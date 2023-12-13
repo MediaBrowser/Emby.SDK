@@ -308,9 +308,11 @@ import UserActionType from './model/UserActionType';
 import UserConfiguration from './model/UserConfiguration';
 import UserDto from './model/UserDto';
 import UserItemDataDto from './model/UserItemDataDto';
+import UserItemShareLevel from './model/UserItemShareLevel';
 import UserLibraryAddTags from './model/UserLibraryAddTags';
 import UserLibraryOfficialRatingItem from './model/UserLibraryOfficialRatingItem';
 import UserLibraryTagItem from './model/UserLibraryTagItem';
+import UserLibraryUpdateUserItemAccess from './model/UserLibraryUpdateUserItemAccess';
 import UserNotificationInfo from './model/UserNotificationInfo';
 import UserPolicy from './model/UserPolicy';
 import ValidatePath from './model/ValidatePath';
@@ -416,7 +418,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export {
     /**
@@ -2214,6 +2216,12 @@ export {
     UserItemDataDto,
 
     /**
+     * The UserItemShareLevel model constructor.
+     * @property {module:model/UserItemShareLevel}
+     */
+    UserItemShareLevel,
+
+    /**
      * The UserLibraryAddTags model constructor.
      * @property {module:model/UserLibraryAddTags}
      */
@@ -2230,6 +2238,12 @@ export {
      * @property {module:model/UserLibraryTagItem}
      */
     UserLibraryTagItem,
+
+    /**
+     * The UserLibraryUpdateUserItemAccess model constructor.
+     * @property {module:model/UserLibraryUpdateUserItemAccess}
+     */
+    UserLibraryUpdateUserItemAccess,
 
     /**
      * The UserNotificationInfo model constructor.

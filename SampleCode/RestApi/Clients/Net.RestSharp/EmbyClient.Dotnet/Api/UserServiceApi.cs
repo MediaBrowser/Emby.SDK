@@ -110,6 +110,37 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a list of users
         /// </summary>
         /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>QueryResultUserDto</returns>
+        QueryResultUserDto GetUsersItemaccess (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
+
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>ApiResponse of QueryResultUserDto</returns>
+        ApiResponse<QueryResultUserDto> GetUsersItemaccessWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
@@ -570,6 +601,37 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (string key, string userId);
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of QueryResultUserDto</returns>
+        System.Threading.Tasks.Task<QueryResultUserDto> GetUsersItemaccessAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
+
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersItemaccessAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Gets a list of users
         /// </summary>
@@ -1679,6 +1741,185 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 null);
+        }
+
+        /// <summary>
+        /// Gets a list of users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>QueryResultUserDto</returns>
+        public QueryResultUserDto GetUsersItemaccess (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+             ApiResponse<QueryResultUserDto> localVarResponse = GetUsersItemaccessWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a list of users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>ApiResponse of QueryResultUserDto</returns>
+        public ApiResponse< QueryResultUserDto > GetUsersItemaccessWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+
+            var localVarPath = "/Users/ItemAccess";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (isHidden != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsHidden", isHidden)); // query parameter
+            if (isDisabled != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsDisabled", isDisabled)); // query parameter
+            if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
+            if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersItemaccess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<QueryResultUserDto>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (QueryResultUserDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultUserDto)));
+        }
+
+        /// <summary>
+        /// Gets a list of users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of QueryResultUserDto</returns>
+        public async System.Threading.Tasks.Task<QueryResultUserDto> GetUsersItemaccessAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+             ApiResponse<QueryResultUserDto> localVarResponse = await GetUsersItemaccessAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a list of users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersItemaccessAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+
+            var localVarPath = "/Users/ItemAccess";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (isHidden != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsHidden", isHidden)); // query parameter
+            if (isDisabled != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsDisabled", isDisabled)); // query parameter
+            if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
+            if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersItemaccess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<QueryResultUserDto>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (QueryResultUserDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultUserDto)));
         }
 
         /// <summary>

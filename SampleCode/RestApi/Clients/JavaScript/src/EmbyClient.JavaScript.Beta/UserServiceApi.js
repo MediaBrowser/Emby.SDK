@@ -28,7 +28,7 @@ import UserPolicy from '../model/UserPolicy';
 /**
 * UserService service.
 * @module EmbyClient.JavaScript.Beta/UserServiceApi
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class UserServiceApi {
 
@@ -190,6 +190,51 @@ export default class UserServiceApi {
 
       return this.apiClient.callApi(
         '/Users/{UserId}/TypedSettings/{Key}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getUsersItemaccess operation.
+     * @callback module:EmbyClient.JavaScript.Beta/UserServiceApi~getUsersItemaccessCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/QueryResultUserDto} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets a list of users
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript.Beta/UserServiceApi~getUsersItemaccessCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/QueryResultUserDto}
+     */
+    getUsersItemaccess() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'IsHidden': opts['isHidden'],
+        'IsDisabled': opts['isDisabled'],
+        'StartIndex': opts['startIndex'],
+        'Limit': opts['limit'],
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'SortOrder': opts['sortOrder']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = QueryResultUserDto;
+
+      return this.apiClient.callApi(
+        '/Users/ItemAccess', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

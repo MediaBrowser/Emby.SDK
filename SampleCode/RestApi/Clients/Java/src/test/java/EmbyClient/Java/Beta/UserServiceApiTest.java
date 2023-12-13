@@ -102,6 +102,26 @@ public class UserServiceApiTest {
     /**
      * Gets a list of users
      *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUsersItemaccessTest() throws Exception {
+        Boolean isHidden = null;
+        Boolean isDisabled = null;
+        Integer startIndex = null;
+        Integer limit = null;
+        String nameStartsWithOrGreater = null;
+        String sortOrder = null;
+        QueryResultUserDto response = api.getUsersItemaccess(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets a list of users
+     *
      * Requires authentication as administrator
      *
      * @throws Exception

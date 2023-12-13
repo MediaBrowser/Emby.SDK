@@ -16,7 +16,7 @@ import SubtitlesSubtitleDownloadResult from '../model/SubtitlesSubtitleDownloadR
 /**
 * SubtitleService service.
 * @module EmbyClient.JavaScript.Beta/SubtitleServiceApi
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class SubtitleServiceApi {
 

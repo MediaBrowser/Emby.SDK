@@ -16,7 +16,7 @@ import UnratedItem from './UnratedItem';
 /**
 * The UserPolicy model module.
 * @module model/UserPolicy
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class UserPolicy {
     /**
@@ -177,6 +177,9 @@ export default class UserPolicy {
             }
             if (data.hasOwnProperty('AllowCameraUpload')) {
                 obj['AllowCameraUpload'] = ApiClient.convertToType(data['AllowCameraUpload'], 'Boolean');
+            }
+            if (data.hasOwnProperty('AllowSharingPersonalItems')) {
+                obj['AllowSharingPersonalItems'] = ApiClient.convertToType(data['AllowSharingPersonalItems'], 'Boolean');
             }
         }
         return obj;
@@ -367,6 +370,10 @@ export default class UserPolicy {
     * @member {Boolean} AllowCameraUpload
     */
     'AllowCameraUpload' = undefined;
+    /**
+    * @member {Boolean} AllowSharingPersonalItems
+    */
+    'AllowSharingPersonalItems' = undefined;
 
 
 

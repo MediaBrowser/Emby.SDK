@@ -566,6 +566,158 @@ public class UserServiceApi {
         return call;
     }
     /**
+     * Build call for getUsersItemaccess
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getUsersItemaccessCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Users/ItemAccess";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (isHidden != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("IsHidden", isHidden));
+        if (isDisabled != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("IsDisabled", isDisabled));
+        if (startIndex != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("StartIndex", startIndex));
+        if (limit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Limit", limit));
+        if (nameStartsWithOrGreater != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("NameStartsWithOrGreater", nameStartsWithOrGreater));
+        if (sortOrder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("SortOrder", sortOrder));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "application/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getUsersItemaccessValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        com.squareup.okhttp.Call call = getUsersItemaccessCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets a list of users
+     * Requires authentication as user
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @return QueryResultUserDto
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public QueryResultUserDto getUsersItemaccess(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        ApiResponse<QueryResultUserDto> resp = getUsersItemaccessWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
+        return resp.getData();
+    }
+
+    /**
+     * Gets a list of users
+     * Requires authentication as user
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @return ApiResponse&lt;QueryResultUserDto&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<QueryResultUserDto> getUsersItemaccessWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersItemaccessValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, null, null);
+        Type localVarReturnType = new TypeToken<QueryResultUserDto>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Gets a list of users (asynchronously)
+     * Requires authentication as user
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getUsersItemaccessAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ApiCallback<QueryResultUserDto> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getUsersItemaccessValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<QueryResultUserDto>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for getUsersPrefixes
      * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
      * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)

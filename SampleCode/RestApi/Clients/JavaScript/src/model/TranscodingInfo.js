@@ -18,7 +18,7 @@ import TupleDoubleDouble from './TupleDoubleDouble';
 /**
 * The TranscodingInfo model module.
 * @module model/TranscodingInfo
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class TranscodingInfo {
     /**

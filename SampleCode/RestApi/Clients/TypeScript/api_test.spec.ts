@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.61
+ * OpenAPI spec version: 4.8.0.62
  * 
  *
  * NOTE: This file is auto generated.
@@ -6873,6 +6873,10 @@ describe("UserLibraryServiceApi", () => {
     const enableUserData: boolean = true
     return expect(instance.getVideosByIdAdditionalparts(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData, {})).resolves.toBe(null)
   })
+  test("postItemsAccess", () => {
+    const body: api.UserLibraryUpdateUserItemAccess = undefined
+    return expect(instance.postItemsAccess(body, {})).resolves.toBe(null)
+  })
   test("postItemsByIdMakeprivate", () => {
     const id: string = "id_example"
     return expect(instance.postItemsByIdMakeprivate(id, {})).resolves.toBe(null)
@@ -6948,6 +6952,15 @@ describe("UserServiceApi", () => {
     const key: string = "key_example"
     const userId: string = "userId_example"
     return expect(instance.getUsersByUseridTypedsettingsByKey(key, userId, {})).resolves.toBe(null)
+  })
+  test("getUsersItemaccess", () => {
+    const isHidden: boolean = true
+    const isDisabled: boolean = true
+    const startIndex: number = 56
+    const limit: number = 56
+    const nameStartsWithOrGreater: string = "nameStartsWithOrGreater_example"
+    const sortOrder: string = "sortOrder_example"
+    return expect(instance.getUsersItemaccess(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, {})).resolves.toBe(null)
   })
   test("getUsersPrefixes", () => {
     const isHidden: boolean = true

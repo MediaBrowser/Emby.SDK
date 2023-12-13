@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.61
+  version: 4.8.0.62
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -153,6 +153,10 @@ tags:
   externalDocs:
     description: "API Reference: ItemUpdateService"
     url: https://betadev.emby.media/reference/RestAPI/ItemUpdateService.html
+- name: UserLibraryService
+  externalDocs:
+    description: "API Documentation: Browsing the Library"
+    url: https://betadev.emby.media/doc/restapi/Browsing-the-Library.html
 - name: LibraryStructureService
   externalDocs:
     description: "API Reference: LibraryStructureService"
@@ -245,10 +249,6 @@ tags:
   externalDocs:
     description: "API Reference: ItemRefreshService"
     url: https://betadev.emby.media/reference/RestAPI/ItemRefreshService.html
-- name: UserLibraryService
-  externalDocs:
-    description: "API Documentation: Browsing the Library"
-    url: https://betadev.emby.media/doc/restapi/Browsing-the-Library.html
 - name: BifService
   externalDocs:
     description: "API Reference: BifService"
@@ -23209,6 +23209,41 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /Items/Access:
+    summary: Updates user item access
+    post:
+      tags:
+      - UserLibraryService
+      summary: Updates user item access
+      description: Requires authentication as user
+      operationId: postItemsAccess
+      requestBody:
+        description: UpdateUserItemAccess
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.UpdateUserItemAccess'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.UpdateUserItemAccess'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/Counts:
     get:
       tags:
@@ -34012,6 +34047,94 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
+  /Users/ItemAccess:
+    summary: Gets a list of users
+    get:
+      tags:
+      - UserService
+      summary: Gets a list of users
+      description: Requires authentication as user
+      operationId: getUsersItemaccess
+      parameters:
+      - name: IsHidden
+        in: query
+        description: Optional filter by IsHidden=true or false
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: IsDisabled
+        in: query
+        description: Optional filter by IsDisabled=true or false
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+          nullable: true
+      - name: StartIndex
+        in: query
+        description: Optional. The record index to start at. All items with a lower
+          index will be dropped from the results.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      - name: Limit
+        in: query
+        description: Optional. The maximum number of records to return
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int32
+          nullable: true
+      - name: NameStartsWithOrGreater
+        in: query
+        description: Optional filter by items whose name is sorted equally or greater
+          than a given input string.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      - name: SortOrder
+        in: query
+        description: "Sort Order - Ascending,Descending"
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Returning a QueryResult<UserDto> object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QueryResult_UserDto'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/QueryResult_UserDto'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Users/{Id}:
     summary: Gets a user by Id
     get:
@@ -68777,6 +68900,29 @@ components:
         Password:
           type: string
       x-internal-ref-name: Emby.Api.GetDirectoryContents
+    UserLibrary.UpdateUserItemAccess:
+      type: object
+      properties:
+        ItemIds:
+          type: array
+          items:
+            type: string
+        UserIds:
+          type: array
+          items:
+            type: string
+        ItemAccess:
+          $ref: '#/components/schemas/UserItemShareLevel'
+      x-internal-ref-name: Emby.Api.UserLibrary.UpdateUserItemAccess
+    UserItemShareLevel:
+      type: string
+      enum:
+      - None
+      - Read
+      - Write
+      - Manage
+      - ManageDelete
+      x-internal-ref-name: MediaBrowser.Model.Dto.UserItemShareLevel
     ItemCounts:
       type: object
       properties:
@@ -77423,11 +77569,14 @@ components:
         HasConfiguredEasyPassword:
           type: boolean
           deprecated: true
+        UserItemShareLevel:
+          $ref: '#/components/schemas/UserItemShareLevel'
       description: "Class UserDto\r\n"
       example:
         Policy:
           AllowTagOrRating: true
           EnableContentDeletion: true
+          AllowSharingPersonalItems: true
           EnableContentDeletionFromFolders:
           - EnableContentDeletionFromFolders
           - EnableContentDeletionFromFolders
@@ -77499,6 +77648,7 @@ components:
           RemoteClientBitrateLimit: 7
         HasConfiguredEasyPassword: true
         EnableAutoLogin: true
+        UserItemShareLevel: None
         Configuration:
           EnableNextEpisodeAutoPlay: true
           SubtitleLanguagePreference: SubtitleLanguagePreference
@@ -77764,9 +77914,12 @@ components:
           type: boolean
         AllowCameraUpload:
           type: boolean
+        AllowSharingPersonalItems:
+          type: boolean
       example:
         AllowTagOrRating: true
         EnableContentDeletion: true
+        AllowSharingPersonalItems: true
         EnableContentDeletionFromFolders:
         - EnableContentDeletionFromFolders
         - EnableContentDeletionFromFolders
@@ -77899,6 +78052,7 @@ components:
         - Policy:
             AllowTagOrRating: true
             EnableContentDeletion: true
+            AllowSharingPersonalItems: true
             EnableContentDeletionFromFolders:
             - EnableContentDeletionFromFolders
             - EnableContentDeletionFromFolders
@@ -77970,6 +78124,7 @@ components:
             RemoteClientBitrateLimit: 7
           HasConfiguredEasyPassword: true
           EnableAutoLogin: true
+          UserItemShareLevel: None
           Configuration:
             EnableNextEpisodeAutoPlay: true
             SubtitleLanguagePreference: SubtitleLanguagePreference
@@ -78012,6 +78167,7 @@ components:
         - Policy:
             AllowTagOrRating: true
             EnableContentDeletion: true
+            AllowSharingPersonalItems: true
             EnableContentDeletionFromFolders:
             - EnableContentDeletionFromFolders
             - EnableContentDeletionFromFolders
@@ -78083,6 +78239,7 @@ components:
             RemoteClientBitrateLimit: 7
           HasConfiguredEasyPassword: true
           EnableAutoLogin: true
+          UserItemShareLevel: None
           Configuration:
             EnableNextEpisodeAutoPlay: true
             SubtitleLanguagePreference: SubtitleLanguagePreference
@@ -78148,6 +78305,7 @@ components:
           Policy:
             AllowTagOrRating: true
             EnableContentDeletion: true
+            AllowSharingPersonalItems: true
             EnableContentDeletionFromFolders:
             - EnableContentDeletionFromFolders
             - EnableContentDeletionFromFolders
@@ -78219,6 +78377,7 @@ components:
             RemoteClientBitrateLimit: 7
           HasConfiguredEasyPassword: true
           EnableAutoLogin: true
+          UserItemShareLevel: None
           Configuration:
             EnableNextEpisodeAutoPlay: true
             SubtitleLanguagePreference: SubtitleLanguagePreference

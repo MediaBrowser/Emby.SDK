@@ -44,7 +44,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="policy">policy.</param>
         /// <param name="primaryImageAspectRatio">The primary image aspect ratio..</param>
         /// <param name="hasConfiguredEasyPassword">hasConfiguredEasyPassword.</param>
-        public UserDto(string name = default(string), string serverId = default(string), string serverName = default(string), string prefix = default(string), string connectUserName = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), ConnectUserLinkType connectLinkType = default(ConnectUserLinkType), string id = default(string), string primaryImageTag = default(string), bool? hasPassword = default(bool?), bool? hasConfiguredPassword = default(bool?), bool? enableAutoLogin = default(bool?), DateTimeOffset? lastLoginDate = default(DateTimeOffset?), DateTimeOffset? lastActivityDate = default(DateTimeOffset?), UserConfiguration configuration = default(UserConfiguration), UserPolicy policy = default(UserPolicy), double? primaryImageAspectRatio = default(double?), bool? hasConfiguredEasyPassword = default(bool?))
+        /// <param name="userItemShareLevel">userItemShareLevel.</param>
+        public UserDto(string name = default(string), string serverId = default(string), string serverName = default(string), string prefix = default(string), string connectUserName = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), ConnectUserLinkType connectLinkType = default(ConnectUserLinkType), string id = default(string), string primaryImageTag = default(string), bool? hasPassword = default(bool?), bool? hasConfiguredPassword = default(bool?), bool? enableAutoLogin = default(bool?), DateTimeOffset? lastLoginDate = default(DateTimeOffset?), DateTimeOffset? lastActivityDate = default(DateTimeOffset?), UserConfiguration configuration = default(UserConfiguration), UserPolicy policy = default(UserPolicy), double? primaryImageAspectRatio = default(double?), bool? hasConfiguredEasyPassword = default(bool?), UserItemShareLevel userItemShareLevel = default(UserItemShareLevel))
         {
             this.Name = name;
             this.ServerId = serverId;
@@ -64,6 +65,7 @@ namespace EmbyClient.Dotnet.Model
             this.Policy = policy;
             this.PrimaryImageAspectRatio = primaryImageAspectRatio;
             this.HasConfiguredEasyPassword = hasConfiguredEasyPassword;
+            this.UserItemShareLevel = userItemShareLevel;
         }
         
         /// <summary>
@@ -186,6 +188,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? HasConfiguredEasyPassword { get; set; }
 
         /// <summary>
+        /// Gets or Sets UserItemShareLevel
+        /// </summary>
+        [DataMember(Name="UserItemShareLevel", EmitDefaultValue=false)]
+        public UserItemShareLevel UserItemShareLevel { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -211,6 +219,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Policy: ").Append(Policy).Append("\n");
             sb.Append("  PrimaryImageAspectRatio: ").Append(PrimaryImageAspectRatio).Append("\n");
             sb.Append("  HasConfiguredEasyPassword: ").Append(HasConfiguredEasyPassword).Append("\n");
+            sb.Append("  UserItemShareLevel: ").Append(UserItemShareLevel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -334,6 +343,11 @@ namespace EmbyClient.Dotnet.Model
                     this.HasConfiguredEasyPassword == input.HasConfiguredEasyPassword ||
                     (this.HasConfiguredEasyPassword != null &&
                     this.HasConfiguredEasyPassword.Equals(input.HasConfiguredEasyPassword))
+                ) && 
+                (
+                    this.UserItemShareLevel == input.UserItemShareLevel ||
+                    (this.UserItemShareLevel != null &&
+                    this.UserItemShareLevel.Equals(input.UserItemShareLevel))
                 );
         }
 
@@ -382,6 +396,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.PrimaryImageAspectRatio.GetHashCode();
                 if (this.HasConfiguredEasyPassword != null)
                     hashCode = hashCode * 59 + this.HasConfiguredEasyPassword.GetHashCode();
+                if (this.UserItemShareLevel != null)
+                    hashCode = hashCode * 59 + this.UserItemShareLevel.GetHashCode();
                 return hashCode;
             }
         }

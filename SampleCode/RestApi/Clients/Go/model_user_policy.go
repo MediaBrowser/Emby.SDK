@@ -57,4 +57,5 @@ type UserPolicy struct {
 	EnabledDevices []string `json:"EnabledDevices,omitempty"`
 	EnableAllDevices bool `json:"EnableAllDevices,omitempty"`
 	AllowCameraUpload bool `json:"AllowCameraUpload,omitempty"`
+	AllowSharingPersonalItems bool `json:"AllowSharingPersonalItems,omitempty"`
 }

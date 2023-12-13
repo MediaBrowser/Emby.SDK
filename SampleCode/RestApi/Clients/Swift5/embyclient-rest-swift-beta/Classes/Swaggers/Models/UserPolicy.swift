@@ -61,8 +61,9 @@ public struct UserPolicy: Codable {
     public var enabledDevices: [String]?
     public var enableAllDevices: Bool?
     public var allowCameraUpload: Bool?
+    public var allowSharingPersonalItems: Bool?
 
-    public init(isAdministrator: Bool? = nil, isHidden: Bool? = nil, isHiddenRemotely: Bool? = nil, isHiddenFromUnusedDevices: Bool? = nil, isDisabled: Bool? = nil, lockedOutDate: Int64? = nil, maxParentalRating: Int? = nil, allowTagOrRating: Bool? = nil, blockedTags: [String]? = nil, isTagBlockingModeInclusive: Bool? = nil, includeTags: [String]? = nil, enableUserPreferenceAccess: Bool? = nil, accessSchedules: [AccessSchedule]? = nil, blockUnratedItems: [UnratedItem]? = nil, enableRemoteControlOfOtherUsers: Bool? = nil, enableSharedDeviceControl: Bool? = nil, enableRemoteAccess: Bool? = nil, enableLiveTvManagement: Bool? = nil, enableLiveTvAccess: Bool? = nil, enableMediaPlayback: Bool? = nil, enableAudioPlaybackTranscoding: Bool? = nil, enableVideoPlaybackTranscoding: Bool? = nil, enablePlaybackRemuxing: Bool? = nil, enableContentDeletion: Bool? = nil, restrictedFeatures: [String]? = nil, enableContentDeletionFromFolders: [String]? = nil, enableContentDownloading: Bool? = nil, enableSubtitleDownloading: Bool? = nil, enableSubtitleManagement: Bool? = nil, enableSyncTranscoding: Bool? = nil, enableMediaConversion: Bool? = nil, enabledChannels: [String]? = nil, enableAllChannels: Bool? = nil, enabledFolders: [String]? = nil, enableAllFolders: Bool? = nil, invalidLoginAttemptCount: Int? = nil, enablePublicSharing: Bool? = nil, blockedMediaFolders: [String]? = nil, remoteClientBitrateLimit: Int? = nil, authenticationProviderId: String? = nil, excludedSubFolders: [String]? = nil, simultaneousStreamLimit: Int? = nil, enabledDevices: [String]? = nil, enableAllDevices: Bool? = nil, allowCameraUpload: Bool? = nil) {
+    public init(isAdministrator: Bool? = nil, isHidden: Bool? = nil, isHiddenRemotely: Bool? = nil, isHiddenFromUnusedDevices: Bool? = nil, isDisabled: Bool? = nil, lockedOutDate: Int64? = nil, maxParentalRating: Int? = nil, allowTagOrRating: Bool? = nil, blockedTags: [String]? = nil, isTagBlockingModeInclusive: Bool? = nil, includeTags: [String]? = nil, enableUserPreferenceAccess: Bool? = nil, accessSchedules: [AccessSchedule]? = nil, blockUnratedItems: [UnratedItem]? = nil, enableRemoteControlOfOtherUsers: Bool? = nil, enableSharedDeviceControl: Bool? = nil, enableRemoteAccess: Bool? = nil, enableLiveTvManagement: Bool? = nil, enableLiveTvAccess: Bool? = nil, enableMediaPlayback: Bool? = nil, enableAudioPlaybackTranscoding: Bool? = nil, enableVideoPlaybackTranscoding: Bool? = nil, enablePlaybackRemuxing: Bool? = nil, enableContentDeletion: Bool? = nil, restrictedFeatures: [String]? = nil, enableContentDeletionFromFolders: [String]? = nil, enableContentDownloading: Bool? = nil, enableSubtitleDownloading: Bool? = nil, enableSubtitleManagement: Bool? = nil, enableSyncTranscoding: Bool? = nil, enableMediaConversion: Bool? = nil, enabledChannels: [String]? = nil, enableAllChannels: Bool? = nil, enabledFolders: [String]? = nil, enableAllFolders: Bool? = nil, invalidLoginAttemptCount: Int? = nil, enablePublicSharing: Bool? = nil, blockedMediaFolders: [String]? = nil, remoteClientBitrateLimit: Int? = nil, authenticationProviderId: String? = nil, excludedSubFolders: [String]? = nil, simultaneousStreamLimit: Int? = nil, enabledDevices: [String]? = nil, enableAllDevices: Bool? = nil, allowCameraUpload: Bool? = nil, allowSharingPersonalItems: Bool? = nil) {
         self.isAdministrator = isAdministrator
         self.isHidden = isHidden
         self.isHiddenRemotely = isHiddenRemotely
@@ -108,6 +109,7 @@ public struct UserPolicy: Codable {
         self.enabledDevices = enabledDevices
         self.enableAllDevices = enableAllDevices
         self.allowCameraUpload = allowCameraUpload
+        self.allowSharingPersonalItems = allowSharingPersonalItems
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -156,6 +158,7 @@ public struct UserPolicy: Codable {
         case enabledDevices = "EnabledDevices"
         case enableAllDevices = "EnableAllDevices"
         case allowCameraUpload = "AllowCameraUpload"
+        case allowSharingPersonalItems = "AllowSharingPersonalItems"
     }
 
 }

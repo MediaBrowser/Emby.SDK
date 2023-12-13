@@ -15,7 +15,7 @@ import SubtitleDeliveryMethod from '../model/SubtitleDeliveryMethod';
 /**
 * DynamicHlsService service.
 * @module EmbyClient.JavaScript.Beta/DynamicHlsServiceApi
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class DynamicHlsServiceApi {
 

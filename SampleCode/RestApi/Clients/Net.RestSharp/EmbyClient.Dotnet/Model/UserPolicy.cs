@@ -71,7 +71,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="enabledDevices">enabledDevices.</param>
         /// <param name="enableAllDevices">enableAllDevices.</param>
         /// <param name="allowCameraUpload">allowCameraUpload.</param>
-        public UserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), long? lockedOutDate = default(long?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<AccessSchedule> accessSchedules = default(List<AccessSchedule>), List<UnratedItem> blockUnratedItems = default(List<UnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), List<string> blockedMediaFolders = default(List<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?), bool? allowCameraUpload = default(bool?))
+        /// <param name="allowSharingPersonalItems">allowSharingPersonalItems.</param>
+        public UserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), long? lockedOutDate = default(long?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<AccessSchedule> accessSchedules = default(List<AccessSchedule>), List<UnratedItem> blockUnratedItems = default(List<UnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), List<string> blockedMediaFolders = default(List<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?), bool? allowCameraUpload = default(bool?), bool? allowSharingPersonalItems = default(bool?))
         {
             this.IsAdministrator = isAdministrator;
             this.IsHidden = isHidden;
@@ -118,6 +119,7 @@ namespace EmbyClient.Dotnet.Model
             this.EnabledDevices = enabledDevices;
             this.EnableAllDevices = enableAllDevices;
             this.AllowCameraUpload = allowCameraUpload;
+            this.AllowSharingPersonalItems = allowSharingPersonalItems;
         }
         
         /// <summary>
@@ -396,6 +398,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? AllowCameraUpload { get; set; }
 
         /// <summary>
+        /// Gets or Sets AllowSharingPersonalItems
+        /// </summary>
+        [DataMember(Name="AllowSharingPersonalItems", EmitDefaultValue=false)]
+        public bool? AllowSharingPersonalItems { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -448,6 +456,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  EnabledDevices: ").Append(EnabledDevices).Append("\n");
             sb.Append("  EnableAllDevices: ").Append(EnableAllDevices).Append("\n");
             sb.Append("  AllowCameraUpload: ").Append(AllowCameraUpload).Append("\n");
+            sb.Append("  AllowSharingPersonalItems: ").Append(AllowSharingPersonalItems).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -717,6 +726,11 @@ namespace EmbyClient.Dotnet.Model
                     this.AllowCameraUpload == input.AllowCameraUpload ||
                     (this.AllowCameraUpload != null &&
                     this.AllowCameraUpload.Equals(input.AllowCameraUpload))
+                ) && 
+                (
+                    this.AllowSharingPersonalItems == input.AllowSharingPersonalItems ||
+                    (this.AllowSharingPersonalItems != null &&
+                    this.AllowSharingPersonalItems.Equals(input.AllowSharingPersonalItems))
                 );
         }
 
@@ -819,6 +833,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.EnableAllDevices.GetHashCode();
                 if (this.AllowCameraUpload != null)
                     hashCode = hashCode * 59 + this.AllowCameraUpload.GetHashCode();
+                if (this.AllowSharingPersonalItems != null)
+                    hashCode = hashCode * 59 + this.AllowSharingPersonalItems.GetHashCode();
                 return hashCode;
             }
         }

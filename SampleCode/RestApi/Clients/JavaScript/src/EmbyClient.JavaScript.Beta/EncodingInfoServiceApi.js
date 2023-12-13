@@ -17,7 +17,7 @@ import VideoCodecBase from '../model/VideoCodecBase';
 /**
 * EncodingInfoService service.
 * @module EmbyClient.JavaScript.Beta/EncodingInfoServiceApi
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class EncodingInfoServiceApi {
 

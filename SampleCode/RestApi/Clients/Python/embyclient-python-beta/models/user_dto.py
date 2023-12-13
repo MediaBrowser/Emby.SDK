@@ -39,7 +39,8 @@ class UserDto(object):
         'configuration': 'UserConfiguration',
         'policy': 'UserPolicy',
         'primary_image_aspect_ratio': 'float',
-        'has_configured_easy_password': 'bool'
+        'has_configured_easy_password': 'bool',
+        'user_item_share_level': 'UserItemShareLevel'
     }
 
     attribute_map = {
@@ -60,10 +61,11 @@ class UserDto(object):
         'configuration': 'Configuration',
         'policy': 'Policy',
         'primary_image_aspect_ratio': 'PrimaryImageAspectRatio',
-        'has_configured_easy_password': 'HasConfiguredEasyPassword'
+        'has_configured_easy_password': 'HasConfiguredEasyPassword',
+        'user_item_share_level': 'UserItemShareLevel'
     }
 
-    def __init__(self, name=None, server_id=None, server_name=None, prefix=None, connect_user_name=None, date_created=None, connect_link_type=None, id=None, primary_image_tag=None, has_password=None, has_configured_password=None, enable_auto_login=None, last_login_date=None, last_activity_date=None, configuration=None, policy=None, primary_image_aspect_ratio=None, has_configured_easy_password=None):  # noqa: E501
+    def __init__(self, name=None, server_id=None, server_name=None, prefix=None, connect_user_name=None, date_created=None, connect_link_type=None, id=None, primary_image_tag=None, has_password=None, has_configured_password=None, enable_auto_login=None, last_login_date=None, last_activity_date=None, configuration=None, policy=None, primary_image_aspect_ratio=None, has_configured_easy_password=None, user_item_share_level=None):  # noqa: E501
         """UserDto - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._server_id = None
@@ -83,6 +85,7 @@ class UserDto(object):
         self._policy = None
         self._primary_image_aspect_ratio = None
         self._has_configured_easy_password = None
+        self._user_item_share_level = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -120,6 +123,8 @@ class UserDto(object):
             self.primary_image_aspect_ratio = primary_image_aspect_ratio
         if has_configured_easy_password is not None:
             self.has_configured_easy_password = has_configured_easy_password
+        if user_item_share_level is not None:
+            self.user_item_share_level = user_item_share_level
 
     @property
     def name(self):
@@ -520,6 +525,27 @@ class UserDto(object):
         """
 
         self._has_configured_easy_password = has_configured_easy_password
+
+    @property
+    def user_item_share_level(self):
+        """Gets the user_item_share_level of this UserDto.  # noqa: E501
+
+
+        :return: The user_item_share_level of this UserDto.  # noqa: E501
+        :rtype: UserItemShareLevel
+        """
+        return self._user_item_share_level
+
+    @user_item_share_level.setter
+    def user_item_share_level(self, user_item_share_level):
+        """Sets the user_item_share_level of this UserDto.
+
+
+        :param user_item_share_level: The user_item_share_level of this UserDto.  # noqa: E501
+        :type: UserItemShareLevel
+        """
+
+        self._user_item_share_level = user_item_share_level
 
     def to_dict(self):
         """Returns the model properties as a dict"""

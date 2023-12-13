@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The TupleDoubleDouble model module.
 * @module model/TupleDoubleDouble
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class TupleDoubleDouble {
     /**

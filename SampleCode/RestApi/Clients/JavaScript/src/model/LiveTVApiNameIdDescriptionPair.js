@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTVApiNameIdDescriptionPair model module.
 * @module model/LiveTVApiNameIdDescriptionPair
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class LiveTVApiNameIdDescriptionPair {
     /**

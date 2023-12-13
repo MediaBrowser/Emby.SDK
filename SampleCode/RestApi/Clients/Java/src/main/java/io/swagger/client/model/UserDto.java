@@ -14,6 +14,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.ConnectUserLinkType;
 import io.swagger.client.model.UserConfiguration;
+import io.swagger.client.model.UserItemShareLevel;
 import io.swagger.client.model.UserPolicy;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -77,6 +78,9 @@ public class UserDto {
 
   @SerializedName("HasConfiguredEasyPassword")
   private Boolean hasConfiguredEasyPassword = null;
+
+  @SerializedName("UserItemShareLevel")
+  private UserItemShareLevel userItemShareLevel = null;
 
   public UserDto name(String name) {
     this.name = name;
@@ -402,6 +406,24 @@ public class UserDto {
     this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
   }
 
+  public UserDto userItemShareLevel(UserItemShareLevel userItemShareLevel) {
+    this.userItemShareLevel = userItemShareLevel;
+    return this;
+  }
+
+   /**
+   * Get userItemShareLevel
+   * @return userItemShareLevel
+  **/
+  @Schema(description = "")
+  public UserItemShareLevel getUserItemShareLevel() {
+    return userItemShareLevel;
+  }
+
+  public void setUserItemShareLevel(UserItemShareLevel userItemShareLevel) {
+    this.userItemShareLevel = userItemShareLevel;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -429,12 +451,13 @@ public class UserDto {
         Objects.equals(this._configuration, userDto._configuration) &&
         Objects.equals(this.policy, userDto.policy) &&
         Objects.equals(this.primaryImageAspectRatio, userDto.primaryImageAspectRatio) &&
-        Objects.equals(this.hasConfiguredEasyPassword, userDto.hasConfiguredEasyPassword);
+        Objects.equals(this.hasConfiguredEasyPassword, userDto.hasConfiguredEasyPassword) &&
+        Objects.equals(this.userItemShareLevel, userDto.userItemShareLevel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, serverId, serverName, prefix, connectUserName, dateCreated, connectLinkType, id, primaryImageTag, hasPassword, hasConfiguredPassword, enableAutoLogin, lastLoginDate, lastActivityDate, _configuration, policy, primaryImageAspectRatio, hasConfiguredEasyPassword);
+    return Objects.hash(name, serverId, serverName, prefix, connectUserName, dateCreated, connectLinkType, id, primaryImageTag, hasPassword, hasConfiguredPassword, enableAutoLogin, lastLoginDate, lastActivityDate, _configuration, policy, primaryImageAspectRatio, hasConfiguredEasyPassword, userItemShareLevel);
   }
 
 
@@ -461,6 +484,7 @@ public class UserDto {
     sb.append("    policy: ").append(toIndentedString(policy)).append("\n");
     sb.append("    primaryImageAspectRatio: ").append(toIndentedString(primaryImageAspectRatio)).append("\n");
     sb.append("    hasConfiguredEasyPassword: ").append(toIndentedString(hasConfiguredEasyPassword)).append("\n");
+    sb.append("    userItemShareLevel: ").append(toIndentedString(userItemShareLevel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

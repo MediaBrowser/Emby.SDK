@@ -182,6 +182,54 @@
   </h3>
   
   
+  <h4 id="Emby_Naming_Common_NamingOptions_AllNamedParts" data-uid="Emby.Naming.Common.NamingOptions.AllNamedParts">AllNamedParts</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] AllNamedParts</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Emby_Naming_Common_NamingOptions_NamedParts" data-uid="Emby.Naming.Common.NamingOptions.NamedParts">NamedParts</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[][] NamedParts</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[][]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Emby_Naming_Common_NamingOptions_SeasonFolderRegexes" data-uid="Emby.Naming.Common.NamingOptions.SeasonFolderRegexes">SeasonFolderRegexes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -206,12 +254,12 @@
   </table>
   
   
-  <h4 id="Emby_Naming_Common_NamingOptions_SeasonInFileNameRegexes" data-uid="Emby.Naming.Common.NamingOptions.SeasonInFileNameRegexes">SeasonInFileNameRegexes</h4>
+  <h4 id="Emby_Naming_Common_NamingOptions_TvMultiEpisodeRegex" data-uid="Emby.Naming.Common.NamingOptions.TvMultiEpisodeRegex">TvMultiEpisodeRegex</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Regex[] SeasonInFileNameRegexes</code></pre>
+    <pre><code class="lang-csharp hljs">public Regex TvMultiEpisodeRegex</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,19 +271,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Text.RegularExpressions.Regex</span>[]</td>
+        <td><span class="xref">System.Text.RegularExpressions.Regex</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Emby_Naming_Common_NamingOptions_TvMultiEpisodeRegex" data-uid="Emby.Naming.Common.NamingOptions.TvMultiEpisodeRegex">TvMultiEpisodeRegex</h4>
+  <h4 id="Emby_Naming_Common_NamingOptions_TvMultiEpisodeRegexAll" data-uid="Emby.Naming.Common.NamingOptions.TvMultiEpisodeRegexAll">TvMultiEpisodeRegexAll</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Regex TvMultiEpisodeRegex</code></pre>
+    <pre><code class="lang-csharp hljs">public Regex TvMultiEpisodeRegexAll</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -875,13 +923,55 @@
   </table>
   
   
-  <a id="Emby_Naming_Common_NamingOptions_GetMainExpression_" data-uid="Emby.Naming.Common.NamingOptions.GetMainExpression*"></a>
-  <h4 id="Emby_Naming_Common_NamingOptions_GetMainExpression_System_Boolean_" data-uid="Emby.Naming.Common.NamingOptions.GetMainExpression(System.Boolean)">GetMainExpression(Boolean)</h4>
+  <a id="Emby_Naming_Common_NamingOptions_GetEpisodeWords_" data-uid="Emby.Naming.Common.NamingOptions.GetEpisodeWords*"></a>
+  <h4 id="Emby_Naming_Common_NamingOptions_GetEpisodeWords_System_String_" data-uid="Emby.Naming.Common.NamingOptions.GetEpisodeWords(System.String)">GetEpisodeWords(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetMainExpression(bool supportEpisodeNumberOnly)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetEpisodeWords(string suffix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">suffix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Naming_Common_NamingOptions_GetMainExpressionRegex_" data-uid="Emby.Naming.Common.NamingOptions.GetMainExpressionRegex*"></a>
+  <h4 id="Emby_Naming_Common_NamingOptions_GetMainExpressionRegex_System_Boolean_System_Boolean_System_Boolean_" data-uid="Emby.Naming.Common.NamingOptions.GetMainExpressionRegex(System.Boolean,System.Boolean,System.Boolean)">GetMainExpressionRegex(Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Regex GetMainExpressionRegex(bool allowEpisodeNumberOnly, bool allowMultiEpisodeNumberOnlyExpression, bool allowX)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -895,7 +985,59 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">supportEpisodeNumberOnly</span></td>
+        <td><span class="parametername">allowEpisodeNumberOnly</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">allowMultiEpisodeNumberOnlyExpression</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">allowX</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Text.RegularExpressions.Regex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Naming_Common_NamingOptions_GetSeasonFolderNames_" data-uid="Emby.Naming.Common.NamingOptions.GetSeasonFolderNames*"></a>
+  <h4 id="Emby_Naming_Common_NamingOptions_GetSeasonFolderNames_System_Boolean_" data-uid="Emby.Naming.Common.NamingOptions.GetSeasonFolderNames(System.Boolean)">GetSeasonFolderNames(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetSeasonFolderNames(bool includeSeries)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">includeSeries</span></td>
         <td></td>
       </tr>
     </tbody>

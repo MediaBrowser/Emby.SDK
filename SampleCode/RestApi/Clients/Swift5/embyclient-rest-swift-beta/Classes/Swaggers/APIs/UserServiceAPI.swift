@@ -132,6 +132,7 @@ open class UserServiceAPI {
   "Policy" : {
     "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
+    "AllowSharingPersonalItems" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
     "EnablePlaybackRemuxing" : true,
@@ -186,6 +187,7 @@ open class UserServiceAPI {
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
+  "UserItemShareLevel" : "None",
   "Configuration" : {
     "EnableNextEpisodeAutoPlay" : true,
     "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -300,6 +302,254 @@ open class UserServiceAPI {
      - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
+    open class func getUsersItemaccess(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: QueryResultUserDto?,_ error: Error?) -> Void)) {
+        getUsersItemaccessWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater, sortOrder: sortOrder).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets a list of users
+     - GET /Users/ItemAccess
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "TotalRecordCount" : 0,
+  "Items" : [ {
+    "Policy" : {
+      "AllowTagOrRating" : true,
+      "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
+      "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
+      "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
+      "EnablePlaybackRemuxing" : true,
+      "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
+      "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
+      "IsDisabled" : true,
+      "MaxParentalRating" : 1,
+      "EnablePublicSharing" : true,
+      "AccessSchedules" : [ {
+        "DayOfWeek" : "Sunday",
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
+      }, {
+        "DayOfWeek" : "Sunday",
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
+      } ],
+      "EnableContentDownloading" : true,
+      "EnableSubtitleManagement" : true,
+      "SimultaneousStreamLimit" : 9,
+      "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
+      "IsAdministrator" : true,
+      "EnableSubtitleDownloading" : true,
+      "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
+      "EnableAllDevices" : true,
+      "EnableMediaConversion" : true,
+      "InvalidLoginAttemptCount" : 2,
+      "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
+      "EnableLiveTvAccess" : true,
+      "EnableAllFolders" : true,
+      "EnableSharedDeviceControl" : true,
+      "EnableRemoteAccess" : true,
+      "IsHidden" : true,
+      "EnableLiveTvManagement" : true,
+      "BlockUnratedItems" : [ "Movie", "Movie" ],
+      "EnableMediaPlayback" : true,
+      "EnableVideoPlaybackTranscoding" : true,
+      "EnableAllChannels" : true,
+      "EnableUserPreferenceAccess" : true,
+      "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
+      "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
+      "IsHiddenRemotely" : true,
+      "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
+      "EnableRemoteControlOfOtherUsers" : true,
+      "EnableAudioPlaybackTranscoding" : true,
+      "IsHiddenFromUnusedDevices" : true,
+      "EnableSyncTranscoding" : true,
+      "RemoteClientBitrateLimit" : 7
+    },
+    "HasConfiguredEasyPassword" : true,
+    "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
+    "Configuration" : {
+      "EnableNextEpisodeAutoPlay" : true,
+      "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
+      "DisplayMissingEpisodes" : true,
+      "IntroSkipMode" : "ShowButton",
+      "OrderedViews" : [ "OrderedViews", "OrderedViews" ],
+      "LatestItemsExcludes" : [ "LatestItemsExcludes", "LatestItemsExcludes" ],
+      "SubtitleMode" : "Default",
+      "ResumeRewindSeconds" : 0,
+      "HidePlayedInLatest" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
+      "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
+      "AudioLanguagePreference" : "AudioLanguagePreference",
+      "PlayDefaultAudioTrack" : true,
+      "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
+      "RememberAudioSelections" : true
+    },
+    "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+    "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "PrimaryImageTag" : "PrimaryImageTag",
+    "Prefix" : "Prefix",
+    "Name" : "Name",
+    "ConnectUserName" : "ConnectUserName",
+    "ServerId" : "ServerId",
+    "HasConfiguredPassword" : true,
+    "ServerName" : "ServerName",
+    "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+    "PrimaryImageAspectRatio" : 3.616076749251911,
+    "ConnectLinkType" : "LinkedUser",
+    "Id" : "Id",
+    "HasPassword" : true
+  }, {
+    "Policy" : {
+      "AllowTagOrRating" : true,
+      "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
+      "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
+      "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
+      "EnablePlaybackRemuxing" : true,
+      "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
+      "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
+      "IsDisabled" : true,
+      "MaxParentalRating" : 1,
+      "EnablePublicSharing" : true,
+      "AccessSchedules" : [ {
+        "DayOfWeek" : "Sunday",
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
+      }, {
+        "DayOfWeek" : "Sunday",
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
+      } ],
+      "EnableContentDownloading" : true,
+      "EnableSubtitleManagement" : true,
+      "SimultaneousStreamLimit" : 9,
+      "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
+      "IsAdministrator" : true,
+      "EnableSubtitleDownloading" : true,
+      "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
+      "EnableAllDevices" : true,
+      "EnableMediaConversion" : true,
+      "InvalidLoginAttemptCount" : 2,
+      "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
+      "EnableLiveTvAccess" : true,
+      "EnableAllFolders" : true,
+      "EnableSharedDeviceControl" : true,
+      "EnableRemoteAccess" : true,
+      "IsHidden" : true,
+      "EnableLiveTvManagement" : true,
+      "BlockUnratedItems" : [ "Movie", "Movie" ],
+      "EnableMediaPlayback" : true,
+      "EnableVideoPlaybackTranscoding" : true,
+      "EnableAllChannels" : true,
+      "EnableUserPreferenceAccess" : true,
+      "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
+      "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
+      "IsHiddenRemotely" : true,
+      "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
+      "EnableRemoteControlOfOtherUsers" : true,
+      "EnableAudioPlaybackTranscoding" : true,
+      "IsHiddenFromUnusedDevices" : true,
+      "EnableSyncTranscoding" : true,
+      "RemoteClientBitrateLimit" : 7
+    },
+    "HasConfiguredEasyPassword" : true,
+    "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
+    "Configuration" : {
+      "EnableNextEpisodeAutoPlay" : true,
+      "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
+      "DisplayMissingEpisodes" : true,
+      "IntroSkipMode" : "ShowButton",
+      "OrderedViews" : [ "OrderedViews", "OrderedViews" ],
+      "LatestItemsExcludes" : [ "LatestItemsExcludes", "LatestItemsExcludes" ],
+      "SubtitleMode" : "Default",
+      "ResumeRewindSeconds" : 0,
+      "HidePlayedInLatest" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
+      "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
+      "AudioLanguagePreference" : "AudioLanguagePreference",
+      "PlayDefaultAudioTrack" : true,
+      "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
+      "RememberAudioSelections" : true
+    },
+    "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+    "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "PrimaryImageTag" : "PrimaryImageTag",
+    "Prefix" : "Prefix",
+    "Name" : "Name",
+    "ConnectUserName" : "ConnectUserName",
+    "ServerId" : "ServerId",
+    "HasConfiguredPassword" : true,
+    "ServerName" : "ServerName",
+    "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+    "PrimaryImageAspectRatio" : 3.616076749251911,
+    "ConnectLinkType" : "LinkedUser",
+    "Id" : "Id",
+    "HasPassword" : true
+  } ]
+}}]
+     - parameter isHidden: (query) Optional filter by IsHidden&#x3D;true or false (optional)
+     - parameter isDisabled: (query) Optional filter by IsDisabled&#x3D;true or false (optional)
+     - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     - parameter limit: (query) Optional. The maximum number of records to return (optional)
+     - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
+
+     - returns: RequestBuilder<QueryResultUserDto> 
+     */
+    open class func getUsersItemaccessWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil) -> RequestBuilder<QueryResultUserDto> {
+        let path = "/Users/ItemAccess"
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "IsHidden": isHidden, 
+                        "IsDisabled": isDisabled, 
+                        "StartIndex": startIndex?.encodeToJSON(), 
+                        "Limit": limit?.encodeToJSON(), 
+                        "NameStartsWithOrGreater": nameStartsWithOrGreater, 
+                        "SortOrder": sortOrder
+        ])
+
+
+        let requestBuilder: RequestBuilder<QueryResultUserDto>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a list of users
+
+     - parameter isHidden: (query) Optional filter by IsHidden&#x3D;true or false (optional)
+     - parameter isDisabled: (query) Optional filter by IsDisabled&#x3D;true or false (optional)
+     - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     - parameter limit: (query) Optional. The maximum number of records to return (optional)
+     - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
     open class func getUsersPrefixes(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: [NameIdPair]?,_ error: Error?) -> Void)) {
         getUsersPrefixesWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater, sortOrder: sortOrder).execute { (response, error) -> Void in
             completion(response?.body, error)
@@ -378,6 +628,7 @@ open class UserServiceAPI {
   "Policy" : {
     "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
+    "AllowSharingPersonalItems" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
     "EnablePlaybackRemuxing" : true,
@@ -432,6 +683,7 @@ open class UserServiceAPI {
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
+  "UserItemShareLevel" : "None",
   "Configuration" : {
     "EnableNextEpisodeAutoPlay" : true,
     "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -470,6 +722,7 @@ open class UserServiceAPI {
   "Policy" : {
     "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
+    "AllowSharingPersonalItems" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
     "EnablePlaybackRemuxing" : true,
@@ -524,6 +777,7 @@ open class UserServiceAPI {
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
+  "UserItemShareLevel" : "None",
   "Configuration" : {
     "EnableNextEpisodeAutoPlay" : true,
     "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -611,6 +865,7 @@ open class UserServiceAPI {
     "Policy" : {
       "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
       "EnablePlaybackRemuxing" : true,
@@ -665,6 +920,7 @@ open class UserServiceAPI {
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
     "Configuration" : {
       "EnableNextEpisodeAutoPlay" : true,
       "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -703,6 +959,7 @@ open class UserServiceAPI {
     "Policy" : {
       "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
       "EnablePlaybackRemuxing" : true,
@@ -757,6 +1014,7 @@ open class UserServiceAPI {
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
     "Configuration" : {
       "EnableNextEpisodeAutoPlay" : true,
       "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -850,6 +1108,7 @@ open class UserServiceAPI {
     "Policy" : {
       "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
       "EnablePlaybackRemuxing" : true,
@@ -904,6 +1163,7 @@ open class UserServiceAPI {
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
     "Configuration" : {
       "EnableNextEpisodeAutoPlay" : true,
       "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -1683,6 +1943,7 @@ open class UserServiceAPI {
     "Policy" : {
       "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
       "EnablePlaybackRemuxing" : true,
@@ -1737,6 +1998,7 @@ open class UserServiceAPI {
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
     "Configuration" : {
       "EnableNextEpisodeAutoPlay" : true,
       "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -2887,6 +3149,7 @@ open class UserServiceAPI {
   "Policy" : {
     "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
+    "AllowSharingPersonalItems" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
     "EnablePlaybackRemuxing" : true,
@@ -2941,6 +3204,7 @@ open class UserServiceAPI {
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
+  "UserItemShareLevel" : "None",
   "Configuration" : {
     "EnableNextEpisodeAutoPlay" : true,
     "SubtitleLanguagePreference" : "SubtitleLanguagePreference",

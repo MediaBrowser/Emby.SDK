@@ -307,6 +307,27 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
         ApiResponse<QueryResultBaseItemDto> GetVideosByIdAdditionalpartsWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
         /// <summary>
+        /// Updates user item access
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns></returns>
+        void PostItemsAccess (UserLibraryUpdateUserItemAccess body);
+
+        /// <summary>
+        /// Updates user item access
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostItemsAccessWithHttpInfo (UserLibraryUpdateUserItemAccess body);
+        /// <summary>
         /// Makes an item private
         /// </summary>
         /// <remarks>
@@ -757,6 +778,27 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetVideosByIdAdditionalpartsAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
+        /// <summary>
+        /// Updates user item access
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostItemsAccessAsync (UserLibraryUpdateUserItemAccess body);
+
+        /// <summary>
+        /// Updates user item access
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsAccessAsyncWithHttpInfo (UserLibraryUpdateUserItemAccess body);
         /// <summary>
         /// Makes an item private
         /// </summary>
@@ -2847,6 +2889,173 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<QueryResultBaseItemDto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (QueryResultBaseItemDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultBaseItemDto)));
+        }
+
+        /// <summary>
+        /// Updates user item access Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns></returns>
+        public void PostItemsAccess (UserLibraryUpdateUserItemAccess body)
+        {
+             PostItemsAccessWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Updates user item access Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostItemsAccessWithHttpInfo (UserLibraryUpdateUserItemAccess body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserLibraryServiceApi->PostItemsAccess");
+
+            var localVarPath = "/Items/Access";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsAccess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Updates user item access Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostItemsAccessAsync (UserLibraryUpdateUserItemAccess body)
+        {
+             await PostItemsAccessAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Updates user item access Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsAccessAsyncWithHttpInfo (UserLibraryUpdateUserItemAccess body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserLibraryServiceApi->PostItemsAccess");
+
+            var localVarPath = "/Items/Access";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsAccess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
         }
 
         /// <summary>

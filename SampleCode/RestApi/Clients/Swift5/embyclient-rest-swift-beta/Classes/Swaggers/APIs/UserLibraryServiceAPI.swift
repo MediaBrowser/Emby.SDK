@@ -7327,6 +7327,48 @@ open class UserLibraryServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Updates user item access
+
+     - parameter body: (body) UpdateUserItemAccess 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postItemsAccess(body: UserLibraryUpdateUserItemAccess, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postItemsAccessWithRequestBuilder(body: body).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates user item access
+     - POST /Items/Access
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) UpdateUserItemAccess 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postItemsAccessWithRequestBuilder(body: UserLibraryUpdateUserItemAccess) -> RequestBuilder<Void> {
+        let path = "/Items/Access"
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
      Makes an item private
 
      - parameter _id: (path) Item Id 

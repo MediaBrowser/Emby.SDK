@@ -8,6 +8,7 @@ package EmbyClient.Java.Beta;
 import io.swagger.client.model.BaseItemDto;
 import io.swagger.client.model.QueryResultBaseItemDto;
 import io.swagger.client.model.UserItemDataDto;
+import io.swagger.client.model.UserLibraryUpdateUserItemAccess;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -212,6 +213,21 @@ public class UserLibraryServiceApiTest {
         String enableImageTypes = null;
         Boolean enableUserData = null;
         QueryResultBaseItemDto response = api.getVideosByIdAdditionalparts(id, userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
+
+        // TODO: test validations
+    }
+    /**
+     * Updates user item access
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postItemsAccessTest() throws Exception {
+        UserLibraryUpdateUserItemAccess body = null;
+        api.postItemsAccess(body);
 
         // TODO: test validations
     }

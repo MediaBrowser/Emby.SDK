@@ -166,12 +166,12 @@
   
   
   <a id="MediaBrowser_Controller_IResourceFileManager_GetResourceFileStream_" data-uid="MediaBrowser.Controller.IResourceFileManager.GetResourceFileStream*"></a>
-  <h4 id="MediaBrowser_Controller_IResourceFileManager_GetResourceFileStream_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__System_Int64_" data-uid="MediaBrowser.Controller.IResourceFileManager.GetResourceFileStream(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.Int64)">GetResourceFileStream(ReadOnlySpan&lt;Char&gt;, ReadOnlySpan&lt;Char&gt;, Int64)</h4>
+  <h4 id="MediaBrowser_Controller_IResourceFileManager_GetResourceFileStream_System_String_System_String_System_Int64_" data-uid="MediaBrowser.Controller.IResourceFileManager.GetResourceFileStream(System.String,System.String,System.Int64)">GetResourceFileStream(String, String, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">StreamHandler GetResourceFileStream(ReadOnlySpan&lt;char&gt; basePath, ReadOnlySpan&lt;char&gt; virtualPath, long offset)</code></pre>
+    <pre><code class="lang-csharp hljs">StreamHandler GetResourceFileStream(string basePath, string virtualPath, long offset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,12 +184,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">basePath</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">virtualPath</span></td>
         <td></td>
       </tr>
@@ -218,12 +218,12 @@
   
   
   <a id="MediaBrowser_Controller_IResourceFileManager_GetStaticFileResult_" data-uid="MediaBrowser.Controller.IResourceFileManager.GetStaticFileResult*"></a>
-  <h4 id="MediaBrowser_Controller_IResourceFileManager_GetStaticFileResult_MediaBrowser_Model_Services_IRequest_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__System_String_System_String_System_Guid_System_Nullable_System_TimeSpan__" data-uid="MediaBrowser.Controller.IResourceFileManager.GetStaticFileResult(MediaBrowser.Model.Services.IRequest,System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},System.String,System.String,System.Guid,System.Nullable{System.TimeSpan})">GetStaticFileResult(IRequest, ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, String, String, Guid, Nullable&lt;TimeSpan&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_IResourceFileManager_GetStaticFileResult_MediaBrowser_Model_Services_IRequest_System_String_System_String_System_String_System_String_System_Guid_System_Nullable_System_TimeSpan__" data-uid="MediaBrowser.Controller.IResourceFileManager.GetStaticFileResult(MediaBrowser.Model.Services.IRequest,System.String,System.String,System.String,System.String,System.Guid,System.Nullable{System.TimeSpan})">GetStaticFileResult(IRequest, String, String, String, String, Guid, Nullable&lt;TimeSpan&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;object&gt; GetStaticFileResult(IRequest request, ReadOnlyMemory&lt;char&gt; basePath, ReadOnlyMemory&lt;char&gt; virtualPath, string contentType, string contentEncoding, Guid cacheKey, TimeSpan? cacheDuration)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;object&gt; GetStaticFileResult(IRequest request, string basePath, string virtualPath, string contentType, string contentEncoding, Guid cacheKey, TimeSpan? cacheDuration)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,12 +241,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">basePath</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">virtualPath</span></td>
         <td></td>
       </tr>

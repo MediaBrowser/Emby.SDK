@@ -17862,6 +17862,61 @@
       },
       "x-summary": "Gets items based on a query."
     },
+    "/Items/Access": {
+      "post": {
+        "tags": [
+          "UserLibraryService"
+        ],
+        "summary": "Updates user item access",
+        "description": "Requires authentication as user",
+        "operationId": "postItemsAccess",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "UpdateUserItemAccess",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLibrary.UpdateUserItemAccess"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Updates user item access"
+    },
     "/Items/Counts": {
       "get": {
         "tags": [
@@ -27594,6 +27649,93 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as administrator"
+      },
+      "x-summary": "Gets a list of users"
+    },
+    "/Users/ItemAccess": {
+      "get": {
+        "tags": [
+          "UserService"
+        ],
+        "summary": "Gets a list of users",
+        "description": "Requires authentication as user",
+        "operationId": "getUsersItemaccess",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "IsHidden",
+            "description": "Optional filter by IsHidden=true or false",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "IsDisabled",
+            "description": "Optional filter by IsDisabled=true or false",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "StartIndex",
+            "description": "Optional. The record index to start at. All items with a lower index will be dropped from the results.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Limit",
+            "description": "Optional. The maximum number of records to return",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "NameStartsWithOrGreater",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "SortOrder",
+            "description": "Sort Order - Ascending,Descending",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a QueryResult<UserDto> object.",
+            "schema": {
+              "$ref": "#/definitions/QueryResult_UserDto"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a list of users"
     },
@@ -59551,6 +59693,38 @@
       },
       "x-internal-ref-name": "Emby.Api.GetDirectoryContents"
     },
+    "UserLibrary.UpdateUserItemAccess": {
+      "type": "object",
+      "properties": {
+        "ItemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "UserIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ItemAccess": {
+          "$ref": "#/definitions/UserItemShareLevel"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.UserLibrary.UpdateUserItemAccess"
+    },
+    "UserItemShareLevel": {
+      "enum": [
+        "None",
+        "Read",
+        "Write",
+        "Manage",
+        "ManageDelete"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Dto.UserItemShareLevel"
+    },
     "ItemCounts": {
       "description": "Class LibrarySummary\r\n",
       "type": "object",
@@ -62676,6 +62850,9 @@
         },
         "HasConfiguredEasyPassword": {
           "type": "boolean"
+        },
+        "UserItemShareLevel": {
+          "$ref": "#/definitions/UserItemShareLevel"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.UserDto"
@@ -62961,6 +63138,9 @@
           "type": "boolean"
         },
         "AllowCameraUpload": {
+          "type": "boolean"
+        },
+        "AllowSharingPersonalItems": {
           "type": "boolean"
         }
       },
@@ -66586,6 +66766,13 @@
       }
     },
     {
+      "name": "UserLibraryService",
+      "externalDocs": {
+        "description": "API Documentation: Browsing the Library",
+        "url": "https://betadev.emby.media/doc/restapi/Browsing-the-Library.html"
+      }
+    },
+    {
       "name": "LibraryStructureService",
       "externalDocs": {
         "description": "API Reference: LibraryStructureService",
@@ -66744,13 +66931,6 @@
       "externalDocs": {
         "description": "API Reference: ItemRefreshService",
         "url": "https://betadev.emby.media/reference/RestAPI/ItemRefreshService.html"
-      }
-    },
-    {
-      "name": "UserLibraryService",
-      "externalDocs": {
-        "description": "API Documentation: Browsing the Library",
-        "url": "https://betadev.emby.media/doc/restapi/Browsing-the-Library.html"
       }
     },
     {

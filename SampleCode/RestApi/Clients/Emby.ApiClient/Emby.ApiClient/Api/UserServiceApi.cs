@@ -180,6 +180,58 @@ namespace Emby.ApiClient.Api
         /// Gets a list of users
         /// </summary>
         /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
+        public async Task<RestResponse<QueryResultUserDto>> GetUsersItemaccess (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+            var request = new RestRequest("/Users/ItemAccess", Method.Get);
+
+            if (isHidden != null)
+            {
+                request.AddQueryParameter("IsHidden", this.ApiClient.ParameterToString(isHidden));
+            }
+
+            if (isDisabled != null)
+            {
+                request.AddQueryParameter("IsDisabled", this.ApiClient.ParameterToString(isDisabled));
+            }
+
+            if (startIndex != null)
+            {
+                request.AddQueryParameter("StartIndex", this.ApiClient.ParameterToString(startIndex));
+            }
+
+            if (limit != null)
+            {
+                request.AddQueryParameter("Limit", this.ApiClient.ParameterToString(limit));
+            }
+
+            if (nameStartsWithOrGreater != null)
+            {
+                request.AddQueryParameter("NameStartsWithOrGreater", this.ApiClient.ParameterToString(nameStartsWithOrGreater));
+            }
+
+            if (sortOrder != null)
+            {
+                request.AddQueryParameter("SortOrder", this.ApiClient.ParameterToString(sortOrder));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<QueryResultUserDto>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
         /// Requires authentication as administrator
         /// </remarks>
         /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>

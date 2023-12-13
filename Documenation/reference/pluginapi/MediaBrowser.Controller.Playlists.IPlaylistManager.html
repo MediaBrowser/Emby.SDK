@@ -366,6 +366,58 @@
   
   
   <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItem_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItem*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItem_MediaBrowser_Controller_Playlists_Playlist_System_Int64_System_Int32_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItem(MediaBrowser.Controller.Playlists.Playlist,System.Int64,System.Int32)">MoveItem(Playlist, Int64, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task MoveItem(Playlist playlist, long entryId, int newIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Playlists.Playlist.html">Playlist</a></td>
+        <td><span class="parametername">playlist</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">entryId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">newIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItem_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItem*"></a>
   <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItem_System_Int64_System_Int64_System_Int32_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItem(System.Int64,System.Int64,System.Int32)">MoveItem(Int64, Int64, Int32)</h4>
   <div class="markdown level1 summary"><p>Moves the item.</p>
 </div>
@@ -417,6 +469,53 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Task.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_RemoveFromPlaylist_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.RemoveFromPlaylist*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_RemoveFromPlaylist_MediaBrowser_Controller_Playlists_Playlist_System_Int64___" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.RemoveFromPlaylist(MediaBrowser.Controller.Playlists.Playlist,System.Int64[])">RemoveFromPlaylist(Playlist, Int64[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task RemoveFromPlaylist(Playlist playlist, long[] entryIds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Playlists.Playlist.html">Playlist</a></td>
+        <td><span class="parametername">playlist</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="parametername">entryIds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

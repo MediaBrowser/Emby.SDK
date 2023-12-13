@@ -12,12 +12,13 @@
 import ApiClient from '../ApiClient';
 import ConnectUserLinkType from './ConnectUserLinkType';
 import UserConfiguration from './UserConfiguration';
+import UserItemShareLevel from './UserItemShareLevel';
 import UserPolicy from './UserPolicy';
 
 /**
 * The UserDto model module.
 * @module model/UserDto
-* @version 4.8.0.61
+* @version 4.8.0.62
 */
 export default class UserDto {
     /**
@@ -98,6 +99,9 @@ export default class UserDto {
             }
             if (data.hasOwnProperty('HasConfiguredEasyPassword')) {
                 obj['HasConfiguredEasyPassword'] = ApiClient.convertToType(data['HasConfiguredEasyPassword'], 'Boolean');
+            }
+            if (data.hasOwnProperty('UserItemShareLevel')) {
+                obj['UserItemShareLevel'] = UserItemShareLevel.constructFromObject(data['UserItemShareLevel']);
             }
         }
         return obj;
@@ -186,6 +190,10 @@ export default class UserDto {
     * @member {Boolean} HasConfiguredEasyPassword
     */
     'HasConfiguredEasyPassword' = undefined;
+    /**
+    * @member {module:model/UserItemShareLevel} UserItemShareLevel
+    */
+    'UserItemShareLevel' = undefined;
 
 
 

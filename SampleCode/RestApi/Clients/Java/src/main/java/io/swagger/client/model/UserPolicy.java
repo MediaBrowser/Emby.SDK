@@ -159,6 +159,9 @@ public class UserPolicy {
   @SerializedName("AllowCameraUpload")
   private Boolean allowCameraUpload = null;
 
+  @SerializedName("AllowSharingPersonalItems")
+  private Boolean allowSharingPersonalItems = null;
+
   public UserPolicy isAdministrator(Boolean isAdministrator) {
     this.isAdministrator = isAdministrator;
     return this;
@@ -1057,6 +1060,24 @@ public class UserPolicy {
     this.allowCameraUpload = allowCameraUpload;
   }
 
+  public UserPolicy allowSharingPersonalItems(Boolean allowSharingPersonalItems) {
+    this.allowSharingPersonalItems = allowSharingPersonalItems;
+    return this;
+  }
+
+   /**
+   * Get allowSharingPersonalItems
+   * @return allowSharingPersonalItems
+  **/
+  @Schema(description = "")
+  public Boolean isAllowSharingPersonalItems() {
+    return allowSharingPersonalItems;
+  }
+
+  public void setAllowSharingPersonalItems(Boolean allowSharingPersonalItems) {
+    this.allowSharingPersonalItems = allowSharingPersonalItems;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1111,12 +1132,13 @@ public class UserPolicy {
         Objects.equals(this.simultaneousStreamLimit, userPolicy.simultaneousStreamLimit) &&
         Objects.equals(this.enabledDevices, userPolicy.enabledDevices) &&
         Objects.equals(this.enableAllDevices, userPolicy.enableAllDevices) &&
-        Objects.equals(this.allowCameraUpload, userPolicy.allowCameraUpload);
+        Objects.equals(this.allowCameraUpload, userPolicy.allowCameraUpload) &&
+        Objects.equals(this.allowSharingPersonalItems, userPolicy.allowSharingPersonalItems);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices, allowCameraUpload);
+    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices, allowCameraUpload, allowSharingPersonalItems);
   }
 
 
@@ -1170,6 +1192,7 @@ public class UserPolicy {
     sb.append("    enabledDevices: ").append(toIndentedString(enabledDevices)).append("\n");
     sb.append("    enableAllDevices: ").append(toIndentedString(enableAllDevices)).append("\n");
     sb.append("    allowCameraUpload: ").append(toIndentedString(allowCameraUpload)).append("\n");
+    sb.append("    allowSharingPersonalItems: ").append(toIndentedString(allowSharingPersonalItems)).append("\n");
     sb.append("}");
     return sb.toString();
   }

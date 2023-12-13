@@ -297,6 +297,12 @@ namespace Emby.ApiClient.Model
         public bool? AllowCameraUpload { get; set; }
 
         /// <summary>
+        /// Gets or Sets AllowSharingPersonalItems
+        /// </summary>
+        /// <value>The AllowSharingPersonalItems.</value>
+        public bool? AllowSharingPersonalItems { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -349,6 +355,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  EnabledDevices: ").Append(EnabledDevices).Append("\n");
             sb.Append("  EnableAllDevices: ").Append(EnableAllDevices).Append("\n");
             sb.Append("  AllowCameraUpload: ").Append(AllowCameraUpload).Append("\n");
+            sb.Append("  AllowSharingPersonalItems: ").Append(AllowSharingPersonalItems).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -609,6 +616,11 @@ namespace Emby.ApiClient.Model
                     this.AllowCameraUpload == input.AllowCameraUpload ||
                     (this.AllowCameraUpload != null &&
                     this.AllowCameraUpload.Equals(input.AllowCameraUpload))
+                ) && 
+                (
+                    this.AllowSharingPersonalItems == input.AllowSharingPersonalItems ||
+                    (this.AllowSharingPersonalItems != null &&
+                    this.AllowSharingPersonalItems.Equals(input.AllowSharingPersonalItems))
                 );
         }
 
@@ -711,6 +723,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.EnableAllDevices.GetHashCode();
                 if (this.AllowCameraUpload != null)
                     hashCode = hashCode * 59 + this.AllowCameraUpload.GetHashCode();
+                if (this.AllowSharingPersonalItems != null)
+                    hashCode = hashCode * 59 + this.AllowSharingPersonalItems.GetHashCode();
                 return hashCode;
             }
         }

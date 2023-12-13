@@ -377,9 +377,11 @@ from embyclient-python-beta.models.user_action_type import UserActionType
 from embyclient-python-beta.models.user_configuration import UserConfiguration
 from embyclient-python-beta.models.user_dto import UserDto
 from embyclient-python-beta.models.user_item_data_dto import UserItemDataDto
+from embyclient-python-beta.models.user_item_share_level import UserItemShareLevel
 from embyclient-python-beta.models.user_library_add_tags import UserLibraryAddTags
 from embyclient-python-beta.models.user_library_official_rating_item import UserLibraryOfficialRatingItem
 from embyclient-python-beta.models.user_library_tag_item import UserLibraryTagItem
+from embyclient-python-beta.models.user_library_update_user_item_access import UserLibraryUpdateUserItemAccess
 from embyclient-python-beta.models.user_notification_info import UserNotificationInfo
 from embyclient-python-beta.models.user_policy import UserPolicy
 from embyclient-python-beta.models.validate_path import ValidatePath
