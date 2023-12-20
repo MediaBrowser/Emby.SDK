@@ -675,6 +675,34 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Leaves a shared item
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostItemsSharedLeave (UserLibraryLeaveSharedItems body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling UserLibraryServiceApi->PostItemsSharedLeave");
+            }
+            
+            var request = new RestRequest("/Items/Shared/Leave", Method.Post);
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Marks an item as a favorite
         /// </summary>
         /// <remarks>

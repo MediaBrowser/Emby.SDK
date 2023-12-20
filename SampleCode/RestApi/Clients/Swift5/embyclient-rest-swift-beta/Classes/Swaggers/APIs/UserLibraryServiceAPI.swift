@@ -524,7 +524,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -532,6 +531,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -1086,7 +1086,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -1094,6 +1093,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -1659,7 +1659,6 @@ open class UserLibraryServiceAPI {
     "GameSystem" : "GameSystem",
     "MusicVideoCount" : 6,
     "IsSeries" : true,
-    "CanMakePrivate" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
     "Bitrate" : 2,
@@ -1667,6 +1666,7 @@ open class UserLibraryServiceAPI {
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -2174,7 +2174,6 @@ open class UserLibraryServiceAPI {
     "GameSystem" : "GameSystem",
     "MusicVideoCount" : 6,
     "IsSeries" : true,
-    "CanMakePrivate" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
     "Bitrate" : 2,
@@ -2182,6 +2181,7 @@ open class UserLibraryServiceAPI {
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -2758,7 +2758,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -2766,6 +2765,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -3273,7 +3273,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -3281,6 +3280,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -3856,7 +3856,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -3864,6 +3863,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -4371,7 +4371,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -4379,6 +4378,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -4960,7 +4960,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -4968,6 +4967,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -5475,7 +5475,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -5483,6 +5482,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -6062,7 +6062,6 @@ open class UserLibraryServiceAPI {
   "GameSystem" : "GameSystem",
   "MusicVideoCount" : 6,
   "IsSeries" : true,
-  "CanMakePrivate" : true,
   "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
   "Subviews" : [ "Subviews", "Subviews" ],
   "Bitrate" : 2,
@@ -6070,6 +6069,7 @@ open class UserLibraryServiceAPI {
   "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
   "ParentThumbItemId" : "ParentThumbItemId",
   "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+  "CanLeaveContent" : true,
   "Type" : "Type",
   "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
   "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -6631,7 +6631,6 @@ open class UserLibraryServiceAPI {
     "GameSystem" : "GameSystem",
     "MusicVideoCount" : 6,
     "IsSeries" : true,
-    "CanMakePrivate" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
     "Bitrate" : 2,
@@ -6639,6 +6638,7 @@ open class UserLibraryServiceAPI {
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -7146,7 +7146,6 @@ open class UserLibraryServiceAPI {
     "GameSystem" : "GameSystem",
     "MusicVideoCount" : 6,
     "IsSeries" : true,
-    "CanMakePrivate" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
     "Bitrate" : 2,
@@ -7154,6 +7153,7 @@ open class UserLibraryServiceAPI {
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
@@ -7457,6 +7457,48 @@ open class UserLibraryServiceAPI {
         let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Leaves a shared item
+
+     - parameter body: (body) LeaveSharedItems 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postItemsSharedLeave(body: UserLibraryLeaveSharedItems, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postItemsSharedLeaveWithRequestBuilder(body: body).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Leaves a shared item
+     - POST /Items/Shared/Leave
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) LeaveSharedItems 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postItemsSharedLeaveWithRequestBuilder(body: UserLibraryLeaveSharedItems) -> RequestBuilder<Void> {
+        let path = "/Items/Shared/Leave"
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
     /**
      Marks an item as a favorite

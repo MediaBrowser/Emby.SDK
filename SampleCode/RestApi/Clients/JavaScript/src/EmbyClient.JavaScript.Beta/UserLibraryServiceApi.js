@@ -13,12 +13,13 @@ import ApiClient from "../ApiClient";
 import BaseItemDto from '../model/BaseItemDto';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 import UserItemDataDto from '../model/UserItemDataDto';
+import UserLibraryLeaveSharedItems from '../model/UserLibraryLeaveSharedItems';
 import UserLibraryUpdateUserItemAccess from '../model/UserLibraryUpdateUserItemAccess';
 
 /**
 * UserLibraryService service.
 * @module EmbyClient.JavaScript.Beta/UserLibraryServiceApi
-* @version 4.8.0.62
+* @version 4.8.0.63
 */
 export default class UserLibraryServiceApi {
 
@@ -568,6 +569,42 @@ export default class UserLibraryServiceApi {
 
       return this.apiClient.callApi(
         '/Items/{Id}/MakePublic', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsSharedLeave operation.
+     * @callback module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~postItemsSharedLeaveCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Leaves a shared item
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/UserLibraryServiceApi~postItemsSharedLeaveCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsSharedLeave() {
+      let postBody = body;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/Shared/Leave', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

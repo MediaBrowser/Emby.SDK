@@ -31,7 +31,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.8.0.62
+* @version 4.8.0.63
 */
 export default class BaseItemDto {
     /**
@@ -122,8 +122,8 @@ export default class BaseItemDto {
             if (data.hasOwnProperty('CanManageAccess')) {
                 obj['CanManageAccess'] = ApiClient.convertToType(data['CanManageAccess'], 'Boolean');
             }
-            if (data.hasOwnProperty('CanMakePrivate')) {
-                obj['CanMakePrivate'] = ApiClient.convertToType(data['CanMakePrivate'], 'Boolean');
+            if (data.hasOwnProperty('CanLeaveContent')) {
+                obj['CanLeaveContent'] = ApiClient.convertToType(data['CanLeaveContent'], 'Boolean');
             }
             if (data.hasOwnProperty('CanMakePublic')) {
                 obj['CanMakePublic'] = ApiClient.convertToType(data['CanMakePublic'], 'Boolean');
@@ -615,9 +615,9 @@ export default class BaseItemDto {
     */
     'CanManageAccess' = undefined;
     /**
-    * @member {Boolean} CanMakePrivate
+    * @member {Boolean} CanLeaveContent
     */
-    'CanMakePrivate' = undefined;
+    'CanLeaveContent' = undefined;
     /**
     * @member {Boolean} CanMakePublic
     */

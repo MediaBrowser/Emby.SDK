@@ -4822,6 +4822,58 @@ public int Width { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CanDelete_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDelete*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDelete(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Dto.UserItemShareLevel,MediaBrowser.Controller.Entities.Folder[])">CanDelete(User, UserItemShareLevel, Folder[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanDelete(User user, UserItemShareLevel shareLevel, Folder[] collectionFolders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>[]</td>
+        <td><span class="parametername">collectionFolders</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_CanDownload_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDownload*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanDownload" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDownload">CanDownload()</h4>
   <div class="markdown level1 summary"></div>
@@ -4922,6 +4974,53 @@ public int Width { get; set; }</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual bool CanDownloadAsSingleMedia()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CanLeaveSharedContent_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanLeaveSharedContent*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanLeaveSharedContent_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanLeaveSharedContent(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Dto.UserItemShareLevel)">CanLeaveSharedContent(User, UserItemShareLevel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CanLeaveSharedContent(User user, UserItemShareLevel shareLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -7516,7 +7615,7 @@ This overload is for CoverArt</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserItemShareLevel? GetShareLevel(User user)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual UserItemShareLevel GetShareLevel(User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7545,7 +7644,7 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a>&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -8070,7 +8169,7 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><span class="xref">System.ArgumentException</span></td>
         <td><p>Backdrops should be accessed using Item.Backdrops</p>
 </td>
       </tr>
@@ -8129,12 +8228,12 @@ This overload is for CoverArt</p>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsAuthorizedToDelete*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.Folder[])">IsAuthorizedToDelete(User, Folder[])</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Dto.UserItemShareLevel,MediaBrowser.Controller.Entities.Folder[])">IsAuthorizedToDelete(User, UserItemShareLevel, Folder[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool IsAuthorizedToDelete(User user, Folder[] collectionFolders)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool IsAuthorizedToDelete(User user, UserItemShareLevel shareLevel, Folder[] collectionFolders)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -8149,6 +8248,11 @@ This overload is for CoverArt</p>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
         <td></td>
       </tr>
       <tr>
@@ -8969,7 +9073,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -9026,7 +9130,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -9075,7 +9179,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -9119,7 +9223,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -9729,7 +9833,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a></div>
+  <div><span class="xref">System.Object.ToString()</span></div>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_TriggerOnRefreshComplete_" data-uid="MediaBrowser.Controller.Entities.BaseItem.TriggerOnRefreshComplete*"></a>
@@ -10027,7 +10131,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -10086,7 +10190,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>

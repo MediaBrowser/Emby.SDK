@@ -378,9 +378,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AssertHasMinimumShareLevel_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_">BaseItem.AssertHasMinimumShareLevel(User, UserItemShareLevel)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetShareLevel_MediaBrowser_Controller_Entities_User_">BaseItem.GetShareLevel(User)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanMakePublic_MediaBrowser_Controller_Entities_User_">BaseItem.CanMakePublic(User)</a>
     </div>
     <div>
@@ -595,6 +592,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(User, Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(User, UserItemShareLevel, Folder[])</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload">BaseItem.CanDownload()</a>
@@ -1365,6 +1365,55 @@ protected override bool ValidatesChildren { get; }</code></pre>
   </h3>
   
   
+  <a id="MediaBrowser_Controller_Playlists_Playlist_CanLeaveSharedContent_" data-uid="MediaBrowser.Controller.Playlists.Playlist.CanLeaveSharedContent*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_Playlist_CanLeaveSharedContent_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_" data-uid="MediaBrowser.Controller.Playlists.Playlist.CanLeaveSharedContent(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Dto.UserItemShareLevel)">CanLeaveSharedContent(User, UserItemShareLevel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanLeaveSharedContent(User user, UserItemShareLevel shareLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanLeaveSharedContent_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_">BaseItem.CanLeaveSharedContent(User, UserItemShareLevel)</a></div>
+  
+  
   <a id="MediaBrowser_Controller_Playlists_Playlist_GetDefaultPrimaryImageAspectRatio_" data-uid="MediaBrowser.Controller.Playlists.Playlist.GetDefaultPrimaryImageAspectRatio*"></a>
   <h4 id="MediaBrowser_Controller_Playlists_Playlist_GetDefaultPrimaryImageAspectRatio" data-uid="MediaBrowser.Controller.Playlists.Playlist.GetDefaultPrimaryImageAspectRatio">GetDefaultPrimaryImageAspectRatio()</h4>
   <div class="markdown level1 summary"></div>
@@ -1581,13 +1630,13 @@ protected override bool ValidatesChildren { get; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Playlists_Playlist_IsAuthorizedToDelete_" data-uid="MediaBrowser.Controller.Playlists.Playlist.IsAuthorizedToDelete*"></a>
-  <h4 id="MediaBrowser_Controller_Playlists_Playlist_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Playlists.Playlist.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.Folder[])">IsAuthorizedToDelete(User, Folder[])</h4>
+  <a id="MediaBrowser_Controller_Playlists_Playlist_GetShareLevel_" data-uid="MediaBrowser.Controller.Playlists.Playlist.GetShareLevel*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_Playlist_GetShareLevel_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Playlists.Playlist.GetShareLevel(MediaBrowser.Controller.Entities.User)">GetShareLevel(User)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsAuthorizedToDelete(User user, Folder[] collectionFolders)</code></pre>
+    <pre><code class="lang-csharp hljs">public override UserItemShareLevel GetShareLevel(User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1602,6 +1651,55 @@ protected override bool ValidatesChildren { get; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetShareLevel_MediaBrowser_Controller_Entities_User_">BaseItem.GetShareLevel(User)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Playlists_Playlist_IsAuthorizedToDelete_" data-uid="MediaBrowser.Controller.Playlists.Playlist.IsAuthorizedToDelete*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_Playlist_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Playlists.Playlist.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Dto.UserItemShareLevel,MediaBrowser.Controller.Entities.Folder[])">IsAuthorizedToDelete(User, UserItemShareLevel, Folder[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsAuthorizedToDelete(User user, UserItemShareLevel shareLevel, Folder[] collectionFolders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1627,7 +1725,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, Folder[])</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, UserItemShareLevel, Folder[])</a></div>
   
   
   <a id="MediaBrowser_Controller_Playlists_Playlist_IsInSpecialUserPlaylistsFolder_" data-uid="MediaBrowser.Controller.Playlists.Playlist.IsInSpecialUserPlaylistsFolder*"></a>

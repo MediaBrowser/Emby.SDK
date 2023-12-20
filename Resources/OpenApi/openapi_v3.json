@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.62"
+    "version": "4.8.0.63"
   },
   "servers": [
     {
@@ -48474,6 +48474,62 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Items/Shared/Leave": {
+      "summary": "Leaves a shared item",
+      "post": {
+        "tags": [
+          "UserLibraryService"
+        ],
+        "summary": "Leaves a shared item",
+        "description": "Requires authentication as user",
+        "operationId": "postItemsSharedLeave",
+        "requestBody": {
+          "description": "LeaveSharedItems",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.LeaveSharedItems"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.LeaveSharedItems"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Items/{Id}/InstantMix": {
       "summary": "Creates an instant playlist based on a given item",
       "get": {
@@ -79329,7 +79385,7 @@
             "type": "boolean",
             "nullable": true
           },
-          "CanMakePrivate": {
+          "CanLeaveContent": {
             "type": "boolean",
             "nullable": true
           },
@@ -88403,6 +88459,21 @@
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Dto.MetadataEditorInfo"
+      },
+      "UserLibrary.LeaveSharedItems": {
+        "type": "object",
+        "properties": {
+          "ItemIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "UserId": {
+            "type": "string"
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.UserLibrary.LeaveSharedItems"
       },
       "Library.DeleteInfo": {
         "type": "object",

@@ -23,7 +23,7 @@ namespace EmbyClient.Dotnet.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "4.8.0.62";
+        public const string Version = "4.8.0.63";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -108,7 +108,7 @@ namespace EmbyClient.Dotnet.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "/4.8.0.62/dotnet";
+            UserAgent = "/4.8.0.63/dotnet";
             BasePath = "http://emby.media/emby";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -180,7 +180,7 @@ namespace EmbyClient.Dotnet.Client
             string tempFolderPath = null,
             string dateTimeFormat = null,
             int timeout = 100000,
-            string userAgent = "/4.8.0.62/dotnet"
+            string userAgent = "/4.8.0.63/dotnet"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -431,8 +431,8 @@ namespace EmbyClient.Dotnet.Client
             String report = "C# SDK (EmbyClient.Dotnet) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
-            report += "    Version of the API: 4.8.0.62\n";
-            report += "    SDK Package Version: 4.8.0.62\n";
+            report += "    Version of the API: 4.8.0.63\n";
+            report += "    SDK Package Version: 4.8.0.63\n";
 
             return report;
         }

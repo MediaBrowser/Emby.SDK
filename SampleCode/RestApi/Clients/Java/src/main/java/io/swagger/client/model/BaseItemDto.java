@@ -106,8 +106,8 @@ public class BaseItemDto {
   @SerializedName("CanManageAccess")
   private Boolean canManageAccess = null;
 
-  @SerializedName("CanMakePrivate")
-  private Boolean canMakePrivate = null;
+  @SerializedName("CanLeaveContent")
+  private Boolean canLeaveContent = null;
 
   @SerializedName("CanMakePublic")
   private Boolean canMakePublic = null;
@@ -880,22 +880,22 @@ public class BaseItemDto {
     this.canManageAccess = canManageAccess;
   }
 
-  public BaseItemDto canMakePrivate(Boolean canMakePrivate) {
-    this.canMakePrivate = canMakePrivate;
+  public BaseItemDto canLeaveContent(Boolean canLeaveContent) {
+    this.canLeaveContent = canLeaveContent;
     return this;
   }
 
    /**
-   * Get canMakePrivate
-   * @return canMakePrivate
+   * Get canLeaveContent
+   * @return canLeaveContent
   **/
   @Schema(description = "")
-  public Boolean isCanMakePrivate() {
-    return canMakePrivate;
+  public Boolean isCanLeaveContent() {
+    return canLeaveContent;
   }
 
-  public void setCanMakePrivate(Boolean canMakePrivate) {
-    this.canMakePrivate = canMakePrivate;
+  public void setCanLeaveContent(Boolean canLeaveContent) {
+    this.canLeaveContent = canLeaveContent;
   }
 
   public BaseItemDto canMakePublic(Boolean canMakePublic) {
@@ -3471,7 +3471,7 @@ public class BaseItemDto {
         Objects.equals(this.supportsSync, baseItemDto.supportsSync) &&
         Objects.equals(this.syncStatus, baseItemDto.syncStatus) &&
         Objects.equals(this.canManageAccess, baseItemDto.canManageAccess) &&
-        Objects.equals(this.canMakePrivate, baseItemDto.canMakePrivate) &&
+        Objects.equals(this.canLeaveContent, baseItemDto.canLeaveContent) &&
         Objects.equals(this.canMakePublic, baseItemDto.canMakePublic) &&
         Objects.equals(this.container, baseItemDto.container) &&
         Objects.equals(this.sortName, baseItemDto.sortName) &&
@@ -3607,7 +3607,7 @@ public class BaseItemDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, syncStatus, canManageAccess, canMakePrivate, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
+    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, syncStatus, canManageAccess, canLeaveContent, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
   }
 
 
@@ -3637,7 +3637,7 @@ public class BaseItemDto {
     sb.append("    supportsSync: ").append(toIndentedString(supportsSync)).append("\n");
     sb.append("    syncStatus: ").append(toIndentedString(syncStatus)).append("\n");
     sb.append("    canManageAccess: ").append(toIndentedString(canManageAccess)).append("\n");
-    sb.append("    canMakePrivate: ").append(toIndentedString(canMakePrivate)).append("\n");
+    sb.append("    canLeaveContent: ").append(toIndentedString(canLeaveContent)).append("\n");
     sb.append("    canMakePublic: ").append(toIndentedString(canMakePublic)).append("\n");
     sb.append("    container: ").append(toIndentedString(container)).append("\n");
     sb.append("    sortName: ").append(toIndentedString(sortName)).append("\n");

@@ -8,6 +8,7 @@ package EmbyClient.Java.Beta;
 import io.swagger.client.model.BaseItemDto;
 import io.swagger.client.model.QueryResultBaseItemDto;
 import io.swagger.client.model.UserItemDataDto;
+import io.swagger.client.model.UserLibraryLeaveSharedItems;
 import io.swagger.client.model.UserLibraryUpdateUserItemAccess;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -258,6 +259,21 @@ public class UserLibraryServiceApiTest {
     public void postItemsByIdMakepublicTest() throws Exception {
         String id = null;
         api.postItemsByIdMakepublic(id);
+
+        // TODO: test validations
+    }
+    /**
+     * Leaves a shared item
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postItemsSharedLeaveTest() throws Exception {
+        UserLibraryLeaveSharedItems body = null;
+        api.postItemsSharedLeave(body);
 
         // TODO: test validations
     }

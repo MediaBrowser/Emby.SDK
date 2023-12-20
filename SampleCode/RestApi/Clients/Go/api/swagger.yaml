@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.62
+  version: 4.8.0.63
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -39599,6 +39599,41 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /Items/Shared/Leave:
+    summary: Leaves a shared item
+    post:
+      tags:
+      - UserLibraryService
+      summary: Leaves a shared item
+      description: Requires authentication as user
+      operationId: postItemsSharedLeave
+      requestBody:
+        description: LeaveSharedItems
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.LeaveSharedItems'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.LeaveSharedItems'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/InstantMix:
     summary: Creates an instant playlist based on a given item
     get:
@@ -63234,7 +63269,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -63246,6 +63280,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -63768,7 +63803,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -63780,6 +63814,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -63988,7 +64023,7 @@ components:
         CanManageAccess:
           type: boolean
           nullable: true
-        CanMakePrivate:
+        CanLeaveContent:
           type: boolean
           nullable: true
         CanMakePublic:
@@ -64847,7 +64882,6 @@ components:
         GameSystem: GameSystem
         MusicVideoCount: 6
         IsSeries: true
-        CanMakePrivate: true
         ProductionLocations:
         - ProductionLocations
         - ProductionLocations
@@ -64859,6 +64893,7 @@ components:
         SeriesPrimaryImageTag: SeriesPrimaryImageTag
         ParentThumbItemId: ParentThumbItemId
         PreferredMetadataLanguage: PreferredMetadataLanguage
+        CanLeaveContent: true
         Type: Type
         BackdropImageTags:
         - BackdropImageTags
@@ -66985,7 +67020,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -66997,6 +67031,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -70434,7 +70469,6 @@ components:
             GameSystem: GameSystem
             MusicVideoCount: 6
             IsSeries: true
-            CanMakePrivate: true
             ProductionLocations:
             - ProductionLocations
             - ProductionLocations
@@ -70446,6 +70480,7 @@ components:
             SeriesPrimaryImageTag: SeriesPrimaryImageTag
             ParentThumbItemId: ParentThumbItemId
             PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
             Type: Type
             BackdropImageTags:
             - BackdropImageTags
@@ -70972,7 +71007,6 @@ components:
             GameSystem: GameSystem
             MusicVideoCount: 6
             IsSeries: true
-            CanMakePrivate: true
             ProductionLocations:
             - ProductionLocations
             - ProductionLocations
@@ -70984,6 +71018,7 @@ components:
             SeriesPrimaryImageTag: SeriesPrimaryImageTag
             ParentThumbItemId: ParentThumbItemId
             PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
             Type: Type
             BackdropImageTags:
             - BackdropImageTags
@@ -71520,7 +71555,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -71532,6 +71566,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -72181,7 +72216,6 @@ components:
             GameSystem: GameSystem
             MusicVideoCount: 6
             IsSeries: true
-            CanMakePrivate: true
             ProductionLocations:
             - ProductionLocations
             - ProductionLocations
@@ -72193,6 +72227,7 @@ components:
             SeriesPrimaryImageTag: SeriesPrimaryImageTag
             ParentThumbItemId: ParentThumbItemId
             PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
             Type: Type
             BackdropImageTags:
             - BackdropImageTags
@@ -72743,7 +72778,6 @@ components:
             GameSystem: GameSystem
             MusicVideoCount: 6
             IsSeries: true
-            CanMakePrivate: true
             ProductionLocations:
             - ProductionLocations
             - ProductionLocations
@@ -72755,6 +72789,7 @@ components:
             SeriesPrimaryImageTag: SeriesPrimaryImageTag
             ParentThumbItemId: ParentThumbItemId
             PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
             Type: Type
             BackdropImageTags:
             - BackdropImageTags
@@ -73389,7 +73424,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -73401,6 +73435,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -74495,7 +74530,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -74507,6 +74541,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -75029,7 +75064,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -75041,6 +75075,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -78819,7 +78854,6 @@ components:
             GameSystem: GameSystem
             MusicVideoCount: 6
             IsSeries: true
-            CanMakePrivate: true
             ProductionLocations:
             - ProductionLocations
             - ProductionLocations
@@ -78831,6 +78865,7 @@ components:
             SeriesPrimaryImageTag: SeriesPrimaryImageTag
             ParentThumbItemId: ParentThumbItemId
             PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
             Type: Type
             BackdropImageTags:
             - BackdropImageTags
@@ -80993,6 +81028,16 @@ components:
           Name: Name
           UrlFormatString: UrlFormatString
       x-internal-ref-name: MediaBrowser.Model.Dto.MetadataEditorInfo
+    UserLibrary.LeaveSharedItems:
+      type: object
+      properties:
+        ItemIds:
+          type: array
+          items:
+            type: string
+        UserId:
+          type: string
+      x-internal-ref-name: Emby.Api.UserLibrary.LeaveSharedItems
     Library.DeleteInfo:
       type: object
       properties:
@@ -81397,7 +81442,6 @@ components:
             GameSystem: GameSystem
             MusicVideoCount: 6
             IsSeries: true
-            CanMakePrivate: true
             ProductionLocations:
             - ProductionLocations
             - ProductionLocations
@@ -81409,6 +81453,7 @@ components:
             SeriesPrimaryImageTag: SeriesPrimaryImageTag
             ParentThumbItemId: ParentThumbItemId
             PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
             Type: Type
             BackdropImageTags:
             - BackdropImageTags
@@ -81931,7 +81976,6 @@ components:
             GameSystem: GameSystem
             MusicVideoCount: 6
             IsSeries: true
-            CanMakePrivate: true
             ProductionLocations:
             - ProductionLocations
             - ProductionLocations
@@ -81943,6 +81987,7 @@ components:
             SeriesPrimaryImageTag: SeriesPrimaryImageTag
             ParentThumbItemId: ParentThumbItemId
             PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
             Type: Type
             BackdropImageTags:
             - BackdropImageTags
@@ -82487,7 +82532,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -82499,6 +82543,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -83021,7 +83066,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -83033,6 +83077,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags
@@ -85010,7 +85055,6 @@ components:
           GameSystem: GameSystem
           MusicVideoCount: 6
           IsSeries: true
-          CanMakePrivate: true
           ProductionLocations:
           - ProductionLocations
           - ProductionLocations
@@ -85022,6 +85066,7 @@ components:
           SeriesPrimaryImageTag: SeriesPrimaryImageTag
           ParentThumbItemId: ParentThumbItemId
           PreferredMetadataLanguage: PreferredMetadataLanguage
+          CanLeaveContent: true
           Type: Type
           BackdropImageTags:
           - BackdropImageTags

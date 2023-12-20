@@ -40,7 +40,7 @@ type BaseItemDto struct {
 	SupportsSync bool `json:"SupportsSync,omitempty"`
 	SyncStatus *SyncJobItemStatus `json:"SyncStatus,omitempty"`
 	CanManageAccess bool `json:"CanManageAccess,omitempty"`
-	CanMakePrivate bool `json:"CanMakePrivate,omitempty"`
+	CanLeaveContent bool `json:"CanLeaveContent,omitempty"`
 	CanMakePublic bool `json:"CanMakePublic,omitempty"`
 	Container string `json:"Container,omitempty"`
 	// The name of the sort.

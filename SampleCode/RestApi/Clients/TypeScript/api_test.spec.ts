@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.62
+ * OpenAPI spec version: 4.8.0.63
  * 
  *
  * NOTE: This file is auto generated.
@@ -6884,6 +6884,10 @@ describe("UserLibraryServiceApi", () => {
   test("postItemsByIdMakepublic", () => {
     const id: string = "id_example"
     return expect(instance.postItemsByIdMakepublic(id, {})).resolves.toBe(null)
+  })
+  test("postItemsSharedLeave", () => {
+    const body: api.UserLibraryLeaveSharedItems = undefined
+    return expect(instance.postItemsSharedLeave(body, {})).resolves.toBe(null)
   })
   test("postUsersByUseridFavoriteitemsById", () => {
     const userId: string = "userId_example"

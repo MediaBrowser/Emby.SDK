@@ -310,6 +310,7 @@ import UserDto from './model/UserDto';
 import UserItemDataDto from './model/UserItemDataDto';
 import UserItemShareLevel from './model/UserItemShareLevel';
 import UserLibraryAddTags from './model/UserLibraryAddTags';
+import UserLibraryLeaveSharedItems from './model/UserLibraryLeaveSharedItems';
 import UserLibraryOfficialRatingItem from './model/UserLibraryOfficialRatingItem';
 import UserLibraryTagItem from './model/UserLibraryTagItem';
 import UserLibraryUpdateUserItemAccess from './model/UserLibraryUpdateUserItemAccess';
@@ -418,7 +419,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.62
+* @version 4.8.0.63
 */
 export {
     /**
@@ -2226,6 +2227,12 @@ export {
      * @property {module:model/UserLibraryAddTags}
      */
     UserLibraryAddTags,
+
+    /**
+     * The UserLibraryLeaveSharedItems model constructor.
+     * @property {module:model/UserLibraryLeaveSharedItems}
+     */
+    UserLibraryLeaveSharedItems,
 
     /**
      * The UserLibraryOfficialRatingItem model constructor.

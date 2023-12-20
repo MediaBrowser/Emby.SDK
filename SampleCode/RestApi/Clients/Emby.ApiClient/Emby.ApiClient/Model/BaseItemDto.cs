@@ -153,10 +153,10 @@ namespace Emby.ApiClient.Model
         public bool? CanManageAccess { get; set; }
 
         /// <summary>
-        /// Gets or Sets CanMakePrivate
+        /// Gets or Sets CanLeaveContent
         /// </summary>
-        /// <value>The CanMakePrivate.</value>
-        public bool? CanMakePrivate { get; set; }
+        /// <value>The CanLeaveContent.</value>
+        public bool? CanLeaveContent { get; set; }
 
         /// <summary>
         /// Gets or Sets CanMakePublic
@@ -973,7 +973,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  SupportsSync: ").Append(SupportsSync).Append("\n");
             sb.Append("  SyncStatus: ").Append(SyncStatus).Append("\n");
             sb.Append("  CanManageAccess: ").Append(CanManageAccess).Append("\n");
-            sb.Append("  CanMakePrivate: ").Append(CanMakePrivate).Append("\n");
+            sb.Append("  CanLeaveContent: ").Append(CanLeaveContent).Append("\n");
             sb.Append("  CanMakePublic: ").Append(CanMakePublic).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
             sb.Append("  SortName: ").Append(SortName).Append("\n");
@@ -1236,9 +1236,9 @@ namespace Emby.ApiClient.Model
                     this.CanManageAccess.Equals(input.CanManageAccess))
                 ) && 
                 (
-                    this.CanMakePrivate == input.CanMakePrivate ||
-                    (this.CanMakePrivate != null &&
-                    this.CanMakePrivate.Equals(input.CanMakePrivate))
+                    this.CanLeaveContent == input.CanLeaveContent ||
+                    (this.CanLeaveContent != null &&
+                    this.CanLeaveContent.Equals(input.CanLeaveContent))
                 ) && 
                 (
                     this.CanMakePublic == input.CanMakePublic ||
@@ -1971,8 +1971,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.SyncStatus.GetHashCode();
                 if (this.CanManageAccess != null)
                     hashCode = hashCode * 59 + this.CanManageAccess.GetHashCode();
-                if (this.CanMakePrivate != null)
-                    hashCode = hashCode * 59 + this.CanMakePrivate.GetHashCode();
+                if (this.CanLeaveContent != null)
+                    hashCode = hashCode * 59 + this.CanLeaveContent.GetHashCode();
                 if (this.CanMakePublic != null)
                     hashCode = hashCode * 59 + this.CanMakePublic.GetHashCode();
                 if (this.Container != null)

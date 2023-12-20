@@ -388,6 +388,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetShareLevel_MediaBrowser_Controller_Entities_User_">BaseItem.GetShareLevel(User)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanLeaveSharedContent_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_">BaseItem.CanLeaveSharedContent(User, UserItemShareLevel)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanMakePublic_MediaBrowser_Controller_Entities_User_">BaseItem.CanMakePublic(User)</a>
     </div>
     <div>
@@ -593,6 +596,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(User, Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(User, UserItemShareLevel, Folder[])</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload">BaseItem.CanDownload()</a>
@@ -1768,12 +1774,12 @@ protected override bool ValidatesChildren { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BoxSet_IsAuthorizedToDelete_" data-uid="MediaBrowser.Controller.Entities.BoxSet.IsAuthorizedToDelete*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BoxSet_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Entities.BoxSet.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.Folder[])">IsAuthorizedToDelete(User, Folder[])</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BoxSet_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Entities.BoxSet.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Dto.UserItemShareLevel,MediaBrowser.Controller.Entities.Folder[])">IsAuthorizedToDelete(User, UserItemShareLevel, Folder[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsAuthorizedToDelete(User user, Folder[] collectionFolders)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool IsAuthorizedToDelete(User user, UserItemShareLevel shareLevel, Folder[] collectionFolders)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1788,6 +1794,11 @@ protected override bool ValidatesChildren { get; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a></td>
+        <td><span class="parametername">shareLevel</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1813,7 +1824,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, Folder[])</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, UserItemShareLevel, Folder[])</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>

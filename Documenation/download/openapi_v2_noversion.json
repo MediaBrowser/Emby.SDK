@@ -32997,6 +32997,61 @@
       },
       "x-summary": "Makes an item private"
     },
+    "/Items/Shared/Leave": {
+      "post": {
+        "tags": [
+          "UserLibraryService"
+        ],
+        "summary": "Leaves a shared item",
+        "description": "Requires authentication as user",
+        "operationId": "postItemsSharedLeave",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "LeaveSharedItems",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLibrary.LeaveSharedItems"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Leaves a shared item"
+    },
     "/Items/{Id}/InstantMix": {
       "get": {
         "tags": [
@@ -56303,7 +56358,7 @@
         "CanManageAccess": {
           "type": "boolean"
         },
-        "CanMakePrivate": {
+        "CanLeaveContent": {
           "type": "boolean"
         },
         "CanMakePublic": {
@@ -65159,6 +65214,21 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.MetadataEditorInfo"
+    },
+    "UserLibrary.LeaveSharedItems": {
+      "type": "object",
+      "properties": {
+        "ItemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "UserId": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.UserLibrary.LeaveSharedItems"
     },
     "Library.DeleteInfo": {
       "type": "object",
