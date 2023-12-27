@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The GlobalizationLocalizatonOption model module.
 * @module model/GlobalizationLocalizatonOption
-* @version 4.8.0.63
+* @version 4.8.0.64
 */
 export default class GlobalizationLocalizatonOption {
     /**

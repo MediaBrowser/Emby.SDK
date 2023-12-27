@@ -23,7 +23,7 @@ import SessionSessionInfo from '../model/SessionSessionInfo';
 /**
 * SessionsService service.
 * @module EmbyClient.JavaScript.Beta/SessionsServiceApi
-* @version 4.8.0.63
+* @version 4.8.0.64
 */
 export default class SessionsServiceApi {
 

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The PluginsPluginInfo model module.
 * @module model/PluginsPluginInfo
-* @version 4.8.0.63
+* @version 4.8.0.64
 */
 export default class PluginsPluginInfo {
     /**

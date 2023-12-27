@@ -15,7 +15,7 @@ import SubtitleDeliveryMethod from './SubtitleDeliveryMethod';
 /**
 * The SubtitleProfile model module.
 * @module model/SubtitleProfile
-* @version 4.8.0.63
+* @version 4.8.0.64
 */
 export default class SubtitleProfile {
     /**

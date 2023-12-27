@@ -15,7 +15,7 @@ import FeatureInfo from '../model/FeatureInfo';
 /**
 * FeatureService service.
 * @module EmbyClient.JavaScript.Beta/FeatureServiceApi
-* @version 4.8.0.63
+* @version 4.8.0.64
 */
 export default class FeatureServiceApi {
 
