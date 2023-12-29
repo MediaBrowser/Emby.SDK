@@ -186,12 +186,12 @@
   
   
   <a id="MediaBrowser_Controller_Session_SessionInfo__ctor_" data-uid="MediaBrowser.Controller.Session.SessionInfo.#ctor*"></a>
-  <h4 id="MediaBrowser_Controller_Session_SessionInfo__ctor_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Model_Logging_ILogger_MediaBrowser_Controller_Library_IMediaSourceManager_" data-uid="MediaBrowser.Controller.Session.SessionInfo.#ctor(MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Model.Logging.ILogger,MediaBrowser.Controller.Library.IMediaSourceManager)">SessionInfo(ISessionManager, ILogger, IMediaSourceManager)</h4>
+  <h4 id="MediaBrowser_Controller_Session_SessionInfo__ctor_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Model_Logging_ILogger_" data-uid="MediaBrowser.Controller.Session.SessionInfo.#ctor(MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Model.Logging.ILogger)">SessionInfo(ISessionManager, ILogger)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SessionInfo(ISessionManager sessionManager, ILogger logger, IMediaSourceManager mediaSourceManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public SessionInfo(ISessionManager sessionManager, ILogger logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,11 +211,6 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Logging.ILogger.html">ILogger</a></td>
         <td><span class="parametername">logger</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a></td>
-        <td><span class="parametername">mediaSourceManager</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -442,7 +437,7 @@ public ClientCapabilities Capabilities { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public BaseItem FullNowPlayingItem { get; set; }</code></pre>
+public BaseItem FullNowPlayingItem { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -620,34 +615,6 @@ public bool IsActive { get; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Session_SessionInfo_LastPingTime_" data-uid="MediaBrowser.Controller.Session.SessionInfo.LastPingTime*"></a>
-  <h4 id="MediaBrowser_Controller_Session_SessionInfo_LastPingTime" data-uid="MediaBrowser.Controller.Session.SessionInfo.LastPingTime">LastPingTime</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the last playback check in.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public DateTimeOffset LastPingTime { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
-        <td><p>The last playback check in.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Session_SessionInfo_NowPlayingItem_" data-uid="MediaBrowser.Controller.Session.SessionInfo.NowPlayingItem*"></a>
   <h4 id="MediaBrowser_Controller_Session_SessionInfo_NowPlayingItem" data-uid="MediaBrowser.Controller.Session.SessionInfo.NowPlayingItem">NowPlayingItem</h4>
   <div class="markdown level1 summary"><p>Gets or sets the now playing item.</p>
@@ -655,7 +622,7 @@ public DateTimeOffset LastPingTime { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BaseItemDto NowPlayingItem { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public BaseItemDto NowPlayingItem { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -809,7 +776,7 @@ public QueueItem[] NowPlayingQueue { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlayerStateInfo PlayState { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public PlayerStateInfo PlayState { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -991,7 +958,7 @@ public ISessionController[] SessionControllers { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TranscodingInfo TranscodingInfo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TranscodingInfo TranscodingInfo { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1253,6 +1220,90 @@ public long UserInternalId { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Session_SessionInfo_GetOrAddPlaySessionInfo_" data-uid="MediaBrowser.Controller.Session.SessionInfo.GetOrAddPlaySessionInfo*"></a>
+  <h4 id="MediaBrowser_Controller_Session_SessionInfo_GetOrAddPlaySessionInfo_MediaBrowser_Model_Session_PlaybackProgressInfo_" data-uid="MediaBrowser.Controller.Session.SessionInfo.GetOrAddPlaySessionInfo(MediaBrowser.Model.Session.PlaybackProgressInfo)">GetOrAddPlaySessionInfo(PlaybackProgressInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlaySessionInfo GetOrAddPlaySessionInfo(PlaybackProgressInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Session.PlaybackProgressInfo.html">PlaybackProgressInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.PlaySessionInfo.html">PlaySessionInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Session_SessionInfo_GetPlaySessionInfo_" data-uid="MediaBrowser.Controller.Session.SessionInfo.GetPlaySessionInfo*"></a>
+  <h4 id="MediaBrowser_Controller_Session_SessionInfo_GetPlaySessionInfo_System_String_" data-uid="MediaBrowser.Controller.Session.SessionInfo.GetPlaySessionInfo(System.String)">GetPlaySessionInfo(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlaySessionInfo GetPlaySessionInfo(string playSessionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.PlaySessionInfo.html">PlaySessionInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Session_SessionInfo_IsControllableByUser_" data-uid="MediaBrowser.Controller.Session.SessionInfo.IsControllableByUser*"></a>
   <h4 id="MediaBrowser_Controller_Session_SessionInfo_IsControllableByUser_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Session.SessionInfo.IsControllableByUser(MediaBrowser.Controller.Entities.User,System.Boolean)">IsControllableByUser(User, Boolean)</h4>
   <div class="markdown level1 summary"></div>
@@ -1327,6 +1378,87 @@ public long UserInternalId { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Session_SessionInfo_RegisterPlaySession_" data-uid="MediaBrowser.Controller.Session.SessionInfo.RegisterPlaySession*"></a>
+  <h4 id="MediaBrowser_Controller_Session_SessionInfo_RegisterPlaySession_MediaBrowser_Model_Session_PlaybackProgressInfo_" data-uid="MediaBrowser.Controller.Session.SessionInfo.RegisterPlaySession(MediaBrowser.Model.Session.PlaybackProgressInfo)">RegisterPlaySession(PlaybackProgressInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterPlaySession(PlaybackProgressInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Session.PlaybackProgressInfo.html">PlaybackProgressInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Session_SessionInfo_RemovePlaySession_" data-uid="MediaBrowser.Controller.Session.SessionInfo.RemovePlaySession*"></a>
+  <h4 id="MediaBrowser_Controller_Session_SessionInfo_RemovePlaySession_MediaBrowser_Controller_Session_PlaySessionInfo_" data-uid="MediaBrowser.Controller.Session.SessionInfo.RemovePlaySession(MediaBrowser.Controller.Session.PlaySessionInfo)">RemovePlaySession(PlaySessionInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemovePlaySession(PlaySessionInfo playSessionInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.PlaySessionInfo.html">PlaySessionInfo</a></td>
+        <td><span class="parametername">playSessionInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Session_SessionInfo_RemovePlaySession_" data-uid="MediaBrowser.Controller.Session.SessionInfo.RemovePlaySession*"></a>
+  <h4 id="MediaBrowser_Controller_Session_SessionInfo_RemovePlaySession_System_String_" data-uid="MediaBrowser.Controller.Session.SessionInfo.RemovePlaySession(System.String)">RemovePlaySession(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemovePlaySession(string playSessionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Session_SessionInfo_ReportTranscodingInfo_" data-uid="MediaBrowser.Controller.Session.SessionInfo.ReportTranscodingInfo*"></a>
   <h4 id="MediaBrowser_Controller_Session_SessionInfo_ReportTranscodingInfo_MediaBrowser_Model_Session_TranscodingInfo_System_String_" data-uid="MediaBrowser.Controller.Session.SessionInfo.ReportTranscodingInfo(MediaBrowser.Model.Session.TranscodingInfo,System.String)">ReportTranscodingInfo(TranscodingInfo, String)</h4>
   <div class="markdown level1 summary"></div>
@@ -1359,13 +1491,13 @@ public long UserInternalId { get; set; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Session_SessionInfo_StartAutomaticProgress_" data-uid="MediaBrowser.Controller.Session.SessionInfo.StartAutomaticProgress*"></a>
-  <h4 id="MediaBrowser_Controller_Session_SessionInfo_StartAutomaticProgress_MediaBrowser_Model_Session_PlaybackProgressInfo_" data-uid="MediaBrowser.Controller.Session.SessionInfo.StartAutomaticProgress(MediaBrowser.Model.Session.PlaybackProgressInfo)">StartAutomaticProgress(PlaybackProgressInfo)</h4>
+  <a id="MediaBrowser_Controller_Session_SessionInfo_UpdateValues_" data-uid="MediaBrowser.Controller.Session.SessionInfo.UpdateValues*"></a>
+  <h4 id="MediaBrowser_Controller_Session_SessionInfo_UpdateValues_MediaBrowser_Model_Session_PlayerStateInfo_MediaBrowser_Model_Session_PlaybackProgressInfo_" data-uid="MediaBrowser.Controller.Session.SessionInfo.UpdateValues(MediaBrowser.Model.Session.PlayerStateInfo,MediaBrowser.Model.Session.PlaybackProgressInfo)">UpdateValues(PlayerStateInfo, PlaybackProgressInfo)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartAutomaticProgress(PlaybackProgressInfo progressInfo)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void UpdateValues(PlayerStateInfo playerStateInfo, PlaybackProgressInfo info)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1378,22 +1510,17 @@ public long UserInternalId { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Session.PlayerStateInfo.html">PlayerStateInfo</a></td>
+        <td><span class="parametername">playerStateInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.PlaybackProgressInfo.html">PlaybackProgressInfo</a></td>
-        <td><span class="parametername">progressInfo</span></td>
+        <td><span class="parametername">info</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="MediaBrowser_Controller_Session_SessionInfo_StopAutomaticProgress_" data-uid="MediaBrowser.Controller.Session.SessionInfo.StopAutomaticProgress*"></a>
-  <h4 id="MediaBrowser_Controller_Session_SessionInfo_StopAutomaticProgress" data-uid="MediaBrowser.Controller.Session.SessionInfo.StopAutomaticProgress">StopAutomaticProgress()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopAutomaticProgress()</code></pre>
-  </div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>

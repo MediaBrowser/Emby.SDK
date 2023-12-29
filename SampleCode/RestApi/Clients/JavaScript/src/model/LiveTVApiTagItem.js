@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTVApiTagItem model module.
 * @module model/LiveTVApiTagItem
-* @version 4.8.0.64
+* @version 4.8.0.65
 */
 export default class LiveTVApiTagItem {
     /**
