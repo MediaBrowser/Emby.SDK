@@ -26,6 +26,7 @@ type UserConfiguration struct {
 	RememberAudioSelections bool `json:"RememberAudioSelections,omitempty"`
 	RememberSubtitleSelections bool `json:"RememberSubtitleSelections,omitempty"`
 	EnableNextEpisodeAutoPlay bool `json:"EnableNextEpisodeAutoPlay,omitempty"`
+	PreferSDHSubtitles bool `json:"PreferSDHSubtitles,omitempty"`
 	ResumeRewindSeconds int32 `json:"ResumeRewindSeconds,omitempty"`
 	IntroSkipMode *SegmentSkipMode `json:"IntroSkipMode,omitempty"`
 	EnableLocalPassword bool `json:"EnableLocalPassword,omitempty"`

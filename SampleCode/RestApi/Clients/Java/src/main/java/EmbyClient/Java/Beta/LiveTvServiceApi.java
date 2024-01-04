@@ -19,14 +19,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import io.swagger.client.model.ApiAvailableRecordingOptions;
 import io.swagger.client.model.ApiBaseItemsRequest;
+import io.swagger.client.model.ApiListingProviderTypeInfo;
+import io.swagger.client.model.ApiSetChannelDisabled;
+import io.swagger.client.model.ApiSetChannelMapping;
+import io.swagger.client.model.ApiSetChannelSortIndex;
+import io.swagger.client.model.ApiTagItem;
 import io.swagger.client.model.BaseItemDto;
-import io.swagger.client.model.LiveTVApiAvailableRecordingOptions;
-import io.swagger.client.model.LiveTVApiListingProviderTypeInfo;
-import io.swagger.client.model.LiveTVApiSetChannelDisabled;
-import io.swagger.client.model.LiveTVApiSetChannelMapping;
-import io.swagger.client.model.LiveTVApiSetChannelSortIndex;
-import io.swagger.client.model.LiveTVApiTagItem;
 import io.swagger.client.model.LiveTvChannelType;
 import io.swagger.client.model.LiveTvGuideInfo;
 import io.swagger.client.model.LiveTvListingsProviderInfo;
@@ -37,9 +37,9 @@ import io.swagger.client.model.LiveTvSeriesTimerInfoDto;
 import io.swagger.client.model.LiveTvTimerInfoDto;
 import io.swagger.client.model.LiveTvTunerHostInfo;
 import io.swagger.client.model.NameIdPair;
+import io.swagger.client.model.QueryResultApiEpgRow;
 import io.swagger.client.model.QueryResultBaseItemDto;
 import io.swagger.client.model.QueryResultChannelManagementInfo;
-import io.swagger.client.model.QueryResultLiveTVApiEpgRow;
 import io.swagger.client.model.QueryResultLiveTvSeriesTimerInfoDto;
 import io.swagger.client.model.QueryResultLiveTvTimerInfoDto;
 import io.swagger.client.model.SortOrder;
@@ -975,23 +975,23 @@ public class LiveTvServiceApi {
     /**
      * Gets available recording options
      * Requires authentication as user
-     * @return LiveTVApiAvailableRecordingOptions
+     * @return ApiAvailableRecordingOptions
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public LiveTVApiAvailableRecordingOptions getLivetvAvailablerecordingoptions() throws ApiException {
-        ApiResponse<LiveTVApiAvailableRecordingOptions> resp = getLivetvAvailablerecordingoptionsWithHttpInfo();
+    public ApiAvailableRecordingOptions getLivetvAvailablerecordingoptions() throws ApiException {
+        ApiResponse<ApiAvailableRecordingOptions> resp = getLivetvAvailablerecordingoptionsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets available recording options
      * Requires authentication as user
-     * @return ApiResponse&lt;LiveTVApiAvailableRecordingOptions&gt;
+     * @return ApiResponse&lt;ApiAvailableRecordingOptions&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<LiveTVApiAvailableRecordingOptions> getLivetvAvailablerecordingoptionsWithHttpInfo() throws ApiException {
+    public ApiResponse<ApiAvailableRecordingOptions> getLivetvAvailablerecordingoptionsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getLivetvAvailablerecordingoptionsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<LiveTVApiAvailableRecordingOptions>(){}.getType();
+        Type localVarReturnType = new TypeToken<ApiAvailableRecordingOptions>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1002,7 +1002,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getLivetvAvailablerecordingoptionsAsync(final ApiCallback<LiveTVApiAvailableRecordingOptions> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLivetvAvailablerecordingoptionsAsync(final ApiCallback<ApiAvailableRecordingOptions> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1024,7 +1024,7 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = getLivetvAvailablerecordingoptionsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<LiveTVApiAvailableRecordingOptions>(){}.getType();
+        Type localVarReturnType = new TypeToken<ApiAvailableRecordingOptions>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -3304,11 +3304,11 @@ public class LiveTvServiceApi {
      * @param albumArtistStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
      * @param nameStartsWith Optional filter by items whose name is sorted equally than a given input string. (optional)
      * @param nameLessThan Optional filter by items whose name is equally or lesser than a given input string. (optional)
-     * @return List&lt;LiveTVApiTagItem&gt;
+     * @return List&lt;ApiTagItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<LiveTVApiTagItem> getLivetvChanneltagsPrefixes(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
-        ApiResponse<List<LiveTVApiTagItem>> resp = getLivetvChanneltagsPrefixesWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+    public List<ApiTagItem> getLivetvChanneltagsPrefixes(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
+        ApiResponse<List<ApiTagItem>> resp = getLivetvChanneltagsPrefixesWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
         return resp.getData();
     }
 
@@ -3412,12 +3412,12 @@ public class LiveTvServiceApi {
      * @param albumArtistStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
      * @param nameStartsWith Optional filter by items whose name is sorted equally than a given input string. (optional)
      * @param nameLessThan Optional filter by items whose name is equally or lesser than a given input string. (optional)
-     * @return ApiResponse&lt;List&lt;LiveTVApiTagItem&gt;&gt;
+     * @return ApiResponse&lt;List&lt;ApiTagItem&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<LiveTVApiTagItem>> getLivetvChanneltagsPrefixesWithHttpInfo(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
+    public ApiResponse<List<ApiTagItem>> getLivetvChanneltagsPrefixesWithHttpInfo(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvChanneltagsPrefixesValidateBeforeCall(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, null);
-        Type localVarReturnType = new TypeToken<List<LiveTVApiTagItem>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<ApiTagItem>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -3525,7 +3525,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getLivetvChanneltagsPrefixesAsync(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan, final ApiCallback<List<LiveTVApiTagItem>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLivetvChanneltagsPrefixesAsync(String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan, final ApiCallback<List<ApiTagItem>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3547,7 +3547,7 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = getLivetvChanneltagsPrefixesValidateBeforeCall(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<LiveTVApiTagItem>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<ApiTagItem>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -4026,11 +4026,11 @@ public class LiveTvServiceApi {
      * @param albumArtistStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
      * @param nameStartsWith Optional filter by items whose name is sorted equally than a given input string. (optional)
      * @param nameLessThan Optional filter by items whose name is equally or lesser than a given input string. (optional)
-     * @return QueryResultLiveTVApiEpgRow
+     * @return QueryResultApiEpgRow
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultLiveTVApiEpgRow getLivetvEPG(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String channelIds, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
-        ApiResponse<QueryResultLiveTVApiEpgRow> resp = getLivetvEPGWithHttpInfo(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+    public QueryResultApiEpgRow getLivetvEPG(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String channelIds, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
+        ApiResponse<QueryResultApiEpgRow> resp = getLivetvEPGWithHttpInfo(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
         return resp.getData();
     }
 
@@ -4140,12 +4140,12 @@ public class LiveTvServiceApi {
      * @param albumArtistStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
      * @param nameStartsWith Optional filter by items whose name is sorted equally than a given input string. (optional)
      * @param nameLessThan Optional filter by items whose name is equally or lesser than a given input string. (optional)
-     * @return ApiResponse&lt;QueryResultLiveTVApiEpgRow&gt;
+     * @return ApiResponse&lt;QueryResultApiEpgRow&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultLiveTVApiEpgRow> getLivetvEPGWithHttpInfo(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String channelIds, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
+    public ApiResponse<QueryResultApiEpgRow> getLivetvEPGWithHttpInfo(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String channelIds, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan) throws ApiException {
         com.squareup.okhttp.Call call = getLivetvEPGValidateBeforeCall(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, null, null);
-        Type localVarReturnType = new TypeToken<QueryResultLiveTVApiEpgRow>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultApiEpgRow>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -4259,7 +4259,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getLivetvEPGAsync(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String channelIds, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan, final ApiCallback<QueryResultLiveTVApiEpgRow> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLivetvEPGAsync(LiveTvChannelType type, Boolean isLiked, Boolean isDisliked, Boolean enableFavoriteSorting, Boolean addCurrentProgram, String channelIds, String artistType, String maxOfficialRating, Boolean hasThemeSong, Boolean hasThemeVideo, Boolean hasSubtitles, Boolean hasSpecialFeature, Boolean hasTrailer, String adjacentTo, Integer minIndexNumber, String minStartDate, String maxStartDate, String minEndDate, String maxEndDate, Integer minPlayers, Integer maxPlayers, Integer parentIndexNumber, Boolean hasParentalRating, Boolean isHD, Boolean isUnaired, Double minCommunityRating, Double minCriticRating, Integer airedDuringSeason, String minPremiereDate, String minDateLastSaved, String minDateLastSavedForUser, String maxPremiereDate, Boolean hasOverview, Boolean hasImdbId, Boolean hasTmdbId, Boolean hasTvdbId, String excludeItemIds, Integer startIndex, Integer limit, Boolean recursive, String searchTerm, String sortOrder, String parentId, String fields, String excludeItemTypes, String includeItemTypes, String anyProviderIdEquals, String filters, Boolean isFavorite, Boolean isMovie, Boolean isSeries, Boolean isFolder, Boolean isNews, Boolean isKids, Boolean isSports, Boolean isNew, Boolean isPremiere, Boolean isNewOrPremiere, Boolean isRepeat, Boolean projectToMedia, String mediaTypes, String imageTypes, String sortBy, Boolean isPlayed, String genres, String officialRatings, String tags, String excludeTags, String years, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String person, String personIds, String personTypes, String studios, String studioIds, String artists, String artistIds, String albums, String ids, String videoTypes, String containers, String audioCodecs, String audioLayouts, String videoCodecs, String extendedVideoTypes, String subtitleCodecs, String path, String userId, String minOfficialRating, Boolean isLocked, Boolean isPlaceHolder, Boolean hasOfficialRating, Boolean groupItemsIntoCollections, Boolean is3D, String seriesStatus, String nameStartsWithOrGreater, String artistStartsWithOrGreater, String albumArtistStartsWithOrGreater, String nameStartsWith, String nameLessThan, final ApiCallback<QueryResultApiEpgRow> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4281,7 +4281,7 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = getLivetvEPGValidateBeforeCall(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultLiveTVApiEpgRow>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultApiEpgRow>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -4830,23 +4830,23 @@ public class LiveTvServiceApi {
     /**
      * Gets listing provider
      * Requires authentication as administrator
-     * @return List&lt;LiveTVApiListingProviderTypeInfo&gt;
+     * @return List&lt;ApiListingProviderTypeInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<LiveTVApiListingProviderTypeInfo> getLivetvListingprovidersAvailable() throws ApiException {
-        ApiResponse<List<LiveTVApiListingProviderTypeInfo>> resp = getLivetvListingprovidersAvailableWithHttpInfo();
+    public List<ApiListingProviderTypeInfo> getLivetvListingprovidersAvailable() throws ApiException {
+        ApiResponse<List<ApiListingProviderTypeInfo>> resp = getLivetvListingprovidersAvailableWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets listing provider
      * Requires authentication as administrator
-     * @return ApiResponse&lt;List&lt;LiveTVApiListingProviderTypeInfo&gt;&gt;
+     * @return ApiResponse&lt;List&lt;ApiListingProviderTypeInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<LiveTVApiListingProviderTypeInfo>> getLivetvListingprovidersAvailableWithHttpInfo() throws ApiException {
+    public ApiResponse<List<ApiListingProviderTypeInfo>> getLivetvListingprovidersAvailableWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getLivetvListingprovidersAvailableValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<LiveTVApiListingProviderTypeInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<ApiListingProviderTypeInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -4857,7 +4857,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getLivetvListingprovidersAvailableAsync(final ApiCallback<List<LiveTVApiListingProviderTypeInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLivetvListingprovidersAvailableAsync(final ApiCallback<List<ApiListingProviderTypeInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4879,7 +4879,7 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = getLivetvListingprovidersAvailableValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<LiveTVApiListingProviderTypeInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<ApiListingProviderTypeInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -5248,257 +5248,6 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = getLivetvListingprovidersSchedulesdirectCountriesValidateBeforeCall(progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
-        return call;
-    }
-    /**
-     * Build call for getLivetvLiverecordingsByIdStream
-     * @param id  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getLivetvLiverecordingsByIdStreamCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-        
-        // create path and map variables
-        String localVarPath = "/LiveTv/LiveRecordings/{Id}/stream"
-            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-    
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getLivetvLiverecordingsByIdStreamValidateBeforeCall(String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'id' is set
-        if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling getLivetvLiverecordingsByIdStream(Async)");
-        }
-        
-        com.squareup.okhttp.Call call = getLivetvLiverecordingsByIdStreamCall(id, progressListener, progressRequestListener);
-        return call;
-
-        
-        
-        
-        
-    }
-
-    /**
-     * Gets a live tv channel
-     * Requires authentication as user
-     * @param id  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public void getLivetvLiverecordingsByIdStream(String id) throws ApiException {
-        getLivetvLiverecordingsByIdStreamWithHttpInfo(id);
-    }
-
-    /**
-     * Gets a live tv channel
-     * Requires authentication as user
-     * @param id  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Void> getLivetvLiverecordingsByIdStreamWithHttpInfo(String id) throws ApiException {
-        com.squareup.okhttp.Call call = getLivetvLiverecordingsByIdStreamValidateBeforeCall(id, null, null);
-        return apiClient.execute(call);
-    }
-
-    /**
-     * Gets a live tv channel (asynchronously)
-     * Requires authentication as user
-     * @param id  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getLivetvLiverecordingsByIdStreamAsync(String id, final ApiCallback<Void> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = getLivetvLiverecordingsByIdStreamValidateBeforeCall(id, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
-        return call;
-    }
-    /**
-     * Build call for getLivetvLivestreamfilesByIdStreamByContainer
-     * @param id  (required)
-     * @param container  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call getLivetvLivestreamfilesByIdStreamByContainerCall(String id, String container, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
-        
-        // create path and map variables
-        String localVarPath = "/LiveTv/LiveStreamFiles/{Id}/stream.{Container}"
-            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Container" + "\\}", apiClient.escapeString(container.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-    
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getLivetvLivestreamfilesByIdStreamByContainerValidateBeforeCall(String id, String container, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'id' is set
-        if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling getLivetvLivestreamfilesByIdStreamByContainer(Async)");
-        }
-        // verify the required parameter 'container' is set
-        if (container == null) {
-            throw new ApiException("Missing the required parameter 'container' when calling getLivetvLivestreamfilesByIdStreamByContainer(Async)");
-        }
-        
-        com.squareup.okhttp.Call call = getLivetvLivestreamfilesByIdStreamByContainerCall(id, container, progressListener, progressRequestListener);
-        return call;
-
-        
-        
-        
-        
-    }
-
-    /**
-     * Gets a live tv channel
-     * Requires authentication as user
-     * @param id  (required)
-     * @param container  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public void getLivetvLivestreamfilesByIdStreamByContainer(String id, String container) throws ApiException {
-        getLivetvLivestreamfilesByIdStreamByContainerWithHttpInfo(id, container);
-    }
-
-    /**
-     * Gets a live tv channel
-     * Requires authentication as user
-     * @param id  (required)
-     * @param container  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Void> getLivetvLivestreamfilesByIdStreamByContainerWithHttpInfo(String id, String container) throws ApiException {
-        com.squareup.okhttp.Call call = getLivetvLivestreamfilesByIdStreamByContainerValidateBeforeCall(id, container, null, null);
-        return apiClient.execute(call);
-    }
-
-    /**
-     * Gets a live tv channel (asynchronously)
-     * Requires authentication as user
-     * @param id  (required)
-     * @param container  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call getLivetvLivestreamfilesByIdStreamByContainerAsync(String id, String container, final ApiCallback<Void> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = getLivetvLivestreamfilesByIdStreamByContainerValidateBeforeCall(id, container, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -9309,7 +9058,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postLivetvChannelmappingsCall(LiveTVApiSetChannelMapping body, String providerId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvChannelmappingsCall(ApiSetChannelMapping body, String providerId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -9353,7 +9102,7 @@ public class LiveTvServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postLivetvChannelmappingsValidateBeforeCall(LiveTVApiSetChannelMapping body, String providerId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postLivetvChannelmappingsValidateBeforeCall(ApiSetChannelMapping body, String providerId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postLivetvChannelmappings(Async)");
@@ -9379,7 +9128,7 @@ public class LiveTvServiceApi {
      * @param providerId Provider id (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postLivetvChannelmappings(LiveTVApiSetChannelMapping body, String providerId) throws ApiException {
+    public void postLivetvChannelmappings(ApiSetChannelMapping body, String providerId) throws ApiException {
         postLivetvChannelmappingsWithHttpInfo(body, providerId);
     }
 
@@ -9391,7 +9140,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postLivetvChannelmappingsWithHttpInfo(LiveTVApiSetChannelMapping body, String providerId) throws ApiException {
+    public ApiResponse<Void> postLivetvChannelmappingsWithHttpInfo(ApiSetChannelMapping body, String providerId) throws ApiException {
         com.squareup.okhttp.Call call = postLivetvChannelmappingsValidateBeforeCall(body, providerId, null, null);
         return apiClient.execute(call);
     }
@@ -9405,7 +9154,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postLivetvChannelmappingsAsync(LiveTVApiSetChannelMapping body, String providerId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvChannelmappingsAsync(ApiSetChannelMapping body, String providerId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -9681,7 +9430,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postLivetvManageChannelsByIdDisabledCall(LiveTVApiSetChannelDisabled body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvManageChannelsByIdDisabledCall(ApiSetChannelDisabled body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -9724,7 +9473,7 @@ public class LiveTvServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postLivetvManageChannelsByIdDisabledValidateBeforeCall(LiveTVApiSetChannelDisabled body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postLivetvManageChannelsByIdDisabledValidateBeforeCall(ApiSetChannelDisabled body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postLivetvManageChannelsByIdDisabled(Async)");
@@ -9751,7 +9500,7 @@ public class LiveTvServiceApi {
      * @return QueryResultChannelManagementInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultChannelManagementInfo postLivetvManageChannelsByIdDisabled(LiveTVApiSetChannelDisabled body, String id) throws ApiException {
+    public QueryResultChannelManagementInfo postLivetvManageChannelsByIdDisabled(ApiSetChannelDisabled body, String id) throws ApiException {
         ApiResponse<QueryResultChannelManagementInfo> resp = postLivetvManageChannelsByIdDisabledWithHttpInfo(body, id);
         return resp.getData();
     }
@@ -9764,7 +9513,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;QueryResultChannelManagementInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultChannelManagementInfo> postLivetvManageChannelsByIdDisabledWithHttpInfo(LiveTVApiSetChannelDisabled body, String id) throws ApiException {
+    public ApiResponse<QueryResultChannelManagementInfo> postLivetvManageChannelsByIdDisabledWithHttpInfo(ApiSetChannelDisabled body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postLivetvManageChannelsByIdDisabledValidateBeforeCall(body, id, null, null);
         Type localVarReturnType = new TypeToken<QueryResultChannelManagementInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -9779,7 +9528,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postLivetvManageChannelsByIdDisabledAsync(LiveTVApiSetChannelDisabled body, String id, final ApiCallback<QueryResultChannelManagementInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvManageChannelsByIdDisabledAsync(ApiSetChannelDisabled body, String id, final ApiCallback<QueryResultChannelManagementInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -9814,7 +9563,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postLivetvManageChannelsByIdSortindexCall(LiveTVApiSetChannelSortIndex body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvManageChannelsByIdSortindexCall(ApiSetChannelSortIndex body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -9857,7 +9606,7 @@ public class LiveTvServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postLivetvManageChannelsByIdSortindexValidateBeforeCall(LiveTVApiSetChannelSortIndex body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postLivetvManageChannelsByIdSortindexValidateBeforeCall(ApiSetChannelSortIndex body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postLivetvManageChannelsByIdSortindex(Async)");
@@ -9884,7 +9633,7 @@ public class LiveTvServiceApi {
      * @return QueryResultChannelManagementInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultChannelManagementInfo postLivetvManageChannelsByIdSortindex(LiveTVApiSetChannelSortIndex body, String id) throws ApiException {
+    public QueryResultChannelManagementInfo postLivetvManageChannelsByIdSortindex(ApiSetChannelSortIndex body, String id) throws ApiException {
         ApiResponse<QueryResultChannelManagementInfo> resp = postLivetvManageChannelsByIdSortindexWithHttpInfo(body, id);
         return resp.getData();
     }
@@ -9897,7 +9646,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;QueryResultChannelManagementInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultChannelManagementInfo> postLivetvManageChannelsByIdSortindexWithHttpInfo(LiveTVApiSetChannelSortIndex body, String id) throws ApiException {
+    public ApiResponse<QueryResultChannelManagementInfo> postLivetvManageChannelsByIdSortindexWithHttpInfo(ApiSetChannelSortIndex body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postLivetvManageChannelsByIdSortindexValidateBeforeCall(body, id, null, null);
         Type localVarReturnType = new TypeToken<QueryResultChannelManagementInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -9912,7 +9661,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postLivetvManageChannelsByIdSortindexAsync(LiveTVApiSetChannelSortIndex body, String id, final ApiCallback<QueryResultChannelManagementInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvManageChannelsByIdSortindexAsync(ApiSetChannelSortIndex body, String id, final ApiCallback<QueryResultChannelManagementInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -12001,7 +11750,7 @@ public class LiveTvServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call putLivetvChannelmappingsCall(LiveTVApiSetChannelMapping body, String providerId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call putLivetvChannelmappingsCall(ApiSetChannelMapping body, String providerId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -12045,7 +11794,7 @@ public class LiveTvServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call putLivetvChannelmappingsValidateBeforeCall(LiveTVApiSetChannelMapping body, String providerId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call putLivetvChannelmappingsValidateBeforeCall(ApiSetChannelMapping body, String providerId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling putLivetvChannelmappings(Async)");
@@ -12071,7 +11820,7 @@ public class LiveTvServiceApi {
      * @param providerId Provider id (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void putLivetvChannelmappings(LiveTVApiSetChannelMapping body, String providerId) throws ApiException {
+    public void putLivetvChannelmappings(ApiSetChannelMapping body, String providerId) throws ApiException {
         putLivetvChannelmappingsWithHttpInfo(body, providerId);
     }
 
@@ -12083,7 +11832,7 @@ public class LiveTvServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> putLivetvChannelmappingsWithHttpInfo(LiveTVApiSetChannelMapping body, String providerId) throws ApiException {
+    public ApiResponse<Void> putLivetvChannelmappingsWithHttpInfo(ApiSetChannelMapping body, String providerId) throws ApiException {
         com.squareup.okhttp.Call call = putLivetvChannelmappingsValidateBeforeCall(body, providerId, null, null);
         return apiClient.execute(call);
     }
@@ -12097,7 +11846,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call putLivetvChannelmappingsAsync(LiveTVApiSetChannelMapping body, String providerId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call putLivetvChannelmappingsAsync(ApiSetChannelMapping body, String providerId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

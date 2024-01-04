@@ -10,14 +10,14 @@
  */
 
 import ApiClient from "../ApiClient";
+import ApiAvailableRecordingOptions from '../model/ApiAvailableRecordingOptions';
 import ApiBaseItemsRequest from '../model/ApiBaseItemsRequest';
+import ApiListingProviderTypeInfo from '../model/ApiListingProviderTypeInfo';
+import ApiSetChannelDisabled from '../model/ApiSetChannelDisabled';
+import ApiSetChannelMapping from '../model/ApiSetChannelMapping';
+import ApiSetChannelSortIndex from '../model/ApiSetChannelSortIndex';
+import ApiTagItem from '../model/ApiTagItem';
 import BaseItemDto from '../model/BaseItemDto';
-import LiveTVApiAvailableRecordingOptions from '../model/LiveTVApiAvailableRecordingOptions';
-import LiveTVApiListingProviderTypeInfo from '../model/LiveTVApiListingProviderTypeInfo';
-import LiveTVApiSetChannelDisabled from '../model/LiveTVApiSetChannelDisabled';
-import LiveTVApiSetChannelMapping from '../model/LiveTVApiSetChannelMapping';
-import LiveTVApiSetChannelSortIndex from '../model/LiveTVApiSetChannelSortIndex';
-import LiveTVApiTagItem from '../model/LiveTVApiTagItem';
 import LiveTvChannelType from '../model/LiveTvChannelType';
 import LiveTvGuideInfo from '../model/LiveTvGuideInfo';
 import LiveTvListingsProviderInfo from '../model/LiveTvListingsProviderInfo';
@@ -28,9 +28,9 @@ import LiveTvSeriesTimerInfoDto from '../model/LiveTvSeriesTimerInfoDto';
 import LiveTvTimerInfoDto from '../model/LiveTvTimerInfoDto';
 import LiveTvTunerHostInfo from '../model/LiveTvTunerHostInfo';
 import NameIdPair from '../model/NameIdPair';
+import QueryResultApiEpgRow from '../model/QueryResultApiEpgRow';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 import QueryResultChannelManagementInfo from '../model/QueryResultChannelManagementInfo';
-import QueryResultLiveTVApiEpgRow from '../model/QueryResultLiveTVApiEpgRow';
 import QueryResultLiveTvSeriesTimerInfoDto from '../model/QueryResultLiveTvSeriesTimerInfoDto';
 import QueryResultLiveTvTimerInfoDto from '../model/QueryResultLiveTvTimerInfoDto';
 import SortOrder from '../model/SortOrder';
@@ -38,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.8.0.65
+* @version 4.8.0.66
 */
 export default class LiveTvServiceApi {
 
@@ -318,7 +318,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvAvailablerecordingoptions operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvAvailablerecordingoptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LiveTVApiAvailableRecordingOptions} data The data returned by the service call.
+     * @param {module:model/ApiAvailableRecordingOptions} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -326,7 +326,7 @@ export default class LiveTvServiceApi {
      * Gets available recording options
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvAvailablerecordingoptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LiveTVApiAvailableRecordingOptions}
+     * data is of type: {@link module:model/ApiAvailableRecordingOptions}
      */
     getLivetvAvailablerecordingoptions() {
       let postBody = null;
@@ -343,7 +343,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = LiveTVApiAvailableRecordingOptions;
+      let returnType = ApiAvailableRecordingOptions;
 
       return this.apiClient.callApi(
         '/LiveTv/AvailableRecordingOptions', 'GET',
@@ -745,7 +745,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvChanneltagsPrefixes operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvChanneltagsPrefixesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/LiveTVApiTagItem>} data The data returned by the service call.
+     * @param {Array.<module:model/ApiTagItem>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -754,7 +754,7 @@ export default class LiveTvServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvChanneltagsPrefixesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/LiveTVApiTagItem>}
+     * data is of type: {@link Array.<module:model/ApiTagItem>}
      */
     getLivetvChanneltagsPrefixes() {
       opts = opts || {};
@@ -869,7 +869,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [LiveTVApiTagItem];
+      let returnType = [ApiTagItem];
 
       return this.apiClient.callApi(
         '/LiveTv/ChannelTags/Prefixes', 'GET',
@@ -881,7 +881,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvEPG operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvEPGCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultLiveTVApiEpgRow} data The data returned by the service call.
+     * @param {module:model/QueryResultApiEpgRow} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -890,7 +890,7 @@ export default class LiveTvServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvEPGCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultLiveTVApiEpgRow}
+     * data is of type: {@link module:model/QueryResultApiEpgRow}
      */
     getLivetvEPG() {
       opts = opts || {};
@@ -1011,7 +1011,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultLiveTVApiEpgRow;
+      let returnType = QueryResultApiEpgRow;
 
       return this.apiClient.callApi(
         '/LiveTv/EPG', 'GET',
@@ -1172,7 +1172,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvListingprovidersAvailable operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvListingprovidersAvailableCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/LiveTVApiListingProviderTypeInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/ApiListingProviderTypeInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1180,7 +1180,7 @@ export default class LiveTvServiceApi {
      * Gets listing provider
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvListingprovidersAvailableCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/LiveTVApiListingProviderTypeInfo>}
+     * data is of type: {@link Array.<module:model/ApiListingProviderTypeInfo>}
      */
     getLivetvListingprovidersAvailable() {
       let postBody = null;
@@ -1197,7 +1197,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [LiveTVApiListingProviderTypeInfo];
+      let returnType = [ApiListingProviderTypeInfo];
 
       return this.apiClient.callApi(
         '/LiveTv/ListingProviders/Available', 'GET',
@@ -1316,81 +1316,6 @@ export default class LiveTvServiceApi {
 
       return this.apiClient.callApi(
         '/LiveTv/ListingProviders/SchedulesDirect/Countries', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getLivetvLiverecordingsByIdStream operation.
-     * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvLiverecordingsByIdStreamCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Gets a live tv channel
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvLiverecordingsByIdStreamCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    getLivetvLiverecordingsByIdStream() {
-      let postBody = null;
-
-      let pathParams = {
-        'Id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/LiveTv/LiveRecordings/{Id}/stream', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getLivetvLivestreamfilesByIdStreamByContainer operation.
-     * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvLivestreamfilesByIdStreamByContainerCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Gets a live tv channel
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvLivestreamfilesByIdStreamByContainerCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    getLivetvLivestreamfilesByIdStreamByContainer() {
-      let postBody = null;
-
-      let pathParams = {
-        'Id': id,
-        'Container': container
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/LiveTv/LiveStreamFiles/{Id}/stream.{Container}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

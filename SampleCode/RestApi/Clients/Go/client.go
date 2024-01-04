@@ -34,7 +34,7 @@ var (
 	xmlCheck  = regexp.MustCompile("(?i:[application|text]/xml)")
 )
 
-// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.65
+// APIClient manages communication with the Emby Server REST API (BETA) API v4.8.0.66
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -47,6 +47,8 @@ type APIClient struct {
 	ArtistsServiceApi *ArtistsServiceApiService
 
 	AudioServiceApi *AudioServiceApiService
+
+	BackupApiApi *BackupApiApiService
 
 	BifServiceApi *BifServiceApiService
 
@@ -103,6 +105,8 @@ type APIClient struct {
 	LibraryServiceApi *LibraryServiceApiService
 
 	LibraryStructureServiceApi *LibraryStructureServiceApiService
+
+	LiveStreamServiceApi *LiveStreamServiceApiService
 
 	LiveTvServiceApi *LiveTvServiceApiService
 
@@ -194,6 +198,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.ActivityLogServiceApi = (*ActivityLogServiceApiService)(&c.common)
 	c.ArtistsServiceApi = (*ArtistsServiceApiService)(&c.common)
 	c.AudioServiceApi = (*AudioServiceApiService)(&c.common)
+	c.BackupApiApi = (*BackupApiApiService)(&c.common)
 	c.BifServiceApi = (*BifServiceApiService)(&c.common)
 	c.BrandingServiceApi = (*BrandingServiceApiService)(&c.common)
 	c.ChannelServiceApi = (*ChannelServiceApiService)(&c.common)
@@ -222,6 +227,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.ItemsServiceApi = (*ItemsServiceApiService)(&c.common)
 	c.LibraryServiceApi = (*LibraryServiceApiService)(&c.common)
 	c.LibraryStructureServiceApi = (*LibraryStructureServiceApiService)(&c.common)
+	c.LiveStreamServiceApi = (*LiveStreamServiceApiService)(&c.common)
 	c.LiveTvServiceApi = (*LiveTvServiceApiService)(&c.common)
 	c.LocalizationServiceApi = (*LocalizationServiceApiService)(&c.common)
 	c.MediaInfoServiceApi = (*MediaInfoServiceApiService)(&c.common)

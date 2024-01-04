@@ -16,7 +16,7 @@ import SubtitlePlaybackMode from './SubtitlePlaybackMode';
 /**
 * The UserConfiguration model module.
 * @module model/UserConfiguration
-* @version 4.8.0.65
+* @version 4.8.0.66
 */
 export default class UserConfiguration {
     /**
@@ -88,6 +88,9 @@ export default class UserConfiguration {
             }
             if (data.hasOwnProperty('EnableNextEpisodeAutoPlay')) {
                 obj['EnableNextEpisodeAutoPlay'] = ApiClient.convertToType(data['EnableNextEpisodeAutoPlay'], 'Boolean');
+            }
+            if (data.hasOwnProperty('PreferSDHSubtitles')) {
+                obj['PreferSDHSubtitles'] = ApiClient.convertToType(data['PreferSDHSubtitles'], 'Boolean');
             }
             if (data.hasOwnProperty('ResumeRewindSeconds')) {
                 obj['ResumeRewindSeconds'] = ApiClient.convertToType(data['ResumeRewindSeconds'], 'Number');
@@ -165,6 +168,10 @@ export default class UserConfiguration {
     * @member {Boolean} EnableNextEpisodeAutoPlay
     */
     'EnableNextEpisodeAutoPlay' = undefined;
+    /**
+    * @member {Boolean} PreferSDHSubtitles
+    */
+    'PreferSDHSubtitles' = undefined;
     /**
     * @member {Number} ResumeRewindSeconds
     */

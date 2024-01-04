@@ -172,8 +172,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>LiveTVApiAvailableRecordingOptions</returns>
-        LiveTVApiAvailableRecordingOptions GetLivetvAvailablerecordingoptions ();
+        /// <returns>ApiAvailableRecordingOptions</returns>
+        ApiAvailableRecordingOptions GetLivetvAvailablerecordingoptions ();
 
         /// <summary>
         /// Gets available recording options
@@ -182,8 +182,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of LiveTVApiAvailableRecordingOptions</returns>
-        ApiResponse<LiveTVApiAvailableRecordingOptions> GetLivetvAvailablerecordingoptionsWithHttpInfo ();
+        /// <returns>ApiResponse of ApiAvailableRecordingOptions</returns>
+        ApiResponse<ApiAvailableRecordingOptions> GetLivetvAvailablerecordingoptionsWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -789,8 +789,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>List&lt;LiveTVApiTagItem&gt;</returns>
-        List<LiveTVApiTagItem> GetLivetvChanneltagsPrefixes (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <returns>List&lt;ApiTagItem&gt;</returns>
+        List<ApiTagItem> GetLivetvChanneltagsPrefixes (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
 
         /// <summary>
         /// Gets live tv channel tag prefixes
@@ -896,8 +896,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>ApiResponse of List&lt;LiveTVApiTagItem&gt;</returns>
-        ApiResponse<List<LiveTVApiTagItem>> GetLivetvChanneltagsPrefixesWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <returns>ApiResponse of List&lt;ApiTagItem&gt;</returns>
+        ApiResponse<List<ApiTagItem>> GetLivetvChanneltagsPrefixesWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
         /// <summary>
         /// Gets the epg.
         /// </summary>
@@ -1008,8 +1008,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>QueryResultLiveTVApiEpgRow</returns>
-        QueryResultLiveTVApiEpgRow GetLivetvEPG (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <returns>QueryResultApiEpgRow</returns>
+        QueryResultApiEpgRow GetLivetvEPG (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
 
         /// <summary>
         /// Gets the epg.
@@ -1121,8 +1121,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>ApiResponse of QueryResultLiveTVApiEpgRow</returns>
-        ApiResponse<QueryResultLiveTVApiEpgRow> GetLivetvEPGWithHttpInfo (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <returns>ApiResponse of QueryResultApiEpgRow</returns>
+        ApiResponse<QueryResultApiEpgRow> GetLivetvEPGWithHttpInfo (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
         /// <summary>
         /// Gets the top level live tv folder
         /// </summary>
@@ -1208,8 +1208,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;LiveTVApiListingProviderTypeInfo&gt;</returns>
-        List<LiveTVApiListingProviderTypeInfo> GetLivetvListingprovidersAvailable ();
+        /// <returns>List&lt;ApiListingProviderTypeInfo&gt;</returns>
+        List<ApiListingProviderTypeInfo> GetLivetvListingprovidersAvailable ();
 
         /// <summary>
         /// Gets listing provider
@@ -1218,8 +1218,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;LiveTVApiListingProviderTypeInfo&gt;</returns>
-        ApiResponse<List<LiveTVApiListingProviderTypeInfo>> GetLivetvListingprovidersAvailableWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;ApiListingProviderTypeInfo&gt;</returns>
+        ApiResponse<List<ApiListingProviderTypeInfo>> GetLivetvListingprovidersAvailableWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -1285,50 +1285,6 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetLivetvListingprovidersSchedulesdirectCountriesWithHttpInfo ();
-        /// <summary>
-        /// Gets a live tv channel
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        void GetLivetvLiverecordingsByIdStream (string id);
-
-        /// <summary>
-        /// Gets a live tv channel
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetLivetvLiverecordingsByIdStreamWithHttpInfo (string id);
-        /// <summary>
-        /// Gets a live tv channel
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="container"></param>
-        /// <returns></returns>
-        void GetLivetvLivestreamfilesByIdStreamByContainer (string id, string container);
-
-        /// <summary>
-        /// Gets a live tv channel
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="container"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetLivetvLivestreamfilesByIdStreamByContainerWithHttpInfo (string id, string container);
         /// <summary>
         /// Gets the channel management list
         /// </summary>
@@ -2197,7 +2153,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns></returns>
-        void PostLivetvChannelmappings (LiveTVApiSetChannelMapping body, string providerId);
+        void PostLivetvChannelmappings (ApiSetChannelMapping body, string providerId);
 
         /// <summary>
         /// 
@@ -2209,7 +2165,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostLivetvChannelmappingsWithHttpInfo (LiveTVApiSetChannelMapping body, string providerId);
+        ApiResponse<Object> PostLivetvChannelmappingsWithHttpInfo (ApiSetChannelMapping body, string providerId);
         /// <summary>
         /// Adds a listing provider
         /// </summary>
@@ -2262,7 +2218,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelDisabled</param>
         /// <param name="id"></param>
         /// <returns>QueryResultChannelManagementInfo</returns>
-        QueryResultChannelManagementInfo PostLivetvManageChannelsByIdDisabled (LiveTVApiSetChannelDisabled body, string id);
+        QueryResultChannelManagementInfo PostLivetvManageChannelsByIdDisabled (ApiSetChannelDisabled body, string id);
 
         /// <summary>
         /// Sets a channel disabled or not
@@ -2274,7 +2230,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelDisabled</param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of QueryResultChannelManagementInfo</returns>
-        ApiResponse<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdDisabledWithHttpInfo (LiveTVApiSetChannelDisabled body, string id);
+        ApiResponse<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdDisabledWithHttpInfo (ApiSetChannelDisabled body, string id);
         /// <summary>
         /// Sets a channel sort index
         /// </summary>
@@ -2285,7 +2241,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelSortIndex</param>
         /// <param name="id"></param>
         /// <returns>QueryResultChannelManagementInfo</returns>
-        QueryResultChannelManagementInfo PostLivetvManageChannelsByIdSortindex (LiveTVApiSetChannelSortIndex body, string id);
+        QueryResultChannelManagementInfo PostLivetvManageChannelsByIdSortindex (ApiSetChannelSortIndex body, string id);
 
         /// <summary>
         /// Sets a channel sort index
@@ -2297,7 +2253,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelSortIndex</param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of QueryResultChannelManagementInfo</returns>
-        ApiResponse<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdSortindexWithHttpInfo (LiveTVApiSetChannelSortIndex body, string id);
+        ApiResponse<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdSortindexWithHttpInfo (ApiSetChannelSortIndex body, string id);
         /// <summary>
         /// Gets available live tv epgs..
         /// </summary>
@@ -2760,7 +2716,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns></returns>
-        void PutLivetvChannelmappings (LiveTVApiSetChannelMapping body, string providerId);
+        void PutLivetvChannelmappings (ApiSetChannelMapping body, string providerId);
 
         /// <summary>
         /// 
@@ -2772,7 +2728,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutLivetvChannelmappingsWithHttpInfo (LiveTVApiSetChannelMapping body, string providerId);
+        ApiResponse<Object> PutLivetvChannelmappingsWithHttpInfo (ApiSetChannelMapping body, string providerId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -2929,8 +2885,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of LiveTVApiAvailableRecordingOptions</returns>
-        System.Threading.Tasks.Task<LiveTVApiAvailableRecordingOptions> GetLivetvAvailablerecordingoptionsAsync ();
+        /// <returns>Task of ApiAvailableRecordingOptions</returns>
+        System.Threading.Tasks.Task<ApiAvailableRecordingOptions> GetLivetvAvailablerecordingoptionsAsync ();
 
         /// <summary>
         /// Gets available recording options
@@ -2939,8 +2895,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (LiveTVApiAvailableRecordingOptions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LiveTVApiAvailableRecordingOptions>> GetLivetvAvailablerecordingoptionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (ApiAvailableRecordingOptions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiAvailableRecordingOptions>> GetLivetvAvailablerecordingoptionsAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -3546,8 +3502,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>Task of List&lt;LiveTVApiTagItem&gt;</returns>
-        System.Threading.Tasks.Task<List<LiveTVApiTagItem>> GetLivetvChanneltagsPrefixesAsync (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <returns>Task of List&lt;ApiTagItem&gt;</returns>
+        System.Threading.Tasks.Task<List<ApiTagItem>> GetLivetvChanneltagsPrefixesAsync (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
 
         /// <summary>
         /// Gets live tv channel tag prefixes
@@ -3653,8 +3609,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;LiveTVApiTagItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<LiveTVApiTagItem>>> GetLivetvChanneltagsPrefixesAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <returns>Task of ApiResponse (List&lt;ApiTagItem&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<ApiTagItem>>> GetLivetvChanneltagsPrefixesAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
         /// <summary>
         /// Gets the epg.
         /// </summary>
@@ -3765,8 +3721,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>Task of QueryResultLiveTVApiEpgRow</returns>
-        System.Threading.Tasks.Task<QueryResultLiveTVApiEpgRow> GetLivetvEPGAsync (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <returns>Task of QueryResultApiEpgRow</returns>
+        System.Threading.Tasks.Task<QueryResultApiEpgRow> GetLivetvEPGAsync (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
 
         /// <summary>
         /// Gets the epg.
@@ -3878,8 +3834,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>Task of ApiResponse (QueryResultLiveTVApiEpgRow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultLiveTVApiEpgRow>> GetLivetvEPGAsyncWithHttpInfo (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        /// <returns>Task of ApiResponse (QueryResultApiEpgRow)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueryResultApiEpgRow>> GetLivetvEPGAsyncWithHttpInfo (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
         /// <summary>
         /// Gets the top level live tv folder
         /// </summary>
@@ -3965,8 +3921,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;LiveTVApiListingProviderTypeInfo&gt;</returns>
-        System.Threading.Tasks.Task<List<LiveTVApiListingProviderTypeInfo>> GetLivetvListingprovidersAvailableAsync ();
+        /// <returns>Task of List&lt;ApiListingProviderTypeInfo&gt;</returns>
+        System.Threading.Tasks.Task<List<ApiListingProviderTypeInfo>> GetLivetvListingprovidersAvailableAsync ();
 
         /// <summary>
         /// Gets listing provider
@@ -3975,8 +3931,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;LiveTVApiListingProviderTypeInfo&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<LiveTVApiListingProviderTypeInfo>>> GetLivetvListingprovidersAvailableAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;ApiListingProviderTypeInfo&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<ApiListingProviderTypeInfo>>> GetLivetvListingprovidersAvailableAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -4042,50 +3998,6 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetLivetvListingprovidersSchedulesdirectCountriesAsyncWithHttpInfo ();
-        /// <summary>
-        /// Gets a live tv channel
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetLivetvLiverecordingsByIdStreamAsync (string id);
-
-        /// <summary>
-        /// Gets a live tv channel
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetLivetvLiverecordingsByIdStreamAsyncWithHttpInfo (string id);
-        /// <summary>
-        /// Gets a live tv channel
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="container"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetLivetvLivestreamfilesByIdStreamByContainerAsync (string id, string container);
-
-        /// <summary>
-        /// Gets a live tv channel
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="container"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetLivetvLivestreamfilesByIdStreamByContainerAsyncWithHttpInfo (string id, string container);
         /// <summary>
         /// Gets the channel management list
         /// </summary>
@@ -4954,7 +4866,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostLivetvChannelmappingsAsync (LiveTVApiSetChannelMapping body, string providerId);
+        System.Threading.Tasks.Task PostLivetvChannelmappingsAsync (ApiSetChannelMapping body, string providerId);
 
         /// <summary>
         /// 
@@ -4966,7 +4878,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostLivetvChannelmappingsAsyncWithHttpInfo (LiveTVApiSetChannelMapping body, string providerId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostLivetvChannelmappingsAsyncWithHttpInfo (ApiSetChannelMapping body, string providerId);
         /// <summary>
         /// Adds a listing provider
         /// </summary>
@@ -5019,7 +4931,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelDisabled</param>
         /// <param name="id"></param>
         /// <returns>Task of QueryResultChannelManagementInfo</returns>
-        System.Threading.Tasks.Task<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdDisabledAsync (LiveTVApiSetChannelDisabled body, string id);
+        System.Threading.Tasks.Task<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdDisabledAsync (ApiSetChannelDisabled body, string id);
 
         /// <summary>
         /// Sets a channel disabled or not
@@ -5031,7 +4943,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelDisabled</param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (QueryResultChannelManagementInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultChannelManagementInfo>> PostLivetvManageChannelsByIdDisabledAsyncWithHttpInfo (LiveTVApiSetChannelDisabled body, string id);
+        System.Threading.Tasks.Task<ApiResponse<QueryResultChannelManagementInfo>> PostLivetvManageChannelsByIdDisabledAsyncWithHttpInfo (ApiSetChannelDisabled body, string id);
         /// <summary>
         /// Sets a channel sort index
         /// </summary>
@@ -5042,7 +4954,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelSortIndex</param>
         /// <param name="id"></param>
         /// <returns>Task of QueryResultChannelManagementInfo</returns>
-        System.Threading.Tasks.Task<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdSortindexAsync (LiveTVApiSetChannelSortIndex body, string id);
+        System.Threading.Tasks.Task<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdSortindexAsync (ApiSetChannelSortIndex body, string id);
 
         /// <summary>
         /// Sets a channel sort index
@@ -5054,7 +4966,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelSortIndex</param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (QueryResultChannelManagementInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultChannelManagementInfo>> PostLivetvManageChannelsByIdSortindexAsyncWithHttpInfo (LiveTVApiSetChannelSortIndex body, string id);
+        System.Threading.Tasks.Task<ApiResponse<QueryResultChannelManagementInfo>> PostLivetvManageChannelsByIdSortindexAsyncWithHttpInfo (ApiSetChannelSortIndex body, string id);
         /// <summary>
         /// Gets available live tv epgs..
         /// </summary>
@@ -5517,7 +5429,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutLivetvChannelmappingsAsync (LiveTVApiSetChannelMapping body, string providerId);
+        System.Threading.Tasks.Task PutLivetvChannelmappingsAsync (ApiSetChannelMapping body, string providerId);
 
         /// <summary>
         /// 
@@ -5529,7 +5441,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutLivetvChannelmappingsAsyncWithHttpInfo (LiveTVApiSetChannelMapping body, string providerId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutLivetvChannelmappingsAsyncWithHttpInfo (ApiSetChannelMapping body, string providerId);
         #endregion Asynchronous Operations
     }
 
@@ -6676,10 +6588,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets available recording options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>LiveTVApiAvailableRecordingOptions</returns>
-        public LiveTVApiAvailableRecordingOptions GetLivetvAvailablerecordingoptions ()
+        /// <returns>ApiAvailableRecordingOptions</returns>
+        public ApiAvailableRecordingOptions GetLivetvAvailablerecordingoptions ()
         {
-             ApiResponse<LiveTVApiAvailableRecordingOptions> localVarResponse = GetLivetvAvailablerecordingoptionsWithHttpInfo();
+             ApiResponse<ApiAvailableRecordingOptions> localVarResponse = GetLivetvAvailablerecordingoptionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -6687,8 +6599,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets available recording options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of LiveTVApiAvailableRecordingOptions</returns>
-        public ApiResponse< LiveTVApiAvailableRecordingOptions > GetLivetvAvailablerecordingoptionsWithHttpInfo ()
+        /// <returns>ApiResponse of ApiAvailableRecordingOptions</returns>
+        public ApiResponse< ApiAvailableRecordingOptions > GetLivetvAvailablerecordingoptionsWithHttpInfo ()
         {
 
             var localVarPath = "/LiveTv/AvailableRecordingOptions";
@@ -6738,19 +6650,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<LiveTVApiAvailableRecordingOptions>(localVarStatusCode,
+            return new ApiResponse<ApiAvailableRecordingOptions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (LiveTVApiAvailableRecordingOptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LiveTVApiAvailableRecordingOptions)));
+                (ApiAvailableRecordingOptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiAvailableRecordingOptions)));
         }
 
         /// <summary>
         /// Gets available recording options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of LiveTVApiAvailableRecordingOptions</returns>
-        public async System.Threading.Tasks.Task<LiveTVApiAvailableRecordingOptions> GetLivetvAvailablerecordingoptionsAsync ()
+        /// <returns>Task of ApiAvailableRecordingOptions</returns>
+        public async System.Threading.Tasks.Task<ApiAvailableRecordingOptions> GetLivetvAvailablerecordingoptionsAsync ()
         {
-             ApiResponse<LiveTVApiAvailableRecordingOptions> localVarResponse = await GetLivetvAvailablerecordingoptionsAsyncWithHttpInfo();
+             ApiResponse<ApiAvailableRecordingOptions> localVarResponse = await GetLivetvAvailablerecordingoptionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -6759,8 +6671,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets available recording options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (LiveTVApiAvailableRecordingOptions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LiveTVApiAvailableRecordingOptions>> GetLivetvAvailablerecordingoptionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (ApiAvailableRecordingOptions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiAvailableRecordingOptions>> GetLivetvAvailablerecordingoptionsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/LiveTv/AvailableRecordingOptions";
@@ -6810,9 +6722,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<LiveTVApiAvailableRecordingOptions>(localVarStatusCode,
+            return new ApiResponse<ApiAvailableRecordingOptions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (LiveTVApiAvailableRecordingOptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LiveTVApiAvailableRecordingOptions)));
+                (ApiAvailableRecordingOptions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiAvailableRecordingOptions)));
         }
 
         /// <summary>
@@ -8855,10 +8767,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>List&lt;LiveTVApiTagItem&gt;</returns>
-        public List<LiveTVApiTagItem> GetLivetvChanneltagsPrefixes (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        /// <returns>List&lt;ApiTagItem&gt;</returns>
+        public List<ApiTagItem> GetLivetvChanneltagsPrefixes (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
-             ApiResponse<List<LiveTVApiTagItem>> localVarResponse = GetLivetvChanneltagsPrefixesWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+             ApiResponse<List<ApiTagItem>> localVarResponse = GetLivetvChanneltagsPrefixesWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
              return localVarResponse.Data;
         }
 
@@ -8963,8 +8875,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>ApiResponse of List&lt;LiveTVApiTagItem&gt;</returns>
-        public ApiResponse< List<LiveTVApiTagItem> > GetLivetvChanneltagsPrefixesWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        /// <returns>ApiResponse of List&lt;ApiTagItem&gt;</returns>
+        public ApiResponse< List<ApiTagItem> > GetLivetvChanneltagsPrefixesWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
 
             var localVarPath = "/LiveTv/ChannelTags/Prefixes";
@@ -9111,9 +9023,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<LiveTVApiTagItem>>(localVarStatusCode,
+            return new ApiResponse<List<ApiTagItem>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<LiveTVApiTagItem>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LiveTVApiTagItem>)));
+                (List<ApiTagItem>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ApiTagItem>)));
         }
 
         /// <summary>
@@ -9217,10 +9129,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>Task of List&lt;LiveTVApiTagItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<LiveTVApiTagItem>> GetLivetvChanneltagsPrefixesAsync (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        /// <returns>Task of List&lt;ApiTagItem&gt;</returns>
+        public async System.Threading.Tasks.Task<List<ApiTagItem>> GetLivetvChanneltagsPrefixesAsync (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
-             ApiResponse<List<LiveTVApiTagItem>> localVarResponse = await GetLivetvChanneltagsPrefixesAsyncWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+             ApiResponse<List<ApiTagItem>> localVarResponse = await GetLivetvChanneltagsPrefixesAsyncWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
              return localVarResponse.Data;
 
         }
@@ -9326,8 +9238,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;LiveTVApiTagItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<LiveTVApiTagItem>>> GetLivetvChanneltagsPrefixesAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        /// <returns>Task of ApiResponse (List&lt;ApiTagItem&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<ApiTagItem>>> GetLivetvChanneltagsPrefixesAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
 
             var localVarPath = "/LiveTv/ChannelTags/Prefixes";
@@ -9474,9 +9386,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<LiveTVApiTagItem>>(localVarStatusCode,
+            return new ApiResponse<List<ApiTagItem>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<LiveTVApiTagItem>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LiveTVApiTagItem>)));
+                (List<ApiTagItem>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ApiTagItem>)));
         }
 
         /// <summary>
@@ -9586,10 +9498,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>QueryResultLiveTVApiEpgRow</returns>
-        public QueryResultLiveTVApiEpgRow GetLivetvEPG (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        /// <returns>QueryResultApiEpgRow</returns>
+        public QueryResultApiEpgRow GetLivetvEPG (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
-             ApiResponse<QueryResultLiveTVApiEpgRow> localVarResponse = GetLivetvEPGWithHttpInfo(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+             ApiResponse<QueryResultApiEpgRow> localVarResponse = GetLivetvEPGWithHttpInfo(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
              return localVarResponse.Data;
         }
 
@@ -9700,8 +9612,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>ApiResponse of QueryResultLiveTVApiEpgRow</returns>
-        public ApiResponse< QueryResultLiveTVApiEpgRow > GetLivetvEPGWithHttpInfo (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        /// <returns>ApiResponse of QueryResultApiEpgRow</returns>
+        public ApiResponse< QueryResultApiEpgRow > GetLivetvEPGWithHttpInfo (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
 
             var localVarPath = "/LiveTv/EPG";
@@ -9854,9 +9766,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<QueryResultLiveTVApiEpgRow>(localVarStatusCode,
+            return new ApiResponse<QueryResultApiEpgRow>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (QueryResultLiveTVApiEpgRow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultLiveTVApiEpgRow)));
+                (QueryResultApiEpgRow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultApiEpgRow)));
         }
 
         /// <summary>
@@ -9966,10 +9878,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>Task of QueryResultLiveTVApiEpgRow</returns>
-        public async System.Threading.Tasks.Task<QueryResultLiveTVApiEpgRow> GetLivetvEPGAsync (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        /// <returns>Task of QueryResultApiEpgRow</returns>
+        public async System.Threading.Tasks.Task<QueryResultApiEpgRow> GetLivetvEPGAsync (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
-             ApiResponse<QueryResultLiveTVApiEpgRow> localVarResponse = await GetLivetvEPGAsyncWithHttpInfo(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+             ApiResponse<QueryResultApiEpgRow> localVarResponse = await GetLivetvEPGAsyncWithHttpInfo(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
              return localVarResponse.Data;
 
         }
@@ -10081,8 +9993,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="albumArtistStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
-        /// <returns>Task of ApiResponse (QueryResultLiveTVApiEpgRow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultLiveTVApiEpgRow>> GetLivetvEPGAsyncWithHttpInfo (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        /// <returns>Task of ApiResponse (QueryResultApiEpgRow)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultApiEpgRow>> GetLivetvEPGAsyncWithHttpInfo (LiveTvChannelType type, bool? isLiked, bool? isDisliked, bool? enableFavoriteSorting, bool? addCurrentProgram, string channelIds, string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
 
             var localVarPath = "/LiveTv/EPG";
@@ -10235,9 +10147,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<QueryResultLiveTVApiEpgRow>(localVarStatusCode,
+            return new ApiResponse<QueryResultApiEpgRow>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (QueryResultLiveTVApiEpgRow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultLiveTVApiEpgRow)));
+                (QueryResultApiEpgRow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultApiEpgRow)));
         }
 
         /// <summary>
@@ -10828,10 +10740,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets listing provider Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;LiveTVApiListingProviderTypeInfo&gt;</returns>
-        public List<LiveTVApiListingProviderTypeInfo> GetLivetvListingprovidersAvailable ()
+        /// <returns>List&lt;ApiListingProviderTypeInfo&gt;</returns>
+        public List<ApiListingProviderTypeInfo> GetLivetvListingprovidersAvailable ()
         {
-             ApiResponse<List<LiveTVApiListingProviderTypeInfo>> localVarResponse = GetLivetvListingprovidersAvailableWithHttpInfo();
+             ApiResponse<List<ApiListingProviderTypeInfo>> localVarResponse = GetLivetvListingprovidersAvailableWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -10839,8 +10751,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets listing provider Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;LiveTVApiListingProviderTypeInfo&gt;</returns>
-        public ApiResponse< List<LiveTVApiListingProviderTypeInfo> > GetLivetvListingprovidersAvailableWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;ApiListingProviderTypeInfo&gt;</returns>
+        public ApiResponse< List<ApiListingProviderTypeInfo> > GetLivetvListingprovidersAvailableWithHttpInfo ()
         {
 
             var localVarPath = "/LiveTv/ListingProviders/Available";
@@ -10890,19 +10802,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<LiveTVApiListingProviderTypeInfo>>(localVarStatusCode,
+            return new ApiResponse<List<ApiListingProviderTypeInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<LiveTVApiListingProviderTypeInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LiveTVApiListingProviderTypeInfo>)));
+                (List<ApiListingProviderTypeInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ApiListingProviderTypeInfo>)));
         }
 
         /// <summary>
         /// Gets listing provider Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;LiveTVApiListingProviderTypeInfo&gt;</returns>
-        public async System.Threading.Tasks.Task<List<LiveTVApiListingProviderTypeInfo>> GetLivetvListingprovidersAvailableAsync ()
+        /// <returns>Task of List&lt;ApiListingProviderTypeInfo&gt;</returns>
+        public async System.Threading.Tasks.Task<List<ApiListingProviderTypeInfo>> GetLivetvListingprovidersAvailableAsync ()
         {
-             ApiResponse<List<LiveTVApiListingProviderTypeInfo>> localVarResponse = await GetLivetvListingprovidersAvailableAsyncWithHttpInfo();
+             ApiResponse<List<ApiListingProviderTypeInfo>> localVarResponse = await GetLivetvListingprovidersAvailableAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -10911,8 +10823,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets listing provider Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;LiveTVApiListingProviderTypeInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<LiveTVApiListingProviderTypeInfo>>> GetLivetvListingprovidersAvailableAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;ApiListingProviderTypeInfo&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<ApiListingProviderTypeInfo>>> GetLivetvListingprovidersAvailableAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/LiveTv/ListingProviders/Available";
@@ -10962,9 +10874,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<LiveTVApiListingProviderTypeInfo>>(localVarStatusCode,
+            return new ApiResponse<List<ApiListingProviderTypeInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<LiveTVApiListingProviderTypeInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LiveTVApiListingProviderTypeInfo>)));
+                (List<ApiListingProviderTypeInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ApiListingProviderTypeInfo>)));
         }
 
         /// <summary>
@@ -11406,316 +11318,6 @@ namespace EmbyClient.Dotnet.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetLivetvListingprovidersSchedulesdirectCountries", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Gets a live tv channel Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public void GetLivetvLiverecordingsByIdStream (string id)
-        {
-             GetLivetvLiverecordingsByIdStreamWithHttpInfo(id);
-        }
-
-        /// <summary>
-        /// Gets a live tv channel Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetLivetvLiverecordingsByIdStreamWithHttpInfo (string id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling LiveTvServiceApi->GetLivetvLiverecordingsByIdStream");
-
-            var localVarPath = "/LiveTv/LiveRecordings/{Id}/stream";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetLivetvLiverecordingsByIdStream", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Gets a live tv channel Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetLivetvLiverecordingsByIdStreamAsync (string id)
-        {
-             await GetLivetvLiverecordingsByIdStreamAsyncWithHttpInfo(id);
-
-        }
-
-        /// <summary>
-        /// Gets a live tv channel Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetLivetvLiverecordingsByIdStreamAsyncWithHttpInfo (string id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling LiveTvServiceApi->GetLivetvLiverecordingsByIdStream");
-
-            var localVarPath = "/LiveTv/LiveRecordings/{Id}/stream";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetLivetvLiverecordingsByIdStream", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Gets a live tv channel Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="container"></param>
-        /// <returns></returns>
-        public void GetLivetvLivestreamfilesByIdStreamByContainer (string id, string container)
-        {
-             GetLivetvLivestreamfilesByIdStreamByContainerWithHttpInfo(id, container);
-        }
-
-        /// <summary>
-        /// Gets a live tv channel Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="container"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetLivetvLivestreamfilesByIdStreamByContainerWithHttpInfo (string id, string container)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling LiveTvServiceApi->GetLivetvLivestreamfilesByIdStreamByContainer");
-            // verify the required parameter 'container' is set
-            if (container == null)
-                throw new ApiException(400, "Missing required parameter 'container' when calling LiveTvServiceApi->GetLivetvLivestreamfilesByIdStreamByContainer");
-
-            var localVarPath = "/LiveTv/LiveStreamFiles/{Id}/stream.{Container}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (container != null) localVarPathParams.Add("Container", this.Configuration.ApiClient.ParameterToString(container)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetLivetvLivestreamfilesByIdStreamByContainer", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Gets a live tv channel Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="container"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetLivetvLivestreamfilesByIdStreamByContainerAsync (string id, string container)
-        {
-             await GetLivetvLivestreamfilesByIdStreamByContainerAsyncWithHttpInfo(id, container);
-
-        }
-
-        /// <summary>
-        /// Gets a live tv channel Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"></param>
-        /// <param name="container"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetLivetvLivestreamfilesByIdStreamByContainerAsyncWithHttpInfo (string id, string container)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling LiveTvServiceApi->GetLivetvLivestreamfilesByIdStreamByContainer");
-            // verify the required parameter 'container' is set
-            if (container == null)
-                throw new ApiException(400, "Missing required parameter 'container' when calling LiveTvServiceApi->GetLivetvLivestreamfilesByIdStreamByContainer");
-
-            var localVarPath = "/LiveTv/LiveStreamFiles/{Id}/stream.{Container}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (container != null) localVarPathParams.Add("Container", this.Configuration.ApiClient.ParameterToString(container)); // path parameter
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetLivetvLivestreamfilesByIdStreamByContainer", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -16037,7 +15639,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns></returns>
-        public void PostLivetvChannelmappings (LiveTVApiSetChannelMapping body, string providerId)
+        public void PostLivetvChannelmappings (ApiSetChannelMapping body, string providerId)
         {
              PostLivetvChannelmappingsWithHttpInfo(body, providerId);
         }
@@ -16049,7 +15651,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostLivetvChannelmappingsWithHttpInfo (LiveTVApiSetChannelMapping body, string providerId)
+        public ApiResponse<Object> PostLivetvChannelmappingsWithHttpInfo (ApiSetChannelMapping body, string providerId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -16126,7 +15728,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostLivetvChannelmappingsAsync (LiveTVApiSetChannelMapping body, string providerId)
+        public async System.Threading.Tasks.Task PostLivetvChannelmappingsAsync (ApiSetChannelMapping body, string providerId)
         {
              await PostLivetvChannelmappingsAsyncWithHttpInfo(body, providerId);
 
@@ -16139,7 +15741,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostLivetvChannelmappingsAsyncWithHttpInfo (LiveTVApiSetChannelMapping body, string providerId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostLivetvChannelmappingsAsyncWithHttpInfo (ApiSetChannelMapping body, string providerId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -16532,7 +16134,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelDisabled</param>
         /// <param name="id"></param>
         /// <returns>QueryResultChannelManagementInfo</returns>
-        public QueryResultChannelManagementInfo PostLivetvManageChannelsByIdDisabled (LiveTVApiSetChannelDisabled body, string id)
+        public QueryResultChannelManagementInfo PostLivetvManageChannelsByIdDisabled (ApiSetChannelDisabled body, string id)
         {
              ApiResponse<QueryResultChannelManagementInfo> localVarResponse = PostLivetvManageChannelsByIdDisabledWithHttpInfo(body, id);
              return localVarResponse.Data;
@@ -16545,7 +16147,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelDisabled</param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of QueryResultChannelManagementInfo</returns>
-        public ApiResponse< QueryResultChannelManagementInfo > PostLivetvManageChannelsByIdDisabledWithHttpInfo (LiveTVApiSetChannelDisabled body, string id)
+        public ApiResponse< QueryResultChannelManagementInfo > PostLivetvManageChannelsByIdDisabledWithHttpInfo (ApiSetChannelDisabled body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -16624,7 +16226,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelDisabled</param>
         /// <param name="id"></param>
         /// <returns>Task of QueryResultChannelManagementInfo</returns>
-        public async System.Threading.Tasks.Task<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdDisabledAsync (LiveTVApiSetChannelDisabled body, string id)
+        public async System.Threading.Tasks.Task<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdDisabledAsync (ApiSetChannelDisabled body, string id)
         {
              ApiResponse<QueryResultChannelManagementInfo> localVarResponse = await PostLivetvManageChannelsByIdDisabledAsyncWithHttpInfo(body, id);
              return localVarResponse.Data;
@@ -16638,7 +16240,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelDisabled</param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (QueryResultChannelManagementInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultChannelManagementInfo>> PostLivetvManageChannelsByIdDisabledAsyncWithHttpInfo (LiveTVApiSetChannelDisabled body, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultChannelManagementInfo>> PostLivetvManageChannelsByIdDisabledAsyncWithHttpInfo (ApiSetChannelDisabled body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -16717,7 +16319,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelSortIndex</param>
         /// <param name="id"></param>
         /// <returns>QueryResultChannelManagementInfo</returns>
-        public QueryResultChannelManagementInfo PostLivetvManageChannelsByIdSortindex (LiveTVApiSetChannelSortIndex body, string id)
+        public QueryResultChannelManagementInfo PostLivetvManageChannelsByIdSortindex (ApiSetChannelSortIndex body, string id)
         {
              ApiResponse<QueryResultChannelManagementInfo> localVarResponse = PostLivetvManageChannelsByIdSortindexWithHttpInfo(body, id);
              return localVarResponse.Data;
@@ -16730,7 +16332,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelSortIndex</param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of QueryResultChannelManagementInfo</returns>
-        public ApiResponse< QueryResultChannelManagementInfo > PostLivetvManageChannelsByIdSortindexWithHttpInfo (LiveTVApiSetChannelSortIndex body, string id)
+        public ApiResponse< QueryResultChannelManagementInfo > PostLivetvManageChannelsByIdSortindexWithHttpInfo (ApiSetChannelSortIndex body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -16809,7 +16411,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelSortIndex</param>
         /// <param name="id"></param>
         /// <returns>Task of QueryResultChannelManagementInfo</returns>
-        public async System.Threading.Tasks.Task<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdSortindexAsync (LiveTVApiSetChannelSortIndex body, string id)
+        public async System.Threading.Tasks.Task<QueryResultChannelManagementInfo> PostLivetvManageChannelsByIdSortindexAsync (ApiSetChannelSortIndex body, string id)
         {
              ApiResponse<QueryResultChannelManagementInfo> localVarResponse = await PostLivetvManageChannelsByIdSortindexAsyncWithHttpInfo(body, id);
              return localVarResponse.Data;
@@ -16823,7 +16425,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelSortIndex</param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (QueryResultChannelManagementInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultChannelManagementInfo>> PostLivetvManageChannelsByIdSortindexAsyncWithHttpInfo (LiveTVApiSetChannelSortIndex body, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultChannelManagementInfo>> PostLivetvManageChannelsByIdSortindexAsyncWithHttpInfo (ApiSetChannelSortIndex body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -19410,7 +19012,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns></returns>
-        public void PutLivetvChannelmappings (LiveTVApiSetChannelMapping body, string providerId)
+        public void PutLivetvChannelmappings (ApiSetChannelMapping body, string providerId)
         {
              PutLivetvChannelmappingsWithHttpInfo(body, providerId);
         }
@@ -19422,7 +19024,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutLivetvChannelmappingsWithHttpInfo (LiveTVApiSetChannelMapping body, string providerId)
+        public ApiResponse<Object> PutLivetvChannelmappingsWithHttpInfo (ApiSetChannelMapping body, string providerId)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -19499,7 +19101,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutLivetvChannelmappingsAsync (LiveTVApiSetChannelMapping body, string providerId)
+        public async System.Threading.Tasks.Task PutLivetvChannelmappingsAsync (ApiSetChannelMapping body, string providerId)
         {
              await PutLivetvChannelmappingsAsyncWithHttpInfo(body, providerId);
 
@@ -19512,7 +19114,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">SetChannelMapping</param>
         /// <param name="providerId">Provider id</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutLivetvChannelmappingsAsyncWithHttpInfo (LiveTVApiSetChannelMapping body, string providerId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutLivetvChannelmappingsAsyncWithHttpInfo (ApiSetChannelMapping body, string providerId)
         {
             // verify the required parameter 'body' is set
             if (body == null)

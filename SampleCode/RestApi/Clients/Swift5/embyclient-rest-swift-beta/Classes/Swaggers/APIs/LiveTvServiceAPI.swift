@@ -326,7 +326,7 @@ open class LiveTvServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLivetvAvailablerecordingoptions(completion: @escaping ((_ data: LiveTVApiAvailableRecordingOptions?,_ error: Error?) -> Void)) {
+    open class func getLivetvAvailablerecordingoptions(completion: @escaping ((_ data: ApiAvailableRecordingOptions?,_ error: Error?) -> Void)) {
         getLivetvAvailablerecordingoptionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -357,16 +357,16 @@ open class LiveTvServiceAPI {
   "SeriesRecordingFolders" : [ null, null ]
 }}]
 
-     - returns: RequestBuilder<LiveTVApiAvailableRecordingOptions> 
+     - returns: RequestBuilder<ApiAvailableRecordingOptions> 
      */
-    open class func getLivetvAvailablerecordingoptionsWithRequestBuilder() -> RequestBuilder<LiveTVApiAvailableRecordingOptions> {
+    open class func getLivetvAvailablerecordingoptionsWithRequestBuilder() -> RequestBuilder<ApiAvailableRecordingOptions> {
         let path = "/LiveTv/AvailableRecordingOptions"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<LiveTVApiAvailableRecordingOptions>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ApiAvailableRecordingOptions>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -3873,7 +3873,7 @@ open class LiveTvServiceAPI {
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLivetvChanneltagsPrefixes(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: [LiveTVApiTagItem]?,_ error: Error?) -> Void)) {
+    open class func getLivetvChanneltagsPrefixes(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: [ApiTagItem]?,_ error: Error?) -> Void)) {
         getLivetvChanneltagsPrefixesWithRequestBuilder(artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, excludeTags: excludeTags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -3995,9 +3995,9 @@ open class LiveTvServiceAPI {
      - parameter nameStartsWith: (query) Optional filter by items whose name is sorted equally than a given input string. (optional)
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
 
-     - returns: RequestBuilder<[LiveTVApiTagItem]> 
+     - returns: RequestBuilder<[ApiTagItem]> 
      */
-    open class func getLivetvChanneltagsPrefixesWithRequestBuilder(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<[LiveTVApiTagItem]> {
+    open class func getLivetvChanneltagsPrefixesWithRequestBuilder(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<[ApiTagItem]> {
         let path = "/LiveTv/ChannelTags/Prefixes"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -4103,7 +4103,7 @@ open class LiveTvServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[LiveTVApiTagItem]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[ApiTagItem]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -4215,7 +4215,7 @@ open class LiveTvServiceAPI {
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLivetvEPG(type: LiveTvChannelType? = nil, isLiked: Bool? = nil, isDisliked: Bool? = nil, enableFavoriteSorting: Bool? = nil, addCurrentProgram: Bool? = nil, channelIds: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: QueryResultLiveTVApiEpgRow?,_ error: Error?) -> Void)) {
+    open class func getLivetvEPG(type: LiveTvChannelType? = nil, isLiked: Bool? = nil, isDisliked: Bool? = nil, enableFavoriteSorting: Bool? = nil, addCurrentProgram: Bool? = nil, channelIds: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: QueryResultApiEpgRow?,_ error: Error?) -> Void)) {
         getLivetvEPGWithRequestBuilder(type: type, isLiked: isLiked, isDisliked: isDisliked, enableFavoriteSorting: enableFavoriteSorting, addCurrentProgram: addCurrentProgram, channelIds: channelIds, artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, excludeTags: excludeTags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -5376,9 +5376,9 @@ open class LiveTvServiceAPI {
      - parameter nameStartsWith: (query) Optional filter by items whose name is sorted equally than a given input string. (optional)
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
 
-     - returns: RequestBuilder<QueryResultLiveTVApiEpgRow> 
+     - returns: RequestBuilder<QueryResultApiEpgRow> 
      */
-    open class func getLivetvEPGWithRequestBuilder(type: LiveTvChannelType? = nil, isLiked: Bool? = nil, isDisliked: Bool? = nil, enableFavoriteSorting: Bool? = nil, addCurrentProgram: Bool? = nil, channelIds: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<QueryResultLiveTVApiEpgRow> {
+    open class func getLivetvEPGWithRequestBuilder(type: LiveTvChannelType? = nil, isLiked: Bool? = nil, isDisliked: Bool? = nil, enableFavoriteSorting: Bool? = nil, addCurrentProgram: Bool? = nil, channelIds: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<QueryResultApiEpgRow> {
         let path = "/LiveTv/EPG"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -5490,7 +5490,7 @@ open class LiveTvServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<QueryResultLiveTVApiEpgRow>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueryResultApiEpgRow>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -6233,7 +6233,7 @@ open class LiveTvServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLivetvListingprovidersAvailable(completion: @escaping ((_ data: [LiveTVApiListingProviderTypeInfo]?,_ error: Error?) -> Void)) {
+    open class func getLivetvListingprovidersAvailable(completion: @escaping ((_ data: [ApiListingProviderTypeInfo]?,_ error: Error?) -> Void)) {
         getLivetvListingprovidersAvailableWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -6260,16 +6260,16 @@ open class LiveTvServiceAPI {
   "Name" : "Name"
 } ]}]
 
-     - returns: RequestBuilder<[LiveTVApiListingProviderTypeInfo]> 
+     - returns: RequestBuilder<[ApiListingProviderTypeInfo]> 
      */
-    open class func getLivetvListingprovidersAvailableWithRequestBuilder() -> RequestBuilder<[LiveTVApiListingProviderTypeInfo]> {
+    open class func getLivetvListingprovidersAvailableWithRequestBuilder() -> RequestBuilder<[ApiListingProviderTypeInfo]> {
         let path = "/LiveTv/ListingProviders/Available"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[LiveTVApiListingProviderTypeInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[ApiListingProviderTypeInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -6424,101 +6424,6 @@ open class LiveTvServiceAPI {
      */
     open class func getLivetvListingprovidersSchedulesdirectCountriesWithRequestBuilder() -> RequestBuilder<Void> {
         let path = "/LiveTv/ListingProviders/SchedulesDirect/Countries"
-        let URLString = embyclient-rest-swift-betaAPI.basePath + path
-        let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
-
-
-        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
-
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
-    }
-    /**
-     Gets a live tv channel
-
-     - parameter _id: (path)  
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getLivetvLiverecordingsByIdStream(_id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getLivetvLiverecordingsByIdStreamWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-
-    /**
-     Gets a live tv channel
-     - GET /LiveTv/LiveRecordings/{Id}/stream
-
-     - API Key:
-       - type: apiKey api_key (QUERY)
-       - name: apikeyauth
-     - :
-       - type: http
-       - name: embyauth
-     - parameter _id: (path)  
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func getLivetvLiverecordingsByIdStreamWithRequestBuilder(_id: String) -> RequestBuilder<Void> {
-        var path = "/LiveTv/LiveRecordings/{Id}/stream"
-        let _idPreEscape = "\(_id)"
-        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let URLString = embyclient-rest-swift-betaAPI.basePath + path
-        let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
-
-
-        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
-
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
-    }
-    /**
-     Gets a live tv channel
-
-     - parameter _id: (path)  
-     - parameter container: (path)  
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getLivetvLivestreamfilesByIdStreamByContainer(_id: String, container: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getLivetvLivestreamfilesByIdStreamByContainerWithRequestBuilder(_id: _id, container: container).execute { (response, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-
-    /**
-     Gets a live tv channel
-     - GET /LiveTv/LiveStreamFiles/{Id}/stream.{Container}
-
-     - API Key:
-       - type: apiKey api_key (QUERY)
-       - name: apikeyauth
-     - :
-       - type: http
-       - name: embyauth
-     - parameter _id: (path)  
-     - parameter container: (path)  
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func getLivetvLivestreamfilesByIdStreamByContainerWithRequestBuilder(_id: String, container: String) -> RequestBuilder<Void> {
-        var path = "/LiveTv/LiveStreamFiles/{Id}/stream.{Container}"
-        let _idPreEscape = "\(_id)"
-        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let containerPreEscape = "\(container)"
-        let containerPostEscape = containerPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Container}", with: containerPostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
@@ -15109,7 +15014,7 @@ open class LiveTvServiceAPI {
      - parameter providerId: (query) Provider id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivetvChannelmappings(body: LiveTVApiSetChannelMapping, providerId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postLivetvChannelmappings(body: ApiSetChannelMapping, providerId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postLivetvChannelmappingsWithRequestBuilder(body: body, providerId: providerId).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -15134,7 +15039,7 @@ open class LiveTvServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postLivetvChannelmappingsWithRequestBuilder(body: LiveTVApiSetChannelMapping, providerId: String) -> RequestBuilder<Void> {
+    open class func postLivetvChannelmappingsWithRequestBuilder(body: ApiSetChannelMapping, providerId: String) -> RequestBuilder<Void> {
         let path = "/LiveTv/ChannelMappings"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -15267,7 +15172,7 @@ open class LiveTvServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivetvManageChannelsByIdDisabled(body: LiveTVApiSetChannelDisabled, _id: String, completion: @escaping ((_ data: QueryResultChannelManagementInfo?,_ error: Error?) -> Void)) {
+    open class func postLivetvManageChannelsByIdDisabled(body: ApiSetChannelDisabled, _id: String, completion: @escaping ((_ data: QueryResultChannelManagementInfo?,_ error: Error?) -> Void)) {
         postLivetvManageChannelsByIdDisabledWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -15299,7 +15204,7 @@ open class LiveTvServiceAPI {
 
      - returns: RequestBuilder<QueryResultChannelManagementInfo> 
      */
-    open class func postLivetvManageChannelsByIdDisabledWithRequestBuilder(body: LiveTVApiSetChannelDisabled, _id: String) -> RequestBuilder<QueryResultChannelManagementInfo> {
+    open class func postLivetvManageChannelsByIdDisabledWithRequestBuilder(body: ApiSetChannelDisabled, _id: String) -> RequestBuilder<QueryResultChannelManagementInfo> {
         var path = "/LiveTv/Manage/Channels/{Id}/Disabled"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -15320,7 +15225,7 @@ open class LiveTvServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivetvManageChannelsByIdSortindex(body: LiveTVApiSetChannelSortIndex, _id: String, completion: @escaping ((_ data: QueryResultChannelManagementInfo?,_ error: Error?) -> Void)) {
+    open class func postLivetvManageChannelsByIdSortindex(body: ApiSetChannelSortIndex, _id: String, completion: @escaping ((_ data: QueryResultChannelManagementInfo?,_ error: Error?) -> Void)) {
         postLivetvManageChannelsByIdSortindexWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -15352,7 +15257,7 @@ open class LiveTvServiceAPI {
 
      - returns: RequestBuilder<QueryResultChannelManagementInfo> 
      */
-    open class func postLivetvManageChannelsByIdSortindexWithRequestBuilder(body: LiveTVApiSetChannelSortIndex, _id: String) -> RequestBuilder<QueryResultChannelManagementInfo> {
+    open class func postLivetvManageChannelsByIdSortindexWithRequestBuilder(body: ApiSetChannelSortIndex, _id: String) -> RequestBuilder<QueryResultChannelManagementInfo> {
         var path = "/LiveTv/Manage/Channels/{Id}/SortIndex"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -16213,7 +16118,7 @@ open class LiveTvServiceAPI {
      - parameter providerId: (query) Provider id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func putLivetvChannelmappings(body: LiveTVApiSetChannelMapping, providerId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func putLivetvChannelmappings(body: ApiSetChannelMapping, providerId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         putLivetvChannelmappingsWithRequestBuilder(body: body, providerId: providerId).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -16238,7 +16143,7 @@ open class LiveTvServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func putLivetvChannelmappingsWithRequestBuilder(body: LiveTVApiSetChannelMapping, providerId: String) -> RequestBuilder<Void> {
+    open class func putLivetvChannelmappingsWithRequestBuilder(body: ApiSetChannelMapping, providerId: String) -> RequestBuilder<Void> {
         let path = "/LiveTv/ChannelMappings"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

@@ -117,6 +117,12 @@ namespace Emby.ApiClient.Model
         public bool? EnableNextEpisodeAutoPlay { get; set; }
 
         /// <summary>
+        /// Gets or Sets PreferSDHSubtitles
+        /// </summary>
+        /// <value>The PreferSDHSubtitles.</value>
+        public bool? PreferSDHSubtitles { get; set; }
+
+        /// <summary>
         /// Gets or Sets ResumeRewindSeconds
         /// </summary>
         /// <value>The ResumeRewindSeconds.</value>
@@ -157,6 +163,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  RememberAudioSelections: ").Append(RememberAudioSelections).Append("\n");
             sb.Append("  RememberSubtitleSelections: ").Append(RememberSubtitleSelections).Append("\n");
             sb.Append("  EnableNextEpisodeAutoPlay: ").Append(EnableNextEpisodeAutoPlay).Append("\n");
+            sb.Append("  PreferSDHSubtitles: ").Append(PreferSDHSubtitles).Append("\n");
             sb.Append("  ResumeRewindSeconds: ").Append(ResumeRewindSeconds).Append("\n");
             sb.Append("  IntroSkipMode: ").Append(IntroSkipMode).Append("\n");
             sb.Append("  EnableLocalPassword: ").Append(EnableLocalPassword).Append("\n");
@@ -264,6 +271,11 @@ namespace Emby.ApiClient.Model
                     this.EnableNextEpisodeAutoPlay.Equals(input.EnableNextEpisodeAutoPlay))
                 ) && 
                 (
+                    this.PreferSDHSubtitles == input.PreferSDHSubtitles ||
+                    (this.PreferSDHSubtitles != null &&
+                    this.PreferSDHSubtitles.Equals(input.PreferSDHSubtitles))
+                ) && 
+                (
                     this.ResumeRewindSeconds == input.ResumeRewindSeconds ||
                     (this.ResumeRewindSeconds != null &&
                     this.ResumeRewindSeconds.Equals(input.ResumeRewindSeconds))
@@ -319,6 +331,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.RememberSubtitleSelections.GetHashCode();
                 if (this.EnableNextEpisodeAutoPlay != null)
                     hashCode = hashCode * 59 + this.EnableNextEpisodeAutoPlay.GetHashCode();
+                if (this.PreferSDHSubtitles != null)
+                    hashCode = hashCode * 59 + this.PreferSDHSubtitles.GetHashCode();
                 if (this.ResumeRewindSeconds != null)
                     hashCode = hashCode * 59 + this.ResumeRewindSeconds.GetHashCode();
                 if (this.IntroSkipMode != null)

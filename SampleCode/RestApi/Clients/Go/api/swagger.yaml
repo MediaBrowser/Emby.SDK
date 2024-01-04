@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.65
+  version: 4.8.0.66
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -105,6 +105,7 @@ tags:
   externalDocs:
     description: "API Reference: InstantMixService"
     url: https://betadev.emby.media/reference/RestAPI/InstantMixService.html
+- name: BackupApi
 - name: BrandingService
   externalDocs:
     description: "API Reference: BrandingService"
@@ -277,6 +278,10 @@ tags:
   externalDocs:
     description: "API Reference: SubtitleService"
     url: https://betadev.emby.media/reference/RestAPI/SubtitleService.html
+- name: LiveStreamService
+  externalDocs:
+    description: "API Reference: LiveStreamService"
+    url: https://betadev.emby.media/reference/RestAPI/LiveStreamService.html
 paths:
   /Artists:
     summary: "Gets all artists from a given item, folder, or the entire library"
@@ -20783,6 +20788,69 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
+  /BackupRestore/Restore:
+    post:
+      tags:
+      - BackupApi
+      description: Requires authentication as administrator
+      operationId: postBackuprestoreRestore
+      requestBody:
+        description: "RestoreOptions: "
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MBBackup.Api.RestoreOptions'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/MBBackup.Api.RestoreOptions'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
+  /BackupRestore/BackupInfo:
+    get:
+      tags:
+      - BackupApi
+      description: Requires authentication as administrator
+      operationId: getBackuprestoreBackupinfo
+      responses:
+        "200":
+          description: Operation successful. Returning a AllBackupsInfo object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MBBackup.Api.AllBackupsInfo'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/MBBackup.Api.AllBackupsInfo'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
   /Branding/Configuration:
     summary: Gets branding configuration
     get:
@@ -24731,10 +24799,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/LiveTV.Api.SetChannelMapping'
+              $ref: '#/components/schemas/Api.SetChannelMapping'
           application/xml:
             schema:
-              $ref: '#/components/schemas/LiveTV.Api.SetChannelMapping'
+              $ref: '#/components/schemas/Api.SetChannelMapping'
         required: true
       responses:
         "200":
@@ -24772,10 +24840,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/LiveTV.Api.SetChannelMapping'
+              $ref: '#/components/schemas/Api.SetChannelMapping'
           application/xml:
             schema:
-              $ref: '#/components/schemas/LiveTV.Api.SetChannelMapping'
+              $ref: '#/components/schemas/Api.SetChannelMapping'
         required: true
       responses:
         "200":
@@ -26207,10 +26275,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/QueryResult_LiveTV.Api.EpgRow'
+                $ref: '#/components/schemas/QueryResult_Api.EpgRow'
             application/xml:
               schema:
-                $ref: '#/components/schemas/QueryResult_LiveTV.Api.EpgRow'
+                $ref: '#/components/schemas/QueryResult_Api.EpgRow'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -30156,10 +30224,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LiveTV.Api.AvailableRecordingOptions'
+                $ref: '#/components/schemas/Api.AvailableRecordingOptions'
             application/xml:
               schema:
-                $ref: '#/components/schemas/LiveTV.Api.AvailableRecordingOptions'
+                $ref: '#/components/schemas/Api.AvailableRecordingOptions'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -42114,13 +42182,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/LiveTV.Api.TagItem'
+                  $ref: '#/components/schemas/Api.TagItem'
                 x-content-type: application/json
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/LiveTV.Api.TagItem'
+                  $ref: '#/components/schemas/Api.TagItem'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -43107,13 +43175,13 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/LiveTV.Api.ListingProviderTypeInfo'
+                  $ref: '#/components/schemas/Api.ListingProviderTypeInfo'
                 x-content-type: application/json
             application/xml:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/LiveTV.Api.ListingProviderTypeInfo'
+                  $ref: '#/components/schemas/Api.ListingProviderTypeInfo'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -53382,16 +53450,23 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
-  /LiveTv/LiveRecordings/{Id}/stream:
+  /LiveTv/LiveStreamFiles/{Id}/stream.{Container}:
     summary: Gets a live tv channel
     get:
       tags:
-      - LiveTvService
+      - LiveStreamService
       summary: Gets a live tv channel
       description: Requires authentication as user
-      operationId: getLivetvLiverecordingsByIdStream
+      operationId: getLivetvLivestreamfilesByIdStreamByContainer
       parameters:
       - name: Id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: Container
         in: path
         required: true
         style: simple
@@ -53415,23 +53490,16 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
-  /LiveTv/LiveStreamFiles/{Id}/stream.{Container}:
+  /LiveTv/LiveRecordings/{Id}/stream:
     summary: Gets a live tv channel
     get:
       tags:
-      - LiveTvService
+      - LiveStreamService
       summary: Gets a live tv channel
       description: Requires authentication as user
-      operationId: getLivetvLivestreamfilesByIdStreamByContainer
+      operationId: getLivetvLiverecordingsByIdStream
       parameters:
       - name: Id
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      - name: Container
         in: path
         required: true
         style: simple
@@ -59471,6 +59539,212 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as administrator
+  /LiveTv/LiveStreamFiles/{Id}/hls/master.m3u8:
+    summary: Gets a live tv channel
+    get:
+      tags:
+      - LiveStreamService
+      summary: Gets a live tv channel
+      description: Requires authentication as user
+      operationId: getLivetvLivestreamfilesByIdHlsMasterM3u8
+      parameters:
+      - name: Id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - LiveStreamService
+      summary: Gets a live tv channel
+      description: Requires authentication as user
+      operationId: headLivetvLivestreamfilesByIdHlsMasterM3u8
+      parameters:
+      - name: Id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /LiveTv/LiveStreamFiles/{Id}/hls/live.m3u8:
+    summary: Gets a live tv channel
+    get:
+      tags:
+      - LiveStreamService
+      summary: Gets a live tv channel
+      description: Requires authentication as user
+      operationId: getLivetvLivestreamfilesByIdHlsLiveM3u8
+      parameters:
+      - name: Id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - LiveStreamService
+      summary: Gets a live tv channel
+      description: Requires authentication as user
+      operationId: headLivetvLivestreamfilesByIdHlsLiveM3u8
+      parameters:
+      - name: Id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /LiveTv/LiveStreamFiles/{Id}/hls/{Segment}:
+    summary: Gets a live tv channel
+    get:
+      tags:
+      - LiveStreamService
+      summary: Gets a live tv channel
+      description: Requires authentication as user
+      operationId: getLivetvLivestreamfilesByIdHlsBySegment
+      parameters:
+      - name: Id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: Segment
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - LiveStreamService
+      summary: Gets a live tv channel
+      description: Requires authentication as user
+      operationId: headLivetvLivestreamfilesByIdHlsBySegment
+      parameters:
+      - name: Id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: Segment
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /LiveTv/Manage/Channels/{Id}/Disabled:
     summary: Sets a channel disabled or not
     post:
@@ -59492,10 +59766,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/LiveTV.Api.SetChannelDisabled'
+              $ref: '#/components/schemas/Api.SetChannelDisabled'
           application/xml:
             schema:
-              $ref: '#/components/schemas/LiveTV.Api.SetChannelDisabled'
+              $ref: '#/components/schemas/Api.SetChannelDisabled'
         required: true
       responses:
         "200":
@@ -59543,10 +59817,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/LiveTV.Api.SetChannelSortIndex'
+              $ref: '#/components/schemas/Api.SetChannelSortIndex'
           application/xml:
             schema:
-              $ref: '#/components/schemas/LiveTV.Api.SetChannelSortIndex'
+              $ref: '#/components/schemas/Api.SetChannelSortIndex'
         required: true
       responses:
         "200":
@@ -67759,6 +68033,59 @@ components:
         Value: Value
         Name: Name
       x-internal-ref-name: MediaBrowser.Model.Dto.NameValuePair
+    MBBackup.Api.RestoreOptions:
+      type: object
+      properties:
+        RestoreServerId:
+          type: boolean
+        UseFiles:
+          type: string
+      x-internal-ref-name: MBBackup.Api.RestoreOptions
+    MBBackup.Api.AllBackupsInfo:
+      type: object
+      properties:
+        FullBackupInfo:
+          $ref: '#/components/schemas/MBBackup.BackupInfo'
+        LightBackups:
+          type: array
+          items:
+            $ref: '#/components/schemas/MBBackup.BackupInfo'
+      example:
+        LightBackups:
+        - null
+        - null
+        FullBackupInfo:
+          ServerVersion: ServerVersion
+          PluginVersion: PluginVersion
+          CanRestore: true
+          DateCreated: 2000-01-23T04:56:07.000+00:00
+          IsFullBackup: true
+          Name: Name
+      x-internal-ref-name: MBBackup.Api.AllBackupsInfo
+    MBBackup.BackupInfo:
+      type: object
+      properties:
+        ServerVersion:
+          type: string
+        PluginVersion:
+          type: string
+        Name:
+          type: string
+        CanRestore:
+          type: boolean
+        IsFullBackup:
+          type: boolean
+        DateCreated:
+          type: string
+          format: date-time
+      example:
+        ServerVersion: ServerVersion
+        PluginVersion: PluginVersion
+        CanRestore: true
+        DateCreated: 2000-01-23T04:56:07.000+00:00
+        IsFullBackup: true
+        Name: Name
+      x-internal-ref-name: MBBackup.BackupInfo
     Branding.BrandingOptions:
       type: object
       properties:
@@ -69890,14 +70217,14 @@ components:
           SupportsTranscoding: true
           DefaultAudioStreamIndex: 6
       x-internal-ref-name: MediaBrowser.Model.MediaInfo.LiveStreamResponse
-    LiveTV.Api.SetChannelMapping:
+    Api.SetChannelMapping:
       type: object
       properties:
         TunerChannelId:
           type: string
         ProviderChannelId:
           type: string
-      x-internal-ref-name: MediaBrowser.LiveTV.Api.SetChannelMapping
+      x-internal-ref-name: Emby.LiveTV.Api.SetChannelMapping
     LiveTv.ListingsProviderInfo:
       type: object
       properties:
@@ -70074,13 +70401,13 @@ components:
       - TV
       - Radio
       x-internal-ref-name: MediaBrowser.Model.LiveTv.ChannelType
-    QueryResult_LiveTV.Api.EpgRow:
+    QueryResult_Api.EpgRow:
       type: object
       properties:
         Items:
           type: array
           items:
-            $ref: '#/components/schemas/LiveTV.Api.EpgRow'
+            $ref: '#/components/schemas/Api.EpgRow'
         TotalRecordCount:
           type: integer
           format: int32
@@ -71163,7 +71490,7 @@ components:
             LocationType: FileSystem
             IsPremiere: true
             Altitude: 9.132027271330688
-    LiveTV.Api.EpgRow:
+    Api.EpgRow:
       type: object
       properties:
         Channel:
@@ -71711,7 +72038,7 @@ components:
           LocationType: FileSystem
           IsPremiere: true
           Altitude: 9.132027271330688
-      x-internal-ref-name: MediaBrowser.LiveTV.Api.EpgRow
+      x-internal-ref-name: Emby.LiveTV.Api.EpgRow
     Api.BaseItemsRequest:
       type: object
       properties:
@@ -73999,21 +74326,21 @@ components:
         StartDate: 2000-01-23T04:56:07.000+00:00
         EndDate: 2000-01-23T04:56:07.000+00:00
       x-internal-ref-name: MediaBrowser.Model.LiveTv.GuideInfo
-    LiveTV.Api.AvailableRecordingOptions:
+    Api.AvailableRecordingOptions:
       type: object
       properties:
         RecordingFolders:
           type: array
           items:
-            $ref: '#/components/schemas/LiveTV.Api.NameIdDescriptionPair'
+            $ref: '#/components/schemas/Api.NameIdDescriptionPair'
         MovieRecordingFolders:
           type: array
           items:
-            $ref: '#/components/schemas/LiveTV.Api.NameIdDescriptionPair'
+            $ref: '#/components/schemas/Api.NameIdDescriptionPair'
         SeriesRecordingFolders:
           type: array
           items:
-            $ref: '#/components/schemas/LiveTV.Api.NameIdDescriptionPair'
+            $ref: '#/components/schemas/Api.NameIdDescriptionPair'
       example:
         MovieRecordingFolders:
         - null
@@ -74028,8 +74355,8 @@ components:
         SeriesRecordingFolders:
         - null
         - null
-      x-internal-ref-name: MediaBrowser.LiveTV.Api.AvailableRecordingOptions
-    LiveTV.Api.NameIdDescriptionPair:
+      x-internal-ref-name: Emby.LiveTV.Api.AvailableRecordingOptions
+    Api.NameIdDescriptionPair:
       type: object
       properties:
         ShortOverview:
@@ -74044,7 +74371,7 @@ components:
         Id: Id
         ShortOverview: ShortOverview
         Name: Name
-      x-internal-ref-name: MediaBrowser.LiveTV.Api.NameIdDescriptionPair
+      x-internal-ref-name: Emby.LiveTV.Api.NameIdDescriptionPair
     ParentalRating:
       type: object
       properties:
@@ -77695,6 +78022,7 @@ components:
           LatestItemsExcludes:
           - LatestItemsExcludes
           - LatestItemsExcludes
+          PreferSDHSubtitles: true
           SubtitleMode: Default
           ResumeRewindSeconds: 0
           HidePlayedInLatest: true
@@ -77772,6 +78100,8 @@ components:
           type: boolean
         EnableNextEpisodeAutoPlay:
           type: boolean
+        PreferSDHSubtitles:
+          type: boolean
         ResumeRewindSeconds:
           type: integer
           format: int32
@@ -77792,6 +78122,7 @@ components:
         LatestItemsExcludes:
         - LatestItemsExcludes
         - LatestItemsExcludes
+        PreferSDHSubtitles: true
         SubtitleMode: Default
         ResumeRewindSeconds: 0
         HidePlayedInLatest: true
@@ -78171,6 +78502,7 @@ components:
             LatestItemsExcludes:
             - LatestItemsExcludes
             - LatestItemsExcludes
+            PreferSDHSubtitles: true
             SubtitleMode: Default
             ResumeRewindSeconds: 0
             HidePlayedInLatest: true
@@ -78286,6 +78618,7 @@ components:
             LatestItemsExcludes:
             - LatestItemsExcludes
             - LatestItemsExcludes
+            PreferSDHSubtitles: true
             SubtitleMode: Default
             ResumeRewindSeconds: 0
             HidePlayedInLatest: true
@@ -78424,6 +78757,7 @@ components:
             LatestItemsExcludes:
             - LatestItemsExcludes
             - LatestItemsExcludes
+            PreferSDHSubtitles: true
             SubtitleMode: Default
             ResumeRewindSeconds: 0
             HidePlayedInLatest: true
@@ -84322,7 +84656,7 @@ components:
         Id: Id
         Name: Name
       x-internal-ref-name: Emby.LiveTV.ChannelManagementInfo
-    LiveTV.Api.TagItem:
+    Api.TagItem:
       type: object
       properties:
         Name:
@@ -84332,8 +84666,8 @@ components:
       example:
         Id: Id
         Name: Name
-      x-internal-ref-name: MediaBrowser.LiveTV.Api.TagItem
-    LiveTV.Api.ListingProviderTypeInfo:
+      x-internal-ref-name: Emby.LiveTV.Api.TagItem
+    Api.ListingProviderTypeInfo:
       type: object
       properties:
         Name:
@@ -84346,7 +84680,7 @@ components:
         Id: Id
         SetupUrl: SetupUrl
         Name: Name
-      x-internal-ref-name: MediaBrowser.LiveTV.Api.ListingProviderTypeInfo
+      x-internal-ref-name: Emby.LiveTV.Api.ListingProviderTypeInfo
     UserNotificationInfo:
       type: object
       properties:
@@ -85608,7 +85942,7 @@ components:
       example:
         NewIndex: 0
       x-internal-ref-name: Emby.Api.Subtitles.SubtitleDownloadResult
-    LiveTV.Api.SetChannelDisabled:
+    Api.SetChannelDisabled:
       type: object
       properties:
         Id:
@@ -85617,8 +85951,8 @@ components:
           type: string
         Disabled:
           type: boolean
-      x-internal-ref-name: MediaBrowser.LiveTV.Api.SetChannelDisabled
-    LiveTV.Api.SetChannelSortIndex:
+      x-internal-ref-name: Emby.LiveTV.Api.SetChannelDisabled
+    Api.SetChannelSortIndex:
       type: object
       properties:
         Id:
@@ -85628,7 +85962,7 @@ components:
         NewIndex:
           type: integer
           format: int32
-      x-internal-ref-name: MediaBrowser.LiveTV.Api.SetChannelSortIndex
+      x-internal-ref-name: Emby.LiveTV.Api.SetChannelSortIndex
     Api.OnPlaybackProgress:
       type: object
       properties:

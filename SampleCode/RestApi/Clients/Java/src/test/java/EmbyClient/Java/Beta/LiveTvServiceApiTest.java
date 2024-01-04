@@ -5,14 +5,14 @@
 
 package EmbyClient.Java.Beta;
 
+import io.swagger.client.model.ApiAvailableRecordingOptions;
 import io.swagger.client.model.ApiBaseItemsRequest;
+import io.swagger.client.model.ApiListingProviderTypeInfo;
+import io.swagger.client.model.ApiSetChannelDisabled;
+import io.swagger.client.model.ApiSetChannelMapping;
+import io.swagger.client.model.ApiSetChannelSortIndex;
+import io.swagger.client.model.ApiTagItem;
 import io.swagger.client.model.BaseItemDto;
-import io.swagger.client.model.LiveTVApiAvailableRecordingOptions;
-import io.swagger.client.model.LiveTVApiListingProviderTypeInfo;
-import io.swagger.client.model.LiveTVApiSetChannelDisabled;
-import io.swagger.client.model.LiveTVApiSetChannelMapping;
-import io.swagger.client.model.LiveTVApiSetChannelSortIndex;
-import io.swagger.client.model.LiveTVApiTagItem;
 import io.swagger.client.model.LiveTvChannelType;
 import io.swagger.client.model.LiveTvGuideInfo;
 import io.swagger.client.model.LiveTvListingsProviderInfo;
@@ -23,9 +23,9 @@ import io.swagger.client.model.LiveTvSeriesTimerInfoDto;
 import io.swagger.client.model.LiveTvTimerInfoDto;
 import io.swagger.client.model.LiveTvTunerHostInfo;
 import io.swagger.client.model.NameIdPair;
+import io.swagger.client.model.QueryResultApiEpgRow;
 import io.swagger.client.model.QueryResultBaseItemDto;
 import io.swagger.client.model.QueryResultChannelManagementInfo;
-import io.swagger.client.model.QueryResultLiveTVApiEpgRow;
 import io.swagger.client.model.QueryResultLiveTvSeriesTimerInfoDto;
 import io.swagger.client.model.QueryResultLiveTvTimerInfoDto;
 import io.swagger.client.model.SortOrder;
@@ -162,7 +162,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void getLivetvAvailablerecordingoptionsTest() throws Exception {
-        LiveTVApiAvailableRecordingOptions response = api.getLivetvAvailablerecordingoptions();
+        ApiAvailableRecordingOptions response = api.getLivetvAvailablerecordingoptions();
 
         // TODO: test validations
     }
@@ -546,7 +546,7 @@ public class LiveTvServiceApiTest {
         String albumArtistStartsWithOrGreater = null;
         String nameStartsWith = null;
         String nameLessThan = null;
-        List<LiveTVApiTagItem> response = api.getLivetvChanneltagsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+        List<ApiTagItem> response = api.getLivetvChanneltagsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
@@ -663,7 +663,7 @@ public class LiveTvServiceApiTest {
         String albumArtistStartsWithOrGreater = null;
         String nameStartsWith = null;
         String nameLessThan = null;
-        QueryResultLiveTVApiEpgRow response = api.getLivetvEPG(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+        QueryResultApiEpgRow response = api.getLivetvEPG(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
@@ -734,7 +734,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void getLivetvListingprovidersAvailableTest() throws Exception {
-        List<LiveTVApiListingProviderTypeInfo> response = api.getLivetvListingprovidersAvailable();
+        List<ApiListingProviderTypeInfo> response = api.getLivetvListingprovidersAvailable();
 
         // TODO: test validations
     }
@@ -781,37 +781,6 @@ public class LiveTvServiceApiTest {
     @Test
     public void getLivetvListingprovidersSchedulesdirectCountriesTest() throws Exception {
         api.getLivetvListingprovidersSchedulesdirectCountries();
-
-        // TODO: test validations
-    }
-    /**
-     * Gets a live tv channel
-     *
-     * Requires authentication as user
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void getLivetvLiverecordingsByIdStreamTest() throws Exception {
-        String id = null;
-        api.getLivetvLiverecordingsByIdStream(id);
-
-        // TODO: test validations
-    }
-    /**
-     * Gets a live tv channel
-     *
-     * Requires authentication as user
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void getLivetvLivestreamfilesByIdStreamByContainerTest() throws Exception {
-        String id = null;
-        String container = null;
-        api.getLivetvLivestreamfilesByIdStreamByContainer(id, container);
 
         // TODO: test validations
     }
@@ -1344,7 +1313,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void postLivetvChannelmappingsTest() throws Exception {
-        LiveTVApiSetChannelMapping body = null;
+        ApiSetChannelMapping body = null;
         String providerId = null;
         api.postLivetvChannelmappings(body, providerId);
 
@@ -1390,7 +1359,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void postLivetvManageChannelsByIdDisabledTest() throws Exception {
-        LiveTVApiSetChannelDisabled body = null;
+        ApiSetChannelDisabled body = null;
         String id = null;
         QueryResultChannelManagementInfo response = api.postLivetvManageChannelsByIdDisabled(body, id);
 
@@ -1406,7 +1375,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void postLivetvManageChannelsByIdSortindexTest() throws Exception {
-        LiveTVApiSetChannelSortIndex body = null;
+        ApiSetChannelSortIndex body = null;
         String id = null;
         QueryResultChannelManagementInfo response = api.postLivetvManageChannelsByIdSortindex(body, id);
 
@@ -1702,7 +1671,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void putLivetvChannelmappingsTest() throws Exception {
-        LiveTVApiSetChannelMapping body = null;
+        ApiSetChannelMapping body = null;
         String providerId = null;
         api.putLivetvChannelmappings(body, providerId);
 

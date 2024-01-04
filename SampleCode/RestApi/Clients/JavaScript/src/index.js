@@ -15,9 +15,17 @@ import ActionsPostbackAction from './model/ActionsPostbackAction';
 import ActivityLogEntry from './model/ActivityLogEntry';
 import AlbumInfo from './model/AlbumInfo';
 import AllThemeMediaResult from './model/AllThemeMediaResult';
+import ApiAvailableRecordingOptions from './model/ApiAvailableRecordingOptions';
 import ApiBaseItemsRequest from './model/ApiBaseItemsRequest';
 import ApiConfigurationPageInfo from './model/ApiConfigurationPageInfo';
+import ApiEpgRow from './model/ApiEpgRow';
+import ApiListingProviderTypeInfo from './model/ApiListingProviderTypeInfo';
+import ApiNameIdDescriptionPair from './model/ApiNameIdDescriptionPair';
 import ApiOnPlaybackProgress from './model/ApiOnPlaybackProgress';
+import ApiSetChannelDisabled from './model/ApiSetChannelDisabled';
+import ApiSetChannelMapping from './model/ApiSetChannelMapping';
+import ApiSetChannelSortIndex from './model/ApiSetChannelSortIndex';
+import ApiTagItem from './model/ApiTagItem';
 import ArtistInfo from './model/ArtistInfo';
 import AttributesSimpleCondition from './model/AttributesSimpleCondition';
 import AttributesValueCondition from './model/AttributesValueCondition';
@@ -126,14 +134,6 @@ import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
 import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
 import LiveStreamRequest from './model/LiveStreamRequest';
 import LiveStreamResponse from './model/LiveStreamResponse';
-import LiveTVApiAvailableRecordingOptions from './model/LiveTVApiAvailableRecordingOptions';
-import LiveTVApiEpgRow from './model/LiveTVApiEpgRow';
-import LiveTVApiListingProviderTypeInfo from './model/LiveTVApiListingProviderTypeInfo';
-import LiveTVApiNameIdDescriptionPair from './model/LiveTVApiNameIdDescriptionPair';
-import LiveTVApiSetChannelDisabled from './model/LiveTVApiSetChannelDisabled';
-import LiveTVApiSetChannelMapping from './model/LiveTVApiSetChannelMapping';
-import LiveTVApiSetChannelSortIndex from './model/LiveTVApiSetChannelSortIndex';
-import LiveTVApiTagItem from './model/LiveTVApiTagItem';
 import LiveTvChannelType from './model/LiveTvChannelType';
 import LiveTvGuideInfo from './model/LiveTvGuideInfo';
 import LiveTvKeepUntil from './model/LiveTvKeepUntil';
@@ -150,6 +150,9 @@ import LiveTvTunerHostInfo from './model/LiveTvTunerHostInfo';
 import LocationType from './model/LocationType';
 import LogFile from './model/LogFile';
 import LoggingLogSeverity from './model/LoggingLogSeverity';
+import MBBackupApiAllBackupsInfo from './model/MBBackupApiAllBackupsInfo';
+import MBBackupApiRestoreOptions from './model/MBBackupApiRestoreOptions';
+import MBBackupBackupInfo from './model/MBBackupBackupInfo';
 import MarkerType from './model/MarkerType';
 import MediaEncodingCodecParameterContext from './model/MediaEncodingCodecParameterContext';
 import MediaPathInfo from './model/MediaPathInfo';
@@ -211,10 +214,10 @@ import ProviderIdDictionary from './model/ProviderIdDictionary';
 import ProxyHeaderMode from './model/ProxyHeaderMode';
 import PublicSystemInfo from './model/PublicSystemInfo';
 import QueryResultActivityLogEntry from './model/QueryResultActivityLogEntry';
+import QueryResultApiEpgRow from './model/QueryResultApiEpgRow';
 import QueryResultBaseItemDto from './model/QueryResultBaseItemDto';
 import QueryResultChannelManagementInfo from './model/QueryResultChannelManagementInfo';
 import QueryResultDevicesDeviceInfo from './model/QueryResultDevicesDeviceInfo';
-import QueryResultLiveTVApiEpgRow from './model/QueryResultLiveTVApiEpgRow';
 import QueryResultLiveTvSeriesTimerInfoDto from './model/QueryResultLiveTvSeriesTimerInfoDto';
 import QueryResultLiveTvTimerInfoDto from './model/QueryResultLiveTvTimerInfoDto';
 import QueryResultLogFile from './model/QueryResultLogFile';
@@ -326,6 +329,7 @@ import WakeOnLanInfo from './model/WakeOnLanInfo';
 import ActivityLogServiceApi from './EmbyClient.JavaScript.Beta/ActivityLogServiceApi';
 import ArtistsServiceApi from './EmbyClient.JavaScript.Beta/ArtistsServiceApi';
 import AudioServiceApi from './EmbyClient.JavaScript.Beta/AudioServiceApi';
+import BackupApiApi from './EmbyClient.JavaScript.Beta/BackupApiApi';
 import BifServiceApi from './EmbyClient.JavaScript.Beta/BifServiceApi';
 import BrandingServiceApi from './EmbyClient.JavaScript.Beta/BrandingServiceApi';
 import ChannelServiceApi from './EmbyClient.JavaScript.Beta/ChannelServiceApi';
@@ -354,6 +358,7 @@ import ItemUpdateServiceApi from './EmbyClient.JavaScript.Beta/ItemUpdateService
 import ItemsServiceApi from './EmbyClient.JavaScript.Beta/ItemsServiceApi';
 import LibraryServiceApi from './EmbyClient.JavaScript.Beta/LibraryServiceApi';
 import LibraryStructureServiceApi from './EmbyClient.JavaScript.Beta/LibraryStructureServiceApi';
+import LiveStreamServiceApi from './EmbyClient.JavaScript.Beta/LiveStreamServiceApi';
 import LiveTvServiceApi from './EmbyClient.JavaScript.Beta/LiveTvServiceApi';
 import LocalizationServiceApi from './EmbyClient.JavaScript.Beta/LocalizationServiceApi';
 import MediaInfoServiceApi from './EmbyClient.JavaScript.Beta/MediaInfoServiceApi';
@@ -419,7 +424,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.65
+* @version 4.8.0.66
 */
 export {
     /**
@@ -459,6 +464,12 @@ export {
     AllThemeMediaResult,
 
     /**
+     * The ApiAvailableRecordingOptions model constructor.
+     * @property {module:model/ApiAvailableRecordingOptions}
+     */
+    ApiAvailableRecordingOptions,
+
+    /**
      * The ApiBaseItemsRequest model constructor.
      * @property {module:model/ApiBaseItemsRequest}
      */
@@ -471,10 +482,52 @@ export {
     ApiConfigurationPageInfo,
 
     /**
+     * The ApiEpgRow model constructor.
+     * @property {module:model/ApiEpgRow}
+     */
+    ApiEpgRow,
+
+    /**
+     * The ApiListingProviderTypeInfo model constructor.
+     * @property {module:model/ApiListingProviderTypeInfo}
+     */
+    ApiListingProviderTypeInfo,
+
+    /**
+     * The ApiNameIdDescriptionPair model constructor.
+     * @property {module:model/ApiNameIdDescriptionPair}
+     */
+    ApiNameIdDescriptionPair,
+
+    /**
      * The ApiOnPlaybackProgress model constructor.
      * @property {module:model/ApiOnPlaybackProgress}
      */
     ApiOnPlaybackProgress,
+
+    /**
+     * The ApiSetChannelDisabled model constructor.
+     * @property {module:model/ApiSetChannelDisabled}
+     */
+    ApiSetChannelDisabled,
+
+    /**
+     * The ApiSetChannelMapping model constructor.
+     * @property {module:model/ApiSetChannelMapping}
+     */
+    ApiSetChannelMapping,
+
+    /**
+     * The ApiSetChannelSortIndex model constructor.
+     * @property {module:model/ApiSetChannelSortIndex}
+     */
+    ApiSetChannelSortIndex,
+
+    /**
+     * The ApiTagItem model constructor.
+     * @property {module:model/ApiTagItem}
+     */
+    ApiTagItem,
 
     /**
      * The ArtistInfo model constructor.
@@ -1125,54 +1178,6 @@ export {
     LiveStreamResponse,
 
     /**
-     * The LiveTVApiAvailableRecordingOptions model constructor.
-     * @property {module:model/LiveTVApiAvailableRecordingOptions}
-     */
-    LiveTVApiAvailableRecordingOptions,
-
-    /**
-     * The LiveTVApiEpgRow model constructor.
-     * @property {module:model/LiveTVApiEpgRow}
-     */
-    LiveTVApiEpgRow,
-
-    /**
-     * The LiveTVApiListingProviderTypeInfo model constructor.
-     * @property {module:model/LiveTVApiListingProviderTypeInfo}
-     */
-    LiveTVApiListingProviderTypeInfo,
-
-    /**
-     * The LiveTVApiNameIdDescriptionPair model constructor.
-     * @property {module:model/LiveTVApiNameIdDescriptionPair}
-     */
-    LiveTVApiNameIdDescriptionPair,
-
-    /**
-     * The LiveTVApiSetChannelDisabled model constructor.
-     * @property {module:model/LiveTVApiSetChannelDisabled}
-     */
-    LiveTVApiSetChannelDisabled,
-
-    /**
-     * The LiveTVApiSetChannelMapping model constructor.
-     * @property {module:model/LiveTVApiSetChannelMapping}
-     */
-    LiveTVApiSetChannelMapping,
-
-    /**
-     * The LiveTVApiSetChannelSortIndex model constructor.
-     * @property {module:model/LiveTVApiSetChannelSortIndex}
-     */
-    LiveTVApiSetChannelSortIndex,
-
-    /**
-     * The LiveTVApiTagItem model constructor.
-     * @property {module:model/LiveTVApiTagItem}
-     */
-    LiveTVApiTagItem,
-
-    /**
      * The LiveTvChannelType model constructor.
      * @property {module:model/LiveTvChannelType}
      */
@@ -1267,6 +1272,24 @@ export {
      * @property {module:model/LoggingLogSeverity}
      */
     LoggingLogSeverity,
+
+    /**
+     * The MBBackupApiAllBackupsInfo model constructor.
+     * @property {module:model/MBBackupApiAllBackupsInfo}
+     */
+    MBBackupApiAllBackupsInfo,
+
+    /**
+     * The MBBackupApiRestoreOptions model constructor.
+     * @property {module:model/MBBackupApiRestoreOptions}
+     */
+    MBBackupApiRestoreOptions,
+
+    /**
+     * The MBBackupBackupInfo model constructor.
+     * @property {module:model/MBBackupBackupInfo}
+     */
+    MBBackupBackupInfo,
 
     /**
      * The MarkerType model constructor.
@@ -1635,6 +1658,12 @@ export {
     QueryResultActivityLogEntry,
 
     /**
+     * The QueryResultApiEpgRow model constructor.
+     * @property {module:model/QueryResultApiEpgRow}
+     */
+    QueryResultApiEpgRow,
+
+    /**
      * The QueryResultBaseItemDto model constructor.
      * @property {module:model/QueryResultBaseItemDto}
      */
@@ -1651,12 +1680,6 @@ export {
      * @property {module:model/QueryResultDevicesDeviceInfo}
      */
     QueryResultDevicesDeviceInfo,
-
-    /**
-     * The QueryResultLiveTVApiEpgRow model constructor.
-     * @property {module:model/QueryResultLiveTVApiEpgRow}
-     */
-    QueryResultLiveTVApiEpgRow,
 
     /**
      * The QueryResultLiveTvSeriesTimerInfoDto model constructor.
@@ -2325,6 +2348,12 @@ export {
     AudioServiceApi,
 
     /**
+    * The BackupApiApi service constructor.
+    * @property {module:EmbyClient.JavaScript.Beta/BackupApiApi}
+    */
+    BackupApiApi,
+
+    /**
     * The BifServiceApi service constructor.
     * @property {module:EmbyClient.JavaScript.Beta/BifServiceApi}
     */
@@ -2491,6 +2520,12 @@ export {
     * @property {module:EmbyClient.JavaScript.Beta/LibraryStructureServiceApi}
     */
     LibraryStructureServiceApi,
+
+    /**
+    * The LiveStreamServiceApi service constructor.
+    * @property {module:EmbyClient.JavaScript.Beta/LiveStreamServiceApi}
+    */
+    LiveStreamServiceApi,
 
     /**
     * The LiveTvServiceApi service constructor.

@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.65"
+    "version": "4.8.0.66"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -15126,6 +15126,104 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
+    "/BackupRestore/Restore": {
+      "post": {
+        "tags": [
+          "BackupApi"
+        ],
+        "description": "Requires authentication as administrator",
+        "operationId": "postBackuprestoreRestore",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "RestoreOptions: ",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MBBackup.Api.RestoreOptions"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      }
+    },
+    "/BackupRestore/BackupInfo": {
+      "get": {
+        "tags": [
+          "BackupApi"
+        ],
+        "description": "Requires authentication as administrator",
+        "operationId": "getBackuprestoreBackupinfo",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a AllBackupsInfo object.",
+            "schema": {
+              "$ref": "#/definitions/MBBackup.Api.AllBackupsInfo"
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      }
+    },
     "/Branding/Configuration": {
       "get": {
         "tags": [
@@ -19431,7 +19529,7 @@
             "description": "SetChannelMapping",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/LiveTV.Api.SetChannelMapping"
+              "$ref": "#/definitions/Api.SetChannelMapping"
             }
           }
         ],
@@ -19489,7 +19587,7 @@
             "description": "SetChannelMapping",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/LiveTV.Api.SetChannelMapping"
+              "$ref": "#/definitions/Api.SetChannelMapping"
             }
           }
         ],
@@ -20806,7 +20904,7 @@
           "200": {
             "description": "Operation successful. Returning a QueryResult<EpgRow> object.",
             "schema": {
-              "$ref": "#/definitions/QueryResult_LiveTV.Api.EpgRow"
+              "$ref": "#/definitions/QueryResult_Api.EpgRow"
             }
           },
           "400": {
@@ -23764,7 +23862,7 @@
           "200": {
             "description": "Operation successful. Returning a AvailableRecordingOptions object.",
             "schema": {
-              "$ref": "#/definitions/LiveTV.Api.AvailableRecordingOptions"
+              "$ref": "#/definitions/Api.AvailableRecordingOptions"
             }
           },
           "400": {
@@ -35572,7 +35670,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/LiveTV.Api.TagItem"
+                "$ref": "#/definitions/Api.TagItem"
               }
             }
           },
@@ -36783,7 +36881,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/LiveTV.Api.ListingProviderTypeInfo"
+                "$ref": "#/definitions/Api.ListingProviderTypeInfo"
               }
             }
           },
@@ -46477,18 +46575,24 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
-    "/LiveTv/LiveRecordings/{Id}/stream": {
+    "/LiveTv/LiveStreamFiles/{Id}/stream.{Container}": {
       "get": {
         "tags": [
-          "LiveTvService"
+          "LiveStreamService"
         ],
         "summary": "Gets a live tv channel",
         "description": "Requires authentication as user",
-        "operationId": "getLivetvLiverecordingsByIdStream",
+        "operationId": "getLivetvLivestreamfilesByIdStreamByContainer",
         "parameters": [
           {
             "in": "path",
             "name": "Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Container",
             "required": true,
             "type": "string"
           }
@@ -46525,24 +46629,18 @@
       },
       "x-summary": "Gets a live tv channel"
     },
-    "/LiveTv/LiveStreamFiles/{Id}/stream.{Container}": {
+    "/LiveTv/LiveRecordings/{Id}/stream": {
       "get": {
         "tags": [
-          "LiveTvService"
+          "LiveStreamService"
         ],
         "summary": "Gets a live tv channel",
         "description": "Requires authentication as user",
-        "operationId": "getLivetvLivestreamfilesByIdStreamByContainer",
+        "operationId": "getLivetvLiverecordingsByIdStream",
         "parameters": [
           {
             "in": "path",
             "name": "Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "Container",
             "required": true,
             "type": "string"
           }
@@ -52695,6 +52793,297 @@
         "x-RequiredAuthentication": "Requires authentication as administrator"
       }
     },
+    "/LiveTv/LiveStreamFiles/{Id}/hls/master.m3u8": {
+      "get": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live tv channel",
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvLivestreamfilesByIdHlsMasterM3u8",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live tv channel",
+        "description": "Requires authentication as user",
+        "operationId": "headLivetvLivestreamfilesByIdHlsMasterM3u8",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets a live tv channel"
+    },
+    "/LiveTv/LiveStreamFiles/{Id}/hls/live.m3u8": {
+      "get": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live tv channel",
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvLivestreamfilesByIdHlsLiveM3u8",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live tv channel",
+        "description": "Requires authentication as user",
+        "operationId": "headLivetvLivestreamfilesByIdHlsLiveM3u8",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets a live tv channel"
+    },
+    "/LiveTv/LiveStreamFiles/{Id}/hls/{Segment}": {
+      "get": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live tv channel",
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvLivestreamfilesByIdHlsBySegment",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Segment",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live tv channel",
+        "description": "Requires authentication as user",
+        "operationId": "headLivetvLivestreamfilesByIdHlsBySegment",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Segment",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets a live tv channel"
+    },
     "/LiveTv/Manage/Channels/{Id}/Disabled": {
       "post": {
         "tags": [
@@ -52724,7 +53113,7 @@
             "description": "SetChannelDisabled",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/LiveTV.Api.SetChannelDisabled"
+              "$ref": "#/definitions/Api.SetChannelDisabled"
             }
           }
         ],
@@ -52792,7 +53181,7 @@
             "description": "SetChannelSortIndex",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/LiveTV.Api.SetChannelSortIndex"
+              "$ref": "#/definitions/Api.SetChannelSortIndex"
             }
           }
         ],
@@ -58764,6 +59153,58 @@
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.NameValuePair"
     },
+    "MBBackup.Api.RestoreOptions": {
+      "type": "object",
+      "properties": {
+        "RestoreServerId": {
+          "type": "boolean"
+        },
+        "UseFiles": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MBBackup.Api.RestoreOptions"
+    },
+    "MBBackup.Api.AllBackupsInfo": {
+      "type": "object",
+      "properties": {
+        "FullBackupInfo": {
+          "$ref": "#/definitions/MBBackup.BackupInfo"
+        },
+        "LightBackups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MBBackup.BackupInfo"
+          }
+        }
+      },
+      "x-internal-ref-name": "MBBackup.Api.AllBackupsInfo"
+    },
+    "MBBackup.BackupInfo": {
+      "type": "object",
+      "properties": {
+        "ServerVersion": {
+          "type": "string"
+        },
+        "PluginVersion": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "CanRestore": {
+          "type": "boolean"
+        },
+        "IsFullBackup": {
+          "type": "boolean"
+        },
+        "DateCreated": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MBBackup.BackupInfo"
+    },
     "Branding.BrandingOptions": {
       "type": "object",
       "properties": {
@@ -60485,7 +60926,7 @@
       },
       "x-internal-ref-name": "MediaBrowser.Model.MediaInfo.LiveStreamResponse"
     },
-    "LiveTV.Api.SetChannelMapping": {
+    "Api.SetChannelMapping": {
       "type": "object",
       "properties": {
         "TunerChannelId": {
@@ -60495,7 +60936,7 @@
           "type": "string"
         }
       },
-      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.SetChannelMapping"
+      "x-internal-ref-name": "Emby.LiveTV.Api.SetChannelMapping"
     },
     "LiveTv.ListingsProviderInfo": {
       "type": "object",
@@ -60669,13 +61110,13 @@
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.LiveTv.ChannelType"
     },
-    "QueryResult_LiveTV.Api.EpgRow": {
+    "QueryResult_Api.EpgRow": {
       "type": "object",
       "properties": {
         "Items": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/LiveTV.Api.EpgRow"
+            "$ref": "#/definitions/Api.EpgRow"
           }
         },
         "TotalRecordCount": {
@@ -60684,7 +61125,7 @@
         }
       }
     },
-    "LiveTV.Api.EpgRow": {
+    "Api.EpgRow": {
       "type": "object",
       "properties": {
         "Channel": {
@@ -60697,7 +61138,7 @@
           }
         }
       },
-      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.EpgRow"
+      "x-internal-ref-name": "Emby.LiveTV.Api.EpgRow"
     },
     "Api.BaseItemsRequest": {
       "type": "object",
@@ -61291,31 +61732,31 @@
       },
       "x-internal-ref-name": "MediaBrowser.Model.LiveTv.GuideInfo"
     },
-    "LiveTV.Api.AvailableRecordingOptions": {
+    "Api.AvailableRecordingOptions": {
       "type": "object",
       "properties": {
         "RecordingFolders": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/LiveTV.Api.NameIdDescriptionPair"
+            "$ref": "#/definitions/Api.NameIdDescriptionPair"
           }
         },
         "MovieRecordingFolders": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/LiveTV.Api.NameIdDescriptionPair"
+            "$ref": "#/definitions/Api.NameIdDescriptionPair"
           }
         },
         "SeriesRecordingFolders": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/LiveTV.Api.NameIdDescriptionPair"
+            "$ref": "#/definitions/Api.NameIdDescriptionPair"
           }
         }
       },
-      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.AvailableRecordingOptions"
+      "x-internal-ref-name": "Emby.LiveTV.Api.AvailableRecordingOptions"
     },
-    "LiveTV.Api.NameIdDescriptionPair": {
+    "Api.NameIdDescriptionPair": {
       "type": "object",
       "properties": {
         "ShortOverview": {
@@ -61330,7 +61771,7 @@
           "type": "string"
         }
       },
-      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.NameIdDescriptionPair"
+      "x-internal-ref-name": "Emby.LiveTV.Api.NameIdDescriptionPair"
     },
     "ParentalRating": {
       "description": "Class ParentalRating\r\n",
@@ -62981,6 +63422,9 @@
           "type": "boolean"
         },
         "EnableNextEpisodeAutoPlay": {
+          "type": "boolean"
+        },
+        "PreferSDHSubtitles": {
           "type": "boolean"
         },
         "ResumeRewindSeconds": {
@@ -65703,7 +66147,7 @@
       },
       "x-internal-ref-name": "Emby.LiveTV.ChannelManagementInfo"
     },
-    "LiveTV.Api.TagItem": {
+    "Api.TagItem": {
       "type": "object",
       "properties": {
         "Name": {
@@ -65713,9 +66157,9 @@
           "type": "string"
         }
       },
-      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.TagItem"
+      "x-internal-ref-name": "Emby.LiveTV.Api.TagItem"
     },
-    "LiveTV.Api.ListingProviderTypeInfo": {
+    "Api.ListingProviderTypeInfo": {
       "type": "object",
       "properties": {
         "Name": {
@@ -65728,7 +66172,7 @@
           "type": "string"
         }
       },
-      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.ListingProviderTypeInfo"
+      "x-internal-ref-name": "Emby.LiveTV.Api.ListingProviderTypeInfo"
     },
     "UserNotificationInfo": {
       "type": "object",
@@ -66516,7 +66960,7 @@
       },
       "x-internal-ref-name": "Emby.Api.Subtitles.SubtitleDownloadResult"
     },
-    "LiveTV.Api.SetChannelDisabled": {
+    "Api.SetChannelDisabled": {
       "type": "object",
       "properties": {
         "Id": {
@@ -66529,9 +66973,9 @@
           "type": "boolean"
         }
       },
-      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.SetChannelDisabled"
+      "x-internal-ref-name": "Emby.LiveTV.Api.SetChannelDisabled"
     },
-    "LiveTV.Api.SetChannelSortIndex": {
+    "Api.SetChannelSortIndex": {
       "type": "object",
       "properties": {
         "Id": {
@@ -66545,7 +66989,7 @@
           "type": "integer"
         }
       },
-      "x-internal-ref-name": "MediaBrowser.LiveTV.Api.SetChannelSortIndex"
+      "x-internal-ref-name": "Emby.LiveTV.Api.SetChannelSortIndex"
     },
     "Api.OnPlaybackProgress": {
       "type": "object",
@@ -66752,6 +67196,9 @@
         "description": "API Reference: InstantMixService",
         "url": "https://betadev.emby.media/reference/RestAPI/InstantMixService.html"
       }
+    },
+    {
+      "name": "BackupApi"
     },
     {
       "name": "BrandingService",
@@ -67052,6 +67499,13 @@
       "externalDocs": {
         "description": "API Reference: SubtitleService",
         "url": "https://betadev.emby.media/reference/RestAPI/SubtitleService.html"
+      }
+    },
+    {
+      "name": "LiveStreamService",
+      "externalDocs": {
+        "description": "API Reference: LiveStreamService",
+        "url": "https://betadev.emby.media/reference/RestAPI/LiveStreamService.html"
       }
     }
   ],

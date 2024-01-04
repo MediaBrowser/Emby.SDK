@@ -6,6 +6,7 @@ from __future__ import absolute_import
 from embyclient-python-beta.EmbyClient.Python.Beta.activity_log_service_api import ActivityLogServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.artists_service_api import ArtistsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.audio_service_api import AudioServiceApi
+from embyclient-python-beta.EmbyClient.Python.Beta.backup_api_api import BackupApiApi
 from embyclient-python-beta.EmbyClient.Python.Beta.bif_service_api import BifServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.branding_service_api import BrandingServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.channel_service_api import ChannelServiceApi
@@ -34,6 +35,7 @@ from embyclient-python-beta.EmbyClient.Python.Beta.item_update_service_api impor
 from embyclient-python-beta.EmbyClient.Python.Beta.items_service_api import ItemsServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.library_service_api import LibraryServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.library_structure_service_api import LibraryStructureServiceApi
+from embyclient-python-beta.EmbyClient.Python.Beta.live_stream_service_api import LiveStreamServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.live_tv_service_api import LiveTvServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.localization_service_api import LocalizationServiceApi
 from embyclient-python-beta.EmbyClient.Python.Beta.media_info_service_api import MediaInfoServiceApi

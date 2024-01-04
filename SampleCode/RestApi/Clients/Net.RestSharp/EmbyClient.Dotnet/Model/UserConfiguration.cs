@@ -41,10 +41,11 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="rememberAudioSelections">rememberAudioSelections.</param>
         /// <param name="rememberSubtitleSelections">rememberSubtitleSelections.</param>
         /// <param name="enableNextEpisodeAutoPlay">enableNextEpisodeAutoPlay.</param>
+        /// <param name="preferSDHSubtitles">preferSDHSubtitles.</param>
         /// <param name="resumeRewindSeconds">resumeRewindSeconds.</param>
         /// <param name="introSkipMode">introSkipMode.</param>
         /// <param name="enableLocalPassword">enableLocalPassword.</param>
-        public UserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), string profilePin = default(string), bool? displayMissingEpisodes = default(bool?), SubtitlePlaybackMode subtitleMode = default(SubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? hidePlayedInMoreLikeThis = default(bool?), bool? hidePlayedInSuggestions = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), int? resumeRewindSeconds = default(int?), SegmentSkipMode introSkipMode = default(SegmentSkipMode), bool? enableLocalPassword = default(bool?))
+        public UserConfiguration(string audioLanguagePreference = default(string), bool? playDefaultAudioTrack = default(bool?), string subtitleLanguagePreference = default(string), string profilePin = default(string), bool? displayMissingEpisodes = default(bool?), SubtitlePlaybackMode subtitleMode = default(SubtitlePlaybackMode), List<string> orderedViews = default(List<string>), List<string> latestItemsExcludes = default(List<string>), List<string> myMediaExcludes = default(List<string>), bool? hidePlayedInLatest = default(bool?), bool? hidePlayedInMoreLikeThis = default(bool?), bool? hidePlayedInSuggestions = default(bool?), bool? rememberAudioSelections = default(bool?), bool? rememberSubtitleSelections = default(bool?), bool? enableNextEpisodeAutoPlay = default(bool?), bool? preferSDHSubtitles = default(bool?), int? resumeRewindSeconds = default(int?), SegmentSkipMode introSkipMode = default(SegmentSkipMode), bool? enableLocalPassword = default(bool?))
         {
             this.AudioLanguagePreference = audioLanguagePreference;
             this.PlayDefaultAudioTrack = playDefaultAudioTrack;
@@ -61,6 +62,7 @@ namespace EmbyClient.Dotnet.Model
             this.RememberAudioSelections = rememberAudioSelections;
             this.RememberSubtitleSelections = rememberSubtitleSelections;
             this.EnableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay;
+            this.PreferSDHSubtitles = preferSDHSubtitles;
             this.ResumeRewindSeconds = resumeRewindSeconds;
             this.IntroSkipMode = introSkipMode;
             this.EnableLocalPassword = enableLocalPassword;
@@ -160,6 +162,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? EnableNextEpisodeAutoPlay { get; set; }
 
         /// <summary>
+        /// Gets or Sets PreferSDHSubtitles
+        /// </summary>
+        [DataMember(Name="PreferSDHSubtitles", EmitDefaultValue=false)]
+        public bool? PreferSDHSubtitles { get; set; }
+
+        /// <summary>
         /// Gets or Sets ResumeRewindSeconds
         /// </summary>
         [DataMember(Name="ResumeRewindSeconds", EmitDefaultValue=false)]
@@ -200,6 +208,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  RememberAudioSelections: ").Append(RememberAudioSelections).Append("\n");
             sb.Append("  RememberSubtitleSelections: ").Append(RememberSubtitleSelections).Append("\n");
             sb.Append("  EnableNextEpisodeAutoPlay: ").Append(EnableNextEpisodeAutoPlay).Append("\n");
+            sb.Append("  PreferSDHSubtitles: ").Append(PreferSDHSubtitles).Append("\n");
             sb.Append("  ResumeRewindSeconds: ").Append(ResumeRewindSeconds).Append("\n");
             sb.Append("  IntroSkipMode: ").Append(IntroSkipMode).Append("\n");
             sb.Append("  EnableLocalPassword: ").Append(EnableLocalPassword).Append("\n");
@@ -316,6 +325,11 @@ namespace EmbyClient.Dotnet.Model
                     this.EnableNextEpisodeAutoPlay.Equals(input.EnableNextEpisodeAutoPlay))
                 ) && 
                 (
+                    this.PreferSDHSubtitles == input.PreferSDHSubtitles ||
+                    (this.PreferSDHSubtitles != null &&
+                    this.PreferSDHSubtitles.Equals(input.PreferSDHSubtitles))
+                ) && 
+                (
                     this.ResumeRewindSeconds == input.ResumeRewindSeconds ||
                     (this.ResumeRewindSeconds != null &&
                     this.ResumeRewindSeconds.Equals(input.ResumeRewindSeconds))
@@ -371,6 +385,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.RememberSubtitleSelections.GetHashCode();
                 if (this.EnableNextEpisodeAutoPlay != null)
                     hashCode = hashCode * 59 + this.EnableNextEpisodeAutoPlay.GetHashCode();
+                if (this.PreferSDHSubtitles != null)
+                    hashCode = hashCode * 59 + this.PreferSDHSubtitles.GetHashCode();
                 if (this.ResumeRewindSeconds != null)
                     hashCode = hashCode * 59 + this.ResumeRewindSeconds.GetHashCode();
                 if (this.IntroSkipMode != null)

@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.65
+ * OpenAPI spec version: 4.8.0.66
  * 
  *
  * NOTE: This file is auto generated.
@@ -440,6 +440,21 @@ describe("AudioServiceApi", () => {
     const audioStreamIndex: number = 56
     const videoStreamIndex: number = 56
     return expect(instance.headAudioByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
+})
+
+describe("BackupApiApi", () => {
+  let instance: api.BackupApiApi
+  beforeEach(function() {
+    instance = new api.BackupApiApi(config)
+  });
+
+  test("getBackuprestoreBackupinfo", () => {
+    return expect(instance.getBackuprestoreBackupinfo({})).resolves.toBe(null)
+  })
+  test("postBackuprestoreRestore", () => {
+    const body: api.MBBackupApiRestoreOptions = undefined
+    return expect(instance.postBackuprestoreRestore(body, {})).resolves.toBe(null)
   })
 })
 
@@ -2850,6 +2865,49 @@ describe("LibraryStructureServiceApi", () => {
   })
 })
 
+describe("LiveStreamServiceApi", () => {
+  let instance: api.LiveStreamServiceApi
+  beforeEach(function() {
+    instance = new api.LiveStreamServiceApi(config)
+  });
+
+  test("getLivetvLiverecordingsByIdStream", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLiverecordingsByIdStream(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLivestreamfilesByIdHlsBySegment", () => {
+    const id: string = "id_example"
+    const segment: string = "segment_example"
+    return expect(instance.getLivetvLivestreamfilesByIdHlsBySegment(id, segment, {})).resolves.toBe(null)
+  })
+  test("getLivetvLivestreamfilesByIdHlsLiveM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLivestreamfilesByIdHlsLiveM3u8(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLivestreamfilesByIdHlsMasterM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLivestreamfilesByIdHlsMasterM3u8(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLivestreamfilesByIdStreamByContainer", () => {
+    const id: string = "id_example"
+    const container: string = "container_example"
+    return expect(instance.getLivetvLivestreamfilesByIdStreamByContainer(id, container, {})).resolves.toBe(null)
+  })
+  test("headLivetvLivestreamfilesByIdHlsBySegment", () => {
+    const id: string = "id_example"
+    const segment: string = "segment_example"
+    return expect(instance.headLivetvLivestreamfilesByIdHlsBySegment(id, segment, {})).resolves.toBe(null)
+  })
+  test("headLivetvLivestreamfilesByIdHlsLiveM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.headLivetvLivestreamfilesByIdHlsLiveM3u8(id, {})).resolves.toBe(null)
+  })
+  test("headLivetvLivestreamfilesByIdHlsMasterM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.headLivetvLivestreamfilesByIdHlsMasterM3u8(id, {})).resolves.toBe(null)
+  })
+})
+
 describe("LiveTvServiceApi", () => {
   let instance: api.LiveTvServiceApi
   beforeEach(function() {
@@ -3340,15 +3398,6 @@ describe("LiveTvServiceApi", () => {
   test("getLivetvListingprovidersSchedulesdirectCountries", () => {
     return expect(instance.getLivetvListingprovidersSchedulesdirectCountries({})).resolves.toBe(null)
   })
-  test("getLivetvLiverecordingsByIdStream", () => {
-    const id: string = "id_example"
-    return expect(instance.getLivetvLiverecordingsByIdStream(id, {})).resolves.toBe(null)
-  })
-  test("getLivetvLivestreamfilesByIdStreamByContainer", () => {
-    const id: string = "id_example"
-    const container: string = "container_example"
-    return expect(instance.getLivetvLivestreamfilesByIdStreamByContainer(id, container, {})).resolves.toBe(null)
-  })
   test("getLivetvManageChannels", () => {
     const startIndex: number = 56
     const limit: number = 56
@@ -3649,7 +3698,7 @@ describe("LiveTvServiceApi", () => {
     return expect(instance.postLivetvChannelmappingoptions(providerId, {})).resolves.toBe(null)
   })
   test("postLivetvChannelmappings", () => {
-    const body: api.LiveTVApiSetChannelMapping = undefined
+    const body: api.ApiSetChannelMapping = undefined
     const providerId: string = "providerId_example"
     return expect(instance.postLivetvChannelmappings(body, providerId, {})).resolves.toBe(null)
   })
@@ -3662,12 +3711,12 @@ describe("LiveTvServiceApi", () => {
     return expect(instance.postLivetvListingprovidersDelete(id, {})).resolves.toBe(null)
   })
   test("postLivetvManageChannelsByIdDisabled", () => {
-    const body: api.LiveTVApiSetChannelDisabled = undefined
+    const body: api.ApiSetChannelDisabled = undefined
     const id: string = "id_example"
     return expect(instance.postLivetvManageChannelsByIdDisabled(body, id, {})).resolves.toBe(null)
   })
   test("postLivetvManageChannelsByIdSortindex", () => {
-    const body: api.LiveTVApiSetChannelSortIndex = undefined
+    const body: api.ApiSetChannelSortIndex = undefined
     const id: string = "id_example"
     return expect(instance.postLivetvManageChannelsByIdSortindex(body, id, {})).resolves.toBe(null)
   })
@@ -3820,7 +3869,7 @@ describe("LiveTvServiceApi", () => {
     return expect(instance.putLivetvChannelmappingoptions(providerId, {})).resolves.toBe(null)
   })
   test("putLivetvChannelmappings", () => {
-    const body: api.LiveTVApiSetChannelMapping = undefined
+    const body: api.ApiSetChannelMapping = undefined
     const providerId: string = "providerId_example"
     return expect(instance.putLivetvChannelmappings(body, providerId, {})).resolves.toBe(null)
   })

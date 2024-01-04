@@ -30,11 +30,12 @@ public struct UserConfiguration: Codable {
     public var rememberAudioSelections: Bool?
     public var rememberSubtitleSelections: Bool?
     public var enableNextEpisodeAutoPlay: Bool?
+    public var preferSDHSubtitles: Bool?
     public var resumeRewindSeconds: Int?
     public var introSkipMode: SegmentSkipMode?
     public var enableLocalPassword: Bool?
 
-    public init(audioLanguagePreference: String? = nil, playDefaultAudioTrack: Bool? = nil, subtitleLanguagePreference: String? = nil, profilePin: String? = nil, displayMissingEpisodes: Bool? = nil, subtitleMode: SubtitlePlaybackMode? = nil, orderedViews: [String]? = nil, latestItemsExcludes: [String]? = nil, myMediaExcludes: [String]? = nil, hidePlayedInLatest: Bool? = nil, hidePlayedInMoreLikeThis: Bool? = nil, hidePlayedInSuggestions: Bool? = nil, rememberAudioSelections: Bool? = nil, rememberSubtitleSelections: Bool? = nil, enableNextEpisodeAutoPlay: Bool? = nil, resumeRewindSeconds: Int? = nil, introSkipMode: SegmentSkipMode? = nil, enableLocalPassword: Bool? = nil) {
+    public init(audioLanguagePreference: String? = nil, playDefaultAudioTrack: Bool? = nil, subtitleLanguagePreference: String? = nil, profilePin: String? = nil, displayMissingEpisodes: Bool? = nil, subtitleMode: SubtitlePlaybackMode? = nil, orderedViews: [String]? = nil, latestItemsExcludes: [String]? = nil, myMediaExcludes: [String]? = nil, hidePlayedInLatest: Bool? = nil, hidePlayedInMoreLikeThis: Bool? = nil, hidePlayedInSuggestions: Bool? = nil, rememberAudioSelections: Bool? = nil, rememberSubtitleSelections: Bool? = nil, enableNextEpisodeAutoPlay: Bool? = nil, preferSDHSubtitles: Bool? = nil, resumeRewindSeconds: Int? = nil, introSkipMode: SegmentSkipMode? = nil, enableLocalPassword: Bool? = nil) {
         self.audioLanguagePreference = audioLanguagePreference
         self.playDefaultAudioTrack = playDefaultAudioTrack
         self.subtitleLanguagePreference = subtitleLanguagePreference
@@ -50,6 +51,7 @@ public struct UserConfiguration: Codable {
         self.rememberAudioSelections = rememberAudioSelections
         self.rememberSubtitleSelections = rememberSubtitleSelections
         self.enableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay
+        self.preferSDHSubtitles = preferSDHSubtitles
         self.resumeRewindSeconds = resumeRewindSeconds
         self.introSkipMode = introSkipMode
         self.enableLocalPassword = enableLocalPassword
@@ -71,6 +73,7 @@ public struct UserConfiguration: Codable {
         case rememberAudioSelections = "RememberAudioSelections"
         case rememberSubtitleSelections = "RememberSubtitleSelections"
         case enableNextEpisodeAutoPlay = "EnableNextEpisodeAutoPlay"
+        case preferSDHSubtitles = "PreferSDHSubtitles"
         case resumeRewindSeconds = "ResumeRewindSeconds"
         case introSkipMode = "IntroSkipMode"
         case enableLocalPassword = "EnableLocalPassword"

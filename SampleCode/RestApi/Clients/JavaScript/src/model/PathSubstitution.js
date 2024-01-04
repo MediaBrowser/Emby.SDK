@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The PathSubstitution model module.
 * @module model/PathSubstitution
-* @version 4.8.0.65
+* @version 4.8.0.66
 */
 export default class PathSubstitution {
     /**

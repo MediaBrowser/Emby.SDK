@@ -662,7 +662,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: LiveTVApiAvailableRecordingOptions
+        :return: ApiAvailableRecordingOptions
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -683,7 +683,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: LiveTVApiAvailableRecordingOptions
+        :return: ApiAvailableRecordingOptions
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -731,7 +731,7 @@ class LiveTvServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='LiveTVApiAvailableRecordingOptions',  # noqa: E501
+            response_type='ApiAvailableRecordingOptions',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2097,7 +2097,7 @@ class LiveTvServiceApi(object):
         :param str album_artist_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
         :param str name_starts_with: Optional filter by items whose name is sorted equally than a given input string.
         :param str name_less_than: Optional filter by items whose name is equally or lesser than a given input string.
-        :return: list[LiveTVApiTagItem]
+        :return: list[ApiTagItem]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2215,7 +2215,7 @@ class LiveTvServiceApi(object):
         :param str album_artist_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
         :param str name_starts_with: Optional filter by items whose name is sorted equally than a given input string.
         :param str name_less_than: Optional filter by items whose name is equally or lesser than a given input string.
-        :return: list[LiveTVApiTagItem]
+        :return: list[ApiTagItem]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2457,7 +2457,7 @@ class LiveTvServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[LiveTVApiTagItem]',  # noqa: E501
+            response_type='list[ApiTagItem]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2578,7 +2578,7 @@ class LiveTvServiceApi(object):
         :param str album_artist_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
         :param str name_starts_with: Optional filter by items whose name is sorted equally than a given input string.
         :param str name_less_than: Optional filter by items whose name is equally or lesser than a given input string.
-        :return: QueryResultLiveTVApiEpgRow
+        :return: QueryResultApiEpgRow
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2702,7 +2702,7 @@ class LiveTvServiceApi(object):
         :param str album_artist_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
         :param str name_starts_with: Optional filter by items whose name is sorted equally than a given input string.
         :param str name_less_than: Optional filter by items whose name is equally or lesser than a given input string.
-        :return: QueryResultLiveTVApiEpgRow
+        :return: QueryResultApiEpgRow
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2956,7 +2956,7 @@ class LiveTvServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='QueryResultLiveTVApiEpgRow',  # noqa: E501
+            response_type='QueryResultApiEpgRow',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3330,7 +3330,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[LiveTVApiListingProviderTypeInfo]
+        :return: list[ApiListingProviderTypeInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3351,7 +3351,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[LiveTVApiListingProviderTypeInfo]
+        :return: list[ApiListingProviderTypeInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3399,7 +3399,7 @@ class LiveTvServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[LiveTVApiListingProviderTypeInfo]',  # noqa: E501
+            response_type='list[ApiListingProviderTypeInfo]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3666,196 +3666,6 @@ class LiveTvServiceApi(object):
 
         return self.api_client.call_api(
             '/LiveTv/ListingProviders/SchedulesDirect/Countries', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_livetv_liverecordings_by_id_stream(self, id, **kwargs):  # noqa: E501
-        """Gets a live tv channel  # noqa: E501
-
-        Requires authentication as user  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_livetv_liverecordings_by_id_stream(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str id: (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_livetv_liverecordings_by_id_stream_with_http_info(id, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_livetv_liverecordings_by_id_stream_with_http_info(id, **kwargs)  # noqa: E501
-            return data
-
-    def get_livetv_liverecordings_by_id_stream_with_http_info(self, id, **kwargs):  # noqa: E501
-        """Gets a live tv channel  # noqa: E501
-
-        Requires authentication as user  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_livetv_liverecordings_by_id_stream_with_http_info(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str id: (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_livetv_liverecordings_by_id_stream" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_livetv_liverecordings_by_id_stream`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'id' in params:
-            path_params['Id'] = params['id']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/LiveTv/LiveRecordings/{Id}/stream', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_livetv_livestreamfiles_by_id_stream_by_container(self, id, container, **kwargs):  # noqa: E501
-        """Gets a live tv channel  # noqa: E501
-
-        Requires authentication as user  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_livetv_livestreamfiles_by_id_stream_by_container(id, container, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str id: (required)
-        :param str container: (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_livetv_livestreamfiles_by_id_stream_by_container_with_http_info(id, container, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_livetv_livestreamfiles_by_id_stream_by_container_with_http_info(id, container, **kwargs)  # noqa: E501
-            return data
-
-    def get_livetv_livestreamfiles_by_id_stream_by_container_with_http_info(self, id, container, **kwargs):  # noqa: E501
-        """Gets a live tv channel  # noqa: E501
-
-        Requires authentication as user  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_livetv_livestreamfiles_by_id_stream_by_container_with_http_info(id, container, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str id: (required)
-        :param str container: (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['id', 'container']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_livetv_livestreamfiles_by_id_stream_by_container" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_livetv_livestreamfiles_by_id_stream_by_container`")  # noqa: E501
-        # verify the required parameter 'container' is set
-        if ('container' not in params or
-                params['container'] is None):
-            raise ValueError("Missing the required parameter `container` when calling `get_livetv_livestreamfiles_by_id_stream_by_container`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'id' in params:
-            path_params['Id'] = params['id']  # noqa: E501
-        if 'container' in params:
-            path_params['Container'] = params['container']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/LiveTv/LiveStreamFiles/{Id}/stream.{Container}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -6584,7 +6394,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param LiveTVApiSetChannelMapping body: SetChannelMapping (required)
+        :param ApiSetChannelMapping body: SetChannelMapping (required)
         :param str provider_id: Provider id (required)
         :return: None
                  If the method is called asynchronously,
@@ -6607,7 +6417,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param LiveTVApiSetChannelMapping body: SetChannelMapping (required)
+        :param ApiSetChannelMapping body: SetChannelMapping (required)
         :param str provider_id: Provider id (required)
         :return: None
                  If the method is called asynchronously,
@@ -6873,7 +6683,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param LiveTVApiSetChannelDisabled body: SetChannelDisabled (required)
+        :param ApiSetChannelDisabled body: SetChannelDisabled (required)
         :param str id: (required)
         :return: QueryResultChannelManagementInfo
                  If the method is called asynchronously,
@@ -6896,7 +6706,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param LiveTVApiSetChannelDisabled body: SetChannelDisabled (required)
+        :param ApiSetChannelDisabled body: SetChannelDisabled (required)
         :param str id: (required)
         :return: QueryResultChannelManagementInfo
                  If the method is called asynchronously,
@@ -6980,7 +6790,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param LiveTVApiSetChannelSortIndex body: SetChannelSortIndex (required)
+        :param ApiSetChannelSortIndex body: SetChannelSortIndex (required)
         :param str id: (required)
         :return: QueryResultChannelManagementInfo
                  If the method is called asynchronously,
@@ -7003,7 +6813,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param LiveTVApiSetChannelSortIndex body: SetChannelSortIndex (required)
+        :param ApiSetChannelSortIndex body: SetChannelSortIndex (required)
         :param str id: (required)
         :return: QueryResultChannelManagementInfo
                  If the method is called asynchronously,
@@ -8611,7 +8421,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param LiveTVApiSetChannelMapping body: SetChannelMapping (required)
+        :param ApiSetChannelMapping body: SetChannelMapping (required)
         :param str provider_id: Provider id (required)
         :return: None
                  If the method is called asynchronously,
@@ -8634,7 +8444,7 @@ class LiveTvServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param LiveTVApiSetChannelMapping body: SetChannelMapping (required)
+        :param ApiSetChannelMapping body: SetChannelMapping (required)
         :param str provider_id: Provider id (required)
         :return: None
                  If the method is called asynchronously,

@@ -610,15 +610,15 @@ func (a *LiveTvServiceApiService) DeleteLivetvTunerhosts(ctx context.Context, lo
 LiveTvServiceApiService Gets available recording options
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return LiveTvApiAvailableRecordingOptions
+@return ApiAvailableRecordingOptions
 */
-func (a *LiveTvServiceApiService) GetLivetvAvailablerecordingoptions(ctx context.Context) (LiveTvApiAvailableRecordingOptions, *http.Response, error) {
+func (a *LiveTvServiceApiService) GetLivetvAvailablerecordingoptions(ctx context.Context) (ApiAvailableRecordingOptions, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue LiveTvApiAvailableRecordingOptions
+		localVarReturnValue ApiAvailableRecordingOptions
 	)
 
 	// create path and map variables
@@ -688,7 +688,7 @@ func (a *LiveTvServiceApiService) GetLivetvAvailablerecordingoptions(ctx context
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v LiveTvApiAvailableRecordingOptions
+			var v ApiAvailableRecordingOptions
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -2271,7 +2271,7 @@ Requires authentication as user
      * @param "AlbumArtistStartsWithOrGreater" (optional.String) -  Optional filter by items whose name is sorted equally or greater than a given input string.
      * @param "NameStartsWith" (optional.String) -  Optional filter by items whose name is sorted equally than a given input string.
      * @param "NameLessThan" (optional.String) -  Optional filter by items whose name is equally or lesser than a given input string.
-@return []LiveTvApiTagItem
+@return []ApiTagItem
 */
 
 type LiveTvServiceApiGetLivetvChanneltagsPrefixesOpts struct {
@@ -2374,13 +2374,13 @@ type LiveTvServiceApiGetLivetvChanneltagsPrefixesOpts struct {
     NameLessThan optional.String
 }
 
-func (a *LiveTvServiceApiService) GetLivetvChanneltagsPrefixes(ctx context.Context, localVarOptionals *LiveTvServiceApiGetLivetvChanneltagsPrefixesOpts) ([]LiveTvApiTagItem, *http.Response, error) {
+func (a *LiveTvServiceApiService) GetLivetvChanneltagsPrefixes(ctx context.Context, localVarOptionals *LiveTvServiceApiGetLivetvChanneltagsPrefixesOpts) ([]ApiTagItem, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []LiveTvApiTagItem
+		localVarReturnValue []ApiTagItem
 	)
 
 	// create path and map variables
@@ -2741,7 +2741,7 @@ func (a *LiveTvServiceApiService) GetLivetvChanneltagsPrefixes(ctx context.Conte
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []LiveTvApiTagItem
+			var v []ApiTagItem
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -2863,7 +2863,7 @@ Requires authentication as user
      * @param "AlbumArtistStartsWithOrGreater" (optional.String) -  Optional filter by items whose name is sorted equally or greater than a given input string.
      * @param "NameStartsWith" (optional.String) -  Optional filter by items whose name is sorted equally than a given input string.
      * @param "NameLessThan" (optional.String) -  Optional filter by items whose name is equally or lesser than a given input string.
-@return QueryResultLiveTvApiEpgRow
+@return QueryResultApiEpgRow
 */
 
 type LiveTvServiceApiGetLivetvEPGOpts struct {
@@ -2972,13 +2972,13 @@ type LiveTvServiceApiGetLivetvEPGOpts struct {
     NameLessThan optional.String
 }
 
-func (a *LiveTvServiceApiService) GetLivetvEPG(ctx context.Context, localVarOptionals *LiveTvServiceApiGetLivetvEPGOpts) (QueryResultLiveTvApiEpgRow, *http.Response, error) {
+func (a *LiveTvServiceApiService) GetLivetvEPG(ctx context.Context, localVarOptionals *LiveTvServiceApiGetLivetvEPGOpts) (QueryResultApiEpgRow, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue QueryResultLiveTvApiEpgRow
+		localVarReturnValue QueryResultApiEpgRow
 	)
 
 	// create path and map variables
@@ -3357,7 +3357,7 @@ func (a *LiveTvServiceApiService) GetLivetvEPG(ctx context.Context, localVarOpti
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v QueryResultLiveTvApiEpgRow
+			var v QueryResultApiEpgRow
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -3761,15 +3761,15 @@ func (a *LiveTvServiceApiService) GetLivetvListingproviders(ctx context.Context,
 LiveTvServiceApiService Gets listing provider
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []LiveTvApiListingProviderTypeInfo
+@return []ApiListingProviderTypeInfo
 */
-func (a *LiveTvServiceApiService) GetLivetvListingprovidersAvailable(ctx context.Context) ([]LiveTvApiListingProviderTypeInfo, *http.Response, error) {
+func (a *LiveTvServiceApiService) GetLivetvListingprovidersAvailable(ctx context.Context) ([]ApiListingProviderTypeInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []LiveTvApiListingProviderTypeInfo
+		localVarReturnValue []ApiListingProviderTypeInfo
 	)
 
 	// create path and map variables
@@ -3839,7 +3839,7 @@ func (a *LiveTvServiceApiService) GetLivetvListingprovidersAvailable(ctx context
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []LiveTvApiListingProviderTypeInfo
+			var v []ApiListingProviderTypeInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -4087,170 +4087,6 @@ func (a *LiveTvServiceApiService) GetLivetvListingprovidersSchedulesdirectCountr
 
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/LiveTv/ListingProviders/SchedulesDirect/Countries"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
-	}
-
-	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{}
-
-	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if ctx != nil {
-		// API Key Authentication
-		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
-			var key string
-			if auth.Prefix != "" {
-				key = auth.Prefix + " " + auth.Key
-			} else {
-				key = auth.Key
-			}
-			
-			localVarQueryParams.Add("api_key", key)
-		}
-	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
-	if err != nil {
-		return localVarHttpResponse, err
-	}
-
-
-	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
-			body: localVarBody,
-			error: localVarHttpResponse.Status,
-		}
-		return localVarHttpResponse, newErr
-	}
-
-	return localVarHttpResponse, nil
-}
-/*
-LiveTvServiceApiService Gets a live tv channel
-Requires authentication as user
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
-
-*/
-func (a *LiveTvServiceApiService) GetLivetvLiverecordingsByIdStream(ctx context.Context, id string) (*http.Response, error) {
-	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
-		
-	)
-
-	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/LiveTv/LiveRecordings/{Id}/stream"
-	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
-	}
-
-	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{}
-
-	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if ctx != nil {
-		// API Key Authentication
-		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {
-			var key string
-			if auth.Prefix != "" {
-				key = auth.Prefix + " " + auth.Key
-			} else {
-				key = auth.Key
-			}
-			
-			localVarQueryParams.Add("api_key", key)
-		}
-	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
-	if err != nil {
-		return nil, err
-	}
-
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarHttpResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
-	if err != nil {
-		return localVarHttpResponse, err
-	}
-
-
-	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
-			body: localVarBody,
-			error: localVarHttpResponse.Status,
-		}
-		return localVarHttpResponse, newErr
-	}
-
-	return localVarHttpResponse, nil
-}
-/*
-LiveTvServiceApiService Gets a live tv channel
-Requires authentication as user
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
- * @param container
-
-*/
-func (a *LiveTvServiceApiService) GetLivetvLivestreamfilesByIdStreamByContainer(ctx context.Context, id string, container string) (*http.Response, error) {
-	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
-		
-	)
-
-	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/LiveTv/LiveStreamFiles/{Id}/stream.{Container}"
-	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Container"+"}", fmt.Sprintf("%v", container), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -7375,7 +7211,7 @@ Requires authentication as administrator
  * @param providerId Provider id
 
 */
-func (a *LiveTvServiceApiService) PostLivetvChannelmappings(ctx context.Context, body LiveTvApiSetChannelMapping, providerId string) (*http.Response, error) {
+func (a *LiveTvServiceApiService) PostLivetvChannelmappings(ctx context.Context, body ApiSetChannelMapping, providerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -7647,7 +7483,7 @@ Requires authentication as administrator
  * @param id
 @return QueryResultChannelManagementInfo
 */
-func (a *LiveTvServiceApiService) PostLivetvManageChannelsByIdDisabled(ctx context.Context, body LiveTvApiSetChannelDisabled, id string) (QueryResultChannelManagementInfo, *http.Response, error) {
+func (a *LiveTvServiceApiService) PostLivetvManageChannelsByIdDisabled(ctx context.Context, body ApiSetChannelDisabled, id string) (QueryResultChannelManagementInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -7748,7 +7584,7 @@ Requires authentication as administrator
  * @param id
 @return QueryResultChannelManagementInfo
 */
-func (a *LiveTvServiceApiService) PostLivetvManageChannelsByIdSortindex(ctx context.Context, body LiveTvApiSetChannelSortIndex, id string) (QueryResultChannelManagementInfo, *http.Response, error) {
+func (a *LiveTvServiceApiService) PostLivetvManageChannelsByIdSortindex(ctx context.Context, body ApiSetChannelSortIndex, id string) (QueryResultChannelManagementInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -9351,7 +9187,7 @@ Requires authentication as administrator
  * @param providerId Provider id
 
 */
-func (a *LiveTvServiceApiService) PutLivetvChannelmappings(ctx context.Context, body LiveTvApiSetChannelMapping, providerId string) (*http.Response, error) {
+func (a *LiveTvServiceApiService) PutLivetvChannelmappings(ctx context.Context, body ApiSetChannelMapping, providerId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
