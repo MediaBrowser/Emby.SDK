@@ -32,6 +32,7 @@ type BaseItemDto struct {
 	SortParentIndexNumber int32 `json:"SortParentIndexNumber,omitempty"`
 	CanDelete bool `json:"CanDelete,omitempty"`
 	CanDownload bool `json:"CanDownload,omitempty"`
+	CanEditItems bool `json:"CanEditItems,omitempty"`
 	SupportsResume bool `json:"SupportsResume,omitempty"`
 	PresentationUniqueKey string `json:"PresentationUniqueKey,omitempty"`
 	PreferredMetadataLanguage string `json:"PreferredMetadataLanguage,omitempty"`

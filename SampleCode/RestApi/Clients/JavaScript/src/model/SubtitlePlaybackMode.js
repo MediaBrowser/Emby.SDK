@@ -46,6 +46,12 @@ export default class SubtitlePlaybackMode {
          */
         smart = "Smart";
 
+        /**
+         * value: "HearingImpaired"
+         * @const
+         */
+        hearingImpaired = "HearingImpaired";
+
 
     /**
     * Returns a <code>SubtitlePlaybackMode</code> enum value from a Javascript object name.

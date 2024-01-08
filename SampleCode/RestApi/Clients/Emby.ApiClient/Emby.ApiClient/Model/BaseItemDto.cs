@@ -111,6 +111,12 @@ namespace Emby.ApiClient.Model
         public bool? CanDownload { get; set; }
 
         /// <summary>
+        /// Gets or Sets CanEditItems
+        /// </summary>
+        /// <value>The CanEditItems.</value>
+        public bool? CanEditItems { get; set; }
+
+        /// <summary>
         /// Gets or Sets SupportsResume
         /// </summary>
         /// <value>The SupportsResume.</value>
@@ -966,6 +972,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  SortParentIndexNumber: ").Append(SortParentIndexNumber).Append("\n");
             sb.Append("  CanDelete: ").Append(CanDelete).Append("\n");
             sb.Append("  CanDownload: ").Append(CanDownload).Append("\n");
+            sb.Append("  CanEditItems: ").Append(CanEditItems).Append("\n");
             sb.Append("  SupportsResume: ").Append(SupportsResume).Append("\n");
             sb.Append("  PresentationUniqueKey: ").Append(PresentationUniqueKey).Append("\n");
             sb.Append("  PreferredMetadataLanguage: ").Append(PreferredMetadataLanguage).Append("\n");
@@ -1199,6 +1206,11 @@ namespace Emby.ApiClient.Model
                     this.CanDownload == input.CanDownload ||
                     (this.CanDownload != null &&
                     this.CanDownload.Equals(input.CanDownload))
+                ) && 
+                (
+                    this.CanEditItems == input.CanEditItems ||
+                    (this.CanEditItems != null &&
+                    this.CanEditItems.Equals(input.CanEditItems))
                 ) && 
                 (
                     this.SupportsResume == input.SupportsResume ||
@@ -1957,6 +1969,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.CanDelete.GetHashCode();
                 if (this.CanDownload != null)
                     hashCode = hashCode * 59 + this.CanDownload.GetHashCode();
+                if (this.CanEditItems != null)
+                    hashCode = hashCode * 59 + this.CanEditItems.GetHashCode();
                 if (this.SupportsResume != null)
                     hashCode = hashCode * 59 + this.SupportsResume.GetHashCode();
                 if (this.PresentationUniqueKey != null)

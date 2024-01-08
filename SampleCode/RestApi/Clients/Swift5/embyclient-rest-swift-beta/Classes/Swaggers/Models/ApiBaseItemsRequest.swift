@@ -28,6 +28,7 @@ public struct ApiBaseItemsRequest: Codable {
     public var listItemIds: String?
     public var audioLanguages: String?
     public var subtitleLanguages: String?
+    public var canEditItems: Bool?
     public var groupItemsInto: LibraryItemLinkType?
     public var minWidth: Int?
     public var minHeight: Int?
@@ -38,7 +39,7 @@ public struct ApiBaseItemsRequest: Codable {
     public var isAiring: Bool?
     public var hasAired: Bool?
 
-    public init(is4K: Bool? = nil, enableTotalRecordCount: Bool? = nil, recordingKeyword: String? = nil, recordingKeywordType: LiveTvKeywordType? = nil, randomSeed: Int? = nil, genreIds: String? = nil, collectionIds: String? = nil, tagIds: String? = nil, excludeTagIds: String? = nil, excludeArtistIds: String? = nil, albumArtistIds: String? = nil, contributingArtistIds: String? = nil, albumIds: String? = nil, outerIds: String? = nil, listItemIds: String? = nil, audioLanguages: String? = nil, subtitleLanguages: String? = nil, groupItemsInto: LibraryItemLinkType? = nil, minWidth: Int? = nil, minHeight: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, groupProgramsBySeries: Bool? = nil, airDays: [DayOfWeek]? = nil, isAiring: Bool? = nil, hasAired: Bool? = nil) {
+    public init(is4K: Bool? = nil, enableTotalRecordCount: Bool? = nil, recordingKeyword: String? = nil, recordingKeywordType: LiveTvKeywordType? = nil, randomSeed: Int? = nil, genreIds: String? = nil, collectionIds: String? = nil, tagIds: String? = nil, excludeTagIds: String? = nil, excludeArtistIds: String? = nil, albumArtistIds: String? = nil, contributingArtistIds: String? = nil, albumIds: String? = nil, outerIds: String? = nil, listItemIds: String? = nil, audioLanguages: String? = nil, subtitleLanguages: String? = nil, canEditItems: Bool? = nil, groupItemsInto: LibraryItemLinkType? = nil, minWidth: Int? = nil, minHeight: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, groupProgramsBySeries: Bool? = nil, airDays: [DayOfWeek]? = nil, isAiring: Bool? = nil, hasAired: Bool? = nil) {
         self.is4K = is4K
         self.enableTotalRecordCount = enableTotalRecordCount
         self.recordingKeyword = recordingKeyword
@@ -56,6 +57,7 @@ public struct ApiBaseItemsRequest: Codable {
         self.listItemIds = listItemIds
         self.audioLanguages = audioLanguages
         self.subtitleLanguages = subtitleLanguages
+        self.canEditItems = canEditItems
         self.groupItemsInto = groupItemsInto
         self.minWidth = minWidth
         self.minHeight = minHeight
@@ -85,6 +87,7 @@ public struct ApiBaseItemsRequest: Codable {
         case listItemIds = "ListItemIds"
         case audioLanguages = "AudioLanguages"
         case subtitleLanguages = "SubtitleLanguages"
+        case canEditItems = "CanEditItems"
         case groupItemsInto = "GroupItemsInto"
         case minWidth = "MinWidth"
         case minHeight = "MinHeight"

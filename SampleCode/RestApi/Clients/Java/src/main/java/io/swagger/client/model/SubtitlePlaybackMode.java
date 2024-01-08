@@ -23,7 +23,8 @@ public enum SubtitlePlaybackMode {
   ALWAYS("Always"),
   ONLYFORCED("OnlyForced"),
   NONE("None"),
-  SMART("Smart");
+  SMART("Smart"),
+  HEARINGIMPAIRED("HearingImpaired");
 
   private String value;
 

@@ -76,6 +76,9 @@ public class ApiBaseItemsRequest {
   @SerializedName("SubtitleLanguages")
   private String subtitleLanguages = null;
 
+  @SerializedName("CanEditItems")
+  private Boolean canEditItems = null;
+
   @SerializedName("GroupItemsInto")
   private LibraryItemLinkType groupItemsInto = null;
 
@@ -409,6 +412,24 @@ public class ApiBaseItemsRequest {
     this.subtitleLanguages = subtitleLanguages;
   }
 
+  public ApiBaseItemsRequest canEditItems(Boolean canEditItems) {
+    this.canEditItems = canEditItems;
+    return this;
+  }
+
+   /**
+   * Get canEditItems
+   * @return canEditItems
+  **/
+  @Schema(description = "")
+  public Boolean isCanEditItems() {
+    return canEditItems;
+  }
+
+  public void setCanEditItems(Boolean canEditItems) {
+    this.canEditItems = canEditItems;
+  }
+
   public ApiBaseItemsRequest groupItemsInto(LibraryItemLinkType groupItemsInto) {
     this.groupItemsInto = groupItemsInto;
     return this;
@@ -606,6 +627,7 @@ public class ApiBaseItemsRequest {
         Objects.equals(this.listItemIds, apiBaseItemsRequest.listItemIds) &&
         Objects.equals(this.audioLanguages, apiBaseItemsRequest.audioLanguages) &&
         Objects.equals(this.subtitleLanguages, apiBaseItemsRequest.subtitleLanguages) &&
+        Objects.equals(this.canEditItems, apiBaseItemsRequest.canEditItems) &&
         Objects.equals(this.groupItemsInto, apiBaseItemsRequest.groupItemsInto) &&
         Objects.equals(this.minWidth, apiBaseItemsRequest.minWidth) &&
         Objects.equals(this.minHeight, apiBaseItemsRequest.minHeight) &&
@@ -619,7 +641,7 @@ public class ApiBaseItemsRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(is4K, enableTotalRecordCount, recordingKeyword, recordingKeywordType, randomSeed, genreIds, collectionIds, tagIds, excludeTagIds, excludeArtistIds, albumArtistIds, contributingArtistIds, albumIds, outerIds, listItemIds, audioLanguages, subtitleLanguages, groupItemsInto, minWidth, minHeight, maxWidth, maxHeight, groupProgramsBySeries, airDays, isAiring, hasAired);
+    return Objects.hash(is4K, enableTotalRecordCount, recordingKeyword, recordingKeywordType, randomSeed, genreIds, collectionIds, tagIds, excludeTagIds, excludeArtistIds, albumArtistIds, contributingArtistIds, albumIds, outerIds, listItemIds, audioLanguages, subtitleLanguages, canEditItems, groupItemsInto, minWidth, minHeight, maxWidth, maxHeight, groupProgramsBySeries, airDays, isAiring, hasAired);
   }
 
 
@@ -645,6 +667,7 @@ public class ApiBaseItemsRequest {
     sb.append("    listItemIds: ").append(toIndentedString(listItemIds)).append("\n");
     sb.append("    audioLanguages: ").append(toIndentedString(audioLanguages)).append("\n");
     sb.append("    subtitleLanguages: ").append(toIndentedString(subtitleLanguages)).append("\n");
+    sb.append("    canEditItems: ").append(toIndentedString(canEditItems)).append("\n");
     sb.append("    groupItemsInto: ").append(toIndentedString(groupItemsInto)).append("\n");
     sb.append("    minWidth: ").append(toIndentedString(minWidth)).append("\n");
     sb.append("    minHeight: ").append(toIndentedString(minHeight)).append("\n");

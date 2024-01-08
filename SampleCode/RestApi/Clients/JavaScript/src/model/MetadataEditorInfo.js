@@ -18,7 +18,7 @@ import ParentalRating from './ParentalRating';
 /**
 * The MetadataEditorInfo model module.
 * @module model/MetadataEditorInfo
-* @version 4.8.0.66
+* @version 4.8.0.67
 */
 export default class MetadataEditorInfo {
     /**

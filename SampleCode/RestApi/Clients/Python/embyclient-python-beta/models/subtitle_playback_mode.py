@@ -23,6 +23,7 @@ class SubtitlePlaybackMode(object):
     ONLYFORCED = "OnlyForced"
     NONE = "None"
     SMART = "Smart"
+    HEARINGIMPAIRED = "HearingImpaired"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

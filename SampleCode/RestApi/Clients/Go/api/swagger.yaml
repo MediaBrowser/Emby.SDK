@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.66
+  version: 4.8.0.67
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -63618,6 +63618,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -64152,6 +64153,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -64277,6 +64279,9 @@ components:
           type: boolean
           nullable: true
         CanDownload:
+          type: boolean
+          nullable: true
+        CanEditItems:
           type: boolean
           nullable: true
         SupportsResume:
@@ -65231,6 +65236,7 @@ components:
         ParentLogoItemId: ParentLogoItemId
         PartCount: 3
         ListingsProviderId: ListingsProviderId
+        CanEditItems: true
         ChannelName: ChannelName
         EpisodeTitle: EpisodeTitle
         IsoSpeedRating: 0
@@ -67369,6 +67375,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -69631,6 +69638,8 @@ components:
           type: boolean
         DownloadImagesInAdvance:
           type: boolean
+        CacheImages:
+          type: boolean
         PathInfos:
           type: array
           items:
@@ -69861,6 +69870,7 @@ components:
         - LyricsFetcherOrder
         - LyricsFetcherOrder
         HearingImpairedSubtitlesOnly: true
+        CacheImages: true
         IgnoreFileExtensions:
         - IgnoreFileExtensions
         - IgnoreFileExtensions
@@ -70871,6 +70881,7 @@ components:
             ParentLogoItemId: ParentLogoItemId
             PartCount: 3
             ListingsProviderId: ListingsProviderId
+            CanEditItems: true
             ChannelName: ChannelName
             EpisodeTitle: EpisodeTitle
             IsoSpeedRating: 0
@@ -71409,6 +71420,7 @@ components:
             ParentLogoItemId: ParentLogoItemId
             PartCount: 3
             ListingsProviderId: ListingsProviderId
+            CanEditItems: true
             ChannelName: ChannelName
             EpisodeTitle: EpisodeTitle
             IsoSpeedRating: 0
@@ -71957,6 +71969,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -72078,6 +72091,9 @@ components:
           type: string
         SubtitleLanguages:
           type: string
+        CanEditItems:
+          type: boolean
+          nullable: true
         GroupItemsInto:
           $ref: '#/components/schemas/Library.ItemLinkType'
         MinWidth:
@@ -72618,6 +72634,7 @@ components:
             ParentLogoItemId: ParentLogoItemId
             PartCount: 3
             ListingsProviderId: ListingsProviderId
+            CanEditItems: true
             ChannelName: ChannelName
             EpisodeTitle: EpisodeTitle
             IsoSpeedRating: 0
@@ -73180,6 +73197,7 @@ components:
             ParentLogoItemId: ParentLogoItemId
             PartCount: 3
             ListingsProviderId: ListingsProviderId
+            CanEditItems: true
             ChannelName: ChannelName
             EpisodeTitle: EpisodeTitle
             IsoSpeedRating: 0
@@ -73826,6 +73844,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -74932,6 +74951,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -75466,6 +75486,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -77306,7 +77327,7 @@ components:
           format: int32
         DisableAsyncIO:
           type: boolean
-        MigratedToUserItemShares:
+        MigratedToUserItemShares1:
           type: boolean
         MigratedLibraryOptionsToDb:
           type: boolean
@@ -77373,7 +77394,6 @@ components:
         LogFileRetentionDays: 4
         HttpsPortNumber: 5
         CertificatePassword: CertificatePassword
-        MigratedToUserItemShares: true
         EnableOriginalTrackTitles: true
         RemoteClientBitrateLimit: 2
         ImageExtractionTimeoutMs: 7
@@ -77390,6 +77410,7 @@ components:
           To: To
         - From: From
           To: To
+        MigratedToUserItemShares1: true
         CachePath: CachePath
         WanDdns: WanDdns
         IsBehindProxy: true
@@ -78022,7 +78043,6 @@ components:
           LatestItemsExcludes:
           - LatestItemsExcludes
           - LatestItemsExcludes
-          PreferSDHSubtitles: true
           SubtitleMode: Default
           ResumeRewindSeconds: 0
           HidePlayedInLatest: true
@@ -78100,8 +78120,6 @@ components:
           type: boolean
         EnableNextEpisodeAutoPlay:
           type: boolean
-        PreferSDHSubtitles:
-          type: boolean
         ResumeRewindSeconds:
           type: integer
           format: int32
@@ -78122,7 +78140,6 @@ components:
         LatestItemsExcludes:
         - LatestItemsExcludes
         - LatestItemsExcludes
-        PreferSDHSubtitles: true
         SubtitleMode: Default
         ResumeRewindSeconds: 0
         HidePlayedInLatest: true
@@ -78146,6 +78163,7 @@ components:
       - OnlyForced
       - None
       - Smart
+      - HearingImpaired
       x-internal-ref-name: MediaBrowser.Model.Configuration.SubtitlePlaybackMode
     SegmentSkipMode:
       type: string
@@ -78502,7 +78520,6 @@ components:
             LatestItemsExcludes:
             - LatestItemsExcludes
             - LatestItemsExcludes
-            PreferSDHSubtitles: true
             SubtitleMode: Default
             ResumeRewindSeconds: 0
             HidePlayedInLatest: true
@@ -78618,7 +78635,6 @@ components:
             LatestItemsExcludes:
             - LatestItemsExcludes
             - LatestItemsExcludes
-            PreferSDHSubtitles: true
             SubtitleMode: Default
             ResumeRewindSeconds: 0
             HidePlayedInLatest: true
@@ -78757,7 +78773,6 @@ components:
             LatestItemsExcludes:
             - LatestItemsExcludes
             - LatestItemsExcludes
-            PreferSDHSubtitles: true
             SubtitleMode: Default
             ResumeRewindSeconds: 0
             HidePlayedInLatest: true
@@ -79263,6 +79278,7 @@ components:
             ParentLogoItemId: ParentLogoItemId
             PartCount: 3
             ListingsProviderId: ListingsProviderId
+            CanEditItems: true
             ChannelName: ChannelName
             EpisodeTitle: EpisodeTitle
             IsoSpeedRating: 0
@@ -81851,6 +81867,7 @@ components:
             ParentLogoItemId: ParentLogoItemId
             PartCount: 3
             ListingsProviderId: ListingsProviderId
+            CanEditItems: true
             ChannelName: ChannelName
             EpisodeTitle: EpisodeTitle
             IsoSpeedRating: 0
@@ -82385,6 +82402,7 @@ components:
             ParentLogoItemId: ParentLogoItemId
             PartCount: 3
             ListingsProviderId: ListingsProviderId
+            CanEditItems: true
             ChannelName: ChannelName
             EpisodeTitle: EpisodeTitle
             IsoSpeedRating: 0
@@ -82941,6 +82959,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -83475,6 +83494,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0
@@ -84246,6 +84266,7 @@ components:
             - LyricsFetcherOrder
             - LyricsFetcherOrder
             HearingImpairedSubtitlesOnly: true
+            CacheImages: true
             IgnoreFileExtensions:
             - IgnoreFileExtensions
             - IgnoreFileExtensions
@@ -84382,6 +84403,7 @@ components:
             - LyricsFetcherOrder
             - LyricsFetcherOrder
             HearingImpairedSubtitlesOnly: true
+            CacheImages: true
             IgnoreFileExtensions:
             - IgnoreFileExtensions
             - IgnoreFileExtensions
@@ -84554,6 +84576,7 @@ components:
           - LyricsFetcherOrder
           - LyricsFetcherOrder
           HearingImpairedSubtitlesOnly: true
+          CacheImages: true
           IgnoreFileExtensions:
           - IgnoreFileExtensions
           - IgnoreFileExtensions
@@ -85464,6 +85487,7 @@ components:
           ParentLogoItemId: ParentLogoItemId
           PartCount: 3
           ListingsProviderId: ListingsProviderId
+          CanEditItems: true
           ChannelName: ChannelName
           EpisodeTitle: EpisodeTitle
           IsoSpeedRating: 0

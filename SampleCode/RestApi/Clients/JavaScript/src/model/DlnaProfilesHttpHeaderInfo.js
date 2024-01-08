@@ -15,7 +15,7 @@ import DlnaProfilesHeaderMatchType from './DlnaProfilesHeaderMatchType';
 /**
 * The DlnaProfilesHttpHeaderInfo model module.
 * @module model/DlnaProfilesHttpHeaderInfo
-* @version 4.8.0.66
+* @version 4.8.0.67
 */
 export default class DlnaProfilesHttpHeaderInfo {
     /**

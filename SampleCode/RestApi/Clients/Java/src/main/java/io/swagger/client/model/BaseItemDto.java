@@ -85,6 +85,9 @@ public class BaseItemDto {
   @SerializedName("CanDownload")
   private Boolean canDownload = null;
 
+  @SerializedName("CanEditItems")
+  private Boolean canEditItems = null;
+
   @SerializedName("SupportsResume")
   private Boolean supportsResume = null;
 
@@ -752,6 +755,24 @@ public class BaseItemDto {
 
   public void setCanDownload(Boolean canDownload) {
     this.canDownload = canDownload;
+  }
+
+  public BaseItemDto canEditItems(Boolean canEditItems) {
+    this.canEditItems = canEditItems;
+    return this;
+  }
+
+   /**
+   * Get canEditItems
+   * @return canEditItems
+  **/
+  @Schema(description = "")
+  public Boolean isCanEditItems() {
+    return canEditItems;
+  }
+
+  public void setCanEditItems(Boolean canEditItems) {
+    this.canEditItems = canEditItems;
   }
 
   public BaseItemDto supportsResume(Boolean supportsResume) {
@@ -3464,6 +3485,7 @@ public class BaseItemDto {
         Objects.equals(this.sortParentIndexNumber, baseItemDto.sortParentIndexNumber) &&
         Objects.equals(this.canDelete, baseItemDto.canDelete) &&
         Objects.equals(this.canDownload, baseItemDto.canDownload) &&
+        Objects.equals(this.canEditItems, baseItemDto.canEditItems) &&
         Objects.equals(this.supportsResume, baseItemDto.supportsResume) &&
         Objects.equals(this.presentationUniqueKey, baseItemDto.presentationUniqueKey) &&
         Objects.equals(this.preferredMetadataLanguage, baseItemDto.preferredMetadataLanguage) &&
@@ -3607,7 +3629,7 @@ public class BaseItemDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, syncStatus, canManageAccess, canLeaveContent, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
+    return Objects.hash(name, originalTitle, serverId, id, guid, etag, prefix, playlistItemId, dateCreated, extraType, sortIndexNumber, sortParentIndexNumber, canDelete, canDownload, canEditItems, supportsResume, presentationUniqueKey, preferredMetadataLanguage, preferredMetadataCountryCode, supportsSync, syncStatus, canManageAccess, canLeaveContent, canMakePublic, container, sortName, forcedSortName, video3DFormat, premiereDate, externalUrls, mediaSources, criticRating, gameSystemId, asSeries, gameSystem, productionLocations, path, officialRating, customRating, channelId, channelName, overview, taglines, genres, communityRating, runTimeTicks, size, fileName, bitrate, productionYear, number, channelNumber, indexNumber, indexNumberEnd, parentIndexNumber, remoteTrailers, providerIds, isFolder, parentId, type, people, studios, genreItems, tagItems, parentLogoItemId, parentBackdropItemId, parentBackdropImageTags, localTrailerCount, userData, recursiveItemCount, childCount, seriesName, seriesId, seasonId, specialFeatureCount, displayPreferencesId, status, airDays, tags, primaryImageAspectRatio, artists, artistItems, composers, album, collectionType, displayOrder, albumId, albumPrimaryImageTag, seriesPrimaryImageTag, albumArtist, albumArtists, seasonName, mediaStreams, partCount, imageTags, backdropImageTags, parentLogoImageTag, seriesStudio, primaryImageItemId, primaryImageTag, parentThumbItemId, parentThumbImageTag, chapters, locationType, mediaType, endDate, lockedFields, lockData, width, height, cameraMake, cameraModel, software, exposureTime, focalLength, imageOrientation, aperture, shutterSpeed, latitude, longitude, altitude, isoSpeedRating, seriesTimerId, channelPrimaryImageTag, startDate, completionPercentage, isRepeat, isNew, episodeTitle, isMovie, isSports, isSeries, isLive, isNews, isKids, isPremiere, timerType, disabled, managementId, timerId, currentProgram, movieCount, seriesCount, albumCount, songCount, musicVideoCount, subviews, listingsProviderId, listingsChannelId, listingsPath, listingsId, listingsChannelName, listingsChannelNumber, affiliateCallSign);
   }
 
 
@@ -3630,6 +3652,7 @@ public class BaseItemDto {
     sb.append("    sortParentIndexNumber: ").append(toIndentedString(sortParentIndexNumber)).append("\n");
     sb.append("    canDelete: ").append(toIndentedString(canDelete)).append("\n");
     sb.append("    canDownload: ").append(toIndentedString(canDownload)).append("\n");
+    sb.append("    canEditItems: ").append(toIndentedString(canEditItems)).append("\n");
     sb.append("    supportsResume: ").append(toIndentedString(supportsResume)).append("\n");
     sb.append("    presentationUniqueKey: ").append(toIndentedString(presentationUniqueKey)).append("\n");
     sb.append("    preferredMetadataLanguage: ").append(toIndentedString(preferredMetadataLanguage)).append("\n");

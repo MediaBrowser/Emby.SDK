@@ -43,6 +43,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="listItemIds">listItemIds.</param>
         /// <param name="audioLanguages">audioLanguages.</param>
         /// <param name="subtitleLanguages">subtitleLanguages.</param>
+        /// <param name="canEditItems">canEditItems.</param>
         /// <param name="groupItemsInto">groupItemsInto.</param>
         /// <param name="minWidth">minWidth.</param>
         /// <param name="minHeight">minHeight.</param>
@@ -52,7 +53,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="airDays">airDays.</param>
         /// <param name="isAiring">isAiring.</param>
         /// <param name="hasAired">hasAired.</param>
-        public ApiBaseItemsRequest(bool? is4K = default(bool?), bool? enableTotalRecordCount = default(bool?), string recordingKeyword = default(string), LiveTvKeywordType recordingKeywordType = default(LiveTvKeywordType), int? randomSeed = default(int?), string genreIds = default(string), string collectionIds = default(string), string tagIds = default(string), string excludeTagIds = default(string), string excludeArtistIds = default(string), string albumArtistIds = default(string), string contributingArtistIds = default(string), string albumIds = default(string), string outerIds = default(string), string listItemIds = default(string), string audioLanguages = default(string), string subtitleLanguages = default(string), LibraryItemLinkType groupItemsInto = default(LibraryItemLinkType), int? minWidth = default(int?), int? minHeight = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? groupProgramsBySeries = default(bool?), List<DayOfWeek> airDays = default(List<DayOfWeek>), bool? isAiring = default(bool?), bool? hasAired = default(bool?))
+        public ApiBaseItemsRequest(bool? is4K = default(bool?), bool? enableTotalRecordCount = default(bool?), string recordingKeyword = default(string), LiveTvKeywordType recordingKeywordType = default(LiveTvKeywordType), int? randomSeed = default(int?), string genreIds = default(string), string collectionIds = default(string), string tagIds = default(string), string excludeTagIds = default(string), string excludeArtistIds = default(string), string albumArtistIds = default(string), string contributingArtistIds = default(string), string albumIds = default(string), string outerIds = default(string), string listItemIds = default(string), string audioLanguages = default(string), string subtitleLanguages = default(string), bool? canEditItems = default(bool?), LibraryItemLinkType groupItemsInto = default(LibraryItemLinkType), int? minWidth = default(int?), int? minHeight = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? groupProgramsBySeries = default(bool?), List<DayOfWeek> airDays = default(List<DayOfWeek>), bool? isAiring = default(bool?), bool? hasAired = default(bool?))
         {
             this.Is4K = is4K;
             this.EnableTotalRecordCount = enableTotalRecordCount;
@@ -71,6 +72,7 @@ namespace EmbyClient.Dotnet.Model
             this.ListItemIds = listItemIds;
             this.AudioLanguages = audioLanguages;
             this.SubtitleLanguages = subtitleLanguages;
+            this.CanEditItems = canEditItems;
             this.GroupItemsInto = groupItemsInto;
             this.MinWidth = minWidth;
             this.MinHeight = minHeight;
@@ -185,6 +187,12 @@ namespace EmbyClient.Dotnet.Model
         public string SubtitleLanguages { get; set; }
 
         /// <summary>
+        /// Gets or Sets CanEditItems
+        /// </summary>
+        [DataMember(Name="CanEditItems", EmitDefaultValue=false)]
+        public bool? CanEditItems { get; set; }
+
+        /// <summary>
         /// Gets or Sets GroupItemsInto
         /// </summary>
         [DataMember(Name="GroupItemsInto", EmitDefaultValue=false)]
@@ -263,6 +271,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  ListItemIds: ").Append(ListItemIds).Append("\n");
             sb.Append("  AudioLanguages: ").Append(AudioLanguages).Append("\n");
             sb.Append("  SubtitleLanguages: ").Append(SubtitleLanguages).Append("\n");
+            sb.Append("  CanEditItems: ").Append(CanEditItems).Append("\n");
             sb.Append("  GroupItemsInto: ").Append(GroupItemsInto).Append("\n");
             sb.Append("  MinWidth: ").Append(MinWidth).Append("\n");
             sb.Append("  MinHeight: ").Append(MinHeight).Append("\n");
@@ -392,6 +401,11 @@ namespace EmbyClient.Dotnet.Model
                     this.SubtitleLanguages.Equals(input.SubtitleLanguages))
                 ) && 
                 (
+                    this.CanEditItems == input.CanEditItems ||
+                    (this.CanEditItems != null &&
+                    this.CanEditItems.Equals(input.CanEditItems))
+                ) && 
+                (
                     this.GroupItemsInto == input.GroupItemsInto ||
                     (this.GroupItemsInto != null &&
                     this.GroupItemsInto.Equals(input.GroupItemsInto))
@@ -482,6 +496,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.AudioLanguages.GetHashCode();
                 if (this.SubtitleLanguages != null)
                     hashCode = hashCode * 59 + this.SubtitleLanguages.GetHashCode();
+                if (this.CanEditItems != null)
+                    hashCode = hashCode * 59 + this.CanEditItems.GetHashCode();
                 if (this.GroupItemsInto != null)
                     hashCode = hashCode * 59 + this.GroupItemsInto.GetHashCode();
                 if (this.MinWidth != null)

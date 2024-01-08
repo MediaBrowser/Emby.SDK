@@ -69,9 +69,6 @@ public class UserConfiguration {
   @SerializedName("EnableNextEpisodeAutoPlay")
   private Boolean enableNextEpisodeAutoPlay = null;
 
-  @SerializedName("PreferSDHSubtitles")
-  private Boolean preferSDHSubtitles = null;
-
   @SerializedName("ResumeRewindSeconds")
   private Integer resumeRewindSeconds = null;
 
@@ -375,24 +372,6 @@ public class UserConfiguration {
     this.enableNextEpisodeAutoPlay = enableNextEpisodeAutoPlay;
   }
 
-  public UserConfiguration preferSDHSubtitles(Boolean preferSDHSubtitles) {
-    this.preferSDHSubtitles = preferSDHSubtitles;
-    return this;
-  }
-
-   /**
-   * Get preferSDHSubtitles
-   * @return preferSDHSubtitles
-  **/
-  @Schema(description = "")
-  public Boolean isPreferSDHSubtitles() {
-    return preferSDHSubtitles;
-  }
-
-  public void setPreferSDHSubtitles(Boolean preferSDHSubtitles) {
-    this.preferSDHSubtitles = preferSDHSubtitles;
-  }
-
   public UserConfiguration resumeRewindSeconds(Integer resumeRewindSeconds) {
     this.resumeRewindSeconds = resumeRewindSeconds;
     return this;
@@ -472,7 +451,6 @@ public class UserConfiguration {
         Objects.equals(this.rememberAudioSelections, userConfiguration.rememberAudioSelections) &&
         Objects.equals(this.rememberSubtitleSelections, userConfiguration.rememberSubtitleSelections) &&
         Objects.equals(this.enableNextEpisodeAutoPlay, userConfiguration.enableNextEpisodeAutoPlay) &&
-        Objects.equals(this.preferSDHSubtitles, userConfiguration.preferSDHSubtitles) &&
         Objects.equals(this.resumeRewindSeconds, userConfiguration.resumeRewindSeconds) &&
         Objects.equals(this.introSkipMode, userConfiguration.introSkipMode) &&
         Objects.equals(this.enableLocalPassword, userConfiguration.enableLocalPassword);
@@ -480,7 +458,7 @@ public class UserConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, profilePin, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, hidePlayedInMoreLikeThis, hidePlayedInSuggestions, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, preferSDHSubtitles, resumeRewindSeconds, introSkipMode, enableLocalPassword);
+    return Objects.hash(audioLanguagePreference, playDefaultAudioTrack, subtitleLanguagePreference, profilePin, displayMissingEpisodes, subtitleMode, orderedViews, latestItemsExcludes, myMediaExcludes, hidePlayedInLatest, hidePlayedInMoreLikeThis, hidePlayedInSuggestions, rememberAudioSelections, rememberSubtitleSelections, enableNextEpisodeAutoPlay, resumeRewindSeconds, introSkipMode, enableLocalPassword);
   }
 
 
@@ -504,7 +482,6 @@ public class UserConfiguration {
     sb.append("    rememberAudioSelections: ").append(toIndentedString(rememberAudioSelections)).append("\n");
     sb.append("    rememberSubtitleSelections: ").append(toIndentedString(rememberSubtitleSelections)).append("\n");
     sb.append("    enableNextEpisodeAutoPlay: ").append(toIndentedString(enableNextEpisodeAutoPlay)).append("\n");
-    sb.append("    preferSDHSubtitles: ").append(toIndentedString(preferSDHSubtitles)).append("\n");
     sb.append("    resumeRewindSeconds: ").append(toIndentedString(resumeRewindSeconds)).append("\n");
     sb.append("    introSkipMode: ").append(toIndentedString(introSkipMode)).append("\n");
     sb.append("    enableLocalPassword: ").append(toIndentedString(enableLocalPassword)).append("\n");

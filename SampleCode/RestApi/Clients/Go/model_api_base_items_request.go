@@ -24,6 +24,7 @@ type ApiBaseItemsRequest struct {
 	ListItemIds string `json:"ListItemIds,omitempty"`
 	AudioLanguages string `json:"AudioLanguages,omitempty"`
 	SubtitleLanguages string `json:"SubtitleLanguages,omitempty"`
+	CanEditItems bool `json:"CanEditItems,omitempty"`
 	GroupItemsInto *LibraryItemLinkType `json:"GroupItemsInto,omitempty"`
 	MinWidth int32 `json:"MinWidth,omitempty"`
 	MinHeight int32 `json:"MinHeight,omitempty"`

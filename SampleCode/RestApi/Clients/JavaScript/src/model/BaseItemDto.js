@@ -31,7 +31,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.8.0.66
+* @version 4.8.0.67
 */
 export default class BaseItemDto {
     /**
@@ -100,6 +100,9 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('CanDownload')) {
                 obj['CanDownload'] = ApiClient.convertToType(data['CanDownload'], 'Boolean');
+            }
+            if (data.hasOwnProperty('CanEditItems')) {
+                obj['CanEditItems'] = ApiClient.convertToType(data['CanEditItems'], 'Boolean');
             }
             if (data.hasOwnProperty('SupportsResume')) {
                 obj['SupportsResume'] = ApiClient.convertToType(data['SupportsResume'], 'Boolean');
@@ -585,6 +588,10 @@ export default class BaseItemDto {
     * @member {Boolean} CanDownload
     */
     'CanDownload' = undefined;
+    /**
+    * @member {Boolean} CanEditItems
+    */
+    'CanEditItems' = undefined;
     /**
     * @member {Boolean} SupportsResume
     */

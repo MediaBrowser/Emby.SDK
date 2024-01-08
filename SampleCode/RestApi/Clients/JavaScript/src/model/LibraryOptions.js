@@ -16,7 +16,7 @@ import TypeOptions from './TypeOptions';
 /**
 * The LibraryOptions model module.
 * @module model/LibraryOptions
-* @version 4.8.0.66
+* @version 4.8.0.67
 */
 export default class LibraryOptions {
     /**
@@ -69,6 +69,9 @@ export default class LibraryOptions {
             }
             if (data.hasOwnProperty('DownloadImagesInAdvance')) {
                 obj['DownloadImagesInAdvance'] = ApiClient.convertToType(data['DownloadImagesInAdvance'], 'Boolean');
+            }
+            if (data.hasOwnProperty('CacheImages')) {
+                obj['CacheImages'] = ApiClient.convertToType(data['CacheImages'], 'Boolean');
             }
             if (data.hasOwnProperty('PathInfos')) {
                 obj['PathInfos'] = ApiClient.convertToType(data['PathInfos'], [MediaPathInfo]);
@@ -251,6 +254,10 @@ export default class LibraryOptions {
     * @member {Boolean} DownloadImagesInAdvance
     */
     'DownloadImagesInAdvance' = undefined;
+    /**
+    * @member {Boolean} CacheImages
+    */
+    'CacheImages' = undefined;
     /**
     * @member {Array.<module:model/MediaPathInfo>} PathInfos
     */

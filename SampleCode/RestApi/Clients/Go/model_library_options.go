@@ -16,6 +16,7 @@ type LibraryOptions struct {
 	EnableChapterImageExtraction bool `json:"EnableChapterImageExtraction,omitempty"`
 	ExtractChapterImagesDuringLibraryScan bool `json:"ExtractChapterImagesDuringLibraryScan,omitempty"`
 	DownloadImagesInAdvance bool `json:"DownloadImagesInAdvance,omitempty"`
+	CacheImages bool `json:"CacheImages,omitempty"`
 	PathInfos []MediaPathInfo `json:"PathInfos,omitempty"`
 	IgnoreHiddenFiles bool `json:"IgnoreHiddenFiles,omitempty"`
 	IgnoreFileExtensions []string `json:"IgnoreFileExtensions,omitempty"`

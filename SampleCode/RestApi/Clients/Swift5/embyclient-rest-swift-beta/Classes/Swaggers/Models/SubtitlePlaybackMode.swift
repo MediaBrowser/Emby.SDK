@@ -14,4 +14,5 @@ public enum SubtitlePlaybackMode: String, Codable {
     case onlyForced = "OnlyForced"
     case _none = "None"
     case smart = "Smart"
+    case hearingImpaired = "HearingImpaired"
 }

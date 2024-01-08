@@ -17,7 +17,7 @@ import LiveTvKeywordType from './LiveTvKeywordType';
 /**
 * The ApiBaseItemsRequest model module.
 * @module model/ApiBaseItemsRequest
-* @version 4.8.0.66
+* @version 4.8.0.67
 */
 export default class ApiBaseItemsRequest {
     /**
@@ -94,6 +94,9 @@ export default class ApiBaseItemsRequest {
             }
             if (data.hasOwnProperty('SubtitleLanguages')) {
                 obj['SubtitleLanguages'] = ApiClient.convertToType(data['SubtitleLanguages'], 'String');
+            }
+            if (data.hasOwnProperty('CanEditItems')) {
+                obj['CanEditItems'] = ApiClient.convertToType(data['CanEditItems'], 'Boolean');
             }
             if (data.hasOwnProperty('GroupItemsInto')) {
                 obj['GroupItemsInto'] = LibraryItemLinkType.constructFromObject(data['GroupItemsInto']);
@@ -194,6 +197,10 @@ export default class ApiBaseItemsRequest {
     * @member {String} SubtitleLanguages
     */
     'SubtitleLanguages' = undefined;
+    /**
+    * @member {Boolean} CanEditItems
+    */
+    'CanEditItems' = undefined;
     /**
     * @member {module:model/LibraryItemLinkType} GroupItemsInto
     */

@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.66"
+    "version": "4.8.0.67"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -56727,6 +56727,9 @@
         "CanDownload": {
           "type": "boolean"
         },
+        "CanEditItems": {
+          "type": "boolean"
+        },
         "SupportsResume": {
           "type": "boolean"
         },
@@ -60533,6 +60536,9 @@
         "DownloadImagesInAdvance": {
           "type": "boolean"
         },
+        "CacheImages": {
+          "type": "boolean"
+        },
         "PathInfos": {
           "type": "array",
           "items": {
@@ -61194,6 +61200,9 @@
         },
         "SubtitleLanguages": {
           "type": "string"
+        },
+        "CanEditItems": {
+          "type": "boolean"
         },
         "GroupItemsInto": {
           "$ref": "#/definitions/Library.ItemLinkType"
@@ -62793,7 +62802,7 @@
         "DisableAsyncIO": {
           "type": "boolean"
         },
-        "MigratedToUserItemShares": {
+        "MigratedToUserItemShares1": {
           "type": "boolean"
         },
         "MigratedLibraryOptionsToDb": {
@@ -63424,9 +63433,6 @@
         "EnableNextEpisodeAutoPlay": {
           "type": "boolean"
         },
-        "PreferSDHSubtitles": {
-          "type": "boolean"
-        },
         "ResumeRewindSeconds": {
           "format": "int32",
           "type": "integer"
@@ -63446,7 +63452,8 @@
         "Always",
         "OnlyForced",
         "None",
-        "Smart"
+        "Smart",
+        "HearingImpaired"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Configuration.SubtitlePlaybackMode"

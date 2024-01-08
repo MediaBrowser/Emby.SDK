@@ -37,7 +37,6 @@ class UserConfiguration(object):
         'remember_audio_selections': 'bool',
         'remember_subtitle_selections': 'bool',
         'enable_next_episode_auto_play': 'bool',
-        'prefer_sdh_subtitles': 'bool',
         'resume_rewind_seconds': 'int',
         'intro_skip_mode': 'SegmentSkipMode',
         'enable_local_password': 'bool'
@@ -59,13 +58,12 @@ class UserConfiguration(object):
         'remember_audio_selections': 'RememberAudioSelections',
         'remember_subtitle_selections': 'RememberSubtitleSelections',
         'enable_next_episode_auto_play': 'EnableNextEpisodeAutoPlay',
-        'prefer_sdh_subtitles': 'PreferSDHSubtitles',
         'resume_rewind_seconds': 'ResumeRewindSeconds',
         'intro_skip_mode': 'IntroSkipMode',
         'enable_local_password': 'EnableLocalPassword'
     }
 
-    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, profile_pin=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, hide_played_in_more_like_this=None, hide_played_in_suggestions=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, prefer_sdh_subtitles=None, resume_rewind_seconds=None, intro_skip_mode=None, enable_local_password=None):  # noqa: E501
+    def __init__(self, audio_language_preference=None, play_default_audio_track=None, subtitle_language_preference=None, profile_pin=None, display_missing_episodes=None, subtitle_mode=None, ordered_views=None, latest_items_excludes=None, my_media_excludes=None, hide_played_in_latest=None, hide_played_in_more_like_this=None, hide_played_in_suggestions=None, remember_audio_selections=None, remember_subtitle_selections=None, enable_next_episode_auto_play=None, resume_rewind_seconds=None, intro_skip_mode=None, enable_local_password=None):  # noqa: E501
         """UserConfiguration - a model defined in Swagger"""  # noqa: E501
         self._audio_language_preference = None
         self._play_default_audio_track = None
@@ -82,7 +80,6 @@ class UserConfiguration(object):
         self._remember_audio_selections = None
         self._remember_subtitle_selections = None
         self._enable_next_episode_auto_play = None
-        self._prefer_sdh_subtitles = None
         self._resume_rewind_seconds = None
         self._intro_skip_mode = None
         self._enable_local_password = None
@@ -117,8 +114,6 @@ class UserConfiguration(object):
             self.remember_subtitle_selections = remember_subtitle_selections
         if enable_next_episode_auto_play is not None:
             self.enable_next_episode_auto_play = enable_next_episode_auto_play
-        if prefer_sdh_subtitles is not None:
-            self.prefer_sdh_subtitles = prefer_sdh_subtitles
         if resume_rewind_seconds is not None:
             self.resume_rewind_seconds = resume_rewind_seconds
         if intro_skip_mode is not None:
@@ -446,27 +441,6 @@ class UserConfiguration(object):
         """
 
         self._enable_next_episode_auto_play = enable_next_episode_auto_play
-
-    @property
-    def prefer_sdh_subtitles(self):
-        """Gets the prefer_sdh_subtitles of this UserConfiguration.  # noqa: E501
-
-
-        :return: The prefer_sdh_subtitles of this UserConfiguration.  # noqa: E501
-        :rtype: bool
-        """
-        return self._prefer_sdh_subtitles
-
-    @prefer_sdh_subtitles.setter
-    def prefer_sdh_subtitles(self, prefer_sdh_subtitles):
-        """Sets the prefer_sdh_subtitles of this UserConfiguration.
-
-
-        :param prefer_sdh_subtitles: The prefer_sdh_subtitles of this UserConfiguration.  # noqa: E501
-        :type: bool
-        """
-
-        self._prefer_sdh_subtitles = prefer_sdh_subtitles
 
     @property
     def resume_rewind_seconds(self):

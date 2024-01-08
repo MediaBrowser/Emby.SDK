@@ -39,6 +39,7 @@ class ApiBaseItemsRequest(object):
         'list_item_ids': 'str',
         'audio_languages': 'str',
         'subtitle_languages': 'str',
+        'can_edit_items': 'bool',
         'group_items_into': 'LibraryItemLinkType',
         'min_width': 'int',
         'min_height': 'int',
@@ -68,6 +69,7 @@ class ApiBaseItemsRequest(object):
         'list_item_ids': 'ListItemIds',
         'audio_languages': 'AudioLanguages',
         'subtitle_languages': 'SubtitleLanguages',
+        'can_edit_items': 'CanEditItems',
         'group_items_into': 'GroupItemsInto',
         'min_width': 'MinWidth',
         'min_height': 'MinHeight',
@@ -79,7 +81,7 @@ class ApiBaseItemsRequest(object):
         'has_aired': 'HasAired'
     }
 
-    def __init__(self, is4_k=None, enable_total_record_count=None, recording_keyword=None, recording_keyword_type=None, random_seed=None, genre_ids=None, collection_ids=None, tag_ids=None, exclude_tag_ids=None, exclude_artist_ids=None, album_artist_ids=None, contributing_artist_ids=None, album_ids=None, outer_ids=None, list_item_ids=None, audio_languages=None, subtitle_languages=None, group_items_into=None, min_width=None, min_height=None, max_width=None, max_height=None, group_programs_by_series=None, air_days=None, is_airing=None, has_aired=None):  # noqa: E501
+    def __init__(self, is4_k=None, enable_total_record_count=None, recording_keyword=None, recording_keyword_type=None, random_seed=None, genre_ids=None, collection_ids=None, tag_ids=None, exclude_tag_ids=None, exclude_artist_ids=None, album_artist_ids=None, contributing_artist_ids=None, album_ids=None, outer_ids=None, list_item_ids=None, audio_languages=None, subtitle_languages=None, can_edit_items=None, group_items_into=None, min_width=None, min_height=None, max_width=None, max_height=None, group_programs_by_series=None, air_days=None, is_airing=None, has_aired=None):  # noqa: E501
         """ApiBaseItemsRequest - a model defined in Swagger"""  # noqa: E501
         self._is4_k = None
         self._enable_total_record_count = None
@@ -98,6 +100,7 @@ class ApiBaseItemsRequest(object):
         self._list_item_ids = None
         self._audio_languages = None
         self._subtitle_languages = None
+        self._can_edit_items = None
         self._group_items_into = None
         self._min_width = None
         self._min_height = None
@@ -142,6 +145,8 @@ class ApiBaseItemsRequest(object):
             self.audio_languages = audio_languages
         if subtitle_languages is not None:
             self.subtitle_languages = subtitle_languages
+        if can_edit_items is not None:
+            self.can_edit_items = can_edit_items
         if group_items_into is not None:
             self.group_items_into = group_items_into
         if min_width is not None:
@@ -517,6 +522,27 @@ class ApiBaseItemsRequest(object):
         """
 
         self._subtitle_languages = subtitle_languages
+
+    @property
+    def can_edit_items(self):
+        """Gets the can_edit_items of this ApiBaseItemsRequest.  # noqa: E501
+
+
+        :return: The can_edit_items of this ApiBaseItemsRequest.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_edit_items
+
+    @can_edit_items.setter
+    def can_edit_items(self, can_edit_items):
+        """Sets the can_edit_items of this ApiBaseItemsRequest.
+
+
+        :param can_edit_items: The can_edit_items of this ApiBaseItemsRequest.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_edit_items = can_edit_items
 
     @property
     def group_items_into(self):

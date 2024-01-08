@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.8.0.66
+* @version 4.8.0.67
 */
 export default class ServerConfiguration {
     /**
@@ -196,8 +196,8 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('DisableAsyncIO')) {
                 obj['DisableAsyncIO'] = ApiClient.convertToType(data['DisableAsyncIO'], 'Boolean');
             }
-            if (data.hasOwnProperty('MigratedToUserItemShares')) {
-                obj['MigratedToUserItemShares'] = ApiClient.convertToType(data['MigratedToUserItemShares'], 'Boolean');
+            if (data.hasOwnProperty('MigratedToUserItemShares1')) {
+                obj['MigratedToUserItemShares1'] = ApiClient.convertToType(data['MigratedToUserItemShares1'], 'Boolean');
             }
             if (data.hasOwnProperty('MigratedLibraryOptionsToDb')) {
                 obj['MigratedLibraryOptionsToDb'] = ApiClient.convertToType(data['MigratedLibraryOptionsToDb'], 'Boolean');
@@ -453,9 +453,9 @@ export default class ServerConfiguration {
     */
     'DisableAsyncIO' = undefined;
     /**
-    * @member {Boolean} MigratedToUserItemShares
+    * @member {Boolean} MigratedToUserItemShares1
     */
-    'MigratedToUserItemShares' = undefined;
+    'MigratedToUserItemShares1' = undefined;
     /**
     * @member {Boolean} MigratedLibraryOptionsToDb
     */

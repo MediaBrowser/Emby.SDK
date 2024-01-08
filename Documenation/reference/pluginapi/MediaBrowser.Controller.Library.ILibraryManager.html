@@ -1344,6 +1344,53 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetCachedImage_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetCachedImage*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetCachedImage_MediaBrowser_Controller_Entities_BaseItem_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetCachedImage(MediaBrowser.Controller.Entities.BaseItem,System.String)">GetCachedImage(BaseItem, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetCachedImage(BaseItem item, string originalImagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">originalImagePath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetCollectionFolders_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetCollectionFolders*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetCollectionFolders_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetCollectionFolders(MediaBrowser.Controller.Entities.BaseItem)">GetCollectionFolders(BaseItem)</h4>
   <div class="markdown level1 summary"><p>Gets the collection folders.</p>
@@ -1675,7 +1722,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;[]</td>
+        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2748,7 +2795,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;[]</td>
+        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2826,6 +2873,53 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><p>Guid.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetNewItemIdFromName_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNewItemIdFromName*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNewItemIdFromName_System_String_System_Type_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNewItemIdFromName(System.String,System.Type)">GetNewItemIdFromName(String, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid GetNewItemIdFromName(string name, Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

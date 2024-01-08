@@ -72,7 +72,7 @@ class ServerConfiguration(object):
         'optimize_database_on_shutdown': 'bool',
         'database_analysis_limit': 'int',
         'disable_async_io': 'bool',
-        'migrated_to_user_item_shares': 'bool',
+        'migrated_to_user_item_shares1': 'bool',
         'migrated_library_options_to_db': 'bool',
         'allow_legacy_local_network_password': 'bool',
         'enable_saved_metadata_for_people': 'bool',
@@ -137,7 +137,7 @@ class ServerConfiguration(object):
         'optimize_database_on_shutdown': 'OptimizeDatabaseOnShutdown',
         'database_analysis_limit': 'DatabaseAnalysisLimit',
         'disable_async_io': 'DisableAsyncIO',
-        'migrated_to_user_item_shares': 'MigratedToUserItemShares',
+        'migrated_to_user_item_shares1': 'MigratedToUserItemShares1',
         'migrated_library_options_to_db': 'MigratedLibraryOptionsToDb',
         'allow_legacy_local_network_password': 'AllowLegacyLocalNetworkPassword',
         'enable_saved_metadata_for_people': 'EnableSavedMetadataForPeople',
@@ -151,7 +151,7 @@ class ServerConfiguration(object):
         'cache_path': 'CachePath'
     }
 
-    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
+    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares1=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
         """ServerConfiguration - a model defined in Swagger"""  # noqa: E501
         self._enable_u_pn_p = None
         self._public_port = None
@@ -203,7 +203,7 @@ class ServerConfiguration(object):
         self._optimize_database_on_shutdown = None
         self._database_analysis_limit = None
         self._disable_async_io = None
-        self._migrated_to_user_item_shares = None
+        self._migrated_to_user_item_shares1 = None
         self._migrated_library_options_to_db = None
         self._allow_legacy_local_network_password = None
         self._enable_saved_metadata_for_people = None
@@ -316,8 +316,8 @@ class ServerConfiguration(object):
             self.database_analysis_limit = database_analysis_limit
         if disable_async_io is not None:
             self.disable_async_io = disable_async_io
-        if migrated_to_user_item_shares is not None:
-            self.migrated_to_user_item_shares = migrated_to_user_item_shares
+        if migrated_to_user_item_shares1 is not None:
+            self.migrated_to_user_item_shares1 = migrated_to_user_item_shares1
         if migrated_library_options_to_db is not None:
             self.migrated_library_options_to_db = migrated_library_options_to_db
         if allow_legacy_local_network_password is not None:
@@ -1424,25 +1424,25 @@ class ServerConfiguration(object):
         self._disable_async_io = disable_async_io
 
     @property
-    def migrated_to_user_item_shares(self):
-        """Gets the migrated_to_user_item_shares of this ServerConfiguration.  # noqa: E501
+    def migrated_to_user_item_shares1(self):
+        """Gets the migrated_to_user_item_shares1 of this ServerConfiguration.  # noqa: E501
 
 
-        :return: The migrated_to_user_item_shares of this ServerConfiguration.  # noqa: E501
+        :return: The migrated_to_user_item_shares1 of this ServerConfiguration.  # noqa: E501
         :rtype: bool
         """
-        return self._migrated_to_user_item_shares
+        return self._migrated_to_user_item_shares1
 
-    @migrated_to_user_item_shares.setter
-    def migrated_to_user_item_shares(self, migrated_to_user_item_shares):
-        """Sets the migrated_to_user_item_shares of this ServerConfiguration.
+    @migrated_to_user_item_shares1.setter
+    def migrated_to_user_item_shares1(self, migrated_to_user_item_shares1):
+        """Sets the migrated_to_user_item_shares1 of this ServerConfiguration.
 
 
-        :param migrated_to_user_item_shares: The migrated_to_user_item_shares of this ServerConfiguration.  # noqa: E501
+        :param migrated_to_user_item_shares1: The migrated_to_user_item_shares1 of this ServerConfiguration.  # noqa: E501
         :type: bool
         """
 
-        self._migrated_to_user_item_shares = migrated_to_user_item_shares
+        self._migrated_to_user_item_shares1 = migrated_to_user_item_shares1
 
     @property
     def migrated_library_options_to_db(self):

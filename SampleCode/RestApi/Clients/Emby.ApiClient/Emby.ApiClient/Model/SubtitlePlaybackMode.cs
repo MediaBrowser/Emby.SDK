@@ -43,5 +43,10 @@ namespace Emby.ApiClient.Model
         /// Enum Smart for value: Smart
         /// </summary>
         [EnumMember(Value = "Smart")]
-        Smart = 5    }
+        Smart = 5,
+        /// <summary>
+        /// Enum HearingImpaired for value: HearingImpaired
+        /// </summary>
+        [EnumMember(Value = "HearingImpaired")]
+        HearingImpaired = 6    }
 }

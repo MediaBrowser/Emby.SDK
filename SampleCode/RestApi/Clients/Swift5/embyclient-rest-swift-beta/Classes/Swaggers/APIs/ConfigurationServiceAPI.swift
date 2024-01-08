@@ -60,7 +60,6 @@ open class ConfigurationServiceAPI {
   "LogFileRetentionDays" : 4,
   "HttpsPortNumber" : 5,
   "CertificatePassword" : "CertificatePassword",
-  "MigratedToUserItemShares" : true,
   "EnableOriginalTrackTitles" : true,
   "RemoteClientBitrateLimit" : 2,
   "ImageExtractionTimeoutMs" : 7,
@@ -79,6 +78,7 @@ open class ConfigurationServiceAPI {
     "From" : "From",
     "To" : "To"
   } ],
+  "MigratedToUserItemShares1" : true,
   "CachePath" : "CachePath",
   "WanDdns" : "WanDdns",
   "IsBehindProxy" : true,

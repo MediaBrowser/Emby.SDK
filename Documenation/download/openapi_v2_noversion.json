@@ -56725,6 +56725,9 @@
         "CanDownload": {
           "type": "boolean"
         },
+        "CanEditItems": {
+          "type": "boolean"
+        },
         "SupportsResume": {
           "type": "boolean"
         },
@@ -60531,6 +60534,9 @@
         "DownloadImagesInAdvance": {
           "type": "boolean"
         },
+        "CacheImages": {
+          "type": "boolean"
+        },
         "PathInfos": {
           "type": "array",
           "items": {
@@ -61192,6 +61198,9 @@
         },
         "SubtitleLanguages": {
           "type": "string"
+        },
+        "CanEditItems": {
+          "type": "boolean"
         },
         "GroupItemsInto": {
           "$ref": "#/definitions/Library.ItemLinkType"
@@ -62791,7 +62800,7 @@
         "DisableAsyncIO": {
           "type": "boolean"
         },
-        "MigratedToUserItemShares": {
+        "MigratedToUserItemShares1": {
           "type": "boolean"
         },
         "MigratedLibraryOptionsToDb": {
@@ -63422,9 +63431,6 @@
         "EnableNextEpisodeAutoPlay": {
           "type": "boolean"
         },
-        "PreferSDHSubtitles": {
-          "type": "boolean"
-        },
         "ResumeRewindSeconds": {
           "format": "int32",
           "type": "integer"
@@ -63444,7 +63450,8 @@
         "Always",
         "OnlyForced",
         "None",
-        "Smart"
+        "Smart",
+        "HearingImpaired"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Configuration.SubtitlePlaybackMode"

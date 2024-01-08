@@ -129,6 +129,12 @@ namespace Emby.ApiClient.Model
         public string SubtitleLanguages { get; set; }
 
         /// <summary>
+        /// Gets or Sets CanEditItems
+        /// </summary>
+        /// <value>The CanEditItems.</value>
+        public bool? CanEditItems { get; set; }
+
+        /// <summary>
         /// Gets or Sets GroupItemsInto
         /// </summary>
         /// <value>The GroupItemsInto.</value>
@@ -207,6 +213,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  ListItemIds: ").Append(ListItemIds).Append("\n");
             sb.Append("  AudioLanguages: ").Append(AudioLanguages).Append("\n");
             sb.Append("  SubtitleLanguages: ").Append(SubtitleLanguages).Append("\n");
+            sb.Append("  CanEditItems: ").Append(CanEditItems).Append("\n");
             sb.Append("  GroupItemsInto: ").Append(GroupItemsInto).Append("\n");
             sb.Append("  MinWidth: ").Append(MinWidth).Append("\n");
             sb.Append("  MinHeight: ").Append(MinHeight).Append("\n");
@@ -327,6 +334,11 @@ namespace Emby.ApiClient.Model
                     this.SubtitleLanguages.Equals(input.SubtitleLanguages))
                 ) && 
                 (
+                    this.CanEditItems == input.CanEditItems ||
+                    (this.CanEditItems != null &&
+                    this.CanEditItems.Equals(input.CanEditItems))
+                ) && 
+                (
                     this.GroupItemsInto == input.GroupItemsInto ||
                     (this.GroupItemsInto != null &&
                     this.GroupItemsInto.Equals(input.GroupItemsInto))
@@ -417,6 +429,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.AudioLanguages.GetHashCode();
                 if (this.SubtitleLanguages != null)
                     hashCode = hashCode * 59 + this.SubtitleLanguages.GetHashCode();
+                if (this.CanEditItems != null)
+                    hashCode = hashCode * 59 + this.CanEditItems.GetHashCode();
                 if (this.GroupItemsInto != null)
                     hashCode = hashCode * 59 + this.GroupItemsInto.GetHashCode();
                 if (this.MinWidth != null)
