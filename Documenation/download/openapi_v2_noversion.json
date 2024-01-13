@@ -30923,6 +30923,238 @@
       },
       "x-summary": "Gets an audio stream using HTTP live streaming."
     },
+    "/Audio/{Id}/live.m3u8": {
+      "get": {
+        "tags": [
+          "DynamicHlsService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "getAudioByIdLiveM3u8",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "DeviceProfileId",
+            "description": "Optional. The dlna device profile id to utilize.",
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Item Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "DeviceId",
+            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Container",
+            "description": "Container",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioCodec",
+            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableAutoStreamCopy",
+            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "AudioSampleRate",
+            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "AudioBitRate",
+            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "AudioChannels",
+            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxAudioChannels",
+            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Static",
+            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Profile",
+            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Level",
+            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Framerate",
+            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "type": "number",
+            "format": "float"
+          },
+          {
+            "in": "query",
+            "name": "MaxFramerate",
+            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "type": "number",
+            "format": "float"
+          },
+          {
+            "in": "query",
+            "name": "CopyTimestamps",
+            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "StartTimeTicks",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "Width",
+            "description": "Optional. The fixed horizontal resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Height",
+            "description": "Optional. The fixed vertical resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxWidth",
+            "description": "Optional. The maximum horizontal resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxHeight",
+            "description": "Optional. The maximum vertical resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoBitRate",
+            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "SubtitleStreamIndex",
+            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "SubtitleMethod",
+            "description": "Optional. Specify the subtitle delivery method."
+          },
+          {
+            "in": "query",
+            "name": "MaxRefFrames",
+            "description": "Optional.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxVideoBitDepth",
+            "description": "Optional.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoCodec",
+            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioStreamIndex",
+            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoStreamIndex",
+            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Audio/{Id}/main.m3u8": {
       "get": {
         "tags": [
@@ -31156,238 +31388,6 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets an audio stream using HTTP live streaming."
-    },
-    "/Audio/{Id}/live.m3u8": {
-      "get": {
-        "tags": [
-          "VideoHlsService"
-        ],
-        "description": "Requires authentication as user",
-        "operationId": "getAudioByIdLiveM3u8",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "DeviceProfileId",
-            "description": "Optional. The dlna device profile id to utilize.",
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "Id",
-            "description": "Item Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "DeviceId",
-            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "Container",
-            "description": "Container",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AudioCodec",
-            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "EnableAutoStreamCopy",
-            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "AudioSampleRate",
-            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "AudioBitRate",
-            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "AudioChannels",
-            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "MaxAudioChannels",
-            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "Static",
-            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "Profile",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "Level",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "Framerate",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "type": "number",
-            "format": "float"
-          },
-          {
-            "in": "query",
-            "name": "MaxFramerate",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "type": "number",
-            "format": "float"
-          },
-          {
-            "in": "query",
-            "name": "CopyTimestamps",
-            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "in": "query",
-            "name": "Width",
-            "description": "Optional. The fixed horizontal resolution of the encoded video.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "Height",
-            "description": "Optional. The fixed vertical resolution of the encoded video.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "MaxWidth",
-            "description": "Optional. The maximum horizontal resolution of the encoded video.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "MaxHeight",
-            "description": "Optional. The maximum vertical resolution of the encoded video.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "VideoBitRate",
-            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "SubtitleStreamIndex",
-            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "SubtitleMethod",
-            "description": "Optional. Specify the subtitle delivery method."
-          },
-          {
-            "in": "query",
-            "name": "MaxRefFrames",
-            "description": "Optional.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "MaxVideoBitDepth",
-            "description": "Optional.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "VideoCodec",
-            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AudioStreamIndex",
-            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "VideoStreamIndex",
-            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
-            "type": "integer",
-            "format": "int32"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Response content unknown."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      }
     },
     "/Auth/Keys/{Key}": {
       "delete": {
@@ -43853,6 +43853,238 @@
       },
       "x-summary": "Gets a video stream using HTTP live streaming."
     },
+    "/Videos/{Id}/live.m3u8": {
+      "get": {
+        "tags": [
+          "DynamicHlsService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "getVideosByIdLiveM3u8",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "DeviceProfileId",
+            "description": "Optional. The dlna device profile id to utilize.",
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Item Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "DeviceId",
+            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Container",
+            "description": "Container",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioCodec",
+            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "EnableAutoStreamCopy",
+            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "AudioSampleRate",
+            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "AudioBitRate",
+            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "AudioChannels",
+            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxAudioChannels",
+            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Static",
+            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "Profile",
+            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Level",
+            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "Framerate",
+            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "type": "number",
+            "format": "float"
+          },
+          {
+            "in": "query",
+            "name": "MaxFramerate",
+            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
+            "type": "number",
+            "format": "float"
+          },
+          {
+            "in": "query",
+            "name": "CopyTimestamps",
+            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "StartTimeTicks",
+            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "Width",
+            "description": "Optional. The fixed horizontal resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "Height",
+            "description": "Optional. The fixed vertical resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxWidth",
+            "description": "Optional. The maximum horizontal resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxHeight",
+            "description": "Optional. The maximum vertical resolution of the encoded video.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoBitRate",
+            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "SubtitleStreamIndex",
+            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "SubtitleMethod",
+            "description": "Optional. Specify the subtitle delivery method."
+          },
+          {
+            "in": "query",
+            "name": "MaxRefFrames",
+            "description": "Optional.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "MaxVideoBitDepth",
+            "description": "Optional.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoCodec",
+            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "AudioStreamIndex",
+            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "VideoStreamIndex",
+            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Videos/{Id}/main.m3u8": {
       "get": {
         "tags": [
@@ -44236,238 +44468,6 @@
             "description": "The play session id",
             "required": true,
             "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Operation successful. Response content unknown."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as user"
-      }
-    },
-    "/Videos/{Id}/live.m3u8": {
-      "get": {
-        "tags": [
-          "VideoHlsService"
-        ],
-        "description": "Requires authentication as user",
-        "operationId": "getVideosByIdLiveM3u8",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "DeviceProfileId",
-            "description": "Optional. The dlna device profile id to utilize.",
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "Id",
-            "description": "Item Id",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "DeviceId",
-            "description": "The device id of the client requesting. Used to stop encoding processes when needed.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "Container",
-            "description": "Container",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AudioCodec",
-            "description": "Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url's extension. Options: aac, mp3, vorbis, wma.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "EnableAutoStreamCopy",
-            "description": "Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "AudioSampleRate",
-            "description": "Optional. Specify a specific audio sample rate, e.g. 44100",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "AudioBitRate",
-            "description": "Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "AudioChannels",
-            "description": "Optional. Specify a specific number of audio channels to encode to, e.g. 2",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "MaxAudioChannels",
-            "description": "Optional. Specify a maximum number of audio channels to encode to, e.g. 2",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "Static",
-            "description": "Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "Profile",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "Level",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "Framerate",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "type": "number",
-            "format": "float"
-          },
-          {
-            "in": "query",
-            "name": "MaxFramerate",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "type": "number",
-            "format": "float"
-          },
-          {
-            "in": "query",
-            "name": "CopyTimestamps",
-            "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "StartTimeTicks",
-            "description": "Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.",
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "in": "query",
-            "name": "Width",
-            "description": "Optional. The fixed horizontal resolution of the encoded video.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "Height",
-            "description": "Optional. The fixed vertical resolution of the encoded video.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "MaxWidth",
-            "description": "Optional. The maximum horizontal resolution of the encoded video.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "MaxHeight",
-            "description": "Optional. The maximum vertical resolution of the encoded video.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "VideoBitRate",
-            "description": "Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "SubtitleStreamIndex",
-            "description": "Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "SubtitleMethod",
-            "description": "Optional. Specify the subtitle delivery method."
-          },
-          {
-            "in": "query",
-            "name": "MaxRefFrames",
-            "description": "Optional.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "MaxVideoBitDepth",
-            "description": "Optional.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "VideoCodec",
-            "description": "Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "AudioStreamIndex",
-            "description": "Optional. The index of the audio stream to use. If omitted the first audio stream will be used.",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "VideoStreamIndex",
-            "description": "Optional. The index of the video stream to use. If omitted the first video stream will be used.",
-            "type": "integer",
-            "format": "int32"
           }
         ],
         "responses": {
@@ -52884,6 +52884,192 @@
       },
       "x-summary": "Gets a live tv channel"
     },
+    "/LiveTv/LiveRecordings/{Id}/hls/master.m3u8": {
+      "get": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live recording",
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvLiverecordingsByIdHlsMasterM3u8",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live recording",
+        "description": "Requires authentication as user",
+        "operationId": "headLivetvLiverecordingsByIdHlsMasterM3u8",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets a live recording"
+    },
+    "/LiveTv/LiveRecordings/{Id}/hls/live.m3u8": {
+      "get": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live recording",
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvLiverecordingsByIdHlsLiveM3u8",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live recording",
+        "description": "Requires authentication as user",
+        "operationId": "headLivetvLiverecordingsByIdHlsLiveM3u8",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets a live recording"
+    },
     "/LiveTv/LiveStreamFiles/{Id}/hls/live.m3u8": {
       "get": {
         "tags": [
@@ -53081,6 +53267,111 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets a live tv channel"
+    },
+    "/LiveTv/LiveRecordings/{Id}/hls/{Segment}": {
+      "get": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live recording",
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvLiverecordingsByIdHlsBySegment",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Segment",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "LiveStreamService"
+        ],
+        "summary": "Gets a live recording",
+        "description": "Requires authentication as user",
+        "operationId": "headLivetvLiverecordingsByIdHlsBySegment",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Segment",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets a live recording"
     },
     "/LiveTv/Manage/Channels/{Id}/Disabled": {
       "post": {
@@ -57418,6 +57709,14 @@
         "SupportsTranscoding": {
           "type": "boolean"
         },
+        "TrancodeLiveStartIndex": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "WallClockStart": {
+          "format": "date-time",
+          "type": "string"
+        },
         "SupportsDirectStream": {
           "type": "boolean"
         },
@@ -57479,6 +57778,9 @@
         },
         "DirectStreamUrl": {
           "type": "string"
+        },
+        "AddApiKeyToDirectStreamUrl": {
+          "type": "boolean"
         },
         "TranscodingUrl": {
           "type": "string"
@@ -62800,7 +63102,7 @@
         "DisableAsyncIO": {
           "type": "boolean"
         },
-        "MigratedToUserItemShares1": {
+        "MigratedToUserItemShares4": {
           "type": "boolean"
         },
         "MigratedLibraryOptionsToDb": {
@@ -66947,6 +67249,9 @@
           "type": "boolean"
         },
         "IsForced": {
+          "type": "boolean"
+        },
+        "IsHearingImpaired": {
           "type": "boolean"
         },
         "Language": {

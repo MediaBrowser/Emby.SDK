@@ -38,8 +38,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="downloadCount">downloadCount.</param>
         /// <param name="isHashMatch">isHashMatch.</param>
         /// <param name="isForced">isForced.</param>
+        /// <param name="isHearingImpaired">isHearingImpaired.</param>
         /// <param name="language">language.</param>
-        public RemoteSubtitleInfo(string threeLetterISOLanguageName = default(string), string id = default(string), string providerName = default(string), string name = default(string), string format = default(string), string author = default(string), string comment = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), float? communityRating = default(float?), int? downloadCount = default(int?), bool? isHashMatch = default(bool?), bool? isForced = default(bool?), string language = default(string))
+        public RemoteSubtitleInfo(string threeLetterISOLanguageName = default(string), string id = default(string), string providerName = default(string), string name = default(string), string format = default(string), string author = default(string), string comment = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), float? communityRating = default(float?), int? downloadCount = default(int?), bool? isHashMatch = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?), string language = default(string))
         {
             this.ThreeLetterISOLanguageName = threeLetterISOLanguageName;
             this.Id = id;
@@ -53,6 +54,7 @@ namespace EmbyClient.Dotnet.Model
             this.DownloadCount = downloadCount;
             this.IsHashMatch = isHashMatch;
             this.IsForced = isForced;
+            this.IsHearingImpaired = isHearingImpaired;
             this.Language = language;
         }
         
@@ -130,6 +132,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsForced { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsHearingImpaired
+        /// </summary>
+        [DataMember(Name="IsHearingImpaired", EmitDefaultValue=false)]
+        public bool? IsHearingImpaired { get; set; }
+
+        /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name="Language", EmitDefaultValue=false)]
@@ -155,6 +163,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  DownloadCount: ").Append(DownloadCount).Append("\n");
             sb.Append("  IsHashMatch: ").Append(IsHashMatch).Append("\n");
             sb.Append("  IsForced: ").Append(IsForced).Append("\n");
+            sb.Append("  IsHearingImpaired: ").Append(IsHearingImpaired).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -251,6 +260,11 @@ namespace EmbyClient.Dotnet.Model
                     this.IsForced.Equals(input.IsForced))
                 ) && 
                 (
+                    this.IsHearingImpaired == input.IsHearingImpaired ||
+                    (this.IsHearingImpaired != null &&
+                    this.IsHearingImpaired.Equals(input.IsHearingImpaired))
+                ) && 
+                (
                     this.Language == input.Language ||
                     (this.Language != null &&
                     this.Language.Equals(input.Language))
@@ -290,6 +304,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IsHashMatch.GetHashCode();
                 if (this.IsForced != null)
                     hashCode = hashCode * 59 + this.IsForced.GetHashCode();
+                if (this.IsHearingImpaired != null)
+                    hashCode = hashCode * 59 + this.IsHearingImpaired.GetHashCode();
                 if (this.Language != null)
                     hashCode = hashCode * 59 + this.Language.GetHashCode();
                 return hashCode;

@@ -5,6 +5,9 @@
  *
  */
 package embyclient-rest-go
+import (
+	"time"
+)
 
 type MediaSourceInfo struct {
 	Protocol *MediaProtocol `json:"Protocol,omitempty"`
@@ -22,6 +25,8 @@ type MediaSourceInfo struct {
 	RunTimeTicks int64 `json:"RunTimeTicks,omitempty"`
 	ContainerStartTimeTicks int64 `json:"ContainerStartTimeTicks,omitempty"`
 	SupportsTranscoding bool `json:"SupportsTranscoding,omitempty"`
+	TrancodeLiveStartIndex int32 `json:"TrancodeLiveStartIndex,omitempty"`
+	WallClockStart time.Time `json:"WallClockStart,omitempty"`
 	SupportsDirectStream bool `json:"SupportsDirectStream,omitempty"`
 	SupportsDirectPlay bool `json:"SupportsDirectPlay,omitempty"`
 	IsInfiniteStream bool `json:"IsInfiniteStream,omitempty"`
@@ -39,6 +44,7 @@ type MediaSourceInfo struct {
 	Timestamp *TransportStreamTimestamp `json:"Timestamp,omitempty"`
 	RequiredHttpHeaders map[string]string `json:"RequiredHttpHeaders,omitempty"`
 	DirectStreamUrl string `json:"DirectStreamUrl,omitempty"`
+	AddApiKeyToDirectStreamUrl bool `json:"AddApiKeyToDirectStreamUrl,omitempty"`
 	TranscodingUrl string `json:"TranscodingUrl,omitempty"`
 	TranscodingSubProtocol string `json:"TranscodingSubProtocol,omitempty"`
 	TranscodingContainer string `json:"TranscodingContainer,omitempty"`

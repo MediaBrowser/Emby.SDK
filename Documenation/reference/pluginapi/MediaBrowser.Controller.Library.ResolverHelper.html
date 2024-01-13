@@ -172,13 +172,13 @@
   
   
   <a id="MediaBrowser_Controller_Library_ResolverHelper_SetInitialItemValues_" data-uid="MediaBrowser.Controller.Library.ResolverHelper.SetInitialItemValues*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ResolverHelper_SetInitialItemValues_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Library_ItemResolveArgs_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="MediaBrowser.Controller.Library.ResolverHelper.SetInitialItemValues(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Library.ItemResolveArgs,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager)">SetInitialItemValues(BaseItem, ItemResolveArgs, IFileSystem, ILibraryManager)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ResolverHelper_SetInitialItemValues_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Library_ItemResolveArgs_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_" data-uid="MediaBrowser.Controller.Library.ResolverHelper.SetInitialItemValues(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Library.ItemResolveArgs,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Configuration.IServerConfigurationManager)">SetInitialItemValues(BaseItem, ItemResolveArgs, IFileSystem, ILibraryManager, IServerConfigurationManager)</h4>
   <div class="markdown level1 summary"><p>Sets the initial item values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SetInitialItemValues(BaseItem item, ItemResolveArgs args, IFileSystem fileSystem, ILibraryManager libraryManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void SetInitialItemValues(BaseItem item, ItemResolveArgs args, IFileSystem fileSystem, ILibraryManager libraryManager, IServerConfigurationManager configurationManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,39 +193,40 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
-        <td><p>The item.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ItemResolveArgs.html">ItemResolveArgs</a></td>
         <td><span class="parametername">args</span></td>
-        <td><p>The args.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
         <td><span class="parametername">fileSystem</span></td>
-        <td><p>The file system.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
         <td><span class="parametername">libraryManager</span></td>
-        <td><p>The library manager.</p>
-</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">configurationManager</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
   <a id="MediaBrowser_Controller_Library_ResolverHelper_SetInitialItemValues_" data-uid="MediaBrowser.Controller.Library.ResolverHelper.SetInitialItemValues*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ResolverHelper_SetInitialItemValues_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Controller_Entities_Folder_" data-uid="MediaBrowser.Controller.Library.ResolverHelper.SetInitialItemValues(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Controller.Entities.Folder)">SetInitialItemValues(BaseItem, FileSystemMetadata, Folder)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ResolverHelper_SetInitialItemValues_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Controller_Entities_Folder_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_" data-uid="MediaBrowser.Controller.Library.ResolverHelper.SetInitialItemValues(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Controller.Entities.Folder,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Configuration.IServerConfigurationManager)">SetInitialItemValues(BaseItem, FileSystemMetadata, Folder, IFileSystem, ILibraryManager, IServerConfigurationManager)</h4>
   <div class="markdown level1 summary"><p>Sets the initial item values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void SetInitialItemValues(BaseItem item, FileSystemMetadata fileInfo, Folder parent)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void SetInitialItemValues(BaseItem item, FileSystemMetadata fileInfo, Folder parent, IFileSystem fileSystem, ILibraryManager libraryManager, IServerConfigurationManager configurationManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,6 +251,21 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></td>
         <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
+        <td><span class="parametername">fileSystem</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
+        <td><span class="parametername">libraryManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">configurationManager</span></td>
         <td></td>
       </tr>
     </tbody>

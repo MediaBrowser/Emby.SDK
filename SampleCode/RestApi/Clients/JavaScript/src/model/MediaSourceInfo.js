@@ -19,7 +19,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.8.0.67
+* @version 4.8.0.69
 */
 export default class MediaSourceInfo {
     /**
@@ -88,6 +88,12 @@ export default class MediaSourceInfo {
             if (data.hasOwnProperty('SupportsTranscoding')) {
                 obj['SupportsTranscoding'] = ApiClient.convertToType(data['SupportsTranscoding'], 'Boolean');
             }
+            if (data.hasOwnProperty('TrancodeLiveStartIndex')) {
+                obj['TrancodeLiveStartIndex'] = ApiClient.convertToType(data['TrancodeLiveStartIndex'], 'Number');
+            }
+            if (data.hasOwnProperty('WallClockStart')) {
+                obj['WallClockStart'] = ApiClient.convertToType(data['WallClockStart'], 'Date');
+            }
             if (data.hasOwnProperty('SupportsDirectStream')) {
                 obj['SupportsDirectStream'] = ApiClient.convertToType(data['SupportsDirectStream'], 'Boolean');
             }
@@ -138,6 +144,9 @@ export default class MediaSourceInfo {
             }
             if (data.hasOwnProperty('DirectStreamUrl')) {
                 obj['DirectStreamUrl'] = ApiClient.convertToType(data['DirectStreamUrl'], 'String');
+            }
+            if (data.hasOwnProperty('AddApiKeyToDirectStreamUrl')) {
+                obj['AddApiKeyToDirectStreamUrl'] = ApiClient.convertToType(data['AddApiKeyToDirectStreamUrl'], 'Boolean');
             }
             if (data.hasOwnProperty('TranscodingUrl')) {
                 obj['TranscodingUrl'] = ApiClient.convertToType(data['TranscodingUrl'], 'String');
@@ -228,6 +237,14 @@ export default class MediaSourceInfo {
     */
     'SupportsTranscoding' = undefined;
     /**
+    * @member {Number} TrancodeLiveStartIndex
+    */
+    'TrancodeLiveStartIndex' = undefined;
+    /**
+    * @member {Date} WallClockStart
+    */
+    'WallClockStart' = undefined;
+    /**
     * @member {Boolean} SupportsDirectStream
     */
     'SupportsDirectStream' = undefined;
@@ -295,6 +312,10 @@ export default class MediaSourceInfo {
     * @member {String} DirectStreamUrl
     */
     'DirectStreamUrl' = undefined;
+    /**
+    * @member {Boolean} AddApiKeyToDirectStreamUrl
+    */
+    'AddApiKeyToDirectStreamUrl' = undefined;
     /**
     * @member {String} TranscodingUrl
     */

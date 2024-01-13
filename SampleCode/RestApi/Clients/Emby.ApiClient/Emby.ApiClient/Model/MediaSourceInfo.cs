@@ -111,6 +111,18 @@ namespace Emby.ApiClient.Model
         public bool? SupportsTranscoding { get; set; }
 
         /// <summary>
+        /// Gets or Sets TrancodeLiveStartIndex
+        /// </summary>
+        /// <value>The TrancodeLiveStartIndex.</value>
+        public int? TrancodeLiveStartIndex { get; set; }
+
+        /// <summary>
+        /// Gets or Sets WallClockStart
+        /// </summary>
+        /// <value>The WallClockStart.</value>
+        public DateTimeOffset? WallClockStart { get; set; }
+
+        /// <summary>
         /// Gets or Sets SupportsDirectStream
         /// </summary>
         /// <value>The SupportsDirectStream.</value>
@@ -213,6 +225,12 @@ namespace Emby.ApiClient.Model
         public string DirectStreamUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets AddApiKeyToDirectStreamUrl
+        /// </summary>
+        /// <value>The AddApiKeyToDirectStreamUrl.</value>
+        public bool? AddApiKeyToDirectStreamUrl { get; set; }
+
+        /// <summary>
         /// Gets or Sets TranscodingUrl
         /// </summary>
         /// <value>The TranscodingUrl.</value>
@@ -288,6 +306,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  RunTimeTicks: ").Append(RunTimeTicks).Append("\n");
             sb.Append("  ContainerStartTimeTicks: ").Append(ContainerStartTimeTicks).Append("\n");
             sb.Append("  SupportsTranscoding: ").Append(SupportsTranscoding).Append("\n");
+            sb.Append("  TrancodeLiveStartIndex: ").Append(TrancodeLiveStartIndex).Append("\n");
+            sb.Append("  WallClockStart: ").Append(WallClockStart).Append("\n");
             sb.Append("  SupportsDirectStream: ").Append(SupportsDirectStream).Append("\n");
             sb.Append("  SupportsDirectPlay: ").Append(SupportsDirectPlay).Append("\n");
             sb.Append("  IsInfiniteStream: ").Append(IsInfiniteStream).Append("\n");
@@ -305,6 +325,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  RequiredHttpHeaders: ").Append(RequiredHttpHeaders).Append("\n");
             sb.Append("  DirectStreamUrl: ").Append(DirectStreamUrl).Append("\n");
+            sb.Append("  AddApiKeyToDirectStreamUrl: ").Append(AddApiKeyToDirectStreamUrl).Append("\n");
             sb.Append("  TranscodingUrl: ").Append(TranscodingUrl).Append("\n");
             sb.Append("  TranscodingSubProtocol: ").Append(TranscodingSubProtocol).Append("\n");
             sb.Append("  TranscodingContainer: ").Append(TranscodingContainer).Append("\n");
@@ -410,6 +431,16 @@ namespace Emby.ApiClient.Model
                     this.SupportsTranscoding.Equals(input.SupportsTranscoding))
                 ) && 
                 (
+                    this.TrancodeLiveStartIndex == input.TrancodeLiveStartIndex ||
+                    (this.TrancodeLiveStartIndex != null &&
+                    this.TrancodeLiveStartIndex.Equals(input.TrancodeLiveStartIndex))
+                ) && 
+                (
+                    this.WallClockStart == input.WallClockStart ||
+                    (this.WallClockStart != null &&
+                    this.WallClockStart.Equals(input.WallClockStart))
+                ) && 
+                (
                     this.SupportsDirectStream == input.SupportsDirectStream ||
                     (this.SupportsDirectStream != null &&
                     this.SupportsDirectStream.Equals(input.SupportsDirectStream))
@@ -498,6 +529,11 @@ namespace Emby.ApiClient.Model
                     this.DirectStreamUrl.Equals(input.DirectStreamUrl))
                 ) && 
                 (
+                    this.AddApiKeyToDirectStreamUrl == input.AddApiKeyToDirectStreamUrl ||
+                    (this.AddApiKeyToDirectStreamUrl != null &&
+                    this.AddApiKeyToDirectStreamUrl.Equals(input.AddApiKeyToDirectStreamUrl))
+                ) && 
+                (
                     this.TranscodingUrl == input.TranscodingUrl ||
                     (this.TranscodingUrl != null &&
                     this.TranscodingUrl.Equals(input.TranscodingUrl))
@@ -581,6 +617,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ContainerStartTimeTicks.GetHashCode();
                 if (this.SupportsTranscoding != null)
                     hashCode = hashCode * 59 + this.SupportsTranscoding.GetHashCode();
+                if (this.TrancodeLiveStartIndex != null)
+                    hashCode = hashCode * 59 + this.TrancodeLiveStartIndex.GetHashCode();
+                if (this.WallClockStart != null)
+                    hashCode = hashCode * 59 + this.WallClockStart.GetHashCode();
                 if (this.SupportsDirectStream != null)
                     hashCode = hashCode * 59 + this.SupportsDirectStream.GetHashCode();
                 if (this.SupportsDirectPlay != null)
@@ -615,6 +655,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.RequiredHttpHeaders.GetHashCode();
                 if (this.DirectStreamUrl != null)
                     hashCode = hashCode * 59 + this.DirectStreamUrl.GetHashCode();
+                if (this.AddApiKeyToDirectStreamUrl != null)
+                    hashCode = hashCode * 59 + this.AddApiKeyToDirectStreamUrl.GetHashCode();
                 if (this.TranscodingUrl != null)
                     hashCode = hashCode * 59 + this.TranscodingUrl.GetHashCode();
                 if (this.TranscodingSubProtocol != null)

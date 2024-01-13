@@ -34,6 +34,7 @@ class RemoteSubtitleInfo(object):
         'download_count': 'int',
         'is_hash_match': 'bool',
         'is_forced': 'bool',
+        'is_hearing_impaired': 'bool',
         'language': 'str'
     }
 
@@ -50,10 +51,11 @@ class RemoteSubtitleInfo(object):
         'download_count': 'DownloadCount',
         'is_hash_match': 'IsHashMatch',
         'is_forced': 'IsForced',
+        'is_hearing_impaired': 'IsHearingImpaired',
         'language': 'Language'
     }
 
-    def __init__(self, three_letter_iso_language_name=None, id=None, provider_name=None, name=None, format=None, author=None, comment=None, date_created=None, community_rating=None, download_count=None, is_hash_match=None, is_forced=None, language=None):  # noqa: E501
+    def __init__(self, three_letter_iso_language_name=None, id=None, provider_name=None, name=None, format=None, author=None, comment=None, date_created=None, community_rating=None, download_count=None, is_hash_match=None, is_forced=None, is_hearing_impaired=None, language=None):  # noqa: E501
         """RemoteSubtitleInfo - a model defined in Swagger"""  # noqa: E501
         self._three_letter_iso_language_name = None
         self._id = None
@@ -67,6 +69,7 @@ class RemoteSubtitleInfo(object):
         self._download_count = None
         self._is_hash_match = None
         self._is_forced = None
+        self._is_hearing_impaired = None
         self._language = None
         self.discriminator = None
         if three_letter_iso_language_name is not None:
@@ -93,6 +96,8 @@ class RemoteSubtitleInfo(object):
             self.is_hash_match = is_hash_match
         if is_forced is not None:
             self.is_forced = is_forced
+        if is_hearing_impaired is not None:
+            self.is_hearing_impaired = is_hearing_impaired
         if language is not None:
             self.language = language
 
@@ -349,6 +354,27 @@ class RemoteSubtitleInfo(object):
         """
 
         self._is_forced = is_forced
+
+    @property
+    def is_hearing_impaired(self):
+        """Gets the is_hearing_impaired of this RemoteSubtitleInfo.  # noqa: E501
+
+
+        :return: The is_hearing_impaired of this RemoteSubtitleInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_hearing_impaired
+
+    @is_hearing_impaired.setter
+    def is_hearing_impaired(self, is_hearing_impaired):
+        """Sets the is_hearing_impaired of this RemoteSubtitleInfo.
+
+
+        :param is_hearing_impaired: The is_hearing_impaired of this RemoteSubtitleInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_hearing_impaired = is_hearing_impaired
 
     @property
     def language(self):

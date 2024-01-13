@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.threeten.bp.OffsetDateTime;
 /**
  * MediaSourceInfo
  */
@@ -70,6 +71,12 @@ public class MediaSourceInfo {
 
   @SerializedName("SupportsTranscoding")
   private Boolean supportsTranscoding = null;
+
+  @SerializedName("TrancodeLiveStartIndex")
+  private Integer trancodeLiveStartIndex = null;
+
+  @SerializedName("WallClockStart")
+  private OffsetDateTime wallClockStart = null;
 
   @SerializedName("SupportsDirectStream")
   private Boolean supportsDirectStream = null;
@@ -121,6 +128,9 @@ public class MediaSourceInfo {
 
   @SerializedName("DirectStreamUrl")
   private String directStreamUrl = null;
+
+  @SerializedName("AddApiKeyToDirectStreamUrl")
+  private Boolean addApiKeyToDirectStreamUrl = null;
 
   @SerializedName("TranscodingUrl")
   private String transcodingUrl = null;
@@ -399,6 +409,42 @@ public class MediaSourceInfo {
 
   public void setSupportsTranscoding(Boolean supportsTranscoding) {
     this.supportsTranscoding = supportsTranscoding;
+  }
+
+  public MediaSourceInfo trancodeLiveStartIndex(Integer trancodeLiveStartIndex) {
+    this.trancodeLiveStartIndex = trancodeLiveStartIndex;
+    return this;
+  }
+
+   /**
+   * Get trancodeLiveStartIndex
+   * @return trancodeLiveStartIndex
+  **/
+  @Schema(description = "")
+  public Integer getTrancodeLiveStartIndex() {
+    return trancodeLiveStartIndex;
+  }
+
+  public void setTrancodeLiveStartIndex(Integer trancodeLiveStartIndex) {
+    this.trancodeLiveStartIndex = trancodeLiveStartIndex;
+  }
+
+  public MediaSourceInfo wallClockStart(OffsetDateTime wallClockStart) {
+    this.wallClockStart = wallClockStart;
+    return this;
+  }
+
+   /**
+   * Get wallClockStart
+   * @return wallClockStart
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getWallClockStart() {
+    return wallClockStart;
+  }
+
+  public void setWallClockStart(OffsetDateTime wallClockStart) {
+    this.wallClockStart = wallClockStart;
   }
 
   public MediaSourceInfo supportsDirectStream(Boolean supportsDirectStream) {
@@ -731,6 +777,24 @@ public class MediaSourceInfo {
     this.directStreamUrl = directStreamUrl;
   }
 
+  public MediaSourceInfo addApiKeyToDirectStreamUrl(Boolean addApiKeyToDirectStreamUrl) {
+    this.addApiKeyToDirectStreamUrl = addApiKeyToDirectStreamUrl;
+    return this;
+  }
+
+   /**
+   * Get addApiKeyToDirectStreamUrl
+   * @return addApiKeyToDirectStreamUrl
+  **/
+  @Schema(description = "")
+  public Boolean isAddApiKeyToDirectStreamUrl() {
+    return addApiKeyToDirectStreamUrl;
+  }
+
+  public void setAddApiKeyToDirectStreamUrl(Boolean addApiKeyToDirectStreamUrl) {
+    this.addApiKeyToDirectStreamUrl = addApiKeyToDirectStreamUrl;
+  }
+
   public MediaSourceInfo transcodingUrl(String transcodingUrl) {
     this.transcodingUrl = transcodingUrl;
     return this;
@@ -917,6 +981,8 @@ public class MediaSourceInfo {
         Objects.equals(this.runTimeTicks, mediaSourceInfo.runTimeTicks) &&
         Objects.equals(this.containerStartTimeTicks, mediaSourceInfo.containerStartTimeTicks) &&
         Objects.equals(this.supportsTranscoding, mediaSourceInfo.supportsTranscoding) &&
+        Objects.equals(this.trancodeLiveStartIndex, mediaSourceInfo.trancodeLiveStartIndex) &&
+        Objects.equals(this.wallClockStart, mediaSourceInfo.wallClockStart) &&
         Objects.equals(this.supportsDirectStream, mediaSourceInfo.supportsDirectStream) &&
         Objects.equals(this.supportsDirectPlay, mediaSourceInfo.supportsDirectPlay) &&
         Objects.equals(this.isInfiniteStream, mediaSourceInfo.isInfiniteStream) &&
@@ -934,6 +1000,7 @@ public class MediaSourceInfo {
         Objects.equals(this.timestamp, mediaSourceInfo.timestamp) &&
         Objects.equals(this.requiredHttpHeaders, mediaSourceInfo.requiredHttpHeaders) &&
         Objects.equals(this.directStreamUrl, mediaSourceInfo.directStreamUrl) &&
+        Objects.equals(this.addApiKeyToDirectStreamUrl, mediaSourceInfo.addApiKeyToDirectStreamUrl) &&
         Objects.equals(this.transcodingUrl, mediaSourceInfo.transcodingUrl) &&
         Objects.equals(this.transcodingSubProtocol, mediaSourceInfo.transcodingSubProtocol) &&
         Objects.equals(this.transcodingContainer, mediaSourceInfo.transcodingContainer) &&
@@ -947,7 +1014,7 @@ public class MediaSourceInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, container, size, name, sortName, isRemote, runTimeTicks, containerStartTimeTicks, supportsTranscoding, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
+    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, container, size, name, sortName, isRemote, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
   }
 
 
@@ -970,6 +1037,8 @@ public class MediaSourceInfo {
     sb.append("    runTimeTicks: ").append(toIndentedString(runTimeTicks)).append("\n");
     sb.append("    containerStartTimeTicks: ").append(toIndentedString(containerStartTimeTicks)).append("\n");
     sb.append("    supportsTranscoding: ").append(toIndentedString(supportsTranscoding)).append("\n");
+    sb.append("    trancodeLiveStartIndex: ").append(toIndentedString(trancodeLiveStartIndex)).append("\n");
+    sb.append("    wallClockStart: ").append(toIndentedString(wallClockStart)).append("\n");
     sb.append("    supportsDirectStream: ").append(toIndentedString(supportsDirectStream)).append("\n");
     sb.append("    supportsDirectPlay: ").append(toIndentedString(supportsDirectPlay)).append("\n");
     sb.append("    isInfiniteStream: ").append(toIndentedString(isInfiniteStream)).append("\n");
@@ -987,6 +1056,7 @@ public class MediaSourceInfo {
     sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("    requiredHttpHeaders: ").append(toIndentedString(requiredHttpHeaders)).append("\n");
     sb.append("    directStreamUrl: ").append(toIndentedString(directStreamUrl)).append("\n");
+    sb.append("    addApiKeyToDirectStreamUrl: ").append(toIndentedString(addApiKeyToDirectStreamUrl)).append("\n");
     sb.append("    transcodingUrl: ").append(toIndentedString(transcodingUrl)).append("\n");
     sb.append("    transcodingSubProtocol: ").append(toIndentedString(transcodingSubProtocol)).append("\n");
     sb.append("    transcodingContainer: ").append(toIndentedString(transcodingContainer)).append("\n");

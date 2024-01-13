@@ -15,7 +15,7 @@ import SubtitleDeliveryMethod from '../model/SubtitleDeliveryMethod';
 /**
 * DynamicHlsService service.
 * @module EmbyClient.JavaScript.Beta/DynamicHlsServiceApi
-* @version 4.8.0.67
+* @version 4.8.0.69
 */
 export default class DynamicHlsServiceApi {
 
@@ -65,6 +65,72 @@ export default class DynamicHlsServiceApi {
 
       return this.apiClient.callApi(
         '/Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getAudioByIdLiveM3u8 operation.
+     * @callback module:EmbyClient.JavaScript.Beta/DynamicHlsServiceApi~getAudioByIdLiveM3u8Callback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript.Beta/DynamicHlsServiceApi~getAudioByIdLiveM3u8Callback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getAudioByIdLiveM3u8() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+        'DeviceProfileId': opts['deviceProfileId'],
+        'DeviceId': opts['deviceId'],
+        'Container': container,
+        'AudioCodec': opts['audioCodec'],
+        'EnableAutoStreamCopy': opts['enableAutoStreamCopy'],
+        'AudioSampleRate': opts['audioSampleRate'],
+        'AudioBitRate': opts['audioBitRate'],
+        'AudioChannels': opts['audioChannels'],
+        'MaxAudioChannels': opts['maxAudioChannels'],
+        'Static': opts['_static'],
+        'Profile': opts['profile'],
+        'Level': opts['level'],
+        'Framerate': opts['framerate'],
+        'MaxFramerate': opts['maxFramerate'],
+        'CopyTimestamps': opts['copyTimestamps'],
+        'StartTimeTicks': opts['startTimeTicks'],
+        'Width': opts['width'],
+        'Height': opts['height'],
+        'MaxWidth': opts['maxWidth'],
+        'MaxHeight': opts['maxHeight'],
+        'VideoBitRate': opts['videoBitRate'],
+        'SubtitleStreamIndex': opts['subtitleStreamIndex'],
+        'SubtitleMethod': opts['subtitleMethod'],
+        'MaxRefFrames': opts['maxRefFrames'],
+        'MaxVideoBitDepth': opts['maxVideoBitDepth'],
+        'VideoCodec': opts['videoCodec'],
+        'AudioStreamIndex': opts['audioStreamIndex'],
+        'VideoStreamIndex': opts['videoStreamIndex']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Audio/{Id}/live.m3u8', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -238,6 +304,72 @@ export default class DynamicHlsServiceApi {
 
       return this.apiClient.callApi(
         '/Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getVideosByIdLiveM3u8 operation.
+     * @callback module:EmbyClient.JavaScript.Beta/DynamicHlsServiceApi~getVideosByIdLiveM3u8Callback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript.Beta/DynamicHlsServiceApi~getVideosByIdLiveM3u8Callback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getVideosByIdLiveM3u8() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+        'DeviceProfileId': opts['deviceProfileId'],
+        'DeviceId': opts['deviceId'],
+        'Container': container,
+        'AudioCodec': opts['audioCodec'],
+        'EnableAutoStreamCopy': opts['enableAutoStreamCopy'],
+        'AudioSampleRate': opts['audioSampleRate'],
+        'AudioBitRate': opts['audioBitRate'],
+        'AudioChannels': opts['audioChannels'],
+        'MaxAudioChannels': opts['maxAudioChannels'],
+        'Static': opts['_static'],
+        'Profile': opts['profile'],
+        'Level': opts['level'],
+        'Framerate': opts['framerate'],
+        'MaxFramerate': opts['maxFramerate'],
+        'CopyTimestamps': opts['copyTimestamps'],
+        'StartTimeTicks': opts['startTimeTicks'],
+        'Width': opts['width'],
+        'Height': opts['height'],
+        'MaxWidth': opts['maxWidth'],
+        'MaxHeight': opts['maxHeight'],
+        'VideoBitRate': opts['videoBitRate'],
+        'SubtitleStreamIndex': opts['subtitleStreamIndex'],
+        'SubtitleMethod': opts['subtitleMethod'],
+        'MaxRefFrames': opts['maxRefFrames'],
+        'MaxVideoBitDepth': opts['maxVideoBitDepth'],
+        'VideoCodec': opts['videoCodec'],
+        'AudioStreamIndex': opts['audioStreamIndex'],
+        'VideoStreamIndex': opts['videoStreamIndex']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Videos/{Id}/live.m3u8', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

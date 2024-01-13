@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTvLiveTvInfo model module.
 * @module model/LiveTvLiveTvInfo
-* @version 4.8.0.67
+* @version 4.8.0.69
 */
 export default class LiveTvLiveTvInfo {
     /**

@@ -180,13 +180,13 @@ whenever needed.  Primarily for entity resolution.</p>
   
   
   <a id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor(MediaBrowser.Controller.Providers.IDirectoryService)">ItemResolveArgs(IDirectoryService)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_MediaBrowser_Controller_Providers_IDirectoryService_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor(MediaBrowser.Controller.Providers.IDirectoryService,MediaBrowser.Controller.Library.ILibraryManager)">ItemResolveArgs(IDirectoryService, ILibraryManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Controller.Library.ItemResolveArgs.html">ItemResolveArgs</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemResolveArgs(IDirectoryService directoryService)</code></pre>
+    <pre><code class="lang-csharp hljs">public ItemResolveArgs(IDirectoryService directoryService, ILibraryManager libraryManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,8 +201,12 @@ whenever needed.  Primarily for entity resolution.</p>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
         <td><span class="parametername">directoryService</span></td>
-        <td><p>The directory service.</p>
-</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
+        <td><span class="parametername">libraryManager</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

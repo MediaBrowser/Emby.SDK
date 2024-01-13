@@ -155,66 +155,24 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Library.ISegmentSource.html#MediaBrowser_Controller_Library_ISegmentSource_SegmentDuration">ISegmentSource.SegmentDuration</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Library.ISegmentSource.html#MediaBrowser_Controller_Library_ISegmentSource_SupportsSegments">ISegmentSource.SupportsSegments</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Library.ISegmentSource.html#MediaBrowser_Controller_Library_ISegmentSource_GetSegments">ISegmentSource.GetSegments()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Library.html">MediaBrowser.Controller.Library</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Library_ISegmentedLiveStream_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISegmentedLiveStream</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISegmentedLiveStream : ISegmentSource</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ISegmentedLiveStream_SegmentDuration_" data-uid="MediaBrowser.Controller.Library.ISegmentedLiveStream.SegmentDuration*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ISegmentedLiveStream_SegmentDuration" data-uid="MediaBrowser.Controller.Library.ISegmentedLiveStream.SegmentDuration">SegmentDuration</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TimeSpan SegmentDuration { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ISegmentedLiveStream_GetSegementFiles_" data-uid="MediaBrowser.Controller.Library.ISegmentedLiveStream.GetSegementFiles*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ISegmentedLiveStream_GetSegementFiles" data-uid="MediaBrowser.Controller.Library.ISegmentedLiveStream.GetSegementFiles">GetSegementFiles()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;SegmentedLiveStreamSegmentInfo&gt; GetSegementFiles()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.SegmentedLiveStreamSegmentInfo.html">SegmentedLiveStreamSegmentInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>

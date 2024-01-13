@@ -239,6 +239,31 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Api_BaseApiService_LocalizationManager_" data-uid="MediaBrowser.Controller.Api.BaseApiService.LocalizationManager*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseApiService_LocalizationManager" data-uid="MediaBrowser.Controller.Api.BaseApiService.LocalizationManager">LocalizationManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILocalizationManager LocalizationManager { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Api_BaseApiService_Logger_" data-uid="MediaBrowser.Controller.Api.BaseApiService.Logger*"></a>
   <h4 id="MediaBrowser_Controller_Api_BaseApiService_Logger" data-uid="MediaBrowser.Controller.Api.BaseApiService.Logger">Logger</h4>
   <div class="markdown level1 summary"><p>Gets or sets the logger.</p>
@@ -1051,12 +1076,12 @@
   
   
   <a id="MediaBrowser_Controller_Api_BaseApiService_GetQueryParentFolder_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetQueryParentFolder*"></a>
-  <h4 id="MediaBrowser_Controller_Api_BaseApiService_GetQueryParentFolder_System_String_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetQueryParentFolder(System.String,MediaBrowser.Controller.Entities.User)">GetQueryParentFolder(String, User)</h4>
+  <h4 id="MediaBrowser_Controller_Api_BaseApiService_GetQueryParentFolder_System_String_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetQueryParentFolder(System.String,MediaBrowser.Controller.Entities.User,System.Boolean)">GetQueryParentFolder(String, User, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Folder GetQueryParentFolder(string parentId, User user)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Folder GetQueryParentFolder(string parentId, User user, bool throwIfNotFound)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1076,6 +1101,11 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">throwIfNotFound</span></td>
         <td></td>
       </tr>
     </tbody>

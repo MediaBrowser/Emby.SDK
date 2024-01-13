@@ -40,6 +40,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="runTimeTicks">runTimeTicks.</param>
         /// <param name="containerStartTimeTicks">containerStartTimeTicks.</param>
         /// <param name="supportsTranscoding">supportsTranscoding.</param>
+        /// <param name="trancodeLiveStartIndex">trancodeLiveStartIndex.</param>
+        /// <param name="wallClockStart">wallClockStart.</param>
         /// <param name="supportsDirectStream">supportsDirectStream.</param>
         /// <param name="supportsDirectPlay">supportsDirectPlay.</param>
         /// <param name="isInfiniteStream">isInfiniteStream.</param>
@@ -57,6 +59,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="timestamp">timestamp.</param>
         /// <param name="requiredHttpHeaders">requiredHttpHeaders.</param>
         /// <param name="directStreamUrl">directStreamUrl.</param>
+        /// <param name="addApiKeyToDirectStreamUrl">addApiKeyToDirectStreamUrl.</param>
         /// <param name="transcodingUrl">transcodingUrl.</param>
         /// <param name="transcodingSubProtocol">transcodingSubProtocol.</param>
         /// <param name="transcodingContainer">transcodingContainer.</param>
@@ -66,7 +69,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="defaultSubtitleStreamIndex">defaultSubtitleStreamIndex.</param>
         /// <param name="itemId">Used only by our Windows app. Not used by Emby Server..</param>
         /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
-        public MediaSourceInfo(MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
+        public MediaSourceInfo(MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
         {
             this.Protocol = protocol;
             this.Id = id;
@@ -82,6 +85,8 @@ namespace EmbyClient.Dotnet.Model
             this.RunTimeTicks = runTimeTicks;
             this.ContainerStartTimeTicks = containerStartTimeTicks;
             this.SupportsTranscoding = supportsTranscoding;
+            this.TrancodeLiveStartIndex = trancodeLiveStartIndex;
+            this.WallClockStart = wallClockStart;
             this.SupportsDirectStream = supportsDirectStream;
             this.SupportsDirectPlay = supportsDirectPlay;
             this.IsInfiniteStream = isInfiniteStream;
@@ -99,6 +104,7 @@ namespace EmbyClient.Dotnet.Model
             this.Timestamp = timestamp;
             this.RequiredHttpHeaders = requiredHttpHeaders;
             this.DirectStreamUrl = directStreamUrl;
+            this.AddApiKeyToDirectStreamUrl = addApiKeyToDirectStreamUrl;
             this.TranscodingUrl = transcodingUrl;
             this.TranscodingSubProtocol = transcodingSubProtocol;
             this.TranscodingContainer = transcodingContainer;
@@ -194,6 +200,18 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="SupportsTranscoding", EmitDefaultValue=false)]
         public bool? SupportsTranscoding { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TrancodeLiveStartIndex
+        /// </summary>
+        [DataMember(Name="TrancodeLiveStartIndex", EmitDefaultValue=false)]
+        public int? TrancodeLiveStartIndex { get; set; }
+
+        /// <summary>
+        /// Gets or Sets WallClockStart
+        /// </summary>
+        [DataMember(Name="WallClockStart", EmitDefaultValue=false)]
+        public DateTimeOffset? WallClockStart { get; set; }
 
         /// <summary>
         /// Gets or Sets SupportsDirectStream
@@ -298,6 +316,12 @@ namespace EmbyClient.Dotnet.Model
         public string DirectStreamUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets AddApiKeyToDirectStreamUrl
+        /// </summary>
+        [DataMember(Name="AddApiKeyToDirectStreamUrl", EmitDefaultValue=false)]
+        public bool? AddApiKeyToDirectStreamUrl { get; set; }
+
+        /// <summary>
         /// Gets or Sets TranscodingUrl
         /// </summary>
         [DataMember(Name="TranscodingUrl", EmitDefaultValue=false)]
@@ -375,6 +399,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  RunTimeTicks: ").Append(RunTimeTicks).Append("\n");
             sb.Append("  ContainerStartTimeTicks: ").Append(ContainerStartTimeTicks).Append("\n");
             sb.Append("  SupportsTranscoding: ").Append(SupportsTranscoding).Append("\n");
+            sb.Append("  TrancodeLiveStartIndex: ").Append(TrancodeLiveStartIndex).Append("\n");
+            sb.Append("  WallClockStart: ").Append(WallClockStart).Append("\n");
             sb.Append("  SupportsDirectStream: ").Append(SupportsDirectStream).Append("\n");
             sb.Append("  SupportsDirectPlay: ").Append(SupportsDirectPlay).Append("\n");
             sb.Append("  IsInfiniteStream: ").Append(IsInfiniteStream).Append("\n");
@@ -392,6 +418,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  RequiredHttpHeaders: ").Append(RequiredHttpHeaders).Append("\n");
             sb.Append("  DirectStreamUrl: ").Append(DirectStreamUrl).Append("\n");
+            sb.Append("  AddApiKeyToDirectStreamUrl: ").Append(AddApiKeyToDirectStreamUrl).Append("\n");
             sb.Append("  TranscodingUrl: ").Append(TranscodingUrl).Append("\n");
             sb.Append("  TranscodingSubProtocol: ").Append(TranscodingSubProtocol).Append("\n");
             sb.Append("  TranscodingContainer: ").Append(TranscodingContainer).Append("\n");
@@ -506,6 +533,16 @@ namespace EmbyClient.Dotnet.Model
                     this.SupportsTranscoding.Equals(input.SupportsTranscoding))
                 ) && 
                 (
+                    this.TrancodeLiveStartIndex == input.TrancodeLiveStartIndex ||
+                    (this.TrancodeLiveStartIndex != null &&
+                    this.TrancodeLiveStartIndex.Equals(input.TrancodeLiveStartIndex))
+                ) && 
+                (
+                    this.WallClockStart == input.WallClockStart ||
+                    (this.WallClockStart != null &&
+                    this.WallClockStart.Equals(input.WallClockStart))
+                ) && 
+                (
                     this.SupportsDirectStream == input.SupportsDirectStream ||
                     (this.SupportsDirectStream != null &&
                     this.SupportsDirectStream.Equals(input.SupportsDirectStream))
@@ -594,6 +631,11 @@ namespace EmbyClient.Dotnet.Model
                     this.DirectStreamUrl.Equals(input.DirectStreamUrl))
                 ) && 
                 (
+                    this.AddApiKeyToDirectStreamUrl == input.AddApiKeyToDirectStreamUrl ||
+                    (this.AddApiKeyToDirectStreamUrl != null &&
+                    this.AddApiKeyToDirectStreamUrl.Equals(input.AddApiKeyToDirectStreamUrl))
+                ) && 
+                (
                     this.TranscodingUrl == input.TranscodingUrl ||
                     (this.TranscodingUrl != null &&
                     this.TranscodingUrl.Equals(input.TranscodingUrl))
@@ -677,6 +719,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ContainerStartTimeTicks.GetHashCode();
                 if (this.SupportsTranscoding != null)
                     hashCode = hashCode * 59 + this.SupportsTranscoding.GetHashCode();
+                if (this.TrancodeLiveStartIndex != null)
+                    hashCode = hashCode * 59 + this.TrancodeLiveStartIndex.GetHashCode();
+                if (this.WallClockStart != null)
+                    hashCode = hashCode * 59 + this.WallClockStart.GetHashCode();
                 if (this.SupportsDirectStream != null)
                     hashCode = hashCode * 59 + this.SupportsDirectStream.GetHashCode();
                 if (this.SupportsDirectPlay != null)
@@ -711,6 +757,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.RequiredHttpHeaders.GetHashCode();
                 if (this.DirectStreamUrl != null)
                     hashCode = hashCode * 59 + this.DirectStreamUrl.GetHashCode();
+                if (this.AddApiKeyToDirectStreamUrl != null)
+                    hashCode = hashCode * 59 + this.AddApiKeyToDirectStreamUrl.GetHashCode();
                 if (this.TranscodingUrl != null)
                     hashCode = hashCode * 59 + this.TranscodingUrl.GetHashCode();
                 if (this.TranscodingSubProtocol != null)

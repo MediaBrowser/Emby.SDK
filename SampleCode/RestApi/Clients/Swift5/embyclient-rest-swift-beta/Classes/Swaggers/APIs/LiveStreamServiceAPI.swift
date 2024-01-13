@@ -11,6 +11,146 @@ import Alamofire
 
 open class LiveStreamServiceAPI {
     /**
+     Gets a live recording
+
+     - parameter _id: (path)  
+     - parameter segment: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLivetvLiverecordingsByIdHlsBySegment(_id: String, segment: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getLivetvLiverecordingsByIdHlsBySegmentWithRequestBuilder(_id: _id, segment: segment).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a live recording
+     - GET /LiveTv/LiveRecordings/{Id}/hls/{Segment}
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path)  
+     - parameter segment: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getLivetvLiverecordingsByIdHlsBySegmentWithRequestBuilder(_id: String, segment: String) -> RequestBuilder<Void> {
+        var path = "/LiveTv/LiveRecordings/{Id}/hls/{Segment}"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let segmentPreEscape = "\(segment)"
+        let segmentPostEscape = segmentPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Segment}", with: segmentPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a live recording
+
+     - parameter _id: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLivetvLiverecordingsByIdHlsLiveM3u8(_id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getLivetvLiverecordingsByIdHlsLiveM3u8WithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a live recording
+     - GET /LiveTv/LiveRecordings/{Id}/hls/live.m3u8
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getLivetvLiverecordingsByIdHlsLiveM3u8WithRequestBuilder(_id: String) -> RequestBuilder<Void> {
+        var path = "/LiveTv/LiveRecordings/{Id}/hls/live.m3u8"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a live recording
+
+     - parameter _id: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLivetvLiverecordingsByIdHlsMasterM3u8(_id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getLivetvLiverecordingsByIdHlsMasterM3u8WithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a live recording
+     - GET /LiveTv/LiveRecordings/{Id}/hls/master.m3u8
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getLivetvLiverecordingsByIdHlsMasterM3u8WithRequestBuilder(_id: String) -> RequestBuilder<Void> {
+        var path = "/LiveTv/LiveRecordings/{Id}/hls/master.m3u8"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Gets a live tv channel
 
      - parameter _id: (path)  
@@ -244,6 +384,146 @@ open class LiveStreamServiceAPI {
         let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a live recording
+
+     - parameter _id: (path)  
+     - parameter segment: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headLivetvLiverecordingsByIdHlsBySegment(_id: String, segment: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headLivetvLiverecordingsByIdHlsBySegmentWithRequestBuilder(_id: _id, segment: segment).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a live recording
+     - HEAD /LiveTv/LiveRecordings/{Id}/hls/{Segment}
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path)  
+     - parameter segment: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headLivetvLiverecordingsByIdHlsBySegmentWithRequestBuilder(_id: String, segment: String) -> RequestBuilder<Void> {
+        var path = "/LiveTv/LiveRecordings/{Id}/hls/{Segment}"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let segmentPreEscape = "\(segment)"
+        let segmentPostEscape = segmentPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Segment}", with: segmentPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a live recording
+
+     - parameter _id: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headLivetvLiverecordingsByIdHlsLiveM3u8(_id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headLivetvLiverecordingsByIdHlsLiveM3u8WithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a live recording
+     - HEAD /LiveTv/LiveRecordings/{Id}/hls/live.m3u8
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headLivetvLiverecordingsByIdHlsLiveM3u8WithRequestBuilder(_id: String) -> RequestBuilder<Void> {
+        var path = "/LiveTv/LiveRecordings/{Id}/hls/live.m3u8"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a live recording
+
+     - parameter _id: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headLivetvLiverecordingsByIdHlsMasterM3u8(_id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headLivetvLiverecordingsByIdHlsMasterM3u8WithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a live recording
+     - HEAD /LiveTv/LiveRecordings/{Id}/hls/master.m3u8
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headLivetvLiverecordingsByIdHlsMasterM3u8WithRequestBuilder(_id: String) -> RequestBuilder<Void> {
+        var path = "/LiveTv/LiveRecordings/{Id}/hls/master.m3u8"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Gets a live tv channel

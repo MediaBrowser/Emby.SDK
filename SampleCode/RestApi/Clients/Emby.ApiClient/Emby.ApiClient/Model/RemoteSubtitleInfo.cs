@@ -99,6 +99,12 @@ namespace Emby.ApiClient.Model
         public bool? IsForced { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsHearingImpaired
+        /// </summary>
+        /// <value>The IsHearingImpaired.</value>
+        public bool? IsHearingImpaired { get; set; }
+
+        /// <summary>
         /// Gets or Sets Language
         /// </summary>
         /// <value>The Language.</value>
@@ -124,6 +130,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  DownloadCount: ").Append(DownloadCount).Append("\n");
             sb.Append("  IsHashMatch: ").Append(IsHashMatch).Append("\n");
             sb.Append("  IsForced: ").Append(IsForced).Append("\n");
+            sb.Append("  IsHearingImpaired: ").Append(IsHearingImpaired).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -211,6 +218,11 @@ namespace Emby.ApiClient.Model
                     this.IsForced.Equals(input.IsForced))
                 ) && 
                 (
+                    this.IsHearingImpaired == input.IsHearingImpaired ||
+                    (this.IsHearingImpaired != null &&
+                    this.IsHearingImpaired.Equals(input.IsHearingImpaired))
+                ) && 
+                (
                     this.Language == input.Language ||
                     (this.Language != null &&
                     this.Language.Equals(input.Language))
@@ -250,6 +262,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IsHashMatch.GetHashCode();
                 if (this.IsForced != null)
                     hashCode = hashCode * 59 + this.IsForced.GetHashCode();
+                if (this.IsHearingImpaired != null)
+                    hashCode = hashCode * 59 + this.IsHearingImpaired.GetHashCode();
                 if (this.Language != null)
                     hashCode = hashCode * 59 + this.Language.GetHashCode();
                 return hashCode;

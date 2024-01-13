@@ -23,5 +23,6 @@ type RemoteSubtitleInfo struct {
 	DownloadCount int32 `json:"DownloadCount,omitempty"`
 	IsHashMatch bool `json:"IsHashMatch,omitempty"`
 	IsForced bool `json:"IsForced,omitempty"`
+	IsHearingImpaired bool `json:"IsHearingImpaired,omitempty"`
 	Language string `json:"Language,omitempty"`
 }

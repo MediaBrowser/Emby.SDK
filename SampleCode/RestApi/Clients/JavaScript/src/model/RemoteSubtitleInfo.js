@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The RemoteSubtitleInfo model module.
 * @module model/RemoteSubtitleInfo
-* @version 4.8.0.67
+* @version 4.8.0.69
 */
 export default class RemoteSubtitleInfo {
     /**
@@ -77,6 +77,9 @@ export default class RemoteSubtitleInfo {
             if (data.hasOwnProperty('IsForced')) {
                 obj['IsForced'] = ApiClient.convertToType(data['IsForced'], 'Boolean');
             }
+            if (data.hasOwnProperty('IsHearingImpaired')) {
+                obj['IsHearingImpaired'] = ApiClient.convertToType(data['IsHearingImpaired'], 'Boolean');
+            }
             if (data.hasOwnProperty('Language')) {
                 obj['Language'] = ApiClient.convertToType(data['Language'], 'String');
             }
@@ -133,6 +136,10 @@ export default class RemoteSubtitleInfo {
     * @member {Boolean} IsForced
     */
     'IsForced' = undefined;
+    /**
+    * @member {Boolean} IsHearingImpaired
+    */
+    'IsHearingImpaired' = undefined;
     /**
     * @member {String} Language
     */

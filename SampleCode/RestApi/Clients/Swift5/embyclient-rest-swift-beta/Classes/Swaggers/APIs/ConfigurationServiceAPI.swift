@@ -78,7 +78,7 @@ open class ConfigurationServiceAPI {
     "From" : "From",
     "To" : "To"
   } ],
-  "MigratedToUserItemShares1" : true,
+  "MigratedToUserItemShares4" : true,
   "CachePath" : "CachePath",
   "WanDdns" : "WanDdns",
   "IsBehindProxy" : true,

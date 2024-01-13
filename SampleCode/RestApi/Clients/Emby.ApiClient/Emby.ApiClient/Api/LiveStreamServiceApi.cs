@@ -40,6 +40,102 @@ namespace Emby.ApiClient.Api
         public ApiClient ApiClient {get; }
 
         /// <summary>
+        /// Gets a live recording
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <param name="segment"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> GetLivetvLiverecordingsByIdHlsBySegment (string id, string segment)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling LiveStreamServiceApi->GetLivetvLiverecordingsByIdHlsBySegment");
+            }
+            
+            // verify the required parameter 'segment' is set
+            if (segment == null)
+            {
+                throw new ApiException("Missing required parameter 'segment' when calling LiveStreamServiceApi->GetLivetvLiverecordingsByIdHlsBySegment");
+            }
+            
+            var request = new RestRequest("/LiveTv/LiveRecordings/{Id}/hls/{Segment}", Method.Get);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (segment != null)
+            {
+                request.AddParameter("Segment", this.ApiClient.ParameterToString(segment), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets a live recording
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> GetLivetvLiverecordingsByIdHlsLiveM3u8 (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling LiveStreamServiceApi->GetLivetvLiverecordingsByIdHlsLiveM3u8");
+            }
+            
+            var request = new RestRequest("/LiveTv/LiveRecordings/{Id}/hls/live.m3u8", Method.Get);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets a live recording
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> GetLivetvLiverecordingsByIdHlsMasterM3u8 (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling LiveStreamServiceApi->GetLivetvLiverecordingsByIdHlsMasterM3u8");
+            }
+            
+            var request = new RestRequest("/LiveTv/LiveRecordings/{Id}/hls/master.m3u8", Method.Get);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Gets a live tv channel
         /// </summary>
         /// <remarks>
@@ -196,6 +292,102 @@ namespace Emby.ApiClient.Api
             if (container != null)
             {
                 request.AddParameter("Container", this.ApiClient.ParameterToString(container), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets a live recording
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <param name="segment"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadLivetvLiverecordingsByIdHlsBySegment (string id, string segment)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling LiveStreamServiceApi->HeadLivetvLiverecordingsByIdHlsBySegment");
+            }
+            
+            // verify the required parameter 'segment' is set
+            if (segment == null)
+            {
+                throw new ApiException("Missing required parameter 'segment' when calling LiveStreamServiceApi->HeadLivetvLiverecordingsByIdHlsBySegment");
+            }
+            
+            var request = new RestRequest("/LiveTv/LiveRecordings/{Id}/hls/{Segment}", Method.Head);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (segment != null)
+            {
+                request.AddParameter("Segment", this.ApiClient.ParameterToString(segment), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets a live recording
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadLivetvLiverecordingsByIdHlsLiveM3u8 (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling LiveStreamServiceApi->HeadLivetvLiverecordingsByIdHlsLiveM3u8");
+            }
+            
+            var request = new RestRequest("/LiveTv/LiveRecordings/{Id}/hls/live.m3u8", Method.Head);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets a live recording
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadLivetvLiverecordingsByIdHlsMasterM3u8 (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling LiveStreamServiceApi->HeadLivetvLiverecordingsByIdHlsMasterM3u8");
+            }
+            
+            var request = new RestRequest("/LiveTv/LiveRecordings/{Id}/hls/master.m3u8", Method.Head);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
             // make the HTTP request

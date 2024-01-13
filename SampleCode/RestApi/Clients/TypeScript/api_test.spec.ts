@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.67
+ * OpenAPI spec version: 4.8.0.69
  * 
  *
  * NOTE: This file is auto generated.
@@ -776,6 +776,38 @@ describe("DynamicHlsServiceApi", () => {
     const playlistId: string = "playlistId_example"
     return expect(instance.getAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId, {})).resolves.toBe(null)
   })
+  test("getAudioByIdLiveM3u8", () => {
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const profile: string = "profile_example"
+    const level: string = "level_example"
+    const framerate: number = 3.4
+    const maxFramerate: number = 3.4
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
+    const maxRefFrames: number = 56
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.getAudioByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
+  })
   test("getAudioByIdMainM3u8", () => {
     const id: string = "id_example"
     const container: string = "container_example"
@@ -846,6 +878,38 @@ describe("DynamicHlsServiceApi", () => {
     const id: string = "id_example"
     const playlistId: string = "playlistId_example"
     return expect(instance.getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId, {})).resolves.toBe(null)
+  })
+  test("getVideosByIdLiveM3u8", () => {
+    const id: string = "id_example"
+    const container: string = "container_example"
+    const deviceProfileId: string = "deviceProfileId_example"
+    const deviceId: string = "deviceId_example"
+    const audioCodec: string = "audioCodec_example"
+    const enableAutoStreamCopy: boolean = true
+    const audioSampleRate: number = 56
+    const audioBitRate: number = 56
+    const audioChannels: number = 56
+    const maxAudioChannels: number = 56
+    const _static: boolean = true
+    const profile: string = "profile_example"
+    const level: string = "level_example"
+    const framerate: number = 3.4
+    const maxFramerate: number = 3.4
+    const copyTimestamps: boolean = true
+    const startTimeTicks: number = 789
+    const width: number = 56
+    const height: number = 56
+    const maxWidth: number = 56
+    const maxHeight: number = 56
+    const videoBitRate: number = 56
+    const subtitleStreamIndex: number = 56
+    const subtitleMethod: SubtitleDeliveryMethod = undefined
+    const maxRefFrames: number = 56
+    const maxVideoBitDepth: number = 56
+    const videoCodec: string = "videoCodec_example"
+    const audioStreamIndex: number = 56
+    const videoStreamIndex: number = 56
+    return expect(instance.getVideosByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
   test("getVideosByIdLiveSubtitlesM3u8", () => {
     const id: string = "id_example"
@@ -2871,6 +2935,19 @@ describe("LiveStreamServiceApi", () => {
     instance = new api.LiveStreamServiceApi(config)
   });
 
+  test("getLivetvLiverecordingsByIdHlsBySegment", () => {
+    const id: string = "id_example"
+    const segment: string = "segment_example"
+    return expect(instance.getLivetvLiverecordingsByIdHlsBySegment(id, segment, {})).resolves.toBe(null)
+  })
+  test("getLivetvLiverecordingsByIdHlsLiveM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLiverecordingsByIdHlsLiveM3u8(id, {})).resolves.toBe(null)
+  })
+  test("getLivetvLiverecordingsByIdHlsMasterM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.getLivetvLiverecordingsByIdHlsMasterM3u8(id, {})).resolves.toBe(null)
+  })
   test("getLivetvLiverecordingsByIdStream", () => {
     const id: string = "id_example"
     return expect(instance.getLivetvLiverecordingsByIdStream(id, {})).resolves.toBe(null)
@@ -2892,6 +2969,19 @@ describe("LiveStreamServiceApi", () => {
     const id: string = "id_example"
     const container: string = "container_example"
     return expect(instance.getLivetvLivestreamfilesByIdStreamByContainer(id, container, {})).resolves.toBe(null)
+  })
+  test("headLivetvLiverecordingsByIdHlsBySegment", () => {
+    const id: string = "id_example"
+    const segment: string = "segment_example"
+    return expect(instance.headLivetvLiverecordingsByIdHlsBySegment(id, segment, {})).resolves.toBe(null)
+  })
+  test("headLivetvLiverecordingsByIdHlsLiveM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.headLivetvLiverecordingsByIdHlsLiveM3u8(id, {})).resolves.toBe(null)
+  })
+  test("headLivetvLiverecordingsByIdHlsMasterM3u8", () => {
+    const id: string = "id_example"
+    return expect(instance.headLivetvLiverecordingsByIdHlsMasterM3u8(id, {})).resolves.toBe(null)
   })
   test("headLivetvLivestreamfilesByIdHlsBySegment", () => {
     const id: string = "id_example"
@@ -7126,76 +7216,12 @@ describe("VideoHlsServiceApi", () => {
     const playlistId: string = "playlistId_example"
     return expect(instance.getAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId, {})).resolves.toBe(null)
   })
-  test("getAudioByIdLiveM3u8", () => {
-    const id: string = "id_example"
-    const container: string = "container_example"
-    const deviceProfileId: string = "deviceProfileId_example"
-    const deviceId: string = "deviceId_example"
-    const audioCodec: string = "audioCodec_example"
-    const enableAutoStreamCopy: boolean = true
-    const audioSampleRate: number = 56
-    const audioBitRate: number = 56
-    const audioChannels: number = 56
-    const maxAudioChannels: number = 56
-    const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
-    const copyTimestamps: boolean = true
-    const startTimeTicks: number = 789
-    const width: number = 56
-    const height: number = 56
-    const maxWidth: number = 56
-    const maxHeight: number = 56
-    const videoBitRate: number = 56
-    const subtitleStreamIndex: number = 56
-    const subtitleMethod: SubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
-    const maxVideoBitDepth: number = 56
-    const videoCodec: string = "videoCodec_example"
-    const audioStreamIndex: number = 56
-    const videoStreamIndex: number = 56
-    return expect(instance.getAudioByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
-  })
   test("getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer", () => {
     const segmentContainer: string = "segmentContainer_example"
     const segmentId: string = "segmentId_example"
     const id: string = "id_example"
     const playlistId: string = "playlistId_example"
     return expect(instance.getVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer(segmentContainer, segmentId, id, playlistId, {})).resolves.toBe(null)
-  })
-  test("getVideosByIdLiveM3u8", () => {
-    const id: string = "id_example"
-    const container: string = "container_example"
-    const deviceProfileId: string = "deviceProfileId_example"
-    const deviceId: string = "deviceId_example"
-    const audioCodec: string = "audioCodec_example"
-    const enableAutoStreamCopy: boolean = true
-    const audioSampleRate: number = 56
-    const audioBitRate: number = 56
-    const audioChannels: number = 56
-    const maxAudioChannels: number = 56
-    const _static: boolean = true
-    const profile: string = "profile_example"
-    const level: string = "level_example"
-    const framerate: number = 3.4
-    const maxFramerate: number = 3.4
-    const copyTimestamps: boolean = true
-    const startTimeTicks: number = 789
-    const width: number = 56
-    const height: number = 56
-    const maxWidth: number = 56
-    const maxHeight: number = 56
-    const videoBitRate: number = 56
-    const subtitleStreamIndex: number = 56
-    const subtitleMethod: SubtitleDeliveryMethod = undefined
-    const maxRefFrames: number = 56
-    const maxVideoBitDepth: number = 56
-    const videoCodec: string = "videoCodec_example"
-    const audioStreamIndex: number = 56
-    const videoStreamIndex: number = 56
-    return expect(instance.getVideosByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex, {})).resolves.toBe(null)
   })
 })
 
