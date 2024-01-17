@@ -82,6 +82,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -234,6 +235,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -604,6 +606,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -756,6 +759,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1200,6 +1204,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1352,6 +1357,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1722,6 +1728,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1874,6 +1881,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -2316,6 +2324,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -2468,6 +2477,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -2838,6 +2848,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -2990,6 +3001,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -3435,6 +3447,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -3587,6 +3600,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -3957,6 +3971,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -4109,6 +4124,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -4554,6 +4570,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -4706,6 +4723,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -5076,6 +5094,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -5228,6 +5247,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -5672,6 +5692,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -5824,6 +5845,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -6194,6 +6216,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -6346,6 +6369,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -6787,6 +6811,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -6939,6 +6964,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -7309,6 +7335,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -7461,6 +7488,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -7906,6 +7934,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -8058,6 +8087,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -8428,6 +8458,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -8580,6 +8611,7 @@ open class InstantMixServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",

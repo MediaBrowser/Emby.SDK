@@ -93,6 +93,12 @@ namespace Emby.ApiClient.Model
         public bool? IsRemote { get; set; }
 
         /// <summary>
+        /// Gets or Sets HasMixedProtocols
+        /// </summary>
+        /// <value>The HasMixedProtocols.</value>
+        public bool? HasMixedProtocols { get; set; }
+
+        /// <summary>
         /// Gets or Sets RunTimeTicks
         /// </summary>
         /// <value>The RunTimeTicks.</value>
@@ -303,6 +309,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SortName: ").Append(SortName).Append("\n");
             sb.Append("  IsRemote: ").Append(IsRemote).Append("\n");
+            sb.Append("  HasMixedProtocols: ").Append(HasMixedProtocols).Append("\n");
             sb.Append("  RunTimeTicks: ").Append(RunTimeTicks).Append("\n");
             sb.Append("  ContainerStartTimeTicks: ").Append(ContainerStartTimeTicks).Append("\n");
             sb.Append("  SupportsTranscoding: ").Append(SupportsTranscoding).Append("\n");
@@ -414,6 +421,11 @@ namespace Emby.ApiClient.Model
                     this.IsRemote == input.IsRemote ||
                     (this.IsRemote != null &&
                     this.IsRemote.Equals(input.IsRemote))
+                ) && 
+                (
+                    this.HasMixedProtocols == input.HasMixedProtocols ||
+                    (this.HasMixedProtocols != null &&
+                    this.HasMixedProtocols.Equals(input.HasMixedProtocols))
                 ) && 
                 (
                     this.RunTimeTicks == input.RunTimeTicks ||
@@ -611,6 +623,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.SortName.GetHashCode();
                 if (this.IsRemote != null)
                     hashCode = hashCode * 59 + this.IsRemote.GetHashCode();
+                if (this.HasMixedProtocols != null)
+                    hashCode = hashCode * 59 + this.HasMixedProtocols.GetHashCode();
                 if (this.RunTimeTicks != null)
                     hashCode = hashCode * 59 + this.RunTimeTicks.GetHashCode();
                 if (this.ContainerStartTimeTicks != null)

@@ -621,6 +621,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -773,6 +774,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1143,6 +1145,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1295,6 +1298,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1915,6 +1919,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -2067,6 +2072,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -2585,6 +2591,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -2737,6 +2744,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -3107,6 +3115,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -3259,6 +3268,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -4310,6 +4320,7 @@ open class LiveTvServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -4462,6 +4473,7 @@ open class LiveTvServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -4835,6 +4847,7 @@ open class LiveTvServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -4987,6 +5000,7 @@ open class LiveTvServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -5604,6 +5618,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -5756,6 +5771,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -6963,6 +6979,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -7115,6 +7132,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -7485,6 +7503,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -7637,6 +7656,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -8428,6 +8448,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -8580,6 +8601,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -9005,6 +9027,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -9157,6 +9180,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -9527,6 +9551,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -9679,6 +9704,7 @@ open class LiveTvServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -10106,6 +10132,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -10258,6 +10285,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -10628,6 +10656,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -10780,6 +10809,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -11194,6 +11224,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -11346,6 +11377,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -11716,6 +11748,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -11868,6 +11901,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -12437,6 +12471,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -12589,6 +12624,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -13031,6 +13067,7 @@ open class LiveTvServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -13183,6 +13220,7 @@ open class LiveTvServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -13580,6 +13618,7 @@ open class LiveTvServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -13732,6 +13771,7 @@ open class LiveTvServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -14174,6 +14214,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -14326,6 +14367,7 @@ open class LiveTvServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",

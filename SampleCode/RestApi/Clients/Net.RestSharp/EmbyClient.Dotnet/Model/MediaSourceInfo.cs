@@ -37,6 +37,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="name">name.</param>
         /// <param name="sortName">sortName.</param>
         /// <param name="isRemote">Differentiate internet url vs local network.</param>
+        /// <param name="hasMixedProtocols">hasMixedProtocols.</param>
         /// <param name="runTimeTicks">runTimeTicks.</param>
         /// <param name="containerStartTimeTicks">containerStartTimeTicks.</param>
         /// <param name="supportsTranscoding">supportsTranscoding.</param>
@@ -69,7 +70,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="defaultSubtitleStreamIndex">defaultSubtitleStreamIndex.</param>
         /// <param name="itemId">Used only by our Windows app. Not used by Emby Server..</param>
         /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
-        public MediaSourceInfo(MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
+        public MediaSourceInfo(MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
         {
             this.Protocol = protocol;
             this.Id = id;
@@ -82,6 +83,7 @@ namespace EmbyClient.Dotnet.Model
             this.Name = name;
             this.SortName = sortName;
             this.IsRemote = isRemote;
+            this.HasMixedProtocols = hasMixedProtocols;
             this.RunTimeTicks = runTimeTicks;
             this.ContainerStartTimeTicks = containerStartTimeTicks;
             this.SupportsTranscoding = supportsTranscoding;
@@ -182,6 +184,12 @@ namespace EmbyClient.Dotnet.Model
         /// <value>Differentiate internet url vs local network</value>
         [DataMember(Name="IsRemote", EmitDefaultValue=false)]
         public bool? IsRemote { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HasMixedProtocols
+        /// </summary>
+        [DataMember(Name="HasMixedProtocols", EmitDefaultValue=false)]
+        public bool? HasMixedProtocols { get; set; }
 
         /// <summary>
         /// Gets or Sets RunTimeTicks
@@ -396,6 +404,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SortName: ").Append(SortName).Append("\n");
             sb.Append("  IsRemote: ").Append(IsRemote).Append("\n");
+            sb.Append("  HasMixedProtocols: ").Append(HasMixedProtocols).Append("\n");
             sb.Append("  RunTimeTicks: ").Append(RunTimeTicks).Append("\n");
             sb.Append("  ContainerStartTimeTicks: ").Append(ContainerStartTimeTicks).Append("\n");
             sb.Append("  SupportsTranscoding: ").Append(SupportsTranscoding).Append("\n");
@@ -516,6 +525,11 @@ namespace EmbyClient.Dotnet.Model
                     this.IsRemote == input.IsRemote ||
                     (this.IsRemote != null &&
                     this.IsRemote.Equals(input.IsRemote))
+                ) && 
+                (
+                    this.HasMixedProtocols == input.HasMixedProtocols ||
+                    (this.HasMixedProtocols != null &&
+                    this.HasMixedProtocols.Equals(input.HasMixedProtocols))
                 ) && 
                 (
                     this.RunTimeTicks == input.RunTimeTicks ||
@@ -713,6 +727,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.SortName.GetHashCode();
                 if (this.IsRemote != null)
                     hashCode = hashCode * 59 + this.IsRemote.GetHashCode();
+                if (this.HasMixedProtocols != null)
+                    hashCode = hashCode * 59 + this.HasMixedProtocols.GetHashCode();
                 if (this.RunTimeTicks != null)
                     hashCode = hashCode * 59 + this.RunTimeTicks.GetHashCode();
                 if (this.ContainerStartTimeTicks != null)

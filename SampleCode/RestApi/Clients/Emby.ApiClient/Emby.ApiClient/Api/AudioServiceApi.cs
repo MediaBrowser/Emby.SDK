@@ -58,10 +58,6 @@ namespace Emby.ApiClient.Api
         /// <param name="audioChannels">Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="maxAudioChannels">Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="_static">Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)</param>
-        /// <param name="profile">Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)</param>
-        /// <param name="level">Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)</param>
-        /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
-        /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
         /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
@@ -71,13 +67,12 @@ namespace Emby.ApiClient.Api
         /// <param name="videoBitRate">Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)</param>
         /// <param name="subtitleStreamIndex">Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)</param>
         /// <param name="subtitleMethod">Optional. Specify the subtitle delivery method. (optional)</param>
-        /// <param name="maxRefFrames">Optional. (optional)</param>
         /// <param name="maxVideoBitDepth">Optional. (optional)</param>
         /// <param name="videoCodec">Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)</param>
         /// <param name="audioStreamIndex">Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)</param>
         /// <param name="videoStreamIndex">Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetAudioByIdByStreamfilename (string deviceProfileId, string streamFileName, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, string profile, string level, float? framerate, float? maxFramerate, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxRefFrames, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
+        public async Task<RestResponse<Object>> GetAudioByIdByStreamfilename (string deviceProfileId, string streamFileName, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
         {
             // verify the required parameter 'streamFileName' is set
             if (streamFileName == null)
@@ -159,26 +154,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("Static", this.ApiClient.ParameterToString(_static));
             }
 
-            if (profile != null)
-            {
-                request.AddQueryParameter("Profile", this.ApiClient.ParameterToString(profile));
-            }
-
-            if (level != null)
-            {
-                request.AddQueryParameter("Level", this.ApiClient.ParameterToString(level));
-            }
-
-            if (framerate != null)
-            {
-                request.AddQueryParameter("Framerate", this.ApiClient.ParameterToString(framerate));
-            }
-
-            if (maxFramerate != null)
-            {
-                request.AddQueryParameter("MaxFramerate", this.ApiClient.ParameterToString(maxFramerate));
-            }
-
             if (copyTimestamps != null)
             {
                 request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
@@ -224,11 +199,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("SubtitleMethod", this.ApiClient.ParameterToString(subtitleMethod));
             }
 
-            if (maxRefFrames != null)
-            {
-                request.AddQueryParameter("MaxRefFrames", this.ApiClient.ParameterToString(maxRefFrames));
-            }
-
             if (maxVideoBitDepth != null)
             {
                 request.AddQueryParameter("MaxVideoBitDepth", this.ApiClient.ParameterToString(maxVideoBitDepth));
@@ -271,10 +241,6 @@ namespace Emby.ApiClient.Api
         /// <param name="audioChannels">Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="maxAudioChannels">Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="_static">Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)</param>
-        /// <param name="profile">Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)</param>
-        /// <param name="level">Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)</param>
-        /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
-        /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
         /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
@@ -284,13 +250,12 @@ namespace Emby.ApiClient.Api
         /// <param name="videoBitRate">Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)</param>
         /// <param name="subtitleStreamIndex">Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)</param>
         /// <param name="subtitleMethod">Optional. Specify the subtitle delivery method. (optional)</param>
-        /// <param name="maxRefFrames">Optional. (optional)</param>
         /// <param name="maxVideoBitDepth">Optional. (optional)</param>
         /// <param name="videoCodec">Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)</param>
         /// <param name="audioStreamIndex">Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)</param>
         /// <param name="videoStreamIndex">Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetAudioByIdStream (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, string profile, string level, float? framerate, float? maxFramerate, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxRefFrames, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
+        public async Task<RestResponse<Object>> GetAudioByIdStream (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -361,26 +326,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("Static", this.ApiClient.ParameterToString(_static));
             }
 
-            if (profile != null)
-            {
-                request.AddQueryParameter("Profile", this.ApiClient.ParameterToString(profile));
-            }
-
-            if (level != null)
-            {
-                request.AddQueryParameter("Level", this.ApiClient.ParameterToString(level));
-            }
-
-            if (framerate != null)
-            {
-                request.AddQueryParameter("Framerate", this.ApiClient.ParameterToString(framerate));
-            }
-
-            if (maxFramerate != null)
-            {
-                request.AddQueryParameter("MaxFramerate", this.ApiClient.ParameterToString(maxFramerate));
-            }
-
             if (copyTimestamps != null)
             {
                 request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
@@ -426,11 +371,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("SubtitleMethod", this.ApiClient.ParameterToString(subtitleMethod));
             }
 
-            if (maxRefFrames != null)
-            {
-                request.AddQueryParameter("MaxRefFrames", this.ApiClient.ParameterToString(maxRefFrames));
-            }
-
             if (maxVideoBitDepth != null)
             {
                 request.AddQueryParameter("MaxVideoBitDepth", this.ApiClient.ParameterToString(maxVideoBitDepth));
@@ -473,10 +413,6 @@ namespace Emby.ApiClient.Api
         /// <param name="audioChannels">Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="maxAudioChannels">Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="_static">Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)</param>
-        /// <param name="profile">Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)</param>
-        /// <param name="level">Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)</param>
-        /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
-        /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
         /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
@@ -486,13 +422,12 @@ namespace Emby.ApiClient.Api
         /// <param name="videoBitRate">Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)</param>
         /// <param name="subtitleStreamIndex">Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)</param>
         /// <param name="subtitleMethod">Optional. Specify the subtitle delivery method. (optional)</param>
-        /// <param name="maxRefFrames">Optional. (optional)</param>
         /// <param name="maxVideoBitDepth">Optional. (optional)</param>
         /// <param name="videoCodec">Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)</param>
         /// <param name="audioStreamIndex">Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)</param>
         /// <param name="videoStreamIndex">Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetAudioByIdStreamByContainer (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, string profile, string level, float? framerate, float? maxFramerate, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxRefFrames, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
+        public async Task<RestResponse<Object>> GetAudioByIdStreamByContainer (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -563,26 +498,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("Static", this.ApiClient.ParameterToString(_static));
             }
 
-            if (profile != null)
-            {
-                request.AddQueryParameter("Profile", this.ApiClient.ParameterToString(profile));
-            }
-
-            if (level != null)
-            {
-                request.AddQueryParameter("Level", this.ApiClient.ParameterToString(level));
-            }
-
-            if (framerate != null)
-            {
-                request.AddQueryParameter("Framerate", this.ApiClient.ParameterToString(framerate));
-            }
-
-            if (maxFramerate != null)
-            {
-                request.AddQueryParameter("MaxFramerate", this.ApiClient.ParameterToString(maxFramerate));
-            }
-
             if (copyTimestamps != null)
             {
                 request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
@@ -628,11 +543,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("SubtitleMethod", this.ApiClient.ParameterToString(subtitleMethod));
             }
 
-            if (maxRefFrames != null)
-            {
-                request.AddQueryParameter("MaxRefFrames", this.ApiClient.ParameterToString(maxRefFrames));
-            }
-
             if (maxVideoBitDepth != null)
             {
                 request.AddQueryParameter("MaxVideoBitDepth", this.ApiClient.ParameterToString(maxVideoBitDepth));
@@ -676,10 +586,6 @@ namespace Emby.ApiClient.Api
         /// <param name="audioChannels">Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="maxAudioChannels">Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="_static">Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)</param>
-        /// <param name="profile">Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)</param>
-        /// <param name="level">Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)</param>
-        /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
-        /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
         /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
@@ -689,13 +595,12 @@ namespace Emby.ApiClient.Api
         /// <param name="videoBitRate">Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)</param>
         /// <param name="subtitleStreamIndex">Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)</param>
         /// <param name="subtitleMethod">Optional. Specify the subtitle delivery method. (optional)</param>
-        /// <param name="maxRefFrames">Optional. (optional)</param>
         /// <param name="maxVideoBitDepth">Optional. (optional)</param>
         /// <param name="videoCodec">Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)</param>
         /// <param name="audioStreamIndex">Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)</param>
         /// <param name="videoStreamIndex">Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadAudioByIdByStreamfilename (string deviceProfileId, string streamFileName, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, string profile, string level, float? framerate, float? maxFramerate, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxRefFrames, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
+        public async Task<RestResponse<Object>> HeadAudioByIdByStreamfilename (string deviceProfileId, string streamFileName, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
         {
             // verify the required parameter 'streamFileName' is set
             if (streamFileName == null)
@@ -777,26 +682,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("Static", this.ApiClient.ParameterToString(_static));
             }
 
-            if (profile != null)
-            {
-                request.AddQueryParameter("Profile", this.ApiClient.ParameterToString(profile));
-            }
-
-            if (level != null)
-            {
-                request.AddQueryParameter("Level", this.ApiClient.ParameterToString(level));
-            }
-
-            if (framerate != null)
-            {
-                request.AddQueryParameter("Framerate", this.ApiClient.ParameterToString(framerate));
-            }
-
-            if (maxFramerate != null)
-            {
-                request.AddQueryParameter("MaxFramerate", this.ApiClient.ParameterToString(maxFramerate));
-            }
-
             if (copyTimestamps != null)
             {
                 request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
@@ -842,11 +727,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("SubtitleMethod", this.ApiClient.ParameterToString(subtitleMethod));
             }
 
-            if (maxRefFrames != null)
-            {
-                request.AddQueryParameter("MaxRefFrames", this.ApiClient.ParameterToString(maxRefFrames));
-            }
-
             if (maxVideoBitDepth != null)
             {
                 request.AddQueryParameter("MaxVideoBitDepth", this.ApiClient.ParameterToString(maxVideoBitDepth));
@@ -889,10 +769,6 @@ namespace Emby.ApiClient.Api
         /// <param name="audioChannels">Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="maxAudioChannels">Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="_static">Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)</param>
-        /// <param name="profile">Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)</param>
-        /// <param name="level">Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)</param>
-        /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
-        /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
         /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
@@ -902,13 +778,12 @@ namespace Emby.ApiClient.Api
         /// <param name="videoBitRate">Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)</param>
         /// <param name="subtitleStreamIndex">Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)</param>
         /// <param name="subtitleMethod">Optional. Specify the subtitle delivery method. (optional)</param>
-        /// <param name="maxRefFrames">Optional. (optional)</param>
         /// <param name="maxVideoBitDepth">Optional. (optional)</param>
         /// <param name="videoCodec">Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)</param>
         /// <param name="audioStreamIndex">Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)</param>
         /// <param name="videoStreamIndex">Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadAudioByIdStream (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, string profile, string level, float? framerate, float? maxFramerate, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxRefFrames, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
+        public async Task<RestResponse<Object>> HeadAudioByIdStream (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -979,26 +854,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("Static", this.ApiClient.ParameterToString(_static));
             }
 
-            if (profile != null)
-            {
-                request.AddQueryParameter("Profile", this.ApiClient.ParameterToString(profile));
-            }
-
-            if (level != null)
-            {
-                request.AddQueryParameter("Level", this.ApiClient.ParameterToString(level));
-            }
-
-            if (framerate != null)
-            {
-                request.AddQueryParameter("Framerate", this.ApiClient.ParameterToString(framerate));
-            }
-
-            if (maxFramerate != null)
-            {
-                request.AddQueryParameter("MaxFramerate", this.ApiClient.ParameterToString(maxFramerate));
-            }
-
             if (copyTimestamps != null)
             {
                 request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
@@ -1044,11 +899,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("SubtitleMethod", this.ApiClient.ParameterToString(subtitleMethod));
             }
 
-            if (maxRefFrames != null)
-            {
-                request.AddQueryParameter("MaxRefFrames", this.ApiClient.ParameterToString(maxRefFrames));
-            }
-
             if (maxVideoBitDepth != null)
             {
                 request.AddQueryParameter("MaxVideoBitDepth", this.ApiClient.ParameterToString(maxVideoBitDepth));
@@ -1091,10 +941,6 @@ namespace Emby.ApiClient.Api
         /// <param name="audioChannels">Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="maxAudioChannels">Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)</param>
         /// <param name="_static">Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)</param>
-        /// <param name="profile">Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)</param>
-        /// <param name="level">Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)</param>
-        /// <param name="framerate">Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
-        /// <param name="maxFramerate">Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)</param>
         /// <param name="copyTimestamps">Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)</param>
         /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="width">Optional. The fixed horizontal resolution of the encoded video. (optional)</param>
@@ -1104,13 +950,12 @@ namespace Emby.ApiClient.Api
         /// <param name="videoBitRate">Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)</param>
         /// <param name="subtitleStreamIndex">Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)</param>
         /// <param name="subtitleMethod">Optional. Specify the subtitle delivery method. (optional)</param>
-        /// <param name="maxRefFrames">Optional. (optional)</param>
         /// <param name="maxVideoBitDepth">Optional. (optional)</param>
         /// <param name="videoCodec">Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)</param>
         /// <param name="audioStreamIndex">Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)</param>
         /// <param name="videoStreamIndex">Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadAudioByIdStreamByContainer (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, string profile, string level, float? framerate, float? maxFramerate, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxRefFrames, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
+        public async Task<RestResponse<Object>> HeadAudioByIdStreamByContainer (string deviceProfileId, string id, string deviceId, string container, string audioCodec, bool? enableAutoStreamCopy, int? audioSampleRate, int? audioBitRate, int? audioChannels, int? maxAudioChannels, bool? _static, bool? copyTimestamps, long? startTimeTicks, int? width, int? height, int? maxWidth, int? maxHeight, int? videoBitRate, int? subtitleStreamIndex, SubtitleDeliveryMethod subtitleMethod, int? maxVideoBitDepth, string videoCodec, int? audioStreamIndex, int? videoStreamIndex)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1181,26 +1026,6 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("Static", this.ApiClient.ParameterToString(_static));
             }
 
-            if (profile != null)
-            {
-                request.AddQueryParameter("Profile", this.ApiClient.ParameterToString(profile));
-            }
-
-            if (level != null)
-            {
-                request.AddQueryParameter("Level", this.ApiClient.ParameterToString(level));
-            }
-
-            if (framerate != null)
-            {
-                request.AddQueryParameter("Framerate", this.ApiClient.ParameterToString(framerate));
-            }
-
-            if (maxFramerate != null)
-            {
-                request.AddQueryParameter("MaxFramerate", this.ApiClient.ParameterToString(maxFramerate));
-            }
-
             if (copyTimestamps != null)
             {
                 request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
@@ -1244,11 +1069,6 @@ namespace Emby.ApiClient.Api
             if (subtitleMethod != null)
             {
                 request.AddQueryParameter("SubtitleMethod", this.ApiClient.ParameterToString(subtitleMethod));
-            }
-
-            if (maxRefFrames != null)
-            {
-                request.AddQueryParameter("MaxRefFrames", this.ApiClient.ParameterToString(maxRefFrames));
             }
 
             if (maxVideoBitDepth != null)

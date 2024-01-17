@@ -19,7 +19,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.8.0.69
+* @version 4.8.0.70
 */
 export default class MediaSourceInfo {
     /**
@@ -78,6 +78,9 @@ export default class MediaSourceInfo {
             }
             if (data.hasOwnProperty('IsRemote')) {
                 obj['IsRemote'] = ApiClient.convertToType(data['IsRemote'], 'Boolean');
+            }
+            if (data.hasOwnProperty('HasMixedProtocols')) {
+                obj['HasMixedProtocols'] = ApiClient.convertToType(data['HasMixedProtocols'], 'Boolean');
             }
             if (data.hasOwnProperty('RunTimeTicks')) {
                 obj['RunTimeTicks'] = ApiClient.convertToType(data['RunTimeTicks'], 'Number');
@@ -224,6 +227,10 @@ export default class MediaSourceInfo {
     * @member {Boolean} IsRemote
     */
     'IsRemote' = undefined;
+    /**
+    * @member {Boolean} HasMixedProtocols
+    */
+    'HasMixedProtocols' = undefined;
     /**
     * @member {Number} RunTimeTicks
     */

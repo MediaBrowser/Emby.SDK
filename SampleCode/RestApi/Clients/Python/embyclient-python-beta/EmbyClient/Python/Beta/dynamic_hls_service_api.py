@@ -159,10 +159,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -172,7 +168,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -209,10 +204,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -222,7 +213,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -232,7 +222,7 @@ class DynamicHlsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'profile', 'level', 'framerate', 'max_framerate', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_ref_frames', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
+        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -283,14 +273,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('MaxAudioChannels', params['max_audio_channels']))  # noqa: E501
         if 'static' in params:
             query_params.append(('Static', params['static']))  # noqa: E501
-        if 'profile' in params:
-            query_params.append(('Profile', params['profile']))  # noqa: E501
-        if 'level' in params:
-            query_params.append(('Level', params['level']))  # noqa: E501
-        if 'framerate' in params:
-            query_params.append(('Framerate', params['framerate']))  # noqa: E501
-        if 'max_framerate' in params:
-            query_params.append(('MaxFramerate', params['max_framerate']))  # noqa: E501
         if 'copy_timestamps' in params:
             query_params.append(('CopyTimestamps', params['copy_timestamps']))  # noqa: E501
         if 'start_time_ticks' in params:
@@ -309,8 +291,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('SubtitleStreamIndex', params['subtitle_stream_index']))  # noqa: E501
         if 'subtitle_method' in params:
             query_params.append(('SubtitleMethod', params['subtitle_method']))  # noqa: E501
-        if 'max_ref_frames' in params:
-            query_params.append(('MaxRefFrames', params['max_ref_frames']))  # noqa: E501
         if 'max_video_bit_depth' in params:
             query_params.append(('MaxVideoBitDepth', params['max_video_bit_depth']))  # noqa: E501
         if 'video_codec' in params:
@@ -366,10 +346,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -379,7 +355,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -416,10 +391,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -429,7 +400,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -439,7 +409,7 @@ class DynamicHlsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'profile', 'level', 'framerate', 'max_framerate', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_ref_frames', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
+        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -490,14 +460,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('MaxAudioChannels', params['max_audio_channels']))  # noqa: E501
         if 'static' in params:
             query_params.append(('Static', params['static']))  # noqa: E501
-        if 'profile' in params:
-            query_params.append(('Profile', params['profile']))  # noqa: E501
-        if 'level' in params:
-            query_params.append(('Level', params['level']))  # noqa: E501
-        if 'framerate' in params:
-            query_params.append(('Framerate', params['framerate']))  # noqa: E501
-        if 'max_framerate' in params:
-            query_params.append(('MaxFramerate', params['max_framerate']))  # noqa: E501
         if 'copy_timestamps' in params:
             query_params.append(('CopyTimestamps', params['copy_timestamps']))  # noqa: E501
         if 'start_time_ticks' in params:
@@ -516,8 +478,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('SubtitleStreamIndex', params['subtitle_stream_index']))  # noqa: E501
         if 'subtitle_method' in params:
             query_params.append(('SubtitleMethod', params['subtitle_method']))  # noqa: E501
-        if 'max_ref_frames' in params:
-            query_params.append(('MaxRefFrames', params['max_ref_frames']))  # noqa: E501
         if 'max_video_bit_depth' in params:
             query_params.append(('MaxVideoBitDepth', params['max_video_bit_depth']))  # noqa: E501
         if 'video_codec' in params:
@@ -573,10 +533,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -586,7 +542,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -623,10 +578,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -636,7 +587,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -646,7 +596,7 @@ class DynamicHlsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'profile', 'level', 'framerate', 'max_framerate', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_ref_frames', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
+        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -697,14 +647,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('MaxAudioChannels', params['max_audio_channels']))  # noqa: E501
         if 'static' in params:
             query_params.append(('Static', params['static']))  # noqa: E501
-        if 'profile' in params:
-            query_params.append(('Profile', params['profile']))  # noqa: E501
-        if 'level' in params:
-            query_params.append(('Level', params['level']))  # noqa: E501
-        if 'framerate' in params:
-            query_params.append(('Framerate', params['framerate']))  # noqa: E501
-        if 'max_framerate' in params:
-            query_params.append(('MaxFramerate', params['max_framerate']))  # noqa: E501
         if 'copy_timestamps' in params:
             query_params.append(('CopyTimestamps', params['copy_timestamps']))  # noqa: E501
         if 'start_time_ticks' in params:
@@ -723,8 +665,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('SubtitleStreamIndex', params['subtitle_stream_index']))  # noqa: E501
         if 'subtitle_method' in params:
             query_params.append(('SubtitleMethod', params['subtitle_method']))  # noqa: E501
-        if 'max_ref_frames' in params:
-            query_params.append(('MaxRefFrames', params['max_ref_frames']))  # noqa: E501
         if 'max_video_bit_depth' in params:
             query_params.append(('MaxVideoBitDepth', params['max_video_bit_depth']))  # noqa: E501
         if 'video_codec' in params:
@@ -895,10 +835,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -908,7 +844,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -945,10 +880,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -958,7 +889,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -968,7 +898,7 @@ class DynamicHlsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'profile', 'level', 'framerate', 'max_framerate', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_ref_frames', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
+        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1019,14 +949,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('MaxAudioChannels', params['max_audio_channels']))  # noqa: E501
         if 'static' in params:
             query_params.append(('Static', params['static']))  # noqa: E501
-        if 'profile' in params:
-            query_params.append(('Profile', params['profile']))  # noqa: E501
-        if 'level' in params:
-            query_params.append(('Level', params['level']))  # noqa: E501
-        if 'framerate' in params:
-            query_params.append(('Framerate', params['framerate']))  # noqa: E501
-        if 'max_framerate' in params:
-            query_params.append(('MaxFramerate', params['max_framerate']))  # noqa: E501
         if 'copy_timestamps' in params:
             query_params.append(('CopyTimestamps', params['copy_timestamps']))  # noqa: E501
         if 'start_time_ticks' in params:
@@ -1045,8 +967,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('SubtitleStreamIndex', params['subtitle_stream_index']))  # noqa: E501
         if 'subtitle_method' in params:
             query_params.append(('SubtitleMethod', params['subtitle_method']))  # noqa: E501
-        if 'max_ref_frames' in params:
-            query_params.append(('MaxRefFrames', params['max_ref_frames']))  # noqa: E501
         if 'max_video_bit_depth' in params:
             query_params.append(('MaxVideoBitDepth', params['max_video_bit_depth']))  # noqa: E501
         if 'video_codec' in params:
@@ -1209,10 +1129,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -1222,7 +1138,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1259,10 +1174,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -1272,7 +1183,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1282,7 +1192,7 @@ class DynamicHlsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'profile', 'level', 'framerate', 'max_framerate', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_ref_frames', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
+        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1333,14 +1243,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('MaxAudioChannels', params['max_audio_channels']))  # noqa: E501
         if 'static' in params:
             query_params.append(('Static', params['static']))  # noqa: E501
-        if 'profile' in params:
-            query_params.append(('Profile', params['profile']))  # noqa: E501
-        if 'level' in params:
-            query_params.append(('Level', params['level']))  # noqa: E501
-        if 'framerate' in params:
-            query_params.append(('Framerate', params['framerate']))  # noqa: E501
-        if 'max_framerate' in params:
-            query_params.append(('MaxFramerate', params['max_framerate']))  # noqa: E501
         if 'copy_timestamps' in params:
             query_params.append(('CopyTimestamps', params['copy_timestamps']))  # noqa: E501
         if 'start_time_ticks' in params:
@@ -1359,8 +1261,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('SubtitleStreamIndex', params['subtitle_stream_index']))  # noqa: E501
         if 'subtitle_method' in params:
             query_params.append(('SubtitleMethod', params['subtitle_method']))  # noqa: E501
-        if 'max_ref_frames' in params:
-            query_params.append(('MaxRefFrames', params['max_ref_frames']))  # noqa: E501
         if 'max_video_bit_depth' in params:
             query_params.append(('MaxVideoBitDepth', params['max_video_bit_depth']))  # noqa: E501
         if 'video_codec' in params:
@@ -1416,10 +1316,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -1429,7 +1325,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1466,10 +1361,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -1479,7 +1370,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1489,7 +1379,7 @@ class DynamicHlsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'profile', 'level', 'framerate', 'max_framerate', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_ref_frames', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
+        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1540,14 +1430,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('MaxAudioChannels', params['max_audio_channels']))  # noqa: E501
         if 'static' in params:
             query_params.append(('Static', params['static']))  # noqa: E501
-        if 'profile' in params:
-            query_params.append(('Profile', params['profile']))  # noqa: E501
-        if 'level' in params:
-            query_params.append(('Level', params['level']))  # noqa: E501
-        if 'framerate' in params:
-            query_params.append(('Framerate', params['framerate']))  # noqa: E501
-        if 'max_framerate' in params:
-            query_params.append(('MaxFramerate', params['max_framerate']))  # noqa: E501
         if 'copy_timestamps' in params:
             query_params.append(('CopyTimestamps', params['copy_timestamps']))  # noqa: E501
         if 'start_time_ticks' in params:
@@ -1566,8 +1448,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('SubtitleStreamIndex', params['subtitle_stream_index']))  # noqa: E501
         if 'subtitle_method' in params:
             query_params.append(('SubtitleMethod', params['subtitle_method']))  # noqa: E501
-        if 'max_ref_frames' in params:
-            query_params.append(('MaxRefFrames', params['max_ref_frames']))  # noqa: E501
         if 'max_video_bit_depth' in params:
             query_params.append(('MaxVideoBitDepth', params['max_video_bit_depth']))  # noqa: E501
         if 'video_codec' in params:
@@ -1845,10 +1725,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -1858,7 +1734,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1895,10 +1770,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -1908,7 +1779,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1918,7 +1788,7 @@ class DynamicHlsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'profile', 'level', 'framerate', 'max_framerate', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_ref_frames', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
+        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1969,14 +1839,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('MaxAudioChannels', params['max_audio_channels']))  # noqa: E501
         if 'static' in params:
             query_params.append(('Static', params['static']))  # noqa: E501
-        if 'profile' in params:
-            query_params.append(('Profile', params['profile']))  # noqa: E501
-        if 'level' in params:
-            query_params.append(('Level', params['level']))  # noqa: E501
-        if 'framerate' in params:
-            query_params.append(('Framerate', params['framerate']))  # noqa: E501
-        if 'max_framerate' in params:
-            query_params.append(('MaxFramerate', params['max_framerate']))  # noqa: E501
         if 'copy_timestamps' in params:
             query_params.append(('CopyTimestamps', params['copy_timestamps']))  # noqa: E501
         if 'start_time_ticks' in params:
@@ -1995,8 +1857,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('SubtitleStreamIndex', params['subtitle_stream_index']))  # noqa: E501
         if 'subtitle_method' in params:
             query_params.append(('SubtitleMethod', params['subtitle_method']))  # noqa: E501
-        if 'max_ref_frames' in params:
-            query_params.append(('MaxRefFrames', params['max_ref_frames']))  # noqa: E501
         if 'max_video_bit_depth' in params:
             query_params.append(('MaxVideoBitDepth', params['max_video_bit_depth']))  # noqa: E501
         if 'video_codec' in params:
@@ -2167,10 +2027,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -2180,7 +2036,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -2217,10 +2072,6 @@ class DynamicHlsServiceApi(object):
         :param int audio_channels: Optional. Specify a specific number of audio channels to encode to, e.g. 2
         :param int max_audio_channels: Optional. Specify a maximum number of audio channels to encode to, e.g. 2
         :param bool static: Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-        :param str profile: Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-        :param str level: Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-        :param float framerate: Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-        :param float max_framerate: Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
         :param bool copy_timestamps: Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
         :param int start_time_ticks: Optional. Specify a starting offset, in ticks. 1ms = 10000 ticks.
         :param int width: Optional. The fixed horizontal resolution of the encoded video.
@@ -2230,7 +2081,6 @@ class DynamicHlsServiceApi(object):
         :param int video_bit_rate: Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
         :param int subtitle_stream_index: Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
         :param SubtitleDeliveryMethod subtitle_method: Optional. Specify the subtitle delivery method.
-        :param int max_ref_frames: Optional.
         :param int max_video_bit_depth: Optional.
         :param str video_codec: Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url's extension. Options: h264, mpeg4, theora, vpx, wmv.
         :param int audio_stream_index: Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -2240,7 +2090,7 @@ class DynamicHlsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'profile', 'level', 'framerate', 'max_framerate', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_ref_frames', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
+        all_params = ['id', 'container', 'device_profile_id', 'device_id', 'audio_codec', 'enable_auto_stream_copy', 'audio_sample_rate', 'audio_bit_rate', 'audio_channels', 'max_audio_channels', 'static', 'copy_timestamps', 'start_time_ticks', 'width', 'height', 'max_width', 'max_height', 'video_bit_rate', 'subtitle_stream_index', 'subtitle_method', 'max_video_bit_depth', 'video_codec', 'audio_stream_index', 'video_stream_index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2291,14 +2141,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('MaxAudioChannels', params['max_audio_channels']))  # noqa: E501
         if 'static' in params:
             query_params.append(('Static', params['static']))  # noqa: E501
-        if 'profile' in params:
-            query_params.append(('Profile', params['profile']))  # noqa: E501
-        if 'level' in params:
-            query_params.append(('Level', params['level']))  # noqa: E501
-        if 'framerate' in params:
-            query_params.append(('Framerate', params['framerate']))  # noqa: E501
-        if 'max_framerate' in params:
-            query_params.append(('MaxFramerate', params['max_framerate']))  # noqa: E501
         if 'copy_timestamps' in params:
             query_params.append(('CopyTimestamps', params['copy_timestamps']))  # noqa: E501
         if 'start_time_ticks' in params:
@@ -2317,8 +2159,6 @@ class DynamicHlsServiceApi(object):
             query_params.append(('SubtitleStreamIndex', params['subtitle_stream_index']))  # noqa: E501
         if 'subtitle_method' in params:
             query_params.append(('SubtitleMethod', params['subtitle_method']))  # noqa: E501
-        if 'max_ref_frames' in params:
-            query_params.append(('MaxRefFrames', params['max_ref_frames']))  # noqa: E501
         if 'max_video_bit_depth' in params:
             query_params.append(('MaxVideoBitDepth', params['max_video_bit_depth']))  # noqa: E501
         if 'video_codec' in params:

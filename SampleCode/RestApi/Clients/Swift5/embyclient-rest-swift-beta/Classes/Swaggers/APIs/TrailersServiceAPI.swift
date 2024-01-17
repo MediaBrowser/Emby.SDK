@@ -170,6 +170,7 @@ open class TrailersServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -322,6 +323,7 @@ open class TrailersServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -692,6 +694,7 @@ open class TrailersServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -844,6 +847,7 @@ open class TrailersServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",

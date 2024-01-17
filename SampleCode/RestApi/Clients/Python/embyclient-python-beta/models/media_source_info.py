@@ -33,6 +33,7 @@ class MediaSourceInfo(object):
         'name': 'str',
         'sort_name': 'str',
         'is_remote': 'bool',
+        'has_mixed_protocols': 'bool',
         'run_time_ticks': 'int',
         'container_start_time_ticks': 'int',
         'supports_transcoding': 'bool',
@@ -79,6 +80,7 @@ class MediaSourceInfo(object):
         'name': 'Name',
         'sort_name': 'SortName',
         'is_remote': 'IsRemote',
+        'has_mixed_protocols': 'HasMixedProtocols',
         'run_time_ticks': 'RunTimeTicks',
         'container_start_time_ticks': 'ContainerStartTimeTicks',
         'supports_transcoding': 'SupportsTranscoding',
@@ -113,7 +115,7 @@ class MediaSourceInfo(object):
         'server_id': 'ServerId'
     }
 
-    def __init__(self, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, container=None, size=None, name=None, sort_name=None, is_remote=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
+    def __init__(self, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
         """MediaSourceInfo - a model defined in Swagger"""  # noqa: E501
         self._protocol = None
         self._id = None
@@ -126,6 +128,7 @@ class MediaSourceInfo(object):
         self._name = None
         self._sort_name = None
         self._is_remote = None
+        self._has_mixed_protocols = None
         self._run_time_ticks = None
         self._container_start_time_ticks = None
         self._supports_transcoding = None
@@ -181,6 +184,8 @@ class MediaSourceInfo(object):
             self.sort_name = sort_name
         if is_remote is not None:
             self.is_remote = is_remote
+        if has_mixed_protocols is not None:
+            self.has_mixed_protocols = has_mixed_protocols
         if run_time_ticks is not None:
             self.run_time_ticks = run_time_ticks
         if container_start_time_ticks is not None:
@@ -478,6 +483,27 @@ class MediaSourceInfo(object):
         """
 
         self._is_remote = is_remote
+
+    @property
+    def has_mixed_protocols(self):
+        """Gets the has_mixed_protocols of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The has_mixed_protocols of this MediaSourceInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_mixed_protocols
+
+    @has_mixed_protocols.setter
+    def has_mixed_protocols(self, has_mixed_protocols):
+        """Sets the has_mixed_protocols of this MediaSourceInfo.
+
+
+        :param has_mixed_protocols: The has_mixed_protocols of this MediaSourceInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_mixed_protocols = has_mixed_protocols
 
     @property
     def run_time_ticks(self):

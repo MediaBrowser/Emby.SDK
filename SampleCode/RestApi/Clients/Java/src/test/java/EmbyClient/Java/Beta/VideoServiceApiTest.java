@@ -46,10 +46,6 @@ public class VideoServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -59,12 +55,11 @@ public class VideoServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getVideosByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getVideosByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -89,10 +84,6 @@ public class VideoServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -102,12 +93,11 @@ public class VideoServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getVideosByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getVideosByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -132,10 +122,6 @@ public class VideoServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -145,12 +131,11 @@ public class VideoServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -176,10 +161,6 @@ public class VideoServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -189,12 +170,11 @@ public class VideoServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.headVideosByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.headVideosByIdByStreamfilename(streamFileName, id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -219,10 +199,6 @@ public class VideoServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -232,12 +208,11 @@ public class VideoServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.headVideosByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.headVideosByIdStream(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -262,10 +237,6 @@ public class VideoServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -275,12 +246,11 @@ public class VideoServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.headVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.headVideosByIdStreamByContainer(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }

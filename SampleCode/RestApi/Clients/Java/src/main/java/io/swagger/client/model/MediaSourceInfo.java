@@ -63,6 +63,9 @@ public class MediaSourceInfo {
   @SerializedName("IsRemote")
   private Boolean isRemote = null;
 
+  @SerializedName("HasMixedProtocols")
+  private Boolean hasMixedProtocols = null;
+
   @SerializedName("RunTimeTicks")
   private Long runTimeTicks = null;
 
@@ -355,6 +358,24 @@ public class MediaSourceInfo {
 
   public void setIsRemote(Boolean isRemote) {
     this.isRemote = isRemote;
+  }
+
+  public MediaSourceInfo hasMixedProtocols(Boolean hasMixedProtocols) {
+    this.hasMixedProtocols = hasMixedProtocols;
+    return this;
+  }
+
+   /**
+   * Get hasMixedProtocols
+   * @return hasMixedProtocols
+  **/
+  @Schema(description = "")
+  public Boolean isHasMixedProtocols() {
+    return hasMixedProtocols;
+  }
+
+  public void setHasMixedProtocols(Boolean hasMixedProtocols) {
+    this.hasMixedProtocols = hasMixedProtocols;
   }
 
   public MediaSourceInfo runTimeTicks(Long runTimeTicks) {
@@ -978,6 +999,7 @@ public class MediaSourceInfo {
         Objects.equals(this.name, mediaSourceInfo.name) &&
         Objects.equals(this.sortName, mediaSourceInfo.sortName) &&
         Objects.equals(this.isRemote, mediaSourceInfo.isRemote) &&
+        Objects.equals(this.hasMixedProtocols, mediaSourceInfo.hasMixedProtocols) &&
         Objects.equals(this.runTimeTicks, mediaSourceInfo.runTimeTicks) &&
         Objects.equals(this.containerStartTimeTicks, mediaSourceInfo.containerStartTimeTicks) &&
         Objects.equals(this.supportsTranscoding, mediaSourceInfo.supportsTranscoding) &&
@@ -1014,7 +1036,7 @@ public class MediaSourceInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, container, size, name, sortName, isRemote, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
+    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
   }
 
 
@@ -1034,6 +1056,7 @@ public class MediaSourceInfo {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    sortName: ").append(toIndentedString(sortName)).append("\n");
     sb.append("    isRemote: ").append(toIndentedString(isRemote)).append("\n");
+    sb.append("    hasMixedProtocols: ").append(toIndentedString(hasMixedProtocols)).append("\n");
     sb.append("    runTimeTicks: ").append(toIndentedString(runTimeTicks)).append("\n");
     sb.append("    containerStartTimeTicks: ").append(toIndentedString(containerStartTimeTicks)).append("\n");
     sb.append("    supportsTranscoding: ").append(toIndentedString(supportsTranscoding)).append("\n");

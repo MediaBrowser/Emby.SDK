@@ -63,10 +63,6 @@ public class DynamicHlsServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -76,12 +72,11 @@ public class DynamicHlsServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getAudioByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getAudioByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -106,10 +101,6 @@ public class DynamicHlsServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -119,12 +110,11 @@ public class DynamicHlsServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getAudioByIdMainM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getAudioByIdMainM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -149,10 +139,6 @@ public class DynamicHlsServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -162,12 +148,11 @@ public class DynamicHlsServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getAudioByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getAudioByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -210,10 +195,6 @@ public class DynamicHlsServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -223,12 +204,11 @@ public class DynamicHlsServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getVideosByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getVideosByIdLiveM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -270,10 +250,6 @@ public class DynamicHlsServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -283,12 +259,11 @@ public class DynamicHlsServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getVideosByIdMainM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getVideosByIdMainM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -313,10 +288,6 @@ public class DynamicHlsServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -326,12 +297,11 @@ public class DynamicHlsServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.getVideosByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.getVideosByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -391,10 +361,6 @@ public class DynamicHlsServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -404,12 +370,11 @@ public class DynamicHlsServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.headAudioByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.headAudioByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }
@@ -452,10 +417,6 @@ public class DynamicHlsServiceApiTest {
         Integer audioChannels = null;
         Integer maxAudioChannels = null;
         Boolean _static = null;
-        String profile = null;
-        String level = null;
-        Float framerate = null;
-        Float maxFramerate = null;
         Boolean copyTimestamps = null;
         Long startTimeTicks = null;
         Integer width = null;
@@ -465,12 +426,11 @@ public class DynamicHlsServiceApiTest {
         Integer videoBitRate = null;
         Integer subtitleStreamIndex = null;
         SubtitleDeliveryMethod subtitleMethod = null;
-        Integer maxRefFrames = null;
         Integer maxVideoBitDepth = null;
         String videoCodec = null;
         Integer audioStreamIndex = null;
         Integer videoStreamIndex = null;
-        api.headVideosByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, profile, level, framerate, maxFramerate, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxRefFrames, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
+        api.headVideosByIdMasterM3u8(id, container, deviceProfileId, deviceId, audioCodec, enableAutoStreamCopy, audioSampleRate, audioBitRate, audioChannels, maxAudioChannels, _static, copyTimestamps, startTimeTicks, width, height, maxWidth, maxHeight, videoBitRate, subtitleStreamIndex, subtitleMethod, maxVideoBitDepth, videoCodec, audioStreamIndex, videoStreamIndex);
 
         // TODO: test validations
     }

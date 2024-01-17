@@ -22,6 +22,7 @@ type MediaSourceInfo struct {
 	SortName string `json:"SortName,omitempty"`
 	// Differentiate internet url vs local network
 	IsRemote bool `json:"IsRemote,omitempty"`
+	HasMixedProtocols bool `json:"HasMixedProtocols,omitempty"`
 	RunTimeTicks int64 `json:"RunTimeTicks,omitempty"`
 	ContainerStartTimeTicks int64 `json:"ContainerStartTimeTicks,omitempty"`
 	SupportsTranscoding bool `json:"SupportsTranscoding,omitempty"`

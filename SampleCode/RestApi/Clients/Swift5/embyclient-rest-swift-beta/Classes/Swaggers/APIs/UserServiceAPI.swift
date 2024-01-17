@@ -1257,6 +1257,7 @@ open class UserServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -1409,6 +1410,7 @@ open class UserServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -2099,6 +2101,7 @@ open class UserServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
@@ -2251,6 +2254,7 @@ open class UserServiceAPI {
           "key" : "RequiredHttpHeaders"
         },
         "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",

@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.69"
+    "version": "4.8.0.70"
   },
   "servers": [
     {
@@ -43067,50 +43067,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -43212,18 +43168,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -43430,50 +43374,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -43575,18 +43475,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -43797,50 +43685,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -43942,18 +43786,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -44161,50 +43993,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -44306,18 +44094,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -44537,50 +44313,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -44682,18 +44414,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -44910,50 +44630,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -45055,18 +44731,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -45277,50 +44941,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -45422,18 +45042,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -45641,50 +45249,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -45786,18 +45350,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -46006,50 +45558,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -46151,18 +45659,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -46373,50 +45869,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -46518,18 +45970,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -60171,50 +59611,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -60316,18 +59712,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -60534,50 +59918,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -60679,18 +60019,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -60901,50 +60229,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -61046,18 +60330,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -61265,50 +60537,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -61410,18 +60638,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -61641,50 +60857,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -61786,18 +60958,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -62014,50 +61174,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -62159,18 +61275,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -62381,50 +61485,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -62526,18 +61586,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -62745,50 +61793,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -62890,18 +61894,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -63110,50 +62102,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -63255,18 +62203,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -63477,50 +62413,6 @@
             }
           },
           {
-            "name": "Profile",
-            "in": "query",
-            "description": "Optional. Specify a specific h264 profile, e.g. main, baseline, high.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Level",
-            "in": "query",
-            "description": "Optional. Specify a level for the h264 profile, e.g. 3, 3.1.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "Framerate",
-            "in": "query",
-            "description": "Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
-            "name": "MaxFramerate",
-            "in": "query",
-            "description": "Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "number",
-              "format": "float",
-              "nullable": true
-            }
-          },
-          {
             "name": "CopyTimestamps",
             "in": "query",
             "description": "Whether or not to copy timestamps when transcoding with an offset. Defaults to false.",
@@ -63622,18 +62514,6 @@
             "explode": false,
             "schema": {
               "$ref": "#/components/schemas/SubtitleDeliveryMethod"
-            }
-          },
-          {
-            "name": "MaxRefFrames",
-            "in": "query",
-            "description": "Optional.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
             }
           },
           {
@@ -80831,6 +79711,9 @@
           "IsRemote": {
             "type": "boolean",
             "description": "Differentiate internet url vs local network"
+          },
+          "HasMixedProtocols": {
+            "type": "boolean"
           },
           "RunTimeTicks": {
             "type": "integer",

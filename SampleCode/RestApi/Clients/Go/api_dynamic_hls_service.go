@@ -126,10 +126,6 @@ Requires authentication as user
      * @param "AudioChannels" (optional.Int32) -  Optional. Specify a specific number of audio channels to encode to, e.g. 2
      * @param "MaxAudioChannels" (optional.Int32) -  Optional. Specify a maximum number of audio channels to encode to, e.g. 2
      * @param "Static" (optional.Bool) -  Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-     * @param "Profile" (optional.String) -  Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-     * @param "Level" (optional.String) -  Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-     * @param "Framerate" (optional.Float32) -  Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-     * @param "MaxFramerate" (optional.Float32) -  Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
      * @param "CopyTimestamps" (optional.Bool) -  Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
      * @param "StartTimeTicks" (optional.Int64) -  Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "Width" (optional.Int32) -  Optional. The fixed horizontal resolution of the encoded video.
@@ -139,7 +135,6 @@ Requires authentication as user
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
      * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
-     * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
      * @param "AudioStreamIndex" (optional.Int32) -  Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -157,10 +152,6 @@ type DynamicHlsServiceApiGetAudioByIdLiveM3u8Opts struct {
     AudioChannels optional.Int32
     MaxAudioChannels optional.Int32
     Static optional.Bool
-    Profile optional.String
-    Level optional.String
-    Framerate optional.Float32
-    MaxFramerate optional.Float32
     CopyTimestamps optional.Bool
     StartTimeTicks optional.Int64
     Width optional.Int32
@@ -170,7 +161,6 @@ type DynamicHlsServiceApiGetAudioByIdLiveM3u8Opts struct {
     VideoBitRate optional.Int32
     SubtitleStreamIndex optional.Int32
     SubtitleMethod optional.Interface
-    MaxRefFrames optional.Int32
     MaxVideoBitDepth optional.Int32
     VideoCodec optional.String
     AudioStreamIndex optional.Int32
@@ -222,18 +212,6 @@ func (a *DynamicHlsServiceApiService) GetAudioByIdLiveM3u8(ctx context.Context, 
 	if localVarOptionals != nil && localVarOptionals.Static.IsSet() {
 		localVarQueryParams.Add("Static", parameterToString(localVarOptionals.Static.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.Profile.IsSet() {
-		localVarQueryParams.Add("Profile", parameterToString(localVarOptionals.Profile.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Level.IsSet() {
-		localVarQueryParams.Add("Level", parameterToString(localVarOptionals.Level.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Framerate.IsSet() {
-		localVarQueryParams.Add("Framerate", parameterToString(localVarOptionals.Framerate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxFramerate.IsSet() {
-		localVarQueryParams.Add("MaxFramerate", parameterToString(localVarOptionals.MaxFramerate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.CopyTimestamps.IsSet() {
 		localVarQueryParams.Add("CopyTimestamps", parameterToString(localVarOptionals.CopyTimestamps.Value(), ""))
 	}
@@ -260,9 +238,6 @@ func (a *DynamicHlsServiceApiService) GetAudioByIdLiveM3u8(ctx context.Context, 
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleMethod.IsSet() {
 		localVarQueryParams.Add("SubtitleMethod", parameterToString(localVarOptionals.SubtitleMethod.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxRefFrames.IsSet() {
-		localVarQueryParams.Add("MaxRefFrames", parameterToString(localVarOptionals.MaxRefFrames.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MaxVideoBitDepth.IsSet() {
 		localVarQueryParams.Add("MaxVideoBitDepth", parameterToString(localVarOptionals.MaxVideoBitDepth.Value(), ""))
@@ -349,10 +324,6 @@ Requires authentication as user
      * @param "AudioChannels" (optional.Int32) -  Optional. Specify a specific number of audio channels to encode to, e.g. 2
      * @param "MaxAudioChannels" (optional.Int32) -  Optional. Specify a maximum number of audio channels to encode to, e.g. 2
      * @param "Static" (optional.Bool) -  Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-     * @param "Profile" (optional.String) -  Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-     * @param "Level" (optional.String) -  Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-     * @param "Framerate" (optional.Float32) -  Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-     * @param "MaxFramerate" (optional.Float32) -  Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
      * @param "CopyTimestamps" (optional.Bool) -  Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
      * @param "StartTimeTicks" (optional.Int64) -  Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "Width" (optional.Int32) -  Optional. The fixed horizontal resolution of the encoded video.
@@ -362,7 +333,6 @@ Requires authentication as user
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
      * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
-     * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
      * @param "AudioStreamIndex" (optional.Int32) -  Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -380,10 +350,6 @@ type DynamicHlsServiceApiGetAudioByIdMainM3u8Opts struct {
     AudioChannels optional.Int32
     MaxAudioChannels optional.Int32
     Static optional.Bool
-    Profile optional.String
-    Level optional.String
-    Framerate optional.Float32
-    MaxFramerate optional.Float32
     CopyTimestamps optional.Bool
     StartTimeTicks optional.Int64
     Width optional.Int32
@@ -393,7 +359,6 @@ type DynamicHlsServiceApiGetAudioByIdMainM3u8Opts struct {
     VideoBitRate optional.Int32
     SubtitleStreamIndex optional.Int32
     SubtitleMethod optional.Interface
-    MaxRefFrames optional.Int32
     MaxVideoBitDepth optional.Int32
     VideoCodec optional.String
     AudioStreamIndex optional.Int32
@@ -445,18 +410,6 @@ func (a *DynamicHlsServiceApiService) GetAudioByIdMainM3u8(ctx context.Context, 
 	if localVarOptionals != nil && localVarOptionals.Static.IsSet() {
 		localVarQueryParams.Add("Static", parameterToString(localVarOptionals.Static.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.Profile.IsSet() {
-		localVarQueryParams.Add("Profile", parameterToString(localVarOptionals.Profile.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Level.IsSet() {
-		localVarQueryParams.Add("Level", parameterToString(localVarOptionals.Level.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Framerate.IsSet() {
-		localVarQueryParams.Add("Framerate", parameterToString(localVarOptionals.Framerate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxFramerate.IsSet() {
-		localVarQueryParams.Add("MaxFramerate", parameterToString(localVarOptionals.MaxFramerate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.CopyTimestamps.IsSet() {
 		localVarQueryParams.Add("CopyTimestamps", parameterToString(localVarOptionals.CopyTimestamps.Value(), ""))
 	}
@@ -483,9 +436,6 @@ func (a *DynamicHlsServiceApiService) GetAudioByIdMainM3u8(ctx context.Context, 
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleMethod.IsSet() {
 		localVarQueryParams.Add("SubtitleMethod", parameterToString(localVarOptionals.SubtitleMethod.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxRefFrames.IsSet() {
-		localVarQueryParams.Add("MaxRefFrames", parameterToString(localVarOptionals.MaxRefFrames.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MaxVideoBitDepth.IsSet() {
 		localVarQueryParams.Add("MaxVideoBitDepth", parameterToString(localVarOptionals.MaxVideoBitDepth.Value(), ""))
@@ -572,10 +522,6 @@ Requires authentication as user
      * @param "AudioChannels" (optional.Int32) -  Optional. Specify a specific number of audio channels to encode to, e.g. 2
      * @param "MaxAudioChannels" (optional.Int32) -  Optional. Specify a maximum number of audio channels to encode to, e.g. 2
      * @param "Static" (optional.Bool) -  Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-     * @param "Profile" (optional.String) -  Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-     * @param "Level" (optional.String) -  Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-     * @param "Framerate" (optional.Float32) -  Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-     * @param "MaxFramerate" (optional.Float32) -  Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
      * @param "CopyTimestamps" (optional.Bool) -  Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
      * @param "StartTimeTicks" (optional.Int64) -  Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "Width" (optional.Int32) -  Optional. The fixed horizontal resolution of the encoded video.
@@ -585,7 +531,6 @@ Requires authentication as user
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
      * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
-     * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
      * @param "AudioStreamIndex" (optional.Int32) -  Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -603,10 +548,6 @@ type DynamicHlsServiceApiGetAudioByIdMasterM3u8Opts struct {
     AudioChannels optional.Int32
     MaxAudioChannels optional.Int32
     Static optional.Bool
-    Profile optional.String
-    Level optional.String
-    Framerate optional.Float32
-    MaxFramerate optional.Float32
     CopyTimestamps optional.Bool
     StartTimeTicks optional.Int64
     Width optional.Int32
@@ -616,7 +557,6 @@ type DynamicHlsServiceApiGetAudioByIdMasterM3u8Opts struct {
     VideoBitRate optional.Int32
     SubtitleStreamIndex optional.Int32
     SubtitleMethod optional.Interface
-    MaxRefFrames optional.Int32
     MaxVideoBitDepth optional.Int32
     VideoCodec optional.String
     AudioStreamIndex optional.Int32
@@ -668,18 +608,6 @@ func (a *DynamicHlsServiceApiService) GetAudioByIdMasterM3u8(ctx context.Context
 	if localVarOptionals != nil && localVarOptionals.Static.IsSet() {
 		localVarQueryParams.Add("Static", parameterToString(localVarOptionals.Static.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.Profile.IsSet() {
-		localVarQueryParams.Add("Profile", parameterToString(localVarOptionals.Profile.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Level.IsSet() {
-		localVarQueryParams.Add("Level", parameterToString(localVarOptionals.Level.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Framerate.IsSet() {
-		localVarQueryParams.Add("Framerate", parameterToString(localVarOptionals.Framerate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxFramerate.IsSet() {
-		localVarQueryParams.Add("MaxFramerate", parameterToString(localVarOptionals.MaxFramerate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.CopyTimestamps.IsSet() {
 		localVarQueryParams.Add("CopyTimestamps", parameterToString(localVarOptionals.CopyTimestamps.Value(), ""))
 	}
@@ -706,9 +634,6 @@ func (a *DynamicHlsServiceApiService) GetAudioByIdMasterM3u8(ctx context.Context
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleMethod.IsSet() {
 		localVarQueryParams.Add("SubtitleMethod", parameterToString(localVarOptionals.SubtitleMethod.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxRefFrames.IsSet() {
-		localVarQueryParams.Add("MaxRefFrames", parameterToString(localVarOptionals.MaxRefFrames.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MaxVideoBitDepth.IsSet() {
 		localVarQueryParams.Add("MaxVideoBitDepth", parameterToString(localVarOptionals.MaxVideoBitDepth.Value(), ""))
@@ -882,10 +807,6 @@ Requires authentication as user
      * @param "AudioChannels" (optional.Int32) -  Optional. Specify a specific number of audio channels to encode to, e.g. 2
      * @param "MaxAudioChannels" (optional.Int32) -  Optional. Specify a maximum number of audio channels to encode to, e.g. 2
      * @param "Static" (optional.Bool) -  Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-     * @param "Profile" (optional.String) -  Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-     * @param "Level" (optional.String) -  Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-     * @param "Framerate" (optional.Float32) -  Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-     * @param "MaxFramerate" (optional.Float32) -  Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
      * @param "CopyTimestamps" (optional.Bool) -  Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
      * @param "StartTimeTicks" (optional.Int64) -  Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "Width" (optional.Int32) -  Optional. The fixed horizontal resolution of the encoded video.
@@ -895,7 +816,6 @@ Requires authentication as user
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
      * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
-     * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
      * @param "AudioStreamIndex" (optional.Int32) -  Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -913,10 +833,6 @@ type DynamicHlsServiceApiGetVideosByIdLiveM3u8Opts struct {
     AudioChannels optional.Int32
     MaxAudioChannels optional.Int32
     Static optional.Bool
-    Profile optional.String
-    Level optional.String
-    Framerate optional.Float32
-    MaxFramerate optional.Float32
     CopyTimestamps optional.Bool
     StartTimeTicks optional.Int64
     Width optional.Int32
@@ -926,7 +842,6 @@ type DynamicHlsServiceApiGetVideosByIdLiveM3u8Opts struct {
     VideoBitRate optional.Int32
     SubtitleStreamIndex optional.Int32
     SubtitleMethod optional.Interface
-    MaxRefFrames optional.Int32
     MaxVideoBitDepth optional.Int32
     VideoCodec optional.String
     AudioStreamIndex optional.Int32
@@ -978,18 +893,6 @@ func (a *DynamicHlsServiceApiService) GetVideosByIdLiveM3u8(ctx context.Context,
 	if localVarOptionals != nil && localVarOptionals.Static.IsSet() {
 		localVarQueryParams.Add("Static", parameterToString(localVarOptionals.Static.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.Profile.IsSet() {
-		localVarQueryParams.Add("Profile", parameterToString(localVarOptionals.Profile.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Level.IsSet() {
-		localVarQueryParams.Add("Level", parameterToString(localVarOptionals.Level.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Framerate.IsSet() {
-		localVarQueryParams.Add("Framerate", parameterToString(localVarOptionals.Framerate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxFramerate.IsSet() {
-		localVarQueryParams.Add("MaxFramerate", parameterToString(localVarOptionals.MaxFramerate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.CopyTimestamps.IsSet() {
 		localVarQueryParams.Add("CopyTimestamps", parameterToString(localVarOptionals.CopyTimestamps.Value(), ""))
 	}
@@ -1016,9 +919,6 @@ func (a *DynamicHlsServiceApiService) GetVideosByIdLiveM3u8(ctx context.Context,
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleMethod.IsSet() {
 		localVarQueryParams.Add("SubtitleMethod", parameterToString(localVarOptionals.SubtitleMethod.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxRefFrames.IsSet() {
-		localVarQueryParams.Add("MaxRefFrames", parameterToString(localVarOptionals.MaxRefFrames.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MaxVideoBitDepth.IsSet() {
 		localVarQueryParams.Add("MaxVideoBitDepth", parameterToString(localVarOptionals.MaxVideoBitDepth.Value(), ""))
@@ -1190,10 +1090,6 @@ Requires authentication as user
      * @param "AudioChannels" (optional.Int32) -  Optional. Specify a specific number of audio channels to encode to, e.g. 2
      * @param "MaxAudioChannels" (optional.Int32) -  Optional. Specify a maximum number of audio channels to encode to, e.g. 2
      * @param "Static" (optional.Bool) -  Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-     * @param "Profile" (optional.String) -  Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-     * @param "Level" (optional.String) -  Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-     * @param "Framerate" (optional.Float32) -  Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-     * @param "MaxFramerate" (optional.Float32) -  Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
      * @param "CopyTimestamps" (optional.Bool) -  Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
      * @param "StartTimeTicks" (optional.Int64) -  Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "Width" (optional.Int32) -  Optional. The fixed horizontal resolution of the encoded video.
@@ -1203,7 +1099,6 @@ Requires authentication as user
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
      * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
-     * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
      * @param "AudioStreamIndex" (optional.Int32) -  Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1221,10 +1116,6 @@ type DynamicHlsServiceApiGetVideosByIdMainM3u8Opts struct {
     AudioChannels optional.Int32
     MaxAudioChannels optional.Int32
     Static optional.Bool
-    Profile optional.String
-    Level optional.String
-    Framerate optional.Float32
-    MaxFramerate optional.Float32
     CopyTimestamps optional.Bool
     StartTimeTicks optional.Int64
     Width optional.Int32
@@ -1234,7 +1125,6 @@ type DynamicHlsServiceApiGetVideosByIdMainM3u8Opts struct {
     VideoBitRate optional.Int32
     SubtitleStreamIndex optional.Int32
     SubtitleMethod optional.Interface
-    MaxRefFrames optional.Int32
     MaxVideoBitDepth optional.Int32
     VideoCodec optional.String
     AudioStreamIndex optional.Int32
@@ -1286,18 +1176,6 @@ func (a *DynamicHlsServiceApiService) GetVideosByIdMainM3u8(ctx context.Context,
 	if localVarOptionals != nil && localVarOptionals.Static.IsSet() {
 		localVarQueryParams.Add("Static", parameterToString(localVarOptionals.Static.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.Profile.IsSet() {
-		localVarQueryParams.Add("Profile", parameterToString(localVarOptionals.Profile.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Level.IsSet() {
-		localVarQueryParams.Add("Level", parameterToString(localVarOptionals.Level.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Framerate.IsSet() {
-		localVarQueryParams.Add("Framerate", parameterToString(localVarOptionals.Framerate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxFramerate.IsSet() {
-		localVarQueryParams.Add("MaxFramerate", parameterToString(localVarOptionals.MaxFramerate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.CopyTimestamps.IsSet() {
 		localVarQueryParams.Add("CopyTimestamps", parameterToString(localVarOptionals.CopyTimestamps.Value(), ""))
 	}
@@ -1324,9 +1202,6 @@ func (a *DynamicHlsServiceApiService) GetVideosByIdMainM3u8(ctx context.Context,
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleMethod.IsSet() {
 		localVarQueryParams.Add("SubtitleMethod", parameterToString(localVarOptionals.SubtitleMethod.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxRefFrames.IsSet() {
-		localVarQueryParams.Add("MaxRefFrames", parameterToString(localVarOptionals.MaxRefFrames.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MaxVideoBitDepth.IsSet() {
 		localVarQueryParams.Add("MaxVideoBitDepth", parameterToString(localVarOptionals.MaxVideoBitDepth.Value(), ""))
@@ -1413,10 +1288,6 @@ Requires authentication as user
      * @param "AudioChannels" (optional.Int32) -  Optional. Specify a specific number of audio channels to encode to, e.g. 2
      * @param "MaxAudioChannels" (optional.Int32) -  Optional. Specify a maximum number of audio channels to encode to, e.g. 2
      * @param "Static" (optional.Bool) -  Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-     * @param "Profile" (optional.String) -  Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-     * @param "Level" (optional.String) -  Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-     * @param "Framerate" (optional.Float32) -  Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-     * @param "MaxFramerate" (optional.Float32) -  Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
      * @param "CopyTimestamps" (optional.Bool) -  Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
      * @param "StartTimeTicks" (optional.Int64) -  Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "Width" (optional.Int32) -  Optional. The fixed horizontal resolution of the encoded video.
@@ -1426,7 +1297,6 @@ Requires authentication as user
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
      * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
-     * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
      * @param "AudioStreamIndex" (optional.Int32) -  Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1444,10 +1314,6 @@ type DynamicHlsServiceApiGetVideosByIdMasterM3u8Opts struct {
     AudioChannels optional.Int32
     MaxAudioChannels optional.Int32
     Static optional.Bool
-    Profile optional.String
-    Level optional.String
-    Framerate optional.Float32
-    MaxFramerate optional.Float32
     CopyTimestamps optional.Bool
     StartTimeTicks optional.Int64
     Width optional.Int32
@@ -1457,7 +1323,6 @@ type DynamicHlsServiceApiGetVideosByIdMasterM3u8Opts struct {
     VideoBitRate optional.Int32
     SubtitleStreamIndex optional.Int32
     SubtitleMethod optional.Interface
-    MaxRefFrames optional.Int32
     MaxVideoBitDepth optional.Int32
     VideoCodec optional.String
     AudioStreamIndex optional.Int32
@@ -1509,18 +1374,6 @@ func (a *DynamicHlsServiceApiService) GetVideosByIdMasterM3u8(ctx context.Contex
 	if localVarOptionals != nil && localVarOptionals.Static.IsSet() {
 		localVarQueryParams.Add("Static", parameterToString(localVarOptionals.Static.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.Profile.IsSet() {
-		localVarQueryParams.Add("Profile", parameterToString(localVarOptionals.Profile.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Level.IsSet() {
-		localVarQueryParams.Add("Level", parameterToString(localVarOptionals.Level.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Framerate.IsSet() {
-		localVarQueryParams.Add("Framerate", parameterToString(localVarOptionals.Framerate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxFramerate.IsSet() {
-		localVarQueryParams.Add("MaxFramerate", parameterToString(localVarOptionals.MaxFramerate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.CopyTimestamps.IsSet() {
 		localVarQueryParams.Add("CopyTimestamps", parameterToString(localVarOptionals.CopyTimestamps.Value(), ""))
 	}
@@ -1547,9 +1400,6 @@ func (a *DynamicHlsServiceApiService) GetVideosByIdMasterM3u8(ctx context.Contex
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleMethod.IsSet() {
 		localVarQueryParams.Add("SubtitleMethod", parameterToString(localVarOptionals.SubtitleMethod.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxRefFrames.IsSet() {
-		localVarQueryParams.Add("MaxRefFrames", parameterToString(localVarOptionals.MaxRefFrames.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MaxVideoBitDepth.IsSet() {
 		localVarQueryParams.Add("MaxVideoBitDepth", parameterToString(localVarOptionals.MaxVideoBitDepth.Value(), ""))
@@ -1808,10 +1658,6 @@ Requires authentication as user
      * @param "AudioChannels" (optional.Int32) -  Optional. Specify a specific number of audio channels to encode to, e.g. 2
      * @param "MaxAudioChannels" (optional.Int32) -  Optional. Specify a maximum number of audio channels to encode to, e.g. 2
      * @param "Static" (optional.Bool) -  Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-     * @param "Profile" (optional.String) -  Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-     * @param "Level" (optional.String) -  Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-     * @param "Framerate" (optional.Float32) -  Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-     * @param "MaxFramerate" (optional.Float32) -  Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
      * @param "CopyTimestamps" (optional.Bool) -  Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
      * @param "StartTimeTicks" (optional.Int64) -  Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "Width" (optional.Int32) -  Optional. The fixed horizontal resolution of the encoded video.
@@ -1821,7 +1667,6 @@ Requires authentication as user
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
      * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
-     * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
      * @param "AudioStreamIndex" (optional.Int32) -  Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -1839,10 +1684,6 @@ type DynamicHlsServiceApiHeadAudioByIdMasterM3u8Opts struct {
     AudioChannels optional.Int32
     MaxAudioChannels optional.Int32
     Static optional.Bool
-    Profile optional.String
-    Level optional.String
-    Framerate optional.Float32
-    MaxFramerate optional.Float32
     CopyTimestamps optional.Bool
     StartTimeTicks optional.Int64
     Width optional.Int32
@@ -1852,7 +1693,6 @@ type DynamicHlsServiceApiHeadAudioByIdMasterM3u8Opts struct {
     VideoBitRate optional.Int32
     SubtitleStreamIndex optional.Int32
     SubtitleMethod optional.Interface
-    MaxRefFrames optional.Int32
     MaxVideoBitDepth optional.Int32
     VideoCodec optional.String
     AudioStreamIndex optional.Int32
@@ -1904,18 +1744,6 @@ func (a *DynamicHlsServiceApiService) HeadAudioByIdMasterM3u8(ctx context.Contex
 	if localVarOptionals != nil && localVarOptionals.Static.IsSet() {
 		localVarQueryParams.Add("Static", parameterToString(localVarOptionals.Static.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.Profile.IsSet() {
-		localVarQueryParams.Add("Profile", parameterToString(localVarOptionals.Profile.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Level.IsSet() {
-		localVarQueryParams.Add("Level", parameterToString(localVarOptionals.Level.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Framerate.IsSet() {
-		localVarQueryParams.Add("Framerate", parameterToString(localVarOptionals.Framerate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxFramerate.IsSet() {
-		localVarQueryParams.Add("MaxFramerate", parameterToString(localVarOptionals.MaxFramerate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.CopyTimestamps.IsSet() {
 		localVarQueryParams.Add("CopyTimestamps", parameterToString(localVarOptionals.CopyTimestamps.Value(), ""))
 	}
@@ -1942,9 +1770,6 @@ func (a *DynamicHlsServiceApiService) HeadAudioByIdMasterM3u8(ctx context.Contex
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleMethod.IsSet() {
 		localVarQueryParams.Add("SubtitleMethod", parameterToString(localVarOptionals.SubtitleMethod.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxRefFrames.IsSet() {
-		localVarQueryParams.Add("MaxRefFrames", parameterToString(localVarOptionals.MaxRefFrames.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MaxVideoBitDepth.IsSet() {
 		localVarQueryParams.Add("MaxVideoBitDepth", parameterToString(localVarOptionals.MaxVideoBitDepth.Value(), ""))
@@ -2118,10 +1943,6 @@ Requires authentication as user
      * @param "AudioChannels" (optional.Int32) -  Optional. Specify a specific number of audio channels to encode to, e.g. 2
      * @param "MaxAudioChannels" (optional.Int32) -  Optional. Specify a maximum number of audio channels to encode to, e.g. 2
      * @param "Static" (optional.Bool) -  Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false
-     * @param "Profile" (optional.String) -  Optional. Specify a specific h264 profile, e.g. main, baseline, high.
-     * @param "Level" (optional.String) -  Optional. Specify a level for the h264 profile, e.g. 3, 3.1.
-     * @param "Framerate" (optional.Float32) -  Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
-     * @param "MaxFramerate" (optional.Float32) -  Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.
      * @param "CopyTimestamps" (optional.Bool) -  Whether or not to copy timestamps when transcoding with an offset. Defaults to false.
      * @param "StartTimeTicks" (optional.Int64) -  Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks.
      * @param "Width" (optional.Int32) -  Optional. The fixed horizontal resolution of the encoded video.
@@ -2131,7 +1952,6 @@ Requires authentication as user
      * @param "VideoBitRate" (optional.Int32) -  Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.
      * @param "SubtitleStreamIndex" (optional.Int32) -  Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.
      * @param "SubtitleMethod" (optional.Interface of SubtitleDeliveryMethod) -  Optional. Specify the subtitle delivery method.
-     * @param "MaxRefFrames" (optional.Int32) -  Optional.
      * @param "MaxVideoBitDepth" (optional.Int32) -  Optional.
      * @param "VideoCodec" (optional.String) -  Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv.
      * @param "AudioStreamIndex" (optional.Int32) -  Optional. The index of the audio stream to use. If omitted the first audio stream will be used.
@@ -2149,10 +1969,6 @@ type DynamicHlsServiceApiHeadVideosByIdMasterM3u8Opts struct {
     AudioChannels optional.Int32
     MaxAudioChannels optional.Int32
     Static optional.Bool
-    Profile optional.String
-    Level optional.String
-    Framerate optional.Float32
-    MaxFramerate optional.Float32
     CopyTimestamps optional.Bool
     StartTimeTicks optional.Int64
     Width optional.Int32
@@ -2162,7 +1978,6 @@ type DynamicHlsServiceApiHeadVideosByIdMasterM3u8Opts struct {
     VideoBitRate optional.Int32
     SubtitleStreamIndex optional.Int32
     SubtitleMethod optional.Interface
-    MaxRefFrames optional.Int32
     MaxVideoBitDepth optional.Int32
     VideoCodec optional.String
     AudioStreamIndex optional.Int32
@@ -2214,18 +2029,6 @@ func (a *DynamicHlsServiceApiService) HeadVideosByIdMasterM3u8(ctx context.Conte
 	if localVarOptionals != nil && localVarOptionals.Static.IsSet() {
 		localVarQueryParams.Add("Static", parameterToString(localVarOptionals.Static.Value(), ""))
 	}
-	if localVarOptionals != nil && localVarOptionals.Profile.IsSet() {
-		localVarQueryParams.Add("Profile", parameterToString(localVarOptionals.Profile.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Level.IsSet() {
-		localVarQueryParams.Add("Level", parameterToString(localVarOptionals.Level.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Framerate.IsSet() {
-		localVarQueryParams.Add("Framerate", parameterToString(localVarOptionals.Framerate.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxFramerate.IsSet() {
-		localVarQueryParams.Add("MaxFramerate", parameterToString(localVarOptionals.MaxFramerate.Value(), ""))
-	}
 	if localVarOptionals != nil && localVarOptionals.CopyTimestamps.IsSet() {
 		localVarQueryParams.Add("CopyTimestamps", parameterToString(localVarOptionals.CopyTimestamps.Value(), ""))
 	}
@@ -2252,9 +2055,6 @@ func (a *DynamicHlsServiceApiService) HeadVideosByIdMasterM3u8(ctx context.Conte
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleMethod.IsSet() {
 		localVarQueryParams.Add("SubtitleMethod", parameterToString(localVarOptionals.SubtitleMethod.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.MaxRefFrames.IsSet() {
-		localVarQueryParams.Add("MaxRefFrames", parameterToString(localVarOptionals.MaxRefFrames.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MaxVideoBitDepth.IsSet() {
 		localVarQueryParams.Add("MaxVideoBitDepth", parameterToString(localVarOptionals.MaxVideoBitDepth.Value(), ""))

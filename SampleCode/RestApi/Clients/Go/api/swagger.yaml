@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.69
+  version: 4.8.0.70
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -35350,46 +35350,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -35479,16 +35439,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -35660,46 +35610,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -35789,16 +35699,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -35972,46 +35872,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -36101,16 +35961,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -36282,46 +36132,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -36411,16 +36221,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -36601,46 +36401,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -36730,16 +36490,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -36918,46 +36668,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -37047,16 +36757,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -37230,46 +36930,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -37359,16 +37019,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -37540,46 +37190,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -37669,16 +37279,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -37850,46 +37450,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -37979,16 +37539,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -38162,46 +37712,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -38291,16 +37801,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -48289,46 +47789,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -48418,16 +47878,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -48599,46 +48049,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -48728,16 +48138,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -48911,46 +48311,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -49040,16 +48400,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -49221,46 +48571,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -49350,16 +48660,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -49540,46 +48840,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -49669,16 +48929,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -49857,46 +49107,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -49986,16 +49196,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -50169,46 +49369,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -50298,16 +49458,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -50479,46 +49629,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -50608,16 +49718,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -50789,46 +49889,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -50918,16 +49978,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -51101,46 +50151,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Profile
-        in: query
-        description: "Optional. Specify a specific h264 profile, e.g. main, baseline,\
-          \ high."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Level
-        in: query
-        description: "Optional. Specify a level for the h264 profile, e.g. 3, 3.1."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: string
-      - name: Framerate
-        in: query
-        description: "Optional. A specific video framerate to encode to, e.g. 23.976.\
-          \ Generally this should be omitted unless the device has specific requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
-      - name: MaxFramerate
-        in: query
-        description: "Optional. A specific maximum video framerate to encode to, e.g.\
-          \ 23.976. Generally this should be omitted unless the device has specific\
-          \ requirements."
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: number
-          format: float
-          nullable: true
       - name: CopyTimestamps
         in: query
         description: Whether or not to copy timestamps when transcoding with an offset.
@@ -51230,16 +50240,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/SubtitleDeliveryMethod'
-      - name: MaxRefFrames
-        in: query
-        description: Optional.
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
-          nullable: true
       - name: MaxVideoBitDepth
         in: query
         description: Optional.
@@ -63406,6 +62406,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -63560,6 +62561,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -63947,6 +62949,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -64101,6 +63104,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -65036,6 +64040,7 @@ components:
           RequiredHttpHeaders:
             key: RequiredHttpHeaders
           RunTimeTicks: 5
+          HasMixedProtocols: true
           MediaStreams:
           - VideoRange: VideoRange
             ColorSpace: ColorSpace
@@ -65190,6 +64195,7 @@ components:
           RequiredHttpHeaders:
             key: RequiredHttpHeaders
           RunTimeTicks: 5
+          HasMixedProtocols: true
           MediaStreams:
           - VideoRange: VideoRange
             ColorSpace: ColorSpace
@@ -65603,6 +64609,8 @@ components:
         IsRemote:
           type: boolean
           description: Differentiate internet url vs local network
+        HasMixedProtocols:
+          type: boolean
         RunTimeTicks:
           type: integer
           format: int64
@@ -65702,6 +64710,7 @@ components:
         RequiredHttpHeaders:
           key: RequiredHttpHeaders
         RunTimeTicks: 5
+        HasMixedProtocols: true
         MediaStreams:
         - VideoRange: VideoRange
           ColorSpace: ColorSpace
@@ -67194,6 +66203,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -67348,6 +66358,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -70322,6 +69333,7 @@ components:
           RequiredHttpHeaders:
             key: RequiredHttpHeaders
           RunTimeTicks: 5
+          HasMixedProtocols: true
           MediaStreams:
           - VideoRange: VideoRange
             ColorSpace: ColorSpace
@@ -70709,6 +69721,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -70863,6 +69876,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -71254,6 +70268,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -71408,6 +70423,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -71809,6 +70825,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -71963,6 +70980,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -72480,6 +71498,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -72634,6 +71653,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -73049,6 +72069,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -73203,6 +72224,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -73702,6 +72724,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -73856,6 +72879,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -74815,6 +73839,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -74969,6 +73994,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -75356,6 +74382,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -75510,6 +74537,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -76285,6 +75313,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -76465,6 +75494,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -76690,6 +75720,7 @@ components:
           RequiredHttpHeaders:
             key: RequiredHttpHeaders
           RunTimeTicks: 5
+          HasMixedProtocols: true
           MediaStreams:
           - VideoRange: VideoRange
             ColorSpace: ColorSpace
@@ -76952,6 +75983,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -77132,6 +76164,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -79169,6 +78202,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -79323,6 +78357,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -81764,6 +80799,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -81918,6 +80954,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -82305,6 +81342,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -82459,6 +81497,7 @@ components:
               RequiredHttpHeaders:
                 key: RequiredHttpHeaders
               RunTimeTicks: 5
+              HasMixedProtocols: true
               MediaStreams:
               - VideoRange: VideoRange
                 ColorSpace: ColorSpace
@@ -82868,6 +81907,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -83022,6 +82062,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -83409,6 +82450,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -83563,6 +82605,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -84114,6 +83157,7 @@ components:
           RequiredHttpHeaders:
             key: RequiredHttpHeaders
           RunTimeTicks: 5
+          HasMixedProtocols: true
           MediaStreams:
           - VideoRange: VideoRange
             ColorSpace: ColorSpace
@@ -84268,6 +83312,7 @@ components:
           RequiredHttpHeaders:
             key: RequiredHttpHeaders
           RunTimeTicks: 5
+          HasMixedProtocols: true
           MediaStreams:
           - VideoRange: VideoRange
             ColorSpace: ColorSpace
@@ -85414,6 +84459,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace
@@ -85568,6 +84614,7 @@ components:
             RequiredHttpHeaders:
               key: RequiredHttpHeaders
             RunTimeTicks: 5
+            HasMixedProtocols: true
             MediaStreams:
             - VideoRange: VideoRange
               ColorSpace: ColorSpace

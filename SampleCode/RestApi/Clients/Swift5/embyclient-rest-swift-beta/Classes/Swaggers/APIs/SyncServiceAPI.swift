@@ -213,6 +213,7 @@ open class SyncServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -365,6 +366,7 @@ open class SyncServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -757,6 +759,7 @@ open class SyncServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -909,6 +912,7 @@ open class SyncServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1322,6 +1326,7 @@ open class SyncServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1503,6 +1508,7 @@ open class SyncServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -2539,6 +2545,7 @@ open class SyncServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -2720,6 +2727,7 @@ open class SyncServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",

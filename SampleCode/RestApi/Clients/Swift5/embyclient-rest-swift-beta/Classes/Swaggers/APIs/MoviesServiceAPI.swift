@@ -83,6 +83,7 @@ open class MoviesServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -235,6 +236,7 @@ open class MoviesServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -605,6 +607,7 @@ open class MoviesServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -757,6 +760,7 @@ open class MoviesServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1132,6 +1136,7 @@ open class MoviesServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1284,6 +1289,7 @@ open class MoviesServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1654,6 +1660,7 @@ open class MoviesServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
@@ -1806,6 +1813,7 @@ open class MoviesServiceAPI {
         "key" : "RequiredHttpHeaders"
       },
       "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",

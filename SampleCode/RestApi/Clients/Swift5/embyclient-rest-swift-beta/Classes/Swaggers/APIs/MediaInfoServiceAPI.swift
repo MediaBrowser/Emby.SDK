@@ -42,6 +42,7 @@ open class MediaInfoServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -194,6 +195,7 @@ open class MediaInfoServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -440,6 +442,7 @@ open class MediaInfoServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -592,6 +595,7 @@ open class MediaInfoServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
@@ -880,6 +884,7 @@ open class MediaInfoServiceAPI {
       "key" : "RequiredHttpHeaders"
     },
     "RunTimeTicks" : 5,
+    "HasMixedProtocols" : true,
     "MediaStreams" : [ {
       "VideoRange" : "VideoRange",
       "ColorSpace" : "ColorSpace",
