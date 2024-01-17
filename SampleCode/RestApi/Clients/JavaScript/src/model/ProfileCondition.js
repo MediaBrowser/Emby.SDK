@@ -16,7 +16,7 @@ import ProfileConditionValue from './ProfileConditionValue';
 /**
 * The ProfileCondition model module.
 * @module model/ProfileCondition
-* @version 4.8.0.70
+* @version 4.8.0.71
 */
 export default class ProfileCondition {
     /**

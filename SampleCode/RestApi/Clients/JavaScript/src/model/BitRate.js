@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The BitRate model module.
 * @module model/BitRate
-* @version 4.8.0.70
+* @version 4.8.0.71
 */
 export default class BitRate {
     /**

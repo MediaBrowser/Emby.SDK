@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ApiNameIdDescriptionPair model module.
 * @module model/ApiNameIdDescriptionPair
-* @version 4.8.0.70
+* @version 4.8.0.71
 */
 export default class ApiNameIdDescriptionPair {
     /**

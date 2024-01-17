@@ -17,7 +17,7 @@ import TaskTriggerInfo from './TaskTriggerInfo';
 /**
 * The TaskInfo model module.
 * @module model/TaskInfo
-* @version 4.8.0.70
+* @version 4.8.0.71
 */
 export default class TaskInfo {
     /**

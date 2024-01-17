@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LibraryDeleteInfo model module.
 * @module model/LibraryDeleteInfo
-* @version 4.8.0.70
+* @version 4.8.0.71
 */
 export default class LibraryDeleteInfo {
     /**
