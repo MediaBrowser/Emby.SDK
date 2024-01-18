@@ -32,6 +32,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="encoderPath">encoderPath.</param>
         /// <param name="encoderProtocol">encoderProtocol.</param>
         /// <param name="type">type.</param>
+        /// <param name="probePath">probePath.</param>
+        /// <param name="probeProtocol">probeProtocol.</param>
         /// <param name="container">container.</param>
         /// <param name="size">size.</param>
         /// <param name="name">name.</param>
@@ -70,7 +72,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="defaultSubtitleStreamIndex">defaultSubtitleStreamIndex.</param>
         /// <param name="itemId">Used only by our Windows app. Not used by Emby Server..</param>
         /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
-        public MediaSourceInfo(MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
+        public MediaSourceInfo(MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string probePath = default(string), MediaProtocol probeProtocol = default(MediaProtocol), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
         {
             this.Protocol = protocol;
             this.Id = id;
@@ -78,6 +80,8 @@ namespace EmbyClient.Dotnet.Model
             this.EncoderPath = encoderPath;
             this.EncoderProtocol = encoderProtocol;
             this.Type = type;
+            this.ProbePath = probePath;
+            this.ProbeProtocol = probeProtocol;
             this.Container = container;
             this.Size = size;
             this.Name = name;
@@ -153,6 +157,18 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="Type", EmitDefaultValue=false)]
         public MediaSourceType Type { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ProbePath
+        /// </summary>
+        [DataMember(Name="ProbePath", EmitDefaultValue=false)]
+        public string ProbePath { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ProbeProtocol
+        /// </summary>
+        [DataMember(Name="ProbeProtocol", EmitDefaultValue=false)]
+        public MediaProtocol ProbeProtocol { get; set; }
 
         /// <summary>
         /// Gets or Sets Container
@@ -399,6 +415,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  EncoderPath: ").Append(EncoderPath).Append("\n");
             sb.Append("  EncoderProtocol: ").Append(EncoderProtocol).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ProbePath: ").Append(ProbePath).Append("\n");
+            sb.Append("  ProbeProtocol: ").Append(ProbeProtocol).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -500,6 +518,16 @@ namespace EmbyClient.Dotnet.Model
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
+                ) && 
+                (
+                    this.ProbePath == input.ProbePath ||
+                    (this.ProbePath != null &&
+                    this.ProbePath.Equals(input.ProbePath))
+                ) && 
+                (
+                    this.ProbeProtocol == input.ProbeProtocol ||
+                    (this.ProbeProtocol != null &&
+                    this.ProbeProtocol.Equals(input.ProbeProtocol))
                 ) && 
                 (
                     this.Container == input.Container ||
@@ -717,6 +745,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.EncoderProtocol.GetHashCode();
                 if (this.Type != null)
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
+                if (this.ProbePath != null)
+                    hashCode = hashCode * 59 + this.ProbePath.GetHashCode();
+                if (this.ProbeProtocol != null)
+                    hashCode = hashCode * 59 + this.ProbeProtocol.GetHashCode();
                 if (this.Container != null)
                     hashCode = hashCode * 59 + this.Container.GetHashCode();
                 if (this.Size != null)

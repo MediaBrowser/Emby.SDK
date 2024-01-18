@@ -57021,6 +57021,12 @@
         "Type": {
           "$ref": "#/definitions/MediaSourceType"
         },
+        "ProbePath": {
+          "type": "string"
+        },
+        "ProbeProtocol": {
+          "$ref": "#/definitions/MediaProtocol"
+        },
         "Container": {
           "type": "string"
         },

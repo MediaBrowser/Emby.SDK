@@ -10781,6 +10781,8 @@
   "MediaBrowser.Model.Dto.MediaSourceInfo.Name": "MediaBrowser.Model.Dto.MediaSourceInfo.yml",
   "MediaBrowser.Model.Dto.MediaSourceInfo.OpenToken": "MediaBrowser.Model.Dto.MediaSourceInfo.yml",
   "MediaBrowser.Model.Dto.MediaSourceInfo.Path": "MediaBrowser.Model.Dto.MediaSourceInfo.yml",
+  "MediaBrowser.Model.Dto.MediaSourceInfo.ProbePath": "MediaBrowser.Model.Dto.MediaSourceInfo.yml",
+  "MediaBrowser.Model.Dto.MediaSourceInfo.ProbeProtocol": "MediaBrowser.Model.Dto.MediaSourceInfo.yml",
   "MediaBrowser.Model.Dto.MediaSourceInfo.Protocol": "MediaBrowser.Model.Dto.MediaSourceInfo.yml",
   "MediaBrowser.Model.Dto.MediaSourceInfo.ReadAtNativeFramerate": "MediaBrowser.Model.Dto.MediaSourceInfo.yml",
   "MediaBrowser.Model.Dto.MediaSourceInfo.RequiredHttpHeaders": "MediaBrowser.Model.Dto.MediaSourceInfo.yml",

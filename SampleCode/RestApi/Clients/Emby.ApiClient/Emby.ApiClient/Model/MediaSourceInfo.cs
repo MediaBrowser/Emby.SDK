@@ -63,6 +63,18 @@ namespace Emby.ApiClient.Model
         public MediaSourceType Type { get; set; }
 
         /// <summary>
+        /// Gets or Sets ProbePath
+        /// </summary>
+        /// <value>The ProbePath.</value>
+        public string ProbePath { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ProbeProtocol
+        /// </summary>
+        /// <value>The ProbeProtocol.</value>
+        public MediaProtocol ProbeProtocol { get; set; }
+
+        /// <summary>
         /// Gets or Sets Container
         /// </summary>
         /// <value>The Container.</value>
@@ -304,6 +316,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  EncoderPath: ").Append(EncoderPath).Append("\n");
             sb.Append("  EncoderProtocol: ").Append(EncoderProtocol).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ProbePath: ").Append(ProbePath).Append("\n");
+            sb.Append("  ProbeProtocol: ").Append(ProbeProtocol).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -396,6 +410,16 @@ namespace Emby.ApiClient.Model
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
+                ) && 
+                (
+                    this.ProbePath == input.ProbePath ||
+                    (this.ProbePath != null &&
+                    this.ProbePath.Equals(input.ProbePath))
+                ) && 
+                (
+                    this.ProbeProtocol == input.ProbeProtocol ||
+                    (this.ProbeProtocol != null &&
+                    this.ProbeProtocol.Equals(input.ProbeProtocol))
                 ) && 
                 (
                     this.Container == input.Container ||
@@ -613,6 +637,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.EncoderProtocol.GetHashCode();
                 if (this.Type != null)
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
+                if (this.ProbePath != null)
+                    hashCode = hashCode * 59 + this.ProbePath.GetHashCode();
+                if (this.ProbeProtocol != null)
+                    hashCode = hashCode * 59 + this.ProbeProtocol.GetHashCode();
                 if (this.Container != null)
                     hashCode = hashCode * 59 + this.Container.GetHashCode();
                 if (this.Size != null)

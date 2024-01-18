@@ -16,6 +16,8 @@ type MediaSourceInfo struct {
 	EncoderPath string `json:"EncoderPath,omitempty"`
 	EncoderProtocol *MediaProtocol `json:"EncoderProtocol,omitempty"`
 	Type_ *MediaSourceType `json:"Type,omitempty"`
+	ProbePath string `json:"ProbePath,omitempty"`
+	ProbeProtocol *MediaProtocol `json:"ProbeProtocol,omitempty"`
 	Container string `json:"Container,omitempty"`
 	Size int64 `json:"Size,omitempty"`
 	Name string `json:"Name,omitempty"`

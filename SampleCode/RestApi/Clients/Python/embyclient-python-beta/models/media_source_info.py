@@ -28,6 +28,8 @@ class MediaSourceInfo(object):
         'encoder_path': 'str',
         'encoder_protocol': 'MediaProtocol',
         'type': 'MediaSourceType',
+        'probe_path': 'str',
+        'probe_protocol': 'MediaProtocol',
         'container': 'str',
         'size': 'int',
         'name': 'str',
@@ -75,6 +77,8 @@ class MediaSourceInfo(object):
         'encoder_path': 'EncoderPath',
         'encoder_protocol': 'EncoderProtocol',
         'type': 'Type',
+        'probe_path': 'ProbePath',
+        'probe_protocol': 'ProbeProtocol',
         'container': 'Container',
         'size': 'Size',
         'name': 'Name',
@@ -115,7 +119,7 @@ class MediaSourceInfo(object):
         'server_id': 'ServerId'
     }
 
-    def __init__(self, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
+    def __init__(self, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, probe_path=None, probe_protocol=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
         """MediaSourceInfo - a model defined in Swagger"""  # noqa: E501
         self._protocol = None
         self._id = None
@@ -123,6 +127,8 @@ class MediaSourceInfo(object):
         self._encoder_path = None
         self._encoder_protocol = None
         self._type = None
+        self._probe_path = None
+        self._probe_protocol = None
         self._container = None
         self._size = None
         self._name = None
@@ -174,6 +180,10 @@ class MediaSourceInfo(object):
             self.encoder_protocol = encoder_protocol
         if type is not None:
             self.type = type
+        if probe_path is not None:
+            self.probe_path = probe_path
+        if probe_protocol is not None:
+            self.probe_protocol = probe_protocol
         if container is not None:
             self.container = container
         if size is not None:
@@ -376,6 +386,48 @@ class MediaSourceInfo(object):
         """
 
         self._type = type
+
+    @property
+    def probe_path(self):
+        """Gets the probe_path of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The probe_path of this MediaSourceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._probe_path
+
+    @probe_path.setter
+    def probe_path(self, probe_path):
+        """Sets the probe_path of this MediaSourceInfo.
+
+
+        :param probe_path: The probe_path of this MediaSourceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._probe_path = probe_path
+
+    @property
+    def probe_protocol(self):
+        """Gets the probe_protocol of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The probe_protocol of this MediaSourceInfo.  # noqa: E501
+        :rtype: MediaProtocol
+        """
+        return self._probe_protocol
+
+    @probe_protocol.setter
+    def probe_protocol(self, probe_protocol):
+        """Sets the probe_protocol of this MediaSourceInfo.
+
+
+        :param probe_protocol: The probe_protocol of this MediaSourceInfo.  # noqa: E501
+        :type: MediaProtocol
+        """
+
+        self._probe_protocol = probe_protocol
 
     @property
     def container(self):

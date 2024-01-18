@@ -48,6 +48,12 @@ public class MediaSourceInfo {
   @SerializedName("Type")
   private MediaSourceType type = null;
 
+  @SerializedName("ProbePath")
+  private String probePath = null;
+
+  @SerializedName("ProbeProtocol")
+  private MediaProtocol probeProtocol = null;
+
   @SerializedName("Container")
   private String container = null;
 
@@ -268,6 +274,42 @@ public class MediaSourceInfo {
 
   public void setType(MediaSourceType type) {
     this.type = type;
+  }
+
+  public MediaSourceInfo probePath(String probePath) {
+    this.probePath = probePath;
+    return this;
+  }
+
+   /**
+   * Get probePath
+   * @return probePath
+  **/
+  @Schema(description = "")
+  public String getProbePath() {
+    return probePath;
+  }
+
+  public void setProbePath(String probePath) {
+    this.probePath = probePath;
+  }
+
+  public MediaSourceInfo probeProtocol(MediaProtocol probeProtocol) {
+    this.probeProtocol = probeProtocol;
+    return this;
+  }
+
+   /**
+   * Get probeProtocol
+   * @return probeProtocol
+  **/
+  @Schema(description = "")
+  public MediaProtocol getProbeProtocol() {
+    return probeProtocol;
+  }
+
+  public void setProbeProtocol(MediaProtocol probeProtocol) {
+    this.probeProtocol = probeProtocol;
   }
 
   public MediaSourceInfo container(String container) {
@@ -994,6 +1036,8 @@ public class MediaSourceInfo {
         Objects.equals(this.encoderPath, mediaSourceInfo.encoderPath) &&
         Objects.equals(this.encoderProtocol, mediaSourceInfo.encoderProtocol) &&
         Objects.equals(this.type, mediaSourceInfo.type) &&
+        Objects.equals(this.probePath, mediaSourceInfo.probePath) &&
+        Objects.equals(this.probeProtocol, mediaSourceInfo.probeProtocol) &&
         Objects.equals(this.container, mediaSourceInfo.container) &&
         Objects.equals(this.size, mediaSourceInfo.size) &&
         Objects.equals(this.name, mediaSourceInfo.name) &&
@@ -1036,7 +1080,7 @@ public class MediaSourceInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
+    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
   }
 
 
@@ -1051,6 +1095,8 @@ public class MediaSourceInfo {
     sb.append("    encoderPath: ").append(toIndentedString(encoderPath)).append("\n");
     sb.append("    encoderProtocol: ").append(toIndentedString(encoderProtocol)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    probePath: ").append(toIndentedString(probePath)).append("\n");
+    sb.append("    probeProtocol: ").append(toIndentedString(probeProtocol)).append("\n");
     sb.append("    container: ").append(toIndentedString(container)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

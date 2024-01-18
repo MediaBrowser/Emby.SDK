@@ -19,7 +19,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.8.0.71
+* @version 4.8.0.72
 */
 export default class MediaSourceInfo {
     /**
@@ -63,6 +63,12 @@ export default class MediaSourceInfo {
             }
             if (data.hasOwnProperty('Type')) {
                 obj['Type'] = MediaSourceType.constructFromObject(data['Type']);
+            }
+            if (data.hasOwnProperty('ProbePath')) {
+                obj['ProbePath'] = ApiClient.convertToType(data['ProbePath'], 'String');
+            }
+            if (data.hasOwnProperty('ProbeProtocol')) {
+                obj['ProbeProtocol'] = MediaProtocol.constructFromObject(data['ProbeProtocol']);
             }
             if (data.hasOwnProperty('Container')) {
                 obj['Container'] = ApiClient.convertToType(data['Container'], 'String');
@@ -206,6 +212,14 @@ export default class MediaSourceInfo {
     * @member {module:model/MediaSourceType} Type
     */
     'Type' = undefined;
+    /**
+    * @member {String} ProbePath
+    */
+    'ProbePath' = undefined;
+    /**
+    * @member {module:model/MediaProtocol} ProbeProtocol
+    */
+    'ProbeProtocol' = undefined;
     /**
     * @member {String} Container
     */

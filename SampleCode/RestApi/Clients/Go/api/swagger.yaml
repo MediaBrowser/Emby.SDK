@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.71
+  version: 4.8.0.72
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -62549,10 +62549,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -62704,10 +62706,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -63092,10 +63096,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -63247,10 +63253,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -64183,10 +64191,12 @@ components:
           WallClockStart: 2000-01-23T04:56:07.000+00:00
           Bitrate: 9
           OpenToken: OpenToken
+          ProbeProtocol: null
           SupportsProbing: true
           Type: Default
           ReadAtNativeFramerate: true
           TranscodingContainer: TranscodingContainer
+          ProbePath: ProbePath
           TranscodingUrl: TranscodingUrl
           Id: Id
           SupportsTranscoding: true
@@ -64338,10 +64348,12 @@ components:
           WallClockStart: 2000-01-23T04:56:07.000+00:00
           Bitrate: 9
           OpenToken: OpenToken
+          ProbeProtocol: null
           SupportsProbing: true
           Type: Default
           ReadAtNativeFramerate: true
           TranscodingContainer: TranscodingContainer
+          ProbePath: ProbePath
           TranscodingUrl: TranscodingUrl
           Id: Id
           SupportsTranscoding: true
@@ -64596,6 +64608,10 @@ components:
           $ref: '#/components/schemas/MediaProtocol'
         Type:
           $ref: '#/components/schemas/MediaSourceType'
+        ProbePath:
+          type: string
+        ProbeProtocol:
+          $ref: '#/components/schemas/MediaProtocol'
         Container:
           type: string
         Size:
@@ -64853,10 +64869,12 @@ components:
         WallClockStart: 2000-01-23T04:56:07.000+00:00
         Bitrate: 9
         OpenToken: OpenToken
+        ProbeProtocol: null
         SupportsProbing: true
         Type: Default
         ReadAtNativeFramerate: true
         TranscodingContainer: TranscodingContainer
+        ProbePath: ProbePath
         TranscodingUrl: TranscodingUrl
         Id: Id
         SupportsTranscoding: true
@@ -66346,10 +66364,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -66501,10 +66521,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -69476,10 +69498,12 @@ components:
           WallClockStart: 2000-01-23T04:56:07.000+00:00
           Bitrate: 9
           OpenToken: OpenToken
+          ProbeProtocol: null
           SupportsProbing: true
           Type: Default
           ReadAtNativeFramerate: true
           TranscodingContainer: TranscodingContainer
+          ProbePath: ProbePath
           TranscodingUrl: TranscodingUrl
           Id: Id
           SupportsTranscoding: true
@@ -69864,10 +69888,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -70019,10 +70045,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -70411,10 +70439,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -70566,10 +70596,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -70968,10 +71000,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -71123,10 +71157,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -71641,10 +71677,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -71796,10 +71834,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -72212,10 +72252,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -72367,10 +72409,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -72867,10 +72911,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -73022,10 +73068,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -73982,10 +74030,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -74137,10 +74187,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -74525,10 +74577,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -74680,10 +74734,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -75456,10 +75512,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -75637,10 +75695,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -75863,10 +75923,12 @@ components:
           WallClockStart: 2000-01-23T04:56:07.000+00:00
           Bitrate: 9
           OpenToken: OpenToken
+          ProbeProtocol: null
           SupportsProbing: true
           Type: Default
           ReadAtNativeFramerate: true
           TranscodingContainer: TranscodingContainer
+          ProbePath: ProbePath
           TranscodingUrl: TranscodingUrl
           Id: Id
           SupportsTranscoding: true
@@ -76126,10 +76188,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -76307,10 +76371,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -78345,10 +78411,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -78500,10 +78568,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -80942,10 +81012,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -81097,10 +81169,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -81485,10 +81559,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -81640,10 +81716,12 @@ components:
               WallClockStart: 2000-01-23T04:56:07.000+00:00
               Bitrate: 9
               OpenToken: OpenToken
+              ProbeProtocol: null
               SupportsProbing: true
               Type: Default
               ReadAtNativeFramerate: true
               TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
               TranscodingUrl: TranscodingUrl
               Id: Id
               SupportsTranscoding: true
@@ -82050,10 +82128,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -82205,10 +82285,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -82593,10 +82675,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -82748,10 +82832,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -83300,10 +83386,12 @@ components:
           WallClockStart: 2000-01-23T04:56:07.000+00:00
           Bitrate: 9
           OpenToken: OpenToken
+          ProbeProtocol: null
           SupportsProbing: true
           Type: Default
           ReadAtNativeFramerate: true
           TranscodingContainer: TranscodingContainer
+          ProbePath: ProbePath
           TranscodingUrl: TranscodingUrl
           Id: Id
           SupportsTranscoding: true
@@ -83455,10 +83543,12 @@ components:
           WallClockStart: 2000-01-23T04:56:07.000+00:00
           Bitrate: 9
           OpenToken: OpenToken
+          ProbeProtocol: null
           SupportsProbing: true
           Type: Default
           ReadAtNativeFramerate: true
           TranscodingContainer: TranscodingContainer
+          ProbePath: ProbePath
           TranscodingUrl: TranscodingUrl
           Id: Id
           SupportsTranscoding: true
@@ -84602,10 +84692,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true
@@ -84757,10 +84849,12 @@ components:
             WallClockStart: 2000-01-23T04:56:07.000+00:00
             Bitrate: 9
             OpenToken: OpenToken
+            ProbeProtocol: null
             SupportsProbing: true
             Type: Default
             ReadAtNativeFramerate: true
             TranscodingContainer: TranscodingContainer
+            ProbePath: ProbePath
             TranscodingUrl: TranscodingUrl
             Id: Id
             SupportsTranscoding: true

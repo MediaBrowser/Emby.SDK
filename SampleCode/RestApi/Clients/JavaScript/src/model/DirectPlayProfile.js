@@ -15,7 +15,7 @@ import DlnaProfileType from './DlnaProfileType';
 /**
 * The DirectPlayProfile model module.
 * @module model/DirectPlayProfile
-* @version 4.8.0.71
+* @version 4.8.0.72
 */
 export default class DirectPlayProfile {
     /**
