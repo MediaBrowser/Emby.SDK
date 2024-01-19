@@ -20,7 +20,7 @@ import TranscodingProfile from './TranscodingProfile';
 /**
 * The DeviceProfile model module.
 * @module model/DeviceProfile
-* @version 4.8.0.72
+* @version 4.8.0.73
 */
 export default class DeviceProfile {
     /**

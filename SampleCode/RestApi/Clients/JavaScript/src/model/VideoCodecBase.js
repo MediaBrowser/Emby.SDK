@@ -22,7 +22,7 @@ import VideoMediaTypes from './VideoMediaTypes';
 /**
 * The VideoCodecBase model module.
 * @module model/VideoCodecBase
-* @version 4.8.0.72
+* @version 4.8.0.73
 */
 export default class VideoCodecBase {
     /**
