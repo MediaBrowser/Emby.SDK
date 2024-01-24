@@ -15,7 +15,7 @@ import QueryResultActivityLogEntry from '../model/QueryResultActivityLogEntry';
 /**
 * ActivityLogService service.
 * @module EmbyClient.JavaScript.Beta/ActivityLogServiceApi
-* @version 4.8.0.74
+* @version 4.8.0.75
 */
 export default class ActivityLogServiceApi {
 

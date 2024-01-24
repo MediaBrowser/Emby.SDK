@@ -15,7 +15,7 @@ import UserLibraryTagItem from './UserLibraryTagItem';
 /**
 * The QueryResultUserLibraryTagItem model module.
 * @module model/QueryResultUserLibraryTagItem
-* @version 4.8.0.74
+* @version 4.8.0.75
 */
 export default class QueryResultUserLibraryTagItem {
     /**

@@ -15,7 +15,7 @@ import LibraryOptions from './LibraryOptions';
 /**
 * The LibraryAddVirtualFolder model module.
 * @module model/LibraryAddVirtualFolder
-* @version 4.8.0.74
+* @version 4.8.0.75
 */
 export default class LibraryAddVirtualFolder {
     /**

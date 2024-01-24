@@ -16,7 +16,7 @@ import ResolutionWithRate from './ResolutionWithRate';
 /**
 * The LevelInformation model module.
 * @module model/LevelInformation
-* @version 4.8.0.74
+* @version 4.8.0.75
 */
 export default class LevelInformation {
     /**

@@ -17,7 +17,7 @@ import PackageVersionInfo from '../model/PackageVersionInfo';
 /**
 * PackageService service.
 * @module EmbyClient.JavaScript.Beta/PackageServiceApi
-* @version 4.8.0.74
+* @version 4.8.0.75
 */
 export default class PackageServiceApi {
 
