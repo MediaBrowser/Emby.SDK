@@ -16,7 +16,7 @@ import MediaProtocol from './MediaProtocol';
 /**
 * The PlaybackInfoRequest model module.
 * @module model/PlaybackInfoRequest
-* @version 4.8.0.75
+* @version 4.8.0.76
 */
 export default class PlaybackInfoRequest {
     /**

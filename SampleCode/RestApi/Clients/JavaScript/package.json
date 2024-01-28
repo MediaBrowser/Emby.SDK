@@ -1,6 +1,6 @@
 {
   "name": "EmbyClient.JavaScript.Beta",
-  "version": "4.8.0.75",
+  "version": "4.8.0.76",
   "description": "A client library for accessing Emby Server via REST API",
   "license": "Unlicense",
   "main": "src/index.js",

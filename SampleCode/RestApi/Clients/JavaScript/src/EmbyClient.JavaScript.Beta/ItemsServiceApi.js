@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ItemsService service.
 * @module EmbyClient.JavaScript.Beta/ItemsServiceApi
-* @version 4.8.0.75
+* @version 4.8.0.76
 */
 export default class ItemsServiceApi {
 

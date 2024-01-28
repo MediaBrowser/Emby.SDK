@@ -15,7 +15,7 @@ import RokuMetadataApiThumbnailSetInfo from '../model/RokuMetadataApiThumbnailSe
 /**
 * BifService service.
 * @module EmbyClient.JavaScript.Beta/BifServiceApi
-* @version 4.8.0.75
+* @version 4.8.0.76
 */
 export default class BifServiceApi {
 
