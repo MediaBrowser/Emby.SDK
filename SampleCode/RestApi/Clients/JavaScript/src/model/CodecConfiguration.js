@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The CodecConfiguration model module.
 * @module model/CodecConfiguration
-* @version 4.8.0.76
+* @version 4.8.0.77
 */
 export default class CodecConfiguration {
     /**

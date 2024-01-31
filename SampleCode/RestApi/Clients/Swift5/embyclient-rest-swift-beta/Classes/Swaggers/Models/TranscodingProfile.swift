@@ -30,8 +30,9 @@ public struct TranscodingProfile: Codable {
     public var maxManifestSubtitles: Int?
     public var maxWidth: Int?
     public var maxHeight: Int?
+    public var fillEmptySubtitleSegments: Bool?
 
-    public init(container: String? = nil, type: DlnaProfileType? = nil, videoCodec: String? = nil, audioCodec: String? = nil, _protocol: String? = nil, estimateContentLength: Bool? = nil, enableMpegtsM2TsMode: Bool? = nil, transcodeSeekInfo: TranscodeSeekInfo? = nil, copyTimestamps: Bool? = nil, context: EncodingContext? = nil, maxAudioChannels: String? = nil, minSegments: Int? = nil, segmentLength: Int? = nil, breakOnNonKeyFrames: Bool? = nil, allowInterlacedVideoStreamCopy: Bool? = nil, manifestSubtitles: String? = nil, maxManifestSubtitles: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil) {
+    public init(container: String? = nil, type: DlnaProfileType? = nil, videoCodec: String? = nil, audioCodec: String? = nil, _protocol: String? = nil, estimateContentLength: Bool? = nil, enableMpegtsM2TsMode: Bool? = nil, transcodeSeekInfo: TranscodeSeekInfo? = nil, copyTimestamps: Bool? = nil, context: EncodingContext? = nil, maxAudioChannels: String? = nil, minSegments: Int? = nil, segmentLength: Int? = nil, breakOnNonKeyFrames: Bool? = nil, allowInterlacedVideoStreamCopy: Bool? = nil, manifestSubtitles: String? = nil, maxManifestSubtitles: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, fillEmptySubtitleSegments: Bool? = nil) {
         self.container = container
         self.type = type
         self.videoCodec = videoCodec
@@ -51,6 +52,7 @@ public struct TranscodingProfile: Codable {
         self.maxManifestSubtitles = maxManifestSubtitles
         self.maxWidth = maxWidth
         self.maxHeight = maxHeight
+        self.fillEmptySubtitleSegments = fillEmptySubtitleSegments
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -73,6 +75,7 @@ public struct TranscodingProfile: Codable {
         case maxManifestSubtitles = "MaxManifestSubtitles"
         case maxWidth = "MaxWidth"
         case maxHeight = "MaxHeight"
+        case fillEmptySubtitleSegments = "FillEmptySubtitleSegments"
     }
 
 }

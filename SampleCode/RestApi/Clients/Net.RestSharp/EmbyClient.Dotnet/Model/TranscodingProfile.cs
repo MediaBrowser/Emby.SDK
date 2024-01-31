@@ -45,7 +45,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="maxManifestSubtitles">maxManifestSubtitles.</param>
         /// <param name="maxWidth">maxWidth.</param>
         /// <param name="maxHeight">maxHeight.</param>
-        public TranscodingProfile(string container = default(string), DlnaProfileType type = default(DlnaProfileType), string videoCodec = default(string), string audioCodec = default(string), string protocol = default(string), bool? estimateContentLength = default(bool?), bool? enableMpegtsM2TsMode = default(bool?), TranscodeSeekInfo transcodeSeekInfo = default(TranscodeSeekInfo), bool? copyTimestamps = default(bool?), EncodingContext context = default(EncodingContext), string maxAudioChannels = default(string), int? minSegments = default(int?), int? segmentLength = default(int?), bool? breakOnNonKeyFrames = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), string manifestSubtitles = default(string), int? maxManifestSubtitles = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?))
+        /// <param name="fillEmptySubtitleSegments">fillEmptySubtitleSegments.</param>
+        public TranscodingProfile(string container = default(string), DlnaProfileType type = default(DlnaProfileType), string videoCodec = default(string), string audioCodec = default(string), string protocol = default(string), bool? estimateContentLength = default(bool?), bool? enableMpegtsM2TsMode = default(bool?), TranscodeSeekInfo transcodeSeekInfo = default(TranscodeSeekInfo), bool? copyTimestamps = default(bool?), EncodingContext context = default(EncodingContext), string maxAudioChannels = default(string), int? minSegments = default(int?), int? segmentLength = default(int?), bool? breakOnNonKeyFrames = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), string manifestSubtitles = default(string), int? maxManifestSubtitles = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? fillEmptySubtitleSegments = default(bool?))
         {
             this.Container = container;
             this.Type = type;
@@ -66,6 +67,7 @@ namespace EmbyClient.Dotnet.Model
             this.MaxManifestSubtitles = maxManifestSubtitles;
             this.MaxWidth = maxWidth;
             this.MaxHeight = maxHeight;
+            this.FillEmptySubtitleSegments = fillEmptySubtitleSegments;
         }
         
         /// <summary>
@@ -183,6 +185,12 @@ namespace EmbyClient.Dotnet.Model
         public int? MaxHeight { get; set; }
 
         /// <summary>
+        /// Gets or Sets FillEmptySubtitleSegments
+        /// </summary>
+        [DataMember(Name="FillEmptySubtitleSegments", EmitDefaultValue=false)]
+        public bool? FillEmptySubtitleSegments { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -209,6 +217,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  MaxManifestSubtitles: ").Append(MaxManifestSubtitles).Append("\n");
             sb.Append("  MaxWidth: ").Append(MaxWidth).Append("\n");
             sb.Append("  MaxHeight: ").Append(MaxHeight).Append("\n");
+            sb.Append("  FillEmptySubtitleSegments: ").Append(FillEmptySubtitleSegments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -337,6 +346,11 @@ namespace EmbyClient.Dotnet.Model
                     this.MaxHeight == input.MaxHeight ||
                     (this.MaxHeight != null &&
                     this.MaxHeight.Equals(input.MaxHeight))
+                ) && 
+                (
+                    this.FillEmptySubtitleSegments == input.FillEmptySubtitleSegments ||
+                    (this.FillEmptySubtitleSegments != null &&
+                    this.FillEmptySubtitleSegments.Equals(input.FillEmptySubtitleSegments))
                 );
         }
 
@@ -387,6 +401,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.MaxWidth.GetHashCode();
                 if (this.MaxHeight != null)
                     hashCode = hashCode * 59 + this.MaxHeight.GetHashCode();
+                if (this.FillEmptySubtitleSegments != null)
+                    hashCode = hashCode * 59 + this.FillEmptySubtitleSegments.GetHashCode();
                 return hashCode;
             }
         }

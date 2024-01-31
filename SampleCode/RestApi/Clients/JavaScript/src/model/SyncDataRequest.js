@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SyncDataRequest model module.
 * @module model/SyncDataRequest
-* @version 4.8.0.76
+* @version 4.8.0.77
 */
 export default class SyncDataRequest {
     /**

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.76
+  version: 4.8.0.77
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -67609,6 +67609,7 @@ components:
           Protocol: Protocol
           MaxManifestSubtitles: 4
           AudioCodec: AudioCodec
+          FillEmptySubtitleSegments: true
         - Context: Streaming
           BreakOnNonKeyFrames: true
           CopyTimestamps: true
@@ -67628,6 +67629,7 @@ components:
           Protocol: Protocol
           MaxManifestSubtitles: 4
           AudioCodec: AudioCodec
+          FillEmptySubtitleSegments: true
         SupportsSamsungBookmark: true
         Identification:
           ModelNumber: ModelNumber
@@ -67914,6 +67916,8 @@ components:
         MaxHeight:
           type: integer
           format: int32
+        FillEmptySubtitleSegments:
+          type: boolean
       example:
         Context: Streaming
         BreakOnNonKeyFrames: true
@@ -67934,6 +67938,7 @@ components:
         Protocol: Protocol
         MaxManifestSubtitles: 4
         AudioCodec: AudioCodec
+        FillEmptySubtitleSegments: true
       x-internal-ref-name: MediaBrowser.Model.Dlna.TranscodingProfile
     TranscodeSeekInfo:
       type: string

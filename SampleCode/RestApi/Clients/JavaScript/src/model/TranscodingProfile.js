@@ -17,7 +17,7 @@ import TranscodeSeekInfo from './TranscodeSeekInfo';
 /**
 * The TranscodingProfile model module.
 * @module model/TranscodingProfile
-* @version 4.8.0.76
+* @version 4.8.0.77
 */
 export default class TranscodingProfile {
     /**
@@ -101,6 +101,9 @@ export default class TranscodingProfile {
             if (data.hasOwnProperty('MaxHeight')) {
                 obj['MaxHeight'] = ApiClient.convertToType(data['MaxHeight'], 'Number');
             }
+            if (data.hasOwnProperty('FillEmptySubtitleSegments')) {
+                obj['FillEmptySubtitleSegments'] = ApiClient.convertToType(data['FillEmptySubtitleSegments'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -181,6 +184,10 @@ export default class TranscodingProfile {
     * @member {Number} MaxHeight
     */
     'MaxHeight' = undefined;
+    /**
+    * @member {Boolean} FillEmptySubtitleSegments
+    */
+    'FillEmptySubtitleSegments' = undefined;
 
 
 

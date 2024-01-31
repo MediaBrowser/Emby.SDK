@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.76"
+    "version": "4.8.0.77"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -59294,6 +59294,9 @@
         "MaxHeight": {
           "format": "int32",
           "type": "integer"
+        },
+        "FillEmptySubtitleSegments": {
+          "type": "boolean"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dlna.TranscodingProfile"

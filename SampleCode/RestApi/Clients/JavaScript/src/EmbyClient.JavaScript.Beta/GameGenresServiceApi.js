@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * GameGenresService service.
 * @module EmbyClient.JavaScript.Beta/GameGenresServiceApi
-* @version 4.8.0.76
+* @version 4.8.0.77
 */
 export default class GameGenresServiceApi {
 

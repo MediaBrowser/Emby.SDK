@@ -80,6 +80,9 @@ public class TranscodingProfile {
   @SerializedName("MaxHeight")
   private Integer maxHeight = null;
 
+  @SerializedName("FillEmptySubtitleSegments")
+  private Boolean fillEmptySubtitleSegments = null;
+
   public TranscodingProfile container(String container) {
     this.container = container;
     return this;
@@ -422,6 +425,24 @@ public class TranscodingProfile {
     this.maxHeight = maxHeight;
   }
 
+  public TranscodingProfile fillEmptySubtitleSegments(Boolean fillEmptySubtitleSegments) {
+    this.fillEmptySubtitleSegments = fillEmptySubtitleSegments;
+    return this;
+  }
+
+   /**
+   * Get fillEmptySubtitleSegments
+   * @return fillEmptySubtitleSegments
+  **/
+  @Schema(description = "")
+  public Boolean isFillEmptySubtitleSegments() {
+    return fillEmptySubtitleSegments;
+  }
+
+  public void setFillEmptySubtitleSegments(Boolean fillEmptySubtitleSegments) {
+    this.fillEmptySubtitleSegments = fillEmptySubtitleSegments;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -450,12 +471,13 @@ public class TranscodingProfile {
         Objects.equals(this.manifestSubtitles, transcodingProfile.manifestSubtitles) &&
         Objects.equals(this.maxManifestSubtitles, transcodingProfile.maxManifestSubtitles) &&
         Objects.equals(this.maxWidth, transcodingProfile.maxWidth) &&
-        Objects.equals(this.maxHeight, transcodingProfile.maxHeight);
+        Objects.equals(this.maxHeight, transcodingProfile.maxHeight) &&
+        Objects.equals(this.fillEmptySubtitleSegments, transcodingProfile.fillEmptySubtitleSegments);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(container, type, videoCodec, audioCodec, protocol, estimateContentLength, enableMpegtsM2TsMode, transcodeSeekInfo, copyTimestamps, context, maxAudioChannels, minSegments, segmentLength, breakOnNonKeyFrames, allowInterlacedVideoStreamCopy, manifestSubtitles, maxManifestSubtitles, maxWidth, maxHeight);
+    return Objects.hash(container, type, videoCodec, audioCodec, protocol, estimateContentLength, enableMpegtsM2TsMode, transcodeSeekInfo, copyTimestamps, context, maxAudioChannels, minSegments, segmentLength, breakOnNonKeyFrames, allowInterlacedVideoStreamCopy, manifestSubtitles, maxManifestSubtitles, maxWidth, maxHeight, fillEmptySubtitleSegments);
   }
 
 
@@ -483,6 +505,7 @@ public class TranscodingProfile {
     sb.append("    maxManifestSubtitles: ").append(toIndentedString(maxManifestSubtitles)).append("\n");
     sb.append("    maxWidth: ").append(toIndentedString(maxWidth)).append("\n");
     sb.append("    maxHeight: ").append(toIndentedString(maxHeight)).append("\n");
+    sb.append("    fillEmptySubtitleSegments: ").append(toIndentedString(fillEmptySubtitleSegments)).append("\n");
     sb.append("}");
     return sb.toString();
   }

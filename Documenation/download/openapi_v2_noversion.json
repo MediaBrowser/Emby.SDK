@@ -59292,6 +59292,9 @@
         "MaxHeight": {
           "format": "int32",
           "type": "integer"
+        },
+        "FillEmptySubtitleSegments": {
+          "type": "boolean"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dlna.TranscodingProfile"

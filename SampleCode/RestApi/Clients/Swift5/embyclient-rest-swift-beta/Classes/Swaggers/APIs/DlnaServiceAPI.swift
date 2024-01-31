@@ -100,7 +100,8 @@ open class DlnaServiceAPI {
     "MaxHeight" : 1,
     "Protocol" : "Protocol",
     "MaxManifestSubtitles" : 4,
-    "AudioCodec" : "AudioCodec"
+    "AudioCodec" : "AudioCodec",
+    "FillEmptySubtitleSegments" : true
   }, {
     "Context" : "Streaming",
     "BreakOnNonKeyFrames" : true,
@@ -119,7 +120,8 @@ open class DlnaServiceAPI {
     "MaxHeight" : 1,
     "Protocol" : "Protocol",
     "MaxManifestSubtitles" : 4,
-    "AudioCodec" : "AudioCodec"
+    "AudioCodec" : "AudioCodec",
+    "FillEmptySubtitleSegments" : true
   } ],
   "SupportsSamsungBookmark" : true,
   "Identification" : {
@@ -277,7 +279,8 @@ open class DlnaServiceAPI {
     "MaxHeight" : 1,
     "Protocol" : "Protocol",
     "MaxManifestSubtitles" : 4,
-    "AudioCodec" : "AudioCodec"
+    "AudioCodec" : "AudioCodec",
+    "FillEmptySubtitleSegments" : true
   }, {
     "Context" : "Streaming",
     "BreakOnNonKeyFrames" : true,
@@ -296,7 +299,8 @@ open class DlnaServiceAPI {
     "MaxHeight" : 1,
     "Protocol" : "Protocol",
     "MaxManifestSubtitles" : 4,
-    "AudioCodec" : "AudioCodec"
+    "AudioCodec" : "AudioCodec",
+    "FillEmptySubtitleSegments" : true
   } ],
   "SupportsSamsungBookmark" : true,
   "Identification" : {
@@ -492,7 +496,8 @@ open class DlnaServiceAPI {
     "MaxHeight" : 1,
     "Protocol" : "Protocol",
     "MaxManifestSubtitles" : 4,
-    "AudioCodec" : "AudioCodec"
+    "AudioCodec" : "AudioCodec",
+    "FillEmptySubtitleSegments" : true
   }, {
     "Context" : "Streaming",
     "BreakOnNonKeyFrames" : true,
@@ -511,7 +516,8 @@ open class DlnaServiceAPI {
     "MaxHeight" : 1,
     "Protocol" : "Protocol",
     "MaxManifestSubtitles" : 4,
-    "AudioCodec" : "AudioCodec"
+    "AudioCodec" : "AudioCodec",
+    "FillEmptySubtitleSegments" : true
   } ],
   "SupportsSamsungBookmark" : true,
   "Identification" : {
@@ -710,7 +716,8 @@ open class DlnaServiceAPI {
     "MaxHeight" : 1,
     "Protocol" : "Protocol",
     "MaxManifestSubtitles" : 4,
-    "AudioCodec" : "AudioCodec"
+    "AudioCodec" : "AudioCodec",
+    "FillEmptySubtitleSegments" : true
   }, {
     "Context" : "Streaming",
     "BreakOnNonKeyFrames" : true,
@@ -729,7 +736,8 @@ open class DlnaServiceAPI {
     "MaxHeight" : 1,
     "Protocol" : "Protocol",
     "MaxManifestSubtitles" : 4,
-    "AudioCodec" : "AudioCodec"
+    "AudioCodec" : "AudioCodec",
+    "FillEmptySubtitleSegments" : true
   } ],
   "SupportsSamsungBookmark" : true,
   "Identification" : {

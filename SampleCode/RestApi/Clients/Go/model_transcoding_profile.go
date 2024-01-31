@@ -26,4 +26,5 @@ type TranscodingProfile struct {
 	MaxManifestSubtitles int32 `json:"MaxManifestSubtitles,omitempty"`
 	MaxWidth int32 `json:"MaxWidth,omitempty"`
 	MaxHeight int32 `json:"MaxHeight,omitempty"`
+	FillEmptySubtitleSegments bool `json:"FillEmptySubtitleSegments,omitempty"`
 }

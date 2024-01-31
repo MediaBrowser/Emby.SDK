@@ -21,7 +21,7 @@ import UserItemDataDto from '../model/UserItemDataDto';
 /**
 * PlaystateService service.
 * @module EmbyClient.JavaScript.Beta/PlaystateServiceApi
-* @version 4.8.0.76
+* @version 4.8.0.77
 */
 export default class PlaystateServiceApi {
 

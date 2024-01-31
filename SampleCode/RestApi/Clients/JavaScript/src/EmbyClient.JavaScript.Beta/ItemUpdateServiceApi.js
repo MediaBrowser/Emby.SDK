@@ -16,7 +16,7 @@ import MetadataEditorInfo from '../model/MetadataEditorInfo';
 /**
 * ItemUpdateService service.
 * @module EmbyClient.JavaScript.Beta/ItemUpdateServiceApi
-* @version 4.8.0.76
+* @version 4.8.0.77
 */
 export default class ItemUpdateServiceApi {
 

@@ -15,7 +15,7 @@ import CommonEditorTypes from './CommonEditorTypes';
 /**
 * The EditorsEditorButtonItem model module.
 * @module model/EditorsEditorButtonItem
-* @version 4.8.0.76
+* @version 4.8.0.77
 */
 export default class EditorsEditorButtonItem {
     /**

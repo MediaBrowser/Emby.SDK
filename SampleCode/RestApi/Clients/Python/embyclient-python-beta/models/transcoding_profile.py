@@ -40,7 +40,8 @@ class TranscodingProfile(object):
         'manifest_subtitles': 'str',
         'max_manifest_subtitles': 'int',
         'max_width': 'int',
-        'max_height': 'int'
+        'max_height': 'int',
+        'fill_empty_subtitle_segments': 'bool'
     }
 
     attribute_map = {
@@ -62,10 +63,11 @@ class TranscodingProfile(object):
         'manifest_subtitles': 'ManifestSubtitles',
         'max_manifest_subtitles': 'MaxManifestSubtitles',
         'max_width': 'MaxWidth',
-        'max_height': 'MaxHeight'
+        'max_height': 'MaxHeight',
+        'fill_empty_subtitle_segments': 'FillEmptySubtitleSegments'
     }
 
-    def __init__(self, container=None, type=None, video_codec=None, audio_codec=None, protocol=None, estimate_content_length=None, enable_mpegts_m2_ts_mode=None, transcode_seek_info=None, copy_timestamps=None, context=None, max_audio_channels=None, min_segments=None, segment_length=None, break_on_non_key_frames=None, allow_interlaced_video_stream_copy=None, manifest_subtitles=None, max_manifest_subtitles=None, max_width=None, max_height=None):  # noqa: E501
+    def __init__(self, container=None, type=None, video_codec=None, audio_codec=None, protocol=None, estimate_content_length=None, enable_mpegts_m2_ts_mode=None, transcode_seek_info=None, copy_timestamps=None, context=None, max_audio_channels=None, min_segments=None, segment_length=None, break_on_non_key_frames=None, allow_interlaced_video_stream_copy=None, manifest_subtitles=None, max_manifest_subtitles=None, max_width=None, max_height=None, fill_empty_subtitle_segments=None):  # noqa: E501
         """TranscodingProfile - a model defined in Swagger"""  # noqa: E501
         self._container = None
         self._type = None
@@ -86,6 +88,7 @@ class TranscodingProfile(object):
         self._max_manifest_subtitles = None
         self._max_width = None
         self._max_height = None
+        self._fill_empty_subtitle_segments = None
         self.discriminator = None
         if container is not None:
             self.container = container
@@ -125,6 +128,8 @@ class TranscodingProfile(object):
             self.max_width = max_width
         if max_height is not None:
             self.max_height = max_height
+        if fill_empty_subtitle_segments is not None:
+            self.fill_empty_subtitle_segments = fill_empty_subtitle_segments
 
     @property
     def container(self):
@@ -524,6 +529,27 @@ class TranscodingProfile(object):
         """
 
         self._max_height = max_height
+
+    @property
+    def fill_empty_subtitle_segments(self):
+        """Gets the fill_empty_subtitle_segments of this TranscodingProfile.  # noqa: E501
+
+
+        :return: The fill_empty_subtitle_segments of this TranscodingProfile.  # noqa: E501
+        :rtype: bool
+        """
+        return self._fill_empty_subtitle_segments
+
+    @fill_empty_subtitle_segments.setter
+    def fill_empty_subtitle_segments(self, fill_empty_subtitle_segments):
+        """Sets the fill_empty_subtitle_segments of this TranscodingProfile.
+
+
+        :param fill_empty_subtitle_segments: The fill_empty_subtitle_segments of this TranscodingProfile.  # noqa: E501
+        :type: bool
+        """
+
+        self._fill_empty_subtitle_segments = fill_empty_subtitle_segments
 
     def to_dict(self):
         """Returns the model properties as a dict"""

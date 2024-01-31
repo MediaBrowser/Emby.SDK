@@ -141,6 +141,12 @@ namespace Emby.ApiClient.Model
         public int? MaxHeight { get; set; }
 
         /// <summary>
+        /// Gets or Sets FillEmptySubtitleSegments
+        /// </summary>
+        /// <value>The FillEmptySubtitleSegments.</value>
+        public bool? FillEmptySubtitleSegments { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -167,6 +173,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  MaxManifestSubtitles: ").Append(MaxManifestSubtitles).Append("\n");
             sb.Append("  MaxWidth: ").Append(MaxWidth).Append("\n");
             sb.Append("  MaxHeight: ").Append(MaxHeight).Append("\n");
+            sb.Append("  FillEmptySubtitleSegments: ").Append(FillEmptySubtitleSegments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -286,6 +293,11 @@ namespace Emby.ApiClient.Model
                     this.MaxHeight == input.MaxHeight ||
                     (this.MaxHeight != null &&
                     this.MaxHeight.Equals(input.MaxHeight))
+                ) && 
+                (
+                    this.FillEmptySubtitleSegments == input.FillEmptySubtitleSegments ||
+                    (this.FillEmptySubtitleSegments != null &&
+                    this.FillEmptySubtitleSegments.Equals(input.FillEmptySubtitleSegments))
                 );
         }
 
@@ -336,6 +348,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.MaxWidth.GetHashCode();
                 if (this.MaxHeight != null)
                     hashCode = hashCode * 59 + this.MaxHeight.GetHashCode();
+                if (this.FillEmptySubtitleSegments != null)
+                    hashCode = hashCode * 59 + this.FillEmptySubtitleSegments.GetHashCode();
                 return hashCode;
             }
         }
