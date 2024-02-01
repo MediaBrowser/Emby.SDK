@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -27,7 +27,7 @@ public class BrandingServiceApiTest {
     /**
      * Gets branding configuration
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -41,7 +41,7 @@ public class BrandingServiceApiTest {
     /**
      * Gets custom css
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class BrandingServiceApiTest {
     /**
      * Gets custom css
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

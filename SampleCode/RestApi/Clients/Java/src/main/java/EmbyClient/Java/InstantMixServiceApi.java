@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -62,7 +62,7 @@ public class InstantMixServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given album Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given album Documentation</a>
      */
     public com.squareup.okhttp.Call getAlbumsByIdInstantmixCall(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -153,7 +153,7 @@ public class InstantMixServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given album Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given album Documentation</a>
      */
     public QueryResultBaseItemDto getAlbumsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getAlbumsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
@@ -175,7 +175,7 @@ public class InstantMixServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given album Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given album Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getAlbumsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getAlbumsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
@@ -199,7 +199,7 @@ public class InstantMixServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given album Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given album Documentation</a>
      */
     public com.squareup.okhttp.Call getAlbumsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -242,7 +242,7 @@ public class InstantMixServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given artist Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given artist Documentation</a>
      */
     public com.squareup.okhttp.Call getArtistsInstantmixCall(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -327,7 +327,7 @@ public class InstantMixServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given artist Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given artist Documentation</a>
      */
     public QueryResultBaseItemDto getArtistsInstantmix(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getArtistsInstantmixWithHttpInfo(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
@@ -348,7 +348,7 @@ public class InstantMixServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given artist Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given artist Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getArtistsInstantmixWithHttpInfo(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getArtistsInstantmixValidateBeforeCall(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
@@ -371,7 +371,7 @@ public class InstantMixServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given artist Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given artist Documentation</a>
      */
     public com.squareup.okhttp.Call getArtistsInstantmixAsync(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -416,7 +416,7 @@ public class InstantMixServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of next up episodes Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
     public com.squareup.okhttp.Call getAudiobooksNextupCall(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -511,7 +511,7 @@ public class InstantMixServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of next up episodes Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
     public QueryResultBaseItemDto getAudiobooksNextup(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getAudiobooksNextupWithHttpInfo(userId, startIndex, limit, fields, albumId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
@@ -534,7 +534,7 @@ public class InstantMixServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of next up episodes Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getAudiobooksNextupWithHttpInfo(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData) throws ApiException {
         com.squareup.okhttp.Call call = getAudiobooksNextupValidateBeforeCall(userId, startIndex, limit, fields, albumId, parentId, enableImages, imageTypeLimit, enableImageTypes, enableUserData, null, null);
@@ -559,7 +559,7 @@ public class InstantMixServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Gets a list of next up episodes Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Gets a list of next up episodes Documentation</a>
      */
     public com.squareup.okhttp.Call getAudiobooksNextupAsync(String userId, Integer startIndex, Integer limit, String fields, String albumId, String parentId, Boolean enableImages, Integer imageTypeLimit, String enableImageTypes, Boolean enableUserData, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -603,7 +603,7 @@ public class InstantMixServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given item Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given item Documentation</a>
      */
     public com.squareup.okhttp.Call getItemsByIdInstantmixCall(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -694,7 +694,7 @@ public class InstantMixServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given item Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given item Documentation</a>
      */
     public QueryResultBaseItemDto getItemsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getItemsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
@@ -716,7 +716,7 @@ public class InstantMixServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given item Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given item Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getItemsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getItemsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
@@ -740,7 +740,7 @@ public class InstantMixServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given item Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given item Documentation</a>
      */
     public com.squareup.okhttp.Call getItemsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -784,7 +784,7 @@ public class InstantMixServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a music genre Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
     public com.squareup.okhttp.Call getMusicgenresByNameInstantmixCall(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -875,7 +875,7 @@ public class InstantMixServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a music genre Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
     public QueryResultBaseItemDto getMusicgenresByNameInstantmix(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getMusicgenresByNameInstantmixWithHttpInfo(name, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
@@ -897,7 +897,7 @@ public class InstantMixServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a music genre Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getMusicgenresByNameInstantmixWithHttpInfo(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getMusicgenresByNameInstantmixValidateBeforeCall(name, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
@@ -921,7 +921,7 @@ public class InstantMixServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a music genre Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
     public com.squareup.okhttp.Call getMusicgenresByNameInstantmixAsync(String name, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -964,7 +964,7 @@ public class InstantMixServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a music genre Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
     public com.squareup.okhttp.Call getMusicgenresInstantmixCall(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1049,7 +1049,7 @@ public class InstantMixServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a music genre Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
     public QueryResultBaseItemDto getMusicgenresInstantmix(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getMusicgenresInstantmixWithHttpInfo(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
@@ -1070,7 +1070,7 @@ public class InstantMixServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a music genre Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getMusicgenresInstantmixWithHttpInfo(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getMusicgenresInstantmixValidateBeforeCall(includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
@@ -1093,7 +1093,7 @@ public class InstantMixServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a music genre Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a music genre Documentation</a>
      */
     public com.squareup.okhttp.Call getMusicgenresInstantmixAsync(String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -1137,7 +1137,7 @@ public class InstantMixServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given playlist Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given playlist Documentation</a>
      */
     public com.squareup.okhttp.Call getPlaylistsByIdInstantmixCall(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1228,7 +1228,7 @@ public class InstantMixServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given playlist Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given playlist Documentation</a>
      */
     public QueryResultBaseItemDto getPlaylistsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getPlaylistsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
@@ -1250,7 +1250,7 @@ public class InstantMixServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given playlist Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given playlist Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getPlaylistsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getPlaylistsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
@@ -1274,7 +1274,7 @@ public class InstantMixServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given playlist Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given playlist Documentation</a>
      */
     public com.squareup.okhttp.Call getPlaylistsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 
@@ -1318,7 +1318,7 @@ public class InstantMixServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given song Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given song Documentation</a>
      */
     public com.squareup.okhttp.Call getSongsByIdInstantmixCall(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -1409,7 +1409,7 @@ public class InstantMixServiceApi {
      * @return QueryResultBaseItemDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given song Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given song Documentation</a>
      */
     public QueryResultBaseItemDto getSongsByIdInstantmix(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         ApiResponse<QueryResultBaseItemDto> resp = getSongsByIdInstantmixWithHttpInfo(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields);
@@ -1431,7 +1431,7 @@ public class InstantMixServiceApi {
      * @return ApiResponse&lt;QueryResultBaseItemDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given song Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given song Documentation</a>
      */
     public ApiResponse<QueryResultBaseItemDto> getSongsByIdInstantmixWithHttpInfo(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields) throws ApiException {
         com.squareup.okhttp.Call call = getSongsByIdInstantmixValidateBeforeCall(id, includeItemTypes, enableImages, enableUserData, imageTypeLimit, enableImageTypes, userId, limit, fields, null, null);
@@ -1455,7 +1455,7 @@ public class InstantMixServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Item Information
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/Item-Information">Creates an instant playlist based on a given song Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/Item-Information.html">Creates an instant playlist based on a given song Documentation</a>
      */
     public com.squareup.okhttp.Call getSongsByIdInstantmixAsync(String id, String includeItemTypes, Boolean enableImages, Boolean enableUserData, Integer imageTypeLimit, String enableImageTypes, String userId, Integer limit, String fields, final ApiCallback<QueryResultBaseItemDto> callback) throws ApiException {
 

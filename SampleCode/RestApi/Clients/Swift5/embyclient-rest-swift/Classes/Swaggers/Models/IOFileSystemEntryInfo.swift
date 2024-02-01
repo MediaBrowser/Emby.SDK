@@ -8,10 +8,13 @@
 import Foundation
 
 
+/** Class FileSystemEntryInfo   */
 
 public struct IOFileSystemEntryInfo: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The path. */
     public var path: String?
     public var type: IOFileSystemEntryType?
 

@@ -28,9 +28,13 @@ public struct TranscodingInfo: Codable {
     public var height: Int?
     public var audioChannels: Int?
     public var transcodeReasons: [TranscodeReason]?
+    /** Deprecated, please use ProcessStatistics instead */
     public var currentCpuUsage: Double?
+    /** Deprecated, please use ProcessStatistics instead */
     public var averageCpuUsage: Double?
+    /** Deprecated, please use ProcessStatistics instead */
     public var cpuHistory: [TupleDoubleDouble]?
+    public var processStatistics: ProcessRunMetricsProcessStatistics?
     public var currentThrottle: Int?
     public var videoDecoder: String?
     public var videoDecoderIsHardware: Bool?
@@ -43,7 +47,7 @@ public struct TranscodingInfo: Codable {
     public var videoPipelineInfo: [TranscodingVpStepInfo]?
     public var subtitlePipelineInfos: [[TranscodingVpStepInfo]]?
 
-    public init(audioCodec: String? = nil, videoCodec: String? = nil, subProtocol: String? = nil, container: String? = nil, isVideoDirect: Bool? = nil, isAudioDirect: Bool? = nil, bitrate: Int? = nil, audioBitrate: Int? = nil, videoBitrate: Int? = nil, framerate: Float? = nil, completionPercentage: Double? = nil, transcodingPositionTicks: Double? = nil, transcodingStartPositionTicks: Double? = nil, width: Int? = nil, height: Int? = nil, audioChannels: Int? = nil, transcodeReasons: [TranscodeReason]? = nil, currentCpuUsage: Double? = nil, averageCpuUsage: Double? = nil, cpuHistory: [TupleDoubleDouble]? = nil, currentThrottle: Int? = nil, videoDecoder: String? = nil, videoDecoderIsHardware: Bool? = nil, videoDecoderMediaType: String? = nil, videoDecoderHwAccel: String? = nil, videoEncoder: String? = nil, videoEncoderIsHardware: Bool? = nil, videoEncoderMediaType: String? = nil, videoEncoderHwAccel: String? = nil, videoPipelineInfo: [TranscodingVpStepInfo]? = nil, subtitlePipelineInfos: [[TranscodingVpStepInfo]]? = nil) {
+    public init(audioCodec: String? = nil, videoCodec: String? = nil, subProtocol: String? = nil, container: String? = nil, isVideoDirect: Bool? = nil, isAudioDirect: Bool? = nil, bitrate: Int? = nil, audioBitrate: Int? = nil, videoBitrate: Int? = nil, framerate: Float? = nil, completionPercentage: Double? = nil, transcodingPositionTicks: Double? = nil, transcodingStartPositionTicks: Double? = nil, width: Int? = nil, height: Int? = nil, audioChannels: Int? = nil, transcodeReasons: [TranscodeReason]? = nil, currentCpuUsage: Double? = nil, averageCpuUsage: Double? = nil, cpuHistory: [TupleDoubleDouble]? = nil, processStatistics: ProcessRunMetricsProcessStatistics? = nil, currentThrottle: Int? = nil, videoDecoder: String? = nil, videoDecoderIsHardware: Bool? = nil, videoDecoderMediaType: String? = nil, videoDecoderHwAccel: String? = nil, videoEncoder: String? = nil, videoEncoderIsHardware: Bool? = nil, videoEncoderMediaType: String? = nil, videoEncoderHwAccel: String? = nil, videoPipelineInfo: [TranscodingVpStepInfo]? = nil, subtitlePipelineInfos: [[TranscodingVpStepInfo]]? = nil) {
         self.audioCodec = audioCodec
         self.videoCodec = videoCodec
         self.subProtocol = subProtocol
@@ -64,6 +68,7 @@ public struct TranscodingInfo: Codable {
         self.currentCpuUsage = currentCpuUsage
         self.averageCpuUsage = averageCpuUsage
         self.cpuHistory = cpuHistory
+        self.processStatistics = processStatistics
         self.currentThrottle = currentThrottle
         self.videoDecoder = videoDecoder
         self.videoDecoderIsHardware = videoDecoderIsHardware
@@ -98,6 +103,7 @@ public struct TranscodingInfo: Codable {
         case currentCpuUsage = "CurrentCpuUsage"
         case averageCpuUsage = "AverageCpuUsage"
         case cpuHistory = "CpuHistory"
+        case processStatistics = "ProcessStatistics"
         case currentThrottle = "CurrentThrottle"
         case videoDecoder = "VideoDecoder"
         case videoDecoderIsHardware = "VideoDecoderIsHardware"

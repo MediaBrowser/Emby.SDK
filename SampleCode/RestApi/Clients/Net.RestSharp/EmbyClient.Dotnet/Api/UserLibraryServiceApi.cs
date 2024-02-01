@@ -116,9 +116,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>QueryResultBaseItemDto</returns>
-        QueryResultBaseItemDto GetUsersByUseridItemsByIdIntros (string userId, string id);
+        QueryResultBaseItemDto GetUsersByUseridItemsByIdIntros (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
 
         /// <summary>
         /// Gets intros to play before the main media item plays
@@ -128,9 +133,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
-        ApiResponse<QueryResultBaseItemDto> GetUsersByUseridItemsByIdIntrosWithHttpInfo (string userId, string id);
+        ApiResponse<QueryResultBaseItemDto> GetUsersByUseridItemsByIdIntrosWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
         /// <summary>
         /// Gets local trailers for an item
         /// </summary>
@@ -139,9 +149,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>List&lt;BaseItemDto&gt;</returns>
-        List<BaseItemDto> GetUsersByUseridItemsByIdLocaltrailers (string userId, string id);
+        List<BaseItemDto> GetUsersByUseridItemsByIdLocaltrailers (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
 
         /// <summary>
         /// Gets local trailers for an item
@@ -151,9 +166,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>ApiResponse of List&lt;BaseItemDto&gt;</returns>
-        ApiResponse<List<BaseItemDto>> GetUsersByUseridItemsByIdLocaltrailersWithHttpInfo (string userId, string id);
+        ApiResponse<List<BaseItemDto>> GetUsersByUseridItemsByIdLocaltrailersWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
         /// <summary>
         /// Gets special features for an item
         /// </summary>
@@ -162,9 +182,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Movie Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>List&lt;BaseItemDto&gt;</returns>
-        List<BaseItemDto> GetUsersByUseridItemsByIdSpecialfeatures (string userId, string id);
+        List<BaseItemDto> GetUsersByUseridItemsByIdSpecialfeatures (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
 
         /// <summary>
         /// Gets special features for an item
@@ -174,9 +199,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Movie Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>ApiResponse of List&lt;BaseItemDto&gt;</returns>
-        ApiResponse<List<BaseItemDto>> GetUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo (string userId, string id);
+        ApiResponse<List<BaseItemDto>> GetUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
         /// <summary>
         /// Gets latest media
         /// </summary>
@@ -250,10 +280,15 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>QueryResultBaseItemDto</returns>
-        QueryResultBaseItemDto GetVideosByIdAdditionalparts (string id, string userId);
+        QueryResultBaseItemDto GetVideosByIdAdditionalparts (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
 
         /// <summary>
         /// Gets additional parts for a video.
@@ -262,10 +297,99 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
-        ApiResponse<QueryResultBaseItemDto> GetVideosByIdAdditionalpartsWithHttpInfo (string id, string userId);
+        ApiResponse<QueryResultBaseItemDto> GetVideosByIdAdditionalpartsWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
+        /// <summary>
+        /// Updates user item access
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns></returns>
+        void PostItemsAccess (UserLibraryUpdateUserItemAccess body);
+
+        /// <summary>
+        /// Updates user item access
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostItemsAccessWithHttpInfo (UserLibraryUpdateUserItemAccess body);
+        /// <summary>
+        /// Makes an item private
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns></returns>
+        void PostItemsByIdMakeprivate (string id);
+
+        /// <summary>
+        /// Makes an item private
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostItemsByIdMakeprivateWithHttpInfo (string id);
+        /// <summary>
+        /// Makes an item public to all users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns></returns>
+        void PostItemsByIdMakepublic (string id);
+
+        /// <summary>
+        /// Makes an item public to all users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostItemsByIdMakepublicWithHttpInfo (string id);
+        /// <summary>
+        /// Leaves a shared item
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns></returns>
+        void PostItemsSharedLeave (UserLibraryLeaveSharedItems body);
+
+        /// <summary>
+        /// Leaves a shared item
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostItemsSharedLeaveWithHttpInfo (UserLibraryLeaveSharedItems body);
         /// <summary>
         /// Marks an item as a favorite
         /// </summary>
@@ -485,9 +609,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of QueryResultBaseItemDto</returns>
-        System.Threading.Tasks.Task<QueryResultBaseItemDto> GetUsersByUseridItemsByIdIntrosAsync (string userId, string id);
+        System.Threading.Tasks.Task<QueryResultBaseItemDto> GetUsersByUseridItemsByIdIntrosAsync (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
 
         /// <summary>
         /// Gets intros to play before the main media item plays
@@ -497,9 +626,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetUsersByUseridItemsByIdIntrosAsyncWithHttpInfo (string userId, string id);
+        System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetUsersByUseridItemsByIdIntrosAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
         /// <summary>
         /// Gets local trailers for an item
         /// </summary>
@@ -508,9 +642,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of List&lt;BaseItemDto&gt;</returns>
-        System.Threading.Tasks.Task<List<BaseItemDto>> GetUsersByUseridItemsByIdLocaltrailersAsync (string userId, string id);
+        System.Threading.Tasks.Task<List<BaseItemDto>> GetUsersByUseridItemsByIdLocaltrailersAsync (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
 
         /// <summary>
         /// Gets local trailers for an item
@@ -520,9 +659,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;BaseItemDto&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetUsersByUseridItemsByIdLocaltrailersAsyncWithHttpInfo (string userId, string id);
+        System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetUsersByUseridItemsByIdLocaltrailersAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
         /// <summary>
         /// Gets special features for an item
         /// </summary>
@@ -531,9 +675,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Movie Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of List&lt;BaseItemDto&gt;</returns>
-        System.Threading.Tasks.Task<List<BaseItemDto>> GetUsersByUseridItemsByIdSpecialfeaturesAsync (string userId, string id);
+        System.Threading.Tasks.Task<List<BaseItemDto>> GetUsersByUseridItemsByIdSpecialfeaturesAsync (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
 
         /// <summary>
         /// Gets special features for an item
@@ -543,9 +692,14 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Movie Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;BaseItemDto&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetUsersByUseridItemsByIdSpecialfeaturesAsyncWithHttpInfo (string userId, string id);
+        System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetUsersByUseridItemsByIdSpecialfeaturesAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
         /// <summary>
         /// Gets latest media
         /// </summary>
@@ -619,10 +773,15 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of QueryResultBaseItemDto</returns>
-        System.Threading.Tasks.Task<QueryResultBaseItemDto> GetVideosByIdAdditionalpartsAsync (string id, string userId);
+        System.Threading.Tasks.Task<QueryResultBaseItemDto> GetVideosByIdAdditionalpartsAsync (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
 
         /// <summary>
         /// Gets additional parts for a video.
@@ -631,10 +790,99 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetVideosByIdAdditionalpartsAsyncWithHttpInfo (string id, string userId);
+        System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetVideosByIdAdditionalpartsAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData);
+        /// <summary>
+        /// Updates user item access
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostItemsAccessAsync (UserLibraryUpdateUserItemAccess body);
+
+        /// <summary>
+        /// Updates user item access
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsAccessAsyncWithHttpInfo (UserLibraryUpdateUserItemAccess body);
+        /// <summary>
+        /// Makes an item private
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostItemsByIdMakeprivateAsync (string id);
+
+        /// <summary>
+        /// Makes an item private
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdMakeprivateAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// Makes an item public to all users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostItemsByIdMakepublicAsync (string id);
+
+        /// <summary>
+        /// Makes an item public to all users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdMakepublicAsyncWithHttpInfo (string id);
+        /// <summary>
+        /// Leaves a shared item
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostItemsSharedLeaveAsync (UserLibraryLeaveSharedItems body);
+
+        /// <summary>
+        /// Leaves a shared item
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsSharedLeaveAsyncWithHttpInfo (UserLibraryLeaveSharedItems body);
         /// <summary>
         /// Marks an item as a favorite
         /// </summary>
@@ -1526,11 +1774,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>QueryResultBaseItemDto</returns>
-        public QueryResultBaseItemDto GetUsersByUseridItemsByIdIntros (string userId, string id)
+        public QueryResultBaseItemDto GetUsersByUseridItemsByIdIntros (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
-             ApiResponse<QueryResultBaseItemDto> localVarResponse = GetUsersByUseridItemsByIdIntrosWithHttpInfo(userId, id);
+             ApiResponse<QueryResultBaseItemDto> localVarResponse = GetUsersByUseridItemsByIdIntrosWithHttpInfo(userId, fields, id, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
              return localVarResponse.Data;
         }
 
@@ -1539,9 +1792,14 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
-        public ApiResponse< QueryResultBaseItemDto > GetUsersByUseridItemsByIdIntrosWithHttpInfo (string userId, string id)
+        public ApiResponse< QueryResultBaseItemDto > GetUsersByUseridItemsByIdIntrosWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1574,6 +1832,11 @@ namespace EmbyClient.Dotnet.Api
 
             if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1609,11 +1872,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of QueryResultBaseItemDto</returns>
-        public async System.Threading.Tasks.Task<QueryResultBaseItemDto> GetUsersByUseridItemsByIdIntrosAsync (string userId, string id)
+        public async System.Threading.Tasks.Task<QueryResultBaseItemDto> GetUsersByUseridItemsByIdIntrosAsync (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
-             ApiResponse<QueryResultBaseItemDto> localVarResponse = await GetUsersByUseridItemsByIdIntrosAsyncWithHttpInfo(userId, id);
+             ApiResponse<QueryResultBaseItemDto> localVarResponse = await GetUsersByUseridItemsByIdIntrosAsyncWithHttpInfo(userId, fields, id, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
              return localVarResponse.Data;
 
         }
@@ -1623,9 +1891,14 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetUsersByUseridItemsByIdIntrosAsyncWithHttpInfo (string userId, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetUsersByUseridItemsByIdIntrosAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1658,6 +1931,11 @@ namespace EmbyClient.Dotnet.Api
 
             if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1693,11 +1971,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>List&lt;BaseItemDto&gt;</returns>
-        public List<BaseItemDto> GetUsersByUseridItemsByIdLocaltrailers (string userId, string id)
+        public List<BaseItemDto> GetUsersByUseridItemsByIdLocaltrailers (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
-             ApiResponse<List<BaseItemDto>> localVarResponse = GetUsersByUseridItemsByIdLocaltrailersWithHttpInfo(userId, id);
+             ApiResponse<List<BaseItemDto>> localVarResponse = GetUsersByUseridItemsByIdLocaltrailersWithHttpInfo(userId, fields, id, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
              return localVarResponse.Data;
         }
 
@@ -1706,9 +1989,14 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>ApiResponse of List&lt;BaseItemDto&gt;</returns>
-        public ApiResponse< List<BaseItemDto> > GetUsersByUseridItemsByIdLocaltrailersWithHttpInfo (string userId, string id)
+        public ApiResponse< List<BaseItemDto> > GetUsersByUseridItemsByIdLocaltrailersWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1741,6 +2029,11 @@ namespace EmbyClient.Dotnet.Api
 
             if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1776,11 +2069,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of List&lt;BaseItemDto&gt;</returns>
-        public async System.Threading.Tasks.Task<List<BaseItemDto>> GetUsersByUseridItemsByIdLocaltrailersAsync (string userId, string id)
+        public async System.Threading.Tasks.Task<List<BaseItemDto>> GetUsersByUseridItemsByIdLocaltrailersAsync (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
-             ApiResponse<List<BaseItemDto>> localVarResponse = await GetUsersByUseridItemsByIdLocaltrailersAsyncWithHttpInfo(userId, id);
+             ApiResponse<List<BaseItemDto>> localVarResponse = await GetUsersByUseridItemsByIdLocaltrailersAsyncWithHttpInfo(userId, fields, id, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
              return localVarResponse.Data;
 
         }
@@ -1790,9 +2088,14 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;BaseItemDto&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetUsersByUseridItemsByIdLocaltrailersAsyncWithHttpInfo (string userId, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetUsersByUseridItemsByIdLocaltrailersAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1825,6 +2128,11 @@ namespace EmbyClient.Dotnet.Api
 
             if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1860,11 +2168,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Movie Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>List&lt;BaseItemDto&gt;</returns>
-        public List<BaseItemDto> GetUsersByUseridItemsByIdSpecialfeatures (string userId, string id)
+        public List<BaseItemDto> GetUsersByUseridItemsByIdSpecialfeatures (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
-             ApiResponse<List<BaseItemDto>> localVarResponse = GetUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo(userId, id);
+             ApiResponse<List<BaseItemDto>> localVarResponse = GetUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo(userId, fields, id, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
              return localVarResponse.Data;
         }
 
@@ -1873,9 +2186,14 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Movie Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>ApiResponse of List&lt;BaseItemDto&gt;</returns>
-        public ApiResponse< List<BaseItemDto> > GetUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo (string userId, string id)
+        public ApiResponse< List<BaseItemDto> > GetUsersByUseridItemsByIdSpecialfeaturesWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1908,6 +2226,11 @@ namespace EmbyClient.Dotnet.Api
 
             if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1943,11 +2266,16 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Movie Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of List&lt;BaseItemDto&gt;</returns>
-        public async System.Threading.Tasks.Task<List<BaseItemDto>> GetUsersByUseridItemsByIdSpecialfeaturesAsync (string userId, string id)
+        public async System.Threading.Tasks.Task<List<BaseItemDto>> GetUsersByUseridItemsByIdSpecialfeaturesAsync (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
-             ApiResponse<List<BaseItemDto>> localVarResponse = await GetUsersByUseridItemsByIdSpecialfeaturesAsyncWithHttpInfo(userId, id);
+             ApiResponse<List<BaseItemDto>> localVarResponse = await GetUsersByUseridItemsByIdSpecialfeaturesAsyncWithHttpInfo(userId, fields, id, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
              return localVarResponse.Data;
 
         }
@@ -1957,9 +2285,14 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <param name="id">Movie Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;BaseItemDto&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetUsersByUseridItemsByIdSpecialfeaturesAsyncWithHttpInfo (string userId, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetUsersByUseridItemsByIdSpecialfeaturesAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1992,6 +2325,11 @@ namespace EmbyClient.Dotnet.Api
 
             if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -2408,12 +2746,17 @@ namespace EmbyClient.Dotnet.Api
         /// Gets additional parts for a video. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>QueryResultBaseItemDto</returns>
-        public QueryResultBaseItemDto GetVideosByIdAdditionalparts (string id, string userId)
+        public QueryResultBaseItemDto GetVideosByIdAdditionalparts (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
-             ApiResponse<QueryResultBaseItemDto> localVarResponse = GetVideosByIdAdditionalpartsWithHttpInfo(id, userId);
+             ApiResponse<QueryResultBaseItemDto> localVarResponse = GetVideosByIdAdditionalpartsWithHttpInfo(userId, fields, id, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
              return localVarResponse.Data;
         }
 
@@ -2421,10 +2764,15 @@ namespace EmbyClient.Dotnet.Api
         /// Gets additional parts for a video. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
-        public ApiResponse< QueryResultBaseItemDto > GetVideosByIdAdditionalpartsWithHttpInfo (string id, string userId)
+        public ApiResponse< QueryResultBaseItemDto > GetVideosByIdAdditionalpartsWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2454,6 +2802,11 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -2488,12 +2841,17 @@ namespace EmbyClient.Dotnet.Api
         /// Gets additional parts for a video. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of QueryResultBaseItemDto</returns>
-        public async System.Threading.Tasks.Task<QueryResultBaseItemDto> GetVideosByIdAdditionalpartsAsync (string id, string userId)
+        public async System.Threading.Tasks.Task<QueryResultBaseItemDto> GetVideosByIdAdditionalpartsAsync (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
-             ApiResponse<QueryResultBaseItemDto> localVarResponse = await GetVideosByIdAdditionalpartsAsyncWithHttpInfo(id, userId);
+             ApiResponse<QueryResultBaseItemDto> localVarResponse = await GetVideosByIdAdditionalpartsAsyncWithHttpInfo(userId, fields, id, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
              return localVarResponse.Data;
 
         }
@@ -2502,10 +2860,15 @@ namespace EmbyClient.Dotnet.Api
         /// Gets additional parts for a video. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
+        /// <param name="id">Item Id</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetVideosByIdAdditionalpartsAsyncWithHttpInfo (string id, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetVideosByIdAdditionalpartsAsyncWithHttpInfo (string userId, string fields, string id, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2535,6 +2898,11 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -2563,6 +2931,638 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<QueryResultBaseItemDto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (QueryResultBaseItemDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultBaseItemDto)));
+        }
+
+        /// <summary>
+        /// Updates user item access Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns></returns>
+        public void PostItemsAccess (UserLibraryUpdateUserItemAccess body)
+        {
+             PostItemsAccessWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Updates user item access Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostItemsAccessWithHttpInfo (UserLibraryUpdateUserItemAccess body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserLibraryServiceApi->PostItemsAccess");
+
+            var localVarPath = "/Items/Access";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsAccess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Updates user item access Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostItemsAccessAsync (UserLibraryUpdateUserItemAccess body)
+        {
+             await PostItemsAccessAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Updates user item access Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">UpdateUserItemAccess</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsAccessAsyncWithHttpInfo (UserLibraryUpdateUserItemAccess body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserLibraryServiceApi->PostItemsAccess");
+
+            var localVarPath = "/Items/Access";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsAccess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Makes an item private Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns></returns>
+        public void PostItemsByIdMakeprivate (string id)
+        {
+             PostItemsByIdMakeprivateWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Makes an item private Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostItemsByIdMakeprivateWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserLibraryServiceApi->PostItemsByIdMakeprivate");
+
+            var localVarPath = "/Items/{Id}/MakePrivate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsByIdMakeprivate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Makes an item private Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostItemsByIdMakeprivateAsync (string id)
+        {
+             await PostItemsByIdMakeprivateAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// Makes an item private Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdMakeprivateAsyncWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserLibraryServiceApi->PostItemsByIdMakeprivate");
+
+            var localVarPath = "/Items/{Id}/MakePrivate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsByIdMakeprivate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Makes an item public to all users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns></returns>
+        public void PostItemsByIdMakepublic (string id)
+        {
+             PostItemsByIdMakepublicWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Makes an item public to all users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostItemsByIdMakepublicWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserLibraryServiceApi->PostItemsByIdMakepublic");
+
+            var localVarPath = "/Items/{Id}/MakePublic";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsByIdMakepublic", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Makes an item public to all users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostItemsByIdMakepublicAsync (string id)
+        {
+             await PostItemsByIdMakepublicAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// Makes an item public to all users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdMakepublicAsyncWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserLibraryServiceApi->PostItemsByIdMakepublic");
+
+            var localVarPath = "/Items/{Id}/MakePublic";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsByIdMakepublic", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Leaves a shared item Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns></returns>
+        public void PostItemsSharedLeave (UserLibraryLeaveSharedItems body)
+        {
+             PostItemsSharedLeaveWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Leaves a shared item Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostItemsSharedLeaveWithHttpInfo (UserLibraryLeaveSharedItems body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserLibraryServiceApi->PostItemsSharedLeave");
+
+            var localVarPath = "/Items/Shared/Leave";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsSharedLeave", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Leaves a shared item Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostItemsSharedLeaveAsync (UserLibraryLeaveSharedItems body)
+        {
+             await PostItemsSharedLeaveAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Leaves a shared item Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">LeaveSharedItems</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsSharedLeaveAsyncWithHttpInfo (UserLibraryLeaveSharedItems body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserLibraryServiceApi->PostItemsSharedLeave");
+
+            var localVarPath = "/Items/Shared/Leave";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsSharedLeave", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
         }
 
         /// <summary>

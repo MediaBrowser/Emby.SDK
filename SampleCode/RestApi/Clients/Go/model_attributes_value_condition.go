@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
-
+// AttributesValueCondition : Conditions for comparing with a target value.  
 type AttributesValueCondition string
 
 // List of Attributes.ValueCondition

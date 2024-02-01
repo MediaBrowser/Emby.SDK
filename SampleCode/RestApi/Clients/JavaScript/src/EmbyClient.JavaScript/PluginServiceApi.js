@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,7 +15,7 @@ import PluginsPluginInfo from '../model/PluginsPluginInfo';
 /**
 * PluginService service.
 * @module EmbyClient.JavaScript/PluginServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class PluginServiceApi {
 
@@ -77,7 +77,7 @@ export default class PluginServiceApi {
 
     /**
      * Gets a list of currently installed plugins
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/PluginServiceApi~getPluginsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/PluginsPluginInfo>}
      */
@@ -114,7 +114,7 @@ export default class PluginServiceApi {
 
     /**
      * Gets a plugin&#x27;s configuration
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/PluginServiceApi~getPluginsByIdConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getPluginsByIdConfiguration() {
@@ -151,7 +151,7 @@ export default class PluginServiceApi {
 
     /**
      * Gets a plugin thumb image
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/PluginServiceApi~getPluginsByIdThumbCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getPluginsByIdThumb() {
@@ -167,7 +167,7 @@ export default class PluginServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -188,7 +188,7 @@ export default class PluginServiceApi {
 
     /**
      * Updates a plugin&#x27;s configuration
-     * Requires authentication as user
+     * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/PluginServiceApi~postPluginsByIdConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postPluginsByIdConfiguration() {

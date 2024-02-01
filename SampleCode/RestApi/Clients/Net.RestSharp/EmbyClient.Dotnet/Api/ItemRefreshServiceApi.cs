@@ -25,14 +25,14 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="recursive">Indicates if the refresh should occur recursively. (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="metadataRefreshMode">Specifies the metadata refresh mode (optional)</param>
         /// <param name="imageRefreshMode">Specifies the image refresh mode (optional)</param>
         /// <param name="replaceAllMetadata">Determines if metadata should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <param name="replaceAllImages">Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <returns></returns>
-        void PostItemsByIdRefresh (string id, bool? recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages);
+        void PostItemsByIdRefresh (bool? recursive, string id, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages);
 
         /// <summary>
         /// Refreshes metadata for an item
@@ -41,14 +41,14 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="recursive">Indicates if the refresh should occur recursively. (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="metadataRefreshMode">Specifies the metadata refresh mode (optional)</param>
         /// <param name="imageRefreshMode">Specifies the image refresh mode (optional)</param>
         /// <param name="replaceAllMetadata">Determines if metadata should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <param name="replaceAllImages">Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostItemsByIdRefreshWithHttpInfo (string id, bool? recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages);
+        ApiResponse<Object> PostItemsByIdRefreshWithHttpInfo (bool? recursive, string id, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -58,14 +58,14 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="recursive">Indicates if the refresh should occur recursively. (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="metadataRefreshMode">Specifies the metadata refresh mode (optional)</param>
         /// <param name="imageRefreshMode">Specifies the image refresh mode (optional)</param>
         /// <param name="replaceAllMetadata">Determines if metadata should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <param name="replaceAllImages">Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostItemsByIdRefreshAsync (string id, bool? recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages);
+        System.Threading.Tasks.Task PostItemsByIdRefreshAsync (bool? recursive, string id, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages);
 
         /// <summary>
         /// Refreshes metadata for an item
@@ -74,14 +74,14 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="recursive">Indicates if the refresh should occur recursively. (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="metadataRefreshMode">Specifies the metadata refresh mode (optional)</param>
         /// <param name="imageRefreshMode">Specifies the image refresh mode (optional)</param>
         /// <param name="replaceAllMetadata">Determines if metadata should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <param name="replaceAllImages">Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdRefreshAsyncWithHttpInfo (string id, bool? recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdRefreshAsyncWithHttpInfo (bool? recursive, string id, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages);
         #endregion Asynchronous Operations
     }
 
@@ -197,30 +197,30 @@ namespace EmbyClient.Dotnet.Api
         /// Refreshes metadata for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="recursive">Indicates if the refresh should occur recursively. (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="metadataRefreshMode">Specifies the metadata refresh mode (optional)</param>
         /// <param name="imageRefreshMode">Specifies the image refresh mode (optional)</param>
         /// <param name="replaceAllMetadata">Determines if metadata should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <param name="replaceAllImages">Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <returns></returns>
-        public void PostItemsByIdRefresh (string id, bool? recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages)
+        public void PostItemsByIdRefresh (bool? recursive, string id, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages)
         {
-             PostItemsByIdRefreshWithHttpInfo(id, recursive, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages);
+             PostItemsByIdRefreshWithHttpInfo(recursive, id, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages);
         }
 
         /// <summary>
         /// Refreshes metadata for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="recursive">Indicates if the refresh should occur recursively. (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="metadataRefreshMode">Specifies the metadata refresh mode (optional)</param>
         /// <param name="imageRefreshMode">Specifies the image refresh mode (optional)</param>
         /// <param name="replaceAllMetadata">Determines if metadata should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <param name="replaceAllImages">Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostItemsByIdRefreshWithHttpInfo (string id, bool? recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages)
+        public ApiResponse<Object> PostItemsByIdRefreshWithHttpInfo (bool? recursive, string id, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -286,16 +286,16 @@ namespace EmbyClient.Dotnet.Api
         /// Refreshes metadata for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="recursive">Indicates if the refresh should occur recursively. (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="metadataRefreshMode">Specifies the metadata refresh mode (optional)</param>
         /// <param name="imageRefreshMode">Specifies the image refresh mode (optional)</param>
         /// <param name="replaceAllMetadata">Determines if metadata should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <param name="replaceAllImages">Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostItemsByIdRefreshAsync (string id, bool? recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages)
+        public async System.Threading.Tasks.Task PostItemsByIdRefreshAsync (bool? recursive, string id, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages)
         {
-             await PostItemsByIdRefreshAsyncWithHttpInfo(id, recursive, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages);
+             await PostItemsByIdRefreshAsyncWithHttpInfo(recursive, id, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages);
 
         }
 
@@ -303,14 +303,14 @@ namespace EmbyClient.Dotnet.Api
         /// Refreshes metadata for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="recursive">Indicates if the refresh should occur recursively. (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="metadataRefreshMode">Specifies the metadata refresh mode (optional)</param>
         /// <param name="imageRefreshMode">Specifies the image refresh mode (optional)</param>
         /// <param name="replaceAllMetadata">Determines if metadata should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <param name="replaceAllImages">Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdRefreshAsyncWithHttpInfo (string id, bool? recursive, ProvidersMetadataRefreshMode metadataRefreshMode, ProvidersMetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdRefreshAsyncWithHttpInfo (bool? recursive, string id, MetadataRefreshMode metadataRefreshMode, MetadataRefreshMode imageRefreshMode, bool? replaceAllMetadata, bool? replaceAllImages)
         {
             // verify the required parameter 'id' is set
             if (id == null)

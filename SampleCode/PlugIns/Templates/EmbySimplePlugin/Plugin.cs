@@ -26,7 +26,7 @@
 
         /// <summary>Gets the description.</summary>
         /// <value>The description.</value>
-        public override string Description => "XVXVXVXVXVXVXVVXVVVXVXVXVV";
+        public override string Description => "XVXVXVXVXVXVX";
 
         /// <summary>Gets the unique id.</summary>
         /// <value>The unique id.</value>
@@ -34,7 +34,7 @@
 
         /// <summary>Gets the name of the plugin</summary>
         /// <value>The name.</value>
-        public override sealed string Name => "´XVXVXVXVXVXVXVVXVVVXVXVXVV";
+        public override sealed string Name => "´XVXVXVXVXVXVX";
 
         /// <summary>Gets the thumb image format.</summary>
         /// <value>The thumb image format.</value>

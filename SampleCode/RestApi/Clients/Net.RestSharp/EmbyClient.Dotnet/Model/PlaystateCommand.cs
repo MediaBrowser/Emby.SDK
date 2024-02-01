@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines PlaystateCommand
+    /// Enum PlaystateCommand  
     /// </summary>
+    /// <value>Enum PlaystateCommand  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum PlaystateCommand
     {
@@ -67,5 +68,10 @@ namespace EmbyClient.Dotnet.Model
         /// Enum PlayPause for value: PlayPause
         /// </summary>
         [EnumMember(Value = "PlayPause")]
-        PlayPause = 9    }
+        PlayPause = 9,
+        /// <summary>
+        /// Enum SeekRelative for value: SeekRelative
+        /// </summary>
+        [EnumMember(Value = "SeekRelative")]
+        SeekRelative = 10    }
 }

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -124,6 +124,7 @@ class DeviceServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: QueryResultDevicesDeviceInfo
                  If the method is called asynchronously,
                  returns the request thread.
@@ -145,12 +146,13 @@ class DeviceServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: QueryResultDevicesDeviceInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['sort_order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -171,6 +173,8 @@ class DeviceServiceApi(object):
         path_params = {}
 
         query_params = []
+        if 'sort_order' in params:
+            query_params.append(('SortOrder', params['sort_order']))  # noqa: E501
 
         header_params = {}
 
@@ -201,45 +205,43 @@ class DeviceServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_devices_camerauploads(self, device_id, **kwargs):  # noqa: E501
+    def get_devices_camerauploads(self, **kwargs):  # noqa: E501
         """Gets camera upload history for a device  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_devices_camerauploads(device_id, async_req=True)
+        >>> thread = api.get_devices_camerauploads(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str device_id: Device Id (required)
         :return: DevicesContentUploadHistory
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_devices_camerauploads_with_http_info(device_id, **kwargs)  # noqa: E501
+            return self.get_devices_camerauploads_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.get_devices_camerauploads_with_http_info(device_id, **kwargs)  # noqa: E501
+            (data) = self.get_devices_camerauploads_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def get_devices_camerauploads_with_http_info(self, device_id, **kwargs):  # noqa: E501
+    def get_devices_camerauploads_with_http_info(self, **kwargs):  # noqa: E501
         """Gets camera upload history for a device  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_devices_camerauploads_with_http_info(device_id, async_req=True)
+        >>> thread = api.get_devices_camerauploads_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str device_id: Device Id (required)
         :return: DevicesContentUploadHistory
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['device_id']  # noqa: E501
+        all_params = []  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -254,18 +256,12 @@ class DeviceServiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `get_devices_camerauploads`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'device_id' in params:
-            query_params.append(('DeviceId', params['device_id']))  # noqa: E501
 
         header_params = {}
 
@@ -486,18 +482,17 @@ class DeviceServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_devices_camerauploads(self, body, device_id, album, name, id, **kwargs):  # noqa: E501
+    def post_devices_camerauploads(self, body, album, name, id, **kwargs):  # noqa: E501
         """Uploads content  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_devices_camerauploads(body, device_id, album, name, id, async_req=True)
+        >>> thread = api.post_devices_camerauploads(body, album, name, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param Object body: Binary stream (required)
-        :param str device_id: Device Id (required)
         :param str album: Album (required)
         :param str name: Name (required)
         :param str id: Id (required)
@@ -507,23 +502,22 @@ class DeviceServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_devices_camerauploads_with_http_info(body, device_id, album, name, id, **kwargs)  # noqa: E501
+            return self.post_devices_camerauploads_with_http_info(body, album, name, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_devices_camerauploads_with_http_info(body, device_id, album, name, id, **kwargs)  # noqa: E501
+            (data) = self.post_devices_camerauploads_with_http_info(body, album, name, id, **kwargs)  # noqa: E501
             return data
 
-    def post_devices_camerauploads_with_http_info(self, body, device_id, album, name, id, **kwargs):  # noqa: E501
+    def post_devices_camerauploads_with_http_info(self, body, album, name, id, **kwargs):  # noqa: E501
         """Uploads content  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_devices_camerauploads_with_http_info(body, device_id, album, name, id, async_req=True)
+        >>> thread = api.post_devices_camerauploads_with_http_info(body, album, name, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param Object body: Binary stream (required)
-        :param str device_id: Device Id (required)
         :param str album: Album (required)
         :param str name: Name (required)
         :param str id: Id (required)
@@ -532,7 +526,7 @@ class DeviceServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'device_id', 'album', 'name', 'id']  # noqa: E501
+        all_params = ['body', 'album', 'name', 'id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -551,10 +545,6 @@ class DeviceServiceApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `post_devices_camerauploads`")  # noqa: E501
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `post_devices_camerauploads`")  # noqa: E501
         # verify the required parameter 'album' is set
         if ('album' not in params or
                 params['album'] is None):
@@ -573,8 +563,6 @@ class DeviceServiceApi(object):
         path_params = {}
 
         query_params = []
-        if 'device_id' in params:
-            query_params.append(('DeviceId', params['device_id']))  # noqa: E501
         if 'album' in params:
             query_params.append(('Album', params['album']))  # noqa: E501
         if 'name' in params:

@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.ProvidersMetadataRefreshMode;
+import io.swagger.client.model.MetadataRefreshMode;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -36,8 +36,8 @@ public class ItemRefreshServiceApiTest {
     public void postItemsByIdRefreshTest() throws Exception {
         String id = null;
         Boolean recursive = null;
-        ProvidersMetadataRefreshMode metadataRefreshMode = null;
-        ProvidersMetadataRefreshMode imageRefreshMode = null;
+        MetadataRefreshMode metadataRefreshMode = null;
+        MetadataRefreshMode imageRefreshMode = null;
         Boolean replaceAllMetadata = null;
         Boolean replaceAllImages = null;
         api.postItemsByIdRefresh(id, recursive, metadataRefreshMode, imageRefreshMode, replaceAllMetadata, replaceAllImages);

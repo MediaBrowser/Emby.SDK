@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -19,19 +19,19 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.QueryResultSyncModelSyncJobItem;
-import io.swagger.client.model.QueryResultSyncSyncJob;
-import io.swagger.client.model.SyncModelSyncDataRequest;
-import io.swagger.client.model.SyncModelSyncDataResponse;
-import io.swagger.client.model.SyncModelSyncDialogOptions;
-import io.swagger.client.model.SyncModelSyncJobCreationResult;
-import io.swagger.client.model.SyncModelSyncJobRequest;
-import io.swagger.client.model.SyncModelSyncedItem;
-import io.swagger.client.model.SyncModelSyncedItemProgress;
-import io.swagger.client.model.SyncSyncCategory;
-import io.swagger.client.model.SyncSyncJob;
-import io.swagger.client.model.SyncSyncTarget;
-import io.swagger.client.model.UsersUserAction;
+import io.swagger.client.model.QueryResultSyncJob;
+import io.swagger.client.model.QueryResultSyncJobItem;
+import io.swagger.client.model.SyncCategory;
+import io.swagger.client.model.SyncDataRequest;
+import io.swagger.client.model.SyncDataResponse;
+import io.swagger.client.model.SyncDialogOptions;
+import io.swagger.client.model.SyncJob;
+import io.swagger.client.model.SyncJobCreationResult;
+import io.swagger.client.model.SyncJobRequest;
+import io.swagger.client.model.SyncTarget;
+import io.swagger.client.model.SyncedItem;
+import io.swagger.client.model.SyncedItemProgress;
+import io.swagger.client.model.UserAction;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -498,11 +498,11 @@ public class SyncServiceApi {
      * Gets ready to download sync items.
      * Requires authentication as user
      * @param targetId TargetId (required)
-     * @return List&lt;SyncModelSyncedItem&gt;
+     * @return List&lt;SyncedItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<SyncModelSyncedItem> getSyncItemsReady(String targetId) throws ApiException {
-        ApiResponse<List<SyncModelSyncedItem>> resp = getSyncItemsReadyWithHttpInfo(targetId);
+    public List<SyncedItem> getSyncItemsReady(String targetId) throws ApiException {
+        ApiResponse<List<SyncedItem>> resp = getSyncItemsReadyWithHttpInfo(targetId);
         return resp.getData();
     }
 
@@ -510,12 +510,12 @@ public class SyncServiceApi {
      * Gets ready to download sync items.
      * Requires authentication as user
      * @param targetId TargetId (required)
-     * @return ApiResponse&lt;List&lt;SyncModelSyncedItem&gt;&gt;
+     * @return ApiResponse&lt;List&lt;SyncedItem&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<SyncModelSyncedItem>> getSyncItemsReadyWithHttpInfo(String targetId) throws ApiException {
+    public ApiResponse<List<SyncedItem>> getSyncItemsReadyWithHttpInfo(String targetId) throws ApiException {
         com.squareup.okhttp.Call call = getSyncItemsReadyValidateBeforeCall(targetId, null, null);
-        Type localVarReturnType = new TypeToken<List<SyncModelSyncedItem>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SyncedItem>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -527,7 +527,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSyncItemsReadyAsync(String targetId, final ApiCallback<List<SyncModelSyncedItem>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSyncItemsReadyAsync(String targetId, final ApiCallback<List<SyncedItem>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -549,18 +549,19 @@ public class SyncServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSyncItemsReadyValidateBeforeCall(targetId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<SyncModelSyncedItem>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SyncedItem>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for getSyncJobitems
+     * @param targetId TargetId (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getSyncJobitemsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getSyncJobitemsCall(String targetId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -568,6 +569,8 @@ public class SyncServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (targetId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("TargetId", targetId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -602,9 +605,13 @@ public class SyncServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getSyncJobitemsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getSyncJobitemsValidateBeforeCall(String targetId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'targetId' is set
+        if (targetId == null) {
+            throw new ApiException("Missing the required parameter 'targetId' when calling getSyncJobitems(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getSyncJobitemsCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getSyncJobitemsCall(targetId, progressListener, progressRequestListener);
         return call;
 
         
@@ -616,34 +623,37 @@ public class SyncServiceApi {
     /**
      * Gets sync job items.
      * Requires authentication as user
-     * @return QueryResultSyncModelSyncJobItem
+     * @param targetId TargetId (required)
+     * @return QueryResultSyncJobItem
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultSyncModelSyncJobItem getSyncJobitems() throws ApiException {
-        ApiResponse<QueryResultSyncModelSyncJobItem> resp = getSyncJobitemsWithHttpInfo();
+    public QueryResultSyncJobItem getSyncJobitems(String targetId) throws ApiException {
+        ApiResponse<QueryResultSyncJobItem> resp = getSyncJobitemsWithHttpInfo(targetId);
         return resp.getData();
     }
 
     /**
      * Gets sync job items.
      * Requires authentication as user
-     * @return ApiResponse&lt;QueryResultSyncModelSyncJobItem&gt;
+     * @param targetId TargetId (required)
+     * @return ApiResponse&lt;QueryResultSyncJobItem&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultSyncModelSyncJobItem> getSyncJobitemsWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = getSyncJobitemsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<QueryResultSyncModelSyncJobItem>(){}.getType();
+    public ApiResponse<QueryResultSyncJobItem> getSyncJobitemsWithHttpInfo(String targetId) throws ApiException {
+        com.squareup.okhttp.Call call = getSyncJobitemsValidateBeforeCall(targetId, null, null);
+        Type localVarReturnType = new TypeToken<QueryResultSyncJobItem>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
      * Gets sync job items. (asynchronously)
      * Requires authentication as user
+     * @param targetId TargetId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSyncJobitemsAsync(final ApiCallback<QueryResultSyncModelSyncJobItem> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSyncJobitemsAsync(String targetId, final ApiCallback<QueryResultSyncJobItem> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -664,8 +674,8 @@ public class SyncServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getSyncJobitemsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultSyncModelSyncJobItem>(){}.getType();
+        com.squareup.okhttp.Call call = getSyncJobitemsValidateBeforeCall(targetId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<QueryResultSyncJobItem>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -984,23 +994,23 @@ public class SyncServiceApi {
     /**
      * Gets sync jobs.
      * Requires authentication as user
-     * @return QueryResultSyncSyncJob
+     * @return QueryResultSyncJob
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultSyncSyncJob getSyncJobs() throws ApiException {
-        ApiResponse<QueryResultSyncSyncJob> resp = getSyncJobsWithHttpInfo();
+    public QueryResultSyncJob getSyncJobs() throws ApiException {
+        ApiResponse<QueryResultSyncJob> resp = getSyncJobsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets sync jobs.
      * Requires authentication as user
-     * @return ApiResponse&lt;QueryResultSyncSyncJob&gt;
+     * @return ApiResponse&lt;QueryResultSyncJob&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultSyncSyncJob> getSyncJobsWithHttpInfo() throws ApiException {
+    public ApiResponse<QueryResultSyncJob> getSyncJobsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getSyncJobsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<QueryResultSyncSyncJob>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultSyncJob>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1011,7 +1021,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSyncJobsAsync(final ApiCallback<QueryResultSyncSyncJob> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSyncJobsAsync(final ApiCallback<QueryResultSyncJob> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1033,7 +1043,7 @@ public class SyncServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSyncJobsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<QueryResultSyncSyncJob>(){}.getType();
+        Type localVarReturnType = new TypeToken<QueryResultSyncJob>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1107,11 +1117,11 @@ public class SyncServiceApi {
      * Gets a sync job.
      * Requires authentication as user
      * @param id Id (required)
-     * @return SyncSyncJob
+     * @return SyncJob
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public SyncSyncJob getSyncJobsById(String id) throws ApiException {
-        ApiResponse<SyncSyncJob> resp = getSyncJobsByIdWithHttpInfo(id);
+    public SyncJob getSyncJobsById(String id) throws ApiException {
+        ApiResponse<SyncJob> resp = getSyncJobsByIdWithHttpInfo(id);
         return resp.getData();
     }
 
@@ -1119,12 +1129,12 @@ public class SyncServiceApi {
      * Gets a sync job.
      * Requires authentication as user
      * @param id Id (required)
-     * @return ApiResponse&lt;SyncSyncJob&gt;
+     * @return ApiResponse&lt;SyncJob&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<SyncSyncJob> getSyncJobsByIdWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<SyncJob> getSyncJobsByIdWithHttpInfo(String id) throws ApiException {
         com.squareup.okhttp.Call call = getSyncJobsByIdValidateBeforeCall(id, null, null);
-        Type localVarReturnType = new TypeToken<SyncSyncJob>(){}.getType();
+        Type localVarReturnType = new TypeToken<SyncJob>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1136,7 +1146,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSyncJobsByIdAsync(String id, final ApiCallback<SyncSyncJob> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSyncJobsByIdAsync(String id, final ApiCallback<SyncJob> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1158,7 +1168,7 @@ public class SyncServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSyncJobsByIdValidateBeforeCall(id, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<SyncSyncJob>(){}.getType();
+        Type localVarReturnType = new TypeToken<SyncJob>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1174,7 +1184,7 @@ public class SyncServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getSyncOptionsCall(String userId, String itemIds, String parentId, String targetId, SyncSyncCategory category, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getSyncOptionsCall(String userId, String itemIds, String parentId, String targetId, SyncCategory category, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -1226,7 +1236,7 @@ public class SyncServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getSyncOptionsValidateBeforeCall(String userId, String itemIds, String parentId, String targetId, SyncSyncCategory category, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getSyncOptionsValidateBeforeCall(String userId, String itemIds, String parentId, String targetId, SyncCategory category, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'userId' is set
         if (userId == null) {
             throw new ApiException("Missing the required parameter 'userId' when calling getSyncOptions(Async)");
@@ -1249,11 +1259,11 @@ public class SyncServiceApi {
      * @param parentId ParentId (optional)
      * @param targetId TargetId (optional)
      * @param category Category (optional)
-     * @return SyncModelSyncDialogOptions
+     * @return SyncDialogOptions
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public SyncModelSyncDialogOptions getSyncOptions(String userId, String itemIds, String parentId, String targetId, SyncSyncCategory category) throws ApiException {
-        ApiResponse<SyncModelSyncDialogOptions> resp = getSyncOptionsWithHttpInfo(userId, itemIds, parentId, targetId, category);
+    public SyncDialogOptions getSyncOptions(String userId, String itemIds, String parentId, String targetId, SyncCategory category) throws ApiException {
+        ApiResponse<SyncDialogOptions> resp = getSyncOptionsWithHttpInfo(userId, itemIds, parentId, targetId, category);
         return resp.getData();
     }
 
@@ -1265,12 +1275,12 @@ public class SyncServiceApi {
      * @param parentId ParentId (optional)
      * @param targetId TargetId (optional)
      * @param category Category (optional)
-     * @return ApiResponse&lt;SyncModelSyncDialogOptions&gt;
+     * @return ApiResponse&lt;SyncDialogOptions&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<SyncModelSyncDialogOptions> getSyncOptionsWithHttpInfo(String userId, String itemIds, String parentId, String targetId, SyncSyncCategory category) throws ApiException {
+    public ApiResponse<SyncDialogOptions> getSyncOptionsWithHttpInfo(String userId, String itemIds, String parentId, String targetId, SyncCategory category) throws ApiException {
         com.squareup.okhttp.Call call = getSyncOptionsValidateBeforeCall(userId, itemIds, parentId, targetId, category, null, null);
-        Type localVarReturnType = new TypeToken<SyncModelSyncDialogOptions>(){}.getType();
+        Type localVarReturnType = new TypeToken<SyncDialogOptions>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1286,7 +1296,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSyncOptionsAsync(String userId, String itemIds, String parentId, String targetId, SyncSyncCategory category, final ApiCallback<SyncModelSyncDialogOptions> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSyncOptionsAsync(String userId, String itemIds, String parentId, String targetId, SyncCategory category, final ApiCallback<SyncDialogOptions> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1308,7 +1318,7 @@ public class SyncServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSyncOptionsValidateBeforeCall(userId, itemIds, parentId, targetId, category, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<SyncModelSyncDialogOptions>(){}.getType();
+        Type localVarReturnType = new TypeToken<SyncDialogOptions>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1383,11 +1393,11 @@ public class SyncServiceApi {
      * Gets a list of available sync targets.
      * Requires authentication as user
      * @param userId UserId (required)
-     * @return List&lt;SyncSyncTarget&gt;
+     * @return List&lt;SyncTarget&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<SyncSyncTarget> getSyncTargets(String userId) throws ApiException {
-        ApiResponse<List<SyncSyncTarget>> resp = getSyncTargetsWithHttpInfo(userId);
+    public List<SyncTarget> getSyncTargets(String userId) throws ApiException {
+        ApiResponse<List<SyncTarget>> resp = getSyncTargetsWithHttpInfo(userId);
         return resp.getData();
     }
 
@@ -1395,12 +1405,12 @@ public class SyncServiceApi {
      * Gets a list of available sync targets.
      * Requires authentication as user
      * @param userId UserId (required)
-     * @return ApiResponse&lt;List&lt;SyncSyncTarget&gt;&gt;
+     * @return ApiResponse&lt;List&lt;SyncTarget&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<SyncSyncTarget>> getSyncTargetsWithHttpInfo(String userId) throws ApiException {
+    public ApiResponse<List<SyncTarget>> getSyncTargetsWithHttpInfo(String userId) throws ApiException {
         com.squareup.okhttp.Call call = getSyncTargetsValidateBeforeCall(userId, null, null);
-        Type localVarReturnType = new TypeToken<List<SyncSyncTarget>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SyncTarget>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1412,7 +1422,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSyncTargetsAsync(String userId, final ApiCallback<List<SyncSyncTarget>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSyncTargetsAsync(String userId, final ApiCallback<List<SyncTarget>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1434,7 +1444,7 @@ public class SyncServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSyncTargetsValidateBeforeCall(userId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<SyncSyncTarget>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<SyncTarget>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1447,7 +1457,7 @@ public class SyncServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postSyncByItemidStatusCall(SyncModelSyncedItemProgress body, String itemId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postSyncByItemidStatusCall(SyncedItemProgress body, String itemId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1490,7 +1500,7 @@ public class SyncServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postSyncByItemidStatusValidateBeforeCall(SyncModelSyncedItemProgress body, String itemId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postSyncByItemidStatusValidateBeforeCall(SyncedItemProgress body, String itemId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postSyncByItemidStatus(Async)");
@@ -1516,7 +1526,7 @@ public class SyncServiceApi {
      * @param itemId  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postSyncByItemidStatus(SyncModelSyncedItemProgress body, String itemId) throws ApiException {
+    public void postSyncByItemidStatus(SyncedItemProgress body, String itemId) throws ApiException {
         postSyncByItemidStatusWithHttpInfo(body, itemId);
     }
 
@@ -1528,7 +1538,7 @@ public class SyncServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postSyncByItemidStatusWithHttpInfo(SyncModelSyncedItemProgress body, String itemId) throws ApiException {
+    public ApiResponse<Void> postSyncByItemidStatusWithHttpInfo(SyncedItemProgress body, String itemId) throws ApiException {
         com.squareup.okhttp.Call call = postSyncByItemidStatusValidateBeforeCall(body, itemId, null, null);
         return apiClient.execute(call);
     }
@@ -1542,7 +1552,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postSyncByItemidStatusAsync(SyncModelSyncedItemProgress body, String itemId, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postSyncByItemidStatusAsync(SyncedItemProgress body, String itemId, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1697,12 +1707,13 @@ public class SyncServiceApi {
     /**
      * Build call for postSyncData
      * @param body SyncDataRequest:  (required)
+     * @param targetId TargetId (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postSyncDataCall(SyncModelSyncDataRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postSyncDataCall(SyncDataRequest body, String targetId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1710,6 +1721,8 @@ public class SyncServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (targetId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("TargetId", targetId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -1744,13 +1757,17 @@ public class SyncServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postSyncDataValidateBeforeCall(SyncModelSyncDataRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postSyncDataValidateBeforeCall(SyncDataRequest body, String targetId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postSyncData(Async)");
         }
+        // verify the required parameter 'targetId' is set
+        if (targetId == null) {
+            throw new ApiException("Missing the required parameter 'targetId' when calling postSyncData(Async)");
+        }
         
-        com.squareup.okhttp.Call call = postSyncDataCall(body, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postSyncDataCall(body, targetId, progressListener, progressRequestListener);
         return call;
 
         
@@ -1763,11 +1780,12 @@ public class SyncServiceApi {
      * Syncs data between device and server
      * Requires authentication as user
      * @param body SyncDataRequest:  (required)
-     * @return SyncModelSyncDataResponse
+     * @param targetId TargetId (required)
+     * @return SyncDataResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public SyncModelSyncDataResponse postSyncData(SyncModelSyncDataRequest body) throws ApiException {
-        ApiResponse<SyncModelSyncDataResponse> resp = postSyncDataWithHttpInfo(body);
+    public SyncDataResponse postSyncData(SyncDataRequest body, String targetId) throws ApiException {
+        ApiResponse<SyncDataResponse> resp = postSyncDataWithHttpInfo(body, targetId);
         return resp.getData();
     }
 
@@ -1775,12 +1793,13 @@ public class SyncServiceApi {
      * Syncs data between device and server
      * Requires authentication as user
      * @param body SyncDataRequest:  (required)
-     * @return ApiResponse&lt;SyncModelSyncDataResponse&gt;
+     * @param targetId TargetId (required)
+     * @return ApiResponse&lt;SyncDataResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<SyncModelSyncDataResponse> postSyncDataWithHttpInfo(SyncModelSyncDataRequest body) throws ApiException {
-        com.squareup.okhttp.Call call = postSyncDataValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<SyncModelSyncDataResponse>(){}.getType();
+    public ApiResponse<SyncDataResponse> postSyncDataWithHttpInfo(SyncDataRequest body, String targetId) throws ApiException {
+        com.squareup.okhttp.Call call = postSyncDataValidateBeforeCall(body, targetId, null, null);
+        Type localVarReturnType = new TypeToken<SyncDataResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1788,11 +1807,12 @@ public class SyncServiceApi {
      * Syncs data between device and server (asynchronously)
      * Requires authentication as user
      * @param body SyncDataRequest:  (required)
+     * @param targetId TargetId (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postSyncDataAsync(SyncModelSyncDataRequest body, final ApiCallback<SyncModelSyncDataResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call postSyncDataAsync(SyncDataRequest body, String targetId, final ApiCallback<SyncDataResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1813,8 +1833,8 @@ public class SyncServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postSyncDataValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<SyncModelSyncDataResponse>(){}.getType();
+        com.squareup.okhttp.Call call = postSyncDataValidateBeforeCall(body, targetId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<SyncDataResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -2549,7 +2569,7 @@ public class SyncServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postSyncJobsCall(SyncModelSyncJobRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postSyncJobsCall(SyncJobRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -2591,7 +2611,7 @@ public class SyncServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postSyncJobsValidateBeforeCall(SyncModelSyncJobRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postSyncJobsValidateBeforeCall(SyncJobRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postSyncJobs(Async)");
@@ -2610,11 +2630,11 @@ public class SyncServiceApi {
      * Gets sync jobs.
      * Requires authentication as user
      * @param body SyncJobRequest:  (required)
-     * @return SyncModelSyncJobCreationResult
+     * @return SyncJobCreationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public SyncModelSyncJobCreationResult postSyncJobs(SyncModelSyncJobRequest body) throws ApiException {
-        ApiResponse<SyncModelSyncJobCreationResult> resp = postSyncJobsWithHttpInfo(body);
+    public SyncJobCreationResult postSyncJobs(SyncJobRequest body) throws ApiException {
+        ApiResponse<SyncJobCreationResult> resp = postSyncJobsWithHttpInfo(body);
         return resp.getData();
     }
 
@@ -2622,12 +2642,12 @@ public class SyncServiceApi {
      * Gets sync jobs.
      * Requires authentication as user
      * @param body SyncJobRequest:  (required)
-     * @return ApiResponse&lt;SyncModelSyncJobCreationResult&gt;
+     * @return ApiResponse&lt;SyncJobCreationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<SyncModelSyncJobCreationResult> postSyncJobsWithHttpInfo(SyncModelSyncJobRequest body) throws ApiException {
+    public ApiResponse<SyncJobCreationResult> postSyncJobsWithHttpInfo(SyncJobRequest body) throws ApiException {
         com.squareup.okhttp.Call call = postSyncJobsValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<SyncModelSyncJobCreationResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<SyncJobCreationResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -2639,7 +2659,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postSyncJobsAsync(SyncModelSyncJobRequest body, final ApiCallback<SyncModelSyncJobCreationResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call postSyncJobsAsync(SyncJobRequest body, final ApiCallback<SyncJobCreationResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2661,7 +2681,7 @@ public class SyncServiceApi {
         }
 
         com.squareup.okhttp.Call call = postSyncJobsValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<SyncModelSyncJobCreationResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<SyncJobCreationResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -2674,7 +2694,7 @@ public class SyncServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postSyncJobsByIdCall(SyncSyncJob body, Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postSyncJobsByIdCall(SyncJob body, Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -2717,7 +2737,7 @@ public class SyncServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postSyncJobsByIdValidateBeforeCall(SyncSyncJob body, Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postSyncJobsByIdValidateBeforeCall(SyncJob body, Long id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postSyncJobsById(Async)");
@@ -2743,7 +2763,7 @@ public class SyncServiceApi {
      * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postSyncJobsById(SyncSyncJob body, Long id) throws ApiException {
+    public void postSyncJobsById(SyncJob body, Long id) throws ApiException {
         postSyncJobsByIdWithHttpInfo(body, id);
     }
 
@@ -2755,7 +2775,7 @@ public class SyncServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postSyncJobsByIdWithHttpInfo(SyncSyncJob body, Long id) throws ApiException {
+    public ApiResponse<Void> postSyncJobsByIdWithHttpInfo(SyncJob body, Long id) throws ApiException {
         com.squareup.okhttp.Call call = postSyncJobsByIdValidateBeforeCall(body, id, null, null);
         return apiClient.execute(call);
     }
@@ -2769,7 +2789,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postSyncJobsByIdAsync(SyncSyncJob body, Long id, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postSyncJobsByIdAsync(SyncJob body, Long id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2923,7 +2943,7 @@ public class SyncServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postSyncOfflineactionsCall(List<UsersUserAction> body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postSyncOfflineactionsCall(List<UserAction> body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -2965,7 +2985,7 @@ public class SyncServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postSyncOfflineactionsValidateBeforeCall(List<UsersUserAction> body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postSyncOfflineactionsValidateBeforeCall(List<UserAction> body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postSyncOfflineactions(Async)");
@@ -2986,7 +3006,7 @@ public class SyncServiceApi {
      * @param body List&#x60;1:  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postSyncOfflineactions(List<UsersUserAction> body) throws ApiException {
+    public void postSyncOfflineactions(List<UserAction> body) throws ApiException {
         postSyncOfflineactionsWithHttpInfo(body);
     }
 
@@ -2997,7 +3017,7 @@ public class SyncServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postSyncOfflineactionsWithHttpInfo(List<UsersUserAction> body) throws ApiException {
+    public ApiResponse<Void> postSyncOfflineactionsWithHttpInfo(List<UserAction> body) throws ApiException {
         com.squareup.okhttp.Call call = postSyncOfflineactionsValidateBeforeCall(body, null, null);
         return apiClient.execute(call);
     }
@@ -3010,7 +3030,7 @@ public class SyncServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postSyncOfflineactionsAsync(List<UsersUserAction> body, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postSyncOfflineactionsAsync(List<UserAction> body, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -439,6 +439,11 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -462,12 +467,17 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'id']  # noqa: E501
+        all_params = ['user_id', 'id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -500,6 +510,16 @@ class UserLibraryServiceApi(object):
             path_params['Id'] = params['id']  # noqa: E501
 
         query_params = []
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 
@@ -542,6 +562,11 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: list[BaseItemDto]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -565,12 +590,17 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Item Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: list[BaseItemDto]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'id']  # noqa: E501
+        all_params = ['user_id', 'id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -603,6 +633,16 @@ class UserLibraryServiceApi(object):
             path_params['Id'] = params['id']  # noqa: E501
 
         query_params = []
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 
@@ -645,6 +685,11 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Movie Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: list[BaseItemDto]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -668,12 +713,17 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str user_id: User Id (required)
         :param str id: Movie Id (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: list[BaseItemDto]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'id']  # noqa: E501
+        all_params = ['user_id', 'id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -706,6 +756,16 @@ class UserLibraryServiceApi(object):
             path_params['Id'] = params['id']  # noqa: E501
 
         query_params = []
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 
@@ -986,6 +1046,11 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1009,12 +1074,17 @@ class UserLibraryServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'user_id']  # noqa: E501
+        all_params = ['id', 'user_id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1043,6 +1113,16 @@ class UserLibraryServiceApi(object):
         query_params = []
         if 'user_id' in params:
             query_params.append(('UserId', params['user_id']))  # noqa: E501
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 
@@ -1066,6 +1146,378 @@ class UserLibraryServiceApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='QueryResultBaseItemDto',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def post_items_access(self, body, **kwargs):  # noqa: E501
+        """Updates user item access  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_items_access(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserLibraryUpdateUserItemAccess body: UpdateUserItemAccess (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.post_items_access_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.post_items_access_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def post_items_access_with_http_info(self, body, **kwargs):  # noqa: E501
+        """Updates user item access  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_items_access_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserLibraryUpdateUserItemAccess body: UpdateUserItemAccess (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_items_access" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `post_items_access`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Items/Access', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def post_items_by_id_makeprivate(self, id, **kwargs):  # noqa: E501
+        """Makes an item private  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_items_by_id_makeprivate(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: Item Id (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.post_items_by_id_makeprivate_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.post_items_by_id_makeprivate_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def post_items_by_id_makeprivate_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Makes an item private  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_items_by_id_makeprivate_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: Item Id (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_items_by_id_makeprivate" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `post_items_by_id_makeprivate`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['Id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Items/{Id}/MakePrivate', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def post_items_by_id_makepublic(self, id, **kwargs):  # noqa: E501
+        """Makes an item public to all users  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_items_by_id_makepublic(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: Item Id (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.post_items_by_id_makepublic_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.post_items_by_id_makepublic_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def post_items_by_id_makepublic_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Makes an item public to all users  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_items_by_id_makepublic_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: Item Id (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_items_by_id_makepublic" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `post_items_by_id_makepublic`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['Id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Items/{Id}/MakePublic', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def post_items_shared_leave(self, body, **kwargs):  # noqa: E501
+        """Leaves a shared item  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_items_shared_leave(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserLibraryLeaveSharedItems body: LeaveSharedItems (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.post_items_shared_leave_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.post_items_shared_leave_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def post_items_shared_leave_with_http_info(self, body, **kwargs):  # noqa: E501
+        """Leaves a shared item  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_items_shared_leave_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserLibraryLeaveSharedItems body: LeaveSharedItems (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_items_shared_leave" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `post_items_shared_leave`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Items/Shared/Leave', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

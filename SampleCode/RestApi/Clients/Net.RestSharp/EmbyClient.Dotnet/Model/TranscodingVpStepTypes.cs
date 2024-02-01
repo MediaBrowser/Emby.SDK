@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines Transcoding.VpStepTypes
+    /// Video Processing Step Type enum.  
     /// </summary>
+    /// <value>Video Processing Step Type enum.  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum TranscodingVpStepTypes
     {

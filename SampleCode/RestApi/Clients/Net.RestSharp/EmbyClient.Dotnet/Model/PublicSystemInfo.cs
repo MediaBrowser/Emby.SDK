@@ -26,13 +26,13 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PublicSystemInfo" /> class.
         /// </summary>
-        /// <param name="localAddress">localAddress.</param>
+        /// <param name="localAddress">The local address..</param>
         /// <param name="localAddresses">localAddresses.</param>
-        /// <param name="wanAddress">wanAddress.</param>
+        /// <param name="wanAddress">The wan address..</param>
         /// <param name="remoteAddresses">remoteAddresses.</param>
-        /// <param name="serverName">serverName.</param>
-        /// <param name="version">version.</param>
-        /// <param name="id">id.</param>
+        /// <param name="serverName">The name of the server..</param>
+        /// <param name="version">The version..</param>
+        /// <param name="id">The id..</param>
         public PublicSystemInfo(string localAddress = default(string), List<string> localAddresses = default(List<string>), string wanAddress = default(string), List<string> remoteAddresses = default(List<string>), string serverName = default(string), string version = default(string), string id = default(string))
         {
             this.LocalAddress = localAddress;
@@ -45,8 +45,9 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets LocalAddress
+        /// The local address.
         /// </summary>
+        /// <value>The local address.</value>
         [DataMember(Name="LocalAddress", EmitDefaultValue=false)]
         public string LocalAddress { get; set; }
 
@@ -57,8 +58,9 @@ namespace EmbyClient.Dotnet.Model
         public List<string> LocalAddresses { get; set; }
 
         /// <summary>
-        /// Gets or Sets WanAddress
+        /// The wan address.
         /// </summary>
+        /// <value>The wan address.</value>
         [DataMember(Name="WanAddress", EmitDefaultValue=false)]
         public string WanAddress { get; set; }
 
@@ -69,20 +71,23 @@ namespace EmbyClient.Dotnet.Model
         public List<string> RemoteAddresses { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServerName
+        /// The name of the server.
         /// </summary>
+        /// <value>The name of the server.</value>
         [DataMember(Name="ServerName", EmitDefaultValue=false)]
         public string ServerName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Version
+        /// The version.
         /// </summary>
+        /// <value>The version.</value>
         [DataMember(Name="Version", EmitDefaultValue=false)]
         public string Version { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The id.
         /// </summary>
+        /// <value>The id.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

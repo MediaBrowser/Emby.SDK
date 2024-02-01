@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -45,6 +45,7 @@ class BrandingBrandingOptions(object):
     def login_disclaimer(self):
         """Gets the login_disclaimer of this BrandingBrandingOptions.  # noqa: E501
 
+        The login disclaimer.  # noqa: E501
 
         :return: The login_disclaimer of this BrandingBrandingOptions.  # noqa: E501
         :rtype: str
@@ -55,6 +56,7 @@ class BrandingBrandingOptions(object):
     def login_disclaimer(self, login_disclaimer):
         """Sets the login_disclaimer of this BrandingBrandingOptions.
 
+        The login disclaimer.  # noqa: E501
 
         :param login_disclaimer: The login_disclaimer of this BrandingBrandingOptions.  # noqa: E501
         :type: str
@@ -66,6 +68,7 @@ class BrandingBrandingOptions(object):
     def custom_css(self):
         """Gets the custom_css of this BrandingBrandingOptions.  # noqa: E501
 
+        The custom CSS.  # noqa: E501
 
         :return: The custom_css of this BrandingBrandingOptions.  # noqa: E501
         :rtype: str
@@ -76,6 +79,7 @@ class BrandingBrandingOptions(object):
     def custom_css(self, custom_css):
         """Sets the custom_css of this BrandingBrandingOptions.
 
+        The custom CSS.  # noqa: E501
 
         :param custom_css: The custom_css of this BrandingBrandingOptions.  # noqa: E501
         :type: str

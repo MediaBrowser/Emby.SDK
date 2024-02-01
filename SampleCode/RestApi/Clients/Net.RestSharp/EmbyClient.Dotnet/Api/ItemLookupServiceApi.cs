@@ -63,6 +63,27 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetItemsRemotesearchImageWithHttpInfo (string imageUrl, string providerName);
         /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns></returns>
+        void PostItemsMetadataReset (string itemIds);
+
+        /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostItemsMetadataResetWithHttpInfo (string itemIds);
+        /// <summary>
         /// Applies search criteria to an item and refreshes metadata
         /// </summary>
         /// <remarks>
@@ -96,7 +117,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchBook (ProvidersRemoteSearchQueryProvidersBookInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchBook (RemoteSearchQueryBookInfo body);
 
         /// <summary>
         /// 
@@ -107,7 +128,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchBookWithHttpInfo (ProvidersRemoteSearchQueryProvidersBookInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchBookWithHttpInfo (RemoteSearchQueryBookInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -117,7 +138,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchBoxset (ProvidersRemoteSearchQueryProvidersItemLookupInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchBoxset (RemoteSearchQueryItemLookupInfo body);
 
         /// <summary>
         /// 
@@ -128,7 +149,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchBoxsetWithHttpInfo (ProvidersRemoteSearchQueryProvidersItemLookupInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchBoxsetWithHttpInfo (RemoteSearchQueryItemLookupInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -138,7 +159,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchGame (ProvidersRemoteSearchQueryProvidersGameInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchGame (RemoteSearchQueryGameInfo body);
 
         /// <summary>
         /// 
@@ -149,7 +170,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchGameWithHttpInfo (ProvidersRemoteSearchQueryProvidersGameInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchGameWithHttpInfo (RemoteSearchQueryGameInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -159,7 +180,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchMovie (ProvidersRemoteSearchQueryProvidersMovieInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchMovie (RemoteSearchQueryMovieInfo body);
 
         /// <summary>
         /// 
@@ -170,7 +191,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchMovieWithHttpInfo (ProvidersRemoteSearchQueryProvidersMovieInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchMovieWithHttpInfo (RemoteSearchQueryMovieInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -180,7 +201,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchMusicalbum (ProvidersRemoteSearchQueryProvidersAlbumInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchMusicalbum (RemoteSearchQueryAlbumInfo body);
 
         /// <summary>
         /// 
@@ -191,7 +212,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchMusicalbumWithHttpInfo (ProvidersRemoteSearchQueryProvidersAlbumInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchMusicalbumWithHttpInfo (RemoteSearchQueryAlbumInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -201,7 +222,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchMusicartist (ProvidersRemoteSearchQueryProvidersArtistInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchMusicartist (RemoteSearchQueryArtistInfo body);
 
         /// <summary>
         /// 
@@ -212,7 +233,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchMusicartistWithHttpInfo (ProvidersRemoteSearchQueryProvidersArtistInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchMusicartistWithHttpInfo (RemoteSearchQueryArtistInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -222,7 +243,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchMusicvideo (ProvidersRemoteSearchQueryProvidersMusicVideoInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchMusicvideo (RemoteSearchQueryMusicVideoInfo body);
 
         /// <summary>
         /// 
@@ -233,7 +254,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchMusicvideoWithHttpInfo (ProvidersRemoteSearchQueryProvidersMusicVideoInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchMusicvideoWithHttpInfo (RemoteSearchQueryMusicVideoInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -243,7 +264,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchPerson (ProvidersRemoteSearchQueryProvidersPersonLookupInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchPerson (RemoteSearchQueryPersonLookupInfo body);
 
         /// <summary>
         /// 
@@ -254,7 +275,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchPersonWithHttpInfo (ProvidersRemoteSearchQueryProvidersPersonLookupInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchPersonWithHttpInfo (RemoteSearchQueryPersonLookupInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -264,7 +285,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchSeries (ProvidersRemoteSearchQueryProvidersSeriesInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchSeries (RemoteSearchQuerySeriesInfo body);
 
         /// <summary>
         /// 
@@ -275,7 +296,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchSeriesWithHttpInfo (ProvidersRemoteSearchQueryProvidersSeriesInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchSeriesWithHttpInfo (RemoteSearchQuerySeriesInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -285,7 +306,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        List<RemoteSearchResult> PostItemsRemotesearchTrailer (ProvidersRemoteSearchQueryProvidersTrailerInfo body);
+        List<RemoteSearchResult> PostItemsRemotesearchTrailer (RemoteSearchQueryTrailerInfo body);
 
         /// <summary>
         /// 
@@ -296,7 +317,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchTrailerWithHttpInfo (ProvidersRemoteSearchQueryProvidersTrailerInfo body);
+        ApiResponse<List<RemoteSearchResult>> PostItemsRemotesearchTrailerWithHttpInfo (RemoteSearchQueryTrailerInfo body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -344,6 +365,27 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsRemotesearchImageAsyncWithHttpInfo (string imageUrl, string providerName);
         /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostItemsMetadataResetAsync (string itemIds);
+
+        /// <summary>
+        /// Resets metadata for one or more items
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsMetadataResetAsyncWithHttpInfo (string itemIds);
+        /// <summary>
         /// Applies search criteria to an item and refreshes metadata
         /// </summary>
         /// <remarks>
@@ -377,7 +419,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchBookAsync (ProvidersRemoteSearchQueryProvidersBookInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchBookAsync (RemoteSearchQueryBookInfo body);
 
         /// <summary>
         /// 
@@ -388,7 +430,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchBookAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersBookInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchBookAsyncWithHttpInfo (RemoteSearchQueryBookInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -398,7 +440,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchBoxsetAsync (ProvidersRemoteSearchQueryProvidersItemLookupInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchBoxsetAsync (RemoteSearchQueryItemLookupInfo body);
 
         /// <summary>
         /// 
@@ -409,7 +451,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchBoxsetAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersItemLookupInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchBoxsetAsyncWithHttpInfo (RemoteSearchQueryItemLookupInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -419,7 +461,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchGameAsync (ProvidersRemoteSearchQueryProvidersGameInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchGameAsync (RemoteSearchQueryGameInfo body);
 
         /// <summary>
         /// 
@@ -430,7 +472,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchGameAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersGameInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchGameAsyncWithHttpInfo (RemoteSearchQueryGameInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -440,7 +482,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMovieAsync (ProvidersRemoteSearchQueryProvidersMovieInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMovieAsync (RemoteSearchQueryMovieInfo body);
 
         /// <summary>
         /// 
@@ -451,7 +493,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMovieAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersMovieInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMovieAsyncWithHttpInfo (RemoteSearchQueryMovieInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -461,7 +503,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicalbumAsync (ProvidersRemoteSearchQueryProvidersAlbumInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicalbumAsync (RemoteSearchQueryAlbumInfo body);
 
         /// <summary>
         /// 
@@ -472,7 +514,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicalbumAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersAlbumInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicalbumAsyncWithHttpInfo (RemoteSearchQueryAlbumInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -482,7 +524,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicartistAsync (ProvidersRemoteSearchQueryProvidersArtistInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicartistAsync (RemoteSearchQueryArtistInfo body);
 
         /// <summary>
         /// 
@@ -493,7 +535,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicartistAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersArtistInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicartistAsyncWithHttpInfo (RemoteSearchQueryArtistInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -503,7 +545,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicvideoAsync (ProvidersRemoteSearchQueryProvidersMusicVideoInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicvideoAsync (RemoteSearchQueryMusicVideoInfo body);
 
         /// <summary>
         /// 
@@ -514,7 +556,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicvideoAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersMusicVideoInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicvideoAsyncWithHttpInfo (RemoteSearchQueryMusicVideoInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -524,7 +566,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchPersonAsync (ProvidersRemoteSearchQueryProvidersPersonLookupInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchPersonAsync (RemoteSearchQueryPersonLookupInfo body);
 
         /// <summary>
         /// 
@@ -535,7 +577,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchPersonAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersPersonLookupInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchPersonAsyncWithHttpInfo (RemoteSearchQueryPersonLookupInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -545,7 +587,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchSeriesAsync (ProvidersRemoteSearchQueryProvidersSeriesInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchSeriesAsync (RemoteSearchQuerySeriesInfo body);
 
         /// <summary>
         /// 
@@ -556,7 +598,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchSeriesAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersSeriesInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchSeriesAsyncWithHttpInfo (RemoteSearchQuerySeriesInfo body);
         /// <summary>
         /// 
         /// </summary>
@@ -566,7 +608,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchTrailerAsync (ProvidersRemoteSearchQueryProvidersTrailerInfo body);
+        System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchTrailerAsync (RemoteSearchQueryTrailerInfo body);
 
         /// <summary>
         /// 
@@ -577,7 +619,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchTrailerAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersTrailerInfo body);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchTrailerAsyncWithHttpInfo (RemoteSearchQueryTrailerInfo body);
         #endregion Asynchronous Operations
     }
 
@@ -1006,6 +1048,155 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
+        /// Resets metadata for one or more items Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns></returns>
+        public void PostItemsMetadataReset (string itemIds)
+        {
+             PostItemsMetadataResetWithHttpInfo(itemIds);
+        }
+
+        /// <summary>
+        /// Resets metadata for one or more items Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostItemsMetadataResetWithHttpInfo (string itemIds)
+        {
+            // verify the required parameter 'itemIds' is set
+            if (itemIds == null)
+                throw new ApiException(400, "Missing required parameter 'itemIds' when calling ItemLookupServiceApi->PostItemsMetadataReset");
+
+            var localVarPath = "/Items/Metadata/Reset";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (itemIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ItemIds", itemIds)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsMetadataReset", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Resets metadata for one or more items Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostItemsMetadataResetAsync (string itemIds)
+        {
+             await PostItemsMetadataResetAsyncWithHttpInfo(itemIds);
+
+        }
+
+        /// <summary>
+        /// Resets metadata for one or more items Requires authentication as administrator
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="itemIds">The item ids</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsMetadataResetAsyncWithHttpInfo (string itemIds)
+        {
+            // verify the required parameter 'itemIds' is set
+            if (itemIds == null)
+                throw new ApiException(400, "Missing required parameter 'itemIds' when calling ItemLookupServiceApi->PostItemsMetadataReset");
+
+            var localVarPath = "/Items/Metadata/Reset";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (itemIds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ItemIds", itemIds)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostItemsMetadataReset", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
         /// Applies search criteria to an item and refreshes metadata Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1196,7 +1387,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchBook (ProvidersRemoteSearchQueryProvidersBookInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchBook (RemoteSearchQueryBookInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchBookWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1208,7 +1399,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchBookWithHttpInfo (ProvidersRemoteSearchQueryProvidersBookInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchBookWithHttpInfo (RemoteSearchQueryBookInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1282,7 +1473,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchBookAsync (ProvidersRemoteSearchQueryProvidersBookInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchBookAsync (RemoteSearchQueryBookInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchBookAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1295,7 +1486,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchBookAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersBookInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchBookAsyncWithHttpInfo (RemoteSearchQueryBookInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1369,7 +1560,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchBoxset (ProvidersRemoteSearchQueryProvidersItemLookupInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchBoxset (RemoteSearchQueryItemLookupInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchBoxsetWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1381,7 +1572,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchBoxsetWithHttpInfo (ProvidersRemoteSearchQueryProvidersItemLookupInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchBoxsetWithHttpInfo (RemoteSearchQueryItemLookupInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1455,7 +1646,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchBoxsetAsync (ProvidersRemoteSearchQueryProvidersItemLookupInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchBoxsetAsync (RemoteSearchQueryItemLookupInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchBoxsetAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1468,7 +1659,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchBoxsetAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersItemLookupInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchBoxsetAsyncWithHttpInfo (RemoteSearchQueryItemLookupInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1542,7 +1733,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchGame (ProvidersRemoteSearchQueryProvidersGameInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchGame (RemoteSearchQueryGameInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchGameWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1554,7 +1745,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchGameWithHttpInfo (ProvidersRemoteSearchQueryProvidersGameInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchGameWithHttpInfo (RemoteSearchQueryGameInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1628,7 +1819,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchGameAsync (ProvidersRemoteSearchQueryProvidersGameInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchGameAsync (RemoteSearchQueryGameInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchGameAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1641,7 +1832,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchGameAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersGameInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchGameAsyncWithHttpInfo (RemoteSearchQueryGameInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1715,7 +1906,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchMovie (ProvidersRemoteSearchQueryProvidersMovieInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchMovie (RemoteSearchQueryMovieInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchMovieWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1727,7 +1918,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchMovieWithHttpInfo (ProvidersRemoteSearchQueryProvidersMovieInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchMovieWithHttpInfo (RemoteSearchQueryMovieInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1801,7 +1992,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMovieAsync (ProvidersRemoteSearchQueryProvidersMovieInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMovieAsync (RemoteSearchQueryMovieInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchMovieAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1814,7 +2005,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMovieAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersMovieInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMovieAsyncWithHttpInfo (RemoteSearchQueryMovieInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1888,7 +2079,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchMusicalbum (ProvidersRemoteSearchQueryProvidersAlbumInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchMusicalbum (RemoteSearchQueryAlbumInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchMusicalbumWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1900,7 +2091,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchMusicalbumWithHttpInfo (ProvidersRemoteSearchQueryProvidersAlbumInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchMusicalbumWithHttpInfo (RemoteSearchQueryAlbumInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1974,7 +2165,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicalbumAsync (ProvidersRemoteSearchQueryProvidersAlbumInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicalbumAsync (RemoteSearchQueryAlbumInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchMusicalbumAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1987,7 +2178,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicalbumAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersAlbumInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicalbumAsyncWithHttpInfo (RemoteSearchQueryAlbumInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2061,7 +2252,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchMusicartist (ProvidersRemoteSearchQueryProvidersArtistInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchMusicartist (RemoteSearchQueryArtistInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchMusicartistWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2073,7 +2264,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchMusicartistWithHttpInfo (ProvidersRemoteSearchQueryProvidersArtistInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchMusicartistWithHttpInfo (RemoteSearchQueryArtistInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2147,7 +2338,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicartistAsync (ProvidersRemoteSearchQueryProvidersArtistInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicartistAsync (RemoteSearchQueryArtistInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchMusicartistAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2160,7 +2351,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicartistAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersArtistInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicartistAsyncWithHttpInfo (RemoteSearchQueryArtistInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2234,7 +2425,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchMusicvideo (ProvidersRemoteSearchQueryProvidersMusicVideoInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchMusicvideo (RemoteSearchQueryMusicVideoInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchMusicvideoWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2246,7 +2437,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchMusicvideoWithHttpInfo (ProvidersRemoteSearchQueryProvidersMusicVideoInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchMusicvideoWithHttpInfo (RemoteSearchQueryMusicVideoInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2320,7 +2511,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicvideoAsync (ProvidersRemoteSearchQueryProvidersMusicVideoInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchMusicvideoAsync (RemoteSearchQueryMusicVideoInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchMusicvideoAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2333,7 +2524,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicvideoAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersMusicVideoInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchMusicvideoAsyncWithHttpInfo (RemoteSearchQueryMusicVideoInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2407,7 +2598,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchPerson (ProvidersRemoteSearchQueryProvidersPersonLookupInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchPerson (RemoteSearchQueryPersonLookupInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchPersonWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2419,7 +2610,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchPersonWithHttpInfo (ProvidersRemoteSearchQueryProvidersPersonLookupInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchPersonWithHttpInfo (RemoteSearchQueryPersonLookupInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2493,7 +2684,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchPersonAsync (ProvidersRemoteSearchQueryProvidersPersonLookupInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchPersonAsync (RemoteSearchQueryPersonLookupInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchPersonAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2506,7 +2697,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchPersonAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersPersonLookupInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchPersonAsyncWithHttpInfo (RemoteSearchQueryPersonLookupInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2580,7 +2771,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchSeries (ProvidersRemoteSearchQueryProvidersSeriesInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchSeries (RemoteSearchQuerySeriesInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchSeriesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2592,7 +2783,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchSeriesWithHttpInfo (ProvidersRemoteSearchQueryProvidersSeriesInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchSeriesWithHttpInfo (RemoteSearchQuerySeriesInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2666,7 +2857,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchSeriesAsync (ProvidersRemoteSearchQueryProvidersSeriesInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchSeriesAsync (RemoteSearchQuerySeriesInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchSeriesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2679,7 +2870,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchSeriesAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersSeriesInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchSeriesAsyncWithHttpInfo (RemoteSearchQuerySeriesInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2753,7 +2944,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>List&lt;RemoteSearchResult&gt;</returns>
-        public List<RemoteSearchResult> PostItemsRemotesearchTrailer (ProvidersRemoteSearchQueryProvidersTrailerInfo body)
+        public List<RemoteSearchResult> PostItemsRemotesearchTrailer (RemoteSearchQueryTrailerInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = PostItemsRemotesearchTrailerWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2765,7 +2956,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>ApiResponse of List&lt;RemoteSearchResult&gt;</returns>
-        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchTrailerWithHttpInfo (ProvidersRemoteSearchQueryProvidersTrailerInfo body)
+        public ApiResponse< List<RemoteSearchResult> > PostItemsRemotesearchTrailerWithHttpInfo (RemoteSearchQueryTrailerInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2839,7 +3030,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of List&lt;RemoteSearchResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchTrailerAsync (ProvidersRemoteSearchQueryProvidersTrailerInfo body)
+        public async System.Threading.Tasks.Task<List<RemoteSearchResult>> PostItemsRemotesearchTrailerAsync (RemoteSearchQueryTrailerInfo body)
         {
              ApiResponse<List<RemoteSearchResult>> localVarResponse = await PostItemsRemotesearchTrailerAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2852,7 +3043,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">RemoteSearchQuery&#x60;1: </param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSearchResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchTrailerAsyncWithHttpInfo (ProvidersRemoteSearchQueryProvidersTrailerInfo body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSearchResult>>> PostItemsRemotesearchTrailerAsyncWithHttpInfo (RemoteSearchQueryTrailerInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)

@@ -52,7 +52,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns></returns>
@@ -69,7 +69,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -191,10 +191,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
-        /// <param name="id">Item Id</param>
         /// <param name="datePlayed">The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>UserItemDataDto</returns>
-        UserItemDataDto PostUsersByUseridPlayeditemsById (string userId, string id, string datePlayed);
+        UserItemDataDto PostUsersByUseridPlayeditemsById (string userId, string datePlayed, string id);
 
         /// <summary>
         /// Marks an item as played
@@ -204,10 +204,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
-        /// <param name="id">Item Id</param>
         /// <param name="datePlayed">The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>ApiResponse of UserItemDataDto</returns>
-        ApiResponse<UserItemDataDto> PostUsersByUseridPlayeditemsByIdWithHttpInfo (string userId, string id, string datePlayed);
+        ApiResponse<UserItemDataDto> PostUsersByUseridPlayeditemsByIdWithHttpInfo (string userId, string datePlayed, string id);
         /// <summary>
         /// Marks an item as unplayed
         /// </summary>
@@ -279,7 +279,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns></returns>
@@ -296,7 +296,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -312,7 +312,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -325,7 +325,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="subtitleOffset"> (optional)</param>
         /// <param name="playbackRate"> (optional)</param>
         /// <returns></returns>
-        void PostUsersByUseridPlayingitemsByIdProgress (MediaEncodingApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate);
+        void PostUsersByUseridPlayingitemsByIdProgress (ApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate);
 
         /// <summary>
         /// Reports a user&#x27;s playback progress
@@ -338,7 +338,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -351,7 +351,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="subtitleOffset"> (optional)</param>
         /// <param name="playbackRate"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostUsersByUseridPlayingitemsByIdProgressWithHttpInfo (MediaEncodingApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate);
+        ApiResponse<Object> PostUsersByUseridPlayingitemsByIdProgressWithHttpInfo (ApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -388,7 +388,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -405,7 +405,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -527,10 +527,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
-        /// <param name="id">Item Id</param>
         /// <param name="datePlayed">The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>Task of UserItemDataDto</returns>
-        System.Threading.Tasks.Task<UserItemDataDto> PostUsersByUseridPlayeditemsByIdAsync (string userId, string id, string datePlayed);
+        System.Threading.Tasks.Task<UserItemDataDto> PostUsersByUseridPlayeditemsByIdAsync (string userId, string datePlayed, string id);
 
         /// <summary>
         /// Marks an item as played
@@ -540,10 +540,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
-        /// <param name="id">Item Id</param>
         /// <param name="datePlayed">The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>Task of ApiResponse (UserItemDataDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserItemDataDto>> PostUsersByUseridPlayeditemsByIdAsyncWithHttpInfo (string userId, string id, string datePlayed);
+        System.Threading.Tasks.Task<ApiResponse<UserItemDataDto>> PostUsersByUseridPlayeditemsByIdAsyncWithHttpInfo (string userId, string datePlayed, string id);
         /// <summary>
         /// Marks an item as unplayed
         /// </summary>
@@ -615,7 +615,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -632,7 +632,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -648,7 +648,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -661,7 +661,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="subtitleOffset"> (optional)</param>
         /// <param name="playbackRate"> (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostUsersByUseridPlayingitemsByIdProgressAsync (MediaEncodingApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate);
+        System.Threading.Tasks.Task PostUsersByUseridPlayingitemsByIdProgressAsync (ApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate);
 
         /// <summary>
         /// Reports a user&#x27;s playback progress
@@ -674,7 +674,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -687,7 +687,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="subtitleOffset"> (optional)</param>
         /// <param name="playbackRate"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridPlayingitemsByIdProgressAsyncWithHttpInfo (MediaEncodingApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridPlayingitemsByIdProgressAsyncWithHttpInfo (ApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate);
         #endregion Asynchronous Operations
     }
 
@@ -974,7 +974,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns></returns>
@@ -991,7 +991,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1075,7 +1075,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -1093,7 +1093,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2009,12 +2009,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
-        /// <param name="id">Item Id</param>
         /// <param name="datePlayed">The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>UserItemDataDto</returns>
-        public UserItemDataDto PostUsersByUseridPlayeditemsById (string userId, string id, string datePlayed)
+        public UserItemDataDto PostUsersByUseridPlayeditemsById (string userId, string datePlayed, string id)
         {
-             ApiResponse<UserItemDataDto> localVarResponse = PostUsersByUseridPlayeditemsByIdWithHttpInfo(userId, id, datePlayed);
+             ApiResponse<UserItemDataDto> localVarResponse = PostUsersByUseridPlayeditemsByIdWithHttpInfo(userId, datePlayed, id);
              return localVarResponse.Data;
         }
 
@@ -2023,10 +2023,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
-        /// <param name="id">Item Id</param>
         /// <param name="datePlayed">The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>ApiResponse of UserItemDataDto</returns>
-        public ApiResponse< UserItemDataDto > PostUsersByUseridPlayeditemsByIdWithHttpInfo (string userId, string id, string datePlayed)
+        public ApiResponse< UserItemDataDto > PostUsersByUseridPlayeditemsByIdWithHttpInfo (string userId, string datePlayed, string id)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -2095,12 +2095,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
-        /// <param name="id">Item Id</param>
         /// <param name="datePlayed">The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>Task of UserItemDataDto</returns>
-        public async System.Threading.Tasks.Task<UserItemDataDto> PostUsersByUseridPlayeditemsByIdAsync (string userId, string id, string datePlayed)
+        public async System.Threading.Tasks.Task<UserItemDataDto> PostUsersByUseridPlayeditemsByIdAsync (string userId, string datePlayed, string id)
         {
-             ApiResponse<UserItemDataDto> localVarResponse = await PostUsersByUseridPlayeditemsByIdAsyncWithHttpInfo(userId, id, datePlayed);
+             ApiResponse<UserItemDataDto> localVarResponse = await PostUsersByUseridPlayeditemsByIdAsyncWithHttpInfo(userId, datePlayed, id);
              return localVarResponse.Data;
 
         }
@@ -2110,10 +2110,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User Id</param>
-        /// <param name="id">Item Id</param>
         /// <param name="datePlayed">The date the item was played (if any). Format &#x3D; yyyyMMddHHmmss (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>Task of ApiResponse (UserItemDataDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserItemDataDto>> PostUsersByUseridPlayeditemsByIdAsyncWithHttpInfo (string userId, string id, string datePlayed)
+        public async System.Threading.Tasks.Task<ApiResponse<UserItemDataDto>> PostUsersByUseridPlayeditemsByIdAsyncWithHttpInfo (string userId, string datePlayed, string id)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -2561,7 +2561,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns></returns>
@@ -2578,7 +2578,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2662,7 +2662,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of void</returns>
@@ -2680,7 +2680,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id">Item Id</param>
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="nextMediaType">The next media type that will play</param>
-        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="liveStreamId"> (optional)</param>
         /// <param name="playSessionId"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
@@ -2764,7 +2764,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -2777,7 +2777,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="subtitleOffset"> (optional)</param>
         /// <param name="playbackRate"> (optional)</param>
         /// <returns></returns>
-        public void PostUsersByUseridPlayingitemsByIdProgress (MediaEncodingApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate)
+        public void PostUsersByUseridPlayingitemsByIdProgress (ApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate)
         {
              PostUsersByUseridPlayingitemsByIdProgressWithHttpInfo(body, mediaSourceId, userId, id, positionTicks, isPaused, isMuted, audioStreamIndex, subtitleStreamIndex, volumeLevel, playMethod, liveStreamId, playSessionId, repeatMode, subtitleOffset, playbackRate);
         }
@@ -2790,7 +2790,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -2803,7 +2803,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="subtitleOffset"> (optional)</param>
         /// <param name="playbackRate"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostUsersByUseridPlayingitemsByIdProgressWithHttpInfo (MediaEncodingApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate)
+        public ApiResponse<Object> PostUsersByUseridPlayingitemsByIdProgressWithHttpInfo (ApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2901,7 +2901,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -2914,7 +2914,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="subtitleOffset"> (optional)</param>
         /// <param name="playbackRate"> (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostUsersByUseridPlayingitemsByIdProgressAsync (MediaEncodingApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate)
+        public async System.Threading.Tasks.Task PostUsersByUseridPlayingitemsByIdProgressAsync (ApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate)
         {
              await PostUsersByUseridPlayingitemsByIdProgressAsyncWithHttpInfo(body, mediaSourceId, userId, id, positionTicks, isPaused, isMuted, audioStreamIndex, subtitleStreamIndex, volumeLevel, playMethod, liveStreamId, playSessionId, repeatMode, subtitleOffset, playbackRate);
 
@@ -2928,7 +2928,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="mediaSourceId">The id of the MediaSource</param>
         /// <param name="userId">User Id</param>
         /// <param name="id">Item Id</param>
-        /// <param name="positionTicks">Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="positionTicks">Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <param name="isPaused">Indicates if the player is paused. (optional)</param>
         /// <param name="isMuted">Indicates if the player is muted. (optional)</param>
         /// <param name="audioStreamIndex"> (optional)</param>
@@ -2941,7 +2941,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="subtitleOffset"> (optional)</param>
         /// <param name="playbackRate"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridPlayingitemsByIdProgressAsyncWithHttpInfo (MediaEncodingApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridPlayingitemsByIdProgressAsyncWithHttpInfo (ApiOnPlaybackProgress body, string mediaSourceId, string userId, string id, long? positionTicks, bool? isPaused, bool? isMuted, int? audioStreamIndex, int? subtitleStreamIndex, int? volumeLevel, PlayMethod playMethod, string liveStreamId, string playSessionId, RepeatMode repeatMode, int? subtitleOffset, double? playbackRate)
         {
             // verify the required parameter 'body' is set
             if (body == null)

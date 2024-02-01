@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -281,15 +281,15 @@ SyncServiceApiService Gets ready to download sync items.
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param targetId TargetId
-@return []SyncModelSyncedItem
+@return []SyncedItem
 */
-func (a *SyncServiceApiService) GetSyncItemsReady(ctx context.Context, targetId string) ([]SyncModelSyncedItem, *http.Response, error) {
+func (a *SyncServiceApiService) GetSyncItemsReady(ctx context.Context, targetId string) ([]SyncedItem, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []SyncModelSyncedItem
+		localVarReturnValue []SyncedItem
 	)
 
 	// create path and map variables
@@ -360,7 +360,7 @@ func (a *SyncServiceApiService) GetSyncItemsReady(ctx context.Context, targetId 
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []SyncModelSyncedItem
+			var v []SyncedItem
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -378,15 +378,16 @@ func (a *SyncServiceApiService) GetSyncItemsReady(ctx context.Context, targetId 
 SyncServiceApiService Gets sync job items.
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return QueryResultSyncModelSyncJobItem
+ * @param targetId TargetId
+@return QueryResultSyncJobItem
 */
-func (a *SyncServiceApiService) GetSyncJobitems(ctx context.Context) (QueryResultSyncModelSyncJobItem, *http.Response, error) {
+func (a *SyncServiceApiService) GetSyncJobitems(ctx context.Context, targetId string) (QueryResultSyncJobItem, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue QueryResultSyncModelSyncJobItem
+		localVarReturnValue QueryResultSyncJobItem
 	)
 
 	// create path and map variables
@@ -396,6 +397,7 @@ func (a *SyncServiceApiService) GetSyncJobitems(ctx context.Context) (QueryResul
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("TargetId", parameterToString(targetId, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 
@@ -456,7 +458,7 @@ func (a *SyncServiceApiService) GetSyncJobitems(ctx context.Context) (QueryResul
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v QueryResultSyncModelSyncJobItem
+			var v QueryResultSyncJobItem
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -638,15 +640,15 @@ func (a *SyncServiceApiService) GetSyncJobitemsByIdFile(ctx context.Context, id 
 SyncServiceApiService Gets sync jobs.
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return QueryResultSyncSyncJob
+@return QueryResultSyncJob
 */
-func (a *SyncServiceApiService) GetSyncJobs(ctx context.Context) (QueryResultSyncSyncJob, *http.Response, error) {
+func (a *SyncServiceApiService) GetSyncJobs(ctx context.Context) (QueryResultSyncJob, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue QueryResultSyncSyncJob
+		localVarReturnValue QueryResultSyncJob
 	)
 
 	// create path and map variables
@@ -716,7 +718,7 @@ func (a *SyncServiceApiService) GetSyncJobs(ctx context.Context) (QueryResultSyn
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v QueryResultSyncSyncJob
+			var v QueryResultSyncJob
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -735,15 +737,15 @@ SyncServiceApiService Gets a sync job.
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Id
-@return SyncSyncJob
+@return SyncJob
 */
-func (a *SyncServiceApiService) GetSyncJobsById(ctx context.Context, id string) (SyncSyncJob, *http.Response, error) {
+func (a *SyncServiceApiService) GetSyncJobsById(ctx context.Context, id string) (SyncJob, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SyncSyncJob
+		localVarReturnValue SyncJob
 	)
 
 	// create path and map variables
@@ -814,7 +816,7 @@ func (a *SyncServiceApiService) GetSyncJobsById(ctx context.Context, id string) 
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SyncSyncJob
+			var v SyncJob
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -837,8 +839,8 @@ Requires authentication as user
      * @param "ItemIds" (optional.String) -  ItemIds
      * @param "ParentId" (optional.String) -  ParentId
      * @param "TargetId" (optional.String) -  TargetId
-     * @param "Category" (optional.Interface of SyncSyncCategory) -  Category
-@return SyncModelSyncDialogOptions
+     * @param "Category" (optional.Interface of SyncCategory) -  Category
+@return SyncDialogOptions
 */
 
 type SyncServiceApiGetSyncOptionsOpts struct {
@@ -848,13 +850,13 @@ type SyncServiceApiGetSyncOptionsOpts struct {
     Category optional.Interface
 }
 
-func (a *SyncServiceApiService) GetSyncOptions(ctx context.Context, userId string, localVarOptionals *SyncServiceApiGetSyncOptionsOpts) (SyncModelSyncDialogOptions, *http.Response, error) {
+func (a *SyncServiceApiService) GetSyncOptions(ctx context.Context, userId string, localVarOptionals *SyncServiceApiGetSyncOptionsOpts) (SyncDialogOptions, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SyncModelSyncDialogOptions
+		localVarReturnValue SyncDialogOptions
 	)
 
 	// create path and map variables
@@ -937,7 +939,7 @@ func (a *SyncServiceApiService) GetSyncOptions(ctx context.Context, userId strin
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SyncModelSyncDialogOptions
+			var v SyncDialogOptions
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -956,15 +958,15 @@ SyncServiceApiService Gets a list of available sync targets.
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId UserId
-@return []SyncSyncTarget
+@return []SyncTarget
 */
-func (a *SyncServiceApiService) GetSyncTargets(ctx context.Context, userId string) ([]SyncSyncTarget, *http.Response, error) {
+func (a *SyncServiceApiService) GetSyncTargets(ctx context.Context, userId string) ([]SyncTarget, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []SyncSyncTarget
+		localVarReturnValue []SyncTarget
 	)
 
 	// create path and map variables
@@ -1035,7 +1037,7 @@ func (a *SyncServiceApiService) GetSyncTargets(ctx context.Context, userId strin
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []SyncSyncTarget
+			var v []SyncTarget
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -1057,7 +1059,7 @@ Requires authentication as user
  * @param itemId
 
 */
-func (a *SyncServiceApiService) PostSyncByItemidStatus(ctx context.Context, body SyncModelSyncedItemProgress, itemId string) (*http.Response, error) {
+func (a *SyncServiceApiService) PostSyncByItemidStatus(ctx context.Context, body SyncedItemProgress, itemId string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1229,15 +1231,16 @@ SyncServiceApiService Syncs data between device and server
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body SyncDataRequest: 
-@return SyncModelSyncDataResponse
+ * @param targetId TargetId
+@return SyncDataResponse
 */
-func (a *SyncServiceApiService) PostSyncData(ctx context.Context, body SyncModelSyncDataRequest) (SyncModelSyncDataResponse, *http.Response, error) {
+func (a *SyncServiceApiService) PostSyncData(ctx context.Context, body SyncDataRequest, targetId string) (SyncDataResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SyncModelSyncDataResponse
+		localVarReturnValue SyncDataResponse
 	)
 
 	// create path and map variables
@@ -1247,6 +1250,7 @@ func (a *SyncServiceApiService) PostSyncData(ctx context.Context, body SyncModel
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	localVarQueryParams.Add("TargetId", parameterToString(targetId, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json", "application/xml"}
 
@@ -1309,7 +1313,7 @@ func (a *SyncServiceApiService) PostSyncData(ctx context.Context, body SyncModel
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SyncModelSyncDataResponse
+			var v SyncDataResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -1822,15 +1826,15 @@ SyncServiceApiService Gets sync jobs.
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body SyncJobRequest: 
-@return SyncModelSyncJobCreationResult
+@return SyncJobCreationResult
 */
-func (a *SyncServiceApiService) PostSyncJobs(ctx context.Context, body SyncModelSyncJobRequest) (SyncModelSyncJobCreationResult, *http.Response, error) {
+func (a *SyncServiceApiService) PostSyncJobs(ctx context.Context, body SyncJobRequest) (SyncJobCreationResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SyncModelSyncJobCreationResult
+		localVarReturnValue SyncJobCreationResult
 	)
 
 	// create path and map variables
@@ -1902,7 +1906,7 @@ func (a *SyncServiceApiService) PostSyncJobs(ctx context.Context, body SyncModel
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SyncModelSyncJobCreationResult
+			var v SyncJobCreationResult
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -1924,7 +1928,7 @@ Requires authentication as user
  * @param id
 
 */
-func (a *SyncServiceApiService) PostSyncJobsById(ctx context.Context, body SyncSyncJob, id int64) (*http.Response, error) {
+func (a *SyncServiceApiService) PostSyncJobsById(ctx context.Context, body SyncJob, id int64) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2088,7 +2092,7 @@ Requires authentication as user
  * @param body List&#x60;1: 
 
 */
-func (a *SyncServiceApiService) PostSyncOfflineactions(ctx context.Context, body []UsersUserAction) (*http.Response, error) {
+func (a *SyncServiceApiService) PostSyncOfflineactions(ctx context.Context, body []UserAction) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

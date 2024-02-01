@@ -1,0 +1,661 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IServerTranscodingTestManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IServerTranscodingTestManager
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager" class="text-break">Interface IServerTranscodingTestManager
+  </h1>
+  <div class="markdown level0 summary"><p>Interface IServerTranscodingTestManager.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.html">MediaBrowser.Controller.MediaEncoding.Tests</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IServerTranscodingTestManager</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ApplyHwAccelerationCodecs_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ApplyHwAccelerationCodecs*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ApplyHwAccelerationCodecs_Emby_Media_Model_Enums_VideoMediaTypes_MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_System_String_MediaBrowser_Controller_MediaEncoding_Tests_TestHwaccels_System_String_System_String__" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ApplyHwAccelerationCodecs(Emby.Media.Model.Enums.VideoMediaTypes,MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels,System.String,MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels,System.String,System.String@)">ApplyHwAccelerationCodecs(VideoMediaTypes, TestHwaccels, String, TestHwaccels, String, out String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ApplyHwAccelerationCodecs(VideoMediaTypes sourceCodec, TestHwaccels decoderHwaccel, string decoderDeviceId, TestHwaccels encoderHwaccel, string encoderDeviceId, out string statusMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.VideoMediaTypes.html">VideoMediaTypes</a></td>
+        <td><span class="parametername">sourceCodec</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels.html">TestHwaccels</a></td>
+        <td><span class="parametername">decoderHwaccel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">decoderDeviceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccels.html">TestHwaccels</a></td>
+        <td><span class="parametername">encoderHwaccel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encoderDeviceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">statusMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetDevicesForFramework_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetDevicesForFramework*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetDevicesForFramework_Emby_Media_Model_Enums_SecondaryFrameworks_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetDevicesForFramework(Emby.Media.Model.Enums.SecondaryFrameworks)">GetDevicesForFramework(SecondaryFrameworks)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TestCodecDevice&gt; GetDevicesForFramework(SecondaryFrameworks secondaryFramework)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.SecondaryFrameworks.html">SecondaryFrameworks</a></td>
+        <td><span class="parametername">secondaryFramework</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.TestCodecDevice.html">TestCodecDevice</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetPipelineStepBurnInTextSubsFfName_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetPipelineStepBurnInTextSubsFfName*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetPipelineStepBurnInTextSubsFfName_MediaBrowser_Controller_MediaEncoding_Tests_ITestEncodingJobInfo_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetPipelineStepBurnInTextSubsFfName(MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo)">GetPipelineStepBurnInTextSubsFfName(ITestEncodingJobInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetPipelineStepBurnInTextSubsFfName(ITestEncodingJobInfo jobInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo.html">ITestEncodingJobInfo</a></td>
+        <td><span class="parametername">jobInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetPipelineStepTs2VideoFfName_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetPipelineStepTs2VideoFfName*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetPipelineStepTs2VideoFfName_MediaBrowser_Controller_MediaEncoding_Tests_ITestEncodingJobInfo_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetPipelineStepTs2VideoFfName(MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo)">GetPipelineStepTs2VideoFfName(ITestEncodingJobInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetPipelineStepTs2VideoFfName(ITestEncodingJobInfo jobInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo.html">ITestEncodingJobInfo</a></td>
+        <td><span class="parametername">jobInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetValidHwAccelCombinations_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetValidHwAccelCombinations*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_GetValidHwAccelCombinations" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.GetValidHwAccelCombinations">GetValidHwAccelCombinations()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IList&lt;TestHwaccelPair&gt; GetValidHwAccelCombinations()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.TestHwaccelPair.html">TestHwaccelPair</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_HasDecoder_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.HasDecoder*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_HasDecoder_Emby_Media_Model_Enums_SecondaryFrameworks_Emby_Media_Model_Enums_VideoMediaTypes_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.HasDecoder(Emby.Media.Model.Enums.SecondaryFrameworks,Emby.Media.Model.Enums.VideoMediaTypes)">HasDecoder(SecondaryFrameworks, VideoMediaTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasDecoder(SecondaryFrameworks secondaryFramework, VideoMediaTypes videoMediaType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.SecondaryFrameworks.html">SecondaryFrameworks</a></td>
+        <td><span class="parametername">secondaryFramework</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.VideoMediaTypes.html">VideoMediaTypes</a></td>
+        <td><span class="parametername">videoMediaType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_HasEncoder_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.HasEncoder*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_HasEncoder_Emby_Media_Model_Enums_SecondaryFrameworks_Emby_Media_Model_Enums_VideoMediaTypes_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.HasEncoder(Emby.Media.Model.Enums.SecondaryFrameworks,Emby.Media.Model.Enums.VideoMediaTypes)">HasEncoder(SecondaryFrameworks, VideoMediaTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasEncoder(SecondaryFrameworks secondaryFramework, VideoMediaTypes videoMediaType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.SecondaryFrameworks.html">SecondaryFrameworks</a></td>
+        <td><span class="parametername">secondaryFramework</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.VideoMediaTypes.html">VideoMediaTypes</a></td>
+        <td><span class="parametername">videoMediaType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_SetDiagnosticOptions_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.SetDiagnosticOptions*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_SetDiagnosticOptions_System_Boolean_System_Boolean_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.SetDiagnosticOptions(System.Boolean,System.Boolean)">SetDiagnosticOptions(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetDiagnosticOptions(bool disableSubtitleFiltering, bool disableHardwareOverlay)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disableSubtitleFiltering</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disableHardwareOverlay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_Start_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.Start*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_Start_MediaBrowser_Controller_MediaEncoding_EncodingJobOptions_System_IProgress_System_Double__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.Start(MediaBrowser.Controller.MediaEncoding.EncodingJobOptions,System.IProgress{System.Double},System.Threading.CancellationToken)">Start(EncodingJobOptions, IProgress&lt;Double&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ITestEncodingJobInfo&gt; Start(EncodingJobOptions options, IProgress&lt;double&gt; progress, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobOptions.html">EncodingJobOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><span class="parametername">progress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo.html">ITestEncodingJobInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ValidateHwAccelCore_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ValidateHwAccelCore*"></a>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_Tests_IServerTranscodingTestManager_ValidateHwAccelCore_MediaBrowser_Controller_MediaEncoding_Tests_ITestEncodingJobInfo_Emby_Media_Model_Enums_SecondaryFrameworks_System_String_Emby_Media_Model_Enums_SecondaryFrameworks_System_String_System_Text_StringBuilder_" data-uid="MediaBrowser.Controller.MediaEncoding.Tests.IServerTranscodingTestManager.ValidateHwAccelCore(MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo,Emby.Media.Model.Enums.SecondaryFrameworks,System.String,Emby.Media.Model.Enums.SecondaryFrameworks,System.String,System.Text.StringBuilder)">ValidateHwAccelCore(ITestEncodingJobInfo, SecondaryFrameworks, String, SecondaryFrameworks, String, StringBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ValidateHwAccelCore(ITestEncodingJobInfo jobInfo, SecondaryFrameworks decoderFramework, string decoderDeviceId, SecondaryFrameworks encoderFramework, string encoderDeviceId, StringBuilder sb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.Tests.ITestEncodingJobInfo.html">ITestEncodingJobInfo</a></td>
+        <td><span class="parametername">jobInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.SecondaryFrameworks.html">SecondaryFrameworks</a></td>
+        <td><span class="parametername">decoderFramework</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">decoderDeviceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Emby.Media.Model.Enums.SecondaryFrameworks.html">SecondaryFrameworks</a></td>
+        <td><span class="parametername">encoderFramework</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">encoderDeviceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">StringBuilder</a></td>
+        <td><span class="parametername">sb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

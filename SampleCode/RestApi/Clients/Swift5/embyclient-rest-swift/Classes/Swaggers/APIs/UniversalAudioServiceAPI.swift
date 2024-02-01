@@ -15,7 +15,7 @@ open class UniversalAudioServiceAPI {
 
      - parameter _id: (path) Item Id 
      - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getAudioByIdUniversal(_id: String, deviceId: String? = nil, startTimeTicks: Int64? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -41,7 +41,7 @@ open class UniversalAudioServiceAPI {
        - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
 
      - returns: RequestBuilder<Void> 
      */
@@ -69,7 +69,7 @@ open class UniversalAudioServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter container: (path)  
      - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getAudioByIdUniversalByContainer(_id: String, container: String, deviceId: String? = nil, startTimeTicks: Int64? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -96,7 +96,7 @@ open class UniversalAudioServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter container: (path)  
      - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
 
      - returns: RequestBuilder<Void> 
      */
@@ -126,7 +126,7 @@ open class UniversalAudioServiceAPI {
 
      - parameter _id: (path) Item Id 
      - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func headAudioByIdUniversal(_id: String, deviceId: String? = nil, startTimeTicks: Int64? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -152,7 +152,7 @@ open class UniversalAudioServiceAPI {
        - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
 
      - returns: RequestBuilder<Void> 
      */
@@ -180,7 +180,7 @@ open class UniversalAudioServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter container: (path)  
      - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func headAudioByIdUniversalByContainer(_id: String, container: String, deviceId: String? = nil, startTimeTicks: Int64? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -207,7 +207,7 @@ open class UniversalAudioServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter container: (path)  
      - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
 
      - returns: RequestBuilder<Void> 
      */

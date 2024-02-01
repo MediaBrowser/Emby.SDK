@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -311,7 +311,7 @@ class SyncServiceApi(object):
 
         :param async_req bool
         :param str target_id: TargetId (required)
-        :return: list[SyncModelSyncedItem]
+        :return: list[SyncedItem]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -333,7 +333,7 @@ class SyncServiceApi(object):
 
         :param async_req bool
         :param str target_id: TargetId (required)
-        :return: list[SyncModelSyncedItem]
+        :return: list[SyncedItem]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -387,7 +387,7 @@ class SyncServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[SyncModelSyncedItem]',  # noqa: E501
+            response_type='list[SyncedItem]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -395,43 +395,45 @@ class SyncServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_sync_jobitems(self, **kwargs):  # noqa: E501
+    def get_sync_jobitems(self, target_id, **kwargs):  # noqa: E501
         """Gets sync job items.  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_sync_jobitems(async_req=True)
+        >>> thread = api.get_sync_jobitems(target_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :return: QueryResultSyncModelSyncJobItem
+        :param str target_id: TargetId (required)
+        :return: QueryResultSyncJobItem
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_sync_jobitems_with_http_info(**kwargs)  # noqa: E501
+            return self.get_sync_jobitems_with_http_info(target_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_sync_jobitems_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_sync_jobitems_with_http_info(target_id, **kwargs)  # noqa: E501
             return data
 
-    def get_sync_jobitems_with_http_info(self, **kwargs):  # noqa: E501
+    def get_sync_jobitems_with_http_info(self, target_id, **kwargs):  # noqa: E501
         """Gets sync job items.  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_sync_jobitems_with_http_info(async_req=True)
+        >>> thread = api.get_sync_jobitems_with_http_info(target_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :return: QueryResultSyncModelSyncJobItem
+        :param str target_id: TargetId (required)
+        :return: QueryResultSyncJobItem
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['target_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -446,12 +448,18 @@ class SyncServiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'target_id' is set
+        if ('target_id' not in params or
+                params['target_id'] is None):
+            raise ValueError("Missing the required parameter `target_id` when calling `get_sync_jobitems`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
+        if 'target_id' in params:
+            query_params.append(('TargetId', params['target_id']))  # noqa: E501
 
         header_params = {}
 
@@ -474,7 +482,7 @@ class SyncServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='QueryResultSyncModelSyncJobItem',  # noqa: E501
+            response_type='QueryResultSyncJobItem',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -682,7 +690,7 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: QueryResultSyncSyncJob
+        :return: QueryResultSyncJob
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -703,7 +711,7 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: QueryResultSyncSyncJob
+        :return: QueryResultSyncJob
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -751,7 +759,7 @@ class SyncServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='QueryResultSyncSyncJob',  # noqa: E501
+            response_type='QueryResultSyncJob',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -770,7 +778,7 @@ class SyncServiceApi(object):
 
         :param async_req bool
         :param str id: Id (required)
-        :return: SyncSyncJob
+        :return: SyncJob
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -792,7 +800,7 @@ class SyncServiceApi(object):
 
         :param async_req bool
         :param str id: Id (required)
-        :return: SyncSyncJob
+        :return: SyncJob
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -846,7 +854,7 @@ class SyncServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SyncSyncJob',  # noqa: E501
+            response_type='SyncJob',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -868,8 +876,8 @@ class SyncServiceApi(object):
         :param str item_ids: ItemIds
         :param str parent_id: ParentId
         :param str target_id: TargetId
-        :param SyncSyncCategory category: Category
-        :return: SyncModelSyncDialogOptions
+        :param SyncCategory category: Category
+        :return: SyncDialogOptions
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -894,8 +902,8 @@ class SyncServiceApi(object):
         :param str item_ids: ItemIds
         :param str parent_id: ParentId
         :param str target_id: TargetId
-        :param SyncSyncCategory category: Category
-        :return: SyncModelSyncDialogOptions
+        :param SyncCategory category: Category
+        :return: SyncDialogOptions
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -957,7 +965,7 @@ class SyncServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SyncModelSyncDialogOptions',  # noqa: E501
+            response_type='SyncDialogOptions',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -976,7 +984,7 @@ class SyncServiceApi(object):
 
         :param async_req bool
         :param str user_id: UserId (required)
-        :return: list[SyncSyncTarget]
+        :return: list[SyncTarget]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -998,7 +1006,7 @@ class SyncServiceApi(object):
 
         :param async_req bool
         :param str user_id: UserId (required)
-        :return: list[SyncSyncTarget]
+        :return: list[SyncTarget]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1052,7 +1060,7 @@ class SyncServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[SyncSyncTarget]',  # noqa: E501
+            response_type='list[SyncTarget]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1070,7 +1078,7 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SyncModelSyncedItemProgress body: SyncedItemProgress:  (required)
+        :param SyncedItemProgress body: SyncedItemProgress:  (required)
         :param str item_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1093,7 +1101,7 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SyncModelSyncedItemProgress body: SyncedItemProgress:  (required)
+        :param SyncedItemProgress body: SyncedItemProgress:  (required)
         :param str item_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1258,45 +1266,47 @@ class SyncServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_sync_data(self, body, **kwargs):  # noqa: E501
+    def post_sync_data(self, body, target_id, **kwargs):  # noqa: E501
         """Syncs data between device and server  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_sync_data(body, async_req=True)
+        >>> thread = api.post_sync_data(body, target_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SyncModelSyncDataRequest body: SyncDataRequest:  (required)
-        :return: SyncModelSyncDataResponse
+        :param SyncDataRequest body: SyncDataRequest:  (required)
+        :param str target_id: TargetId (required)
+        :return: SyncDataResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_sync_data_with_http_info(body, **kwargs)  # noqa: E501
+            return self.post_sync_data_with_http_info(body, target_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_sync_data_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.post_sync_data_with_http_info(body, target_id, **kwargs)  # noqa: E501
             return data
 
-    def post_sync_data_with_http_info(self, body, **kwargs):  # noqa: E501
+    def post_sync_data_with_http_info(self, body, target_id, **kwargs):  # noqa: E501
         """Syncs data between device and server  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_sync_data_with_http_info(body, async_req=True)
+        >>> thread = api.post_sync_data_with_http_info(body, target_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param SyncModelSyncDataRequest body: SyncDataRequest:  (required)
-        :return: SyncModelSyncDataResponse
+        :param SyncDataRequest body: SyncDataRequest:  (required)
+        :param str target_id: TargetId (required)
+        :return: SyncDataResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body']  # noqa: E501
+        all_params = ['body', 'target_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1315,12 +1325,18 @@ class SyncServiceApi(object):
         if ('body' not in params or
                 params['body'] is None):
             raise ValueError("Missing the required parameter `body` when calling `post_sync_data`")  # noqa: E501
+        # verify the required parameter 'target_id' is set
+        if ('target_id' not in params or
+                params['target_id'] is None):
+            raise ValueError("Missing the required parameter `target_id` when calling `post_sync_data`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
+        if 'target_id' in params:
+            query_params.append(('TargetId', params['target_id']))  # noqa: E501
 
         header_params = {}
 
@@ -1349,7 +1365,7 @@ class SyncServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SyncModelSyncDataResponse',  # noqa: E501
+            response_type='SyncDataResponse',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1909,8 +1925,8 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SyncModelSyncJobRequest body: SyncJobRequest:  (required)
-        :return: SyncModelSyncJobCreationResult
+        :param SyncJobRequest body: SyncJobRequest:  (required)
+        :return: SyncJobCreationResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1931,8 +1947,8 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SyncModelSyncJobRequest body: SyncJobRequest:  (required)
-        :return: SyncModelSyncJobCreationResult
+        :param SyncJobRequest body: SyncJobRequest:  (required)
+        :return: SyncJobCreationResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1990,7 +2006,7 @@ class SyncServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SyncModelSyncJobCreationResult',  # noqa: E501
+            response_type='SyncJobCreationResult',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2008,7 +2024,7 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SyncSyncJob body: SyncJob:  (required)
+        :param SyncJob body: SyncJob:  (required)
         :param int id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2031,7 +2047,7 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param SyncSyncJob body: SyncJob:  (required)
+        :param SyncJob body: SyncJob:  (required)
         :param int id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2202,7 +2218,7 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[UsersUserAction] body: List`1:  (required)
+        :param list[UserAction] body: List`1:  (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2224,7 +2240,7 @@ class SyncServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param list[UsersUserAction] body: List`1:  (required)
+        :param list[UserAction] body: List`1:  (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.

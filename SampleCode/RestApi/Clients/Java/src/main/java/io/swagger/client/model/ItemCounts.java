@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -15,9 +15,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * ItemCounts
+ * Class LibrarySummary  
  */
-
+@Schema(description = "Class LibrarySummary  ")
 
 public class ItemCounts {
   @SerializedName("MovieCount")
@@ -68,10 +68,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get movieCount
+   * The movie count.
    * @return movieCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The movie count.")
   public Integer getMovieCount() {
     return movieCount;
   }
@@ -86,10 +86,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get seriesCount
+   * The series count.
    * @return seriesCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The series count.")
   public Integer getSeriesCount() {
     return seriesCount;
   }
@@ -104,10 +104,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get episodeCount
+   * The episode count.
    * @return episodeCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The episode count.")
   public Integer getEpisodeCount() {
     return episodeCount;
   }
@@ -122,10 +122,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get gameCount
+   * The game count.
    * @return gameCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The game count.")
   public Integer getGameCount() {
     return gameCount;
   }
@@ -176,10 +176,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get gameSystemCount
+   * The game system count.
    * @return gameSystemCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The game system count.")
   public Integer getGameSystemCount() {
     return gameSystemCount;
   }
@@ -194,10 +194,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get trailerCount
+   * The trailer count.
    * @return trailerCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The trailer count.")
   public Integer getTrailerCount() {
     return trailerCount;
   }
@@ -212,10 +212,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get songCount
+   * The song count.
    * @return songCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The song count.")
   public Integer getSongCount() {
     return songCount;
   }
@@ -230,10 +230,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get albumCount
+   * The album count.
    * @return albumCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The album count.")
   public Integer getAlbumCount() {
     return albumCount;
   }
@@ -248,10 +248,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get musicVideoCount
+   * The music video count.
    * @return musicVideoCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The music video count.")
   public Integer getMusicVideoCount() {
     return musicVideoCount;
   }
@@ -266,10 +266,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get boxSetCount
+   * The box set count.
    * @return boxSetCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The box set count.")
   public Integer getBoxSetCount() {
     return boxSetCount;
   }
@@ -284,10 +284,10 @@ public class ItemCounts {
   }
 
    /**
-   * Get bookCount
+   * The book count.
    * @return bookCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The book count.")
   public Integer getBookCount() {
     return bookCount;
   }

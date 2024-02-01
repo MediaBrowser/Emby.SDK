@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -16,9 +16,9 @@ import io.swagger.client.model.Version;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * CommonPluginsIPlugin
+ * Interface IPlugin  
  */
-
+@Schema(description = "Interface IPlugin  ")
 
 public class CommonPluginsIPlugin {
   @SerializedName("Name")
@@ -45,10 +45,10 @@ public class CommonPluginsIPlugin {
   }
 
    /**
-   * Get name
+   * The name of the plugin
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the plugin")
   public String getName() {
     return name;
   }
@@ -63,10 +63,10 @@ public class CommonPluginsIPlugin {
   }
 
    /**
-   * Get description
+   * The description.
    * @return description
   **/
-  @Schema(description = "")
+  @Schema(description = "The description.")
   public String getDescription() {
     return description;
   }
@@ -81,10 +81,10 @@ public class CommonPluginsIPlugin {
   }
 
    /**
-   * Get id
+   * The unique id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The unique id.")
   public String getId() {
     return id;
   }
@@ -117,10 +117,10 @@ public class CommonPluginsIPlugin {
   }
 
    /**
-   * Get assemblyFilePath
+   * The path to the assembly file
    * @return assemblyFilePath
   **/
-  @Schema(description = "")
+  @Schema(description = "The path to the assembly file")
   public String getAssemblyFilePath() {
     return assemblyFilePath;
   }
@@ -135,10 +135,10 @@ public class CommonPluginsIPlugin {
   }
 
    /**
-   * Get dataFolderPath
+   * The full path to the data folder, where the plugin can store any miscellaneous files needed
    * @return dataFolderPath
   **/
-  @Schema(description = "")
+  @Schema(description = "The full path to the data folder, where the plugin can store any miscellaneous files needed")
   public String getDataFolderPath() {
     return dataFolderPath;
   }

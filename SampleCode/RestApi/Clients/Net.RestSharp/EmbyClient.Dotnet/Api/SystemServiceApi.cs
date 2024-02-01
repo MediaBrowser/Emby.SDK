@@ -60,7 +60,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets public information about the server
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PublicSystemInfo</returns>
@@ -70,7 +70,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets public information about the server
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PublicSystemInfo</returns>
@@ -146,7 +146,7 @@ namespace EmbyClient.Dotnet.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -156,7 +156,7 @@ namespace EmbyClient.Dotnet.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -168,8 +168,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UpdatesPackageVersionInfo</returns>
-        UpdatesPackageVersionInfo GetSystemReleasenotes ();
+        /// <returns>PackageVersionInfo</returns>
+        PackageVersionInfo GetSystemReleasenotes ();
 
         /// <summary>
         /// Gets release notes
@@ -178,8 +178,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UpdatesPackageVersionInfo</returns>
-        ApiResponse<UpdatesPackageVersionInfo> GetSystemReleasenotesWithHttpInfo ();
+        /// <returns>ApiResponse of PackageVersionInfo</returns>
+        ApiResponse<PackageVersionInfo> GetSystemReleasenotesWithHttpInfo ();
         /// <summary>
         /// Gets release notes
         /// </summary>
@@ -187,8 +187,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        List<UpdatesPackageVersionInfo> GetSystemReleasenotesVersions ();
+        /// <returns>List&lt;PackageVersionInfo&gt;</returns>
+        List<PackageVersionInfo> GetSystemReleasenotesVersions ();
 
         /// <summary>
         /// Gets release notes
@@ -197,8 +197,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        ApiResponse<List<UpdatesPackageVersionInfo>> GetSystemReleasenotesVersionsWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;PackageVersionInfo&gt;</returns>
+        ApiResponse<List<PackageVersionInfo>> GetSystemReleasenotesVersionsWithHttpInfo ();
         /// <summary>
         /// Gets wake on lan information
         /// </summary>
@@ -222,7 +222,7 @@ namespace EmbyClient.Dotnet.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -232,7 +232,7 @@ namespace EmbyClient.Dotnet.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -319,7 +319,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets public information about the server
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PublicSystemInfo</returns>
@@ -329,7 +329,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets public information about the server
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PublicSystemInfo)</returns>
@@ -405,7 +405,7 @@ namespace EmbyClient.Dotnet.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -415,7 +415,7 @@ namespace EmbyClient.Dotnet.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -427,8 +427,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UpdatesPackageVersionInfo</returns>
-        System.Threading.Tasks.Task<UpdatesPackageVersionInfo> GetSystemReleasenotesAsync ();
+        /// <returns>Task of PackageVersionInfo</returns>
+        System.Threading.Tasks.Task<PackageVersionInfo> GetSystemReleasenotesAsync ();
 
         /// <summary>
         /// Gets release notes
@@ -437,8 +437,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UpdatesPackageVersionInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UpdatesPackageVersionInfo>> GetSystemReleasenotesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (PackageVersionInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PackageVersionInfo>> GetSystemReleasenotesAsyncWithHttpInfo ();
         /// <summary>
         /// Gets release notes
         /// </summary>
@@ -446,8 +446,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        System.Threading.Tasks.Task<List<UpdatesPackageVersionInfo>> GetSystemReleasenotesVersionsAsync ();
+        /// <returns>Task of List&lt;PackageVersionInfo&gt;</returns>
+        System.Threading.Tasks.Task<List<PackageVersionInfo>> GetSystemReleasenotesVersionsAsync ();
 
         /// <summary>
         /// Gets release notes
@@ -456,8 +456,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;UpdatesPackageVersionInfo&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UpdatesPackageVersionInfo>>> GetSystemReleasenotesVersionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;PackageVersionInfo&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PackageVersionInfo>>> GetSystemReleasenotesVersionsAsyncWithHttpInfo ();
         /// <summary>
         /// Gets wake on lan information
         /// </summary>
@@ -481,7 +481,7 @@ namespace EmbyClient.Dotnet.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -491,7 +491,7 @@ namespace EmbyClient.Dotnet.Api
         /// 
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -932,7 +932,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets public information about the server No authentication required
+        /// Gets public information about the server Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PublicSystemInfo</returns>
@@ -943,7 +943,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets public information about the server No authentication required
+        /// Gets public information about the server Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PublicSystemInfo</returns>
@@ -972,6 +972,17 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -992,7 +1003,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets public information about the server No authentication required
+        /// Gets public information about the server Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PublicSystemInfo</returns>
@@ -1004,7 +1015,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets public information about the server No authentication required
+        /// Gets public information about the server Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PublicSystemInfo)</returns>
@@ -1033,6 +1044,17 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1518,7 +1540,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -1528,7 +1550,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1555,6 +1577,17 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1575,7 +1608,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -1586,7 +1619,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -1613,6 +1646,17 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1636,10 +1680,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets release notes Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UpdatesPackageVersionInfo</returns>
-        public UpdatesPackageVersionInfo GetSystemReleasenotes ()
+        /// <returns>PackageVersionInfo</returns>
+        public PackageVersionInfo GetSystemReleasenotes ()
         {
-             ApiResponse<UpdatesPackageVersionInfo> localVarResponse = GetSystemReleasenotesWithHttpInfo();
+             ApiResponse<PackageVersionInfo> localVarResponse = GetSystemReleasenotesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1647,8 +1691,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets release notes Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UpdatesPackageVersionInfo</returns>
-        public ApiResponse< UpdatesPackageVersionInfo > GetSystemReleasenotesWithHttpInfo ()
+        /// <returns>ApiResponse of PackageVersionInfo</returns>
+        public ApiResponse< PackageVersionInfo > GetSystemReleasenotesWithHttpInfo ()
         {
 
             var localVarPath = "/System/ReleaseNotes";
@@ -1698,19 +1742,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UpdatesPackageVersionInfo>(localVarStatusCode,
+            return new ApiResponse<PackageVersionInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (UpdatesPackageVersionInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdatesPackageVersionInfo)));
+                (PackageVersionInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PackageVersionInfo)));
         }
 
         /// <summary>
         /// Gets release notes Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UpdatesPackageVersionInfo</returns>
-        public async System.Threading.Tasks.Task<UpdatesPackageVersionInfo> GetSystemReleasenotesAsync ()
+        /// <returns>Task of PackageVersionInfo</returns>
+        public async System.Threading.Tasks.Task<PackageVersionInfo> GetSystemReleasenotesAsync ()
         {
-             ApiResponse<UpdatesPackageVersionInfo> localVarResponse = await GetSystemReleasenotesAsyncWithHttpInfo();
+             ApiResponse<PackageVersionInfo> localVarResponse = await GetSystemReleasenotesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1719,8 +1763,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets release notes Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UpdatesPackageVersionInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UpdatesPackageVersionInfo>> GetSystemReleasenotesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (PackageVersionInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PackageVersionInfo>> GetSystemReleasenotesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/System/ReleaseNotes";
@@ -1770,19 +1814,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UpdatesPackageVersionInfo>(localVarStatusCode,
+            return new ApiResponse<PackageVersionInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (UpdatesPackageVersionInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdatesPackageVersionInfo)));
+                (PackageVersionInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PackageVersionInfo)));
         }
 
         /// <summary>
         /// Gets release notes Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        public List<UpdatesPackageVersionInfo> GetSystemReleasenotesVersions ()
+        /// <returns>List&lt;PackageVersionInfo&gt;</returns>
+        public List<PackageVersionInfo> GetSystemReleasenotesVersions ()
         {
-             ApiResponse<List<UpdatesPackageVersionInfo>> localVarResponse = GetSystemReleasenotesVersionsWithHttpInfo();
+             ApiResponse<List<PackageVersionInfo>> localVarResponse = GetSystemReleasenotesVersionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1790,8 +1834,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets release notes Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        public ApiResponse< List<UpdatesPackageVersionInfo> > GetSystemReleasenotesVersionsWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;PackageVersionInfo&gt;</returns>
+        public ApiResponse< List<PackageVersionInfo> > GetSystemReleasenotesVersionsWithHttpInfo ()
         {
 
             var localVarPath = "/System/ReleaseNotes/Versions";
@@ -1841,19 +1885,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UpdatesPackageVersionInfo>>(localVarStatusCode,
+            return new ApiResponse<List<PackageVersionInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UpdatesPackageVersionInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UpdatesPackageVersionInfo>)));
+                (List<PackageVersionInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PackageVersionInfo>)));
         }
 
         /// <summary>
         /// Gets release notes Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UpdatesPackageVersionInfo>> GetSystemReleasenotesVersionsAsync ()
+        /// <returns>Task of List&lt;PackageVersionInfo&gt;</returns>
+        public async System.Threading.Tasks.Task<List<PackageVersionInfo>> GetSystemReleasenotesVersionsAsync ()
         {
-             ApiResponse<List<UpdatesPackageVersionInfo>> localVarResponse = await GetSystemReleasenotesVersionsAsyncWithHttpInfo();
+             ApiResponse<List<PackageVersionInfo>> localVarResponse = await GetSystemReleasenotesVersionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1862,8 +1906,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets release notes Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;UpdatesPackageVersionInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UpdatesPackageVersionInfo>>> GetSystemReleasenotesVersionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;PackageVersionInfo&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PackageVersionInfo>>> GetSystemReleasenotesVersionsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/System/ReleaseNotes/Versions";
@@ -1913,9 +1957,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UpdatesPackageVersionInfo>>(localVarStatusCode,
+            return new ApiResponse<List<PackageVersionInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UpdatesPackageVersionInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UpdatesPackageVersionInfo>)));
+                (List<PackageVersionInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PackageVersionInfo>)));
         }
 
         /// <summary>
@@ -2062,7 +2106,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -2072,7 +2116,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -2099,6 +2143,17 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -2119,7 +2174,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -2130,7 +2185,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        ///  No authentication required
+        ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -2157,6 +2212,17 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,

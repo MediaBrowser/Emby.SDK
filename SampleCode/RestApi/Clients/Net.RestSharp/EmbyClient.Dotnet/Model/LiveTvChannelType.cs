@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines LiveTv.ChannelType
+    /// Enum ChannelType  
     /// </summary>
+    /// <value>Enum ChannelType  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum LiveTvChannelType
     {

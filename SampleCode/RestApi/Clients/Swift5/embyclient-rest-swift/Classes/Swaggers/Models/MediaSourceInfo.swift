@@ -11,20 +11,26 @@ import Foundation
 
 public struct MediaSourceInfo: Codable {
 
-    public var _protocol: MediaInfoMediaProtocol?
+    public var _protocol: MediaProtocol?
     public var _id: String?
     public var path: String?
     public var encoderPath: String?
-    public var encoderProtocol: MediaInfoMediaProtocol?
+    public var encoderProtocol: MediaProtocol?
     public var type: MediaSourceType?
+    public var probePath: String?
+    public var probeProtocol: MediaProtocol?
     public var container: String?
     public var size: Int64?
     public var name: String?
     public var sortName: String?
+    /** Differentiate internet url vs local network */
     public var isRemote: Bool?
+    public var hasMixedProtocols: Bool?
     public var runTimeTicks: Int64?
     public var containerStartTimeTicks: Int64?
     public var supportsTranscoding: Bool?
+    public var trancodeLiveStartIndex: Int?
+    public var wallClockStart: Date?
     public var supportsDirectStream: Bool?
     public var supportsDirectPlay: Bool?
     public var isInfiniteStream: Bool?
@@ -39,9 +45,10 @@ public struct MediaSourceInfo: Codable {
     public var mediaStreams: [MediaStream]?
     public var formats: [String]?
     public var bitrate: Int?
-    public var timestamp: MediaInfoTransportStreamTimestamp?
+    public var timestamp: TransportStreamTimestamp?
     public var requiredHttpHeaders: [String:String]?
     public var directStreamUrl: String?
+    public var addApiKeyToDirectStreamUrl: Bool?
     public var transcodingUrl: String?
     public var transcodingSubProtocol: String?
     public var transcodingContainer: String?
@@ -49,24 +56,31 @@ public struct MediaSourceInfo: Codable {
     public var readAtNativeFramerate: Bool?
     public var defaultAudioStreamIndex: Int?
     public var defaultSubtitleStreamIndex: Int?
+    /** Used only by our Windows app. Not used by Emby Server. */
     public var itemId: String?
+    /** Used only by our Windows app. Not used by Emby Server. */
     public var serverId: String?
 
-    public init(_protocol: MediaInfoMediaProtocol? = nil, _id: String? = nil, path: String? = nil, encoderPath: String? = nil, encoderProtocol: MediaInfoMediaProtocol? = nil, type: MediaSourceType? = nil, container: String? = nil, size: Int64? = nil, name: String? = nil, sortName: String? = nil, isRemote: Bool? = nil, runTimeTicks: Int64? = nil, containerStartTimeTicks: Int64? = nil, supportsTranscoding: Bool? = nil, supportsDirectStream: Bool? = nil, supportsDirectPlay: Bool? = nil, isInfiniteStream: Bool? = nil, requiresOpening: Bool? = nil, openToken: String? = nil, requiresClosing: Bool? = nil, liveStreamId: String? = nil, bufferMs: Int? = nil, requiresLooping: Bool? = nil, supportsProbing: Bool? = nil, video3DFormat: Video3DFormat? = nil, mediaStreams: [MediaStream]? = nil, formats: [String]? = nil, bitrate: Int? = nil, timestamp: MediaInfoTransportStreamTimestamp? = nil, requiredHttpHeaders: [String:String]? = nil, directStreamUrl: String? = nil, transcodingUrl: String? = nil, transcodingSubProtocol: String? = nil, transcodingContainer: String? = nil, analyzeDurationMs: Int? = nil, readAtNativeFramerate: Bool? = nil, defaultAudioStreamIndex: Int? = nil, defaultSubtitleStreamIndex: Int? = nil, itemId: String? = nil, serverId: String? = nil) {
+    public init(_protocol: MediaProtocol? = nil, _id: String? = nil, path: String? = nil, encoderPath: String? = nil, encoderProtocol: MediaProtocol? = nil, type: MediaSourceType? = nil, probePath: String? = nil, probeProtocol: MediaProtocol? = nil, container: String? = nil, size: Int64? = nil, name: String? = nil, sortName: String? = nil, isRemote: Bool? = nil, hasMixedProtocols: Bool? = nil, runTimeTicks: Int64? = nil, containerStartTimeTicks: Int64? = nil, supportsTranscoding: Bool? = nil, trancodeLiveStartIndex: Int? = nil, wallClockStart: Date? = nil, supportsDirectStream: Bool? = nil, supportsDirectPlay: Bool? = nil, isInfiniteStream: Bool? = nil, requiresOpening: Bool? = nil, openToken: String? = nil, requiresClosing: Bool? = nil, liveStreamId: String? = nil, bufferMs: Int? = nil, requiresLooping: Bool? = nil, supportsProbing: Bool? = nil, video3DFormat: Video3DFormat? = nil, mediaStreams: [MediaStream]? = nil, formats: [String]? = nil, bitrate: Int? = nil, timestamp: TransportStreamTimestamp? = nil, requiredHttpHeaders: [String:String]? = nil, directStreamUrl: String? = nil, addApiKeyToDirectStreamUrl: Bool? = nil, transcodingUrl: String? = nil, transcodingSubProtocol: String? = nil, transcodingContainer: String? = nil, analyzeDurationMs: Int? = nil, readAtNativeFramerate: Bool? = nil, defaultAudioStreamIndex: Int? = nil, defaultSubtitleStreamIndex: Int? = nil, itemId: String? = nil, serverId: String? = nil) {
         self._protocol = _protocol
         self._id = _id
         self.path = path
         self.encoderPath = encoderPath
         self.encoderProtocol = encoderProtocol
         self.type = type
+        self.probePath = probePath
+        self.probeProtocol = probeProtocol
         self.container = container
         self.size = size
         self.name = name
         self.sortName = sortName
         self.isRemote = isRemote
+        self.hasMixedProtocols = hasMixedProtocols
         self.runTimeTicks = runTimeTicks
         self.containerStartTimeTicks = containerStartTimeTicks
         self.supportsTranscoding = supportsTranscoding
+        self.trancodeLiveStartIndex = trancodeLiveStartIndex
+        self.wallClockStart = wallClockStart
         self.supportsDirectStream = supportsDirectStream
         self.supportsDirectPlay = supportsDirectPlay
         self.isInfiniteStream = isInfiniteStream
@@ -84,6 +98,7 @@ public struct MediaSourceInfo: Codable {
         self.timestamp = timestamp
         self.requiredHttpHeaders = requiredHttpHeaders
         self.directStreamUrl = directStreamUrl
+        self.addApiKeyToDirectStreamUrl = addApiKeyToDirectStreamUrl
         self.transcodingUrl = transcodingUrl
         self.transcodingSubProtocol = transcodingSubProtocol
         self.transcodingContainer = transcodingContainer
@@ -102,14 +117,19 @@ public struct MediaSourceInfo: Codable {
         case encoderPath = "EncoderPath"
         case encoderProtocol = "EncoderProtocol"
         case type = "Type"
+        case probePath = "ProbePath"
+        case probeProtocol = "ProbeProtocol"
         case container = "Container"
         case size = "Size"
         case name = "Name"
         case sortName = "SortName"
         case isRemote = "IsRemote"
+        case hasMixedProtocols = "HasMixedProtocols"
         case runTimeTicks = "RunTimeTicks"
         case containerStartTimeTicks = "ContainerStartTimeTicks"
         case supportsTranscoding = "SupportsTranscoding"
+        case trancodeLiveStartIndex = "TrancodeLiveStartIndex"
+        case wallClockStart = "WallClockStart"
         case supportsDirectStream = "SupportsDirectStream"
         case supportsDirectPlay = "SupportsDirectPlay"
         case isInfiniteStream = "IsInfiniteStream"
@@ -127,6 +147,7 @@ public struct MediaSourceInfo: Codable {
         case timestamp = "Timestamp"
         case requiredHttpHeaders = "RequiredHttpHeaders"
         case directStreamUrl = "DirectStreamUrl"
+        case addApiKeyToDirectStreamUrl = "AddApiKeyToDirectStreamUrl"
         case transcodingUrl = "TranscodingUrl"
         case transcodingSubProtocol = "TranscodingSubProtocol"
         case transcodingContainer = "TranscodingContainer"

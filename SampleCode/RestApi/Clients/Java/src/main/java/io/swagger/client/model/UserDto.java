@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -12,16 +12,17 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationUserConfiguration;
 import io.swagger.client.model.ConnectUserLinkType;
-import io.swagger.client.model.UsersUserPolicy;
+import io.swagger.client.model.UserConfiguration;
+import io.swagger.client.model.UserItemShareLevel;
+import io.swagger.client.model.UserPolicy;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 /**
- * UserDto
+ * Class UserDto  
  */
-
+@Schema(description = "Class UserDto  ")
 
 public class UserDto {
   @SerializedName("Name")
@@ -57,9 +58,6 @@ public class UserDto {
   @SerializedName("HasConfiguredPassword")
   private Boolean hasConfiguredPassword = null;
 
-  @SerializedName("HasConfiguredEasyPassword")
-  private Boolean hasConfiguredEasyPassword = null;
-
   @SerializedName("EnableAutoLogin")
   private Boolean enableAutoLogin = null;
 
@@ -70,13 +68,19 @@ public class UserDto {
   private OffsetDateTime lastActivityDate = null;
 
   @SerializedName("Configuration")
-  private ConfigurationUserConfiguration _configuration = null;
+  private UserConfiguration _configuration = null;
 
   @SerializedName("Policy")
-  private UsersUserPolicy policy = null;
+  private UserPolicy policy = null;
 
   @SerializedName("PrimaryImageAspectRatio")
   private Double primaryImageAspectRatio = null;
+
+  @SerializedName("HasConfiguredEasyPassword")
+  private Boolean hasConfiguredEasyPassword = null;
+
+  @SerializedName("UserItemShareLevel")
+  private UserItemShareLevel userItemShareLevel = null;
 
   public UserDto name(String name) {
     this.name = name;
@@ -84,10 +88,10 @@ public class UserDto {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -102,10 +106,10 @@ public class UserDto {
   }
 
    /**
-   * Get serverId
+   * The server identifier.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "The server identifier.")
   public String getServerId() {
     return serverId;
   }
@@ -120,10 +124,10 @@ public class UserDto {
   }
 
    /**
-   * Get serverName
+   * The name of the server. This is not used by the server and is for client\\-side usage only.
    * @return serverName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the server. This is not used by the server and is for client\\-side usage only.")
   public String getServerName() {
     return serverName;
   }
@@ -156,10 +160,10 @@ public class UserDto {
   }
 
    /**
-   * Get connectUserName
+   * The name of the connect user.
    * @return connectUserName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the connect user.")
   public String getConnectUserName() {
     return connectUserName;
   }
@@ -210,10 +214,10 @@ public class UserDto {
   }
 
    /**
-   * Get id
+   * The id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The id.")
   public String getId() {
     return id;
   }
@@ -228,10 +232,10 @@ public class UserDto {
   }
 
    /**
-   * Get primaryImageTag
+   * The primary image tag.
    * @return primaryImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The primary image tag.")
   public String getPrimaryImageTag() {
     return primaryImageTag;
   }
@@ -246,10 +250,10 @@ public class UserDto {
   }
 
    /**
-   * Get hasPassword
+   * A value indicating whether this instance has password.
    * @return hasPassword
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance has password.")
   public Boolean isHasPassword() {
     return hasPassword;
   }
@@ -264,34 +268,16 @@ public class UserDto {
   }
 
    /**
-   * Get hasConfiguredPassword
+   * A value indicating whether this instance has configured password.
    * @return hasConfiguredPassword
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance has configured password.")
   public Boolean isHasConfiguredPassword() {
     return hasConfiguredPassword;
   }
 
   public void setHasConfiguredPassword(Boolean hasConfiguredPassword) {
     this.hasConfiguredPassword = hasConfiguredPassword;
-  }
-
-  public UserDto hasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
-    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
-    return this;
-  }
-
-   /**
-   * Get hasConfiguredEasyPassword
-   * @return hasConfiguredEasyPassword
-  **/
-  @Schema(description = "")
-  public Boolean isHasConfiguredEasyPassword() {
-    return hasConfiguredEasyPassword;
-  }
-
-  public void setHasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
-    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
   }
 
   public UserDto enableAutoLogin(Boolean enableAutoLogin) {
@@ -318,10 +304,10 @@ public class UserDto {
   }
 
    /**
-   * Get lastLoginDate
+   * The last login date.
    * @return lastLoginDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The last login date.")
   public OffsetDateTime getLastLoginDate() {
     return lastLoginDate;
   }
@@ -336,10 +322,10 @@ public class UserDto {
   }
 
    /**
-   * Get lastActivityDate
+   * The last activity date.
    * @return lastActivityDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The last activity date.")
   public OffsetDateTime getLastActivityDate() {
     return lastActivityDate;
   }
@@ -348,7 +334,7 @@ public class UserDto {
     this.lastActivityDate = lastActivityDate;
   }
 
-  public UserDto _configuration(ConfigurationUserConfiguration _configuration) {
+  public UserDto _configuration(UserConfiguration _configuration) {
     this._configuration = _configuration;
     return this;
   }
@@ -358,15 +344,15 @@ public class UserDto {
    * @return _configuration
   **/
   @Schema(description = "")
-  public ConfigurationUserConfiguration getConfiguration() {
+  public UserConfiguration getConfiguration() {
     return _configuration;
   }
 
-  public void setConfiguration(ConfigurationUserConfiguration _configuration) {
+  public void setConfiguration(UserConfiguration _configuration) {
     this._configuration = _configuration;
   }
 
-  public UserDto policy(UsersUserPolicy policy) {
+  public UserDto policy(UserPolicy policy) {
     this.policy = policy;
     return this;
   }
@@ -376,11 +362,11 @@ public class UserDto {
    * @return policy
   **/
   @Schema(description = "")
-  public UsersUserPolicy getPolicy() {
+  public UserPolicy getPolicy() {
     return policy;
   }
 
-  public void setPolicy(UsersUserPolicy policy) {
+  public void setPolicy(UserPolicy policy) {
     this.policy = policy;
   }
 
@@ -390,16 +376,52 @@ public class UserDto {
   }
 
    /**
-   * Get primaryImageAspectRatio
+   * The primary image aspect ratio.
    * @return primaryImageAspectRatio
   **/
-  @Schema(description = "")
+  @Schema(description = "The primary image aspect ratio.")
   public Double getPrimaryImageAspectRatio() {
     return primaryImageAspectRatio;
   }
 
   public void setPrimaryImageAspectRatio(Double primaryImageAspectRatio) {
     this.primaryImageAspectRatio = primaryImageAspectRatio;
+  }
+
+  public UserDto hasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
+    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
+    return this;
+  }
+
+   /**
+   * Get hasConfiguredEasyPassword
+   * @return hasConfiguredEasyPassword
+  **/
+  @Schema(description = "")
+  public Boolean isHasConfiguredEasyPassword() {
+    return hasConfiguredEasyPassword;
+  }
+
+  public void setHasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
+    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
+  }
+
+  public UserDto userItemShareLevel(UserItemShareLevel userItemShareLevel) {
+    this.userItemShareLevel = userItemShareLevel;
+    return this;
+  }
+
+   /**
+   * Get userItemShareLevel
+   * @return userItemShareLevel
+  **/
+  @Schema(description = "")
+  public UserItemShareLevel getUserItemShareLevel() {
+    return userItemShareLevel;
+  }
+
+  public void setUserItemShareLevel(UserItemShareLevel userItemShareLevel) {
+    this.userItemShareLevel = userItemShareLevel;
   }
 
 
@@ -423,18 +445,19 @@ public class UserDto {
         Objects.equals(this.primaryImageTag, userDto.primaryImageTag) &&
         Objects.equals(this.hasPassword, userDto.hasPassword) &&
         Objects.equals(this.hasConfiguredPassword, userDto.hasConfiguredPassword) &&
-        Objects.equals(this.hasConfiguredEasyPassword, userDto.hasConfiguredEasyPassword) &&
         Objects.equals(this.enableAutoLogin, userDto.enableAutoLogin) &&
         Objects.equals(this.lastLoginDate, userDto.lastLoginDate) &&
         Objects.equals(this.lastActivityDate, userDto.lastActivityDate) &&
         Objects.equals(this._configuration, userDto._configuration) &&
         Objects.equals(this.policy, userDto.policy) &&
-        Objects.equals(this.primaryImageAspectRatio, userDto.primaryImageAspectRatio);
+        Objects.equals(this.primaryImageAspectRatio, userDto.primaryImageAspectRatio) &&
+        Objects.equals(this.hasConfiguredEasyPassword, userDto.hasConfiguredEasyPassword) &&
+        Objects.equals(this.userItemShareLevel, userDto.userItemShareLevel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, serverId, serverName, prefix, connectUserName, dateCreated, connectLinkType, id, primaryImageTag, hasPassword, hasConfiguredPassword, hasConfiguredEasyPassword, enableAutoLogin, lastLoginDate, lastActivityDate, _configuration, policy, primaryImageAspectRatio);
+    return Objects.hash(name, serverId, serverName, prefix, connectUserName, dateCreated, connectLinkType, id, primaryImageTag, hasPassword, hasConfiguredPassword, enableAutoLogin, lastLoginDate, lastActivityDate, _configuration, policy, primaryImageAspectRatio, hasConfiguredEasyPassword, userItemShareLevel);
   }
 
 
@@ -454,13 +477,14 @@ public class UserDto {
     sb.append("    primaryImageTag: ").append(toIndentedString(primaryImageTag)).append("\n");
     sb.append("    hasPassword: ").append(toIndentedString(hasPassword)).append("\n");
     sb.append("    hasConfiguredPassword: ").append(toIndentedString(hasConfiguredPassword)).append("\n");
-    sb.append("    hasConfiguredEasyPassword: ").append(toIndentedString(hasConfiguredEasyPassword)).append("\n");
     sb.append("    enableAutoLogin: ").append(toIndentedString(enableAutoLogin)).append("\n");
     sb.append("    lastLoginDate: ").append(toIndentedString(lastLoginDate)).append("\n");
     sb.append("    lastActivityDate: ").append(toIndentedString(lastActivityDate)).append("\n");
     sb.append("    _configuration: ").append(toIndentedString(_configuration)).append("\n");
     sb.append("    policy: ").append(toIndentedString(policy)).append("\n");
     sb.append("    primaryImageAspectRatio: ").append(toIndentedString(primaryImageAspectRatio)).append("\n");
+    sb.append("    hasConfiguredEasyPassword: ").append(toIndentedString(hasConfiguredEasyPassword)).append("\n");
+    sb.append("    userItemShareLevel: ").append(toIndentedString(userItemShareLevel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

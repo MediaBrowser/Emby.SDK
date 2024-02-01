@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *

@@ -15,7 +15,7 @@ open class ConfigurationServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSystemConfiguration(completion: @escaping ((_ data: ConfigurationServerConfiguration?,_ error: Error?) -> Void)) {
+    open class func getSystemConfiguration(completion: @escaping ((_ data: ServerConfiguration?,_ error: Error?) -> Void)) {
         getSystemConfigurationWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -40,35 +40,36 @@ open class ConfigurationServiceAPI {
   "RevertDebugLogging" : "RevertDebugLogging",
   "IsStartupWizardCompleted" : true,
   "ImageSavingConvention" : "Legacy",
+  "EnableSavedMetadataForPeople" : true,
   "LocalNetworkAddresses" : [ "LocalNetworkAddresses", "LocalNetworkAddresses" ],
   "EnableUPnP" : true,
   "OptimizeDatabaseOnShutdown" : true,
   "MetadataCountryCode" : "MetadataCountryCode",
-  "SaveMetadataHidden" : true,
+  "ProxyHeaderMode" : "None",
   "MetadataNetworkPath" : "MetadataNetworkPath",
   "LocalNetworkSubnets" : [ "LocalNetworkSubnets", "LocalNetworkSubnets" ],
   "EnableDebugLevelLogging" : true,
   "LogAllQueryTimes" : true,
+  "PlaylistsUpgradedToM3U" : true,
+  "AllowLegacyLocalNetworkPassword" : true,
+  "ImageExtractorUpgraded" : true,
   "RunAtStartup" : true,
   "HttpServerPortNumber" : 1,
   "RequireHttps" : true,
   "DashboardSourcePath" : "DashboardSourcePath",
   "LogFileRetentionDays" : 4,
   "HttpsPortNumber" : 5,
-  "ChannelOptionsUpgraded" : true,
   "CertificatePassword" : "CertificatePassword",
-  "InheritedParentalRatingValueUpgraded" : true,
   "EnableOriginalTrackTitles" : true,
   "RemoteClientBitrateLimit" : 2,
-  "CollectionFolderIdsMigrated" : true,
   "ImageExtractionTimeoutMs" : 7,
   "EnableExternalContentInSuggestions" : true,
   "LibraryMonitorDelay" : 5,
   "EnableCaseSensitiveItemIds" : true,
   "EnablePeopleLetterSubFolders" : true,
   "DisableAsyncIO" : true,
-  "NextUpUpgraded" : true,
-  "TimerIdsUpgraded" : true,
+  "PreferredDetectedRemoteAddressFamily" : "Unspecified",
+  "MigratedLibraryOptionsToDb" : true,
   "SimultaneousStreamLimit" : 9,
   "PathSubstitutions" : [ {
     "From" : "From",
@@ -77,13 +78,12 @@ open class ConfigurationServiceAPI {
     "From" : "From",
     "To" : "To"
   } ],
+  "MigratedToUserItemShares4" : true,
   "CachePath" : "CachePath",
   "WanDdns" : "WanDdns",
   "IsBehindProxy" : true,
   "UninstalledPlugins" : [ "UninstalledPlugins", "UninstalledPlugins" ],
-  "DisplaySpecialsWithinSeasons" : true,
   "EnableDashboardResponseCaching" : true,
-  "ForcedSortNameUpgraded" : true,
   "EnableRemoteAccess" : true,
   "CertificatePath" : "CertificatePath",
   "CollapseVideoFolders" : true,
@@ -103,16 +103,16 @@ open class ConfigurationServiceAPI {
   "EnableAutoUpdate" : true
 }}]
 
-     - returns: RequestBuilder<ConfigurationServerConfiguration> 
+     - returns: RequestBuilder<ServerConfiguration> 
      */
-    open class func getSystemConfigurationWithRequestBuilder() -> RequestBuilder<ConfigurationServerConfiguration> {
+    open class func getSystemConfigurationWithRequestBuilder() -> RequestBuilder<ServerConfiguration> {
         let path = "/System/Configuration"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<ConfigurationServerConfiguration>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ServerConfiguration>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -167,7 +167,7 @@ open class ConfigurationServiceAPI {
      - parameter body: (body) ServerConfiguration:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSystemConfiguration(body: ConfigurationServerConfiguration, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSystemConfiguration(body: ServerConfiguration, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSystemConfigurationWithRequestBuilder(body: body).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -192,7 +192,7 @@ open class ConfigurationServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSystemConfigurationWithRequestBuilder(body: ConfigurationServerConfiguration) -> RequestBuilder<Void> {
+    open class func postSystemConfigurationWithRequestBuilder(body: ServerConfiguration) -> RequestBuilder<Void> {
         let path = "/System/Configuration"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -241,6 +241,48 @@ open class ConfigurationServiceAPI {
         let keyPreEscape = "\(key)"
         let keyPostEscape = keyPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Key}", with: keyPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
+     Updates application configuration
+
+     - parameter body: (body) ServerConfiguration:  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSystemConfigurationPartial(body: ServerConfiguration, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postSystemConfigurationPartialWithRequestBuilder(body: body).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates application configuration
+     - POST /System/Configuration/Partial
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) ServerConfiguration:  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postSystemConfigurationPartialWithRequestBuilder(body: ServerConfiguration) -> RequestBuilder<Void> {
+        let path = "/System/Configuration/Partial"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)

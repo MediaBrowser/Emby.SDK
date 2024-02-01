@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -90,6 +90,7 @@ class RemoteImageInfo(object):
     def provider_name(self):
         """Gets the provider_name of this RemoteImageInfo.  # noqa: E501
 
+        The name of the provider.  # noqa: E501
 
         :return: The provider_name of this RemoteImageInfo.  # noqa: E501
         :rtype: str
@@ -100,6 +101,7 @@ class RemoteImageInfo(object):
     def provider_name(self, provider_name):
         """Sets the provider_name of this RemoteImageInfo.
 
+        The name of the provider.  # noqa: E501
 
         :param provider_name: The provider_name of this RemoteImageInfo.  # noqa: E501
         :type: str
@@ -111,6 +113,7 @@ class RemoteImageInfo(object):
     def url(self):
         """Gets the url of this RemoteImageInfo.  # noqa: E501
 
+        The URL.  # noqa: E501
 
         :return: The url of this RemoteImageInfo.  # noqa: E501
         :rtype: str
@@ -121,6 +124,7 @@ class RemoteImageInfo(object):
     def url(self, url):
         """Sets the url of this RemoteImageInfo.
 
+        The URL.  # noqa: E501
 
         :param url: The url of this RemoteImageInfo.  # noqa: E501
         :type: str
@@ -132,6 +136,7 @@ class RemoteImageInfo(object):
     def thumbnail_url(self):
         """Gets the thumbnail_url of this RemoteImageInfo.  # noqa: E501
 
+        A url used for previewing a smaller version  # noqa: E501
 
         :return: The thumbnail_url of this RemoteImageInfo.  # noqa: E501
         :rtype: str
@@ -142,6 +147,7 @@ class RemoteImageInfo(object):
     def thumbnail_url(self, thumbnail_url):
         """Sets the thumbnail_url of this RemoteImageInfo.
 
+        A url used for previewing a smaller version  # noqa: E501
 
         :param thumbnail_url: The thumbnail_url of this RemoteImageInfo.  # noqa: E501
         :type: str
@@ -153,6 +159,7 @@ class RemoteImageInfo(object):
     def height(self):
         """Gets the height of this RemoteImageInfo.  # noqa: E501
 
+        The height.  # noqa: E501
 
         :return: The height of this RemoteImageInfo.  # noqa: E501
         :rtype: int
@@ -163,6 +170,7 @@ class RemoteImageInfo(object):
     def height(self, height):
         """Sets the height of this RemoteImageInfo.
 
+        The height.  # noqa: E501
 
         :param height: The height of this RemoteImageInfo.  # noqa: E501
         :type: int
@@ -174,6 +182,7 @@ class RemoteImageInfo(object):
     def width(self):
         """Gets the width of this RemoteImageInfo.  # noqa: E501
 
+        The width.  # noqa: E501
 
         :return: The width of this RemoteImageInfo.  # noqa: E501
         :rtype: int
@@ -184,6 +193,7 @@ class RemoteImageInfo(object):
     def width(self, width):
         """Sets the width of this RemoteImageInfo.
 
+        The width.  # noqa: E501
 
         :param width: The width of this RemoteImageInfo.  # noqa: E501
         :type: int
@@ -195,6 +205,7 @@ class RemoteImageInfo(object):
     def community_rating(self):
         """Gets the community_rating of this RemoteImageInfo.  # noqa: E501
 
+        The community rating.  # noqa: E501
 
         :return: The community_rating of this RemoteImageInfo.  # noqa: E501
         :rtype: float
@@ -205,6 +216,7 @@ class RemoteImageInfo(object):
     def community_rating(self, community_rating):
         """Sets the community_rating of this RemoteImageInfo.
 
+        The community rating.  # noqa: E501
 
         :param community_rating: The community_rating of this RemoteImageInfo.  # noqa: E501
         :type: float
@@ -216,6 +228,7 @@ class RemoteImageInfo(object):
     def vote_count(self):
         """Gets the vote_count of this RemoteImageInfo.  # noqa: E501
 
+        The vote count.  # noqa: E501
 
         :return: The vote_count of this RemoteImageInfo.  # noqa: E501
         :rtype: int
@@ -226,6 +239,7 @@ class RemoteImageInfo(object):
     def vote_count(self, vote_count):
         """Sets the vote_count of this RemoteImageInfo.
 
+        The vote count.  # noqa: E501
 
         :param vote_count: The vote_count of this RemoteImageInfo.  # noqa: E501
         :type: int
@@ -237,6 +251,7 @@ class RemoteImageInfo(object):
     def language(self):
         """Gets the language of this RemoteImageInfo.  # noqa: E501
 
+        The language.  # noqa: E501
 
         :return: The language of this RemoteImageInfo.  # noqa: E501
         :rtype: str
@@ -247,6 +262,7 @@ class RemoteImageInfo(object):
     def language(self, language):
         """Sets the language of this RemoteImageInfo.
 
+        The language.  # noqa: E501
 
         :param language: The language of this RemoteImageInfo.  # noqa: E501
         :type: str

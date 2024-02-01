@@ -11,12 +11,16 @@ import Foundation
 
 public struct RemoteSearchResult: Codable {
 
+    /** The name. */
     public var name: String?
     public var providerIds: ProviderIdDictionary?
+    /** The year. */
     public var productionYear: Int?
     public var indexNumber: Int?
     public var indexNumberEnd: Int?
     public var parentIndexNumber: Int?
+    public var sortIndexNumber: Int?
+    public var sortParentIndexNumber: Int?
     public var premiereDate: Date?
     public var imageUrl: String?
     public var searchProviderName: String?
@@ -26,13 +30,15 @@ public struct RemoteSearchResult: Codable {
     public var albumArtist: RemoteSearchResult?
     public var artists: [RemoteSearchResult]?
 
-    public init(name: String? = nil, providerIds: ProviderIdDictionary? = nil, productionYear: Int? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, imageUrl: String? = nil, searchProviderName: String? = nil, gameSystem: String? = nil, overview: String? = nil, disambiguationComment: String? = nil, albumArtist: RemoteSearchResult? = nil, artists: [RemoteSearchResult]? = nil) {
+    public init(name: String? = nil, providerIds: ProviderIdDictionary? = nil, productionYear: Int? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, premiereDate: Date? = nil, imageUrl: String? = nil, searchProviderName: String? = nil, gameSystem: String? = nil, overview: String? = nil, disambiguationComment: String? = nil, albumArtist: RemoteSearchResult? = nil, artists: [RemoteSearchResult]? = nil) {
         self.name = name
         self.providerIds = providerIds
         self.productionYear = productionYear
         self.indexNumber = indexNumber
         self.indexNumberEnd = indexNumberEnd
         self.parentIndexNumber = parentIndexNumber
+        self.sortIndexNumber = sortIndexNumber
+        self.sortParentIndexNumber = sortParentIndexNumber
         self.premiereDate = premiereDate
         self.imageUrl = imageUrl
         self.searchProviderName = searchProviderName
@@ -50,6 +56,8 @@ public struct RemoteSearchResult: Codable {
         case indexNumber = "IndexNumber"
         case indexNumberEnd = "IndexNumberEnd"
         case parentIndexNumber = "ParentIndexNumber"
+        case sortIndexNumber = "SortIndexNumber"
+        case sortParentIndexNumber = "SortParentIndexNumber"
         case premiereDate = "PremiereDate"
         case imageUrl = "ImageUrl"
         case searchProviderName = "SearchProviderName"

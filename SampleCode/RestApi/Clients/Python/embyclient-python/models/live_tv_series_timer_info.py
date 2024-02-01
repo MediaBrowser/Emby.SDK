@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -25,6 +25,7 @@ class LiveTvSeriesTimerInfo(object):
         'id': 'str',
         'channel_id': 'str',
         'channel_ids': 'list[str]',
+        'parent_folder_id': 'int',
         'program_id': 'str',
         'name': 'str',
         'service_name': 'str',
@@ -53,6 +54,7 @@ class LiveTvSeriesTimerInfo(object):
         'id': 'Id',
         'channel_id': 'ChannelId',
         'channel_ids': 'ChannelIds',
+        'parent_folder_id': 'ParentFolderId',
         'program_id': 'ProgramId',
         'name': 'Name',
         'service_name': 'ServiceName',
@@ -77,11 +79,12 @@ class LiveTvSeriesTimerInfo(object):
         'timer_type': 'TimerType'
     }
 
-    def __init__(self, id=None, channel_id=None, channel_ids=None, program_id=None, name=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None):  # noqa: E501
+    def __init__(self, id=None, channel_id=None, channel_ids=None, parent_folder_id=None, program_id=None, name=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None):  # noqa: E501
         """LiveTvSeriesTimerInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._channel_id = None
         self._channel_ids = None
+        self._parent_folder_id = None
         self._program_id = None
         self._name = None
         self._service_name = None
@@ -111,6 +114,8 @@ class LiveTvSeriesTimerInfo(object):
             self.channel_id = channel_id
         if channel_ids is not None:
             self.channel_ids = channel_ids
+        if parent_folder_id is not None:
+            self.parent_folder_id = parent_folder_id
         if program_id is not None:
             self.program_id = program_id
         if name is not None:
@@ -160,6 +165,7 @@ class LiveTvSeriesTimerInfo(object):
     def id(self):
         """Gets the id of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        Id of the recording.  # noqa: E501
 
         :return: The id of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: str
@@ -170,6 +176,7 @@ class LiveTvSeriesTimerInfo(object):
     def id(self, id):
         """Sets the id of this LiveTvSeriesTimerInfo.
 
+        Id of the recording.  # noqa: E501
 
         :param id: The id of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: str
@@ -181,6 +188,7 @@ class LiveTvSeriesTimerInfo(object):
     def channel_id(self):
         """Gets the channel_id of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        ChannelId of the recording.  # noqa: E501
 
         :return: The channel_id of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: str
@@ -191,6 +199,7 @@ class LiveTvSeriesTimerInfo(object):
     def channel_id(self, channel_id):
         """Sets the channel_id of this LiveTvSeriesTimerInfo.
 
+        ChannelId of the recording.  # noqa: E501
 
         :param channel_id: The channel_id of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: str
@@ -220,9 +229,31 @@ class LiveTvSeriesTimerInfo(object):
         self._channel_ids = channel_ids
 
     @property
+    def parent_folder_id(self):
+        """Gets the parent_folder_id of this LiveTvSeriesTimerInfo.  # noqa: E501
+
+
+        :return: The parent_folder_id of this LiveTvSeriesTimerInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._parent_folder_id
+
+    @parent_folder_id.setter
+    def parent_folder_id(self, parent_folder_id):
+        """Sets the parent_folder_id of this LiveTvSeriesTimerInfo.
+
+
+        :param parent_folder_id: The parent_folder_id of this LiveTvSeriesTimerInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._parent_folder_id = parent_folder_id
+
+    @property
     def program_id(self):
         """Gets the program_id of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        The program identifier.  # noqa: E501
 
         :return: The program_id of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: str
@@ -233,6 +264,7 @@ class LiveTvSeriesTimerInfo(object):
     def program_id(self, program_id):
         """Sets the program_id of this LiveTvSeriesTimerInfo.
 
+        The program identifier.  # noqa: E501
 
         :param program_id: The program_id of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: str
@@ -244,6 +276,7 @@ class LiveTvSeriesTimerInfo(object):
     def name(self):
         """Gets the name of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        Name of the recording.  # noqa: E501
 
         :return: The name of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: str
@@ -254,6 +287,7 @@ class LiveTvSeriesTimerInfo(object):
     def name(self, name):
         """Sets the name of this LiveTvSeriesTimerInfo.
 
+        Name of the recording.  # noqa: E501
 
         :param name: The name of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: str
@@ -286,6 +320,7 @@ class LiveTvSeriesTimerInfo(object):
     def overview(self):
         """Gets the overview of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        Description of the recording.  # noqa: E501
 
         :return: The overview of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: str
@@ -296,6 +331,7 @@ class LiveTvSeriesTimerInfo(object):
     def overview(self, overview):
         """Sets the overview of this LiveTvSeriesTimerInfo.
 
+        Description of the recording.  # noqa: E501
 
         :param overview: The overview of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: str
@@ -307,6 +343,7 @@ class LiveTvSeriesTimerInfo(object):
     def start_date(self):
         """Gets the start_date of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        The start date of the recording, in UTC.  # noqa: E501
 
         :return: The start_date of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: datetime
@@ -317,6 +354,7 @@ class LiveTvSeriesTimerInfo(object):
     def start_date(self, start_date):
         """Sets the start_date of this LiveTvSeriesTimerInfo.
 
+        The start date of the recording, in UTC.  # noqa: E501
 
         :param start_date: The start_date of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: datetime
@@ -328,6 +366,7 @@ class LiveTvSeriesTimerInfo(object):
     def end_date(self):
         """Gets the end_date of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        The end date of the recording, in UTC.  # noqa: E501
 
         :return: The end_date of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: datetime
@@ -338,6 +377,7 @@ class LiveTvSeriesTimerInfo(object):
     def end_date(self, end_date):
         """Sets the end_date of this LiveTvSeriesTimerInfo.
 
+        The end date of the recording, in UTC.  # noqa: E501
 
         :param end_date: The end_date of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: datetime
@@ -349,6 +389,7 @@ class LiveTvSeriesTimerInfo(object):
     def record_any_time(self):
         """Gets the record_any_time of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        A value indicating whether \\[record any time\\].  # noqa: E501
 
         :return: The record_any_time of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: bool
@@ -359,6 +400,7 @@ class LiveTvSeriesTimerInfo(object):
     def record_any_time(self, record_any_time):
         """Sets the record_any_time of this LiveTvSeriesTimerInfo.
 
+        A value indicating whether \\[record any time\\].  # noqa: E501
 
         :param record_any_time: The record_any_time of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: bool
@@ -433,6 +475,7 @@ class LiveTvSeriesTimerInfo(object):
     def record_new_only(self):
         """Gets the record_new_only of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        A value indicating whether \\[record new only\\].  # noqa: E501
 
         :return: The record_new_only of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: bool
@@ -443,6 +486,7 @@ class LiveTvSeriesTimerInfo(object):
     def record_new_only(self, record_new_only):
         """Sets the record_new_only of this LiveTvSeriesTimerInfo.
 
+        A value indicating whether \\[record new only\\].  # noqa: E501
 
         :param record_new_only: The record_new_only of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: bool
@@ -454,6 +498,7 @@ class LiveTvSeriesTimerInfo(object):
     def days(self):
         """Gets the days of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        The days.  # noqa: E501
 
         :return: The days of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: list[DayOfWeek]
@@ -464,6 +509,7 @@ class LiveTvSeriesTimerInfo(object):
     def days(self, days):
         """Sets the days of this LiveTvSeriesTimerInfo.
 
+        The days.  # noqa: E501
 
         :param days: The days of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: list[DayOfWeek]
@@ -475,6 +521,7 @@ class LiveTvSeriesTimerInfo(object):
     def priority(self):
         """Gets the priority of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        The priority.  # noqa: E501
 
         :return: The priority of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: int
@@ -485,6 +532,7 @@ class LiveTvSeriesTimerInfo(object):
     def priority(self, priority):
         """Sets the priority of this LiveTvSeriesTimerInfo.
 
+        The priority.  # noqa: E501
 
         :param priority: The priority of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: int
@@ -496,6 +544,7 @@ class LiveTvSeriesTimerInfo(object):
     def pre_padding_seconds(self):
         """Gets the pre_padding_seconds of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        The pre padding seconds.  # noqa: E501
 
         :return: The pre_padding_seconds of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: int
@@ -506,6 +555,7 @@ class LiveTvSeriesTimerInfo(object):
     def pre_padding_seconds(self, pre_padding_seconds):
         """Sets the pre_padding_seconds of this LiveTvSeriesTimerInfo.
 
+        The pre padding seconds.  # noqa: E501
 
         :param pre_padding_seconds: The pre_padding_seconds of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: int
@@ -517,6 +567,7 @@ class LiveTvSeriesTimerInfo(object):
     def post_padding_seconds(self):
         """Gets the post_padding_seconds of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        The post padding seconds.  # noqa: E501
 
         :return: The post_padding_seconds of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: int
@@ -527,6 +578,7 @@ class LiveTvSeriesTimerInfo(object):
     def post_padding_seconds(self, post_padding_seconds):
         """Sets the post_padding_seconds of this LiveTvSeriesTimerInfo.
 
+        The post padding seconds.  # noqa: E501
 
         :param post_padding_seconds: The post_padding_seconds of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: int
@@ -538,6 +590,7 @@ class LiveTvSeriesTimerInfo(object):
     def is_pre_padding_required(self):
         """Gets the is_pre_padding_required of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        A value indicating whether this instance is pre padding required.  # noqa: E501
 
         :return: The is_pre_padding_required of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: bool
@@ -548,6 +601,7 @@ class LiveTvSeriesTimerInfo(object):
     def is_pre_padding_required(self, is_pre_padding_required):
         """Sets the is_pre_padding_required of this LiveTvSeriesTimerInfo.
 
+        A value indicating whether this instance is pre padding required.  # noqa: E501
 
         :param is_pre_padding_required: The is_pre_padding_required of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: bool
@@ -559,6 +613,7 @@ class LiveTvSeriesTimerInfo(object):
     def is_post_padding_required(self):
         """Gets the is_post_padding_required of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        A value indicating whether this instance is post padding required.  # noqa: E501
 
         :return: The is_post_padding_required of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: bool
@@ -569,6 +624,7 @@ class LiveTvSeriesTimerInfo(object):
     def is_post_padding_required(self, is_post_padding_required):
         """Sets the is_post_padding_required of this LiveTvSeriesTimerInfo.
 
+        A value indicating whether this instance is post padding required.  # noqa: E501
 
         :param is_post_padding_required: The is_post_padding_required of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: bool
@@ -580,6 +636,7 @@ class LiveTvSeriesTimerInfo(object):
     def series_id(self):
         """Gets the series_id of this LiveTvSeriesTimerInfo.  # noqa: E501
 
+        The series identifier.  # noqa: E501
 
         :return: The series_id of this LiveTvSeriesTimerInfo.  # noqa: E501
         :rtype: str
@@ -590,6 +647,7 @@ class LiveTvSeriesTimerInfo(object):
     def series_id(self, series_id):
         """Sets the series_id of this LiveTvSeriesTimerInfo.
 
+        The series identifier.  # noqa: E501
 
         :param series_id: The series_id of this LiveTvSeriesTimerInfo.  # noqa: E501
         :type: str

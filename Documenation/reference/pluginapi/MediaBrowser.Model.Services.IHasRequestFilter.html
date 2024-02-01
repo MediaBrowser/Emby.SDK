@@ -166,13 +166,13 @@
   
   
   <a id="MediaBrowser_Model_Services_IHasRequestFilter_RequestFilter_" data-uid="MediaBrowser.Model.Services.IHasRequestFilter.RequestFilter*"></a>
-  <h4 id="MediaBrowser_Model_Services_IHasRequestFilter_RequestFilter_MediaBrowser_Model_Services_IRequest_MediaBrowser_Model_Services_IResponse_System_Object_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.Services.IHasRequestFilter.RequestFilter(MediaBrowser.Model.Services.IRequest,MediaBrowser.Model.Services.IResponse,System.Object,System.Threading.CancellationToken)">RequestFilter(IRequest, IResponse, Object, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Model_Services_IHasRequestFilter_RequestFilter_MediaBrowser_Model_Services_IRequest_MediaBrowser_Model_Services_IResponse_System_Object_" data-uid="MediaBrowser.Model.Services.IHasRequestFilter.RequestFilter(MediaBrowser.Model.Services.IRequest,MediaBrowser.Model.Services.IResponse,System.Object)">RequestFilter(IRequest, IResponse, Object)</h4>
   <div class="markdown level1 summary"><p>The request filter is executed before the service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task RequestFilter(IRequest req, IResponse res, object requestDto, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">void RequestFilter(IRequest req, IResponse res, object requestDto)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,44 +187,24 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Services.IRequest.html">IRequest</a></td>
         <td><span class="parametername">req</span></td>
-        <td><p>The http request wrapper</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Services.IResponse.html">IResponse</a></td>
         <td><span class="parametername">res</span></td>
-        <td><p>The http response wrapper</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><span class="parametername">requestDto</span></td>
-        <td><p>The request DTO</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>

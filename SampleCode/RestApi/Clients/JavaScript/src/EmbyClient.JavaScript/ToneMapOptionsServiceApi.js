@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyWebGenericEditEditObjectContainer from '../model/EmbyWebGenericEditEditObjectContainer';
+import EditObjectContainer from '../model/EditObjectContainer';
 
 /**
 * ToneMapOptionsService service.
 * @module EmbyClient.JavaScript/ToneMapOptionsServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ToneMapOptionsServiceApi {
 
@@ -34,7 +34,7 @@ export default class ToneMapOptionsServiceApi {
      * Callback function to receive the result of the getEncodingFulltonemapoptions operation.
      * @callback module:EmbyClient.JavaScript/ToneMapOptionsServiceApi~getEncodingFulltonemapoptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyWebGenericEditEditObjectContainer} data The data returned by the service call.
+     * @param {module:model/EditObjectContainer} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -42,7 +42,7 @@ export default class ToneMapOptionsServiceApi {
      * Gets the tone mapping options
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/ToneMapOptionsServiceApi~getEncodingFulltonemapoptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyWebGenericEditEditObjectContainer}
+     * data is of type: {@link module:model/EditObjectContainer}
      */
     getEncodingFulltonemapoptions() {
       let postBody = null;
@@ -59,7 +59,7 @@ export default class ToneMapOptionsServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyWebGenericEditEditObjectContainer;
+      let returnType = EditObjectContainer;
 
       return this.apiClient.callApi(
         '/Encoding/FullToneMapOptions', 'GET',
@@ -71,7 +71,7 @@ export default class ToneMapOptionsServiceApi {
      * Callback function to receive the result of the getEncodingPublictonemapoptions operation.
      * @callback module:EmbyClient.JavaScript/ToneMapOptionsServiceApi~getEncodingPublictonemapoptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyWebGenericEditEditObjectContainer} data The data returned by the service call.
+     * @param {module:model/EditObjectContainer} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -79,7 +79,7 @@ export default class ToneMapOptionsServiceApi {
      * Gets the tone mapping options
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/ToneMapOptionsServiceApi~getEncodingPublictonemapoptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyWebGenericEditEditObjectContainer}
+     * data is of type: {@link module:model/EditObjectContainer}
      */
     getEncodingPublictonemapoptions() {
       let postBody = null;
@@ -96,7 +96,7 @@ export default class ToneMapOptionsServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyWebGenericEditEditObjectContainer;
+      let returnType = EditObjectContainer;
 
       return this.apiClient.callApi(
         '/Encoding/PublicToneMapOptions', 'GET',

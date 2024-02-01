@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import querystring from "querystring";
 
 /**
 * @module ApiClient
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 
 /**

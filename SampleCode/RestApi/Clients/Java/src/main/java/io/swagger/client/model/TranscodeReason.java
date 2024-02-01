@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -41,7 +41,9 @@ public enum TranscodeReason {
   VIDEOPROFILENOTSUPPORTED("VideoProfileNotSupported"),
   AUDIOBITDEPTHNOTSUPPORTED("AudioBitDepthNotSupported"),
   SUBTITLECODECNOTSUPPORTED("SubtitleCodecNotSupported"),
-  DIRECTPLAYERROR("DirectPlayError");
+  DIRECTPLAYERROR("DirectPlayError"),
+  VIDEORANGENOTSUPPORTED("VideoRangeNotSupported"),
+  SUBTITLECONTENTOPTIONSENABLED("SubtitleContentOptionsEnabled");
 
   private String value;
 

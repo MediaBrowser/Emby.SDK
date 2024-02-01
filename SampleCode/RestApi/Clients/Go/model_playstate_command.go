@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
-
+// PlaystateCommand : Enum PlaystateCommand  
 type PlaystateCommand string
 
 // List of PlaystateCommand
@@ -19,4 +19,5 @@ const (
 	REWIND_PlaystateCommand PlaystateCommand = "Rewind"
 	FAST_FORWARD_PlaystateCommand PlaystateCommand = "FastForward"
 	PLAY_PAUSE_PlaystateCommand PlaystateCommand = "PlayPause"
+	SEEK_RELATIVE_PlaystateCommand PlaystateCommand = "SeekRelative"
 )

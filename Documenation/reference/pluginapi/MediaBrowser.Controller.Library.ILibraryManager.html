@@ -184,7 +184,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -236,7 +236,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -273,12 +273,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_AddExternalSubtitleStreams_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddExternalSubtitleStreams*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_AddExternalSubtitleStreams_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__System_ReadOnlySpan_System_Char__System_Boolean_MediaBrowser_Model_IO_FileSystemMetadata___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddExternalSubtitleStreams(System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream},System.ReadOnlySpan{System.Char},System.Boolean,MediaBrowser.Model.IO.FileSystemMetadata[])">AddExternalSubtitleStreams(List&lt;MediaStream&gt;, ReadOnlySpan&lt;Char&gt;, Boolean, FileSystemMetadata[])</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_AddExternalSubtitleStreams_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__System_String_System_Boolean_MediaBrowser_Model_IO_FileSystemMetadata___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddExternalSubtitleStreams(System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream},System.String,System.Boolean,MediaBrowser.Model.IO.FileSystemMetadata[])">AddExternalSubtitleStreams(List&lt;MediaStream&gt;, String, Boolean, FileSystemMetadata[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddExternalSubtitleStreams(List&lt;MediaStream&gt; streams, ReadOnlySpan&lt;char&gt; mediaPath, bool isAudio, FileSystemMetadata[] files)</code></pre>
+    <pre><code class="lang-csharp hljs">void AddExternalSubtitleStreams(List&lt;MediaStream&gt; streams, string mediaPath, bool isAudio, FileSystemMetadata[] files)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,17 +291,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td><span class="parametername">streams</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">mediaPath</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">isAudio</span></td>
         <td></td>
       </tr>
@@ -320,7 +320,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool AddListItems(BaseItem list, ListItem[] items, bool uniqueByItemId)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;ListItem[]&gt; AddListItems(BaseItem list, ListItem[] items, bool skipDuplicates)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -343,8 +343,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">uniqueByItemId</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">skipDuplicates</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -359,20 +359,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ListItem.html">ListItem</a>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_AddMediaPath_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddMediaPath*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_AddMediaPath_System_Int64_MediaBrowser_Model_Configuration_MediaPathInfo_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddMediaPath(System.Int64,MediaBrowser.Model.Configuration.MediaPathInfo)">AddMediaPath(Int64, MediaPathInfo)</h4>
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_AddMediaPaths_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddMediaPaths*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_AddMediaPaths_MediaBrowser_Controller_Entities_CollectionFolder_MediaBrowser_Model_Configuration_MediaPathInfo___System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.AddMediaPaths(MediaBrowser.Controller.Entities.CollectionFolder,MediaBrowser.Model.Configuration.MediaPathInfo[],System.Boolean)">AddMediaPaths(CollectionFolder, MediaPathInfo[], Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddMediaPath(long virtualFolderId, MediaPathInfo path)</code></pre>
+    <pre><code class="lang-csharp hljs">void AddMediaPaths(CollectionFolder item, MediaPathInfo[] pathInfos, bool refreshLibrary)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -385,13 +385,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">virtualFolderId</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.CollectionFolder.html">CollectionFolder</a></td>
+        <td><span class="parametername">item</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.MediaPathInfo.html">MediaPathInfo</a></td>
-        <td><span class="parametername">path</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.MediaPathInfo.html">MediaPathInfo</a>[]</td>
+        <td><span class="parametername">pathInfos</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">refreshLibrary</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -418,22 +423,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Resolvers.IItemResolver.html">IItemResolver</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Resolvers.IItemResolver.html">IItemResolver</a>&gt;</td>
         <td><span class="parametername">resolvers</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.IIntroProvider.html">IIntroProvider</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.IIntroProvider.html">IIntroProvider</a>&gt;</td>
         <td><span class="parametername">introProviders</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ILibraryPostScanTask.html">ILibraryPostScanTask</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ILibraryPostScanTask.html">ILibraryPostScanTask</a>&gt;</td>
         <td><span class="parametername">postscanTasks</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ILazyImageProvider.html">ILazyImageProvider</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ILazyImageProvider.html">ILazyImageProvider</a>&gt;</td>
         <td><span class="parametername">lazyImageProviders</span></td>
         <td></td>
       </tr>
@@ -447,7 +452,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task AddVirtualFolder(string name, LibraryOptions options, bool refreshLibrary)</code></pre>
+    <pre><code class="lang-csharp hljs">CollectionFolder AddVirtualFolder(string name, LibraryOptions options, bool refreshLibrary)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +465,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -470,7 +475,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">refreshLibrary</span></td>
         <td></td>
       </tr>
@@ -486,7 +491,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.CollectionFolder.html">CollectionFolder</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -523,12 +528,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">imageIndex</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -544,7 +549,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -553,8 +558,7 @@
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_CreateItem_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItem*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_CreateItem_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItem(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.BaseItem)">CreateItem(BaseItem, BaseItem)</h4>
-  <div class="markdown level1 summary"><p>Creates the item.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -584,14 +588,14 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_CreateItems_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItems*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_CreateItems_System_Collections_Generic_List_MediaBrowser_Controller_Entities_BaseItem__MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItems(System.Collections.Generic.List{MediaBrowser.Controller.Entities.BaseItem},MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Threading.CancellationToken)">CreateItems(List&lt;BaseItem&gt;, BaseItem, MetadataRefreshOptions, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Creates the items.</p>
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_CreateItem_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItem*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_CreateItem_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItem(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.BaseItem[])">CreateItem(BaseItem, BaseItem, BaseItem[])</h4>
+  <div class="markdown level1 summary"><p>Creates the item.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void CreateItems(List&lt;BaseItem&gt; items, BaseItem parent, MetadataRefreshOptions metadataRefreshOptions, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">void CreateItem(BaseItem item, BaseItem parent, BaseItem[] collectionFolders)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -604,7 +608,45 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">collectionFolders</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_CreateItems_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItems*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_CreateItems_System_Collections_Generic_List_MediaBrowser_Controller_Entities_BaseItem__MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Entities_BaseItem___System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.CreateItems(System.Collections.Generic.List{MediaBrowser.Controller.Entities.BaseItem},MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Controller.Entities.BaseItem[],System.Boolean,System.Threading.CancellationToken)">CreateItems(List&lt;BaseItem&gt;, BaseItem, MetadataRefreshOptions, BaseItem[], Boolean, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates the items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CreateItems(List&lt;BaseItem&gt; items, BaseItem parent, MetadataRefreshOptions metadataRefreshOptions, BaseItem[] collectionFolders, bool triggerItemAdded, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td><span class="parametername">items</span></td>
         <td></td>
       </tr>
@@ -619,7 +661,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">collectionFolders</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">triggerItemAdded</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -695,7 +747,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">notifyParentItem</span></td>
         <td></td>
       </tr>
@@ -733,7 +785,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">notifyParentItem</span></td>
         <td></td>
       </tr>
@@ -760,8 +812,55 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td><span class="parametername">ids</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_FileNameMatchesMetadataName_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FileNameMatchesMetadataName*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_FileNameMatchesMetadataName_System_String_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FileNameMatchesMetadataName(System.String,System.String)">FileNameMatchesMetadataName(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool FileNameMatchesMetadataName(string filename, string metadataName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">filename</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">metadataName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -793,7 +892,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">forceRefresh</span></td>
         <td></td>
       </tr>
@@ -809,7 +908,54 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_FilterItemsToIdsForUser_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FilterItemsToIdsForUser*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_FilterItemsToIdsForUser_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FilterItemsToIdsForUser(MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Entities.User)">FilterItemsToIdsForUser(BaseItem[], User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long[] FilterItemsToIdsForUser(BaseItem[] items, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -836,13 +982,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
         <td><p>The path.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">isFolder</span></td>
         <td><p>The is folder.</p>
 </td>
@@ -867,62 +1013,6 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_FindExtras_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FindExtras*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_FindExtras_MediaBrowser_Controller_Entities_BaseItem_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FindExtras(MediaBrowser.Controller.Entities.BaseItem,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Controller.Providers.IDirectoryService)">FindExtras(BaseItem, List&lt;FileSystemMetadata&gt;, IDirectoryService)</h4>
-  <div class="markdown level1 summary"><p>Finds the extras.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;BaseItem&gt; FindExtras(BaseItem owner, List&lt;FileSystemMetadata&gt; fileSystemChildren, IDirectoryService directoryService)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td><span class="parametername">owner</span></td>
-        <td><p>The owner.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
-        <td><span class="parametername">fileSystemChildren</span></td>
-        <td><p>The file system children.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
-        <td><span class="parametername">directoryService</span></td>
-        <td><p>The directory service.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_FindIdByPath_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FindIdByPath*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_FindIdByPath_System_String_System_Nullable_System_Boolean__" data-uid="MediaBrowser.Controller.Library.ILibraryManager.FindIdByPath(System.String,System.Nullable{System.Boolean})">FindIdByPath(String, Nullable&lt;Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -942,12 +1032,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">isFolder</span></td>
         <td></td>
       </tr>
@@ -963,7 +1053,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1005,7 +1095,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetAllGenres_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetAllGenres*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetAllGenres_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetAllGenres(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetAllGenres(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;Tuple&lt;BaseItem, ItemCounts&gt;&gt; GetAllGenres(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1031,56 +1163,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><p>IEnumerable{System.String}.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetArtistPrefixes_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetArtistPrefixes*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetArtistPrefixes_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Controller_Library_ItemLinkType___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetArtistPrefixes(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Controller.Library.ItemLinkType[])">GetArtistPrefixes(InternalItemsQuery, ItemLinkType[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string[] GetArtistPrefixes(InternalItemsQuery query, ItemLinkType[] artistTypes)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>[]</td>
-        <td><span class="parametername">artistTypes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1121,7 +1206,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1168,7 +1253,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1210,7 +1295,96 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetAudioLayouts_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetAudioLayouts*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetAudioLayouts_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetAudioLayouts(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetAudioLayouts(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;string&gt; GetAudioLayouts(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetCachedImage_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetCachedImage*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetCachedImage_MediaBrowser_Controller_Entities_BaseItem_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetCachedImage(MediaBrowser.Controller.Entities.BaseItem,System.String)">GetCachedImage(BaseItem, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetCachedImage(BaseItem item, string originalImagePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">originalImagePath</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1261,13 +1435,13 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetContainers_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetContainers*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetContainers_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetContainers(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetContainers(InternalItemsQuery)</h4>
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetExtendedVideoTypes_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetExtendedVideoTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetExtendedVideoTypes_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetExtendedVideoTypes(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetExtendedVideoTypes(InternalItemsQuery)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;string&gt; GetContainers(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">QueryResult&lt;ExtendedVideoTypes&gt; GetExtendedVideoTypes(InternalItemsQuery query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1296,54 +1470,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetExcludedSubFolders_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetExcludedSubFolders*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetExcludedSubFolders_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_CollectionFolder_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetExcludedSubFolders(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Entities.CollectionFolder)">GetExcludedSubFolders(User, CollectionFolder)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long[] GetExcludedSubFolders(User user, CollectionFolder folder)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.CollectionFolder.html">CollectionFolder</a></td>
-        <td><span class="parametername">folder</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtendedVideoTypes.html">ExtendedVideoTypes</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1369,7 +1496,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">itemId</span></td>
         <td></td>
       </tr>
@@ -1385,7 +1512,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetExtraTypes_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetExtraTypes*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetExtraTypes_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetExtraTypes(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetExtraTypes(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ExtraType[] GetExtraTypes(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1427,7 +1596,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1469,49 +1638,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetGuid_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetGuid*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetGuid_System_Int64_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetGuid(System.Int64)">GetGuid(Int64)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Guid GetGuid(long id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1537,7 +1664,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">itemId</span></td>
         <td></td>
       </tr>
@@ -1553,7 +1680,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1595,7 +1722,54 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetIdsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetIdsForAncestorIdsQuery*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetIdsForAncestorIdsQuery(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User)">GetIdsForAncestorIdsQuery(BaseItem, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long[] GetIdsForAncestorIdsQuery(BaseItem item, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1621,7 +1795,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">itemId</span></td>
         <td></td>
       </tr>
@@ -1631,7 +1805,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">index</span></td>
         <td></td>
       </tr>
@@ -1673,7 +1847,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">itemId</span></td>
         <td></td>
       </tr>
@@ -1715,7 +1889,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
@@ -1731,7 +1905,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1757,7 +1931,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
@@ -1773,7 +1947,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1799,7 +1973,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
@@ -1815,7 +1989,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1857,7 +2031,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1907,7 +2081,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.Video.html">Video</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.Video.html">Video</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1934,7 +2108,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">id</span></td>
         <td><p>The id.</p>
 </td>
@@ -1978,7 +2152,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
@@ -2038,7 +2212,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
         <td><p>List&lt;Guid&gt;.</p>
 </td>
       </tr>
@@ -2065,12 +2239,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">itemId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>&gt;</td>
         <td><span class="parametername">types</span></td>
         <td></td>
       </tr>
@@ -2086,7 +2260,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-3">(T1, T2, T3)</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-3">(T1, T2, T3)</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2139,60 +2313,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetItemList_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemList*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetItemList_MediaBrowser_Controller_Entities_InternalItemsQuery_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemList(MediaBrowser.Controller.Entities.InternalItemsQuery,MediaBrowser.Controller.Entities.BaseItem[])">GetItemList(InternalItemsQuery, BaseItem[])</h4>
-  <div class="markdown level1 summary"><p>Gets the items.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">BaseItem[] GetItemList(InternalItemsQuery query, BaseItem[] parents)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
-        <td><span class="parametername">parents</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetItemList_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemList*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetItemList_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemList(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Boolean)">GetItemList(InternalItemsQuery, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">BaseItem[] GetItemList(InternalItemsQuery query, bool allowExternalContent)</code></pre>
+    <pre><code class="lang-csharp hljs">BaseItem[] GetItemList(InternalItemsQuery query, bool obsoleteParam)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2210,8 +2336,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">allowExternalContent</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">obsoleteParam</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2269,7 +2395,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2312,7 +2438,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2399,7 +2525,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2427,6 +2553,53 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetLibraryOptions_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetLibraryOptions*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetLibraryOptions_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetLibraryOptions(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.BaseItem[])">GetLibraryOptions(BaseItem, BaseItem[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">LibraryOptions GetLibraryOptions(BaseItem item, BaseItem[] collectionFolders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">collectionFolders</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2483,7 +2656,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2525,7 +2698,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2533,13 +2706,13 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetNamedView_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamedView*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNamedView_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamedView(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char})">GetNamedView(ReadOnlySpan&lt;Char&gt;, ReadOnlySpan&lt;Char&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNamedView_System_String_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamedView(System.String,System.String,System.Boolean)">GetNamedView(String, String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Gets the named view.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UserView GetNamedView(ReadOnlySpan&lt;char&gt; name, ReadOnlySpan&lt;char&gt; viewType)</code></pre>
+    <pre><code class="lang-csharp hljs">Folder GetNamedView(string name, string viewType, bool createIfNotFound)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2552,16 +2725,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
         <td><p>The name.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">viewType</span></td>
         <td><p>Type of the view.</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">createIfNotFound</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -2575,7 +2753,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.UserView.html">UserView</a></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2617,7 +2795,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetNamingOptions_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamingOptions*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNamingOptions" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNamingOptions">GetNamingOptions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">NamingOptions GetNamingOptions()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2644,13 +2847,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">key</span></td>
         <td><p>The key.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">type</span></td>
         <td><p>The type.</p>
 </td>
@@ -2667,7 +2870,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><p>Guid.</p>
 </td>
       </tr>
@@ -2675,13 +2878,13 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetOfficialRatings_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetOfficialRatings*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetOfficialRatings_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetOfficialRatings(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetOfficialRatings(InternalItemsQuery)</h4>
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetNewItemIdFromName_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNewItemIdFromName*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetNewItemIdFromName_System_String_System_Type_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetNewItemIdFromName(System.String,System.Type)">GetNewItemIdFromName(String, Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;string&gt; GetOfficialRatings(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">Guid GetNewItemIdFromName(string name, Type type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2694,8 +2897,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2710,7 +2918,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2736,7 +2944,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -2757,7 +2965,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2799,7 +3007,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2841,7 +3049,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2849,12 +3057,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetPrefixes_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetPrefixes*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetPrefixes_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetPrefixes(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetPrefixes(InternalItemsQuery)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetPrefixes_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetPrefixes(MediaBrowser.Controller.Entities.BaseItem[])">GetPrefixes(BaseItem[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string[] GetPrefixes(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">string[] GetPrefixes(BaseItem[] items)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2867,8 +3075,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">items</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2883,7 +3091,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2909,7 +3117,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">itemId</span></td>
         <td></td>
       </tr>
@@ -2952,7 +3160,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td><p>The path.</p>
 </td>
@@ -2969,9 +3177,51 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><p>System.Nullable&lt;System.Int32&gt;.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetShareLevels_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetShareLevels*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetShareLevels_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetShareLevels(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetShareLevels(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;UserItemShareLevel?&gt; GetShareLevels(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a>&gt;&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -3017,7 +3267,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3059,7 +3309,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3101,7 +3351,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3132,7 +3382,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">contentType</span></td>
         <td></td>
       </tr>
@@ -3148,20 +3398,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetTagPrefixes_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetTagPrefixes*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetTagPrefixes_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetTagPrefixes(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetTagPrefixes(InternalItemsQuery)</h4>
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetSyncTargetId_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetSyncTargetId*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetSyncTargetId_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetSyncTargetId(System.String,System.Boolean)">GetSyncTargetId(String, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string[] GetTagPrefixes(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">long GetSyncTargetId(string reportedDeviceId, bool createIfNotFound)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3174,8 +3424,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">reportedDeviceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">createIfNotFound</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3190,7 +3445,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -3232,20 +3487,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.ItemCounts.html">ItemCounts</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetTopParentIdsForQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetTopParentIdsForQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetTopParentIdsForQuery_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetTopParentIdsForQuery(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User)">GetTopParentIdsForQuery(BaseItem, User)</h4>
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetTypeAndImageInfo_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetTypeAndImageInfo*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetTypeAndImageInfo_System_Int64_MediaBrowser_Model_Entities_ImageType_System_Int32_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetTypeAndImageInfo(System.Int64,MediaBrowser.Model.Entities.ImageType,System.Int32)">GetTypeAndImageInfo(Int64, ImageType, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long[] GetTopParentIdsForQuery(BaseItem item, User user)</code></pre>
+    <pre><code class="lang-csharp hljs">Tuple&lt;Type, ItemImageInfo&gt; GetTypeAndImageInfo(long itemId, ImageType imageType, int index)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3258,13 +3513,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td><span class="parametername">item</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">itemId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a></td>
+        <td><span class="parametername">imageType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3279,7 +3539,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<span class="xref">System.Type</span>, <a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3348,7 +3608,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3374,7 +3634,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.VirtualFolderInfo.html">VirtualFolderInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.VirtualFolderInfo.html">VirtualFolderInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3382,12 +3642,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetVirtualFolders_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetVirtualFolders*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetVirtualFolders_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetVirtualFolders(System.Boolean)">GetVirtualFolders(Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetVirtualFolders_MediaBrowser_Controller_Entities_User_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetVirtualFolders(MediaBrowser.Controller.Entities.User,System.Boolean)">GetVirtualFolders(User, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;VirtualFolderInfo&gt; GetVirtualFolders(bool includeRefreshState)</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;VirtualFolderInfo&gt; GetVirtualFolders(User user, bool includeRefreshState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3400,7 +3660,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">includeRefreshState</span></td>
         <td></td>
       </tr>
@@ -3416,49 +3681,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.VirtualFolderInfo.html">VirtualFolderInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetYears_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetYears*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetYears_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetYears(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetYears(InternalItemsQuery)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;int&gt; GetYears(InternalItemsQuery query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.VirtualFolderInfo.html">VirtualFolderInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3511,7 +3734,101 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_IsAlphaNumericallyEquivalent_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsAlphaNumericallyEquivalent*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsAlphaNumericallyEquivalent_System_String_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsAlphaNumericallyEquivalent(System.String,System.String)">IsAlphaNumericallyEquivalent(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAlphaNumericallyEquivalent(string str1, string str2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">str1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">str2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_IsAudioFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsAudioFile_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsAudioFile(MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Model.Configuration.LibraryOptions)">IsAudioFile(FileSystemMetadata, LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAudioFile(FileSystemMetadata file, LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">file</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -3538,7 +3855,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td><p>The path.</p>
 </td>
@@ -3555,7 +3872,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if [is audio file] [the specified path]; otherwise, <code>false</code>.</p>
 </td>
       </tr>
@@ -3582,7 +3899,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -3603,7 +3920,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -3611,12 +3928,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_IsLyricsFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsLyricsFile*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsLyricsFile_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsLyricsFile(System.ReadOnlySpan{System.Char})">IsLyricsFile(ReadOnlySpan&lt;Char&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsLyricsFile_MediaBrowser_Model_IO_FileSystemMetadata_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsLyricsFile(MediaBrowser.Model.IO.FileSystemMetadata)">IsLyricsFile(FileSystemMetadata)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsLyricsFile(ReadOnlySpan&lt;char&gt; path)</code></pre>
+    <pre><code class="lang-csharp hljs">bool IsLyricsFile(FileSystemMetadata file)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3629,8 +3946,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
-        <td><span class="parametername">path</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">file</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3645,7 +3962,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -3671,7 +3988,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -3687,7 +4004,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -3695,12 +4012,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_IsSubtitleFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsSubtitleFile*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsSubtitleFile_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsSubtitleFile(System.ReadOnlySpan{System.Char})">IsSubtitleFile(ReadOnlySpan&lt;Char&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsSubtitleFile_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsSubtitleFile(System.String)">IsSubtitleFile(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsSubtitleFile(ReadOnlySpan&lt;char&gt; path)</code></pre>
+    <pre><code class="lang-csharp hljs">bool IsSubtitleFile(string path)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3713,7 +4030,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -3729,7 +4046,96 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_IsTVSpecialsFolder_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsTVSpecialsFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsTVSpecialsFolder_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsTVSpecialsFolder(System.String)">IsTVSpecialsFolder(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsTVSpecialsFolder(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_IsVideoFile_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsVideoFile*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_IsVideoFile_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.IsVideoFile(MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Model.Configuration.LibraryOptions)">IsVideoFile(FileSystemMetadata, LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsVideoFile(FileSystemMetadata file, LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
+        <td><span class="parametername">file</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -3756,7 +4162,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td><p>The path.</p>
 </td>
@@ -3773,7 +4179,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if [is video file] [the specified path]; otherwise, <code>false</code>.</p>
 </td>
       </tr>
@@ -3800,7 +4206,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -3821,7 +4227,71 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_MakePrivate_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MakePrivate*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_MakePrivate_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MakePrivate(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User)">MakePrivate(BaseItem, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MakePrivate(BaseItem item, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_MakePublic_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MakePublic*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_MakePublic_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.MakePublic(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User)">MakePublic(BaseItem, User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void MakePublic(BaseItem item, User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3861,7 +4331,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void MoveListItem(BaseItem list, long entryId, int newIndex)</code></pre>
+    <pre><code class="lang-csharp hljs">Task MoveListItem(BaseItem list, long entryId, int newIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3879,43 +4349,14 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">entryId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">newIndex</span></td>
         <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ILibraryManager_NormalizeRootPathList_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.NormalizeRootPathList*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_NormalizeRootPathList_MediaBrowser_Model_IO_FileSystemMetadata___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.NormalizeRootPathList(MediaBrowser.Model.IO.FileSystemMetadata[])">NormalizeRootPathList(FileSystemMetadata[])</h4>
-  <div class="markdown level1 summary"><p>Normalizes the root path list.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;FileSystemMetadata&gt; NormalizeRootPathList(FileSystemMetadata[] paths)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>[]</td>
-        <td><span class="parametername">paths</span></td>
-        <td><p>The paths.</p>
-</td>
       </tr>
     </tbody>
   </table>
@@ -3929,7 +4370,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -3956,7 +4397,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">name</span></td>
         <td><p>The name.</p>
 </td>
@@ -3981,6 +4422,48 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_ParseName_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ParseName*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_ParseName_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ParseName(System.String)">ParseName(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ItemLookupInfo ParseName(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_ParseSxxExxEpisodeNumberSystem_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ParseSxxExxEpisodeNumberSystem*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_ParseSxxExxEpisodeNumberSystem_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ParseSxxExxEpisodeNumberSystem(System.String)">ParseSxxExxEpisodeNumberSystem(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -4000,7 +4483,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -4016,7 +4499,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-3">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-3">Tuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4118,22 +4601,22 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
         <td><span class="parametername">chapters</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">extractImages</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">saveChapters</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -4149,7 +4632,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4180,7 +4663,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td><span class="parametername">listItemIds</span></td>
         <td></td>
       </tr>
@@ -4196,7 +4679,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -4222,12 +4705,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">virtualFolderId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -4236,12 +4719,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_RemoveVirtualFolder_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.RemoveVirtualFolder*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_RemoveVirtualFolder_System_Int64_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.RemoveVirtualFolder(System.Int64,System.Boolean)">RemoveVirtualFolder(Int64, Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_RemoveVirtualFolder_System_Int64_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.RemoveVirtualFolder(System.Int64)">RemoveVirtualFolder(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task RemoveVirtualFolder(long id, bool refreshLibrary)</code></pre>
+    <pre><code class="lang-csharp hljs">void RemoveVirtualFolder(long id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4254,28 +4737,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">refreshLibrary</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_RemoveVirtualFolder_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.RemoveVirtualFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_RemoveVirtualFolder_System_Int64_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.RemoveVirtualFolder(System.Int64,System.Boolean)">RemoveVirtualFolder(Int64, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveVirtualFolder(long id, bool refreshLibrary)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">refreshLibrary</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -4284,8 +4779,7 @@
   
   <a id="MediaBrowser_Controller_Library_ILibraryManager_ResolvePath_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ResolvePath*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_ResolvePath_MediaBrowser_Model_IO_FileSystemMetadata_MediaBrowser_Controller_Entities_Folder_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ResolvePath(MediaBrowser.Model.IO.FileSystemMetadata,MediaBrowser.Controller.Entities.Folder)">ResolvePath(FileSystemMetadata, Folder)</h4>
-  <div class="markdown level1 summary"><p>Resolves the path.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -4304,14 +4798,12 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
         <td><span class="parametername">fileInfo</span></td>
-        <td><p>The file information.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></td>
         <td><span class="parametername">parent</span></td>
-        <td><p>The parent.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -4326,8 +4818,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td><p>BaseItem.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -4384,7 +4875,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_SaveUserItemShares_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.SaveUserItemShares*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_SaveUserItemShares_MediaBrowser_Controller_Library_UserItemShare___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.SaveUserItemShares(MediaBrowser.Controller.Library.UserItemShare[])">SaveUserItemShares(UserItemShare[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SaveUserItemShares(UserItemShare[] shares)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.UserItemShare.html">UserItemShare</a>[]</td>
+        <td><span class="parametername">shares</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -4410,7 +4928,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;&gt;</td>
         <td><span class="parametername">values</span></td>
         <td></td>
       </tr>
@@ -4465,19 +4983,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td><p>The path.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">from</span></td>
         <td><p>From.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">to</span></td>
         <td><p>To.</p>
 </td>
@@ -4494,9 +5012,46 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><p>System.String.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_TriggerItemAdded_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.TriggerItemAdded*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_TriggerItemAdded_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.TriggerItemAdded(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.BaseItem[])">TriggerItemAdded(BaseItem, BaseItem, BaseItem[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void TriggerItemAdded(BaseItem item, BaseItem parent, BaseItem[] collectionFolders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">collectionFolders</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -4628,7 +5183,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td><span class="parametername">items</span></td>
         <td></td>
       </tr>
@@ -4648,7 +5203,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -4675,7 +5230,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td><span class="parametername">items</span></td>
         <td></td>
       </tr>
@@ -4690,12 +5245,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">setDateLastSaved</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">saveMetadata</span></td>
         <td></td>
       </tr>
@@ -4705,7 +5260,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -4764,7 +5319,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">virtualFolderId</span></td>
         <td></td>
       </tr>
@@ -4802,12 +5357,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
         <td><span class="parametername">people</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">isNewItem</span></td>
         <td></td>
       </tr>
@@ -4835,13 +5390,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td><span class="parametername">progress</span></td>
         <td><p>The progress.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -4858,7 +5413,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Task.</p>
 </td>
       </tr>
@@ -4887,13 +5442,13 @@ The items are stored in the db but not loaded into memory until actually request
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td><span class="parametername">progress</span></td>
         <td><p>The progress.</p>
 </td>
@@ -4910,7 +5465,7 @@ The items are stored in the db but not loaded into memory until actually request
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Task.</p>
 </td>
       </tr>
@@ -4938,7 +5493,31 @@ The items are stored in the db but not loaded into memory until actually request
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemChangeEventArgs.html">ItemChangeEventArgs</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemChangeEventArgs.html">ItemChangeEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_ItemAdding" data-uid="MediaBrowser.Controller.Library.ILibraryManager.ItemAdding">ItemAdding</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;ItemChangeEventArgs&gt; ItemAdding</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemChangeEventArgs.html">ItemChangeEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4963,7 +5542,7 @@ The items are stored in the db but not loaded into memory until actually request
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemChangeEventArgs.html">ItemChangeEventArgs</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemChangeEventArgs.html">ItemChangeEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4988,7 +5567,7 @@ The items are stored in the db but not loaded into memory until actually request
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemChangeEventArgs.html">ItemChangeEventArgs</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemChangeEventArgs.html">ItemChangeEventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4999,6 +5578,9 @@ The items are stored in the db but not loaded into memory until actually request
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Library.LibraryManagerExtensions.html#MediaBrowser_Controller_Library_LibraryManagerExtensions_GetItemById_MediaBrowser_Controller_Library_ILibraryManager_System_ReadOnlySpan_System_Char__">LibraryManagerExtensions.GetItemById(ILibraryManager, ReadOnlySpan&lt;Char&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
   </div>
 </div>
 </article>

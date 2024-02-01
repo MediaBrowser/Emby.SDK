@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -45,6 +45,7 @@ class ImageProviderInfo(object):
     def name(self):
         """Gets the name of this ImageProviderInfo.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this ImageProviderInfo.  # noqa: E501
         :rtype: str
@@ -55,6 +56,7 @@ class ImageProviderInfo(object):
     def name(self, name):
         """Sets the name of this ImageProviderInfo.
 
+        The name.  # noqa: E501
 
         :param name: The name of this ImageProviderInfo.  # noqa: E501
         :type: str

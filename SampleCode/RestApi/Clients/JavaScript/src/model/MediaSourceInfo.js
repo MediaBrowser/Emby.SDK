@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,16 +10,16 @@
  */
 
 import ApiClient from '../ApiClient';
-import MediaInfoMediaProtocol from './MediaInfoMediaProtocol';
-import MediaInfoTransportStreamTimestamp from './MediaInfoTransportStreamTimestamp';
+import MediaProtocol from './MediaProtocol';
 import MediaSourceType from './MediaSourceType';
 import MediaStream from './MediaStream';
+import TransportStreamTimestamp from './TransportStreamTimestamp';
 import Video3DFormat from './Video3DFormat';
 
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class MediaSourceInfo {
     /**
@@ -47,7 +47,7 @@ export default class MediaSourceInfo {
                         
             
             if (data.hasOwnProperty('Protocol')) {
-                obj['Protocol'] = MediaInfoMediaProtocol.constructFromObject(data['Protocol']);
+                obj['Protocol'] = MediaProtocol.constructFromObject(data['Protocol']);
             }
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
@@ -59,10 +59,16 @@ export default class MediaSourceInfo {
                 obj['EncoderPath'] = ApiClient.convertToType(data['EncoderPath'], 'String');
             }
             if (data.hasOwnProperty('EncoderProtocol')) {
-                obj['EncoderProtocol'] = MediaInfoMediaProtocol.constructFromObject(data['EncoderProtocol']);
+                obj['EncoderProtocol'] = MediaProtocol.constructFromObject(data['EncoderProtocol']);
             }
             if (data.hasOwnProperty('Type')) {
                 obj['Type'] = MediaSourceType.constructFromObject(data['Type']);
+            }
+            if (data.hasOwnProperty('ProbePath')) {
+                obj['ProbePath'] = ApiClient.convertToType(data['ProbePath'], 'String');
+            }
+            if (data.hasOwnProperty('ProbeProtocol')) {
+                obj['ProbeProtocol'] = MediaProtocol.constructFromObject(data['ProbeProtocol']);
             }
             if (data.hasOwnProperty('Container')) {
                 obj['Container'] = ApiClient.convertToType(data['Container'], 'String');
@@ -79,6 +85,9 @@ export default class MediaSourceInfo {
             if (data.hasOwnProperty('IsRemote')) {
                 obj['IsRemote'] = ApiClient.convertToType(data['IsRemote'], 'Boolean');
             }
+            if (data.hasOwnProperty('HasMixedProtocols')) {
+                obj['HasMixedProtocols'] = ApiClient.convertToType(data['HasMixedProtocols'], 'Boolean');
+            }
             if (data.hasOwnProperty('RunTimeTicks')) {
                 obj['RunTimeTicks'] = ApiClient.convertToType(data['RunTimeTicks'], 'Number');
             }
@@ -87,6 +96,12 @@ export default class MediaSourceInfo {
             }
             if (data.hasOwnProperty('SupportsTranscoding')) {
                 obj['SupportsTranscoding'] = ApiClient.convertToType(data['SupportsTranscoding'], 'Boolean');
+            }
+            if (data.hasOwnProperty('TrancodeLiveStartIndex')) {
+                obj['TrancodeLiveStartIndex'] = ApiClient.convertToType(data['TrancodeLiveStartIndex'], 'Number');
+            }
+            if (data.hasOwnProperty('WallClockStart')) {
+                obj['WallClockStart'] = ApiClient.convertToType(data['WallClockStart'], 'Date');
             }
             if (data.hasOwnProperty('SupportsDirectStream')) {
                 obj['SupportsDirectStream'] = ApiClient.convertToType(data['SupportsDirectStream'], 'Boolean');
@@ -131,13 +146,16 @@ export default class MediaSourceInfo {
                 obj['Bitrate'] = ApiClient.convertToType(data['Bitrate'], 'Number');
             }
             if (data.hasOwnProperty('Timestamp')) {
-                obj['Timestamp'] = MediaInfoTransportStreamTimestamp.constructFromObject(data['Timestamp']);
+                obj['Timestamp'] = TransportStreamTimestamp.constructFromObject(data['Timestamp']);
             }
             if (data.hasOwnProperty('RequiredHttpHeaders')) {
                 obj['RequiredHttpHeaders'] = ApiClient.convertToType(data['RequiredHttpHeaders'], {'String': 'String'});
             }
             if (data.hasOwnProperty('DirectStreamUrl')) {
                 obj['DirectStreamUrl'] = ApiClient.convertToType(data['DirectStreamUrl'], 'String');
+            }
+            if (data.hasOwnProperty('AddApiKeyToDirectStreamUrl')) {
+                obj['AddApiKeyToDirectStreamUrl'] = ApiClient.convertToType(data['AddApiKeyToDirectStreamUrl'], 'Boolean');
             }
             if (data.hasOwnProperty('TranscodingUrl')) {
                 obj['TranscodingUrl'] = ApiClient.convertToType(data['TranscodingUrl'], 'String');
@@ -171,7 +189,7 @@ export default class MediaSourceInfo {
     }
 
     /**
-    * @member {module:model/MediaInfoMediaProtocol} Protocol
+    * @member {module:model/MediaProtocol} Protocol
     */
     'Protocol' = undefined;
     /**
@@ -187,13 +205,21 @@ export default class MediaSourceInfo {
     */
     'EncoderPath' = undefined;
     /**
-    * @member {module:model/MediaInfoMediaProtocol} EncoderProtocol
+    * @member {module:model/MediaProtocol} EncoderProtocol
     */
     'EncoderProtocol' = undefined;
     /**
     * @member {module:model/MediaSourceType} Type
     */
     'Type' = undefined;
+    /**
+    * @member {String} ProbePath
+    */
+    'ProbePath' = undefined;
+    /**
+    * @member {module:model/MediaProtocol} ProbeProtocol
+    */
+    'ProbeProtocol' = undefined;
     /**
     * @member {String} Container
     */
@@ -211,9 +237,14 @@ export default class MediaSourceInfo {
     */
     'SortName' = undefined;
     /**
+    * Differentiate internet url vs local network
     * @member {Boolean} IsRemote
     */
     'IsRemote' = undefined;
+    /**
+    * @member {Boolean} HasMixedProtocols
+    */
+    'HasMixedProtocols' = undefined;
     /**
     * @member {Number} RunTimeTicks
     */
@@ -226,6 +257,14 @@ export default class MediaSourceInfo {
     * @member {Boolean} SupportsTranscoding
     */
     'SupportsTranscoding' = undefined;
+    /**
+    * @member {Number} TrancodeLiveStartIndex
+    */
+    'TrancodeLiveStartIndex' = undefined;
+    /**
+    * @member {Date} WallClockStart
+    */
+    'WallClockStart' = undefined;
     /**
     * @member {Boolean} SupportsDirectStream
     */
@@ -283,7 +322,7 @@ export default class MediaSourceInfo {
     */
     'Bitrate' = undefined;
     /**
-    * @member {module:model/MediaInfoTransportStreamTimestamp} Timestamp
+    * @member {module:model/TransportStreamTimestamp} Timestamp
     */
     'Timestamp' = undefined;
     /**
@@ -294,6 +333,10 @@ export default class MediaSourceInfo {
     * @member {String} DirectStreamUrl
     */
     'DirectStreamUrl' = undefined;
+    /**
+    * @member {Boolean} AddApiKeyToDirectStreamUrl
+    */
+    'AddApiKeyToDirectStreamUrl' = undefined;
     /**
     * @member {String} TranscodingUrl
     */
@@ -323,10 +366,12 @@ export default class MediaSourceInfo {
     */
     'DefaultSubtitleStreamIndex' = undefined;
     /**
+    * Used only by our Windows app. Not used by Emby Server.
     * @member {String} ItemId
     */
     'ItemId' = undefined;
     /**
+    * Used only by our Windows app. Not used by Emby Server.
     * @member {String} ServerId
     */
     'ServerId' = undefined;

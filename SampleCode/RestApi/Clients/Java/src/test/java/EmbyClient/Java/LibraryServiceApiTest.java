@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -246,7 +246,12 @@ public class LibraryServiceApiTest {
         String id = null;
         String userId = null;
         Boolean inheritFromParent = null;
-        AllThemeMediaResult response = api.getItemsByIdThememedia(id, userId, inheritFromParent);
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        String fields = null;
+        AllThemeMediaResult response = api.getItemsByIdThememedia(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
 
         // TODO: test validations
     }
@@ -263,7 +268,12 @@ public class LibraryServiceApiTest {
         String id = null;
         String userId = null;
         Boolean inheritFromParent = null;
-        ThemeMediaResult response = api.getItemsByIdThemesongs(id, userId, inheritFromParent);
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        String fields = null;
+        ThemeMediaResult response = api.getItemsByIdThemesongs(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
 
         // TODO: test validations
     }
@@ -280,7 +290,12 @@ public class LibraryServiceApiTest {
         String id = null;
         String userId = null;
         Boolean inheritFromParent = null;
-        ThemeMediaResult response = api.getItemsByIdThemevideos(id, userId, inheritFromParent);
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        String fields = null;
+        ThemeMediaResult response = api.getItemsByIdThemevideos(id, userId, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
 
         // TODO: test validations
     }

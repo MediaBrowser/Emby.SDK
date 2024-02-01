@@ -1,11 +1,12 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
 package EmbyClient.Java;
 
 import io.swagger.client.model.DefaultDirectoryBrowserInfo;
+import io.swagger.client.model.GetDirectoryContents;
 import io.swagger.client.model.IOFileSystemEntryInfo;
 import io.swagger.client.model.ValidatePath;
 import org.junit.Test;
@@ -112,6 +113,24 @@ public class EnvironmentServiceApiTest {
     public void getEnvironmentParentpathTest() throws Exception {
         String path = null;
         String response = api.getEnvironmentParentpath(path);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets the contents of a given directory in the file system
+     *
+     * Requires authentication as administrator
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postEnvironmentDirectorycontentsTest() throws Exception {
+        GetDirectoryContents body = null;
+        String path = null;
+        Boolean includeFiles = null;
+        Boolean includeDirectories = null;
+        List<IOFileSystemEntryInfo> response = api.postEnvironmentDirectorycontents(body, path, includeFiles, includeDirectories);
 
         // TODO: test validations
     }

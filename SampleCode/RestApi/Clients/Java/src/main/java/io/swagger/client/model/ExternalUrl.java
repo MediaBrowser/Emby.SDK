@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -32,10 +32,10 @@ public class ExternalUrl {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -50,10 +50,10 @@ public class ExternalUrl {
   }
 
    /**
-   * Get url
+   * The type of the item.
    * @return url
   **/
-  @Schema(description = "")
+  @Schema(description = "The type of the item.")
   public String getUrl() {
     return url;
   }

@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LiveTvGuideInfo" /> class.
         /// </summary>
-        /// <param name="startDate">startDate.</param>
-        /// <param name="endDate">endDate.</param>
+        /// <param name="startDate">The start date..</param>
+        /// <param name="endDate">The end date..</param>
         public LiveTvGuideInfo(DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?))
         {
             this.StartDate = startDate;
@@ -35,14 +35,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets StartDate
+        /// The start date.
         /// </summary>
+        /// <value>The start date.</value>
         [DataMember(Name="StartDate", EmitDefaultValue=false)]
         public DateTimeOffset? StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndDate
+        /// The end date.
         /// </summary>
+        /// <value>The end date.</value>
         [DataMember(Name="EndDate", EmitDefaultValue=false)]
         public DateTimeOffset? EndDate { get; set; }
 

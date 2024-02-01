@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -17,7 +17,7 @@ import RemoteImageResult from '../model/RemoteImageResult';
 /**
 * RemoteImageService service.
 * @module EmbyClient.JavaScript/RemoteImageServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class RemoteImageServiceApi {
 

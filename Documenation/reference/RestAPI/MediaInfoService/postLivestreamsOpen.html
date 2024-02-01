@@ -472,7 +472,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Id</span></td>
@@ -529,7 +530,8 @@
                       <a href="#MediaBrowser_Model_Dlna_DirectPlayProfile" class="typelink">DirectPlayProfile[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The direct play profiles.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">TranscodingProfiles</span></td>
@@ -538,7 +540,8 @@
                       <a href="#MediaBrowser_Model_Dlna_TranscodingProfile" class="typelink">TranscodingProfile[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The transcoding profiles.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ContainerProfiles</span></td>
@@ -814,6 +817,35 @@
               </td>
               <td></td>
           </tr>
+          <tr>
+              <td><span class="parametername">MaxWidth</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxHeight</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">FillEmptySubtitleSegments</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
       </tbody>
   </table>
   
@@ -980,6 +1012,8 @@
   <li>IsInterlaced</li>
   <li>AudioSampleRate</li>
   <li>AudioBitDepth</li>
+  <li>VideoRange</li>
+  <li>VideoRotation</li>
   </ul>
   
   <h3 id="MediaBrowser_Model_Dlna_CodecProfile" class="text-capitalize">CodecProfile</h3>
@@ -1322,6 +1356,24 @@
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">ProbePath</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProbeProtocol</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">Container</span></td>
               <td>
                     string
@@ -1365,6 +1417,16 @@
   
                   
               </td>
+              <td><p>Differentiate internet url vs local network</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HasMixedProtocols</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
               <td></td>
           </tr>
           <tr>
@@ -1391,6 +1453,26 @@
               <td><span class="parametername">SupportsTranscoding</span></td>
               <td>
                     boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TrancodeLiveStartIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">WallClockStart</span></td>
+              <td>
+                    string
+                      (date-time)
   
                   
               </td>
@@ -1552,6 +1634,15 @@
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">AddApiKeyToDirectStreamUrl</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">TranscodingUrl</span></td>
               <td>
                     string
@@ -1624,7 +1715,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ServerId</span></td>
@@ -1633,7 +1725,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -1685,7 +1778,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The codec.</p>
+<p>Probe Field: <code>codec_name</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code><br>
+Related Enums: <code>T:Emby.Media.Model.Enums.VideoMediaTypes</code>, <code>Emby.Media.Model.Enums.AudioMediaTypes</code>, <code>Emby.Media.Model.Enums.SubtitleMediaTypes</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CodecTag</span></td>
@@ -1694,7 +1791,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The codec tag.</p>
+<p>Probe Field: <code>codec_tag</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Language</span></td>
@@ -1703,7 +1803,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The language.</p>
+<p>Probe Field: <code>tags[&quot;language&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ColorTransfer</span></td>
@@ -1712,7 +1815,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The color transfer characteristics.</p>
+<p>Probe Field: <code>color_transfer</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code><br>
+Related Enum: <code>Emby.Media.Model.Enums.ColorTransfers</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ColorPrimaries</span></td>
@@ -1721,7 +1828,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The chromaticity coordinates of the source primaries.</p>
+<p>Probe Field: <code>color_primaries</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code><br>
+Related Enum: <code>Emby.Media.Model.Enums.ColorPrimaries</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ColorSpace</span></td>
@@ -1730,7 +1841,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The YUV colorspace type.</p>
+<p>Probe Field: <code>color_space</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code><br>
+Related Enum: <code>Emby.Media.Model.Enums.ColorSpaces</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Comment</span></td>
@@ -1739,7 +1854,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The comment.</p>
+<p>Probe Field: <code>tags[&quot;comment&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">StreamStartTimeTicks</span></td>
@@ -1749,7 +1867,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The start time of the stream.</p>
+<p>Probe Field: <code>start_time</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.<br>
+Actual type: <code>System.TimeSpan</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">TimeBase</span></td>
@@ -1758,16 +1880,11 @@
   
                   
               </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">CodecTimeBase</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
+              <td><p>The time-base.</p>
+<p>Probe Field: <code>time_base</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.<br>
+Actual type: <code>Emby.Media.Model.Types.Rational</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Title</span></td>
@@ -1776,7 +1893,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The title.</p>
+<p>Probe Field: <code>tags[&quot;title&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Extradata</span></td>
@@ -1785,7 +1905,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The extradata.</p>
+<p>Probe Field: <code>extradata</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+<p>Currently, this value is only parsed for subtitle streams with codec <code>Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">VideoRange</span></td>
@@ -1803,7 +1927,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The display title.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DisplayLanguage</span></td>
@@ -1812,7 +1938,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The display language.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">NalLengthSize</span></td>
@@ -1821,7 +1949,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The nal length size.</p>
+<p>Probe Field: <code>nal_length_size</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code> of type <code>Emby.Media.Model.Enums.VideoMediaTypes.h264</code>.<br>
+Actual type: <code>System.Int32</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsInterlaced</span></td>
@@ -1830,7 +1962,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is interlaced.</p>
+<p>Probe Field: <code>field_order</code> != <code>progressive</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsAVC</span></td>
@@ -1848,7 +1983,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The channel layout.</p>
+<p>Probe Field: <code>channel_layout</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code><br>
+Related Enum: <code>MediaBrowser.Model.Entities.MediaStream.ChannelLayout</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">BitRate</span></td>
@@ -1858,7 +1997,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The bit rate.</p>
+<p>Probe Field: <code>bit_rate</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>.</p>
+<p>THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS!</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">BitDepth</span></td>
@@ -1868,7 +2011,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The bit depth.</p>
+<p>Probe Field: <code>bits_per_sample</code> or <code>bits_per_raw_sample</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RefFrames</span></td>
@@ -1878,7 +2024,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The reference frames.</p>
+<p>Probe Field: <code>refs</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Rotation</span></td>
@@ -1898,7 +2047,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The audio channel count.</p>
+<p>Probe Field: <code>channels</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SampleRate</span></td>
@@ -1908,7 +2060,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The sample rate.</p>
+<p>Probe Field: <code>sample_rate</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code><br>
+Related Enum: <code>Emby.Media.Model.Enums.SampleRates</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsDefault</span></td>
@@ -1917,10 +2073,25 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is default.</p>
+<p>Probe Field: <code>disposition[&quot;default&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsForced</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether this instance is forced.</p>
+<p>Probe Field: <code>disposition[&quot;forced&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsHearingImpaired</span></td>
               <td>
                     boolean
   
@@ -1936,7 +2107,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The height.</p>
+<p>Probe Field: <code>height</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Width</span></td>
@@ -1946,7 +2120,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The width.</p>
+<p>Probe Field: <code>width</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AverageFrameRate</span></td>
@@ -1956,7 +2133,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The average frame rate..</p>
+<p>Probe Field: <code>avg_frame_rate</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.<br>
+Actual type: <code>Emby.Media.Model.Types.Rational</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RealFrameRate</span></td>
@@ -1966,7 +2147,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The real frame rate..</p>
+<p>Probe Field: <code>r_frame_rate</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.<br>
+Actual type: <code>Emby.Media.Model.Types.Rational</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Profile</span></td>
@@ -1975,7 +2160,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The profile.</p>
+<p>Probe Field: <code>profile</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code><br>
+Related Enums: <code>Emby.Media.Model.Enums.AacProfiles</code>, <code>Emby.Media.Model.Enums.AvcProfiles</code>, <code>Emby.Media.Model.Enums.H263Profiles</code>, <code>Emby.Media.Model.Enums.HevcProfiles</code>, <code>Emby.Media.Model.Enums.Mpeg2Profiles</code>,<code>Emby.Media.Model.Enums.Vc1Profiles</code>, <code>Emby.Media.Model.Enums.Mpeg4Profiles</code>, <code>Emby.Media.Model.Enums.Vp8Profiles</code>, <code>Emby.Media.Model.Enums.Vp9Profiles</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Type</span></td>
@@ -1984,7 +2173,8 @@
                       <a href="#MediaBrowser_Model_Entities_MediaStreamType" class="typelink">MediaStreamType</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum MediaStreamType</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AspectRatio</span></td>
@@ -1993,7 +2183,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The aspect ratio.</p>
+<p>Probe Field: <code>display_aspect_ratio</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.<br>
+Actual type: <code>Emby.Media.Model.Types.Rational</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Index</span></td>
@@ -2003,7 +2197,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The index of the stream inside its container.</p>
+<p>Probe Field: <code>index</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsExternal</span></td>
@@ -2012,7 +2209,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is external.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DeliveryMethod</span></td>
@@ -2030,7 +2229,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The delivery URL.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsExternalUrl</span></td>
@@ -2039,7 +2240,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is external URL.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsTextSubtitleStream</span></td>
@@ -2057,7 +2260,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether [supports external stream].</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Path</span></td>
@@ -2066,7 +2270,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The filename.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Protocol</span></td>
@@ -2084,7 +2289,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The pixel format.</p>
+<p>Probe Field: <code>pix_fmt</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.<br>
+Actual type: <code>MediaBrowser.Model.Entities.MediaStream.PixelFormat</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Level</span></td>
@@ -2094,7 +2303,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The codec level.</p>
+<p>Probe Field: <code>level</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code><br>
+Related Enums: <code>Emby.Media.Model.Enums.AvcLevels</code>, <code>Emby.Media.Model.Enums.H263Levels</code>, <code>Emby.Media.Model.Enums.HevcLevels</code>, <code>Emby.Media.Model.Enums.Mpeg2Levels</code>,<code>Emby.Media.Model.Enums.Vc1Levels</code>, <code>Emby.Media.Model.Enums.Mpeg4Levels</code>, <code>Emby.Media.Model.Enums.Vp8Levels</code>, <code>Emby.Media.Model.Enums.Vp9Levels</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsAnamorphic</span></td>
@@ -2103,7 +2316,36 @@
   
                   
               </td>
+              <td><p>A value indicating whether this instance is anamorphic.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExtendedVideoType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ExtendedVideoTypes" class="typelink">ExtendedVideoTypes</a>
+                  
+              </td>
               <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExtendedVideoSubType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ExtendedVideoSubTypes" class="typelink">ExtendedVideoSubTypes</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExtendedVideoSubTypeDescription</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The extended video sub-type description.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ItemId</span></td>
@@ -2112,7 +2354,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ServerId</span></td>
@@ -2121,7 +2364,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AttachmentSize</span></td>
@@ -2131,7 +2375,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The size of the attachment.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MimeType</span></td>
@@ -2140,16 +2385,8 @@
   
                   
               </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">IsClosedCaptions</span></td>
-              <td>
-                    boolean
-  
-                  
-              </td>
-              <td></td>
+              <td><p>The type of the MIME.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SubtitleLocationType</span></td>
@@ -2177,6 +2414,47 @@
   <li>EmbeddedImage</li>
   <li>Attachment</li>
   <li>Data</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_ExtendedVideoTypes" class="text-capitalize">ExtendedVideoTypes</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ExtendedVideoTypes.html">MediaBrowser.Model.Entities.ExtendedVideoTypes</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>None</li>
+  <li>Hdr10</li>
+  <li>Hdr10Plus</li>
+  <li>HyperLogGamma</li>
+  <li>DolbyVision</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_ExtendedVideoSubTypes" class="text-capitalize">ExtendedVideoSubTypes</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ExtendedVideoSubTypes.html">MediaBrowser.Model.Entities.ExtendedVideoSubTypes</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>None</li>
+  <li>Hdr10</li>
+  <li>HyperLogGamma</li>
+  <li>Hdr10Plus0</li>
+  <li>DoviProfile02</li>
+  <li>DoviProfile10</li>
+  <li>DoviProfile22</li>
+  <li>DoviProfile30</li>
+  <li>DoviProfile42</li>
+  <li>DoviProfile50</li>
+  <li>DoviProfile61</li>
+  <li>DoviProfile76</li>
+  <li>DoviProfile81</li>
+  <li>DoviProfile82</li>
+  <li>DoviProfile83</li>
+  <li>DoviProfile84</li>
+  <li>DoviProfile85</li>
+  <li>DoviProfile92</li>
   </ul>
   
   <h3 id="MediaBrowser_Model_Entities_SubtitleLocationType" class="text-capitalize">SubtitleLocationType</h3>

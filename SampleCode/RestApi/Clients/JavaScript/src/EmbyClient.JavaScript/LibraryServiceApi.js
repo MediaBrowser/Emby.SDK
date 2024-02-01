@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -24,7 +24,7 @@ import ThemeMediaResult from '../model/ThemeMediaResult';
 /**
 * LibraryService service.
 * @module EmbyClient.JavaScript/LibraryServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LibraryServiceApi {
 
@@ -524,7 +524,12 @@ export default class LibraryServiceApi {
       };
       let queryParams = {
         'UserId': opts['userId'],
-        'InheritFromParent': opts['inheritFromParent']
+        'InheritFromParent': opts['inheritFromParent'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData'],
+        'Fields': opts['fields']
       };
       let headerParams = {
       };
@@ -566,7 +571,12 @@ export default class LibraryServiceApi {
       };
       let queryParams = {
         'UserId': opts['userId'],
-        'InheritFromParent': opts['inheritFromParent']
+        'InheritFromParent': opts['inheritFromParent'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData'],
+        'Fields': opts['fields']
       };
       let headerParams = {
       };
@@ -608,7 +618,12 @@ export default class LibraryServiceApi {
       };
       let queryParams = {
         'UserId': opts['userId'],
-        'InheritFromParent': opts['inheritFromParent']
+        'InheritFromParent': opts['inheritFromParent'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData'],
+        'Fields': opts['fields']
       };
       let headerParams = {
       };

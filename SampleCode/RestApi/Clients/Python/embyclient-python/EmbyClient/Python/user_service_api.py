@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -117,7 +117,7 @@ class UserServiceApi(object):
     def delete_users_by_id_trackselections_by_tracktype(self, id, track_type, **kwargs):  # noqa: E501
         """Clears audio or subtitle track selections for a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_users_by_id_trackselections_by_tracktype(id, track_type, async_req=True)
@@ -140,7 +140,7 @@ class UserServiceApi(object):
     def delete_users_by_id_trackselections_by_tracktype_with_http_info(self, id, track_type, **kwargs):  # noqa: E501
         """Clears audio or subtitle track selections for a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_users_by_id_trackselections_by_tracktype_with_http_info(id, track_type, async_req=True)
@@ -195,7 +195,7 @@ class UserServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/TrackSelections/{TrackType}', 'DELETE',
@@ -308,6 +308,216 @@ class UserServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_users_by_userid_typedsettings_by_key(self, key, user_id, **kwargs):  # noqa: E501
+        """Gets a typed user setting  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_users_by_userid_typedsettings_by_key(key, user_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str key: Key (required)
+        :param str user_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_users_by_userid_typedsettings_by_key_with_http_info(key, user_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_users_by_userid_typedsettings_by_key_with_http_info(key, user_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_users_by_userid_typedsettings_by_key_with_http_info(self, key, user_id, **kwargs):  # noqa: E501
+        """Gets a typed user setting  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_users_by_userid_typedsettings_by_key_with_http_info(key, user_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str key: Key (required)
+        :param str user_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['key', 'user_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_users_by_userid_typedsettings_by_key" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'key' is set
+        if ('key' not in params or
+                params['key'] is None):
+            raise ValueError("Missing the required parameter `key` when calling `get_users_by_userid_typedsettings_by_key`")  # noqa: E501
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params or
+                params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `get_users_by_userid_typedsettings_by_key`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'key' in params:
+            path_params['Key'] = params['key']  # noqa: E501
+        if 'user_id' in params:
+            path_params['UserId'] = params['user_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Users/{UserId}/TypedSettings/{Key}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_users_itemaccess(self, **kwargs):  # noqa: E501
+        """Gets a list of users  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_users_itemaccess(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param bool is_hidden: Optional filter by IsHidden=true or false
+        :param bool is_disabled: Optional filter by IsDisabled=true or false
+        :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
+        :param int limit: Optional. The maximum number of records to return
+        :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
+        :return: QueryResultUserDto
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_users_itemaccess_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_users_itemaccess_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_users_itemaccess_with_http_info(self, **kwargs):  # noqa: E501
+        """Gets a list of users  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_users_itemaccess_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param bool is_hidden: Optional filter by IsHidden=true or false
+        :param bool is_disabled: Optional filter by IsDisabled=true or false
+        :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
+        :param int limit: Optional. The maximum number of records to return
+        :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
+        :return: QueryResultUserDto
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater', 'sort_order']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_users_itemaccess" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'is_hidden' in params:
+            query_params.append(('IsHidden', params['is_hidden']))  # noqa: E501
+        if 'is_disabled' in params:
+            query_params.append(('IsDisabled', params['is_disabled']))  # noqa: E501
+        if 'start_index' in params:
+            query_params.append(('StartIndex', params['start_index']))  # noqa: E501
+        if 'limit' in params:
+            query_params.append(('Limit', params['limit']))  # noqa: E501
+        if 'name_starts_with_or_greater' in params:
+            query_params.append(('NameStartsWithOrGreater', params['name_starts_with_or_greater']))  # noqa: E501
+        if 'sort_order' in params:
+            query_params.append(('SortOrder', params['sort_order']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'application/xml'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Users/ItemAccess', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='QueryResultUserDto',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_users_prefixes(self, **kwargs):  # noqa: E501
         """Gets a list of users  # noqa: E501
 
@@ -323,6 +533,7 @@ class UserServiceApi(object):
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
         :param int limit: Optional. The maximum number of records to return
         :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: list[NameIdPair]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -349,12 +560,13 @@ class UserServiceApi(object):
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
         :param int limit: Optional. The maximum number of records to return
         :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: list[NameIdPair]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater']  # noqa: E501
+        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater', 'sort_order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -385,6 +597,8 @@ class UserServiceApi(object):
             query_params.append(('Limit', params['limit']))  # noqa: E501
         if 'name_starts_with_or_greater' in params:
             query_params.append(('NameStartsWithOrGreater', params['name_starts_with_or_greater']))  # noqa: E501
+        if 'sort_order' in params:
+            query_params.append(('SortOrder', params['sort_order']))  # noqa: E501
 
         header_params = {}
 
@@ -418,7 +632,7 @@ class UserServiceApi(object):
     def get_users_public(self, **kwargs):  # noqa: E501
         """Gets a list of publicly visible users for display on a login screen.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_public(async_req=True)
@@ -439,7 +653,7 @@ class UserServiceApi(object):
     def get_users_public_with_http_info(self, **kwargs):  # noqa: E501
         """Gets a list of publicly visible users for display on a login screen.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_public_with_http_info(async_req=True)
@@ -484,7 +698,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/Public', 'GET',
@@ -517,6 +731,7 @@ class UserServiceApi(object):
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
         :param int limit: Optional. The maximum number of records to return
         :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: QueryResultUserDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -543,12 +758,13 @@ class UserServiceApi(object):
         :param int start_index: Optional. The record index to start at. All items with a lower index will be dropped from the results.
         :param int limit: Optional. The maximum number of records to return
         :param str name_starts_with_or_greater: Optional filter by items whose name is sorted equally or greater than a given input string.
+        :param str sort_order: Sort Order - Ascending,Descending
         :return: QueryResultUserDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater']  # noqa: E501
+        all_params = ['is_hidden', 'is_disabled', 'start_index', 'limit', 'name_starts_with_or_greater', 'sort_order']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -579,6 +795,8 @@ class UserServiceApi(object):
             query_params.append(('Limit', params['limit']))  # noqa: E501
         if 'name_starts_with_or_greater' in params:
             query_params.append(('NameStartsWithOrGreater', params['name_starts_with_or_greater']))  # noqa: E501
+        if 'sort_order' in params:
+            query_params.append(('SortOrder', params['sort_order']))  # noqa: E501
 
         header_params = {}
 
@@ -612,7 +830,7 @@ class UserServiceApi(object):
     def post_users_authenticatebyname(self, body, x_emby_authorization, **kwargs):  # noqa: E501
         """Authenticates a user  # noqa: E501
 
-        Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required  # noqa: E501
+        Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_authenticatebyname(body, x_emby_authorization, async_req=True)
@@ -635,7 +853,7 @@ class UserServiceApi(object):
     def post_users_authenticatebyname_with_http_info(self, body, x_emby_authorization, **kwargs):  # noqa: E501
         """Authenticates a user  # noqa: E501
 
-        Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required  # noqa: E501
+        Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_authenticatebyname_with_http_info(body, x_emby_authorization, async_req=True)
@@ -698,7 +916,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/AuthenticateByName', 'POST',
@@ -822,7 +1040,7 @@ class UserServiceApi(object):
     def post_users_by_id_authenticate(self, body, id, **kwargs):  # noqa: E501
         """Authenticates a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_by_id_authenticate(body, id, async_req=True)
@@ -845,7 +1063,7 @@ class UserServiceApi(object):
     def post_users_by_id_authenticate_with_http_info(self, body, id, **kwargs):  # noqa: E501
         """Authenticates a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_by_id_authenticate_with_http_info(body, id, async_req=True)
@@ -908,7 +1126,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Authenticate', 'POST',
@@ -936,7 +1154,7 @@ class UserServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ConfigurationUserConfiguration body: UserConfiguration:  (required)
+        :param UserConfiguration body: UserConfiguration:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -959,7 +1177,7 @@ class UserServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ConfigurationUserConfiguration body: UserConfiguration:  (required)
+        :param UserConfiguration body: UserConfiguration:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1015,6 +1233,109 @@ class UserServiceApi(object):
 
         return self.api_client.call_api(
             '/Users/{Id}/Configuration', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def post_users_by_id_configuration_partial(self, body, id, **kwargs):  # noqa: E501
+        """Updates a user configuration  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_users_by_id_configuration_partial(body, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param Object body: Binary stream (required)
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.post_users_by_id_configuration_partial_with_http_info(body, id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.post_users_by_id_configuration_partial_with_http_info(body, id, **kwargs)  # noqa: E501
+            return data
+
+    def post_users_by_id_configuration_partial_with_http_info(self, body, id, **kwargs):  # noqa: E501
+        """Updates a user configuration  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_users_by_id_configuration_partial_with_http_info(body, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param Object body: Binary stream (required)
+        :param str id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_users_by_id_configuration_partial" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `post_users_by_id_configuration_partial`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `post_users_by_id_configuration_partial`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['Id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/octet-stream'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Users/{Id}/Configuration/Partial', 'POST',
             path_params,
             query_params,
             header_params,
@@ -1106,109 +1427,6 @@ class UserServiceApi(object):
 
         return self.api_client.call_api(
             '/Users/{Id}/Delete', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def post_users_by_id_easypassword(self, body, id, **kwargs):  # noqa: E501
-        """Updates a user's easy password  # noqa: E501
-
-        Requires authentication as user  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_users_by_id_easypassword(body, id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param UpdateUserEasyPassword body: UpdateUserEasyPassword (required)
-        :param str id: (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.post_users_by_id_easypassword_with_http_info(body, id, **kwargs)  # noqa: E501
-        else:
-            (data) = self.post_users_by_id_easypassword_with_http_info(body, id, **kwargs)  # noqa: E501
-            return data
-
-    def post_users_by_id_easypassword_with_http_info(self, body, id, **kwargs):  # noqa: E501
-        """Updates a user's easy password  # noqa: E501
-
-        Requires authentication as user  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_users_by_id_easypassword_with_http_info(body, id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param UpdateUserEasyPassword body: UpdateUserEasyPassword (required)
-        :param str id: (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method post_users_by_id_easypassword" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `post_users_by_id_easypassword`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `post_users_by_id_easypassword`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'id' in params:
-            path_params['Id'] = params['id']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json', 'application/xml'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/Users/{Id}/EasyPassword', 'POST',
             path_params,
             query_params,
             header_params,
@@ -1336,7 +1554,7 @@ class UserServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param UsersUserPolicy body: UserPolicy:  (required)
+        :param UserPolicy body: UserPolicy:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1359,7 +1577,7 @@ class UserServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param UsersUserPolicy body: UserPolicy:  (required)
+        :param UserPolicy body: UserPolicy:  (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1432,7 +1650,7 @@ class UserServiceApi(object):
     def post_users_by_id_trackselections_by_tracktype_delete(self, id, track_type, **kwargs):  # noqa: E501
         """Clears audio or subtitle track selections for a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_by_id_trackselections_by_tracktype_delete(id, track_type, async_req=True)
@@ -1455,7 +1673,7 @@ class UserServiceApi(object):
     def post_users_by_id_trackselections_by_tracktype_delete_with_http_info(self, id, track_type, **kwargs):  # noqa: E501
         """Clears audio or subtitle track selections for a user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_by_id_trackselections_by_tracktype_delete_with_http_info(id, track_type, async_req=True)
@@ -1510,7 +1728,7 @@ class UserServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/TrackSelections/{TrackType}/Delete', 'POST',
@@ -1528,10 +1746,121 @@ class UserServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def post_users_by_userid_typedsettings_by_key(self, body, user_id, key, **kwargs):  # noqa: E501
+        """Updates a typed user setting  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_users_by_userid_typedsettings_by_key(body, user_id, key, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param Object body: Binary stream (required)
+        :param str user_id: (required)
+        :param str key: Key (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.post_users_by_userid_typedsettings_by_key_with_http_info(body, user_id, key, **kwargs)  # noqa: E501
+        else:
+            (data) = self.post_users_by_userid_typedsettings_by_key_with_http_info(body, user_id, key, **kwargs)  # noqa: E501
+            return data
+
+    def post_users_by_userid_typedsettings_by_key_with_http_info(self, body, user_id, key, **kwargs):  # noqa: E501
+        """Updates a typed user setting  # noqa: E501
+
+        Requires authentication as user  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_users_by_userid_typedsettings_by_key_with_http_info(body, user_id, key, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param Object body: Binary stream (required)
+        :param str user_id: (required)
+        :param str key: Key (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'user_id', 'key']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_users_by_userid_typedsettings_by_key" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `post_users_by_userid_typedsettings_by_key`")  # noqa: E501
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params or
+                params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `post_users_by_userid_typedsettings_by_key`")  # noqa: E501
+        # verify the required parameter 'key' is set
+        if ('key' not in params or
+                params['key'] is None):
+            raise ValueError("Missing the required parameter `key` when calling `post_users_by_userid_typedsettings_by_key`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'user_id' in params:
+            path_params['UserId'] = params['user_id']  # noqa: E501
+        if 'key' in params:
+            path_params['Key'] = params['key']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/octet-stream'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/Users/{UserId}/TypedSettings/{Key}', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def post_users_forgotpassword(self, body, **kwargs):  # noqa: E501
         """Initiates the forgot password process for a local user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_forgotpassword(body, async_req=True)
@@ -1539,7 +1868,7 @@ class UserServiceApi(object):
 
         :param async_req bool
         :param ForgotPassword body: ForgotPassword (required)
-        :return: UsersForgotPasswordResult
+        :return: ForgotPasswordResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1553,7 +1882,7 @@ class UserServiceApi(object):
     def post_users_forgotpassword_with_http_info(self, body, **kwargs):  # noqa: E501
         """Initiates the forgot password process for a local user  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_forgotpassword_with_http_info(body, async_req=True)
@@ -1561,7 +1890,7 @@ class UserServiceApi(object):
 
         :param async_req bool
         :param ForgotPassword body: ForgotPassword (required)
-        :return: UsersForgotPasswordResult
+        :return: ForgotPasswordResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1609,7 +1938,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/ForgotPassword', 'POST',
@@ -1619,7 +1948,7 @@ class UserServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UsersForgotPasswordResult',  # noqa: E501
+            response_type='ForgotPasswordResult',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1630,7 +1959,7 @@ class UserServiceApi(object):
     def post_users_forgotpassword_pin(self, body, **kwargs):  # noqa: E501
         """Redeems a forgot password pin  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_forgotpassword_pin(body, async_req=True)
@@ -1638,7 +1967,7 @@ class UserServiceApi(object):
 
         :param async_req bool
         :param ForgotPasswordPin body: ForgotPasswordPin (required)
-        :return: UsersPinRedeemResult
+        :return: PinRedeemResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1652,7 +1981,7 @@ class UserServiceApi(object):
     def post_users_forgotpassword_pin_with_http_info(self, body, **kwargs):  # noqa: E501
         """Redeems a forgot password pin  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_users_forgotpassword_pin_with_http_info(body, async_req=True)
@@ -1660,7 +1989,7 @@ class UserServiceApi(object):
 
         :param async_req bool
         :param ForgotPasswordPin body: ForgotPasswordPin (required)
-        :return: UsersPinRedeemResult
+        :return: PinRedeemResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1708,7 +2037,7 @@ class UserServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/ForgotPassword/Pin', 'POST',
@@ -1718,7 +2047,7 @@ class UserServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UsersPinRedeemResult',  # noqa: E501
+            response_type='PinRedeemResult',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

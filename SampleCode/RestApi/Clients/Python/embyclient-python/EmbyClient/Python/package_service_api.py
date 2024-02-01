@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -128,7 +128,7 @@ class PackageServiceApi(object):
         :param str target_systems: Optional. Filter by target system type. Allows multiple, comma delimited.
         :param bool is_premium: Optional. Filter by premium status
         :param bool is_adult: Optional. Filter by package that contain adult content.
-        :return: list[UpdatesPackageInfo]
+        :return: list[PackageInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -153,7 +153,7 @@ class PackageServiceApi(object):
         :param str target_systems: Optional. Filter by target system type. Allows multiple, comma delimited.
         :param bool is_premium: Optional. Filter by premium status
         :param bool is_adult: Optional. Filter by package that contain adult content.
-        :return: list[UpdatesPackageInfo]
+        :return: list[PackageInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -209,7 +209,7 @@ class PackageServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[UpdatesPackageInfo]',  # noqa: E501
+            response_type='list[PackageInfo]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -229,7 +229,7 @@ class PackageServiceApi(object):
         :param async_req bool
         :param str name: The name of the package (required)
         :param str assembly_guid: The guid of the associated assembly
-        :return: UpdatesPackageInfo
+        :return: PackageInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -252,7 +252,7 @@ class PackageServiceApi(object):
         :param async_req bool
         :param str name: The name of the package (required)
         :param str assembly_guid: The guid of the associated assembly
-        :return: UpdatesPackageInfo
+        :return: PackageInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -308,7 +308,7 @@ class PackageServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UpdatesPackageInfo',  # noqa: E501
+            response_type='PackageInfo',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -327,7 +327,7 @@ class PackageServiceApi(object):
 
         :param async_req bool
         :param str package_type: Package type filter (System/UserInstalled) (required)
-        :return: list[UpdatesPackageVersionInfo]
+        :return: list[PackageVersionInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -349,7 +349,7 @@ class PackageServiceApi(object):
 
         :param async_req bool
         :param str package_type: Package type filter (System/UserInstalled) (required)
-        :return: list[UpdatesPackageVersionInfo]
+        :return: list[PackageVersionInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -403,7 +403,7 @@ class PackageServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[UpdatesPackageVersionInfo]',  # noqa: E501
+            response_type='list[PackageVersionInfo]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -424,7 +424,7 @@ class PackageServiceApi(object):
         :param str name: Package name (required)
         :param str assembly_guid: Guid of the associated assembly
         :param str version: Optional version. Defaults to latest version.
-        :param UpdatesPackageVersionClass update_class: Optional update class (Dev, Beta, Release). Defaults to Release.
+        :param PackageVersionClass update_class: Optional update class (Dev, Beta, Release). Defaults to Release.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -449,7 +449,7 @@ class PackageServiceApi(object):
         :param str name: Package name (required)
         :param str assembly_guid: Guid of the associated assembly
         :param str version: Optional version. Defaults to latest version.
-        :param UpdatesPackageVersionClass update_class: Optional update class (Dev, Beta, Release). Defaults to Release.
+        :param PackageVersionClass update_class: Optional update class (Dev, Beta, Release). Defaults to Release.
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.

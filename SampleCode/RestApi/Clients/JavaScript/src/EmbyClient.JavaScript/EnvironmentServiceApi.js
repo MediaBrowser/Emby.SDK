@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -11,13 +11,14 @@
 
 import ApiClient from "../ApiClient";
 import DefaultDirectoryBrowserInfo from '../model/DefaultDirectoryBrowserInfo';
+import GetDirectoryContents from '../model/GetDirectoryContents';
 import IOFileSystemEntryInfo from '../model/IOFileSystemEntryInfo';
 import ValidatePath from '../model/ValidatePath';
 
 /**
 * EnvironmentService service.
 * @module EmbyClient.JavaScript/EnvironmentServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class EnvironmentServiceApi {
 
@@ -257,6 +258,48 @@ export default class EnvironmentServiceApi {
 
       return this.apiClient.callApi(
         '/Environment/ParentPath', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postEnvironmentDirectorycontents operation.
+     * @callback module:EmbyClient.JavaScript/EnvironmentServiceApi~postEnvironmentDirectorycontentsCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/IOFileSystemEntryInfo>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets the contents of a given directory in the file system
+     * Requires authentication as administrator
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript/EnvironmentServiceApi~postEnvironmentDirectorycontentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/IOFileSystemEntryInfo>}
+     */
+    postEnvironmentDirectorycontents() {
+      opts = opts || {};
+      let postBody = body;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'Path': path,
+        'IncludeFiles': opts['includeFiles'],
+        'IncludeDirectories': opts['includeDirectories']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = [IOFileSystemEntryInfo];
+
+      return this.apiClient.callApi(
+        '/Environment/DirectoryContents', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

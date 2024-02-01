@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Conditions on the source value.   */
 public enum AttributesSimpleCondition: String, Codable {
     case isTrue = "IsTrue"
     case isFalse = "IsFalse"

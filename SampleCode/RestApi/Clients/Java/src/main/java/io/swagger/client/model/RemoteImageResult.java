@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -18,9 +18,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * RemoteImageResult
+ * Class RemoteImageResult.  
  */
-
+@Schema(description = "Class RemoteImageResult.  ")
 
 public class RemoteImageResult {
   @SerializedName("Images")
@@ -46,10 +46,10 @@ public class RemoteImageResult {
   }
 
    /**
-   * Get images
+   * The images.
    * @return images
   **/
-  @Schema(description = "")
+  @Schema(description = "The images.")
   public List<RemoteImageInfo> getImages() {
     return images;
   }
@@ -64,10 +64,10 @@ public class RemoteImageResult {
   }
 
    /**
-   * Get totalRecordCount
+   * The total record count.
    * @return totalRecordCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The total record count.")
   public Integer getTotalRecordCount() {
     return totalRecordCount;
   }
@@ -90,10 +90,10 @@ public class RemoteImageResult {
   }
 
    /**
-   * Get providers
+   * The providers.
    * @return providers
   **/
-  @Schema(description = "")
+  @Schema(description = "The providers.")
   public List<String> getProviders() {
     return providers;
   }

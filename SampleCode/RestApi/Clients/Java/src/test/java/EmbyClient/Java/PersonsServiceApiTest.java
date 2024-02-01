@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -44,14 +44,15 @@ public class PersonsServiceApiTest {
         Boolean hasTrailer = null;
         String adjacentTo = null;
         Integer minIndexNumber = null;
+        String minStartDate = null;
+        String maxStartDate = null;
+        String minEndDate = null;
+        String maxEndDate = null;
         Integer minPlayers = null;
         Integer maxPlayers = null;
         Integer parentIndexNumber = null;
         Boolean hasParentalRating = null;
         Boolean isHD = null;
-        String locationTypes = null;
-        String excludeLocationTypes = null;
-        Boolean isMissing = null;
         Boolean isUnaired = null;
         Double minCommunityRating = null;
         Double minCriticRating = null;
@@ -79,9 +80,15 @@ public class PersonsServiceApiTest {
         Boolean isFavorite = null;
         Boolean isMovie = null;
         Boolean isSeries = null;
+        Boolean isFolder = null;
         Boolean isNews = null;
         Boolean isKids = null;
         Boolean isSports = null;
+        Boolean isNew = null;
+        Boolean isPremiere = null;
+        Boolean isNewOrPremiere = null;
+        Boolean isRepeat = null;
+        Boolean projectToMedia = null;
         String mediaTypes = null;
         String imageTypes = null;
         String sortBy = null;
@@ -89,6 +96,7 @@ public class PersonsServiceApiTest {
         String genres = null;
         String officialRatings = null;
         String tags = null;
+        String excludeTags = null;
         String years = null;
         Boolean enableImages = null;
         Boolean enableUserData = null;
@@ -106,7 +114,9 @@ public class PersonsServiceApiTest {
         String videoTypes = null;
         String containers = null;
         String audioCodecs = null;
+        String audioLayouts = null;
         String videoCodecs = null;
+        String extendedVideoTypes = null;
         String subtitleCodecs = null;
         String path = null;
         String userId = null;
@@ -122,7 +132,7 @@ public class PersonsServiceApiTest {
         String albumArtistStartsWithOrGreater = null;
         String nameStartsWith = null;
         String nameLessThan = null;
-        QueryResultBaseItemDto response = api.getPersons(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+        QueryResultBaseItemDto response = api.getPersons(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }

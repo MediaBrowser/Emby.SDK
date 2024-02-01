@@ -149,7 +149,7 @@
 <div class="refdoc">
 
 <h1 id="emby_restapi_headPersonsByNameImagesByType" data-uid="emby.restapi/headPersonsByNameImagesByType" class="text-capitalize text-break">headPersonsByNameImagesByType</h1>
-<div class="markdown level0 description"><p>No authentication required</p>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
 </div>
 
 
@@ -286,39 +286,6 @@
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">AddPlayedIndicator</span></td>
-        <td>query</td>
-        <td>
-              
-  
-        </td>
-        <td></td>
-        <td><p>Optional. Add a played indicator</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">PercentPlayed</span></td>
-        <td>query</td>
-        <td>
-              
-  
-        </td>
-        <td></td>
-        <td><p>Optional percent to render for the percent played overlay</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">UnplayedCount</span></td>
-        <td>query</td>
-        <td>
-              
-  
-        </td>
-        <td></td>
-        <td><p>Optional unplayed count overlay to render</p>
-</td>
-      </tr>
-      <tr>
         <td><span class="parametername">BackgroundColor</span></td>
         <td>query</td>
         <td>
@@ -349,6 +316,17 @@
         </td>
         <td></td>
         <td><p>Set to true to force normalization of orientation in the event the renderer does not support it.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">KeepAnimation</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Set to true to retain image animation (when supported).</p>
 </td>
       </tr>
       <tr>
@@ -405,6 +383,28 @@
   
         </td>
         <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
 </td>
         <td class="sample-response">
         </td>

@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,11 +14,12 @@ import ApiClient from '../ApiClient';
 /**
 * The GlobalizationCountryInfo model module.
 * @module model/GlobalizationCountryInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class GlobalizationCountryInfo {
     /**
     * Constructs a new <code>GlobalizationCountryInfo</code>.
+    * Class CountryInfo  
     * @alias module:model/GlobalizationCountryInfo
     * @class
     */
@@ -61,22 +62,27 @@ export default class GlobalizationCountryInfo {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The display name.
     * @member {String} DisplayName
     */
     'DisplayName' = undefined;
     /**
+    * The English name.
     * @member {String} EnglishName
     */
     'EnglishName' = undefined;
     /**
+    * The name of the two letter ISO region.
     * @member {String} TwoLetterISORegionName
     */
     'TwoLetterISORegionName' = undefined;
     /**
+    * The name of the three letter ISO region.
     * @member {String} ThreeLetterISORegionName
     */
     'ThreeLetterISORegionName' = undefined;

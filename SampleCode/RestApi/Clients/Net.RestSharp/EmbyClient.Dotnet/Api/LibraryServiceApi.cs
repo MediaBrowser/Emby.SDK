@@ -178,10 +178,10 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>List&lt;BaseItemDto&gt;</returns>
-        List<BaseItemDto> GetItemsByIdAncestors (string id, string userId);
+        List<BaseItemDto> GetItemsByIdAncestors (string userId, string id);
 
         /// <summary>
         /// Gets all parents of an item
@@ -190,10 +190,10 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>ApiResponse of List&lt;BaseItemDto&gt;</returns>
-        ApiResponse<List<BaseItemDto>> GetItemsByIdAncestorsWithHttpInfo (string id, string userId);
+        ApiResponse<List<BaseItemDto>> GetItemsByIdAncestorsWithHttpInfo (string userId, string id);
         /// <summary>
         /// Gets critic reviews for an item
         /// </summary>
@@ -326,11 +326,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>AllThemeMediaResult</returns>
-        AllThemeMediaResult GetItemsByIdThememedia (string id, string userId, bool? inheritFromParent);
+        AllThemeMediaResult GetItemsByIdThememedia (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
 
         /// <summary>
         /// Gets theme videos and songs for an item
@@ -339,11 +344,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ApiResponse of AllThemeMediaResult</returns>
-        ApiResponse<AllThemeMediaResult> GetItemsByIdThememediaWithHttpInfo (string id, string userId, bool? inheritFromParent);
+        ApiResponse<AllThemeMediaResult> GetItemsByIdThememediaWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
         /// <summary>
         /// Gets theme songs for an item
         /// </summary>
@@ -351,11 +361,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ThemeMediaResult</returns>
-        ThemeMediaResult GetItemsByIdThemesongs (string id, string userId, bool? inheritFromParent);
+        ThemeMediaResult GetItemsByIdThemesongs (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
 
         /// <summary>
         /// Gets theme songs for an item
@@ -364,11 +379,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ApiResponse of ThemeMediaResult</returns>
-        ApiResponse<ThemeMediaResult> GetItemsByIdThemesongsWithHttpInfo (string id, string userId, bool? inheritFromParent);
+        ApiResponse<ThemeMediaResult> GetItemsByIdThemesongsWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
         /// <summary>
         /// Gets theme videos for an item
         /// </summary>
@@ -376,11 +396,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ThemeMediaResult</returns>
-        ThemeMediaResult GetItemsByIdThemevideos (string id, string userId, bool? inheritFromParent);
+        ThemeMediaResult GetItemsByIdThemevideos (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
 
         /// <summary>
         /// Gets theme videos for an item
@@ -389,11 +414,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ApiResponse of ThemeMediaResult</returns>
-        ApiResponse<ThemeMediaResult> GetItemsByIdThemevideosWithHttpInfo (string id, string userId, bool? inheritFromParent);
+        ApiResponse<ThemeMediaResult> GetItemsByIdThemevideosWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
         /// <summary>
         /// 
         /// </summary>
@@ -945,10 +975,10 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>Task of List&lt;BaseItemDto&gt;</returns>
-        System.Threading.Tasks.Task<List<BaseItemDto>> GetItemsByIdAncestorsAsync (string id, string userId);
+        System.Threading.Tasks.Task<List<BaseItemDto>> GetItemsByIdAncestorsAsync (string userId, string id);
 
         /// <summary>
         /// Gets all parents of an item
@@ -957,10 +987,10 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>Task of ApiResponse (List&lt;BaseItemDto&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetItemsByIdAncestorsAsyncWithHttpInfo (string id, string userId);
+        System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetItemsByIdAncestorsAsyncWithHttpInfo (string userId, string id);
         /// <summary>
         /// Gets critic reviews for an item
         /// </summary>
@@ -1093,11 +1123,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of AllThemeMediaResult</returns>
-        System.Threading.Tasks.Task<AllThemeMediaResult> GetItemsByIdThememediaAsync (string id, string userId, bool? inheritFromParent);
+        System.Threading.Tasks.Task<AllThemeMediaResult> GetItemsByIdThememediaAsync (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
 
         /// <summary>
         /// Gets theme videos and songs for an item
@@ -1106,11 +1141,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ApiResponse (AllThemeMediaResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AllThemeMediaResult>> GetItemsByIdThememediaAsyncWithHttpInfo (string id, string userId, bool? inheritFromParent);
+        System.Threading.Tasks.Task<ApiResponse<AllThemeMediaResult>> GetItemsByIdThememediaAsyncWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
         /// <summary>
         /// Gets theme songs for an item
         /// </summary>
@@ -1118,11 +1158,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ThemeMediaResult</returns>
-        System.Threading.Tasks.Task<ThemeMediaResult> GetItemsByIdThemesongsAsync (string id, string userId, bool? inheritFromParent);
+        System.Threading.Tasks.Task<ThemeMediaResult> GetItemsByIdThemesongsAsync (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
 
         /// <summary>
         /// Gets theme songs for an item
@@ -1131,11 +1176,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ApiResponse (ThemeMediaResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ThemeMediaResult>> GetItemsByIdThemesongsAsyncWithHttpInfo (string id, string userId, bool? inheritFromParent);
+        System.Threading.Tasks.Task<ApiResponse<ThemeMediaResult>> GetItemsByIdThemesongsAsyncWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
         /// <summary>
         /// Gets theme videos for an item
         /// </summary>
@@ -1143,11 +1193,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ThemeMediaResult</returns>
-        System.Threading.Tasks.Task<ThemeMediaResult> GetItemsByIdThemevideosAsync (string id, string userId, bool? inheritFromParent);
+        System.Threading.Tasks.Task<ThemeMediaResult> GetItemsByIdThemevideosAsync (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
 
         /// <summary>
         /// Gets theme videos for an item
@@ -1156,11 +1211,16 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ApiResponse (ThemeMediaResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ThemeMediaResult>> GetItemsByIdThemevideosAsyncWithHttpInfo (string id, string userId, bool? inheritFromParent);
+        System.Threading.Tasks.Task<ApiResponse<ThemeMediaResult>> GetItemsByIdThemevideosAsyncWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields);
         /// <summary>
         /// 
         /// </summary>
@@ -2572,12 +2632,12 @@ namespace EmbyClient.Dotnet.Api
         /// Gets all parents of an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>List&lt;BaseItemDto&gt;</returns>
-        public List<BaseItemDto> GetItemsByIdAncestors (string id, string userId)
+        public List<BaseItemDto> GetItemsByIdAncestors (string userId, string id)
         {
-             ApiResponse<List<BaseItemDto>> localVarResponse = GetItemsByIdAncestorsWithHttpInfo(id, userId);
+             ApiResponse<List<BaseItemDto>> localVarResponse = GetItemsByIdAncestorsWithHttpInfo(userId, id);
              return localVarResponse.Data;
         }
 
@@ -2585,10 +2645,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets all parents of an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>ApiResponse of List&lt;BaseItemDto&gt;</returns>
-        public ApiResponse< List<BaseItemDto> > GetItemsByIdAncestorsWithHttpInfo (string id, string userId)
+        public ApiResponse< List<BaseItemDto> > GetItemsByIdAncestorsWithHttpInfo (string userId, string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2652,12 +2712,12 @@ namespace EmbyClient.Dotnet.Api
         /// Gets all parents of an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>Task of List&lt;BaseItemDto&gt;</returns>
-        public async System.Threading.Tasks.Task<List<BaseItemDto>> GetItemsByIdAncestorsAsync (string id, string userId)
+        public async System.Threading.Tasks.Task<List<BaseItemDto>> GetItemsByIdAncestorsAsync (string userId, string id)
         {
-             ApiResponse<List<BaseItemDto>> localVarResponse = await GetItemsByIdAncestorsAsyncWithHttpInfo(id, userId);
+             ApiResponse<List<BaseItemDto>> localVarResponse = await GetItemsByIdAncestorsAsyncWithHttpInfo(userId, id);
              return localVarResponse.Data;
 
         }
@@ -2666,10 +2726,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets all parents of an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <returns>Task of ApiResponse (List&lt;BaseItemDto&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetItemsByIdAncestorsAsyncWithHttpInfo (string id, string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<BaseItemDto>>> GetItemsByIdAncestorsAsyncWithHttpInfo (string userId, string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3556,13 +3616,18 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme videos and songs for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>AllThemeMediaResult</returns>
-        public AllThemeMediaResult GetItemsByIdThememedia (string id, string userId, bool? inheritFromParent)
+        public AllThemeMediaResult GetItemsByIdThememedia (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
-             ApiResponse<AllThemeMediaResult> localVarResponse = GetItemsByIdThememediaWithHttpInfo(id, userId, inheritFromParent);
+             ApiResponse<AllThemeMediaResult> localVarResponse = GetItemsByIdThememediaWithHttpInfo(userId, id, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
              return localVarResponse.Data;
         }
 
@@ -3570,11 +3635,16 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme videos and songs for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ApiResponse of AllThemeMediaResult</returns>
-        public ApiResponse< AllThemeMediaResult > GetItemsByIdThememediaWithHttpInfo (string id, string userId, bool? inheritFromParent)
+        public ApiResponse< AllThemeMediaResult > GetItemsByIdThememediaWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3605,6 +3675,11 @@ namespace EmbyClient.Dotnet.Api
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
             if (inheritFromParent != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "InheritFromParent", inheritFromParent)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -3639,13 +3714,18 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme videos and songs for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of AllThemeMediaResult</returns>
-        public async System.Threading.Tasks.Task<AllThemeMediaResult> GetItemsByIdThememediaAsync (string id, string userId, bool? inheritFromParent)
+        public async System.Threading.Tasks.Task<AllThemeMediaResult> GetItemsByIdThememediaAsync (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
-             ApiResponse<AllThemeMediaResult> localVarResponse = await GetItemsByIdThememediaAsyncWithHttpInfo(id, userId, inheritFromParent);
+             ApiResponse<AllThemeMediaResult> localVarResponse = await GetItemsByIdThememediaAsyncWithHttpInfo(userId, id, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
              return localVarResponse.Data;
 
         }
@@ -3654,11 +3734,16 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme videos and songs for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ApiResponse (AllThemeMediaResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AllThemeMediaResult>> GetItemsByIdThememediaAsyncWithHttpInfo (string id, string userId, bool? inheritFromParent)
+        public async System.Threading.Tasks.Task<ApiResponse<AllThemeMediaResult>> GetItemsByIdThememediaAsyncWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3689,6 +3774,11 @@ namespace EmbyClient.Dotnet.Api
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
             if (inheritFromParent != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "InheritFromParent", inheritFromParent)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -3723,13 +3813,18 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme songs for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ThemeMediaResult</returns>
-        public ThemeMediaResult GetItemsByIdThemesongs (string id, string userId, bool? inheritFromParent)
+        public ThemeMediaResult GetItemsByIdThemesongs (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
-             ApiResponse<ThemeMediaResult> localVarResponse = GetItemsByIdThemesongsWithHttpInfo(id, userId, inheritFromParent);
+             ApiResponse<ThemeMediaResult> localVarResponse = GetItemsByIdThemesongsWithHttpInfo(userId, id, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
              return localVarResponse.Data;
         }
 
@@ -3737,11 +3832,16 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme songs for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ApiResponse of ThemeMediaResult</returns>
-        public ApiResponse< ThemeMediaResult > GetItemsByIdThemesongsWithHttpInfo (string id, string userId, bool? inheritFromParent)
+        public ApiResponse< ThemeMediaResult > GetItemsByIdThemesongsWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3772,6 +3872,11 @@ namespace EmbyClient.Dotnet.Api
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
             if (inheritFromParent != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "InheritFromParent", inheritFromParent)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -3806,13 +3911,18 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme songs for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ThemeMediaResult</returns>
-        public async System.Threading.Tasks.Task<ThemeMediaResult> GetItemsByIdThemesongsAsync (string id, string userId, bool? inheritFromParent)
+        public async System.Threading.Tasks.Task<ThemeMediaResult> GetItemsByIdThemesongsAsync (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
-             ApiResponse<ThemeMediaResult> localVarResponse = await GetItemsByIdThemesongsAsyncWithHttpInfo(id, userId, inheritFromParent);
+             ApiResponse<ThemeMediaResult> localVarResponse = await GetItemsByIdThemesongsAsyncWithHttpInfo(userId, id, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
              return localVarResponse.Data;
 
         }
@@ -3821,11 +3931,16 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme songs for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ApiResponse (ThemeMediaResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ThemeMediaResult>> GetItemsByIdThemesongsAsyncWithHttpInfo (string id, string userId, bool? inheritFromParent)
+        public async System.Threading.Tasks.Task<ApiResponse<ThemeMediaResult>> GetItemsByIdThemesongsAsyncWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3856,6 +3971,11 @@ namespace EmbyClient.Dotnet.Api
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
             if (inheritFromParent != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "InheritFromParent", inheritFromParent)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -3890,13 +4010,18 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme videos for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ThemeMediaResult</returns>
-        public ThemeMediaResult GetItemsByIdThemevideos (string id, string userId, bool? inheritFromParent)
+        public ThemeMediaResult GetItemsByIdThemevideos (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
-             ApiResponse<ThemeMediaResult> localVarResponse = GetItemsByIdThemevideosWithHttpInfo(id, userId, inheritFromParent);
+             ApiResponse<ThemeMediaResult> localVarResponse = GetItemsByIdThemevideosWithHttpInfo(userId, id, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
              return localVarResponse.Data;
         }
 
@@ -3904,11 +4029,16 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme videos for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>ApiResponse of ThemeMediaResult</returns>
-        public ApiResponse< ThemeMediaResult > GetItemsByIdThemevideosWithHttpInfo (string id, string userId, bool? inheritFromParent)
+        public ApiResponse< ThemeMediaResult > GetItemsByIdThemevideosWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3939,6 +4069,11 @@ namespace EmbyClient.Dotnet.Api
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
             if (inheritFromParent != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "InheritFromParent", inheritFromParent)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -3973,13 +4108,18 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme videos for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ThemeMediaResult</returns>
-        public async System.Threading.Tasks.Task<ThemeMediaResult> GetItemsByIdThemevideosAsync (string id, string userId, bool? inheritFromParent)
+        public async System.Threading.Tasks.Task<ThemeMediaResult> GetItemsByIdThemevideosAsync (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
-             ApiResponse<ThemeMediaResult> localVarResponse = await GetItemsByIdThemevideosAsyncWithHttpInfo(id, userId, inheritFromParent);
+             ApiResponse<ThemeMediaResult> localVarResponse = await GetItemsByIdThemevideosAsyncWithHttpInfo(userId, id, inheritFromParent, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
              return localVarResponse.Data;
 
         }
@@ -3988,11 +4128,16 @@ namespace EmbyClient.Dotnet.Api
         /// Gets theme videos for an item Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
         /// <param name="userId">Optional. Filter by user id, and attach user data (optional)</param>
+        /// <param name="id">Item Id</param>
         /// <param name="inheritFromParent">Determines whether or not parent items should be searched for theme media. (optional)</param>
+        /// <param name="enableImages">Optional, include image information in output (optional)</param>
+        /// <param name="imageTypeLimit">Optional, the max number of images to return, per image type (optional)</param>
+        /// <param name="enableImageTypes">Optional. The image types to include in the output. (optional)</param>
+        /// <param name="enableUserData">Optional, include user data (optional)</param>
+        /// <param name="fields">Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)</param>
         /// <returns>Task of ApiResponse (ThemeMediaResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ThemeMediaResult>> GetItemsByIdThemevideosAsyncWithHttpInfo (string id, string userId, bool? inheritFromParent)
+        public async System.Threading.Tasks.Task<ApiResponse<ThemeMediaResult>> GetItemsByIdThemevideosAsyncWithHttpInfo (string userId, string id, bool? inheritFromParent, bool? enableImages, int? imageTypeLimit, string enableImageTypes, bool? enableUserData, string fields)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4023,6 +4168,11 @@ namespace EmbyClient.Dotnet.Api
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
             if (inheritFromParent != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "InheritFromParent", inheritFromParent)); // query parameter
+            if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
+            if (imageTypeLimit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypeLimit", imageTypeLimit)); // query parameter
+            if (enableImageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImageTypes", enableImageTypes)); // query parameter
+            if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
+            if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Fields", fields)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {

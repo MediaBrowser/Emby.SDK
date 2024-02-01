@@ -1,12 +1,12 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.TasksTaskInfo;
-import io.swagger.client.model.TasksTaskTriggerInfo;
+import io.swagger.client.model.TaskInfo;
+import io.swagger.client.model.TaskTriggerInfo;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -52,7 +52,7 @@ public class ScheduledTaskServiceApiTest {
     public void getScheduledtasksTest() throws Exception {
         Boolean isHidden = null;
         Boolean isEnabled = null;
-        List<TasksTaskInfo> response = api.getScheduledtasks(isHidden, isEnabled);
+        List<TaskInfo> response = api.getScheduledtasks(isHidden, isEnabled);
 
         // TODO: test validations
     }
@@ -67,7 +67,7 @@ public class ScheduledTaskServiceApiTest {
     @Test
     public void getScheduledtasksByIdTest() throws Exception {
         String id = null;
-        TasksTaskInfo response = api.getScheduledtasksById(id);
+        TaskInfo response = api.getScheduledtasksById(id);
 
         // TODO: test validations
     }
@@ -81,7 +81,7 @@ public class ScheduledTaskServiceApiTest {
      */
     @Test
     public void postScheduledtasksByIdTriggersTest() throws Exception {
-        List<TasksTaskTriggerInfo> body = null;
+        List<TaskTriggerInfo> body = null;
         String id = null;
         api.postScheduledtasksByIdTriggers(body, id);
 

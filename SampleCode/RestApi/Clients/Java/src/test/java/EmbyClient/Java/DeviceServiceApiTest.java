@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -52,7 +52,8 @@ public class DeviceServiceApiTest {
      */
     @Test
     public void getDevicesTest() throws Exception {
-        QueryResultDevicesDeviceInfo response = api.getDevices();
+        String sortOrder = null;
+        QueryResultDevicesDeviceInfo response = api.getDevices(sortOrder);
 
         // TODO: test validations
     }
@@ -66,8 +67,7 @@ public class DeviceServiceApiTest {
      */
     @Test
     public void getDevicesCamerauploadsTest() throws Exception {
-        String deviceId = null;
-        DevicesContentUploadHistory response = api.getDevicesCamerauploads(deviceId);
+        DevicesContentUploadHistory response = api.getDevicesCamerauploads();
 
         // TODO: test validations
     }
@@ -112,11 +112,10 @@ public class DeviceServiceApiTest {
     @Test
     public void postDevicesCamerauploadsTest() throws Exception {
         Object body = null;
-        String deviceId = null;
         String album = null;
         String name = null;
         String id = null;
-        api.postDevicesCamerauploads(body, deviceId, album, name, id);
+        api.postDevicesCamerauploads(body, album, name, id);
 
         // TODO: test validations
     }

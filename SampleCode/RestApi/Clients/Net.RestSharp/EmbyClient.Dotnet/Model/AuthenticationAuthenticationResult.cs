@@ -28,8 +28,8 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="user">user.</param>
         /// <param name="sessionInfo">sessionInfo.</param>
-        /// <param name="accessToken">accessToken.</param>
-        /// <param name="serverId">serverId.</param>
+        /// <param name="accessToken">The authentication token..</param>
+        /// <param name="serverId">The server identifier..</param>
         public AuthenticationAuthenticationResult(UserDto user = default(UserDto), SessionSessionInfo sessionInfo = default(SessionSessionInfo), string accessToken = default(string), string serverId = default(string))
         {
             this.User = user;
@@ -51,14 +51,16 @@ namespace EmbyClient.Dotnet.Model
         public SessionSessionInfo SessionInfo { get; set; }
 
         /// <summary>
-        /// Gets or Sets AccessToken
+        /// The authentication token.
         /// </summary>
+        /// <value>The authentication token.</value>
         [DataMember(Name="AccessToken", EmitDefaultValue=false)]
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServerId
+        /// The server identifier.
         /// </summary>
+        /// <value>The server identifier.</value>
         [DataMember(Name="ServerId", EmitDefaultValue=false)]
         public string ServerId { get; set; }
 

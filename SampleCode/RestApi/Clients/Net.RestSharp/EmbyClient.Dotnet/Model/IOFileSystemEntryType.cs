@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines IO.FileSystemEntryType
+    /// Enum FileSystemEntryType  
     /// </summary>
+    /// <value>Enum FileSystemEntryType  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum IOFileSystemEntryType
     {

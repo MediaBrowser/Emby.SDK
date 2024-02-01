@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines ImageType
+    /// Enum ImageType  
     /// </summary>
+    /// <value>Enum ImageType  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum ImageType
     {

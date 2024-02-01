@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -33,7 +33,7 @@ class ToneMapOptionsServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: EmbyWebGenericEditEditObjectContainer
+        :return: EditObjectContainer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -54,7 +54,7 @@ class ToneMapOptionsServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: EmbyWebGenericEditEditObjectContainer
+        :return: EditObjectContainer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -102,7 +102,7 @@ class ToneMapOptionsServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EmbyWebGenericEditEditObjectContainer',  # noqa: E501
+            response_type='EditObjectContainer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -120,7 +120,7 @@ class ToneMapOptionsServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: EmbyWebGenericEditEditObjectContainer
+        :return: EditObjectContainer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -141,7 +141,7 @@ class ToneMapOptionsServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: EmbyWebGenericEditEditObjectContainer
+        :return: EditObjectContainer
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -189,7 +189,7 @@ class ToneMapOptionsServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EmbyWebGenericEditEditObjectContainer',  # noqa: E501
+            response_type='EditObjectContainer',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

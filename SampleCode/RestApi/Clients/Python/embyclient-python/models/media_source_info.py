@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -22,20 +22,25 @@ class MediaSourceInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'protocol': 'MediaInfoMediaProtocol',
+        'protocol': 'MediaProtocol',
         'id': 'str',
         'path': 'str',
         'encoder_path': 'str',
-        'encoder_protocol': 'MediaInfoMediaProtocol',
+        'encoder_protocol': 'MediaProtocol',
         'type': 'MediaSourceType',
+        'probe_path': 'str',
+        'probe_protocol': 'MediaProtocol',
         'container': 'str',
         'size': 'int',
         'name': 'str',
         'sort_name': 'str',
         'is_remote': 'bool',
+        'has_mixed_protocols': 'bool',
         'run_time_ticks': 'int',
         'container_start_time_ticks': 'int',
         'supports_transcoding': 'bool',
+        'trancode_live_start_index': 'int',
+        'wall_clock_start': 'datetime',
         'supports_direct_stream': 'bool',
         'supports_direct_play': 'bool',
         'is_infinite_stream': 'bool',
@@ -50,9 +55,10 @@ class MediaSourceInfo(object):
         'media_streams': 'list[MediaStream]',
         'formats': 'list[str]',
         'bitrate': 'int',
-        'timestamp': 'MediaInfoTransportStreamTimestamp',
+        'timestamp': 'TransportStreamTimestamp',
         'required_http_headers': 'dict(str, str)',
         'direct_stream_url': 'str',
+        'add_api_key_to_direct_stream_url': 'bool',
         'transcoding_url': 'str',
         'transcoding_sub_protocol': 'str',
         'transcoding_container': 'str',
@@ -71,14 +77,19 @@ class MediaSourceInfo(object):
         'encoder_path': 'EncoderPath',
         'encoder_protocol': 'EncoderProtocol',
         'type': 'Type',
+        'probe_path': 'ProbePath',
+        'probe_protocol': 'ProbeProtocol',
         'container': 'Container',
         'size': 'Size',
         'name': 'Name',
         'sort_name': 'SortName',
         'is_remote': 'IsRemote',
+        'has_mixed_protocols': 'HasMixedProtocols',
         'run_time_ticks': 'RunTimeTicks',
         'container_start_time_ticks': 'ContainerStartTimeTicks',
         'supports_transcoding': 'SupportsTranscoding',
+        'trancode_live_start_index': 'TrancodeLiveStartIndex',
+        'wall_clock_start': 'WallClockStart',
         'supports_direct_stream': 'SupportsDirectStream',
         'supports_direct_play': 'SupportsDirectPlay',
         'is_infinite_stream': 'IsInfiniteStream',
@@ -96,6 +107,7 @@ class MediaSourceInfo(object):
         'timestamp': 'Timestamp',
         'required_http_headers': 'RequiredHttpHeaders',
         'direct_stream_url': 'DirectStreamUrl',
+        'add_api_key_to_direct_stream_url': 'AddApiKeyToDirectStreamUrl',
         'transcoding_url': 'TranscodingUrl',
         'transcoding_sub_protocol': 'TranscodingSubProtocol',
         'transcoding_container': 'TranscodingContainer',
@@ -107,7 +119,7 @@ class MediaSourceInfo(object):
         'server_id': 'ServerId'
     }
 
-    def __init__(self, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, container=None, size=None, name=None, sort_name=None, is_remote=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
+    def __init__(self, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, probe_path=None, probe_protocol=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
         """MediaSourceInfo - a model defined in Swagger"""  # noqa: E501
         self._protocol = None
         self._id = None
@@ -115,14 +127,19 @@ class MediaSourceInfo(object):
         self._encoder_path = None
         self._encoder_protocol = None
         self._type = None
+        self._probe_path = None
+        self._probe_protocol = None
         self._container = None
         self._size = None
         self._name = None
         self._sort_name = None
         self._is_remote = None
+        self._has_mixed_protocols = None
         self._run_time_ticks = None
         self._container_start_time_ticks = None
         self._supports_transcoding = None
+        self._trancode_live_start_index = None
+        self._wall_clock_start = None
         self._supports_direct_stream = None
         self._supports_direct_play = None
         self._is_infinite_stream = None
@@ -140,6 +157,7 @@ class MediaSourceInfo(object):
         self._timestamp = None
         self._required_http_headers = None
         self._direct_stream_url = None
+        self._add_api_key_to_direct_stream_url = None
         self._transcoding_url = None
         self._transcoding_sub_protocol = None
         self._transcoding_container = None
@@ -162,6 +180,10 @@ class MediaSourceInfo(object):
             self.encoder_protocol = encoder_protocol
         if type is not None:
             self.type = type
+        if probe_path is not None:
+            self.probe_path = probe_path
+        if probe_protocol is not None:
+            self.probe_protocol = probe_protocol
         if container is not None:
             self.container = container
         if size is not None:
@@ -172,12 +194,18 @@ class MediaSourceInfo(object):
             self.sort_name = sort_name
         if is_remote is not None:
             self.is_remote = is_remote
+        if has_mixed_protocols is not None:
+            self.has_mixed_protocols = has_mixed_protocols
         if run_time_ticks is not None:
             self.run_time_ticks = run_time_ticks
         if container_start_time_ticks is not None:
             self.container_start_time_ticks = container_start_time_ticks
         if supports_transcoding is not None:
             self.supports_transcoding = supports_transcoding
+        if trancode_live_start_index is not None:
+            self.trancode_live_start_index = trancode_live_start_index
+        if wall_clock_start is not None:
+            self.wall_clock_start = wall_clock_start
         if supports_direct_stream is not None:
             self.supports_direct_stream = supports_direct_stream
         if supports_direct_play is not None:
@@ -212,6 +240,8 @@ class MediaSourceInfo(object):
             self.required_http_headers = required_http_headers
         if direct_stream_url is not None:
             self.direct_stream_url = direct_stream_url
+        if add_api_key_to_direct_stream_url is not None:
+            self.add_api_key_to_direct_stream_url = add_api_key_to_direct_stream_url
         if transcoding_url is not None:
             self.transcoding_url = transcoding_url
         if transcoding_sub_protocol is not None:
@@ -237,7 +267,7 @@ class MediaSourceInfo(object):
 
 
         :return: The protocol of this MediaSourceInfo.  # noqa: E501
-        :rtype: MediaInfoMediaProtocol
+        :rtype: MediaProtocol
         """
         return self._protocol
 
@@ -247,7 +277,7 @@ class MediaSourceInfo(object):
 
 
         :param protocol: The protocol of this MediaSourceInfo.  # noqa: E501
-        :type: MediaInfoMediaProtocol
+        :type: MediaProtocol
         """
 
         self._protocol = protocol
@@ -321,7 +351,7 @@ class MediaSourceInfo(object):
 
 
         :return: The encoder_protocol of this MediaSourceInfo.  # noqa: E501
-        :rtype: MediaInfoMediaProtocol
+        :rtype: MediaProtocol
         """
         return self._encoder_protocol
 
@@ -331,7 +361,7 @@ class MediaSourceInfo(object):
 
 
         :param encoder_protocol: The encoder_protocol of this MediaSourceInfo.  # noqa: E501
-        :type: MediaInfoMediaProtocol
+        :type: MediaProtocol
         """
 
         self._encoder_protocol = encoder_protocol
@@ -356,6 +386,48 @@ class MediaSourceInfo(object):
         """
 
         self._type = type
+
+    @property
+    def probe_path(self):
+        """Gets the probe_path of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The probe_path of this MediaSourceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._probe_path
+
+    @probe_path.setter
+    def probe_path(self, probe_path):
+        """Sets the probe_path of this MediaSourceInfo.
+
+
+        :param probe_path: The probe_path of this MediaSourceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._probe_path = probe_path
+
+    @property
+    def probe_protocol(self):
+        """Gets the probe_protocol of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The probe_protocol of this MediaSourceInfo.  # noqa: E501
+        :rtype: MediaProtocol
+        """
+        return self._probe_protocol
+
+    @probe_protocol.setter
+    def probe_protocol(self, probe_protocol):
+        """Sets the probe_protocol of this MediaSourceInfo.
+
+
+        :param probe_protocol: The probe_protocol of this MediaSourceInfo.  # noqa: E501
+        :type: MediaProtocol
+        """
+
+        self._probe_protocol = probe_protocol
 
     @property
     def container(self):
@@ -445,6 +517,7 @@ class MediaSourceInfo(object):
     def is_remote(self):
         """Gets the is_remote of this MediaSourceInfo.  # noqa: E501
 
+        Differentiate internet url vs local network  # noqa: E501
 
         :return: The is_remote of this MediaSourceInfo.  # noqa: E501
         :rtype: bool
@@ -455,12 +528,34 @@ class MediaSourceInfo(object):
     def is_remote(self, is_remote):
         """Sets the is_remote of this MediaSourceInfo.
 
+        Differentiate internet url vs local network  # noqa: E501
 
         :param is_remote: The is_remote of this MediaSourceInfo.  # noqa: E501
         :type: bool
         """
 
         self._is_remote = is_remote
+
+    @property
+    def has_mixed_protocols(self):
+        """Gets the has_mixed_protocols of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The has_mixed_protocols of this MediaSourceInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_mixed_protocols
+
+    @has_mixed_protocols.setter
+    def has_mixed_protocols(self, has_mixed_protocols):
+        """Sets the has_mixed_protocols of this MediaSourceInfo.
+
+
+        :param has_mixed_protocols: The has_mixed_protocols of this MediaSourceInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_mixed_protocols = has_mixed_protocols
 
     @property
     def run_time_ticks(self):
@@ -524,6 +619,48 @@ class MediaSourceInfo(object):
         """
 
         self._supports_transcoding = supports_transcoding
+
+    @property
+    def trancode_live_start_index(self):
+        """Gets the trancode_live_start_index of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The trancode_live_start_index of this MediaSourceInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._trancode_live_start_index
+
+    @trancode_live_start_index.setter
+    def trancode_live_start_index(self, trancode_live_start_index):
+        """Sets the trancode_live_start_index of this MediaSourceInfo.
+
+
+        :param trancode_live_start_index: The trancode_live_start_index of this MediaSourceInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._trancode_live_start_index = trancode_live_start_index
+
+    @property
+    def wall_clock_start(self):
+        """Gets the wall_clock_start of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The wall_clock_start of this MediaSourceInfo.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._wall_clock_start
+
+    @wall_clock_start.setter
+    def wall_clock_start(self, wall_clock_start):
+        """Sets the wall_clock_start of this MediaSourceInfo.
+
+
+        :param wall_clock_start: The wall_clock_start of this MediaSourceInfo.  # noqa: E501
+        :type: datetime
+        """
+
+        self._wall_clock_start = wall_clock_start
 
     @property
     def supports_direct_stream(self):
@@ -825,7 +962,7 @@ class MediaSourceInfo(object):
 
 
         :return: The timestamp of this MediaSourceInfo.  # noqa: E501
-        :rtype: MediaInfoTransportStreamTimestamp
+        :rtype: TransportStreamTimestamp
         """
         return self._timestamp
 
@@ -835,7 +972,7 @@ class MediaSourceInfo(object):
 
 
         :param timestamp: The timestamp of this MediaSourceInfo.  # noqa: E501
-        :type: MediaInfoTransportStreamTimestamp
+        :type: TransportStreamTimestamp
         """
 
         self._timestamp = timestamp
@@ -881,6 +1018,27 @@ class MediaSourceInfo(object):
         """
 
         self._direct_stream_url = direct_stream_url
+
+    @property
+    def add_api_key_to_direct_stream_url(self):
+        """Gets the add_api_key_to_direct_stream_url of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The add_api_key_to_direct_stream_url of this MediaSourceInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._add_api_key_to_direct_stream_url
+
+    @add_api_key_to_direct_stream_url.setter
+    def add_api_key_to_direct_stream_url(self, add_api_key_to_direct_stream_url):
+        """Sets the add_api_key_to_direct_stream_url of this MediaSourceInfo.
+
+
+        :param add_api_key_to_direct_stream_url: The add_api_key_to_direct_stream_url of this MediaSourceInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._add_api_key_to_direct_stream_url = add_api_key_to_direct_stream_url
 
     @property
     def transcoding_url(self):
@@ -1033,6 +1191,7 @@ class MediaSourceInfo(object):
     def item_id(self):
         """Gets the item_id of this MediaSourceInfo.  # noqa: E501
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :return: The item_id of this MediaSourceInfo.  # noqa: E501
         :rtype: str
@@ -1043,6 +1202,7 @@ class MediaSourceInfo(object):
     def item_id(self, item_id):
         """Sets the item_id of this MediaSourceInfo.
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :param item_id: The item_id of this MediaSourceInfo.  # noqa: E501
         :type: str
@@ -1054,6 +1214,7 @@ class MediaSourceInfo(object):
     def server_id(self):
         """Gets the server_id of this MediaSourceInfo.  # noqa: E501
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :return: The server_id of this MediaSourceInfo.  # noqa: E501
         :rtype: str
@@ -1064,6 +1225,7 @@ class MediaSourceInfo(object):
     def server_id(self, server_id):
         """Sets the server_id of this MediaSourceInfo.
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :param server_id: The server_id of this MediaSourceInfo.  # noqa: E501
         :type: str

@@ -36,21 +36,13 @@ open class DisplayPreferencesServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "RememberSorting" : true,
-  "RememberIndexing" : true,
-  "PrimaryImageWidth" : 6,
-  "ScrollDirection" : "Horizontal",
-  "IndexBy" : "IndexBy",
   "SortBy" : "SortBy",
-  "ShowBackdrop" : true,
   "SortOrder" : "Ascending",
-  "PrimaryImageHeight" : 0,
   "Id" : "Id",
   "Client" : "Client",
   "CustomPrefs" : {
     "key" : "CustomPrefs"
-  },
-  "ViewType" : "ViewType"
+  }
 }}]
      - parameter _id: (path) Item Id 
      - parameter userId: (query) User Id 

@@ -15,9 +15,9 @@ public struct LibraryLibraryTypeOptions: Codable {
     public var metadataFetchers: [LibraryLibraryOptionInfo]?
     public var imageFetchers: [LibraryLibraryOptionInfo]?
     public var supportedImageTypes: [ImageType]?
-    public var defaultImageOptions: [ConfigurationImageOption]?
+    public var defaultImageOptions: [ImageOption]?
 
-    public init(type: String? = nil, metadataFetchers: [LibraryLibraryOptionInfo]? = nil, imageFetchers: [LibraryLibraryOptionInfo]? = nil, supportedImageTypes: [ImageType]? = nil, defaultImageOptions: [ConfigurationImageOption]? = nil) {
+    public init(type: String? = nil, metadataFetchers: [LibraryLibraryOptionInfo]? = nil, imageFetchers: [LibraryLibraryOptionInfo]? = nil, supportedImageTypes: [ImageType]? = nil, defaultImageOptions: [ImageOption]? = nil) {
         self.type = type
         self.metadataFetchers = metadataFetchers
         self.imageFetchers = imageFetchers

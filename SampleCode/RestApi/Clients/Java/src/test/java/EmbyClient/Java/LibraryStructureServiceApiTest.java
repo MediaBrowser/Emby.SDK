@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -62,7 +62,7 @@ public class LibraryStructureServiceApiTest {
     /**
      * 
      *
-     * Requires authentication as administrator
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

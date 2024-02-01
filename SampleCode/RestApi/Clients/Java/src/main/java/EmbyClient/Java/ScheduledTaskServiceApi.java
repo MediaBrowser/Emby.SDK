@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -19,8 +19,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.TasksTaskInfo;
-import io.swagger.client.model.TasksTaskTriggerInfo;
+import io.swagger.client.model.TaskInfo;
+import io.swagger.client.model.TaskTriggerInfo;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -239,11 +239,11 @@ public class ScheduledTaskServiceApi {
      * Requires authentication as administrator
      * @param isHidden Optional filter tasks that are hidden, or not. (optional)
      * @param isEnabled Optional filter tasks that are enabled, or not. (optional)
-     * @return List&lt;TasksTaskInfo&gt;
+     * @return List&lt;TaskInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<TasksTaskInfo> getScheduledtasks(Boolean isHidden, Boolean isEnabled) throws ApiException {
-        ApiResponse<List<TasksTaskInfo>> resp = getScheduledtasksWithHttpInfo(isHidden, isEnabled);
+    public List<TaskInfo> getScheduledtasks(Boolean isHidden, Boolean isEnabled) throws ApiException {
+        ApiResponse<List<TaskInfo>> resp = getScheduledtasksWithHttpInfo(isHidden, isEnabled);
         return resp.getData();
     }
 
@@ -252,12 +252,12 @@ public class ScheduledTaskServiceApi {
      * Requires authentication as administrator
      * @param isHidden Optional filter tasks that are hidden, or not. (optional)
      * @param isEnabled Optional filter tasks that are enabled, or not. (optional)
-     * @return ApiResponse&lt;List&lt;TasksTaskInfo&gt;&gt;
+     * @return ApiResponse&lt;List&lt;TaskInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<TasksTaskInfo>> getScheduledtasksWithHttpInfo(Boolean isHidden, Boolean isEnabled) throws ApiException {
+    public ApiResponse<List<TaskInfo>> getScheduledtasksWithHttpInfo(Boolean isHidden, Boolean isEnabled) throws ApiException {
         com.squareup.okhttp.Call call = getScheduledtasksValidateBeforeCall(isHidden, isEnabled, null, null);
-        Type localVarReturnType = new TypeToken<List<TasksTaskInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<TaskInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -270,7 +270,7 @@ public class ScheduledTaskServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getScheduledtasksAsync(Boolean isHidden, Boolean isEnabled, final ApiCallback<List<TasksTaskInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getScheduledtasksAsync(Boolean isHidden, Boolean isEnabled, final ApiCallback<List<TaskInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -292,7 +292,7 @@ public class ScheduledTaskServiceApi {
         }
 
         com.squareup.okhttp.Call call = getScheduledtasksValidateBeforeCall(isHidden, isEnabled, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<TasksTaskInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<TaskInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -366,11 +366,11 @@ public class ScheduledTaskServiceApi {
      * Gets a scheduled task, by Id
      * Requires authentication as administrator
      * @param id  (required)
-     * @return TasksTaskInfo
+     * @return TaskInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public TasksTaskInfo getScheduledtasksById(String id) throws ApiException {
-        ApiResponse<TasksTaskInfo> resp = getScheduledtasksByIdWithHttpInfo(id);
+    public TaskInfo getScheduledtasksById(String id) throws ApiException {
+        ApiResponse<TaskInfo> resp = getScheduledtasksByIdWithHttpInfo(id);
         return resp.getData();
     }
 
@@ -378,12 +378,12 @@ public class ScheduledTaskServiceApi {
      * Gets a scheduled task, by Id
      * Requires authentication as administrator
      * @param id  (required)
-     * @return ApiResponse&lt;TasksTaskInfo&gt;
+     * @return ApiResponse&lt;TaskInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<TasksTaskInfo> getScheduledtasksByIdWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<TaskInfo> getScheduledtasksByIdWithHttpInfo(String id) throws ApiException {
         com.squareup.okhttp.Call call = getScheduledtasksByIdValidateBeforeCall(id, null, null);
-        Type localVarReturnType = new TypeToken<TasksTaskInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<TaskInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -395,7 +395,7 @@ public class ScheduledTaskServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getScheduledtasksByIdAsync(String id, final ApiCallback<TasksTaskInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call getScheduledtasksByIdAsync(String id, final ApiCallback<TaskInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -417,7 +417,7 @@ public class ScheduledTaskServiceApi {
         }
 
         com.squareup.okhttp.Call call = getScheduledtasksByIdValidateBeforeCall(id, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<TasksTaskInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<TaskInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -430,7 +430,7 @@ public class ScheduledTaskServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postScheduledtasksByIdTriggersCall(List<TasksTaskTriggerInfo> body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postScheduledtasksByIdTriggersCall(List<TaskTriggerInfo> body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -473,7 +473,7 @@ public class ScheduledTaskServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postScheduledtasksByIdTriggersValidateBeforeCall(List<TasksTaskTriggerInfo> body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postScheduledtasksByIdTriggersValidateBeforeCall(List<TaskTriggerInfo> body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postScheduledtasksByIdTriggers(Async)");
@@ -499,7 +499,7 @@ public class ScheduledTaskServiceApi {
      * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postScheduledtasksByIdTriggers(List<TasksTaskTriggerInfo> body, String id) throws ApiException {
+    public void postScheduledtasksByIdTriggers(List<TaskTriggerInfo> body, String id) throws ApiException {
         postScheduledtasksByIdTriggersWithHttpInfo(body, id);
     }
 
@@ -511,7 +511,7 @@ public class ScheduledTaskServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postScheduledtasksByIdTriggersWithHttpInfo(List<TasksTaskTriggerInfo> body, String id) throws ApiException {
+    public ApiResponse<Void> postScheduledtasksByIdTriggersWithHttpInfo(List<TaskTriggerInfo> body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postScheduledtasksByIdTriggersValidateBeforeCall(body, id, null, null);
         return apiClient.execute(call);
     }
@@ -525,7 +525,7 @@ public class ScheduledTaskServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postScheduledtasksByIdTriggersAsync(List<TasksTaskTriggerInfo> body, String id, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postScheduledtasksByIdTriggersAsync(List<TaskTriggerInfo> body, String id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

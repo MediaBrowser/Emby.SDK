@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -15,9 +15,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * ParentalRating
+ * Class ParentalRating  
  */
-
+@Schema(description = "Class ParentalRating  ")
 
 public class ParentalRating {
   @SerializedName("Name")
@@ -32,10 +32,10 @@ public class ParentalRating {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -50,10 +50,10 @@ public class ParentalRating {
   }
 
    /**
-   * Get value
+   * The value.
    * @return value
   **/
-  @Schema(description = "")
+  @Schema(description = "The value.")
   public Integer getValue() {
     return value;
   }

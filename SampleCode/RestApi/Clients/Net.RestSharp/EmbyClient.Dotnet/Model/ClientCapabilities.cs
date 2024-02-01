@@ -35,7 +35,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="deviceProfile">deviceProfile.</param>
         /// <param name="iconUrl">iconUrl.</param>
         /// <param name="appId">appId.</param>
-        public ClientCapabilities(List<string> playableMediaTypes = default(List<string>), List<string> supportedCommands = default(List<string>), bool? supportsMediaControl = default(bool?), string pushToken = default(string), string pushTokenType = default(string), bool? supportsSync = default(bool?), DlnaDeviceProfile deviceProfile = default(DlnaDeviceProfile), string iconUrl = default(string), string appId = default(string))
+        public ClientCapabilities(List<string> playableMediaTypes = default(List<string>), List<string> supportedCommands = default(List<string>), bool? supportsMediaControl = default(bool?), string pushToken = default(string), string pushTokenType = default(string), bool? supportsSync = default(bool?), DeviceProfile deviceProfile = default(DeviceProfile), string iconUrl = default(string), string appId = default(string))
         {
             this.PlayableMediaTypes = playableMediaTypes;
             this.SupportedCommands = supportedCommands;
@@ -88,7 +88,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets DeviceProfile
         /// </summary>
         [DataMember(Name="DeviceProfile", EmitDefaultValue=false)]
-        public DlnaDeviceProfile DeviceProfile { get; set; }
+        public DeviceProfile DeviceProfile { get; set; }
 
         /// <summary>
         /// Gets or Sets IconUrl

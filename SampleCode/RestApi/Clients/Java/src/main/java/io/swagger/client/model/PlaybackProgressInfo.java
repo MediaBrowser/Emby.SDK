@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -22,9 +22,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * PlaybackProgressInfo
+ * Class PlaybackProgressInfo.  
  */
-
+@Schema(description = "Class PlaybackProgressInfo.  ")
 
 public class PlaybackProgressInfo {
   @SerializedName("CanSeek")
@@ -114,10 +114,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get canSeek
+   * A value indicating whether this instance can seek.
    * @return canSeek
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance can seek.")
   public Boolean isCanSeek() {
     return canSeek;
   }
@@ -194,10 +194,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get itemId
+   * The item identifier.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The item identifier.")
   public String getItemId() {
     return itemId;
   }
@@ -212,10 +212,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get sessionId
+   * The session id.
    * @return sessionId
   **/
-  @Schema(description = "")
+  @Schema(description = "The session id.")
   public String getSessionId() {
     return sessionId;
   }
@@ -230,10 +230,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get mediaSourceId
+   * The media version identifier.
    * @return mediaSourceId
   **/
-  @Schema(description = "")
+  @Schema(description = "The media version identifier.")
   public String getMediaSourceId() {
     return mediaSourceId;
   }
@@ -248,10 +248,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get audioStreamIndex
+   * The index of the audio stream.
    * @return audioStreamIndex
   **/
-  @Schema(description = "")
+  @Schema(description = "The index of the audio stream.")
   public Integer getAudioStreamIndex() {
     return audioStreamIndex;
   }
@@ -266,10 +266,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get subtitleStreamIndex
+   * The index of the subtitle stream.
    * @return subtitleStreamIndex
   **/
-  @Schema(description = "")
+  @Schema(description = "The index of the subtitle stream.")
   public Integer getSubtitleStreamIndex() {
     return subtitleStreamIndex;
   }
@@ -284,10 +284,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get isPaused
+   * A value indicating whether this instance is paused.
    * @return isPaused
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is paused.")
   public Boolean isIsPaused() {
     return isPaused;
   }
@@ -338,10 +338,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get isMuted
+   * A value indicating whether this instance is muted.
    * @return isMuted
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is muted.")
   public Boolean isIsMuted() {
     return isMuted;
   }
@@ -356,10 +356,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get positionTicks
+   * The position ticks.
    * @return positionTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The position ticks.")
   public Long getPositionTicks() {
     return positionTicks;
   }
@@ -410,10 +410,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get volumeLevel
+   * The volume level.
    * @return volumeLevel
   **/
-  @Schema(description = "")
+  @Schema(description = "The volume level.")
   public Integer getVolumeLevel() {
     return volumeLevel;
   }
@@ -500,10 +500,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get liveStreamId
+   * The live stream identifier.
    * @return liveStreamId
   **/
-  @Schema(description = "")
+  @Schema(description = "The live stream identifier.")
   public String getLiveStreamId() {
     return liveStreamId;
   }
@@ -518,10 +518,10 @@ public class PlaybackProgressInfo {
   }
 
    /**
-   * Get playSessionId
+   * The play session identifier.
    * @return playSessionId
   **/
-  @Schema(description = "")
+  @Schema(description = "The play session identifier.")
   public String getPlaySessionId() {
     return playSessionId;
   }

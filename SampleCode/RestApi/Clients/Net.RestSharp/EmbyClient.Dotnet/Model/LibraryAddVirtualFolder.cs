@@ -31,7 +31,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="refreshLibrary">refreshLibrary.</param>
         /// <param name="paths">paths.</param>
         /// <param name="libraryOptions">libraryOptions.</param>
-        public LibraryAddVirtualFolder(string name = default(string), string collectionType = default(string), bool? refreshLibrary = default(bool?), List<string> paths = default(List<string>), ConfigurationLibraryOptions libraryOptions = default(ConfigurationLibraryOptions))
+        public LibraryAddVirtualFolder(string name = default(string), string collectionType = default(string), bool? refreshLibrary = default(bool?), List<string> paths = default(List<string>), LibraryOptions libraryOptions = default(LibraryOptions))
         {
             this.Name = name;
             this.CollectionType = collectionType;
@@ -68,7 +68,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets LibraryOptions
         /// </summary>
         [DataMember(Name="LibraryOptions", EmitDefaultValue=false)]
-        public ConfigurationLibraryOptions LibraryOptions { get; set; }
+        public LibraryOptions LibraryOptions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

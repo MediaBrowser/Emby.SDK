@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -58,10 +58,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get id
+   * The identifier.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The identifier.")
   public Long getId() {
     return id;
   }
@@ -76,10 +76,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -94,10 +94,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get overview
+   * The overview.
    * @return overview
   **/
-  @Schema(description = "")
+  @Schema(description = "The overview.")
   public String getOverview() {
     return overview;
   }
@@ -112,10 +112,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get shortOverview
+   * The short overview.
    * @return shortOverview
   **/
-  @Schema(description = "")
+  @Schema(description = "The short overview.")
   public String getShortOverview() {
     return shortOverview;
   }
@@ -130,10 +130,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get type
+   * The type.
    * @return type
   **/
-  @Schema(description = "")
+  @Schema(description = "The type.")
   public String getType() {
     return type;
   }
@@ -148,10 +148,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get itemId
+   * The item identifier.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The item identifier.")
   public String getItemId() {
     return itemId;
   }
@@ -166,10 +166,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get date
+   * The date.
    * @return date
   **/
-  @Schema(description = "")
+  @Schema(description = "The date.")
   public OffsetDateTime getDate() {
     return date;
   }
@@ -184,10 +184,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get userId
+   * The user identifier.
    * @return userId
   **/
-  @Schema(description = "")
+  @Schema(description = "The user identifier.")
   public String getUserId() {
     return userId;
   }
@@ -202,10 +202,10 @@ public class ActivityLogEntry {
   }
 
    /**
-   * Get userPrimaryImageTag
+   * The user primary image tag.
    * @return userPrimaryImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The user primary image tag.")
   public String getUserPrimaryImageTag() {
     return userPrimaryImageTag;
   }

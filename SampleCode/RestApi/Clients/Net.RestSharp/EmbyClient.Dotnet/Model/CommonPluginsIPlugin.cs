@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// CommonPluginsIPlugin
+    /// Interface IPlugin  
     /// </summary>
     [DataContract]
         public partial class CommonPluginsIPlugin :  IEquatable<CommonPluginsIPlugin>
@@ -26,12 +26,12 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonPluginsIPlugin" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="description">description.</param>
-        /// <param name="id">id.</param>
+        /// <param name="name">The name of the plugin.</param>
+        /// <param name="description">The description..</param>
+        /// <param name="id">The unique id..</param>
         /// <param name="version">version.</param>
-        /// <param name="assemblyFilePath">assemblyFilePath.</param>
-        /// <param name="dataFolderPath">dataFolderPath.</param>
+        /// <param name="assemblyFilePath">The path to the assembly file.</param>
+        /// <param name="dataFolderPath">The full path to the data folder, where the plugin can store any miscellaneous files needed.</param>
         public CommonPluginsIPlugin(string name = default(string), string description = default(string), string id = default(string), Version version = default(Version), string assemblyFilePath = default(string), string dataFolderPath = default(string))
         {
             this.Name = name;
@@ -43,20 +43,23 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the plugin
         /// </summary>
+        /// <value>The name of the plugin</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// The description.
         /// </summary>
+        /// <value>The description.</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The unique id.
         /// </summary>
+        /// <value>The unique id.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
@@ -67,14 +70,16 @@ namespace EmbyClient.Dotnet.Model
         public Version Version { get; set; }
 
         /// <summary>
-        /// Gets or Sets AssemblyFilePath
+        /// The path to the assembly file
         /// </summary>
+        /// <value>The path to the assembly file</value>
         [DataMember(Name="AssemblyFilePath", EmitDefaultValue=false)]
         public string AssemblyFilePath { get; set; }
 
         /// <summary>
-        /// Gets or Sets DataFolderPath
+        /// The full path to the data folder, where the plugin can store any miscellaneous files needed
         /// </summary>
+        /// <value>The full path to the data folder, where the plugin can store any miscellaneous files needed</value>
         [DataMember(Name="DataFolderPath", EmitDefaultValue=false)]
         public string DataFolderPath { get; set; }
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -28,7 +28,7 @@ class ClientCapabilities(object):
         'push_token': 'str',
         'push_token_type': 'str',
         'supports_sync': 'bool',
-        'device_profile': 'DlnaDeviceProfile',
+        'device_profile': 'DeviceProfile',
         'icon_url': 'str',
         'app_id': 'str'
     }
@@ -208,7 +208,7 @@ class ClientCapabilities(object):
 
 
         :return: The device_profile of this ClientCapabilities.  # noqa: E501
-        :rtype: DlnaDeviceProfile
+        :rtype: DeviceProfile
         """
         return self._device_profile
 
@@ -218,7 +218,7 @@ class ClientCapabilities(object):
 
 
         :param device_profile: The device_profile of this ClientCapabilities.  # noqa: E501
-        :type: DlnaDeviceProfile
+        :type: DeviceProfile
         """
 
         self._device_profile = device_profile

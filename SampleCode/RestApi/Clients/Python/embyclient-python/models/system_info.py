@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -22,7 +22,7 @@ class SystemInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'system_update_level': 'UpdatesPackageVersionClass',
+        'system_update_level': 'PackageVersionClass',
         'operating_system_display_name': 'str',
         'package_name': 'str',
         'has_pending_restart': 'bool',
@@ -32,7 +32,7 @@ class SystemInfo(object):
         'supports_local_port_configuration': 'bool',
         'supports_wake_server': 'bool',
         'web_socket_port_number': 'int',
-        'completed_installations': 'list[UpdatesInstallationInfo]',
+        'completed_installations': 'list[InstallationInfo]',
         'can_self_restart': 'bool',
         'can_self_update': 'bool',
         'can_launch_web_browser': 'bool',
@@ -202,7 +202,7 @@ class SystemInfo(object):
 
 
         :return: The system_update_level of this SystemInfo.  # noqa: E501
-        :rtype: UpdatesPackageVersionClass
+        :rtype: PackageVersionClass
         """
         return self._system_update_level
 
@@ -212,7 +212,7 @@ class SystemInfo(object):
 
 
         :param system_update_level: The system_update_level of this SystemInfo.  # noqa: E501
-        :type: UpdatesPackageVersionClass
+        :type: PackageVersionClass
         """
 
         self._system_update_level = system_update_level
@@ -221,6 +221,7 @@ class SystemInfo(object):
     def operating_system_display_name(self):
         """Gets the operating_system_display_name of this SystemInfo.  # noqa: E501
 
+        The display name of the operating system.  # noqa: E501
 
         :return: The operating_system_display_name of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -231,6 +232,7 @@ class SystemInfo(object):
     def operating_system_display_name(self, operating_system_display_name):
         """Sets the operating_system_display_name of this SystemInfo.
 
+        The display name of the operating system.  # noqa: E501
 
         :param operating_system_display_name: The operating_system_display_name of this SystemInfo.  # noqa: E501
         :type: str
@@ -263,6 +265,7 @@ class SystemInfo(object):
     def has_pending_restart(self):
         """Gets the has_pending_restart of this SystemInfo.  # noqa: E501
 
+        A value indicating whether this instance has pending restart.  # noqa: E501
 
         :return: The has_pending_restart of this SystemInfo.  # noqa: E501
         :rtype: bool
@@ -273,6 +276,7 @@ class SystemInfo(object):
     def has_pending_restart(self, has_pending_restart):
         """Sets the has_pending_restart of this SystemInfo.
 
+        A value indicating whether this instance has pending restart.  # noqa: E501
 
         :param has_pending_restart: The has_pending_restart of this SystemInfo.  # noqa: E501
         :type: bool
@@ -305,6 +309,7 @@ class SystemInfo(object):
     def operating_system(self):
         """Gets the operating_system of this SystemInfo.  # noqa: E501
 
+        The operating sytem.  # noqa: E501
 
         :return: The operating_system of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -315,6 +320,7 @@ class SystemInfo(object):
     def operating_system(self, operating_system):
         """Sets the operating_system of this SystemInfo.
 
+        The operating sytem.  # noqa: E501
 
         :param operating_system: The operating_system of this SystemInfo.  # noqa: E501
         :type: str
@@ -326,6 +332,7 @@ class SystemInfo(object):
     def supports_library_monitor(self):
         """Gets the supports_library_monitor of this SystemInfo.  # noqa: E501
 
+        A value indicating whether \\[supports library monitor\\].  # noqa: E501
 
         :return: The supports_library_monitor of this SystemInfo.  # noqa: E501
         :rtype: bool
@@ -336,6 +343,7 @@ class SystemInfo(object):
     def supports_library_monitor(self, supports_library_monitor):
         """Sets the supports_library_monitor of this SystemInfo.
 
+        A value indicating whether \\[supports library monitor\\].  # noqa: E501
 
         :param supports_library_monitor: The supports_library_monitor of this SystemInfo.  # noqa: E501
         :type: bool
@@ -389,6 +397,7 @@ class SystemInfo(object):
     def web_socket_port_number(self):
         """Gets the web_socket_port_number of this SystemInfo.  # noqa: E501
 
+        The web socket port number.  # noqa: E501
 
         :return: The web_socket_port_number of this SystemInfo.  # noqa: E501
         :rtype: int
@@ -399,6 +408,7 @@ class SystemInfo(object):
     def web_socket_port_number(self, web_socket_port_number):
         """Sets the web_socket_port_number of this SystemInfo.
 
+        The web socket port number.  # noqa: E501
 
         :param web_socket_port_number: The web_socket_port_number of this SystemInfo.  # noqa: E501
         :type: int
@@ -410,9 +420,10 @@ class SystemInfo(object):
     def completed_installations(self):
         """Gets the completed_installations of this SystemInfo.  # noqa: E501
 
+        The completed installations.  # noqa: E501
 
         :return: The completed_installations of this SystemInfo.  # noqa: E501
-        :rtype: list[UpdatesInstallationInfo]
+        :rtype: list[InstallationInfo]
         """
         return self._completed_installations
 
@@ -420,9 +431,10 @@ class SystemInfo(object):
     def completed_installations(self, completed_installations):
         """Sets the completed_installations of this SystemInfo.
 
+        The completed installations.  # noqa: E501
 
         :param completed_installations: The completed_installations of this SystemInfo.  # noqa: E501
-        :type: list[UpdatesInstallationInfo]
+        :type: list[InstallationInfo]
         """
 
         self._completed_installations = completed_installations
@@ -431,6 +443,7 @@ class SystemInfo(object):
     def can_self_restart(self):
         """Gets the can_self_restart of this SystemInfo.  # noqa: E501
 
+        A value indicating whether this instance can self restart.  # noqa: E501
 
         :return: The can_self_restart of this SystemInfo.  # noqa: E501
         :rtype: bool
@@ -441,6 +454,7 @@ class SystemInfo(object):
     def can_self_restart(self, can_self_restart):
         """Sets the can_self_restart of this SystemInfo.
 
+        A value indicating whether this instance can self restart.  # noqa: E501
 
         :param can_self_restart: The can_self_restart of this SystemInfo.  # noqa: E501
         :type: bool
@@ -452,6 +466,7 @@ class SystemInfo(object):
     def can_self_update(self):
         """Gets the can_self_update of this SystemInfo.  # noqa: E501
 
+        A value indicating whether this instance can self update.  # noqa: E501
 
         :return: The can_self_update of this SystemInfo.  # noqa: E501
         :rtype: bool
@@ -462,6 +477,7 @@ class SystemInfo(object):
     def can_self_update(self, can_self_update):
         """Sets the can_self_update of this SystemInfo.
 
+        A value indicating whether this instance can self update.  # noqa: E501
 
         :param can_self_update: The can_self_update of this SystemInfo.  # noqa: E501
         :type: bool
@@ -494,6 +510,7 @@ class SystemInfo(object):
     def program_data_path(self):
         """Gets the program_data_path of this SystemInfo.  # noqa: E501
 
+        The program data path.  # noqa: E501
 
         :return: The program_data_path of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -504,6 +521,7 @@ class SystemInfo(object):
     def program_data_path(self, program_data_path):
         """Sets the program_data_path of this SystemInfo.
 
+        The program data path.  # noqa: E501
 
         :param program_data_path: The program_data_path of this SystemInfo.  # noqa: E501
         :type: str
@@ -515,6 +533,7 @@ class SystemInfo(object):
     def items_by_name_path(self):
         """Gets the items_by_name_path of this SystemInfo.  # noqa: E501
 
+        The items by name path.  # noqa: E501
 
         :return: The items_by_name_path of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -525,6 +544,7 @@ class SystemInfo(object):
     def items_by_name_path(self, items_by_name_path):
         """Sets the items_by_name_path of this SystemInfo.
 
+        The items by name path.  # noqa: E501
 
         :param items_by_name_path: The items_by_name_path of this SystemInfo.  # noqa: E501
         :type: str
@@ -536,6 +556,7 @@ class SystemInfo(object):
     def cache_path(self):
         """Gets the cache_path of this SystemInfo.  # noqa: E501
 
+        The cache path.  # noqa: E501
 
         :return: The cache_path of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -546,6 +567,7 @@ class SystemInfo(object):
     def cache_path(self, cache_path):
         """Sets the cache_path of this SystemInfo.
 
+        The cache path.  # noqa: E501
 
         :param cache_path: The cache_path of this SystemInfo.  # noqa: E501
         :type: str
@@ -557,6 +579,7 @@ class SystemInfo(object):
     def log_path(self):
         """Gets the log_path of this SystemInfo.  # noqa: E501
 
+        The log path.  # noqa: E501
 
         :return: The log_path of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -567,6 +590,7 @@ class SystemInfo(object):
     def log_path(self, log_path):
         """Sets the log_path of this SystemInfo.
 
+        The log path.  # noqa: E501
 
         :param log_path: The log_path of this SystemInfo.  # noqa: E501
         :type: str
@@ -578,6 +602,7 @@ class SystemInfo(object):
     def internal_metadata_path(self):
         """Gets the internal_metadata_path of this SystemInfo.  # noqa: E501
 
+        The internal metadata path.  # noqa: E501
 
         :return: The internal_metadata_path of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -588,6 +613,7 @@ class SystemInfo(object):
     def internal_metadata_path(self, internal_metadata_path):
         """Sets the internal_metadata_path of this SystemInfo.
 
+        The internal metadata path.  # noqa: E501
 
         :param internal_metadata_path: The internal_metadata_path of this SystemInfo.  # noqa: E501
         :type: str
@@ -599,6 +625,7 @@ class SystemInfo(object):
     def transcoding_temp_path(self):
         """Gets the transcoding_temp_path of this SystemInfo.  # noqa: E501
 
+        The transcoding temporary path.  # noqa: E501
 
         :return: The transcoding_temp_path of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -609,6 +636,7 @@ class SystemInfo(object):
     def transcoding_temp_path(self, transcoding_temp_path):
         """Sets the transcoding_temp_path of this SystemInfo.
 
+        The transcoding temporary path.  # noqa: E501
 
         :param transcoding_temp_path: The transcoding_temp_path of this SystemInfo.  # noqa: E501
         :type: str
@@ -620,6 +648,7 @@ class SystemInfo(object):
     def http_server_port_number(self):
         """Gets the http_server_port_number of this SystemInfo.  # noqa: E501
 
+        The HTTP server port number.  # noqa: E501
 
         :return: The http_server_port_number of this SystemInfo.  # noqa: E501
         :rtype: int
@@ -630,6 +659,7 @@ class SystemInfo(object):
     def http_server_port_number(self, http_server_port_number):
         """Sets the http_server_port_number of this SystemInfo.
 
+        The HTTP server port number.  # noqa: E501
 
         :param http_server_port_number: The http_server_port_number of this SystemInfo.  # noqa: E501
         :type: int
@@ -641,6 +671,7 @@ class SystemInfo(object):
     def supports_https(self):
         """Gets the supports_https of this SystemInfo.  # noqa: E501
 
+        A value indicating whether \\[enable HTTPS\\].  # noqa: E501
 
         :return: The supports_https of this SystemInfo.  # noqa: E501
         :rtype: bool
@@ -651,6 +682,7 @@ class SystemInfo(object):
     def supports_https(self, supports_https):
         """Sets the supports_https of this SystemInfo.
 
+        A value indicating whether \\[enable HTTPS\\].  # noqa: E501
 
         :param supports_https: The supports_https of this SystemInfo.  # noqa: E501
         :type: bool
@@ -662,6 +694,7 @@ class SystemInfo(object):
     def https_port_number(self):
         """Gets the https_port_number of this SystemInfo.  # noqa: E501
 
+        The HTTPS server port number.  # noqa: E501
 
         :return: The https_port_number of this SystemInfo.  # noqa: E501
         :rtype: int
@@ -672,6 +705,7 @@ class SystemInfo(object):
     def https_port_number(self, https_port_number):
         """Sets the https_port_number of this SystemInfo.
 
+        The HTTPS server port number.  # noqa: E501
 
         :param https_port_number: The https_port_number of this SystemInfo.  # noqa: E501
         :type: int
@@ -683,6 +717,7 @@ class SystemInfo(object):
     def has_update_available(self):
         """Gets the has_update_available of this SystemInfo.  # noqa: E501
 
+        A value indicating whether this instance has update available.  # noqa: E501
 
         :return: The has_update_available of this SystemInfo.  # noqa: E501
         :rtype: bool
@@ -693,6 +728,7 @@ class SystemInfo(object):
     def has_update_available(self, has_update_available):
         """Sets the has_update_available of this SystemInfo.
 
+        A value indicating whether this instance has update available.  # noqa: E501
 
         :param has_update_available: The has_update_available of this SystemInfo.  # noqa: E501
         :type: bool
@@ -704,6 +740,7 @@ class SystemInfo(object):
     def supports_auto_run_at_startup(self):
         """Gets the supports_auto_run_at_startup of this SystemInfo.  # noqa: E501
 
+        A value indicating whether \\[supports automatic run at startup\\].  # noqa: E501
 
         :return: The supports_auto_run_at_startup of this SystemInfo.  # noqa: E501
         :rtype: bool
@@ -714,6 +751,7 @@ class SystemInfo(object):
     def supports_auto_run_at_startup(self, supports_auto_run_at_startup):
         """Sets the supports_auto_run_at_startup of this SystemInfo.
 
+        A value indicating whether \\[supports automatic run at startup\\].  # noqa: E501
 
         :param supports_auto_run_at_startup: The supports_auto_run_at_startup of this SystemInfo.  # noqa: E501
         :type: bool
@@ -746,6 +784,7 @@ class SystemInfo(object):
     def local_address(self):
         """Gets the local_address of this SystemInfo.  # noqa: E501
 
+        The local address.  # noqa: E501
 
         :return: The local_address of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -756,6 +795,7 @@ class SystemInfo(object):
     def local_address(self, local_address):
         """Sets the local_address of this SystemInfo.
 
+        The local address.  # noqa: E501
 
         :param local_address: The local_address of this SystemInfo.  # noqa: E501
         :type: str
@@ -788,6 +828,7 @@ class SystemInfo(object):
     def wan_address(self):
         """Gets the wan_address of this SystemInfo.  # noqa: E501
 
+        The wan address.  # noqa: E501
 
         :return: The wan_address of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -798,6 +839,7 @@ class SystemInfo(object):
     def wan_address(self, wan_address):
         """Sets the wan_address of this SystemInfo.
 
+        The wan address.  # noqa: E501
 
         :param wan_address: The wan_address of this SystemInfo.  # noqa: E501
         :type: str
@@ -830,6 +872,7 @@ class SystemInfo(object):
     def server_name(self):
         """Gets the server_name of this SystemInfo.  # noqa: E501
 
+        The name of the server.  # noqa: E501
 
         :return: The server_name of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -840,6 +883,7 @@ class SystemInfo(object):
     def server_name(self, server_name):
         """Sets the server_name of this SystemInfo.
 
+        The name of the server.  # noqa: E501
 
         :param server_name: The server_name of this SystemInfo.  # noqa: E501
         :type: str
@@ -851,6 +895,7 @@ class SystemInfo(object):
     def version(self):
         """Gets the version of this SystemInfo.  # noqa: E501
 
+        The version.  # noqa: E501
 
         :return: The version of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -861,6 +906,7 @@ class SystemInfo(object):
     def version(self, version):
         """Sets the version of this SystemInfo.
 
+        The version.  # noqa: E501
 
         :param version: The version of this SystemInfo.  # noqa: E501
         :type: str
@@ -872,6 +918,7 @@ class SystemInfo(object):
     def id(self):
         """Gets the id of this SystemInfo.  # noqa: E501
 
+        The id.  # noqa: E501
 
         :return: The id of this SystemInfo.  # noqa: E501
         :rtype: str
@@ -882,6 +929,7 @@ class SystemInfo(object):
     def id(self, id):
         """Sets the id of this SystemInfo.
 
+        The id.  # noqa: E501
 
         :param id: The id of this SystemInfo.  # noqa: E501
         :type: str

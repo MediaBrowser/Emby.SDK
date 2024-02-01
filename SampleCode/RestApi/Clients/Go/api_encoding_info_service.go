@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -25,15 +25,15 @@ type EncodingInfoServiceApiService service
 EncodingInfoServiceApiService Gets default codec configurations
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []ConfigurationCodecConfiguration
+@return []CodecConfiguration
 */
-func (a *EncodingInfoServiceApiService) GetEncodingCodecconfigurationDefaults(ctx context.Context) ([]ConfigurationCodecConfiguration, *http.Response, error) {
+func (a *EncodingInfoServiceApiService) GetEncodingCodecconfigurationDefaults(ctx context.Context) ([]CodecConfiguration, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []ConfigurationCodecConfiguration
+		localVarReturnValue []CodecConfiguration
 	)
 
 	// create path and map variables
@@ -103,7 +103,7 @@ func (a *EncodingInfoServiceApiService) GetEncodingCodecconfigurationDefaults(ct
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []ConfigurationCodecConfiguration
+			var v []CodecConfiguration
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -121,15 +121,15 @@ func (a *EncodingInfoServiceApiService) GetEncodingCodecconfigurationDefaults(ct
 EncodingInfoServiceApiService Gets details about available video encoders and decoders
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []MediaEncodingCodecsVideoCodecsVideoCodecBase
+@return []VideoCodecBase
 */
-func (a *EncodingInfoServiceApiService) GetEncodingCodecinformationVideo(ctx context.Context) ([]MediaEncodingCodecsVideoCodecsVideoCodecBase, *http.Response, error) {
+func (a *EncodingInfoServiceApiService) GetEncodingCodecinformationVideo(ctx context.Context) ([]VideoCodecBase, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []MediaEncodingCodecsVideoCodecsVideoCodecBase
+		localVarReturnValue []VideoCodecBase
 	)
 
 	// create path and map variables
@@ -199,7 +199,7 @@ func (a *EncodingInfoServiceApiService) GetEncodingCodecinformationVideo(ctx con
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []MediaEncodingCodecsVideoCodecsVideoCodecBase
+			var v []VideoCodecBase
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -217,15 +217,15 @@ func (a *EncodingInfoServiceApiService) GetEncodingCodecinformationVideo(ctx con
 EncodingInfoServiceApiService Gets available tone mapping options
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return MediaEncodingConfigurationToneMappingToneMapOptionsVisibility
+@return ConfigurationToneMappingToneMapOptionsVisibility
 */
-func (a *EncodingInfoServiceApiService) GetEncodingTonemapoptions(ctx context.Context) (MediaEncodingConfigurationToneMappingToneMapOptionsVisibility, *http.Response, error) {
+func (a *EncodingInfoServiceApiService) GetEncodingTonemapoptions(ctx context.Context) (ConfigurationToneMappingToneMapOptionsVisibility, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue MediaEncodingConfigurationToneMappingToneMapOptionsVisibility
+		localVarReturnValue ConfigurationToneMappingToneMapOptionsVisibility
 	)
 
 	// create path and map variables
@@ -295,7 +295,7 @@ func (a *EncodingInfoServiceApiService) GetEncodingTonemapoptions(ctx context.Co
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v MediaEncodingConfigurationToneMappingToneMapOptionsVisibility
+			var v ConfigurationToneMappingToneMapOptionsVisibility
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

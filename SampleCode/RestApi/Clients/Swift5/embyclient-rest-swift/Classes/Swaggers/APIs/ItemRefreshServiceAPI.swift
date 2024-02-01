@@ -21,7 +21,7 @@ open class ItemRefreshServiceAPI {
      - parameter replaceAllImages: (query) Determines if images should be replaced. Only applicable if mode is FullRefresh (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsByIdRefresh(_id: String, recursive: Bool? = nil, metadataRefreshMode: ProvidersMetadataRefreshMode? = nil, imageRefreshMode: ProvidersMetadataRefreshMode? = nil, replaceAllMetadata: Bool? = nil, replaceAllImages: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postItemsByIdRefresh(_id: String, recursive: Bool? = nil, metadataRefreshMode: MetadataRefreshMode? = nil, imageRefreshMode: MetadataRefreshMode? = nil, replaceAllMetadata: Bool? = nil, replaceAllImages: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postItemsByIdRefreshWithRequestBuilder(_id: _id, recursive: recursive, metadataRefreshMode: metadataRefreshMode, imageRefreshMode: imageRefreshMode, replaceAllMetadata: replaceAllMetadata, replaceAllImages: replaceAllImages).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -51,7 +51,7 @@ open class ItemRefreshServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postItemsByIdRefreshWithRequestBuilder(_id: String, recursive: Bool? = nil, metadataRefreshMode: ProvidersMetadataRefreshMode? = nil, imageRefreshMode: ProvidersMetadataRefreshMode? = nil, replaceAllMetadata: Bool? = nil, replaceAllImages: Bool? = nil) -> RequestBuilder<Void> {
+    open class func postItemsByIdRefreshWithRequestBuilder(_id: String, recursive: Bool? = nil, metadataRefreshMode: MetadataRefreshMode? = nil, imageRefreshMode: MetadataRefreshMode? = nil, replaceAllMetadata: Bool? = nil, replaceAllImages: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Refresh"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

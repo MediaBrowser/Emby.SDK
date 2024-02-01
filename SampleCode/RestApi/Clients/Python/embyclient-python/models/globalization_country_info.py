@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -60,6 +60,7 @@ class GlobalizationCountryInfo(object):
     def name(self):
         """Gets the name of this GlobalizationCountryInfo.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this GlobalizationCountryInfo.  # noqa: E501
         :rtype: str
@@ -70,6 +71,7 @@ class GlobalizationCountryInfo(object):
     def name(self, name):
         """Sets the name of this GlobalizationCountryInfo.
 
+        The name.  # noqa: E501
 
         :param name: The name of this GlobalizationCountryInfo.  # noqa: E501
         :type: str
@@ -81,6 +83,7 @@ class GlobalizationCountryInfo(object):
     def display_name(self):
         """Gets the display_name of this GlobalizationCountryInfo.  # noqa: E501
 
+        The display name.  # noqa: E501
 
         :return: The display_name of this GlobalizationCountryInfo.  # noqa: E501
         :rtype: str
@@ -91,6 +94,7 @@ class GlobalizationCountryInfo(object):
     def display_name(self, display_name):
         """Sets the display_name of this GlobalizationCountryInfo.
 
+        The display name.  # noqa: E501
 
         :param display_name: The display_name of this GlobalizationCountryInfo.  # noqa: E501
         :type: str
@@ -102,6 +106,7 @@ class GlobalizationCountryInfo(object):
     def english_name(self):
         """Gets the english_name of this GlobalizationCountryInfo.  # noqa: E501
 
+        The English name.  # noqa: E501
 
         :return: The english_name of this GlobalizationCountryInfo.  # noqa: E501
         :rtype: str
@@ -112,6 +117,7 @@ class GlobalizationCountryInfo(object):
     def english_name(self, english_name):
         """Sets the english_name of this GlobalizationCountryInfo.
 
+        The English name.  # noqa: E501
 
         :param english_name: The english_name of this GlobalizationCountryInfo.  # noqa: E501
         :type: str
@@ -123,6 +129,7 @@ class GlobalizationCountryInfo(object):
     def two_letter_iso_region_name(self):
         """Gets the two_letter_iso_region_name of this GlobalizationCountryInfo.  # noqa: E501
 
+        The name of the two letter ISO region.  # noqa: E501
 
         :return: The two_letter_iso_region_name of this GlobalizationCountryInfo.  # noqa: E501
         :rtype: str
@@ -133,6 +140,7 @@ class GlobalizationCountryInfo(object):
     def two_letter_iso_region_name(self, two_letter_iso_region_name):
         """Sets the two_letter_iso_region_name of this GlobalizationCountryInfo.
 
+        The name of the two letter ISO region.  # noqa: E501
 
         :param two_letter_iso_region_name: The two_letter_iso_region_name of this GlobalizationCountryInfo.  # noqa: E501
         :type: str
@@ -144,6 +152,7 @@ class GlobalizationCountryInfo(object):
     def three_letter_iso_region_name(self):
         """Gets the three_letter_iso_region_name of this GlobalizationCountryInfo.  # noqa: E501
 
+        The name of the three letter ISO region.  # noqa: E501
 
         :return: The three_letter_iso_region_name of this GlobalizationCountryInfo.  # noqa: E501
         :rtype: str
@@ -154,6 +163,7 @@ class GlobalizationCountryInfo(object):
     def three_letter_iso_region_name(self, three_letter_iso_region_name):
         """Sets the three_letter_iso_region_name of this GlobalizationCountryInfo.
 
+        The name of the three letter ISO region.  # noqa: E501
 
         :param three_letter_iso_region_name: The three_letter_iso_region_name of this GlobalizationCountryInfo.  # noqa: E501
         :type: str

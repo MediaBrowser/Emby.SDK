@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -50,6 +50,7 @@ class ThemeMediaResult(object):
     def owner_id(self):
         """Gets the owner_id of this ThemeMediaResult.  # noqa: E501
 
+        The owner id.  # noqa: E501
 
         :return: The owner_id of this ThemeMediaResult.  # noqa: E501
         :rtype: int
@@ -60,6 +61,7 @@ class ThemeMediaResult(object):
     def owner_id(self, owner_id):
         """Sets the owner_id of this ThemeMediaResult.
 
+        The owner id.  # noqa: E501
 
         :param owner_id: The owner_id of this ThemeMediaResult.  # noqa: E501
         :type: int

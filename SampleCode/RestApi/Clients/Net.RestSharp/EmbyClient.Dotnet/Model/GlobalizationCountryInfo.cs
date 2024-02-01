@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// GlobalizationCountryInfo
+    /// Class CountryInfo  
     /// </summary>
     [DataContract]
         public partial class GlobalizationCountryInfo :  IEquatable<GlobalizationCountryInfo>
@@ -26,11 +26,11 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalizationCountryInfo" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="displayName">displayName.</param>
-        /// <param name="englishName">englishName.</param>
-        /// <param name="twoLetterISORegionName">twoLetterISORegionName.</param>
-        /// <param name="threeLetterISORegionName">threeLetterISORegionName.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="displayName">The display name..</param>
+        /// <param name="englishName">The English name..</param>
+        /// <param name="twoLetterISORegionName">The name of the two letter ISO region..</param>
+        /// <param name="threeLetterISORegionName">The name of the three letter ISO region..</param>
         public GlobalizationCountryInfo(string name = default(string), string displayName = default(string), string englishName = default(string), string twoLetterISORegionName = default(string), string threeLetterISORegionName = default(string))
         {
             this.Name = name;
@@ -41,32 +41,37 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// The display name.
         /// </summary>
+        /// <value>The display name.</value>
         [DataMember(Name="DisplayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnglishName
+        /// The English name.
         /// </summary>
+        /// <value>The English name.</value>
         [DataMember(Name="EnglishName", EmitDefaultValue=false)]
         public string EnglishName { get; set; }
 
         /// <summary>
-        /// Gets or Sets TwoLetterISORegionName
+        /// The name of the two letter ISO region.
         /// </summary>
+        /// <value>The name of the two letter ISO region.</value>
         [DataMember(Name="TwoLetterISORegionName", EmitDefaultValue=false)]
         public string TwoLetterISORegionName { get; set; }
 
         /// <summary>
-        /// Gets or Sets ThreeLetterISORegionName
+        /// The name of the three letter ISO region.
         /// </summary>
+        /// <value>The name of the three letter ISO region.</value>
         [DataMember(Name="ThreeLetterISORegionName", EmitDefaultValue=false)]
         public string ThreeLetterISORegionName { get; set; }
 

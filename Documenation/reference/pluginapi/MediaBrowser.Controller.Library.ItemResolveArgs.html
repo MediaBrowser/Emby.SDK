@@ -159,14 +159,14 @@ whenever needed.  Primarily for entity resolution.</p>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
     <div class="level2"><span class="xref">ItemResolveArgs</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventargs.empty">EventArgs.Empty</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs.empty#system-eventargs-empty">EventArgs.Empty</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Library.html">MediaBrowser.Controller.Library</a></h6>
@@ -180,13 +180,13 @@ whenever needed.  Primarily for entity resolution.</p>
   
   
   <a id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_MediaBrowser_Controller_IServerApplicationPaths_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor(MediaBrowser.Controller.IServerApplicationPaths,MediaBrowser.Controller.Providers.IDirectoryService)">ItemResolveArgs(IServerApplicationPaths, IDirectoryService)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs__ctor_MediaBrowser_Controller_Providers_IDirectoryService_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.#ctor(MediaBrowser.Controller.Providers.IDirectoryService,MediaBrowser.Controller.Library.ILibraryManager)">ItemResolveArgs(IDirectoryService, ILibraryManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Controller.Library.ItemResolveArgs.html">ItemResolveArgs</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemResolveArgs(IServerApplicationPaths appPaths, IDirectoryService directoryService)</code></pre>
+    <pre><code class="lang-csharp hljs">public ItemResolveArgs(IDirectoryService directoryService, ILibraryManager libraryManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -199,16 +199,14 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationPaths.html">IServerApplicationPaths</a></td>
-        <td><span class="parametername">appPaths</span></td>
-        <td><p>The app paths.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
         <td><span class="parametername">directoryService</span></td>
-        <td><p>The directory service.</p>
-</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
+        <td><span class="parametername">libraryManager</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -234,7 +232,7 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -293,33 +291,6 @@ whenever needed.  Primarily for entity resolution.</p>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_FileSystemChildren_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.FileSystemChildren*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_FileSystemChildren" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.FileSystemChildren">FileSystemChildren</h4>
-  <div class="markdown level1 summary"><p>Gets the file system children.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileSystemMetadata[] FileSystemChildren { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>[]</td>
-        <td><p>The file system children.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Library_ItemResolveArgs_IsDirectory_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsDirectory*"></a>
   <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_IsDirectory" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsDirectory">IsDirectory</h4>
   <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is directory.</p>
@@ -339,62 +310,8 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if this instance is directory; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_IsPhysicalRoot_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsPhysicalRoot*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_IsPhysicalRoot" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsPhysicalRoot">IsPhysicalRoot</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is physical root.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPhysicalRoot { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if this instance is physical root; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_IsVf_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsVf*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_IsVf" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.IsVf">IsVf</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is vf.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsVf { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if this instance is vf; otherwise, <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -472,35 +389,8 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><p>The path.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_PhysicalLocations_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.PhysicalLocations*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_PhysicalLocations" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.PhysicalLocations">PhysicalLocations</h4>
-  <div class="markdown level1 summary"><p>Gets the physical locations.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] PhysicalLocations { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><p>The physical locations.</p>
 </td>
       </tr>
     </tbody>
@@ -509,58 +399,14 @@ whenever needed.  Primarily for entity resolution.</p>
   </h3>
   
   
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_AddAdditionalLocation_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.AddAdditionalLocation*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_AddAdditionalLocation_System_String_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.AddAdditionalLocation(System.String)">AddAdditionalLocation(String)</h4>
-  <div class="markdown level1 summary"><p>Adds the additional location.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddAdditionalLocation(string path)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">path</span></td>
-        <td><p>The path.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Library_ItemResolveArgs_ContainsFileSystemEntryByName_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.ContainsFileSystemEntryByName*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_ContainsFileSystemEntryByName_System_String_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.ContainsFileSystemEntryByName(System.String)">ContainsFileSystemEntryByName(String)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_ContainsFileSystemEntryByName_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.ContainsFileSystemEntryByName(System.String,System.Boolean)">ContainsFileSystemEntryByName(String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Determines whether [contains file system entry by name] [the specified name].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ContainsFileSystemEntryByName(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ContainsFileSystemEntryByName(string name, bool caseSensitive)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -573,10 +419,14 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
-        <td><p>The name.</p>
-</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">caseSensitive</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -590,9 +440,8 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if [contains file system entry by name] [the specified name]; otherwise, <code>false</code>.</p>
-</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -616,40 +465,21 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_GetFileSystemEntryByPath_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.GetFileSystemEntryByPath*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_GetFileSystemEntryByPath_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.GetFileSystemEntryByPath(System.ReadOnlySpan{System.Char})">GetFileSystemEntryByPath(ReadOnlySpan&lt;Char&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets the file system entry by path.</p>
-</div>
+  <a id="MediaBrowser_Controller_Library_ItemResolveArgs_GetFileSystemChildren_" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.GetFileSystemChildren*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ItemResolveArgs_GetFileSystemChildren" data-uid="MediaBrowser.Controller.Library.ItemResolveArgs.GetFileSystemChildren">GetFileSystemChildren()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileSystemMetadata GetFileSystemEntryByPath(ReadOnlySpan&lt;char&gt; path)</code></pre>
+    <pre><code class="lang-csharp hljs">public FileSystemMetadata[] GetFileSystemChildren()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
-        <td><span class="parametername">path</span></td>
-        <td><p>The path.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -660,23 +490,7 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a></td>
-        <td><p>FileSystemInfo.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -727,7 +541,7 @@ whenever needed.  Primarily for entity resolution.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -747,6 +561,10 @@ whenever needed.  Primarily for entity resolution.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>

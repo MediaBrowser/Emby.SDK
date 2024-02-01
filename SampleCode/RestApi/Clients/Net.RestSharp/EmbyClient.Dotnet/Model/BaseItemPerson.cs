@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// BaseItemPerson
+    /// This is used by the api to get information about a Person within a BaseItem  
     /// </summary>
     [DataContract]
         public partial class BaseItemPerson :  IEquatable<BaseItemPerson>
@@ -26,11 +26,11 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseItemPerson" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="id">id.</param>
-        /// <param name="role">role.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="id">The identifier..</param>
+        /// <param name="role">The role..</param>
         /// <param name="type">type.</param>
-        /// <param name="primaryImageTag">primaryImageTag.</param>
+        /// <param name="primaryImageTag">The primary image tag..</param>
         public BaseItemPerson(string name = default(string), string id = default(string), string role = default(string), PersonType type = default(PersonType), string primaryImageTag = default(string))
         {
             this.Name = name;
@@ -41,20 +41,23 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The identifier.
         /// </summary>
+        /// <value>The identifier.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Role
+        /// The role.
         /// </summary>
+        /// <value>The role.</value>
         [DataMember(Name="Role", EmitDefaultValue=false)]
         public string Role { get; set; }
 
@@ -65,8 +68,9 @@ namespace EmbyClient.Dotnet.Model
         public PersonType Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryImageTag
+        /// The primary image tag.
         /// </summary>
+        /// <value>The primary image tag.</value>
         [DataMember(Name="PrimaryImageTag", EmitDefaultValue=false)]
         public string PrimaryImageTag { get; set; }
 

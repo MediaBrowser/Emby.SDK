@@ -11,7 +11,9 @@ import Foundation
 
 public struct NameLongIdPair: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The identifier. */
     public var _id: Int64?
 
     public init(name: String? = nil, _id: Int64? = nil) {

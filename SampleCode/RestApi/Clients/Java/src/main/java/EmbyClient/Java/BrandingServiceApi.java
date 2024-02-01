@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -90,7 +90,7 @@ public class BrandingServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -108,7 +108,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets branding configuration
-     * No authentication required
+     * Requires authentication as user
      * @return BrandingBrandingOptions
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -119,7 +119,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets branding configuration
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;BrandingBrandingOptions&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -131,7 +131,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets branding configuration (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -206,7 +206,7 @@ public class BrandingServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -224,7 +224,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets custom css
-     * No authentication required
+     * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getBrandingCss() throws ApiException {
@@ -233,7 +233,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets custom css
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -244,7 +244,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets custom css (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -318,7 +318,7 @@ public class BrandingServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -336,7 +336,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets custom css
-     * No authentication required
+     * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getBrandingCssCss() throws ApiException {
@@ -345,7 +345,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets custom css
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -356,7 +356,7 @@ public class BrandingServiceApi {
 
     /**
      * Gets custom css (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

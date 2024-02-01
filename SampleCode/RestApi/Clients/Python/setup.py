@@ -1,13 +1,13 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "embyclient-python"
-VERSION = "4.7.5.0"
+VERSION = "4.8.0.80"
 # To install the library, run the following
 #
 # python setup.py install
@@ -20,10 +20,10 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="Emby REST API",
+    description="Emby Server REST API",
     author_email="",
     url="",
-    keywords=["Emby REST API"],
+    keywords=["Emby Server REST API"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,

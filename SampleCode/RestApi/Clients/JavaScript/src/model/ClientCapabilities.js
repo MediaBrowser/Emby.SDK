@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,12 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import DlnaDeviceProfile from './DlnaDeviceProfile';
+import DeviceProfile from './DeviceProfile';
 
 /**
 * The ClientCapabilities model module.
 * @module model/ClientCapabilities
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ClientCapabilities {
     /**
@@ -61,7 +61,7 @@ export default class ClientCapabilities {
                 obj['SupportsSync'] = ApiClient.convertToType(data['SupportsSync'], 'Boolean');
             }
             if (data.hasOwnProperty('DeviceProfile')) {
-                obj['DeviceProfile'] = DlnaDeviceProfile.constructFromObject(data['DeviceProfile']);
+                obj['DeviceProfile'] = DeviceProfile.constructFromObject(data['DeviceProfile']);
             }
             if (data.hasOwnProperty('IconUrl')) {
                 obj['IconUrl'] = ApiClient.convertToType(data['IconUrl'], 'String');
@@ -98,7 +98,7 @@ export default class ClientCapabilities {
     */
     'SupportsSync' = undefined;
     /**
-    * @member {module:model/DlnaDeviceProfile} DeviceProfile
+    * @member {module:model/DeviceProfile} DeviceProfile
     */
     'DeviceProfile' = undefined;
     /**

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -26,6 +26,7 @@ class BaseItemDto(object):
         'original_title': 'str',
         'server_id': 'str',
         'id': 'str',
+        'guid': 'str',
         'etag': 'str',
         'prefix': 'str',
         'playlist_item_id': 'str',
@@ -33,16 +34,18 @@ class BaseItemDto(object):
         'extra_type': 'str',
         'sort_index_number': 'int',
         'sort_parent_index_number': 'int',
-        'airs_before_season_number': 'int',
-        'airs_after_season_number': 'int',
-        'airs_before_episode_number': 'int',
         'can_delete': 'bool',
         'can_download': 'bool',
+        'can_edit_items': 'bool',
         'supports_resume': 'bool',
         'presentation_unique_key': 'str',
         'preferred_metadata_language': 'str',
         'preferred_metadata_country_code': 'str',
         'supports_sync': 'bool',
+        'sync_status': 'SyncJobItemStatus',
+        'can_manage_access': 'bool',
+        'can_leave_content': 'bool',
+        'can_make_public': 'bool',
         'container': 'str',
         'sort_name': 'str',
         'forced_sort_name': 'str',
@@ -68,7 +71,6 @@ class BaseItemDto(object):
         'size': 'int',
         'file_name': 'str',
         'bitrate': 'int',
-        'play_access': 'LibraryPlayAccess',
         'production_year': 'int',
         'number': 'str',
         'channel_number': 'str',
@@ -118,6 +120,8 @@ class BaseItemDto(object):
         'backdrop_image_tags': 'list[str]',
         'parent_logo_image_tag': 'str',
         'series_studio': 'str',
+        'primary_image_item_id': 'str',
+        'primary_image_tag': 'str',
         'parent_thumb_item_id': 'str',
         'parent_thumb_image_tag': 'str',
         'chapters': 'list[ChapterInfo]',
@@ -179,6 +183,7 @@ class BaseItemDto(object):
         'original_title': 'OriginalTitle',
         'server_id': 'ServerId',
         'id': 'Id',
+        'guid': 'Guid',
         'etag': 'Etag',
         'prefix': 'Prefix',
         'playlist_item_id': 'PlaylistItemId',
@@ -186,16 +191,18 @@ class BaseItemDto(object):
         'extra_type': 'ExtraType',
         'sort_index_number': 'SortIndexNumber',
         'sort_parent_index_number': 'SortParentIndexNumber',
-        'airs_before_season_number': 'AirsBeforeSeasonNumber',
-        'airs_after_season_number': 'AirsAfterSeasonNumber',
-        'airs_before_episode_number': 'AirsBeforeEpisodeNumber',
         'can_delete': 'CanDelete',
         'can_download': 'CanDownload',
+        'can_edit_items': 'CanEditItems',
         'supports_resume': 'SupportsResume',
         'presentation_unique_key': 'PresentationUniqueKey',
         'preferred_metadata_language': 'PreferredMetadataLanguage',
         'preferred_metadata_country_code': 'PreferredMetadataCountryCode',
         'supports_sync': 'SupportsSync',
+        'sync_status': 'SyncStatus',
+        'can_manage_access': 'CanManageAccess',
+        'can_leave_content': 'CanLeaveContent',
+        'can_make_public': 'CanMakePublic',
         'container': 'Container',
         'sort_name': 'SortName',
         'forced_sort_name': 'ForcedSortName',
@@ -221,7 +228,6 @@ class BaseItemDto(object):
         'size': 'Size',
         'file_name': 'FileName',
         'bitrate': 'Bitrate',
-        'play_access': 'PlayAccess',
         'production_year': 'ProductionYear',
         'number': 'Number',
         'channel_number': 'ChannelNumber',
@@ -271,6 +277,8 @@ class BaseItemDto(object):
         'backdrop_image_tags': 'BackdropImageTags',
         'parent_logo_image_tag': 'ParentLogoImageTag',
         'series_studio': 'SeriesStudio',
+        'primary_image_item_id': 'PrimaryImageItemId',
+        'primary_image_tag': 'PrimaryImageTag',
         'parent_thumb_item_id': 'ParentThumbItemId',
         'parent_thumb_image_tag': 'ParentThumbImageTag',
         'chapters': 'Chapters',
@@ -327,12 +335,13 @@ class BaseItemDto(object):
         'affiliate_call_sign': 'AffiliateCallSign'
     }
 
-    def __init__(self, name=None, original_title=None, server_id=None, id=None, etag=None, prefix=None, playlist_item_id=None, date_created=None, extra_type=None, sort_index_number=None, sort_parent_index_number=None, airs_before_season_number=None, airs_after_season_number=None, airs_before_episode_number=None, can_delete=None, can_download=None, supports_resume=None, presentation_unique_key=None, preferred_metadata_language=None, preferred_metadata_country_code=None, supports_sync=None, container=None, sort_name=None, forced_sort_name=None, video3_d_format=None, premiere_date=None, external_urls=None, media_sources=None, critic_rating=None, game_system_id=None, as_series=None, game_system=None, production_locations=None, path=None, official_rating=None, custom_rating=None, channel_id=None, channel_name=None, overview=None, taglines=None, genres=None, community_rating=None, run_time_ticks=None, size=None, file_name=None, bitrate=None, play_access=None, production_year=None, number=None, channel_number=None, index_number=None, index_number_end=None, parent_index_number=None, remote_trailers=None, provider_ids=None, is_folder=None, parent_id=None, type=None, people=None, studios=None, genre_items=None, tag_items=None, parent_logo_item_id=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, local_trailer_count=None, user_data=None, recursive_item_count=None, child_count=None, series_name=None, series_id=None, season_id=None, special_feature_count=None, display_preferences_id=None, status=None, air_days=None, tags=None, primary_image_aspect_ratio=None, artists=None, artist_items=None, composers=None, album=None, collection_type=None, display_order=None, album_id=None, album_primary_image_tag=None, series_primary_image_tag=None, album_artist=None, album_artists=None, season_name=None, media_streams=None, part_count=None, image_tags=None, backdrop_image_tags=None, parent_logo_image_tag=None, series_studio=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, chapters=None, location_type=None, media_type=None, end_date=None, locked_fields=None, lock_data=None, width=None, height=None, camera_make=None, camera_model=None, software=None, exposure_time=None, focal_length=None, image_orientation=None, aperture=None, shutter_speed=None, latitude=None, longitude=None, altitude=None, iso_speed_rating=None, series_timer_id=None, channel_primary_image_tag=None, start_date=None, completion_percentage=None, is_repeat=None, is_new=None, episode_title=None, is_movie=None, is_sports=None, is_series=None, is_live=None, is_news=None, is_kids=None, is_premiere=None, timer_type=None, disabled=None, management_id=None, timer_id=None, current_program=None, movie_count=None, series_count=None, album_count=None, song_count=None, music_video_count=None, subviews=None, listings_provider_id=None, listings_channel_id=None, listings_path=None, listings_id=None, listings_channel_name=None, listings_channel_number=None, affiliate_call_sign=None):  # noqa: E501
+    def __init__(self, name=None, original_title=None, server_id=None, id=None, guid=None, etag=None, prefix=None, playlist_item_id=None, date_created=None, extra_type=None, sort_index_number=None, sort_parent_index_number=None, can_delete=None, can_download=None, can_edit_items=None, supports_resume=None, presentation_unique_key=None, preferred_metadata_language=None, preferred_metadata_country_code=None, supports_sync=None, sync_status=None, can_manage_access=None, can_leave_content=None, can_make_public=None, container=None, sort_name=None, forced_sort_name=None, video3_d_format=None, premiere_date=None, external_urls=None, media_sources=None, critic_rating=None, game_system_id=None, as_series=None, game_system=None, production_locations=None, path=None, official_rating=None, custom_rating=None, channel_id=None, channel_name=None, overview=None, taglines=None, genres=None, community_rating=None, run_time_ticks=None, size=None, file_name=None, bitrate=None, production_year=None, number=None, channel_number=None, index_number=None, index_number_end=None, parent_index_number=None, remote_trailers=None, provider_ids=None, is_folder=None, parent_id=None, type=None, people=None, studios=None, genre_items=None, tag_items=None, parent_logo_item_id=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, local_trailer_count=None, user_data=None, recursive_item_count=None, child_count=None, series_name=None, series_id=None, season_id=None, special_feature_count=None, display_preferences_id=None, status=None, air_days=None, tags=None, primary_image_aspect_ratio=None, artists=None, artist_items=None, composers=None, album=None, collection_type=None, display_order=None, album_id=None, album_primary_image_tag=None, series_primary_image_tag=None, album_artist=None, album_artists=None, season_name=None, media_streams=None, part_count=None, image_tags=None, backdrop_image_tags=None, parent_logo_image_tag=None, series_studio=None, primary_image_item_id=None, primary_image_tag=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, chapters=None, location_type=None, media_type=None, end_date=None, locked_fields=None, lock_data=None, width=None, height=None, camera_make=None, camera_model=None, software=None, exposure_time=None, focal_length=None, image_orientation=None, aperture=None, shutter_speed=None, latitude=None, longitude=None, altitude=None, iso_speed_rating=None, series_timer_id=None, channel_primary_image_tag=None, start_date=None, completion_percentage=None, is_repeat=None, is_new=None, episode_title=None, is_movie=None, is_sports=None, is_series=None, is_live=None, is_news=None, is_kids=None, is_premiere=None, timer_type=None, disabled=None, management_id=None, timer_id=None, current_program=None, movie_count=None, series_count=None, album_count=None, song_count=None, music_video_count=None, subviews=None, listings_provider_id=None, listings_channel_id=None, listings_path=None, listings_id=None, listings_channel_name=None, listings_channel_number=None, affiliate_call_sign=None):  # noqa: E501
         """BaseItemDto - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._original_title = None
         self._server_id = None
         self._id = None
+        self._guid = None
         self._etag = None
         self._prefix = None
         self._playlist_item_id = None
@@ -340,16 +349,18 @@ class BaseItemDto(object):
         self._extra_type = None
         self._sort_index_number = None
         self._sort_parent_index_number = None
-        self._airs_before_season_number = None
-        self._airs_after_season_number = None
-        self._airs_before_episode_number = None
         self._can_delete = None
         self._can_download = None
+        self._can_edit_items = None
         self._supports_resume = None
         self._presentation_unique_key = None
         self._preferred_metadata_language = None
         self._preferred_metadata_country_code = None
         self._supports_sync = None
+        self._sync_status = None
+        self._can_manage_access = None
+        self._can_leave_content = None
+        self._can_make_public = None
         self._container = None
         self._sort_name = None
         self._forced_sort_name = None
@@ -375,7 +386,6 @@ class BaseItemDto(object):
         self._size = None
         self._file_name = None
         self._bitrate = None
-        self._play_access = None
         self._production_year = None
         self._number = None
         self._channel_number = None
@@ -425,6 +435,8 @@ class BaseItemDto(object):
         self._backdrop_image_tags = None
         self._parent_logo_image_tag = None
         self._series_studio = None
+        self._primary_image_item_id = None
+        self._primary_image_tag = None
         self._parent_thumb_item_id = None
         self._parent_thumb_image_tag = None
         self._chapters = None
@@ -488,6 +500,8 @@ class BaseItemDto(object):
             self.server_id = server_id
         if id is not None:
             self.id = id
+        if guid is not None:
+            self.guid = guid
         if etag is not None:
             self.etag = etag
         if prefix is not None:
@@ -502,16 +516,12 @@ class BaseItemDto(object):
             self.sort_index_number = sort_index_number
         if sort_parent_index_number is not None:
             self.sort_parent_index_number = sort_parent_index_number
-        if airs_before_season_number is not None:
-            self.airs_before_season_number = airs_before_season_number
-        if airs_after_season_number is not None:
-            self.airs_after_season_number = airs_after_season_number
-        if airs_before_episode_number is not None:
-            self.airs_before_episode_number = airs_before_episode_number
         if can_delete is not None:
             self.can_delete = can_delete
         if can_download is not None:
             self.can_download = can_download
+        if can_edit_items is not None:
+            self.can_edit_items = can_edit_items
         if supports_resume is not None:
             self.supports_resume = supports_resume
         if presentation_unique_key is not None:
@@ -522,6 +532,14 @@ class BaseItemDto(object):
             self.preferred_metadata_country_code = preferred_metadata_country_code
         if supports_sync is not None:
             self.supports_sync = supports_sync
+        if sync_status is not None:
+            self.sync_status = sync_status
+        if can_manage_access is not None:
+            self.can_manage_access = can_manage_access
+        if can_leave_content is not None:
+            self.can_leave_content = can_leave_content
+        if can_make_public is not None:
+            self.can_make_public = can_make_public
         if container is not None:
             self.container = container
         if sort_name is not None:
@@ -572,8 +590,6 @@ class BaseItemDto(object):
             self.file_name = file_name
         if bitrate is not None:
             self.bitrate = bitrate
-        if play_access is not None:
-            self.play_access = play_access
         if production_year is not None:
             self.production_year = production_year
         if number is not None:
@@ -672,6 +688,10 @@ class BaseItemDto(object):
             self.parent_logo_image_tag = parent_logo_image_tag
         if series_studio is not None:
             self.series_studio = series_studio
+        if primary_image_item_id is not None:
+            self.primary_image_item_id = primary_image_item_id
+        if primary_image_tag is not None:
+            self.primary_image_tag = primary_image_tag
         if parent_thumb_item_id is not None:
             self.parent_thumb_item_id = parent_thumb_item_id
         if parent_thumb_image_tag is not None:
@@ -785,6 +805,7 @@ class BaseItemDto(object):
     def name(self):
         """Gets the name of this BaseItemDto.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -795,6 +816,7 @@ class BaseItemDto(object):
     def name(self, name):
         """Sets the name of this BaseItemDto.
 
+        The name.  # noqa: E501
 
         :param name: The name of this BaseItemDto.  # noqa: E501
         :type: str
@@ -827,6 +849,7 @@ class BaseItemDto(object):
     def server_id(self):
         """Gets the server_id of this BaseItemDto.  # noqa: E501
 
+        The server identifier.  # noqa: E501
 
         :return: The server_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -837,6 +860,7 @@ class BaseItemDto(object):
     def server_id(self, server_id):
         """Sets the server_id of this BaseItemDto.
 
+        The server identifier.  # noqa: E501
 
         :param server_id: The server_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -848,6 +872,7 @@ class BaseItemDto(object):
     def id(self):
         """Gets the id of this BaseItemDto.  # noqa: E501
 
+        The id.  # noqa: E501
 
         :return: The id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -858,6 +883,7 @@ class BaseItemDto(object):
     def id(self, id):
         """Sets the id of this BaseItemDto.
 
+        The id.  # noqa: E501
 
         :param id: The id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -866,9 +892,31 @@ class BaseItemDto(object):
         self._id = id
 
     @property
+    def guid(self):
+        """Gets the guid of this BaseItemDto.  # noqa: E501
+
+
+        :return: The guid of this BaseItemDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._guid
+
+    @guid.setter
+    def guid(self, guid):
+        """Sets the guid of this BaseItemDto.
+
+
+        :param guid: The guid of this BaseItemDto.  # noqa: E501
+        :type: str
+        """
+
+        self._guid = guid
+
+    @property
     def etag(self):
         """Gets the etag of this BaseItemDto.  # noqa: E501
 
+        The etag.  # noqa: E501
 
         :return: The etag of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -879,6 +927,7 @@ class BaseItemDto(object):
     def etag(self, etag):
         """Sets the etag of this BaseItemDto.
 
+        The etag.  # noqa: E501
 
         :param etag: The etag of this BaseItemDto.  # noqa: E501
         :type: str
@@ -890,6 +939,7 @@ class BaseItemDto(object):
     def prefix(self):
         """Gets the prefix of this BaseItemDto.  # noqa: E501
 
+        The Prefix.  # noqa: E501
 
         :return: The prefix of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -900,6 +950,7 @@ class BaseItemDto(object):
     def prefix(self, prefix):
         """Sets the prefix of this BaseItemDto.
 
+        The Prefix.  # noqa: E501
 
         :param prefix: The prefix of this BaseItemDto.  # noqa: E501
         :type: str
@@ -911,6 +962,7 @@ class BaseItemDto(object):
     def playlist_item_id(self):
         """Gets the playlist_item_id of this BaseItemDto.  # noqa: E501
 
+        The playlist item identifier.  # noqa: E501
 
         :return: The playlist_item_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -921,6 +973,7 @@ class BaseItemDto(object):
     def playlist_item_id(self, playlist_item_id):
         """Sets the playlist_item_id of this BaseItemDto.
 
+        The playlist item identifier.  # noqa: E501
 
         :param playlist_item_id: The playlist_item_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -932,6 +985,7 @@ class BaseItemDto(object):
     def date_created(self):
         """Gets the date_created of this BaseItemDto.  # noqa: E501
 
+        The date created.  # noqa: E501
 
         :return: The date_created of this BaseItemDto.  # noqa: E501
         :rtype: datetime
@@ -942,6 +996,7 @@ class BaseItemDto(object):
     def date_created(self, date_created):
         """Sets the date_created of this BaseItemDto.
 
+        The date created.  # noqa: E501
 
         :param date_created: The date_created of this BaseItemDto.  # noqa: E501
         :type: datetime
@@ -1013,69 +1068,6 @@ class BaseItemDto(object):
         self._sort_parent_index_number = sort_parent_index_number
 
     @property
-    def airs_before_season_number(self):
-        """Gets the airs_before_season_number of this BaseItemDto.  # noqa: E501
-
-
-        :return: The airs_before_season_number of this BaseItemDto.  # noqa: E501
-        :rtype: int
-        """
-        return self._airs_before_season_number
-
-    @airs_before_season_number.setter
-    def airs_before_season_number(self, airs_before_season_number):
-        """Sets the airs_before_season_number of this BaseItemDto.
-
-
-        :param airs_before_season_number: The airs_before_season_number of this BaseItemDto.  # noqa: E501
-        :type: int
-        """
-
-        self._airs_before_season_number = airs_before_season_number
-
-    @property
-    def airs_after_season_number(self):
-        """Gets the airs_after_season_number of this BaseItemDto.  # noqa: E501
-
-
-        :return: The airs_after_season_number of this BaseItemDto.  # noqa: E501
-        :rtype: int
-        """
-        return self._airs_after_season_number
-
-    @airs_after_season_number.setter
-    def airs_after_season_number(self, airs_after_season_number):
-        """Sets the airs_after_season_number of this BaseItemDto.
-
-
-        :param airs_after_season_number: The airs_after_season_number of this BaseItemDto.  # noqa: E501
-        :type: int
-        """
-
-        self._airs_after_season_number = airs_after_season_number
-
-    @property
-    def airs_before_episode_number(self):
-        """Gets the airs_before_episode_number of this BaseItemDto.  # noqa: E501
-
-
-        :return: The airs_before_episode_number of this BaseItemDto.  # noqa: E501
-        :rtype: int
-        """
-        return self._airs_before_episode_number
-
-    @airs_before_episode_number.setter
-    def airs_before_episode_number(self, airs_before_episode_number):
-        """Sets the airs_before_episode_number of this BaseItemDto.
-
-
-        :param airs_before_episode_number: The airs_before_episode_number of this BaseItemDto.  # noqa: E501
-        :type: int
-        """
-
-        self._airs_before_episode_number = airs_before_episode_number
-
-    @property
     def can_delete(self):
         """Gets the can_delete of this BaseItemDto.  # noqa: E501
 
@@ -1116,6 +1108,27 @@ class BaseItemDto(object):
         """
 
         self._can_download = can_download
+
+    @property
+    def can_edit_items(self):
+        """Gets the can_edit_items of this BaseItemDto.  # noqa: E501
+
+
+        :return: The can_edit_items of this BaseItemDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_edit_items
+
+    @can_edit_items.setter
+    def can_edit_items(self, can_edit_items):
+        """Sets the can_edit_items of this BaseItemDto.
+
+
+        :param can_edit_items: The can_edit_items of this BaseItemDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_edit_items = can_edit_items
 
     @property
     def supports_resume(self):
@@ -1205,6 +1218,7 @@ class BaseItemDto(object):
     def supports_sync(self):
         """Gets the supports_sync of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether \\[supports synchronize\\].  # noqa: E501
 
         :return: The supports_sync of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -1215,12 +1229,97 @@ class BaseItemDto(object):
     def supports_sync(self, supports_sync):
         """Sets the supports_sync of this BaseItemDto.
 
+        A value indicating whether \\[supports synchronize\\].  # noqa: E501
 
         :param supports_sync: The supports_sync of this BaseItemDto.  # noqa: E501
         :type: bool
         """
 
         self._supports_sync = supports_sync
+
+    @property
+    def sync_status(self):
+        """Gets the sync_status of this BaseItemDto.  # noqa: E501
+
+
+        :return: The sync_status of this BaseItemDto.  # noqa: E501
+        :rtype: SyncJobItemStatus
+        """
+        return self._sync_status
+
+    @sync_status.setter
+    def sync_status(self, sync_status):
+        """Sets the sync_status of this BaseItemDto.
+
+
+        :param sync_status: The sync_status of this BaseItemDto.  # noqa: E501
+        :type: SyncJobItemStatus
+        """
+
+        self._sync_status = sync_status
+
+    @property
+    def can_manage_access(self):
+        """Gets the can_manage_access of this BaseItemDto.  # noqa: E501
+
+
+        :return: The can_manage_access of this BaseItemDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_manage_access
+
+    @can_manage_access.setter
+    def can_manage_access(self, can_manage_access):
+        """Sets the can_manage_access of this BaseItemDto.
+
+
+        :param can_manage_access: The can_manage_access of this BaseItemDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_manage_access = can_manage_access
+
+    @property
+    def can_leave_content(self):
+        """Gets the can_leave_content of this BaseItemDto.  # noqa: E501
+
+
+        :return: The can_leave_content of this BaseItemDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_leave_content
+
+    @can_leave_content.setter
+    def can_leave_content(self, can_leave_content):
+        """Sets the can_leave_content of this BaseItemDto.
+
+
+        :param can_leave_content: The can_leave_content of this BaseItemDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_leave_content = can_leave_content
+
+    @property
+    def can_make_public(self):
+        """Gets the can_make_public of this BaseItemDto.  # noqa: E501
+
+
+        :return: The can_make_public of this BaseItemDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._can_make_public
+
+    @can_make_public.setter
+    def can_make_public(self, can_make_public):
+        """Sets the can_make_public of this BaseItemDto.
+
+
+        :param can_make_public: The can_make_public of this BaseItemDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._can_make_public = can_make_public
 
     @property
     def container(self):
@@ -1247,6 +1346,7 @@ class BaseItemDto(object):
     def sort_name(self):
         """Gets the sort_name of this BaseItemDto.  # noqa: E501
 
+        The name of the sort.  # noqa: E501
 
         :return: The sort_name of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1257,6 +1357,7 @@ class BaseItemDto(object):
     def sort_name(self, sort_name):
         """Sets the sort_name of this BaseItemDto.
 
+        The name of the sort.  # noqa: E501
 
         :param sort_name: The sort_name of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1310,6 +1411,7 @@ class BaseItemDto(object):
     def premiere_date(self):
         """Gets the premiere_date of this BaseItemDto.  # noqa: E501
 
+        The premiere date.  # noqa: E501
 
         :return: The premiere_date of this BaseItemDto.  # noqa: E501
         :rtype: datetime
@@ -1320,6 +1422,7 @@ class BaseItemDto(object):
     def premiere_date(self, premiere_date):
         """Sets the premiere_date of this BaseItemDto.
 
+        The premiere date.  # noqa: E501
 
         :param premiere_date: The premiere_date of this BaseItemDto.  # noqa: E501
         :type: datetime
@@ -1331,6 +1434,7 @@ class BaseItemDto(object):
     def external_urls(self):
         """Gets the external_urls of this BaseItemDto.  # noqa: E501
 
+        The external urls.  # noqa: E501
 
         :return: The external_urls of this BaseItemDto.  # noqa: E501
         :rtype: list[ExternalUrl]
@@ -1341,6 +1445,7 @@ class BaseItemDto(object):
     def external_urls(self, external_urls):
         """Sets the external_urls of this BaseItemDto.
 
+        The external urls.  # noqa: E501
 
         :param external_urls: The external_urls of this BaseItemDto.  # noqa: E501
         :type: list[ExternalUrl]
@@ -1352,6 +1457,7 @@ class BaseItemDto(object):
     def media_sources(self):
         """Gets the media_sources of this BaseItemDto.  # noqa: E501
 
+        The media versions.  # noqa: E501
 
         :return: The media_sources of this BaseItemDto.  # noqa: E501
         :rtype: list[MediaSourceInfo]
@@ -1362,6 +1468,7 @@ class BaseItemDto(object):
     def media_sources(self, media_sources):
         """Sets the media_sources of this BaseItemDto.
 
+        The media versions.  # noqa: E501
 
         :param media_sources: The media_sources of this BaseItemDto.  # noqa: E501
         :type: list[MediaSourceInfo]
@@ -1373,6 +1480,7 @@ class BaseItemDto(object):
     def critic_rating(self):
         """Gets the critic_rating of this BaseItemDto.  # noqa: E501
 
+        The critic rating.  # noqa: E501
 
         :return: The critic_rating of this BaseItemDto.  # noqa: E501
         :rtype: float
@@ -1383,6 +1491,7 @@ class BaseItemDto(object):
     def critic_rating(self, critic_rating):
         """Sets the critic_rating of this BaseItemDto.
 
+        The critic rating.  # noqa: E501
 
         :param critic_rating: The critic_rating of this BaseItemDto.  # noqa: E501
         :type: float
@@ -1436,6 +1545,7 @@ class BaseItemDto(object):
     def game_system(self):
         """Gets the game_system of this BaseItemDto.  # noqa: E501
 
+        The game system.  # noqa: E501
 
         :return: The game_system of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1446,6 +1556,7 @@ class BaseItemDto(object):
     def game_system(self, game_system):
         """Sets the game_system of this BaseItemDto.
 
+        The game system.  # noqa: E501
 
         :param game_system: The game_system of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1478,6 +1589,7 @@ class BaseItemDto(object):
     def path(self):
         """Gets the path of this BaseItemDto.  # noqa: E501
 
+        The path.  # noqa: E501
 
         :return: The path of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1488,6 +1600,7 @@ class BaseItemDto(object):
     def path(self, path):
         """Sets the path of this BaseItemDto.
 
+        The path.  # noqa: E501
 
         :param path: The path of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1499,6 +1612,7 @@ class BaseItemDto(object):
     def official_rating(self):
         """Gets the official_rating of this BaseItemDto.  # noqa: E501
 
+        The official rating.  # noqa: E501
 
         :return: The official_rating of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1509,6 +1623,7 @@ class BaseItemDto(object):
     def official_rating(self, official_rating):
         """Sets the official_rating of this BaseItemDto.
 
+        The official rating.  # noqa: E501
 
         :param official_rating: The official_rating of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1520,6 +1635,7 @@ class BaseItemDto(object):
     def custom_rating(self):
         """Gets the custom_rating of this BaseItemDto.  # noqa: E501
 
+        The custom rating.  # noqa: E501
 
         :return: The custom_rating of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1530,6 +1646,7 @@ class BaseItemDto(object):
     def custom_rating(self, custom_rating):
         """Sets the custom_rating of this BaseItemDto.
 
+        The custom rating.  # noqa: E501
 
         :param custom_rating: The custom_rating of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1541,6 +1658,7 @@ class BaseItemDto(object):
     def channel_id(self):
         """Gets the channel_id of this BaseItemDto.  # noqa: E501
 
+        The channel identifier.  # noqa: E501
 
         :return: The channel_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1551,6 +1669,7 @@ class BaseItemDto(object):
     def channel_id(self, channel_id):
         """Sets the channel_id of this BaseItemDto.
 
+        The channel identifier.  # noqa: E501
 
         :param channel_id: The channel_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1583,6 +1702,7 @@ class BaseItemDto(object):
     def overview(self):
         """Gets the overview of this BaseItemDto.  # noqa: E501
 
+        The overview.  # noqa: E501
 
         :return: The overview of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1593,6 +1713,7 @@ class BaseItemDto(object):
     def overview(self, overview):
         """Sets the overview of this BaseItemDto.
 
+        The overview.  # noqa: E501
 
         :param overview: The overview of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1604,6 +1725,7 @@ class BaseItemDto(object):
     def taglines(self):
         """Gets the taglines of this BaseItemDto.  # noqa: E501
 
+        The taglines.  # noqa: E501
 
         :return: The taglines of this BaseItemDto.  # noqa: E501
         :rtype: list[str]
@@ -1614,6 +1736,7 @@ class BaseItemDto(object):
     def taglines(self, taglines):
         """Sets the taglines of this BaseItemDto.
 
+        The taglines.  # noqa: E501
 
         :param taglines: The taglines of this BaseItemDto.  # noqa: E501
         :type: list[str]
@@ -1625,6 +1748,7 @@ class BaseItemDto(object):
     def genres(self):
         """Gets the genres of this BaseItemDto.  # noqa: E501
 
+        The genres.  # noqa: E501
 
         :return: The genres of this BaseItemDto.  # noqa: E501
         :rtype: list[str]
@@ -1635,6 +1759,7 @@ class BaseItemDto(object):
     def genres(self, genres):
         """Sets the genres of this BaseItemDto.
 
+        The genres.  # noqa: E501
 
         :param genres: The genres of this BaseItemDto.  # noqa: E501
         :type: list[str]
@@ -1646,6 +1771,7 @@ class BaseItemDto(object):
     def community_rating(self):
         """Gets the community_rating of this BaseItemDto.  # noqa: E501
 
+        The community rating.  # noqa: E501
 
         :return: The community_rating of this BaseItemDto.  # noqa: E501
         :rtype: float
@@ -1656,6 +1782,7 @@ class BaseItemDto(object):
     def community_rating(self, community_rating):
         """Sets the community_rating of this BaseItemDto.
 
+        The community rating.  # noqa: E501
 
         :param community_rating: The community_rating of this BaseItemDto.  # noqa: E501
         :type: float
@@ -1667,6 +1794,7 @@ class BaseItemDto(object):
     def run_time_ticks(self):
         """Gets the run_time_ticks of this BaseItemDto.  # noqa: E501
 
+        The run time ticks.  # noqa: E501
 
         :return: The run_time_ticks of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -1677,6 +1805,7 @@ class BaseItemDto(object):
     def run_time_ticks(self, run_time_ticks):
         """Sets the run_time_ticks of this BaseItemDto.
 
+        The run time ticks.  # noqa: E501
 
         :param run_time_ticks: The run_time_ticks of this BaseItemDto.  # noqa: E501
         :type: int
@@ -1748,30 +1877,10 @@ class BaseItemDto(object):
         self._bitrate = bitrate
 
     @property
-    def play_access(self):
-        """Gets the play_access of this BaseItemDto.  # noqa: E501
-
-
-        :return: The play_access of this BaseItemDto.  # noqa: E501
-        :rtype: LibraryPlayAccess
-        """
-        return self._play_access
-
-    @play_access.setter
-    def play_access(self, play_access):
-        """Sets the play_access of this BaseItemDto.
-
-
-        :param play_access: The play_access of this BaseItemDto.  # noqa: E501
-        :type: LibraryPlayAccess
-        """
-
-        self._play_access = play_access
-
-    @property
     def production_year(self):
         """Gets the production_year of this BaseItemDto.  # noqa: E501
 
+        The production year.  # noqa: E501
 
         :return: The production_year of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -1782,6 +1891,7 @@ class BaseItemDto(object):
     def production_year(self, production_year):
         """Sets the production_year of this BaseItemDto.
 
+        The production year.  # noqa: E501
 
         :param production_year: The production_year of this BaseItemDto.  # noqa: E501
         :type: int
@@ -1793,6 +1903,7 @@ class BaseItemDto(object):
     def number(self):
         """Gets the number of this BaseItemDto.  # noqa: E501
 
+        The number.  # noqa: E501
 
         :return: The number of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1803,6 +1914,7 @@ class BaseItemDto(object):
     def number(self, number):
         """Sets the number of this BaseItemDto.
 
+        The number.  # noqa: E501
 
         :param number: The number of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1835,6 +1947,7 @@ class BaseItemDto(object):
     def index_number(self):
         """Gets the index_number of this BaseItemDto.  # noqa: E501
 
+        The index number.  # noqa: E501
 
         :return: The index_number of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -1845,6 +1958,7 @@ class BaseItemDto(object):
     def index_number(self, index_number):
         """Sets the index_number of this BaseItemDto.
 
+        The index number.  # noqa: E501
 
         :param index_number: The index_number of this BaseItemDto.  # noqa: E501
         :type: int
@@ -1856,6 +1970,7 @@ class BaseItemDto(object):
     def index_number_end(self):
         """Gets the index_number_end of this BaseItemDto.  # noqa: E501
 
+        The index number end.  # noqa: E501
 
         :return: The index_number_end of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -1866,6 +1981,7 @@ class BaseItemDto(object):
     def index_number_end(self, index_number_end):
         """Sets the index_number_end of this BaseItemDto.
 
+        The index number end.  # noqa: E501
 
         :param index_number_end: The index_number_end of this BaseItemDto.  # noqa: E501
         :type: int
@@ -1877,6 +1993,7 @@ class BaseItemDto(object):
     def parent_index_number(self):
         """Gets the parent_index_number of this BaseItemDto.  # noqa: E501
 
+        The parent index number.  # noqa: E501
 
         :return: The parent_index_number of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -1887,6 +2004,7 @@ class BaseItemDto(object):
     def parent_index_number(self, parent_index_number):
         """Sets the parent_index_number of this BaseItemDto.
 
+        The parent index number.  # noqa: E501
 
         :param parent_index_number: The parent_index_number of this BaseItemDto.  # noqa: E501
         :type: int
@@ -1898,6 +2016,7 @@ class BaseItemDto(object):
     def remote_trailers(self):
         """Gets the remote_trailers of this BaseItemDto.  # noqa: E501
 
+        The trailer urls.  # noqa: E501
 
         :return: The remote_trailers of this BaseItemDto.  # noqa: E501
         :rtype: list[MediaUrl]
@@ -1908,6 +2027,7 @@ class BaseItemDto(object):
     def remote_trailers(self, remote_trailers):
         """Sets the remote_trailers of this BaseItemDto.
 
+        The trailer urls.  # noqa: E501
 
         :param remote_trailers: The remote_trailers of this BaseItemDto.  # noqa: E501
         :type: list[MediaUrl]
@@ -1940,6 +2060,7 @@ class BaseItemDto(object):
     def is_folder(self):
         """Gets the is_folder of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is folder.  # noqa: E501
 
         :return: The is_folder of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -1950,6 +2071,7 @@ class BaseItemDto(object):
     def is_folder(self, is_folder):
         """Sets the is_folder of this BaseItemDto.
 
+        A value indicating whether this instance is folder.  # noqa: E501
 
         :param is_folder: The is_folder of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -1961,6 +2083,7 @@ class BaseItemDto(object):
     def parent_id(self):
         """Gets the parent_id of this BaseItemDto.  # noqa: E501
 
+        The parent id.  # noqa: E501
 
         :return: The parent_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1971,6 +2094,7 @@ class BaseItemDto(object):
     def parent_id(self, parent_id):
         """Sets the parent_id of this BaseItemDto.
 
+        The parent id.  # noqa: E501
 
         :param parent_id: The parent_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -1982,6 +2106,7 @@ class BaseItemDto(object):
     def type(self):
         """Gets the type of this BaseItemDto.  # noqa: E501
 
+        The type.  # noqa: E501
 
         :return: The type of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -1992,6 +2117,7 @@ class BaseItemDto(object):
     def type(self, type):
         """Sets the type of this BaseItemDto.
 
+        The type.  # noqa: E501
 
         :param type: The type of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2003,6 +2129,7 @@ class BaseItemDto(object):
     def people(self):
         """Gets the people of this BaseItemDto.  # noqa: E501
 
+        The people.  # noqa: E501
 
         :return: The people of this BaseItemDto.  # noqa: E501
         :rtype: list[BaseItemPerson]
@@ -2013,6 +2140,7 @@ class BaseItemDto(object):
     def people(self, people):
         """Sets the people of this BaseItemDto.
 
+        The people.  # noqa: E501
 
         :param people: The people of this BaseItemDto.  # noqa: E501
         :type: list[BaseItemPerson]
@@ -2024,6 +2152,7 @@ class BaseItemDto(object):
     def studios(self):
         """Gets the studios of this BaseItemDto.  # noqa: E501
 
+        The studios.  # noqa: E501
 
         :return: The studios of this BaseItemDto.  # noqa: E501
         :rtype: list[NameLongIdPair]
@@ -2034,6 +2163,7 @@ class BaseItemDto(object):
     def studios(self, studios):
         """Sets the studios of this BaseItemDto.
 
+        The studios.  # noqa: E501
 
         :param studios: The studios of this BaseItemDto.  # noqa: E501
         :type: list[NameLongIdPair]
@@ -2087,6 +2217,7 @@ class BaseItemDto(object):
     def parent_logo_item_id(self):
         """Gets the parent_logo_item_id of this BaseItemDto.  # noqa: E501
 
+        If the item does not have a logo, this will hold the Id of the Parent that has one.  # noqa: E501
 
         :return: The parent_logo_item_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2097,6 +2228,7 @@ class BaseItemDto(object):
     def parent_logo_item_id(self, parent_logo_item_id):
         """Sets the parent_logo_item_id of this BaseItemDto.
 
+        If the item does not have a logo, this will hold the Id of the Parent that has one.  # noqa: E501
 
         :param parent_logo_item_id: The parent_logo_item_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2108,6 +2240,7 @@ class BaseItemDto(object):
     def parent_backdrop_item_id(self):
         """Gets the parent_backdrop_item_id of this BaseItemDto.  # noqa: E501
 
+        If the item does not have any backdrops, this will hold the Id of the Parent that has one.  # noqa: E501
 
         :return: The parent_backdrop_item_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2118,6 +2251,7 @@ class BaseItemDto(object):
     def parent_backdrop_item_id(self, parent_backdrop_item_id):
         """Sets the parent_backdrop_item_id of this BaseItemDto.
 
+        If the item does not have any backdrops, this will hold the Id of the Parent that has one.  # noqa: E501
 
         :param parent_backdrop_item_id: The parent_backdrop_item_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2129,6 +2263,7 @@ class BaseItemDto(object):
     def parent_backdrop_image_tags(self):
         """Gets the parent_backdrop_image_tags of this BaseItemDto.  # noqa: E501
 
+        The parent backdrop image tags.  # noqa: E501
 
         :return: The parent_backdrop_image_tags of this BaseItemDto.  # noqa: E501
         :rtype: list[str]
@@ -2139,6 +2274,7 @@ class BaseItemDto(object):
     def parent_backdrop_image_tags(self, parent_backdrop_image_tags):
         """Sets the parent_backdrop_image_tags of this BaseItemDto.
 
+        The parent backdrop image tags.  # noqa: E501
 
         :param parent_backdrop_image_tags: The parent_backdrop_image_tags of this BaseItemDto.  # noqa: E501
         :type: list[str]
@@ -2150,6 +2286,7 @@ class BaseItemDto(object):
     def local_trailer_count(self):
         """Gets the local_trailer_count of this BaseItemDto.  # noqa: E501
 
+        The local trailer count.  # noqa: E501
 
         :return: The local_trailer_count of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -2160,6 +2297,7 @@ class BaseItemDto(object):
     def local_trailer_count(self, local_trailer_count):
         """Sets the local_trailer_count of this BaseItemDto.
 
+        The local trailer count.  # noqa: E501
 
         :param local_trailer_count: The local_trailer_count of this BaseItemDto.  # noqa: E501
         :type: int
@@ -2192,6 +2330,7 @@ class BaseItemDto(object):
     def recursive_item_count(self):
         """Gets the recursive_item_count of this BaseItemDto.  # noqa: E501
 
+        The recursive item count.  # noqa: E501
 
         :return: The recursive_item_count of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -2202,6 +2341,7 @@ class BaseItemDto(object):
     def recursive_item_count(self, recursive_item_count):
         """Sets the recursive_item_count of this BaseItemDto.
 
+        The recursive item count.  # noqa: E501
 
         :param recursive_item_count: The recursive_item_count of this BaseItemDto.  # noqa: E501
         :type: int
@@ -2213,6 +2353,7 @@ class BaseItemDto(object):
     def child_count(self):
         """Gets the child_count of this BaseItemDto.  # noqa: E501
 
+        The child count.  # noqa: E501
 
         :return: The child_count of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -2223,6 +2364,7 @@ class BaseItemDto(object):
     def child_count(self, child_count):
         """Sets the child_count of this BaseItemDto.
 
+        The child count.  # noqa: E501
 
         :param child_count: The child_count of this BaseItemDto.  # noqa: E501
         :type: int
@@ -2234,6 +2376,7 @@ class BaseItemDto(object):
     def series_name(self):
         """Gets the series_name of this BaseItemDto.  # noqa: E501
 
+        The name of the series.  # noqa: E501
 
         :return: The series_name of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2244,6 +2387,7 @@ class BaseItemDto(object):
     def series_name(self, series_name):
         """Sets the series_name of this BaseItemDto.
 
+        The name of the series.  # noqa: E501
 
         :param series_name: The series_name of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2255,6 +2399,7 @@ class BaseItemDto(object):
     def series_id(self):
         """Gets the series_id of this BaseItemDto.  # noqa: E501
 
+        The series id.  # noqa: E501
 
         :return: The series_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2265,6 +2410,7 @@ class BaseItemDto(object):
     def series_id(self, series_id):
         """Sets the series_id of this BaseItemDto.
 
+        The series id.  # noqa: E501
 
         :param series_id: The series_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2276,6 +2422,7 @@ class BaseItemDto(object):
     def season_id(self):
         """Gets the season_id of this BaseItemDto.  # noqa: E501
 
+        The season identifier.  # noqa: E501
 
         :return: The season_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2286,6 +2433,7 @@ class BaseItemDto(object):
     def season_id(self, season_id):
         """Sets the season_id of this BaseItemDto.
 
+        The season identifier.  # noqa: E501
 
         :param season_id: The season_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2297,6 +2445,7 @@ class BaseItemDto(object):
     def special_feature_count(self):
         """Gets the special_feature_count of this BaseItemDto.  # noqa: E501
 
+        The special feature count.  # noqa: E501
 
         :return: The special_feature_count of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -2307,6 +2456,7 @@ class BaseItemDto(object):
     def special_feature_count(self, special_feature_count):
         """Sets the special_feature_count of this BaseItemDto.
 
+        The special feature count.  # noqa: E501
 
         :param special_feature_count: The special_feature_count of this BaseItemDto.  # noqa: E501
         :type: int
@@ -2318,6 +2468,7 @@ class BaseItemDto(object):
     def display_preferences_id(self):
         """Gets the display_preferences_id of this BaseItemDto.  # noqa: E501
 
+        The display preferences id.  # noqa: E501
 
         :return: The display_preferences_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2328,6 +2479,7 @@ class BaseItemDto(object):
     def display_preferences_id(self, display_preferences_id):
         """Sets the display_preferences_id of this BaseItemDto.
 
+        The display preferences id.  # noqa: E501
 
         :param display_preferences_id: The display_preferences_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2339,6 +2491,7 @@ class BaseItemDto(object):
     def status(self):
         """Gets the status of this BaseItemDto.  # noqa: E501
 
+        The status.  # noqa: E501
 
         :return: The status of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2349,6 +2502,7 @@ class BaseItemDto(object):
     def status(self, status):
         """Sets the status of this BaseItemDto.
 
+        The status.  # noqa: E501
 
         :param status: The status of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2360,6 +2514,7 @@ class BaseItemDto(object):
     def air_days(self):
         """Gets the air_days of this BaseItemDto.  # noqa: E501
 
+        The air days.  # noqa: E501
 
         :return: The air_days of this BaseItemDto.  # noqa: E501
         :rtype: list[DayOfWeek]
@@ -2370,6 +2525,7 @@ class BaseItemDto(object):
     def air_days(self, air_days):
         """Sets the air_days of this BaseItemDto.
 
+        The air days.  # noqa: E501
 
         :param air_days: The air_days of this BaseItemDto.  # noqa: E501
         :type: list[DayOfWeek]
@@ -2381,6 +2537,7 @@ class BaseItemDto(object):
     def tags(self):
         """Gets the tags of this BaseItemDto.  # noqa: E501
 
+        The tags.  # noqa: E501
 
         :return: The tags of this BaseItemDto.  # noqa: E501
         :rtype: list[str]
@@ -2391,6 +2548,7 @@ class BaseItemDto(object):
     def tags(self, tags):
         """Sets the tags of this BaseItemDto.
 
+        The tags.  # noqa: E501
 
         :param tags: The tags of this BaseItemDto.  # noqa: E501
         :type: list[str]
@@ -2402,6 +2560,7 @@ class BaseItemDto(object):
     def primary_image_aspect_ratio(self):
         """Gets the primary_image_aspect_ratio of this BaseItemDto.  # noqa: E501
 
+        The primary image aspect ratio, after image enhancements.  # noqa: E501
 
         :return: The primary_image_aspect_ratio of this BaseItemDto.  # noqa: E501
         :rtype: float
@@ -2412,6 +2571,7 @@ class BaseItemDto(object):
     def primary_image_aspect_ratio(self, primary_image_aspect_ratio):
         """Sets the primary_image_aspect_ratio of this BaseItemDto.
 
+        The primary image aspect ratio, after image enhancements.  # noqa: E501
 
         :param primary_image_aspect_ratio: The primary_image_aspect_ratio of this BaseItemDto.  # noqa: E501
         :type: float
@@ -2423,6 +2583,7 @@ class BaseItemDto(object):
     def artists(self):
         """Gets the artists of this BaseItemDto.  # noqa: E501
 
+        The artists.  # noqa: E501
 
         :return: The artists of this BaseItemDto.  # noqa: E501
         :rtype: list[str]
@@ -2433,6 +2594,7 @@ class BaseItemDto(object):
     def artists(self, artists):
         """Sets the artists of this BaseItemDto.
 
+        The artists.  # noqa: E501
 
         :param artists: The artists of this BaseItemDto.  # noqa: E501
         :type: list[str]
@@ -2444,6 +2606,7 @@ class BaseItemDto(object):
     def artist_items(self):
         """Gets the artist_items of this BaseItemDto.  # noqa: E501
 
+        The artist items.  # noqa: E501
 
         :return: The artist_items of this BaseItemDto.  # noqa: E501
         :rtype: list[NameIdPair]
@@ -2454,6 +2617,7 @@ class BaseItemDto(object):
     def artist_items(self, artist_items):
         """Sets the artist_items of this BaseItemDto.
 
+        The artist items.  # noqa: E501
 
         :param artist_items: The artist_items of this BaseItemDto.  # noqa: E501
         :type: list[NameIdPair]
@@ -2486,6 +2650,7 @@ class BaseItemDto(object):
     def album(self):
         """Gets the album of this BaseItemDto.  # noqa: E501
 
+        The album.  # noqa: E501
 
         :return: The album of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2496,6 +2661,7 @@ class BaseItemDto(object):
     def album(self, album):
         """Sets the album of this BaseItemDto.
 
+        The album.  # noqa: E501
 
         :param album: The album of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2507,6 +2673,7 @@ class BaseItemDto(object):
     def collection_type(self):
         """Gets the collection_type of this BaseItemDto.  # noqa: E501
 
+        The type of the collection.  # noqa: E501
 
         :return: The collection_type of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2517,6 +2684,7 @@ class BaseItemDto(object):
     def collection_type(self, collection_type):
         """Sets the collection_type of this BaseItemDto.
 
+        The type of the collection.  # noqa: E501
 
         :param collection_type: The collection_type of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2528,6 +2696,7 @@ class BaseItemDto(object):
     def display_order(self):
         """Gets the display_order of this BaseItemDto.  # noqa: E501
 
+        The display order.  # noqa: E501
 
         :return: The display_order of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2538,6 +2707,7 @@ class BaseItemDto(object):
     def display_order(self, display_order):
         """Sets the display_order of this BaseItemDto.
 
+        The display order.  # noqa: E501
 
         :param display_order: The display_order of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2549,6 +2719,7 @@ class BaseItemDto(object):
     def album_id(self):
         """Gets the album_id of this BaseItemDto.  # noqa: E501
 
+        The album id.  # noqa: E501
 
         :return: The album_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2559,6 +2730,7 @@ class BaseItemDto(object):
     def album_id(self, album_id):
         """Sets the album_id of this BaseItemDto.
 
+        The album id.  # noqa: E501
 
         :param album_id: The album_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2570,6 +2742,7 @@ class BaseItemDto(object):
     def album_primary_image_tag(self):
         """Gets the album_primary_image_tag of this BaseItemDto.  # noqa: E501
 
+        The album image tag.  # noqa: E501
 
         :return: The album_primary_image_tag of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2580,6 +2753,7 @@ class BaseItemDto(object):
     def album_primary_image_tag(self, album_primary_image_tag):
         """Sets the album_primary_image_tag of this BaseItemDto.
 
+        The album image tag.  # noqa: E501
 
         :param album_primary_image_tag: The album_primary_image_tag of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2591,6 +2765,7 @@ class BaseItemDto(object):
     def series_primary_image_tag(self):
         """Gets the series_primary_image_tag of this BaseItemDto.  # noqa: E501
 
+        The series primary image tag.  # noqa: E501
 
         :return: The series_primary_image_tag of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2601,6 +2776,7 @@ class BaseItemDto(object):
     def series_primary_image_tag(self, series_primary_image_tag):
         """Sets the series_primary_image_tag of this BaseItemDto.
 
+        The series primary image tag.  # noqa: E501
 
         :param series_primary_image_tag: The series_primary_image_tag of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2612,6 +2788,7 @@ class BaseItemDto(object):
     def album_artist(self):
         """Gets the album_artist of this BaseItemDto.  # noqa: E501
 
+        The album artist.  # noqa: E501
 
         :return: The album_artist of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2622,6 +2799,7 @@ class BaseItemDto(object):
     def album_artist(self, album_artist):
         """Sets the album_artist of this BaseItemDto.
 
+        The album artist.  # noqa: E501
 
         :param album_artist: The album_artist of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2633,6 +2811,7 @@ class BaseItemDto(object):
     def album_artists(self):
         """Gets the album_artists of this BaseItemDto.  # noqa: E501
 
+        The album artists.  # noqa: E501
 
         :return: The album_artists of this BaseItemDto.  # noqa: E501
         :rtype: list[NameIdPair]
@@ -2643,6 +2822,7 @@ class BaseItemDto(object):
     def album_artists(self, album_artists):
         """Sets the album_artists of this BaseItemDto.
 
+        The album artists.  # noqa: E501
 
         :param album_artists: The album_artists of this BaseItemDto.  # noqa: E501
         :type: list[NameIdPair]
@@ -2654,6 +2834,7 @@ class BaseItemDto(object):
     def season_name(self):
         """Gets the season_name of this BaseItemDto.  # noqa: E501
 
+        The name of the season.  # noqa: E501
 
         :return: The season_name of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2664,6 +2845,7 @@ class BaseItemDto(object):
     def season_name(self, season_name):
         """Sets the season_name of this BaseItemDto.
 
+        The name of the season.  # noqa: E501
 
         :param season_name: The season_name of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2675,6 +2857,7 @@ class BaseItemDto(object):
     def media_streams(self):
         """Gets the media_streams of this BaseItemDto.  # noqa: E501
 
+        The media streams.  # noqa: E501
 
         :return: The media_streams of this BaseItemDto.  # noqa: E501
         :rtype: list[MediaStream]
@@ -2685,6 +2868,7 @@ class BaseItemDto(object):
     def media_streams(self, media_streams):
         """Sets the media_streams of this BaseItemDto.
 
+        The media streams.  # noqa: E501
 
         :param media_streams: The media_streams of this BaseItemDto.  # noqa: E501
         :type: list[MediaStream]
@@ -2696,6 +2880,7 @@ class BaseItemDto(object):
     def part_count(self):
         """Gets the part_count of this BaseItemDto.  # noqa: E501
 
+        The part count.  # noqa: E501
 
         :return: The part_count of this BaseItemDto.  # noqa: E501
         :rtype: int
@@ -2706,6 +2891,7 @@ class BaseItemDto(object):
     def part_count(self, part_count):
         """Sets the part_count of this BaseItemDto.
 
+        The part count.  # noqa: E501
 
         :param part_count: The part_count of this BaseItemDto.  # noqa: E501
         :type: int
@@ -2717,6 +2903,7 @@ class BaseItemDto(object):
     def image_tags(self):
         """Gets the image_tags of this BaseItemDto.  # noqa: E501
 
+        The image tags.  # noqa: E501
 
         :return: The image_tags of this BaseItemDto.  # noqa: E501
         :rtype: dict(str, str)
@@ -2727,6 +2914,7 @@ class BaseItemDto(object):
     def image_tags(self, image_tags):
         """Sets the image_tags of this BaseItemDto.
 
+        The image tags.  # noqa: E501
 
         :param image_tags: The image_tags of this BaseItemDto.  # noqa: E501
         :type: dict(str, str)
@@ -2738,6 +2926,7 @@ class BaseItemDto(object):
     def backdrop_image_tags(self):
         """Gets the backdrop_image_tags of this BaseItemDto.  # noqa: E501
 
+        The backdrop image tags.  # noqa: E501
 
         :return: The backdrop_image_tags of this BaseItemDto.  # noqa: E501
         :rtype: list[str]
@@ -2748,6 +2937,7 @@ class BaseItemDto(object):
     def backdrop_image_tags(self, backdrop_image_tags):
         """Sets the backdrop_image_tags of this BaseItemDto.
 
+        The backdrop image tags.  # noqa: E501
 
         :param backdrop_image_tags: The backdrop_image_tags of this BaseItemDto.  # noqa: E501
         :type: list[str]
@@ -2759,6 +2949,7 @@ class BaseItemDto(object):
     def parent_logo_image_tag(self):
         """Gets the parent_logo_image_tag of this BaseItemDto.  # noqa: E501
 
+        The parent logo image tag.  # noqa: E501
 
         :return: The parent_logo_image_tag of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2769,6 +2960,7 @@ class BaseItemDto(object):
     def parent_logo_image_tag(self, parent_logo_image_tag):
         """Sets the parent_logo_image_tag of this BaseItemDto.
 
+        The parent logo image tag.  # noqa: E501
 
         :param parent_logo_image_tag: The parent_logo_image_tag of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2780,6 +2972,7 @@ class BaseItemDto(object):
     def series_studio(self):
         """Gets the series_studio of this BaseItemDto.  # noqa: E501
 
+        The series studio.  # noqa: E501
 
         :return: The series_studio of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2790,6 +2983,7 @@ class BaseItemDto(object):
     def series_studio(self, series_studio):
         """Sets the series_studio of this BaseItemDto.
 
+        The series studio.  # noqa: E501
 
         :param series_studio: The series_studio of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2798,9 +2992,52 @@ class BaseItemDto(object):
         self._series_studio = series_studio
 
     @property
+    def primary_image_item_id(self):
+        """Gets the primary_image_item_id of this BaseItemDto.  # noqa: E501
+
+
+        :return: The primary_image_item_id of this BaseItemDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._primary_image_item_id
+
+    @primary_image_item_id.setter
+    def primary_image_item_id(self, primary_image_item_id):
+        """Sets the primary_image_item_id of this BaseItemDto.
+
+
+        :param primary_image_item_id: The primary_image_item_id of this BaseItemDto.  # noqa: E501
+        :type: str
+        """
+
+        self._primary_image_item_id = primary_image_item_id
+
+    @property
+    def primary_image_tag(self):
+        """Gets the primary_image_tag of this BaseItemDto.  # noqa: E501
+
+
+        :return: The primary_image_tag of this BaseItemDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._primary_image_tag
+
+    @primary_image_tag.setter
+    def primary_image_tag(self, primary_image_tag):
+        """Sets the primary_image_tag of this BaseItemDto.
+
+
+        :param primary_image_tag: The primary_image_tag of this BaseItemDto.  # noqa: E501
+        :type: str
+        """
+
+        self._primary_image_tag = primary_image_tag
+
+    @property
     def parent_thumb_item_id(self):
         """Gets the parent_thumb_item_id of this BaseItemDto.  # noqa: E501
 
+        The parent thumb item id.  # noqa: E501
 
         :return: The parent_thumb_item_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2811,6 +3048,7 @@ class BaseItemDto(object):
     def parent_thumb_item_id(self, parent_thumb_item_id):
         """Sets the parent_thumb_item_id of this BaseItemDto.
 
+        The parent thumb item id.  # noqa: E501
 
         :param parent_thumb_item_id: The parent_thumb_item_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2822,6 +3060,7 @@ class BaseItemDto(object):
     def parent_thumb_image_tag(self):
         """Gets the parent_thumb_image_tag of this BaseItemDto.  # noqa: E501
 
+        The parent thumb image tag.  # noqa: E501
 
         :return: The parent_thumb_image_tag of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2832,6 +3071,7 @@ class BaseItemDto(object):
     def parent_thumb_image_tag(self, parent_thumb_image_tag):
         """Sets the parent_thumb_image_tag of this BaseItemDto.
 
+        The parent thumb image tag.  # noqa: E501
 
         :param parent_thumb_image_tag: The parent_thumb_image_tag of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2843,6 +3083,7 @@ class BaseItemDto(object):
     def chapters(self):
         """Gets the chapters of this BaseItemDto.  # noqa: E501
 
+        The chapters.  # noqa: E501
 
         :return: The chapters of this BaseItemDto.  # noqa: E501
         :rtype: list[ChapterInfo]
@@ -2853,6 +3094,7 @@ class BaseItemDto(object):
     def chapters(self, chapters):
         """Sets the chapters of this BaseItemDto.
 
+        The chapters.  # noqa: E501
 
         :param chapters: The chapters of this BaseItemDto.  # noqa: E501
         :type: list[ChapterInfo]
@@ -2885,6 +3127,7 @@ class BaseItemDto(object):
     def media_type(self):
         """Gets the media_type of this BaseItemDto.  # noqa: E501
 
+        The type of the media.  # noqa: E501
 
         :return: The media_type of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -2895,6 +3138,7 @@ class BaseItemDto(object):
     def media_type(self, media_type):
         """Sets the media_type of this BaseItemDto.
 
+        The type of the media.  # noqa: E501
 
         :param media_type: The media_type of this BaseItemDto.  # noqa: E501
         :type: str
@@ -2906,6 +3150,7 @@ class BaseItemDto(object):
     def end_date(self):
         """Gets the end_date of this BaseItemDto.  # noqa: E501
 
+        The end date.  # noqa: E501
 
         :return: The end_date of this BaseItemDto.  # noqa: E501
         :rtype: datetime
@@ -2916,6 +3161,7 @@ class BaseItemDto(object):
     def end_date(self, end_date):
         """Sets the end_date of this BaseItemDto.
 
+        The end date.  # noqa: E501
 
         :param end_date: The end_date of this BaseItemDto.  # noqa: E501
         :type: datetime
@@ -2927,6 +3173,7 @@ class BaseItemDto(object):
     def locked_fields(self):
         """Gets the locked_fields of this BaseItemDto.  # noqa: E501
 
+        The locked fields.  # noqa: E501
 
         :return: The locked_fields of this BaseItemDto.  # noqa: E501
         :rtype: list[MetadataFields]
@@ -2937,6 +3184,7 @@ class BaseItemDto(object):
     def locked_fields(self, locked_fields):
         """Sets the locked_fields of this BaseItemDto.
 
+        The locked fields.  # noqa: E501
 
         :param locked_fields: The locked_fields of this BaseItemDto.  # noqa: E501
         :type: list[MetadataFields]
@@ -2948,6 +3196,7 @@ class BaseItemDto(object):
     def lock_data(self):
         """Gets the lock_data of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether \\[enable internet providers\\].  # noqa: E501
 
         :return: The lock_data of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -2958,6 +3207,7 @@ class BaseItemDto(object):
     def lock_data(self, lock_data):
         """Sets the lock_data of this BaseItemDto.
 
+        A value indicating whether \\[enable internet providers\\].  # noqa: E501
 
         :param lock_data: The lock_data of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3263,6 +3513,7 @@ class BaseItemDto(object):
     def series_timer_id(self):
         """Gets the series_timer_id of this BaseItemDto.  # noqa: E501
 
+        The series timer identifier.  # noqa: E501
 
         :return: The series_timer_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -3273,6 +3524,7 @@ class BaseItemDto(object):
     def series_timer_id(self, series_timer_id):
         """Sets the series_timer_id of this BaseItemDto.
 
+        The series timer identifier.  # noqa: E501
 
         :param series_timer_id: The series_timer_id of this BaseItemDto.  # noqa: E501
         :type: str
@@ -3284,6 +3536,7 @@ class BaseItemDto(object):
     def channel_primary_image_tag(self):
         """Gets the channel_primary_image_tag of this BaseItemDto.  # noqa: E501
 
+        The channel primary image tag.  # noqa: E501
 
         :return: The channel_primary_image_tag of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -3294,6 +3547,7 @@ class BaseItemDto(object):
     def channel_primary_image_tag(self, channel_primary_image_tag):
         """Sets the channel_primary_image_tag of this BaseItemDto.
 
+        The channel primary image tag.  # noqa: E501
 
         :param channel_primary_image_tag: The channel_primary_image_tag of this BaseItemDto.  # noqa: E501
         :type: str
@@ -3305,6 +3559,7 @@ class BaseItemDto(object):
     def start_date(self):
         """Gets the start_date of this BaseItemDto.  # noqa: E501
 
+        The start date of the recording, in UTC.  # noqa: E501
 
         :return: The start_date of this BaseItemDto.  # noqa: E501
         :rtype: datetime
@@ -3315,6 +3570,7 @@ class BaseItemDto(object):
     def start_date(self, start_date):
         """Sets the start_date of this BaseItemDto.
 
+        The start date of the recording, in UTC.  # noqa: E501
 
         :param start_date: The start_date of this BaseItemDto.  # noqa: E501
         :type: datetime
@@ -3326,6 +3582,7 @@ class BaseItemDto(object):
     def completion_percentage(self):
         """Gets the completion_percentage of this BaseItemDto.  # noqa: E501
 
+        The completion percentage.  # noqa: E501
 
         :return: The completion_percentage of this BaseItemDto.  # noqa: E501
         :rtype: float
@@ -3336,6 +3593,7 @@ class BaseItemDto(object):
     def completion_percentage(self, completion_percentage):
         """Sets the completion_percentage of this BaseItemDto.
 
+        The completion percentage.  # noqa: E501
 
         :param completion_percentage: The completion_percentage of this BaseItemDto.  # noqa: E501
         :type: float
@@ -3347,6 +3605,7 @@ class BaseItemDto(object):
     def is_repeat(self):
         """Gets the is_repeat of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is repeat.  # noqa: E501
 
         :return: The is_repeat of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -3357,6 +3616,7 @@ class BaseItemDto(object):
     def is_repeat(self, is_repeat):
         """Sets the is_repeat of this BaseItemDto.
 
+        A value indicating whether this instance is repeat.  # noqa: E501
 
         :param is_repeat: The is_repeat of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3389,6 +3649,7 @@ class BaseItemDto(object):
     def episode_title(self):
         """Gets the episode_title of this BaseItemDto.  # noqa: E501
 
+        The episode title.  # noqa: E501
 
         :return: The episode_title of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -3399,6 +3660,7 @@ class BaseItemDto(object):
     def episode_title(self, episode_title):
         """Sets the episode_title of this BaseItemDto.
 
+        The episode title.  # noqa: E501
 
         :param episode_title: The episode_title of this BaseItemDto.  # noqa: E501
         :type: str
@@ -3410,6 +3672,7 @@ class BaseItemDto(object):
     def is_movie(self):
         """Gets the is_movie of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is movie.  # noqa: E501
 
         :return: The is_movie of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -3420,6 +3683,7 @@ class BaseItemDto(object):
     def is_movie(self, is_movie):
         """Sets the is_movie of this BaseItemDto.
 
+        A value indicating whether this instance is movie.  # noqa: E501
 
         :param is_movie: The is_movie of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3431,6 +3695,7 @@ class BaseItemDto(object):
     def is_sports(self):
         """Gets the is_sports of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is sports.  # noqa: E501
 
         :return: The is_sports of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -3441,6 +3706,7 @@ class BaseItemDto(object):
     def is_sports(self, is_sports):
         """Sets the is_sports of this BaseItemDto.
 
+        A value indicating whether this instance is sports.  # noqa: E501
 
         :param is_sports: The is_sports of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3452,6 +3718,7 @@ class BaseItemDto(object):
     def is_series(self):
         """Gets the is_series of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is series.  # noqa: E501
 
         :return: The is_series of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -3462,6 +3729,7 @@ class BaseItemDto(object):
     def is_series(self, is_series):
         """Sets the is_series of this BaseItemDto.
 
+        A value indicating whether this instance is series.  # noqa: E501
 
         :param is_series: The is_series of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3473,6 +3741,7 @@ class BaseItemDto(object):
     def is_live(self):
         """Gets the is_live of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is live.  # noqa: E501
 
         :return: The is_live of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -3483,6 +3752,7 @@ class BaseItemDto(object):
     def is_live(self, is_live):
         """Sets the is_live of this BaseItemDto.
 
+        A value indicating whether this instance is live.  # noqa: E501
 
         :param is_live: The is_live of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3494,6 +3764,7 @@ class BaseItemDto(object):
     def is_news(self):
         """Gets the is_news of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is news.  # noqa: E501
 
         :return: The is_news of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -3504,6 +3775,7 @@ class BaseItemDto(object):
     def is_news(self, is_news):
         """Sets the is_news of this BaseItemDto.
 
+        A value indicating whether this instance is news.  # noqa: E501
 
         :param is_news: The is_news of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3515,6 +3787,7 @@ class BaseItemDto(object):
     def is_kids(self):
         """Gets the is_kids of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is kids.  # noqa: E501
 
         :return: The is_kids of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -3525,6 +3798,7 @@ class BaseItemDto(object):
     def is_kids(self, is_kids):
         """Sets the is_kids of this BaseItemDto.
 
+        A value indicating whether this instance is kids.  # noqa: E501
 
         :param is_kids: The is_kids of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3536,6 +3810,7 @@ class BaseItemDto(object):
     def is_premiere(self):
         """Gets the is_premiere of this BaseItemDto.  # noqa: E501
 
+        A value indicating whether this instance is premiere.  # noqa: E501
 
         :return: The is_premiere of this BaseItemDto.  # noqa: E501
         :rtype: bool
@@ -3546,6 +3821,7 @@ class BaseItemDto(object):
     def is_premiere(self, is_premiere):
         """Sets the is_premiere of this BaseItemDto.
 
+        A value indicating whether this instance is premiere.  # noqa: E501
 
         :param is_premiere: The is_premiere of this BaseItemDto.  # noqa: E501
         :type: bool
@@ -3620,6 +3896,7 @@ class BaseItemDto(object):
     def timer_id(self):
         """Gets the timer_id of this BaseItemDto.  # noqa: E501
 
+        The timer identifier.  # noqa: E501
 
         :return: The timer_id of this BaseItemDto.  # noqa: E501
         :rtype: str
@@ -3630,6 +3907,7 @@ class BaseItemDto(object):
     def timer_id(self, timer_id):
         """Sets the timer_id of this BaseItemDto.
 
+        The timer identifier.  # noqa: E501
 
         :param timer_id: The timer_id of this BaseItemDto.  # noqa: E501
         :type: str

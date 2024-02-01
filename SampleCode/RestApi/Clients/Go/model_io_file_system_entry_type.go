@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
-
+// IoFileSystemEntryType : Enum FileSystemEntryType  
 type IoFileSystemEntryType string
 
 // List of IO.FileSystemEntryType

@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,11 +15,12 @@ import ImageType from './ImageType';
 /**
 * The ImageInfo model module.
 * @module model/ImageInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ImageInfo {
     /**
     * Constructs a new <code>ImageInfo</code>.
+    * Class ImageInfo  
     * @alias module:model/ImageInfo
     * @class
     */
@@ -72,10 +73,12 @@ export default class ImageInfo {
     */
     'ImageType' = undefined;
     /**
+    * The index of the image.
     * @member {Number} ImageIndex
     */
     'ImageIndex' = undefined;
     /**
+    * The path.
     * @member {String} Path
     */
     'Path' = undefined;
@@ -84,14 +87,17 @@ export default class ImageInfo {
     */
     'Filename' = undefined;
     /**
+    * The height.
     * @member {Number} Height
     */
     'Height' = undefined;
     /**
+    * The width.
     * @member {Number} Width
     */
     'Width' = undefined;
     /**
+    * The size.
     * @member {Number} Size
     */
     'Size' = undefined;

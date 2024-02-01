@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -113,7 +113,7 @@ Requires authentication as user
      * @param "TargetSystems" (optional.String) -  Optional. Filter by target system type. Allows multiple, comma delimited.
      * @param "IsPremium" (optional.Bool) -  Optional. Filter by premium status
      * @param "IsAdult" (optional.Bool) -  Optional. Filter by package that contain adult content.
-@return []UpdatesPackageInfo
+@return []PackageInfo
 */
 
 type PackageServiceApiGetPackagesOpts struct {
@@ -123,13 +123,13 @@ type PackageServiceApiGetPackagesOpts struct {
     IsAdult optional.Bool
 }
 
-func (a *PackageServiceApiService) GetPackages(ctx context.Context, localVarOptionals *PackageServiceApiGetPackagesOpts) ([]UpdatesPackageInfo, *http.Response, error) {
+func (a *PackageServiceApiService) GetPackages(ctx context.Context, localVarOptionals *PackageServiceApiGetPackagesOpts) ([]PackageInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []UpdatesPackageInfo
+		localVarReturnValue []PackageInfo
 	)
 
 	// create path and map variables
@@ -211,7 +211,7 @@ func (a *PackageServiceApiService) GetPackages(ctx context.Context, localVarOpti
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []UpdatesPackageInfo
+			var v []PackageInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -232,20 +232,20 @@ Requires authentication as user
  * @param name The name of the package
  * @param optional nil or *PackageServiceApiGetPackagesByNameOpts - Optional Parameters:
      * @param "AssemblyGuid" (optional.String) -  The guid of the associated assembly
-@return UpdatesPackageInfo
+@return PackageInfo
 */
 
 type PackageServiceApiGetPackagesByNameOpts struct {
     AssemblyGuid optional.String
 }
 
-func (a *PackageServiceApiService) GetPackagesByName(ctx context.Context, name string, localVarOptionals *PackageServiceApiGetPackagesByNameOpts) (UpdatesPackageInfo, *http.Response, error) {
+func (a *PackageServiceApiService) GetPackagesByName(ctx context.Context, name string, localVarOptionals *PackageServiceApiGetPackagesByNameOpts) (PackageInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue UpdatesPackageInfo
+		localVarReturnValue PackageInfo
 	)
 
 	// create path and map variables
@@ -319,7 +319,7 @@ func (a *PackageServiceApiService) GetPackagesByName(ctx context.Context, name s
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v UpdatesPackageInfo
+			var v PackageInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -338,15 +338,15 @@ PackageServiceApiService Gets available package updates for currently installed 
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param packageType Package type filter (System/UserInstalled)
-@return []UpdatesPackageVersionInfo
+@return []PackageVersionInfo
 */
-func (a *PackageServiceApiService) GetPackagesUpdates(ctx context.Context, packageType string) ([]UpdatesPackageVersionInfo, *http.Response, error) {
+func (a *PackageServiceApiService) GetPackagesUpdates(ctx context.Context, packageType string) ([]PackageVersionInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []UpdatesPackageVersionInfo
+		localVarReturnValue []PackageVersionInfo
 	)
 
 	// create path and map variables
@@ -417,7 +417,7 @@ func (a *PackageServiceApiService) GetPackagesUpdates(ctx context.Context, packa
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []UpdatesPackageVersionInfo
+			var v []PackageVersionInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -439,7 +439,7 @@ Requires authentication as administrator
  * @param optional nil or *PackageServiceApiPostPackagesInstalledByNameOpts - Optional Parameters:
      * @param "AssemblyGuid" (optional.String) -  Guid of the associated assembly
      * @param "Version" (optional.String) -  Optional version. Defaults to latest version.
-     * @param "UpdateClass" (optional.Interface of UpdatesPackageVersionClass) -  Optional update class (Dev, Beta, Release). Defaults to Release.
+     * @param "UpdateClass" (optional.Interface of PackageVersionClass) -  Optional update class (Dev, Beta, Release). Defaults to Release.
 
 */
 

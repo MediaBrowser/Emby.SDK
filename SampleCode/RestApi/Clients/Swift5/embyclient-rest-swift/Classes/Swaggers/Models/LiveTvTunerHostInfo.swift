@@ -18,7 +18,10 @@ public struct LiveTvTunerHostInfo: Codable {
     public var friendlyName: String?
     public var setupUrl: String?
     public var importFavoritesOnly: Bool?
+    public var preferEpgChannelImages: Bool?
+    public var preferEpgChannelNumbers: Bool?
     public var allowHWTranscoding: Bool?
+    public var allowMappingByNumber: Bool?
     public var source: String?
     public var tunerCount: Int?
     public var userAgent: String?
@@ -26,7 +29,7 @@ public struct LiveTvTunerHostInfo: Codable {
     public var providerOptions: String?
     public var dataVersion: Int?
 
-    public init(_id: String? = nil, url: String? = nil, type: String? = nil, deviceId: String? = nil, friendlyName: String? = nil, setupUrl: String? = nil, importFavoritesOnly: Bool? = nil, allowHWTranscoding: Bool? = nil, source: String? = nil, tunerCount: Int? = nil, userAgent: String? = nil, referrer: String? = nil, providerOptions: String? = nil, dataVersion: Int? = nil) {
+    public init(_id: String? = nil, url: String? = nil, type: String? = nil, deviceId: String? = nil, friendlyName: String? = nil, setupUrl: String? = nil, importFavoritesOnly: Bool? = nil, preferEpgChannelImages: Bool? = nil, preferEpgChannelNumbers: Bool? = nil, allowHWTranscoding: Bool? = nil, allowMappingByNumber: Bool? = nil, source: String? = nil, tunerCount: Int? = nil, userAgent: String? = nil, referrer: String? = nil, providerOptions: String? = nil, dataVersion: Int? = nil) {
         self._id = _id
         self.url = url
         self.type = type
@@ -34,7 +37,10 @@ public struct LiveTvTunerHostInfo: Codable {
         self.friendlyName = friendlyName
         self.setupUrl = setupUrl
         self.importFavoritesOnly = importFavoritesOnly
+        self.preferEpgChannelImages = preferEpgChannelImages
+        self.preferEpgChannelNumbers = preferEpgChannelNumbers
         self.allowHWTranscoding = allowHWTranscoding
+        self.allowMappingByNumber = allowMappingByNumber
         self.source = source
         self.tunerCount = tunerCount
         self.userAgent = userAgent
@@ -51,7 +57,10 @@ public struct LiveTvTunerHostInfo: Codable {
         case friendlyName = "FriendlyName"
         case setupUrl = "SetupUrl"
         case importFavoritesOnly = "ImportFavoritesOnly"
+        case preferEpgChannelImages = "PreferEpgChannelImages"
+        case preferEpgChannelNumbers = "PreferEpgChannelNumbers"
         case allowHWTranscoding = "AllowHWTranscoding"
+        case allowMappingByNumber = "AllowMappingByNumber"
         case source = "Source"
         case tunerCount = "TunerCount"
         case userAgent = "UserAgent"

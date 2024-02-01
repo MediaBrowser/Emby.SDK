@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -153,6 +153,18 @@ export default class TranscodeReason {
          * @const
          */
         directPlayError = "DirectPlayError";
+
+        /**
+         * value: "VideoRangeNotSupported"
+         * @const
+         */
+        videoRangeNotSupported = "VideoRangeNotSupported";
+
+        /**
+         * value: "SubtitleContentOptionsEnabled"
+         * @const
+         */
+        subtitleContentOptionsEnabled = "SubtitleContentOptionsEnabled";
 
 
     /**

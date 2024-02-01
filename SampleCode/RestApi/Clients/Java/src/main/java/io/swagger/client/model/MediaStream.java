@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -12,16 +12,18 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.DlnaSubtitleDeliveryMethod;
-import io.swagger.client.model.MediaInfoMediaProtocol;
+import io.swagger.client.model.ExtendedVideoSubTypes;
+import io.swagger.client.model.ExtendedVideoTypes;
+import io.swagger.client.model.MediaProtocol;
 import io.swagger.client.model.MediaStreamType;
+import io.swagger.client.model.SubtitleDeliveryMethod;
 import io.swagger.client.model.SubtitleLocationType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * MediaStream
+ * MediaStream information.      MediaStream itens are typically included in a &#x60;MediaBrowser.Model.Dto.MediaSourceInfo&#x60; object.      &#x60;MediaBrowser.Model.Dto.MediaSourceInfo.MediaStreams&#x60;  
  */
-
+@Schema(description = "MediaStream information.      MediaStream itens are typically included in a `MediaBrowser.Model.Dto.MediaSourceInfo` object.      `MediaBrowser.Model.Dto.MediaSourceInfo.MediaStreams`  ")
 
 public class MediaStream {
   @SerializedName("Codec")
@@ -50,9 +52,6 @@ public class MediaStream {
 
   @SerializedName("TimeBase")
   private String timeBase = null;
-
-  @SerializedName("CodecTimeBase")
-  private String codecTimeBase = null;
 
   @SerializedName("Title")
   private String title = null;
@@ -105,6 +104,9 @@ public class MediaStream {
   @SerializedName("IsForced")
   private Boolean isForced = null;
 
+  @SerializedName("IsHearingImpaired")
+  private Boolean isHearingImpaired = null;
+
   @SerializedName("Height")
   private Integer height = null;
 
@@ -133,7 +135,7 @@ public class MediaStream {
   private Boolean isExternal = null;
 
   @SerializedName("DeliveryMethod")
-  private DlnaSubtitleDeliveryMethod deliveryMethod = null;
+  private SubtitleDeliveryMethod deliveryMethod = null;
 
   @SerializedName("DeliveryUrl")
   private String deliveryUrl = null;
@@ -151,7 +153,7 @@ public class MediaStream {
   private String path = null;
 
   @SerializedName("Protocol")
-  private MediaInfoMediaProtocol protocol = null;
+  private MediaProtocol protocol = null;
 
   @SerializedName("PixelFormat")
   private String pixelFormat = null;
@@ -161,6 +163,15 @@ public class MediaStream {
 
   @SerializedName("IsAnamorphic")
   private Boolean isAnamorphic = null;
+
+  @SerializedName("ExtendedVideoType")
+  private ExtendedVideoTypes extendedVideoType = null;
+
+  @SerializedName("ExtendedVideoSubType")
+  private ExtendedVideoSubTypes extendedVideoSubType = null;
+
+  @SerializedName("ExtendedVideoSubTypeDescription")
+  private String extendedVideoSubTypeDescription = null;
 
   @SerializedName("ItemId")
   private String itemId = null;
@@ -174,9 +185,6 @@ public class MediaStream {
   @SerializedName("MimeType")
   private String mimeType = null;
 
-  @SerializedName("IsClosedCaptions")
-  private Boolean isClosedCaptions = null;
-
   @SerializedName("SubtitleLocationType")
   private SubtitleLocationType subtitleLocationType = null;
 
@@ -186,10 +194,10 @@ public class MediaStream {
   }
 
    /**
-   * Get codec
+   * The codec.    Probe Field: &#x60;codec_name&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;    Related Enums: &#x60;T:Emby.Media.Model.Enums.VideoMediaTypes&#x60;, &#x60;Emby.Media.Model.Enums.AudioMediaTypes&#x60;, &#x60;Emby.Media.Model.Enums.SubtitleMediaTypes&#x60;.
    * @return codec
   **/
-  @Schema(description = "")
+  @Schema(description = "The codec.    Probe Field: `codec_name`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`    Related Enums: `T:Emby.Media.Model.Enums.VideoMediaTypes`, `Emby.Media.Model.Enums.AudioMediaTypes`, `Emby.Media.Model.Enums.SubtitleMediaTypes`.")
   public String getCodec() {
     return codec;
   }
@@ -204,10 +212,10 @@ public class MediaStream {
   }
 
    /**
-   * Get codecTag
+   * The codec tag.    Probe Field: &#x60;codec_tag&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
    * @return codecTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The codec tag.    Probe Field: `codec_tag`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.")
   public String getCodecTag() {
     return codecTag;
   }
@@ -222,10 +230,10 @@ public class MediaStream {
   }
 
    /**
-   * Get language
+   * The language.    Probe Field: &#x60;tags[\&quot;language\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
    * @return language
   **/
-  @Schema(description = "")
+  @Schema(description = "The language.    Probe Field: `tags[\"language\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.")
   public String getLanguage() {
     return language;
   }
@@ -240,10 +248,10 @@ public class MediaStream {
   }
 
    /**
-   * Get colorTransfer
+   * The color transfer characteristics.    Probe Field: &#x60;color_transfer&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorTransfers&#x60;.
    * @return colorTransfer
   **/
-  @Schema(description = "")
+  @Schema(description = "The color transfer characteristics.    Probe Field: `color_transfer`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorTransfers`.")
   public String getColorTransfer() {
     return colorTransfer;
   }
@@ -258,10 +266,10 @@ public class MediaStream {
   }
 
    /**
-   * Get colorPrimaries
+   * The chromaticity coordinates of the source primaries.    Probe Field: &#x60;color_primaries&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorPrimaries&#x60;.
    * @return colorPrimaries
   **/
-  @Schema(description = "")
+  @Schema(description = "The chromaticity coordinates of the source primaries.    Probe Field: `color_primaries`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorPrimaries`.")
   public String getColorPrimaries() {
     return colorPrimaries;
   }
@@ -276,10 +284,10 @@ public class MediaStream {
   }
 
    /**
-   * Get colorSpace
+   * The YUV colorspace type.    Probe Field: &#x60;color_space&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorSpaces&#x60;.
    * @return colorSpace
   **/
-  @Schema(description = "")
+  @Schema(description = "The YUV colorspace type.    Probe Field: `color_space`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enum: `Emby.Media.Model.Enums.ColorSpaces`.")
   public String getColorSpace() {
     return colorSpace;
   }
@@ -294,10 +302,10 @@ public class MediaStream {
   }
 
    /**
-   * Get comment
+   * The comment.    Probe Field: &#x60;tags[\&quot;comment\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
    * @return comment
   **/
-  @Schema(description = "")
+  @Schema(description = "The comment.    Probe Field: `tags[\"comment\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.")
   public String getComment() {
     return comment;
   }
@@ -312,10 +320,10 @@ public class MediaStream {
   }
 
    /**
-   * Get streamStartTimeTicks
+   * The start time of the stream.    Probe Field: &#x60;start_time&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Actual type: &#x60;System.TimeSpan&#x60;.
    * @return streamStartTimeTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The start time of the stream.    Probe Field: `start_time`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Actual type: `System.TimeSpan`.")
   public Long getStreamStartTimeTicks() {
     return streamStartTimeTicks;
   }
@@ -330,10 +338,10 @@ public class MediaStream {
   }
 
    /**
-   * Get timeBase
+   * The time\\-base.    Probe Field: &#x60;time_base&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.
    * @return timeBase
   **/
-  @Schema(description = "")
+  @Schema(description = "The time\\-base.    Probe Field: `time_base`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Actual type: `Emby.Media.Model.Types.Rational`.")
   public String getTimeBase() {
     return timeBase;
   }
@@ -342,34 +350,16 @@ public class MediaStream {
     this.timeBase = timeBase;
   }
 
-  public MediaStream codecTimeBase(String codecTimeBase) {
-    this.codecTimeBase = codecTimeBase;
-    return this;
-  }
-
-   /**
-   * Get codecTimeBase
-   * @return codecTimeBase
-  **/
-  @Schema(description = "")
-  public String getCodecTimeBase() {
-    return codecTimeBase;
-  }
-
-  public void setCodecTimeBase(String codecTimeBase) {
-    this.codecTimeBase = codecTimeBase;
-  }
-
   public MediaStream title(String title) {
     this.title = title;
     return this;
   }
 
    /**
-   * Get title
+   * The title.    Probe Field: &#x60;tags[\&quot;title\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
    * @return title
   **/
-  @Schema(description = "")
+  @Schema(description = "The title.    Probe Field: `tags[\"title\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.")
   public String getTitle() {
     return title;
   }
@@ -384,10 +374,10 @@ public class MediaStream {
   }
 
    /**
-   * Get extradata
+   * The extradata.    Probe Field: &#x60;extradata&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Currently, this value is only parsed for subtitle streams with codec &#x60;Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext&#x60;.
    * @return extradata
   **/
-  @Schema(description = "")
+  @Schema(description = "The extradata.    Probe Field: `extradata`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.    Currently, this value is only parsed for subtitle streams with codec `Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext`.")
   public String getExtradata() {
     return extradata;
   }
@@ -420,10 +410,10 @@ public class MediaStream {
   }
 
    /**
-   * Get displayTitle
+   * The display title.    Custom property set by the application.
    * @return displayTitle
   **/
-  @Schema(description = "")
+  @Schema(description = "The display title.    Custom property set by the application.")
   public String getDisplayTitle() {
     return displayTitle;
   }
@@ -438,10 +428,10 @@ public class MediaStream {
   }
 
    /**
-   * Get displayLanguage
+   * The display language.    Custom property set by the application.
    * @return displayLanguage
   **/
-  @Schema(description = "")
+  @Schema(description = "The display language.    Custom property set by the application.")
   public String getDisplayLanguage() {
     return displayLanguage;
   }
@@ -456,10 +446,10 @@ public class MediaStream {
   }
 
    /**
-   * Get nalLengthSize
+   * The nal length size.    Probe Field: &#x60;nal_length_size&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60; of type &#x60;Emby.Media.Model.Enums.VideoMediaTypes.h264&#x60;.    Actual type: &#x60;System.Int32&#x60;.
    * @return nalLengthSize
   **/
-  @Schema(description = "")
+  @Schema(description = "The nal length size.    Probe Field: `nal_length_size`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video` of type `Emby.Media.Model.Enums.VideoMediaTypes.h264`.    Actual type: `System.Int32`.")
   public String getNalLengthSize() {
     return nalLengthSize;
   }
@@ -474,10 +464,10 @@ public class MediaStream {
   }
 
    /**
-   * Get isInterlaced
+   * A value indicating whether this instance is interlaced.    Probe Field: &#x60;field_order&#x60; \\!\\&#x3D; &#x60;progressive&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.
    * @return isInterlaced
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is interlaced.    Probe Field: `field_order` \\!\\= `progressive`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.")
   public Boolean isIsInterlaced() {
     return isInterlaced;
   }
@@ -510,10 +500,10 @@ public class MediaStream {
   }
 
    /**
-   * Get channelLayout
+   * The channel layout.    Probe Field: &#x60;channel_layout&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enum: &#x60;MediaBrowser.Model.Entities.MediaStream.ChannelLayout&#x60;.
    * @return channelLayout
   **/
-  @Schema(description = "")
+  @Schema(description = "The channel layout.    Probe Field: `channel_layout`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enum: `MediaBrowser.Model.Entities.MediaStream.ChannelLayout`.")
   public String getChannelLayout() {
     return channelLayout;
   }
@@ -528,10 +518,10 @@ public class MediaStream {
   }
 
    /**
-   * Get bitRate
+   * The bit rate.    Probe Field: &#x60;bit_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.    THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS\\!
    * @return bitRate
   **/
-  @Schema(description = "")
+  @Schema(description = "The bit rate.    Probe Field: `bit_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`.    THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS\\!")
   public Integer getBitRate() {
     return bitRate;
   }
@@ -546,10 +536,10 @@ public class MediaStream {
   }
 
    /**
-   * Get bitDepth
+   * The bit depth.    Probe Field: &#x60;bits_per_sample&#x60; or &#x60;bits_per_raw_sample&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.
    * @return bitDepth
   **/
-  @Schema(description = "")
+  @Schema(description = "The bit depth.    Probe Field: `bits_per_sample` or `bits_per_raw_sample`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`.")
   public Integer getBitDepth() {
     return bitDepth;
   }
@@ -564,10 +554,10 @@ public class MediaStream {
   }
 
    /**
-   * Get refFrames
+   * The reference frames.    Probe Field: &#x60;refs&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.
    * @return refFrames
   **/
-  @Schema(description = "")
+  @Schema(description = "The reference frames.    Probe Field: `refs`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.")
   public Integer getRefFrames() {
     return refFrames;
   }
@@ -600,10 +590,10 @@ public class MediaStream {
   }
 
    /**
-   * Get channels
+   * The audio channel count.    Probe Field: &#x60;channels&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.
    * @return channels
   **/
-  @Schema(description = "")
+  @Schema(description = "The audio channel count.    Probe Field: `channels`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`.")
   public Integer getChannels() {
     return channels;
   }
@@ -618,10 +608,10 @@ public class MediaStream {
   }
 
    /**
-   * Get sampleRate
+   * The sample rate.    Probe Field: &#x60;sample_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.SampleRates&#x60;.
    * @return sampleRate
   **/
-  @Schema(description = "")
+  @Schema(description = "The sample rate.    Probe Field: `sample_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enum: `Emby.Media.Model.Enums.SampleRates`.")
   public Integer getSampleRate() {
     return sampleRate;
   }
@@ -636,10 +626,10 @@ public class MediaStream {
   }
 
    /**
-   * Get isDefault
+   * A value indicating whether this instance is default.    Probe Field: &#x60;disposition[\&quot;default\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
    * @return isDefault
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is default.    Probe Field: `disposition[\"default\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.")
   public Boolean isIsDefault() {
     return isDefault;
   }
@@ -654,10 +644,10 @@ public class MediaStream {
   }
 
    /**
-   * Get isForced
+   * A value indicating whether this instance is forced.    Probe Field: &#x60;disposition[\&quot;forced\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
    * @return isForced
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is forced.    Probe Field: `disposition[\"forced\"]`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.")
   public Boolean isIsForced() {
     return isForced;
   }
@@ -666,16 +656,34 @@ public class MediaStream {
     this.isForced = isForced;
   }
 
+  public MediaStream isHearingImpaired(Boolean isHearingImpaired) {
+    this.isHearingImpaired = isHearingImpaired;
+    return this;
+  }
+
+   /**
+   * Get isHearingImpaired
+   * @return isHearingImpaired
+  **/
+  @Schema(description = "")
+  public Boolean isIsHearingImpaired() {
+    return isHearingImpaired;
+  }
+
+  public void setIsHearingImpaired(Boolean isHearingImpaired) {
+    this.isHearingImpaired = isHearingImpaired;
+  }
+
   public MediaStream height(Integer height) {
     this.height = height;
     return this;
   }
 
    /**
-   * Get height
+   * The height.    Probe Field: &#x60;height&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.
    * @return height
   **/
-  @Schema(description = "")
+  @Schema(description = "The height.    Probe Field: `height`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.")
   public Integer getHeight() {
     return height;
   }
@@ -690,10 +698,10 @@ public class MediaStream {
   }
 
    /**
-   * Get width
+   * The width.    Probe Field: &#x60;width&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.
    * @return width
   **/
-  @Schema(description = "")
+  @Schema(description = "The width.    Probe Field: `width`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.")
   public Integer getWidth() {
     return width;
   }
@@ -708,10 +716,10 @@ public class MediaStream {
   }
 
    /**
-   * Get averageFrameRate
+   * The average frame rate..    Probe Field: &#x60;avg_frame_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.
    * @return averageFrameRate
   **/
-  @Schema(description = "")
+  @Schema(description = "The average frame rate..    Probe Field: `avg_frame_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.")
   public Float getAverageFrameRate() {
     return averageFrameRate;
   }
@@ -726,10 +734,10 @@ public class MediaStream {
   }
 
    /**
-   * Get realFrameRate
+   * The real frame rate..    Probe Field: &#x60;r_frame_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.
    * @return realFrameRate
   **/
-  @Schema(description = "")
+  @Schema(description = "The real frame rate..    Probe Field: `r_frame_rate`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.")
   public Float getRealFrameRate() {
     return realFrameRate;
   }
@@ -744,10 +752,10 @@ public class MediaStream {
   }
 
    /**
-   * Get profile
+   * The profile.    Probe Field: &#x60;profile&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enums: &#x60;Emby.Media.Model.Enums.AacProfiles&#x60;, &#x60;Emby.Media.Model.Enums.AvcProfiles&#x60;, &#x60;Emby.Media.Model.Enums.H263Profiles&#x60;, &#x60;Emby.Media.Model.Enums.HevcProfiles&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg2Profiles&#x60;,&#x60;Emby.Media.Model.Enums.Vc1Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg4Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Vp8Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Vp9Profiles&#x60;.
    * @return profile
   **/
-  @Schema(description = "")
+  @Schema(description = "The profile.    Probe Field: `profile`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`    Related Enums: `Emby.Media.Model.Enums.AacProfiles`, `Emby.Media.Model.Enums.AvcProfiles`, `Emby.Media.Model.Enums.H263Profiles`, `Emby.Media.Model.Enums.HevcProfiles`, `Emby.Media.Model.Enums.Mpeg2Profiles`,`Emby.Media.Model.Enums.Vc1Profiles`, `Emby.Media.Model.Enums.Mpeg4Profiles`, `Emby.Media.Model.Enums.Vp8Profiles`, `Emby.Media.Model.Enums.Vp9Profiles`.")
   public String getProfile() {
     return profile;
   }
@@ -780,10 +788,10 @@ public class MediaStream {
   }
 
    /**
-   * Get aspectRatio
+   * The aspect ratio.    Probe Field: &#x60;display_aspect_ratio&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.
    * @return aspectRatio
   **/
-  @Schema(description = "")
+  @Schema(description = "The aspect ratio.    Probe Field: `display_aspect_ratio`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `Emby.Media.Model.Types.Rational`.")
   public String getAspectRatio() {
     return aspectRatio;
   }
@@ -798,10 +806,10 @@ public class MediaStream {
   }
 
    /**
-   * Get index
+   * The index of the stream inside its container.    Probe Field: &#x60;index&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
    * @return index
   **/
-  @Schema(description = "")
+  @Schema(description = "The index of the stream inside its container.    Probe Field: `index`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`, `MediaBrowser.Model.Entities.MediaStreamType.Audio`, `MediaBrowser.Model.Entities.MediaStreamType.Subtitle`.")
   public Integer getIndex() {
     return index;
   }
@@ -816,10 +824,10 @@ public class MediaStream {
   }
 
    /**
-   * Get isExternal
+   * A value indicating whether this instance is external.    Custom property set by the application.
    * @return isExternal
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is external.    Custom property set by the application.")
   public Boolean isIsExternal() {
     return isExternal;
   }
@@ -828,7 +836,7 @@ public class MediaStream {
     this.isExternal = isExternal;
   }
 
-  public MediaStream deliveryMethod(DlnaSubtitleDeliveryMethod deliveryMethod) {
+  public MediaStream deliveryMethod(SubtitleDeliveryMethod deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
     return this;
   }
@@ -838,11 +846,11 @@ public class MediaStream {
    * @return deliveryMethod
   **/
   @Schema(description = "")
-  public DlnaSubtitleDeliveryMethod getDeliveryMethod() {
+  public SubtitleDeliveryMethod getDeliveryMethod() {
     return deliveryMethod;
   }
 
-  public void setDeliveryMethod(DlnaSubtitleDeliveryMethod deliveryMethod) {
+  public void setDeliveryMethod(SubtitleDeliveryMethod deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
   }
 
@@ -852,10 +860,10 @@ public class MediaStream {
   }
 
    /**
-   * Get deliveryUrl
+   * The delivery URL.    Custom property set by the application.
    * @return deliveryUrl
   **/
-  @Schema(description = "")
+  @Schema(description = "The delivery URL.    Custom property set by the application.")
   public String getDeliveryUrl() {
     return deliveryUrl;
   }
@@ -870,10 +878,10 @@ public class MediaStream {
   }
 
    /**
-   * Get isExternalUrl
+   * A value indicating whether this instance is external URL.    Custom property set by the application.
    * @return isExternalUrl
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is external URL.    Custom property set by the application.")
   public Boolean isIsExternalUrl() {
     return isExternalUrl;
   }
@@ -906,10 +914,10 @@ public class MediaStream {
   }
 
    /**
-   * Get supportsExternalStream
+   * A value indicating whether \\[supports external stream\\].
    * @return supportsExternalStream
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[supports external stream\\].")
   public Boolean isSupportsExternalStream() {
     return supportsExternalStream;
   }
@@ -924,10 +932,10 @@ public class MediaStream {
   }
 
    /**
-   * Get path
+   * The filename.
    * @return path
   **/
-  @Schema(description = "")
+  @Schema(description = "The filename.")
   public String getPath() {
     return path;
   }
@@ -936,7 +944,7 @@ public class MediaStream {
     this.path = path;
   }
 
-  public MediaStream protocol(MediaInfoMediaProtocol protocol) {
+  public MediaStream protocol(MediaProtocol protocol) {
     this.protocol = protocol;
     return this;
   }
@@ -946,11 +954,11 @@ public class MediaStream {
    * @return protocol
   **/
   @Schema(description = "")
-  public MediaInfoMediaProtocol getProtocol() {
+  public MediaProtocol getProtocol() {
     return protocol;
   }
 
-  public void setProtocol(MediaInfoMediaProtocol protocol) {
+  public void setProtocol(MediaProtocol protocol) {
     this.protocol = protocol;
   }
 
@@ -960,10 +968,10 @@ public class MediaStream {
   }
 
    /**
-   * Get pixelFormat
+   * The pixel format.    Probe Field: &#x60;pix_fmt&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;MediaBrowser.Model.Entities.MediaStream.PixelFormat&#x60;.
    * @return pixelFormat
   **/
-  @Schema(description = "")
+  @Schema(description = "The pixel format.    Probe Field: `pix_fmt`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`.    Actual type: `MediaBrowser.Model.Entities.MediaStream.PixelFormat`.")
   public String getPixelFormat() {
     return pixelFormat;
   }
@@ -978,10 +986,10 @@ public class MediaStream {
   }
 
    /**
-   * Get level
+   * The codec level.    Probe Field: &#x60;level&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enums: &#x60;Emby.Media.Model.Enums.AvcLevels&#x60;, &#x60;Emby.Media.Model.Enums.H263Levels&#x60;, &#x60;Emby.Media.Model.Enums.HevcLevels&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg2Levels&#x60;,&#x60;Emby.Media.Model.Enums.Vc1Levels&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg4Levels&#x60;, &#x60;Emby.Media.Model.Enums.Vp8Levels&#x60;, &#x60;Emby.Media.Model.Enums.Vp9Levels&#x60;.
    * @return level
   **/
-  @Schema(description = "")
+  @Schema(description = "The codec level.    Probe Field: `level`    Applies to: `MediaBrowser.Model.Entities.MediaStreamType.Video`    Related Enums: `Emby.Media.Model.Enums.AvcLevels`, `Emby.Media.Model.Enums.H263Levels`, `Emby.Media.Model.Enums.HevcLevels`, `Emby.Media.Model.Enums.Mpeg2Levels`,`Emby.Media.Model.Enums.Vc1Levels`, `Emby.Media.Model.Enums.Mpeg4Levels`, `Emby.Media.Model.Enums.Vp8Levels`, `Emby.Media.Model.Enums.Vp9Levels`.")
   public Double getLevel() {
     return level;
   }
@@ -996,10 +1004,10 @@ public class MediaStream {
   }
 
    /**
-   * Get isAnamorphic
+   * A value indicating whether this instance is anamorphic.
    * @return isAnamorphic
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is anamorphic.")
   public Boolean isIsAnamorphic() {
     return isAnamorphic;
   }
@@ -1008,16 +1016,70 @@ public class MediaStream {
     this.isAnamorphic = isAnamorphic;
   }
 
+  public MediaStream extendedVideoType(ExtendedVideoTypes extendedVideoType) {
+    this.extendedVideoType = extendedVideoType;
+    return this;
+  }
+
+   /**
+   * Get extendedVideoType
+   * @return extendedVideoType
+  **/
+  @Schema(description = "")
+  public ExtendedVideoTypes getExtendedVideoType() {
+    return extendedVideoType;
+  }
+
+  public void setExtendedVideoType(ExtendedVideoTypes extendedVideoType) {
+    this.extendedVideoType = extendedVideoType;
+  }
+
+  public MediaStream extendedVideoSubType(ExtendedVideoSubTypes extendedVideoSubType) {
+    this.extendedVideoSubType = extendedVideoSubType;
+    return this;
+  }
+
+   /**
+   * Get extendedVideoSubType
+   * @return extendedVideoSubType
+  **/
+  @Schema(description = "")
+  public ExtendedVideoSubTypes getExtendedVideoSubType() {
+    return extendedVideoSubType;
+  }
+
+  public void setExtendedVideoSubType(ExtendedVideoSubTypes extendedVideoSubType) {
+    this.extendedVideoSubType = extendedVideoSubType;
+  }
+
+  public MediaStream extendedVideoSubTypeDescription(String extendedVideoSubTypeDescription) {
+    this.extendedVideoSubTypeDescription = extendedVideoSubTypeDescription;
+    return this;
+  }
+
+   /**
+   * The extended video sub\\-type description.
+   * @return extendedVideoSubTypeDescription
+  **/
+  @Schema(description = "The extended video sub\\-type description.")
+  public String getExtendedVideoSubTypeDescription() {
+    return extendedVideoSubTypeDescription;
+  }
+
+  public void setExtendedVideoSubTypeDescription(String extendedVideoSubTypeDescription) {
+    this.extendedVideoSubTypeDescription = extendedVideoSubTypeDescription;
+  }
+
   public MediaStream itemId(String itemId) {
     this.itemId = itemId;
     return this;
   }
 
    /**
-   * Get itemId
+   * Used only by our Windows app. Not used by Emby Server.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "Used only by our Windows app. Not used by Emby Server.")
   public String getItemId() {
     return itemId;
   }
@@ -1032,10 +1094,10 @@ public class MediaStream {
   }
 
    /**
-   * Get serverId
+   * Used only by our Windows app. Not used by Emby Server.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "Used only by our Windows app. Not used by Emby Server.")
   public String getServerId() {
     return serverId;
   }
@@ -1050,10 +1112,10 @@ public class MediaStream {
   }
 
    /**
-   * Get attachmentSize
+   * The size of the attachment.
    * @return attachmentSize
   **/
-  @Schema(description = "")
+  @Schema(description = "The size of the attachment.")
   public Integer getAttachmentSize() {
     return attachmentSize;
   }
@@ -1068,34 +1130,16 @@ public class MediaStream {
   }
 
    /**
-   * Get mimeType
+   * The type of the MIME.
    * @return mimeType
   **/
-  @Schema(description = "")
+  @Schema(description = "The type of the MIME.")
   public String getMimeType() {
     return mimeType;
   }
 
   public void setMimeType(String mimeType) {
     this.mimeType = mimeType;
-  }
-
-  public MediaStream isClosedCaptions(Boolean isClosedCaptions) {
-    this.isClosedCaptions = isClosedCaptions;
-    return this;
-  }
-
-   /**
-   * Get isClosedCaptions
-   * @return isClosedCaptions
-  **/
-  @Schema(description = "")
-  public Boolean isIsClosedCaptions() {
-    return isClosedCaptions;
-  }
-
-  public void setIsClosedCaptions(Boolean isClosedCaptions) {
-    this.isClosedCaptions = isClosedCaptions;
   }
 
   public MediaStream subtitleLocationType(SubtitleLocationType subtitleLocationType) {
@@ -1135,7 +1179,6 @@ public class MediaStream {
         Objects.equals(this.comment, mediaStream.comment) &&
         Objects.equals(this.streamStartTimeTicks, mediaStream.streamStartTimeTicks) &&
         Objects.equals(this.timeBase, mediaStream.timeBase) &&
-        Objects.equals(this.codecTimeBase, mediaStream.codecTimeBase) &&
         Objects.equals(this.title, mediaStream.title) &&
         Objects.equals(this.extradata, mediaStream.extradata) &&
         Objects.equals(this.videoRange, mediaStream.videoRange) &&
@@ -1153,6 +1196,7 @@ public class MediaStream {
         Objects.equals(this.sampleRate, mediaStream.sampleRate) &&
         Objects.equals(this.isDefault, mediaStream.isDefault) &&
         Objects.equals(this.isForced, mediaStream.isForced) &&
+        Objects.equals(this.isHearingImpaired, mediaStream.isHearingImpaired) &&
         Objects.equals(this.height, mediaStream.height) &&
         Objects.equals(this.width, mediaStream.width) &&
         Objects.equals(this.averageFrameRate, mediaStream.averageFrameRate) &&
@@ -1172,17 +1216,19 @@ public class MediaStream {
         Objects.equals(this.pixelFormat, mediaStream.pixelFormat) &&
         Objects.equals(this.level, mediaStream.level) &&
         Objects.equals(this.isAnamorphic, mediaStream.isAnamorphic) &&
+        Objects.equals(this.extendedVideoType, mediaStream.extendedVideoType) &&
+        Objects.equals(this.extendedVideoSubType, mediaStream.extendedVideoSubType) &&
+        Objects.equals(this.extendedVideoSubTypeDescription, mediaStream.extendedVideoSubTypeDescription) &&
         Objects.equals(this.itemId, mediaStream.itemId) &&
         Objects.equals(this.serverId, mediaStream.serverId) &&
         Objects.equals(this.attachmentSize, mediaStream.attachmentSize) &&
         Objects.equals(this.mimeType, mediaStream.mimeType) &&
-        Objects.equals(this.isClosedCaptions, mediaStream.isClosedCaptions) &&
         Objects.equals(this.subtitleLocationType, mediaStream.subtitleLocationType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, codecTimeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, itemId, serverId, attachmentSize, mimeType, isClosedCaptions, subtitleLocationType);
+    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, isHearingImpaired, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
   }
 
 
@@ -1200,7 +1246,6 @@ public class MediaStream {
     sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
     sb.append("    streamStartTimeTicks: ").append(toIndentedString(streamStartTimeTicks)).append("\n");
     sb.append("    timeBase: ").append(toIndentedString(timeBase)).append("\n");
-    sb.append("    codecTimeBase: ").append(toIndentedString(codecTimeBase)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    extradata: ").append(toIndentedString(extradata)).append("\n");
     sb.append("    videoRange: ").append(toIndentedString(videoRange)).append("\n");
@@ -1218,6 +1263,7 @@ public class MediaStream {
     sb.append("    sampleRate: ").append(toIndentedString(sampleRate)).append("\n");
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
     sb.append("    isForced: ").append(toIndentedString(isForced)).append("\n");
+    sb.append("    isHearingImpaired: ").append(toIndentedString(isHearingImpaired)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    averageFrameRate: ").append(toIndentedString(averageFrameRate)).append("\n");
@@ -1237,11 +1283,13 @@ public class MediaStream {
     sb.append("    pixelFormat: ").append(toIndentedString(pixelFormat)).append("\n");
     sb.append("    level: ").append(toIndentedString(level)).append("\n");
     sb.append("    isAnamorphic: ").append(toIndentedString(isAnamorphic)).append("\n");
+    sb.append("    extendedVideoType: ").append(toIndentedString(extendedVideoType)).append("\n");
+    sb.append("    extendedVideoSubType: ").append(toIndentedString(extendedVideoSubType)).append("\n");
+    sb.append("    extendedVideoSubTypeDescription: ").append(toIndentedString(extendedVideoSubTypeDescription)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
     sb.append("    attachmentSize: ").append(toIndentedString(attachmentSize)).append("\n");
     sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
-    sb.append("    isClosedCaptions: ").append(toIndentedString(isClosedCaptions)).append("\n");
     sb.append("    subtitleLocationType: ").append(toIndentedString(subtitleLocationType)).append("\n");
     sb.append("}");
     return sb.toString();

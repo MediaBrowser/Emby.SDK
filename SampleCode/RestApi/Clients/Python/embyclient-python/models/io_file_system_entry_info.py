@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -50,6 +50,7 @@ class IOFileSystemEntryInfo(object):
     def name(self):
         """Gets the name of this IOFileSystemEntryInfo.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this IOFileSystemEntryInfo.  # noqa: E501
         :rtype: str
@@ -60,6 +61,7 @@ class IOFileSystemEntryInfo(object):
     def name(self, name):
         """Sets the name of this IOFileSystemEntryInfo.
 
+        The name.  # noqa: E501
 
         :param name: The name of this IOFileSystemEntryInfo.  # noqa: E501
         :type: str
@@ -71,6 +73,7 @@ class IOFileSystemEntryInfo(object):
     def path(self):
         """Gets the path of this IOFileSystemEntryInfo.  # noqa: E501
 
+        The path.  # noqa: E501
 
         :return: The path of this IOFileSystemEntryInfo.  # noqa: E501
         :rtype: str
@@ -81,6 +84,7 @@ class IOFileSystemEntryInfo(object):
     def path(self, path):
         """Sets the path of this IOFileSystemEntryInfo.
 
+        The path.  # noqa: E501
 
         :param path: The path of this IOFileSystemEntryInfo.  # noqa: E501
         :type: str

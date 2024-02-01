@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -8,18 +8,17 @@ package EmbyClient.Java;
 import io.swagger.client.model.AuthenticateUser;
 import io.swagger.client.model.AuthenticateUserByName;
 import io.swagger.client.model.AuthenticationAuthenticationResult;
-import io.swagger.client.model.ConfigurationUserConfiguration;
 import io.swagger.client.model.CreateUserByName;
 import io.swagger.client.model.ForgotPassword;
 import io.swagger.client.model.ForgotPasswordPin;
+import io.swagger.client.model.ForgotPasswordResult;
 import io.swagger.client.model.NameIdPair;
+import io.swagger.client.model.PinRedeemResult;
 import io.swagger.client.model.QueryResultUserDto;
-import io.swagger.client.model.UpdateUserEasyPassword;
 import io.swagger.client.model.UpdateUserPassword;
+import io.swagger.client.model.UserConfiguration;
 import io.swagger.client.model.UserDto;
-import io.swagger.client.model.UsersForgotPasswordResult;
-import io.swagger.client.model.UsersPinRedeemResult;
-import io.swagger.client.model.UsersUserPolicy;
+import io.swagger.client.model.UserPolicy;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -56,7 +55,7 @@ public class UserServiceApiTest {
     /**
      * Clears audio or subtitle track selections for a user
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -85,6 +84,42 @@ public class UserServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Gets a typed user setting
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUsersByUseridTypedsettingsByKeyTest() throws Exception {
+        String key = null;
+        String userId = null;
+        api.getUsersByUseridTypedsettingsByKey(key, userId);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets a list of users
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUsersItemaccessTest() throws Exception {
+        Boolean isHidden = null;
+        Boolean isDisabled = null;
+        Integer startIndex = null;
+        Integer limit = null;
+        String nameStartsWithOrGreater = null;
+        String sortOrder = null;
+        QueryResultUserDto response = api.getUsersItemaccess(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
+
+        // TODO: test validations
+    }
+    /**
      * Gets a list of users
      *
      * Requires authentication as administrator
@@ -99,14 +134,15 @@ public class UserServiceApiTest {
         Integer startIndex = null;
         Integer limit = null;
         String nameStartsWithOrGreater = null;
-        List<NameIdPair> response = api.getUsersPrefixes(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+        String sortOrder = null;
+        List<NameIdPair> response = api.getUsersPrefixes(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
 
         // TODO: test validations
     }
     /**
      * Gets a list of publicly visible users for display on a login screen.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -132,14 +168,15 @@ public class UserServiceApiTest {
         Integer startIndex = null;
         Integer limit = null;
         String nameStartsWithOrGreater = null;
-        QueryResultUserDto response = api.getUsersQuery(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+        String sortOrder = null;
+        QueryResultUserDto response = api.getUsersQuery(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
 
         // TODO: test validations
     }
     /**
      * Authenticates a user
      *
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -171,7 +208,7 @@ public class UserServiceApiTest {
     /**
      * Authenticates a user
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -194,9 +231,25 @@ public class UserServiceApiTest {
      */
     @Test
     public void postUsersByIdConfigurationTest() throws Exception {
-        ConfigurationUserConfiguration body = null;
+        UserConfiguration body = null;
         String id = null;
         api.postUsersByIdConfiguration(body, id);
+
+        // TODO: test validations
+    }
+    /**
+     * Updates a user configuration
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByIdConfigurationPartialTest() throws Exception {
+        Object body = null;
+        String id = null;
+        api.postUsersByIdConfigurationPartial(body, id);
 
         // TODO: test validations
     }
@@ -212,22 +265,6 @@ public class UserServiceApiTest {
     public void postUsersByIdDeleteTest() throws Exception {
         String id = null;
         api.postUsersByIdDelete(id);
-
-        // TODO: test validations
-    }
-    /**
-     * Updates a user&#x27;s easy password
-     *
-     * Requires authentication as user
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void postUsersByIdEasypasswordTest() throws Exception {
-        UpdateUserEasyPassword body = null;
-        String id = null;
-        api.postUsersByIdEasypassword(body, id);
 
         // TODO: test validations
     }
@@ -257,7 +294,7 @@ public class UserServiceApiTest {
      */
     @Test
     public void postUsersByIdPolicyTest() throws Exception {
-        UsersUserPolicy body = null;
+        UserPolicy body = null;
         String id = null;
         api.postUsersByIdPolicy(body, id);
 
@@ -266,7 +303,7 @@ public class UserServiceApiTest {
     /**
      * Clears audio or subtitle track selections for a user
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -280,9 +317,26 @@ public class UserServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Updates a typed user setting
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersByUseridTypedsettingsByKeyTest() throws Exception {
+        Object body = null;
+        String userId = null;
+        String key = null;
+        api.postUsersByUseridTypedsettingsByKey(body, userId, key);
+
+        // TODO: test validations
+    }
+    /**
      * Initiates the forgot password process for a local user
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -290,14 +344,14 @@ public class UserServiceApiTest {
     @Test
     public void postUsersForgotpasswordTest() throws Exception {
         ForgotPassword body = null;
-        UsersForgotPasswordResult response = api.postUsersForgotpassword(body);
+        ForgotPasswordResult response = api.postUsersForgotpassword(body);
 
         // TODO: test validations
     }
     /**
      * Redeems a forgot password pin
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -305,7 +359,7 @@ public class UserServiceApiTest {
     @Test
     public void postUsersForgotpasswordPinTest() throws Exception {
         ForgotPasswordPin body = null;
-        UsersPinRedeemResult response = api.postUsersForgotpasswordPin(body);
+        PinRedeemResult response = api.postUsersForgotpasswordPin(body);
 
         // TODO: test validations
     }

@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// PlayRequest
+    /// Class PlayRequest  
     /// </summary>
     [DataContract]
         public partial class PlayRequest :  IEquatable<PlayRequest>
@@ -26,7 +26,7 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PlayRequest" /> class.
         /// </summary>
-        /// <param name="controllingUserId">controllingUserId.</param>
+        /// <param name="controllingUserId">The controlling user identifier..</param>
         /// <param name="subtitleStreamIndex">subtitleStreamIndex.</param>
         /// <param name="audioStreamIndex">audioStreamIndex.</param>
         /// <param name="mediaSourceId">mediaSourceId.</param>
@@ -41,8 +41,9 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets ControllingUserId
+        /// The controlling user identifier.
         /// </summary>
+        /// <value>The controlling user identifier.</value>
         [DataMember(Name="ControllingUserId", EmitDefaultValue=false)]
         public string ControllingUserId { get; set; }
 

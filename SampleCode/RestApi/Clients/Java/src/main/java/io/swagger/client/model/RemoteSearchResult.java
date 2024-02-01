@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -43,6 +43,12 @@ public class RemoteSearchResult {
   @SerializedName("ParentIndexNumber")
   private Integer parentIndexNumber = null;
 
+  @SerializedName("SortIndexNumber")
+  private Integer sortIndexNumber = null;
+
+  @SerializedName("SortParentIndexNumber")
+  private Integer sortParentIndexNumber = null;
+
   @SerializedName("PremiereDate")
   private OffsetDateTime premiereDate = null;
 
@@ -73,10 +79,10 @@ public class RemoteSearchResult {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -109,10 +115,10 @@ public class RemoteSearchResult {
   }
 
    /**
-   * Get productionYear
+   * The year.
    * @return productionYear
   **/
-  @Schema(description = "")
+  @Schema(description = "The year.")
   public Integer getProductionYear() {
     return productionYear;
   }
@@ -173,6 +179,42 @@ public class RemoteSearchResult {
 
   public void setParentIndexNumber(Integer parentIndexNumber) {
     this.parentIndexNumber = parentIndexNumber;
+  }
+
+  public RemoteSearchResult sortIndexNumber(Integer sortIndexNumber) {
+    this.sortIndexNumber = sortIndexNumber;
+    return this;
+  }
+
+   /**
+   * Get sortIndexNumber
+   * @return sortIndexNumber
+  **/
+  @Schema(description = "")
+  public Integer getSortIndexNumber() {
+    return sortIndexNumber;
+  }
+
+  public void setSortIndexNumber(Integer sortIndexNumber) {
+    this.sortIndexNumber = sortIndexNumber;
+  }
+
+  public RemoteSearchResult sortParentIndexNumber(Integer sortParentIndexNumber) {
+    this.sortParentIndexNumber = sortParentIndexNumber;
+    return this;
+  }
+
+   /**
+   * Get sortParentIndexNumber
+   * @return sortParentIndexNumber
+  **/
+  @Schema(description = "")
+  public Integer getSortParentIndexNumber() {
+    return sortParentIndexNumber;
+  }
+
+  public void setSortParentIndexNumber(Integer sortParentIndexNumber) {
+    this.sortParentIndexNumber = sortParentIndexNumber;
   }
 
   public RemoteSearchResult premiereDate(OffsetDateTime premiereDate) {
@@ -343,6 +385,8 @@ public class RemoteSearchResult {
         Objects.equals(this.indexNumber, remoteSearchResult.indexNumber) &&
         Objects.equals(this.indexNumberEnd, remoteSearchResult.indexNumberEnd) &&
         Objects.equals(this.parentIndexNumber, remoteSearchResult.parentIndexNumber) &&
+        Objects.equals(this.sortIndexNumber, remoteSearchResult.sortIndexNumber) &&
+        Objects.equals(this.sortParentIndexNumber, remoteSearchResult.sortParentIndexNumber) &&
         Objects.equals(this.premiereDate, remoteSearchResult.premiereDate) &&
         Objects.equals(this.imageUrl, remoteSearchResult.imageUrl) &&
         Objects.equals(this.searchProviderName, remoteSearchResult.searchProviderName) &&
@@ -355,7 +399,7 @@ public class RemoteSearchResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, premiereDate, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
+    return Objects.hash(name, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
   }
 
 
@@ -370,6 +414,8 @@ public class RemoteSearchResult {
     sb.append("    indexNumber: ").append(toIndentedString(indexNumber)).append("\n");
     sb.append("    indexNumberEnd: ").append(toIndentedString(indexNumberEnd)).append("\n");
     sb.append("    parentIndexNumber: ").append(toIndentedString(parentIndexNumber)).append("\n");
+    sb.append("    sortIndexNumber: ").append(toIndentedString(sortIndexNumber)).append("\n");
+    sb.append("    sortParentIndexNumber: ").append(toIndentedString(sortParentIndexNumber)).append("\n");
     sb.append("    premiereDate: ").append(toIndentedString(premiereDate)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    searchProviderName: ").append(toIndentedString(searchProviderName)).append("\n");

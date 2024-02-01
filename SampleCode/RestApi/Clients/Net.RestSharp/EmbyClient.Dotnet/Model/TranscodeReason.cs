@@ -137,5 +137,15 @@ namespace EmbyClient.Dotnet.Model
         /// Enum DirectPlayError for value: DirectPlayError
         /// </summary>
         [EnumMember(Value = "DirectPlayError")]
-        DirectPlayError = 23    }
+        DirectPlayError = 23,
+        /// <summary>
+        /// Enum VideoRangeNotSupported for value: VideoRangeNotSupported
+        /// </summary>
+        [EnumMember(Value = "VideoRangeNotSupported")]
+        VideoRangeNotSupported = 24,
+        /// <summary>
+        /// Enum SubtitleContentOptionsEnabled for value: SubtitleContentOptionsEnabled
+        /// </summary>
+        [EnumMember(Value = "SubtitleContentOptionsEnabled")]
+        SubtitleContentOptionsEnabled = 25    }
 }

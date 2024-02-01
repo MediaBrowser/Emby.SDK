@@ -189,17 +189,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">isAudio</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">addProbeDelay</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -215,20 +215,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_AddMediaInfoWithProbe_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.AddMediaInfoWithProbe*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_AddMediaInfoWithProbe_MediaBrowser_Model_Dto_MediaSourceInfo_System_Boolean_System_ReadOnlyMemory_System_Char__System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.AddMediaInfoWithProbe(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,System.ReadOnlyMemory{System.Char},System.Boolean,System.Threading.CancellationToken)">AddMediaInfoWithProbe(MediaSourceInfo, Boolean, ReadOnlyMemory&lt;Char&gt;, Boolean, CancellationToken)</h4>
+  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_AddMediaInfoWithProbeSafe_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.AddMediaInfoWithProbeSafe*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_AddMediaInfoWithProbeSafe_MediaBrowser_Model_Dto_MediaSourceInfo_System_Boolean_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.AddMediaInfoWithProbeSafe(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,System.Boolean,System.Threading.CancellationToken)">AddMediaInfoWithProbeSafe(MediaSourceInfo, Boolean, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task AddMediaInfoWithProbe(MediaSourceInfo mediaSource, bool isAudio, ReadOnlyMemory&lt;char&gt; cacheKey, bool addProbeDelay, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task AddMediaInfoWithProbeSafe(MediaSourceInfo mediaSource, bool isAudio, bool addProbeDelay, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -246,22 +246,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">isAudio</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
-        <td><span class="parametername">cacheKey</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">addProbeDelay</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -277,7 +272,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -304,7 +299,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceProvider.html">IMediaSourceProvider</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceProvider.html">IMediaSourceProvider</a>&gt;</td>
         <td><span class="parametername">providers</span></td>
         <td><p>The providers.</p>
 </td>
@@ -333,7 +328,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">id</span></td>
         <td><p>The live stream identifier.</p>
 </td>
@@ -350,7 +345,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Task.</p>
 </td>
       </tr>
@@ -358,13 +353,13 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetDirectStreamProviderByUniqueId_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetDirectStreamProviderByUniqueId*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetDirectStreamProviderByUniqueId_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetDirectStreamProviderByUniqueId(System.String,System.Threading.CancellationToken)">GetDirectStreamProviderByUniqueId(String, CancellationToken)</h4>
+  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamInfo_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamInfo*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamInfo_System_String_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamInfo(System.String)">GetLiveStreamInfo(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IDirectStreamProvider&gt; GetDirectStreamProviderByUniqueId(string uniqueId, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">ILiveStream GetLiveStreamInfo(string id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,13 +372,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">uniqueId</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -398,21 +388,63 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.IDirectStreamProvider.html">IDirectStreamProvider</a>&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILiveStream.html">ILiveStream</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStream_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStream*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStream_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStream(System.String,System.Threading.CancellationToken)">GetLiveStream(String, CancellationToken)</h4>
+  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamInfoByUniqueId_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamInfoByUniqueId*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamInfoByUniqueId_System_String_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamInfoByUniqueId(System.String)">GetLiveStreamInfoByUniqueId(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ILiveStream GetLiveStreamInfoByUniqueId(string uniqueId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">uniqueId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILiveStream.html">ILiveStream</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamMediaSource_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamMediaSource*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamMediaSource_System_String_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamMediaSource(System.String)">GetLiveStreamMediaSource(String)</h4>
   <div class="markdown level1 summary"><p>Gets the live stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;MediaSourceInfo&gt; GetLiveStream(string id, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">MediaSourceInfo GetLiveStreamMediaSource(string id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -425,63 +457,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">id</span></td>
-        <td><p>The identifier.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
-        <td><p>Task&lt;MediaSourceInfo&gt;.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamMediaInfo_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamMediaInfo*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamMediaInfo_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamMediaInfo(System.String,System.Threading.CancellationToken)">GetLiveStreamMediaInfo(String, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;MediaSourceInfo&gt; GetLiveStreamMediaInfo(string id, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -496,54 +473,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamWithDirectStreamProvider_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamWithDirectStreamProvider*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetLiveStreamWithDirectStreamProvider_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetLiveStreamWithDirectStreamProvider(System.String,System.Threading.CancellationToken)">GetLiveStreamWithDirectStreamProvider(String, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;MediaSourceInfo, IDirectStreamProvider&gt;&gt; GetLiveStreamWithDirectStreamProvider(string id, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">id</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>, <a class="xref" href="MediaBrowser.Controller.Library.IDirectStreamProvider.html">IDirectStreamProvider</a>&gt;&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -575,22 +505,22 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">mediaSourceId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">liveStreamId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">enablePathSubstitution</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -606,7 +536,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetMediaStreams_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetMediaStreams*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetMediaStreams_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetMediaStreams(MediaBrowser.Controller.Entities.BaseItem)">GetMediaStreams(BaseItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;MediaStream&gt; GetMediaStreams(BaseItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -650,7 +622,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -677,7 +649,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">itemId</span></td>
         <td><p>The item identifier.</p>
 </td>
@@ -694,7 +666,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -720,7 +692,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -772,17 +744,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">allowMediaProbe</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">enablePathSubstitution</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -798,7 +770,79 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetPlayackMediaSources_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetPlayackMediaSources*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetPlayackMediaSources_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_User_System_Boolean_System_String_System_Boolean_MediaBrowser_Model_Dlna_DeviceProfile_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetPlayackMediaSources(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.User,System.Boolean,System.String,System.Boolean,MediaBrowser.Model.Dlna.DeviceProfile,System.Threading.CancellationToken)">GetPlayackMediaSources(BaseItem, User, Boolean, String, Boolean, DeviceProfile, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;MediaSourceInfo&gt;&gt; GetPlayackMediaSources(BaseItem item, User user, bool allowMediaProbe, string probeMediaSourceId, bool enablePathSubstitution, DeviceProfile deviceProfile, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">allowMediaProbe</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">probeMediaSourceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enablePathSubstitution</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">deviceProfile</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -834,22 +878,22 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">allowMediaProbe</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">probeMediaSourceId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">enablePathSubstitution</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -865,7 +909,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -873,13 +917,13 @@
   
   
   <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,MediaBrowser.Controller.Entities.User)">GetStaticMediaSources(BaseItem, Boolean, User)</h4>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,MediaBrowser.Model.Dlna.DeviceProfile,MediaBrowser.Controller.Entities.User)">GetStaticMediaSources(BaseItem, Boolean, DeviceProfile, User)</h4>
   <div class="markdown level1 summary"><p>Gets the static media sources.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;MediaSourceInfo&gt; GetStaticMediaSources(BaseItem item, bool enablePathSubstitution, User user = null)</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;MediaSourceInfo&gt; GetStaticMediaSources(BaseItem item, bool enablePathSubstitution, DeviceProfile deviceProfile, User user = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -897,8 +941,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">enablePathSubstitution</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">deviceProfile</span></td>
         <td></td>
       </tr>
       <tr>
@@ -918,7 +967,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -926,12 +975,12 @@
   
   
   <a id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.User)">GetStaticMediaSources(BaseItem, Boolean, Boolean, LibraryOptions, User)</h4>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_GetStaticMediaSources_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.GetStaticMediaSources(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Model.Dlna.DeviceProfile,MediaBrowser.Controller.Entities.User)">GetStaticMediaSources(BaseItem, Boolean, Boolean, LibraryOptions, DeviceProfile, User)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;MediaSourceInfo&gt; GetStaticMediaSources(BaseItem item, bool enableAlternateMediaSources, bool enablePathSubstitution, LibraryOptions libraryOptions, User user = null)</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;MediaSourceInfo&gt; GetStaticMediaSources(BaseItem item, bool enableAlternateMediaSources, bool enablePathSubstitution, LibraryOptions libraryOptions, DeviceProfile deviceProfile, User user = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -949,12 +998,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">enableAlternateMediaSources</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">enablePathSubstitution</span></td>
         <td></td>
       </tr>
@@ -964,6 +1013,11 @@
         <td></td>
       </tr>
       <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">deviceProfile</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
         <td></td>
@@ -980,20 +1034,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_NormalizePreferredLanguages_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.NormalizePreferredLanguages*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_NormalizePreferredLanguages_System_String_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.NormalizePreferredLanguages(System.String)">NormalizePreferredLanguages(String)</h4>
+  <a id="MediaBrowser_Controller_Library_IMediaSourceManager_NormalizeMediaStreams_" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.NormalizeMediaStreams*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IMediaSourceManager_NormalizeMediaStreams_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__" data-uid="MediaBrowser.Controller.Library.IMediaSourceManager.NormalizeMediaStreams(System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream})">NormalizeMediaStreams(List&lt;MediaStream&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string[] NormalizePreferredLanguages(string preferredLanguage)</code></pre>
+    <pre><code class="lang-csharp hljs">void NormalizeMediaStreams(List&lt;MediaStream&gt; streams)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1006,23 +1060,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">preferredLanguage</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><span class="parametername">streams</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1055,7 +1094,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -1072,7 +1111,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.LiveStreamResponse.html">LiveStreamResponse</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.LiveStreamResponse.html">LiveStreamResponse</a>&gt;</td>
         <td><p>Task&lt;MediaSourceInfo&gt;.</p>
 </td>
       </tr>
@@ -1086,7 +1125,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;LiveStreamResponse, IDirectStreamProvider&gt;&gt; OpenLiveStreamInternal(LiveStreamRequest request, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;Tuple&lt;LiveStreamResponse, ILiveStream&gt;&gt; OpenLiveStreamInternal(LiveStreamRequest request, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1104,7 +1143,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -1120,7 +1159,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.LiveStreamResponse.html">LiveStreamResponse</a>, <a class="xref" href="MediaBrowser.Controller.Library.IDirectStreamProvider.html">IDirectStreamProvider</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.LiveStreamResponse.html">LiveStreamResponse</a>, <a class="xref" href="MediaBrowser.Controller.Library.ILiveStream.html">ILiveStream</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1183,7 +1222,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
@@ -1204,11 +1243,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>

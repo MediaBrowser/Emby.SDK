@@ -31,7 +31,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="imageFetchers">imageFetchers.</param>
         /// <param name="supportedImageTypes">supportedImageTypes.</param>
         /// <param name="defaultImageOptions">defaultImageOptions.</param>
-        public LibraryLibraryTypeOptions(string type = default(string), List<LibraryLibraryOptionInfo> metadataFetchers = default(List<LibraryLibraryOptionInfo>), List<LibraryLibraryOptionInfo> imageFetchers = default(List<LibraryLibraryOptionInfo>), List<ImageType> supportedImageTypes = default(List<ImageType>), List<ConfigurationImageOption> defaultImageOptions = default(List<ConfigurationImageOption>))
+        public LibraryLibraryTypeOptions(string type = default(string), List<LibraryLibraryOptionInfo> metadataFetchers = default(List<LibraryLibraryOptionInfo>), List<LibraryLibraryOptionInfo> imageFetchers = default(List<LibraryLibraryOptionInfo>), List<ImageType> supportedImageTypes = default(List<ImageType>), List<ImageOption> defaultImageOptions = default(List<ImageOption>))
         {
             this.Type = type;
             this.MetadataFetchers = metadataFetchers;
@@ -68,7 +68,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets DefaultImageOptions
         /// </summary>
         [DataMember(Name="DefaultImageOptions", EmitDefaultValue=false)]
-        public List<ConfigurationImageOption> DefaultImageOptions { get; set; }
+        public List<ImageOption> DefaultImageOptions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

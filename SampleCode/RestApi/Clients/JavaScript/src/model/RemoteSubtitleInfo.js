@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The RemoteSubtitleInfo model module.
 * @module model/RemoteSubtitleInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class RemoteSubtitleInfo {
     /**
@@ -77,6 +77,9 @@ export default class RemoteSubtitleInfo {
             if (data.hasOwnProperty('IsForced')) {
                 obj['IsForced'] = ApiClient.convertToType(data['IsForced'], 'Boolean');
             }
+            if (data.hasOwnProperty('IsHearingImpaired')) {
+                obj['IsHearingImpaired'] = ApiClient.convertToType(data['IsHearingImpaired'], 'Boolean');
+            }
             if (data.hasOwnProperty('Language')) {
                 obj['Language'] = ApiClient.convertToType(data['Language'], 'String');
             }
@@ -85,6 +88,7 @@ export default class RemoteSubtitleInfo {
     }
 
     /**
+    * Use language instead to return the language specified by the subtitle provider
     * @member {String} ThreeLetterISOLanguageName
     */
     'ThreeLetterISOLanguageName' = undefined;
@@ -132,6 +136,10 @@ export default class RemoteSubtitleInfo {
     * @member {Boolean} IsForced
     */
     'IsForced' = undefined;
+    /**
+    * @member {Boolean} IsHearingImpaired
+    */
+    'IsHearingImpaired' = undefined;
     /**
     * @member {String} Language
     */

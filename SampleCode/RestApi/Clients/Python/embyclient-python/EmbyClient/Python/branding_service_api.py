@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -26,7 +26,7 @@ class BrandingServiceApi(object):
     def get_branding_configuration(self, **kwargs):  # noqa: E501
         """Gets branding configuration  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_branding_configuration(async_req=True)
@@ -47,7 +47,7 @@ class BrandingServiceApi(object):
     def get_branding_configuration_with_http_info(self, **kwargs):  # noqa: E501
         """Gets branding configuration  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_branding_configuration_with_http_info(async_req=True)
@@ -92,7 +92,7 @@ class BrandingServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Branding/Configuration', 'GET',
@@ -113,7 +113,7 @@ class BrandingServiceApi(object):
     def get_branding_css(self, **kwargs):  # noqa: E501
         """Gets custom css  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_branding_css(async_req=True)
@@ -134,7 +134,7 @@ class BrandingServiceApi(object):
     def get_branding_css_with_http_info(self, **kwargs):  # noqa: E501
         """Gets custom css  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_branding_css_with_http_info(async_req=True)
@@ -175,7 +175,7 @@ class BrandingServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Branding/Css', 'GET',
@@ -196,7 +196,7 @@ class BrandingServiceApi(object):
     def get_branding_css_css(self, **kwargs):  # noqa: E501
         """Gets custom css  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_branding_css_css(async_req=True)
@@ -217,7 +217,7 @@ class BrandingServiceApi(object):
     def get_branding_css_css_with_http_info(self, **kwargs):  # noqa: E501
         """Gets custom css  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_branding_css_css_with_http_info(async_req=True)
@@ -258,7 +258,7 @@ class BrandingServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Branding/Css.css', 'GET',

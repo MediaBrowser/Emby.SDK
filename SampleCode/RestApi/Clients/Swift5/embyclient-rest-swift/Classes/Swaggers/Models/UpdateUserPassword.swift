@@ -12,20 +12,17 @@ import Foundation
 public struct UpdateUserPassword: Codable {
 
     public var _id: String?
-    public var currentPw: String?
     public var newPw: String?
     public var resetPassword: Bool?
 
-    public init(_id: String? = nil, currentPw: String? = nil, newPw: String? = nil, resetPassword: Bool? = nil) {
+    public init(_id: String? = nil, newPw: String? = nil, resetPassword: Bool? = nil) {
         self._id = _id
-        self.currentPw = currentPw
         self.newPw = newPw
         self.resetPassword = resetPassword
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "Id"
-        case currentPw = "CurrentPw"
         case newPw = "NewPw"
         case resetPassword = "ResetPassword"
     }

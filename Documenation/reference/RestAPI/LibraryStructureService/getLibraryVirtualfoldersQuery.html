@@ -149,7 +149,7 @@
 <div class="refdoc">
 
 <h1 id="emby_restapi_getLibraryVirtualfoldersQuery" data-uid="emby.restapi/getLibraryVirtualfoldersQuery" class="text-capitalize text-break">getLibraryVirtualfoldersQuery</h1>
-<div class="markdown level0 description"><p>Requires authentication as administrator</p>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
 </div>
 
 
@@ -339,7 +339,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Locations</span></td>
@@ -348,7 +349,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The locations.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CollectionType</span></td>
@@ -357,7 +359,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The type of the collection.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">LibraryOptions</span></td>
@@ -375,6 +378,26 @@
   
                   
               </td>
+              <td><p>The item identifier.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>ItemId came first, so that is left for compatability purposes</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Guid</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
               <td></td>
           </tr>
           <tr>
@@ -384,7 +407,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The primary image item identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RefreshProgress</span></td>
@@ -468,6 +492,16 @@
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">IntroDetectionFingerprintLength</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">EnableChapterImageExtraction</span></td>
               <td>
                     boolean
@@ -487,6 +521,15 @@
           </tr>
           <tr>
               <td><span class="parametername">DownloadImagesInAdvance</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CacheImages</span></td>
               <td>
                     boolean
   
@@ -549,15 +592,6 @@
               <td></td>
           </tr>
           <tr>
-              <td><span class="parametername">ImportMissingEpisodes</span></td>
-              <td>
-                    boolean
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
               <td><span class="parametername">ImportPlaylists</span></td>
               <td>
                     boolean
@@ -568,6 +602,15 @@
           </tr>
           <tr>
               <td><span class="parametername">EnableAutomaticSeriesGrouping</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ShareEmbeddedMusicAlbumImages</span></td>
               <td>
                     boolean
   
@@ -594,7 +637,26 @@
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">AutoGenerateChapters</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">AutomaticRefreshIntervalDays</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlaceholderMetadataRefreshIntervalDays</span></td>
               <td>
                     integer
                       (int32)
@@ -610,7 +672,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The preferred metadata language.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PreferredImageLanguage</span></td>
@@ -637,25 +700,8 @@
   
                   
               </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">SeasonZeroDisplayName</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Name</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
+              <td><p>The metadata country code.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MetadataSavers</span></td>
@@ -813,6 +859,15 @@
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">HearingImpairedSubtitlesOnly</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">TypeOptions</span></td>
               <td>
   
@@ -875,7 +930,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The minimum percentage of an item that must be played in order for playstate to be updated.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MaxResumePct</span></td>
@@ -885,7 +941,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The maximum percentage of an item that can be played while still saving playstate. If this percentage is crossed playstate will be reset to the beginning and the item will be marked watched.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MinResumeDurationSeconds</span></td>
@@ -895,7 +952,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The minimum duration that an item must have in order to be eligible for playstate updates..</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ThumbnailImagesIntervalSeconds</span></td>
@@ -945,6 +1003,24 @@
           </tr>
           <tr>
               <td><span class="parametername">NetworkPath</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Username</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Password</span></td>
               <td>
                     string
   
@@ -1047,7 +1123,8 @@
                       <a href="#MediaBrowser_Model_Entities_ImageType" class="typelink">ImageType</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum ImageType</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Limit</span></td>
@@ -1057,7 +1134,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The limit.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MinWidth</span></td>
@@ -1067,7 +1145,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The minimum width.</p>
+</td>
           </tr>
       </tbody>
   </table>

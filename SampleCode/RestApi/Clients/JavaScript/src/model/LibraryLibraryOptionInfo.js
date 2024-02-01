@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,12 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ConfigurationMetadataFeatures from './ConfigurationMetadataFeatures';
+import MetadataFeatures from './MetadataFeatures';
 
 /**
 * The LibraryLibraryOptionInfo model module.
 * @module model/LibraryLibraryOptionInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LibraryLibraryOptionInfo {
     /**
@@ -45,11 +45,14 @@ export default class LibraryLibraryOptionInfo {
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
+            if (data.hasOwnProperty('SetupUrl')) {
+                obj['SetupUrl'] = ApiClient.convertToType(data['SetupUrl'], 'String');
+            }
             if (data.hasOwnProperty('DefaultEnabled')) {
                 obj['DefaultEnabled'] = ApiClient.convertToType(data['DefaultEnabled'], 'Boolean');
             }
             if (data.hasOwnProperty('Features')) {
-                obj['Features'] = ApiClient.convertToType(data['Features'], [ConfigurationMetadataFeatures]);
+                obj['Features'] = ApiClient.convertToType(data['Features'], [MetadataFeatures]);
             }
         }
         return obj;
@@ -60,11 +63,15 @@ export default class LibraryLibraryOptionInfo {
     */
     'Name' = undefined;
     /**
+    * @member {String} SetupUrl
+    */
+    'SetupUrl' = undefined;
+    /**
     * @member {Boolean} DefaultEnabled
     */
     'DefaultEnabled' = undefined;
     /**
-    * @member {Array.<module:model/ConfigurationMetadataFeatures>} Features
+    * @member {Array.<module:model/MetadataFeatures>} Features
     */
     'Features' = undefined;
 

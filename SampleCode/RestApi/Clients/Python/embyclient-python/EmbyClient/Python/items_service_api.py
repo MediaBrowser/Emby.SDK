@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -42,14 +42,15 @@ class ItemsServiceApi(object):
         :param bool has_trailer: Optional filter by items with trailers.
         :param str adjacent_to: Optional. Return items that are siblings of a supplied item.
         :param int min_index_number: Optional filter by minimum index number.
+        :param str min_start_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_start_date: Optional. The maximum premiere date. Format = ISO
+        :param str min_end_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_end_date: Optional. The maximum premiere date. Format = ISO
         :param int min_players: Optional filter by minimum number of game players.
         :param int max_players: Optional filter by maximum number of game players.
         :param int parent_index_number: Optional filter by parent index number.
         :param bool has_parental_rating: Optional filter by items that have or do not have a parental rating
         :param bool is_hd: Optional filter by items that are HD or not.
-        :param str location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param str exclude_location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param bool is_missing: Optional filter by items that are missing episodes or not.
         :param bool is_unaired: Optional filter by items that are unaired episodes or not.
         :param float min_community_rating: Optional filter by minimum community rating.
         :param float min_critic_rating: Optional filter by minimum critic rating.
@@ -77,9 +78,15 @@ class ItemsServiceApi(object):
         :param bool is_favorite: Optional filter by items that are marked as favorite, or not.
         :param bool is_movie: Optional filter for movies.
         :param bool is_series: Optional filter for series.
+        :param bool is_folder: Optional filter for folders.
         :param bool is_news: Optional filter for news.
         :param bool is_kids: Optional filter for kids.
         :param bool is_sports: Optional filter for sports.
+        :param bool is_new: Optional filter for IsNew.
+        :param bool is_premiere: Optional filter for IsPremiere.
+        :param bool is_new_or_premiere: Optional filter for IsNewOrPremiere.
+        :param bool is_repeat: Optional filter for IsRepeat.
+        :param bool project_to_media: ProjectToMedia
         :param str media_types: Optional filter by MediaType. Allows multiple, comma delimited.
         :param str image_types: Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
         :param str sort_by: Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -87,6 +94,7 @@ class ItemsServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -104,7 +112,9 @@ class ItemsServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
+        :param str extended_video_types: Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
         :param str user_id: User Id
@@ -150,14 +160,15 @@ class ItemsServiceApi(object):
         :param bool has_trailer: Optional filter by items with trailers.
         :param str adjacent_to: Optional. Return items that are siblings of a supplied item.
         :param int min_index_number: Optional filter by minimum index number.
+        :param str min_start_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_start_date: Optional. The maximum premiere date. Format = ISO
+        :param str min_end_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_end_date: Optional. The maximum premiere date. Format = ISO
         :param int min_players: Optional filter by minimum number of game players.
         :param int max_players: Optional filter by maximum number of game players.
         :param int parent_index_number: Optional filter by parent index number.
         :param bool has_parental_rating: Optional filter by items that have or do not have a parental rating
         :param bool is_hd: Optional filter by items that are HD or not.
-        :param str location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param str exclude_location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param bool is_missing: Optional filter by items that are missing episodes or not.
         :param bool is_unaired: Optional filter by items that are unaired episodes or not.
         :param float min_community_rating: Optional filter by minimum community rating.
         :param float min_critic_rating: Optional filter by minimum critic rating.
@@ -185,9 +196,15 @@ class ItemsServiceApi(object):
         :param bool is_favorite: Optional filter by items that are marked as favorite, or not.
         :param bool is_movie: Optional filter for movies.
         :param bool is_series: Optional filter for series.
+        :param bool is_folder: Optional filter for folders.
         :param bool is_news: Optional filter for news.
         :param bool is_kids: Optional filter for kids.
         :param bool is_sports: Optional filter for sports.
+        :param bool is_new: Optional filter for IsNew.
+        :param bool is_premiere: Optional filter for IsPremiere.
+        :param bool is_new_or_premiere: Optional filter for IsNewOrPremiere.
+        :param bool is_repeat: Optional filter for IsRepeat.
+        :param bool project_to_media: ProjectToMedia
         :param str media_types: Optional filter by MediaType. Allows multiple, comma delimited.
         :param str image_types: Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
         :param str sort_by: Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -195,6 +212,7 @@ class ItemsServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -212,7 +230,9 @@ class ItemsServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
+        :param str extended_video_types: Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
         :param str user_id: User Id
@@ -233,7 +253,7 @@ class ItemsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'user_id', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -272,6 +292,14 @@ class ItemsServiceApi(object):
             query_params.append(('AdjacentTo', params['adjacent_to']))  # noqa: E501
         if 'min_index_number' in params:
             query_params.append(('MinIndexNumber', params['min_index_number']))  # noqa: E501
+        if 'min_start_date' in params:
+            query_params.append(('MinStartDate', params['min_start_date']))  # noqa: E501
+        if 'max_start_date' in params:
+            query_params.append(('MaxStartDate', params['max_start_date']))  # noqa: E501
+        if 'min_end_date' in params:
+            query_params.append(('MinEndDate', params['min_end_date']))  # noqa: E501
+        if 'max_end_date' in params:
+            query_params.append(('MaxEndDate', params['max_end_date']))  # noqa: E501
         if 'min_players' in params:
             query_params.append(('MinPlayers', params['min_players']))  # noqa: E501
         if 'max_players' in params:
@@ -282,12 +310,6 @@ class ItemsServiceApi(object):
             query_params.append(('HasParentalRating', params['has_parental_rating']))  # noqa: E501
         if 'is_hd' in params:
             query_params.append(('IsHD', params['is_hd']))  # noqa: E501
-        if 'location_types' in params:
-            query_params.append(('LocationTypes', params['location_types']))  # noqa: E501
-        if 'exclude_location_types' in params:
-            query_params.append(('ExcludeLocationTypes', params['exclude_location_types']))  # noqa: E501
-        if 'is_missing' in params:
-            query_params.append(('IsMissing', params['is_missing']))  # noqa: E501
         if 'is_unaired' in params:
             query_params.append(('IsUnaired', params['is_unaired']))  # noqa: E501
         if 'min_community_rating' in params:
@@ -342,12 +364,24 @@ class ItemsServiceApi(object):
             query_params.append(('IsMovie', params['is_movie']))  # noqa: E501
         if 'is_series' in params:
             query_params.append(('IsSeries', params['is_series']))  # noqa: E501
+        if 'is_folder' in params:
+            query_params.append(('IsFolder', params['is_folder']))  # noqa: E501
         if 'is_news' in params:
             query_params.append(('IsNews', params['is_news']))  # noqa: E501
         if 'is_kids' in params:
             query_params.append(('IsKids', params['is_kids']))  # noqa: E501
         if 'is_sports' in params:
             query_params.append(('IsSports', params['is_sports']))  # noqa: E501
+        if 'is_new' in params:
+            query_params.append(('IsNew', params['is_new']))  # noqa: E501
+        if 'is_premiere' in params:
+            query_params.append(('IsPremiere', params['is_premiere']))  # noqa: E501
+        if 'is_new_or_premiere' in params:
+            query_params.append(('IsNewOrPremiere', params['is_new_or_premiere']))  # noqa: E501
+        if 'is_repeat' in params:
+            query_params.append(('IsRepeat', params['is_repeat']))  # noqa: E501
+        if 'project_to_media' in params:
+            query_params.append(('ProjectToMedia', params['project_to_media']))  # noqa: E501
         if 'media_types' in params:
             query_params.append(('MediaTypes', params['media_types']))  # noqa: E501
         if 'image_types' in params:
@@ -362,6 +396,8 @@ class ItemsServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -396,8 +432,12 @@ class ItemsServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
+        if 'extended_video_types' in params:
+            query_params.append(('ExtendedVideoTypes', params['extended_video_types']))  # noqa: E501
         if 'subtitle_codecs' in params:
             query_params.append(('SubtitleCodecs', params['subtitle_codecs']))  # noqa: E501
         if 'path' in params:
@@ -478,14 +518,15 @@ class ItemsServiceApi(object):
         :param bool has_trailer: Optional filter by items with trailers.
         :param str adjacent_to: Optional. Return items that are siblings of a supplied item.
         :param int min_index_number: Optional filter by minimum index number.
+        :param str min_start_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_start_date: Optional. The maximum premiere date. Format = ISO
+        :param str min_end_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_end_date: Optional. The maximum premiere date. Format = ISO
         :param int min_players: Optional filter by minimum number of game players.
         :param int max_players: Optional filter by maximum number of game players.
         :param int parent_index_number: Optional filter by parent index number.
         :param bool has_parental_rating: Optional filter by items that have or do not have a parental rating
         :param bool is_hd: Optional filter by items that are HD or not.
-        :param str location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param str exclude_location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param bool is_missing: Optional filter by items that are missing episodes or not.
         :param bool is_unaired: Optional filter by items that are unaired episodes or not.
         :param float min_community_rating: Optional filter by minimum community rating.
         :param float min_critic_rating: Optional filter by minimum critic rating.
@@ -513,9 +554,15 @@ class ItemsServiceApi(object):
         :param bool is_favorite: Optional filter by items that are marked as favorite, or not.
         :param bool is_movie: Optional filter for movies.
         :param bool is_series: Optional filter for series.
+        :param bool is_folder: Optional filter for folders.
         :param bool is_news: Optional filter for news.
         :param bool is_kids: Optional filter for kids.
         :param bool is_sports: Optional filter for sports.
+        :param bool is_new: Optional filter for IsNew.
+        :param bool is_premiere: Optional filter for IsPremiere.
+        :param bool is_new_or_premiere: Optional filter for IsNewOrPremiere.
+        :param bool is_repeat: Optional filter for IsRepeat.
+        :param bool project_to_media: ProjectToMedia
         :param str media_types: Optional filter by MediaType. Allows multiple, comma delimited.
         :param str image_types: Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
         :param str sort_by: Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -523,6 +570,7 @@ class ItemsServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -540,7 +588,9 @@ class ItemsServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
+        :param str extended_video_types: Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
         :param str min_official_rating: Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
@@ -586,14 +636,15 @@ class ItemsServiceApi(object):
         :param bool has_trailer: Optional filter by items with trailers.
         :param str adjacent_to: Optional. Return items that are siblings of a supplied item.
         :param int min_index_number: Optional filter by minimum index number.
+        :param str min_start_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_start_date: Optional. The maximum premiere date. Format = ISO
+        :param str min_end_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_end_date: Optional. The maximum premiere date. Format = ISO
         :param int min_players: Optional filter by minimum number of game players.
         :param int max_players: Optional filter by maximum number of game players.
         :param int parent_index_number: Optional filter by parent index number.
         :param bool has_parental_rating: Optional filter by items that have or do not have a parental rating
         :param bool is_hd: Optional filter by items that are HD or not.
-        :param str location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param str exclude_location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param bool is_missing: Optional filter by items that are missing episodes or not.
         :param bool is_unaired: Optional filter by items that are unaired episodes or not.
         :param float min_community_rating: Optional filter by minimum community rating.
         :param float min_critic_rating: Optional filter by minimum critic rating.
@@ -621,9 +672,15 @@ class ItemsServiceApi(object):
         :param bool is_favorite: Optional filter by items that are marked as favorite, or not.
         :param bool is_movie: Optional filter for movies.
         :param bool is_series: Optional filter for series.
+        :param bool is_folder: Optional filter for folders.
         :param bool is_news: Optional filter for news.
         :param bool is_kids: Optional filter for kids.
         :param bool is_sports: Optional filter for sports.
+        :param bool is_new: Optional filter for IsNew.
+        :param bool is_premiere: Optional filter for IsPremiere.
+        :param bool is_new_or_premiere: Optional filter for IsNewOrPremiere.
+        :param bool is_repeat: Optional filter for IsRepeat.
+        :param bool project_to_media: ProjectToMedia
         :param str media_types: Optional filter by MediaType. Allows multiple, comma delimited.
         :param str image_types: Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
         :param str sort_by: Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -631,6 +688,7 @@ class ItemsServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -648,7 +706,9 @@ class ItemsServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
+        :param str extended_video_types: Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
         :param str min_official_rating: Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
@@ -668,7 +728,7 @@ class ItemsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['user_id', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -713,6 +773,14 @@ class ItemsServiceApi(object):
             query_params.append(('AdjacentTo', params['adjacent_to']))  # noqa: E501
         if 'min_index_number' in params:
             query_params.append(('MinIndexNumber', params['min_index_number']))  # noqa: E501
+        if 'min_start_date' in params:
+            query_params.append(('MinStartDate', params['min_start_date']))  # noqa: E501
+        if 'max_start_date' in params:
+            query_params.append(('MaxStartDate', params['max_start_date']))  # noqa: E501
+        if 'min_end_date' in params:
+            query_params.append(('MinEndDate', params['min_end_date']))  # noqa: E501
+        if 'max_end_date' in params:
+            query_params.append(('MaxEndDate', params['max_end_date']))  # noqa: E501
         if 'min_players' in params:
             query_params.append(('MinPlayers', params['min_players']))  # noqa: E501
         if 'max_players' in params:
@@ -723,12 +791,6 @@ class ItemsServiceApi(object):
             query_params.append(('HasParentalRating', params['has_parental_rating']))  # noqa: E501
         if 'is_hd' in params:
             query_params.append(('IsHD', params['is_hd']))  # noqa: E501
-        if 'location_types' in params:
-            query_params.append(('LocationTypes', params['location_types']))  # noqa: E501
-        if 'exclude_location_types' in params:
-            query_params.append(('ExcludeLocationTypes', params['exclude_location_types']))  # noqa: E501
-        if 'is_missing' in params:
-            query_params.append(('IsMissing', params['is_missing']))  # noqa: E501
         if 'is_unaired' in params:
             query_params.append(('IsUnaired', params['is_unaired']))  # noqa: E501
         if 'min_community_rating' in params:
@@ -783,12 +845,24 @@ class ItemsServiceApi(object):
             query_params.append(('IsMovie', params['is_movie']))  # noqa: E501
         if 'is_series' in params:
             query_params.append(('IsSeries', params['is_series']))  # noqa: E501
+        if 'is_folder' in params:
+            query_params.append(('IsFolder', params['is_folder']))  # noqa: E501
         if 'is_news' in params:
             query_params.append(('IsNews', params['is_news']))  # noqa: E501
         if 'is_kids' in params:
             query_params.append(('IsKids', params['is_kids']))  # noqa: E501
         if 'is_sports' in params:
             query_params.append(('IsSports', params['is_sports']))  # noqa: E501
+        if 'is_new' in params:
+            query_params.append(('IsNew', params['is_new']))  # noqa: E501
+        if 'is_premiere' in params:
+            query_params.append(('IsPremiere', params['is_premiere']))  # noqa: E501
+        if 'is_new_or_premiere' in params:
+            query_params.append(('IsNewOrPremiere', params['is_new_or_premiere']))  # noqa: E501
+        if 'is_repeat' in params:
+            query_params.append(('IsRepeat', params['is_repeat']))  # noqa: E501
+        if 'project_to_media' in params:
+            query_params.append(('ProjectToMedia', params['project_to_media']))  # noqa: E501
         if 'media_types' in params:
             query_params.append(('MediaTypes', params['media_types']))  # noqa: E501
         if 'image_types' in params:
@@ -803,6 +877,8 @@ class ItemsServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -837,8 +913,12 @@ class ItemsServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
+        if 'extended_video_types' in params:
+            query_params.append(('ExtendedVideoTypes', params['extended_video_types']))  # noqa: E501
         if 'subtitle_codecs' in params:
             query_params.append(('SubtitleCodecs', params['subtitle_codecs']))  # noqa: E501
         if 'path' in params:
@@ -917,14 +997,15 @@ class ItemsServiceApi(object):
         :param bool has_trailer: Optional filter by items with trailers.
         :param str adjacent_to: Optional. Return items that are siblings of a supplied item.
         :param int min_index_number: Optional filter by minimum index number.
+        :param str min_start_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_start_date: Optional. The maximum premiere date. Format = ISO
+        :param str min_end_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_end_date: Optional. The maximum premiere date. Format = ISO
         :param int min_players: Optional filter by minimum number of game players.
         :param int max_players: Optional filter by maximum number of game players.
         :param int parent_index_number: Optional filter by parent index number.
         :param bool has_parental_rating: Optional filter by items that have or do not have a parental rating
         :param bool is_hd: Optional filter by items that are HD or not.
-        :param str location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param str exclude_location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param bool is_missing: Optional filter by items that are missing episodes or not.
         :param bool is_unaired: Optional filter by items that are unaired episodes or not.
         :param float min_community_rating: Optional filter by minimum community rating.
         :param float min_critic_rating: Optional filter by minimum critic rating.
@@ -952,9 +1033,15 @@ class ItemsServiceApi(object):
         :param bool is_favorite: Optional filter by items that are marked as favorite, or not.
         :param bool is_movie: Optional filter for movies.
         :param bool is_series: Optional filter for series.
+        :param bool is_folder: Optional filter for folders.
         :param bool is_news: Optional filter for news.
         :param bool is_kids: Optional filter for kids.
         :param bool is_sports: Optional filter for sports.
+        :param bool is_new: Optional filter for IsNew.
+        :param bool is_premiere: Optional filter for IsPremiere.
+        :param bool is_new_or_premiere: Optional filter for IsNewOrPremiere.
+        :param bool is_repeat: Optional filter for IsRepeat.
+        :param bool project_to_media: ProjectToMedia
         :param str media_types: Optional filter by MediaType. Allows multiple, comma delimited.
         :param str image_types: Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
         :param str sort_by: Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -962,6 +1049,7 @@ class ItemsServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -979,7 +1067,9 @@ class ItemsServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
+        :param str extended_video_types: Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
         :param str min_official_rating: Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
@@ -1025,14 +1115,15 @@ class ItemsServiceApi(object):
         :param bool has_trailer: Optional filter by items with trailers.
         :param str adjacent_to: Optional. Return items that are siblings of a supplied item.
         :param int min_index_number: Optional filter by minimum index number.
+        :param str min_start_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_start_date: Optional. The maximum premiere date. Format = ISO
+        :param str min_end_date: Optional. The minimum premiere date. Format = ISO
+        :param str max_end_date: Optional. The maximum premiere date. Format = ISO
         :param int min_players: Optional filter by minimum number of game players.
         :param int max_players: Optional filter by maximum number of game players.
         :param int parent_index_number: Optional filter by parent index number.
         :param bool has_parental_rating: Optional filter by items that have or do not have a parental rating
         :param bool is_hd: Optional filter by items that are HD or not.
-        :param str location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param str exclude_location_types: Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-        :param bool is_missing: Optional filter by items that are missing episodes or not.
         :param bool is_unaired: Optional filter by items that are unaired episodes or not.
         :param float min_community_rating: Optional filter by minimum community rating.
         :param float min_critic_rating: Optional filter by minimum critic rating.
@@ -1060,9 +1151,15 @@ class ItemsServiceApi(object):
         :param bool is_favorite: Optional filter by items that are marked as favorite, or not.
         :param bool is_movie: Optional filter for movies.
         :param bool is_series: Optional filter for series.
+        :param bool is_folder: Optional filter for folders.
         :param bool is_news: Optional filter for news.
         :param bool is_kids: Optional filter for kids.
         :param bool is_sports: Optional filter for sports.
+        :param bool is_new: Optional filter for IsNew.
+        :param bool is_premiere: Optional filter for IsPremiere.
+        :param bool is_new_or_premiere: Optional filter for IsNewOrPremiere.
+        :param bool is_repeat: Optional filter for IsRepeat.
+        :param bool project_to_media: ProjectToMedia
         :param str media_types: Optional filter by MediaType. Allows multiple, comma delimited.
         :param str image_types: Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
         :param str sort_by: Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -1070,6 +1167,7 @@ class ItemsServiceApi(object):
         :param str genres: Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
         :param str official_ratings: Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
         :param str tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+        :param str exclude_tags: Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
         :param str years: Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
         :param bool enable_images: Optional, include image information in output
         :param bool enable_user_data: Optional, include user data
@@ -1087,7 +1185,9 @@ class ItemsServiceApi(object):
         :param str video_types: Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
         :param str containers: Optional filter by Container. Allows multiple, comma delimeted.
         :param str audio_codecs: Optional filter by AudioCodec. Allows multiple, comma delimeted.
+        :param str audio_layouts: Optional filter by AudioLayout. Allows multiple, comma delimeted.
         :param str video_codecs: Optional filter by VideoCodec. Allows multiple, comma delimeted.
+        :param str extended_video_types: Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
         :param str subtitle_codecs: Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
         :param str path: Optional filter by Path.
         :param str min_official_rating: Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
@@ -1107,7 +1207,7 @@ class ItemsServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'location_types', 'exclude_location_types', 'is_missing', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_news', 'is_kids', 'is_sports', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'video_codecs', 'subtitle_codecs', 'path', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
+        all_params = ['user_id', 'artist_type', 'max_official_rating', 'has_theme_song', 'has_theme_video', 'has_subtitles', 'has_special_feature', 'has_trailer', 'adjacent_to', 'min_index_number', 'min_start_date', 'max_start_date', 'min_end_date', 'max_end_date', 'min_players', 'max_players', 'parent_index_number', 'has_parental_rating', 'is_hd', 'is_unaired', 'min_community_rating', 'min_critic_rating', 'aired_during_season', 'min_premiere_date', 'min_date_last_saved', 'min_date_last_saved_for_user', 'max_premiere_date', 'has_overview', 'has_imdb_id', 'has_tmdb_id', 'has_tvdb_id', 'exclude_item_ids', 'start_index', 'limit', 'recursive', 'search_term', 'sort_order', 'parent_id', 'fields', 'exclude_item_types', 'include_item_types', 'any_provider_id_equals', 'filters', 'is_favorite', 'is_movie', 'is_series', 'is_folder', 'is_news', 'is_kids', 'is_sports', 'is_new', 'is_premiere', 'is_new_or_premiere', 'is_repeat', 'project_to_media', 'media_types', 'image_types', 'sort_by', 'is_played', 'genres', 'official_ratings', 'tags', 'exclude_tags', 'years', 'enable_images', 'enable_user_data', 'image_type_limit', 'enable_image_types', 'person', 'person_ids', 'person_types', 'studios', 'studio_ids', 'artists', 'artist_ids', 'albums', 'ids', 'video_types', 'containers', 'audio_codecs', 'audio_layouts', 'video_codecs', 'extended_video_types', 'subtitle_codecs', 'path', 'min_official_rating', 'is_locked', 'is_place_holder', 'has_official_rating', 'group_items_into_collections', 'is3_d', 'series_status', 'name_starts_with_or_greater', 'artist_starts_with_or_greater', 'album_artist_starts_with_or_greater', 'name_starts_with', 'name_less_than']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1152,6 +1252,14 @@ class ItemsServiceApi(object):
             query_params.append(('AdjacentTo', params['adjacent_to']))  # noqa: E501
         if 'min_index_number' in params:
             query_params.append(('MinIndexNumber', params['min_index_number']))  # noqa: E501
+        if 'min_start_date' in params:
+            query_params.append(('MinStartDate', params['min_start_date']))  # noqa: E501
+        if 'max_start_date' in params:
+            query_params.append(('MaxStartDate', params['max_start_date']))  # noqa: E501
+        if 'min_end_date' in params:
+            query_params.append(('MinEndDate', params['min_end_date']))  # noqa: E501
+        if 'max_end_date' in params:
+            query_params.append(('MaxEndDate', params['max_end_date']))  # noqa: E501
         if 'min_players' in params:
             query_params.append(('MinPlayers', params['min_players']))  # noqa: E501
         if 'max_players' in params:
@@ -1162,12 +1270,6 @@ class ItemsServiceApi(object):
             query_params.append(('HasParentalRating', params['has_parental_rating']))  # noqa: E501
         if 'is_hd' in params:
             query_params.append(('IsHD', params['is_hd']))  # noqa: E501
-        if 'location_types' in params:
-            query_params.append(('LocationTypes', params['location_types']))  # noqa: E501
-        if 'exclude_location_types' in params:
-            query_params.append(('ExcludeLocationTypes', params['exclude_location_types']))  # noqa: E501
-        if 'is_missing' in params:
-            query_params.append(('IsMissing', params['is_missing']))  # noqa: E501
         if 'is_unaired' in params:
             query_params.append(('IsUnaired', params['is_unaired']))  # noqa: E501
         if 'min_community_rating' in params:
@@ -1222,12 +1324,24 @@ class ItemsServiceApi(object):
             query_params.append(('IsMovie', params['is_movie']))  # noqa: E501
         if 'is_series' in params:
             query_params.append(('IsSeries', params['is_series']))  # noqa: E501
+        if 'is_folder' in params:
+            query_params.append(('IsFolder', params['is_folder']))  # noqa: E501
         if 'is_news' in params:
             query_params.append(('IsNews', params['is_news']))  # noqa: E501
         if 'is_kids' in params:
             query_params.append(('IsKids', params['is_kids']))  # noqa: E501
         if 'is_sports' in params:
             query_params.append(('IsSports', params['is_sports']))  # noqa: E501
+        if 'is_new' in params:
+            query_params.append(('IsNew', params['is_new']))  # noqa: E501
+        if 'is_premiere' in params:
+            query_params.append(('IsPremiere', params['is_premiere']))  # noqa: E501
+        if 'is_new_or_premiere' in params:
+            query_params.append(('IsNewOrPremiere', params['is_new_or_premiere']))  # noqa: E501
+        if 'is_repeat' in params:
+            query_params.append(('IsRepeat', params['is_repeat']))  # noqa: E501
+        if 'project_to_media' in params:
+            query_params.append(('ProjectToMedia', params['project_to_media']))  # noqa: E501
         if 'media_types' in params:
             query_params.append(('MediaTypes', params['media_types']))  # noqa: E501
         if 'image_types' in params:
@@ -1242,6 +1356,8 @@ class ItemsServiceApi(object):
             query_params.append(('OfficialRatings', params['official_ratings']))  # noqa: E501
         if 'tags' in params:
             query_params.append(('Tags', params['tags']))  # noqa: E501
+        if 'exclude_tags' in params:
+            query_params.append(('ExcludeTags', params['exclude_tags']))  # noqa: E501
         if 'years' in params:
             query_params.append(('Years', params['years']))  # noqa: E501
         if 'enable_images' in params:
@@ -1276,8 +1392,12 @@ class ItemsServiceApi(object):
             query_params.append(('Containers', params['containers']))  # noqa: E501
         if 'audio_codecs' in params:
             query_params.append(('AudioCodecs', params['audio_codecs']))  # noqa: E501
+        if 'audio_layouts' in params:
+            query_params.append(('AudioLayouts', params['audio_layouts']))  # noqa: E501
         if 'video_codecs' in params:
             query_params.append(('VideoCodecs', params['video_codecs']))  # noqa: E501
+        if 'extended_video_types' in params:
+            query_params.append(('ExtendedVideoTypes', params['extended_video_types']))  # noqa: E501
         if 'subtitle_codecs' in params:
             query_params.append(('SubtitleCodecs', params['subtitle_codecs']))  # noqa: E501
         if 'path' in params:

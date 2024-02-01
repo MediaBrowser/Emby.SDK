@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ExternalIdInfo model module.
 * @module model/ExternalIdInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ExternalIdInfo {
     /**
@@ -58,14 +58,17 @@ export default class ExternalIdInfo {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The key.
     * @member {String} Key
     */
     'Key' = undefined;
     /**
+    * The URL format string.
     * @member {String} UrlFormatString
     */
     'UrlFormatString' = undefined;

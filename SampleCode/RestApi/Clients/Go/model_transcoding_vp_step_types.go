@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
-
+// TranscodingVpStepTypes : Video Processing Step Type enum.  
 type TranscodingVpStepTypes string
 
 // List of Transcoding.VpStepTypes

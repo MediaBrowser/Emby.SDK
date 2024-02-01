@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
-
+// PlayCommand : Enum PlayCommand  
 type PlayCommand string
 
 // List of PlayCommand

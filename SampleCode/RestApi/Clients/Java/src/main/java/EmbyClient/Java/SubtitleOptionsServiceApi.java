@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import io.swagger.client.model.EmbyWebGenericEditEditObjectContainer;
+import io.swagger.client.model.EditObjectContainer;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -109,23 +109,23 @@ public class SubtitleOptionsServiceApi {
     /**
      * Gets the subtitle options
      * Requires authentication as user
-     * @return EmbyWebGenericEditEditObjectContainer
+     * @return EditObjectContainer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public EmbyWebGenericEditEditObjectContainer getEncodingSubtitleoptions() throws ApiException {
-        ApiResponse<EmbyWebGenericEditEditObjectContainer> resp = getEncodingSubtitleoptionsWithHttpInfo();
+    public EditObjectContainer getEncodingSubtitleoptions() throws ApiException {
+        ApiResponse<EditObjectContainer> resp = getEncodingSubtitleoptionsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets the subtitle options
      * Requires authentication as user
-     * @return ApiResponse&lt;EmbyWebGenericEditEditObjectContainer&gt;
+     * @return ApiResponse&lt;EditObjectContainer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<EmbyWebGenericEditEditObjectContainer> getEncodingSubtitleoptionsWithHttpInfo() throws ApiException {
+    public ApiResponse<EditObjectContainer> getEncodingSubtitleoptionsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getEncodingSubtitleoptionsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericEditEditObjectContainer>(){}.getType();
+        Type localVarReturnType = new TypeToken<EditObjectContainer>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -136,7 +136,7 @@ public class SubtitleOptionsServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getEncodingSubtitleoptionsAsync(final ApiCallback<EmbyWebGenericEditEditObjectContainer> callback) throws ApiException {
+    public com.squareup.okhttp.Call getEncodingSubtitleoptionsAsync(final ApiCallback<EditObjectContainer> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -158,7 +158,7 @@ public class SubtitleOptionsServiceApi {
         }
 
         com.squareup.okhttp.Call call = getEncodingSubtitleoptionsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<EmbyWebGenericEditEditObjectContainer>(){}.getType();
+        Type localVarReturnType = new TypeToken<EditObjectContainer>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

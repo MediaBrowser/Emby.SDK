@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum PlayCommand   */
 public enum PlayCommand: String, Codable {
     case playNow = "PlayNow"
     case playNext = "PlayNext"

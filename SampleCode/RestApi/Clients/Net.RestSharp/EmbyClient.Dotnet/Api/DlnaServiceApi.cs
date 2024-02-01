@@ -46,8 +46,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;EmbyDlnaProfilesDlnaProfile&gt;</returns>
-        List<EmbyDlnaProfilesDlnaProfile> GetDlnaProfileinfos ();
+        /// <returns>List&lt;DlnaProfilesDlnaProfile&gt;</returns>
+        List<DlnaProfilesDlnaProfile> GetDlnaProfileinfos ();
 
         /// <summary>
         /// Gets a list of profiles
@@ -56,8 +56,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;EmbyDlnaProfilesDlnaProfile&gt;</returns>
-        ApiResponse<List<EmbyDlnaProfilesDlnaProfile>> GetDlnaProfileinfosWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;DlnaProfilesDlnaProfile&gt;</returns>
+        ApiResponse<List<DlnaProfilesDlnaProfile>> GetDlnaProfileinfosWithHttpInfo ();
         /// <summary>
         /// Gets a single profile
         /// </summary>
@@ -66,8 +66,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Profile Id</param>
-        /// <returns>EmbyDlnaProfilesDlnaProfile</returns>
-        EmbyDlnaProfilesDlnaProfile GetDlnaProfilesById (string id);
+        /// <returns>DlnaProfilesDlnaProfile</returns>
+        DlnaProfilesDlnaProfile GetDlnaProfilesById (string id);
 
         /// <summary>
         /// Gets a single profile
@@ -77,8 +77,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Profile Id</param>
-        /// <returns>ApiResponse of EmbyDlnaProfilesDlnaProfile</returns>
-        ApiResponse<EmbyDlnaProfilesDlnaProfile> GetDlnaProfilesByIdWithHttpInfo (string id);
+        /// <returns>ApiResponse of DlnaProfilesDlnaProfile</returns>
+        ApiResponse<DlnaProfilesDlnaProfile> GetDlnaProfilesByIdWithHttpInfo (string id);
         /// <summary>
         /// Gets the default profile
         /// </summary>
@@ -86,8 +86,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyDlnaProfilesDlnaProfile</returns>
-        EmbyDlnaProfilesDlnaProfile GetDlnaProfilesDefault ();
+        /// <returns>DlnaProfilesDlnaProfile</returns>
+        DlnaProfilesDlnaProfile GetDlnaProfilesDefault ();
 
         /// <summary>
         /// Gets the default profile
@@ -96,8 +96,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyDlnaProfilesDlnaProfile</returns>
-        ApiResponse<EmbyDlnaProfilesDlnaProfile> GetDlnaProfilesDefaultWithHttpInfo ();
+        /// <returns>ApiResponse of DlnaProfilesDlnaProfile</returns>
+        ApiResponse<DlnaProfilesDlnaProfile> GetDlnaProfilesDefaultWithHttpInfo ();
         /// <summary>
         /// Creates a profile
         /// </summary>
@@ -107,7 +107,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DlnaProfile: </param>
         /// <returns></returns>
-        void PostDlnaProfiles (EmbyDlnaProfilesDlnaProfile body);
+        void PostDlnaProfiles (DlnaProfilesDlnaProfile body);
 
         /// <summary>
         /// Creates a profile
@@ -118,7 +118,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DlnaProfile: </param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostDlnaProfilesWithHttpInfo (EmbyDlnaProfilesDlnaProfile body);
+        ApiResponse<Object> PostDlnaProfilesWithHttpInfo (DlnaProfilesDlnaProfile body);
         /// <summary>
         /// Updates a profile
         /// </summary>
@@ -129,7 +129,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">DlnaProfile: </param>
         /// <param name="id"></param>
         /// <returns></returns>
-        void PostDlnaProfilesById (EmbyDlnaProfilesDlnaProfile body, string id);
+        void PostDlnaProfilesById (DlnaProfilesDlnaProfile body, string id);
 
         /// <summary>
         /// Updates a profile
@@ -141,7 +141,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">DlnaProfile: </param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostDlnaProfilesByIdWithHttpInfo (EmbyDlnaProfilesDlnaProfile body, string id);
+        ApiResponse<Object> PostDlnaProfilesByIdWithHttpInfo (DlnaProfilesDlnaProfile body, string id);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -172,8 +172,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;EmbyDlnaProfilesDlnaProfile&gt;</returns>
-        System.Threading.Tasks.Task<List<EmbyDlnaProfilesDlnaProfile>> GetDlnaProfileinfosAsync ();
+        /// <returns>Task of List&lt;DlnaProfilesDlnaProfile&gt;</returns>
+        System.Threading.Tasks.Task<List<DlnaProfilesDlnaProfile>> GetDlnaProfileinfosAsync ();
 
         /// <summary>
         /// Gets a list of profiles
@@ -182,8 +182,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;EmbyDlnaProfilesDlnaProfile&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<EmbyDlnaProfilesDlnaProfile>>> GetDlnaProfileinfosAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;DlnaProfilesDlnaProfile&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DlnaProfilesDlnaProfile>>> GetDlnaProfileinfosAsyncWithHttpInfo ();
         /// <summary>
         /// Gets a single profile
         /// </summary>
@@ -192,8 +192,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Profile Id</param>
-        /// <returns>Task of EmbyDlnaProfilesDlnaProfile</returns>
-        System.Threading.Tasks.Task<EmbyDlnaProfilesDlnaProfile> GetDlnaProfilesByIdAsync (string id);
+        /// <returns>Task of DlnaProfilesDlnaProfile</returns>
+        System.Threading.Tasks.Task<DlnaProfilesDlnaProfile> GetDlnaProfilesByIdAsync (string id);
 
         /// <summary>
         /// Gets a single profile
@@ -203,8 +203,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Profile Id</param>
-        /// <returns>Task of ApiResponse (EmbyDlnaProfilesDlnaProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmbyDlnaProfilesDlnaProfile>> GetDlnaProfilesByIdAsyncWithHttpInfo (string id);
+        /// <returns>Task of ApiResponse (DlnaProfilesDlnaProfile)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DlnaProfilesDlnaProfile>> GetDlnaProfilesByIdAsyncWithHttpInfo (string id);
         /// <summary>
         /// Gets the default profile
         /// </summary>
@@ -212,8 +212,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyDlnaProfilesDlnaProfile</returns>
-        System.Threading.Tasks.Task<EmbyDlnaProfilesDlnaProfile> GetDlnaProfilesDefaultAsync ();
+        /// <returns>Task of DlnaProfilesDlnaProfile</returns>
+        System.Threading.Tasks.Task<DlnaProfilesDlnaProfile> GetDlnaProfilesDefaultAsync ();
 
         /// <summary>
         /// Gets the default profile
@@ -222,8 +222,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyDlnaProfilesDlnaProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmbyDlnaProfilesDlnaProfile>> GetDlnaProfilesDefaultAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (DlnaProfilesDlnaProfile)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DlnaProfilesDlnaProfile>> GetDlnaProfilesDefaultAsyncWithHttpInfo ();
         /// <summary>
         /// Creates a profile
         /// </summary>
@@ -233,7 +233,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DlnaProfile: </param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostDlnaProfilesAsync (EmbyDlnaProfilesDlnaProfile body);
+        System.Threading.Tasks.Task PostDlnaProfilesAsync (DlnaProfilesDlnaProfile body);
 
         /// <summary>
         /// Creates a profile
@@ -244,7 +244,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DlnaProfile: </param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostDlnaProfilesAsyncWithHttpInfo (EmbyDlnaProfilesDlnaProfile body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostDlnaProfilesAsyncWithHttpInfo (DlnaProfilesDlnaProfile body);
         /// <summary>
         /// Updates a profile
         /// </summary>
@@ -255,7 +255,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">DlnaProfile: </param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostDlnaProfilesByIdAsync (EmbyDlnaProfilesDlnaProfile body, string id);
+        System.Threading.Tasks.Task PostDlnaProfilesByIdAsync (DlnaProfilesDlnaProfile body, string id);
 
         /// <summary>
         /// Updates a profile
@@ -267,7 +267,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">DlnaProfile: </param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostDlnaProfilesByIdAsyncWithHttpInfo (EmbyDlnaProfilesDlnaProfile body, string id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostDlnaProfilesByIdAsyncWithHttpInfo (DlnaProfilesDlnaProfile body, string id);
         #endregion Asynchronous Operations
     }
 
@@ -532,10 +532,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a list of profiles Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;EmbyDlnaProfilesDlnaProfile&gt;</returns>
-        public List<EmbyDlnaProfilesDlnaProfile> GetDlnaProfileinfos ()
+        /// <returns>List&lt;DlnaProfilesDlnaProfile&gt;</returns>
+        public List<DlnaProfilesDlnaProfile> GetDlnaProfileinfos ()
         {
-             ApiResponse<List<EmbyDlnaProfilesDlnaProfile>> localVarResponse = GetDlnaProfileinfosWithHttpInfo();
+             ApiResponse<List<DlnaProfilesDlnaProfile>> localVarResponse = GetDlnaProfileinfosWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -543,8 +543,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a list of profiles Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;EmbyDlnaProfilesDlnaProfile&gt;</returns>
-        public ApiResponse< List<EmbyDlnaProfilesDlnaProfile> > GetDlnaProfileinfosWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;DlnaProfilesDlnaProfile&gt;</returns>
+        public ApiResponse< List<DlnaProfilesDlnaProfile> > GetDlnaProfileinfosWithHttpInfo ()
         {
 
             var localVarPath = "/Dlna/ProfileInfos";
@@ -594,19 +594,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<EmbyDlnaProfilesDlnaProfile>>(localVarStatusCode,
+            return new ApiResponse<List<DlnaProfilesDlnaProfile>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<EmbyDlnaProfilesDlnaProfile>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EmbyDlnaProfilesDlnaProfile>)));
+                (List<DlnaProfilesDlnaProfile>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DlnaProfilesDlnaProfile>)));
         }
 
         /// <summary>
         /// Gets a list of profiles Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;EmbyDlnaProfilesDlnaProfile&gt;</returns>
-        public async System.Threading.Tasks.Task<List<EmbyDlnaProfilesDlnaProfile>> GetDlnaProfileinfosAsync ()
+        /// <returns>Task of List&lt;DlnaProfilesDlnaProfile&gt;</returns>
+        public async System.Threading.Tasks.Task<List<DlnaProfilesDlnaProfile>> GetDlnaProfileinfosAsync ()
         {
-             ApiResponse<List<EmbyDlnaProfilesDlnaProfile>> localVarResponse = await GetDlnaProfileinfosAsyncWithHttpInfo();
+             ApiResponse<List<DlnaProfilesDlnaProfile>> localVarResponse = await GetDlnaProfileinfosAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -615,8 +615,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a list of profiles Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;EmbyDlnaProfilesDlnaProfile&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<EmbyDlnaProfilesDlnaProfile>>> GetDlnaProfileinfosAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;DlnaProfilesDlnaProfile&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DlnaProfilesDlnaProfile>>> GetDlnaProfileinfosAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Dlna/ProfileInfos";
@@ -666,9 +666,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<EmbyDlnaProfilesDlnaProfile>>(localVarStatusCode,
+            return new ApiResponse<List<DlnaProfilesDlnaProfile>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<EmbyDlnaProfilesDlnaProfile>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<EmbyDlnaProfilesDlnaProfile>)));
+                (List<DlnaProfilesDlnaProfile>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DlnaProfilesDlnaProfile>)));
         }
 
         /// <summary>
@@ -676,10 +676,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Profile Id</param>
-        /// <returns>EmbyDlnaProfilesDlnaProfile</returns>
-        public EmbyDlnaProfilesDlnaProfile GetDlnaProfilesById (string id)
+        /// <returns>DlnaProfilesDlnaProfile</returns>
+        public DlnaProfilesDlnaProfile GetDlnaProfilesById (string id)
         {
-             ApiResponse<EmbyDlnaProfilesDlnaProfile> localVarResponse = GetDlnaProfilesByIdWithHttpInfo(id);
+             ApiResponse<DlnaProfilesDlnaProfile> localVarResponse = GetDlnaProfilesByIdWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -688,8 +688,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Profile Id</param>
-        /// <returns>ApiResponse of EmbyDlnaProfilesDlnaProfile</returns>
-        public ApiResponse< EmbyDlnaProfilesDlnaProfile > GetDlnaProfilesByIdWithHttpInfo (string id)
+        /// <returns>ApiResponse of DlnaProfilesDlnaProfile</returns>
+        public ApiResponse< DlnaProfilesDlnaProfile > GetDlnaProfilesByIdWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -743,9 +743,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyDlnaProfilesDlnaProfile>(localVarStatusCode,
+            return new ApiResponse<DlnaProfilesDlnaProfile>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyDlnaProfilesDlnaProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyDlnaProfilesDlnaProfile)));
+                (DlnaProfilesDlnaProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DlnaProfilesDlnaProfile)));
         }
 
         /// <summary>
@@ -753,10 +753,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Profile Id</param>
-        /// <returns>Task of EmbyDlnaProfilesDlnaProfile</returns>
-        public async System.Threading.Tasks.Task<EmbyDlnaProfilesDlnaProfile> GetDlnaProfilesByIdAsync (string id)
+        /// <returns>Task of DlnaProfilesDlnaProfile</returns>
+        public async System.Threading.Tasks.Task<DlnaProfilesDlnaProfile> GetDlnaProfilesByIdAsync (string id)
         {
-             ApiResponse<EmbyDlnaProfilesDlnaProfile> localVarResponse = await GetDlnaProfilesByIdAsyncWithHttpInfo(id);
+             ApiResponse<DlnaProfilesDlnaProfile> localVarResponse = await GetDlnaProfilesByIdAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -766,8 +766,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Profile Id</param>
-        /// <returns>Task of ApiResponse (EmbyDlnaProfilesDlnaProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmbyDlnaProfilesDlnaProfile>> GetDlnaProfilesByIdAsyncWithHttpInfo (string id)
+        /// <returns>Task of ApiResponse (DlnaProfilesDlnaProfile)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DlnaProfilesDlnaProfile>> GetDlnaProfilesByIdAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -821,19 +821,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyDlnaProfilesDlnaProfile>(localVarStatusCode,
+            return new ApiResponse<DlnaProfilesDlnaProfile>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyDlnaProfilesDlnaProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyDlnaProfilesDlnaProfile)));
+                (DlnaProfilesDlnaProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DlnaProfilesDlnaProfile)));
         }
 
         /// <summary>
         /// Gets the default profile Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyDlnaProfilesDlnaProfile</returns>
-        public EmbyDlnaProfilesDlnaProfile GetDlnaProfilesDefault ()
+        /// <returns>DlnaProfilesDlnaProfile</returns>
+        public DlnaProfilesDlnaProfile GetDlnaProfilesDefault ()
         {
-             ApiResponse<EmbyDlnaProfilesDlnaProfile> localVarResponse = GetDlnaProfilesDefaultWithHttpInfo();
+             ApiResponse<DlnaProfilesDlnaProfile> localVarResponse = GetDlnaProfilesDefaultWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -841,8 +841,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the default profile Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyDlnaProfilesDlnaProfile</returns>
-        public ApiResponse< EmbyDlnaProfilesDlnaProfile > GetDlnaProfilesDefaultWithHttpInfo ()
+        /// <returns>ApiResponse of DlnaProfilesDlnaProfile</returns>
+        public ApiResponse< DlnaProfilesDlnaProfile > GetDlnaProfilesDefaultWithHttpInfo ()
         {
 
             var localVarPath = "/Dlna/Profiles/Default";
@@ -892,19 +892,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyDlnaProfilesDlnaProfile>(localVarStatusCode,
+            return new ApiResponse<DlnaProfilesDlnaProfile>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyDlnaProfilesDlnaProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyDlnaProfilesDlnaProfile)));
+                (DlnaProfilesDlnaProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DlnaProfilesDlnaProfile)));
         }
 
         /// <summary>
         /// Gets the default profile Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyDlnaProfilesDlnaProfile</returns>
-        public async System.Threading.Tasks.Task<EmbyDlnaProfilesDlnaProfile> GetDlnaProfilesDefaultAsync ()
+        /// <returns>Task of DlnaProfilesDlnaProfile</returns>
+        public async System.Threading.Tasks.Task<DlnaProfilesDlnaProfile> GetDlnaProfilesDefaultAsync ()
         {
-             ApiResponse<EmbyDlnaProfilesDlnaProfile> localVarResponse = await GetDlnaProfilesDefaultAsyncWithHttpInfo();
+             ApiResponse<DlnaProfilesDlnaProfile> localVarResponse = await GetDlnaProfilesDefaultAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -913,8 +913,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the default profile Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyDlnaProfilesDlnaProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmbyDlnaProfilesDlnaProfile>> GetDlnaProfilesDefaultAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (DlnaProfilesDlnaProfile)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DlnaProfilesDlnaProfile>> GetDlnaProfilesDefaultAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Dlna/Profiles/Default";
@@ -964,9 +964,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyDlnaProfilesDlnaProfile>(localVarStatusCode,
+            return new ApiResponse<DlnaProfilesDlnaProfile>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyDlnaProfilesDlnaProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyDlnaProfilesDlnaProfile)));
+                (DlnaProfilesDlnaProfile) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DlnaProfilesDlnaProfile)));
         }
 
         /// <summary>
@@ -975,7 +975,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DlnaProfile: </param>
         /// <returns></returns>
-        public void PostDlnaProfiles (EmbyDlnaProfilesDlnaProfile body)
+        public void PostDlnaProfiles (DlnaProfilesDlnaProfile body)
         {
              PostDlnaProfilesWithHttpInfo(body);
         }
@@ -986,7 +986,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DlnaProfile: </param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostDlnaProfilesWithHttpInfo (EmbyDlnaProfilesDlnaProfile body)
+        public ApiResponse<Object> PostDlnaProfilesWithHttpInfo (DlnaProfilesDlnaProfile body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1058,7 +1058,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DlnaProfile: </param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostDlnaProfilesAsync (EmbyDlnaProfilesDlnaProfile body)
+        public async System.Threading.Tasks.Task PostDlnaProfilesAsync (DlnaProfilesDlnaProfile body)
         {
              await PostDlnaProfilesAsyncWithHttpInfo(body);
 
@@ -1070,7 +1070,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">DlnaProfile: </param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDlnaProfilesAsyncWithHttpInfo (EmbyDlnaProfilesDlnaProfile body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDlnaProfilesAsyncWithHttpInfo (DlnaProfilesDlnaProfile body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1143,7 +1143,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">DlnaProfile: </param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public void PostDlnaProfilesById (EmbyDlnaProfilesDlnaProfile body, string id)
+        public void PostDlnaProfilesById (DlnaProfilesDlnaProfile body, string id)
         {
              PostDlnaProfilesByIdWithHttpInfo(body, id);
         }
@@ -1155,7 +1155,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">DlnaProfile: </param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostDlnaProfilesByIdWithHttpInfo (EmbyDlnaProfilesDlnaProfile body, string id)
+        public ApiResponse<Object> PostDlnaProfilesByIdWithHttpInfo (DlnaProfilesDlnaProfile body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1232,7 +1232,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">DlnaProfile: </param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostDlnaProfilesByIdAsync (EmbyDlnaProfilesDlnaProfile body, string id)
+        public async System.Threading.Tasks.Task PostDlnaProfilesByIdAsync (DlnaProfilesDlnaProfile body, string id)
         {
              await PostDlnaProfilesByIdAsyncWithHttpInfo(body, id);
 
@@ -1245,7 +1245,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">DlnaProfile: </param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDlnaProfilesByIdAsyncWithHttpInfo (EmbyDlnaProfilesDlnaProfile body, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDlnaProfilesByIdAsyncWithHttpInfo (DlnaProfilesDlnaProfile body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)

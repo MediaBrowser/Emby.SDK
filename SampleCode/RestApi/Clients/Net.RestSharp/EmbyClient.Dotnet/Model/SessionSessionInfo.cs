@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// SessionSessionInfo
+    /// Class SessionInfo  
     /// </summary>
     [DataContract]
         public partial class SessionSessionInfo :  IEquatable<SessionSessionInfo>
@@ -28,32 +28,35 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="playState">playState.</param>
         /// <param name="additionalUsers">additionalUsers.</param>
-        /// <param name="remoteEndPoint">remoteEndPoint.</param>
-        /// <param name="playableMediaTypes">playableMediaTypes.</param>
+        /// <param name="remoteEndPoint">The remote end point..</param>
+        /// <param name="protocol">protocol.</param>
+        /// <param name="playableMediaTypes">The playable media types..</param>
         /// <param name="playlistItemId">playlistItemId.</param>
         /// <param name="playlistIndex">playlistIndex.</param>
         /// <param name="playlistLength">playlistLength.</param>
-        /// <param name="id">id.</param>
+        /// <param name="id">The id..</param>
         /// <param name="serverId">serverId.</param>
-        /// <param name="userId">userId.</param>
-        /// <param name="userName">userName.</param>
+        /// <param name="userId">The user id..</param>
+        /// <param name="userName">The username..</param>
         /// <param name="userPrimaryImageTag">userPrimaryImageTag.</param>
-        /// <param name="_client">_client.</param>
-        /// <param name="lastActivityDate">lastActivityDate.</param>
-        /// <param name="deviceName">deviceName.</param>
+        /// <param name="_client">The type of the client..</param>
+        /// <param name="lastActivityDate">The last activity date..</param>
+        /// <param name="deviceName">The name of the device..</param>
         /// <param name="deviceType">deviceType.</param>
         /// <param name="nowPlayingItem">nowPlayingItem.</param>
-        /// <param name="deviceId">deviceId.</param>
-        /// <param name="applicationVersion">applicationVersion.</param>
-        /// <param name="appIconUrl">appIconUrl.</param>
-        /// <param name="supportedCommands">supportedCommands.</param>
+        /// <param name="internalDeviceId">internalDeviceId.</param>
+        /// <param name="deviceId">The device id..</param>
+        /// <param name="applicationVersion">The application version..</param>
+        /// <param name="appIconUrl">The application icon URL..</param>
+        /// <param name="supportedCommands">The supported commands..</param>
         /// <param name="transcodingInfo">transcodingInfo.</param>
         /// <param name="supportsRemoteControl">supportsRemoteControl.</param>
-        public SessionSessionInfo(PlayerStateInfo playState = default(PlayerStateInfo), List<SessionUserInfo> additionalUsers = default(List<SessionUserInfo>), string remoteEndPoint = default(string), List<string> playableMediaTypes = default(List<string>), string playlistItemId = default(string), int? playlistIndex = default(int?), int? playlistLength = default(int?), string id = default(string), string serverId = default(string), string userId = default(string), string userName = default(string), string userPrimaryImageTag = default(string), string _client = default(string), DateTimeOffset? lastActivityDate = default(DateTimeOffset?), string deviceName = default(string), string deviceType = default(string), BaseItemDto nowPlayingItem = default(BaseItemDto), string deviceId = default(string), string applicationVersion = default(string), string appIconUrl = default(string), List<string> supportedCommands = default(List<string>), TranscodingInfo transcodingInfo = default(TranscodingInfo), bool? supportsRemoteControl = default(bool?))
+        public SessionSessionInfo(PlayerStateInfo playState = default(PlayerStateInfo), List<SessionUserInfo> additionalUsers = default(List<SessionUserInfo>), string remoteEndPoint = default(string), string protocol = default(string), List<string> playableMediaTypes = default(List<string>), string playlistItemId = default(string), int? playlistIndex = default(int?), int? playlistLength = default(int?), string id = default(string), string serverId = default(string), string userId = default(string), string userName = default(string), string userPrimaryImageTag = default(string), string _client = default(string), DateTimeOffset? lastActivityDate = default(DateTimeOffset?), string deviceName = default(string), string deviceType = default(string), BaseItemDto nowPlayingItem = default(BaseItemDto), long? internalDeviceId = default(long?), string deviceId = default(string), string applicationVersion = default(string), string appIconUrl = default(string), List<string> supportedCommands = default(List<string>), TranscodingInfo transcodingInfo = default(TranscodingInfo), bool? supportsRemoteControl = default(bool?))
         {
             this.PlayState = playState;
             this.AdditionalUsers = additionalUsers;
             this.RemoteEndPoint = remoteEndPoint;
+            this.Protocol = protocol;
             this.PlayableMediaTypes = playableMediaTypes;
             this.PlaylistItemId = playlistItemId;
             this.PlaylistIndex = playlistIndex;
@@ -68,6 +71,7 @@ namespace EmbyClient.Dotnet.Model
             this.DeviceName = deviceName;
             this.DeviceType = deviceType;
             this.NowPlayingItem = nowPlayingItem;
+            this.InternalDeviceId = internalDeviceId;
             this.DeviceId = deviceId;
             this.ApplicationVersion = applicationVersion;
             this.AppIconUrl = appIconUrl;
@@ -89,14 +93,22 @@ namespace EmbyClient.Dotnet.Model
         public List<SessionUserInfo> AdditionalUsers { get; set; }
 
         /// <summary>
-        /// Gets or Sets RemoteEndPoint
+        /// The remote end point.
         /// </summary>
+        /// <value>The remote end point.</value>
         [DataMember(Name="RemoteEndPoint", EmitDefaultValue=false)]
         public string RemoteEndPoint { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayableMediaTypes
+        /// Gets or Sets Protocol
         /// </summary>
+        [DataMember(Name="Protocol", EmitDefaultValue=false)]
+        public string Protocol { get; set; }
+
+        /// <summary>
+        /// The playable media types.
+        /// </summary>
+        /// <value>The playable media types.</value>
         [DataMember(Name="PlayableMediaTypes", EmitDefaultValue=false)]
         public List<string> PlayableMediaTypes { get; set; }
 
@@ -119,8 +131,9 @@ namespace EmbyClient.Dotnet.Model
         public int? PlaylistLength { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The id.
         /// </summary>
+        /// <value>The id.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
@@ -131,14 +144,16 @@ namespace EmbyClient.Dotnet.Model
         public string ServerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserId
+        /// The user id.
         /// </summary>
+        /// <value>The user id.</value>
         [DataMember(Name="UserId", EmitDefaultValue=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserName
+        /// The username.
         /// </summary>
+        /// <value>The username.</value>
         [DataMember(Name="UserName", EmitDefaultValue=false)]
         public string UserName { get; set; }
 
@@ -149,20 +164,23 @@ namespace EmbyClient.Dotnet.Model
         public string UserPrimaryImageTag { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Client
+        /// The type of the client.
         /// </summary>
+        /// <value>The type of the client.</value>
         [DataMember(Name="Client", EmitDefaultValue=false)]
         public string _Client { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastActivityDate
+        /// The last activity date.
         /// </summary>
+        /// <value>The last activity date.</value>
         [DataMember(Name="LastActivityDate", EmitDefaultValue=false)]
         public DateTimeOffset? LastActivityDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeviceName
+        /// The name of the device.
         /// </summary>
+        /// <value>The name of the device.</value>
         [DataMember(Name="DeviceName", EmitDefaultValue=false)]
         public string DeviceName { get; set; }
 
@@ -179,26 +197,36 @@ namespace EmbyClient.Dotnet.Model
         public BaseItemDto NowPlayingItem { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeviceId
+        /// Gets or Sets InternalDeviceId
         /// </summary>
+        [DataMember(Name="InternalDeviceId", EmitDefaultValue=false)]
+        public long? InternalDeviceId { get; set; }
+
+        /// <summary>
+        /// The device id.
+        /// </summary>
+        /// <value>The device id.</value>
         [DataMember(Name="DeviceId", EmitDefaultValue=false)]
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ApplicationVersion
+        /// The application version.
         /// </summary>
+        /// <value>The application version.</value>
         [DataMember(Name="ApplicationVersion", EmitDefaultValue=false)]
         public string ApplicationVersion { get; set; }
 
         /// <summary>
-        /// Gets or Sets AppIconUrl
+        /// The application icon URL.
         /// </summary>
+        /// <value>The application icon URL.</value>
         [DataMember(Name="AppIconUrl", EmitDefaultValue=false)]
         public string AppIconUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets SupportedCommands
+        /// The supported commands.
         /// </summary>
+        /// <value>The supported commands.</value>
         [DataMember(Name="SupportedCommands", EmitDefaultValue=false)]
         public List<string> SupportedCommands { get; set; }
 
@@ -225,6 +253,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PlayState: ").Append(PlayState).Append("\n");
             sb.Append("  AdditionalUsers: ").Append(AdditionalUsers).Append("\n");
             sb.Append("  RemoteEndPoint: ").Append(RemoteEndPoint).Append("\n");
+            sb.Append("  Protocol: ").Append(Protocol).Append("\n");
             sb.Append("  PlayableMediaTypes: ").Append(PlayableMediaTypes).Append("\n");
             sb.Append("  PlaylistItemId: ").Append(PlaylistItemId).Append("\n");
             sb.Append("  PlaylistIndex: ").Append(PlaylistIndex).Append("\n");
@@ -239,6 +268,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  DeviceName: ").Append(DeviceName).Append("\n");
             sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
             sb.Append("  NowPlayingItem: ").Append(NowPlayingItem).Append("\n");
+            sb.Append("  InternalDeviceId: ").Append(InternalDeviceId).Append("\n");
             sb.Append("  DeviceId: ").Append(DeviceId).Append("\n");
             sb.Append("  ApplicationVersion: ").Append(ApplicationVersion).Append("\n");
             sb.Append("  AppIconUrl: ").Append(AppIconUrl).Append("\n");
@@ -294,6 +324,11 @@ namespace EmbyClient.Dotnet.Model
                     this.RemoteEndPoint == input.RemoteEndPoint ||
                     (this.RemoteEndPoint != null &&
                     this.RemoteEndPoint.Equals(input.RemoteEndPoint))
+                ) && 
+                (
+                    this.Protocol == input.Protocol ||
+                    (this.Protocol != null &&
+                    this.Protocol.Equals(input.Protocol))
                 ) && 
                 (
                     this.PlayableMediaTypes == input.PlayableMediaTypes ||
@@ -367,6 +402,11 @@ namespace EmbyClient.Dotnet.Model
                     this.NowPlayingItem.Equals(input.NowPlayingItem))
                 ) && 
                 (
+                    this.InternalDeviceId == input.InternalDeviceId ||
+                    (this.InternalDeviceId != null &&
+                    this.InternalDeviceId.Equals(input.InternalDeviceId))
+                ) && 
+                (
                     this.DeviceId == input.DeviceId ||
                     (this.DeviceId != null &&
                     this.DeviceId.Equals(input.DeviceId))
@@ -414,6 +454,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.AdditionalUsers.GetHashCode();
                 if (this.RemoteEndPoint != null)
                     hashCode = hashCode * 59 + this.RemoteEndPoint.GetHashCode();
+                if (this.Protocol != null)
+                    hashCode = hashCode * 59 + this.Protocol.GetHashCode();
                 if (this.PlayableMediaTypes != null)
                     hashCode = hashCode * 59 + this.PlayableMediaTypes.GetHashCode();
                 if (this.PlaylistItemId != null)
@@ -442,6 +484,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.DeviceType.GetHashCode();
                 if (this.NowPlayingItem != null)
                     hashCode = hashCode * 59 + this.NowPlayingItem.GetHashCode();
+                if (this.InternalDeviceId != null)
+                    hashCode = hashCode * 59 + this.InternalDeviceId.GetHashCode();
                 if (this.DeviceId != null)
                     hashCode = hashCode * 59 + this.DeviceId.GetHashCode();
                 if (this.ApplicationVersion != null)

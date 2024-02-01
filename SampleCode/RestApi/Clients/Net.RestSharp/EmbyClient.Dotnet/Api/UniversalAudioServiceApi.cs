@@ -26,7 +26,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns></returns>
         void GetAudioByIdUniversal (string id, string deviceId, long? startTimeTicks);
 
@@ -39,7 +39,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetAudioByIdUniversalWithHttpInfo (string id, string deviceId, long? startTimeTicks);
         /// <summary>
@@ -50,11 +50,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns></returns>
-        void GetAudioByIdUniversalByContainer (string id, string container, string deviceId, long? startTimeTicks);
+        void GetAudioByIdUniversalByContainer (string id, string deviceId, string container, long? startTimeTicks);
 
         /// <summary>
         /// Gets an audio stream
@@ -64,11 +64,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetAudioByIdUniversalByContainerWithHttpInfo (string id, string container, string deviceId, long? startTimeTicks);
+        ApiResponse<Object> GetAudioByIdUniversalByContainerWithHttpInfo (string id, string deviceId, string container, long? startTimeTicks);
         /// <summary>
         /// Gets an audio stream
         /// </summary>
@@ -78,7 +78,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns></returns>
         void HeadAudioByIdUniversal (string id, string deviceId, long? startTimeTicks);
 
@@ -91,7 +91,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> HeadAudioByIdUniversalWithHttpInfo (string id, string deviceId, long? startTimeTicks);
         /// <summary>
@@ -102,11 +102,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns></returns>
-        void HeadAudioByIdUniversalByContainer (string id, string container, string deviceId, long? startTimeTicks);
+        void HeadAudioByIdUniversalByContainer (string id, string deviceId, string container, long? startTimeTicks);
 
         /// <summary>
         /// Gets an audio stream
@@ -116,11 +116,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadAudioByIdUniversalByContainerWithHttpInfo (string id, string container, string deviceId, long? startTimeTicks);
+        ApiResponse<Object> HeadAudioByIdUniversalByContainerWithHttpInfo (string id, string deviceId, string container, long? startTimeTicks);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -132,7 +132,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task GetAudioByIdUniversalAsync (string id, string deviceId, long? startTimeTicks);
 
@@ -145,7 +145,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetAudioByIdUniversalAsyncWithHttpInfo (string id, string deviceId, long? startTimeTicks);
         /// <summary>
@@ -156,11 +156,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetAudioByIdUniversalByContainerAsync (string id, string container, string deviceId, long? startTimeTicks);
+        System.Threading.Tasks.Task GetAudioByIdUniversalByContainerAsync (string id, string deviceId, string container, long? startTimeTicks);
 
         /// <summary>
         /// Gets an audio stream
@@ -170,11 +170,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetAudioByIdUniversalByContainerAsyncWithHttpInfo (string id, string container, string deviceId, long? startTimeTicks);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetAudioByIdUniversalByContainerAsyncWithHttpInfo (string id, string deviceId, string container, long? startTimeTicks);
         /// <summary>
         /// Gets an audio stream
         /// </summary>
@@ -184,7 +184,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task HeadAudioByIdUniversalAsync (string id, string deviceId, long? startTimeTicks);
 
@@ -197,7 +197,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> HeadAudioByIdUniversalAsyncWithHttpInfo (string id, string deviceId, long? startTimeTicks);
         /// <summary>
@@ -208,11 +208,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadAudioByIdUniversalByContainerAsync (string id, string container, string deviceId, long? startTimeTicks);
+        System.Threading.Tasks.Task HeadAudioByIdUniversalByContainerAsync (string id, string deviceId, string container, long? startTimeTicks);
 
         /// <summary>
         /// Gets an audio stream
@@ -222,11 +222,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadAudioByIdUniversalByContainerAsyncWithHttpInfo (string id, string container, string deviceId, long? startTimeTicks);
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadAudioByIdUniversalByContainerAsyncWithHttpInfo (string id, string deviceId, string container, long? startTimeTicks);
         #endregion Asynchronous Operations
     }
 
@@ -344,7 +344,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns></returns>
         public void GetAudioByIdUniversal (string id, string deviceId, long? startTimeTicks)
         {
@@ -357,7 +357,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> GetAudioByIdUniversalWithHttpInfo (string id, string deviceId, long? startTimeTicks)
         {
@@ -424,7 +424,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task GetAudioByIdUniversalAsync (string id, string deviceId, long? startTimeTicks)
         {
@@ -438,7 +438,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetAudioByIdUniversalAsyncWithHttpInfo (string id, string deviceId, long? startTimeTicks)
         {
@@ -504,13 +504,13 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns></returns>
-        public void GetAudioByIdUniversalByContainer (string id, string container, string deviceId, long? startTimeTicks)
+        public void GetAudioByIdUniversalByContainer (string id, string deviceId, string container, long? startTimeTicks)
         {
-             GetAudioByIdUniversalByContainerWithHttpInfo(id, container, deviceId, startTimeTicks);
+             GetAudioByIdUniversalByContainerWithHttpInfo(id, deviceId, container, startTimeTicks);
         }
 
         /// <summary>
@@ -518,11 +518,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetAudioByIdUniversalByContainerWithHttpInfo (string id, string container, string deviceId, long? startTimeTicks)
+        public ApiResponse<Object> GetAudioByIdUniversalByContainerWithHttpInfo (string id, string deviceId, string container, long? startTimeTicks)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -590,13 +590,13 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetAudioByIdUniversalByContainerAsync (string id, string container, string deviceId, long? startTimeTicks)
+        public async System.Threading.Tasks.Task GetAudioByIdUniversalByContainerAsync (string id, string deviceId, string container, long? startTimeTicks)
         {
-             await GetAudioByIdUniversalByContainerAsyncWithHttpInfo(id, container, deviceId, startTimeTicks);
+             await GetAudioByIdUniversalByContainerAsyncWithHttpInfo(id, deviceId, container, startTimeTicks);
 
         }
 
@@ -605,11 +605,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetAudioByIdUniversalByContainerAsyncWithHttpInfo (string id, string container, string deviceId, long? startTimeTicks)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetAudioByIdUniversalByContainerAsyncWithHttpInfo (string id, string deviceId, string container, long? startTimeTicks)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -678,7 +678,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns></returns>
         public void HeadAudioByIdUniversal (string id, string deviceId, long? startTimeTicks)
         {
@@ -691,7 +691,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> HeadAudioByIdUniversalWithHttpInfo (string id, string deviceId, long? startTimeTicks)
         {
@@ -758,7 +758,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task HeadAudioByIdUniversalAsync (string id, string deviceId, long? startTimeTicks)
         {
@@ -772,7 +772,7 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadAudioByIdUniversalAsyncWithHttpInfo (string id, string deviceId, long? startTimeTicks)
         {
@@ -838,13 +838,13 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns></returns>
-        public void HeadAudioByIdUniversalByContainer (string id, string container, string deviceId, long? startTimeTicks)
+        public void HeadAudioByIdUniversalByContainer (string id, string deviceId, string container, long? startTimeTicks)
         {
-             HeadAudioByIdUniversalByContainerWithHttpInfo(id, container, deviceId, startTimeTicks);
+             HeadAudioByIdUniversalByContainerWithHttpInfo(id, deviceId, container, startTimeTicks);
         }
 
         /// <summary>
@@ -852,11 +852,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadAudioByIdUniversalByContainerWithHttpInfo (string id, string container, string deviceId, long? startTimeTicks)
+        public ApiResponse<Object> HeadAudioByIdUniversalByContainerWithHttpInfo (string id, string deviceId, string container, long? startTimeTicks)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -924,13 +924,13 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadAudioByIdUniversalByContainerAsync (string id, string container, string deviceId, long? startTimeTicks)
+        public async System.Threading.Tasks.Task HeadAudioByIdUniversalByContainerAsync (string id, string deviceId, string container, long? startTimeTicks)
         {
-             await HeadAudioByIdUniversalByContainerAsyncWithHttpInfo(id, container, deviceId, startTimeTicks);
+             await HeadAudioByIdUniversalByContainerAsyncWithHttpInfo(id, deviceId, container, startTimeTicks);
 
         }
 
@@ -939,11 +939,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="container"></param>
         /// <param name="deviceId">The device id of the client requesting. Used to stop encoding processes when needed. (optional)</param>
-        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)</param>
+        /// <param name="container"></param>
+        /// <param name="startTimeTicks">Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadAudioByIdUniversalByContainerAsyncWithHttpInfo (string id, string container, string deviceId, long? startTimeTicks)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadAudioByIdUniversalByContainerAsyncWithHttpInfo (string id, string deviceId, string container, long? startTimeTicks)
         {
             // verify the required parameter 'id' is set
             if (id == null)

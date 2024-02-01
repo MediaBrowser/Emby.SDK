@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// ParentalRating
+    /// Class ParentalRating  
     /// </summary>
     [DataContract]
         public partial class ParentalRating :  IEquatable<ParentalRating>
@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ParentalRating" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="value">value.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="value">The value..</param>
         public ParentalRating(string name = default(string), int? value = default(int?))
         {
             this.Name = name;
@@ -35,14 +35,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// The value.
         /// </summary>
+        /// <value>The value.</value>
         [DataMember(Name="Value", EmitDefaultValue=false)]
         public int? Value { get; set; }
 

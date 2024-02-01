@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The NameLongIdPair model module.
 * @module model/NameLongIdPair
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class NameLongIdPair {
     /**
@@ -52,10 +52,12 @@ export default class NameLongIdPair {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The identifier.
     * @member {Number} Id
     */
     'Id' = undefined;

@@ -11,7 +11,9 @@ import Foundation
 
 public struct ExternalUrl: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The type of the item. */
     public var url: String?
 
     public init(name: String? = nil, url: String? = nil) {

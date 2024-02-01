@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -57,6 +57,9 @@ public class LiveTvTimerInfoDto {
   @SerializedName("ChannelName")
   private String channelName = null;
 
+  @SerializedName("ChannelNumber")
+  private String channelNumber = null;
+
   @SerializedName("ChannelPrimaryImageTag")
   private String channelPrimaryImageTag = null;
 
@@ -68,6 +71,9 @@ public class LiveTvTimerInfoDto {
 
   @SerializedName("Overview")
   private String overview = null;
+
+  @SerializedName("ParentFolderId")
+  private String parentFolderId = null;
 
   @SerializedName("StartDate")
   private OffsetDateTime startDate = null;
@@ -123,10 +129,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get seriesTimerId
+   * The series timer identifier.
    * @return seriesTimerId
   **/
-  @Schema(description = "")
+  @Schema(description = "The series timer identifier.")
   public String getSeriesTimerId() {
     return seriesTimerId;
   }
@@ -141,10 +147,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get runTimeTicks
+   * The run time ticks.
    * @return runTimeTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The run time ticks.")
   public Long getRunTimeTicks() {
     return runTimeTicks;
   }
@@ -195,10 +201,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get id
+   * Id of the recording.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "Id of the recording.")
   public String getId() {
     return id;
   }
@@ -231,10 +237,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get serverId
+   * The server identifier.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "The server identifier.")
   public String getServerId() {
     return serverId;
   }
@@ -249,10 +255,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get channelId
+   * ChannelId of the recording.
    * @return channelId
   **/
-  @Schema(description = "")
+  @Schema(description = "ChannelId of the recording.")
   public String getChannelId() {
     return channelId;
   }
@@ -267,16 +273,34 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get channelName
+   * ChannelName of the recording.
    * @return channelName
   **/
-  @Schema(description = "")
+  @Schema(description = "ChannelName of the recording.")
   public String getChannelName() {
     return channelName;
   }
 
   public void setChannelName(String channelName) {
     this.channelName = channelName;
+  }
+
+  public LiveTvTimerInfoDto channelNumber(String channelNumber) {
+    this.channelNumber = channelNumber;
+    return this;
+  }
+
+   /**
+   * Get channelNumber
+   * @return channelNumber
+  **/
+  @Schema(description = "")
+  public String getChannelNumber() {
+    return channelNumber;
+  }
+
+  public void setChannelNumber(String channelNumber) {
+    this.channelNumber = channelNumber;
   }
 
   public LiveTvTimerInfoDto channelPrimaryImageTag(String channelPrimaryImageTag) {
@@ -303,10 +327,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get programId
+   * The program identifier.
    * @return programId
   **/
-  @Schema(description = "")
+  @Schema(description = "The program identifier.")
   public String getProgramId() {
     return programId;
   }
@@ -321,10 +345,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get name
+   * Name of the recording.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "Name of the recording.")
   public String getName() {
     return name;
   }
@@ -339,10 +363,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get overview
+   * Description of the recording.
    * @return overview
   **/
-  @Schema(description = "")
+  @Schema(description = "Description of the recording.")
   public String getOverview() {
     return overview;
   }
@@ -351,16 +375,34 @@ public class LiveTvTimerInfoDto {
     this.overview = overview;
   }
 
+  public LiveTvTimerInfoDto parentFolderId(String parentFolderId) {
+    this.parentFolderId = parentFolderId;
+    return this;
+  }
+
+   /**
+   * Get parentFolderId
+   * @return parentFolderId
+  **/
+  @Schema(description = "")
+  public String getParentFolderId() {
+    return parentFolderId;
+  }
+
+  public void setParentFolderId(String parentFolderId) {
+    this.parentFolderId = parentFolderId;
+  }
+
   public LiveTvTimerInfoDto startDate(OffsetDateTime startDate) {
     this.startDate = startDate;
     return this;
   }
 
    /**
-   * Get startDate
+   * The start date of the recording, in UTC.
    * @return startDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The start date of the recording, in UTC.")
   public OffsetDateTime getStartDate() {
     return startDate;
   }
@@ -375,10 +417,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get endDate
+   * The end date of the recording, in UTC.
    * @return endDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The end date of the recording, in UTC.")
   public OffsetDateTime getEndDate() {
     return endDate;
   }
@@ -393,10 +435,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get priority
+   * The priority.
    * @return priority
   **/
-  @Schema(description = "")
+  @Schema(description = "The priority.")
   public Integer getPriority() {
     return priority;
   }
@@ -411,10 +453,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get prePaddingSeconds
+   * The pre padding seconds.
    * @return prePaddingSeconds
   **/
-  @Schema(description = "")
+  @Schema(description = "The pre padding seconds.")
   public Integer getPrePaddingSeconds() {
     return prePaddingSeconds;
   }
@@ -429,10 +471,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get postPaddingSeconds
+   * The post padding seconds.
    * @return postPaddingSeconds
   **/
-  @Schema(description = "")
+  @Schema(description = "The post padding seconds.")
   public Integer getPostPaddingSeconds() {
     return postPaddingSeconds;
   }
@@ -447,10 +489,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get isPrePaddingRequired
+   * A value indicating whether this instance is pre padding required.
    * @return isPrePaddingRequired
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is pre padding required.")
   public Boolean isIsPrePaddingRequired() {
     return isPrePaddingRequired;
   }
@@ -465,10 +507,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get parentBackdropItemId
+   * If the item does not have any backdrops, this will hold the Id of the Parent that has one.
    * @return parentBackdropItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "If the item does not have any backdrops, this will hold the Id of the Parent that has one.")
   public String getParentBackdropItemId() {
     return parentBackdropItemId;
   }
@@ -491,10 +533,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get parentBackdropImageTags
+   * The parent backdrop image tags.
    * @return parentBackdropImageTags
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent backdrop image tags.")
   public List<String> getParentBackdropImageTags() {
     return parentBackdropImageTags;
   }
@@ -509,10 +551,10 @@ public class LiveTvTimerInfoDto {
   }
 
    /**
-   * Get isPostPaddingRequired
+   * A value indicating whether this instance is post padding required.
    * @return isPostPaddingRequired
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is post padding required.")
   public Boolean isIsPostPaddingRequired() {
     return isPostPaddingRequired;
   }
@@ -559,10 +601,12 @@ public class LiveTvTimerInfoDto {
         Objects.equals(this.serverId, liveTvTimerInfoDto.serverId) &&
         Objects.equals(this.channelId, liveTvTimerInfoDto.channelId) &&
         Objects.equals(this.channelName, liveTvTimerInfoDto.channelName) &&
+        Objects.equals(this.channelNumber, liveTvTimerInfoDto.channelNumber) &&
         Objects.equals(this.channelPrimaryImageTag, liveTvTimerInfoDto.channelPrimaryImageTag) &&
         Objects.equals(this.programId, liveTvTimerInfoDto.programId) &&
         Objects.equals(this.name, liveTvTimerInfoDto.name) &&
         Objects.equals(this.overview, liveTvTimerInfoDto.overview) &&
+        Objects.equals(this.parentFolderId, liveTvTimerInfoDto.parentFolderId) &&
         Objects.equals(this.startDate, liveTvTimerInfoDto.startDate) &&
         Objects.equals(this.endDate, liveTvTimerInfoDto.endDate) &&
         Objects.equals(this.priority, liveTvTimerInfoDto.priority) &&
@@ -577,7 +621,7 @@ public class LiveTvTimerInfoDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, seriesTimerId, runTimeTicks, programInfo, timerType, id, type, serverId, channelId, channelName, channelPrimaryImageTag, programId, name, overview, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
+    return Objects.hash(status, seriesTimerId, runTimeTicks, programInfo, timerType, id, type, serverId, channelId, channelName, channelNumber, channelPrimaryImageTag, programId, name, overview, parentFolderId, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
   }
 
 
@@ -596,10 +640,12 @@ public class LiveTvTimerInfoDto {
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
     sb.append("    channelId: ").append(toIndentedString(channelId)).append("\n");
     sb.append("    channelName: ").append(toIndentedString(channelName)).append("\n");
+    sb.append("    channelNumber: ").append(toIndentedString(channelNumber)).append("\n");
     sb.append("    channelPrimaryImageTag: ").append(toIndentedString(channelPrimaryImageTag)).append("\n");
     sb.append("    programId: ").append(toIndentedString(programId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    overview: ").append(toIndentedString(overview)).append("\n");
+    sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");

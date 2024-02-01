@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -1205,6 +1205,11 @@ class LibraryServiceApi(object):
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
         :param bool inherit_from_parent: Determines whether or not parent items should be searched for theme media.
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
         :return: AllThemeMediaResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1229,12 +1234,17 @@ class LibraryServiceApi(object):
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
         :param bool inherit_from_parent: Determines whether or not parent items should be searched for theme media.
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
         :return: AllThemeMediaResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'user_id', 'inherit_from_parent']  # noqa: E501
+        all_params = ['id', 'user_id', 'inherit_from_parent', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data', 'fields']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1265,6 +1275,16 @@ class LibraryServiceApi(object):
             query_params.append(('UserId', params['user_id']))  # noqa: E501
         if 'inherit_from_parent' in params:
             query_params.append(('InheritFromParent', params['inherit_from_parent']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
 
         header_params = {}
 
@@ -1308,6 +1328,11 @@ class LibraryServiceApi(object):
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
         :param bool inherit_from_parent: Determines whether or not parent items should be searched for theme media.
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
         :return: ThemeMediaResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1332,12 +1357,17 @@ class LibraryServiceApi(object):
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
         :param bool inherit_from_parent: Determines whether or not parent items should be searched for theme media.
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
         :return: ThemeMediaResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'user_id', 'inherit_from_parent']  # noqa: E501
+        all_params = ['id', 'user_id', 'inherit_from_parent', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data', 'fields']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1368,6 +1398,16 @@ class LibraryServiceApi(object):
             query_params.append(('UserId', params['user_id']))  # noqa: E501
         if 'inherit_from_parent' in params:
             query_params.append(('InheritFromParent', params['inherit_from_parent']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
 
         header_params = {}
 
@@ -1411,6 +1451,11 @@ class LibraryServiceApi(object):
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
         :param bool inherit_from_parent: Determines whether or not parent items should be searched for theme media.
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
         :return: ThemeMediaResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1435,12 +1480,17 @@ class LibraryServiceApi(object):
         :param str id: Item Id (required)
         :param str user_id: Optional. Filter by user id, and attach user data
         :param bool inherit_from_parent: Determines whether or not parent items should be searched for theme media.
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
         :return: ThemeMediaResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'user_id', 'inherit_from_parent']  # noqa: E501
+        all_params = ['id', 'user_id', 'inherit_from_parent', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data', 'fields']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1471,6 +1521,16 @@ class LibraryServiceApi(object):
             query_params.append(('UserId', params['user_id']))  # noqa: E501
         if 'inherit_from_parent' in params:
             query_params.append(('InheritFromParent', params['inherit_from_parent']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
 
         header_params = {}
 

@@ -25,8 +25,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyWebGenericEditEditObjectContainer</returns>
-        EmbyWebGenericEditEditObjectContainer GetEncodingFfmpegoptions ();
+        /// <returns>EditObjectContainer</returns>
+        EditObjectContainer GetEncodingFfmpegoptions ();
 
         /// <summary>
         /// Gets the ffmpeg options
@@ -35,8 +35,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyWebGenericEditEditObjectContainer</returns>
-        ApiResponse<EmbyWebGenericEditEditObjectContainer> GetEncodingFfmpegoptionsWithHttpInfo ();
+        /// <returns>ApiResponse of EditObjectContainer</returns>
+        ApiResponse<EditObjectContainer> GetEncodingFfmpegoptionsWithHttpInfo ();
         /// <summary>
         /// Updates the ffmpeg options
         /// </summary>
@@ -67,8 +67,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyWebGenericEditEditObjectContainer</returns>
-        System.Threading.Tasks.Task<EmbyWebGenericEditEditObjectContainer> GetEncodingFfmpegoptionsAsync ();
+        /// <returns>Task of EditObjectContainer</returns>
+        System.Threading.Tasks.Task<EditObjectContainer> GetEncodingFfmpegoptionsAsync ();
 
         /// <summary>
         /// Gets the ffmpeg options
@@ -77,8 +77,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyWebGenericEditEditObjectContainer)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmbyWebGenericEditEditObjectContainer>> GetEncodingFfmpegoptionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (EditObjectContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EditObjectContainer>> GetEncodingFfmpegoptionsAsyncWithHttpInfo ();
         /// <summary>
         /// Updates the ffmpeg options
         /// </summary>
@@ -215,10 +215,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the ffmpeg options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyWebGenericEditEditObjectContainer</returns>
-        public EmbyWebGenericEditEditObjectContainer GetEncodingFfmpegoptions ()
+        /// <returns>EditObjectContainer</returns>
+        public EditObjectContainer GetEncodingFfmpegoptions ()
         {
-             ApiResponse<EmbyWebGenericEditEditObjectContainer> localVarResponse = GetEncodingFfmpegoptionsWithHttpInfo();
+             ApiResponse<EditObjectContainer> localVarResponse = GetEncodingFfmpegoptionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -226,8 +226,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the ffmpeg options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyWebGenericEditEditObjectContainer</returns>
-        public ApiResponse< EmbyWebGenericEditEditObjectContainer > GetEncodingFfmpegoptionsWithHttpInfo ()
+        /// <returns>ApiResponse of EditObjectContainer</returns>
+        public ApiResponse< EditObjectContainer > GetEncodingFfmpegoptionsWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/FfmpegOptions";
@@ -277,19 +277,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyWebGenericEditEditObjectContainer>(localVarStatusCode,
+            return new ApiResponse<EditObjectContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyWebGenericEditEditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyWebGenericEditEditObjectContainer)));
+                (EditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditObjectContainer)));
         }
 
         /// <summary>
         /// Gets the ffmpeg options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyWebGenericEditEditObjectContainer</returns>
-        public async System.Threading.Tasks.Task<EmbyWebGenericEditEditObjectContainer> GetEncodingFfmpegoptionsAsync ()
+        /// <returns>Task of EditObjectContainer</returns>
+        public async System.Threading.Tasks.Task<EditObjectContainer> GetEncodingFfmpegoptionsAsync ()
         {
-             ApiResponse<EmbyWebGenericEditEditObjectContainer> localVarResponse = await GetEncodingFfmpegoptionsAsyncWithHttpInfo();
+             ApiResponse<EditObjectContainer> localVarResponse = await GetEncodingFfmpegoptionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -298,8 +298,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the ffmpeg options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyWebGenericEditEditObjectContainer)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmbyWebGenericEditEditObjectContainer>> GetEncodingFfmpegoptionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (EditObjectContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EditObjectContainer>> GetEncodingFfmpegoptionsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/FfmpegOptions";
@@ -349,9 +349,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyWebGenericEditEditObjectContainer>(localVarStatusCode,
+            return new ApiResponse<EditObjectContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyWebGenericEditEditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyWebGenericEditEditObjectContainer)));
+                (EditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditObjectContainer)));
         }
 
         /// <summary>

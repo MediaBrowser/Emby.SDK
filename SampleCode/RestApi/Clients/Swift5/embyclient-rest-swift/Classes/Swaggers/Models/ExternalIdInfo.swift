@@ -11,8 +11,11 @@ import Foundation
 
 public struct ExternalIdInfo: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The key. */
     public var key: String?
+    /** The URL format string. */
     public var urlFormatString: String?
     public var isSupportedAsIdentifier: Bool?
 

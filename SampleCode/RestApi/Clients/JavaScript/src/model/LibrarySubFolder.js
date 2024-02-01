@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LibrarySubFolder model module.
 * @module model/LibrarySubFolder
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LibrarySubFolder {
     /**
@@ -50,6 +50,9 @@ export default class LibrarySubFolder {
             if (data.hasOwnProperty('Path')) {
                 obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
             }
+            if (data.hasOwnProperty('IsUserAccessConfigurable')) {
+                obj['IsUserAccessConfigurable'] = ApiClient.convertToType(data['IsUserAccessConfigurable'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -66,6 +69,10 @@ export default class LibrarySubFolder {
     * @member {String} Path
     */
     'Path' = undefined;
+    /**
+    * @member {Boolean} IsUserAccessConfigurable
+    */
+    'IsUserAccessConfigurable' = undefined;
 
 
 

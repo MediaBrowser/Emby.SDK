@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -16,7 +16,7 @@ import ImageType from '../model/ImageType';
 /**
 * ImageService service.
 * @module EmbyClient.JavaScript/ImageServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ImageServiceApi {
 
@@ -196,7 +196,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getArtistsByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -218,12 +218,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -231,7 +229,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -251,7 +249,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getArtistsByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -274,19 +272,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -306,7 +302,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getGamegenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -328,12 +324,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -341,7 +335,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -361,7 +355,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getGamegenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -384,19 +378,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -416,7 +408,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getGenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -438,12 +430,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -451,7 +441,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -471,7 +461,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getGenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -494,19 +484,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -564,7 +552,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getItemsByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -586,12 +574,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -599,7 +585,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -619,7 +605,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getItemsByIdImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -642,19 +628,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -674,7 +658,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -683,13 +667,13 @@ export default class ImageServiceApi {
       let postBody = null;
 
       let pathParams = {
+        'PercentPlayed': percentPlayed,
+        'UnPlayedCount': unPlayedCount,
         'Id': id,
         'MaxWidth': maxWidth,
         'MaxHeight': maxHeight,
         'Tag': tag,
         'Format': format,
-        'PercentPlayed': percentPlayed,
-        'UnplayedCount': unplayedCount,
         'Type': type,
         'Index': index
       };
@@ -699,17 +683,17 @@ export default class ImageServiceApi {
         'Quality': opts['quality'],
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -729,7 +713,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getMusicgenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -751,12 +735,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -764,7 +746,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -784,7 +766,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getMusicgenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -807,19 +789,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -839,7 +819,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getPersonsByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -861,12 +841,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -874,7 +852,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -894,7 +872,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getPersonsByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -917,19 +895,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -949,7 +925,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getStudiosByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -971,12 +947,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -984,7 +958,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1004,7 +978,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getStudiosByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1027,19 +1001,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1059,7 +1031,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getUsersByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1081,12 +1053,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1094,7 +1064,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1114,7 +1084,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~getUsersByIdImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1137,19 +1107,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1169,7 +1137,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headArtistsByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1191,12 +1159,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1204,7 +1170,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1224,7 +1190,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headArtistsByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1247,19 +1213,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1279,7 +1243,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headGamegenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1301,12 +1265,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1314,7 +1276,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1334,7 +1296,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headGamegenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1357,19 +1319,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1389,7 +1349,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headGenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1411,12 +1371,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1424,7 +1382,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1444,7 +1402,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headGenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1467,19 +1425,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1499,7 +1455,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headItemsByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1521,12 +1477,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1534,7 +1488,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1554,7 +1508,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headItemsByIdImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1577,19 +1531,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1609,7 +1561,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1618,13 +1570,13 @@ export default class ImageServiceApi {
       let postBody = null;
 
       let pathParams = {
+        'PercentPlayed': percentPlayed,
+        'UnPlayedCount': unPlayedCount,
         'Id': id,
         'MaxWidth': maxWidth,
         'MaxHeight': maxHeight,
         'Tag': tag,
         'Format': format,
-        'PercentPlayed': percentPlayed,
-        'UnplayedCount': unplayedCount,
         'Type': type,
         'Index': index
       };
@@ -1634,17 +1586,17 @@ export default class ImageServiceApi {
         'Quality': opts['quality'],
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1664,7 +1616,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headMusicgenresByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1686,12 +1638,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1699,7 +1649,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1719,7 +1669,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headMusicgenresByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1742,19 +1692,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1774,7 +1722,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headPersonsByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1796,12 +1744,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1809,7 +1755,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1829,7 +1775,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headPersonsByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1852,19 +1798,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1884,7 +1828,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headStudiosByNameImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1906,12 +1850,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -1919,7 +1861,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1939,7 +1881,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headStudiosByNameImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -1962,19 +1904,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -1994,7 +1934,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headUsersByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -2016,12 +1956,10 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
         'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation'],
         'Index': opts['index']
       };
       let headerParams = {
@@ -2029,7 +1967,7 @@ export default class ImageServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -2049,7 +1987,7 @@ export default class ImageServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ImageServiceApi~headUsersByIdImagesByTypeByIndexCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -2072,19 +2010,17 @@ export default class ImageServiceApi {
         'CropWhitespace': opts['cropWhitespace'],
         'EnableImageEnhancers': opts['enableImageEnhancers'],
         'Format': opts['format'],
-        'AddPlayedIndicator': opts['addPlayedIndicator'],
-        'PercentPlayed': opts['percentPlayed'],
-        'UnplayedCount': opts['unplayedCount'],
         'BackgroundColor': opts['backgroundColor'],
         'ForegroundLayer': opts['foregroundLayer'],
-        'AutoOrient': opts['autoOrient']
+        'AutoOrient': opts['autoOrient'],
+        'KeepAnimation': opts['keepAnimation']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -111,7 +111,7 @@ Requires authentication as administrator
  * @param optional nil or *ScheduledTaskServiceApiGetScheduledtasksOpts - Optional Parameters:
      * @param "IsHidden" (optional.Bool) -  Optional filter tasks that are hidden, or not.
      * @param "IsEnabled" (optional.Bool) -  Optional filter tasks that are enabled, or not.
-@return []TasksTaskInfo
+@return []TaskInfo
 */
 
 type ScheduledTaskServiceApiGetScheduledtasksOpts struct {
@@ -119,13 +119,13 @@ type ScheduledTaskServiceApiGetScheduledtasksOpts struct {
     IsEnabled optional.Bool
 }
 
-func (a *ScheduledTaskServiceApiService) GetScheduledtasks(ctx context.Context, localVarOptionals *ScheduledTaskServiceApiGetScheduledtasksOpts) ([]TasksTaskInfo, *http.Response, error) {
+func (a *ScheduledTaskServiceApiService) GetScheduledtasks(ctx context.Context, localVarOptionals *ScheduledTaskServiceApiGetScheduledtasksOpts) ([]TaskInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []TasksTaskInfo
+		localVarReturnValue []TaskInfo
 	)
 
 	// create path and map variables
@@ -201,7 +201,7 @@ func (a *ScheduledTaskServiceApiService) GetScheduledtasks(ctx context.Context, 
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []TasksTaskInfo
+			var v []TaskInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -220,15 +220,15 @@ ScheduledTaskServiceApiService Gets a scheduled task, by Id
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
-@return TasksTaskInfo
+@return TaskInfo
 */
-func (a *ScheduledTaskServiceApiService) GetScheduledtasksById(ctx context.Context, id string) (TasksTaskInfo, *http.Response, error) {
+func (a *ScheduledTaskServiceApiService) GetScheduledtasksById(ctx context.Context, id string) (TaskInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue TasksTaskInfo
+		localVarReturnValue TaskInfo
 	)
 
 	// create path and map variables
@@ -299,7 +299,7 @@ func (a *ScheduledTaskServiceApiService) GetScheduledtasksById(ctx context.Conte
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v TasksTaskInfo
+			var v TaskInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -321,7 +321,7 @@ Requires authentication as administrator
  * @param id
 
 */
-func (a *ScheduledTaskServiceApiService) PostScheduledtasksByIdTriggers(ctx context.Context, body []TasksTaskTriggerInfo, id string) (*http.Response, error) {
+func (a *ScheduledTaskServiceApiService) PostScheduledtasksByIdTriggers(ctx context.Context, body []TaskTriggerInfo, id string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

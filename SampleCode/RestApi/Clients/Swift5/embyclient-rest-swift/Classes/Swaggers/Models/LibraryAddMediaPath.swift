@@ -13,10 +13,10 @@ public struct LibraryAddMediaPath: Codable {
 
     public var _id: String?
     public var path: String?
-    public var pathInfo: ConfigurationMediaPathInfo?
+    public var pathInfo: MediaPathInfo?
     public var refreshLibrary: Bool?
 
-    public init(_id: String? = nil, path: String? = nil, pathInfo: ConfigurationMediaPathInfo? = nil, refreshLibrary: Bool? = nil) {
+    public init(_id: String? = nil, path: String? = nil, pathInfo: MediaPathInfo? = nil, refreshLibrary: Bool? = nil) {
         self._id = _id
         self.path = path
         self.pathInfo = pathInfo

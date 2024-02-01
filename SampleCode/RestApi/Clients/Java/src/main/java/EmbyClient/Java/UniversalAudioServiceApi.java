@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -49,7 +49,7 @@ public class UniversalAudioServiceApi {
      * Build call for getAudioByIdUniversal
      * @param id Item Id (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -122,7 +122,7 @@ public class UniversalAudioServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getAudioByIdUniversal(String id, String deviceId, Long startTimeTicks) throws ApiException {
@@ -134,7 +134,7 @@ public class UniversalAudioServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -148,7 +148,7 @@ public class UniversalAudioServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -183,7 +183,7 @@ public class UniversalAudioServiceApi {
      * @param id Item Id (required)
      * @param container  (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -262,7 +262,7 @@ public class UniversalAudioServiceApi {
      * @param id Item Id (required)
      * @param container  (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getAudioByIdUniversalByContainer(String id, String container, String deviceId, Long startTimeTicks) throws ApiException {
@@ -275,7 +275,7 @@ public class UniversalAudioServiceApi {
      * @param id Item Id (required)
      * @param container  (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -290,7 +290,7 @@ public class UniversalAudioServiceApi {
      * @param id Item Id (required)
      * @param container  (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -324,7 +324,7 @@ public class UniversalAudioServiceApi {
      * Build call for headAudioByIdUniversal
      * @param id Item Id (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -397,7 +397,7 @@ public class UniversalAudioServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void headAudioByIdUniversal(String id, String deviceId, Long startTimeTicks) throws ApiException {
@@ -409,7 +409,7 @@ public class UniversalAudioServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -423,7 +423,7 @@ public class UniversalAudioServiceApi {
      * Requires authentication as user
      * @param id Item Id (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -458,7 +458,7 @@ public class UniversalAudioServiceApi {
      * @param id Item Id (required)
      * @param container  (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
@@ -537,7 +537,7 @@ public class UniversalAudioServiceApi {
      * @param id Item Id (required)
      * @param container  (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void headAudioByIdUniversalByContainer(String id, String container, String deviceId, Long startTimeTicks) throws ApiException {
@@ -550,7 +550,7 @@ public class UniversalAudioServiceApi {
      * @param id Item Id (required)
      * @param container  (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -565,7 +565,7 @@ public class UniversalAudioServiceApi {
      * @param id Item Id (required)
      * @param container  (required)
      * @param deviceId The device id of the client requesting. Used to stop encoding processes when needed. (optional)
-     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     * @param startTimeTicks Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

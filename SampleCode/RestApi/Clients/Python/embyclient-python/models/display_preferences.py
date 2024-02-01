@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -23,74 +23,34 @@ class DisplayPreferences(object):
     """
     swagger_types = {
         'id': 'str',
-        'view_type': 'str',
         'sort_by': 'str',
-        'index_by': 'str',
-        'remember_indexing': 'bool',
-        'primary_image_height': 'int',
-        'primary_image_width': 'int',
         'custom_prefs': 'dict(str, str)',
-        'scroll_direction': 'ScrollDirection',
-        'show_backdrop': 'bool',
-        'remember_sorting': 'bool',
         'sort_order': 'SortOrder',
         'client': 'str'
     }
 
     attribute_map = {
         'id': 'Id',
-        'view_type': 'ViewType',
         'sort_by': 'SortBy',
-        'index_by': 'IndexBy',
-        'remember_indexing': 'RememberIndexing',
-        'primary_image_height': 'PrimaryImageHeight',
-        'primary_image_width': 'PrimaryImageWidth',
         'custom_prefs': 'CustomPrefs',
-        'scroll_direction': 'ScrollDirection',
-        'show_backdrop': 'ShowBackdrop',
-        'remember_sorting': 'RememberSorting',
         'sort_order': 'SortOrder',
         'client': 'Client'
     }
 
-    def __init__(self, id=None, view_type=None, sort_by=None, index_by=None, remember_indexing=None, primary_image_height=None, primary_image_width=None, custom_prefs=None, scroll_direction=None, show_backdrop=None, remember_sorting=None, sort_order=None, client=None):  # noqa: E501
+    def __init__(self, id=None, sort_by=None, custom_prefs=None, sort_order=None, client=None):  # noqa: E501
         """DisplayPreferences - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._view_type = None
         self._sort_by = None
-        self._index_by = None
-        self._remember_indexing = None
-        self._primary_image_height = None
-        self._primary_image_width = None
         self._custom_prefs = None
-        self._scroll_direction = None
-        self._show_backdrop = None
-        self._remember_sorting = None
         self._sort_order = None
         self._client = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        if view_type is not None:
-            self.view_type = view_type
         if sort_by is not None:
             self.sort_by = sort_by
-        if index_by is not None:
-            self.index_by = index_by
-        if remember_indexing is not None:
-            self.remember_indexing = remember_indexing
-        if primary_image_height is not None:
-            self.primary_image_height = primary_image_height
-        if primary_image_width is not None:
-            self.primary_image_width = primary_image_width
         if custom_prefs is not None:
             self.custom_prefs = custom_prefs
-        if scroll_direction is not None:
-            self.scroll_direction = scroll_direction
-        if show_backdrop is not None:
-            self.show_backdrop = show_backdrop
-        if remember_sorting is not None:
-            self.remember_sorting = remember_sorting
         if sort_order is not None:
             self.sort_order = sort_order
         if client is not None:
@@ -100,6 +60,7 @@ class DisplayPreferences(object):
     def id(self):
         """Gets the id of this DisplayPreferences.  # noqa: E501
 
+        The user id.  # noqa: E501
 
         :return: The id of this DisplayPreferences.  # noqa: E501
         :rtype: str
@@ -110,6 +71,7 @@ class DisplayPreferences(object):
     def id(self, id):
         """Sets the id of this DisplayPreferences.
 
+        The user id.  # noqa: E501
 
         :param id: The id of this DisplayPreferences.  # noqa: E501
         :type: str
@@ -118,30 +80,10 @@ class DisplayPreferences(object):
         self._id = id
 
     @property
-    def view_type(self):
-        """Gets the view_type of this DisplayPreferences.  # noqa: E501
-
-
-        :return: The view_type of this DisplayPreferences.  # noqa: E501
-        :rtype: str
-        """
-        return self._view_type
-
-    @view_type.setter
-    def view_type(self, view_type):
-        """Sets the view_type of this DisplayPreferences.
-
-
-        :param view_type: The view_type of this DisplayPreferences.  # noqa: E501
-        :type: str
-        """
-
-        self._view_type = view_type
-
-    @property
     def sort_by(self):
         """Gets the sort_by of this DisplayPreferences.  # noqa: E501
 
+        The sort by.  # noqa: E501
 
         :return: The sort_by of this DisplayPreferences.  # noqa: E501
         :rtype: str
@@ -152,6 +94,7 @@ class DisplayPreferences(object):
     def sort_by(self, sort_by):
         """Sets the sort_by of this DisplayPreferences.
 
+        The sort by.  # noqa: E501
 
         :param sort_by: The sort_by of this DisplayPreferences.  # noqa: E501
         :type: str
@@ -160,93 +103,10 @@ class DisplayPreferences(object):
         self._sort_by = sort_by
 
     @property
-    def index_by(self):
-        """Gets the index_by of this DisplayPreferences.  # noqa: E501
-
-
-        :return: The index_by of this DisplayPreferences.  # noqa: E501
-        :rtype: str
-        """
-        return self._index_by
-
-    @index_by.setter
-    def index_by(self, index_by):
-        """Sets the index_by of this DisplayPreferences.
-
-
-        :param index_by: The index_by of this DisplayPreferences.  # noqa: E501
-        :type: str
-        """
-
-        self._index_by = index_by
-
-    @property
-    def remember_indexing(self):
-        """Gets the remember_indexing of this DisplayPreferences.  # noqa: E501
-
-
-        :return: The remember_indexing of this DisplayPreferences.  # noqa: E501
-        :rtype: bool
-        """
-        return self._remember_indexing
-
-    @remember_indexing.setter
-    def remember_indexing(self, remember_indexing):
-        """Sets the remember_indexing of this DisplayPreferences.
-
-
-        :param remember_indexing: The remember_indexing of this DisplayPreferences.  # noqa: E501
-        :type: bool
-        """
-
-        self._remember_indexing = remember_indexing
-
-    @property
-    def primary_image_height(self):
-        """Gets the primary_image_height of this DisplayPreferences.  # noqa: E501
-
-
-        :return: The primary_image_height of this DisplayPreferences.  # noqa: E501
-        :rtype: int
-        """
-        return self._primary_image_height
-
-    @primary_image_height.setter
-    def primary_image_height(self, primary_image_height):
-        """Sets the primary_image_height of this DisplayPreferences.
-
-
-        :param primary_image_height: The primary_image_height of this DisplayPreferences.  # noqa: E501
-        :type: int
-        """
-
-        self._primary_image_height = primary_image_height
-
-    @property
-    def primary_image_width(self):
-        """Gets the primary_image_width of this DisplayPreferences.  # noqa: E501
-
-
-        :return: The primary_image_width of this DisplayPreferences.  # noqa: E501
-        :rtype: int
-        """
-        return self._primary_image_width
-
-    @primary_image_width.setter
-    def primary_image_width(self, primary_image_width):
-        """Sets the primary_image_width of this DisplayPreferences.
-
-
-        :param primary_image_width: The primary_image_width of this DisplayPreferences.  # noqa: E501
-        :type: int
-        """
-
-        self._primary_image_width = primary_image_width
-
-    @property
     def custom_prefs(self):
         """Gets the custom_prefs of this DisplayPreferences.  # noqa: E501
 
+        The custom prefs.  # noqa: E501
 
         :return: The custom_prefs of this DisplayPreferences.  # noqa: E501
         :rtype: dict(str, str)
@@ -257,75 +117,13 @@ class DisplayPreferences(object):
     def custom_prefs(self, custom_prefs):
         """Sets the custom_prefs of this DisplayPreferences.
 
+        The custom prefs.  # noqa: E501
 
         :param custom_prefs: The custom_prefs of this DisplayPreferences.  # noqa: E501
         :type: dict(str, str)
         """
 
         self._custom_prefs = custom_prefs
-
-    @property
-    def scroll_direction(self):
-        """Gets the scroll_direction of this DisplayPreferences.  # noqa: E501
-
-
-        :return: The scroll_direction of this DisplayPreferences.  # noqa: E501
-        :rtype: ScrollDirection
-        """
-        return self._scroll_direction
-
-    @scroll_direction.setter
-    def scroll_direction(self, scroll_direction):
-        """Sets the scroll_direction of this DisplayPreferences.
-
-
-        :param scroll_direction: The scroll_direction of this DisplayPreferences.  # noqa: E501
-        :type: ScrollDirection
-        """
-
-        self._scroll_direction = scroll_direction
-
-    @property
-    def show_backdrop(self):
-        """Gets the show_backdrop of this DisplayPreferences.  # noqa: E501
-
-
-        :return: The show_backdrop of this DisplayPreferences.  # noqa: E501
-        :rtype: bool
-        """
-        return self._show_backdrop
-
-    @show_backdrop.setter
-    def show_backdrop(self, show_backdrop):
-        """Sets the show_backdrop of this DisplayPreferences.
-
-
-        :param show_backdrop: The show_backdrop of this DisplayPreferences.  # noqa: E501
-        :type: bool
-        """
-
-        self._show_backdrop = show_backdrop
-
-    @property
-    def remember_sorting(self):
-        """Gets the remember_sorting of this DisplayPreferences.  # noqa: E501
-
-
-        :return: The remember_sorting of this DisplayPreferences.  # noqa: E501
-        :rtype: bool
-        """
-        return self._remember_sorting
-
-    @remember_sorting.setter
-    def remember_sorting(self, remember_sorting):
-        """Sets the remember_sorting of this DisplayPreferences.
-
-
-        :param remember_sorting: The remember_sorting of this DisplayPreferences.  # noqa: E501
-        :type: bool
-        """
-
-        self._remember_sorting = remember_sorting
 
     @property
     def sort_order(self):
@@ -352,6 +150,7 @@ class DisplayPreferences(object):
     def client(self):
         """Gets the client of this DisplayPreferences.  # noqa: E501
 
+        The client  # noqa: E501
 
         :return: The client of this DisplayPreferences.  # noqa: E501
         :rtype: str
@@ -362,6 +161,7 @@ class DisplayPreferences(object):
     def client(self, client):
         """Sets the client of this DisplayPreferences.
 
+        The client  # noqa: E501
 
         :param client: The client of this DisplayPreferences.  # noqa: E501
         :type: str

@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// GlobalizationCultureDto
+    /// Class CultureDto  
     /// </summary>
     [DataContract]
         public partial class GlobalizationCultureDto :  IEquatable<GlobalizationCultureDto>
@@ -26,10 +26,10 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalizationCultureDto" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="displayName">displayName.</param>
-        /// <param name="twoLetterISOLanguageName">twoLetterISOLanguageName.</param>
-        /// <param name="threeLetterISOLanguageName">threeLetterISOLanguageName.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="displayName">The display name..</param>
+        /// <param name="twoLetterISOLanguageName">The name of the two letter ISO language..</param>
+        /// <param name="threeLetterISOLanguageName">The name of the three letter ISO language..</param>
         /// <param name="threeLetterISOLanguageNames">threeLetterISOLanguageNames.</param>
         /// <param name="twoLetterISOLanguageNames">twoLetterISOLanguageNames.</param>
         public GlobalizationCultureDto(string name = default(string), string displayName = default(string), string twoLetterISOLanguageName = default(string), string threeLetterISOLanguageName = default(string), List<string> threeLetterISOLanguageNames = default(List<string>), List<string> twoLetterISOLanguageNames = default(List<string>))
@@ -43,26 +43,30 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// The display name.
         /// </summary>
+        /// <value>The display name.</value>
         [DataMember(Name="DisplayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets TwoLetterISOLanguageName
+        /// The name of the two letter ISO language.
         /// </summary>
+        /// <value>The name of the two letter ISO language.</value>
         [DataMember(Name="TwoLetterISOLanguageName", EmitDefaultValue=false)]
         public string TwoLetterISOLanguageName { get; set; }
 
         /// <summary>
-        /// Gets or Sets ThreeLetterISOLanguageName
+        /// The name of the three letter ISO language.
         /// </summary>
+        /// <value>The name of the three letter ISO language.</value>
         [DataMember(Name="ThreeLetterISOLanguageName", EmitDefaultValue=false)]
         public string ThreeLetterISOLanguageName { get; set; }
 

@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
-
+// AttributesSimpleCondition : Conditions on the source value.  
 type AttributesSimpleCondition string
 
 // List of Attributes.SimpleCondition

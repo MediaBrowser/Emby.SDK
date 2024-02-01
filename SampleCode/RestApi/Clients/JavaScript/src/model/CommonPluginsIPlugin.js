@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,11 +15,12 @@ import Version from './Version';
 /**
 * The CommonPluginsIPlugin model module.
 * @module model/CommonPluginsIPlugin
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class CommonPluginsIPlugin {
     /**
     * Constructs a new <code>CommonPluginsIPlugin</code>.
+    * Interface IPlugin  
     * @alias module:model/CommonPluginsIPlugin
     * @class
     */
@@ -65,14 +66,17 @@ export default class CommonPluginsIPlugin {
     }
 
     /**
+    * The name of the plugin
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The description.
     * @member {String} Description
     */
     'Description' = undefined;
     /**
+    * The unique id.
     * @member {String} Id
     */
     'Id' = undefined;
@@ -81,10 +85,12 @@ export default class CommonPluginsIPlugin {
     */
     'Version' = undefined;
     /**
+    * The path to the assembly file
     * @member {String} AssemblyFilePath
     */
     'AssemblyFilePath' = undefined;
     /**
+    * The full path to the data folder, where the plugin can store any miscellaneous files needed
     * @member {String} DataFolderPath
     */
     'DataFolderPath' = undefined;

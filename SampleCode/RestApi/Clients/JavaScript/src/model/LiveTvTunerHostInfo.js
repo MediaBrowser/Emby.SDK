@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTvTunerHostInfo model module.
 * @module model/LiveTvTunerHostInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LiveTvTunerHostInfo {
     /**
@@ -62,8 +62,17 @@ export default class LiveTvTunerHostInfo {
             if (data.hasOwnProperty('ImportFavoritesOnly')) {
                 obj['ImportFavoritesOnly'] = ApiClient.convertToType(data['ImportFavoritesOnly'], 'Boolean');
             }
+            if (data.hasOwnProperty('PreferEpgChannelImages')) {
+                obj['PreferEpgChannelImages'] = ApiClient.convertToType(data['PreferEpgChannelImages'], 'Boolean');
+            }
+            if (data.hasOwnProperty('PreferEpgChannelNumbers')) {
+                obj['PreferEpgChannelNumbers'] = ApiClient.convertToType(data['PreferEpgChannelNumbers'], 'Boolean');
+            }
             if (data.hasOwnProperty('AllowHWTranscoding')) {
                 obj['AllowHWTranscoding'] = ApiClient.convertToType(data['AllowHWTranscoding'], 'Boolean');
+            }
+            if (data.hasOwnProperty('AllowMappingByNumber')) {
+                obj['AllowMappingByNumber'] = ApiClient.convertToType(data['AllowMappingByNumber'], 'Boolean');
             }
             if (data.hasOwnProperty('Source')) {
                 obj['Source'] = ApiClient.convertToType(data['Source'], 'String');
@@ -116,9 +125,21 @@ export default class LiveTvTunerHostInfo {
     */
     'ImportFavoritesOnly' = undefined;
     /**
+    * @member {Boolean} PreferEpgChannelImages
+    */
+    'PreferEpgChannelImages' = undefined;
+    /**
+    * @member {Boolean} PreferEpgChannelNumbers
+    */
+    'PreferEpgChannelNumbers' = undefined;
+    /**
     * @member {Boolean} AllowHWTranscoding
     */
     'AllowHWTranscoding' = undefined;
+    /**
+    * @member {Boolean} AllowMappingByNumber
+    */
+    'AllowMappingByNumber' = undefined;
     /**
     * @member {String} Source
     */

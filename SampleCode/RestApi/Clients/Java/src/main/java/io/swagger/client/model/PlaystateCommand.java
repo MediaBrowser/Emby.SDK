@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -7,6 +7,7 @@ package io.swagger.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import io.swagger.v3.oas.annotations.media.Schema;
 import com.google.gson.annotations.SerializedName;
 import java.io.IOException;
 import com.google.gson.TypeAdapter;
@@ -15,7 +16,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets PlaystateCommand
+ * Enum PlaystateCommand  
  */
 @JsonAdapter(PlaystateCommand.Adapter.class)
 public enum PlaystateCommand {
@@ -27,7 +28,8 @@ public enum PlaystateCommand {
   SEEK("Seek"),
   REWIND("Rewind"),
   FASTFORWARD("FastForward"),
-  PLAYPAUSE("PlayPause");
+  PLAYPAUSE("PlayPause"),
+  SEEKRELATIVE("SeekRelative");
 
   private String value;
 

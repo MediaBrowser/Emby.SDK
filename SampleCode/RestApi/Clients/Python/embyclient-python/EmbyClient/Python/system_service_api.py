@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -200,7 +200,7 @@ class SystemServiceApi(object):
     def get_system_info_public(self, **kwargs):  # noqa: E501
         """Gets public information about the server  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_system_info_public(async_req=True)
@@ -221,7 +221,7 @@ class SystemServiceApi(object):
     def get_system_info_public_with_http_info(self, **kwargs):  # noqa: E501
         """Gets public information about the server  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_system_info_public_with_http_info(async_req=True)
@@ -266,7 +266,7 @@ class SystemServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/System/Info/Public', 'GET',
@@ -572,7 +572,7 @@ class SystemServiceApi(object):
     def get_system_ping(self, **kwargs):  # noqa: E501
         """get_system_ping  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_system_ping(async_req=True)
@@ -593,7 +593,7 @@ class SystemServiceApi(object):
     def get_system_ping_with_http_info(self, **kwargs):  # noqa: E501
         """get_system_ping  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_system_ping_with_http_info(async_req=True)
@@ -634,7 +634,7 @@ class SystemServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/System/Ping', 'GET',
@@ -662,7 +662,7 @@ class SystemServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: UpdatesPackageVersionInfo
+        :return: PackageVersionInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -683,7 +683,7 @@ class SystemServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: UpdatesPackageVersionInfo
+        :return: PackageVersionInfo
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -731,7 +731,7 @@ class SystemServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='UpdatesPackageVersionInfo',  # noqa: E501
+            response_type='PackageVersionInfo',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -749,7 +749,7 @@ class SystemServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[UpdatesPackageVersionInfo]
+        :return: list[PackageVersionInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -770,7 +770,7 @@ class SystemServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[UpdatesPackageVersionInfo]
+        :return: list[PackageVersionInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -818,7 +818,7 @@ class SystemServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[UpdatesPackageVersionInfo]',  # noqa: E501
+            response_type='list[PackageVersionInfo]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -916,7 +916,7 @@ class SystemServiceApi(object):
     def post_system_ping(self, **kwargs):  # noqa: E501
         """post_system_ping  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_system_ping(async_req=True)
@@ -937,7 +937,7 @@ class SystemServiceApi(object):
     def post_system_ping_with_http_info(self, **kwargs):  # noqa: E501
         """post_system_ping  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.post_system_ping_with_http_info(async_req=True)
@@ -978,7 +978,7 @@ class SystemServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/System/Ping', 'POST',

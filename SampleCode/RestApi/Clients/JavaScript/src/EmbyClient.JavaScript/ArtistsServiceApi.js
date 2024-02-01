@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ArtistsService service.
 * @module EmbyClient.JavaScript/ArtistsServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ArtistsServiceApi {
 
@@ -62,14 +62,15 @@ export default class ArtistsServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -97,9 +98,15 @@ export default class ArtistsServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -107,6 +114,7 @@ export default class ArtistsServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -124,7 +132,9 @@ export default class ArtistsServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -188,14 +198,15 @@ export default class ArtistsServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -223,9 +234,15 @@ export default class ArtistsServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -233,6 +250,7 @@ export default class ArtistsServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -250,7 +268,9 @@ export default class ArtistsServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],

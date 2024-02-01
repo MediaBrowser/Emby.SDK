@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -13,6 +13,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"github.com/antihax/optional"
 )
 
 // Linger please
@@ -106,9 +107,16 @@ func (a *DeviceServiceApiService) DeleteDevices(ctx context.Context, id string) 
 DeviceServiceApiService Gets all devices
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param optional nil or *DeviceServiceApiGetDevicesOpts - Optional Parameters:
+     * @param "SortOrder" (optional.String) -  Sort Order - Ascending,Descending
 @return QueryResultDevicesDeviceInfo
 */
-func (a *DeviceServiceApiService) GetDevices(ctx context.Context) (QueryResultDevicesDeviceInfo, *http.Response, error) {
+
+type DeviceServiceApiGetDevicesOpts struct {
+    SortOrder optional.String
+}
+
+func (a *DeviceServiceApiService) GetDevices(ctx context.Context, localVarOptionals *DeviceServiceApiGetDevicesOpts) (QueryResultDevicesDeviceInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -124,6 +132,9 @@ func (a *DeviceServiceApiService) GetDevices(ctx context.Context) (QueryResultDe
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
+	if localVarOptionals != nil && localVarOptionals.SortOrder.IsSet() {
+		localVarQueryParams.Add("SortOrder", parameterToString(localVarOptionals.SortOrder.Value(), ""))
+	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 
@@ -202,10 +213,9 @@ func (a *DeviceServiceApiService) GetDevices(ctx context.Context) (QueryResultDe
 DeviceServiceApiService Gets camera upload history for a device
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param deviceId Device Id
 @return DevicesContentUploadHistory
 */
-func (a *DeviceServiceApiService) GetDevicesCamerauploads(ctx context.Context, deviceId string) (DevicesContentUploadHistory, *http.Response, error) {
+func (a *DeviceServiceApiService) GetDevicesCamerauploads(ctx context.Context) (DevicesContentUploadHistory, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -221,7 +231,6 @@ func (a *DeviceServiceApiService) GetDevicesCamerauploads(ctx context.Context, d
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	localVarQueryParams.Add("DeviceId", parameterToString(deviceId, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}
 
@@ -497,13 +506,12 @@ DeviceServiceApiService Uploads content
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body Binary stream
- * @param deviceId Device Id
  * @param album Album
  * @param name Name
  * @param id Id
 
 */
-func (a *DeviceServiceApiService) PostDevicesCamerauploads(ctx context.Context, body Object, deviceId string, album string, name string, id string) (*http.Response, error) {
+func (a *DeviceServiceApiService) PostDevicesCamerauploads(ctx context.Context, body Object, album string, name string, id string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -519,7 +527,6 @@ func (a *DeviceServiceApiService) PostDevicesCamerauploads(ctx context.Context, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	localVarQueryParams.Add("DeviceId", parameterToString(deviceId, ""))
 	localVarQueryParams.Add("Album", parameterToString(album, ""))
 	localVarQueryParams.Add("Name", parameterToString(name, ""))
 	localVarQueryParams.Add("Id", parameterToString(id, ""))

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -97,6 +97,7 @@ class AuthenticationAuthenticationResult(object):
     def access_token(self):
         """Gets the access_token of this AuthenticationAuthenticationResult.  # noqa: E501
 
+        The authentication token.  # noqa: E501
 
         :return: The access_token of this AuthenticationAuthenticationResult.  # noqa: E501
         :rtype: str
@@ -107,6 +108,7 @@ class AuthenticationAuthenticationResult(object):
     def access_token(self, access_token):
         """Sets the access_token of this AuthenticationAuthenticationResult.
 
+        The authentication token.  # noqa: E501
 
         :param access_token: The access_token of this AuthenticationAuthenticationResult.  # noqa: E501
         :type: str
@@ -118,6 +120,7 @@ class AuthenticationAuthenticationResult(object):
     def server_id(self):
         """Gets the server_id of this AuthenticationAuthenticationResult.  # noqa: E501
 
+        The server identifier.  # noqa: E501
 
         :return: The server_id of this AuthenticationAuthenticationResult.  # noqa: E501
         :rtype: str
@@ -128,6 +131,7 @@ class AuthenticationAuthenticationResult(object):
     def server_id(self, server_id):
         """Sets the server_id of this AuthenticationAuthenticationResult.
 
+        The server identifier.  # noqa: E501
 
         :param server_id: The server_id of this AuthenticationAuthenticationResult.  # noqa: E501
         :type: str

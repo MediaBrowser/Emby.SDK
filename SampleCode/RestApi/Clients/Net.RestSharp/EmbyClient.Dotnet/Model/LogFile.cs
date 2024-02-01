@@ -26,10 +26,10 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LogFile" /> class.
         /// </summary>
-        /// <param name="dateCreated">dateCreated.</param>
-        /// <param name="dateModified">dateModified.</param>
-        /// <param name="size">size.</param>
-        /// <param name="name">name.</param>
+        /// <param name="dateCreated">The date created..</param>
+        /// <param name="dateModified">The date modified..</param>
+        /// <param name="size">The size..</param>
+        /// <param name="name">The name..</param>
         public LogFile(DateTimeOffset? dateCreated = default(DateTimeOffset?), DateTimeOffset? dateModified = default(DateTimeOffset?), long? size = default(long?), string name = default(string))
         {
             this.DateCreated = dateCreated;
@@ -39,26 +39,30 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets DateCreated
+        /// The date created.
         /// </summary>
+        /// <value>The date created.</value>
         [DataMember(Name="DateCreated", EmitDefaultValue=false)]
         public DateTimeOffset? DateCreated { get; set; }
 
         /// <summary>
-        /// Gets or Sets DateModified
+        /// The date modified.
         /// </summary>
+        /// <value>The date modified.</value>
         [DataMember(Name="DateModified", EmitDefaultValue=false)]
         public DateTimeOffset? DateModified { get; set; }
 
         /// <summary>
-        /// Gets or Sets Size
+        /// The size.
         /// </summary>
+        /// <value>The size.</value>
         [DataMember(Name="Size", EmitDefaultValue=false)]
         public long? Size { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

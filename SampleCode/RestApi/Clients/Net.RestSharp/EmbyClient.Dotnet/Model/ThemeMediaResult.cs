@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// ThemeMediaResult
+    /// Class ThemeMediaResult  
     /// </summary>
     [DataContract]
         public partial class ThemeMediaResult :  IEquatable<ThemeMediaResult>
@@ -26,7 +26,7 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ThemeMediaResult" /> class.
         /// </summary>
-        /// <param name="ownerId">ownerId.</param>
+        /// <param name="ownerId">The owner id..</param>
         /// <param name="items">items.</param>
         /// <param name="totalRecordCount">totalRecordCount.</param>
         public ThemeMediaResult(long? ownerId = default(long?), List<BaseItemDto> items = default(List<BaseItemDto>), int? totalRecordCount = default(int?))
@@ -37,8 +37,9 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets OwnerId
+        /// The owner id.
         /// </summary>
+        /// <value>The owner id.</value>
         [DataMember(Name="OwnerId", EmitDefaultValue=false)]
         public long? OwnerId { get; set; }
 

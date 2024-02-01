@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,16 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyNotificationsApiNotificationResult from '../model/EmbyNotificationsApiNotificationResult';
-import EmbyNotificationsApiNotificationsSummary from '../model/EmbyNotificationsApiNotificationsSummary';
-import NameIdPair from '../model/NameIdPair';
-import NotificationsNotificationLevel from '../model/NotificationsNotificationLevel';
-import NotificationsNotificationTypeInfo from '../model/NotificationsNotificationTypeInfo';
+import NotificationCategoryInfo from '../model/NotificationCategoryInfo';
 
 /**
 * NotificationsService service.
 * @module EmbyClient.JavaScript/NotificationsServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class NotificationsServiceApi {
 
@@ -35,128 +31,10 @@ export default class NotificationsServiceApi {
     }
 
     /**
-     * Callback function to receive the result of the getNotificationsByUserid operation.
-     * @callback module:EmbyClient.JavaScript/NotificationsServiceApi~getNotificationsByUseridCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EmbyNotificationsApiNotificationResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Gets notifications
-     * Requires authentication as user
-     * @param {Object} opts Optional parameters
-     * @param {module:EmbyClient.JavaScript/NotificationsServiceApi~getNotificationsByUseridCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyNotificationsApiNotificationResult}
-     */
-    getNotificationsByUserid() {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-        'UserId': userId
-      };
-      let queryParams = {
-        'IsRead': opts['isRead'],
-        'StartIndex': opts['startIndex'],
-        'Limit': opts['limit']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyNotificationsApiNotificationResult;
-
-      return this.apiClient.callApi(
-        '/Notifications/{UserId}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getNotificationsByUseridSummary operation.
-     * @callback module:EmbyClient.JavaScript/NotificationsServiceApi~getNotificationsByUseridSummaryCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EmbyNotificationsApiNotificationsSummary} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Gets a notification summary for a user
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript/NotificationsServiceApi~getNotificationsByUseridSummaryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyNotificationsApiNotificationsSummary}
-     */
-    getNotificationsByUseridSummary() {
-      let postBody = null;
-
-      let pathParams = {
-        'UserId': userId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyNotificationsApiNotificationsSummary;
-
-      return this.apiClient.callApi(
-        '/Notifications/{UserId}/Summary', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getNotificationsServices operation.
-     * @callback module:EmbyClient.JavaScript/NotificationsServiceApi~getNotificationsServicesCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/NameIdPair>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Gets notification types
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript/NotificationsServiceApi~getNotificationsServicesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/NameIdPair>}
-     */
-    getNotificationsServices() {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = [NameIdPair];
-
-      return this.apiClient.callApi(
-        '/Notifications/Services', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
      * Callback function to receive the result of the getNotificationsTypes operation.
      * @callback module:EmbyClient.JavaScript/NotificationsServiceApi~getNotificationsTypesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/NotificationsNotificationTypeInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/NotificationCategoryInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -164,7 +42,7 @@ export default class NotificationsServiceApi {
      * Gets notification types
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/NotificationsServiceApi~getNotificationsTypesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/NotificationsNotificationTypeInfo>}
+     * data is of type: {@link Array.<module:model/NotificationCategoryInfo>}
      */
     getNotificationsTypes() {
       let postBody = null;
@@ -181,7 +59,7 @@ export default class NotificationsServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [NotificationsNotificationTypeInfo];
+      let returnType = [NotificationCategoryInfo];
 
       return this.apiClient.callApi(
         '/Notifications/Types', 'GET',
@@ -228,82 +106,6 @@ export default class NotificationsServiceApi {
 
       return this.apiClient.callApi(
         '/Notifications/Admin', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the postNotificationsByUseridRead operation.
-     * @callback module:EmbyClient.JavaScript/NotificationsServiceApi~postNotificationsByUseridReadCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Marks notifications as read
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript/NotificationsServiceApi~postNotificationsByUseridReadCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    postNotificationsByUseridRead() {
-      let postBody = null;
-
-      let pathParams = {
-        'UserId': userId
-      };
-      let queryParams = {
-        'Ids': ids
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/Notifications/{UserId}/Read', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the postNotificationsByUseridUnread operation.
-     * @callback module:EmbyClient.JavaScript/NotificationsServiceApi~postNotificationsByUseridUnreadCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Marks notifications as unread
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript/NotificationsServiceApi~postNotificationsByUseridUnreadCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    postNotificationsByUseridUnread() {
-      let postBody = null;
-
-      let pathParams = {
-        'UserId': userId
-      };
-      let queryParams = {
-        'Ids': ids
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/Notifications/{UserId}/Unread', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

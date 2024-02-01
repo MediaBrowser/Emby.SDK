@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// ChapterInfo
+    /// Class ChapterInfo  
     /// </summary>
     [DataContract]
         public partial class ChapterInfo :  IEquatable<ChapterInfo>
@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChapterInfo" /> class.
         /// </summary>
-        /// <param name="startPositionTicks">startPositionTicks.</param>
-        /// <param name="name">name.</param>
+        /// <param name="startPositionTicks">The start position ticks..</param>
+        /// <param name="name">The name..</param>
         /// <param name="imageTag">imageTag.</param>
         /// <param name="markerType">markerType.</param>
         /// <param name="chapterIndex">chapterIndex.</param>
@@ -41,14 +41,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets StartPositionTicks
+        /// The start position ticks.
         /// </summary>
+        /// <value>The start position ticks.</value>
         [DataMember(Name="StartPositionTicks", EmitDefaultValue=false)]
         public long? StartPositionTicks { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

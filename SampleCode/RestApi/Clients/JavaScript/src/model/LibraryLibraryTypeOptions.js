@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,14 +10,14 @@
  */
 
 import ApiClient from '../ApiClient';
-import ConfigurationImageOption from './ConfigurationImageOption';
+import ImageOption from './ImageOption';
 import ImageType from './ImageType';
 import LibraryLibraryOptionInfo from './LibraryLibraryOptionInfo';
 
 /**
 * The LibraryLibraryTypeOptions model module.
 * @module model/LibraryLibraryTypeOptions
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LibraryLibraryTypeOptions {
     /**
@@ -57,7 +57,7 @@ export default class LibraryLibraryTypeOptions {
                 obj['SupportedImageTypes'] = ApiClient.convertToType(data['SupportedImageTypes'], [ImageType]);
             }
             if (data.hasOwnProperty('DefaultImageOptions')) {
-                obj['DefaultImageOptions'] = ApiClient.convertToType(data['DefaultImageOptions'], [ConfigurationImageOption]);
+                obj['DefaultImageOptions'] = ApiClient.convertToType(data['DefaultImageOptions'], [ImageOption]);
             }
         }
         return obj;
@@ -80,7 +80,7 @@ export default class LibraryLibraryTypeOptions {
     */
     'SupportedImageTypes' = undefined;
     /**
-    * @member {Array.<module:model/ConfigurationImageOption>} DefaultImageOptions
+    * @member {Array.<module:model/ImageOption>} DefaultImageOptions
     */
     'DefaultImageOptions' = undefined;
 

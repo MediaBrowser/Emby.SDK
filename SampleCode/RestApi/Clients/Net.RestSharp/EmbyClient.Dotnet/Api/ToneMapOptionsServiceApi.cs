@@ -25,8 +25,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyWebGenericEditEditObjectContainer</returns>
-        EmbyWebGenericEditEditObjectContainer GetEncodingFulltonemapoptions ();
+        /// <returns>EditObjectContainer</returns>
+        EditObjectContainer GetEncodingFulltonemapoptions ();
 
         /// <summary>
         /// Gets the tone mapping options
@@ -35,8 +35,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyWebGenericEditEditObjectContainer</returns>
-        ApiResponse<EmbyWebGenericEditEditObjectContainer> GetEncodingFulltonemapoptionsWithHttpInfo ();
+        /// <returns>ApiResponse of EditObjectContainer</returns>
+        ApiResponse<EditObjectContainer> GetEncodingFulltonemapoptionsWithHttpInfo ();
         /// <summary>
         /// Gets the tone mapping options
         /// </summary>
@@ -44,8 +44,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyWebGenericEditEditObjectContainer</returns>
-        EmbyWebGenericEditEditObjectContainer GetEncodingPublictonemapoptions ();
+        /// <returns>EditObjectContainer</returns>
+        EditObjectContainer GetEncodingPublictonemapoptions ();
 
         /// <summary>
         /// Gets the tone mapping options
@@ -54,8 +54,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyWebGenericEditEditObjectContainer</returns>
-        ApiResponse<EmbyWebGenericEditEditObjectContainer> GetEncodingPublictonemapoptionsWithHttpInfo ();
+        /// <returns>ApiResponse of EditObjectContainer</returns>
+        ApiResponse<EditObjectContainer> GetEncodingPublictonemapoptionsWithHttpInfo ();
         /// <summary>
         /// Updates the tone mapping options
         /// </summary>
@@ -107,8 +107,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyWebGenericEditEditObjectContainer</returns>
-        System.Threading.Tasks.Task<EmbyWebGenericEditEditObjectContainer> GetEncodingFulltonemapoptionsAsync ();
+        /// <returns>Task of EditObjectContainer</returns>
+        System.Threading.Tasks.Task<EditObjectContainer> GetEncodingFulltonemapoptionsAsync ();
 
         /// <summary>
         /// Gets the tone mapping options
@@ -117,8 +117,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyWebGenericEditEditObjectContainer)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmbyWebGenericEditEditObjectContainer>> GetEncodingFulltonemapoptionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (EditObjectContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EditObjectContainer>> GetEncodingFulltonemapoptionsAsyncWithHttpInfo ();
         /// <summary>
         /// Gets the tone mapping options
         /// </summary>
@@ -126,8 +126,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyWebGenericEditEditObjectContainer</returns>
-        System.Threading.Tasks.Task<EmbyWebGenericEditEditObjectContainer> GetEncodingPublictonemapoptionsAsync ();
+        /// <returns>Task of EditObjectContainer</returns>
+        System.Threading.Tasks.Task<EditObjectContainer> GetEncodingPublictonemapoptionsAsync ();
 
         /// <summary>
         /// Gets the tone mapping options
@@ -136,8 +136,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyWebGenericEditEditObjectContainer)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmbyWebGenericEditEditObjectContainer>> GetEncodingPublictonemapoptionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (EditObjectContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EditObjectContainer>> GetEncodingPublictonemapoptionsAsyncWithHttpInfo ();
         /// <summary>
         /// Updates the tone mapping options
         /// </summary>
@@ -295,10 +295,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the tone mapping options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyWebGenericEditEditObjectContainer</returns>
-        public EmbyWebGenericEditEditObjectContainer GetEncodingFulltonemapoptions ()
+        /// <returns>EditObjectContainer</returns>
+        public EditObjectContainer GetEncodingFulltonemapoptions ()
         {
-             ApiResponse<EmbyWebGenericEditEditObjectContainer> localVarResponse = GetEncodingFulltonemapoptionsWithHttpInfo();
+             ApiResponse<EditObjectContainer> localVarResponse = GetEncodingFulltonemapoptionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -306,8 +306,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the tone mapping options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyWebGenericEditEditObjectContainer</returns>
-        public ApiResponse< EmbyWebGenericEditEditObjectContainer > GetEncodingFulltonemapoptionsWithHttpInfo ()
+        /// <returns>ApiResponse of EditObjectContainer</returns>
+        public ApiResponse< EditObjectContainer > GetEncodingFulltonemapoptionsWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/FullToneMapOptions";
@@ -357,19 +357,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyWebGenericEditEditObjectContainer>(localVarStatusCode,
+            return new ApiResponse<EditObjectContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyWebGenericEditEditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyWebGenericEditEditObjectContainer)));
+                (EditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditObjectContainer)));
         }
 
         /// <summary>
         /// Gets the tone mapping options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyWebGenericEditEditObjectContainer</returns>
-        public async System.Threading.Tasks.Task<EmbyWebGenericEditEditObjectContainer> GetEncodingFulltonemapoptionsAsync ()
+        /// <returns>Task of EditObjectContainer</returns>
+        public async System.Threading.Tasks.Task<EditObjectContainer> GetEncodingFulltonemapoptionsAsync ()
         {
-             ApiResponse<EmbyWebGenericEditEditObjectContainer> localVarResponse = await GetEncodingFulltonemapoptionsAsyncWithHttpInfo();
+             ApiResponse<EditObjectContainer> localVarResponse = await GetEncodingFulltonemapoptionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -378,8 +378,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the tone mapping options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyWebGenericEditEditObjectContainer)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmbyWebGenericEditEditObjectContainer>> GetEncodingFulltonemapoptionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (EditObjectContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EditObjectContainer>> GetEncodingFulltonemapoptionsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/FullToneMapOptions";
@@ -429,19 +429,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyWebGenericEditEditObjectContainer>(localVarStatusCode,
+            return new ApiResponse<EditObjectContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyWebGenericEditEditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyWebGenericEditEditObjectContainer)));
+                (EditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditObjectContainer)));
         }
 
         /// <summary>
         /// Gets the tone mapping options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyWebGenericEditEditObjectContainer</returns>
-        public EmbyWebGenericEditEditObjectContainer GetEncodingPublictonemapoptions ()
+        /// <returns>EditObjectContainer</returns>
+        public EditObjectContainer GetEncodingPublictonemapoptions ()
         {
-             ApiResponse<EmbyWebGenericEditEditObjectContainer> localVarResponse = GetEncodingPublictonemapoptionsWithHttpInfo();
+             ApiResponse<EditObjectContainer> localVarResponse = GetEncodingPublictonemapoptionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -449,8 +449,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the tone mapping options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyWebGenericEditEditObjectContainer</returns>
-        public ApiResponse< EmbyWebGenericEditEditObjectContainer > GetEncodingPublictonemapoptionsWithHttpInfo ()
+        /// <returns>ApiResponse of EditObjectContainer</returns>
+        public ApiResponse< EditObjectContainer > GetEncodingPublictonemapoptionsWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/PublicToneMapOptions";
@@ -500,19 +500,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyWebGenericEditEditObjectContainer>(localVarStatusCode,
+            return new ApiResponse<EditObjectContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyWebGenericEditEditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyWebGenericEditEditObjectContainer)));
+                (EditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditObjectContainer)));
         }
 
         /// <summary>
         /// Gets the tone mapping options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyWebGenericEditEditObjectContainer</returns>
-        public async System.Threading.Tasks.Task<EmbyWebGenericEditEditObjectContainer> GetEncodingPublictonemapoptionsAsync ()
+        /// <returns>Task of EditObjectContainer</returns>
+        public async System.Threading.Tasks.Task<EditObjectContainer> GetEncodingPublictonemapoptionsAsync ()
         {
-             ApiResponse<EmbyWebGenericEditEditObjectContainer> localVarResponse = await GetEncodingPublictonemapoptionsAsyncWithHttpInfo();
+             ApiResponse<EditObjectContainer> localVarResponse = await GetEncodingPublictonemapoptionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -521,8 +521,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the tone mapping options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyWebGenericEditEditObjectContainer)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmbyWebGenericEditEditObjectContainer>> GetEncodingPublictonemapoptionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (EditObjectContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EditObjectContainer>> GetEncodingPublictonemapoptionsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/PublicToneMapOptions";
@@ -572,9 +572,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyWebGenericEditEditObjectContainer>(localVarStatusCode,
+            return new ApiResponse<EditObjectContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyWebGenericEditEditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyWebGenericEditEditObjectContainer)));
+                (EditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditObjectContainer)));
         }
 
         /// <summary>

@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum PlaystateCommand   */
 public enum PlaystateCommand: String, Codable {
     case stop = "Stop"
     case pause = "Pause"
@@ -18,4 +19,5 @@ public enum PlaystateCommand: String, Codable {
     case rewind = "Rewind"
     case fastForward = "FastForward"
     case playPause = "PlayPause"
+    case seekRelative = "SeekRelative"
 }

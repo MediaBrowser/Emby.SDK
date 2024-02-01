@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,11 +15,12 @@ import MarkerType from './MarkerType';
 /**
 * The ChapterInfo model module.
 * @module model/ChapterInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ChapterInfo {
     /**
     * Constructs a new <code>ChapterInfo</code>.
+    * Class ChapterInfo  
     * @alias module:model/ChapterInfo
     * @class
     */
@@ -62,10 +63,12 @@ export default class ChapterInfo {
     }
 
     /**
+    * The start position ticks.
     * @member {Number} StartPositionTicks
     */
     'StartPositionTicks' = undefined;
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;

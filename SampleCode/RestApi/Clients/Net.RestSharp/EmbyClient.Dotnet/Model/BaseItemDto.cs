@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// BaseItemDto
+    /// This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.  
     /// </summary>
     [DataContract]
         public partial class BaseItemDto :  IEquatable<BaseItemDto>
@@ -26,110 +26,114 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseItemDto" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
+        /// <param name="name">The name..</param>
         /// <param name="originalTitle">originalTitle.</param>
-        /// <param name="serverId">serverId.</param>
-        /// <param name="id">id.</param>
-        /// <param name="etag">etag.</param>
-        /// <param name="prefix">prefix.</param>
-        /// <param name="playlistItemId">playlistItemId.</param>
-        /// <param name="dateCreated">dateCreated.</param>
+        /// <param name="serverId">The server identifier..</param>
+        /// <param name="id">The id..</param>
+        /// <param name="guid">guid.</param>
+        /// <param name="etag">The etag..</param>
+        /// <param name="prefix">The Prefix..</param>
+        /// <param name="playlistItemId">The playlist item identifier..</param>
+        /// <param name="dateCreated">The date created..</param>
         /// <param name="extraType">extraType.</param>
         /// <param name="sortIndexNumber">sortIndexNumber.</param>
         /// <param name="sortParentIndexNumber">sortParentIndexNumber.</param>
-        /// <param name="airsBeforeSeasonNumber">airsBeforeSeasonNumber.</param>
-        /// <param name="airsAfterSeasonNumber">airsAfterSeasonNumber.</param>
-        /// <param name="airsBeforeEpisodeNumber">airsBeforeEpisodeNumber.</param>
         /// <param name="canDelete">canDelete.</param>
         /// <param name="canDownload">canDownload.</param>
+        /// <param name="canEditItems">canEditItems.</param>
         /// <param name="supportsResume">supportsResume.</param>
         /// <param name="presentationUniqueKey">presentationUniqueKey.</param>
         /// <param name="preferredMetadataLanguage">preferredMetadataLanguage.</param>
         /// <param name="preferredMetadataCountryCode">preferredMetadataCountryCode.</param>
-        /// <param name="supportsSync">supportsSync.</param>
+        /// <param name="supportsSync">A value indicating whether \\[supports synchronize\\]..</param>
+        /// <param name="syncStatus">syncStatus.</param>
+        /// <param name="canManageAccess">canManageAccess.</param>
+        /// <param name="canLeaveContent">canLeaveContent.</param>
+        /// <param name="canMakePublic">canMakePublic.</param>
         /// <param name="container">container.</param>
-        /// <param name="sortName">sortName.</param>
+        /// <param name="sortName">The name of the sort..</param>
         /// <param name="forcedSortName">forcedSortName.</param>
         /// <param name="video3DFormat">video3DFormat.</param>
-        /// <param name="premiereDate">premiereDate.</param>
-        /// <param name="externalUrls">externalUrls.</param>
-        /// <param name="mediaSources">mediaSources.</param>
-        /// <param name="criticRating">criticRating.</param>
+        /// <param name="premiereDate">The premiere date..</param>
+        /// <param name="externalUrls">The external urls..</param>
+        /// <param name="mediaSources">The media versions..</param>
+        /// <param name="criticRating">The critic rating..</param>
         /// <param name="gameSystemId">gameSystemId.</param>
         /// <param name="asSeries">asSeries.</param>
-        /// <param name="gameSystem">gameSystem.</param>
+        /// <param name="gameSystem">The game system..</param>
         /// <param name="productionLocations">productionLocations.</param>
-        /// <param name="path">path.</param>
-        /// <param name="officialRating">officialRating.</param>
-        /// <param name="customRating">customRating.</param>
-        /// <param name="channelId">channelId.</param>
+        /// <param name="path">The path..</param>
+        /// <param name="officialRating">The official rating..</param>
+        /// <param name="customRating">The custom rating..</param>
+        /// <param name="channelId">The channel identifier..</param>
         /// <param name="channelName">channelName.</param>
-        /// <param name="overview">overview.</param>
-        /// <param name="taglines">taglines.</param>
-        /// <param name="genres">genres.</param>
-        /// <param name="communityRating">communityRating.</param>
-        /// <param name="runTimeTicks">runTimeTicks.</param>
+        /// <param name="overview">The overview..</param>
+        /// <param name="taglines">The taglines..</param>
+        /// <param name="genres">The genres..</param>
+        /// <param name="communityRating">The community rating..</param>
+        /// <param name="runTimeTicks">The run time ticks..</param>
         /// <param name="size">size.</param>
         /// <param name="fileName">fileName.</param>
         /// <param name="bitrate">bitrate.</param>
-        /// <param name="playAccess">playAccess.</param>
-        /// <param name="productionYear">productionYear.</param>
-        /// <param name="number">number.</param>
+        /// <param name="productionYear">The production year..</param>
+        /// <param name="number">The number..</param>
         /// <param name="channelNumber">channelNumber.</param>
-        /// <param name="indexNumber">indexNumber.</param>
-        /// <param name="indexNumberEnd">indexNumberEnd.</param>
-        /// <param name="parentIndexNumber">parentIndexNumber.</param>
-        /// <param name="remoteTrailers">remoteTrailers.</param>
+        /// <param name="indexNumber">The index number..</param>
+        /// <param name="indexNumberEnd">The index number end..</param>
+        /// <param name="parentIndexNumber">The parent index number..</param>
+        /// <param name="remoteTrailers">The trailer urls..</param>
         /// <param name="providerIds">providerIds.</param>
-        /// <param name="isFolder">isFolder.</param>
-        /// <param name="parentId">parentId.</param>
-        /// <param name="type">type.</param>
-        /// <param name="people">people.</param>
-        /// <param name="studios">studios.</param>
+        /// <param name="isFolder">A value indicating whether this instance is folder..</param>
+        /// <param name="parentId">The parent id..</param>
+        /// <param name="type">The type..</param>
+        /// <param name="people">The people..</param>
+        /// <param name="studios">The studios..</param>
         /// <param name="genreItems">genreItems.</param>
         /// <param name="tagItems">tagItems.</param>
-        /// <param name="parentLogoItemId">parentLogoItemId.</param>
-        /// <param name="parentBackdropItemId">parentBackdropItemId.</param>
-        /// <param name="parentBackdropImageTags">parentBackdropImageTags.</param>
-        /// <param name="localTrailerCount">localTrailerCount.</param>
+        /// <param name="parentLogoItemId">If the item does not have a logo, this will hold the Id of the Parent that has one..</param>
+        /// <param name="parentBackdropItemId">If the item does not have any backdrops, this will hold the Id of the Parent that has one..</param>
+        /// <param name="parentBackdropImageTags">The parent backdrop image tags..</param>
+        /// <param name="localTrailerCount">The local trailer count..</param>
         /// <param name="userData">userData.</param>
-        /// <param name="recursiveItemCount">recursiveItemCount.</param>
-        /// <param name="childCount">childCount.</param>
-        /// <param name="seriesName">seriesName.</param>
-        /// <param name="seriesId">seriesId.</param>
-        /// <param name="seasonId">seasonId.</param>
-        /// <param name="specialFeatureCount">specialFeatureCount.</param>
-        /// <param name="displayPreferencesId">displayPreferencesId.</param>
-        /// <param name="status">status.</param>
-        /// <param name="airDays">airDays.</param>
-        /// <param name="tags">tags.</param>
-        /// <param name="primaryImageAspectRatio">primaryImageAspectRatio.</param>
-        /// <param name="artists">artists.</param>
-        /// <param name="artistItems">artistItems.</param>
+        /// <param name="recursiveItemCount">The recursive item count..</param>
+        /// <param name="childCount">The child count..</param>
+        /// <param name="seriesName">The name of the series..</param>
+        /// <param name="seriesId">The series id..</param>
+        /// <param name="seasonId">The season identifier..</param>
+        /// <param name="specialFeatureCount">The special feature count..</param>
+        /// <param name="displayPreferencesId">The display preferences id..</param>
+        /// <param name="status">The status..</param>
+        /// <param name="airDays">The air days..</param>
+        /// <param name="tags">The tags..</param>
+        /// <param name="primaryImageAspectRatio">The primary image aspect ratio, after image enhancements..</param>
+        /// <param name="artists">The artists..</param>
+        /// <param name="artistItems">The artist items..</param>
         /// <param name="composers">composers.</param>
-        /// <param name="album">album.</param>
-        /// <param name="collectionType">collectionType.</param>
-        /// <param name="displayOrder">displayOrder.</param>
-        /// <param name="albumId">albumId.</param>
-        /// <param name="albumPrimaryImageTag">albumPrimaryImageTag.</param>
-        /// <param name="seriesPrimaryImageTag">seriesPrimaryImageTag.</param>
-        /// <param name="albumArtist">albumArtist.</param>
-        /// <param name="albumArtists">albumArtists.</param>
-        /// <param name="seasonName">seasonName.</param>
-        /// <param name="mediaStreams">mediaStreams.</param>
-        /// <param name="partCount">partCount.</param>
-        /// <param name="imageTags">imageTags.</param>
-        /// <param name="backdropImageTags">backdropImageTags.</param>
-        /// <param name="parentLogoImageTag">parentLogoImageTag.</param>
-        /// <param name="seriesStudio">seriesStudio.</param>
-        /// <param name="parentThumbItemId">parentThumbItemId.</param>
-        /// <param name="parentThumbImageTag">parentThumbImageTag.</param>
-        /// <param name="chapters">chapters.</param>
+        /// <param name="album">The album..</param>
+        /// <param name="collectionType">The type of the collection..</param>
+        /// <param name="displayOrder">The display order..</param>
+        /// <param name="albumId">The album id..</param>
+        /// <param name="albumPrimaryImageTag">The album image tag..</param>
+        /// <param name="seriesPrimaryImageTag">The series primary image tag..</param>
+        /// <param name="albumArtist">The album artist..</param>
+        /// <param name="albumArtists">The album artists..</param>
+        /// <param name="seasonName">The name of the season..</param>
+        /// <param name="mediaStreams">The media streams..</param>
+        /// <param name="partCount">The part count..</param>
+        /// <param name="imageTags">The image tags..</param>
+        /// <param name="backdropImageTags">The backdrop image tags..</param>
+        /// <param name="parentLogoImageTag">The parent logo image tag..</param>
+        /// <param name="seriesStudio">The series studio..</param>
+        /// <param name="primaryImageItemId">primaryImageItemId.</param>
+        /// <param name="primaryImageTag">primaryImageTag.</param>
+        /// <param name="parentThumbItemId">The parent thumb item id..</param>
+        /// <param name="parentThumbImageTag">The parent thumb image tag..</param>
+        /// <param name="chapters">The chapters..</param>
         /// <param name="locationType">locationType.</param>
-        /// <param name="mediaType">mediaType.</param>
-        /// <param name="endDate">endDate.</param>
-        /// <param name="lockedFields">lockedFields.</param>
-        /// <param name="lockData">lockData.</param>
+        /// <param name="mediaType">The type of the media..</param>
+        /// <param name="endDate">The end date..</param>
+        /// <param name="lockedFields">The locked fields..</param>
+        /// <param name="lockData">A value indicating whether \\[enable internet providers\\]..</param>
         /// <param name="width">width.</param>
         /// <param name="height">height.</param>
         /// <param name="cameraMake">cameraMake.</param>
@@ -144,24 +148,24 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="longitude">longitude.</param>
         /// <param name="altitude">altitude.</param>
         /// <param name="isoSpeedRating">isoSpeedRating.</param>
-        /// <param name="seriesTimerId">seriesTimerId.</param>
-        /// <param name="channelPrimaryImageTag">channelPrimaryImageTag.</param>
-        /// <param name="startDate">startDate.</param>
-        /// <param name="completionPercentage">completionPercentage.</param>
-        /// <param name="isRepeat">isRepeat.</param>
+        /// <param name="seriesTimerId">The series timer identifier..</param>
+        /// <param name="channelPrimaryImageTag">The channel primary image tag..</param>
+        /// <param name="startDate">The start date of the recording, in UTC..</param>
+        /// <param name="completionPercentage">The completion percentage..</param>
+        /// <param name="isRepeat">A value indicating whether this instance is repeat..</param>
         /// <param name="isNew">isNew.</param>
-        /// <param name="episodeTitle">episodeTitle.</param>
-        /// <param name="isMovie">isMovie.</param>
-        /// <param name="isSports">isSports.</param>
-        /// <param name="isSeries">isSeries.</param>
-        /// <param name="isLive">isLive.</param>
-        /// <param name="isNews">isNews.</param>
-        /// <param name="isKids">isKids.</param>
-        /// <param name="isPremiere">isPremiere.</param>
+        /// <param name="episodeTitle">The episode title..</param>
+        /// <param name="isMovie">A value indicating whether this instance is movie..</param>
+        /// <param name="isSports">A value indicating whether this instance is sports..</param>
+        /// <param name="isSeries">A value indicating whether this instance is series..</param>
+        /// <param name="isLive">A value indicating whether this instance is live..</param>
+        /// <param name="isNews">A value indicating whether this instance is news..</param>
+        /// <param name="isKids">A value indicating whether this instance is kids..</param>
+        /// <param name="isPremiere">A value indicating whether this instance is premiere..</param>
         /// <param name="timerType">timerType.</param>
         /// <param name="disabled">disabled.</param>
         /// <param name="managementId">managementId.</param>
-        /// <param name="timerId">timerId.</param>
+        /// <param name="timerId">The timer identifier..</param>
         /// <param name="currentProgram">currentProgram.</param>
         /// <param name="movieCount">movieCount.</param>
         /// <param name="seriesCount">seriesCount.</param>
@@ -176,12 +180,13 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="listingsChannelName">listingsChannelName.</param>
         /// <param name="listingsChannelNumber">listingsChannelNumber.</param>
         /// <param name="affiliateCallSign">affiliateCallSign.</param>
-        public BaseItemDto(string name = default(string), string originalTitle = default(string), string serverId = default(string), string id = default(string), string etag = default(string), string prefix = default(string), string playlistItemId = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), string extraType = default(string), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), int? airsBeforeSeasonNumber = default(int?), int? airsAfterSeasonNumber = default(int?), int? airsBeforeEpisodeNumber = default(int?), bool? canDelete = default(bool?), bool? canDownload = default(bool?), bool? supportsResume = default(bool?), string presentationUniqueKey = default(string), string preferredMetadataLanguage = default(string), string preferredMetadataCountryCode = default(string), bool? supportsSync = default(bool?), string container = default(string), string sortName = default(string), string forcedSortName = default(string), Video3DFormat video3DFormat = default(Video3DFormat), DateTimeOffset? premiereDate = default(DateTimeOffset?), List<ExternalUrl> externalUrls = default(List<ExternalUrl>), List<MediaSourceInfo> mediaSources = default(List<MediaSourceInfo>), float? criticRating = default(float?), long? gameSystemId = default(long?), bool? asSeries = default(bool?), string gameSystem = default(string), List<string> productionLocations = default(List<string>), string path = default(string), string officialRating = default(string), string customRating = default(string), string channelId = default(string), string channelName = default(string), string overview = default(string), List<string> taglines = default(List<string>), List<string> genres = default(List<string>), float? communityRating = default(float?), long? runTimeTicks = default(long?), long? size = default(long?), string fileName = default(string), int? bitrate = default(int?), LibraryPlayAccess playAccess = default(LibraryPlayAccess), int? productionYear = default(int?), string number = default(string), string channelNumber = default(string), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), List<MediaUrl> remoteTrailers = default(List<MediaUrl>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), bool? isFolder = default(bool?), string parentId = default(string), string type = default(string), List<BaseItemPerson> people = default(List<BaseItemPerson>), List<NameLongIdPair> studios = default(List<NameLongIdPair>), List<NameLongIdPair> genreItems = default(List<NameLongIdPair>), List<NameLongIdPair> tagItems = default(List<NameLongIdPair>), string parentLogoItemId = default(string), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), int? localTrailerCount = default(int?), UserItemDataDto userData = default(UserItemDataDto), int? recursiveItemCount = default(int?), int? childCount = default(int?), string seriesName = default(string), string seriesId = default(string), string seasonId = default(string), int? specialFeatureCount = default(int?), string displayPreferencesId = default(string), string status = default(string), List<DayOfWeek> airDays = default(List<DayOfWeek>), List<string> tags = default(List<string>), double? primaryImageAspectRatio = default(double?), List<string> artists = default(List<string>), List<NameIdPair> artistItems = default(List<NameIdPair>), List<NameIdPair> composers = default(List<NameIdPair>), string album = default(string), string collectionType = default(string), string displayOrder = default(string), string albumId = default(string), string albumPrimaryImageTag = default(string), string seriesPrimaryImageTag = default(string), string albumArtist = default(string), List<NameIdPair> albumArtists = default(List<NameIdPair>), string seasonName = default(string), List<MediaStream> mediaStreams = default(List<MediaStream>), int? partCount = default(int?), Dictionary<string, string> imageTags = default(Dictionary<string, string>), List<string> backdropImageTags = default(List<string>), string parentLogoImageTag = default(string), string seriesStudio = default(string), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), List<ChapterInfo> chapters = default(List<ChapterInfo>), LocationType locationType = default(LocationType), string mediaType = default(string), DateTimeOffset? endDate = default(DateTimeOffset?), List<MetadataFields> lockedFields = default(List<MetadataFields>), bool? lockData = default(bool?), int? width = default(int?), int? height = default(int?), string cameraMake = default(string), string cameraModel = default(string), string software = default(string), double? exposureTime = default(double?), double? focalLength = default(double?), DrawingImageOrientation imageOrientation = default(DrawingImageOrientation), double? aperture = default(double?), double? shutterSpeed = default(double?), double? latitude = default(double?), double? longitude = default(double?), double? altitude = default(double?), int? isoSpeedRating = default(int?), string seriesTimerId = default(string), string channelPrimaryImageTag = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), double? completionPercentage = default(double?), bool? isRepeat = default(bool?), bool? isNew = default(bool?), string episodeTitle = default(string), bool? isMovie = default(bool?), bool? isSports = default(bool?), bool? isSeries = default(bool?), bool? isLive = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isPremiere = default(bool?), LiveTvTimerType timerType = default(LiveTvTimerType), bool? disabled = default(bool?), string managementId = default(string), string timerId = default(string), BaseItemDto currentProgram = default(BaseItemDto), int? movieCount = default(int?), int? seriesCount = default(int?), int? albumCount = default(int?), int? songCount = default(int?), int? musicVideoCount = default(int?), List<string> subviews = default(List<string>), string listingsProviderId = default(string), string listingsChannelId = default(string), string listingsPath = default(string), string listingsId = default(string), string listingsChannelName = default(string), string listingsChannelNumber = default(string), string affiliateCallSign = default(string))
+        public BaseItemDto(string name = default(string), string originalTitle = default(string), string serverId = default(string), string id = default(string), string guid = default(string), string etag = default(string), string prefix = default(string), string playlistItemId = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), string extraType = default(string), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), bool? canDelete = default(bool?), bool? canDownload = default(bool?), bool? canEditItems = default(bool?), bool? supportsResume = default(bool?), string presentationUniqueKey = default(string), string preferredMetadataLanguage = default(string), string preferredMetadataCountryCode = default(string), bool? supportsSync = default(bool?), SyncJobItemStatus syncStatus = default(SyncJobItemStatus), bool? canManageAccess = default(bool?), bool? canLeaveContent = default(bool?), bool? canMakePublic = default(bool?), string container = default(string), string sortName = default(string), string forcedSortName = default(string), Video3DFormat video3DFormat = default(Video3DFormat), DateTimeOffset? premiereDate = default(DateTimeOffset?), List<ExternalUrl> externalUrls = default(List<ExternalUrl>), List<MediaSourceInfo> mediaSources = default(List<MediaSourceInfo>), float? criticRating = default(float?), long? gameSystemId = default(long?), bool? asSeries = default(bool?), string gameSystem = default(string), List<string> productionLocations = default(List<string>), string path = default(string), string officialRating = default(string), string customRating = default(string), string channelId = default(string), string channelName = default(string), string overview = default(string), List<string> taglines = default(List<string>), List<string> genres = default(List<string>), float? communityRating = default(float?), long? runTimeTicks = default(long?), long? size = default(long?), string fileName = default(string), int? bitrate = default(int?), int? productionYear = default(int?), string number = default(string), string channelNumber = default(string), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), List<MediaUrl> remoteTrailers = default(List<MediaUrl>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), bool? isFolder = default(bool?), string parentId = default(string), string type = default(string), List<BaseItemPerson> people = default(List<BaseItemPerson>), List<NameLongIdPair> studios = default(List<NameLongIdPair>), List<NameLongIdPair> genreItems = default(List<NameLongIdPair>), List<NameLongIdPair> tagItems = default(List<NameLongIdPair>), string parentLogoItemId = default(string), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), int? localTrailerCount = default(int?), UserItemDataDto userData = default(UserItemDataDto), int? recursiveItemCount = default(int?), int? childCount = default(int?), string seriesName = default(string), string seriesId = default(string), string seasonId = default(string), int? specialFeatureCount = default(int?), string displayPreferencesId = default(string), string status = default(string), List<DayOfWeek> airDays = default(List<DayOfWeek>), List<string> tags = default(List<string>), double? primaryImageAspectRatio = default(double?), List<string> artists = default(List<string>), List<NameIdPair> artistItems = default(List<NameIdPair>), List<NameIdPair> composers = default(List<NameIdPair>), string album = default(string), string collectionType = default(string), string displayOrder = default(string), string albumId = default(string), string albumPrimaryImageTag = default(string), string seriesPrimaryImageTag = default(string), string albumArtist = default(string), List<NameIdPair> albumArtists = default(List<NameIdPair>), string seasonName = default(string), List<MediaStream> mediaStreams = default(List<MediaStream>), int? partCount = default(int?), Dictionary<string, string> imageTags = default(Dictionary<string, string>), List<string> backdropImageTags = default(List<string>), string parentLogoImageTag = default(string), string seriesStudio = default(string), string primaryImageItemId = default(string), string primaryImageTag = default(string), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), List<ChapterInfo> chapters = default(List<ChapterInfo>), LocationType locationType = default(LocationType), string mediaType = default(string), DateTimeOffset? endDate = default(DateTimeOffset?), List<MetadataFields> lockedFields = default(List<MetadataFields>), bool? lockData = default(bool?), int? width = default(int?), int? height = default(int?), string cameraMake = default(string), string cameraModel = default(string), string software = default(string), double? exposureTime = default(double?), double? focalLength = default(double?), DrawingImageOrientation imageOrientation = default(DrawingImageOrientation), double? aperture = default(double?), double? shutterSpeed = default(double?), double? latitude = default(double?), double? longitude = default(double?), double? altitude = default(double?), int? isoSpeedRating = default(int?), string seriesTimerId = default(string), string channelPrimaryImageTag = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), double? completionPercentage = default(double?), bool? isRepeat = default(bool?), bool? isNew = default(bool?), string episodeTitle = default(string), bool? isMovie = default(bool?), bool? isSports = default(bool?), bool? isSeries = default(bool?), bool? isLive = default(bool?), bool? isNews = default(bool?), bool? isKids = default(bool?), bool? isPremiere = default(bool?), LiveTvTimerType timerType = default(LiveTvTimerType), bool? disabled = default(bool?), string managementId = default(string), string timerId = default(string), BaseItemDto currentProgram = default(BaseItemDto), int? movieCount = default(int?), int? seriesCount = default(int?), int? albumCount = default(int?), int? songCount = default(int?), int? musicVideoCount = default(int?), List<string> subviews = default(List<string>), string listingsProviderId = default(string), string listingsChannelId = default(string), string listingsPath = default(string), string listingsId = default(string), string listingsChannelName = default(string), string listingsChannelNumber = default(string), string affiliateCallSign = default(string))
         {
             this.Name = name;
             this.OriginalTitle = originalTitle;
             this.ServerId = serverId;
             this.Id = id;
+            this.Guid = guid;
             this.Etag = etag;
             this.Prefix = prefix;
             this.PlaylistItemId = playlistItemId;
@@ -189,16 +194,18 @@ namespace EmbyClient.Dotnet.Model
             this.ExtraType = extraType;
             this.SortIndexNumber = sortIndexNumber;
             this.SortParentIndexNumber = sortParentIndexNumber;
-            this.AirsBeforeSeasonNumber = airsBeforeSeasonNumber;
-            this.AirsAfterSeasonNumber = airsAfterSeasonNumber;
-            this.AirsBeforeEpisodeNumber = airsBeforeEpisodeNumber;
             this.CanDelete = canDelete;
             this.CanDownload = canDownload;
+            this.CanEditItems = canEditItems;
             this.SupportsResume = supportsResume;
             this.PresentationUniqueKey = presentationUniqueKey;
             this.PreferredMetadataLanguage = preferredMetadataLanguage;
             this.PreferredMetadataCountryCode = preferredMetadataCountryCode;
             this.SupportsSync = supportsSync;
+            this.SyncStatus = syncStatus;
+            this.CanManageAccess = canManageAccess;
+            this.CanLeaveContent = canLeaveContent;
+            this.CanMakePublic = canMakePublic;
             this.Container = container;
             this.SortName = sortName;
             this.ForcedSortName = forcedSortName;
@@ -224,7 +231,6 @@ namespace EmbyClient.Dotnet.Model
             this.Size = size;
             this.FileName = fileName;
             this.Bitrate = bitrate;
-            this.PlayAccess = playAccess;
             this.ProductionYear = productionYear;
             this.Number = number;
             this.ChannelNumber = channelNumber;
@@ -274,6 +280,8 @@ namespace EmbyClient.Dotnet.Model
             this.BackdropImageTags = backdropImageTags;
             this.ParentLogoImageTag = parentLogoImageTag;
             this.SeriesStudio = seriesStudio;
+            this.PrimaryImageItemId = primaryImageItemId;
+            this.PrimaryImageTag = primaryImageTag;
             this.ParentThumbItemId = parentThumbItemId;
             this.ParentThumbImageTag = parentThumbImageTag;
             this.Chapters = chapters;
@@ -331,8 +339,9 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -343,38 +352,50 @@ namespace EmbyClient.Dotnet.Model
         public string OriginalTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServerId
+        /// The server identifier.
         /// </summary>
+        /// <value>The server identifier.</value>
         [DataMember(Name="ServerId", EmitDefaultValue=false)]
         public string ServerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The id.
         /// </summary>
+        /// <value>The id.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Etag
+        /// Gets or Sets Guid
         /// </summary>
+        [DataMember(Name="Guid", EmitDefaultValue=false)]
+        public string Guid { get; set; }
+
+        /// <summary>
+        /// The etag.
+        /// </summary>
+        /// <value>The etag.</value>
         [DataMember(Name="Etag", EmitDefaultValue=false)]
         public string Etag { get; set; }
 
         /// <summary>
-        /// Gets or Sets Prefix
+        /// The Prefix.
         /// </summary>
+        /// <value>The Prefix.</value>
         [DataMember(Name="Prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlaylistItemId
+        /// The playlist item identifier.
         /// </summary>
+        /// <value>The playlist item identifier.</value>
         [DataMember(Name="PlaylistItemId", EmitDefaultValue=false)]
         public string PlaylistItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets DateCreated
+        /// The date created.
         /// </summary>
+        /// <value>The date created.</value>
         [DataMember(Name="DateCreated", EmitDefaultValue=false)]
         public DateTimeOffset? DateCreated { get; set; }
 
@@ -397,24 +418,6 @@ namespace EmbyClient.Dotnet.Model
         public int? SortParentIndexNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets AirsBeforeSeasonNumber
-        /// </summary>
-        [DataMember(Name="AirsBeforeSeasonNumber", EmitDefaultValue=false)]
-        public int? AirsBeforeSeasonNumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AirsAfterSeasonNumber
-        /// </summary>
-        [DataMember(Name="AirsAfterSeasonNumber", EmitDefaultValue=false)]
-        public int? AirsAfterSeasonNumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AirsBeforeEpisodeNumber
-        /// </summary>
-        [DataMember(Name="AirsBeforeEpisodeNumber", EmitDefaultValue=false)]
-        public int? AirsBeforeEpisodeNumber { get; set; }
-
-        /// <summary>
         /// Gets or Sets CanDelete
         /// </summary>
         [DataMember(Name="CanDelete", EmitDefaultValue=false)]
@@ -425,6 +428,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="CanDownload", EmitDefaultValue=false)]
         public bool? CanDownload { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CanEditItems
+        /// </summary>
+        [DataMember(Name="CanEditItems", EmitDefaultValue=false)]
+        public bool? CanEditItems { get; set; }
 
         /// <summary>
         /// Gets or Sets SupportsResume
@@ -451,10 +460,35 @@ namespace EmbyClient.Dotnet.Model
         public string PreferredMetadataCountryCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets SupportsSync
+        /// A value indicating whether \\[supports synchronize\\].
         /// </summary>
+        /// <value>A value indicating whether \\[supports synchronize\\].</value>
         [DataMember(Name="SupportsSync", EmitDefaultValue=false)]
         public bool? SupportsSync { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SyncStatus
+        /// </summary>
+        [DataMember(Name="SyncStatus", EmitDefaultValue=false)]
+        public SyncJobItemStatus SyncStatus { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CanManageAccess
+        /// </summary>
+        [DataMember(Name="CanManageAccess", EmitDefaultValue=false)]
+        public bool? CanManageAccess { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CanLeaveContent
+        /// </summary>
+        [DataMember(Name="CanLeaveContent", EmitDefaultValue=false)]
+        public bool? CanLeaveContent { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CanMakePublic
+        /// </summary>
+        [DataMember(Name="CanMakePublic", EmitDefaultValue=false)]
+        public bool? CanMakePublic { get; set; }
 
         /// <summary>
         /// Gets or Sets Container
@@ -463,8 +497,9 @@ namespace EmbyClient.Dotnet.Model
         public string Container { get; set; }
 
         /// <summary>
-        /// Gets or Sets SortName
+        /// The name of the sort.
         /// </summary>
+        /// <value>The name of the sort.</value>
         [DataMember(Name="SortName", EmitDefaultValue=false)]
         public string SortName { get; set; }
 
@@ -481,26 +516,30 @@ namespace EmbyClient.Dotnet.Model
         public Video3DFormat Video3DFormat { get; set; }
 
         /// <summary>
-        /// Gets or Sets PremiereDate
+        /// The premiere date.
         /// </summary>
+        /// <value>The premiere date.</value>
         [DataMember(Name="PremiereDate", EmitDefaultValue=false)]
         public DateTimeOffset? PremiereDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExternalUrls
+        /// The external urls.
         /// </summary>
+        /// <value>The external urls.</value>
         [DataMember(Name="ExternalUrls", EmitDefaultValue=false)]
         public List<ExternalUrl> ExternalUrls { get; set; }
 
         /// <summary>
-        /// Gets or Sets MediaSources
+        /// The media versions.
         /// </summary>
+        /// <value>The media versions.</value>
         [DataMember(Name="MediaSources", EmitDefaultValue=false)]
         public List<MediaSourceInfo> MediaSources { get; set; }
 
         /// <summary>
-        /// Gets or Sets CriticRating
+        /// The critic rating.
         /// </summary>
+        /// <value>The critic rating.</value>
         [DataMember(Name="CriticRating", EmitDefaultValue=false)]
         public float? CriticRating { get; set; }
 
@@ -517,8 +556,9 @@ namespace EmbyClient.Dotnet.Model
         public bool? AsSeries { get; set; }
 
         /// <summary>
-        /// Gets or Sets GameSystem
+        /// The game system.
         /// </summary>
+        /// <value>The game system.</value>
         [DataMember(Name="GameSystem", EmitDefaultValue=false)]
         public string GameSystem { get; set; }
 
@@ -529,26 +569,30 @@ namespace EmbyClient.Dotnet.Model
         public List<string> ProductionLocations { get; set; }
 
         /// <summary>
-        /// Gets or Sets Path
+        /// The path.
         /// </summary>
+        /// <value>The path.</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or Sets OfficialRating
+        /// The official rating.
         /// </summary>
+        /// <value>The official rating.</value>
         [DataMember(Name="OfficialRating", EmitDefaultValue=false)]
         public string OfficialRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomRating
+        /// The custom rating.
         /// </summary>
+        /// <value>The custom rating.</value>
         [DataMember(Name="CustomRating", EmitDefaultValue=false)]
         public string CustomRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChannelId
+        /// The channel identifier.
         /// </summary>
+        /// <value>The channel identifier.</value>
         [DataMember(Name="ChannelId", EmitDefaultValue=false)]
         public string ChannelId { get; set; }
 
@@ -559,32 +603,37 @@ namespace EmbyClient.Dotnet.Model
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Overview
+        /// The overview.
         /// </summary>
+        /// <value>The overview.</value>
         [DataMember(Name="Overview", EmitDefaultValue=false)]
         public string Overview { get; set; }
 
         /// <summary>
-        /// Gets or Sets Taglines
+        /// The taglines.
         /// </summary>
+        /// <value>The taglines.</value>
         [DataMember(Name="Taglines", EmitDefaultValue=false)]
         public List<string> Taglines { get; set; }
 
         /// <summary>
-        /// Gets or Sets Genres
+        /// The genres.
         /// </summary>
+        /// <value>The genres.</value>
         [DataMember(Name="Genres", EmitDefaultValue=false)]
         public List<string> Genres { get; set; }
 
         /// <summary>
-        /// Gets or Sets CommunityRating
+        /// The community rating.
         /// </summary>
+        /// <value>The community rating.</value>
         [DataMember(Name="CommunityRating", EmitDefaultValue=false)]
         public float? CommunityRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets RunTimeTicks
+        /// The run time ticks.
         /// </summary>
+        /// <value>The run time ticks.</value>
         [DataMember(Name="RunTimeTicks", EmitDefaultValue=false)]
         public long? RunTimeTicks { get; set; }
 
@@ -607,20 +656,16 @@ namespace EmbyClient.Dotnet.Model
         public int? Bitrate { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayAccess
+        /// The production year.
         /// </summary>
-        [DataMember(Name="PlayAccess", EmitDefaultValue=false)]
-        public LibraryPlayAccess PlayAccess { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ProductionYear
-        /// </summary>
+        /// <value>The production year.</value>
         [DataMember(Name="ProductionYear", EmitDefaultValue=false)]
         public int? ProductionYear { get; set; }
 
         /// <summary>
-        /// Gets or Sets Number
+        /// The number.
         /// </summary>
+        /// <value>The number.</value>
         [DataMember(Name="Number", EmitDefaultValue=false)]
         public string Number { get; set; }
 
@@ -631,26 +676,30 @@ namespace EmbyClient.Dotnet.Model
         public string ChannelNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets IndexNumber
+        /// The index number.
         /// </summary>
+        /// <value>The index number.</value>
         [DataMember(Name="IndexNumber", EmitDefaultValue=false)]
         public int? IndexNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets IndexNumberEnd
+        /// The index number end.
         /// </summary>
+        /// <value>The index number end.</value>
         [DataMember(Name="IndexNumberEnd", EmitDefaultValue=false)]
         public int? IndexNumberEnd { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentIndexNumber
+        /// The parent index number.
         /// </summary>
+        /// <value>The parent index number.</value>
         [DataMember(Name="ParentIndexNumber", EmitDefaultValue=false)]
         public int? ParentIndexNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets RemoteTrailers
+        /// The trailer urls.
         /// </summary>
+        /// <value>The trailer urls.</value>
         [DataMember(Name="RemoteTrailers", EmitDefaultValue=false)]
         public List<MediaUrl> RemoteTrailers { get; set; }
 
@@ -661,32 +710,37 @@ namespace EmbyClient.Dotnet.Model
         public ProviderIdDictionary ProviderIds { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsFolder
+        /// A value indicating whether this instance is folder.
         /// </summary>
+        /// <value>A value indicating whether this instance is folder.</value>
         [DataMember(Name="IsFolder", EmitDefaultValue=false)]
         public bool? IsFolder { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentId
+        /// The parent id.
         /// </summary>
+        /// <value>The parent id.</value>
         [DataMember(Name="ParentId", EmitDefaultValue=false)]
         public string ParentId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// The type.
         /// </summary>
+        /// <value>The type.</value>
         [DataMember(Name="Type", EmitDefaultValue=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets People
+        /// The people.
         /// </summary>
+        /// <value>The people.</value>
         [DataMember(Name="People", EmitDefaultValue=false)]
         public List<BaseItemPerson> People { get; set; }
 
         /// <summary>
-        /// Gets or Sets Studios
+        /// The studios.
         /// </summary>
+        /// <value>The studios.</value>
         [DataMember(Name="Studios", EmitDefaultValue=false)]
         public List<NameLongIdPair> Studios { get; set; }
 
@@ -703,26 +757,30 @@ namespace EmbyClient.Dotnet.Model
         public List<NameLongIdPair> TagItems { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentLogoItemId
+        /// If the item does not have a logo, this will hold the Id of the Parent that has one.
         /// </summary>
+        /// <value>If the item does not have a logo, this will hold the Id of the Parent that has one.</value>
         [DataMember(Name="ParentLogoItemId", EmitDefaultValue=false)]
         public string ParentLogoItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBackdropItemId
+        /// If the item does not have any backdrops, this will hold the Id of the Parent that has one.
         /// </summary>
+        /// <value>If the item does not have any backdrops, this will hold the Id of the Parent that has one.</value>
         [DataMember(Name="ParentBackdropItemId", EmitDefaultValue=false)]
         public string ParentBackdropItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBackdropImageTags
+        /// The parent backdrop image tags.
         /// </summary>
+        /// <value>The parent backdrop image tags.</value>
         [DataMember(Name="ParentBackdropImageTags", EmitDefaultValue=false)]
         public List<string> ParentBackdropImageTags { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocalTrailerCount
+        /// The local trailer count.
         /// </summary>
+        /// <value>The local trailer count.</value>
         [DataMember(Name="LocalTrailerCount", EmitDefaultValue=false)]
         public int? LocalTrailerCount { get; set; }
 
@@ -733,80 +791,93 @@ namespace EmbyClient.Dotnet.Model
         public UserItemDataDto UserData { get; set; }
 
         /// <summary>
-        /// Gets or Sets RecursiveItemCount
+        /// The recursive item count.
         /// </summary>
+        /// <value>The recursive item count.</value>
         [DataMember(Name="RecursiveItemCount", EmitDefaultValue=false)]
         public int? RecursiveItemCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChildCount
+        /// The child count.
         /// </summary>
+        /// <value>The child count.</value>
         [DataMember(Name="ChildCount", EmitDefaultValue=false)]
         public int? ChildCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesName
+        /// The name of the series.
         /// </summary>
+        /// <value>The name of the series.</value>
         [DataMember(Name="SeriesName", EmitDefaultValue=false)]
         public string SeriesName { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesId
+        /// The series id.
         /// </summary>
+        /// <value>The series id.</value>
         [DataMember(Name="SeriesId", EmitDefaultValue=false)]
         public string SeriesId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeasonId
+        /// The season identifier.
         /// </summary>
+        /// <value>The season identifier.</value>
         [DataMember(Name="SeasonId", EmitDefaultValue=false)]
         public string SeasonId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SpecialFeatureCount
+        /// The special feature count.
         /// </summary>
+        /// <value>The special feature count.</value>
         [DataMember(Name="SpecialFeatureCount", EmitDefaultValue=false)]
         public int? SpecialFeatureCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayPreferencesId
+        /// The display preferences id.
         /// </summary>
+        /// <value>The display preferences id.</value>
         [DataMember(Name="DisplayPreferencesId", EmitDefaultValue=false)]
         public string DisplayPreferencesId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// The status.
         /// </summary>
+        /// <value>The status.</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets AirDays
+        /// The air days.
         /// </summary>
+        /// <value>The air days.</value>
         [DataMember(Name="AirDays", EmitDefaultValue=false)]
         public List<DayOfWeek> AirDays { get; set; }
 
         /// <summary>
-        /// Gets or Sets Tags
+        /// The tags.
         /// </summary>
+        /// <value>The tags.</value>
         [DataMember(Name="Tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryImageAspectRatio
+        /// The primary image aspect ratio, after image enhancements.
         /// </summary>
+        /// <value>The primary image aspect ratio, after image enhancements.</value>
         [DataMember(Name="PrimaryImageAspectRatio", EmitDefaultValue=false)]
         public double? PrimaryImageAspectRatio { get; set; }
 
         /// <summary>
-        /// Gets or Sets Artists
+        /// The artists.
         /// </summary>
+        /// <value>The artists.</value>
         [DataMember(Name="Artists", EmitDefaultValue=false)]
         public List<string> Artists { get; set; }
 
         /// <summary>
-        /// Gets or Sets ArtistItems
+        /// The artist items.
         /// </summary>
+        /// <value>The artist items.</value>
         [DataMember(Name="ArtistItems", EmitDefaultValue=false)]
         public List<NameIdPair> ArtistItems { get; set; }
 
@@ -817,110 +888,140 @@ namespace EmbyClient.Dotnet.Model
         public List<NameIdPair> Composers { get; set; }
 
         /// <summary>
-        /// Gets or Sets Album
+        /// The album.
         /// </summary>
+        /// <value>The album.</value>
         [DataMember(Name="Album", EmitDefaultValue=false)]
         public string Album { get; set; }
 
         /// <summary>
-        /// Gets or Sets CollectionType
+        /// The type of the collection.
         /// </summary>
+        /// <value>The type of the collection.</value>
         [DataMember(Name="CollectionType", EmitDefaultValue=false)]
         public string CollectionType { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayOrder
+        /// The display order.
         /// </summary>
+        /// <value>The display order.</value>
         [DataMember(Name="DisplayOrder", EmitDefaultValue=false)]
         public string DisplayOrder { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlbumId
+        /// The album id.
         /// </summary>
+        /// <value>The album id.</value>
         [DataMember(Name="AlbumId", EmitDefaultValue=false)]
         public string AlbumId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlbumPrimaryImageTag
+        /// The album image tag.
         /// </summary>
+        /// <value>The album image tag.</value>
         [DataMember(Name="AlbumPrimaryImageTag", EmitDefaultValue=false)]
         public string AlbumPrimaryImageTag { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesPrimaryImageTag
+        /// The series primary image tag.
         /// </summary>
+        /// <value>The series primary image tag.</value>
         [DataMember(Name="SeriesPrimaryImageTag", EmitDefaultValue=false)]
         public string SeriesPrimaryImageTag { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlbumArtist
+        /// The album artist.
         /// </summary>
+        /// <value>The album artist.</value>
         [DataMember(Name="AlbumArtist", EmitDefaultValue=false)]
         public string AlbumArtist { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlbumArtists
+        /// The album artists.
         /// </summary>
+        /// <value>The album artists.</value>
         [DataMember(Name="AlbumArtists", EmitDefaultValue=false)]
         public List<NameIdPair> AlbumArtists { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeasonName
+        /// The name of the season.
         /// </summary>
+        /// <value>The name of the season.</value>
         [DataMember(Name="SeasonName", EmitDefaultValue=false)]
         public string SeasonName { get; set; }
 
         /// <summary>
-        /// Gets or Sets MediaStreams
+        /// The media streams.
         /// </summary>
+        /// <value>The media streams.</value>
         [DataMember(Name="MediaStreams", EmitDefaultValue=false)]
         public List<MediaStream> MediaStreams { get; set; }
 
         /// <summary>
-        /// Gets or Sets PartCount
+        /// The part count.
         /// </summary>
+        /// <value>The part count.</value>
         [DataMember(Name="PartCount", EmitDefaultValue=false)]
         public int? PartCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageTags
+        /// The image tags.
         /// </summary>
+        /// <value>The image tags.</value>
         [DataMember(Name="ImageTags", EmitDefaultValue=false)]
         public Dictionary<string, string> ImageTags { get; set; }
 
         /// <summary>
-        /// Gets or Sets BackdropImageTags
+        /// The backdrop image tags.
         /// </summary>
+        /// <value>The backdrop image tags.</value>
         [DataMember(Name="BackdropImageTags", EmitDefaultValue=false)]
         public List<string> BackdropImageTags { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentLogoImageTag
+        /// The parent logo image tag.
         /// </summary>
+        /// <value>The parent logo image tag.</value>
         [DataMember(Name="ParentLogoImageTag", EmitDefaultValue=false)]
         public string ParentLogoImageTag { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesStudio
+        /// The series studio.
         /// </summary>
+        /// <value>The series studio.</value>
         [DataMember(Name="SeriesStudio", EmitDefaultValue=false)]
         public string SeriesStudio { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentThumbItemId
+        /// Gets or Sets PrimaryImageItemId
         /// </summary>
+        [DataMember(Name="PrimaryImageItemId", EmitDefaultValue=false)]
+        public string PrimaryImageItemId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PrimaryImageTag
+        /// </summary>
+        [DataMember(Name="PrimaryImageTag", EmitDefaultValue=false)]
+        public string PrimaryImageTag { get; set; }
+
+        /// <summary>
+        /// The parent thumb item id.
+        /// </summary>
+        /// <value>The parent thumb item id.</value>
         [DataMember(Name="ParentThumbItemId", EmitDefaultValue=false)]
         public string ParentThumbItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentThumbImageTag
+        /// The parent thumb image tag.
         /// </summary>
+        /// <value>The parent thumb image tag.</value>
         [DataMember(Name="ParentThumbImageTag", EmitDefaultValue=false)]
         public string ParentThumbImageTag { get; set; }
 
         /// <summary>
-        /// Gets or Sets Chapters
+        /// The chapters.
         /// </summary>
+        /// <value>The chapters.</value>
         [DataMember(Name="Chapters", EmitDefaultValue=false)]
         public List<ChapterInfo> Chapters { get; set; }
 
@@ -931,26 +1032,30 @@ namespace EmbyClient.Dotnet.Model
         public LocationType LocationType { get; set; }
 
         /// <summary>
-        /// Gets or Sets MediaType
+        /// The type of the media.
         /// </summary>
+        /// <value>The type of the media.</value>
         [DataMember(Name="MediaType", EmitDefaultValue=false)]
         public string MediaType { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndDate
+        /// The end date.
         /// </summary>
+        /// <value>The end date.</value>
         [DataMember(Name="EndDate", EmitDefaultValue=false)]
         public DateTimeOffset? EndDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets LockedFields
+        /// The locked fields.
         /// </summary>
+        /// <value>The locked fields.</value>
         [DataMember(Name="LockedFields", EmitDefaultValue=false)]
         public List<MetadataFields> LockedFields { get; set; }
 
         /// <summary>
-        /// Gets or Sets LockData
+        /// A value indicating whether \\[enable internet providers\\].
         /// </summary>
+        /// <value>A value indicating whether \\[enable internet providers\\].</value>
         [DataMember(Name="LockData", EmitDefaultValue=false)]
         public bool? LockData { get; set; }
 
@@ -1039,32 +1144,37 @@ namespace EmbyClient.Dotnet.Model
         public int? IsoSpeedRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesTimerId
+        /// The series timer identifier.
         /// </summary>
+        /// <value>The series timer identifier.</value>
         [DataMember(Name="SeriesTimerId", EmitDefaultValue=false)]
         public string SeriesTimerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChannelPrimaryImageTag
+        /// The channel primary image tag.
         /// </summary>
+        /// <value>The channel primary image tag.</value>
         [DataMember(Name="ChannelPrimaryImageTag", EmitDefaultValue=false)]
         public string ChannelPrimaryImageTag { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartDate
+        /// The start date of the recording, in UTC.
         /// </summary>
+        /// <value>The start date of the recording, in UTC.</value>
         [DataMember(Name="StartDate", EmitDefaultValue=false)]
         public DateTimeOffset? StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets CompletionPercentage
+        /// The completion percentage.
         /// </summary>
+        /// <value>The completion percentage.</value>
         [DataMember(Name="CompletionPercentage", EmitDefaultValue=false)]
         public double? CompletionPercentage { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsRepeat
+        /// A value indicating whether this instance is repeat.
         /// </summary>
+        /// <value>A value indicating whether this instance is repeat.</value>
         [DataMember(Name="IsRepeat", EmitDefaultValue=false)]
         public bool? IsRepeat { get; set; }
 
@@ -1075,50 +1185,58 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsNew { get; set; }
 
         /// <summary>
-        /// Gets or Sets EpisodeTitle
+        /// The episode title.
         /// </summary>
+        /// <value>The episode title.</value>
         [DataMember(Name="EpisodeTitle", EmitDefaultValue=false)]
         public string EpisodeTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsMovie
+        /// A value indicating whether this instance is movie.
         /// </summary>
+        /// <value>A value indicating whether this instance is movie.</value>
         [DataMember(Name="IsMovie", EmitDefaultValue=false)]
         public bool? IsMovie { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsSports
+        /// A value indicating whether this instance is sports.
         /// </summary>
+        /// <value>A value indicating whether this instance is sports.</value>
         [DataMember(Name="IsSports", EmitDefaultValue=false)]
         public bool? IsSports { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsSeries
+        /// A value indicating whether this instance is series.
         /// </summary>
+        /// <value>A value indicating whether this instance is series.</value>
         [DataMember(Name="IsSeries", EmitDefaultValue=false)]
         public bool? IsSeries { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsLive
+        /// A value indicating whether this instance is live.
         /// </summary>
+        /// <value>A value indicating whether this instance is live.</value>
         [DataMember(Name="IsLive", EmitDefaultValue=false)]
         public bool? IsLive { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsNews
+        /// A value indicating whether this instance is news.
         /// </summary>
+        /// <value>A value indicating whether this instance is news.</value>
         [DataMember(Name="IsNews", EmitDefaultValue=false)]
         public bool? IsNews { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsKids
+        /// A value indicating whether this instance is kids.
         /// </summary>
+        /// <value>A value indicating whether this instance is kids.</value>
         [DataMember(Name="IsKids", EmitDefaultValue=false)]
         public bool? IsKids { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPremiere
+        /// A value indicating whether this instance is premiere.
         /// </summary>
+        /// <value>A value indicating whether this instance is premiere.</value>
         [DataMember(Name="IsPremiere", EmitDefaultValue=false)]
         public bool? IsPremiere { get; set; }
 
@@ -1141,8 +1259,9 @@ namespace EmbyClient.Dotnet.Model
         public string ManagementId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimerId
+        /// The timer identifier.
         /// </summary>
+        /// <value>The timer identifier.</value>
         [DataMember(Name="TimerId", EmitDefaultValue=false)]
         public string TimerId { get; set; }
 
@@ -1242,6 +1361,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  OriginalTitle: ").Append(OriginalTitle).Append("\n");
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  Etag: ").Append(Etag).Append("\n");
             sb.Append("  Prefix: ").Append(Prefix).Append("\n");
             sb.Append("  PlaylistItemId: ").Append(PlaylistItemId).Append("\n");
@@ -1249,16 +1369,18 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  ExtraType: ").Append(ExtraType).Append("\n");
             sb.Append("  SortIndexNumber: ").Append(SortIndexNumber).Append("\n");
             sb.Append("  SortParentIndexNumber: ").Append(SortParentIndexNumber).Append("\n");
-            sb.Append("  AirsBeforeSeasonNumber: ").Append(AirsBeforeSeasonNumber).Append("\n");
-            sb.Append("  AirsAfterSeasonNumber: ").Append(AirsAfterSeasonNumber).Append("\n");
-            sb.Append("  AirsBeforeEpisodeNumber: ").Append(AirsBeforeEpisodeNumber).Append("\n");
             sb.Append("  CanDelete: ").Append(CanDelete).Append("\n");
             sb.Append("  CanDownload: ").Append(CanDownload).Append("\n");
+            sb.Append("  CanEditItems: ").Append(CanEditItems).Append("\n");
             sb.Append("  SupportsResume: ").Append(SupportsResume).Append("\n");
             sb.Append("  PresentationUniqueKey: ").Append(PresentationUniqueKey).Append("\n");
             sb.Append("  PreferredMetadataLanguage: ").Append(PreferredMetadataLanguage).Append("\n");
             sb.Append("  PreferredMetadataCountryCode: ").Append(PreferredMetadataCountryCode).Append("\n");
             sb.Append("  SupportsSync: ").Append(SupportsSync).Append("\n");
+            sb.Append("  SyncStatus: ").Append(SyncStatus).Append("\n");
+            sb.Append("  CanManageAccess: ").Append(CanManageAccess).Append("\n");
+            sb.Append("  CanLeaveContent: ").Append(CanLeaveContent).Append("\n");
+            sb.Append("  CanMakePublic: ").Append(CanMakePublic).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
             sb.Append("  SortName: ").Append(SortName).Append("\n");
             sb.Append("  ForcedSortName: ").Append(ForcedSortName).Append("\n");
@@ -1284,7 +1406,6 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("  Bitrate: ").Append(Bitrate).Append("\n");
-            sb.Append("  PlayAccess: ").Append(PlayAccess).Append("\n");
             sb.Append("  ProductionYear: ").Append(ProductionYear).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  ChannelNumber: ").Append(ChannelNumber).Append("\n");
@@ -1334,6 +1455,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  BackdropImageTags: ").Append(BackdropImageTags).Append("\n");
             sb.Append("  ParentLogoImageTag: ").Append(ParentLogoImageTag).Append("\n");
             sb.Append("  SeriesStudio: ").Append(SeriesStudio).Append("\n");
+            sb.Append("  PrimaryImageItemId: ").Append(PrimaryImageItemId).Append("\n");
+            sb.Append("  PrimaryImageTag: ").Append(PrimaryImageTag).Append("\n");
             sb.Append("  ParentThumbItemId: ").Append(ParentThumbItemId).Append("\n");
             sb.Append("  ParentThumbImageTag: ").Append(ParentThumbImageTag).Append("\n");
             sb.Append("  Chapters: ").Append(Chapters).Append("\n");
@@ -1443,6 +1566,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.Guid == input.Guid ||
+                    (this.Guid != null &&
+                    this.Guid.Equals(input.Guid))
+                ) && 
+                (
                     this.Etag == input.Etag ||
                     (this.Etag != null &&
                     this.Etag.Equals(input.Etag))
@@ -1478,21 +1606,6 @@ namespace EmbyClient.Dotnet.Model
                     this.SortParentIndexNumber.Equals(input.SortParentIndexNumber))
                 ) && 
                 (
-                    this.AirsBeforeSeasonNumber == input.AirsBeforeSeasonNumber ||
-                    (this.AirsBeforeSeasonNumber != null &&
-                    this.AirsBeforeSeasonNumber.Equals(input.AirsBeforeSeasonNumber))
-                ) && 
-                (
-                    this.AirsAfterSeasonNumber == input.AirsAfterSeasonNumber ||
-                    (this.AirsAfterSeasonNumber != null &&
-                    this.AirsAfterSeasonNumber.Equals(input.AirsAfterSeasonNumber))
-                ) && 
-                (
-                    this.AirsBeforeEpisodeNumber == input.AirsBeforeEpisodeNumber ||
-                    (this.AirsBeforeEpisodeNumber != null &&
-                    this.AirsBeforeEpisodeNumber.Equals(input.AirsBeforeEpisodeNumber))
-                ) && 
-                (
                     this.CanDelete == input.CanDelete ||
                     (this.CanDelete != null &&
                     this.CanDelete.Equals(input.CanDelete))
@@ -1501,6 +1614,11 @@ namespace EmbyClient.Dotnet.Model
                     this.CanDownload == input.CanDownload ||
                     (this.CanDownload != null &&
                     this.CanDownload.Equals(input.CanDownload))
+                ) && 
+                (
+                    this.CanEditItems == input.CanEditItems ||
+                    (this.CanEditItems != null &&
+                    this.CanEditItems.Equals(input.CanEditItems))
                 ) && 
                 (
                     this.SupportsResume == input.SupportsResume ||
@@ -1526,6 +1644,26 @@ namespace EmbyClient.Dotnet.Model
                     this.SupportsSync == input.SupportsSync ||
                     (this.SupportsSync != null &&
                     this.SupportsSync.Equals(input.SupportsSync))
+                ) && 
+                (
+                    this.SyncStatus == input.SyncStatus ||
+                    (this.SyncStatus != null &&
+                    this.SyncStatus.Equals(input.SyncStatus))
+                ) && 
+                (
+                    this.CanManageAccess == input.CanManageAccess ||
+                    (this.CanManageAccess != null &&
+                    this.CanManageAccess.Equals(input.CanManageAccess))
+                ) && 
+                (
+                    this.CanLeaveContent == input.CanLeaveContent ||
+                    (this.CanLeaveContent != null &&
+                    this.CanLeaveContent.Equals(input.CanLeaveContent))
+                ) && 
+                (
+                    this.CanMakePublic == input.CanMakePublic ||
+                    (this.CanMakePublic != null &&
+                    this.CanMakePublic.Equals(input.CanMakePublic))
                 ) && 
                 (
                     this.Container == input.Container ||
@@ -1656,11 +1794,6 @@ namespace EmbyClient.Dotnet.Model
                     this.Bitrate == input.Bitrate ||
                     (this.Bitrate != null &&
                     this.Bitrate.Equals(input.Bitrate))
-                ) && 
-                (
-                    this.PlayAccess == input.PlayAccess ||
-                    (this.PlayAccess != null &&
-                    this.PlayAccess.Equals(input.PlayAccess))
                 ) && 
                 (
                     this.ProductionYear == input.ProductionYear ||
@@ -1921,6 +2054,16 @@ namespace EmbyClient.Dotnet.Model
                     this.SeriesStudio == input.SeriesStudio ||
                     (this.SeriesStudio != null &&
                     this.SeriesStudio.Equals(input.SeriesStudio))
+                ) && 
+                (
+                    this.PrimaryImageItemId == input.PrimaryImageItemId ||
+                    (this.PrimaryImageItemId != null &&
+                    this.PrimaryImageItemId.Equals(input.PrimaryImageItemId))
+                ) && 
+                (
+                    this.PrimaryImageTag == input.PrimaryImageTag ||
+                    (this.PrimaryImageTag != null &&
+                    this.PrimaryImageTag.Equals(input.PrimaryImageTag))
                 ) && 
                 (
                     this.ParentThumbItemId == input.ParentThumbItemId ||
@@ -2214,6 +2357,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ServerId.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Guid != null)
+                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 if (this.Etag != null)
                     hashCode = hashCode * 59 + this.Etag.GetHashCode();
                 if (this.Prefix != null)
@@ -2228,16 +2373,12 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.SortIndexNumber.GetHashCode();
                 if (this.SortParentIndexNumber != null)
                     hashCode = hashCode * 59 + this.SortParentIndexNumber.GetHashCode();
-                if (this.AirsBeforeSeasonNumber != null)
-                    hashCode = hashCode * 59 + this.AirsBeforeSeasonNumber.GetHashCode();
-                if (this.AirsAfterSeasonNumber != null)
-                    hashCode = hashCode * 59 + this.AirsAfterSeasonNumber.GetHashCode();
-                if (this.AirsBeforeEpisodeNumber != null)
-                    hashCode = hashCode * 59 + this.AirsBeforeEpisodeNumber.GetHashCode();
                 if (this.CanDelete != null)
                     hashCode = hashCode * 59 + this.CanDelete.GetHashCode();
                 if (this.CanDownload != null)
                     hashCode = hashCode * 59 + this.CanDownload.GetHashCode();
+                if (this.CanEditItems != null)
+                    hashCode = hashCode * 59 + this.CanEditItems.GetHashCode();
                 if (this.SupportsResume != null)
                     hashCode = hashCode * 59 + this.SupportsResume.GetHashCode();
                 if (this.PresentationUniqueKey != null)
@@ -2248,6 +2389,14 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.PreferredMetadataCountryCode.GetHashCode();
                 if (this.SupportsSync != null)
                     hashCode = hashCode * 59 + this.SupportsSync.GetHashCode();
+                if (this.SyncStatus != null)
+                    hashCode = hashCode * 59 + this.SyncStatus.GetHashCode();
+                if (this.CanManageAccess != null)
+                    hashCode = hashCode * 59 + this.CanManageAccess.GetHashCode();
+                if (this.CanLeaveContent != null)
+                    hashCode = hashCode * 59 + this.CanLeaveContent.GetHashCode();
+                if (this.CanMakePublic != null)
+                    hashCode = hashCode * 59 + this.CanMakePublic.GetHashCode();
                 if (this.Container != null)
                     hashCode = hashCode * 59 + this.Container.GetHashCode();
                 if (this.SortName != null)
@@ -2298,8 +2447,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.FileName.GetHashCode();
                 if (this.Bitrate != null)
                     hashCode = hashCode * 59 + this.Bitrate.GetHashCode();
-                if (this.PlayAccess != null)
-                    hashCode = hashCode * 59 + this.PlayAccess.GetHashCode();
                 if (this.ProductionYear != null)
                     hashCode = hashCode * 59 + this.ProductionYear.GetHashCode();
                 if (this.Number != null)
@@ -2398,6 +2545,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ParentLogoImageTag.GetHashCode();
                 if (this.SeriesStudio != null)
                     hashCode = hashCode * 59 + this.SeriesStudio.GetHashCode();
+                if (this.PrimaryImageItemId != null)
+                    hashCode = hashCode * 59 + this.PrimaryImageItemId.GetHashCode();
+                if (this.PrimaryImageTag != null)
+                    hashCode = hashCode * 59 + this.PrimaryImageTag.GetHashCode();
                 if (this.ParentThumbItemId != null)
                     hashCode = hashCode * 59 + this.ParentThumbItemId.GetHashCode();
                 if (this.ParentThumbImageTag != null)

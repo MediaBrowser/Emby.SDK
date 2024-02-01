@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -11,5 +11,5 @@ type LibraryLibraryTypeOptions struct {
 	MetadataFetchers []LibraryLibraryOptionInfo `json:"MetadataFetchers,omitempty"`
 	ImageFetchers []LibraryLibraryOptionInfo `json:"ImageFetchers,omitempty"`
 	SupportedImageTypes []ImageType `json:"SupportedImageTypes,omitempty"`
-	DefaultImageOptions []ConfigurationImageOption `json:"DefaultImageOptions,omitempty"`
+	DefaultImageOptions []ImageOption `json:"DefaultImageOptions,omitempty"`
 }

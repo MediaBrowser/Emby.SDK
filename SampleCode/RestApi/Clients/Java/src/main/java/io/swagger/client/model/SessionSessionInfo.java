@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -22,9 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 /**
- * SessionSessionInfo
+ * Class SessionInfo  
  */
-
+@Schema(description = "Class SessionInfo  ")
 
 public class SessionSessionInfo {
   @SerializedName("PlayState")
@@ -35,6 +35,9 @@ public class SessionSessionInfo {
 
   @SerializedName("RemoteEndPoint")
   private String remoteEndPoint = null;
+
+  @SerializedName("Protocol")
+  private String protocol = null;
 
   @SerializedName("PlayableMediaTypes")
   private List<String> playableMediaTypes = null;
@@ -77,6 +80,9 @@ public class SessionSessionInfo {
 
   @SerializedName("NowPlayingItem")
   private BaseItemDto nowPlayingItem = null;
+
+  @SerializedName("InternalDeviceId")
+  private Long internalDeviceId = null;
 
   @SerializedName("DeviceId")
   private String deviceId = null;
@@ -146,16 +152,34 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get remoteEndPoint
+   * The remote end point.
    * @return remoteEndPoint
   **/
-  @Schema(description = "")
+  @Schema(description = "The remote end point.")
   public String getRemoteEndPoint() {
     return remoteEndPoint;
   }
 
   public void setRemoteEndPoint(String remoteEndPoint) {
     this.remoteEndPoint = remoteEndPoint;
+  }
+
+  public SessionSessionInfo protocol(String protocol) {
+    this.protocol = protocol;
+    return this;
+  }
+
+   /**
+   * Get protocol
+   * @return protocol
+  **/
+  @Schema(description = "")
+  public String getProtocol() {
+    return protocol;
+  }
+
+  public void setProtocol(String protocol) {
+    this.protocol = protocol;
   }
 
   public SessionSessionInfo playableMediaTypes(List<String> playableMediaTypes) {
@@ -172,10 +196,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get playableMediaTypes
+   * The playable media types.
    * @return playableMediaTypes
   **/
-  @Schema(description = "")
+  @Schema(description = "The playable media types.")
   public List<String> getPlayableMediaTypes() {
     return playableMediaTypes;
   }
@@ -244,10 +268,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get id
+   * The id.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The id.")
   public String getId() {
     return id;
   }
@@ -280,10 +304,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get userId
+   * The user id.
    * @return userId
   **/
-  @Schema(description = "")
+  @Schema(description = "The user id.")
   public String getUserId() {
     return userId;
   }
@@ -298,10 +322,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get userName
+   * The username.
    * @return userName
   **/
-  @Schema(description = "")
+  @Schema(description = "The username.")
   public String getUserName() {
     return userName;
   }
@@ -334,10 +358,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get client
+   * The type of the client.
    * @return client
   **/
-  @Schema(description = "")
+  @Schema(description = "The type of the client.")
   public String getClient() {
     return client;
   }
@@ -352,10 +376,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get lastActivityDate
+   * The last activity date.
    * @return lastActivityDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The last activity date.")
   public OffsetDateTime getLastActivityDate() {
     return lastActivityDate;
   }
@@ -370,10 +394,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get deviceName
+   * The name of the device.
    * @return deviceName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the device.")
   public String getDeviceName() {
     return deviceName;
   }
@@ -418,16 +442,34 @@ public class SessionSessionInfo {
     this.nowPlayingItem = nowPlayingItem;
   }
 
+  public SessionSessionInfo internalDeviceId(Long internalDeviceId) {
+    this.internalDeviceId = internalDeviceId;
+    return this;
+  }
+
+   /**
+   * Get internalDeviceId
+   * @return internalDeviceId
+  **/
+  @Schema(description = "")
+  public Long getInternalDeviceId() {
+    return internalDeviceId;
+  }
+
+  public void setInternalDeviceId(Long internalDeviceId) {
+    this.internalDeviceId = internalDeviceId;
+  }
+
   public SessionSessionInfo deviceId(String deviceId) {
     this.deviceId = deviceId;
     return this;
   }
 
    /**
-   * Get deviceId
+   * The device id.
    * @return deviceId
   **/
-  @Schema(description = "")
+  @Schema(description = "The device id.")
   public String getDeviceId() {
     return deviceId;
   }
@@ -442,10 +484,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get applicationVersion
+   * The application version.
    * @return applicationVersion
   **/
-  @Schema(description = "")
+  @Schema(description = "The application version.")
   public String getApplicationVersion() {
     return applicationVersion;
   }
@@ -460,10 +502,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get appIconUrl
+   * The application icon URL.
    * @return appIconUrl
   **/
-  @Schema(description = "")
+  @Schema(description = "The application icon URL.")
   public String getAppIconUrl() {
     return appIconUrl;
   }
@@ -486,10 +528,10 @@ public class SessionSessionInfo {
   }
 
    /**
-   * Get supportedCommands
+   * The supported commands.
    * @return supportedCommands
   **/
-  @Schema(description = "")
+  @Schema(description = "The supported commands.")
   public List<String> getSupportedCommands() {
     return supportedCommands;
   }
@@ -547,6 +589,7 @@ public class SessionSessionInfo {
     return Objects.equals(this.playState, sessionSessionInfo.playState) &&
         Objects.equals(this.additionalUsers, sessionSessionInfo.additionalUsers) &&
         Objects.equals(this.remoteEndPoint, sessionSessionInfo.remoteEndPoint) &&
+        Objects.equals(this.protocol, sessionSessionInfo.protocol) &&
         Objects.equals(this.playableMediaTypes, sessionSessionInfo.playableMediaTypes) &&
         Objects.equals(this.playlistItemId, sessionSessionInfo.playlistItemId) &&
         Objects.equals(this.playlistIndex, sessionSessionInfo.playlistIndex) &&
@@ -561,6 +604,7 @@ public class SessionSessionInfo {
         Objects.equals(this.deviceName, sessionSessionInfo.deviceName) &&
         Objects.equals(this.deviceType, sessionSessionInfo.deviceType) &&
         Objects.equals(this.nowPlayingItem, sessionSessionInfo.nowPlayingItem) &&
+        Objects.equals(this.internalDeviceId, sessionSessionInfo.internalDeviceId) &&
         Objects.equals(this.deviceId, sessionSessionInfo.deviceId) &&
         Objects.equals(this.applicationVersion, sessionSessionInfo.applicationVersion) &&
         Objects.equals(this.appIconUrl, sessionSessionInfo.appIconUrl) &&
@@ -571,7 +615,7 @@ public class SessionSessionInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(playState, additionalUsers, remoteEndPoint, playableMediaTypes, playlistItemId, playlistIndex, playlistLength, id, serverId, userId, userName, userPrimaryImageTag, client, lastActivityDate, deviceName, deviceType, nowPlayingItem, deviceId, applicationVersion, appIconUrl, supportedCommands, transcodingInfo, supportsRemoteControl);
+    return Objects.hash(playState, additionalUsers, remoteEndPoint, protocol, playableMediaTypes, playlistItemId, playlistIndex, playlistLength, id, serverId, userId, userName, userPrimaryImageTag, client, lastActivityDate, deviceName, deviceType, nowPlayingItem, internalDeviceId, deviceId, applicationVersion, appIconUrl, supportedCommands, transcodingInfo, supportsRemoteControl);
   }
 
 
@@ -583,6 +627,7 @@ public class SessionSessionInfo {
     sb.append("    playState: ").append(toIndentedString(playState)).append("\n");
     sb.append("    additionalUsers: ").append(toIndentedString(additionalUsers)).append("\n");
     sb.append("    remoteEndPoint: ").append(toIndentedString(remoteEndPoint)).append("\n");
+    sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
     sb.append("    playableMediaTypes: ").append(toIndentedString(playableMediaTypes)).append("\n");
     sb.append("    playlistItemId: ").append(toIndentedString(playlistItemId)).append("\n");
     sb.append("    playlistIndex: ").append(toIndentedString(playlistIndex)).append("\n");
@@ -597,6 +642,7 @@ public class SessionSessionInfo {
     sb.append("    deviceName: ").append(toIndentedString(deviceName)).append("\n");
     sb.append("    deviceType: ").append(toIndentedString(deviceType)).append("\n");
     sb.append("    nowPlayingItem: ").append(toIndentedString(nowPlayingItem)).append("\n");
+    sb.append("    internalDeviceId: ").append(toIndentedString(internalDeviceId)).append("\n");
     sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
     sb.append("    applicationVersion: ").append(toIndentedString(applicationVersion)).append("\n");
     sb.append("    appIconUrl: ").append(toIndentedString(appIconUrl)).append("\n");

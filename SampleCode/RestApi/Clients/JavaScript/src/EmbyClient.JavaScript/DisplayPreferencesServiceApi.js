@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,7 +15,7 @@ import DisplayPreferences from '../model/DisplayPreferences';
 /**
 * DisplayPreferencesService service.
 * @module EmbyClient.JavaScript/DisplayPreferencesServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class DisplayPreferencesServiceApi {
 

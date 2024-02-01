@@ -8,13 +8,19 @@
 import Foundation
 
 
+/** Class CountryInfo   */
 
 public struct GlobalizationCountryInfo: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The display name. */
     public var displayName: String?
+    /** The English name. */
     public var englishName: String?
+    /** The name of the two letter ISO region. */
     public var twoLetterISORegionName: String?
+    /** The name of the three letter ISO region. */
     public var threeLetterISORegionName: String?
 
     public init(name: String? = nil, displayName: String? = nil, englishName: String? = nil, twoLetterISORegionName: String? = nil, threeLetterISORegionName: String? = nil) {

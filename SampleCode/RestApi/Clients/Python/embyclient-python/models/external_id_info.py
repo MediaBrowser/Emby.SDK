@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -55,6 +55,7 @@ class ExternalIdInfo(object):
     def name(self):
         """Gets the name of this ExternalIdInfo.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this ExternalIdInfo.  # noqa: E501
         :rtype: str
@@ -65,6 +66,7 @@ class ExternalIdInfo(object):
     def name(self, name):
         """Sets the name of this ExternalIdInfo.
 
+        The name.  # noqa: E501
 
         :param name: The name of this ExternalIdInfo.  # noqa: E501
         :type: str
@@ -76,6 +78,7 @@ class ExternalIdInfo(object):
     def key(self):
         """Gets the key of this ExternalIdInfo.  # noqa: E501
 
+        The key.  # noqa: E501
 
         :return: The key of this ExternalIdInfo.  # noqa: E501
         :rtype: str
@@ -86,6 +89,7 @@ class ExternalIdInfo(object):
     def key(self, key):
         """Sets the key of this ExternalIdInfo.
 
+        The key.  # noqa: E501
 
         :param key: The key of this ExternalIdInfo.  # noqa: E501
         :type: str
@@ -97,6 +101,7 @@ class ExternalIdInfo(object):
     def url_format_string(self):
         """Gets the url_format_string of this ExternalIdInfo.  # noqa: E501
 
+        The URL format string.  # noqa: E501
 
         :return: The url_format_string of this ExternalIdInfo.  # noqa: E501
         :rtype: str
@@ -107,6 +112,7 @@ class ExternalIdInfo(object):
     def url_format_string(self, url_format_string):
         """Sets the url_format_string of this ExternalIdInfo.
 
+        The URL format string.  # noqa: E501
 
         :param url_format_string: The url_format_string of this ExternalIdInfo.  # noqa: E501
         :type: str

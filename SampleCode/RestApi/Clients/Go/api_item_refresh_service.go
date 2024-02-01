@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -30,8 +30,8 @@ Requires authentication as user
  * @param id Item Id
  * @param optional nil or *ItemRefreshServiceApiPostItemsByIdRefreshOpts - Optional Parameters:
      * @param "Recursive" (optional.Bool) -  Indicates if the refresh should occur recursively.
-     * @param "MetadataRefreshMode" (optional.Interface of ProvidersMetadataRefreshMode) -  Specifies the metadata refresh mode
-     * @param "ImageRefreshMode" (optional.Interface of ProvidersMetadataRefreshMode) -  Specifies the image refresh mode
+     * @param "MetadataRefreshMode" (optional.Interface of MetadataRefreshMode) -  Specifies the metadata refresh mode
+     * @param "ImageRefreshMode" (optional.Interface of MetadataRefreshMode) -  Specifies the image refresh mode
      * @param "ReplaceAllMetadata" (optional.Bool) -  Determines if metadata should be replaced. Only applicable if mode is FullRefresh
      * @param "ReplaceAllImages" (optional.Bool) -  Determines if images should be replaced. Only applicable if mode is FullRefresh
 

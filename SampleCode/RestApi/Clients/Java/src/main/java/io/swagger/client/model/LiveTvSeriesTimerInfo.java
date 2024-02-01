@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -36,6 +36,9 @@ public class LiveTvSeriesTimerInfo {
 
   @SerializedName("ChannelIds")
   private List<String> channelIds = null;
+
+  @SerializedName("ParentFolderId")
+  private Long parentFolderId = null;
 
   @SerializedName("ProgramId")
   private String programId = null;
@@ -109,10 +112,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get id
+   * Id of the recording.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "Id of the recording.")
   public String getId() {
     return id;
   }
@@ -127,10 +130,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get channelId
+   * ChannelId of the recording.
    * @return channelId
   **/
-  @Schema(description = "")
+  @Schema(description = "ChannelId of the recording.")
   public String getChannelId() {
     return channelId;
   }
@@ -165,16 +168,34 @@ public class LiveTvSeriesTimerInfo {
     this.channelIds = channelIds;
   }
 
+  public LiveTvSeriesTimerInfo parentFolderId(Long parentFolderId) {
+    this.parentFolderId = parentFolderId;
+    return this;
+  }
+
+   /**
+   * Get parentFolderId
+   * @return parentFolderId
+  **/
+  @Schema(description = "")
+  public Long getParentFolderId() {
+    return parentFolderId;
+  }
+
+  public void setParentFolderId(Long parentFolderId) {
+    this.parentFolderId = parentFolderId;
+  }
+
   public LiveTvSeriesTimerInfo programId(String programId) {
     this.programId = programId;
     return this;
   }
 
    /**
-   * Get programId
+   * The program identifier.
    * @return programId
   **/
-  @Schema(description = "")
+  @Schema(description = "The program identifier.")
   public String getProgramId() {
     return programId;
   }
@@ -189,10 +210,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get name
+   * Name of the recording.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "Name of the recording.")
   public String getName() {
     return name;
   }
@@ -225,10 +246,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get overview
+   * Description of the recording.
    * @return overview
   **/
-  @Schema(description = "")
+  @Schema(description = "Description of the recording.")
   public String getOverview() {
     return overview;
   }
@@ -243,10 +264,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get startDate
+   * The start date of the recording, in UTC.
    * @return startDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The start date of the recording, in UTC.")
   public OffsetDateTime getStartDate() {
     return startDate;
   }
@@ -261,10 +282,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get endDate
+   * The end date of the recording, in UTC.
    * @return endDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The end date of the recording, in UTC.")
   public OffsetDateTime getEndDate() {
     return endDate;
   }
@@ -279,10 +300,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get recordAnyTime
+   * A value indicating whether \\[record any time\\].
    * @return recordAnyTime
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[record any time\\].")
   public Boolean isRecordAnyTime() {
     return recordAnyTime;
   }
@@ -351,10 +372,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get recordNewOnly
+   * A value indicating whether \\[record new only\\].
    * @return recordNewOnly
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[record new only\\].")
   public Boolean isRecordNewOnly() {
     return recordNewOnly;
   }
@@ -377,10 +398,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get days
+   * The days.
    * @return days
   **/
-  @Schema(description = "")
+  @Schema(description = "The days.")
   public List<DayOfWeek> getDays() {
     return days;
   }
@@ -395,10 +416,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get priority
+   * The priority.
    * @return priority
   **/
-  @Schema(description = "")
+  @Schema(description = "The priority.")
   public Integer getPriority() {
     return priority;
   }
@@ -413,10 +434,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get prePaddingSeconds
+   * The pre padding seconds.
    * @return prePaddingSeconds
   **/
-  @Schema(description = "")
+  @Schema(description = "The pre padding seconds.")
   public Integer getPrePaddingSeconds() {
     return prePaddingSeconds;
   }
@@ -431,10 +452,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get postPaddingSeconds
+   * The post padding seconds.
    * @return postPaddingSeconds
   **/
-  @Schema(description = "")
+  @Schema(description = "The post padding seconds.")
   public Integer getPostPaddingSeconds() {
     return postPaddingSeconds;
   }
@@ -449,10 +470,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get isPrePaddingRequired
+   * A value indicating whether this instance is pre padding required.
    * @return isPrePaddingRequired
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is pre padding required.")
   public Boolean isIsPrePaddingRequired() {
     return isPrePaddingRequired;
   }
@@ -467,10 +488,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get isPostPaddingRequired
+   * A value indicating whether this instance is post padding required.
    * @return isPostPaddingRequired
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is post padding required.")
   public Boolean isIsPostPaddingRequired() {
     return isPostPaddingRequired;
   }
@@ -485,10 +506,10 @@ public class LiveTvSeriesTimerInfo {
   }
 
    /**
-   * Get seriesId
+   * The series identifier.
    * @return seriesId
   **/
-  @Schema(description = "")
+  @Schema(description = "The series identifier.")
   public String getSeriesId() {
     return seriesId;
   }
@@ -590,6 +611,7 @@ public class LiveTvSeriesTimerInfo {
     return Objects.equals(this.id, liveTvSeriesTimerInfo.id) &&
         Objects.equals(this.channelId, liveTvSeriesTimerInfo.channelId) &&
         Objects.equals(this.channelIds, liveTvSeriesTimerInfo.channelIds) &&
+        Objects.equals(this.parentFolderId, liveTvSeriesTimerInfo.parentFolderId) &&
         Objects.equals(this.programId, liveTvSeriesTimerInfo.programId) &&
         Objects.equals(this.name, liveTvSeriesTimerInfo.name) &&
         Objects.equals(this.serviceName, liveTvSeriesTimerInfo.serviceName) &&
@@ -616,7 +638,7 @@ public class LiveTvSeriesTimerInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, channelId, channelIds, programId, name, serviceName, overview, startDate, endDate, recordAnyTime, keepUpTo, keepUntil, skipEpisodesInLibrary, recordNewOnly, days, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, isPostPaddingRequired, seriesId, providerIds, maxRecordingSeconds, keywords, timerType);
+    return Objects.hash(id, channelId, channelIds, parentFolderId, programId, name, serviceName, overview, startDate, endDate, recordAnyTime, keepUpTo, keepUntil, skipEpisodesInLibrary, recordNewOnly, days, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, isPostPaddingRequired, seriesId, providerIds, maxRecordingSeconds, keywords, timerType);
   }
 
 
@@ -628,6 +650,7 @@ public class LiveTvSeriesTimerInfo {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    channelId: ").append(toIndentedString(channelId)).append("\n");
     sb.append("    channelIds: ").append(toIndentedString(channelIds)).append("\n");
+    sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
     sb.append("    programId: ").append(toIndentedString(programId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    serviceName: ").append(toIndentedString(serviceName)).append("\n");

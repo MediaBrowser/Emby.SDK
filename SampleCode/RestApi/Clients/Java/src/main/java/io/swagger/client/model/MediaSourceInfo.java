@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -12,10 +12,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.MediaInfoMediaProtocol;
-import io.swagger.client.model.MediaInfoTransportStreamTimestamp;
+import io.swagger.client.model.MediaProtocol;
 import io.swagger.client.model.MediaSourceType;
 import io.swagger.client.model.MediaStream;
+import io.swagger.client.model.TransportStreamTimestamp;
 import io.swagger.client.model.Video3DFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.threeten.bp.OffsetDateTime;
 /**
  * MediaSourceInfo
  */
@@ -30,7 +31,7 @@ import java.util.Map;
 
 public class MediaSourceInfo {
   @SerializedName("Protocol")
-  private MediaInfoMediaProtocol protocol = null;
+  private MediaProtocol protocol = null;
 
   @SerializedName("Id")
   private String id = null;
@@ -42,10 +43,16 @@ public class MediaSourceInfo {
   private String encoderPath = null;
 
   @SerializedName("EncoderProtocol")
-  private MediaInfoMediaProtocol encoderProtocol = null;
+  private MediaProtocol encoderProtocol = null;
 
   @SerializedName("Type")
   private MediaSourceType type = null;
+
+  @SerializedName("ProbePath")
+  private String probePath = null;
+
+  @SerializedName("ProbeProtocol")
+  private MediaProtocol probeProtocol = null;
 
   @SerializedName("Container")
   private String container = null;
@@ -62,6 +69,9 @@ public class MediaSourceInfo {
   @SerializedName("IsRemote")
   private Boolean isRemote = null;
 
+  @SerializedName("HasMixedProtocols")
+  private Boolean hasMixedProtocols = null;
+
   @SerializedName("RunTimeTicks")
   private Long runTimeTicks = null;
 
@@ -70,6 +80,12 @@ public class MediaSourceInfo {
 
   @SerializedName("SupportsTranscoding")
   private Boolean supportsTranscoding = null;
+
+  @SerializedName("TrancodeLiveStartIndex")
+  private Integer trancodeLiveStartIndex = null;
+
+  @SerializedName("WallClockStart")
+  private OffsetDateTime wallClockStart = null;
 
   @SerializedName("SupportsDirectStream")
   private Boolean supportsDirectStream = null;
@@ -114,13 +130,16 @@ public class MediaSourceInfo {
   private Integer bitrate = null;
 
   @SerializedName("Timestamp")
-  private MediaInfoTransportStreamTimestamp timestamp = null;
+  private TransportStreamTimestamp timestamp = null;
 
   @SerializedName("RequiredHttpHeaders")
   private Map<String, String> requiredHttpHeaders = null;
 
   @SerializedName("DirectStreamUrl")
   private String directStreamUrl = null;
+
+  @SerializedName("AddApiKeyToDirectStreamUrl")
+  private Boolean addApiKeyToDirectStreamUrl = null;
 
   @SerializedName("TranscodingUrl")
   private String transcodingUrl = null;
@@ -149,7 +168,7 @@ public class MediaSourceInfo {
   @SerializedName("ServerId")
   private String serverId = null;
 
-  public MediaSourceInfo protocol(MediaInfoMediaProtocol protocol) {
+  public MediaSourceInfo protocol(MediaProtocol protocol) {
     this.protocol = protocol;
     return this;
   }
@@ -159,11 +178,11 @@ public class MediaSourceInfo {
    * @return protocol
   **/
   @Schema(description = "")
-  public MediaInfoMediaProtocol getProtocol() {
+  public MediaProtocol getProtocol() {
     return protocol;
   }
 
-  public void setProtocol(MediaInfoMediaProtocol protocol) {
+  public void setProtocol(MediaProtocol protocol) {
     this.protocol = protocol;
   }
 
@@ -221,7 +240,7 @@ public class MediaSourceInfo {
     this.encoderPath = encoderPath;
   }
 
-  public MediaSourceInfo encoderProtocol(MediaInfoMediaProtocol encoderProtocol) {
+  public MediaSourceInfo encoderProtocol(MediaProtocol encoderProtocol) {
     this.encoderProtocol = encoderProtocol;
     return this;
   }
@@ -231,11 +250,11 @@ public class MediaSourceInfo {
    * @return encoderProtocol
   **/
   @Schema(description = "")
-  public MediaInfoMediaProtocol getEncoderProtocol() {
+  public MediaProtocol getEncoderProtocol() {
     return encoderProtocol;
   }
 
-  public void setEncoderProtocol(MediaInfoMediaProtocol encoderProtocol) {
+  public void setEncoderProtocol(MediaProtocol encoderProtocol) {
     this.encoderProtocol = encoderProtocol;
   }
 
@@ -255,6 +274,42 @@ public class MediaSourceInfo {
 
   public void setType(MediaSourceType type) {
     this.type = type;
+  }
+
+  public MediaSourceInfo probePath(String probePath) {
+    this.probePath = probePath;
+    return this;
+  }
+
+   /**
+   * Get probePath
+   * @return probePath
+  **/
+  @Schema(description = "")
+  public String getProbePath() {
+    return probePath;
+  }
+
+  public void setProbePath(String probePath) {
+    this.probePath = probePath;
+  }
+
+  public MediaSourceInfo probeProtocol(MediaProtocol probeProtocol) {
+    this.probeProtocol = probeProtocol;
+    return this;
+  }
+
+   /**
+   * Get probeProtocol
+   * @return probeProtocol
+  **/
+  @Schema(description = "")
+  public MediaProtocol getProbeProtocol() {
+    return probeProtocol;
+  }
+
+  public void setProbeProtocol(MediaProtocol probeProtocol) {
+    this.probeProtocol = probeProtocol;
   }
 
   public MediaSourceInfo container(String container) {
@@ -335,16 +390,34 @@ public class MediaSourceInfo {
   }
 
    /**
-   * Get isRemote
+   * Differentiate internet url vs local network
    * @return isRemote
   **/
-  @Schema(description = "")
+  @Schema(description = "Differentiate internet url vs local network")
   public Boolean isIsRemote() {
     return isRemote;
   }
 
   public void setIsRemote(Boolean isRemote) {
     this.isRemote = isRemote;
+  }
+
+  public MediaSourceInfo hasMixedProtocols(Boolean hasMixedProtocols) {
+    this.hasMixedProtocols = hasMixedProtocols;
+    return this;
+  }
+
+   /**
+   * Get hasMixedProtocols
+   * @return hasMixedProtocols
+  **/
+  @Schema(description = "")
+  public Boolean isHasMixedProtocols() {
+    return hasMixedProtocols;
+  }
+
+  public void setHasMixedProtocols(Boolean hasMixedProtocols) {
+    this.hasMixedProtocols = hasMixedProtocols;
   }
 
   public MediaSourceInfo runTimeTicks(Long runTimeTicks) {
@@ -399,6 +472,42 @@ public class MediaSourceInfo {
 
   public void setSupportsTranscoding(Boolean supportsTranscoding) {
     this.supportsTranscoding = supportsTranscoding;
+  }
+
+  public MediaSourceInfo trancodeLiveStartIndex(Integer trancodeLiveStartIndex) {
+    this.trancodeLiveStartIndex = trancodeLiveStartIndex;
+    return this;
+  }
+
+   /**
+   * Get trancodeLiveStartIndex
+   * @return trancodeLiveStartIndex
+  **/
+  @Schema(description = "")
+  public Integer getTrancodeLiveStartIndex() {
+    return trancodeLiveStartIndex;
+  }
+
+  public void setTrancodeLiveStartIndex(Integer trancodeLiveStartIndex) {
+    this.trancodeLiveStartIndex = trancodeLiveStartIndex;
+  }
+
+  public MediaSourceInfo wallClockStart(OffsetDateTime wallClockStart) {
+    this.wallClockStart = wallClockStart;
+    return this;
+  }
+
+   /**
+   * Get wallClockStart
+   * @return wallClockStart
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getWallClockStart() {
+    return wallClockStart;
+  }
+
+  public void setWallClockStart(OffsetDateTime wallClockStart) {
+    this.wallClockStart = wallClockStart;
   }
 
   public MediaSourceInfo supportsDirectStream(Boolean supportsDirectStream) {
@@ -669,7 +778,7 @@ public class MediaSourceInfo {
     this.bitrate = bitrate;
   }
 
-  public MediaSourceInfo timestamp(MediaInfoTransportStreamTimestamp timestamp) {
+  public MediaSourceInfo timestamp(TransportStreamTimestamp timestamp) {
     this.timestamp = timestamp;
     return this;
   }
@@ -679,11 +788,11 @@ public class MediaSourceInfo {
    * @return timestamp
   **/
   @Schema(description = "")
-  public MediaInfoTransportStreamTimestamp getTimestamp() {
+  public TransportStreamTimestamp getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(MediaInfoTransportStreamTimestamp timestamp) {
+  public void setTimestamp(TransportStreamTimestamp timestamp) {
     this.timestamp = timestamp;
   }
 
@@ -729,6 +838,24 @@ public class MediaSourceInfo {
 
   public void setDirectStreamUrl(String directStreamUrl) {
     this.directStreamUrl = directStreamUrl;
+  }
+
+  public MediaSourceInfo addApiKeyToDirectStreamUrl(Boolean addApiKeyToDirectStreamUrl) {
+    this.addApiKeyToDirectStreamUrl = addApiKeyToDirectStreamUrl;
+    return this;
+  }
+
+   /**
+   * Get addApiKeyToDirectStreamUrl
+   * @return addApiKeyToDirectStreamUrl
+  **/
+  @Schema(description = "")
+  public Boolean isAddApiKeyToDirectStreamUrl() {
+    return addApiKeyToDirectStreamUrl;
+  }
+
+  public void setAddApiKeyToDirectStreamUrl(Boolean addApiKeyToDirectStreamUrl) {
+    this.addApiKeyToDirectStreamUrl = addApiKeyToDirectStreamUrl;
   }
 
   public MediaSourceInfo transcodingUrl(String transcodingUrl) {
@@ -863,10 +990,10 @@ public class MediaSourceInfo {
   }
 
    /**
-   * Get itemId
+   * Used only by our Windows app. Not used by Emby Server.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "Used only by our Windows app. Not used by Emby Server.")
   public String getItemId() {
     return itemId;
   }
@@ -881,10 +1008,10 @@ public class MediaSourceInfo {
   }
 
    /**
-   * Get serverId
+   * Used only by our Windows app. Not used by Emby Server.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "Used only by our Windows app. Not used by Emby Server.")
   public String getServerId() {
     return serverId;
   }
@@ -909,14 +1036,19 @@ public class MediaSourceInfo {
         Objects.equals(this.encoderPath, mediaSourceInfo.encoderPath) &&
         Objects.equals(this.encoderProtocol, mediaSourceInfo.encoderProtocol) &&
         Objects.equals(this.type, mediaSourceInfo.type) &&
+        Objects.equals(this.probePath, mediaSourceInfo.probePath) &&
+        Objects.equals(this.probeProtocol, mediaSourceInfo.probeProtocol) &&
         Objects.equals(this.container, mediaSourceInfo.container) &&
         Objects.equals(this.size, mediaSourceInfo.size) &&
         Objects.equals(this.name, mediaSourceInfo.name) &&
         Objects.equals(this.sortName, mediaSourceInfo.sortName) &&
         Objects.equals(this.isRemote, mediaSourceInfo.isRemote) &&
+        Objects.equals(this.hasMixedProtocols, mediaSourceInfo.hasMixedProtocols) &&
         Objects.equals(this.runTimeTicks, mediaSourceInfo.runTimeTicks) &&
         Objects.equals(this.containerStartTimeTicks, mediaSourceInfo.containerStartTimeTicks) &&
         Objects.equals(this.supportsTranscoding, mediaSourceInfo.supportsTranscoding) &&
+        Objects.equals(this.trancodeLiveStartIndex, mediaSourceInfo.trancodeLiveStartIndex) &&
+        Objects.equals(this.wallClockStart, mediaSourceInfo.wallClockStart) &&
         Objects.equals(this.supportsDirectStream, mediaSourceInfo.supportsDirectStream) &&
         Objects.equals(this.supportsDirectPlay, mediaSourceInfo.supportsDirectPlay) &&
         Objects.equals(this.isInfiniteStream, mediaSourceInfo.isInfiniteStream) &&
@@ -934,6 +1066,7 @@ public class MediaSourceInfo {
         Objects.equals(this.timestamp, mediaSourceInfo.timestamp) &&
         Objects.equals(this.requiredHttpHeaders, mediaSourceInfo.requiredHttpHeaders) &&
         Objects.equals(this.directStreamUrl, mediaSourceInfo.directStreamUrl) &&
+        Objects.equals(this.addApiKeyToDirectStreamUrl, mediaSourceInfo.addApiKeyToDirectStreamUrl) &&
         Objects.equals(this.transcodingUrl, mediaSourceInfo.transcodingUrl) &&
         Objects.equals(this.transcodingSubProtocol, mediaSourceInfo.transcodingSubProtocol) &&
         Objects.equals(this.transcodingContainer, mediaSourceInfo.transcodingContainer) &&
@@ -947,7 +1080,7 @@ public class MediaSourceInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, container, size, name, sortName, isRemote, runTimeTicks, containerStartTimeTicks, supportsTranscoding, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
+    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
   }
 
 
@@ -962,14 +1095,19 @@ public class MediaSourceInfo {
     sb.append("    encoderPath: ").append(toIndentedString(encoderPath)).append("\n");
     sb.append("    encoderProtocol: ").append(toIndentedString(encoderProtocol)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    probePath: ").append(toIndentedString(probePath)).append("\n");
+    sb.append("    probeProtocol: ").append(toIndentedString(probeProtocol)).append("\n");
     sb.append("    container: ").append(toIndentedString(container)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    sortName: ").append(toIndentedString(sortName)).append("\n");
     sb.append("    isRemote: ").append(toIndentedString(isRemote)).append("\n");
+    sb.append("    hasMixedProtocols: ").append(toIndentedString(hasMixedProtocols)).append("\n");
     sb.append("    runTimeTicks: ").append(toIndentedString(runTimeTicks)).append("\n");
     sb.append("    containerStartTimeTicks: ").append(toIndentedString(containerStartTimeTicks)).append("\n");
     sb.append("    supportsTranscoding: ").append(toIndentedString(supportsTranscoding)).append("\n");
+    sb.append("    trancodeLiveStartIndex: ").append(toIndentedString(trancodeLiveStartIndex)).append("\n");
+    sb.append("    wallClockStart: ").append(toIndentedString(wallClockStart)).append("\n");
     sb.append("    supportsDirectStream: ").append(toIndentedString(supportsDirectStream)).append("\n");
     sb.append("    supportsDirectPlay: ").append(toIndentedString(supportsDirectPlay)).append("\n");
     sb.append("    isInfiniteStream: ").append(toIndentedString(isInfiniteStream)).append("\n");
@@ -987,6 +1125,7 @@ public class MediaSourceInfo {
     sb.append("    timestamp: ").append(toIndentedString(timestamp)).append("\n");
     sb.append("    requiredHttpHeaders: ").append(toIndentedString(requiredHttpHeaders)).append("\n");
     sb.append("    directStreamUrl: ").append(toIndentedString(directStreamUrl)).append("\n");
+    sb.append("    addApiKeyToDirectStreamUrl: ").append(toIndentedString(addApiKeyToDirectStreamUrl)).append("\n");
     sb.append("    transcodingUrl: ").append(toIndentedString(transcodingUrl)).append("\n");
     sb.append("    transcodingSubProtocol: ").append(toIndentedString(transcodingSubProtocol)).append("\n");
     sb.append("    transcodingContainer: ").append(toIndentedString(transcodingContainer)).append("\n");

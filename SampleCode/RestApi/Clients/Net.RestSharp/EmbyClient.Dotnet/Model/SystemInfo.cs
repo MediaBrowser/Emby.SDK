@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// SystemInfo
+    /// Class SystemInfo  
     /// </summary>
     [DataContract]
         public partial class SystemInfo :  IEquatable<SystemInfo>
@@ -27,39 +27,39 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="SystemInfo" /> class.
         /// </summary>
         /// <param name="systemUpdateLevel">systemUpdateLevel.</param>
-        /// <param name="operatingSystemDisplayName">operatingSystemDisplayName.</param>
+        /// <param name="operatingSystemDisplayName">The display name of the operating system..</param>
         /// <param name="packageName">packageName.</param>
-        /// <param name="hasPendingRestart">hasPendingRestart.</param>
+        /// <param name="hasPendingRestart">A value indicating whether this instance has pending restart..</param>
         /// <param name="isShuttingDown">isShuttingDown.</param>
-        /// <param name="operatingSystem">operatingSystem.</param>
-        /// <param name="supportsLibraryMonitor">supportsLibraryMonitor.</param>
+        /// <param name="operatingSystem">The operating sytem..</param>
+        /// <param name="supportsLibraryMonitor">A value indicating whether \\[supports library monitor\\]..</param>
         /// <param name="supportsLocalPortConfiguration">supportsLocalPortConfiguration.</param>
         /// <param name="supportsWakeServer">supportsWakeServer.</param>
-        /// <param name="webSocketPortNumber">webSocketPortNumber.</param>
-        /// <param name="completedInstallations">completedInstallations.</param>
-        /// <param name="canSelfRestart">canSelfRestart.</param>
-        /// <param name="canSelfUpdate">canSelfUpdate.</param>
+        /// <param name="webSocketPortNumber">The web socket port number..</param>
+        /// <param name="completedInstallations">The completed installations..</param>
+        /// <param name="canSelfRestart">A value indicating whether this instance can self restart..</param>
+        /// <param name="canSelfUpdate">A value indicating whether this instance can self update..</param>
         /// <param name="canLaunchWebBrowser">canLaunchWebBrowser.</param>
-        /// <param name="programDataPath">programDataPath.</param>
-        /// <param name="itemsByNamePath">itemsByNamePath.</param>
-        /// <param name="cachePath">cachePath.</param>
-        /// <param name="logPath">logPath.</param>
-        /// <param name="internalMetadataPath">internalMetadataPath.</param>
-        /// <param name="transcodingTempPath">transcodingTempPath.</param>
-        /// <param name="httpServerPortNumber">httpServerPortNumber.</param>
-        /// <param name="supportsHttps">supportsHttps.</param>
-        /// <param name="httpsPortNumber">httpsPortNumber.</param>
-        /// <param name="hasUpdateAvailable">hasUpdateAvailable.</param>
-        /// <param name="supportsAutoRunAtStartup">supportsAutoRunAtStartup.</param>
+        /// <param name="programDataPath">The program data path..</param>
+        /// <param name="itemsByNamePath">The items by name path..</param>
+        /// <param name="cachePath">The cache path..</param>
+        /// <param name="logPath">The log path..</param>
+        /// <param name="internalMetadataPath">The internal metadata path..</param>
+        /// <param name="transcodingTempPath">The transcoding temporary path..</param>
+        /// <param name="httpServerPortNumber">The HTTP server port number..</param>
+        /// <param name="supportsHttps">A value indicating whether \\[enable HTTPS\\]..</param>
+        /// <param name="httpsPortNumber">The HTTPS server port number..</param>
+        /// <param name="hasUpdateAvailable">A value indicating whether this instance has update available..</param>
+        /// <param name="supportsAutoRunAtStartup">A value indicating whether \\[supports automatic run at startup\\]..</param>
         /// <param name="hardwareAccelerationRequiresPremiere">hardwareAccelerationRequiresPremiere.</param>
-        /// <param name="localAddress">localAddress.</param>
+        /// <param name="localAddress">The local address..</param>
         /// <param name="localAddresses">localAddresses.</param>
-        /// <param name="wanAddress">wanAddress.</param>
+        /// <param name="wanAddress">The wan address..</param>
         /// <param name="remoteAddresses">remoteAddresses.</param>
-        /// <param name="serverName">serverName.</param>
-        /// <param name="version">version.</param>
-        /// <param name="id">id.</param>
-        public SystemInfo(UpdatesPackageVersionClass systemUpdateLevel = default(UpdatesPackageVersionClass), string operatingSystemDisplayName = default(string), string packageName = default(string), bool? hasPendingRestart = default(bool?), bool? isShuttingDown = default(bool?), string operatingSystem = default(string), bool? supportsLibraryMonitor = default(bool?), bool? supportsLocalPortConfiguration = default(bool?), bool? supportsWakeServer = default(bool?), int? webSocketPortNumber = default(int?), List<UpdatesInstallationInfo> completedInstallations = default(List<UpdatesInstallationInfo>), bool? canSelfRestart = default(bool?), bool? canSelfUpdate = default(bool?), bool? canLaunchWebBrowser = default(bool?), string programDataPath = default(string), string itemsByNamePath = default(string), string cachePath = default(string), string logPath = default(string), string internalMetadataPath = default(string), string transcodingTempPath = default(string), int? httpServerPortNumber = default(int?), bool? supportsHttps = default(bool?), int? httpsPortNumber = default(int?), bool? hasUpdateAvailable = default(bool?), bool? supportsAutoRunAtStartup = default(bool?), bool? hardwareAccelerationRequiresPremiere = default(bool?), string localAddress = default(string), List<string> localAddresses = default(List<string>), string wanAddress = default(string), List<string> remoteAddresses = default(List<string>), string serverName = default(string), string version = default(string), string id = default(string))
+        /// <param name="serverName">The name of the server..</param>
+        /// <param name="version">The version..</param>
+        /// <param name="id">The id..</param>
+        public SystemInfo(PackageVersionClass systemUpdateLevel = default(PackageVersionClass), string operatingSystemDisplayName = default(string), string packageName = default(string), bool? hasPendingRestart = default(bool?), bool? isShuttingDown = default(bool?), string operatingSystem = default(string), bool? supportsLibraryMonitor = default(bool?), bool? supportsLocalPortConfiguration = default(bool?), bool? supportsWakeServer = default(bool?), int? webSocketPortNumber = default(int?), List<InstallationInfo> completedInstallations = default(List<InstallationInfo>), bool? canSelfRestart = default(bool?), bool? canSelfUpdate = default(bool?), bool? canLaunchWebBrowser = default(bool?), string programDataPath = default(string), string itemsByNamePath = default(string), string cachePath = default(string), string logPath = default(string), string internalMetadataPath = default(string), string transcodingTempPath = default(string), int? httpServerPortNumber = default(int?), bool? supportsHttps = default(bool?), int? httpsPortNumber = default(int?), bool? hasUpdateAvailable = default(bool?), bool? supportsAutoRunAtStartup = default(bool?), bool? hardwareAccelerationRequiresPremiere = default(bool?), string localAddress = default(string), List<string> localAddresses = default(List<string>), string wanAddress = default(string), List<string> remoteAddresses = default(List<string>), string serverName = default(string), string version = default(string), string id = default(string))
         {
             this.SystemUpdateLevel = systemUpdateLevel;
             this.OperatingSystemDisplayName = operatingSystemDisplayName;
@@ -100,11 +100,12 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets SystemUpdateLevel
         /// </summary>
         [DataMember(Name="SystemUpdateLevel", EmitDefaultValue=false)]
-        public UpdatesPackageVersionClass SystemUpdateLevel { get; set; }
+        public PackageVersionClass SystemUpdateLevel { get; set; }
 
         /// <summary>
-        /// Gets or Sets OperatingSystemDisplayName
+        /// The display name of the operating system.
         /// </summary>
+        /// <value>The display name of the operating system.</value>
         [DataMember(Name="OperatingSystemDisplayName", EmitDefaultValue=false)]
         public string OperatingSystemDisplayName { get; set; }
 
@@ -115,8 +116,9 @@ namespace EmbyClient.Dotnet.Model
         public string PackageName { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasPendingRestart
+        /// A value indicating whether this instance has pending restart.
         /// </summary>
+        /// <value>A value indicating whether this instance has pending restart.</value>
         [DataMember(Name="HasPendingRestart", EmitDefaultValue=false)]
         public bool? HasPendingRestart { get; set; }
 
@@ -127,14 +129,16 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsShuttingDown { get; set; }
 
         /// <summary>
-        /// Gets or Sets OperatingSystem
+        /// The operating sytem.
         /// </summary>
+        /// <value>The operating sytem.</value>
         [DataMember(Name="OperatingSystem", EmitDefaultValue=false)]
         public string OperatingSystem { get; set; }
 
         /// <summary>
-        /// Gets or Sets SupportsLibraryMonitor
+        /// A value indicating whether \\[supports library monitor\\].
         /// </summary>
+        /// <value>A value indicating whether \\[supports library monitor\\].</value>
         [DataMember(Name="SupportsLibraryMonitor", EmitDefaultValue=false)]
         public bool? SupportsLibraryMonitor { get; set; }
 
@@ -151,26 +155,30 @@ namespace EmbyClient.Dotnet.Model
         public bool? SupportsWakeServer { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebSocketPortNumber
+        /// The web socket port number.
         /// </summary>
+        /// <value>The web socket port number.</value>
         [DataMember(Name="WebSocketPortNumber", EmitDefaultValue=false)]
         public int? WebSocketPortNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets CompletedInstallations
+        /// The completed installations.
         /// </summary>
+        /// <value>The completed installations.</value>
         [DataMember(Name="CompletedInstallations", EmitDefaultValue=false)]
-        public List<UpdatesInstallationInfo> CompletedInstallations { get; set; }
+        public List<InstallationInfo> CompletedInstallations { get; set; }
 
         /// <summary>
-        /// Gets or Sets CanSelfRestart
+        /// A value indicating whether this instance can self restart.
         /// </summary>
+        /// <value>A value indicating whether this instance can self restart.</value>
         [DataMember(Name="CanSelfRestart", EmitDefaultValue=false)]
         public bool? CanSelfRestart { get; set; }
 
         /// <summary>
-        /// Gets or Sets CanSelfUpdate
+        /// A value indicating whether this instance can self update.
         /// </summary>
+        /// <value>A value indicating whether this instance can self update.</value>
         [DataMember(Name="CanSelfUpdate", EmitDefaultValue=false)]
         public bool? CanSelfUpdate { get; set; }
 
@@ -181,68 +189,79 @@ namespace EmbyClient.Dotnet.Model
         public bool? CanLaunchWebBrowser { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProgramDataPath
+        /// The program data path.
         /// </summary>
+        /// <value>The program data path.</value>
         [DataMember(Name="ProgramDataPath", EmitDefaultValue=false)]
         public string ProgramDataPath { get; set; }
 
         /// <summary>
-        /// Gets or Sets ItemsByNamePath
+        /// The items by name path.
         /// </summary>
+        /// <value>The items by name path.</value>
         [DataMember(Name="ItemsByNamePath", EmitDefaultValue=false)]
         public string ItemsByNamePath { get; set; }
 
         /// <summary>
-        /// Gets or Sets CachePath
+        /// The cache path.
         /// </summary>
+        /// <value>The cache path.</value>
         [DataMember(Name="CachePath", EmitDefaultValue=false)]
         public string CachePath { get; set; }
 
         /// <summary>
-        /// Gets or Sets LogPath
+        /// The log path.
         /// </summary>
+        /// <value>The log path.</value>
         [DataMember(Name="LogPath", EmitDefaultValue=false)]
         public string LogPath { get; set; }
 
         /// <summary>
-        /// Gets or Sets InternalMetadataPath
+        /// The internal metadata path.
         /// </summary>
+        /// <value>The internal metadata path.</value>
         [DataMember(Name="InternalMetadataPath", EmitDefaultValue=false)]
         public string InternalMetadataPath { get; set; }
 
         /// <summary>
-        /// Gets or Sets TranscodingTempPath
+        /// The transcoding temporary path.
         /// </summary>
+        /// <value>The transcoding temporary path.</value>
         [DataMember(Name="TranscodingTempPath", EmitDefaultValue=false)]
         public string TranscodingTempPath { get; set; }
 
         /// <summary>
-        /// Gets or Sets HttpServerPortNumber
+        /// The HTTP server port number.
         /// </summary>
+        /// <value>The HTTP server port number.</value>
         [DataMember(Name="HttpServerPortNumber", EmitDefaultValue=false)]
         public int? HttpServerPortNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets SupportsHttps
+        /// A value indicating whether \\[enable HTTPS\\].
         /// </summary>
+        /// <value>A value indicating whether \\[enable HTTPS\\].</value>
         [DataMember(Name="SupportsHttps", EmitDefaultValue=false)]
         public bool? SupportsHttps { get; set; }
 
         /// <summary>
-        /// Gets or Sets HttpsPortNumber
+        /// The HTTPS server port number.
         /// </summary>
+        /// <value>The HTTPS server port number.</value>
         [DataMember(Name="HttpsPortNumber", EmitDefaultValue=false)]
         public int? HttpsPortNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasUpdateAvailable
+        /// A value indicating whether this instance has update available.
         /// </summary>
+        /// <value>A value indicating whether this instance has update available.</value>
         [DataMember(Name="HasUpdateAvailable", EmitDefaultValue=false)]
         public bool? HasUpdateAvailable { get; set; }
 
         /// <summary>
-        /// Gets or Sets SupportsAutoRunAtStartup
+        /// A value indicating whether \\[supports automatic run at startup\\].
         /// </summary>
+        /// <value>A value indicating whether \\[supports automatic run at startup\\].</value>
         [DataMember(Name="SupportsAutoRunAtStartup", EmitDefaultValue=false)]
         public bool? SupportsAutoRunAtStartup { get; set; }
 
@@ -253,8 +272,9 @@ namespace EmbyClient.Dotnet.Model
         public bool? HardwareAccelerationRequiresPremiere { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocalAddress
+        /// The local address.
         /// </summary>
+        /// <value>The local address.</value>
         [DataMember(Name="LocalAddress", EmitDefaultValue=false)]
         public string LocalAddress { get; set; }
 
@@ -265,8 +285,9 @@ namespace EmbyClient.Dotnet.Model
         public List<string> LocalAddresses { get; set; }
 
         /// <summary>
-        /// Gets or Sets WanAddress
+        /// The wan address.
         /// </summary>
+        /// <value>The wan address.</value>
         [DataMember(Name="WanAddress", EmitDefaultValue=false)]
         public string WanAddress { get; set; }
 
@@ -277,20 +298,23 @@ namespace EmbyClient.Dotnet.Model
         public List<string> RemoteAddresses { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServerName
+        /// The name of the server.
         /// </summary>
+        /// <value>The name of the server.</value>
         [DataMember(Name="ServerName", EmitDefaultValue=false)]
         public string ServerName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Version
+        /// The version.
         /// </summary>
+        /// <value>The version.</value>
         [DataMember(Name="Version", EmitDefaultValue=false)]
         public string Version { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The id.
         /// </summary>
+        /// <value>The id.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

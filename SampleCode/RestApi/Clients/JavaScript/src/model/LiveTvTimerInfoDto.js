@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -18,7 +18,7 @@ import LiveTvTimerType from './LiveTvTimerType';
 /**
 * The LiveTvTimerInfoDto model module.
 * @module model/LiveTvTimerInfoDto
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LiveTvTimerInfoDto {
     /**
@@ -75,6 +75,9 @@ export default class LiveTvTimerInfoDto {
             if (data.hasOwnProperty('ChannelName')) {
                 obj['ChannelName'] = ApiClient.convertToType(data['ChannelName'], 'String');
             }
+            if (data.hasOwnProperty('ChannelNumber')) {
+                obj['ChannelNumber'] = ApiClient.convertToType(data['ChannelNumber'], 'String');
+            }
             if (data.hasOwnProperty('ChannelPrimaryImageTag')) {
                 obj['ChannelPrimaryImageTag'] = ApiClient.convertToType(data['ChannelPrimaryImageTag'], 'String');
             }
@@ -86,6 +89,9 @@ export default class LiveTvTimerInfoDto {
             }
             if (data.hasOwnProperty('Overview')) {
                 obj['Overview'] = ApiClient.convertToType(data['Overview'], 'String');
+            }
+            if (data.hasOwnProperty('ParentFolderId')) {
+                obj['ParentFolderId'] = ApiClient.convertToType(data['ParentFolderId'], 'String');
             }
             if (data.hasOwnProperty('StartDate')) {
                 obj['StartDate'] = ApiClient.convertToType(data['StartDate'], 'Date');
@@ -126,10 +132,12 @@ export default class LiveTvTimerInfoDto {
     */
     'Status' = undefined;
     /**
+    * The series timer identifier.
     * @member {String} SeriesTimerId
     */
     'SeriesTimerId' = undefined;
     /**
+    * The run time ticks.
     * @member {Number} RunTimeTicks
     */
     'RunTimeTicks' = undefined;
@@ -142,6 +150,7 @@ export default class LiveTvTimerInfoDto {
     */
     'TimerType' = undefined;
     /**
+    * Id of the recording.
     * @member {String} Id
     */
     'Id' = undefined;
@@ -150,66 +159,89 @@ export default class LiveTvTimerInfoDto {
     */
     'Type' = undefined;
     /**
+    * The server identifier.
     * @member {String} ServerId
     */
     'ServerId' = undefined;
     /**
+    * ChannelId of the recording.
     * @member {String} ChannelId
     */
     'ChannelId' = undefined;
     /**
+    * ChannelName of the recording.
     * @member {String} ChannelName
     */
     'ChannelName' = undefined;
+    /**
+    * @member {String} ChannelNumber
+    */
+    'ChannelNumber' = undefined;
     /**
     * @member {String} ChannelPrimaryImageTag
     */
     'ChannelPrimaryImageTag' = undefined;
     /**
+    * The program identifier.
     * @member {String} ProgramId
     */
     'ProgramId' = undefined;
     /**
+    * Name of the recording.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * Description of the recording.
     * @member {String} Overview
     */
     'Overview' = undefined;
     /**
+    * @member {String} ParentFolderId
+    */
+    'ParentFolderId' = undefined;
+    /**
+    * The start date of the recording, in UTC.
     * @member {Date} StartDate
     */
     'StartDate' = undefined;
     /**
+    * The end date of the recording, in UTC.
     * @member {Date} EndDate
     */
     'EndDate' = undefined;
     /**
+    * The priority.
     * @member {Number} Priority
     */
     'Priority' = undefined;
     /**
+    * The pre padding seconds.
     * @member {Number} PrePaddingSeconds
     */
     'PrePaddingSeconds' = undefined;
     /**
+    * The post padding seconds.
     * @member {Number} PostPaddingSeconds
     */
     'PostPaddingSeconds' = undefined;
     /**
+    * A value indicating whether this instance is pre padding required.
     * @member {Boolean} IsPrePaddingRequired
     */
     'IsPrePaddingRequired' = undefined;
     /**
+    * If the item does not have any backdrops, this will hold the Id of the Parent that has one.
     * @member {String} ParentBackdropItemId
     */
     'ParentBackdropItemId' = undefined;
     /**
+    * The parent backdrop image tags.
     * @member {Array.<String>} ParentBackdropImageTags
     */
     'ParentBackdropImageTags' = undefined;
     /**
+    * A value indicating whether this instance is post padding required.
     * @member {Boolean} IsPostPaddingRequired
     */
     'IsPostPaddingRequired' = undefined;

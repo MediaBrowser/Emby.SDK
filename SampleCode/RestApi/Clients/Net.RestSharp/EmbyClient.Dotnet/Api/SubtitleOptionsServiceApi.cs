@@ -25,8 +25,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyWebGenericEditEditObjectContainer</returns>
-        EmbyWebGenericEditEditObjectContainer GetEncodingSubtitleoptions ();
+        /// <returns>EditObjectContainer</returns>
+        EditObjectContainer GetEncodingSubtitleoptions ();
 
         /// <summary>
         /// Gets the subtitle options
@@ -35,8 +35,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyWebGenericEditEditObjectContainer</returns>
-        ApiResponse<EmbyWebGenericEditEditObjectContainer> GetEncodingSubtitleoptionsWithHttpInfo ();
+        /// <returns>ApiResponse of EditObjectContainer</returns>
+        ApiResponse<EditObjectContainer> GetEncodingSubtitleoptionsWithHttpInfo ();
         /// <summary>
         /// Updates the subtitle options
         /// </summary>
@@ -67,8 +67,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyWebGenericEditEditObjectContainer</returns>
-        System.Threading.Tasks.Task<EmbyWebGenericEditEditObjectContainer> GetEncodingSubtitleoptionsAsync ();
+        /// <returns>Task of EditObjectContainer</returns>
+        System.Threading.Tasks.Task<EditObjectContainer> GetEncodingSubtitleoptionsAsync ();
 
         /// <summary>
         /// Gets the subtitle options
@@ -77,8 +77,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyWebGenericEditEditObjectContainer)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmbyWebGenericEditEditObjectContainer>> GetEncodingSubtitleoptionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (EditObjectContainer)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EditObjectContainer>> GetEncodingSubtitleoptionsAsyncWithHttpInfo ();
         /// <summary>
         /// Updates the subtitle options
         /// </summary>
@@ -215,10 +215,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the subtitle options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>EmbyWebGenericEditEditObjectContainer</returns>
-        public EmbyWebGenericEditEditObjectContainer GetEncodingSubtitleoptions ()
+        /// <returns>EditObjectContainer</returns>
+        public EditObjectContainer GetEncodingSubtitleoptions ()
         {
-             ApiResponse<EmbyWebGenericEditEditObjectContainer> localVarResponse = GetEncodingSubtitleoptionsWithHttpInfo();
+             ApiResponse<EditObjectContainer> localVarResponse = GetEncodingSubtitleoptionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -226,8 +226,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the subtitle options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of EmbyWebGenericEditEditObjectContainer</returns>
-        public ApiResponse< EmbyWebGenericEditEditObjectContainer > GetEncodingSubtitleoptionsWithHttpInfo ()
+        /// <returns>ApiResponse of EditObjectContainer</returns>
+        public ApiResponse< EditObjectContainer > GetEncodingSubtitleoptionsWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/SubtitleOptions";
@@ -277,19 +277,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyWebGenericEditEditObjectContainer>(localVarStatusCode,
+            return new ApiResponse<EditObjectContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyWebGenericEditEditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyWebGenericEditEditObjectContainer)));
+                (EditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditObjectContainer)));
         }
 
         /// <summary>
         /// Gets the subtitle options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of EmbyWebGenericEditEditObjectContainer</returns>
-        public async System.Threading.Tasks.Task<EmbyWebGenericEditEditObjectContainer> GetEncodingSubtitleoptionsAsync ()
+        /// <returns>Task of EditObjectContainer</returns>
+        public async System.Threading.Tasks.Task<EditObjectContainer> GetEncodingSubtitleoptionsAsync ()
         {
-             ApiResponse<EmbyWebGenericEditEditObjectContainer> localVarResponse = await GetEncodingSubtitleoptionsAsyncWithHttpInfo();
+             ApiResponse<EditObjectContainer> localVarResponse = await GetEncodingSubtitleoptionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -298,8 +298,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets the subtitle options Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (EmbyWebGenericEditEditObjectContainer)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmbyWebGenericEditEditObjectContainer>> GetEncodingSubtitleoptionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (EditObjectContainer)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EditObjectContainer>> GetEncodingSubtitleoptionsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/SubtitleOptions";
@@ -349,9 +349,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<EmbyWebGenericEditEditObjectContainer>(localVarStatusCode,
+            return new ApiResponse<EditObjectContainer>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (EmbyWebGenericEditEditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmbyWebGenericEditEditObjectContainer)));
+                (EditObjectContainer) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EditObjectContainer)));
         }
 
         /// <summary>

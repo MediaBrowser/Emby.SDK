@@ -157,14 +157,18 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ActiveRecordingInfo</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Controller.Library.ISegmentSource.html">ISegmentSource</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.LiveTv.html">MediaBrowser.Controller.LiveTv</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ActiveRecordingInfo</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ActiveRecordingInfo : ISegmentSource</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -188,7 +192,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource">CancellationTokenSource</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource">CancellationTokenSource</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -238,7 +242,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -263,7 +267,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_MediaSource_" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.MediaSource*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_MediaSource" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.MediaSource">MediaSource</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract MediaSourceInfo MediaSource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -288,7 +317,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -345,6 +374,81 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_SegmentDuration_" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.SegmentDuration*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_SegmentDuration" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.SegmentDuration">SegmentDuration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TimeSpan SegmentDuration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_SupportsPlaybackSegments_" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.SupportsPlaybackSegments*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_SupportsPlaybackSegments" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.SupportsPlaybackSegments">SupportsPlaybackSegments</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool SupportsPlaybackSegments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_SupportsSegments_" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.SupportsSegments*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_SupportsSegments" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.SupportsSegments">SupportsSegments</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool SupportsSegments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_Timer_" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Timer*"></a>
   <h4 id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_Timer" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Timer">Timer</h4>
   <div class="markdown level1 summary"></div>
@@ -368,6 +472,41 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_GetSegments_" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.GetSegments*"></a>
+  <h4 id="MediaBrowser_Controller_LiveTv_ActiveRecordingInfo_GetSegments" data-uid="MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.GetSegments">GetSegments()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract List&lt;SegmentedStreamSegmentInfo&gt; GetSegments()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.SegmentedStreamSegmentInfo.html">SegmentedStreamSegmentInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Library.ISegmentSource.html">ISegmentSource</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>

@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
-
+// LiveTvChannelType : Enum ChannelType  
 type LiveTvChannelType string
 
 // List of LiveTv.ChannelType

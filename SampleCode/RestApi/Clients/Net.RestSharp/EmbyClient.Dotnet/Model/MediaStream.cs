@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// MediaStream
+    /// MediaStream information.      MediaStream itens are typically included in a &#x60;MediaBrowser.Model.Dto.MediaSourceInfo&#x60; object.      &#x60;MediaBrowser.Model.Dto.MediaSourceInfo.MediaStreams&#x60;  
     /// </summary>
     [DataContract]
         public partial class MediaStream :  IEquatable<MediaStream>
@@ -26,59 +26,61 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaStream" /> class.
         /// </summary>
-        /// <param name="codec">codec.</param>
-        /// <param name="codecTag">codecTag.</param>
-        /// <param name="language">language.</param>
-        /// <param name="colorTransfer">colorTransfer.</param>
-        /// <param name="colorPrimaries">colorPrimaries.</param>
-        /// <param name="colorSpace">colorSpace.</param>
-        /// <param name="comment">comment.</param>
-        /// <param name="streamStartTimeTicks">streamStartTimeTicks.</param>
-        /// <param name="timeBase">timeBase.</param>
-        /// <param name="codecTimeBase">codecTimeBase.</param>
-        /// <param name="title">title.</param>
-        /// <param name="extradata">extradata.</param>
+        /// <param name="codec">The codec.    Probe Field: &#x60;codec_name&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;    Related Enums: &#x60;T:Emby.Media.Model.Enums.VideoMediaTypes&#x60;, &#x60;Emby.Media.Model.Enums.AudioMediaTypes&#x60;, &#x60;Emby.Media.Model.Enums.SubtitleMediaTypes&#x60;..</param>
+        /// <param name="codecTag">The codec tag.    Probe Field: &#x60;codec_tag&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;..</param>
+        /// <param name="language">The language.    Probe Field: &#x60;tags[\&quot;language\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;..</param>
+        /// <param name="colorTransfer">The color transfer characteristics.    Probe Field: &#x60;color_transfer&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorTransfers&#x60;..</param>
+        /// <param name="colorPrimaries">The chromaticity coordinates of the source primaries.    Probe Field: &#x60;color_primaries&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorPrimaries&#x60;..</param>
+        /// <param name="colorSpace">The YUV colorspace type.    Probe Field: &#x60;color_space&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorSpaces&#x60;..</param>
+        /// <param name="comment">The comment.    Probe Field: &#x60;tags[\&quot;comment\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;..</param>
+        /// <param name="streamStartTimeTicks">The start time of the stream.    Probe Field: &#x60;start_time&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Actual type: &#x60;System.TimeSpan&#x60;..</param>
+        /// <param name="timeBase">The time\\-base.    Probe Field: &#x60;time_base&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;..</param>
+        /// <param name="title">The title.    Probe Field: &#x60;tags[\&quot;title\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;..</param>
+        /// <param name="extradata">The extradata.    Probe Field: &#x60;extradata&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Currently, this value is only parsed for subtitle streams with codec &#x60;Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext&#x60;..</param>
         /// <param name="videoRange">videoRange.</param>
-        /// <param name="displayTitle">displayTitle.</param>
-        /// <param name="displayLanguage">displayLanguage.</param>
-        /// <param name="nalLengthSize">nalLengthSize.</param>
-        /// <param name="isInterlaced">isInterlaced.</param>
+        /// <param name="displayTitle">The display title.    Custom property set by the application..</param>
+        /// <param name="displayLanguage">The display language.    Custom property set by the application..</param>
+        /// <param name="nalLengthSize">The nal length size.    Probe Field: &#x60;nal_length_size&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60; of type &#x60;Emby.Media.Model.Enums.VideoMediaTypes.h264&#x60;.    Actual type: &#x60;System.Int32&#x60;..</param>
+        /// <param name="isInterlaced">A value indicating whether this instance is interlaced.    Probe Field: &#x60;field_order&#x60; \\!\\&#x3D; &#x60;progressive&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;..</param>
         /// <param name="isAVC">isAVC.</param>
-        /// <param name="channelLayout">channelLayout.</param>
-        /// <param name="bitRate">bitRate.</param>
-        /// <param name="bitDepth">bitDepth.</param>
-        /// <param name="refFrames">refFrames.</param>
+        /// <param name="channelLayout">The channel layout.    Probe Field: &#x60;channel_layout&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enum: &#x60;MediaBrowser.Model.Entities.MediaStream.ChannelLayout&#x60;..</param>
+        /// <param name="bitRate">The bit rate.    Probe Field: &#x60;bit_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.    THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS\\!.</param>
+        /// <param name="bitDepth">The bit depth.    Probe Field: &#x60;bits_per_sample&#x60; or &#x60;bits_per_raw_sample&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;..</param>
+        /// <param name="refFrames">The reference frames.    Probe Field: &#x60;refs&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;..</param>
         /// <param name="rotation">rotation.</param>
-        /// <param name="channels">channels.</param>
-        /// <param name="sampleRate">sampleRate.</param>
-        /// <param name="isDefault">isDefault.</param>
-        /// <param name="isForced">isForced.</param>
-        /// <param name="height">height.</param>
-        /// <param name="width">width.</param>
-        /// <param name="averageFrameRate">averageFrameRate.</param>
-        /// <param name="realFrameRate">realFrameRate.</param>
-        /// <param name="profile">profile.</param>
+        /// <param name="channels">The audio channel count.    Probe Field: &#x60;channels&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;..</param>
+        /// <param name="sampleRate">The sample rate.    Probe Field: &#x60;sample_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.SampleRates&#x60;..</param>
+        /// <param name="isDefault">A value indicating whether this instance is default.    Probe Field: &#x60;disposition[\&quot;default\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;..</param>
+        /// <param name="isForced">A value indicating whether this instance is forced.    Probe Field: &#x60;disposition[\&quot;forced\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;..</param>
+        /// <param name="isHearingImpaired">isHearingImpaired.</param>
+        /// <param name="height">The height.    Probe Field: &#x60;height&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;..</param>
+        /// <param name="width">The width.    Probe Field: &#x60;width&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;..</param>
+        /// <param name="averageFrameRate">The average frame rate..    Probe Field: &#x60;avg_frame_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;..</param>
+        /// <param name="realFrameRate">The real frame rate..    Probe Field: &#x60;r_frame_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;..</param>
+        /// <param name="profile">The profile.    Probe Field: &#x60;profile&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enums: &#x60;Emby.Media.Model.Enums.AacProfiles&#x60;, &#x60;Emby.Media.Model.Enums.AvcProfiles&#x60;, &#x60;Emby.Media.Model.Enums.H263Profiles&#x60;, &#x60;Emby.Media.Model.Enums.HevcProfiles&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg2Profiles&#x60;,&#x60;Emby.Media.Model.Enums.Vc1Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg4Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Vp8Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Vp9Profiles&#x60;..</param>
         /// <param name="type">type.</param>
-        /// <param name="aspectRatio">aspectRatio.</param>
-        /// <param name="index">index.</param>
-        /// <param name="isExternal">isExternal.</param>
+        /// <param name="aspectRatio">The aspect ratio.    Probe Field: &#x60;display_aspect_ratio&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;..</param>
+        /// <param name="index">The index of the stream inside its container.    Probe Field: &#x60;index&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;..</param>
+        /// <param name="isExternal">A value indicating whether this instance is external.    Custom property set by the application..</param>
         /// <param name="deliveryMethod">deliveryMethod.</param>
-        /// <param name="deliveryUrl">deliveryUrl.</param>
-        /// <param name="isExternalUrl">isExternalUrl.</param>
+        /// <param name="deliveryUrl">The delivery URL.    Custom property set by the application..</param>
+        /// <param name="isExternalUrl">A value indicating whether this instance is external URL.    Custom property set by the application..</param>
         /// <param name="isTextSubtitleStream">isTextSubtitleStream.</param>
-        /// <param name="supportsExternalStream">supportsExternalStream.</param>
-        /// <param name="path">path.</param>
+        /// <param name="supportsExternalStream">A value indicating whether \\[supports external stream\\]..</param>
+        /// <param name="path">The filename..</param>
         /// <param name="protocol">protocol.</param>
-        /// <param name="pixelFormat">pixelFormat.</param>
-        /// <param name="level">level.</param>
-        /// <param name="isAnamorphic">isAnamorphic.</param>
-        /// <param name="itemId">itemId.</param>
-        /// <param name="serverId">serverId.</param>
-        /// <param name="attachmentSize">attachmentSize.</param>
-        /// <param name="mimeType">mimeType.</param>
-        /// <param name="isClosedCaptions">isClosedCaptions.</param>
+        /// <param name="pixelFormat">The pixel format.    Probe Field: &#x60;pix_fmt&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;MediaBrowser.Model.Entities.MediaStream.PixelFormat&#x60;..</param>
+        /// <param name="level">The codec level.    Probe Field: &#x60;level&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enums: &#x60;Emby.Media.Model.Enums.AvcLevels&#x60;, &#x60;Emby.Media.Model.Enums.H263Levels&#x60;, &#x60;Emby.Media.Model.Enums.HevcLevels&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg2Levels&#x60;,&#x60;Emby.Media.Model.Enums.Vc1Levels&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg4Levels&#x60;, &#x60;Emby.Media.Model.Enums.Vp8Levels&#x60;, &#x60;Emby.Media.Model.Enums.Vp9Levels&#x60;..</param>
+        /// <param name="isAnamorphic">A value indicating whether this instance is anamorphic..</param>
+        /// <param name="extendedVideoType">extendedVideoType.</param>
+        /// <param name="extendedVideoSubType">extendedVideoSubType.</param>
+        /// <param name="extendedVideoSubTypeDescription">The extended video sub\\-type description..</param>
+        /// <param name="itemId">Used only by our Windows app. Not used by Emby Server..</param>
+        /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
+        /// <param name="attachmentSize">The size of the attachment..</param>
+        /// <param name="mimeType">The type of the MIME..</param>
         /// <param name="subtitleLocationType">subtitleLocationType.</param>
-        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string codecTimeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), int? height = default(int?), int? width = default(int?), float? averageFrameRate = default(float?), float? realFrameRate = default(float?), string profile = default(string), MediaStreamType type = default(MediaStreamType), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), DlnaSubtitleDeliveryMethod deliveryMethod = default(DlnaSubtitleDeliveryMethod), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), MediaInfoMediaProtocol protocol = default(MediaInfoMediaProtocol), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), bool? isClosedCaptions = default(bool?), SubtitleLocationType subtitleLocationType = default(SubtitleLocationType))
+        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?), int? height = default(int?), int? width = default(int?), float? averageFrameRate = default(float?), float? realFrameRate = default(float?), string profile = default(string), MediaStreamType type = default(MediaStreamType), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), SubtitleDeliveryMethod deliveryMethod = default(SubtitleDeliveryMethod), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), MediaProtocol protocol = default(MediaProtocol), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), ExtendedVideoTypes extendedVideoType = default(ExtendedVideoTypes), ExtendedVideoSubTypes extendedVideoSubType = default(ExtendedVideoSubTypes), string extendedVideoSubTypeDescription = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), SubtitleLocationType subtitleLocationType = default(SubtitleLocationType))
         {
             this.Codec = codec;
             this.CodecTag = codecTag;
@@ -89,7 +91,6 @@ namespace EmbyClient.Dotnet.Model
             this.Comment = comment;
             this.StreamStartTimeTicks = streamStartTimeTicks;
             this.TimeBase = timeBase;
-            this.CodecTimeBase = codecTimeBase;
             this.Title = title;
             this.Extradata = extradata;
             this.VideoRange = videoRange;
@@ -107,6 +108,7 @@ namespace EmbyClient.Dotnet.Model
             this.SampleRate = sampleRate;
             this.IsDefault = isDefault;
             this.IsForced = isForced;
+            this.IsHearingImpaired = isHearingImpaired;
             this.Height = height;
             this.Width = width;
             this.AverageFrameRate = averageFrameRate;
@@ -126,83 +128,90 @@ namespace EmbyClient.Dotnet.Model
             this.PixelFormat = pixelFormat;
             this.Level = level;
             this.IsAnamorphic = isAnamorphic;
+            this.ExtendedVideoType = extendedVideoType;
+            this.ExtendedVideoSubType = extendedVideoSubType;
+            this.ExtendedVideoSubTypeDescription = extendedVideoSubTypeDescription;
             this.ItemId = itemId;
             this.ServerId = serverId;
             this.AttachmentSize = attachmentSize;
             this.MimeType = mimeType;
-            this.IsClosedCaptions = isClosedCaptions;
             this.SubtitleLocationType = subtitleLocationType;
         }
         
         /// <summary>
-        /// Gets or Sets Codec
+        /// The codec.    Probe Field: &#x60;codec_name&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;    Related Enums: &#x60;T:Emby.Media.Model.Enums.VideoMediaTypes&#x60;, &#x60;Emby.Media.Model.Enums.AudioMediaTypes&#x60;, &#x60;Emby.Media.Model.Enums.SubtitleMediaTypes&#x60;.
         /// </summary>
+        /// <value>The codec.    Probe Field: &#x60;codec_name&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;    Related Enums: &#x60;T:Emby.Media.Model.Enums.VideoMediaTypes&#x60;, &#x60;Emby.Media.Model.Enums.AudioMediaTypes&#x60;, &#x60;Emby.Media.Model.Enums.SubtitleMediaTypes&#x60;.</value>
         [DataMember(Name="Codec", EmitDefaultValue=false)]
         public string Codec { get; set; }
 
         /// <summary>
-        /// Gets or Sets CodecTag
+        /// The codec tag.    Probe Field: &#x60;codec_tag&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
         /// </summary>
+        /// <value>The codec tag.    Probe Field: &#x60;codec_tag&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.</value>
         [DataMember(Name="CodecTag", EmitDefaultValue=false)]
         public string CodecTag { get; set; }
 
         /// <summary>
-        /// Gets or Sets Language
+        /// The language.    Probe Field: &#x60;tags[\&quot;language\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
         /// </summary>
+        /// <value>The language.    Probe Field: &#x60;tags[\&quot;language\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.</value>
         [DataMember(Name="Language", EmitDefaultValue=false)]
         public string Language { get; set; }
 
         /// <summary>
-        /// Gets or Sets ColorTransfer
+        /// The color transfer characteristics.    Probe Field: &#x60;color_transfer&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorTransfers&#x60;.
         /// </summary>
+        /// <value>The color transfer characteristics.    Probe Field: &#x60;color_transfer&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorTransfers&#x60;.</value>
         [DataMember(Name="ColorTransfer", EmitDefaultValue=false)]
         public string ColorTransfer { get; set; }
 
         /// <summary>
-        /// Gets or Sets ColorPrimaries
+        /// The chromaticity coordinates of the source primaries.    Probe Field: &#x60;color_primaries&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorPrimaries&#x60;.
         /// </summary>
+        /// <value>The chromaticity coordinates of the source primaries.    Probe Field: &#x60;color_primaries&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorPrimaries&#x60;.</value>
         [DataMember(Name="ColorPrimaries", EmitDefaultValue=false)]
         public string ColorPrimaries { get; set; }
 
         /// <summary>
-        /// Gets or Sets ColorSpace
+        /// The YUV colorspace type.    Probe Field: &#x60;color_space&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorSpaces&#x60;.
         /// </summary>
+        /// <value>The YUV colorspace type.    Probe Field: &#x60;color_space&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.ColorSpaces&#x60;.</value>
         [DataMember(Name="ColorSpace", EmitDefaultValue=false)]
         public string ColorSpace { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comment
+        /// The comment.    Probe Field: &#x60;tags[\&quot;comment\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
         /// </summary>
+        /// <value>The comment.    Probe Field: &#x60;tags[\&quot;comment\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.</value>
         [DataMember(Name="Comment", EmitDefaultValue=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// Gets or Sets StreamStartTimeTicks
+        /// The start time of the stream.    Probe Field: &#x60;start_time&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Actual type: &#x60;System.TimeSpan&#x60;.
         /// </summary>
+        /// <value>The start time of the stream.    Probe Field: &#x60;start_time&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Actual type: &#x60;System.TimeSpan&#x60;.</value>
         [DataMember(Name="StreamStartTimeTicks", EmitDefaultValue=false)]
         public long? StreamStartTimeTicks { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeBase
+        /// The time\\-base.    Probe Field: &#x60;time_base&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.
         /// </summary>
+        /// <value>The time\\-base.    Probe Field: &#x60;time_base&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.</value>
         [DataMember(Name="TimeBase", EmitDefaultValue=false)]
         public string TimeBase { get; set; }
 
         /// <summary>
-        /// Gets or Sets CodecTimeBase
+        /// The title.    Probe Field: &#x60;tags[\&quot;title\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
         /// </summary>
-        [DataMember(Name="CodecTimeBase", EmitDefaultValue=false)]
-        public string CodecTimeBase { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Title
-        /// </summary>
+        /// <value>The title.    Probe Field: &#x60;tags[\&quot;title\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.</value>
         [DataMember(Name="Title", EmitDefaultValue=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or Sets Extradata
+        /// The extradata.    Probe Field: &#x60;extradata&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Currently, this value is only parsed for subtitle streams with codec &#x60;Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext&#x60;.
         /// </summary>
+        /// <value>The extradata.    Probe Field: &#x60;extradata&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.    Currently, this value is only parsed for subtitle streams with codec &#x60;Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext&#x60;.</value>
         [DataMember(Name="Extradata", EmitDefaultValue=false)]
         public string Extradata { get; set; }
 
@@ -213,26 +222,30 @@ namespace EmbyClient.Dotnet.Model
         public string VideoRange { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayTitle
+        /// The display title.    Custom property set by the application.
         /// </summary>
+        /// <value>The display title.    Custom property set by the application.</value>
         [DataMember(Name="DisplayTitle", EmitDefaultValue=false)]
         public string DisplayTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayLanguage
+        /// The display language.    Custom property set by the application.
         /// </summary>
+        /// <value>The display language.    Custom property set by the application.</value>
         [DataMember(Name="DisplayLanguage", EmitDefaultValue=false)]
         public string DisplayLanguage { get; set; }
 
         /// <summary>
-        /// Gets or Sets NalLengthSize
+        /// The nal length size.    Probe Field: &#x60;nal_length_size&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60; of type &#x60;Emby.Media.Model.Enums.VideoMediaTypes.h264&#x60;.    Actual type: &#x60;System.Int32&#x60;.
         /// </summary>
+        /// <value>The nal length size.    Probe Field: &#x60;nal_length_size&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60; of type &#x60;Emby.Media.Model.Enums.VideoMediaTypes.h264&#x60;.    Actual type: &#x60;System.Int32&#x60;.</value>
         [DataMember(Name="NalLengthSize", EmitDefaultValue=false)]
         public string NalLengthSize { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsInterlaced
+        /// A value indicating whether this instance is interlaced.    Probe Field: &#x60;field_order&#x60; \\!\\&#x3D; &#x60;progressive&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.
         /// </summary>
+        /// <value>A value indicating whether this instance is interlaced.    Probe Field: &#x60;field_order&#x60; \\!\\&#x3D; &#x60;progressive&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.</value>
         [DataMember(Name="IsInterlaced", EmitDefaultValue=false)]
         public bool? IsInterlaced { get; set; }
 
@@ -243,26 +256,30 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsAVC { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChannelLayout
+        /// The channel layout.    Probe Field: &#x60;channel_layout&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enum: &#x60;MediaBrowser.Model.Entities.MediaStream.ChannelLayout&#x60;.
         /// </summary>
+        /// <value>The channel layout.    Probe Field: &#x60;channel_layout&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enum: &#x60;MediaBrowser.Model.Entities.MediaStream.ChannelLayout&#x60;.</value>
         [DataMember(Name="ChannelLayout", EmitDefaultValue=false)]
         public string ChannelLayout { get; set; }
 
         /// <summary>
-        /// Gets or Sets BitRate
+        /// The bit rate.    Probe Field: &#x60;bit_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.    THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS\\!
         /// </summary>
+        /// <value>The bit rate.    Probe Field: &#x60;bit_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.    THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS\\!</value>
         [DataMember(Name="BitRate", EmitDefaultValue=false)]
         public int? BitRate { get; set; }
 
         /// <summary>
-        /// Gets or Sets BitDepth
+        /// The bit depth.    Probe Field: &#x60;bits_per_sample&#x60; or &#x60;bits_per_raw_sample&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.
         /// </summary>
+        /// <value>The bit depth.    Probe Field: &#x60;bits_per_sample&#x60; or &#x60;bits_per_raw_sample&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.</value>
         [DataMember(Name="BitDepth", EmitDefaultValue=false)]
         public int? BitDepth { get; set; }
 
         /// <summary>
-        /// Gets or Sets RefFrames
+        /// The reference frames.    Probe Field: &#x60;refs&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.
         /// </summary>
+        /// <value>The reference frames.    Probe Field: &#x60;refs&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.</value>
         [DataMember(Name="RefFrames", EmitDefaultValue=false)]
         public int? RefFrames { get; set; }
 
@@ -273,56 +290,71 @@ namespace EmbyClient.Dotnet.Model
         public int? Rotation { get; set; }
 
         /// <summary>
-        /// Gets or Sets Channels
+        /// The audio channel count.    Probe Field: &#x60;channels&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.
         /// </summary>
+        /// <value>The audio channel count.    Probe Field: &#x60;channels&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;.</value>
         [DataMember(Name="Channels", EmitDefaultValue=false)]
         public int? Channels { get; set; }
 
         /// <summary>
-        /// Gets or Sets SampleRate
+        /// The sample rate.    Probe Field: &#x60;sample_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.SampleRates&#x60;.
         /// </summary>
+        /// <value>The sample rate.    Probe Field: &#x60;sample_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enum: &#x60;Emby.Media.Model.Enums.SampleRates&#x60;.</value>
         [DataMember(Name="SampleRate", EmitDefaultValue=false)]
         public int? SampleRate { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsDefault
+        /// A value indicating whether this instance is default.    Probe Field: &#x60;disposition[\&quot;default\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
         /// </summary>
+        /// <value>A value indicating whether this instance is default.    Probe Field: &#x60;disposition[\&quot;default\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.</value>
         [DataMember(Name="IsDefault", EmitDefaultValue=false)]
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsForced
+        /// A value indicating whether this instance is forced.    Probe Field: &#x60;disposition[\&quot;forced\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
         /// </summary>
+        /// <value>A value indicating whether this instance is forced.    Probe Field: &#x60;disposition[\&quot;forced\&quot;]&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.</value>
         [DataMember(Name="IsForced", EmitDefaultValue=false)]
         public bool? IsForced { get; set; }
 
         /// <summary>
-        /// Gets or Sets Height
+        /// Gets or Sets IsHearingImpaired
         /// </summary>
+        [DataMember(Name="IsHearingImpaired", EmitDefaultValue=false)]
+        public bool? IsHearingImpaired { get; set; }
+
+        /// <summary>
+        /// The height.    Probe Field: &#x60;height&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.
+        /// </summary>
+        /// <value>The height.    Probe Field: &#x60;height&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.</value>
         [DataMember(Name="Height", EmitDefaultValue=false)]
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or Sets Width
+        /// The width.    Probe Field: &#x60;width&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.
         /// </summary>
+        /// <value>The width.    Probe Field: &#x60;width&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.</value>
         [DataMember(Name="Width", EmitDefaultValue=false)]
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or Sets AverageFrameRate
+        /// The average frame rate..    Probe Field: &#x60;avg_frame_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.
         /// </summary>
+        /// <value>The average frame rate..    Probe Field: &#x60;avg_frame_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.</value>
         [DataMember(Name="AverageFrameRate", EmitDefaultValue=false)]
         public float? AverageFrameRate { get; set; }
 
         /// <summary>
-        /// Gets or Sets RealFrameRate
+        /// The real frame rate..    Probe Field: &#x60;r_frame_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.
         /// </summary>
+        /// <value>The real frame rate..    Probe Field: &#x60;r_frame_rate&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.</value>
         [DataMember(Name="RealFrameRate", EmitDefaultValue=false)]
         public float? RealFrameRate { get; set; }
 
         /// <summary>
-        /// Gets or Sets Profile
+        /// The profile.    Probe Field: &#x60;profile&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enums: &#x60;Emby.Media.Model.Enums.AacProfiles&#x60;, &#x60;Emby.Media.Model.Enums.AvcProfiles&#x60;, &#x60;Emby.Media.Model.Enums.H263Profiles&#x60;, &#x60;Emby.Media.Model.Enums.HevcProfiles&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg2Profiles&#x60;,&#x60;Emby.Media.Model.Enums.Vc1Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg4Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Vp8Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Vp9Profiles&#x60;.
         /// </summary>
+        /// <value>The profile.    Probe Field: &#x60;profile&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;    Related Enums: &#x60;Emby.Media.Model.Enums.AacProfiles&#x60;, &#x60;Emby.Media.Model.Enums.AvcProfiles&#x60;, &#x60;Emby.Media.Model.Enums.H263Profiles&#x60;, &#x60;Emby.Media.Model.Enums.HevcProfiles&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg2Profiles&#x60;,&#x60;Emby.Media.Model.Enums.Vc1Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg4Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Vp8Profiles&#x60;, &#x60;Emby.Media.Model.Enums.Vp9Profiles&#x60;.</value>
         [DataMember(Name="Profile", EmitDefaultValue=false)]
         public string Profile { get; set; }
 
@@ -333,20 +365,23 @@ namespace EmbyClient.Dotnet.Model
         public MediaStreamType Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets AspectRatio
+        /// The aspect ratio.    Probe Field: &#x60;display_aspect_ratio&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.
         /// </summary>
+        /// <value>The aspect ratio.    Probe Field: &#x60;display_aspect_ratio&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;Emby.Media.Model.Types.Rational&#x60;.</value>
         [DataMember(Name="AspectRatio", EmitDefaultValue=false)]
         public string AspectRatio { get; set; }
 
         /// <summary>
-        /// Gets or Sets Index
+        /// The index of the stream inside its container.    Probe Field: &#x60;index&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.
         /// </summary>
+        /// <value>The index of the stream inside its container.    Probe Field: &#x60;index&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Audio&#x60;, &#x60;MediaBrowser.Model.Entities.MediaStreamType.Subtitle&#x60;.</value>
         [DataMember(Name="Index", EmitDefaultValue=false)]
         public int? Index { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsExternal
+        /// A value indicating whether this instance is external.    Custom property set by the application.
         /// </summary>
+        /// <value>A value indicating whether this instance is external.    Custom property set by the application.</value>
         [DataMember(Name="IsExternal", EmitDefaultValue=false)]
         public bool? IsExternal { get; set; }
 
@@ -354,17 +389,19 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets DeliveryMethod
         /// </summary>
         [DataMember(Name="DeliveryMethod", EmitDefaultValue=false)]
-        public DlnaSubtitleDeliveryMethod DeliveryMethod { get; set; }
+        public SubtitleDeliveryMethod DeliveryMethod { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeliveryUrl
+        /// The delivery URL.    Custom property set by the application.
         /// </summary>
+        /// <value>The delivery URL.    Custom property set by the application.</value>
         [DataMember(Name="DeliveryUrl", EmitDefaultValue=false)]
         public string DeliveryUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsExternalUrl
+        /// A value indicating whether this instance is external URL.    Custom property set by the application.
         /// </summary>
+        /// <value>A value indicating whether this instance is external URL.    Custom property set by the application.</value>
         [DataMember(Name="IsExternalUrl", EmitDefaultValue=false)]
         public bool? IsExternalUrl { get; set; }
 
@@ -375,14 +412,16 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsTextSubtitleStream { get; set; }
 
         /// <summary>
-        /// Gets or Sets SupportsExternalStream
+        /// A value indicating whether \\[supports external stream\\].
         /// </summary>
+        /// <value>A value indicating whether \\[supports external stream\\].</value>
         [DataMember(Name="SupportsExternalStream", EmitDefaultValue=false)]
         public bool? SupportsExternalStream { get; set; }
 
         /// <summary>
-        /// Gets or Sets Path
+        /// The filename.
         /// </summary>
+        /// <value>The filename.</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 
@@ -390,55 +429,75 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets Protocol
         /// </summary>
         [DataMember(Name="Protocol", EmitDefaultValue=false)]
-        public MediaInfoMediaProtocol Protocol { get; set; }
+        public MediaProtocol Protocol { get; set; }
 
         /// <summary>
-        /// Gets or Sets PixelFormat
+        /// The pixel format.    Probe Field: &#x60;pix_fmt&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;MediaBrowser.Model.Entities.MediaStream.PixelFormat&#x60;.
         /// </summary>
+        /// <value>The pixel format.    Probe Field: &#x60;pix_fmt&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;.    Actual type: &#x60;MediaBrowser.Model.Entities.MediaStream.PixelFormat&#x60;.</value>
         [DataMember(Name="PixelFormat", EmitDefaultValue=false)]
         public string PixelFormat { get; set; }
 
         /// <summary>
-        /// Gets or Sets Level
+        /// The codec level.    Probe Field: &#x60;level&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enums: &#x60;Emby.Media.Model.Enums.AvcLevels&#x60;, &#x60;Emby.Media.Model.Enums.H263Levels&#x60;, &#x60;Emby.Media.Model.Enums.HevcLevels&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg2Levels&#x60;,&#x60;Emby.Media.Model.Enums.Vc1Levels&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg4Levels&#x60;, &#x60;Emby.Media.Model.Enums.Vp8Levels&#x60;, &#x60;Emby.Media.Model.Enums.Vp9Levels&#x60;.
         /// </summary>
+        /// <value>The codec level.    Probe Field: &#x60;level&#x60;    Applies to: &#x60;MediaBrowser.Model.Entities.MediaStreamType.Video&#x60;    Related Enums: &#x60;Emby.Media.Model.Enums.AvcLevels&#x60;, &#x60;Emby.Media.Model.Enums.H263Levels&#x60;, &#x60;Emby.Media.Model.Enums.HevcLevels&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg2Levels&#x60;,&#x60;Emby.Media.Model.Enums.Vc1Levels&#x60;, &#x60;Emby.Media.Model.Enums.Mpeg4Levels&#x60;, &#x60;Emby.Media.Model.Enums.Vp8Levels&#x60;, &#x60;Emby.Media.Model.Enums.Vp9Levels&#x60;.</value>
         [DataMember(Name="Level", EmitDefaultValue=false)]
         public double? Level { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsAnamorphic
+        /// A value indicating whether this instance is anamorphic.
         /// </summary>
+        /// <value>A value indicating whether this instance is anamorphic.</value>
         [DataMember(Name="IsAnamorphic", EmitDefaultValue=false)]
         public bool? IsAnamorphic { get; set; }
 
         /// <summary>
-        /// Gets or Sets ItemId
+        /// Gets or Sets ExtendedVideoType
         /// </summary>
+        [DataMember(Name="ExtendedVideoType", EmitDefaultValue=false)]
+        public ExtendedVideoTypes ExtendedVideoType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ExtendedVideoSubType
+        /// </summary>
+        [DataMember(Name="ExtendedVideoSubType", EmitDefaultValue=false)]
+        public ExtendedVideoSubTypes ExtendedVideoSubType { get; set; }
+
+        /// <summary>
+        /// The extended video sub\\-type description.
+        /// </summary>
+        /// <value>The extended video sub\\-type description.</value>
+        [DataMember(Name="ExtendedVideoSubTypeDescription", EmitDefaultValue=false)]
+        public string ExtendedVideoSubTypeDescription { get; set; }
+
+        /// <summary>
+        /// Used only by our Windows app. Not used by Emby Server.
+        /// </summary>
+        /// <value>Used only by our Windows app. Not used by Emby Server.</value>
         [DataMember(Name="ItemId", EmitDefaultValue=false)]
         public string ItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServerId
+        /// Used only by our Windows app. Not used by Emby Server.
         /// </summary>
+        /// <value>Used only by our Windows app. Not used by Emby Server.</value>
         [DataMember(Name="ServerId", EmitDefaultValue=false)]
         public string ServerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AttachmentSize
+        /// The size of the attachment.
         /// </summary>
+        /// <value>The size of the attachment.</value>
         [DataMember(Name="AttachmentSize", EmitDefaultValue=false)]
         public int? AttachmentSize { get; set; }
 
         /// <summary>
-        /// Gets or Sets MimeType
+        /// The type of the MIME.
         /// </summary>
+        /// <value>The type of the MIME.</value>
         [DataMember(Name="MimeType", EmitDefaultValue=false)]
         public string MimeType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets IsClosedCaptions
-        /// </summary>
-        [DataMember(Name="IsClosedCaptions", EmitDefaultValue=false)]
-        public bool? IsClosedCaptions { get; set; }
 
         /// <summary>
         /// Gets or Sets SubtitleLocationType
@@ -463,7 +522,6 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Comment: ").Append(Comment).Append("\n");
             sb.Append("  StreamStartTimeTicks: ").Append(StreamStartTimeTicks).Append("\n");
             sb.Append("  TimeBase: ").Append(TimeBase).Append("\n");
-            sb.Append("  CodecTimeBase: ").Append(CodecTimeBase).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Extradata: ").Append(Extradata).Append("\n");
             sb.Append("  VideoRange: ").Append(VideoRange).Append("\n");
@@ -481,6 +539,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  SampleRate: ").Append(SampleRate).Append("\n");
             sb.Append("  IsDefault: ").Append(IsDefault).Append("\n");
             sb.Append("  IsForced: ").Append(IsForced).Append("\n");
+            sb.Append("  IsHearingImpaired: ").Append(IsHearingImpaired).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
             sb.Append("  AverageFrameRate: ").Append(AverageFrameRate).Append("\n");
@@ -500,11 +559,13 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PixelFormat: ").Append(PixelFormat).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("  IsAnamorphic: ").Append(IsAnamorphic).Append("\n");
+            sb.Append("  ExtendedVideoType: ").Append(ExtendedVideoType).Append("\n");
+            sb.Append("  ExtendedVideoSubType: ").Append(ExtendedVideoSubType).Append("\n");
+            sb.Append("  ExtendedVideoSubTypeDescription: ").Append(ExtendedVideoSubTypeDescription).Append("\n");
             sb.Append("  ItemId: ").Append(ItemId).Append("\n");
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
             sb.Append("  AttachmentSize: ").Append(AttachmentSize).Append("\n");
             sb.Append("  MimeType: ").Append(MimeType).Append("\n");
-            sb.Append("  IsClosedCaptions: ").Append(IsClosedCaptions).Append("\n");
             sb.Append("  SubtitleLocationType: ").Append(SubtitleLocationType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -584,11 +645,6 @@ namespace EmbyClient.Dotnet.Model
                     this.TimeBase == input.TimeBase ||
                     (this.TimeBase != null &&
                     this.TimeBase.Equals(input.TimeBase))
-                ) && 
-                (
-                    this.CodecTimeBase == input.CodecTimeBase ||
-                    (this.CodecTimeBase != null &&
-                    this.CodecTimeBase.Equals(input.CodecTimeBase))
                 ) && 
                 (
                     this.Title == input.Title ||
@@ -674,6 +730,11 @@ namespace EmbyClient.Dotnet.Model
                     this.IsForced == input.IsForced ||
                     (this.IsForced != null &&
                     this.IsForced.Equals(input.IsForced))
+                ) && 
+                (
+                    this.IsHearingImpaired == input.IsHearingImpaired ||
+                    (this.IsHearingImpaired != null &&
+                    this.IsHearingImpaired.Equals(input.IsHearingImpaired))
                 ) && 
                 (
                     this.Height == input.Height ||
@@ -771,6 +832,21 @@ namespace EmbyClient.Dotnet.Model
                     this.IsAnamorphic.Equals(input.IsAnamorphic))
                 ) && 
                 (
+                    this.ExtendedVideoType == input.ExtendedVideoType ||
+                    (this.ExtendedVideoType != null &&
+                    this.ExtendedVideoType.Equals(input.ExtendedVideoType))
+                ) && 
+                (
+                    this.ExtendedVideoSubType == input.ExtendedVideoSubType ||
+                    (this.ExtendedVideoSubType != null &&
+                    this.ExtendedVideoSubType.Equals(input.ExtendedVideoSubType))
+                ) && 
+                (
+                    this.ExtendedVideoSubTypeDescription == input.ExtendedVideoSubTypeDescription ||
+                    (this.ExtendedVideoSubTypeDescription != null &&
+                    this.ExtendedVideoSubTypeDescription.Equals(input.ExtendedVideoSubTypeDescription))
+                ) && 
+                (
                     this.ItemId == input.ItemId ||
                     (this.ItemId != null &&
                     this.ItemId.Equals(input.ItemId))
@@ -789,11 +865,6 @@ namespace EmbyClient.Dotnet.Model
                     this.MimeType == input.MimeType ||
                     (this.MimeType != null &&
                     this.MimeType.Equals(input.MimeType))
-                ) && 
-                (
-                    this.IsClosedCaptions == input.IsClosedCaptions ||
-                    (this.IsClosedCaptions != null &&
-                    this.IsClosedCaptions.Equals(input.IsClosedCaptions))
                 ) && 
                 (
                     this.SubtitleLocationType == input.SubtitleLocationType ||
@@ -829,8 +900,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.StreamStartTimeTicks.GetHashCode();
                 if (this.TimeBase != null)
                     hashCode = hashCode * 59 + this.TimeBase.GetHashCode();
-                if (this.CodecTimeBase != null)
-                    hashCode = hashCode * 59 + this.CodecTimeBase.GetHashCode();
                 if (this.Title != null)
                     hashCode = hashCode * 59 + this.Title.GetHashCode();
                 if (this.Extradata != null)
@@ -865,6 +934,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IsDefault.GetHashCode();
                 if (this.IsForced != null)
                     hashCode = hashCode * 59 + this.IsForced.GetHashCode();
+                if (this.IsHearingImpaired != null)
+                    hashCode = hashCode * 59 + this.IsHearingImpaired.GetHashCode();
                 if (this.Height != null)
                     hashCode = hashCode * 59 + this.Height.GetHashCode();
                 if (this.Width != null)
@@ -903,6 +974,12 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Level.GetHashCode();
                 if (this.IsAnamorphic != null)
                     hashCode = hashCode * 59 + this.IsAnamorphic.GetHashCode();
+                if (this.ExtendedVideoType != null)
+                    hashCode = hashCode * 59 + this.ExtendedVideoType.GetHashCode();
+                if (this.ExtendedVideoSubType != null)
+                    hashCode = hashCode * 59 + this.ExtendedVideoSubType.GetHashCode();
+                if (this.ExtendedVideoSubTypeDescription != null)
+                    hashCode = hashCode * 59 + this.ExtendedVideoSubTypeDescription.GetHashCode();
                 if (this.ItemId != null)
                     hashCode = hashCode * 59 + this.ItemId.GetHashCode();
                 if (this.ServerId != null)
@@ -911,8 +988,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.AttachmentSize.GetHashCode();
                 if (this.MimeType != null)
                     hashCode = hashCode * 59 + this.MimeType.GetHashCode();
-                if (this.IsClosedCaptions != null)
-                    hashCode = hashCode * 59 + this.IsClosedCaptions.GetHashCode();
                 if (this.SubtitleLocationType != null)
                     hashCode = hashCode * 59 + this.SubtitleLocationType.GetHashCode();
                 return hashCode;

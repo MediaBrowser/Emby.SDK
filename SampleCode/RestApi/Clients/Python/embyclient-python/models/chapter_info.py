@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -60,6 +60,7 @@ class ChapterInfo(object):
     def start_position_ticks(self):
         """Gets the start_position_ticks of this ChapterInfo.  # noqa: E501
 
+        The start position ticks.  # noqa: E501
 
         :return: The start_position_ticks of this ChapterInfo.  # noqa: E501
         :rtype: int
@@ -70,6 +71,7 @@ class ChapterInfo(object):
     def start_position_ticks(self, start_position_ticks):
         """Sets the start_position_ticks of this ChapterInfo.
 
+        The start position ticks.  # noqa: E501
 
         :param start_position_ticks: The start_position_ticks of this ChapterInfo.  # noqa: E501
         :type: int
@@ -81,6 +83,7 @@ class ChapterInfo(object):
     def name(self):
         """Gets the name of this ChapterInfo.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this ChapterInfo.  # noqa: E501
         :rtype: str
@@ -91,6 +94,7 @@ class ChapterInfo(object):
     def name(self, name):
         """Sets the name of this ChapterInfo.
 
+        The name.  # noqa: E501
 
         :param name: The name of this ChapterInfo.  # noqa: E501
         :type: str

@@ -8,37 +8,53 @@
 import Foundation
 
 
+/** Class SessionInfo   */
 
 public struct SessionSessionInfo: Codable {
 
     public var playState: PlayerStateInfo?
     public var additionalUsers: [SessionUserInfo]?
+    /** The remote end point. */
     public var remoteEndPoint: String?
+    public var _protocol: String?
+    /** The playable media types. */
     public var playableMediaTypes: [String]?
     public var playlistItemId: String?
     public var playlistIndex: Int?
     public var playlistLength: Int?
+    /** The id. */
     public var _id: String?
     public var serverId: String?
+    /** The user id. */
     public var userId: String?
+    /** The username. */
     public var userName: String?
     public var userPrimaryImageTag: String?
+    /** The type of the client. */
     public var client: String?
+    /** The last activity date. */
     public var lastActivityDate: Date?
+    /** The name of the device. */
     public var deviceName: String?
     public var deviceType: String?
     public var nowPlayingItem: BaseItemDto?
+    public var internalDeviceId: Int64?
+    /** The device id. */
     public var deviceId: String?
+    /** The application version. */
     public var applicationVersion: String?
+    /** The application icon URL. */
     public var appIconUrl: String?
+    /** The supported commands. */
     public var supportedCommands: [String]?
     public var transcodingInfo: TranscodingInfo?
     public var supportsRemoteControl: Bool?
 
-    public init(playState: PlayerStateInfo? = nil, additionalUsers: [SessionUserInfo]? = nil, remoteEndPoint: String? = nil, playableMediaTypes: [String]? = nil, playlistItemId: String? = nil, playlistIndex: Int? = nil, playlistLength: Int? = nil, _id: String? = nil, serverId: String? = nil, userId: String? = nil, userName: String? = nil, userPrimaryImageTag: String? = nil, client: String? = nil, lastActivityDate: Date? = nil, deviceName: String? = nil, deviceType: String? = nil, nowPlayingItem: BaseItemDto? = nil, deviceId: String? = nil, applicationVersion: String? = nil, appIconUrl: String? = nil, supportedCommands: [String]? = nil, transcodingInfo: TranscodingInfo? = nil, supportsRemoteControl: Bool? = nil) {
+    public init(playState: PlayerStateInfo? = nil, additionalUsers: [SessionUserInfo]? = nil, remoteEndPoint: String? = nil, _protocol: String? = nil, playableMediaTypes: [String]? = nil, playlistItemId: String? = nil, playlistIndex: Int? = nil, playlistLength: Int? = nil, _id: String? = nil, serverId: String? = nil, userId: String? = nil, userName: String? = nil, userPrimaryImageTag: String? = nil, client: String? = nil, lastActivityDate: Date? = nil, deviceName: String? = nil, deviceType: String? = nil, nowPlayingItem: BaseItemDto? = nil, internalDeviceId: Int64? = nil, deviceId: String? = nil, applicationVersion: String? = nil, appIconUrl: String? = nil, supportedCommands: [String]? = nil, transcodingInfo: TranscodingInfo? = nil, supportsRemoteControl: Bool? = nil) {
         self.playState = playState
         self.additionalUsers = additionalUsers
         self.remoteEndPoint = remoteEndPoint
+        self._protocol = _protocol
         self.playableMediaTypes = playableMediaTypes
         self.playlistItemId = playlistItemId
         self.playlistIndex = playlistIndex
@@ -53,6 +69,7 @@ public struct SessionSessionInfo: Codable {
         self.deviceName = deviceName
         self.deviceType = deviceType
         self.nowPlayingItem = nowPlayingItem
+        self.internalDeviceId = internalDeviceId
         self.deviceId = deviceId
         self.applicationVersion = applicationVersion
         self.appIconUrl = appIconUrl
@@ -65,6 +82,7 @@ public struct SessionSessionInfo: Codable {
         case playState = "PlayState"
         case additionalUsers = "AdditionalUsers"
         case remoteEndPoint = "RemoteEndPoint"
+        case _protocol = "Protocol"
         case playableMediaTypes = "PlayableMediaTypes"
         case playlistItemId = "PlaylistItemId"
         case playlistIndex = "PlaylistIndex"
@@ -79,6 +97,7 @@ public struct SessionSessionInfo: Codable {
         case deviceName = "DeviceName"
         case deviceType = "DeviceType"
         case nowPlayingItem = "NowPlayingItem"
+        case internalDeviceId = "InternalDeviceId"
         case deviceId = "DeviceId"
         case applicationVersion = "ApplicationVersion"
         case appIconUrl = "AppIconUrl"

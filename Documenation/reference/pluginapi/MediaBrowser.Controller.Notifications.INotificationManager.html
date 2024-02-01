@@ -165,14 +165,14 @@
   </h3>
   
   
-  <a id="MediaBrowser_Controller_Notifications_INotificationManager_AddParts_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.AddParts*"></a>
-  <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Notifications_INotificationService__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Notifications_INotificationTypeFactory__" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.AddParts(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Notifications.INotificationService},System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Notifications.INotificationTypeFactory})">AddParts(IEnumerable&lt;INotificationService&gt;, IEnumerable&lt;INotificationTypeFactory&gt;)</h4>
-  <div class="markdown level1 summary"><p>Adds the parts.</p>
+  <a id="MediaBrowser_Controller_Notifications_INotificationManager_GetNotificationCategories_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.GetNotificationCategories*"></a>
+  <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_GetNotificationCategories_System_String_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.GetNotificationCategories(System.String,MediaBrowser.Controller.Entities.User)">GetNotificationCategories(String, User)</h4>
+  <div class="markdown level1 summary"><p>Gets the notification types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddParts(IEnumerable&lt;INotificationService&gt; services, IEnumerable&lt;INotificationTypeFactory&gt; notificationTypeFactories)</code></pre>
+    <pre><code class="lang-csharp hljs">NotificationCategoryInfo[] GetNotificationCategories(string language, User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,30 +185,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Notifications.INotificationService.html">INotificationService</a>&gt;</td>
-        <td><span class="parametername">services</span></td>
-        <td><p>The services.</p>
-</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">language</span></td>
+        <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Notifications.INotificationTypeFactory.html">INotificationTypeFactory</a>&gt;</td>
-        <td><span class="parametername">notificationTypeFactories</span></td>
-        <td><p>The notification type factories.</p>
-</td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="MediaBrowser_Controller_Notifications_INotificationManager_GetNotificationServices_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.GetNotificationServices*"></a>
-  <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_GetNotificationServices" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.GetNotificationServices">GetNotificationServices()</h4>
-  <div class="markdown level1 summary"><p>Gets the notification services.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;NameIdPair&gt; GetNotificationServices()</code></pre>
-  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -219,34 +206,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.NameIdPair.html">NameIdPair</a>&gt;</td>
-        <td><p>IEnumerable{NotificationServiceInfo}.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Notifications_INotificationManager_GetNotificationTypes_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.GetNotificationTypes*"></a>
-  <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_GetNotificationTypes" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.GetNotificationTypes">GetNotificationTypes()</h4>
-  <div class="markdown level1 summary"><p>Gets the notification types.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;NotificationTypeInfo&gt; GetNotificationTypes()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Notifications.NotificationTypeInfo.html">NotificationTypeInfo</a>&gt;</td>
+        <td><a class="xref" href="Emby.Notifications.NotificationCategoryInfo.html">NotificationCategoryInfo</a>[]</td>
         <td><p>IEnumerable{NotificationTypeInfo}.</p>
 </td>
       </tr>
@@ -254,13 +214,13 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Notifications_INotificationManager_SendNotification_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.SendNotification*"></a>
-  <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_SendNotification_MediaBrowser_Model_Notifications_NotificationRequest_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.SendNotification(MediaBrowser.Model.Notifications.NotificationRequest,MediaBrowser.Controller.Entities.BaseItem,System.Threading.CancellationToken)">SendNotification(NotificationRequest, BaseItem, CancellationToken)</h4>
+  <a id="MediaBrowser_Controller_Notifications_INotificationManager_GetNotificationTokens_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.GetNotificationTokens*"></a>
+  <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_GetNotificationTokens_System_String_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.GetNotificationTokens(System.String)">GetNotificationTokens(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task SendNotification(NotificationRequest request, BaseItem relatedItem, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">NotificationTokenCategory[] GetNotificationTokens(string language)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,18 +233,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Notifications.NotificationRequest.html">NotificationRequest</a></td>
-        <td><span class="parametername">request</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td><span class="parametername">relatedItem</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">language</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -299,7 +249,71 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Notifications.NotificationTokenCategory.html">NotificationTokenCategory</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Notifications_INotificationManager_SaveUserNotification_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.SaveUserNotification*"></a>
+  <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_SaveUserNotification_Emby_Notifications_NotificationInfo_MediaBrowser_Controller_Entities_User_System_String_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.SaveUserNotification(Emby.Notifications.NotificationInfo,MediaBrowser.Controller.Entities.User,System.String)">SaveUserNotification(NotificationInfo, User, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SaveUserNotification(NotificationInfo notificationInfo, User user, string notifierKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Notifications.NotificationInfo.html">NotificationInfo</a></td>
+        <td><span class="parametername">notificationInfo</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">notifierKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Notifications_INotificationManager_SendNotification_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.SendNotification*"></a>
+  <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_SendNotification_Emby_Notifications_NotificationRequest_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.SendNotification(Emby.Notifications.NotificationRequest)">SendNotification(NotificationRequest)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendNotification(NotificationRequest request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Emby.Notifications.NotificationRequest.html">NotificationRequest</a></td>
+        <td><span class="parametername">request</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -308,12 +322,12 @@
   
   <a id="MediaBrowser_Controller_Notifications_INotificationManager_SendNotification_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.SendNotification*"></a>
   <h4 id="MediaBrowser_Controller_Notifications_INotificationManager_SendNotification_MediaBrowser_Model_Notifications_NotificationRequest_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Notifications.INotificationManager.SendNotification(MediaBrowser.Model.Notifications.NotificationRequest,System.Threading.CancellationToken)">SendNotification(NotificationRequest, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Sends the notification.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task SendNotification(NotificationRequest request, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Switch to void SendNotification(NotificationRequest request)&quot;)]
+Task SendNotification(NotificationRequest request, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -328,14 +342,12 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Notifications.NotificationRequest.html">NotificationRequest</a></td>
         <td><span class="parametername">request</span></td>
-        <td><p>The request.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -349,12 +361,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td><p>Task.</p>
-</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>

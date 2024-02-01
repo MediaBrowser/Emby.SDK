@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The NameValuePair model module.
 * @module model/NameValuePair
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class NameValuePair {
     /**
@@ -52,10 +52,12 @@ export default class NameValuePair {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The value.
     * @member {String} Value
     */
     'Value' = undefined;

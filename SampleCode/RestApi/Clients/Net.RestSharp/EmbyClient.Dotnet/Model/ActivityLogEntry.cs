@@ -26,15 +26,15 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityLogEntry" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
-        /// <param name="overview">overview.</param>
-        /// <param name="shortOverview">shortOverview.</param>
-        /// <param name="type">type.</param>
-        /// <param name="itemId">itemId.</param>
-        /// <param name="date">date.</param>
-        /// <param name="userId">userId.</param>
-        /// <param name="userPrimaryImageTag">userPrimaryImageTag.</param>
+        /// <param name="id">The identifier..</param>
+        /// <param name="name">The name..</param>
+        /// <param name="overview">The overview..</param>
+        /// <param name="shortOverview">The short overview..</param>
+        /// <param name="type">The type..</param>
+        /// <param name="itemId">The item identifier..</param>
+        /// <param name="date">The date..</param>
+        /// <param name="userId">The user identifier..</param>
+        /// <param name="userPrimaryImageTag">The user primary image tag..</param>
         /// <param name="severity">severity.</param>
         public ActivityLogEntry(long? id = default(long?), string name = default(string), string overview = default(string), string shortOverview = default(string), string type = default(string), string itemId = default(string), DateTimeOffset? date = default(DateTimeOffset?), string userId = default(string), string userPrimaryImageTag = default(string), LoggingLogSeverity severity = default(LoggingLogSeverity))
         {
@@ -51,56 +51,65 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The identifier.
         /// </summary>
+        /// <value>The identifier.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Overview
+        /// The overview.
         /// </summary>
+        /// <value>The overview.</value>
         [DataMember(Name="Overview", EmitDefaultValue=false)]
         public string Overview { get; set; }
 
         /// <summary>
-        /// Gets or Sets ShortOverview
+        /// The short overview.
         /// </summary>
+        /// <value>The short overview.</value>
         [DataMember(Name="ShortOverview", EmitDefaultValue=false)]
         public string ShortOverview { get; set; }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// The type.
         /// </summary>
+        /// <value>The type.</value>
         [DataMember(Name="Type", EmitDefaultValue=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets ItemId
+        /// The item identifier.
         /// </summary>
+        /// <value>The item identifier.</value>
         [DataMember(Name="ItemId", EmitDefaultValue=false)]
         public string ItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Date
+        /// The date.
         /// </summary>
+        /// <value>The date.</value>
         [DataMember(Name="Date", EmitDefaultValue=false)]
         public DateTimeOffset? Date { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserId
+        /// The user identifier.
         /// </summary>
+        /// <value>The user identifier.</value>
         [DataMember(Name="UserId", EmitDefaultValue=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserPrimaryImageTag
+        /// The user primary image tag.
         /// </summary>
+        /// <value>The user primary image tag.</value>
         [DataMember(Name="UserPrimaryImageTag", EmitDefaultValue=false)]
         public string UserPrimaryImageTag { get; set; }
 

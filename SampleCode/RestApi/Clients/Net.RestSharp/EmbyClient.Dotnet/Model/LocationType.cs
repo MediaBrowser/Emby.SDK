@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines LocationType
+    /// Enum LocationType  
     /// </summary>
+    /// <value>Enum LocationType  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum LocationType
     {

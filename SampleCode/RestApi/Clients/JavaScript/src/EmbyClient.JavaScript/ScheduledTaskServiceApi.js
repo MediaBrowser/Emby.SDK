@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,13 +10,13 @@
  */
 
 import ApiClient from "../ApiClient";
-import TasksTaskInfo from '../model/TasksTaskInfo';
-import TasksTaskTriggerInfo from '../model/TasksTaskTriggerInfo';
+import TaskInfo from '../model/TaskInfo';
+import TaskTriggerInfo from '../model/TaskTriggerInfo';
 
 /**
 * ScheduledTaskService service.
 * @module EmbyClient.JavaScript/ScheduledTaskServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ScheduledTaskServiceApi {
 
@@ -72,7 +72,7 @@ export default class ScheduledTaskServiceApi {
      * Callback function to receive the result of the getScheduledtasks operation.
      * @callback module:EmbyClient.JavaScript/ScheduledTaskServiceApi~getScheduledtasksCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TasksTaskInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/TaskInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -81,7 +81,7 @@ export default class ScheduledTaskServiceApi {
      * Requires authentication as administrator
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/ScheduledTaskServiceApi~getScheduledtasksCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TasksTaskInfo>}
+     * data is of type: {@link Array.<module:model/TaskInfo>}
      */
     getScheduledtasks() {
       opts = opts || {};
@@ -101,7 +101,7 @@ export default class ScheduledTaskServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [TasksTaskInfo];
+      let returnType = [TaskInfo];
 
       return this.apiClient.callApi(
         '/ScheduledTasks', 'GET',
@@ -113,7 +113,7 @@ export default class ScheduledTaskServiceApi {
      * Callback function to receive the result of the getScheduledtasksById operation.
      * @callback module:EmbyClient.JavaScript/ScheduledTaskServiceApi~getScheduledtasksByIdCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/TasksTaskInfo} data The data returned by the service call.
+     * @param {module:model/TaskInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -121,7 +121,7 @@ export default class ScheduledTaskServiceApi {
      * Gets a scheduled task, by Id
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/ScheduledTaskServiceApi~getScheduledtasksByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TasksTaskInfo}
+     * data is of type: {@link module:model/TaskInfo}
      */
     getScheduledtasksById() {
       let postBody = null;
@@ -139,7 +139,7 @@ export default class ScheduledTaskServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = TasksTaskInfo;
+      let returnType = TaskInfo;
 
       return this.apiClient.callApi(
         '/ScheduledTasks/{Id}', 'GET',

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -28,6 +28,8 @@ class RemoteSearchResult(object):
         'index_number': 'int',
         'index_number_end': 'int',
         'parent_index_number': 'int',
+        'sort_index_number': 'int',
+        'sort_parent_index_number': 'int',
         'premiere_date': 'datetime',
         'image_url': 'str',
         'search_provider_name': 'str',
@@ -45,6 +47,8 @@ class RemoteSearchResult(object):
         'index_number': 'IndexNumber',
         'index_number_end': 'IndexNumberEnd',
         'parent_index_number': 'ParentIndexNumber',
+        'sort_index_number': 'SortIndexNumber',
+        'sort_parent_index_number': 'SortParentIndexNumber',
         'premiere_date': 'PremiereDate',
         'image_url': 'ImageUrl',
         'search_provider_name': 'SearchProviderName',
@@ -55,7 +59,7 @@ class RemoteSearchResult(object):
         'artists': 'Artists'
     }
 
-    def __init__(self, name=None, provider_ids=None, production_year=None, index_number=None, index_number_end=None, parent_index_number=None, premiere_date=None, image_url=None, search_provider_name=None, game_system=None, overview=None, disambiguation_comment=None, album_artist=None, artists=None):  # noqa: E501
+    def __init__(self, name=None, provider_ids=None, production_year=None, index_number=None, index_number_end=None, parent_index_number=None, sort_index_number=None, sort_parent_index_number=None, premiere_date=None, image_url=None, search_provider_name=None, game_system=None, overview=None, disambiguation_comment=None, album_artist=None, artists=None):  # noqa: E501
         """RemoteSearchResult - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._provider_ids = None
@@ -63,6 +67,8 @@ class RemoteSearchResult(object):
         self._index_number = None
         self._index_number_end = None
         self._parent_index_number = None
+        self._sort_index_number = None
+        self._sort_parent_index_number = None
         self._premiere_date = None
         self._image_url = None
         self._search_provider_name = None
@@ -84,6 +90,10 @@ class RemoteSearchResult(object):
             self.index_number_end = index_number_end
         if parent_index_number is not None:
             self.parent_index_number = parent_index_number
+        if sort_index_number is not None:
+            self.sort_index_number = sort_index_number
+        if sort_parent_index_number is not None:
+            self.sort_parent_index_number = sort_parent_index_number
         if premiere_date is not None:
             self.premiere_date = premiere_date
         if image_url is not None:
@@ -105,6 +115,7 @@ class RemoteSearchResult(object):
     def name(self):
         """Gets the name of this RemoteSearchResult.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this RemoteSearchResult.  # noqa: E501
         :rtype: str
@@ -115,6 +126,7 @@ class RemoteSearchResult(object):
     def name(self, name):
         """Sets the name of this RemoteSearchResult.
 
+        The name.  # noqa: E501
 
         :param name: The name of this RemoteSearchResult.  # noqa: E501
         :type: str
@@ -147,6 +159,7 @@ class RemoteSearchResult(object):
     def production_year(self):
         """Gets the production_year of this RemoteSearchResult.  # noqa: E501
 
+        The year.  # noqa: E501
 
         :return: The production_year of this RemoteSearchResult.  # noqa: E501
         :rtype: int
@@ -157,6 +170,7 @@ class RemoteSearchResult(object):
     def production_year(self, production_year):
         """Sets the production_year of this RemoteSearchResult.
 
+        The year.  # noqa: E501
 
         :param production_year: The production_year of this RemoteSearchResult.  # noqa: E501
         :type: int
@@ -226,6 +240,48 @@ class RemoteSearchResult(object):
         """
 
         self._parent_index_number = parent_index_number
+
+    @property
+    def sort_index_number(self):
+        """Gets the sort_index_number of this RemoteSearchResult.  # noqa: E501
+
+
+        :return: The sort_index_number of this RemoteSearchResult.  # noqa: E501
+        :rtype: int
+        """
+        return self._sort_index_number
+
+    @sort_index_number.setter
+    def sort_index_number(self, sort_index_number):
+        """Sets the sort_index_number of this RemoteSearchResult.
+
+
+        :param sort_index_number: The sort_index_number of this RemoteSearchResult.  # noqa: E501
+        :type: int
+        """
+
+        self._sort_index_number = sort_index_number
+
+    @property
+    def sort_parent_index_number(self):
+        """Gets the sort_parent_index_number of this RemoteSearchResult.  # noqa: E501
+
+
+        :return: The sort_parent_index_number of this RemoteSearchResult.  # noqa: E501
+        :rtype: int
+        """
+        return self._sort_parent_index_number
+
+    @sort_parent_index_number.setter
+    def sort_parent_index_number(self, sort_parent_index_number):
+        """Sets the sort_parent_index_number of this RemoteSearchResult.
+
+
+        :param sort_parent_index_number: The sort_parent_index_number of this RemoteSearchResult.  # noqa: E501
+        :type: int
+        """
+
+        self._sort_parent_index_number = sort_parent_index_number
 
     @property
     def premiere_date(self):

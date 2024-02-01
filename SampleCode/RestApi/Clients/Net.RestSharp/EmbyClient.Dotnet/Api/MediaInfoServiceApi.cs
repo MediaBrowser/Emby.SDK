@@ -27,8 +27,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="userId">User Id</param>
-        /// <returns>MediaInfoPlaybackInfoResponse</returns>
-        MediaInfoPlaybackInfoResponse GetItemsByIdPlaybackinfo (string id, string userId);
+        /// <returns>PlaybackInfoResponse</returns>
+        PlaybackInfoResponse GetItemsByIdPlaybackinfo (string id, string userId);
 
         /// <summary>
         /// Gets live playback media info for an item
@@ -39,8 +39,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="userId">User Id</param>
-        /// <returns>ApiResponse of MediaInfoPlaybackInfoResponse</returns>
-        ApiResponse<MediaInfoPlaybackInfoResponse> GetItemsByIdPlaybackinfoWithHttpInfo (string id, string userId);
+        /// <returns>ApiResponse of PlaybackInfoResponse</returns>
+        ApiResponse<PlaybackInfoResponse> GetItemsByIdPlaybackinfoWithHttpInfo (string id, string userId);
         /// <summary>
         /// 
         /// </summary>
@@ -71,8 +71,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">PlaybackInfoRequest: </param>
         /// <param name="id"></param>
-        /// <returns>MediaInfoPlaybackInfoResponse</returns>
-        MediaInfoPlaybackInfoResponse PostItemsByIdPlaybackinfo (MediaInfoPlaybackInfoRequest body, string id);
+        /// <returns>PlaybackInfoResponse</returns>
+        PlaybackInfoResponse PostItemsByIdPlaybackinfo (PlaybackInfoRequest body, string id);
 
         /// <summary>
         /// Gets live playback media info for an item
@@ -83,8 +83,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">PlaybackInfoRequest: </param>
         /// <param name="id"></param>
-        /// <returns>ApiResponse of MediaInfoPlaybackInfoResponse</returns>
-        ApiResponse<MediaInfoPlaybackInfoResponse> PostItemsByIdPlaybackinfoWithHttpInfo (MediaInfoPlaybackInfoRequest body, string id);
+        /// <returns>ApiResponse of PlaybackInfoResponse</returns>
+        ApiResponse<PlaybackInfoResponse> PostItemsByIdPlaybackinfoWithHttpInfo (PlaybackInfoRequest body, string id);
         /// <summary>
         /// Closes a media source
         /// </summary>
@@ -135,8 +135,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LiveStreamRequest: </param>
-        /// <returns>MediaInfoLiveStreamResponse</returns>
-        MediaInfoLiveStreamResponse PostLivestreamsOpen (MediaInfoLiveStreamRequest body);
+        /// <returns>LiveStreamResponse</returns>
+        LiveStreamResponse PostLivestreamsOpen (LiveStreamRequest body);
 
         /// <summary>
         /// Opens a media source
@@ -146,8 +146,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LiveStreamRequest: </param>
-        /// <returns>ApiResponse of MediaInfoLiveStreamResponse</returns>
-        ApiResponse<MediaInfoLiveStreamResponse> PostLivestreamsOpenWithHttpInfo (MediaInfoLiveStreamRequest body);
+        /// <returns>ApiResponse of LiveStreamResponse</returns>
+        ApiResponse<LiveStreamResponse> PostLivestreamsOpenWithHttpInfo (LiveStreamRequest body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -159,8 +159,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="userId">User Id</param>
-        /// <returns>Task of MediaInfoPlaybackInfoResponse</returns>
-        System.Threading.Tasks.Task<MediaInfoPlaybackInfoResponse> GetItemsByIdPlaybackinfoAsync (string id, string userId);
+        /// <returns>Task of PlaybackInfoResponse</returns>
+        System.Threading.Tasks.Task<PlaybackInfoResponse> GetItemsByIdPlaybackinfoAsync (string id, string userId);
 
         /// <summary>
         /// Gets live playback media info for an item
@@ -171,8 +171,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="userId">User Id</param>
-        /// <returns>Task of ApiResponse (MediaInfoPlaybackInfoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MediaInfoPlaybackInfoResponse>> GetItemsByIdPlaybackinfoAsyncWithHttpInfo (string id, string userId);
+        /// <returns>Task of ApiResponse (PlaybackInfoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PlaybackInfoResponse>> GetItemsByIdPlaybackinfoAsyncWithHttpInfo (string id, string userId);
         /// <summary>
         /// 
         /// </summary>
@@ -203,8 +203,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">PlaybackInfoRequest: </param>
         /// <param name="id"></param>
-        /// <returns>Task of MediaInfoPlaybackInfoResponse</returns>
-        System.Threading.Tasks.Task<MediaInfoPlaybackInfoResponse> PostItemsByIdPlaybackinfoAsync (MediaInfoPlaybackInfoRequest body, string id);
+        /// <returns>Task of PlaybackInfoResponse</returns>
+        System.Threading.Tasks.Task<PlaybackInfoResponse> PostItemsByIdPlaybackinfoAsync (PlaybackInfoRequest body, string id);
 
         /// <summary>
         /// Gets live playback media info for an item
@@ -215,8 +215,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">PlaybackInfoRequest: </param>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (MediaInfoPlaybackInfoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MediaInfoPlaybackInfoResponse>> PostItemsByIdPlaybackinfoAsyncWithHttpInfo (MediaInfoPlaybackInfoRequest body, string id);
+        /// <returns>Task of ApiResponse (PlaybackInfoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PlaybackInfoResponse>> PostItemsByIdPlaybackinfoAsyncWithHttpInfo (PlaybackInfoRequest body, string id);
         /// <summary>
         /// Closes a media source
         /// </summary>
@@ -267,8 +267,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LiveStreamRequest: </param>
-        /// <returns>Task of MediaInfoLiveStreamResponse</returns>
-        System.Threading.Tasks.Task<MediaInfoLiveStreamResponse> PostLivestreamsOpenAsync (MediaInfoLiveStreamRequest body);
+        /// <returns>Task of LiveStreamResponse</returns>
+        System.Threading.Tasks.Task<LiveStreamResponse> PostLivestreamsOpenAsync (LiveStreamRequest body);
 
         /// <summary>
         /// Opens a media source
@@ -278,8 +278,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LiveStreamRequest: </param>
-        /// <returns>Task of ApiResponse (MediaInfoLiveStreamResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MediaInfoLiveStreamResponse>> PostLivestreamsOpenAsyncWithHttpInfo (MediaInfoLiveStreamRequest body);
+        /// <returns>Task of ApiResponse (LiveStreamResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LiveStreamResponse>> PostLivestreamsOpenAsyncWithHttpInfo (LiveStreamRequest body);
         #endregion Asynchronous Operations
     }
 
@@ -397,10 +397,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="userId">User Id</param>
-        /// <returns>MediaInfoPlaybackInfoResponse</returns>
-        public MediaInfoPlaybackInfoResponse GetItemsByIdPlaybackinfo (string id, string userId)
+        /// <returns>PlaybackInfoResponse</returns>
+        public PlaybackInfoResponse GetItemsByIdPlaybackinfo (string id, string userId)
         {
-             ApiResponse<MediaInfoPlaybackInfoResponse> localVarResponse = GetItemsByIdPlaybackinfoWithHttpInfo(id, userId);
+             ApiResponse<PlaybackInfoResponse> localVarResponse = GetItemsByIdPlaybackinfoWithHttpInfo(id, userId);
              return localVarResponse.Data;
         }
 
@@ -410,8 +410,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="userId">User Id</param>
-        /// <returns>ApiResponse of MediaInfoPlaybackInfoResponse</returns>
-        public ApiResponse< MediaInfoPlaybackInfoResponse > GetItemsByIdPlaybackinfoWithHttpInfo (string id, string userId)
+        /// <returns>ApiResponse of PlaybackInfoResponse</returns>
+        public ApiResponse< PlaybackInfoResponse > GetItemsByIdPlaybackinfoWithHttpInfo (string id, string userId)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -469,9 +469,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MediaInfoPlaybackInfoResponse>(localVarStatusCode,
+            return new ApiResponse<PlaybackInfoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MediaInfoPlaybackInfoResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaInfoPlaybackInfoResponse)));
+                (PlaybackInfoResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlaybackInfoResponse)));
         }
 
         /// <summary>
@@ -480,10 +480,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="userId">User Id</param>
-        /// <returns>Task of MediaInfoPlaybackInfoResponse</returns>
-        public async System.Threading.Tasks.Task<MediaInfoPlaybackInfoResponse> GetItemsByIdPlaybackinfoAsync (string id, string userId)
+        /// <returns>Task of PlaybackInfoResponse</returns>
+        public async System.Threading.Tasks.Task<PlaybackInfoResponse> GetItemsByIdPlaybackinfoAsync (string id, string userId)
         {
-             ApiResponse<MediaInfoPlaybackInfoResponse> localVarResponse = await GetItemsByIdPlaybackinfoAsyncWithHttpInfo(id, userId);
+             ApiResponse<PlaybackInfoResponse> localVarResponse = await GetItemsByIdPlaybackinfoAsyncWithHttpInfo(id, userId);
              return localVarResponse.Data;
 
         }
@@ -494,8 +494,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
         /// <param name="userId">User Id</param>
-        /// <returns>Task of ApiResponse (MediaInfoPlaybackInfoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MediaInfoPlaybackInfoResponse>> GetItemsByIdPlaybackinfoAsyncWithHttpInfo (string id, string userId)
+        /// <returns>Task of ApiResponse (PlaybackInfoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PlaybackInfoResponse>> GetItemsByIdPlaybackinfoAsyncWithHttpInfo (string id, string userId)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -553,9 +553,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MediaInfoPlaybackInfoResponse>(localVarStatusCode,
+            return new ApiResponse<PlaybackInfoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MediaInfoPlaybackInfoResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaInfoPlaybackInfoResponse)));
+                (PlaybackInfoResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlaybackInfoResponse)));
         }
 
         /// <summary>
@@ -713,10 +713,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">PlaybackInfoRequest: </param>
         /// <param name="id"></param>
-        /// <returns>MediaInfoPlaybackInfoResponse</returns>
-        public MediaInfoPlaybackInfoResponse PostItemsByIdPlaybackinfo (MediaInfoPlaybackInfoRequest body, string id)
+        /// <returns>PlaybackInfoResponse</returns>
+        public PlaybackInfoResponse PostItemsByIdPlaybackinfo (PlaybackInfoRequest body, string id)
         {
-             ApiResponse<MediaInfoPlaybackInfoResponse> localVarResponse = PostItemsByIdPlaybackinfoWithHttpInfo(body, id);
+             ApiResponse<PlaybackInfoResponse> localVarResponse = PostItemsByIdPlaybackinfoWithHttpInfo(body, id);
              return localVarResponse.Data;
         }
 
@@ -726,8 +726,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">PlaybackInfoRequest: </param>
         /// <param name="id"></param>
-        /// <returns>ApiResponse of MediaInfoPlaybackInfoResponse</returns>
-        public ApiResponse< MediaInfoPlaybackInfoResponse > PostItemsByIdPlaybackinfoWithHttpInfo (MediaInfoPlaybackInfoRequest body, string id)
+        /// <returns>ApiResponse of PlaybackInfoResponse</returns>
+        public ApiResponse< PlaybackInfoResponse > PostItemsByIdPlaybackinfoWithHttpInfo (PlaybackInfoRequest body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -794,9 +794,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MediaInfoPlaybackInfoResponse>(localVarStatusCode,
+            return new ApiResponse<PlaybackInfoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MediaInfoPlaybackInfoResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaInfoPlaybackInfoResponse)));
+                (PlaybackInfoResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlaybackInfoResponse)));
         }
 
         /// <summary>
@@ -805,10 +805,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">PlaybackInfoRequest: </param>
         /// <param name="id"></param>
-        /// <returns>Task of MediaInfoPlaybackInfoResponse</returns>
-        public async System.Threading.Tasks.Task<MediaInfoPlaybackInfoResponse> PostItemsByIdPlaybackinfoAsync (MediaInfoPlaybackInfoRequest body, string id)
+        /// <returns>Task of PlaybackInfoResponse</returns>
+        public async System.Threading.Tasks.Task<PlaybackInfoResponse> PostItemsByIdPlaybackinfoAsync (PlaybackInfoRequest body, string id)
         {
-             ApiResponse<MediaInfoPlaybackInfoResponse> localVarResponse = await PostItemsByIdPlaybackinfoAsyncWithHttpInfo(body, id);
+             ApiResponse<PlaybackInfoResponse> localVarResponse = await PostItemsByIdPlaybackinfoAsyncWithHttpInfo(body, id);
              return localVarResponse.Data;
 
         }
@@ -819,8 +819,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">PlaybackInfoRequest: </param>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (MediaInfoPlaybackInfoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MediaInfoPlaybackInfoResponse>> PostItemsByIdPlaybackinfoAsyncWithHttpInfo (MediaInfoPlaybackInfoRequest body, string id)
+        /// <returns>Task of ApiResponse (PlaybackInfoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PlaybackInfoResponse>> PostItemsByIdPlaybackinfoAsyncWithHttpInfo (PlaybackInfoRequest body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -887,9 +887,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MediaInfoPlaybackInfoResponse>(localVarStatusCode,
+            return new ApiResponse<PlaybackInfoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MediaInfoPlaybackInfoResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaInfoPlaybackInfoResponse)));
+                (PlaybackInfoResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlaybackInfoResponse)));
         }
 
         /// <summary>
@@ -1195,10 +1195,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LiveStreamRequest: </param>
-        /// <returns>MediaInfoLiveStreamResponse</returns>
-        public MediaInfoLiveStreamResponse PostLivestreamsOpen (MediaInfoLiveStreamRequest body)
+        /// <returns>LiveStreamResponse</returns>
+        public LiveStreamResponse PostLivestreamsOpen (LiveStreamRequest body)
         {
-             ApiResponse<MediaInfoLiveStreamResponse> localVarResponse = PostLivestreamsOpenWithHttpInfo(body);
+             ApiResponse<LiveStreamResponse> localVarResponse = PostLivestreamsOpenWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -1207,8 +1207,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LiveStreamRequest: </param>
-        /// <returns>ApiResponse of MediaInfoLiveStreamResponse</returns>
-        public ApiResponse< MediaInfoLiveStreamResponse > PostLivestreamsOpenWithHttpInfo (MediaInfoLiveStreamRequest body)
+        /// <returns>ApiResponse of LiveStreamResponse</returns>
+        public ApiResponse< LiveStreamResponse > PostLivestreamsOpenWithHttpInfo (LiveStreamRequest body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1271,9 +1271,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MediaInfoLiveStreamResponse>(localVarStatusCode,
+            return new ApiResponse<LiveStreamResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MediaInfoLiveStreamResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaInfoLiveStreamResponse)));
+                (LiveStreamResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LiveStreamResponse)));
         }
 
         /// <summary>
@@ -1281,10 +1281,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LiveStreamRequest: </param>
-        /// <returns>Task of MediaInfoLiveStreamResponse</returns>
-        public async System.Threading.Tasks.Task<MediaInfoLiveStreamResponse> PostLivestreamsOpenAsync (MediaInfoLiveStreamRequest body)
+        /// <returns>Task of LiveStreamResponse</returns>
+        public async System.Threading.Tasks.Task<LiveStreamResponse> PostLivestreamsOpenAsync (LiveStreamRequest body)
         {
-             ApiResponse<MediaInfoLiveStreamResponse> localVarResponse = await PostLivestreamsOpenAsyncWithHttpInfo(body);
+             ApiResponse<LiveStreamResponse> localVarResponse = await PostLivestreamsOpenAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1294,8 +1294,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">LiveStreamRequest: </param>
-        /// <returns>Task of ApiResponse (MediaInfoLiveStreamResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MediaInfoLiveStreamResponse>> PostLivestreamsOpenAsyncWithHttpInfo (MediaInfoLiveStreamRequest body)
+        /// <returns>Task of ApiResponse (LiveStreamResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LiveStreamResponse>> PostLivestreamsOpenAsyncWithHttpInfo (LiveStreamRequest body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1358,9 +1358,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MediaInfoLiveStreamResponse>(localVarStatusCode,
+            return new ApiResponse<LiveStreamResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MediaInfoLiveStreamResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaInfoLiveStreamResponse)));
+                (LiveStreamResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LiveStreamResponse)));
         }
 
     }

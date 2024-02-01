@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyWebGenericEditEditObjectContainer from '../model/EmbyWebGenericEditEditObjectContainer';
+import EditObjectContainer from '../model/EditObjectContainer';
 
 /**
 * FfmpegOptionsService service.
 * @module EmbyClient.JavaScript/FfmpegOptionsServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class FfmpegOptionsServiceApi {
 
@@ -34,7 +34,7 @@ export default class FfmpegOptionsServiceApi {
      * Callback function to receive the result of the getEncodingFfmpegoptions operation.
      * @callback module:EmbyClient.JavaScript/FfmpegOptionsServiceApi~getEncodingFfmpegoptionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyWebGenericEditEditObjectContainer} data The data returned by the service call.
+     * @param {module:model/EditObjectContainer} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -42,7 +42,7 @@ export default class FfmpegOptionsServiceApi {
      * Gets the ffmpeg options
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/FfmpegOptionsServiceApi~getEncodingFfmpegoptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyWebGenericEditEditObjectContainer}
+     * data is of type: {@link module:model/EditObjectContainer}
      */
     getEncodingFfmpegoptions() {
       let postBody = null;
@@ -59,7 +59,7 @@ export default class FfmpegOptionsServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyWebGenericEditEditObjectContainer;
+      let returnType = EditObjectContainer;
 
       return this.apiClient.callApi(
         '/Encoding/FfmpegOptions', 'GET',

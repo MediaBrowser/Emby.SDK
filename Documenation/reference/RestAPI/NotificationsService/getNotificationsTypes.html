@@ -181,11 +181,11 @@
         <td><span class="status">200</span></td>
         <td>
   
-              <a href="#MediaBrowser_Model_Notifications_NotificationTypeInfo" class="typelink">NotificationTypeInfo</a>
+              <a href="#Emby_Notifications_NotificationCategoryInfo" class="typelink">NotificationCategoryInfo</a>
               []
         </td>
-        <td><p>Operation successful. Returning a List<notificationtypeinfo> object.<p>
-</notificationtypeinfo></td>
+        <td><p>Operation successful. Returning a NotificationCategoryInfo[] object.</p>
+</td>
         <td class="sample-response">
         </td>
       </tr>
@@ -249,9 +249,9 @@
   </div>
 <h2 id="definitions">Definitions</h2>
   
-  <h3 id="MediaBrowser_Model_Notifications_NotificationTypeInfo" class="text-capitalize">NotificationTypeInfo</h3>
+  <h3 id="Emby_Notifications_NotificationCategoryInfo" class="text-capitalize">NotificationCategoryInfo</h3>
   <div>
-      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Notifications.NotificationTypeInfo.html">MediaBrowser.Model.Notifications.NotificationTypeInfo</a></p>
+      <p>see also <a href="../../pluginapi/Emby.Notifications.NotificationCategoryInfo.html">Emby.Notifications.NotificationCategoryInfo</a></p>
 
   </div>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,7 +264,7 @@
       </thead>
       <tbody>
           <tr>
-              <td><span class="parametername">Type</span></td>
+              <td><span class="parametername">Name</span></td>
               <td>
                     string
   
@@ -272,6 +272,41 @@
               </td>
               <td></td>
           </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Events</span></td>
+              <td>
+  
+                      <a href="#Emby_Notifications_NotificationTypeInfo" class="typelink">NotificationTypeInfo[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="Emby_Notifications_NotificationTypeInfo" class="text-capitalize">NotificationTypeInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/Emby.Notifications.NotificationTypeInfo.html">Emby.Notifications.NotificationTypeInfo</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
           <tr>
               <td><span class="parametername">Name</span></td>
               <td>
@@ -282,16 +317,7 @@
               <td></td>
           </tr>
           <tr>
-              <td><span class="parametername">Enabled</span></td>
-              <td>
-                    boolean
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Category</span></td>
+              <td><span class="parametername">Id</span></td>
               <td>
                     string
   
@@ -300,9 +326,18 @@
               <td></td>
           </tr>
           <tr>
-              <td><span class="parametername">IsBasedOnUserEvent</span></td>
+              <td><span class="parametername">CategoryName</span></td>
               <td>
-                    boolean
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CategoryId</span></td>
+              <td>
+                    string
   
                   
               </td>

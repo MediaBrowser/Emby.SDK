@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -35,8 +35,8 @@ class ItemRefreshServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param bool recursive: Indicates if the refresh should occur recursively.
-        :param ProvidersMetadataRefreshMode metadata_refresh_mode: Specifies the metadata refresh mode
-        :param ProvidersMetadataRefreshMode image_refresh_mode: Specifies the image refresh mode
+        :param MetadataRefreshMode metadata_refresh_mode: Specifies the metadata refresh mode
+        :param MetadataRefreshMode image_refresh_mode: Specifies the image refresh mode
         :param bool replace_all_metadata: Determines if metadata should be replaced. Only applicable if mode is FullRefresh
         :param bool replace_all_images: Determines if images should be replaced. Only applicable if mode is FullRefresh
         :return: None
@@ -62,8 +62,8 @@ class ItemRefreshServiceApi(object):
         :param async_req bool
         :param str id: Item Id (required)
         :param bool recursive: Indicates if the refresh should occur recursively.
-        :param ProvidersMetadataRefreshMode metadata_refresh_mode: Specifies the metadata refresh mode
-        :param ProvidersMetadataRefreshMode image_refresh_mode: Specifies the image refresh mode
+        :param MetadataRefreshMode metadata_refresh_mode: Specifies the metadata refresh mode
+        :param MetadataRefreshMode image_refresh_mode: Specifies the image refresh mode
         :param bool replace_all_metadata: Determines if metadata should be replaced. Only applicable if mode is FullRefresh
         :param bool replace_all_images: Determines if images should be replaced. Only applicable if mode is FullRefresh
         :return: None

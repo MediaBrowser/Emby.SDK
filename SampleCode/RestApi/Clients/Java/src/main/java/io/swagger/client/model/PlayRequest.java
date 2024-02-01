@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -15,9 +15,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * PlayRequest
+ * Class PlayRequest  
  */
-
+@Schema(description = "Class PlayRequest  ")
 
 public class PlayRequest {
   @SerializedName("ControllingUserId")
@@ -41,10 +41,10 @@ public class PlayRequest {
   }
 
    /**
-   * Get controllingUserId
+   * The controlling user identifier.
    * @return controllingUserId
   **/
-  @Schema(description = "")
+  @Schema(description = "The controlling user identifier.")
   public String getControllingUserId() {
     return controllingUserId;
   }

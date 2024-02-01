@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -24,9 +24,13 @@ type TranscodingInfo struct {
 	Height int32 `json:"Height,omitempty"`
 	AudioChannels int32 `json:"AudioChannels,omitempty"`
 	TranscodeReasons []TranscodeReason `json:"TranscodeReasons,omitempty"`
+	// Deprecated, please use ProcessStatistics instead
 	CurrentCpuUsage float64 `json:"CurrentCpuUsage,omitempty"`
+	// Deprecated, please use ProcessStatistics instead
 	AverageCpuUsage float64 `json:"AverageCpuUsage,omitempty"`
+	// Deprecated, please use ProcessStatistics instead
 	CpuHistory []TupleDoubleDouble `json:"CpuHistory,omitempty"`
+	ProcessStatistics *ProcessRunMetricsProcessStatistics `json:"ProcessStatistics,omitempty"`
 	CurrentThrottle int32 `json:"CurrentThrottle,omitempty"`
 	VideoDecoder string `json:"VideoDecoder,omitempty"`
 	VideoDecoderIsHardware bool `json:"VideoDecoderIsHardware,omitempty"`

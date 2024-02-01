@@ -11,7 +11,9 @@ import Foundation
 
 public struct BrandingBrandingOptions: Codable {
 
+    /** The login disclaimer. */
     public var loginDisclaimer: String?
+    /** The custom CSS. */
     public var customCss: String?
 
     public init(loginDisclaimer: String? = nil, customCss: String? = nil) {

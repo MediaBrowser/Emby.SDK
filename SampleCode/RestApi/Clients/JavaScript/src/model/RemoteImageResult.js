@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,11 +15,12 @@ import RemoteImageInfo from './RemoteImageInfo';
 /**
 * The RemoteImageResult model module.
 * @module model/RemoteImageResult
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class RemoteImageResult {
     /**
     * Constructs a new <code>RemoteImageResult</code>.
+    * Class RemoteImageResult.  
     * @alias module:model/RemoteImageResult
     * @class
     */
@@ -56,14 +57,17 @@ export default class RemoteImageResult {
     }
 
     /**
+    * The images.
     * @member {Array.<module:model/RemoteImageInfo>} Images
     */
     'Images' = undefined;
     /**
+    * The total record count.
     * @member {Number} TotalRecordCount
     */
     'TotalRecordCount' = undefined;
     /**
+    * The providers.
     * @member {Array.<String>} Providers
     */
     'Providers' = undefined;

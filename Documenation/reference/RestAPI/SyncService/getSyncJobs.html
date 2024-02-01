@@ -181,7 +181,7 @@
         <td><span class="status">200</span></td>
         <td>
   
-              <a href="#QueryResult_Sync_SyncJob" class="typelink">SyncJob</a>
+              <a href="#QueryResult_SyncJob" class="typelink">QueryResult_SyncJob</a>
               
         </td>
         <td><p>Operation successful. Returning a QueryResult<syncjob> object.<p>
@@ -249,9 +249,9 @@
   </div>
 <h2 id="definitions">Definitions</h2>
   
-  <h3 id="QueryResult_Sync_SyncJob" class="text-capitalize">SyncJob</h3>
+  <h3 id="QueryResult_SyncJob" class="text-capitalize">QueryResult_SyncJob</h3>
   <div>
-      <span class="xref">QueryResult_Sync.SyncJob</span>
+      <span class="xref">QueryResult_SyncJob</span>
   </div>
   <table class="table table-bordered table-striped table-condensed">
       <thead>
@@ -306,12 +306,24 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">TargetId</span></td>
               <td>
                     string
+  
+                  
+              </td>
+              <td><p>The device identifier.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">InternalTargetId</span></td>
+              <td>
+                    integer
+                      (int64)
   
                   
               </td>
@@ -324,7 +336,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name of the target.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Quality</span></td>
@@ -333,7 +346,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The quality.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Bitrate</span></td>
@@ -343,7 +357,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The bitrate.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Container</span></td>
@@ -379,7 +394,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The profile.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Category</span></td>
@@ -398,7 +414,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The parent identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Progress</span></td>
@@ -408,7 +425,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The current progress.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Name</span></td>
@@ -417,7 +435,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Status</span></td>
@@ -436,7 +455,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The user identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">UnwatchedOnly</span></td>
@@ -445,7 +465,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether [unwatched only].</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SyncNewContent</span></td>
@@ -454,7 +475,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether [synchronize new content].</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ItemLimit</span></td>
@@ -464,12 +486,24 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The item limit.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RequestedItemIds</span></td>
               <td>
                     array
+  
+                  
+              </td>
+              <td><p>The requested item ids.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ItemId</span></td>
+              <td>
+                    integer
+                      (int64)
   
                   
               </td>
@@ -483,7 +517,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The date created.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DateLastModified</span></td>
@@ -493,7 +528,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The date last modified.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ItemCount</span></td>
@@ -503,7 +539,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The item count.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ParentName</span></td>

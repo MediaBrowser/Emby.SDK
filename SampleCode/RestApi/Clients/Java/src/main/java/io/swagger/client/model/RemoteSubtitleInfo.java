@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -57,6 +57,9 @@ public class RemoteSubtitleInfo {
   @SerializedName("IsForced")
   private Boolean isForced = null;
 
+  @SerializedName("IsHearingImpaired")
+  private Boolean isHearingImpaired = null;
+
   @SerializedName("Language")
   private String language = null;
 
@@ -66,10 +69,10 @@ public class RemoteSubtitleInfo {
   }
 
    /**
-   * Get threeLetterISOLanguageName
+   * Use language instead to return the language specified by the subtitle provider
    * @return threeLetterISOLanguageName
   **/
-  @Schema(description = "")
+  @Schema(description = "Use language instead to return the language specified by the subtitle provider")
   public String getThreeLetterISOLanguageName() {
     return threeLetterISOLanguageName;
   }
@@ -276,6 +279,24 @@ public class RemoteSubtitleInfo {
     this.isForced = isForced;
   }
 
+  public RemoteSubtitleInfo isHearingImpaired(Boolean isHearingImpaired) {
+    this.isHearingImpaired = isHearingImpaired;
+    return this;
+  }
+
+   /**
+   * Get isHearingImpaired
+   * @return isHearingImpaired
+  **/
+  @Schema(description = "")
+  public Boolean isIsHearingImpaired() {
+    return isHearingImpaired;
+  }
+
+  public void setIsHearingImpaired(Boolean isHearingImpaired) {
+    this.isHearingImpaired = isHearingImpaired;
+  }
+
   public RemoteSubtitleInfo language(String language) {
     this.language = language;
     return this;
@@ -316,12 +337,13 @@ public class RemoteSubtitleInfo {
         Objects.equals(this.downloadCount, remoteSubtitleInfo.downloadCount) &&
         Objects.equals(this.isHashMatch, remoteSubtitleInfo.isHashMatch) &&
         Objects.equals(this.isForced, remoteSubtitleInfo.isForced) &&
+        Objects.equals(this.isHearingImpaired, remoteSubtitleInfo.isHearingImpaired) &&
         Objects.equals(this.language, remoteSubtitleInfo.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(threeLetterISOLanguageName, id, providerName, name, format, author, comment, dateCreated, communityRating, downloadCount, isHashMatch, isForced, language);
+    return Objects.hash(threeLetterISOLanguageName, id, providerName, name, format, author, comment, dateCreated, communityRating, downloadCount, isHashMatch, isForced, isHearingImpaired, language);
   }
 
 
@@ -342,6 +364,7 @@ public class RemoteSubtitleInfo {
     sb.append("    downloadCount: ").append(toIndentedString(downloadCount)).append("\n");
     sb.append("    isHashMatch: ").append(toIndentedString(isHashMatch)).append("\n");
     sb.append("    isForced: ").append(toIndentedString(isForced)).append("\n");
+    sb.append("    isHearingImpaired: ").append(toIndentedString(isHearingImpaired)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("}");
     return sb.toString();

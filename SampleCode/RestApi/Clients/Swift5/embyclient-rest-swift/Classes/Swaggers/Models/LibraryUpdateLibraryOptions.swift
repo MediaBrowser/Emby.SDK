@@ -12,9 +12,9 @@ import Foundation
 public struct LibraryUpdateLibraryOptions: Codable {
 
     public var _id: String?
-    public var libraryOptions: ConfigurationLibraryOptions?
+    public var libraryOptions: LibraryOptions?
 
-    public init(_id: String? = nil, libraryOptions: ConfigurationLibraryOptions? = nil) {
+    public init(_id: String? = nil, libraryOptions: LibraryOptions? = nil) {
         self._id = _id
         self.libraryOptions = libraryOptions
     }

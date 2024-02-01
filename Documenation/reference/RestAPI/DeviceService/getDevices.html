@@ -165,6 +165,31 @@
   <div class="codewrapper">
     <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Devices</code></pre>
   </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>In</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">SortOrder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Sort Order - Ascending,Descending</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <div class="responses">
     <h5>Responses</h5>
     <table class="table table-bordered table-striped table-condensed">
@@ -314,6 +339,26 @@
   
                   
               </td>
+              <td><p>The identifier.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">InternalId</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ReportedDeviceId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
               <td></td>
           </tr>
           <tr>
@@ -323,7 +368,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The last name of the user.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AppName</span></td>
@@ -332,7 +378,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name of the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AppVersion</span></td>
@@ -341,7 +388,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The application version.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">LastUserId</span></td>
@@ -350,7 +398,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The last user identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DateLastActivity</span></td>
@@ -366,6 +415,16 @@
               <td><span class="parametername">IconUrl</span></td>
               <td>
                     string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IpAddress</span></td>
+              <td>
+                    string
+                      (ipv4)
   
                   
               </td>

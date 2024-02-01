@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -23,29 +23,24 @@ class UpdateUserPassword(object):
     """
     swagger_types = {
         'id': 'str',
-        'current_pw': 'str',
         'new_pw': 'str',
         'reset_password': 'bool'
     }
 
     attribute_map = {
         'id': 'Id',
-        'current_pw': 'CurrentPw',
         'new_pw': 'NewPw',
         'reset_password': 'ResetPassword'
     }
 
-    def __init__(self, id=None, current_pw=None, new_pw=None, reset_password=None):  # noqa: E501
+    def __init__(self, id=None, new_pw=None, reset_password=None):  # noqa: E501
         """UpdateUserPassword - a model defined in Swagger"""  # noqa: E501
         self._id = None
-        self._current_pw = None
         self._new_pw = None
         self._reset_password = None
         self.discriminator = None
         if id is not None:
             self.id = id
-        if current_pw is not None:
-            self.current_pw = current_pw
         if new_pw is not None:
             self.new_pw = new_pw
         if reset_password is not None:
@@ -71,27 +66,6 @@ class UpdateUserPassword(object):
         """
 
         self._id = id
-
-    @property
-    def current_pw(self):
-        """Gets the current_pw of this UpdateUserPassword.  # noqa: E501
-
-
-        :return: The current_pw of this UpdateUserPassword.  # noqa: E501
-        :rtype: str
-        """
-        return self._current_pw
-
-    @current_pw.setter
-    def current_pw(self, current_pw):
-        """Sets the current_pw of this UpdateUserPassword.
-
-
-        :param current_pw: The current_pw of this UpdateUserPassword.  # noqa: E501
-        :type: str
-        """
-
-        self._current_pw = current_pw
 
     @property
     def new_pw(self):

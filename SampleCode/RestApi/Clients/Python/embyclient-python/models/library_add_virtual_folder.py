@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -26,7 +26,7 @@ class LibraryAddVirtualFolder(object):
         'collection_type': 'str',
         'refresh_library': 'bool',
         'paths': 'list[str]',
-        'library_options': 'ConfigurationLibraryOptions'
+        'library_options': 'LibraryOptions'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class LibraryAddVirtualFolder(object):
 
 
         :return: The library_options of this LibraryAddVirtualFolder.  # noqa: E501
-        :rtype: ConfigurationLibraryOptions
+        :rtype: LibraryOptions
         """
         return self._library_options
 
@@ -156,7 +156,7 @@ class LibraryAddVirtualFolder(object):
 
 
         :param library_options: The library_options of this LibraryAddVirtualFolder.  # noqa: E501
-        :type: ConfigurationLibraryOptions
+        :type: LibraryOptions
         """
 
         self._library_options = library_options

@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -34,10 +34,10 @@ public class LiveTvLiveTvInfo {
   }
 
    /**
-   * Get isEnabled
+   * A value indicating whether this instance is enabled.
    * @return isEnabled
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is enabled.")
   public Boolean isIsEnabled() {
     return isEnabled;
   }
@@ -60,10 +60,10 @@ public class LiveTvLiveTvInfo {
   }
 
    /**
-   * Get enabledUsers
+   * The enabled users.
    * @return enabledUsers
   **/
-  @Schema(description = "")
+  @Schema(description = "The enabled users.")
   public List<String> getEnabledUsers() {
     return enabledUsers;
   }

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -90,6 +90,7 @@ class UserItemDataDto(object):
     def rating(self):
         """Gets the rating of this UserItemDataDto.  # noqa: E501
 
+        The rating.  # noqa: E501
 
         :return: The rating of this UserItemDataDto.  # noqa: E501
         :rtype: float
@@ -100,6 +101,7 @@ class UserItemDataDto(object):
     def rating(self, rating):
         """Sets the rating of this UserItemDataDto.
 
+        The rating.  # noqa: E501
 
         :param rating: The rating of this UserItemDataDto.  # noqa: E501
         :type: float
@@ -111,6 +113,7 @@ class UserItemDataDto(object):
     def played_percentage(self):
         """Gets the played_percentage of this UserItemDataDto.  # noqa: E501
 
+        The played percentage.  # noqa: E501
 
         :return: The played_percentage of this UserItemDataDto.  # noqa: E501
         :rtype: float
@@ -121,6 +124,7 @@ class UserItemDataDto(object):
     def played_percentage(self, played_percentage):
         """Sets the played_percentage of this UserItemDataDto.
 
+        The played percentage.  # noqa: E501
 
         :param played_percentage: The played_percentage of this UserItemDataDto.  # noqa: E501
         :type: float
@@ -132,6 +136,7 @@ class UserItemDataDto(object):
     def unplayed_item_count(self):
         """Gets the unplayed_item_count of this UserItemDataDto.  # noqa: E501
 
+        The unplayed item count.  # noqa: E501
 
         :return: The unplayed_item_count of this UserItemDataDto.  # noqa: E501
         :rtype: int
@@ -142,6 +147,7 @@ class UserItemDataDto(object):
     def unplayed_item_count(self, unplayed_item_count):
         """Sets the unplayed_item_count of this UserItemDataDto.
 
+        The unplayed item count.  # noqa: E501
 
         :param unplayed_item_count: The unplayed_item_count of this UserItemDataDto.  # noqa: E501
         :type: int
@@ -153,6 +159,7 @@ class UserItemDataDto(object):
     def playback_position_ticks(self):
         """Gets the playback_position_ticks of this UserItemDataDto.  # noqa: E501
 
+        The playback position ticks.  # noqa: E501
 
         :return: The playback_position_ticks of this UserItemDataDto.  # noqa: E501
         :rtype: int
@@ -163,6 +170,7 @@ class UserItemDataDto(object):
     def playback_position_ticks(self, playback_position_ticks):
         """Sets the playback_position_ticks of this UserItemDataDto.
 
+        The playback position ticks.  # noqa: E501
 
         :param playback_position_ticks: The playback_position_ticks of this UserItemDataDto.  # noqa: E501
         :type: int
@@ -174,6 +182,7 @@ class UserItemDataDto(object):
     def play_count(self):
         """Gets the play_count of this UserItemDataDto.  # noqa: E501
 
+        The play count.  # noqa: E501
 
         :return: The play_count of this UserItemDataDto.  # noqa: E501
         :rtype: int
@@ -184,6 +193,7 @@ class UserItemDataDto(object):
     def play_count(self, play_count):
         """Sets the play_count of this UserItemDataDto.
 
+        The play count.  # noqa: E501
 
         :param play_count: The play_count of this UserItemDataDto.  # noqa: E501
         :type: int
@@ -195,6 +205,7 @@ class UserItemDataDto(object):
     def is_favorite(self):
         """Gets the is_favorite of this UserItemDataDto.  # noqa: E501
 
+        A value indicating whether this instance is favorite.  # noqa: E501
 
         :return: The is_favorite of this UserItemDataDto.  # noqa: E501
         :rtype: bool
@@ -205,6 +216,7 @@ class UserItemDataDto(object):
     def is_favorite(self, is_favorite):
         """Sets the is_favorite of this UserItemDataDto.
 
+        A value indicating whether this instance is favorite.  # noqa: E501
 
         :param is_favorite: The is_favorite of this UserItemDataDto.  # noqa: E501
         :type: bool
@@ -216,6 +228,7 @@ class UserItemDataDto(object):
     def last_played_date(self):
         """Gets the last_played_date of this UserItemDataDto.  # noqa: E501
 
+        The last played date.  # noqa: E501
 
         :return: The last_played_date of this UserItemDataDto.  # noqa: E501
         :rtype: datetime
@@ -226,6 +239,7 @@ class UserItemDataDto(object):
     def last_played_date(self, last_played_date):
         """Sets the last_played_date of this UserItemDataDto.
 
+        The last played date.  # noqa: E501
 
         :param last_played_date: The last_played_date of this UserItemDataDto.  # noqa: E501
         :type: datetime
@@ -237,6 +251,7 @@ class UserItemDataDto(object):
     def played(self):
         """Gets the played of this UserItemDataDto.  # noqa: E501
 
+        A value indicating whether this `MediaBrowser.Model.Dto.UserItemDataDto` is played.  # noqa: E501
 
         :return: The played of this UserItemDataDto.  # noqa: E501
         :rtype: bool
@@ -247,6 +262,7 @@ class UserItemDataDto(object):
     def played(self, played):
         """Sets the played of this UserItemDataDto.
 
+        A value indicating whether this `MediaBrowser.Model.Dto.UserItemDataDto` is played.  # noqa: E501
 
         :param played: The played of this UserItemDataDto.  # noqa: E501
         :type: bool
@@ -258,6 +274,7 @@ class UserItemDataDto(object):
     def key(self):
         """Gets the key of this UserItemDataDto.  # noqa: E501
 
+        The key.  # noqa: E501
 
         :return: The key of this UserItemDataDto.  # noqa: E501
         :rtype: str
@@ -268,6 +285,7 @@ class UserItemDataDto(object):
     def key(self, key):
         """Sets the key of this UserItemDataDto.
 
+        The key.  # noqa: E501
 
         :param key: The key of this UserItemDataDto.  # noqa: E501
         :type: str
@@ -279,6 +297,7 @@ class UserItemDataDto(object):
     def item_id(self):
         """Gets the item_id of this UserItemDataDto.  # noqa: E501
 
+        The item identifier.  # noqa: E501
 
         :return: The item_id of this UserItemDataDto.  # noqa: E501
         :rtype: str
@@ -289,6 +308,7 @@ class UserItemDataDto(object):
     def item_id(self, item_id):
         """Sets the item_id of this UserItemDataDto.
 
+        The item identifier.  # noqa: E501
 
         :param item_id: The item_id of this UserItemDataDto.  # noqa: E501
         :type: str
@@ -300,6 +320,7 @@ class UserItemDataDto(object):
     def server_id(self):
         """Gets the server_id of this UserItemDataDto.  # noqa: E501
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :return: The server_id of this UserItemDataDto.  # noqa: E501
         :rtype: str
@@ -310,6 +331,7 @@ class UserItemDataDto(object):
     def server_id(self, server_id):
         """Sets the server_id of this UserItemDataDto.
 
+        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
 
         :param server_id: The server_id of this UserItemDataDto.  # noqa: E501
         :type: str

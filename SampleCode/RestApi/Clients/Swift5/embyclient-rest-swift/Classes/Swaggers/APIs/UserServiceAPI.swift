@@ -77,6 +77,12 @@ open class UserServiceAPI {
      Clears audio or subtitle track selections for a user
      - DELETE /Users/{Id}/TrackSelections/{TrackType}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path)  
      - parameter trackType: (path)  
 
@@ -124,35 +130,38 @@ open class UserServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "Policy" : {
+    "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
+    "AllowSharingPersonalItems" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
     "EnablePlaybackRemuxing" : true,
     "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
     "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
     "IsDisabled" : true,
-    "MaxParentalRating" : 6,
+    "MaxParentalRating" : 1,
     "EnablePublicSharing" : true,
     "AccessSchedules" : [ {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     }, {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     } ],
     "EnableContentDownloading" : true,
     "EnableSubtitleManagement" : true,
-    "SimultaneousStreamLimit" : 7,
+    "SimultaneousStreamLimit" : 9,
     "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
     "IsAdministrator" : true,
     "EnableSubtitleDownloading" : true,
     "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
     "EnableAllDevices" : true,
     "EnableMediaConversion" : true,
-    "InvalidLoginAttemptCount" : 5,
+    "InvalidLoginAttemptCount" : 2,
     "IsTagBlockingModeInclusive" : true,
+    "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
     "EnableAllFolders" : true,
     "EnableSharedDeviceControl" : true,
@@ -165,17 +174,20 @@ open class UserServiceAPI {
     "EnableAllChannels" : true,
     "EnableUserPreferenceAccess" : true,
     "AuthenticationProviderId" : "AuthenticationProviderId",
+    "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+    "AllowCameraUpload" : true,
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
     "EnableRemoteControlOfOtherUsers" : true,
     "EnableAudioPlaybackTranscoding" : true,
     "IsHiddenFromUnusedDevices" : true,
     "EnableSyncTranscoding" : true,
-    "RemoteClientBitrateLimit" : 2
+    "RemoteClientBitrateLimit" : 7
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
+  "UserItemShareLevel" : "None",
   "Configuration" : {
     "EnableNextEpisodeAutoPlay" : true,
     "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -186,8 +198,11 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
-    "EnableLocalPassword" : true,
+    "ProfilePin" : "ProfilePin",
+    "HidePlayedInMoreLikeThis" : true,
+    "HidePlayedInSuggestions" : true,
     "RememberSubtitleSelections" : true,
+    "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
     "PlayDefaultAudioTrack" : true,
     "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -203,7 +218,7 @@ open class UserServiceAPI {
   "HasConfiguredPassword" : true,
   "ServerName" : "ServerName",
   "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-  "PrimaryImageAspectRatio" : 9.301444243932576,
+  "PrimaryImageAspectRatio" : 3.616076749251911,
   "ConnectLinkType" : "LinkedUser",
   "Id" : "Id",
   "HasPassword" : true
@@ -227,6 +242,56 @@ open class UserServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets a typed user setting
+
+     - parameter key: (path) Key 
+     - parameter userId: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersByUseridTypedsettingsByKey(key: String, userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getUsersByUseridTypedsettingsByKeyWithRequestBuilder(key: key, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a typed user setting
+     - GET /Users/{UserId}/TypedSettings/{Key}
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter key: (path) Key 
+     - parameter userId: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getUsersByUseridTypedsettingsByKeyWithRequestBuilder(key: String, userId: String) -> RequestBuilder<Void> {
+        var path = "/Users/{UserId}/TypedSettings/{Key}"
+        let keyPreEscape = "\(key)"
+        let keyPostEscape = keyPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Key}", with: keyPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Gets a list of users
 
      - parameter isHidden: (query) Optional filter by IsHidden&#x3D;true or false (optional)
@@ -234,10 +299,259 @@ open class UserServiceAPI {
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersPrefixes(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, completion: @escaping ((_ data: [NameIdPair]?,_ error: Error?) -> Void)) {
-        getUsersPrefixesWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater).execute { (response, error) -> Void in
+    open class func getUsersItemaccess(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: QueryResultUserDto?,_ error: Error?) -> Void)) {
+        getUsersItemaccessWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater, sortOrder: sortOrder).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets a list of users
+     - GET /Users/ItemAccess
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "TotalRecordCount" : 0,
+  "Items" : [ {
+    "Policy" : {
+      "AllowTagOrRating" : true,
+      "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
+      "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
+      "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
+      "EnablePlaybackRemuxing" : true,
+      "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
+      "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
+      "IsDisabled" : true,
+      "MaxParentalRating" : 1,
+      "EnablePublicSharing" : true,
+      "AccessSchedules" : [ {
+        "DayOfWeek" : "Sunday",
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
+      }, {
+        "DayOfWeek" : "Sunday",
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
+      } ],
+      "EnableContentDownloading" : true,
+      "EnableSubtitleManagement" : true,
+      "SimultaneousStreamLimit" : 9,
+      "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
+      "IsAdministrator" : true,
+      "EnableSubtitleDownloading" : true,
+      "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
+      "EnableAllDevices" : true,
+      "EnableMediaConversion" : true,
+      "InvalidLoginAttemptCount" : 2,
+      "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
+      "EnableLiveTvAccess" : true,
+      "EnableAllFolders" : true,
+      "EnableSharedDeviceControl" : true,
+      "EnableRemoteAccess" : true,
+      "IsHidden" : true,
+      "EnableLiveTvManagement" : true,
+      "BlockUnratedItems" : [ "Movie", "Movie" ],
+      "EnableMediaPlayback" : true,
+      "EnableVideoPlaybackTranscoding" : true,
+      "EnableAllChannels" : true,
+      "EnableUserPreferenceAccess" : true,
+      "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
+      "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
+      "IsHiddenRemotely" : true,
+      "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
+      "EnableRemoteControlOfOtherUsers" : true,
+      "EnableAudioPlaybackTranscoding" : true,
+      "IsHiddenFromUnusedDevices" : true,
+      "EnableSyncTranscoding" : true,
+      "RemoteClientBitrateLimit" : 7
+    },
+    "HasConfiguredEasyPassword" : true,
+    "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
+    "Configuration" : {
+      "EnableNextEpisodeAutoPlay" : true,
+      "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
+      "DisplayMissingEpisodes" : true,
+      "IntroSkipMode" : "ShowButton",
+      "OrderedViews" : [ "OrderedViews", "OrderedViews" ],
+      "LatestItemsExcludes" : [ "LatestItemsExcludes", "LatestItemsExcludes" ],
+      "SubtitleMode" : "Default",
+      "ResumeRewindSeconds" : 0,
+      "HidePlayedInLatest" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
+      "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
+      "AudioLanguagePreference" : "AudioLanguagePreference",
+      "PlayDefaultAudioTrack" : true,
+      "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
+      "RememberAudioSelections" : true
+    },
+    "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+    "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "PrimaryImageTag" : "PrimaryImageTag",
+    "Prefix" : "Prefix",
+    "Name" : "Name",
+    "ConnectUserName" : "ConnectUserName",
+    "ServerId" : "ServerId",
+    "HasConfiguredPassword" : true,
+    "ServerName" : "ServerName",
+    "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+    "PrimaryImageAspectRatio" : 3.616076749251911,
+    "ConnectLinkType" : "LinkedUser",
+    "Id" : "Id",
+    "HasPassword" : true
+  }, {
+    "Policy" : {
+      "AllowTagOrRating" : true,
+      "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
+      "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
+      "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
+      "EnablePlaybackRemuxing" : true,
+      "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
+      "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
+      "IsDisabled" : true,
+      "MaxParentalRating" : 1,
+      "EnablePublicSharing" : true,
+      "AccessSchedules" : [ {
+        "DayOfWeek" : "Sunday",
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
+      }, {
+        "DayOfWeek" : "Sunday",
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
+      } ],
+      "EnableContentDownloading" : true,
+      "EnableSubtitleManagement" : true,
+      "SimultaneousStreamLimit" : 9,
+      "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
+      "IsAdministrator" : true,
+      "EnableSubtitleDownloading" : true,
+      "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
+      "EnableAllDevices" : true,
+      "EnableMediaConversion" : true,
+      "InvalidLoginAttemptCount" : 2,
+      "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
+      "EnableLiveTvAccess" : true,
+      "EnableAllFolders" : true,
+      "EnableSharedDeviceControl" : true,
+      "EnableRemoteAccess" : true,
+      "IsHidden" : true,
+      "EnableLiveTvManagement" : true,
+      "BlockUnratedItems" : [ "Movie", "Movie" ],
+      "EnableMediaPlayback" : true,
+      "EnableVideoPlaybackTranscoding" : true,
+      "EnableAllChannels" : true,
+      "EnableUserPreferenceAccess" : true,
+      "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
+      "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
+      "IsHiddenRemotely" : true,
+      "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
+      "EnableRemoteControlOfOtherUsers" : true,
+      "EnableAudioPlaybackTranscoding" : true,
+      "IsHiddenFromUnusedDevices" : true,
+      "EnableSyncTranscoding" : true,
+      "RemoteClientBitrateLimit" : 7
+    },
+    "HasConfiguredEasyPassword" : true,
+    "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
+    "Configuration" : {
+      "EnableNextEpisodeAutoPlay" : true,
+      "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
+      "DisplayMissingEpisodes" : true,
+      "IntroSkipMode" : "ShowButton",
+      "OrderedViews" : [ "OrderedViews", "OrderedViews" ],
+      "LatestItemsExcludes" : [ "LatestItemsExcludes", "LatestItemsExcludes" ],
+      "SubtitleMode" : "Default",
+      "ResumeRewindSeconds" : 0,
+      "HidePlayedInLatest" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
+      "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
+      "AudioLanguagePreference" : "AudioLanguagePreference",
+      "PlayDefaultAudioTrack" : true,
+      "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
+      "RememberAudioSelections" : true
+    },
+    "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+    "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "PrimaryImageTag" : "PrimaryImageTag",
+    "Prefix" : "Prefix",
+    "Name" : "Name",
+    "ConnectUserName" : "ConnectUserName",
+    "ServerId" : "ServerId",
+    "HasConfiguredPassword" : true,
+    "ServerName" : "ServerName",
+    "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+    "PrimaryImageAspectRatio" : 3.616076749251911,
+    "ConnectLinkType" : "LinkedUser",
+    "Id" : "Id",
+    "HasPassword" : true
+  } ]
+}}]
+     - parameter isHidden: (query) Optional filter by IsHidden&#x3D;true or false (optional)
+     - parameter isDisabled: (query) Optional filter by IsDisabled&#x3D;true or false (optional)
+     - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     - parameter limit: (query) Optional. The maximum number of records to return (optional)
+     - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
+
+     - returns: RequestBuilder<QueryResultUserDto> 
+     */
+    open class func getUsersItemaccessWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil) -> RequestBuilder<QueryResultUserDto> {
+        let path = "/Users/ItemAccess"
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "IsHidden": isHidden, 
+                        "IsDisabled": isDisabled, 
+                        "StartIndex": startIndex?.encodeToJSON(), 
+                        "Limit": limit?.encodeToJSON(), 
+                        "NameStartsWithOrGreater": nameStartsWithOrGreater, 
+                        "SortOrder": sortOrder
+        ])
+
+
+        let requestBuilder: RequestBuilder<QueryResultUserDto>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a list of users
+
+     - parameter isHidden: (query) Optional filter by IsHidden&#x3D;true or false (optional)
+     - parameter isDisabled: (query) Optional filter by IsDisabled&#x3D;true or false (optional)
+     - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     - parameter limit: (query) Optional. The maximum number of records to return (optional)
+     - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersPrefixes(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: [NameIdPair]?,_ error: Error?) -> Void)) {
+        getUsersPrefixesWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater, sortOrder: sortOrder).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -265,10 +579,11 @@ open class UserServiceAPI {
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
 
      - returns: RequestBuilder<[NameIdPair]> 
      */
-    open class func getUsersPrefixesWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil) -> RequestBuilder<[NameIdPair]> {
+    open class func getUsersPrefixesWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil) -> RequestBuilder<[NameIdPair]> {
         let path = "/Users/Prefixes"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -278,7 +593,8 @@ open class UserServiceAPI {
                         "IsDisabled": isDisabled, 
                         "StartIndex": startIndex?.encodeToJSON(), 
                         "Limit": limit?.encodeToJSON(), 
-                        "NameStartsWithOrGreater": nameStartsWithOrGreater
+                        "NameStartsWithOrGreater": nameStartsWithOrGreater, 
+                        "SortOrder": sortOrder
         ])
 
 
@@ -302,37 +618,46 @@ open class UserServiceAPI {
      Gets a list of publicly visible users for display on a login screen.
      - GET /Users/Public
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example=[ {
   "Policy" : {
+    "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
+    "AllowSharingPersonalItems" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
     "EnablePlaybackRemuxing" : true,
     "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
     "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
     "IsDisabled" : true,
-    "MaxParentalRating" : 6,
+    "MaxParentalRating" : 1,
     "EnablePublicSharing" : true,
     "AccessSchedules" : [ {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     }, {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     } ],
     "EnableContentDownloading" : true,
     "EnableSubtitleManagement" : true,
-    "SimultaneousStreamLimit" : 7,
+    "SimultaneousStreamLimit" : 9,
     "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
     "IsAdministrator" : true,
     "EnableSubtitleDownloading" : true,
     "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
     "EnableAllDevices" : true,
     "EnableMediaConversion" : true,
-    "InvalidLoginAttemptCount" : 5,
+    "InvalidLoginAttemptCount" : 2,
     "IsTagBlockingModeInclusive" : true,
+    "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
     "EnableAllFolders" : true,
     "EnableSharedDeviceControl" : true,
@@ -345,17 +670,20 @@ open class UserServiceAPI {
     "EnableAllChannels" : true,
     "EnableUserPreferenceAccess" : true,
     "AuthenticationProviderId" : "AuthenticationProviderId",
+    "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+    "AllowCameraUpload" : true,
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
     "EnableRemoteControlOfOtherUsers" : true,
     "EnableAudioPlaybackTranscoding" : true,
     "IsHiddenFromUnusedDevices" : true,
     "EnableSyncTranscoding" : true,
-    "RemoteClientBitrateLimit" : 2
+    "RemoteClientBitrateLimit" : 7
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
+  "UserItemShareLevel" : "None",
   "Configuration" : {
     "EnableNextEpisodeAutoPlay" : true,
     "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -366,8 +694,11 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
-    "EnableLocalPassword" : true,
+    "ProfilePin" : "ProfilePin",
+    "HidePlayedInMoreLikeThis" : true,
+    "HidePlayedInSuggestions" : true,
     "RememberSubtitleSelections" : true,
+    "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
     "PlayDefaultAudioTrack" : true,
     "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -383,41 +714,44 @@ open class UserServiceAPI {
   "HasConfiguredPassword" : true,
   "ServerName" : "ServerName",
   "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-  "PrimaryImageAspectRatio" : 9.301444243932576,
+  "PrimaryImageAspectRatio" : 3.616076749251911,
   "ConnectLinkType" : "LinkedUser",
   "Id" : "Id",
   "HasPassword" : true
 }, {
   "Policy" : {
+    "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
+    "AllowSharingPersonalItems" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
     "EnablePlaybackRemuxing" : true,
     "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
     "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
     "IsDisabled" : true,
-    "MaxParentalRating" : 6,
+    "MaxParentalRating" : 1,
     "EnablePublicSharing" : true,
     "AccessSchedules" : [ {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     }, {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     } ],
     "EnableContentDownloading" : true,
     "EnableSubtitleManagement" : true,
-    "SimultaneousStreamLimit" : 7,
+    "SimultaneousStreamLimit" : 9,
     "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
     "IsAdministrator" : true,
     "EnableSubtitleDownloading" : true,
     "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
     "EnableAllDevices" : true,
     "EnableMediaConversion" : true,
-    "InvalidLoginAttemptCount" : 5,
+    "InvalidLoginAttemptCount" : 2,
     "IsTagBlockingModeInclusive" : true,
+    "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
     "EnableAllFolders" : true,
     "EnableSharedDeviceControl" : true,
@@ -430,17 +764,20 @@ open class UserServiceAPI {
     "EnableAllChannels" : true,
     "EnableUserPreferenceAccess" : true,
     "AuthenticationProviderId" : "AuthenticationProviderId",
+    "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+    "AllowCameraUpload" : true,
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
     "EnableRemoteControlOfOtherUsers" : true,
     "EnableAudioPlaybackTranscoding" : true,
     "IsHiddenFromUnusedDevices" : true,
     "EnableSyncTranscoding" : true,
-    "RemoteClientBitrateLimit" : 2
+    "RemoteClientBitrateLimit" : 7
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
+  "UserItemShareLevel" : "None",
   "Configuration" : {
     "EnableNextEpisodeAutoPlay" : true,
     "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -451,8 +788,11 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
-    "EnableLocalPassword" : true,
+    "ProfilePin" : "ProfilePin",
+    "HidePlayedInMoreLikeThis" : true,
+    "HidePlayedInSuggestions" : true,
     "RememberSubtitleSelections" : true,
+    "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
     "PlayDefaultAudioTrack" : true,
     "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -468,14 +808,14 @@ open class UserServiceAPI {
   "HasConfiguredPassword" : true,
   "ServerName" : "ServerName",
   "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-  "PrimaryImageAspectRatio" : 9.301444243932576,
+  "PrimaryImageAspectRatio" : 3.616076749251911,
   "ConnectLinkType" : "LinkedUser",
   "Id" : "Id",
   "HasPassword" : true
 } ]}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://dev.emby.media/doc/restapi/User-Authentication.html
 }
 
      - returns: RequestBuilder<[UserDto]> 
@@ -499,10 +839,11 @@ open class UserServiceAPI {
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersQuery(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, completion: @escaping ((_ data: QueryResultUserDto?,_ error: Error?) -> Void)) {
-        getUsersQueryWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater).execute { (response, error) -> Void in
+    open class func getUsersQuery(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: QueryResultUserDto?,_ error: Error?) -> Void)) {
+        getUsersQueryWithRequestBuilder(isHidden: isHidden, isDisabled: isDisabled, startIndex: startIndex, limit: limit, nameStartsWithOrGreater: nameStartsWithOrGreater, sortOrder: sortOrder).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -522,35 +863,38 @@ open class UserServiceAPI {
   "TotalRecordCount" : 0,
   "Items" : [ {
     "Policy" : {
+      "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
       "EnablePlaybackRemuxing" : true,
       "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
       "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
       "IsDisabled" : true,
-      "MaxParentalRating" : 6,
+      "MaxParentalRating" : 1,
       "EnablePublicSharing" : true,
       "AccessSchedules" : [ {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       }, {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       } ],
       "EnableContentDownloading" : true,
       "EnableSubtitleManagement" : true,
-      "SimultaneousStreamLimit" : 7,
+      "SimultaneousStreamLimit" : 9,
       "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
       "IsAdministrator" : true,
       "EnableSubtitleDownloading" : true,
       "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
       "EnableAllDevices" : true,
       "EnableMediaConversion" : true,
-      "InvalidLoginAttemptCount" : 5,
+      "InvalidLoginAttemptCount" : 2,
       "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
       "EnableAllFolders" : true,
       "EnableSharedDeviceControl" : true,
@@ -563,17 +907,20 @@ open class UserServiceAPI {
       "EnableAllChannels" : true,
       "EnableUserPreferenceAccess" : true,
       "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
       "EnableRemoteControlOfOtherUsers" : true,
       "EnableAudioPlaybackTranscoding" : true,
       "IsHiddenFromUnusedDevices" : true,
       "EnableSyncTranscoding" : true,
-      "RemoteClientBitrateLimit" : 2
+      "RemoteClientBitrateLimit" : 7
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
     "Configuration" : {
       "EnableNextEpisodeAutoPlay" : true,
       "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -584,8 +931,11 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
-      "EnableLocalPassword" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
       "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
       "PlayDefaultAudioTrack" : true,
       "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -601,41 +951,44 @@ open class UserServiceAPI {
     "HasConfiguredPassword" : true,
     "ServerName" : "ServerName",
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-    "PrimaryImageAspectRatio" : 9.301444243932576,
+    "PrimaryImageAspectRatio" : 3.616076749251911,
     "ConnectLinkType" : "LinkedUser",
     "Id" : "Id",
     "HasPassword" : true
   }, {
     "Policy" : {
+      "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
       "EnablePlaybackRemuxing" : true,
       "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
       "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
       "IsDisabled" : true,
-      "MaxParentalRating" : 6,
+      "MaxParentalRating" : 1,
       "EnablePublicSharing" : true,
       "AccessSchedules" : [ {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       }, {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       } ],
       "EnableContentDownloading" : true,
       "EnableSubtitleManagement" : true,
-      "SimultaneousStreamLimit" : 7,
+      "SimultaneousStreamLimit" : 9,
       "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
       "IsAdministrator" : true,
       "EnableSubtitleDownloading" : true,
       "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
       "EnableAllDevices" : true,
       "EnableMediaConversion" : true,
-      "InvalidLoginAttemptCount" : 5,
+      "InvalidLoginAttemptCount" : 2,
       "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
       "EnableAllFolders" : true,
       "EnableSharedDeviceControl" : true,
@@ -648,17 +1001,20 @@ open class UserServiceAPI {
       "EnableAllChannels" : true,
       "EnableUserPreferenceAccess" : true,
       "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
       "EnableRemoteControlOfOtherUsers" : true,
       "EnableAudioPlaybackTranscoding" : true,
       "IsHiddenFromUnusedDevices" : true,
       "EnableSyncTranscoding" : true,
-      "RemoteClientBitrateLimit" : 2
+      "RemoteClientBitrateLimit" : 7
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
     "Configuration" : {
       "EnableNextEpisodeAutoPlay" : true,
       "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -669,8 +1025,11 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
-      "EnableLocalPassword" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
       "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
       "PlayDefaultAudioTrack" : true,
       "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -686,7 +1045,7 @@ open class UserServiceAPI {
     "HasConfiguredPassword" : true,
     "ServerName" : "ServerName",
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-    "PrimaryImageAspectRatio" : 9.301444243932576,
+    "PrimaryImageAspectRatio" : 3.616076749251911,
     "ConnectLinkType" : "LinkedUser",
     "Id" : "Id",
     "HasPassword" : true
@@ -697,10 +1056,11 @@ open class UserServiceAPI {
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
 
      - returns: RequestBuilder<QueryResultUserDto> 
      */
-    open class func getUsersQueryWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil) -> RequestBuilder<QueryResultUserDto> {
+    open class func getUsersQueryWithRequestBuilder(isHidden: Bool? = nil, isDisabled: Bool? = nil, startIndex: Int? = nil, limit: Int? = nil, nameStartsWithOrGreater: String? = nil, sortOrder: String? = nil) -> RequestBuilder<QueryResultUserDto> {
         let path = "/Users/Query"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -710,7 +1070,8 @@ open class UserServiceAPI {
                         "IsDisabled": isDisabled, 
                         "StartIndex": startIndex?.encodeToJSON(), 
                         "Limit": limit?.encodeToJSON(), 
-                        "NameStartsWithOrGreater": nameStartsWithOrGreater
+                        "NameStartsWithOrGreater": nameStartsWithOrGreater, 
+                        "SortOrder": sortOrder
         ])
 
 
@@ -736,38 +1097,47 @@ open class UserServiceAPI {
      Authenticates a user
      - POST /Users/AuthenticateByName
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "User" : {
     "Policy" : {
+      "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
       "EnablePlaybackRemuxing" : true,
       "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
       "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
       "IsDisabled" : true,
-      "MaxParentalRating" : 6,
+      "MaxParentalRating" : 1,
       "EnablePublicSharing" : true,
       "AccessSchedules" : [ {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       }, {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       } ],
       "EnableContentDownloading" : true,
       "EnableSubtitleManagement" : true,
-      "SimultaneousStreamLimit" : 7,
+      "SimultaneousStreamLimit" : 9,
       "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
       "IsAdministrator" : true,
       "EnableSubtitleDownloading" : true,
       "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
       "EnableAllDevices" : true,
       "EnableMediaConversion" : true,
-      "InvalidLoginAttemptCount" : 5,
+      "InvalidLoginAttemptCount" : 2,
       "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
       "EnableAllFolders" : true,
       "EnableSharedDeviceControl" : true,
@@ -780,17 +1150,20 @@ open class UserServiceAPI {
       "EnableAllChannels" : true,
       "EnableUserPreferenceAccess" : true,
       "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
       "EnableRemoteControlOfOtherUsers" : true,
       "EnableAudioPlaybackTranscoding" : true,
       "IsHiddenFromUnusedDevices" : true,
       "EnableSyncTranscoding" : true,
-      "RemoteClientBitrateLimit" : 2
+      "RemoteClientBitrateLimit" : 7
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
     "Configuration" : {
       "EnableNextEpisodeAutoPlay" : true,
       "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -801,8 +1174,11 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
-      "EnableLocalPassword" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
       "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
       "PlayDefaultAudioTrack" : true,
       "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -818,7 +1194,7 @@ open class UserServiceAPI {
     "HasConfiguredPassword" : true,
     "ServerName" : "ServerName",
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-    "PrimaryImageAspectRatio" : 9.301444243932576,
+    "PrimaryImageAspectRatio" : 3.616076749251911,
     "ConnectLinkType" : "LinkedUser",
     "Id" : "Id",
     "HasPassword" : true
@@ -827,42 +1203,47 @@ open class UserServiceAPI {
   "AccessToken" : "AccessToken",
   "SessionInfo" : {
     "PlaylistLength" : 3,
-    "UserName" : "UserName",
     "ApplicationVersion" : "ApplicationVersion",
     "SupportedCommands" : [ "SupportedCommands", "SupportedCommands" ],
     "DeviceId" : "DeviceId",
     "PlaylistItemId" : "PlaylistItemId",
+    "PlaylistIndex" : 9,
+    "ServerId" : "ServerId",
+    "RemoteEndPoint" : "RemoteEndPoint",
+    "InternalDeviceId" : 2,
+    "SupportsRemoteControl" : true,
+    "Protocol" : "Protocol",
+    "Client" : "Client",
+    "UserName" : "UserName",
     "UserPrimaryImageTag" : "UserPrimaryImageTag",
     "DeviceType" : "DeviceType",
     "PlayableMediaTypes" : [ "PlayableMediaTypes", "PlayableMediaTypes" ],
-    "PlaylistIndex" : 9,
-    "ServerId" : "ServerId",
     "NowPlayingItem" : {
       "SeasonName" : "SeasonName",
       "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-      "Size" : 6,
-      "CriticRating" : 6.965118,
-      "GameSystemId" : 1,
+      "Size" : 2,
+      "CriticRating" : 6.4384236,
+      "GameSystemId" : 3,
       "Studios" : [ {
-        "Id" : 0,
+        "Id" : 3,
         "Name" : "Name"
       }, {
-        "Id" : 0,
+        "Id" : 3,
         "Name" : "Name"
       } ],
       "CameraMake" : "CameraMake",
-      "Aperture" : 7.260521264802104,
+      "Aperture" : 1.041444916118296,
       "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
       "ExtraType" : "ExtraType",
       "ParentBackdropItemId" : "ParentBackdropItemId",
       "Etag" : "Etag",
       "ParentLogoImageTag" : "ParentLogoImageTag",
-      "ExposureTime" : 1.041444916118296,
+      "ExposureTime" : 6.628464275087742,
       "MediaType" : "MediaType",
       "ManagementId" : "ManagementId",
       "Tags" : [ "Tags", "Tags" ],
       "Status" : "Status",
-      "IndexNumberEnd" : 3,
+      "IndexNumberEnd" : 6,
       "ArtistItems" : [ {
         "Id" : "Id",
         "Name" : "Name"
@@ -875,34 +1256,35 @@ open class UserServiceAPI {
         "RequiredHttpHeaders" : {
           "key" : "RequiredHttpHeaders"
         },
-        "RunTimeTicks" : 7,
+        "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
-          "Index" : 9,
-          "BitDepth" : 7,
+          "Index" : 4,
+          "BitDepth" : 2,
           "ItemId" : "ItemId",
           "SupportsExternalStream" : true,
           "Codec" : "Codec",
-          "IsClosedCaptions" : true,
-          "SampleRate" : 6,
+          "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "AttachmentSize" : 6,
+          "AttachmentSize" : 9,
           "SubtitleLocationType" : "InternalStream",
-          "RefFrames" : 1,
+          "RefFrames" : 4,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
           "ChannelLayout" : "ChannelLayout",
           "DisplayLanguage" : "DisplayLanguage",
-          "AverageFrameRate" : 4.9652185,
-          "StreamStartTimeTicks" : 2,
+          "AverageFrameRate" : 7.4577446,
+          "StreamStartTimeTicks" : 9,
           "IsExternal" : true,
-          "Level" : 9.369310271410669,
-          "CodecTimeBase" : "CodecTimeBase",
+          "Level" : 5.025004791520295,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 1,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -912,8 +1294,8 @@ open class UserServiceAPI {
           "Language" : "Language",
           "IsTextSubtitleStream" : true,
           "NalLengthSize" : "NalLengthSize",
-          "Height" : 7,
-          "Width" : 1,
+          "Height" : 1,
+          "Width" : 6,
           "TimeBase" : "TimeBase",
           "CodecTag" : "CodecTag",
           "IsDefault" : true,
@@ -921,40 +1303,42 @@ open class UserServiceAPI {
           "Comment" : "Comment",
           "DeliveryMethod" : "Encode",
           "Title" : "Title",
-          "Rotation" : 1,
-          "RealFrameRate" : 5.025005,
+          "ExtendedVideoType" : "None",
+          "Rotation" : 7,
+          "RealFrameRate" : 1.1730742,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
           "Extradata" : "Extradata",
-          "BitRate" : 4
+          "BitRate" : 3
         }, {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
-          "Index" : 9,
-          "BitDepth" : 7,
+          "Index" : 4,
+          "BitDepth" : 2,
           "ItemId" : "ItemId",
           "SupportsExternalStream" : true,
           "Codec" : "Codec",
-          "IsClosedCaptions" : true,
-          "SampleRate" : 6,
+          "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "AttachmentSize" : 6,
+          "AttachmentSize" : 9,
           "SubtitleLocationType" : "InternalStream",
-          "RefFrames" : 1,
+          "RefFrames" : 4,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
           "ChannelLayout" : "ChannelLayout",
           "DisplayLanguage" : "DisplayLanguage",
-          "AverageFrameRate" : 4.9652185,
-          "StreamStartTimeTicks" : 2,
+          "AverageFrameRate" : 7.4577446,
+          "StreamStartTimeTicks" : 9,
           "IsExternal" : true,
-          "Level" : 9.369310271410669,
-          "CodecTimeBase" : "CodecTimeBase",
+          "Level" : 5.025004791520295,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 1,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -964,8 +1348,8 @@ open class UserServiceAPI {
           "Language" : "Language",
           "IsTextSubtitleStream" : true,
           "NalLengthSize" : "NalLengthSize",
-          "Height" : 7,
-          "Width" : 1,
+          "Height" : 1,
+          "Width" : 6,
           "TimeBase" : "TimeBase",
           "CodecTag" : "CodecTag",
           "IsDefault" : true,
@@ -973,17 +1357,19 @@ open class UserServiceAPI {
           "Comment" : "Comment",
           "DeliveryMethod" : "Encode",
           "Title" : "Title",
-          "Rotation" : 1,
-          "RealFrameRate" : 5.025005,
+          "ExtendedVideoType" : "None",
+          "Rotation" : 7,
+          "RealFrameRate" : 1.1730742,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
           "Extradata" : "Extradata",
-          "BitRate" : 4
+          "BitRate" : 3
         } ],
-        "Size" : 2,
-        "BufferMs" : 3,
-        "ContainerStartTimeTicks" : 9,
+        "Size" : 1,
+        "BufferMs" : 7,
+        "ContainerStartTimeTicks" : 5,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -997,57 +1383,62 @@ open class UserServiceAPI {
         "LiveStreamId" : "LiveStreamId",
         "RequiresLooping" : true,
         "Protocol" : "File",
-        "DefaultSubtitleStreamIndex" : 3,
+        "AddApiKeyToDirectStreamUrl" : true,
+        "DefaultSubtitleStreamIndex" : 9,
+        "TrancodeLiveStartIndex" : 2,
         "IsInfiniteStream" : true,
         "Path" : "Path",
         "IsRemote" : true,
         "SupportsDirectPlay" : true,
         "TranscodingSubProtocol" : "TranscodingSubProtocol",
         "Formats" : [ "Formats", "Formats" ],
-        "AnalyzeDurationMs" : 9,
-        "Bitrate" : 8,
+        "AnalyzeDurationMs" : 6,
+        "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+        "Bitrate" : 9,
         "OpenToken" : "OpenToken",
         "SupportsProbing" : true,
         "Type" : "Default",
         "ReadAtNativeFramerate" : true,
         "TranscodingContainer" : "TranscodingContainer",
+        "ProbePath" : "ProbePath",
         "TranscodingUrl" : "TranscodingUrl",
         "Id" : "Id",
         "SupportsTranscoding" : true,
-        "DefaultAudioStreamIndex" : 6
+        "DefaultAudioStreamIndex" : 8
       }, {
         "EncoderPath" : "EncoderPath",
         "RequiredHttpHeaders" : {
           "key" : "RequiredHttpHeaders"
         },
-        "RunTimeTicks" : 7,
+        "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
-          "Index" : 9,
-          "BitDepth" : 7,
+          "Index" : 4,
+          "BitDepth" : 2,
           "ItemId" : "ItemId",
           "SupportsExternalStream" : true,
           "Codec" : "Codec",
-          "IsClosedCaptions" : true,
-          "SampleRate" : 6,
+          "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "AttachmentSize" : 6,
+          "AttachmentSize" : 9,
           "SubtitleLocationType" : "InternalStream",
-          "RefFrames" : 1,
+          "RefFrames" : 4,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
           "ChannelLayout" : "ChannelLayout",
           "DisplayLanguage" : "DisplayLanguage",
-          "AverageFrameRate" : 4.9652185,
-          "StreamStartTimeTicks" : 2,
+          "AverageFrameRate" : 7.4577446,
+          "StreamStartTimeTicks" : 9,
           "IsExternal" : true,
-          "Level" : 9.369310271410669,
-          "CodecTimeBase" : "CodecTimeBase",
+          "Level" : 5.025004791520295,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 1,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1057,8 +1448,8 @@ open class UserServiceAPI {
           "Language" : "Language",
           "IsTextSubtitleStream" : true,
           "NalLengthSize" : "NalLengthSize",
-          "Height" : 7,
-          "Width" : 1,
+          "Height" : 1,
+          "Width" : 6,
           "TimeBase" : "TimeBase",
           "CodecTag" : "CodecTag",
           "IsDefault" : true,
@@ -1066,40 +1457,42 @@ open class UserServiceAPI {
           "Comment" : "Comment",
           "DeliveryMethod" : "Encode",
           "Title" : "Title",
-          "Rotation" : 1,
-          "RealFrameRate" : 5.025005,
+          "ExtendedVideoType" : "None",
+          "Rotation" : 7,
+          "RealFrameRate" : 1.1730742,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
           "Extradata" : "Extradata",
-          "BitRate" : 4
+          "BitRate" : 3
         }, {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
-          "Index" : 9,
-          "BitDepth" : 7,
+          "Index" : 4,
+          "BitDepth" : 2,
           "ItemId" : "ItemId",
           "SupportsExternalStream" : true,
           "Codec" : "Codec",
-          "IsClosedCaptions" : true,
-          "SampleRate" : 6,
+          "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "AttachmentSize" : 6,
+          "AttachmentSize" : 9,
           "SubtitleLocationType" : "InternalStream",
-          "RefFrames" : 1,
+          "RefFrames" : 4,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
           "ChannelLayout" : "ChannelLayout",
           "DisplayLanguage" : "DisplayLanguage",
-          "AverageFrameRate" : 4.9652185,
-          "StreamStartTimeTicks" : 2,
+          "AverageFrameRate" : 7.4577446,
+          "StreamStartTimeTicks" : 9,
           "IsExternal" : true,
-          "Level" : 9.369310271410669,
-          "CodecTimeBase" : "CodecTimeBase",
+          "Level" : 5.025004791520295,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 1,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1109,8 +1502,8 @@ open class UserServiceAPI {
           "Language" : "Language",
           "IsTextSubtitleStream" : true,
           "NalLengthSize" : "NalLengthSize",
-          "Height" : 7,
-          "Width" : 1,
+          "Height" : 1,
+          "Width" : 6,
           "TimeBase" : "TimeBase",
           "CodecTag" : "CodecTag",
           "IsDefault" : true,
@@ -1118,17 +1511,19 @@ open class UserServiceAPI {
           "Comment" : "Comment",
           "DeliveryMethod" : "Encode",
           "Title" : "Title",
-          "Rotation" : 1,
-          "RealFrameRate" : 5.025005,
+          "ExtendedVideoType" : "None",
+          "Rotation" : 7,
+          "RealFrameRate" : 1.1730742,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
           "Extradata" : "Extradata",
-          "BitRate" : 4
+          "BitRate" : 3
         } ],
-        "Size" : 2,
-        "BufferMs" : 3,
-        "ContainerStartTimeTicks" : 9,
+        "Size" : 1,
+        "BufferMs" : 7,
+        "ContainerStartTimeTicks" : 5,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -1142,50 +1537,56 @@ open class UserServiceAPI {
         "LiveStreamId" : "LiveStreamId",
         "RequiresLooping" : true,
         "Protocol" : "File",
-        "DefaultSubtitleStreamIndex" : 3,
+        "AddApiKeyToDirectStreamUrl" : true,
+        "DefaultSubtitleStreamIndex" : 9,
+        "TrancodeLiveStartIndex" : 2,
         "IsInfiniteStream" : true,
         "Path" : "Path",
         "IsRemote" : true,
         "SupportsDirectPlay" : true,
         "TranscodingSubProtocol" : "TranscodingSubProtocol",
         "Formats" : [ "Formats", "Formats" ],
-        "AnalyzeDurationMs" : 9,
-        "Bitrate" : 8,
+        "AnalyzeDurationMs" : 6,
+        "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+        "Bitrate" : 9,
         "OpenToken" : "OpenToken",
         "SupportsProbing" : true,
         "Type" : "Default",
         "ReadAtNativeFramerate" : true,
         "TranscodingContainer" : "TranscodingContainer",
+        "ProbePath" : "ProbePath",
         "TranscodingUrl" : "TranscodingUrl",
         "Id" : "Id",
         "SupportsTranscoding" : true,
-        "DefaultAudioStreamIndex" : 6
+        "DefaultAudioStreamIndex" : 8
       } ],
       "GenreItems" : [ null, null ],
       "OfficialRating" : "OfficialRating",
-      "Longitude" : 9.702963800023566,
+      "Longitude" : 9.132027271330688,
       "Composers" : [ null, null ],
       "LockData" : true,
-      "FocalLength" : 4.678947989005849,
+      "FocalLength" : 4.258773108174356,
       "IsNews" : true,
-      "ShutterSpeed" : 9.132027271330688,
+      "ShutterSpeed" : 4.678947989005849,
       "Id" : "Id",
       "SortIndexNumber" : 0,
       "IsFolder" : true,
+      "CanMakePublic" : true,
       "SeriesTimerId" : "SeriesTimerId",
       "SeriesId" : "SeriesId",
       "ListingsPath" : "ListingsPath",
       "MediaStreams" : [ null, null ],
       "FileName" : "FileName",
+      "PrimaryImageTag" : "PrimaryImageTag",
       "Prefix" : "Prefix",
       "CanDownload" : true,
       "IsMovie" : true,
-      "SeriesCount" : 6,
+      "SeriesCount" : 5,
+      "PrimaryImageItemId" : "PrimaryImageItemId",
       "ListingsChannelId" : "ListingsChannelId",
-      "PlayAccess" : "Full",
       "SeriesStudio" : "SeriesStudio",
       "IsLive" : true,
-      "Width" : 6,
+      "Width" : 4,
       "ExternalUrls" : [ {
         "Url" : "Url",
         "Name" : "Name"
@@ -1193,29 +1594,29 @@ open class UserServiceAPI {
         "Url" : "Url",
         "Name" : "Name"
       } ],
-      "RecursiveItemCount" : 3,
+      "RecursiveItemCount" : 8,
       "Path" : "Path",
       "ParentId" : "ParentId",
       "TimerType" : "Program",
       "GameSystem" : "GameSystem",
-      "MusicVideoCount" : 3,
+      "MusicVideoCount" : 8,
       "IsSeries" : true,
       "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
       "Subviews" : [ "Subviews", "Subviews" ],
-      "Bitrate" : 5,
+      "Bitrate" : 6,
       "EndDate" : "2000-01-23T04:56:07.000+00:00",
       "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
       "ParentThumbItemId" : "ParentThumbItemId",
       "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+      "CanLeaveContent" : true,
       "Type" : "Type",
       "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
       "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-      "AirsBeforeEpisodeNumber" : 5,
-      "ChildCount" : 3,
+      "ChildCount" : 7,
       "TagItems" : [ null, null ],
       "Artists" : [ "Artists", "Artists" ],
       "ListingsChannelName" : "ListingsChannelName",
-      "RunTimeTicks" : 6,
+      "RunTimeTicks" : 1,
       "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
       "Video3DFormat" : "HalfSideBySide",
       "CanDelete" : true,
@@ -1223,7 +1624,8 @@ open class UserServiceAPI {
       "SortParentIndexNumber" : 6,
       "DisplayPreferencesId" : "DisplayPreferencesId",
       "Album" : "Album",
-      "Latitude" : 0.8774076871421566,
+      "Latitude" : 7.260521264802104,
+      "Guid" : "Guid",
       "SortName" : "SortName",
       "Name" : "Name",
       "StartDate" : "2000-01-23T04:56:07.000+00:00",
@@ -1234,8 +1636,8 @@ open class UserServiceAPI {
       "AlbumId" : "AlbumId",
       "SupportsSync" : true,
       "LocalTrailerCount" : 7,
-      "IndexNumber" : 3,
-      "CompletionPercentage" : 5.507386964179881,
+      "IndexNumber" : 5,
+      "CompletionPercentage" : 0.5199002018724985,
       "Genres" : [ "Genres", "Genres" ],
       "SeasonId" : "SeasonId",
       "LockedFields" : [ "Cast", "Cast" ],
@@ -1253,43 +1655,44 @@ open class UserServiceAPI {
       "PresentationUniqueKey" : "PresentationUniqueKey",
       "CustomRating" : "CustomRating",
       "ListingsChannelNumber" : "ListingsChannelNumber",
-      "AirsAfterSeasonNumber" : 5,
+      "SyncStatus" : "Queued",
+      "CanManageAccess" : true,
       "AirDays" : [ "Sunday", "Sunday" ],
       "ParentLogoItemId" : "ParentLogoItemId",
-      "PartCount" : 3,
+      "PartCount" : 7,
       "ListingsProviderId" : "ListingsProviderId",
+      "CanEditItems" : true,
       "ChannelName" : "ChannelName",
       "EpisodeTitle" : "EpisodeTitle",
-      "IsoSpeedRating" : 7,
-      "CommunityRating" : 2.8841622,
+      "IsoSpeedRating" : 9,
+      "CommunityRating" : 6.965118,
       "Software" : "Software",
       "Chapters" : [ {
-        "StartPositionTicks" : 4,
+        "StartPositionTicks" : 5,
         "ImageTag" : "ImageTag",
         "MarkerType" : "Chapter",
-        "ChapterIndex" : 0,
+        "ChapterIndex" : 3,
         "Name" : "Name"
       }, {
-        "StartPositionTicks" : 4,
+        "StartPositionTicks" : 5,
         "ImageTag" : "ImageTag",
         "MarkerType" : "Chapter",
-        "ChapterIndex" : 0,
+        "ChapterIndex" : 3,
         "Name" : "Name"
       } ],
-      "SongCount" : 4,
+      "SongCount" : 6,
       "Taglines" : [ "Taglines", "Taglines" ],
-      "AirsBeforeSeasonNumber" : 1,
       "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
       "CameraModel" : "CameraModel",
       "ChannelNumber" : "ChannelNumber",
       "UserData" : {
-        "UnplayedItemCount" : 4,
+        "UnplayedItemCount" : 6,
         "Played" : true,
         "ServerId" : "ServerId",
-        "PlayedPercentage" : 0.10263654006109402,
-        "Rating" : 6.519180951018382,
-        "PlayCount" : 7,
-        "PlaybackPositionTicks" : 8,
+        "PlayedPercentage" : 7.058770351582356,
+        "Rating" : 0.8851374739011653,
+        "PlayCount" : 4,
+        "PlaybackPositionTicks" : 0,
         "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
         "IsFavorite" : true,
         "ItemId" : "ItemId",
@@ -1300,21 +1703,21 @@ open class UserServiceAPI {
       "ParentThumbImageTag" : "ParentThumbImageTag",
       "IsSports" : true,
       "ChannelId" : "ChannelId",
-      "ParentIndexNumber" : 7,
+      "ParentIndexNumber" : 3,
       "IsNew" : true,
       "AffiliateCallSign" : "AffiliateCallSign",
       "ListingsId" : "ListingsId",
       "AlbumArtists" : [ null, null ],
       "ServerId" : "ServerId",
       "Number" : "Number",
-      "AlbumCount" : 8,
+      "AlbumCount" : 4,
       "IsRepeat" : true,
       "CollectionType" : "CollectionType",
-      "PrimaryImageAspectRatio" : 5.533258397034986,
-      "Height" : 4,
+      "PrimaryImageAspectRatio" : 3.0576100241049344,
+      "Height" : 0,
       "IsKids" : true,
       "DisplayOrder" : "DisplayOrder",
-      "MovieCount" : 4,
+      "MovieCount" : 7,
       "People" : [ {
         "Role" : "Role",
         "Type" : "Actor",
@@ -1329,7 +1732,7 @@ open class UserServiceAPI {
         "Name" : "Name"
       } ],
       "Overview" : "Overview",
-      "SpecialFeatureCount" : 7,
+      "SpecialFeatureCount" : 3,
       "ImageOrientation" : "TopLeft",
       "AlbumArtist" : "AlbumArtist",
       "ImageTags" : {
@@ -1340,22 +1743,39 @@ open class UserServiceAPI {
       "SupportsResume" : true,
       "LocationType" : "FileSystem",
       "IsPremiere" : true,
-      "Altitude" : 0.5199002018724985
+      "Altitude" : 0.8774076871421566
     },
     "TranscodingInfo" : {
       "IsAudioDirect" : true,
+      "ProcessStatistics" : {
+        "Metrics" : [ {
+          "Time" : "Time",
+          "WorkingSet" : 6.778324963048013,
+          "VirtualMemory" : 2.8841621266687802,
+          "CpuPercent" : 1.284659006116532
+        }, {
+          "Time" : "Time",
+          "WorkingSet" : 6.778324963048013,
+          "VirtualMemory" : 2.8841621266687802,
+          "CpuPercent" : 1.284659006116532
+        } ],
+        "AverageCpu" : 6.438423552598547,
+        "CurrentCpu" : 9.018348186070783,
+        "CurrentWorkingSet" : 6.965117697638846,
+        "CurrentVirtualMemory" : 3.5571952270680973
+      },
       "TranscodeReasons" : [ "ContainerNotSupported", "ContainerNotSupported" ],
       "VideoEncoderHwAccel" : "VideoEncoderHwAccel",
-      "Framerate" : 1.2315135,
+      "Framerate" : 1.0246457,
       "Container" : "Container",
-      "TranscodingStartPositionTicks" : 6.84685269835264,
+      "TranscodingStartPositionTicks" : 7.457744773683766,
       "IsVideoDirect" : true,
-      "AverageCpuUsage" : 9.965781217890562,
+      "AverageCpuUsage" : 9.369310271410669,
       "VideoDecoderIsHardware" : true,
       "VideoDecoderMediaType" : "VideoDecoderMediaType",
       "SubProtocol" : "SubProtocol",
-      "CompletionPercentage" : 1.0246457001441578,
-      "Height" : 1,
+      "CompletionPercentage" : 1.4894159098541704,
+      "Height" : 4,
       "VideoPipelineInfo" : [ {
         "StepType" : "Decoder",
         "FfmpegDescription" : "FfmpegDescription",
@@ -1382,33 +1802,31 @@ open class UserServiceAPI {
         "Name" : "Name"
       } ],
       "VideoDecoder" : "VideoDecoder",
-      "Width" : 7,
+      "Width" : 1,
       "AudioCodec" : "AudioCodec",
       "VideoEncoderIsHardware" : true,
       "SubtitlePipelineInfos" : [ [ null, null ], [ null, null ] ],
       "CpuHistory" : [ {
-        "Item1" : 9.369310271410669,
-        "Item2" : 6.683562403749608
+        "Item1" : 6.683562403749608,
+        "Item2" : 8.762042012749001
       }, {
-        "Item1" : 9.369310271410669,
-        "Item2" : 6.683562403749608
+        "Item1" : 6.683562403749608,
+        "Item2" : 8.762042012749001
       } ],
-      "CurrentThrottle" : 8,
+      "CurrentThrottle" : 6,
       "VideoCodec" : "VideoCodec",
-      "Bitrate" : 2,
+      "Bitrate" : 4,
       "VideoDecoderHwAccel" : "VideoDecoderHwAccel",
-      "TranscodingPositionTicks" : 1.4894159098541704,
-      "CurrentCpuUsage" : 5.025004791520295,
-      "AudioBitrate" : 4,
-      "AudioChannels" : 4,
+      "TranscodingPositionTicks" : 6.84685269835264,
+      "CurrentCpuUsage" : 9.965781217890562,
+      "AudioBitrate" : 7,
+      "AudioChannels" : 5,
       "VideoEncoderMediaType" : "VideoEncoderMediaType",
       "VideoEncoder" : "VideoEncoder",
-      "VideoBitrate" : 7
+      "VideoBitrate" : 1
     },
-    "RemoteEndPoint" : "RemoteEndPoint",
     "AppIconUrl" : "AppIconUrl",
     "UserId" : "UserId",
-    "SupportsRemoteControl" : true,
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
     "Id" : "Id",
     "AdditionalUsers" : [ {
@@ -1420,7 +1838,6 @@ open class UserServiceAPI {
       "UserId" : "UserId",
       "UserInternalId" : 7
     } ],
-    "Client" : "Client",
     "PlayState" : {
       "RepeatMode" : "RepeatNone",
       "CanSeek" : true,
@@ -1440,7 +1857,7 @@ open class UserServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://dev.emby.media/doc/restapi/User-Authentication.html
 }
      - parameter body: (body) AuthenticateUserByName 
      - parameter xEmbyAuthorization: (header) The authorization header can be either named &#x27;Authorization&#x27; or &#x27;X-Emby-Authorization&#x27;.    It must be of the following schema:     Emby UserId&#x3D;\&quot;(guid)\&quot;, Client&#x3D;\&quot;(string)\&quot;, Device&#x3D;\&quot;(string)\&quot;, DeviceId&#x3D;\&quot;(string)\&quot;, Version&#x3D;\&quot;string\&quot;, Token&#x3D;\&quot;(string)\&quot;     Please consult the documentation for further details. 
@@ -1526,38 +1943,47 @@ open class UserServiceAPI {
      Authenticates a user
      - POST /Users/{Id}/Authenticate
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "User" : {
     "Policy" : {
+      "AllowTagOrRating" : true,
       "EnableContentDeletion" : true,
+      "AllowSharingPersonalItems" : true,
       "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
       "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
       "EnablePlaybackRemuxing" : true,
       "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
       "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
       "IsDisabled" : true,
-      "MaxParentalRating" : 6,
+      "MaxParentalRating" : 1,
       "EnablePublicSharing" : true,
       "AccessSchedules" : [ {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       }, {
         "DayOfWeek" : "Sunday",
-        "StartHour" : 1.4658129805029452,
-        "EndHour" : 5.962133916683182
+        "StartHour" : 5.962133916683182,
+        "EndHour" : 5.637376656633329
       } ],
       "EnableContentDownloading" : true,
       "EnableSubtitleManagement" : true,
-      "SimultaneousStreamLimit" : 7,
+      "SimultaneousStreamLimit" : 9,
       "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
       "IsAdministrator" : true,
       "EnableSubtitleDownloading" : true,
       "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
       "EnableAllDevices" : true,
       "EnableMediaConversion" : true,
-      "InvalidLoginAttemptCount" : 5,
+      "InvalidLoginAttemptCount" : 2,
       "IsTagBlockingModeInclusive" : true,
+      "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
       "EnableLiveTvAccess" : true,
       "EnableAllFolders" : true,
       "EnableSharedDeviceControl" : true,
@@ -1570,17 +1996,20 @@ open class UserServiceAPI {
       "EnableAllChannels" : true,
       "EnableUserPreferenceAccess" : true,
       "AuthenticationProviderId" : "AuthenticationProviderId",
+      "LockedOutDate" : 6,
       "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+      "AllowCameraUpload" : true,
       "IsHiddenRemotely" : true,
       "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
       "EnableRemoteControlOfOtherUsers" : true,
       "EnableAudioPlaybackTranscoding" : true,
       "IsHiddenFromUnusedDevices" : true,
       "EnableSyncTranscoding" : true,
-      "RemoteClientBitrateLimit" : 2
+      "RemoteClientBitrateLimit" : 7
     },
     "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
+    "UserItemShareLevel" : "None",
     "Configuration" : {
       "EnableNextEpisodeAutoPlay" : true,
       "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -1591,8 +2020,11 @@ open class UserServiceAPI {
       "SubtitleMode" : "Default",
       "ResumeRewindSeconds" : 0,
       "HidePlayedInLatest" : true,
-      "EnableLocalPassword" : true,
+      "ProfilePin" : "ProfilePin",
+      "HidePlayedInMoreLikeThis" : true,
+      "HidePlayedInSuggestions" : true,
       "RememberSubtitleSelections" : true,
+      "EnableLocalPassword" : true,
       "AudioLanguagePreference" : "AudioLanguagePreference",
       "PlayDefaultAudioTrack" : true,
       "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -1608,7 +2040,7 @@ open class UserServiceAPI {
     "HasConfiguredPassword" : true,
     "ServerName" : "ServerName",
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-    "PrimaryImageAspectRatio" : 9.301444243932576,
+    "PrimaryImageAspectRatio" : 3.616076749251911,
     "ConnectLinkType" : "LinkedUser",
     "Id" : "Id",
     "HasPassword" : true
@@ -1617,42 +2049,47 @@ open class UserServiceAPI {
   "AccessToken" : "AccessToken",
   "SessionInfo" : {
     "PlaylistLength" : 3,
-    "UserName" : "UserName",
     "ApplicationVersion" : "ApplicationVersion",
     "SupportedCommands" : [ "SupportedCommands", "SupportedCommands" ],
     "DeviceId" : "DeviceId",
     "PlaylistItemId" : "PlaylistItemId",
+    "PlaylistIndex" : 9,
+    "ServerId" : "ServerId",
+    "RemoteEndPoint" : "RemoteEndPoint",
+    "InternalDeviceId" : 2,
+    "SupportsRemoteControl" : true,
+    "Protocol" : "Protocol",
+    "Client" : "Client",
+    "UserName" : "UserName",
     "UserPrimaryImageTag" : "UserPrimaryImageTag",
     "DeviceType" : "DeviceType",
     "PlayableMediaTypes" : [ "PlayableMediaTypes", "PlayableMediaTypes" ],
-    "PlaylistIndex" : 9,
-    "ServerId" : "ServerId",
     "NowPlayingItem" : {
       "SeasonName" : "SeasonName",
       "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-      "Size" : 6,
-      "CriticRating" : 6.965118,
-      "GameSystemId" : 1,
+      "Size" : 2,
+      "CriticRating" : 6.4384236,
+      "GameSystemId" : 3,
       "Studios" : [ {
-        "Id" : 0,
+        "Id" : 3,
         "Name" : "Name"
       }, {
-        "Id" : 0,
+        "Id" : 3,
         "Name" : "Name"
       } ],
       "CameraMake" : "CameraMake",
-      "Aperture" : 7.260521264802104,
+      "Aperture" : 1.041444916118296,
       "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
       "ExtraType" : "ExtraType",
       "ParentBackdropItemId" : "ParentBackdropItemId",
       "Etag" : "Etag",
       "ParentLogoImageTag" : "ParentLogoImageTag",
-      "ExposureTime" : 1.041444916118296,
+      "ExposureTime" : 6.628464275087742,
       "MediaType" : "MediaType",
       "ManagementId" : "ManagementId",
       "Tags" : [ "Tags", "Tags" ],
       "Status" : "Status",
-      "IndexNumberEnd" : 3,
+      "IndexNumberEnd" : 6,
       "ArtistItems" : [ {
         "Id" : "Id",
         "Name" : "Name"
@@ -1665,34 +2102,35 @@ open class UserServiceAPI {
         "RequiredHttpHeaders" : {
           "key" : "RequiredHttpHeaders"
         },
-        "RunTimeTicks" : 7,
+        "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
-          "Index" : 9,
-          "BitDepth" : 7,
+          "Index" : 4,
+          "BitDepth" : 2,
           "ItemId" : "ItemId",
           "SupportsExternalStream" : true,
           "Codec" : "Codec",
-          "IsClosedCaptions" : true,
-          "SampleRate" : 6,
+          "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "AttachmentSize" : 6,
+          "AttachmentSize" : 9,
           "SubtitleLocationType" : "InternalStream",
-          "RefFrames" : 1,
+          "RefFrames" : 4,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
           "ChannelLayout" : "ChannelLayout",
           "DisplayLanguage" : "DisplayLanguage",
-          "AverageFrameRate" : 4.9652185,
-          "StreamStartTimeTicks" : 2,
+          "AverageFrameRate" : 7.4577446,
+          "StreamStartTimeTicks" : 9,
           "IsExternal" : true,
-          "Level" : 9.369310271410669,
-          "CodecTimeBase" : "CodecTimeBase",
+          "Level" : 5.025004791520295,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 1,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1702,8 +2140,8 @@ open class UserServiceAPI {
           "Language" : "Language",
           "IsTextSubtitleStream" : true,
           "NalLengthSize" : "NalLengthSize",
-          "Height" : 7,
-          "Width" : 1,
+          "Height" : 1,
+          "Width" : 6,
           "TimeBase" : "TimeBase",
           "CodecTag" : "CodecTag",
           "IsDefault" : true,
@@ -1711,40 +2149,42 @@ open class UserServiceAPI {
           "Comment" : "Comment",
           "DeliveryMethod" : "Encode",
           "Title" : "Title",
-          "Rotation" : 1,
-          "RealFrameRate" : 5.025005,
+          "ExtendedVideoType" : "None",
+          "Rotation" : 7,
+          "RealFrameRate" : 1.1730742,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
           "Extradata" : "Extradata",
-          "BitRate" : 4
+          "BitRate" : 3
         }, {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
-          "Index" : 9,
-          "BitDepth" : 7,
+          "Index" : 4,
+          "BitDepth" : 2,
           "ItemId" : "ItemId",
           "SupportsExternalStream" : true,
           "Codec" : "Codec",
-          "IsClosedCaptions" : true,
-          "SampleRate" : 6,
+          "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "AttachmentSize" : 6,
+          "AttachmentSize" : 9,
           "SubtitleLocationType" : "InternalStream",
-          "RefFrames" : 1,
+          "RefFrames" : 4,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
           "ChannelLayout" : "ChannelLayout",
           "DisplayLanguage" : "DisplayLanguage",
-          "AverageFrameRate" : 4.9652185,
-          "StreamStartTimeTicks" : 2,
+          "AverageFrameRate" : 7.4577446,
+          "StreamStartTimeTicks" : 9,
           "IsExternal" : true,
-          "Level" : 9.369310271410669,
-          "CodecTimeBase" : "CodecTimeBase",
+          "Level" : 5.025004791520295,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 1,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1754,8 +2194,8 @@ open class UserServiceAPI {
           "Language" : "Language",
           "IsTextSubtitleStream" : true,
           "NalLengthSize" : "NalLengthSize",
-          "Height" : 7,
-          "Width" : 1,
+          "Height" : 1,
+          "Width" : 6,
           "TimeBase" : "TimeBase",
           "CodecTag" : "CodecTag",
           "IsDefault" : true,
@@ -1763,17 +2203,19 @@ open class UserServiceAPI {
           "Comment" : "Comment",
           "DeliveryMethod" : "Encode",
           "Title" : "Title",
-          "Rotation" : 1,
-          "RealFrameRate" : 5.025005,
+          "ExtendedVideoType" : "None",
+          "Rotation" : 7,
+          "RealFrameRate" : 1.1730742,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
           "Extradata" : "Extradata",
-          "BitRate" : 4
+          "BitRate" : 3
         } ],
-        "Size" : 2,
-        "BufferMs" : 3,
-        "ContainerStartTimeTicks" : 9,
+        "Size" : 1,
+        "BufferMs" : 7,
+        "ContainerStartTimeTicks" : 5,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -1787,57 +2229,62 @@ open class UserServiceAPI {
         "LiveStreamId" : "LiveStreamId",
         "RequiresLooping" : true,
         "Protocol" : "File",
-        "DefaultSubtitleStreamIndex" : 3,
+        "AddApiKeyToDirectStreamUrl" : true,
+        "DefaultSubtitleStreamIndex" : 9,
+        "TrancodeLiveStartIndex" : 2,
         "IsInfiniteStream" : true,
         "Path" : "Path",
         "IsRemote" : true,
         "SupportsDirectPlay" : true,
         "TranscodingSubProtocol" : "TranscodingSubProtocol",
         "Formats" : [ "Formats", "Formats" ],
-        "AnalyzeDurationMs" : 9,
-        "Bitrate" : 8,
+        "AnalyzeDurationMs" : 6,
+        "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+        "Bitrate" : 9,
         "OpenToken" : "OpenToken",
         "SupportsProbing" : true,
         "Type" : "Default",
         "ReadAtNativeFramerate" : true,
         "TranscodingContainer" : "TranscodingContainer",
+        "ProbePath" : "ProbePath",
         "TranscodingUrl" : "TranscodingUrl",
         "Id" : "Id",
         "SupportsTranscoding" : true,
-        "DefaultAudioStreamIndex" : 6
+        "DefaultAudioStreamIndex" : 8
       }, {
         "EncoderPath" : "EncoderPath",
         "RequiredHttpHeaders" : {
           "key" : "RequiredHttpHeaders"
         },
-        "RunTimeTicks" : 7,
+        "RunTimeTicks" : 5,
+        "HasMixedProtocols" : true,
         "MediaStreams" : [ {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
-          "Index" : 9,
-          "BitDepth" : 7,
+          "Index" : 4,
+          "BitDepth" : 2,
           "ItemId" : "ItemId",
           "SupportsExternalStream" : true,
           "Codec" : "Codec",
-          "IsClosedCaptions" : true,
-          "SampleRate" : 6,
+          "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "AttachmentSize" : 6,
+          "AttachmentSize" : 9,
           "SubtitleLocationType" : "InternalStream",
-          "RefFrames" : 1,
+          "RefFrames" : 4,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
           "ChannelLayout" : "ChannelLayout",
           "DisplayLanguage" : "DisplayLanguage",
-          "AverageFrameRate" : 4.9652185,
-          "StreamStartTimeTicks" : 2,
+          "AverageFrameRate" : 7.4577446,
+          "StreamStartTimeTicks" : 9,
           "IsExternal" : true,
-          "Level" : 9.369310271410669,
-          "CodecTimeBase" : "CodecTimeBase",
+          "Level" : 5.025004791520295,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 1,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1847,8 +2294,8 @@ open class UserServiceAPI {
           "Language" : "Language",
           "IsTextSubtitleStream" : true,
           "NalLengthSize" : "NalLengthSize",
-          "Height" : 7,
-          "Width" : 1,
+          "Height" : 1,
+          "Width" : 6,
           "TimeBase" : "TimeBase",
           "CodecTag" : "CodecTag",
           "IsDefault" : true,
@@ -1856,40 +2303,42 @@ open class UserServiceAPI {
           "Comment" : "Comment",
           "DeliveryMethod" : "Encode",
           "Title" : "Title",
-          "Rotation" : 1,
-          "RealFrameRate" : 5.025005,
+          "ExtendedVideoType" : "None",
+          "Rotation" : 7,
+          "RealFrameRate" : 1.1730742,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
           "Extradata" : "Extradata",
-          "BitRate" : 4
+          "BitRate" : 3
         }, {
           "VideoRange" : "VideoRange",
           "ColorSpace" : "ColorSpace",
-          "Index" : 9,
-          "BitDepth" : 7,
+          "Index" : 4,
+          "BitDepth" : 2,
           "ItemId" : "ItemId",
           "SupportsExternalStream" : true,
           "Codec" : "Codec",
-          "IsClosedCaptions" : true,
-          "SampleRate" : 6,
+          "SampleRate" : 1,
           "IsAnamorphic" : true,
           "PixelFormat" : "PixelFormat",
-          "AttachmentSize" : 6,
+          "AttachmentSize" : 9,
           "SubtitleLocationType" : "InternalStream",
-          "RefFrames" : 1,
+          "RefFrames" : 4,
           "IsAVC" : true,
           "ColorTransfer" : "ColorTransfer",
+          "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
           "IsExternalUrl" : true,
           "DisplayTitle" : "DisplayTitle",
           "IsForced" : true,
           "ChannelLayout" : "ChannelLayout",
           "DisplayLanguage" : "DisplayLanguage",
-          "AverageFrameRate" : 4.9652185,
-          "StreamStartTimeTicks" : 2,
+          "AverageFrameRate" : 7.4577446,
+          "StreamStartTimeTicks" : 9,
           "IsExternal" : true,
-          "Level" : 9.369310271410669,
-          "CodecTimeBase" : "CodecTimeBase",
+          "Level" : 5.025004791520295,
+          "ExtendedVideoSubType" : "None",
           "Channels" : 1,
           "Profile" : "Profile",
           "MimeType" : "MimeType",
@@ -1899,8 +2348,8 @@ open class UserServiceAPI {
           "Language" : "Language",
           "IsTextSubtitleStream" : true,
           "NalLengthSize" : "NalLengthSize",
-          "Height" : 7,
-          "Width" : 1,
+          "Height" : 1,
+          "Width" : 6,
           "TimeBase" : "TimeBase",
           "CodecTag" : "CodecTag",
           "IsDefault" : true,
@@ -1908,17 +2357,19 @@ open class UserServiceAPI {
           "Comment" : "Comment",
           "DeliveryMethod" : "Encode",
           "Title" : "Title",
-          "Rotation" : 1,
-          "RealFrameRate" : 5.025005,
+          "ExtendedVideoType" : "None",
+          "Rotation" : 7,
+          "RealFrameRate" : 1.1730742,
+          "IsHearingImpaired" : true,
           "AspectRatio" : "AspectRatio",
           "Type" : "Unknown",
           "IsInterlaced" : true,
           "Extradata" : "Extradata",
-          "BitRate" : 4
+          "BitRate" : 3
         } ],
-        "Size" : 2,
-        "BufferMs" : 3,
-        "ContainerStartTimeTicks" : 9,
+        "Size" : 1,
+        "BufferMs" : 7,
+        "ContainerStartTimeTicks" : 5,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -1932,50 +2383,56 @@ open class UserServiceAPI {
         "LiveStreamId" : "LiveStreamId",
         "RequiresLooping" : true,
         "Protocol" : "File",
-        "DefaultSubtitleStreamIndex" : 3,
+        "AddApiKeyToDirectStreamUrl" : true,
+        "DefaultSubtitleStreamIndex" : 9,
+        "TrancodeLiveStartIndex" : 2,
         "IsInfiniteStream" : true,
         "Path" : "Path",
         "IsRemote" : true,
         "SupportsDirectPlay" : true,
         "TranscodingSubProtocol" : "TranscodingSubProtocol",
         "Formats" : [ "Formats", "Formats" ],
-        "AnalyzeDurationMs" : 9,
-        "Bitrate" : 8,
+        "AnalyzeDurationMs" : 6,
+        "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+        "Bitrate" : 9,
         "OpenToken" : "OpenToken",
         "SupportsProbing" : true,
         "Type" : "Default",
         "ReadAtNativeFramerate" : true,
         "TranscodingContainer" : "TranscodingContainer",
+        "ProbePath" : "ProbePath",
         "TranscodingUrl" : "TranscodingUrl",
         "Id" : "Id",
         "SupportsTranscoding" : true,
-        "DefaultAudioStreamIndex" : 6
+        "DefaultAudioStreamIndex" : 8
       } ],
       "GenreItems" : [ null, null ],
       "OfficialRating" : "OfficialRating",
-      "Longitude" : 9.702963800023566,
+      "Longitude" : 9.132027271330688,
       "Composers" : [ null, null ],
       "LockData" : true,
-      "FocalLength" : 4.678947989005849,
+      "FocalLength" : 4.258773108174356,
       "IsNews" : true,
-      "ShutterSpeed" : 9.132027271330688,
+      "ShutterSpeed" : 4.678947989005849,
       "Id" : "Id",
       "SortIndexNumber" : 0,
       "IsFolder" : true,
+      "CanMakePublic" : true,
       "SeriesTimerId" : "SeriesTimerId",
       "SeriesId" : "SeriesId",
       "ListingsPath" : "ListingsPath",
       "MediaStreams" : [ null, null ],
       "FileName" : "FileName",
+      "PrimaryImageTag" : "PrimaryImageTag",
       "Prefix" : "Prefix",
       "CanDownload" : true,
       "IsMovie" : true,
-      "SeriesCount" : 6,
+      "SeriesCount" : 5,
+      "PrimaryImageItemId" : "PrimaryImageItemId",
       "ListingsChannelId" : "ListingsChannelId",
-      "PlayAccess" : "Full",
       "SeriesStudio" : "SeriesStudio",
       "IsLive" : true,
-      "Width" : 6,
+      "Width" : 4,
       "ExternalUrls" : [ {
         "Url" : "Url",
         "Name" : "Name"
@@ -1983,29 +2440,29 @@ open class UserServiceAPI {
         "Url" : "Url",
         "Name" : "Name"
       } ],
-      "RecursiveItemCount" : 3,
+      "RecursiveItemCount" : 8,
       "Path" : "Path",
       "ParentId" : "ParentId",
       "TimerType" : "Program",
       "GameSystem" : "GameSystem",
-      "MusicVideoCount" : 3,
+      "MusicVideoCount" : 8,
       "IsSeries" : true,
       "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
       "Subviews" : [ "Subviews", "Subviews" ],
-      "Bitrate" : 5,
+      "Bitrate" : 6,
       "EndDate" : "2000-01-23T04:56:07.000+00:00",
       "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
       "ParentThumbItemId" : "ParentThumbItemId",
       "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+      "CanLeaveContent" : true,
       "Type" : "Type",
       "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
       "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-      "AirsBeforeEpisodeNumber" : 5,
-      "ChildCount" : 3,
+      "ChildCount" : 7,
       "TagItems" : [ null, null ],
       "Artists" : [ "Artists", "Artists" ],
       "ListingsChannelName" : "ListingsChannelName",
-      "RunTimeTicks" : 6,
+      "RunTimeTicks" : 1,
       "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
       "Video3DFormat" : "HalfSideBySide",
       "CanDelete" : true,
@@ -2013,7 +2470,8 @@ open class UserServiceAPI {
       "SortParentIndexNumber" : 6,
       "DisplayPreferencesId" : "DisplayPreferencesId",
       "Album" : "Album",
-      "Latitude" : 0.8774076871421566,
+      "Latitude" : 7.260521264802104,
+      "Guid" : "Guid",
       "SortName" : "SortName",
       "Name" : "Name",
       "StartDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2024,8 +2482,8 @@ open class UserServiceAPI {
       "AlbumId" : "AlbumId",
       "SupportsSync" : true,
       "LocalTrailerCount" : 7,
-      "IndexNumber" : 3,
-      "CompletionPercentage" : 5.507386964179881,
+      "IndexNumber" : 5,
+      "CompletionPercentage" : 0.5199002018724985,
       "Genres" : [ "Genres", "Genres" ],
       "SeasonId" : "SeasonId",
       "LockedFields" : [ "Cast", "Cast" ],
@@ -2043,43 +2501,44 @@ open class UserServiceAPI {
       "PresentationUniqueKey" : "PresentationUniqueKey",
       "CustomRating" : "CustomRating",
       "ListingsChannelNumber" : "ListingsChannelNumber",
-      "AirsAfterSeasonNumber" : 5,
+      "SyncStatus" : "Queued",
+      "CanManageAccess" : true,
       "AirDays" : [ "Sunday", "Sunday" ],
       "ParentLogoItemId" : "ParentLogoItemId",
-      "PartCount" : 3,
+      "PartCount" : 7,
       "ListingsProviderId" : "ListingsProviderId",
+      "CanEditItems" : true,
       "ChannelName" : "ChannelName",
       "EpisodeTitle" : "EpisodeTitle",
-      "IsoSpeedRating" : 7,
-      "CommunityRating" : 2.8841622,
+      "IsoSpeedRating" : 9,
+      "CommunityRating" : 6.965118,
       "Software" : "Software",
       "Chapters" : [ {
-        "StartPositionTicks" : 4,
+        "StartPositionTicks" : 5,
         "ImageTag" : "ImageTag",
         "MarkerType" : "Chapter",
-        "ChapterIndex" : 0,
+        "ChapterIndex" : 3,
         "Name" : "Name"
       }, {
-        "StartPositionTicks" : 4,
+        "StartPositionTicks" : 5,
         "ImageTag" : "ImageTag",
         "MarkerType" : "Chapter",
-        "ChapterIndex" : 0,
+        "ChapterIndex" : 3,
         "Name" : "Name"
       } ],
-      "SongCount" : 4,
+      "SongCount" : 6,
       "Taglines" : [ "Taglines", "Taglines" ],
-      "AirsBeforeSeasonNumber" : 1,
       "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
       "CameraModel" : "CameraModel",
       "ChannelNumber" : "ChannelNumber",
       "UserData" : {
-        "UnplayedItemCount" : 4,
+        "UnplayedItemCount" : 6,
         "Played" : true,
         "ServerId" : "ServerId",
-        "PlayedPercentage" : 0.10263654006109402,
-        "Rating" : 6.519180951018382,
-        "PlayCount" : 7,
-        "PlaybackPositionTicks" : 8,
+        "PlayedPercentage" : 7.058770351582356,
+        "Rating" : 0.8851374739011653,
+        "PlayCount" : 4,
+        "PlaybackPositionTicks" : 0,
         "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
         "IsFavorite" : true,
         "ItemId" : "ItemId",
@@ -2090,21 +2549,21 @@ open class UserServiceAPI {
       "ParentThumbImageTag" : "ParentThumbImageTag",
       "IsSports" : true,
       "ChannelId" : "ChannelId",
-      "ParentIndexNumber" : 7,
+      "ParentIndexNumber" : 3,
       "IsNew" : true,
       "AffiliateCallSign" : "AffiliateCallSign",
       "ListingsId" : "ListingsId",
       "AlbumArtists" : [ null, null ],
       "ServerId" : "ServerId",
       "Number" : "Number",
-      "AlbumCount" : 8,
+      "AlbumCount" : 4,
       "IsRepeat" : true,
       "CollectionType" : "CollectionType",
-      "PrimaryImageAspectRatio" : 5.533258397034986,
-      "Height" : 4,
+      "PrimaryImageAspectRatio" : 3.0576100241049344,
+      "Height" : 0,
       "IsKids" : true,
       "DisplayOrder" : "DisplayOrder",
-      "MovieCount" : 4,
+      "MovieCount" : 7,
       "People" : [ {
         "Role" : "Role",
         "Type" : "Actor",
@@ -2119,7 +2578,7 @@ open class UserServiceAPI {
         "Name" : "Name"
       } ],
       "Overview" : "Overview",
-      "SpecialFeatureCount" : 7,
+      "SpecialFeatureCount" : 3,
       "ImageOrientation" : "TopLeft",
       "AlbumArtist" : "AlbumArtist",
       "ImageTags" : {
@@ -2130,22 +2589,39 @@ open class UserServiceAPI {
       "SupportsResume" : true,
       "LocationType" : "FileSystem",
       "IsPremiere" : true,
-      "Altitude" : 0.5199002018724985
+      "Altitude" : 0.8774076871421566
     },
     "TranscodingInfo" : {
       "IsAudioDirect" : true,
+      "ProcessStatistics" : {
+        "Metrics" : [ {
+          "Time" : "Time",
+          "WorkingSet" : 6.778324963048013,
+          "VirtualMemory" : 2.8841621266687802,
+          "CpuPercent" : 1.284659006116532
+        }, {
+          "Time" : "Time",
+          "WorkingSet" : 6.778324963048013,
+          "VirtualMemory" : 2.8841621266687802,
+          "CpuPercent" : 1.284659006116532
+        } ],
+        "AverageCpu" : 6.438423552598547,
+        "CurrentCpu" : 9.018348186070783,
+        "CurrentWorkingSet" : 6.965117697638846,
+        "CurrentVirtualMemory" : 3.5571952270680973
+      },
       "TranscodeReasons" : [ "ContainerNotSupported", "ContainerNotSupported" ],
       "VideoEncoderHwAccel" : "VideoEncoderHwAccel",
-      "Framerate" : 1.2315135,
+      "Framerate" : 1.0246457,
       "Container" : "Container",
-      "TranscodingStartPositionTicks" : 6.84685269835264,
+      "TranscodingStartPositionTicks" : 7.457744773683766,
       "IsVideoDirect" : true,
-      "AverageCpuUsage" : 9.965781217890562,
+      "AverageCpuUsage" : 9.369310271410669,
       "VideoDecoderIsHardware" : true,
       "VideoDecoderMediaType" : "VideoDecoderMediaType",
       "SubProtocol" : "SubProtocol",
-      "CompletionPercentage" : 1.0246457001441578,
-      "Height" : 1,
+      "CompletionPercentage" : 1.4894159098541704,
+      "Height" : 4,
       "VideoPipelineInfo" : [ {
         "StepType" : "Decoder",
         "FfmpegDescription" : "FfmpegDescription",
@@ -2172,33 +2648,31 @@ open class UserServiceAPI {
         "Name" : "Name"
       } ],
       "VideoDecoder" : "VideoDecoder",
-      "Width" : 7,
+      "Width" : 1,
       "AudioCodec" : "AudioCodec",
       "VideoEncoderIsHardware" : true,
       "SubtitlePipelineInfos" : [ [ null, null ], [ null, null ] ],
       "CpuHistory" : [ {
-        "Item1" : 9.369310271410669,
-        "Item2" : 6.683562403749608
+        "Item1" : 6.683562403749608,
+        "Item2" : 8.762042012749001
       }, {
-        "Item1" : 9.369310271410669,
-        "Item2" : 6.683562403749608
+        "Item1" : 6.683562403749608,
+        "Item2" : 8.762042012749001
       } ],
-      "CurrentThrottle" : 8,
+      "CurrentThrottle" : 6,
       "VideoCodec" : "VideoCodec",
-      "Bitrate" : 2,
+      "Bitrate" : 4,
       "VideoDecoderHwAccel" : "VideoDecoderHwAccel",
-      "TranscodingPositionTicks" : 1.4894159098541704,
-      "CurrentCpuUsage" : 5.025004791520295,
-      "AudioBitrate" : 4,
-      "AudioChannels" : 4,
+      "TranscodingPositionTicks" : 6.84685269835264,
+      "CurrentCpuUsage" : 9.965781217890562,
+      "AudioBitrate" : 7,
+      "AudioChannels" : 5,
       "VideoEncoderMediaType" : "VideoEncoderMediaType",
       "VideoEncoder" : "VideoEncoder",
-      "VideoBitrate" : 7
+      "VideoBitrate" : 1
     },
-    "RemoteEndPoint" : "RemoteEndPoint",
     "AppIconUrl" : "AppIconUrl",
     "UserId" : "UserId",
-    "SupportsRemoteControl" : true,
     "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
     "Id" : "Id",
     "AdditionalUsers" : [ {
@@ -2210,7 +2684,6 @@ open class UserServiceAPI {
       "UserId" : "UserId",
       "UserInternalId" : 7
     } ],
-    "Client" : "Client",
     "PlayState" : {
       "RepeatMode" : "RepeatNone",
       "CanSeek" : true,
@@ -2230,7 +2703,7 @@ open class UserServiceAPI {
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://dev.emby.media/doc/restapi/User-Authentication.html
 }
      - parameter body: (body) AuthenticateUser 
      - parameter _id: (path)  
@@ -2258,7 +2731,7 @@ open class UserServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByIdConfiguration(body: ConfigurationUserConfiguration, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postUsersByIdConfiguration(body: UserConfiguration, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postUsersByIdConfigurationWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2284,8 +2757,55 @@ open class UserServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByIdConfigurationWithRequestBuilder(body: ConfigurationUserConfiguration, _id: String) -> RequestBuilder<Void> {
+    open class func postUsersByIdConfigurationWithRequestBuilder(body: UserConfiguration, _id: String) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Configuration"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
+     Updates a user configuration
+
+     - parameter body: (body) Binary stream 
+     - parameter _id: (path)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersByIdConfigurationPartial(body: Object, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByIdConfigurationPartialWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates a user configuration
+     - POST /Users/{Id}/Configuration/Partial
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) Binary stream 
+     - parameter _id: (path)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersByIdConfigurationPartialWithRequestBuilder(body: Object, _id: String) -> RequestBuilder<Void> {
+        var path = "/Users/{Id}/Configuration/Partial"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
@@ -2344,53 +2864,6 @@ open class UserServiceAPI {
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
-     Updates a user's easy password
-
-     - parameter body: (body) UpdateUserEasyPassword 
-     - parameter _id: (path)  
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postUsersByIdEasypassword(body: UpdateUserEasyPassword, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postUsersByIdEasypasswordWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-
-    /**
-     Updates a user's easy password
-     - POST /Users/{Id}/EasyPassword
-
-     - API Key:
-       - type: apiKey api_key (QUERY)
-       - name: apikeyauth
-     - :
-       - type: http
-       - name: embyauth
-     - parameter body: (body) UpdateUserEasyPassword 
-     - parameter _id: (path)  
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func postUsersByIdEasypasswordWithRequestBuilder(body: UpdateUserEasyPassword, _id: String) -> RequestBuilder<Void> {
-        var path = "/Users/{Id}/EasyPassword"
-        let _idPreEscape = "\(_id)"
-        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let URLString = embyclient-rest-swiftAPI.basePath + path
-        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        let url = URLComponents(string: URLString)
-
-
-        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
-
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
-    }
-    /**
      Updates a user's password
 
      - parameter body: (body) UpdateUserPassword 
@@ -2444,7 +2917,7 @@ open class UserServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByIdPolicy(body: UsersUserPolicy, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postUsersByIdPolicy(body: UserPolicy, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postUsersByIdPolicyWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2470,7 +2943,7 @@ open class UserServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByIdPolicyWithRequestBuilder(body: UsersUserPolicy, _id: String) -> RequestBuilder<Void> {
+    open class func postUsersByIdPolicyWithRequestBuilder(body: UserPolicy, _id: String) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Policy"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2506,6 +2979,12 @@ open class UserServiceAPI {
      Clears audio or subtitle track selections for a user
      - POST /Users/{Id}/TrackSelections/{TrackType}/Delete
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path)  
      - parameter trackType: (path)  
 
@@ -2529,12 +3008,64 @@ open class UserServiceAPI {
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Updates a typed user setting
+
+     - parameter body: (body) Binary stream 
+     - parameter userId: (path)  
+     - parameter key: (path) Key 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersByUseridTypedsettingsByKey(body: Object, userId: String, key: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByUseridTypedsettingsByKeyWithRequestBuilder(body: body, userId: userId, key: key).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates a typed user setting
+     - POST /Users/{UserId}/TypedSettings/{Key}
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) Binary stream 
+     - parameter userId: (path)  
+     - parameter key: (path) Key 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersByUseridTypedsettingsByKeyWithRequestBuilder(body: Object, userId: String, key: String) -> RequestBuilder<Void> {
+        var path = "/Users/{UserId}/TypedSettings/{Key}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let keyPreEscape = "\(key)"
+        let keyPostEscape = keyPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Key}", with: keyPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
      Initiates the forgot password process for a local user
 
      - parameter body: (body) ForgotPassword 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersForgotpassword(body: ForgotPassword, completion: @escaping ((_ data: UsersForgotPasswordResult?,_ error: Error?) -> Void)) {
+    open class func postUsersForgotpassword(body: ForgotPassword, completion: @escaping ((_ data: ForgotPasswordResult?,_ error: Error?) -> Void)) {
         postUsersForgotpasswordWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2545,6 +3076,12 @@ open class UserServiceAPI {
      Initiates the forgot password process for a local user
      - POST /Users/ForgotPassword
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "Action" : "ContactAdmin",
   "PinExpirationDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2552,16 +3089,16 @@ open class UserServiceAPI {
 }}]
      - parameter body: (body) ForgotPassword 
 
-     - returns: RequestBuilder<UsersForgotPasswordResult> 
+     - returns: RequestBuilder<ForgotPasswordResult> 
      */
-    open class func postUsersForgotpasswordWithRequestBuilder(body: ForgotPassword) -> RequestBuilder<UsersForgotPasswordResult> {
+    open class func postUsersForgotpasswordWithRequestBuilder(body: ForgotPassword) -> RequestBuilder<ForgotPasswordResult> {
         let path = "/Users/ForgotPassword"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<UsersForgotPasswordResult>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ForgotPasswordResult>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -2571,7 +3108,7 @@ open class UserServiceAPI {
      - parameter body: (body) ForgotPasswordPin 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersForgotpasswordPin(body: ForgotPasswordPin, completion: @escaping ((_ data: UsersPinRedeemResult?,_ error: Error?) -> Void)) {
+    open class func postUsersForgotpasswordPin(body: ForgotPasswordPin, completion: @escaping ((_ data: PinRedeemResult?,_ error: Error?) -> Void)) {
         postUsersForgotpasswordPinWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2582,22 +3119,28 @@ open class UserServiceAPI {
      Redeems a forgot password pin
      - POST /Users/ForgotPassword/Pin
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "UsersReset" : [ "UsersReset", "UsersReset" ],
   "Success" : true
 }}]
      - parameter body: (body) ForgotPasswordPin 
 
-     - returns: RequestBuilder<UsersPinRedeemResult> 
+     - returns: RequestBuilder<PinRedeemResult> 
      */
-    open class func postUsersForgotpasswordPinWithRequestBuilder(body: ForgotPasswordPin) -> RequestBuilder<UsersPinRedeemResult> {
+    open class func postUsersForgotpasswordPinWithRequestBuilder(body: ForgotPasswordPin) -> RequestBuilder<PinRedeemResult> {
         let path = "/Users/ForgotPassword/Pin"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<UsersPinRedeemResult>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PinRedeemResult>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -2626,35 +3169,38 @@ open class UserServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "Policy" : {
+    "AllowTagOrRating" : true,
     "EnableContentDeletion" : true,
+    "AllowSharingPersonalItems" : true,
     "EnableContentDeletionFromFolders" : [ "EnableContentDeletionFromFolders", "EnableContentDeletionFromFolders" ],
     "ExcludedSubFolders" : [ "ExcludedSubFolders", "ExcludedSubFolders" ],
     "EnablePlaybackRemuxing" : true,
     "EnabledFolders" : [ "EnabledFolders", "EnabledFolders" ],
     "BlockedMediaFolders" : [ "BlockedMediaFolders", "BlockedMediaFolders" ],
     "IsDisabled" : true,
-    "MaxParentalRating" : 6,
+    "MaxParentalRating" : 1,
     "EnablePublicSharing" : true,
     "AccessSchedules" : [ {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     }, {
       "DayOfWeek" : "Sunday",
-      "StartHour" : 1.4658129805029452,
-      "EndHour" : 5.962133916683182
+      "StartHour" : 5.962133916683182,
+      "EndHour" : 5.637376656633329
     } ],
     "EnableContentDownloading" : true,
     "EnableSubtitleManagement" : true,
-    "SimultaneousStreamLimit" : 7,
+    "SimultaneousStreamLimit" : 9,
     "IncludeTags" : [ "IncludeTags", "IncludeTags" ],
     "IsAdministrator" : true,
     "EnableSubtitleDownloading" : true,
     "EnabledChannels" : [ "EnabledChannels", "EnabledChannels" ],
     "EnableAllDevices" : true,
     "EnableMediaConversion" : true,
-    "InvalidLoginAttemptCount" : 5,
+    "InvalidLoginAttemptCount" : 2,
     "IsTagBlockingModeInclusive" : true,
+    "RestrictedFeatures" : [ "RestrictedFeatures", "RestrictedFeatures" ],
     "EnableLiveTvAccess" : true,
     "EnableAllFolders" : true,
     "EnableSharedDeviceControl" : true,
@@ -2667,17 +3213,20 @@ open class UserServiceAPI {
     "EnableAllChannels" : true,
     "EnableUserPreferenceAccess" : true,
     "AuthenticationProviderId" : "AuthenticationProviderId",
+    "LockedOutDate" : 6,
     "BlockedTags" : [ "BlockedTags", "BlockedTags" ],
+    "AllowCameraUpload" : true,
     "IsHiddenRemotely" : true,
     "EnabledDevices" : [ "EnabledDevices", "EnabledDevices" ],
     "EnableRemoteControlOfOtherUsers" : true,
     "EnableAudioPlaybackTranscoding" : true,
     "IsHiddenFromUnusedDevices" : true,
     "EnableSyncTranscoding" : true,
-    "RemoteClientBitrateLimit" : 2
+    "RemoteClientBitrateLimit" : 7
   },
   "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
+  "UserItemShareLevel" : "None",
   "Configuration" : {
     "EnableNextEpisodeAutoPlay" : true,
     "SubtitleLanguagePreference" : "SubtitleLanguagePreference",
@@ -2688,8 +3237,11 @@ open class UserServiceAPI {
     "SubtitleMode" : "Default",
     "ResumeRewindSeconds" : 0,
     "HidePlayedInLatest" : true,
-    "EnableLocalPassword" : true,
+    "ProfilePin" : "ProfilePin",
+    "HidePlayedInMoreLikeThis" : true,
+    "HidePlayedInSuggestions" : true,
     "RememberSubtitleSelections" : true,
+    "EnableLocalPassword" : true,
     "AudioLanguagePreference" : "AudioLanguagePreference",
     "PlayDefaultAudioTrack" : true,
     "MyMediaExcludes" : [ "MyMediaExcludes", "MyMediaExcludes" ],
@@ -2705,7 +3257,7 @@ open class UserServiceAPI {
   "HasConfiguredPassword" : true,
   "ServerName" : "ServerName",
   "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
-  "PrimaryImageAspectRatio" : 9.301444243932576,
+  "PrimaryImageAspectRatio" : 3.616076749251911,
   "ConnectLinkType" : "LinkedUser",
   "Id" : "Id",
   "HasPassword" : true

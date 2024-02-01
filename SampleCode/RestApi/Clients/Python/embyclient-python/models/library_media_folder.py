@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -24,27 +24,37 @@ class LibraryMediaFolder(object):
     swagger_types = {
         'name': 'str',
         'id': 'str',
-        'sub_folders': 'list[LibrarySubFolder]'
+        'guid': 'str',
+        'sub_folders': 'list[LibrarySubFolder]',
+        'is_user_access_configurable': 'bool'
     }
 
     attribute_map = {
         'name': 'Name',
         'id': 'Id',
-        'sub_folders': 'SubFolders'
+        'guid': 'Guid',
+        'sub_folders': 'SubFolders',
+        'is_user_access_configurable': 'IsUserAccessConfigurable'
     }
 
-    def __init__(self, name=None, id=None, sub_folders=None):  # noqa: E501
+    def __init__(self, name=None, id=None, guid=None, sub_folders=None, is_user_access_configurable=None):  # noqa: E501
         """LibraryMediaFolder - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._id = None
+        self._guid = None
         self._sub_folders = None
+        self._is_user_access_configurable = None
         self.discriminator = None
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
+        if guid is not None:
+            self.guid = guid
         if sub_folders is not None:
             self.sub_folders = sub_folders
+        if is_user_access_configurable is not None:
+            self.is_user_access_configurable = is_user_access_configurable
 
     @property
     def name(self):
@@ -89,6 +99,27 @@ class LibraryMediaFolder(object):
         self._id = id
 
     @property
+    def guid(self):
+        """Gets the guid of this LibraryMediaFolder.  # noqa: E501
+
+
+        :return: The guid of this LibraryMediaFolder.  # noqa: E501
+        :rtype: str
+        """
+        return self._guid
+
+    @guid.setter
+    def guid(self, guid):
+        """Sets the guid of this LibraryMediaFolder.
+
+
+        :param guid: The guid of this LibraryMediaFolder.  # noqa: E501
+        :type: str
+        """
+
+        self._guid = guid
+
+    @property
     def sub_folders(self):
         """Gets the sub_folders of this LibraryMediaFolder.  # noqa: E501
 
@@ -108,6 +139,27 @@ class LibraryMediaFolder(object):
         """
 
         self._sub_folders = sub_folders
+
+    @property
+    def is_user_access_configurable(self):
+        """Gets the is_user_access_configurable of this LibraryMediaFolder.  # noqa: E501
+
+
+        :return: The is_user_access_configurable of this LibraryMediaFolder.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_user_access_configurable
+
+    @is_user_access_configurable.setter
+    def is_user_access_configurable(self, is_user_access_configurable):
+        """Sets the is_user_access_configurable of this LibraryMediaFolder.
+
+
+        :param is_user_access_configurable: The is_user_access_configurable of this LibraryMediaFolder.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_user_access_configurable = is_user_access_configurable
 
     def to_dict(self):
         """Returns the model properties as a dict"""

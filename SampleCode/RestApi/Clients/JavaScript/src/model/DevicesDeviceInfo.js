@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The DevicesDeviceInfo model module.
 * @module model/DevicesDeviceInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class DevicesDeviceInfo {
     /**
@@ -47,6 +47,12 @@ export default class DevicesDeviceInfo {
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
+            if (data.hasOwnProperty('InternalId')) {
+                obj['InternalId'] = ApiClient.convertToType(data['InternalId'], 'Number');
+            }
+            if (data.hasOwnProperty('ReportedDeviceId')) {
+                obj['ReportedDeviceId'] = ApiClient.convertToType(data['ReportedDeviceId'], 'String');
+            }
             if (data.hasOwnProperty('LastUserName')) {
                 obj['LastUserName'] = ApiClient.convertToType(data['LastUserName'], 'String');
             }
@@ -65,6 +71,9 @@ export default class DevicesDeviceInfo {
             if (data.hasOwnProperty('IconUrl')) {
                 obj['IconUrl'] = ApiClient.convertToType(data['IconUrl'], 'String');
             }
+            if (data.hasOwnProperty('IpAddress')) {
+                obj['IpAddress'] = ApiClient.convertToType(data['IpAddress'], 'String');
+            }
         }
         return obj;
     }
@@ -74,22 +83,35 @@ export default class DevicesDeviceInfo {
     */
     'Name' = undefined;
     /**
+    * The identifier.
     * @member {String} Id
     */
     'Id' = undefined;
     /**
+    * @member {Number} InternalId
+    */
+    'InternalId' = undefined;
+    /**
+    * @member {String} ReportedDeviceId
+    */
+    'ReportedDeviceId' = undefined;
+    /**
+    * The last name of the user.
     * @member {String} LastUserName
     */
     'LastUserName' = undefined;
     /**
+    * The name of the application.
     * @member {String} AppName
     */
     'AppName' = undefined;
     /**
+    * The application version.
     * @member {String} AppVersion
     */
     'AppVersion' = undefined;
     /**
+    * The last user identifier.
     * @member {String} LastUserId
     */
     'LastUserId' = undefined;
@@ -101,6 +123,10 @@ export default class DevicesDeviceInfo {
     * @member {String} IconUrl
     */
     'IconUrl' = undefined;
+    /**
+    * @member {String} IpAddress
+    */
+    'IpAddress' = undefined;
 
 
 

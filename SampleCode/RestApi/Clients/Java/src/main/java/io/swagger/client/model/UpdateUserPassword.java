@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -23,9 +23,6 @@ public class UpdateUserPassword {
   @SerializedName("Id")
   private String id = null;
 
-  @SerializedName("CurrentPw")
-  private String currentPw = null;
-
   @SerializedName("NewPw")
   private String newPw = null;
 
@@ -48,24 +45,6 @@ public class UpdateUserPassword {
 
   public void setId(String id) {
     this.id = id;
-  }
-
-  public UpdateUserPassword currentPw(String currentPw) {
-    this.currentPw = currentPw;
-    return this;
-  }
-
-   /**
-   * Get currentPw
-   * @return currentPw
-  **/
-  @Schema(description = "")
-  public String getCurrentPw() {
-    return currentPw;
-  }
-
-  public void setCurrentPw(String currentPw) {
-    this.currentPw = currentPw;
   }
 
   public UpdateUserPassword newPw(String newPw) {
@@ -115,14 +94,13 @@ public class UpdateUserPassword {
     }
     UpdateUserPassword updateUserPassword = (UpdateUserPassword) o;
     return Objects.equals(this.id, updateUserPassword.id) &&
-        Objects.equals(this.currentPw, updateUserPassword.currentPw) &&
         Objects.equals(this.newPw, updateUserPassword.newPw) &&
         Objects.equals(this.resetPassword, updateUserPassword.resetPassword);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, currentPw, newPw, resetPassword);
+    return Objects.hash(id, newPw, resetPassword);
   }
 
 
@@ -132,7 +110,6 @@ public class UpdateUserPassword {
     sb.append("class UpdateUserPassword {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    currentPw: ").append(toIndentedString(currentPw)).append("\n");
     sb.append("    newPw: ").append(toIndentedString(newPw)).append("\n");
     sb.append("    resetPassword: ").append(toIndentedString(resetPassword)).append("\n");
     sb.append("}");

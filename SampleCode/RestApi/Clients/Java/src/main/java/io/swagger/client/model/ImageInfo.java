@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -16,9 +16,9 @@ import io.swagger.client.model.ImageType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * ImageInfo
+ * Class ImageInfo  
  */
-
+@Schema(description = "Class ImageInfo  ")
 
 public class ImageInfo {
   @SerializedName("ImageType")
@@ -66,10 +66,10 @@ public class ImageInfo {
   }
 
    /**
-   * Get imageIndex
+   * The index of the image.
    * @return imageIndex
   **/
-  @Schema(description = "")
+  @Schema(description = "The index of the image.")
   public Integer getImageIndex() {
     return imageIndex;
   }
@@ -84,10 +84,10 @@ public class ImageInfo {
   }
 
    /**
-   * Get path
+   * The path.
    * @return path
   **/
-  @Schema(description = "")
+  @Schema(description = "The path.")
   public String getPath() {
     return path;
   }
@@ -120,10 +120,10 @@ public class ImageInfo {
   }
 
    /**
-   * Get height
+   * The height.
    * @return height
   **/
-  @Schema(description = "")
+  @Schema(description = "The height.")
   public Integer getHeight() {
     return height;
   }
@@ -138,10 +138,10 @@ public class ImageInfo {
   }
 
    /**
-   * Get width
+   * The width.
    * @return width
   **/
-  @Schema(description = "")
+  @Schema(description = "The width.")
   public Integer getWidth() {
     return width;
   }
@@ -156,10 +156,10 @@ public class ImageInfo {
   }
 
    /**
-   * Get size
+   * The size.
    * @return size
   **/
-  @Schema(description = "")
+  @Schema(description = "The size.")
   public Long getSize() {
     return size;
   }

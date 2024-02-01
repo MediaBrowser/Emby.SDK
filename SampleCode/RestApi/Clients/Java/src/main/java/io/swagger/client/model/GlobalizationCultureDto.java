@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -17,9 +17,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * GlobalizationCultureDto
+ * Class CultureDto  
  */
-
+@Schema(description = "Class CultureDto  ")
 
 public class GlobalizationCultureDto {
   @SerializedName("Name")
@@ -46,10 +46,10 @@ public class GlobalizationCultureDto {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -64,10 +64,10 @@ public class GlobalizationCultureDto {
   }
 
    /**
-   * Get displayName
+   * The display name.
    * @return displayName
   **/
-  @Schema(description = "")
+  @Schema(description = "The display name.")
   public String getDisplayName() {
     return displayName;
   }
@@ -82,10 +82,10 @@ public class GlobalizationCultureDto {
   }
 
    /**
-   * Get twoLetterISOLanguageName
+   * The name of the two letter ISO language.
    * @return twoLetterISOLanguageName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the two letter ISO language.")
   public String getTwoLetterISOLanguageName() {
     return twoLetterISOLanguageName;
   }
@@ -100,10 +100,10 @@ public class GlobalizationCultureDto {
   }
 
    /**
-   * Get threeLetterISOLanguageName
+   * The name of the three letter ISO language.
    * @return threeLetterISOLanguageName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the three letter ISO language.")
   public String getThreeLetterISOLanguageName() {
     return threeLetterISOLanguageName;
   }

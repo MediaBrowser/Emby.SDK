@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// PlaybackProgressInfo
+    /// Class PlaybackProgressInfo.  
     /// </summary>
     [DataContract]
         public partial class PlaybackProgressInfo :  IEquatable<PlaybackProgressInfo>
@@ -26,29 +26,29 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PlaybackProgressInfo" /> class.
         /// </summary>
-        /// <param name="canSeek">canSeek.</param>
+        /// <param name="canSeek">A value indicating whether this instance can seek..</param>
         /// <param name="item">item.</param>
         /// <param name="nowPlayingQueue">nowPlayingQueue.</param>
         /// <param name="playlistItemId">playlistItemId.</param>
-        /// <param name="itemId">itemId.</param>
-        /// <param name="sessionId">sessionId.</param>
-        /// <param name="mediaSourceId">mediaSourceId.</param>
-        /// <param name="audioStreamIndex">audioStreamIndex.</param>
-        /// <param name="subtitleStreamIndex">subtitleStreamIndex.</param>
-        /// <param name="isPaused">isPaused.</param>
+        /// <param name="itemId">The item identifier..</param>
+        /// <param name="sessionId">The session id..</param>
+        /// <param name="mediaSourceId">The media version identifier..</param>
+        /// <param name="audioStreamIndex">The index of the audio stream..</param>
+        /// <param name="subtitleStreamIndex">The index of the subtitle stream..</param>
+        /// <param name="isPaused">A value indicating whether this instance is paused..</param>
         /// <param name="playlistIndex">playlistIndex.</param>
         /// <param name="playlistLength">playlistLength.</param>
-        /// <param name="isMuted">isMuted.</param>
-        /// <param name="positionTicks">positionTicks.</param>
+        /// <param name="isMuted">A value indicating whether this instance is muted..</param>
+        /// <param name="positionTicks">The position ticks..</param>
         /// <param name="runTimeTicks">runTimeTicks.</param>
         /// <param name="playbackStartTimeTicks">playbackStartTimeTicks.</param>
-        /// <param name="volumeLevel">volumeLevel.</param>
+        /// <param name="volumeLevel">The volume level..</param>
         /// <param name="brightness">brightness.</param>
         /// <param name="aspectRatio">aspectRatio.</param>
         /// <param name="eventName">eventName.</param>
         /// <param name="playMethod">playMethod.</param>
-        /// <param name="liveStreamId">liveStreamId.</param>
-        /// <param name="playSessionId">playSessionId.</param>
+        /// <param name="liveStreamId">The live stream identifier..</param>
+        /// <param name="playSessionId">The play session identifier..</param>
         /// <param name="repeatMode">repeatMode.</param>
         /// <param name="subtitleOffset">subtitleOffset.</param>
         /// <param name="playbackRate">playbackRate.</param>
@@ -85,8 +85,9 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets CanSeek
+        /// A value indicating whether this instance can seek.
         /// </summary>
+        /// <value>A value indicating whether this instance can seek.</value>
         [DataMember(Name="CanSeek", EmitDefaultValue=false)]
         public bool? CanSeek { get; set; }
 
@@ -109,38 +110,44 @@ namespace EmbyClient.Dotnet.Model
         public string PlaylistItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ItemId
+        /// The item identifier.
         /// </summary>
+        /// <value>The item identifier.</value>
         [DataMember(Name="ItemId", EmitDefaultValue=false)]
         public string ItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SessionId
+        /// The session id.
         /// </summary>
+        /// <value>The session id.</value>
         [DataMember(Name="SessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets MediaSourceId
+        /// The media version identifier.
         /// </summary>
+        /// <value>The media version identifier.</value>
         [DataMember(Name="MediaSourceId", EmitDefaultValue=false)]
         public string MediaSourceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AudioStreamIndex
+        /// The index of the audio stream.
         /// </summary>
+        /// <value>The index of the audio stream.</value>
         [DataMember(Name="AudioStreamIndex", EmitDefaultValue=false)]
         public int? AudioStreamIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubtitleStreamIndex
+        /// The index of the subtitle stream.
         /// </summary>
+        /// <value>The index of the subtitle stream.</value>
         [DataMember(Name="SubtitleStreamIndex", EmitDefaultValue=false)]
         public int? SubtitleStreamIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPaused
+        /// A value indicating whether this instance is paused.
         /// </summary>
+        /// <value>A value indicating whether this instance is paused.</value>
         [DataMember(Name="IsPaused", EmitDefaultValue=false)]
         public bool? IsPaused { get; set; }
 
@@ -157,14 +164,16 @@ namespace EmbyClient.Dotnet.Model
         public int? PlaylistLength { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsMuted
+        /// A value indicating whether this instance is muted.
         /// </summary>
+        /// <value>A value indicating whether this instance is muted.</value>
         [DataMember(Name="IsMuted", EmitDefaultValue=false)]
         public bool? IsMuted { get; set; }
 
         /// <summary>
-        /// Gets or Sets PositionTicks
+        /// The position ticks.
         /// </summary>
+        /// <value>The position ticks.</value>
         [DataMember(Name="PositionTicks", EmitDefaultValue=false)]
         public long? PositionTicks { get; set; }
 
@@ -181,8 +190,9 @@ namespace EmbyClient.Dotnet.Model
         public long? PlaybackStartTimeTicks { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeLevel
+        /// The volume level.
         /// </summary>
+        /// <value>The volume level.</value>
         [DataMember(Name="VolumeLevel", EmitDefaultValue=false)]
         public int? VolumeLevel { get; set; }
 
@@ -211,14 +221,16 @@ namespace EmbyClient.Dotnet.Model
         public PlayMethod PlayMethod { get; set; }
 
         /// <summary>
-        /// Gets or Sets LiveStreamId
+        /// The live stream identifier.
         /// </summary>
+        /// <value>The live stream identifier.</value>
         [DataMember(Name="LiveStreamId", EmitDefaultValue=false)]
         public string LiveStreamId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlaySessionId
+        /// The play session identifier.
         /// </summary>
+        /// <value>The play session identifier.</value>
         [DataMember(Name="PlaySessionId", EmitDefaultValue=false)]
         public string PlaySessionId { get; set; }
 

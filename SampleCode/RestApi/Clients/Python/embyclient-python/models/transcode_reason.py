@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -41,6 +41,8 @@ class TranscodeReason(object):
     AUDIOBITDEPTHNOTSUPPORTED = "AudioBitDepthNotSupported"
     SUBTITLECODECNOTSUPPORTED = "SubtitleCodecNotSupported"
     DIRECTPLAYERROR = "DirectPlayError"
+    VIDEORANGENOTSUPPORTED = "VideoRangeNotSupported"
+    SUBTITLECONTENTOPTIONSENABLED = "SubtitleContentOptionsEnabled"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

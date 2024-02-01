@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// ImageInfo
+    /// Class ImageInfo  
     /// </summary>
     [DataContract]
         public partial class ImageInfo :  IEquatable<ImageInfo>
@@ -27,12 +27,12 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="ImageInfo" /> class.
         /// </summary>
         /// <param name="imageType">imageType.</param>
-        /// <param name="imageIndex">imageIndex.</param>
-        /// <param name="path">path.</param>
+        /// <param name="imageIndex">The index of the image..</param>
+        /// <param name="path">The path..</param>
         /// <param name="filename">filename.</param>
-        /// <param name="height">height.</param>
-        /// <param name="width">width.</param>
-        /// <param name="size">size.</param>
+        /// <param name="height">The height..</param>
+        /// <param name="width">The width..</param>
+        /// <param name="size">The size..</param>
         public ImageInfo(ImageType imageType = default(ImageType), int? imageIndex = default(int?), string path = default(string), string filename = default(string), int? height = default(int?), int? width = default(int?), long? size = default(long?))
         {
             this.ImageType = imageType;
@@ -51,14 +51,16 @@ namespace EmbyClient.Dotnet.Model
         public ImageType ImageType { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageIndex
+        /// The index of the image.
         /// </summary>
+        /// <value>The index of the image.</value>
         [DataMember(Name="ImageIndex", EmitDefaultValue=false)]
         public int? ImageIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets Path
+        /// The path.
         /// </summary>
+        /// <value>The path.</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 
@@ -69,20 +71,23 @@ namespace EmbyClient.Dotnet.Model
         public string Filename { get; set; }
 
         /// <summary>
-        /// Gets or Sets Height
+        /// The height.
         /// </summary>
+        /// <value>The height.</value>
         [DataMember(Name="Height", EmitDefaultValue=false)]
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or Sets Width
+        /// The width.
         /// </summary>
+        /// <value>The width.</value>
         [DataMember(Name="Width", EmitDefaultValue=false)]
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or Sets Size
+        /// The size.
         /// </summary>
+        /// <value>The size.</value>
         [DataMember(Name="Size", EmitDefaultValue=false)]
         public long? Size { get; set; }
 

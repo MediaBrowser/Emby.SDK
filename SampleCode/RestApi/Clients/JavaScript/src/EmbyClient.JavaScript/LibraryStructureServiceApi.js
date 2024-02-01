@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -22,7 +22,7 @@ import QueryResultVirtualFolderInfo from '../model/QueryResultVirtualFolderInfo'
 /**
 * LibraryStructureService service.
 * @module EmbyClient.JavaScript/LibraryStructureServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LibraryStructureServiceApi {
 
@@ -116,7 +116,7 @@ export default class LibraryStructureServiceApi {
      */
 
     /**
-     * Requires authentication as administrator
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/LibraryStructureServiceApi~getLibraryVirtualfoldersQueryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultVirtualFolderInfo}

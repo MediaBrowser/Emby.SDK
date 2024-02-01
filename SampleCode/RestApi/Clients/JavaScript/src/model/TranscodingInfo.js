@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,6 +10,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ProcessRunMetricsProcessStatistics from './ProcessRunMetricsProcessStatistics';
 import TranscodeReason from './TranscodeReason';
 import TranscodingVpStepInfo from './TranscodingVpStepInfo';
 import TupleDoubleDouble from './TupleDoubleDouble';
@@ -17,7 +18,7 @@ import TupleDoubleDouble from './TupleDoubleDouble';
 /**
 * The TranscodingInfo model module.
 * @module model/TranscodingInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class TranscodingInfo {
     /**
@@ -103,6 +104,9 @@ export default class TranscodingInfo {
             }
             if (data.hasOwnProperty('CpuHistory')) {
                 obj['CpuHistory'] = ApiClient.convertToType(data['CpuHistory'], [TupleDoubleDouble]);
+            }
+            if (data.hasOwnProperty('ProcessStatistics')) {
+                obj['ProcessStatistics'] = ProcessRunMetricsProcessStatistics.constructFromObject(data['ProcessStatistics']);
             }
             if (data.hasOwnProperty('CurrentThrottle')) {
                 obj['CurrentThrottle'] = ApiClient.convertToType(data['CurrentThrottle'], 'Number');
@@ -210,17 +214,24 @@ export default class TranscodingInfo {
     */
     'TranscodeReasons' = undefined;
     /**
+    * Deprecated, please use ProcessStatistics instead
     * @member {Number} CurrentCpuUsage
     */
     'CurrentCpuUsage' = undefined;
     /**
+    * Deprecated, please use ProcessStatistics instead
     * @member {Number} AverageCpuUsage
     */
     'AverageCpuUsage' = undefined;
     /**
+    * Deprecated, please use ProcessStatistics instead
     * @member {Array.<module:model/TupleDoubleDouble>} CpuHistory
     */
     'CpuHistory' = undefined;
+    /**
+    * @member {module:model/ProcessRunMetricsProcessStatistics} ProcessStatistics
+    */
+    'ProcessStatistics' = undefined;
     /**
     * @member {Number} CurrentThrottle
     */

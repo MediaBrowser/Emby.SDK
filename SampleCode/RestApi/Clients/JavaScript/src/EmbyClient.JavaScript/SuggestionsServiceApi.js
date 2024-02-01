@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * SuggestionsService service.
 * @module EmbyClient.JavaScript/SuggestionsServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class SuggestionsServiceApi {
 
@@ -40,24 +40,31 @@ export default class SuggestionsServiceApi {
 
     /**
      * Gets items based on a query.
-     * No authentication required
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/SuggestionsServiceApi~getUsersByUseridSuggestionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
     getUsersByUseridSuggestions() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
         'UserId': userId
       };
       let queryParams = {
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = QueryResultBaseItemDto;

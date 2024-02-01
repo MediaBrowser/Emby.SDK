@@ -28,7 +28,7 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="pathInfo">pathInfo.</param>
-        public LibraryUpdateMediaPath(string id = default(string), ConfigurationMediaPathInfo pathInfo = default(ConfigurationMediaPathInfo))
+        public LibraryUpdateMediaPath(string id = default(string), MediaPathInfo pathInfo = default(MediaPathInfo))
         {
             this.Id = id;
             this.PathInfo = pathInfo;
@@ -44,7 +44,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets PathInfo
         /// </summary>
         [DataMember(Name="PathInfo", EmitDefaultValue=false)]
-        public ConfigurationMediaPathInfo PathInfo { get; set; }
+        public MediaPathInfo PathInfo { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

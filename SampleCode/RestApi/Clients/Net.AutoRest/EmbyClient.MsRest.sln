@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmbyClient.MsRest", "EmbyClient.MsRest\EmbyClient.MsRest.csproj", "{3C67DEEC-D822-4027-A347-B9FCF324847D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbyClient.MsRest.Example", "EmbyClient.MsRest.Example\EmbyClient.MsRest.Example.csproj", "{08596676-1842-4EE4-AE0C-EB4EEDA65846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C67DEEC-D822-4027-A347-B9FCF324847D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C67DEEC-D822-4027-A347-B9FCF324847D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C67DEEC-D822-4027-A347-B9FCF324847D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C67DEEC-D822-4027-A347-B9FCF324847D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08596676-1842-4EE4-AE0C-EB4EEDA65846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08596676-1842-4EE4-AE0C-EB4EEDA65846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08596676-1842-4EE4-AE0C-EB4EEDA65846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08596676-1842-4EE4-AE0C-EB4EEDA65846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BAAF6B8-2633-48CA-9ACB-51E5D403B8C1}
+	EndGlobalSection
+EndGlobal

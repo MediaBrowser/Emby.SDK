@@ -32,6 +32,12 @@ open class DynamicHlsServiceAPI {
     /**
      - GET /Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  
@@ -63,6 +69,120 @@ open class DynamicHlsServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+
+     - parameter _id: (path) Item Id 
+     - parameter container: (query) Container 
+     - parameter deviceProfileId: (query) Optional. The dlna device profile id to utilize. (optional)
+     - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
+     - parameter audioCodec: (query) Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#x27;s extension. Options: aac, mp3, vorbis, wma. (optional)
+     - parameter enableAutoStreamCopy: (query) Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)
+     - parameter audioSampleRate: (query) Optional. Specify a specific audio sample rate, e.g. 44100 (optional)
+     - parameter audioBitRate: (query) Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults. (optional)
+     - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
+     - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
+     - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
+     - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
+     - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
+     - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
+     - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
+     - parameter maxHeight: (query) Optional. The maximum vertical resolution of the encoded video. (optional)
+     - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
+     - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
+     - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
+     - parameter maxVideoBitDepth: (query) Optional. (optional)
+     - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
+     - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
+     - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAudioByIdLiveM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getAudioByIdLiveM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     - GET /Audio/{Id}/live.m3u8
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path) Item Id 
+     - parameter container: (query) Container 
+     - parameter deviceProfileId: (query) Optional. The dlna device profile id to utilize. (optional)
+     - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
+     - parameter audioCodec: (query) Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#x27;s extension. Options: aac, mp3, vorbis, wma. (optional)
+     - parameter enableAutoStreamCopy: (query) Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)
+     - parameter audioSampleRate: (query) Optional. Specify a specific audio sample rate, e.g. 44100 (optional)
+     - parameter audioBitRate: (query) Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults. (optional)
+     - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
+     - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
+     - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
+     - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
+     - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
+     - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
+     - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
+     - parameter maxHeight: (query) Optional. The maximum vertical resolution of the encoded video. (optional)
+     - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
+     - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
+     - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
+     - parameter maxVideoBitDepth: (query) Optional. (optional)
+     - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
+     - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
+     - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getAudioByIdLiveM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
+        var path = "/Audio/{Id}/live.m3u8"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "DeviceProfileId": deviceProfileId, 
+                        "DeviceId": deviceId, 
+                        "Container": container, 
+                        "AudioCodec": audioCodec, 
+                        "EnableAutoStreamCopy": enableAutoStreamCopy, 
+                        "AudioSampleRate": audioSampleRate?.encodeToJSON(), 
+                        "AudioBitRate": audioBitRate?.encodeToJSON(), 
+                        "AudioChannels": audioChannels?.encodeToJSON(), 
+                        "MaxAudioChannels": maxAudioChannels?.encodeToJSON(), 
+                        "Static": _static, 
+                        "CopyTimestamps": copyTimestamps, 
+                        "StartTimeTicks": startTimeTicks?.encodeToJSON(), 
+                        "Width": width?.encodeToJSON(), 
+                        "Height": height?.encodeToJSON(), 
+                        "MaxWidth": maxWidth?.encodeToJSON(), 
+                        "MaxHeight": maxHeight?.encodeToJSON(), 
+                        "VideoBitRate": videoBitRate?.encodeToJSON(), 
+                        "SubtitleStreamIndex": subtitleStreamIndex?.encodeToJSON(), 
+                        "SubtitleMethod": subtitleMethod, 
+                        "MaxVideoBitDepth": maxVideoBitDepth?.encodeToJSON(), 
+                        "VideoCodec": videoCodec, 
+                        "AudioStreamIndex": audioStreamIndex?.encodeToJSON(), 
+                        "VideoStreamIndex": videoStreamIndex?.encodeToJSON()
+        ])
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Gets an audio stream using HTTP live streaming.
 
      - parameter _id: (path) Item Id 
@@ -76,12 +196,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -89,15 +205,14 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
      - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAudioByIdMainM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getAudioByIdMainM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, profile: profile, level: level, framerate: framerate, maxFramerate: maxFramerate, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxRefFrames: maxRefFrames, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
+    open class func getAudioByIdMainM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getAudioByIdMainM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -128,12 +243,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -141,7 +252,6 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
@@ -149,7 +259,7 @@ open class DynamicHlsServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getAudioByIdMainM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
+    open class func getAudioByIdMainM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Audio/{Id}/main.m3u8"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -168,10 +278,6 @@ open class DynamicHlsServiceAPI {
                         "AudioChannels": audioChannels?.encodeToJSON(), 
                         "MaxAudioChannels": maxAudioChannels?.encodeToJSON(), 
                         "Static": _static, 
-                        "Profile": profile, 
-                        "Level": level, 
-                        "Framerate": framerate, 
-                        "MaxFramerate": maxFramerate, 
                         "CopyTimestamps": copyTimestamps, 
                         "StartTimeTicks": startTimeTicks?.encodeToJSON(), 
                         "Width": width?.encodeToJSON(), 
@@ -181,7 +287,6 @@ open class DynamicHlsServiceAPI {
                         "VideoBitRate": videoBitRate?.encodeToJSON(), 
                         "SubtitleStreamIndex": subtitleStreamIndex?.encodeToJSON(), 
                         "SubtitleMethod": subtitleMethod, 
-                        "MaxRefFrames": maxRefFrames?.encodeToJSON(), 
                         "MaxVideoBitDepth": maxVideoBitDepth?.encodeToJSON(), 
                         "VideoCodec": videoCodec, 
                         "AudioStreamIndex": audioStreamIndex?.encodeToJSON(), 
@@ -207,12 +312,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -220,15 +321,14 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
      - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAudioByIdMasterM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getAudioByIdMasterM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, profile: profile, level: level, framerate: framerate, maxFramerate: maxFramerate, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxRefFrames: maxRefFrames, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
+    open class func getAudioByIdMasterM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getAudioByIdMasterM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -259,12 +359,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -272,7 +368,6 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
@@ -280,7 +375,7 @@ open class DynamicHlsServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getAudioByIdMasterM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
+    open class func getAudioByIdMasterM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Audio/{Id}/master.m3u8"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -299,10 +394,6 @@ open class DynamicHlsServiceAPI {
                         "AudioChannels": audioChannels?.encodeToJSON(), 
                         "MaxAudioChannels": maxAudioChannels?.encodeToJSON(), 
                         "Static": _static, 
-                        "Profile": profile, 
-                        "Level": level, 
-                        "Framerate": framerate, 
-                        "MaxFramerate": maxFramerate, 
                         "CopyTimestamps": copyTimestamps, 
                         "StartTimeTicks": startTimeTicks?.encodeToJSON(), 
                         "Width": width?.encodeToJSON(), 
@@ -312,7 +403,6 @@ open class DynamicHlsServiceAPI {
                         "VideoBitRate": videoBitRate?.encodeToJSON(), 
                         "SubtitleStreamIndex": subtitleStreamIndex?.encodeToJSON(), 
                         "SubtitleMethod": subtitleMethod, 
-                        "MaxRefFrames": maxRefFrames?.encodeToJSON(), 
                         "MaxVideoBitDepth": maxVideoBitDepth?.encodeToJSON(), 
                         "VideoCodec": videoCodec, 
                         "AudioStreamIndex": audioStreamIndex?.encodeToJSON(), 
@@ -346,6 +436,12 @@ open class DynamicHlsServiceAPI {
     /**
      - GET /Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  
@@ -370,6 +466,120 @@ open class DynamicHlsServiceAPI {
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+
+     - parameter _id: (path) Item Id 
+     - parameter container: (query) Container 
+     - parameter deviceProfileId: (query) Optional. The dlna device profile id to utilize. (optional)
+     - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
+     - parameter audioCodec: (query) Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#x27;s extension. Options: aac, mp3, vorbis, wma. (optional)
+     - parameter enableAutoStreamCopy: (query) Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)
+     - parameter audioSampleRate: (query) Optional. Specify a specific audio sample rate, e.g. 44100 (optional)
+     - parameter audioBitRate: (query) Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults. (optional)
+     - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
+     - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
+     - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
+     - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
+     - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
+     - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
+     - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
+     - parameter maxHeight: (query) Optional. The maximum vertical resolution of the encoded video. (optional)
+     - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
+     - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
+     - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
+     - parameter maxVideoBitDepth: (query) Optional. (optional)
+     - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
+     - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
+     - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getVideosByIdLiveM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getVideosByIdLiveM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     - GET /Videos/{Id}/live.m3u8
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path) Item Id 
+     - parameter container: (query) Container 
+     - parameter deviceProfileId: (query) Optional. The dlna device profile id to utilize. (optional)
+     - parameter deviceId: (query) The device id of the client requesting. Used to stop encoding processes when needed. (optional)
+     - parameter audioCodec: (query) Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&#x27;s extension. Options: aac, mp3, vorbis, wma. (optional)
+     - parameter enableAutoStreamCopy: (query) Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true. (optional)
+     - parameter audioSampleRate: (query) Optional. Specify a specific audio sample rate, e.g. 44100 (optional)
+     - parameter audioBitRate: (query) Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults. (optional)
+     - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
+     - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
+     - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
+     - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
+     - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
+     - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
+     - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
+     - parameter maxHeight: (query) Optional. The maximum vertical resolution of the encoded video. (optional)
+     - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
+     - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
+     - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
+     - parameter maxVideoBitDepth: (query) Optional. (optional)
+     - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
+     - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
+     - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getVideosByIdLiveM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
+        var path = "/Videos/{Id}/live.m3u8"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "DeviceProfileId": deviceProfileId, 
+                        "DeviceId": deviceId, 
+                        "Container": container, 
+                        "AudioCodec": audioCodec, 
+                        "EnableAutoStreamCopy": enableAutoStreamCopy, 
+                        "AudioSampleRate": audioSampleRate?.encodeToJSON(), 
+                        "AudioBitRate": audioBitRate?.encodeToJSON(), 
+                        "AudioChannels": audioChannels?.encodeToJSON(), 
+                        "MaxAudioChannels": maxAudioChannels?.encodeToJSON(), 
+                        "Static": _static, 
+                        "CopyTimestamps": copyTimestamps, 
+                        "StartTimeTicks": startTimeTicks?.encodeToJSON(), 
+                        "Width": width?.encodeToJSON(), 
+                        "Height": height?.encodeToJSON(), 
+                        "MaxWidth": maxWidth?.encodeToJSON(), 
+                        "MaxHeight": maxHeight?.encodeToJSON(), 
+                        "VideoBitRate": videoBitRate?.encodeToJSON(), 
+                        "SubtitleStreamIndex": subtitleStreamIndex?.encodeToJSON(), 
+                        "SubtitleMethod": subtitleMethod, 
+                        "MaxVideoBitDepth": maxVideoBitDepth?.encodeToJSON(), 
+                        "VideoCodec": videoCodec, 
+                        "AudioStreamIndex": audioStreamIndex?.encodeToJSON(), 
+                        "VideoStreamIndex": videoStreamIndex?.encodeToJSON()
+        ])
 
 
         let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
@@ -443,12 +653,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -456,15 +662,14 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
      - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getVideosByIdMainM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getVideosByIdMainM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, profile: profile, level: level, framerate: framerate, maxFramerate: maxFramerate, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxRefFrames: maxRefFrames, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
+    open class func getVideosByIdMainM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getVideosByIdMainM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -495,12 +700,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -508,7 +709,6 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
@@ -516,7 +716,7 @@ open class DynamicHlsServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getVideosByIdMainM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
+    open class func getVideosByIdMainM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Videos/{Id}/main.m3u8"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -535,10 +735,6 @@ open class DynamicHlsServiceAPI {
                         "AudioChannels": audioChannels?.encodeToJSON(), 
                         "MaxAudioChannels": maxAudioChannels?.encodeToJSON(), 
                         "Static": _static, 
-                        "Profile": profile, 
-                        "Level": level, 
-                        "Framerate": framerate, 
-                        "MaxFramerate": maxFramerate, 
                         "CopyTimestamps": copyTimestamps, 
                         "StartTimeTicks": startTimeTicks?.encodeToJSON(), 
                         "Width": width?.encodeToJSON(), 
@@ -548,7 +744,6 @@ open class DynamicHlsServiceAPI {
                         "VideoBitRate": videoBitRate?.encodeToJSON(), 
                         "SubtitleStreamIndex": subtitleStreamIndex?.encodeToJSON(), 
                         "SubtitleMethod": subtitleMethod, 
-                        "MaxRefFrames": maxRefFrames?.encodeToJSON(), 
                         "MaxVideoBitDepth": maxVideoBitDepth?.encodeToJSON(), 
                         "VideoCodec": videoCodec, 
                         "AudioStreamIndex": audioStreamIndex?.encodeToJSON(), 
@@ -574,12 +769,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -587,15 +778,14 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
      - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getVideosByIdMasterM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getVideosByIdMasterM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, profile: profile, level: level, framerate: framerate, maxFramerate: maxFramerate, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxRefFrames: maxRefFrames, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
+    open class func getVideosByIdMasterM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getVideosByIdMasterM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -626,12 +816,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -639,7 +825,6 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
@@ -647,7 +832,7 @@ open class DynamicHlsServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getVideosByIdMasterM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
+    open class func getVideosByIdMasterM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Videos/{Id}/master.m3u8"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -666,10 +851,6 @@ open class DynamicHlsServiceAPI {
                         "AudioChannels": audioChannels?.encodeToJSON(), 
                         "MaxAudioChannels": maxAudioChannels?.encodeToJSON(), 
                         "Static": _static, 
-                        "Profile": profile, 
-                        "Level": level, 
-                        "Framerate": framerate, 
-                        "MaxFramerate": maxFramerate, 
                         "CopyTimestamps": copyTimestamps, 
                         "StartTimeTicks": startTimeTicks?.encodeToJSON(), 
                         "Width": width?.encodeToJSON(), 
@@ -679,7 +860,6 @@ open class DynamicHlsServiceAPI {
                         "VideoBitRate": videoBitRate?.encodeToJSON(), 
                         "SubtitleStreamIndex": subtitleStreamIndex?.encodeToJSON(), 
                         "SubtitleMethod": subtitleMethod, 
-                        "MaxRefFrames": maxRefFrames?.encodeToJSON(), 
                         "MaxVideoBitDepth": maxVideoBitDepth?.encodeToJSON(), 
                         "VideoCodec": videoCodec, 
                         "AudioStreamIndex": audioStreamIndex?.encodeToJSON(), 
@@ -766,6 +946,12 @@ open class DynamicHlsServiceAPI {
     /**
      - HEAD /Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  
@@ -810,12 +996,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -823,15 +1005,14 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
      - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headAudioByIdMasterM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headAudioByIdMasterM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, profile: profile, level: level, framerate: framerate, maxFramerate: maxFramerate, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxRefFrames: maxRefFrames, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
+    open class func headAudioByIdMasterM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headAudioByIdMasterM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -862,12 +1043,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -875,7 +1052,6 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
@@ -883,7 +1059,7 @@ open class DynamicHlsServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headAudioByIdMasterM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
+    open class func headAudioByIdMasterM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Audio/{Id}/master.m3u8"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -902,10 +1078,6 @@ open class DynamicHlsServiceAPI {
                         "AudioChannels": audioChannels?.encodeToJSON(), 
                         "MaxAudioChannels": maxAudioChannels?.encodeToJSON(), 
                         "Static": _static, 
-                        "Profile": profile, 
-                        "Level": level, 
-                        "Framerate": framerate, 
-                        "MaxFramerate": maxFramerate, 
                         "CopyTimestamps": copyTimestamps, 
                         "StartTimeTicks": startTimeTicks?.encodeToJSON(), 
                         "Width": width?.encodeToJSON(), 
@@ -915,7 +1087,6 @@ open class DynamicHlsServiceAPI {
                         "VideoBitRate": videoBitRate?.encodeToJSON(), 
                         "SubtitleStreamIndex": subtitleStreamIndex?.encodeToJSON(), 
                         "SubtitleMethod": subtitleMethod, 
-                        "MaxRefFrames": maxRefFrames?.encodeToJSON(), 
                         "MaxVideoBitDepth": maxVideoBitDepth?.encodeToJSON(), 
                         "VideoCodec": videoCodec, 
                         "AudioStreamIndex": audioStreamIndex?.encodeToJSON(), 
@@ -949,6 +1120,12 @@ open class DynamicHlsServiceAPI {
     /**
      - HEAD /Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter segmentContainer: (path)  
      - parameter segmentId: (path)  
      - parameter _id: (path)  
@@ -993,12 +1170,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -1006,15 +1179,14 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
      - parameter videoStreamIndex: (query) Optional. The index of the video stream to use. If omitted the first video stream will be used. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headVideosByIdMasterM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headVideosByIdMasterM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, profile: profile, level: level, framerate: framerate, maxFramerate: maxFramerate, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxRefFrames: maxRefFrames, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
+    open class func headVideosByIdMasterM3u8(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headVideosByIdMasterM3u8WithRequestBuilder(_id: _id, container: container, deviceProfileId: deviceProfileId, deviceId: deviceId, audioCodec: audioCodec, enableAutoStreamCopy: enableAutoStreamCopy, audioSampleRate: audioSampleRate, audioBitRate: audioBitRate, audioChannels: audioChannels, maxAudioChannels: maxAudioChannels, _static: _static, copyTimestamps: copyTimestamps, startTimeTicks: startTimeTicks, width: width, height: height, maxWidth: maxWidth, maxHeight: maxHeight, videoBitRate: videoBitRate, subtitleStreamIndex: subtitleStreamIndex, subtitleMethod: subtitleMethod, maxVideoBitDepth: maxVideoBitDepth, videoCodec: videoCodec, audioStreamIndex: audioStreamIndex, videoStreamIndex: videoStreamIndex).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1045,12 +1217,8 @@ open class DynamicHlsServiceAPI {
      - parameter audioChannels: (query) Optional. Specify a specific number of audio channels to encode to, e.g. 2 (optional)
      - parameter maxAudioChannels: (query) Optional. Specify a maximum number of audio channels to encode to, e.g. 2 (optional)
      - parameter _static: (query) Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false (optional)
-     - parameter profile: (query) Optional. Specify a specific h264 profile, e.g. main, baseline, high. (optional)
-     - parameter level: (query) Optional. Specify a level for the h264 profile, e.g. 3, 3.1. (optional)
-     - parameter framerate: (query) Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
-     - parameter maxFramerate: (query) Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements. (optional)
      - parameter copyTimestamps: (query) Whether or not to copy timestamps when transcoding with an offset. Defaults to false. (optional)
-     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter startTimeTicks: (query) Optional. Specify a starting offset, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter width: (query) Optional. The fixed horizontal resolution of the encoded video. (optional)
      - parameter height: (query) Optional. The fixed vertical resolution of the encoded video. (optional)
      - parameter maxWidth: (query) Optional. The maximum horizontal resolution of the encoded video. (optional)
@@ -1058,7 +1226,6 @@ open class DynamicHlsServiceAPI {
      - parameter videoBitRate: (query) Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults. (optional)
      - parameter subtitleStreamIndex: (query) Optional. The index of the subtitle stream to use. If omitted no subtitles will be used. (optional)
      - parameter subtitleMethod: (query) Optional. Specify the subtitle delivery method. (optional)
-     - parameter maxRefFrames: (query) Optional. (optional)
      - parameter maxVideoBitDepth: (query) Optional. (optional)
      - parameter videoCodec: (query) Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&#x27;s extension. Options: h264, mpeg4, theora, vpx, wmv. (optional)
      - parameter audioStreamIndex: (query) Optional. The index of the audio stream to use. If omitted the first audio stream will be used. (optional)
@@ -1066,7 +1233,7 @@ open class DynamicHlsServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headVideosByIdMasterM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, profile: String? = nil, level: String? = nil, framerate: Float? = nil, maxFramerate: Float? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: DlnaSubtitleDeliveryMethod? = nil, maxRefFrames: Int? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
+    open class func headVideosByIdMasterM3u8WithRequestBuilder(_id: String, container: String, deviceProfileId: String? = nil, deviceId: String? = nil, audioCodec: String? = nil, enableAutoStreamCopy: Bool? = nil, audioSampleRate: Int? = nil, audioBitRate: Int? = nil, audioChannels: Int? = nil, maxAudioChannels: Int? = nil, _static: Bool? = nil, copyTimestamps: Bool? = nil, startTimeTicks: Int64? = nil, width: Int? = nil, height: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, videoBitRate: Int? = nil, subtitleStreamIndex: Int? = nil, subtitleMethod: SubtitleDeliveryMethod? = nil, maxVideoBitDepth: Int? = nil, videoCodec: String? = nil, audioStreamIndex: Int? = nil, videoStreamIndex: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Videos/{Id}/master.m3u8"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1085,10 +1252,6 @@ open class DynamicHlsServiceAPI {
                         "AudioChannels": audioChannels?.encodeToJSON(), 
                         "MaxAudioChannels": maxAudioChannels?.encodeToJSON(), 
                         "Static": _static, 
-                        "Profile": profile, 
-                        "Level": level, 
-                        "Framerate": framerate, 
-                        "MaxFramerate": maxFramerate, 
                         "CopyTimestamps": copyTimestamps, 
                         "StartTimeTicks": startTimeTicks?.encodeToJSON(), 
                         "Width": width?.encodeToJSON(), 
@@ -1098,7 +1261,6 @@ open class DynamicHlsServiceAPI {
                         "VideoBitRate": videoBitRate?.encodeToJSON(), 
                         "SubtitleStreamIndex": subtitleStreamIndex?.encodeToJSON(), 
                         "SubtitleMethod": subtitleMethod, 
-                        "MaxRefFrames": maxRefFrames?.encodeToJSON(), 
                         "MaxVideoBitDepth": maxVideoBitDepth?.encodeToJSON(), 
                         "VideoCodec": videoCodec, 
                         "AudioStreamIndex": audioStreamIndex?.encodeToJSON(), 

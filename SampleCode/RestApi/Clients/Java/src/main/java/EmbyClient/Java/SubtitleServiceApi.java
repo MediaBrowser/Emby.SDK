@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -387,7 +387,7 @@ public class SubtitleServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -425,7 +425,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -441,7 +441,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -459,7 +459,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -557,7 +557,7 @@ public class SubtitleServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -591,7 +591,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -607,7 +607,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -625,7 +625,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -669,12 +669,13 @@ public class SubtitleServiceApi {
      * @param language Language (required)
      * @param isPerfectMatch IsPerfectMatch (optional)
      * @param isForced IsForced (optional)
+     * @param isHearingImpaired IsHearingImpaired (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdRemotesearchSubtitlesByLanguageCall(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdRemotesearchSubtitlesByLanguageCall(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced, Boolean isHearingImpaired, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -690,6 +691,8 @@ public class SubtitleServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("IsPerfectMatch", isPerfectMatch));
         if (isForced != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("IsForced", isForced));
+        if (isHearingImpaired != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("IsHearingImpaired", isHearingImpaired));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -724,7 +727,7 @@ public class SubtitleServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdRemotesearchSubtitlesByLanguageValidateBeforeCall(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdRemotesearchSubtitlesByLanguageValidateBeforeCall(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced, Boolean isHearingImpaired, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdRemotesearchSubtitlesByLanguage(Async)");
@@ -738,7 +741,7 @@ public class SubtitleServiceApi {
             throw new ApiException("Missing the required parameter 'language' when calling getItemsByIdRemotesearchSubtitlesByLanguage(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdRemotesearchSubtitlesByLanguageCall(id, mediaSourceId, language, isPerfectMatch, isForced, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdRemotesearchSubtitlesByLanguageCall(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired, progressListener, progressRequestListener);
         return call;
 
         
@@ -755,11 +758,12 @@ public class SubtitleServiceApi {
      * @param language Language (required)
      * @param isPerfectMatch IsPerfectMatch (optional)
      * @param isForced IsForced (optional)
+     * @param isHearingImpaired IsHearingImpaired (optional)
      * @return List&lt;RemoteSubtitleInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<RemoteSubtitleInfo> getItemsByIdRemotesearchSubtitlesByLanguage(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced) throws ApiException {
-        ApiResponse<List<RemoteSubtitleInfo>> resp = getItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo(id, mediaSourceId, language, isPerfectMatch, isForced);
+    public List<RemoteSubtitleInfo> getItemsByIdRemotesearchSubtitlesByLanguage(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced, Boolean isHearingImpaired) throws ApiException {
+        ApiResponse<List<RemoteSubtitleInfo>> resp = getItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired);
         return resp.getData();
     }
 
@@ -771,11 +775,12 @@ public class SubtitleServiceApi {
      * @param language Language (required)
      * @param isPerfectMatch IsPerfectMatch (optional)
      * @param isForced IsForced (optional)
+     * @param isHearingImpaired IsHearingImpaired (optional)
      * @return ApiResponse&lt;List&lt;RemoteSubtitleInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<RemoteSubtitleInfo>> getItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdRemotesearchSubtitlesByLanguageValidateBeforeCall(id, mediaSourceId, language, isPerfectMatch, isForced, null, null);
+    public ApiResponse<List<RemoteSubtitleInfo>> getItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced, Boolean isHearingImpaired) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdRemotesearchSubtitlesByLanguageValidateBeforeCall(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired, null, null);
         Type localVarReturnType = new TypeToken<List<RemoteSubtitleInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -788,11 +793,12 @@ public class SubtitleServiceApi {
      * @param language Language (required)
      * @param isPerfectMatch IsPerfectMatch (optional)
      * @param isForced IsForced (optional)
+     * @param isHearingImpaired IsHearingImpaired (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdRemotesearchSubtitlesByLanguageAsync(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced, final ApiCallback<List<RemoteSubtitleInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdRemotesearchSubtitlesByLanguageAsync(String id, String mediaSourceId, String language, Boolean isPerfectMatch, Boolean isForced, Boolean isHearingImpaired, final ApiCallback<List<RemoteSubtitleInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -813,7 +819,7 @@ public class SubtitleServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdRemotesearchSubtitlesByLanguageValidateBeforeCall(id, mediaSourceId, language, isPerfectMatch, isForced, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdRemotesearchSubtitlesByLanguageValidateBeforeCall(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<RemoteSubtitleInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -999,7 +1005,7 @@ public class SubtitleServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1037,7 +1043,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1053,7 +1059,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1071,7 +1077,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1169,7 +1175,7 @@ public class SubtitleServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1203,7 +1209,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1219,7 +1225,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)
@@ -1237,7 +1243,7 @@ public class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)
      * @param index The subtitle stream index (required)

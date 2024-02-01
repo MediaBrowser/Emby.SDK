@@ -149,6 +149,12 @@ open class SystemServiceAPI {
      Gets public information about the server
      - GET /System/Info/Public
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - examples: [{contentType=application/json, example={
   "LocalAddress" : "LocalAddress",
   "WanAddress" : "WanAddress",
@@ -343,6 +349,12 @@ open class SystemServiceAPI {
     /**
      - GET /System/Ping
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
 
      - returns: RequestBuilder<Void> 
      */
@@ -362,7 +374,7 @@ open class SystemServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSystemReleasenotes(completion: @escaping ((_ data: UpdatesPackageVersionInfo?,_ error: Error?) -> Void)) {
+    open class func getSystemReleasenotes(completion: @escaping ((_ data: PackageVersionInfo?,_ error: Error?) -> Void)) {
         getSystemReleasenotesWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -390,19 +402,20 @@ open class SystemServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 }}]
 
-     - returns: RequestBuilder<UpdatesPackageVersionInfo> 
+     - returns: RequestBuilder<PackageVersionInfo> 
      */
-    open class func getSystemReleasenotesWithRequestBuilder() -> RequestBuilder<UpdatesPackageVersionInfo> {
+    open class func getSystemReleasenotesWithRequestBuilder() -> RequestBuilder<PackageVersionInfo> {
         let path = "/System/ReleaseNotes"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<UpdatesPackageVersionInfo>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PackageVersionInfo>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -411,7 +424,7 @@ open class SystemServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSystemReleasenotesVersions(completion: @escaping ((_ data: [UpdatesPackageVersionInfo]?,_ error: Error?) -> Void)) {
+    open class func getSystemReleasenotesVersions(completion: @escaping ((_ data: [PackageVersionInfo]?,_ error: Error?) -> Void)) {
         getSystemReleasenotesVersionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -439,7 +452,8 @@ open class SystemServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 }, {
   "sourceUrl" : "sourceUrl",
   "versionStr" : "versionStr",
@@ -451,19 +465,20 @@ open class SystemServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 } ]}]
 
-     - returns: RequestBuilder<[UpdatesPackageVersionInfo]> 
+     - returns: RequestBuilder<[PackageVersionInfo]> 
      */
-    open class func getSystemReleasenotesVersionsWithRequestBuilder() -> RequestBuilder<[UpdatesPackageVersionInfo]> {
+    open class func getSystemReleasenotesVersionsWithRequestBuilder() -> RequestBuilder<[PackageVersionInfo]> {
         let path = "/System/ReleaseNotes/Versions"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<[UpdatesPackageVersionInfo]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[PackageVersionInfo]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -530,6 +545,12 @@ open class SystemServiceAPI {
     /**
      - POST /System/Ping
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
 
      - returns: RequestBuilder<Void> 
      */

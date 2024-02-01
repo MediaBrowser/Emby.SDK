@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -230,7 +230,7 @@ public class BifServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -256,7 +256,7 @@ public class BifServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param width  (required)
      * @param id Item Id (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -267,7 +267,7 @@ public class BifServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @param width  (required)
      * @param id Item Id (required)
      * @return ApiResponse&lt;Void&gt;
@@ -280,7 +280,7 @@ public class BifServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param width  (required)
      * @param id Item Id (required)
      * @param callback The callback to be executed when the API call finishes

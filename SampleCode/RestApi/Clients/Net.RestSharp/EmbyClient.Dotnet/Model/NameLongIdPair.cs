@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NameLongIdPair" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="id">id.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="id">The identifier..</param>
         public NameLongIdPair(string name = default(string), long? id = default(long?))
         {
             this.Name = name;
@@ -35,14 +35,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The identifier.
         /// </summary>
+        /// <value>The identifier.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public long? Id { get; set; }
 

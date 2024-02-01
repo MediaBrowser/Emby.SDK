@@ -1,0 +1,1361 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>getUsersItemaccess </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="getUsersItemaccess ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/getUsersItemaccess">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/getUsersItemaccess">
+<div class="refdoc">
+
+<h1 id="emby_restapi_getUsersItemaccess" data-uid="emby.restapi/getUsersItemaccess" class="text-capitalize text-break">getUsersItemaccess</h1>
+<div class="markdown level0 summary"><p>Gets a list of users</p>
+</div>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
+</div>
+
+
+
+
+  
+  
+  
+   <h3 id="emby_restapi_getUsersItemaccess_operation" data-uid="emby.restapi/getUsersItemaccess/operation" style="display:none;" class="text-capitalize">getUsersItemaccess</h3>
+  <h5>Request</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/ItemAccess</code></pre>
+  </div>
+  <h5>Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>In</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">IsHidden</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by IsHidden=true or false</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsDisabled</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by IsDisabled=true or false</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">StartIndex</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The record index to start at. All items with a lower index will be dropped from the results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Limit</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The maximum number of records to return</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">NameStartsWithOrGreater</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SortOrder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Sort Order - Ascending,Descending</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+  
+              <a href="#QueryResult_UserDto" class="typelink">QueryResult_UserDto</a>
+              
+        </td>
+        <td><p>Operation successful. Returning a QueryResult<userdto> object.<p>
+</userdto></td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Resource not found or unavailable.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Server error.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="definitions">Definitions</h2>
+  
+  <h3 id="QueryResult_UserDto" class="text-capitalize">QueryResult_UserDto</h3>
+  <div>
+      <span class="xref">QueryResult_UserDto</span>
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Items</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_UserDto" class="typelink">UserDto[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TotalRecordCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dto_UserDto" class="text-capitalize">UserDto</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.UserDto.html">MediaBrowser.Model.Dto.UserDto</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The server identifier.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ServerName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name of the server. This is not used by the server and is for client-side usage only.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Prefix</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConnectUserName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name of the connect user.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DateCreated</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConnectLinkType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Connect_UserLinkType" class="typelink">UserLinkType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The id.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryImageTag</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The primary image tag.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HasPassword</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether this instance has password.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HasConfiguredPassword</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether this instance has configured password.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableAutoLogin</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LastLoginDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td><p>The last login date.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LastActivityDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td><p>The last activity date.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Configuration</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_UserConfiguration" class="typelink">UserConfiguration[]</a>
+                  
+              </td>
+              <td><p>Class UserConfiguration</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Policy</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Users_UserPolicy" class="typelink">UserPolicy[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryImageAspectRatio</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td><p>The primary image aspect ratio.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HasConfiguredEasyPassword</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">UserItemShareLevel</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_UserItemShareLevel" class="typelink">UserItemShareLevel</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Connect_UserLinkType" class="text-capitalize">UserLinkType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Connect.UserLinkType.html">MediaBrowser.Model.Connect.UserLinkType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>LinkedUser</li>
+  <li>Guest</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Configuration_UserConfiguration" class="text-capitalize">UserConfiguration</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.UserConfiguration.html">MediaBrowser.Model.Configuration.UserConfiguration</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">AudioLanguagePreference</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The audio language preference.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlayDefaultAudioTrack</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether [play default audio track].</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleLanguagePreference</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The subtitle language preference.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProfilePin</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayMissingEpisodes</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SubtitleMode</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_SubtitlePlaybackMode" class="typelink">SubtitlePlaybackMode</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OrderedViews</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LatestItemsExcludes</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MyMediaExcludes</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HidePlayedInLatest</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HidePlayedInMoreLikeThis</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HidePlayedInSuggestions</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RememberAudioSelections</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RememberSubtitleSelections</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableNextEpisodeAutoPlay</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ResumeRewindSeconds</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IntroSkipMode</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_SegmentSkipMode" class="typelink">SegmentSkipMode</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableLocalPassword</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Configuration_SubtitlePlaybackMode" class="text-capitalize">SubtitlePlaybackMode</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.SubtitlePlaybackMode.html">MediaBrowser.Model.Configuration.SubtitlePlaybackMode</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Default</li>
+  <li>Always</li>
+  <li>OnlyForced</li>
+  <li>None</li>
+  <li>Smart</li>
+  <li>HearingImpaired</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Configuration_SegmentSkipMode" class="text-capitalize">SegmentSkipMode</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.SegmentSkipMode.html">MediaBrowser.Model.Configuration.SegmentSkipMode</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>ShowButton</li>
+  <li>AutoSkip</li>
+  <li>None</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Users_UserPolicy" class="text-capitalize">UserPolicy</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Users.UserPolicy.html">MediaBrowser.Model.Users.UserPolicy</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">IsAdministrator</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether this instance is administrator.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsHidden</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether this instance is hidden.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsHiddenRemotely</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsHiddenFromUnusedDevices</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsDisabled</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether this instance is disabled.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LockedOutDate</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MaxParentalRating</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td><p>The max parental rating.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowTagOrRating</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BlockedTags</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsTagBlockingModeInclusive</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IncludeTags</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableUserPreferenceAccess</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AccessSchedules</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_AccessSchedule" class="typelink">AccessSchedule[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BlockUnratedItems</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_UnratedItem" class="typelink">UnratedItem[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableRemoteControlOfOtherUsers</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableSharedDeviceControl</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableRemoteAccess</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableLiveTvManagement</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableLiveTvAccess</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableMediaPlayback</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableAudioPlaybackTranscoding</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableVideoPlaybackTranscoding</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnablePlaybackRemuxing</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableContentDeletion</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RestrictedFeatures</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableContentDeletionFromFolders</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableContentDownloading</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableSubtitleDownloading</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableSubtitleManagement</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableSyncTranscoding</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether [enable synchronize].</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableMediaConversion</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnabledChannels</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableAllChannels</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnabledFolders</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableAllFolders</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">InvalidLoginAttemptCount</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnablePublicSharing</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">BlockedMediaFolders</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RemoteClientBitrateLimit</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AuthenticationProviderId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExcludedSubFolders</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SimultaneousStreamLimit</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnabledDevices</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EnableAllDevices</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowCameraUpload</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowSharingPersonalItems</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Configuration_AccessSchedule" class="text-capitalize">AccessSchedule</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.AccessSchedule.html">MediaBrowser.Model.Configuration.AccessSchedule</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">DayOfWeek</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Configuration_DynamicDayOfWeek" class="typelink">DynamicDayOfWeek</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">StartHour</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td><p>The start hour.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EndHour</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td><p>The end hour.</p>
+</td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Configuration_DynamicDayOfWeek" class="text-capitalize">DynamicDayOfWeek</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.DynamicDayOfWeek.html">MediaBrowser.Model.Configuration.DynamicDayOfWeek</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Sunday</li>
+  <li>Monday</li>
+  <li>Tuesday</li>
+  <li>Wednesday</li>
+  <li>Thursday</li>
+  <li>Friday</li>
+  <li>Saturday</li>
+  <li>Everyday</li>
+  <li>Weekday</li>
+  <li>Weekend</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Configuration_UnratedItem" class="text-capitalize">UnratedItem</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.UnratedItem.html">MediaBrowser.Model.Configuration.UnratedItem</a></p>
+
+  </div>
+  
+  <h3 id="MediaBrowser_Model_Dto_UserItemShareLevel" class="text-capitalize">UserItemShareLevel</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.UserItemShareLevel.html">MediaBrowser.Model.Dto.UserItemShareLevel</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>None</li>
+  <li>Read</li>
+  <li>Write</li>
+  <li>Manage</li>
+  <li>ManageDelete</li>
+  </ul>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

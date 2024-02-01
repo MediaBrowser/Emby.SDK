@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UpdateUserPassword model module.
 * @module model/UpdateUserPassword
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class UpdateUserPassword {
     /**
@@ -44,9 +44,6 @@ export default class UpdateUserPassword {
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
-            if (data.hasOwnProperty('CurrentPw')) {
-                obj['CurrentPw'] = ApiClient.convertToType(data['CurrentPw'], 'String');
-            }
             if (data.hasOwnProperty('NewPw')) {
                 obj['NewPw'] = ApiClient.convertToType(data['NewPw'], 'String');
             }
@@ -61,10 +58,6 @@ export default class UpdateUserPassword {
     * @member {String} Id
     */
     'Id' = undefined;
-    /**
-    * @member {String} CurrentPw
-    */
-    'CurrentPw' = undefined;
     /**
     * @member {String} NewPw
     */

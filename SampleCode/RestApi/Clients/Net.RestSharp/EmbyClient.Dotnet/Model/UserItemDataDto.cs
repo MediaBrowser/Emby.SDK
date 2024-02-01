@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// UserItemDataDto
+    /// Class UserItemDataDto  
     /// </summary>
     [DataContract]
         public partial class UserItemDataDto :  IEquatable<UserItemDataDto>
@@ -26,17 +26,17 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserItemDataDto" /> class.
         /// </summary>
-        /// <param name="rating">rating.</param>
-        /// <param name="playedPercentage">playedPercentage.</param>
-        /// <param name="unplayedItemCount">unplayedItemCount.</param>
-        /// <param name="playbackPositionTicks">playbackPositionTicks.</param>
-        /// <param name="playCount">playCount.</param>
-        /// <param name="isFavorite">isFavorite.</param>
-        /// <param name="lastPlayedDate">lastPlayedDate.</param>
-        /// <param name="played">played.</param>
-        /// <param name="key">key.</param>
-        /// <param name="itemId">itemId.</param>
-        /// <param name="serverId">serverId.</param>
+        /// <param name="rating">The rating..</param>
+        /// <param name="playedPercentage">The played percentage..</param>
+        /// <param name="unplayedItemCount">The unplayed item count..</param>
+        /// <param name="playbackPositionTicks">The playback position ticks..</param>
+        /// <param name="playCount">The play count..</param>
+        /// <param name="isFavorite">A value indicating whether this instance is favorite..</param>
+        /// <param name="lastPlayedDate">The last played date..</param>
+        /// <param name="played">A value indicating whether this &#x60;MediaBrowser.Model.Dto.UserItemDataDto&#x60; is played..</param>
+        /// <param name="key">The key..</param>
+        /// <param name="itemId">The item identifier..</param>
+        /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
         public UserItemDataDto(double? rating = default(double?), double? playedPercentage = default(double?), int? unplayedItemCount = default(int?), long? playbackPositionTicks = default(long?), int? playCount = default(int?), bool? isFavorite = default(bool?), DateTimeOffset? lastPlayedDate = default(DateTimeOffset?), bool? played = default(bool?), string key = default(string), string itemId = default(string), string serverId = default(string))
         {
             this.Rating = rating;
@@ -53,68 +53,79 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Rating
+        /// The rating.
         /// </summary>
+        /// <value>The rating.</value>
         [DataMember(Name="Rating", EmitDefaultValue=false)]
         public double? Rating { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayedPercentage
+        /// The played percentage.
         /// </summary>
+        /// <value>The played percentage.</value>
         [DataMember(Name="PlayedPercentage", EmitDefaultValue=false)]
         public double? PlayedPercentage { get; set; }
 
         /// <summary>
-        /// Gets or Sets UnplayedItemCount
+        /// The unplayed item count.
         /// </summary>
+        /// <value>The unplayed item count.</value>
         [DataMember(Name="UnplayedItemCount", EmitDefaultValue=false)]
         public int? UnplayedItemCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlaybackPositionTicks
+        /// The playback position ticks.
         /// </summary>
+        /// <value>The playback position ticks.</value>
         [DataMember(Name="PlaybackPositionTicks", EmitDefaultValue=false)]
         public long? PlaybackPositionTicks { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayCount
+        /// The play count.
         /// </summary>
+        /// <value>The play count.</value>
         [DataMember(Name="PlayCount", EmitDefaultValue=false)]
         public int? PlayCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsFavorite
+        /// A value indicating whether this instance is favorite.
         /// </summary>
+        /// <value>A value indicating whether this instance is favorite.</value>
         [DataMember(Name="IsFavorite", EmitDefaultValue=false)]
         public bool? IsFavorite { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastPlayedDate
+        /// The last played date.
         /// </summary>
+        /// <value>The last played date.</value>
         [DataMember(Name="LastPlayedDate", EmitDefaultValue=false)]
         public DateTimeOffset? LastPlayedDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets Played
+        /// A value indicating whether this &#x60;MediaBrowser.Model.Dto.UserItemDataDto&#x60; is played.
         /// </summary>
+        /// <value>A value indicating whether this &#x60;MediaBrowser.Model.Dto.UserItemDataDto&#x60; is played.</value>
         [DataMember(Name="Played", EmitDefaultValue=false)]
         public bool? Played { get; set; }
 
         /// <summary>
-        /// Gets or Sets Key
+        /// The key.
         /// </summary>
+        /// <value>The key.</value>
         [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// Gets or Sets ItemId
+        /// The item identifier.
         /// </summary>
+        /// <value>The item identifier.</value>
         [DataMember(Name="ItemId", EmitDefaultValue=false)]
         public string ItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServerId
+        /// Used only by our Windows app. Not used by Emby Server.
         /// </summary>
+        /// <value>Used only by our Windows app. Not used by Emby Server.</value>
         [DataMember(Name="ServerId", EmitDefaultValue=false)]
         public string ServerId { get; set; }
 

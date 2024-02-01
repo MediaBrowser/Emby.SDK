@@ -27,11 +27,13 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="LibraryLibraryOptionInfo" /> class.
         /// </summary>
         /// <param name="name">name.</param>
+        /// <param name="setupUrl">setupUrl.</param>
         /// <param name="defaultEnabled">defaultEnabled.</param>
         /// <param name="features">features.</param>
-        public LibraryLibraryOptionInfo(string name = default(string), bool? defaultEnabled = default(bool?), List<ConfigurationMetadataFeatures> features = default(List<ConfigurationMetadataFeatures>))
+        public LibraryLibraryOptionInfo(string name = default(string), string setupUrl = default(string), bool? defaultEnabled = default(bool?), List<MetadataFeatures> features = default(List<MetadataFeatures>))
         {
             this.Name = name;
+            this.SetupUrl = setupUrl;
             this.DefaultEnabled = defaultEnabled;
             this.Features = features;
         }
@@ -43,6 +45,12 @@ namespace EmbyClient.Dotnet.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets SetupUrl
+        /// </summary>
+        [DataMember(Name="SetupUrl", EmitDefaultValue=false)]
+        public string SetupUrl { get; set; }
+
+        /// <summary>
         /// Gets or Sets DefaultEnabled
         /// </summary>
         [DataMember(Name="DefaultEnabled", EmitDefaultValue=false)]
@@ -52,7 +60,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets Features
         /// </summary>
         [DataMember(Name="Features", EmitDefaultValue=false)]
-        public List<ConfigurationMetadataFeatures> Features { get; set; }
+        public List<MetadataFeatures> Features { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -63,6 +71,7 @@ namespace EmbyClient.Dotnet.Model
             var sb = new StringBuilder();
             sb.Append("class LibraryLibraryOptionInfo {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SetupUrl: ").Append(SetupUrl).Append("\n");
             sb.Append("  DefaultEnabled: ").Append(DefaultEnabled).Append("\n");
             sb.Append("  Features: ").Append(Features).Append("\n");
             sb.Append("}\n");
@@ -105,6 +114,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.SetupUrl == input.SetupUrl ||
+                    (this.SetupUrl != null &&
+                    this.SetupUrl.Equals(input.SetupUrl))
+                ) && 
+                (
                     this.DefaultEnabled == input.DefaultEnabled ||
                     (this.DefaultEnabled != null &&
                     this.DefaultEnabled.Equals(input.DefaultEnabled))
@@ -128,6 +142,8 @@ namespace EmbyClient.Dotnet.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.SetupUrl != null)
+                    hashCode = hashCode * 59 + this.SetupUrl.GetHashCode();
                 if (this.DefaultEnabled != null)
                     hashCode = hashCode * 59 + this.DefaultEnabled.GetHashCode();
                 if (this.Features != null)

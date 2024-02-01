@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum LocationType   */
 public enum LocationType: String, Codable {
     case fileSystem = "FileSystem"
     case virtual = "Virtual"

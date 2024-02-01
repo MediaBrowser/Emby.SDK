@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -26,7 +26,7 @@ class LibraryLibraryTypeOptions(object):
         'metadata_fetchers': 'list[LibraryLibraryOptionInfo]',
         'image_fetchers': 'list[LibraryLibraryOptionInfo]',
         'supported_image_types': 'list[ImageType]',
-        'default_image_options': 'list[ConfigurationImageOption]'
+        'default_image_options': 'list[ImageOption]'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class LibraryLibraryTypeOptions(object):
 
 
         :return: The default_image_options of this LibraryLibraryTypeOptions.  # noqa: E501
-        :rtype: list[ConfigurationImageOption]
+        :rtype: list[ImageOption]
         """
         return self._default_image_options
 
@@ -156,7 +156,7 @@ class LibraryLibraryTypeOptions(object):
 
 
         :param default_image_options: The default_image_options of this LibraryLibraryTypeOptions.  # noqa: E501
-        :type: list[ConfigurationImageOption]
+        :type: list[ImageOption]
         """
 
         self._default_image_options = default_image_options

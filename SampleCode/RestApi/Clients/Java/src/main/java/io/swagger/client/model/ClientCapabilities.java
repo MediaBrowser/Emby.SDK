@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -12,7 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.DlnaDeviceProfile;
+import io.swagger.client.model.DeviceProfile;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -42,7 +42,7 @@ public class ClientCapabilities {
   private Boolean supportsSync = null;
 
   @SerializedName("DeviceProfile")
-  private DlnaDeviceProfile deviceProfile = null;
+  private DeviceProfile deviceProfile = null;
 
   @SerializedName("IconUrl")
   private String iconUrl = null;
@@ -174,7 +174,7 @@ public class ClientCapabilities {
     this.supportsSync = supportsSync;
   }
 
-  public ClientCapabilities deviceProfile(DlnaDeviceProfile deviceProfile) {
+  public ClientCapabilities deviceProfile(DeviceProfile deviceProfile) {
     this.deviceProfile = deviceProfile;
     return this;
   }
@@ -184,11 +184,11 @@ public class ClientCapabilities {
    * @return deviceProfile
   **/
   @Schema(description = "")
-  public DlnaDeviceProfile getDeviceProfile() {
+  public DeviceProfile getDeviceProfile() {
     return deviceProfile;
   }
 
-  public void setDeviceProfile(DlnaDeviceProfile deviceProfile) {
+  public void setDeviceProfile(DeviceProfile deviceProfile) {
     this.deviceProfile = deviceProfile;
   }
 

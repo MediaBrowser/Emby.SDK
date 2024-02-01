@@ -35,21 +35,21 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "UnplayedItemCount" : 4,
+  "UnplayedItemCount" : 6,
   "Played" : true,
   "ServerId" : "ServerId",
-  "PlayedPercentage" : 0.10263654006109402,
-  "Rating" : 6.519180951018382,
-  "PlayCount" : 7,
-  "PlaybackPositionTicks" : 8,
+  "PlayedPercentage" : 7.058770351582356,
+  "Rating" : 0.8851374739011653,
+  "PlayCount" : 4,
+  "PlaybackPositionTicks" : 0,
   "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
   "IsFavorite" : true,
   "ItemId" : "ItemId",
   "Key" : "Key"
 }}]
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://dev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
@@ -80,7 +80,7 @@ open class PlaystateServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter nextMediaType: (query) The next media type that will play 
-     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)
      - parameter liveStreamId: (query)  (optional)
      - parameter playSessionId: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -110,7 +110,7 @@ open class PlaystateServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter nextMediaType: (query) The next media type that will play 
-     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)
      - parameter liveStreamId: (query)  (optional)
      - parameter playSessionId: (query)  (optional)
 
@@ -168,8 +168,8 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://dev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter body: (body) PlaybackStartInfo:  
 
@@ -259,8 +259,8 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://dev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter body: (body) PlaybackProgressInfo:  
 
@@ -305,8 +305,8 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://dev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter body: (body) PlaybackStopInfo:  
 
@@ -401,21 +401,21 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "UnplayedItemCount" : 4,
+  "UnplayedItemCount" : 6,
   "Played" : true,
   "ServerId" : "ServerId",
-  "PlayedPercentage" : 0.10263654006109402,
-  "Rating" : 6.519180951018382,
-  "PlayCount" : 7,
-  "PlaybackPositionTicks" : 8,
+  "PlayedPercentage" : 7.058770351582356,
+  "Rating" : 0.8851374739011653,
+  "PlayCount" : 4,
+  "PlaybackPositionTicks" : 0,
   "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
   "IsFavorite" : true,
   "ItemId" : "ItemId",
   "Key" : "Key"
 }}]
      - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Playback Check ins
-    url: https://github.com/MediaBrowser/Emby/wiki/Playback-Check-ins
+    description: API Documentation: Playback Check-ins
+    url: https://dev.emby.media/doc/restapi/Playback-Check-ins.html
 }
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
@@ -468,13 +468,13 @@ open class PlaystateServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "UnplayedItemCount" : 4,
+  "UnplayedItemCount" : 6,
   "Played" : true,
   "ServerId" : "ServerId",
-  "PlayedPercentage" : 0.10263654006109402,
-  "Rating" : 6.519180951018382,
-  "PlayCount" : 7,
-  "PlaybackPositionTicks" : 8,
+  "PlayedPercentage" : 7.058770351582356,
+  "Rating" : 0.8851374739011653,
+  "PlayCount" : 4,
+  "PlaybackPositionTicks" : 0,
   "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
   "IsFavorite" : true,
   "ItemId" : "ItemId",
@@ -582,7 +582,7 @@ open class PlaystateServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter nextMediaType: (query) The next media type that will play 
-     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)
      - parameter liveStreamId: (query)  (optional)
      - parameter playSessionId: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -612,7 +612,7 @@ open class PlaystateServiceAPI {
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter nextMediaType: (query) The next media type that will play 
-     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The position, in ticks, where playback stopped. 1ms &#x3D; 10000 ticks. (optional)
      - parameter liveStreamId: (query)  (optional)
      - parameter playSessionId: (query)  (optional)
 
@@ -649,7 +649,7 @@ open class PlaystateServiceAPI {
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
-     - parameter positionTicks: (query) Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter isPaused: (query) Indicates if the player is paused. (optional)
      - parameter isMuted: (query) Indicates if the player is muted. (optional)
      - parameter audioStreamIndex: (query)  (optional)
@@ -663,7 +663,7 @@ open class PlaystateServiceAPI {
      - parameter playbackRate: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByUseridPlayingitemsByIdProgress(body: MediaEncodingApiOnPlaybackProgress, mediaSourceId: String, userId: String, _id: String, positionTicks: Int64? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, volumeLevel: Int? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postUsersByUseridPlayingitemsByIdProgress(body: ApiOnPlaybackProgress, mediaSourceId: String, userId: String, _id: String, positionTicks: Int64? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, volumeLevel: Int? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postUsersByUseridPlayingitemsByIdProgressWithRequestBuilder(body: body, mediaSourceId: mediaSourceId, userId: userId, _id: _id, positionTicks: positionTicks, isPaused: isPaused, isMuted: isMuted, audioStreamIndex: audioStreamIndex, subtitleStreamIndex: subtitleStreamIndex, volumeLevel: volumeLevel, playMethod: playMethod, liveStreamId: liveStreamId, playSessionId: playSessionId, repeatMode: repeatMode, subtitleOffset: subtitleOffset, playbackRate: playbackRate).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -688,7 +688,7 @@ open class PlaystateServiceAPI {
      - parameter mediaSourceId: (query) The id of the MediaSource 
      - parameter userId: (path) User Id 
      - parameter _id: (path) Item Id 
-     - parameter positionTicks: (query) Optional. The current position, in ticks. 1 tick &#x3D; 10000 ms (optional)
+     - parameter positionTicks: (query) Optional. The current position, in ticks. 1ms &#x3D; 10000 ticks. (optional)
      - parameter isPaused: (query) Indicates if the player is paused. (optional)
      - parameter isMuted: (query) Indicates if the player is muted. (optional)
      - parameter audioStreamIndex: (query)  (optional)
@@ -703,7 +703,7 @@ open class PlaystateServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByUseridPlayingitemsByIdProgressWithRequestBuilder(body: MediaEncodingApiOnPlaybackProgress, mediaSourceId: String, userId: String, _id: String, positionTicks: Int64? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, volumeLevel: Int? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil) -> RequestBuilder<Void> {
+    open class func postUsersByUseridPlayingitemsByIdProgressWithRequestBuilder(body: ApiOnPlaybackProgress, mediaSourceId: String, userId: String, _id: String, positionTicks: Int64? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, volumeLevel: Int? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil) -> RequestBuilder<Void> {
         var path = "/Users/{UserId}/PlayingItems/{Id}/Progress"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

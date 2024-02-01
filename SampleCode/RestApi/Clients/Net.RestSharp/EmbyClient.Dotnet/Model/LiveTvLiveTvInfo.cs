@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LiveTvLiveTvInfo" /> class.
         /// </summary>
-        /// <param name="isEnabled">isEnabled.</param>
-        /// <param name="enabledUsers">enabledUsers.</param>
+        /// <param name="isEnabled">A value indicating whether this instance is enabled..</param>
+        /// <param name="enabledUsers">The enabled users..</param>
         public LiveTvLiveTvInfo(bool? isEnabled = default(bool?), List<string> enabledUsers = default(List<string>))
         {
             this.IsEnabled = isEnabled;
@@ -35,14 +35,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets IsEnabled
+        /// A value indicating whether this instance is enabled.
         /// </summary>
+        /// <value>A value indicating whether this instance is enabled.</value>
         [DataMember(Name="IsEnabled", EmitDefaultValue=false)]
         public bool? IsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnabledUsers
+        /// The enabled users.
         /// </summary>
+        /// <value>The enabled users.</value>
         [DataMember(Name="EnabledUsers", EmitDefaultValue=false)]
         public List<string> EnabledUsers { get; set; }
 

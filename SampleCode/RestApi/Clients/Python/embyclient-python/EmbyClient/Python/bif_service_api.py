@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -129,7 +129,7 @@ class BifServiceApi(object):
     def get_videos_by_id_index_bif(self, width, id, **kwargs):  # noqa: E501
         """get_videos_by_id_index_bif  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_videos_by_id_index_bif(width, id, async_req=True)
@@ -152,7 +152,7 @@ class BifServiceApi(object):
     def get_videos_by_id_index_bif_with_http_info(self, width, id, **kwargs):  # noqa: E501
         """get_videos_by_id_index_bif  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_videos_by_id_index_bif_with_http_info(width, id, async_req=True)
@@ -207,7 +207,7 @@ class BifServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Videos/{Id}/index.bif', 'GET',

@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PluginViewOptions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PluginViewOptions
+   ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:uid" content="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <script type="text/javascript" src="../../nav.js"></script>
+    <script type="text/javascript" src="../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../index.html">
+        		    <img id="logo" class="svg" src="../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions">
+<div class="refdoc">
+  
+  
+  <h1 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions" class="text-break">Class PluginViewOptions
+  </h1>
+  <div class="markdown level0 summary"><p>Options for Plugin Views</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">PluginViewOptions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.html">MediaBrowser.Model.Plugins.UI.Views</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PluginViewOptions</code></pre>
+  </div>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>To specify options for plugin views, implement the interface <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginViewWithOptions.html">IPluginViewWithOptions</a> in your
+Page, Dialog or Wizard view.</p>
+</div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_CompactViewAppearance_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.CompactViewAppearance*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_CompactViewAppearance" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.CompactViewAppearance">CompactViewAppearance</h4>
+  <div class="markdown level1 summary"><p>Gets or sets how a Page View should be presented in cases of limited screen space (like TV mode).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompactViewAppearance CompactViewAppearance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.CompactViewAppearance.html">CompactViewAppearance</a></td>
+        <td><p>The compact view appearance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_CompactViewAppearance_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Applies to</p>
+<ul><li></li></ul>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_DialogSize_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.DialogSize*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_DialogSize" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.DialogSize">DialogSize</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the preferred dialog size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DialogSize DialogSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.DialogSize.html">DialogSize</a></td>
+        <td><p>The preferred dialog display size.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_DialogSize_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Please note that in case of TV or mobile display modes, dialogs may always be shown
+      as full-screen.</p>
+<p>The default is <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.DialogSize.html#MediaBrowser_Model_Plugins_UI_Views_Enums_DialogSize_AutoFit">AutoFit</a></p>
+<p>Applies to</p>
+<ul><li></li></ul>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_HelpUrl_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.HelpUrl*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_HelpUrl" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.HelpUrl">HelpUrl</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a URL, pointing to help information for this specific view.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Uri HelpUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></td>
+        <td><p>The help URL.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_HelpUrl_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Applies to</p>
+<ul><li></li><li></li><li></li></ul>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_QueryCloseAction_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.QueryCloseAction*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_QueryCloseAction" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.QueryCloseAction">QueryCloseAction</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the action to be taken when the plugin view is exited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueryCloseAction QueryCloseAction { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.QueryCloseAction.html">QueryCloseAction</a></td>
+        <td><p>The query close action.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_QueryCloseAction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this to specify what should happen when the user exits a view by navigating back,
+      pressing cancel or mouse-clicking or tapping outside of a dialog.
+</p>
+<p>The default is <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.QueryCloseAction.html#MediaBrowser_Model_Plugins_UI_Views_Enums_QueryCloseAction_None">None</a></p>
+<p>Applies to</p>
+<ul><li></li><li></li></ul>
+</div>
+  
+  
+  <a id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_WizardHidingBehavior_" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.WizardHidingBehavior*"></a>
+  <h4 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_WizardHidingBehavior" data-uid="MediaBrowser.Model.Plugins.UI.Views.PluginViewOptions.WizardHidingBehavior">WizardHidingBehavior</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the action to be taken when leaving a Wizard View.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WizardHidingBehavior WizardHidingBehavior { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.WizardHidingBehavior.html">WizardHidingBehavior</a></td>
+        <td><p>The wizard hiding behavior.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Model_Plugins_UI_Views_PluginViewOptions_WizardHidingBehavior_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this to specify what should happen when the user exits a wizard view by navigating away,
+      mouse-clicking or tapping outside of the wizard.
+</p>
+<p>Please note that it can make sense to use different values at different stages of
+      a wizard progress. For example, the initial wizard page should always be set to
+<a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.WizardHidingBehavior.html#MediaBrowser_Model_Plugins_UI_Views_Enums_WizardHidingBehavior_AutoCancel">AutoCancel</a> as there is not state that
+would need to be retained.
+</p>
+<p>The default is <a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.Enums.WizardHidingBehavior.html#MediaBrowser_Model_Plugins_UI_Views_Enums_WizardHidingBehavior_AutoCancel">AutoCancel</a></p>
+<p>Applies to</p>
+<ul><li></li></ul>
+</div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginViewWithOptions.html">IPluginViewWithOptions</a></div>
+      <div><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginPageView.html">IPluginPageView</a></div>
+      <div><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginDialogView.html">IPluginDialogView</a></div>
+      <div><a class="xref" href="MediaBrowser.Model.Plugins.UI.Views.IPluginWizardView.html">IPluginWizardView</a></div>
+  </div>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -12,7 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationLibraryOptions;
+import io.swagger.client.model.LibraryOptions;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class LibraryAddVirtualFolder {
   private List<String> paths = null;
 
   @SerializedName("LibraryOptions")
-  private ConfigurationLibraryOptions libraryOptions = null;
+  private LibraryOptions libraryOptions = null;
 
   public LibraryAddVirtualFolder name(String name) {
     this.name = name;
@@ -118,7 +118,7 @@ public class LibraryAddVirtualFolder {
     this.paths = paths;
   }
 
-  public LibraryAddVirtualFolder libraryOptions(ConfigurationLibraryOptions libraryOptions) {
+  public LibraryAddVirtualFolder libraryOptions(LibraryOptions libraryOptions) {
     this.libraryOptions = libraryOptions;
     return this;
   }
@@ -128,11 +128,11 @@ public class LibraryAddVirtualFolder {
    * @return libraryOptions
   **/
   @Schema(description = "")
-  public ConfigurationLibraryOptions getLibraryOptions() {
+  public LibraryOptions getLibraryOptions() {
     return libraryOptions;
   }
 
-  public void setLibraryOptions(ConfigurationLibraryOptions libraryOptions) {
+  public void setLibraryOptions(LibraryOptions libraryOptions) {
     this.libraryOptions = libraryOptions;
   }
 

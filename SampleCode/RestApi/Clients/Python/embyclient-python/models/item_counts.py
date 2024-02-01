@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -105,6 +105,7 @@ class ItemCounts(object):
     def movie_count(self):
         """Gets the movie_count of this ItemCounts.  # noqa: E501
 
+        The movie count.  # noqa: E501
 
         :return: The movie_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -115,6 +116,7 @@ class ItemCounts(object):
     def movie_count(self, movie_count):
         """Sets the movie_count of this ItemCounts.
 
+        The movie count.  # noqa: E501
 
         :param movie_count: The movie_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -126,6 +128,7 @@ class ItemCounts(object):
     def series_count(self):
         """Gets the series_count of this ItemCounts.  # noqa: E501
 
+        The series count.  # noqa: E501
 
         :return: The series_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -136,6 +139,7 @@ class ItemCounts(object):
     def series_count(self, series_count):
         """Sets the series_count of this ItemCounts.
 
+        The series count.  # noqa: E501
 
         :param series_count: The series_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -147,6 +151,7 @@ class ItemCounts(object):
     def episode_count(self):
         """Gets the episode_count of this ItemCounts.  # noqa: E501
 
+        The episode count.  # noqa: E501
 
         :return: The episode_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -157,6 +162,7 @@ class ItemCounts(object):
     def episode_count(self, episode_count):
         """Sets the episode_count of this ItemCounts.
 
+        The episode count.  # noqa: E501
 
         :param episode_count: The episode_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -168,6 +174,7 @@ class ItemCounts(object):
     def game_count(self):
         """Gets the game_count of this ItemCounts.  # noqa: E501
 
+        The game count.  # noqa: E501
 
         :return: The game_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -178,6 +185,7 @@ class ItemCounts(object):
     def game_count(self, game_count):
         """Sets the game_count of this ItemCounts.
 
+        The game count.  # noqa: E501
 
         :param game_count: The game_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -231,6 +239,7 @@ class ItemCounts(object):
     def game_system_count(self):
         """Gets the game_system_count of this ItemCounts.  # noqa: E501
 
+        The game system count.  # noqa: E501
 
         :return: The game_system_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -241,6 +250,7 @@ class ItemCounts(object):
     def game_system_count(self, game_system_count):
         """Sets the game_system_count of this ItemCounts.
 
+        The game system count.  # noqa: E501
 
         :param game_system_count: The game_system_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -252,6 +262,7 @@ class ItemCounts(object):
     def trailer_count(self):
         """Gets the trailer_count of this ItemCounts.  # noqa: E501
 
+        The trailer count.  # noqa: E501
 
         :return: The trailer_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -262,6 +273,7 @@ class ItemCounts(object):
     def trailer_count(self, trailer_count):
         """Sets the trailer_count of this ItemCounts.
 
+        The trailer count.  # noqa: E501
 
         :param trailer_count: The trailer_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -273,6 +285,7 @@ class ItemCounts(object):
     def song_count(self):
         """Gets the song_count of this ItemCounts.  # noqa: E501
 
+        The song count.  # noqa: E501
 
         :return: The song_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -283,6 +296,7 @@ class ItemCounts(object):
     def song_count(self, song_count):
         """Sets the song_count of this ItemCounts.
 
+        The song count.  # noqa: E501
 
         :param song_count: The song_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -294,6 +308,7 @@ class ItemCounts(object):
     def album_count(self):
         """Gets the album_count of this ItemCounts.  # noqa: E501
 
+        The album count.  # noqa: E501
 
         :return: The album_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -304,6 +319,7 @@ class ItemCounts(object):
     def album_count(self, album_count):
         """Sets the album_count of this ItemCounts.
 
+        The album count.  # noqa: E501
 
         :param album_count: The album_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -315,6 +331,7 @@ class ItemCounts(object):
     def music_video_count(self):
         """Gets the music_video_count of this ItemCounts.  # noqa: E501
 
+        The music video count.  # noqa: E501
 
         :return: The music_video_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -325,6 +342,7 @@ class ItemCounts(object):
     def music_video_count(self, music_video_count):
         """Sets the music_video_count of this ItemCounts.
 
+        The music video count.  # noqa: E501
 
         :param music_video_count: The music_video_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -336,6 +354,7 @@ class ItemCounts(object):
     def box_set_count(self):
         """Gets the box_set_count of this ItemCounts.  # noqa: E501
 
+        The box set count.  # noqa: E501
 
         :return: The box_set_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -346,6 +365,7 @@ class ItemCounts(object):
     def box_set_count(self, box_set_count):
         """Sets the box_set_count of this ItemCounts.
 
+        The box set count.  # noqa: E501
 
         :param box_set_count: The box_set_count of this ItemCounts.  # noqa: E501
         :type: int
@@ -357,6 +377,7 @@ class ItemCounts(object):
     def book_count(self):
         """Gets the book_count of this ItemCounts.  # noqa: E501
 
+        The book count.  # noqa: E501
 
         :return: The book_count of this ItemCounts.  # noqa: E501
         :rtype: int
@@ -367,6 +388,7 @@ class ItemCounts(object):
     def book_count(self, book_count):
         """Sets the book_count of this ItemCounts.
 
+        The book count.  # noqa: E501
 
         :param book_count: The book_count of this ItemCounts.  # noqa: E501
         :type: int

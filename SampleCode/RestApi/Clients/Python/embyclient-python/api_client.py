@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-    Emby REST API
+    Emby Server REST API
 """
 from __future__ import absolute_import
 
@@ -63,7 +63,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = '/4.7.5.0/python'
+        self.user_agent = '/4.8.0.80/python'
 
     def __del__(self):
         self.pool.close()

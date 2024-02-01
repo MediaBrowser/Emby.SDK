@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -19,9 +19,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * PlaybackStopInfo
+ * Class PlaybackStopInfo.  
  */
-
+@Schema(description = "Class PlaybackStopInfo.  ")
 
 public class PlaybackStopInfo {
   @SerializedName("NowPlayingQueue")
@@ -59,6 +59,9 @@ public class PlaybackStopInfo {
 
   @SerializedName("Failed")
   private Boolean failed = null;
+
+  @SerializedName("IsAutomated")
+  private Boolean isAutomated = null;
 
   @SerializedName("NextMediaType")
   private String nextMediaType = null;
@@ -167,10 +170,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get itemId
+   * The item identifier.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The item identifier.")
   public String getItemId() {
     return itemId;
   }
@@ -185,10 +188,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get sessionId
+   * The session id.
    * @return sessionId
   **/
-  @Schema(description = "")
+  @Schema(description = "The session id.")
   public String getSessionId() {
     return sessionId;
   }
@@ -203,10 +206,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get mediaSourceId
+   * The media version identifier.
    * @return mediaSourceId
   **/
-  @Schema(description = "")
+  @Schema(description = "The media version identifier.")
   public String getMediaSourceId() {
     return mediaSourceId;
   }
@@ -221,10 +224,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get positionTicks
+   * The position ticks.
    * @return positionTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The position ticks.")
   public Long getPositionTicks() {
     return positionTicks;
   }
@@ -239,10 +242,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get liveStreamId
+   * The live stream identifier.
    * @return liveStreamId
   **/
-  @Schema(description = "")
+  @Schema(description = "The live stream identifier.")
   public String getLiveStreamId() {
     return liveStreamId;
   }
@@ -257,10 +260,10 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get playSessionId
+   * The play session identifier.
    * @return playSessionId
   **/
-  @Schema(description = "")
+  @Schema(description = "The play session identifier.")
   public String getPlaySessionId() {
     return playSessionId;
   }
@@ -275,16 +278,34 @@ public class PlaybackStopInfo {
   }
 
    /**
-   * Get failed
+   * A value indicating whether this &#x60;MediaBrowser.Model.Session.PlaybackStopInfo&#x60; is failed.
    * @return failed
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.")
   public Boolean isFailed() {
     return failed;
   }
 
   public void setFailed(Boolean failed) {
     this.failed = failed;
+  }
+
+  public PlaybackStopInfo isAutomated(Boolean isAutomated) {
+    this.isAutomated = isAutomated;
+    return this;
+  }
+
+   /**
+   * Get isAutomated
+   * @return isAutomated
+  **/
+  @Schema(description = "")
+  public Boolean isIsAutomated() {
+    return isAutomated;
+  }
+
+  public void setIsAutomated(Boolean isAutomated) {
+    this.isAutomated = isAutomated;
   }
 
   public PlaybackStopInfo nextMediaType(String nextMediaType) {
@@ -327,12 +348,13 @@ public class PlaybackStopInfo {
         Objects.equals(this.liveStreamId, playbackStopInfo.liveStreamId) &&
         Objects.equals(this.playSessionId, playbackStopInfo.playSessionId) &&
         Objects.equals(this.failed, playbackStopInfo.failed) &&
+        Objects.equals(this.isAutomated, playbackStopInfo.isAutomated) &&
         Objects.equals(this.nextMediaType, playbackStopInfo.nextMediaType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nowPlayingQueue, playlistItemId, playlistIndex, playlistLength, item, itemId, sessionId, mediaSourceId, positionTicks, liveStreamId, playSessionId, failed, nextMediaType);
+    return Objects.hash(nowPlayingQueue, playlistItemId, playlistIndex, playlistLength, item, itemId, sessionId, mediaSourceId, positionTicks, liveStreamId, playSessionId, failed, isAutomated, nextMediaType);
   }
 
 
@@ -353,6 +375,7 @@ public class PlaybackStopInfo {
     sb.append("    liveStreamId: ").append(toIndentedString(liveStreamId)).append("\n");
     sb.append("    playSessionId: ").append(toIndentedString(playSessionId)).append("\n");
     sb.append("    failed: ").append(toIndentedString(failed)).append("\n");
+    sb.append("    isAutomated: ").append(toIndentedString(isAutomated)).append("\n");
     sb.append("    nextMediaType: ").append(toIndentedString(nextMediaType)).append("\n");
     sb.append("}");
     return sb.toString();

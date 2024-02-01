@@ -26,12 +26,14 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoteSearchResult" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
+        /// <param name="name">The name..</param>
         /// <param name="providerIds">providerIds.</param>
-        /// <param name="productionYear">productionYear.</param>
+        /// <param name="productionYear">The year..</param>
         /// <param name="indexNumber">indexNumber.</param>
         /// <param name="indexNumberEnd">indexNumberEnd.</param>
         /// <param name="parentIndexNumber">parentIndexNumber.</param>
+        /// <param name="sortIndexNumber">sortIndexNumber.</param>
+        /// <param name="sortParentIndexNumber">sortParentIndexNumber.</param>
         /// <param name="premiereDate">premiereDate.</param>
         /// <param name="imageUrl">imageUrl.</param>
         /// <param name="searchProviderName">searchProviderName.</param>
@@ -40,7 +42,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="disambiguationComment">disambiguationComment.</param>
         /// <param name="albumArtist">albumArtist.</param>
         /// <param name="artists">artists.</param>
-        public RemoteSearchResult(string name = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? productionYear = default(int?), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), string imageUrl = default(string), string searchProviderName = default(string), string gameSystem = default(string), string overview = default(string), string disambiguationComment = default(string), RemoteSearchResult albumArtist = default(RemoteSearchResult), List<RemoteSearchResult> artists = default(List<RemoteSearchResult>))
+        public RemoteSearchResult(string name = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? productionYear = default(int?), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), string imageUrl = default(string), string searchProviderName = default(string), string gameSystem = default(string), string overview = default(string), string disambiguationComment = default(string), RemoteSearchResult albumArtist = default(RemoteSearchResult), List<RemoteSearchResult> artists = default(List<RemoteSearchResult>))
         {
             this.Name = name;
             this.ProviderIds = providerIds;
@@ -48,6 +50,8 @@ namespace EmbyClient.Dotnet.Model
             this.IndexNumber = indexNumber;
             this.IndexNumberEnd = indexNumberEnd;
             this.ParentIndexNumber = parentIndexNumber;
+            this.SortIndexNumber = sortIndexNumber;
+            this.SortParentIndexNumber = sortParentIndexNumber;
             this.PremiereDate = premiereDate;
             this.ImageUrl = imageUrl;
             this.SearchProviderName = searchProviderName;
@@ -59,8 +63,9 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -71,8 +76,9 @@ namespace EmbyClient.Dotnet.Model
         public ProviderIdDictionary ProviderIds { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProductionYear
+        /// The year.
         /// </summary>
+        /// <value>The year.</value>
         [DataMember(Name="ProductionYear", EmitDefaultValue=false)]
         public int? ProductionYear { get; set; }
 
@@ -93,6 +99,18 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="ParentIndexNumber", EmitDefaultValue=false)]
         public int? ParentIndexNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SortIndexNumber
+        /// </summary>
+        [DataMember(Name="SortIndexNumber", EmitDefaultValue=false)]
+        public int? SortIndexNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SortParentIndexNumber
+        /// </summary>
+        [DataMember(Name="SortParentIndexNumber", EmitDefaultValue=false)]
+        public int? SortParentIndexNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets PremiereDate
@@ -156,6 +174,8 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  IndexNumber: ").Append(IndexNumber).Append("\n");
             sb.Append("  IndexNumberEnd: ").Append(IndexNumberEnd).Append("\n");
             sb.Append("  ParentIndexNumber: ").Append(ParentIndexNumber).Append("\n");
+            sb.Append("  SortIndexNumber: ").Append(SortIndexNumber).Append("\n");
+            sb.Append("  SortParentIndexNumber: ").Append(SortParentIndexNumber).Append("\n");
             sb.Append("  PremiereDate: ").Append(PremiereDate).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  SearchProviderName: ").Append(SearchProviderName).Append("\n");
@@ -229,6 +249,16 @@ namespace EmbyClient.Dotnet.Model
                     this.ParentIndexNumber.Equals(input.ParentIndexNumber))
                 ) && 
                 (
+                    this.SortIndexNumber == input.SortIndexNumber ||
+                    (this.SortIndexNumber != null &&
+                    this.SortIndexNumber.Equals(input.SortIndexNumber))
+                ) && 
+                (
+                    this.SortParentIndexNumber == input.SortParentIndexNumber ||
+                    (this.SortParentIndexNumber != null &&
+                    this.SortParentIndexNumber.Equals(input.SortParentIndexNumber))
+                ) && 
+                (
                     this.PremiereDate == input.PremiereDate ||
                     (this.PremiereDate != null &&
                     this.PremiereDate.Equals(input.PremiereDate))
@@ -292,6 +322,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IndexNumberEnd.GetHashCode();
                 if (this.ParentIndexNumber != null)
                     hashCode = hashCode * 59 + this.ParentIndexNumber.GetHashCode();
+                if (this.SortIndexNumber != null)
+                    hashCode = hashCode * 59 + this.SortIndexNumber.GetHashCode();
+                if (this.SortParentIndexNumber != null)
+                    hashCode = hashCode * 59 + this.SortParentIndexNumber.GetHashCode();
                 if (this.PremiereDate != null)
                     hashCode = hashCode * 59 + this.PremiereDate.GetHashCode();
                 if (this.ImageUrl != null)

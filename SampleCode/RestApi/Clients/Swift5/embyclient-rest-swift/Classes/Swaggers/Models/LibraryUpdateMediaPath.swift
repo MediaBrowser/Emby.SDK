@@ -12,9 +12,9 @@ import Foundation
 public struct LibraryUpdateMediaPath: Codable {
 
     public var _id: String?
-    public var pathInfo: ConfigurationMediaPathInfo?
+    public var pathInfo: MediaPathInfo?
 
-    public init(_id: String? = nil, pathInfo: ConfigurationMediaPathInfo? = nil) {
+    public init(_id: String? = nil, pathInfo: MediaPathInfo? = nil) {
         self._id = _id
         self.pathInfo = pathInfo
     }

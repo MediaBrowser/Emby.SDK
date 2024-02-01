@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -13,11 +13,13 @@ import ApiClient from "../ApiClient";
 import BaseItemDto from '../model/BaseItemDto';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 import UserItemDataDto from '../model/UserItemDataDto';
+import UserLibraryLeaveSharedItems from '../model/UserLibraryLeaveSharedItems';
+import UserLibraryUpdateUserItemAccess from '../model/UserLibraryUpdateUserItemAccess';
 
 /**
 * UserLibraryService service.
 * @module EmbyClient.JavaScript/UserLibraryServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class UserLibraryServiceApi {
 
@@ -198,10 +200,12 @@ export default class UserLibraryServiceApi {
     /**
      * Gets intros to play before the main media item plays
      * Requires authentication as user
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/UserLibraryServiceApi~getUsersByUseridItemsByIdIntrosCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
     getUsersByUseridItemsByIdIntros() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -209,6 +213,11 @@ export default class UserLibraryServiceApi {
         'Id': id
       };
       let queryParams = {
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -237,10 +246,12 @@ export default class UserLibraryServiceApi {
     /**
      * Gets local trailers for an item
      * Requires authentication as user
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/UserLibraryServiceApi~getUsersByUseridItemsByIdLocaltrailersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/BaseItemDto>}
      */
     getUsersByUseridItemsByIdLocaltrailers() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -248,6 +259,11 @@ export default class UserLibraryServiceApi {
         'Id': id
       };
       let queryParams = {
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -276,10 +292,12 @@ export default class UserLibraryServiceApi {
     /**
      * Gets special features for an item
      * Requires authentication as user
+     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/UserLibraryServiceApi~getUsersByUseridItemsByIdSpecialfeaturesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/BaseItemDto>}
      */
     getUsersByUseridItemsByIdSpecialfeatures() {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
@@ -287,6 +305,11 @@ export default class UserLibraryServiceApi {
         'Id': id
       };
       let queryParams = {
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -417,7 +440,12 @@ export default class UserLibraryServiceApi {
         'Id': id
       };
       let queryParams = {
-        'UserId': opts['userId']
+        'UserId': opts['userId'],
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -431,6 +459,152 @@ export default class UserLibraryServiceApi {
 
       return this.apiClient.callApi(
         '/Videos/{Id}/AdditionalParts', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsAccess operation.
+     * @callback module:EmbyClient.JavaScript/UserLibraryServiceApi~postItemsAccessCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates user item access
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/UserLibraryServiceApi~postItemsAccessCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsAccess() {
+      let postBody = body;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/Access', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsByIdMakeprivate operation.
+     * @callback module:EmbyClient.JavaScript/UserLibraryServiceApi~postItemsByIdMakeprivateCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Makes an item private
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/UserLibraryServiceApi~postItemsByIdMakeprivateCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsByIdMakeprivate() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/MakePrivate', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsByIdMakepublic operation.
+     * @callback module:EmbyClient.JavaScript/UserLibraryServiceApi~postItemsByIdMakepublicCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Makes an item public to all users
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/UserLibraryServiceApi~postItemsByIdMakepublicCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsByIdMakepublic() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/MakePublic', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsSharedLeave operation.
+     * @callback module:EmbyClient.JavaScript/UserLibraryServiceApi~postItemsSharedLeaveCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Leaves a shared item
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/UserLibraryServiceApi~postItemsSharedLeaveCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsSharedLeave() {
+      let postBody = body;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/Shared/Leave', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

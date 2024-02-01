@@ -11,6 +11,7 @@ import Foundation
 
 public struct RemoteSubtitleInfo: Codable {
 
+    /** Use language instead to return the language specified by the subtitle provider */
     public var threeLetterISOLanguageName: String?
     public var _id: String?
     public var providerName: String?
@@ -23,9 +24,10 @@ public struct RemoteSubtitleInfo: Codable {
     public var downloadCount: Int?
     public var isHashMatch: Bool?
     public var isForced: Bool?
+    public var isHearingImpaired: Bool?
     public var language: String?
 
-    public init(threeLetterISOLanguageName: String? = nil, _id: String? = nil, providerName: String? = nil, name: String? = nil, format: String? = nil, author: String? = nil, comment: String? = nil, dateCreated: Date? = nil, communityRating: Float? = nil, downloadCount: Int? = nil, isHashMatch: Bool? = nil, isForced: Bool? = nil, language: String? = nil) {
+    public init(threeLetterISOLanguageName: String? = nil, _id: String? = nil, providerName: String? = nil, name: String? = nil, format: String? = nil, author: String? = nil, comment: String? = nil, dateCreated: Date? = nil, communityRating: Float? = nil, downloadCount: Int? = nil, isHashMatch: Bool? = nil, isForced: Bool? = nil, isHearingImpaired: Bool? = nil, language: String? = nil) {
         self.threeLetterISOLanguageName = threeLetterISOLanguageName
         self._id = _id
         self.providerName = providerName
@@ -38,6 +40,7 @@ public struct RemoteSubtitleInfo: Codable {
         self.downloadCount = downloadCount
         self.isHashMatch = isHashMatch
         self.isForced = isForced
+        self.isHearingImpaired = isHearingImpaired
         self.language = language
     }
 
@@ -54,6 +57,7 @@ public struct RemoteSubtitleInfo: Codable {
         case downloadCount = "DownloadCount"
         case isHashMatch = "IsHashMatch"
         case isForced = "IsForced"
+        case isHearingImpaired = "IsHearingImpaired"
         case language = "Language"
     }
 

@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import ProvidersMetadataRefreshMode from '../model/ProvidersMetadataRefreshMode';
+import MetadataRefreshMode from '../model/MetadataRefreshMode';
 
 /**
 * ItemRefreshService service.
 * @module EmbyClient.JavaScript/ItemRefreshServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ItemRefreshServiceApi {
 

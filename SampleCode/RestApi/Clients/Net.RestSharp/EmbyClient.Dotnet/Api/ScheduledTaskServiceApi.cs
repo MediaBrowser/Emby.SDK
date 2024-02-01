@@ -48,8 +48,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isHidden">Optional filter tasks that are hidden, or not. (optional)</param>
         /// <param name="isEnabled">Optional filter tasks that are enabled, or not. (optional)</param>
-        /// <returns>List&lt;TasksTaskInfo&gt;</returns>
-        List<TasksTaskInfo> GetScheduledtasks (bool? isHidden, bool? isEnabled);
+        /// <returns>List&lt;TaskInfo&gt;</returns>
+        List<TaskInfo> GetScheduledtasks (bool? isHidden, bool? isEnabled);
 
         /// <summary>
         /// Gets scheduled tasks
@@ -60,8 +60,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isHidden">Optional filter tasks that are hidden, or not. (optional)</param>
         /// <param name="isEnabled">Optional filter tasks that are enabled, or not. (optional)</param>
-        /// <returns>ApiResponse of List&lt;TasksTaskInfo&gt;</returns>
-        ApiResponse<List<TasksTaskInfo>> GetScheduledtasksWithHttpInfo (bool? isHidden, bool? isEnabled);
+        /// <returns>ApiResponse of List&lt;TaskInfo&gt;</returns>
+        ApiResponse<List<TaskInfo>> GetScheduledtasksWithHttpInfo (bool? isHidden, bool? isEnabled);
         /// <summary>
         /// Gets a scheduled task, by Id
         /// </summary>
@@ -70,8 +70,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>TasksTaskInfo</returns>
-        TasksTaskInfo GetScheduledtasksById (string id);
+        /// <returns>TaskInfo</returns>
+        TaskInfo GetScheduledtasksById (string id);
 
         /// <summary>
         /// Gets a scheduled task, by Id
@@ -81,8 +81,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>ApiResponse of TasksTaskInfo</returns>
-        ApiResponse<TasksTaskInfo> GetScheduledtasksByIdWithHttpInfo (string id);
+        /// <returns>ApiResponse of TaskInfo</returns>
+        ApiResponse<TaskInfo> GetScheduledtasksByIdWithHttpInfo (string id);
         /// <summary>
         /// Updates the triggers for a scheduled task
         /// </summary>
@@ -93,7 +93,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">List&#x60;1: </param>
         /// <param name="id"></param>
         /// <returns></returns>
-        void PostScheduledtasksByIdTriggers (List<TasksTaskTriggerInfo> body, string id);
+        void PostScheduledtasksByIdTriggers (List<TaskTriggerInfo> body, string id);
 
         /// <summary>
         /// Updates the triggers for a scheduled task
@@ -105,7 +105,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">List&#x60;1: </param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostScheduledtasksByIdTriggersWithHttpInfo (List<TasksTaskTriggerInfo> body, string id);
+        ApiResponse<Object> PostScheduledtasksByIdTriggersWithHttpInfo (List<TaskTriggerInfo> body, string id);
         /// <summary>
         /// Starts a scheduled task
         /// </summary>
@@ -180,8 +180,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isHidden">Optional filter tasks that are hidden, or not. (optional)</param>
         /// <param name="isEnabled">Optional filter tasks that are enabled, or not. (optional)</param>
-        /// <returns>Task of List&lt;TasksTaskInfo&gt;</returns>
-        System.Threading.Tasks.Task<List<TasksTaskInfo>> GetScheduledtasksAsync (bool? isHidden, bool? isEnabled);
+        /// <returns>Task of List&lt;TaskInfo&gt;</returns>
+        System.Threading.Tasks.Task<List<TaskInfo>> GetScheduledtasksAsync (bool? isHidden, bool? isEnabled);
 
         /// <summary>
         /// Gets scheduled tasks
@@ -192,8 +192,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isHidden">Optional filter tasks that are hidden, or not. (optional)</param>
         /// <param name="isEnabled">Optional filter tasks that are enabled, or not. (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;TasksTaskInfo&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TasksTaskInfo>>> GetScheduledtasksAsyncWithHttpInfo (bool? isHidden, bool? isEnabled);
+        /// <returns>Task of ApiResponse (List&lt;TaskInfo&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<TaskInfo>>> GetScheduledtasksAsyncWithHttpInfo (bool? isHidden, bool? isEnabled);
         /// <summary>
         /// Gets a scheduled task, by Id
         /// </summary>
@@ -202,8 +202,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Task of TasksTaskInfo</returns>
-        System.Threading.Tasks.Task<TasksTaskInfo> GetScheduledtasksByIdAsync (string id);
+        /// <returns>Task of TaskInfo</returns>
+        System.Threading.Tasks.Task<TaskInfo> GetScheduledtasksByIdAsync (string id);
 
         /// <summary>
         /// Gets a scheduled task, by Id
@@ -213,8 +213,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (TasksTaskInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TasksTaskInfo>> GetScheduledtasksByIdAsyncWithHttpInfo (string id);
+        /// <returns>Task of ApiResponse (TaskInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TaskInfo>> GetScheduledtasksByIdAsyncWithHttpInfo (string id);
         /// <summary>
         /// Updates the triggers for a scheduled task
         /// </summary>
@@ -225,7 +225,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">List&#x60;1: </param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostScheduledtasksByIdTriggersAsync (List<TasksTaskTriggerInfo> body, string id);
+        System.Threading.Tasks.Task PostScheduledtasksByIdTriggersAsync (List<TaskTriggerInfo> body, string id);
 
         /// <summary>
         /// Updates the triggers for a scheduled task
@@ -237,7 +237,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">List&#x60;1: </param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostScheduledtasksByIdTriggersAsyncWithHttpInfo (List<TasksTaskTriggerInfo> body, string id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostScheduledtasksByIdTriggersAsyncWithHttpInfo (List<TaskTriggerInfo> body, string id);
         /// <summary>
         /// Starts a scheduled task
         /// </summary>
@@ -546,10 +546,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isHidden">Optional filter tasks that are hidden, or not. (optional)</param>
         /// <param name="isEnabled">Optional filter tasks that are enabled, or not. (optional)</param>
-        /// <returns>List&lt;TasksTaskInfo&gt;</returns>
-        public List<TasksTaskInfo> GetScheduledtasks (bool? isHidden, bool? isEnabled)
+        /// <returns>List&lt;TaskInfo&gt;</returns>
+        public List<TaskInfo> GetScheduledtasks (bool? isHidden, bool? isEnabled)
         {
-             ApiResponse<List<TasksTaskInfo>> localVarResponse = GetScheduledtasksWithHttpInfo(isHidden, isEnabled);
+             ApiResponse<List<TaskInfo>> localVarResponse = GetScheduledtasksWithHttpInfo(isHidden, isEnabled);
              return localVarResponse.Data;
         }
 
@@ -559,8 +559,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isHidden">Optional filter tasks that are hidden, or not. (optional)</param>
         /// <param name="isEnabled">Optional filter tasks that are enabled, or not. (optional)</param>
-        /// <returns>ApiResponse of List&lt;TasksTaskInfo&gt;</returns>
-        public ApiResponse< List<TasksTaskInfo> > GetScheduledtasksWithHttpInfo (bool? isHidden, bool? isEnabled)
+        /// <returns>ApiResponse of List&lt;TaskInfo&gt;</returns>
+        public ApiResponse< List<TaskInfo> > GetScheduledtasksWithHttpInfo (bool? isHidden, bool? isEnabled)
         {
 
             var localVarPath = "/ScheduledTasks";
@@ -612,9 +612,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TasksTaskInfo>>(localVarStatusCode,
+            return new ApiResponse<List<TaskInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<TasksTaskInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TasksTaskInfo>)));
+                (List<TaskInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TaskInfo>)));
         }
 
         /// <summary>
@@ -623,10 +623,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isHidden">Optional filter tasks that are hidden, or not. (optional)</param>
         /// <param name="isEnabled">Optional filter tasks that are enabled, or not. (optional)</param>
-        /// <returns>Task of List&lt;TasksTaskInfo&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TasksTaskInfo>> GetScheduledtasksAsync (bool? isHidden, bool? isEnabled)
+        /// <returns>Task of List&lt;TaskInfo&gt;</returns>
+        public async System.Threading.Tasks.Task<List<TaskInfo>> GetScheduledtasksAsync (bool? isHidden, bool? isEnabled)
         {
-             ApiResponse<List<TasksTaskInfo>> localVarResponse = await GetScheduledtasksAsyncWithHttpInfo(isHidden, isEnabled);
+             ApiResponse<List<TaskInfo>> localVarResponse = await GetScheduledtasksAsyncWithHttpInfo(isHidden, isEnabled);
              return localVarResponse.Data;
 
         }
@@ -637,8 +637,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isHidden">Optional filter tasks that are hidden, or not. (optional)</param>
         /// <param name="isEnabled">Optional filter tasks that are enabled, or not. (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;TasksTaskInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TasksTaskInfo>>> GetScheduledtasksAsyncWithHttpInfo (bool? isHidden, bool? isEnabled)
+        /// <returns>Task of ApiResponse (List&lt;TaskInfo&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<TaskInfo>>> GetScheduledtasksAsyncWithHttpInfo (bool? isHidden, bool? isEnabled)
         {
 
             var localVarPath = "/ScheduledTasks";
@@ -690,9 +690,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<TasksTaskInfo>>(localVarStatusCode,
+            return new ApiResponse<List<TaskInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<TasksTaskInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TasksTaskInfo>)));
+                (List<TaskInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<TaskInfo>)));
         }
 
         /// <summary>
@@ -700,10 +700,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>TasksTaskInfo</returns>
-        public TasksTaskInfo GetScheduledtasksById (string id)
+        /// <returns>TaskInfo</returns>
+        public TaskInfo GetScheduledtasksById (string id)
         {
-             ApiResponse<TasksTaskInfo> localVarResponse = GetScheduledtasksByIdWithHttpInfo(id);
+             ApiResponse<TaskInfo> localVarResponse = GetScheduledtasksByIdWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -712,8 +712,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>ApiResponse of TasksTaskInfo</returns>
-        public ApiResponse< TasksTaskInfo > GetScheduledtasksByIdWithHttpInfo (string id)
+        /// <returns>ApiResponse of TaskInfo</returns>
+        public ApiResponse< TaskInfo > GetScheduledtasksByIdWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -767,9 +767,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TasksTaskInfo>(localVarStatusCode,
+            return new ApiResponse<TaskInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (TasksTaskInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TasksTaskInfo)));
+                (TaskInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaskInfo)));
         }
 
         /// <summary>
@@ -777,10 +777,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Task of TasksTaskInfo</returns>
-        public async System.Threading.Tasks.Task<TasksTaskInfo> GetScheduledtasksByIdAsync (string id)
+        /// <returns>Task of TaskInfo</returns>
+        public async System.Threading.Tasks.Task<TaskInfo> GetScheduledtasksByIdAsync (string id)
         {
-             ApiResponse<TasksTaskInfo> localVarResponse = await GetScheduledtasksByIdAsyncWithHttpInfo(id);
+             ApiResponse<TaskInfo> localVarResponse = await GetScheduledtasksByIdAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -790,8 +790,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse (TasksTaskInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TasksTaskInfo>> GetScheduledtasksByIdAsyncWithHttpInfo (string id)
+        /// <returns>Task of ApiResponse (TaskInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TaskInfo>> GetScheduledtasksByIdAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -845,9 +845,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TasksTaskInfo>(localVarStatusCode,
+            return new ApiResponse<TaskInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (TasksTaskInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TasksTaskInfo)));
+                (TaskInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaskInfo)));
         }
 
         /// <summary>
@@ -857,7 +857,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">List&#x60;1: </param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public void PostScheduledtasksByIdTriggers (List<TasksTaskTriggerInfo> body, string id)
+        public void PostScheduledtasksByIdTriggers (List<TaskTriggerInfo> body, string id)
         {
              PostScheduledtasksByIdTriggersWithHttpInfo(body, id);
         }
@@ -869,7 +869,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">List&#x60;1: </param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostScheduledtasksByIdTriggersWithHttpInfo (List<TasksTaskTriggerInfo> body, string id)
+        public ApiResponse<Object> PostScheduledtasksByIdTriggersWithHttpInfo (List<TaskTriggerInfo> body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -946,7 +946,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">List&#x60;1: </param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostScheduledtasksByIdTriggersAsync (List<TasksTaskTriggerInfo> body, string id)
+        public async System.Threading.Tasks.Task PostScheduledtasksByIdTriggersAsync (List<TaskTriggerInfo> body, string id)
         {
              await PostScheduledtasksByIdTriggersAsyncWithHttpInfo(body, id);
 
@@ -959,7 +959,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">List&#x60;1: </param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostScheduledtasksByIdTriggersAsyncWithHttpInfo (List<TasksTaskTriggerInfo> body, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostScheduledtasksByIdTriggersAsyncWithHttpInfo (List<TaskTriggerInfo> body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)

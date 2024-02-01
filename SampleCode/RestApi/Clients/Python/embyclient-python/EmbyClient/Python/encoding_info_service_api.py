@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -33,7 +33,7 @@ class EncodingInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[ConfigurationCodecConfiguration]
+        :return: list[CodecConfiguration]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -54,7 +54,7 @@ class EncodingInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[ConfigurationCodecConfiguration]
+        :return: list[CodecConfiguration]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -102,7 +102,7 @@ class EncodingInfoServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[ConfigurationCodecConfiguration]',  # noqa: E501
+            response_type='list[CodecConfiguration]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -120,7 +120,7 @@ class EncodingInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[MediaEncodingCodecsVideoCodecsVideoCodecBase]
+        :return: list[VideoCodecBase]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -141,7 +141,7 @@ class EncodingInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: list[MediaEncodingCodecsVideoCodecsVideoCodecBase]
+        :return: list[VideoCodecBase]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -189,7 +189,7 @@ class EncodingInfoServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[MediaEncodingCodecsVideoCodecsVideoCodecBase]',  # noqa: E501
+            response_type='list[VideoCodecBase]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -207,7 +207,7 @@ class EncodingInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: MediaEncodingConfigurationToneMappingToneMapOptionsVisibility
+        :return: ConfigurationToneMappingToneMapOptionsVisibility
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -228,7 +228,7 @@ class EncodingInfoServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :return: MediaEncodingConfigurationToneMappingToneMapOptionsVisibility
+        :return: ConfigurationToneMappingToneMapOptionsVisibility
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -276,7 +276,7 @@ class EncodingInfoServiceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='MediaEncodingConfigurationToneMappingToneMapOptionsVisibility',  # noqa: E501
+            response_type='ConfigurationToneMappingToneMapOptionsVisibility',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

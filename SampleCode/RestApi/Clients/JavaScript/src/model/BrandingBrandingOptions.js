@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The BrandingBrandingOptions model module.
 * @module model/BrandingBrandingOptions
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class BrandingBrandingOptions {
     /**
@@ -52,10 +52,12 @@ export default class BrandingBrandingOptions {
     }
 
     /**
+    * The login disclaimer.
     * @member {String} LoginDisclaimer
     */
     'LoginDisclaimer' = undefined;
     /**
+    * The custom CSS.
     * @member {String} CustomCss
     */
     'CustomCss' = undefined;

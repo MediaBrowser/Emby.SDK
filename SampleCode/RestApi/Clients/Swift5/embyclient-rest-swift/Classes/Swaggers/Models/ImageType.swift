@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum ImageType   */
 public enum ImageType: String, Codable {
     case primary = "Primary"
     case art = "Art"

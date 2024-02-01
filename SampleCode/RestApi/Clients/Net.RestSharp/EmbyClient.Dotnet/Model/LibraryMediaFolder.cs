@@ -28,12 +28,16 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="id">id.</param>
+        /// <param name="guid">guid.</param>
         /// <param name="subFolders">subFolders.</param>
-        public LibraryMediaFolder(string name = default(string), string id = default(string), List<LibrarySubFolder> subFolders = default(List<LibrarySubFolder>))
+        /// <param name="isUserAccessConfigurable">isUserAccessConfigurable.</param>
+        public LibraryMediaFolder(string name = default(string), string id = default(string), string guid = default(string), List<LibrarySubFolder> subFolders = default(List<LibrarySubFolder>), bool? isUserAccessConfigurable = default(bool?))
         {
             this.Name = name;
             this.Id = id;
+            this.Guid = guid;
             this.SubFolders = subFolders;
+            this.IsUserAccessConfigurable = isUserAccessConfigurable;
         }
         
         /// <summary>
@@ -49,10 +53,22 @@ namespace EmbyClient.Dotnet.Model
         public string Id { get; set; }
 
         /// <summary>
+        /// Gets or Sets Guid
+        /// </summary>
+        [DataMember(Name="Guid", EmitDefaultValue=false)]
+        public string Guid { get; set; }
+
+        /// <summary>
         /// Gets or Sets SubFolders
         /// </summary>
         [DataMember(Name="SubFolders", EmitDefaultValue=false)]
         public List<LibrarySubFolder> SubFolders { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsUserAccessConfigurable
+        /// </summary>
+        [DataMember(Name="IsUserAccessConfigurable", EmitDefaultValue=false)]
+        public bool? IsUserAccessConfigurable { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -64,7 +80,9 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class LibraryMediaFolder {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  SubFolders: ").Append(SubFolders).Append("\n");
+            sb.Append("  IsUserAccessConfigurable: ").Append(IsUserAccessConfigurable).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +128,20 @@ namespace EmbyClient.Dotnet.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.Guid == input.Guid ||
+                    (this.Guid != null &&
+                    this.Guid.Equals(input.Guid))
+                ) && 
+                (
                     this.SubFolders == input.SubFolders ||
                     this.SubFolders != null &&
                     input.SubFolders != null &&
                     this.SubFolders.SequenceEqual(input.SubFolders)
+                ) && 
+                (
+                    this.IsUserAccessConfigurable == input.IsUserAccessConfigurable ||
+                    (this.IsUserAccessConfigurable != null &&
+                    this.IsUserAccessConfigurable.Equals(input.IsUserAccessConfigurable))
                 );
         }
 
@@ -130,8 +158,12 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Guid != null)
+                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 if (this.SubFolders != null)
                     hashCode = hashCode * 59 + this.SubFolders.GetHashCode();
+                if (this.IsUserAccessConfigurable != null)
+                    hashCode = hashCode * 59 + this.IsUserAccessConfigurable.GetHashCode();
                 return hashCode;
             }
         }

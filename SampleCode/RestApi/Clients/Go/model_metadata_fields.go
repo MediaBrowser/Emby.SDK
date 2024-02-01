@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
-
+// MetadataFields : Enum MetadataFields  
 type MetadataFields string
 
 // List of MetadataFields
@@ -23,4 +23,9 @@ const (
 	CHANNEL_NUMBER_MetadataFields MetadataFields = "ChannelNumber"
 	SORT_NAME_MetadataFields MetadataFields = "SortName"
 	ORIGINAL_TITLE_MetadataFields MetadataFields = "OriginalTitle"
+	SORT_INDEX_NUMBER_MetadataFields MetadataFields = "SortIndexNumber"
+	SORT_PARENT_INDEX_NUMBER_MetadataFields MetadataFields = "SortParentIndexNumber"
+	COMMUNITY_RATING_MetadataFields MetadataFields = "CommunityRating"
+	CRITIC_RATING_MetadataFields MetadataFields = "CriticRating"
+	TAGLINE_MetadataFields MetadataFields = "Tagline"
 )

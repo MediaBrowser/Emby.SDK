@@ -27,23 +27,29 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="DevicesDeviceInfo" /> class.
         /// </summary>
         /// <param name="name">name.</param>
-        /// <param name="id">id.</param>
-        /// <param name="lastUserName">lastUserName.</param>
-        /// <param name="appName">appName.</param>
-        /// <param name="appVersion">appVersion.</param>
-        /// <param name="lastUserId">lastUserId.</param>
+        /// <param name="id">The identifier..</param>
+        /// <param name="internalId">internalId.</param>
+        /// <param name="reportedDeviceId">reportedDeviceId.</param>
+        /// <param name="lastUserName">The last name of the user..</param>
+        /// <param name="appName">The name of the application..</param>
+        /// <param name="appVersion">The application version..</param>
+        /// <param name="lastUserId">The last user identifier..</param>
         /// <param name="dateLastActivity">dateLastActivity.</param>
         /// <param name="iconUrl">iconUrl.</param>
-        public DevicesDeviceInfo(string name = default(string), string id = default(string), string lastUserName = default(string), string appName = default(string), string appVersion = default(string), string lastUserId = default(string), DateTimeOffset? dateLastActivity = default(DateTimeOffset?), string iconUrl = default(string))
+        /// <param name="ipAddress">ipAddress.</param>
+        public DevicesDeviceInfo(string name = default(string), string id = default(string), long? internalId = default(long?), string reportedDeviceId = default(string), string lastUserName = default(string), string appName = default(string), string appVersion = default(string), string lastUserId = default(string), DateTimeOffset? dateLastActivity = default(DateTimeOffset?), string iconUrl = default(string), string ipAddress = default(string))
         {
             this.Name = name;
             this.Id = id;
+            this.InternalId = internalId;
+            this.ReportedDeviceId = reportedDeviceId;
             this.LastUserName = lastUserName;
             this.AppName = appName;
             this.AppVersion = appVersion;
             this.LastUserId = lastUserId;
             this.DateLastActivity = dateLastActivity;
             this.IconUrl = iconUrl;
+            this.IpAddress = ipAddress;
         }
         
         /// <summary>
@@ -53,32 +59,49 @@ namespace EmbyClient.Dotnet.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The identifier.
         /// </summary>
+        /// <value>The identifier.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastUserName
+        /// Gets or Sets InternalId
         /// </summary>
+        [DataMember(Name="InternalId", EmitDefaultValue=false)]
+        public long? InternalId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ReportedDeviceId
+        /// </summary>
+        [DataMember(Name="ReportedDeviceId", EmitDefaultValue=false)]
+        public string ReportedDeviceId { get; set; }
+
+        /// <summary>
+        /// The last name of the user.
+        /// </summary>
+        /// <value>The last name of the user.</value>
         [DataMember(Name="LastUserName", EmitDefaultValue=false)]
         public string LastUserName { get; set; }
 
         /// <summary>
-        /// Gets or Sets AppName
+        /// The name of the application.
         /// </summary>
+        /// <value>The name of the application.</value>
         [DataMember(Name="AppName", EmitDefaultValue=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// Gets or Sets AppVersion
+        /// The application version.
         /// </summary>
+        /// <value>The application version.</value>
         [DataMember(Name="AppVersion", EmitDefaultValue=false)]
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastUserId
+        /// The last user identifier.
         /// </summary>
+        /// <value>The last user identifier.</value>
         [DataMember(Name="LastUserId", EmitDefaultValue=false)]
         public string LastUserId { get; set; }
 
@@ -95,6 +118,12 @@ namespace EmbyClient.Dotnet.Model
         public string IconUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets IpAddress
+        /// </summary>
+        [DataMember(Name="IpAddress", EmitDefaultValue=false)]
+        public string IpAddress { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -104,12 +133,15 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class DevicesDeviceInfo {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  InternalId: ").Append(InternalId).Append("\n");
+            sb.Append("  ReportedDeviceId: ").Append(ReportedDeviceId).Append("\n");
             sb.Append("  LastUserName: ").Append(LastUserName).Append("\n");
             sb.Append("  AppName: ").Append(AppName).Append("\n");
             sb.Append("  AppVersion: ").Append(AppVersion).Append("\n");
             sb.Append("  LastUserId: ").Append(LastUserId).Append("\n");
             sb.Append("  DateLastActivity: ").Append(DateLastActivity).Append("\n");
             sb.Append("  IconUrl: ").Append(IconUrl).Append("\n");
+            sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,6 +187,16 @@ namespace EmbyClient.Dotnet.Model
                     this.Id.Equals(input.Id))
                 ) && 
                 (
+                    this.InternalId == input.InternalId ||
+                    (this.InternalId != null &&
+                    this.InternalId.Equals(input.InternalId))
+                ) && 
+                (
+                    this.ReportedDeviceId == input.ReportedDeviceId ||
+                    (this.ReportedDeviceId != null &&
+                    this.ReportedDeviceId.Equals(input.ReportedDeviceId))
+                ) && 
+                (
                     this.LastUserName == input.LastUserName ||
                     (this.LastUserName != null &&
                     this.LastUserName.Equals(input.LastUserName))
@@ -183,6 +225,11 @@ namespace EmbyClient.Dotnet.Model
                     this.IconUrl == input.IconUrl ||
                     (this.IconUrl != null &&
                     this.IconUrl.Equals(input.IconUrl))
+                ) && 
+                (
+                    this.IpAddress == input.IpAddress ||
+                    (this.IpAddress != null &&
+                    this.IpAddress.Equals(input.IpAddress))
                 );
         }
 
@@ -199,6 +246,10 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.InternalId != null)
+                    hashCode = hashCode * 59 + this.InternalId.GetHashCode();
+                if (this.ReportedDeviceId != null)
+                    hashCode = hashCode * 59 + this.ReportedDeviceId.GetHashCode();
                 if (this.LastUserName != null)
                     hashCode = hashCode * 59 + this.LastUserName.GetHashCode();
                 if (this.AppName != null)
@@ -211,6 +262,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.DateLastActivity.GetHashCode();
                 if (this.IconUrl != null)
                     hashCode = hashCode * 59 + this.IconUrl.GetHashCode();
+                if (this.IpAddress != null)
+                    hashCode = hashCode * 59 + this.IpAddress.GetHashCode();
                 return hashCode;
             }
         }

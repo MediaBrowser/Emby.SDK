@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NameIdPair" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="id">id.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="id">The identifier..</param>
         public NameIdPair(string name = default(string), string id = default(string))
         {
             this.Name = name;
@@ -35,14 +35,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The identifier.
         /// </summary>
+        /// <value>The identifier.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

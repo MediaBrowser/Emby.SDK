@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -28,15 +28,15 @@ Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
  * @param userId User Id
-@return MediaInfoPlaybackInfoResponse
+@return PlaybackInfoResponse
 */
-func (a *MediaInfoServiceApiService) GetItemsByIdPlaybackinfo(ctx context.Context, id string, userId string) (MediaInfoPlaybackInfoResponse, *http.Response, error) {
+func (a *MediaInfoServiceApiService) GetItemsByIdPlaybackinfo(ctx context.Context, id string, userId string) (PlaybackInfoResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue MediaInfoPlaybackInfoResponse
+		localVarReturnValue PlaybackInfoResponse
 	)
 
 	// create path and map variables
@@ -108,7 +108,7 @@ func (a *MediaInfoServiceApiService) GetItemsByIdPlaybackinfo(ctx context.Contex
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v MediaInfoPlaybackInfoResponse
+			var v PlaybackInfoResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -209,15 +209,15 @@ Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body PlaybackInfoRequest: 
  * @param id
-@return MediaInfoPlaybackInfoResponse
+@return PlaybackInfoResponse
 */
-func (a *MediaInfoServiceApiService) PostItemsByIdPlaybackinfo(ctx context.Context, body MediaInfoPlaybackInfoRequest, id string) (MediaInfoPlaybackInfoResponse, *http.Response, error) {
+func (a *MediaInfoServiceApiService) PostItemsByIdPlaybackinfo(ctx context.Context, body PlaybackInfoRequest, id string) (PlaybackInfoResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue MediaInfoPlaybackInfoResponse
+		localVarReturnValue PlaybackInfoResponse
 	)
 
 	// create path and map variables
@@ -290,7 +290,7 @@ func (a *MediaInfoServiceApiService) PostItemsByIdPlaybackinfo(ctx context.Conte
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v MediaInfoPlaybackInfoResponse
+			var v PlaybackInfoResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -471,15 +471,15 @@ MediaInfoServiceApiService Opens a media source
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body LiveStreamRequest: 
-@return MediaInfoLiveStreamResponse
+@return LiveStreamResponse
 */
-func (a *MediaInfoServiceApiService) PostLivestreamsOpen(ctx context.Context, body MediaInfoLiveStreamRequest) (MediaInfoLiveStreamResponse, *http.Response, error) {
+func (a *MediaInfoServiceApiService) PostLivestreamsOpen(ctx context.Context, body LiveStreamRequest) (LiveStreamResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue MediaInfoLiveStreamResponse
+		localVarReturnValue LiveStreamResponse
 	)
 
 	// create path and map variables
@@ -551,7 +551,7 @@ func (a *MediaInfoServiceApiService) PostLivestreamsOpen(ctx context.Context, bo
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v MediaInfoLiveStreamResponse
+			var v LiveStreamResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// IOFileSystemEntryInfo
+    /// Class FileSystemEntryInfo  
     /// </summary>
     [DataContract]
         public partial class IOFileSystemEntryInfo :  IEquatable<IOFileSystemEntryInfo>
@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IOFileSystemEntryInfo" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="path">path.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="path">The path..</param>
         /// <param name="type">type.</param>
         public IOFileSystemEntryInfo(string name = default(string), string path = default(string), IOFileSystemEntryType type = default(IOFileSystemEntryType))
         {
@@ -37,14 +37,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Path
+        /// The path.
         /// </summary>
+        /// <value>The path.</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 

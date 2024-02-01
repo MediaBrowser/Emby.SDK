@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// ItemCounts
+    /// Class LibrarySummary  
     /// </summary>
     [DataContract]
         public partial class ItemCounts :  IEquatable<ItemCounts>
@@ -26,19 +26,19 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ItemCounts" /> class.
         /// </summary>
-        /// <param name="movieCount">movieCount.</param>
-        /// <param name="seriesCount">seriesCount.</param>
-        /// <param name="episodeCount">episodeCount.</param>
-        /// <param name="gameCount">gameCount.</param>
+        /// <param name="movieCount">The movie count..</param>
+        /// <param name="seriesCount">The series count..</param>
+        /// <param name="episodeCount">The episode count..</param>
+        /// <param name="gameCount">The game count..</param>
         /// <param name="artistCount">artistCount.</param>
         /// <param name="programCount">programCount.</param>
-        /// <param name="gameSystemCount">gameSystemCount.</param>
-        /// <param name="trailerCount">trailerCount.</param>
-        /// <param name="songCount">songCount.</param>
-        /// <param name="albumCount">albumCount.</param>
-        /// <param name="musicVideoCount">musicVideoCount.</param>
-        /// <param name="boxSetCount">boxSetCount.</param>
-        /// <param name="bookCount">bookCount.</param>
+        /// <param name="gameSystemCount">The game system count..</param>
+        /// <param name="trailerCount">The trailer count..</param>
+        /// <param name="songCount">The song count..</param>
+        /// <param name="albumCount">The album count..</param>
+        /// <param name="musicVideoCount">The music video count..</param>
+        /// <param name="boxSetCount">The box set count..</param>
+        /// <param name="bookCount">The book count..</param>
         /// <param name="itemCount">itemCount.</param>
         public ItemCounts(int? movieCount = default(int?), int? seriesCount = default(int?), int? episodeCount = default(int?), int? gameCount = default(int?), int? artistCount = default(int?), int? programCount = default(int?), int? gameSystemCount = default(int?), int? trailerCount = default(int?), int? songCount = default(int?), int? albumCount = default(int?), int? musicVideoCount = default(int?), int? boxSetCount = default(int?), int? bookCount = default(int?), int? itemCount = default(int?))
         {
@@ -59,26 +59,30 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets MovieCount
+        /// The movie count.
         /// </summary>
+        /// <value>The movie count.</value>
         [DataMember(Name="MovieCount", EmitDefaultValue=false)]
         public int? MovieCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesCount
+        /// The series count.
         /// </summary>
+        /// <value>The series count.</value>
         [DataMember(Name="SeriesCount", EmitDefaultValue=false)]
         public int? SeriesCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets EpisodeCount
+        /// The episode count.
         /// </summary>
+        /// <value>The episode count.</value>
         [DataMember(Name="EpisodeCount", EmitDefaultValue=false)]
         public int? EpisodeCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets GameCount
+        /// The game count.
         /// </summary>
+        /// <value>The game count.</value>
         [DataMember(Name="GameCount", EmitDefaultValue=false)]
         public int? GameCount { get; set; }
 
@@ -95,44 +99,51 @@ namespace EmbyClient.Dotnet.Model
         public int? ProgramCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets GameSystemCount
+        /// The game system count.
         /// </summary>
+        /// <value>The game system count.</value>
         [DataMember(Name="GameSystemCount", EmitDefaultValue=false)]
         public int? GameSystemCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets TrailerCount
+        /// The trailer count.
         /// </summary>
+        /// <value>The trailer count.</value>
         [DataMember(Name="TrailerCount", EmitDefaultValue=false)]
         public int? TrailerCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets SongCount
+        /// The song count.
         /// </summary>
+        /// <value>The song count.</value>
         [DataMember(Name="SongCount", EmitDefaultValue=false)]
         public int? SongCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlbumCount
+        /// The album count.
         /// </summary>
+        /// <value>The album count.</value>
         [DataMember(Name="AlbumCount", EmitDefaultValue=false)]
         public int? AlbumCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets MusicVideoCount
+        /// The music video count.
         /// </summary>
+        /// <value>The music video count.</value>
         [DataMember(Name="MusicVideoCount", EmitDefaultValue=false)]
         public int? MusicVideoCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets BoxSetCount
+        /// The box set count.
         /// </summary>
+        /// <value>The box set count.</value>
         [DataMember(Name="BoxSetCount", EmitDefaultValue=false)]
         public int? BoxSetCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets BookCount
+        /// The book count.
         /// </summary>
+        /// <value>The book count.</value>
         [DataMember(Name="BookCount", EmitDefaultValue=false)]
         public int? BookCount { get; set; }
 

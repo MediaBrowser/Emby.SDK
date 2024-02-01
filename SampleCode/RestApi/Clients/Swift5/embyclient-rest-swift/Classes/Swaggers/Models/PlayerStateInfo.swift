@@ -11,13 +11,21 @@ import Foundation
 
 public struct PlayerStateInfo: Codable {
 
+    /** The now playing position ticks. */
     public var positionTicks: Int64?
+    /** A value indicating whether this instance can seek. */
     public var canSeek: Bool?
+    /** A value indicating whether this instance is paused. */
     public var isPaused: Bool?
+    /** A value indicating whether this instance is muted. */
     public var isMuted: Bool?
+    /** The volume level. */
     public var volumeLevel: Int?
+    /** The index of the now playing audio stream. */
     public var audioStreamIndex: Int?
+    /** The index of the now playing subtitle stream. */
     public var subtitleStreamIndex: Int?
+    /** The now playing media version identifier. */
     public var mediaSourceId: String?
     public var playMethod: PlayMethod?
     public var repeatMode: RepeatMode?

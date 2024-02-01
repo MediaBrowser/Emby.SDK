@@ -26,9 +26,9 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalIdInfo" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="key">key.</param>
-        /// <param name="urlFormatString">urlFormatString.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="key">The key..</param>
+        /// <param name="urlFormatString">The URL format string..</param>
         /// <param name="isSupportedAsIdentifier">isSupportedAsIdentifier.</param>
         public ExternalIdInfo(string name = default(string), string key = default(string), string urlFormatString = default(string), bool? isSupportedAsIdentifier = default(bool?))
         {
@@ -39,20 +39,23 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Key
+        /// The key.
         /// </summary>
+        /// <value>The key.</value>
         [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// Gets or Sets UrlFormatString
+        /// The URL format string.
         /// </summary>
+        /// <value>The URL format string.</value>
         [DataMember(Name="UrlFormatString", EmitDefaultValue=false)]
         public string UrlFormatString { get; set; }
 

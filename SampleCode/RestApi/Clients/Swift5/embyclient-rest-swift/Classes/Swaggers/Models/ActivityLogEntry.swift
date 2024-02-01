@@ -11,14 +11,23 @@ import Foundation
 
 public struct ActivityLogEntry: Codable {
 
+    /** The identifier. */
     public var _id: Int64?
+    /** The name. */
     public var name: String?
+    /** The overview. */
     public var overview: String?
+    /** The short overview. */
     public var shortOverview: String?
+    /** The type. */
     public var type: String?
+    /** The item identifier. */
     public var itemId: String?
+    /** The date. */
     public var date: Date?
+    /** The user identifier. */
     public var userId: String?
+    /** The user primary image tag. */
     public var userPrimaryImageTag: String?
     public var severity: LoggingLogSeverity?
 

@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -12,15 +12,15 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationLibraryOptions;
+import io.swagger.client.model.LibraryOptions;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * VirtualFolderInfo
+ * Used to hold information about a user&#x27;s list of configured virtual folders  
  */
-
+@Schema(description = "Used to hold information about a user's list of configured virtual folders  ")
 
 public class VirtualFolderInfo {
   @SerializedName("Name")
@@ -33,10 +33,16 @@ public class VirtualFolderInfo {
   private String collectionType = null;
 
   @SerializedName("LibraryOptions")
-  private ConfigurationLibraryOptions libraryOptions = null;
+  private LibraryOptions libraryOptions = null;
 
   @SerializedName("ItemId")
   private String itemId = null;
+
+  @SerializedName("Id")
+  private String id = null;
+
+  @SerializedName("Guid")
+  private String guid = null;
 
   @SerializedName("PrimaryImageItemId")
   private String primaryImageItemId = null;
@@ -53,10 +59,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -79,10 +85,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get locations
+   * The locations.
    * @return locations
   **/
-  @Schema(description = "")
+  @Schema(description = "The locations.")
   public List<String> getLocations() {
     return locations;
   }
@@ -97,10 +103,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get collectionType
+   * The type of the collection.
    * @return collectionType
   **/
-  @Schema(description = "")
+  @Schema(description = "The type of the collection.")
   public String getCollectionType() {
     return collectionType;
   }
@@ -109,7 +115,7 @@ public class VirtualFolderInfo {
     this.collectionType = collectionType;
   }
 
-  public VirtualFolderInfo libraryOptions(ConfigurationLibraryOptions libraryOptions) {
+  public VirtualFolderInfo libraryOptions(LibraryOptions libraryOptions) {
     this.libraryOptions = libraryOptions;
     return this;
   }
@@ -119,11 +125,11 @@ public class VirtualFolderInfo {
    * @return libraryOptions
   **/
   @Schema(description = "")
-  public ConfigurationLibraryOptions getLibraryOptions() {
+  public LibraryOptions getLibraryOptions() {
     return libraryOptions;
   }
 
-  public void setLibraryOptions(ConfigurationLibraryOptions libraryOptions) {
+  public void setLibraryOptions(LibraryOptions libraryOptions) {
     this.libraryOptions = libraryOptions;
   }
 
@@ -133,10 +139,10 @@ public class VirtualFolderInfo {
   }
 
    /**
-   * Get itemId
+   * The item identifier.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The item identifier.")
   public String getItemId() {
     return itemId;
   }
@@ -145,16 +151,52 @@ public class VirtualFolderInfo {
     this.itemId = itemId;
   }
 
+  public VirtualFolderInfo id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * ItemId came first, so that is left for compatability purposes
+   * @return id
+  **/
+  @Schema(description = "ItemId came first, so that is left for compatability purposes")
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public VirtualFolderInfo guid(String guid) {
+    this.guid = guid;
+    return this;
+  }
+
+   /**
+   * Get guid
+   * @return guid
+  **/
+  @Schema(description = "")
+  public String getGuid() {
+    return guid;
+  }
+
+  public void setGuid(String guid) {
+    this.guid = guid;
+  }
+
   public VirtualFolderInfo primaryImageItemId(String primaryImageItemId) {
     this.primaryImageItemId = primaryImageItemId;
     return this;
   }
 
    /**
-   * Get primaryImageItemId
+   * The primary image item identifier.
    * @return primaryImageItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The primary image item identifier.")
   public String getPrimaryImageItemId() {
     return primaryImageItemId;
   }
@@ -214,6 +256,8 @@ public class VirtualFolderInfo {
         Objects.equals(this.collectionType, virtualFolderInfo.collectionType) &&
         Objects.equals(this.libraryOptions, virtualFolderInfo.libraryOptions) &&
         Objects.equals(this.itemId, virtualFolderInfo.itemId) &&
+        Objects.equals(this.id, virtualFolderInfo.id) &&
+        Objects.equals(this.guid, virtualFolderInfo.guid) &&
         Objects.equals(this.primaryImageItemId, virtualFolderInfo.primaryImageItemId) &&
         Objects.equals(this.refreshProgress, virtualFolderInfo.refreshProgress) &&
         Objects.equals(this.refreshStatus, virtualFolderInfo.refreshStatus);
@@ -221,7 +265,7 @@ public class VirtualFolderInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, locations, collectionType, libraryOptions, itemId, primaryImageItemId, refreshProgress, refreshStatus);
+    return Objects.hash(name, locations, collectionType, libraryOptions, itemId, id, guid, primaryImageItemId, refreshProgress, refreshStatus);
   }
 
 
@@ -235,6 +279,8 @@ public class VirtualFolderInfo {
     sb.append("    collectionType: ").append(toIndentedString(collectionType)).append("\n");
     sb.append("    libraryOptions: ").append(toIndentedString(libraryOptions)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    guid: ").append(toIndentedString(guid)).append("\n");
     sb.append("    primaryImageItemId: ").append(toIndentedString(primaryImageItemId)).append("\n");
     sb.append("    refreshProgress: ").append(toIndentedString(refreshProgress)).append("\n");
     sb.append("    refreshStatus: ").append(toIndentedString(refreshStatus)).append("\n");

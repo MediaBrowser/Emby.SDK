@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -22,19 +22,29 @@ class CreateUserByName(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str'
+        'name': 'str',
+        'copy_from_user_id': 'str',
+        'user_copy_options': 'list[LibraryUserCopyOptions]'
     }
 
     attribute_map = {
-        'name': 'Name'
+        'name': 'Name',
+        'copy_from_user_id': 'CopyFromUserId',
+        'user_copy_options': 'UserCopyOptions'
     }
 
-    def __init__(self, name=None):  # noqa: E501
+    def __init__(self, name=None, copy_from_user_id=None, user_copy_options=None):  # noqa: E501
         """CreateUserByName - a model defined in Swagger"""  # noqa: E501
         self._name = None
+        self._copy_from_user_id = None
+        self._user_copy_options = None
         self.discriminator = None
         if name is not None:
             self.name = name
+        if copy_from_user_id is not None:
+            self.copy_from_user_id = copy_from_user_id
+        if user_copy_options is not None:
+            self.user_copy_options = user_copy_options
 
     @property
     def name(self):
@@ -56,6 +66,48 @@ class CreateUserByName(object):
         """
 
         self._name = name
+
+    @property
+    def copy_from_user_id(self):
+        """Gets the copy_from_user_id of this CreateUserByName.  # noqa: E501
+
+
+        :return: The copy_from_user_id of this CreateUserByName.  # noqa: E501
+        :rtype: str
+        """
+        return self._copy_from_user_id
+
+    @copy_from_user_id.setter
+    def copy_from_user_id(self, copy_from_user_id):
+        """Sets the copy_from_user_id of this CreateUserByName.
+
+
+        :param copy_from_user_id: The copy_from_user_id of this CreateUserByName.  # noqa: E501
+        :type: str
+        """
+
+        self._copy_from_user_id = copy_from_user_id
+
+    @property
+    def user_copy_options(self):
+        """Gets the user_copy_options of this CreateUserByName.  # noqa: E501
+
+
+        :return: The user_copy_options of this CreateUserByName.  # noqa: E501
+        :rtype: list[LibraryUserCopyOptions]
+        """
+        return self._user_copy_options
+
+    @user_copy_options.setter
+    def user_copy_options(self, user_copy_options):
+        """Sets the user_copy_options of this CreateUserByName.
+
+
+        :param user_copy_options: The user_copy_options of this CreateUserByName.  # noqa: E501
+        :type: list[LibraryUserCopyOptions]
+        """
+
+        self._user_copy_options = user_copy_options
 
     def to_dict(self):
         """Returns the model properties as a dict"""

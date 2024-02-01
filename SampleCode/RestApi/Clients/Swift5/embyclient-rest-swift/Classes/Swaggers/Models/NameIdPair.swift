@@ -11,7 +11,9 @@ import Foundation
 
 public struct NameIdPair: Codable {
 
+    /** The name. */
     public var name: String?
+    /** The identifier. */
     public var _id: String?
 
     public init(name: String? = nil, _id: String? = nil) {

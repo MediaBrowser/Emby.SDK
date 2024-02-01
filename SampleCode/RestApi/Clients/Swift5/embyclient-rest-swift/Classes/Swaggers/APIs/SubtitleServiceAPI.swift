@@ -147,6 +147,12 @@ open class SubtitleServiceAPI {
      Gets subtitles in a specified format.
      - GET /Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (path) MediaSourceId 
      - parameter index: (path) The subtitle stream index 
@@ -214,6 +220,12 @@ open class SubtitleServiceAPI {
      Gets subtitles in a specified format.
      - GET /Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (path) MediaSourceId 
      - parameter index: (path) The subtitle stream index 
@@ -259,10 +271,11 @@ open class SubtitleServiceAPI {
      - parameter language: (path) Language 
      - parameter isPerfectMatch: (query) IsPerfectMatch (optional)
      - parameter isForced: (query) IsForced (optional)
+     - parameter isHearingImpaired: (query) IsHearingImpaired (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdRemotesearchSubtitlesByLanguage(_id: String, mediaSourceId: String, language: String, isPerfectMatch: Bool? = nil, isForced: Bool? = nil, completion: @escaping ((_ data: [RemoteSubtitleInfo]?,_ error: Error?) -> Void)) {
-        getItemsByIdRemotesearchSubtitlesByLanguageWithRequestBuilder(_id: _id, mediaSourceId: mediaSourceId, language: language, isPerfectMatch: isPerfectMatch, isForced: isForced).execute { (response, error) -> Void in
+    open class func getItemsByIdRemotesearchSubtitlesByLanguage(_id: String, mediaSourceId: String, language: String, isPerfectMatch: Bool? = nil, isForced: Bool? = nil, isHearingImpaired: Bool? = nil, completion: @escaping ((_ data: [RemoteSubtitleInfo]?,_ error: Error?) -> Void)) {
+        getItemsByIdRemotesearchSubtitlesByLanguageWithRequestBuilder(_id: _id, mediaSourceId: mediaSourceId, language: language, isPerfectMatch: isPerfectMatch, isForced: isForced, isHearingImpaired: isHearingImpaired).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -283,6 +296,7 @@ open class SubtitleServiceAPI {
   "IsForced" : true,
   "DateCreated" : "2000-01-23T04:56:07.000+00:00",
   "Name" : "Name",
+  "IsHearingImpaired" : true,
   "ProviderName" : "ProviderName",
   "Format" : "Format",
   "Language" : "Language",
@@ -297,6 +311,7 @@ open class SubtitleServiceAPI {
   "IsForced" : true,
   "DateCreated" : "2000-01-23T04:56:07.000+00:00",
   "Name" : "Name",
+  "IsHearingImpaired" : true,
   "ProviderName" : "ProviderName",
   "Format" : "Format",
   "Language" : "Language",
@@ -311,10 +326,11 @@ open class SubtitleServiceAPI {
      - parameter language: (path) Language 
      - parameter isPerfectMatch: (query) IsPerfectMatch (optional)
      - parameter isForced: (query) IsForced (optional)
+     - parameter isHearingImpaired: (query) IsHearingImpaired (optional)
 
      - returns: RequestBuilder<[RemoteSubtitleInfo]> 
      */
-    open class func getItemsByIdRemotesearchSubtitlesByLanguageWithRequestBuilder(_id: String, mediaSourceId: String, language: String, isPerfectMatch: Bool? = nil, isForced: Bool? = nil) -> RequestBuilder<[RemoteSubtitleInfo]> {
+    open class func getItemsByIdRemotesearchSubtitlesByLanguageWithRequestBuilder(_id: String, mediaSourceId: String, language: String, isPerfectMatch: Bool? = nil, isForced: Bool? = nil, isHearingImpaired: Bool? = nil) -> RequestBuilder<[RemoteSubtitleInfo]> {
         var path = "/Items/{Id}/RemoteSearch/Subtitles/{Language}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -328,7 +344,8 @@ open class SubtitleServiceAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "MediaSourceId": mediaSourceId, 
                         "IsPerfectMatch": isPerfectMatch, 
-                        "IsForced": isForced
+                        "IsForced": isForced, 
+                        "IsHearingImpaired": isHearingImpaired
         ])
 
 
@@ -406,6 +423,12 @@ open class SubtitleServiceAPI {
      Gets subtitles in a specified format.
      - GET /Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (path) MediaSourceId 
      - parameter index: (path) The subtitle stream index 
@@ -473,6 +496,12 @@ open class SubtitleServiceAPI {
      Gets subtitles in a specified format.
      - GET /Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter mediaSourceId: (path) MediaSourceId 
      - parameter index: (path) The subtitle stream index 

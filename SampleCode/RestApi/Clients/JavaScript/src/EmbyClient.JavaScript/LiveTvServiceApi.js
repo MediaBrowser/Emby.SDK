@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,13 +10,14 @@
  */
 
 import ApiClient from "../ApiClient";
+import ApiAvailableRecordingOptions from '../model/ApiAvailableRecordingOptions';
+import ApiBaseItemsRequest from '../model/ApiBaseItemsRequest';
+import ApiListingProviderTypeInfo from '../model/ApiListingProviderTypeInfo';
+import ApiSetChannelDisabled from '../model/ApiSetChannelDisabled';
+import ApiSetChannelMapping from '../model/ApiSetChannelMapping';
+import ApiSetChannelSortIndex from '../model/ApiSetChannelSortIndex';
+import ApiTagItem from '../model/ApiTagItem';
 import BaseItemDto from '../model/BaseItemDto';
-import LiveTVApiGetPrograms from '../model/LiveTVApiGetPrograms';
-import LiveTVApiListingProviderTypeInfo from '../model/LiveTVApiListingProviderTypeInfo';
-import LiveTVApiSetChannelDisabled from '../model/LiveTVApiSetChannelDisabled';
-import LiveTVApiSetChannelMapping from '../model/LiveTVApiSetChannelMapping';
-import LiveTVApiSetChannelSortIndex from '../model/LiveTVApiSetChannelSortIndex';
-import LiveTVApiTagItem from '../model/LiveTVApiTagItem';
 import LiveTvChannelType from '../model/LiveTvChannelType';
 import LiveTvGuideInfo from '../model/LiveTvGuideInfo';
 import LiveTvListingsProviderInfo from '../model/LiveTvListingsProviderInfo';
@@ -27,9 +28,9 @@ import LiveTvSeriesTimerInfoDto from '../model/LiveTvSeriesTimerInfoDto';
 import LiveTvTimerInfoDto from '../model/LiveTvTimerInfoDto';
 import LiveTvTunerHostInfo from '../model/LiveTvTunerHostInfo';
 import NameIdPair from '../model/NameIdPair';
+import QueryResultApiEpgRow from '../model/QueryResultApiEpgRow';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
-import QueryResultEmbyLiveTVChannelManagementInfo from '../model/QueryResultEmbyLiveTVChannelManagementInfo';
-import QueryResultLiveTVApiEpgRow from '../model/QueryResultLiveTVApiEpgRow';
+import QueryResultChannelManagementInfo from '../model/QueryResultChannelManagementInfo';
 import QueryResultLiveTvSeriesTimerInfoDto from '../model/QueryResultLiveTvSeriesTimerInfoDto';
 import QueryResultLiveTvTimerInfoDto from '../model/QueryResultLiveTvTimerInfoDto';
 import SortOrder from '../model/SortOrder';
@@ -37,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript/LiveTvServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LiveTvServiceApi {
 
@@ -314,6 +315,43 @@ export default class LiveTvServiceApi {
       );
     }
     /**
+     * Callback function to receive the result of the getLivetvAvailablerecordingoptions operation.
+     * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvAvailablerecordingoptionsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ApiAvailableRecordingOptions} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets available recording options
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvAvailablerecordingoptionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ApiAvailableRecordingOptions}
+     */
+    getLivetvAvailablerecordingoptions() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = ApiAvailableRecordingOptions;
+
+      return this.apiClient.callApi(
+        '/LiveTv/AvailableRecordingOptions', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
      * Callback function to receive the result of the getLivetvChannelmappingoptions operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvChannelmappingoptionsCallback
      * @param {String} error Error message, if any.
@@ -421,14 +459,15 @@ export default class LiveTvServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -456,9 +495,15 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -466,6 +511,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -483,7 +529,9 @@ export default class LiveTvServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -567,7 +615,7 @@ export default class LiveTvServiceApi {
 
     /**
      * Gets live tv channel tags
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvChanneltagsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/QueryResultBaseItemDto}
@@ -588,14 +636,15 @@ export default class LiveTvServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -623,9 +672,15 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -633,6 +688,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -650,7 +706,9 @@ export default class LiveTvServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -672,7 +730,7 @@ export default class LiveTvServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = QueryResultBaseItemDto;
@@ -687,16 +745,16 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvChanneltagsPrefixes operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvChanneltagsPrefixesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/LiveTVApiTagItem>} data The data returned by the service call.
+     * @param {Array.<module:model/ApiTagItem>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Gets live tv channel tag prefixes
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvChanneltagsPrefixesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/LiveTVApiTagItem>}
+     * data is of type: {@link Array.<module:model/ApiTagItem>}
      */
     getLivetvChanneltagsPrefixes() {
       opts = opts || {};
@@ -714,14 +772,15 @@ export default class LiveTvServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -749,9 +808,15 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -759,6 +824,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -776,7 +842,9 @@ export default class LiveTvServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -798,10 +866,10 @@ export default class LiveTvServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [LiveTVApiTagItem];
+      let returnType = [ApiTagItem];
 
       return this.apiClient.callApi(
         '/LiveTv/ChannelTags/Prefixes', 'GET',
@@ -813,7 +881,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvEPG operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvEPGCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultLiveTVApiEpgRow} data The data returned by the service call.
+     * @param {module:model/QueryResultApiEpgRow} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -822,7 +890,7 @@ export default class LiveTvServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvEPGCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultLiveTVApiEpgRow}
+     * data is of type: {@link module:model/QueryResultApiEpgRow}
      */
     getLivetvEPG() {
       opts = opts || {};
@@ -832,30 +900,108 @@ export default class LiveTvServiceApi {
       };
       let queryParams = {
         'Type': opts['type'],
-        'UserId': opts['userId'],
-        'GenreIds': opts['genreIds'],
+        'IsLiked': opts['isLiked'],
+        'IsDisliked': opts['isDisliked'],
+        'EnableFavoriteSorting': opts['enableFavoriteSorting'],
+        'AddCurrentProgram': opts['addCurrentProgram'],
+        'ChannelIds': opts['channelIds'],
+        'ArtistType': opts['artistType'],
+        'MaxOfficialRating': opts['maxOfficialRating'],
+        'HasThemeSong': opts['hasThemeSong'],
+        'HasThemeVideo': opts['hasThemeVideo'],
+        'HasSubtitles': opts['hasSubtitles'],
+        'HasSpecialFeature': opts['hasSpecialFeature'],
+        'HasTrailer': opts['hasTrailer'],
+        'AdjacentTo': opts['adjacentTo'],
+        'MinIndexNumber': opts['minIndexNumber'],
         'MinStartDate': opts['minStartDate'],
         'MaxStartDate': opts['maxStartDate'],
         'MinEndDate': opts['minEndDate'],
         'MaxEndDate': opts['maxEndDate'],
+        'MinPlayers': opts['minPlayers'],
+        'MaxPlayers': opts['maxPlayers'],
+        'ParentIndexNumber': opts['parentIndexNumber'],
+        'HasParentalRating': opts['hasParentalRating'],
+        'IsHD': opts['isHD'],
+        'IsUnaired': opts['isUnaired'],
+        'MinCommunityRating': opts['minCommunityRating'],
+        'MinCriticRating': opts['minCriticRating'],
+        'AiredDuringSeason': opts['airedDuringSeason'],
+        'MinPremiereDate': opts['minPremiereDate'],
+        'MinDateLastSaved': opts['minDateLastSaved'],
+        'MinDateLastSavedForUser': opts['minDateLastSavedForUser'],
+        'MaxPremiereDate': opts['maxPremiereDate'],
+        'HasOverview': opts['hasOverview'],
+        'HasImdbId': opts['hasImdbId'],
+        'HasTmdbId': opts['hasTmdbId'],
+        'HasTvdbId': opts['hasTvdbId'],
+        'ExcludeItemIds': opts['excludeItemIds'],
         'StartIndex': opts['startIndex'],
+        'Limit': opts['limit'],
+        'Recursive': opts['recursive'],
+        'SearchTerm': opts['searchTerm'],
+        'SortOrder': opts['sortOrder'],
+        'ParentId': opts['parentId'],
+        'Fields': opts['fields'],
+        'ExcludeItemTypes': opts['excludeItemTypes'],
+        'IncludeItemTypes': opts['includeItemTypes'],
+        'AnyProviderIdEquals': opts['anyProviderIdEquals'],
+        'Filters': opts['filters'],
+        'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
-        'Limit': opts['limit'],
-        'IsFavorite': opts['isFavorite'],
-        'IsLiked': opts['isLiked'],
-        'IsDisliked': opts['isDisliked'],
-        'EnableFavoriteSorting': opts['enableFavoriteSorting'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
+        'MediaTypes': opts['mediaTypes'],
+        'ImageTypes': opts['imageTypes'],
+        'SortBy': opts['sortBy'],
+        'IsPlayed': opts['isPlayed'],
+        'Genres': opts['genres'],
+        'OfficialRatings': opts['officialRatings'],
+        'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
+        'Years': opts['years'],
         'EnableImages': opts['enableImages'],
+        'EnableUserData': opts['enableUserData'],
         'ImageTypeLimit': opts['imageTypeLimit'],
         'EnableImageTypes': opts['enableImageTypes'],
-        'Fields': opts['fields'],
-        'AddCurrentProgram': opts['addCurrentProgram'],
-        'EnableUserData': opts['enableUserData'],
-        'ChannelIds': opts['channelIds']
+        'Person': opts['person'],
+        'PersonIds': opts['personIds'],
+        'PersonTypes': opts['personTypes'],
+        'Studios': opts['studios'],
+        'StudioIds': opts['studioIds'],
+        'Artists': opts['artists'],
+        'ArtistIds': opts['artistIds'],
+        'Albums': opts['albums'],
+        'Ids': opts['ids'],
+        'VideoTypes': opts['videoTypes'],
+        'Containers': opts['containers'],
+        'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
+        'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
+        'SubtitleCodecs': opts['subtitleCodecs'],
+        'Path': opts['path'],
+        'UserId': opts['userId'],
+        'MinOfficialRating': opts['minOfficialRating'],
+        'IsLocked': opts['isLocked'],
+        'IsPlaceHolder': opts['isPlaceHolder'],
+        'HasOfficialRating': opts['hasOfficialRating'],
+        'GroupItemsIntoCollections': opts['groupItemsIntoCollections'],
+        'Is3D': opts['is3D'],
+        'SeriesStatus': opts['seriesStatus'],
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'ArtistStartsWithOrGreater': opts['artistStartsWithOrGreater'],
+        'AlbumArtistStartsWithOrGreater': opts['albumArtistStartsWithOrGreater'],
+        'NameStartsWith': opts['nameStartsWith'],
+        'NameLessThan': opts['nameLessThan']
       };
       let headerParams = {
       };
@@ -865,7 +1011,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultLiveTVApiEpgRow;
+      let returnType = QueryResultApiEpgRow;
 
       return this.apiClient.callApi(
         '/LiveTv/EPG', 'GET',
@@ -1026,7 +1172,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvListingprovidersAvailable operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvListingprovidersAvailableCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/LiveTVApiListingProviderTypeInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/ApiListingProviderTypeInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1034,7 +1180,7 @@ export default class LiveTvServiceApi {
      * Gets listing provider
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvListingprovidersAvailableCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/LiveTVApiListingProviderTypeInfo>}
+     * data is of type: {@link Array.<module:model/ApiListingProviderTypeInfo>}
      */
     getLivetvListingprovidersAvailable() {
       let postBody = null;
@@ -1051,7 +1197,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [LiveTVApiListingProviderTypeInfo];
+      let returnType = [ApiListingProviderTypeInfo];
 
       return this.apiClient.callApi(
         '/LiveTv/ListingProviders/Available', 'GET',
@@ -1175,85 +1321,10 @@ export default class LiveTvServiceApi {
       );
     }
     /**
-     * Callback function to receive the result of the getLivetvLiverecordingsByIdStream operation.
-     * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvLiverecordingsByIdStreamCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Gets a live tv channel
-     * No authentication required
-     * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvLiverecordingsByIdStreamCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    getLivetvLiverecordingsByIdStream() {
-      let postBody = null;
-
-      let pathParams = {
-        'Id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/LiveTv/LiveRecordings/{Id}/stream', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the getLivetvLivestreamfilesByIdStreamByContainer operation.
-     * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvLivestreamfilesByIdStreamByContainerCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Gets a live tv channel
-     * No authentication required
-     * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvLivestreamfilesByIdStreamByContainerCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    getLivetvLivestreamfilesByIdStreamByContainer() {
-      let postBody = null;
-
-      let pathParams = {
-        'Id': id,
-        'Container': container
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/LiveTv/LiveStreamFiles/{Id}/stream.{Container}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
      * Callback function to receive the result of the getLivetvManageChannels operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvManageChannelsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultEmbyLiveTVChannelManagementInfo} data The data returned by the service call.
+     * @param {module:model/QueryResultChannelManagementInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1262,7 +1333,7 @@ export default class LiveTvServiceApi {
      * Requires authentication as administrator
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvManageChannelsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultEmbyLiveTVChannelManagementInfo}
+     * data is of type: {@link module:model/QueryResultChannelManagementInfo}
      */
     getLivetvManageChannels() {
       opts = opts || {};
@@ -1284,7 +1355,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultEmbyLiveTVChannelManagementInfo;
+      let returnType = QueryResultChannelManagementInfo;
 
       return this.apiClient.callApi(
         '/LiveTv/Manage/Channels', 'GET',
@@ -1296,7 +1367,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the getLivetvPrograms operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvProgramsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultBaseItemDto} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1305,7 +1376,6 @@ export default class LiveTvServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~getLivetvProgramsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
     getLivetvPrograms() {
       opts = opts || {};
@@ -1315,27 +1385,103 @@ export default class LiveTvServiceApi {
       };
       let queryParams = {
         'ChannelIds': opts['channelIds'],
-        'UserId': opts['userId'],
-        'HasAired': opts['hasAired'],
+        'ArtistType': opts['artistType'],
+        'MaxOfficialRating': opts['maxOfficialRating'],
+        'HasThemeSong': opts['hasThemeSong'],
+        'HasThemeVideo': opts['hasThemeVideo'],
+        'HasSubtitles': opts['hasSubtitles'],
+        'HasSpecialFeature': opts['hasSpecialFeature'],
+        'HasTrailer': opts['hasTrailer'],
+        'AdjacentTo': opts['adjacentTo'],
+        'MinIndexNumber': opts['minIndexNumber'],
         'MinStartDate': opts['minStartDate'],
         'MaxStartDate': opts['maxStartDate'],
         'MinEndDate': opts['minEndDate'],
         'MaxEndDate': opts['maxEndDate'],
+        'MinPlayers': opts['minPlayers'],
+        'MaxPlayers': opts['maxPlayers'],
+        'ParentIndexNumber': opts['parentIndexNumber'],
+        'HasParentalRating': opts['hasParentalRating'],
+        'IsHD': opts['isHD'],
+        'IsUnaired': opts['isUnaired'],
+        'MinCommunityRating': opts['minCommunityRating'],
+        'MinCriticRating': opts['minCriticRating'],
+        'AiredDuringSeason': opts['airedDuringSeason'],
+        'MinPremiereDate': opts['minPremiereDate'],
+        'MinDateLastSaved': opts['minDateLastSaved'],
+        'MinDateLastSavedForUser': opts['minDateLastSavedForUser'],
+        'MaxPremiereDate': opts['maxPremiereDate'],
+        'HasOverview': opts['hasOverview'],
+        'HasImdbId': opts['hasImdbId'],
+        'HasTmdbId': opts['hasTmdbId'],
+        'HasTvdbId': opts['hasTvdbId'],
+        'ExcludeItemIds': opts['excludeItemIds'],
+        'StartIndex': opts['startIndex'],
+        'Limit': opts['limit'],
+        'Recursive': opts['recursive'],
+        'SearchTerm': opts['searchTerm'],
+        'SortOrder': opts['sortOrder'],
+        'ParentId': opts['parentId'],
+        'Fields': opts['fields'],
+        'ExcludeItemTypes': opts['excludeItemTypes'],
+        'IncludeItemTypes': opts['includeItemTypes'],
+        'AnyProviderIdEquals': opts['anyProviderIdEquals'],
+        'Filters': opts['filters'],
+        'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
-        'StartIndex': opts['startIndex'],
-        'Limit': opts['limit'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
+        'MediaTypes': opts['mediaTypes'],
+        'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
-        'SortOrder': opts['sortOrder'],
-        'GenreIds': opts['genreIds'],
+        'IsPlayed': opts['isPlayed'],
+        'Genres': opts['genres'],
+        'OfficialRatings': opts['officialRatings'],
+        'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
+        'Years': opts['years'],
         'EnableImages': opts['enableImages'],
+        'EnableUserData': opts['enableUserData'],
         'ImageTypeLimit': opts['imageTypeLimit'],
         'EnableImageTypes': opts['enableImageTypes'],
-        'EnableUserData': opts['enableUserData'],
-        'Fields': opts['fields']
+        'Person': opts['person'],
+        'PersonIds': opts['personIds'],
+        'PersonTypes': opts['personTypes'],
+        'Studios': opts['studios'],
+        'StudioIds': opts['studioIds'],
+        'Artists': opts['artists'],
+        'ArtistIds': opts['artistIds'],
+        'Albums': opts['albums'],
+        'Ids': opts['ids'],
+        'VideoTypes': opts['videoTypes'],
+        'Containers': opts['containers'],
+        'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
+        'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
+        'SubtitleCodecs': opts['subtitleCodecs'],
+        'Path': opts['path'],
+        'UserId': opts['userId'],
+        'MinOfficialRating': opts['minOfficialRating'],
+        'IsLocked': opts['isLocked'],
+        'IsPlaceHolder': opts['isPlaceHolder'],
+        'HasOfficialRating': opts['hasOfficialRating'],
+        'GroupItemsIntoCollections': opts['groupItemsIntoCollections'],
+        'Is3D': opts['is3D'],
+        'SeriesStatus': opts['seriesStatus'],
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'ArtistStartsWithOrGreater': opts['artistStartsWithOrGreater'],
+        'AlbumArtistStartsWithOrGreater': opts['albumArtistStartsWithOrGreater'],
+        'NameStartsWith': opts['nameStartsWith'],
+        'NameLessThan': opts['nameLessThan']
       };
       let headerParams = {
       };
@@ -1344,8 +1490,8 @@ export default class LiveTvServiceApi {
 
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultBaseItemDto;
+      let accepts = [];
+      let returnType = null;
 
       return this.apiClient.callApi(
         '/LiveTv/Programs', 'GET',
@@ -1441,14 +1587,15 @@ export default class LiveTvServiceApi {
         'HasTrailer': opts['hasTrailer'],
         'AdjacentTo': opts['adjacentTo'],
         'MinIndexNumber': opts['minIndexNumber'],
+        'MinStartDate': opts['minStartDate'],
+        'MaxStartDate': opts['maxStartDate'],
+        'MinEndDate': opts['minEndDate'],
+        'MaxEndDate': opts['maxEndDate'],
         'MinPlayers': opts['minPlayers'],
         'MaxPlayers': opts['maxPlayers'],
         'ParentIndexNumber': opts['parentIndexNumber'],
         'HasParentalRating': opts['hasParentalRating'],
         'IsHD': opts['isHD'],
-        'LocationTypes': opts['locationTypes'],
-        'ExcludeLocationTypes': opts['excludeLocationTypes'],
-        'IsMissing': opts['isMissing'],
         'IsUnaired': opts['isUnaired'],
         'MinCommunityRating': opts['minCommunityRating'],
         'MinCriticRating': opts['minCriticRating'],
@@ -1476,9 +1623,15 @@ export default class LiveTvServiceApi {
         'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
         'MediaTypes': opts['mediaTypes'],
         'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
@@ -1486,6 +1639,7 @@ export default class LiveTvServiceApi {
         'Genres': opts['genres'],
         'OfficialRatings': opts['officialRatings'],
         'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
         'Years': opts['years'],
         'EnableImages': opts['enableImages'],
         'EnableUserData': opts['enableUserData'],
@@ -1503,7 +1657,9 @@ export default class LiveTvServiceApi {
         'VideoTypes': opts['videoTypes'],
         'Containers': opts['containers'],
         'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
         'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
         'SubtitleCodecs': opts['subtitleCodecs'],
         'Path': opts['path'],
         'UserId': opts['userId'],
@@ -1599,7 +1755,12 @@ export default class LiveTvServiceApi {
       let pathParams = {
       };
       let queryParams = {
-        'UserId': opts['userId']
+        'UserId': opts['userId'],
+        'Fields': opts['fields'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };
@@ -2262,7 +2423,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the postLivetvManageChannelsByIdDisabled operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~postLivetvManageChannelsByIdDisabledCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultEmbyLiveTVChannelManagementInfo} data The data returned by the service call.
+     * @param {module:model/QueryResultChannelManagementInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2270,7 +2431,7 @@ export default class LiveTvServiceApi {
      * Sets a channel disabled or not
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~postLivetvManageChannelsByIdDisabledCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultEmbyLiveTVChannelManagementInfo}
+     * data is of type: {@link module:model/QueryResultChannelManagementInfo}
      */
     postLivetvManageChannelsByIdDisabled() {
       let postBody = body;
@@ -2288,7 +2449,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultEmbyLiveTVChannelManagementInfo;
+      let returnType = QueryResultChannelManagementInfo;
 
       return this.apiClient.callApi(
         '/LiveTv/Manage/Channels/{Id}/Disabled', 'POST',
@@ -2300,7 +2461,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the postLivetvManageChannelsByIdSortindex operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~postLivetvManageChannelsByIdSortindexCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultEmbyLiveTVChannelManagementInfo} data The data returned by the service call.
+     * @param {module:model/QueryResultChannelManagementInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2308,7 +2469,7 @@ export default class LiveTvServiceApi {
      * Sets a channel sort index
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~postLivetvManageChannelsByIdSortindexCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultEmbyLiveTVChannelManagementInfo}
+     * data is of type: {@link module:model/QueryResultChannelManagementInfo}
      */
     postLivetvManageChannelsByIdSortindex() {
       let postBody = body;
@@ -2326,7 +2487,7 @@ export default class LiveTvServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultEmbyLiveTVChannelManagementInfo;
+      let returnType = QueryResultChannelManagementInfo;
 
       return this.apiClient.callApi(
         '/LiveTv/Manage/Channels/{Id}/SortIndex', 'POST',
@@ -2338,7 +2499,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the postLivetvPrograms operation.
      * @callback module:EmbyClient.JavaScript/LiveTvServiceApi~postLivetvProgramsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/QueryResultBaseItemDto} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2347,7 +2508,6 @@ export default class LiveTvServiceApi {
      * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/LiveTvServiceApi~postLivetvProgramsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/QueryResultBaseItemDto}
      */
     postLivetvPrograms() {
       opts = opts || {};
@@ -2357,27 +2517,103 @@ export default class LiveTvServiceApi {
       };
       let queryParams = {
         'ChannelIds': opts['channelIds'],
-        'UserId': opts['userId'],
-        'HasAired': opts['hasAired'],
+        'ArtistType': opts['artistType'],
+        'MaxOfficialRating': opts['maxOfficialRating'],
+        'HasThemeSong': opts['hasThemeSong'],
+        'HasThemeVideo': opts['hasThemeVideo'],
+        'HasSubtitles': opts['hasSubtitles'],
+        'HasSpecialFeature': opts['hasSpecialFeature'],
+        'HasTrailer': opts['hasTrailer'],
+        'AdjacentTo': opts['adjacentTo'],
+        'MinIndexNumber': opts['minIndexNumber'],
         'MinStartDate': opts['minStartDate'],
         'MaxStartDate': opts['maxStartDate'],
         'MinEndDate': opts['minEndDate'],
         'MaxEndDate': opts['maxEndDate'],
+        'MinPlayers': opts['minPlayers'],
+        'MaxPlayers': opts['maxPlayers'],
+        'ParentIndexNumber': opts['parentIndexNumber'],
+        'HasParentalRating': opts['hasParentalRating'],
+        'IsHD': opts['isHD'],
+        'IsUnaired': opts['isUnaired'],
+        'MinCommunityRating': opts['minCommunityRating'],
+        'MinCriticRating': opts['minCriticRating'],
+        'AiredDuringSeason': opts['airedDuringSeason'],
+        'MinPremiereDate': opts['minPremiereDate'],
+        'MinDateLastSaved': opts['minDateLastSaved'],
+        'MinDateLastSavedForUser': opts['minDateLastSavedForUser'],
+        'MaxPremiereDate': opts['maxPremiereDate'],
+        'HasOverview': opts['hasOverview'],
+        'HasImdbId': opts['hasImdbId'],
+        'HasTmdbId': opts['hasTmdbId'],
+        'HasTvdbId': opts['hasTvdbId'],
+        'ExcludeItemIds': opts['excludeItemIds'],
+        'StartIndex': opts['startIndex'],
+        'Limit': opts['limit'],
+        'Recursive': opts['recursive'],
+        'SearchTerm': opts['searchTerm'],
+        'SortOrder': opts['sortOrder'],
+        'ParentId': opts['parentId'],
+        'Fields': opts['fields'],
+        'ExcludeItemTypes': opts['excludeItemTypes'],
+        'IncludeItemTypes': opts['includeItemTypes'],
+        'AnyProviderIdEquals': opts['anyProviderIdEquals'],
+        'Filters': opts['filters'],
+        'IsFavorite': opts['isFavorite'],
         'IsMovie': opts['isMovie'],
         'IsSeries': opts['isSeries'],
+        'IsFolder': opts['isFolder'],
         'IsNews': opts['isNews'],
         'IsKids': opts['isKids'],
         'IsSports': opts['isSports'],
-        'StartIndex': opts['startIndex'],
-        'Limit': opts['limit'],
+        'IsNew': opts['isNew'],
+        'IsPremiere': opts['isPremiere'],
+        'IsNewOrPremiere': opts['isNewOrPremiere'],
+        'IsRepeat': opts['isRepeat'],
+        'ProjectToMedia': opts['projectToMedia'],
+        'MediaTypes': opts['mediaTypes'],
+        'ImageTypes': opts['imageTypes'],
         'SortBy': opts['sortBy'],
-        'SortOrder': opts['sortOrder'],
-        'GenreIds': opts['genreIds'],
+        'IsPlayed': opts['isPlayed'],
+        'Genres': opts['genres'],
+        'OfficialRatings': opts['officialRatings'],
+        'Tags': opts['tags'],
+        'ExcludeTags': opts['excludeTags'],
+        'Years': opts['years'],
         'EnableImages': opts['enableImages'],
+        'EnableUserData': opts['enableUserData'],
         'ImageTypeLimit': opts['imageTypeLimit'],
         'EnableImageTypes': opts['enableImageTypes'],
-        'EnableUserData': opts['enableUserData'],
-        'Fields': opts['fields']
+        'Person': opts['person'],
+        'PersonIds': opts['personIds'],
+        'PersonTypes': opts['personTypes'],
+        'Studios': opts['studios'],
+        'StudioIds': opts['studioIds'],
+        'Artists': opts['artists'],
+        'ArtistIds': opts['artistIds'],
+        'Albums': opts['albums'],
+        'Ids': opts['ids'],
+        'VideoTypes': opts['videoTypes'],
+        'Containers': opts['containers'],
+        'AudioCodecs': opts['audioCodecs'],
+        'AudioLayouts': opts['audioLayouts'],
+        'VideoCodecs': opts['videoCodecs'],
+        'ExtendedVideoTypes': opts['extendedVideoTypes'],
+        'SubtitleCodecs': opts['subtitleCodecs'],
+        'Path': opts['path'],
+        'UserId': opts['userId'],
+        'MinOfficialRating': opts['minOfficialRating'],
+        'IsLocked': opts['isLocked'],
+        'IsPlaceHolder': opts['isPlaceHolder'],
+        'HasOfficialRating': opts['hasOfficialRating'],
+        'GroupItemsIntoCollections': opts['groupItemsIntoCollections'],
+        'Is3D': opts['is3D'],
+        'SeriesStatus': opts['seriesStatus'],
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'ArtistStartsWithOrGreater': opts['artistStartsWithOrGreater'],
+        'AlbumArtistStartsWithOrGreater': opts['albumArtistStartsWithOrGreater'],
+        'NameStartsWith': opts['nameStartsWith'],
+        'NameLessThan': opts['nameLessThan']
       };
       let headerParams = {
       };
@@ -2386,8 +2622,8 @@ export default class LiveTvServiceApi {
 
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
-      let accepts = ['application/json', 'application/xml'];
-      let returnType = QueryResultBaseItemDto;
+      let accepts = [];
+      let returnType = null;
 
       return this.apiClient.callApi(
         '/LiveTv/Programs', 'POST',

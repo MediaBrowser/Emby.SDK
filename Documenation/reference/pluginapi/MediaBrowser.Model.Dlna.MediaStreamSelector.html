@@ -157,7 +157,7 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">MediaStreamSelector</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Dlna.html">MediaBrowser.Model.Dlna</a></h6>
@@ -171,12 +171,12 @@
   
   
   <a id="MediaBrowser_Model_Dlna_MediaStreamSelector_GetDefaultAudioStreamIndex_" data-uid="MediaBrowser.Model.Dlna.MediaStreamSelector.GetDefaultAudioStreamIndex*"></a>
-  <h4 id="MediaBrowser_Model_Dlna_MediaStreamSelector_GetDefaultAudioStreamIndex_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__System_String___System_Boolean_" data-uid="MediaBrowser.Model.Dlna.MediaStreamSelector.GetDefaultAudioStreamIndex(System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream},System.String[],System.Boolean)">GetDefaultAudioStreamIndex(List&lt;MediaStream&gt;, String[], Boolean)</h4>
+  <h4 id="MediaBrowser_Model_Dlna_MediaStreamSelector_GetDefaultAudioStreamIndex_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__MediaBrowser_Model_Globalization_CultureDto___System_Boolean_MediaBrowser_Model_Dto_MediaSourceInfo_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Model_Globalization_ILocalizationManager_" data-uid="MediaBrowser.Model.Dlna.MediaStreamSelector.GetDefaultAudioStreamIndex(System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream},MediaBrowser.Model.Globalization.CultureDto[],System.Boolean,MediaBrowser.Model.Dto.MediaSourceInfo,MediaBrowser.Model.Dlna.DeviceProfile,MediaBrowser.Model.Globalization.ILocalizationManager)">GetDefaultAudioStreamIndex(List&lt;MediaStream&gt;, CultureDto[], Boolean, MediaSourceInfo, DeviceProfile, ILocalizationManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int? GetDefaultAudioStreamIndex(List&lt;MediaStream&gt; streams, string[] preferredLanguages, bool preferDefaultTrack)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int? GetDefaultAudioStreamIndex(List&lt;MediaStream&gt; streams, CultureDto[] preferredLanguages, bool preferDefaultTrack, MediaSourceInfo mediaSource, DeviceProfile deviceProfile, ILocalizationManager localizationManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,18 +189,33 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td><span class="parametername">streams</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.CultureDto.html">CultureDto</a>[]</td>
         <td><span class="parametername">preferredLanguages</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">preferDefaultTrack</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">deviceProfile</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
+        <td><span class="parametername">localizationManager</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -215,7 +230,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -223,12 +238,12 @@
   
   
   <a id="MediaBrowser_Model_Dlna_MediaStreamSelector_GetDefaultSubtitleStream_" data-uid="MediaBrowser.Model.Dlna.MediaStreamSelector.GetDefaultSubtitleStream*"></a>
-  <h4 id="MediaBrowser_Model_Dlna_MediaStreamSelector_GetDefaultSubtitleStream_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__System_String___MediaBrowser_Model_Configuration_SubtitlePlaybackMode_System_Boolean_System_String_MediaBrowser_Model_Dlna_SubtitleProfile___" data-uid="MediaBrowser.Model.Dlna.MediaStreamSelector.GetDefaultSubtitleStream(System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream},System.String[],MediaBrowser.Model.Configuration.SubtitlePlaybackMode,System.Boolean,System.String,MediaBrowser.Model.Dlna.SubtitleProfile[])">GetDefaultSubtitleStream(List&lt;MediaStream&gt;, String[], SubtitlePlaybackMode, Boolean, String, SubtitleProfile[])</h4>
+  <h4 id="MediaBrowser_Model_Dlna_MediaStreamSelector_GetDefaultSubtitleStream_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__MediaBrowser_Model_Globalization_CultureDto___MediaBrowser_Model_Configuration_SubtitlePlaybackMode_System_Boolean_MediaBrowser_Model_Globalization_CultureDto_MediaBrowser_Model_Dlna_SubtitleProfile___MediaBrowser_Model_Globalization_ILocalizationManager_" data-uid="MediaBrowser.Model.Dlna.MediaStreamSelector.GetDefaultSubtitleStream(System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream},MediaBrowser.Model.Globalization.CultureDto[],MediaBrowser.Model.Configuration.SubtitlePlaybackMode,System.Boolean,MediaBrowser.Model.Globalization.CultureDto,MediaBrowser.Model.Dlna.SubtitleProfile[],MediaBrowser.Model.Globalization.ILocalizationManager)">GetDefaultSubtitleStream(List&lt;MediaStream&gt;, CultureDto[], SubtitlePlaybackMode, Boolean, CultureDto, SubtitleProfile[], ILocalizationManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static MediaStream GetDefaultSubtitleStream(List&lt;MediaStream&gt; streams, string[] preferredLanguages, SubtitlePlaybackMode mode, bool rememberSubtitleSelections, string audioTrackLanguage, SubtitleProfile[] subtitleProfiles)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MediaStream GetDefaultSubtitleStream(List&lt;MediaStream&gt; streams, CultureDto[] preferredLanguages, SubtitlePlaybackMode mode, bool rememberSubtitleSelections, CultureDto audioTrackLanguage, SubtitleProfile[] subtitleProfiles, ILocalizationManager localizationManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,12 +256,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td><span class="parametername">streams</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.CultureDto.html">CultureDto</a>[]</td>
         <td><span class="parametername">preferredLanguages</span></td>
         <td></td>
       </tr>
@@ -256,18 +271,23 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">rememberSubtitleSelections</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.CultureDto.html">CultureDto</a></td>
         <td><span class="parametername">audioTrackLanguage</span></td>
         <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Dlna.SubtitleProfile.html">SubtitleProfile</a>[]</td>
         <td><span class="parametername">subtitleProfiles</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
+        <td><span class="parametername">localizationManager</span></td>
         <td></td>
       </tr>
     </tbody>

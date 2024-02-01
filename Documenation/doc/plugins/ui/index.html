@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating UI for Plugins </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating UI for Plugins ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="doc-plugins-ui-root">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-plugins-ui-root">
+<h1 id="creating-ui-for-plugins">Creating UI for Plugins</h1>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>This section is describing the new and easy way for creating plugin user interfaces. The classic way using bundled html and javascript files is still supported but not covered in this documentation section</p>
+</div>
+<h2 id="introduction">Introduction</h2>
+<h3 id="history">History</h3>
+<p>Creating user interfaces for Emby Server plugins has been quite a complex and tedious task. It was required to create API endpoints for exchanging data with the plugin, create custom HTML files containing all the required controls and make sure to do it all in the same way as Emby does it, use the same HTML elements and CSS classes, none of which were ever documented and which are subject to frequent changes.<br>
+It was required to create Javascript files which load the data from the plugin API's endpoints, deserialize the data and then go through each of the html elements and set them to the received values. Saving data required to write almost the same code again, just in reverse, to collect the values from the html elements, serialize and send it back to the plugin's API endpoint for saving.<br>
+Plugins got broken quite too often, either visually or sometimes even functionallly due to breaking changes in Emby Server.</p>
+<h4 id="typical-approach">Typical Approach</h4>
+<p>To implement a configuration UI for a plugin, you typically start by creating a class containing the option properties which can then be serialized for saving or loading a plugin settings file from or to disk. Such class could look like this for example:</p>
+<pre><code class="lang-csharp">public class PluginConfig
+{
+    public string TargetFolder { get; set; }
+
+    public LogSeverity LogLevel { get; set; }
+
+    public string MessageFormat { get; set; }
+}
+</code></pre>
+<h4 id="motivation">Motivation</h4>
+<p>Emby's mission is to be user-friendly and easy to use. Requiring users to manually edit text files from disk to make any changes to configuration does not align with that and is highly disregarded.<br>
+Though, when looking at that class above, a developer might come to think:</p>
+<p>&quot;Why do I - and every other plugin developer - need to do all that crazy amount of work, just for creating a simple configuration UI with a few settings? Actually, that class already defines almost everything I need and it should be none of my business to create HTML setttings pages that mimick the look and the behavior of Emby Server's own UI...&quot;</p>
+<p>That was the original thought when we had started with the design of the new Plugin UI approach a few years ago.</p>
+<h3 id="not-a-ui-framework">Not a UI Framework</h3>
+<p>As a developer, you have probably seen many UI frameworks already, and HTML+JS is just one of such frameworks - liked by many and hated by many as well. But the same could be said about other frameworks and hence it was clear that replacing one UI framework with another doesn't get us anywhere.<br>
+Essentially, developers should only need to define the content which should be shown in the UI and the functionality that is involved/exposed, without needing to care about the way it is supposed to look like.</p>
+<p>We want to make developing for Emby as easy as possible and in a way that developers don't need to care much about the UI presentation and coding.
+The concept about separation of content and presentation is nothing new at all. Many UI frameworks have made such promises, but these were rarely ever fulfilled and in most cases, developers end up working on both - content and design - at the same time.</p>
+<p>The Emby Plugin UI is different in this regard: it is impossible for a developer to  affect the UI presentation in a way other than the intended/predefined ones.
+Technically, it doesn't fit in any of the known patterns. Speaking in terms like MVC (Model, View, Controller) or MVVM (Model, View, ViewModel), it is some kind of VMC (ViewModel, Controller) or MC (Model, Controller), because you can either use a model class directly or create an individual ViewModel class.
+Note that there is no 'View'. The View is autogenerated by Emby Server based on the structure of the ViewModel/Model class (or class hierarchy if nested). That structure is all you can influence as a plugin developer, but there's no way to set positions, sizes, colors, fonts, flow, wrapping and all those kinds of things.</p>
+<p>That's why this is not a UI framework.</p>
+<h2 id="declarative-ui">Declarative UI</h2>
+<p>So how does it work?</p>
+<p>If you have ever worked with property grids in UI applications (similar to the Properties tool window in Visual Studio), then you'll understand instantly, because the rows in those property grids are auto-generated in the same way:
+By checking and evaluating property descriptors on a given class:</p>
+<ul>
+<li>A string property is shown as a text field</li>
+<li>A boolean property is shown as a checkbox</li>
+<li>An enum property is shown as a drowdown</li>
+<li>etc.</li>
+</ul>
+<p>Not all information can be expressed by the basic source code of the class alone. In those cases we can use member attributes to supply that kind of information right at those places where it belongs to.</p>
+<h3 id="viewmodel-example">ViewModel Example</h3>
+<p>Let's look at the class from above again, but this time with those attributes included.</p>
+<h4 id="class">Class</h4>
+<pre><code class="lang-csharp">public class PluginConfig
+{
+    public override string EditorTitle =&gt; &quot;Plugin Options&quot;;
+
+    public override string EditorDescription =&gt; &quot;This is a description text, shown at the top of the options page.\\n&quot;
+                                                + &quot;The options below are examples for creating UI elements.&quot;;
+
+    [DisplayName(&quot;Output Folder&quot;)]
+    [Description(&quot;Please choose a folder for plugin output&quot;)]
+    [EditFolderPicker]
+    public string TargetFolder { get; set; }
+
+    [Description(&quot;The log level determines how messages will be logged&quot;)]
+    public LogSeverity LogLevel { get; set; }
+
+    [Description(&quot;This value is required and needs to have a minimum length of 10&quot;)]
+    [Required]
+    public string MessageFormat { get; set; }
+}
+</code></pre>
+<h4 id="resulting-ui">Resulting UI</h4>
+<p>At the time of writing, using the 'Light' theme this generates the following UI view:</p>
+<p><img src="../../../images/plugin_ui_simple_example.png" alt="Plugin Ui Simple Example"></p>
+<h2 id="getting-started">Getting Started</h2>
+<p>The easiest way to get into this is to create a plugin using the 'SimpleUI' approach and template:</p>
+<p><a href="simpleui.html">Simple Plugin UI</a></p>
+<h2 id="advanced-features">Advanced Features</h2>
+<p>The new Plugin UI offers many more features like multiple UI pages, tabbed UI pages, data grid display, live UI updating, auto-postback and more.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Documentation for those features will be added in future SDK updates</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

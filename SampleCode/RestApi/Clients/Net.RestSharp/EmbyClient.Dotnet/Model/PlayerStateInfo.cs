@@ -26,14 +26,14 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PlayerStateInfo" /> class.
         /// </summary>
-        /// <param name="positionTicks">positionTicks.</param>
-        /// <param name="canSeek">canSeek.</param>
-        /// <param name="isPaused">isPaused.</param>
-        /// <param name="isMuted">isMuted.</param>
-        /// <param name="volumeLevel">volumeLevel.</param>
-        /// <param name="audioStreamIndex">audioStreamIndex.</param>
-        /// <param name="subtitleStreamIndex">subtitleStreamIndex.</param>
-        /// <param name="mediaSourceId">mediaSourceId.</param>
+        /// <param name="positionTicks">The now playing position ticks..</param>
+        /// <param name="canSeek">A value indicating whether this instance can seek..</param>
+        /// <param name="isPaused">A value indicating whether this instance is paused..</param>
+        /// <param name="isMuted">A value indicating whether this instance is muted..</param>
+        /// <param name="volumeLevel">The volume level..</param>
+        /// <param name="audioStreamIndex">The index of the now playing audio stream..</param>
+        /// <param name="subtitleStreamIndex">The index of the now playing subtitle stream..</param>
+        /// <param name="mediaSourceId">The now playing media version identifier..</param>
         /// <param name="playMethod">playMethod.</param>
         /// <param name="repeatMode">repeatMode.</param>
         /// <param name="subtitleOffset">subtitleOffset.</param>
@@ -55,50 +55,58 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets PositionTicks
+        /// The now playing position ticks.
         /// </summary>
+        /// <value>The now playing position ticks.</value>
         [DataMember(Name="PositionTicks", EmitDefaultValue=false)]
         public long? PositionTicks { get; set; }
 
         /// <summary>
-        /// Gets or Sets CanSeek
+        /// A value indicating whether this instance can seek.
         /// </summary>
+        /// <value>A value indicating whether this instance can seek.</value>
         [DataMember(Name="CanSeek", EmitDefaultValue=false)]
         public bool? CanSeek { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPaused
+        /// A value indicating whether this instance is paused.
         /// </summary>
+        /// <value>A value indicating whether this instance is paused.</value>
         [DataMember(Name="IsPaused", EmitDefaultValue=false)]
         public bool? IsPaused { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsMuted
+        /// A value indicating whether this instance is muted.
         /// </summary>
+        /// <value>A value indicating whether this instance is muted.</value>
         [DataMember(Name="IsMuted", EmitDefaultValue=false)]
         public bool? IsMuted { get; set; }
 
         /// <summary>
-        /// Gets or Sets VolumeLevel
+        /// The volume level.
         /// </summary>
+        /// <value>The volume level.</value>
         [DataMember(Name="VolumeLevel", EmitDefaultValue=false)]
         public int? VolumeLevel { get; set; }
 
         /// <summary>
-        /// Gets or Sets AudioStreamIndex
+        /// The index of the now playing audio stream.
         /// </summary>
+        /// <value>The index of the now playing audio stream.</value>
         [DataMember(Name="AudioStreamIndex", EmitDefaultValue=false)]
         public int? AudioStreamIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubtitleStreamIndex
+        /// The index of the now playing subtitle stream.
         /// </summary>
+        /// <value>The index of the now playing subtitle stream.</value>
         [DataMember(Name="SubtitleStreamIndex", EmitDefaultValue=false)]
         public int? SubtitleStreamIndex { get; set; }
 
         /// <summary>
-        /// Gets or Sets MediaSourceId
+        /// The now playing media version identifier.
         /// </summary>
+        /// <value>The now playing media version identifier.</value>
         [DataMember(Name="MediaSourceId", EmitDefaultValue=false)]
         public string MediaSourceId { get; set; }
 

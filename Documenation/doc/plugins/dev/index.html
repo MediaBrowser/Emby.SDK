@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Plugin Development </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Plugin Development ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="doc-plugins-How-to-build-a-Server-Plugin">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-plugins-How-to-build-a-Server-Plugin">
+<h1 id="plugin-development">Plugin Development</h1>
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>Please see our <a href="Development-Policy.html">Development Policy</a> before beginning development.</p>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Emby Server runs on two different runtimes: .NET Core 2.0+, and Mono. The following instructions will show you how to build one plugin that will run on all platforms supported by Emby Server.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>First install Emby Server, and get it up and running. Install Visual Studio 2017 or later along with the .NET Core SDK.</p>
+<p>The easiest and recommened way is to use one of the <a href="../../../home/sdk/plugins/index.html">Plugin Templates</a> which are provided as part of the <a href="../../../home/sdk/index.html">Emby SDK</a>.</p>
+<p>For example, with the <a href="../../../home/sdk/plugins/template_simple_ui.html">Simple UI Plugin</a> template, follow these steps:</p>
+<ul>
+<li>Copy and open the <code>EmbyPluginSimpleUI.sln</code> solution in Visual Studio</li>
+<li>In the Plugin class, replace all the indicated values with your own</li>
+<li>Rename the <code>EmbyPluginSimpleUI</code> project in Visual Studio to a name of your choosing.
+This will also change the file name</li>
+<li>Adjust the namespaces in the plugin classes accordingly</li>
+</ul>
+<h2 id="create-a-post-build-event">Create a Post-Build Event</h2>
+<p>Right click the project -&gt; Edit Project. At the bottom before the Project closing tag, add a copy command to copy your plugin to the server's plugin folder. For example:</p>
+<pre><code class="lang-xml">  &lt;Target Name=&quot;PostBuild&quot; AfterTargets=&quot;PostBuildEvent&quot;&gt;
+    &lt;Exec Command=&quot;copy $(TargetPath) %AppData%\Emby-Server\programdata\plugins\&quot; /&gt;
+  &lt;/Target&gt;
+</code></pre>
+<h2 id="test-the-plugin">Test the Plugin</h2>
+<p>Shutdown the server, rebuild your solution, and restart the server. At this point you should see your plugin in the Dashboard's Plugins menu.</p>
+<h2 id="add-functionality">Add Functionality</h2>
+<p>To add real functionality to your plugin, you will need an entrypoint that can initialize and accept the various dependencies you may need in order to interact with the Emby environment.</p>
+<p>This is done by creating a class that implements the <a class="xref" href="../../../reference/pluginapi/MediaBrowser.Controller.Plugins.IServerEntryPoint.html">IServerEntryPoint</a> interface.<br>
+See <a href="Automatic-Type-Discovery.html">Automatic Type Discovery</a> for this and other types you can include in your plug-in. Its constructor can accept any number of injected dependencies - depending on what your plugin needs to access.<br>
+See also: <a href="Dependency-Injection.html">Dependency Injection</a>.</p>
+<p>If your plugin will be a premium plugin, see <a class="xref" href="../../../reference/pluginapi/MediaBrowser.Common.Security.IRequiresRegistration.html">IRequiresRegistration</a> in <a href="Other-Interfaces.html">Other Interfaces</a>.</p>
+<p>In addition, use these Emby interfaces when applicable:</p>
+<ul>
+<li><a class="xref" href="../../../reference/pluginapi/MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></li>
+<li><a class="xref" href="../../../reference/pluginapi/MediaBrowser.Common.Net.IHttpClient.html">IHttpClient</a></li>
+<li><a class="xref" href="../../../reference/pluginapi/MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a></li>
+<li>@MediaBrowser.Model.Diagnostics.IProcessFactory</li>
+<li><a class="xref" href="../../../reference/pluginapi/MediaBrowser.Model.IO.IZipClient.html">IZipClient</a></li>
+</ul>
+<h2 id="debugging">Debugging</h2>
+<h3 id="setup">Setup</h3>
+<p>For debugging your plugin running in Emby Server, you need to create a launch target in Visual Studio. Start by opening &quot;Debug Properties&quot;:</p>
+<p><img src="../../../images/debug1.png" alt="Debug1"></p>
+<p>Create a new profile of type &quot;Executable&quot;:</p>
+<p><img src="../../../images/debug2.png" alt="Debug2"></p>
+<p>and rename it to &quot;Emby Sever&quot;.</p>
+<p>Next, enter the path to Emby Server and its containing folder as &quot;Working Directory&quot;:</p>
+<p><img src="../../../images/debug3.png" alt="Debug3"></p>
+<p>The command line argument <code>-nointerface</code> disables the Emby tray icon.</p>
+<h3 id="running">Running</h3>
+<p>To run Emby Server and debug your plugin, you need to select the newly created target:</p>
+<p><img src="../../../images/debug4.png" alt="Debug4"></p>
+<p>Now you're ready to run!</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Create a breakpoint in the constructor of your plugin to be sure that it's all set up and working.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

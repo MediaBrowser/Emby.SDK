@@ -8,10 +8,13 @@
 import Foundation
 
 
+/** Class ChapterInfo   */
 
 public struct ChapterInfo: Codable {
 
+    /** The start position ticks. */
     public var startPositionTicks: Int64?
+    /** The name. */
     public var name: String?
     public var imageTag: String?
     public var markerType: MarkerType?

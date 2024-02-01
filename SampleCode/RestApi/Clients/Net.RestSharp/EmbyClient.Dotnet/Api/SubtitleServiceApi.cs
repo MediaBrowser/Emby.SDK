@@ -72,7 +72,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -89,7 +89,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -105,7 +105,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -122,7 +122,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -146,8 +146,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="language">Language</param>
         /// <param name="isPerfectMatch">IsPerfectMatch (optional)</param>
         /// <param name="isForced">IsForced (optional)</param>
+        /// <param name="isHearingImpaired">IsHearingImpaired (optional)</param>
         /// <returns>List&lt;RemoteSubtitleInfo&gt;</returns>
-        List<RemoteSubtitleInfo> GetItemsByIdRemotesearchSubtitlesByLanguage (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced);
+        List<RemoteSubtitleInfo> GetItemsByIdRemotesearchSubtitlesByLanguage (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced, bool? isHearingImpaired);
 
         /// <summary>
         /// 
@@ -161,8 +162,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="language">Language</param>
         /// <param name="isPerfectMatch">IsPerfectMatch (optional)</param>
         /// <param name="isForced">IsForced (optional)</param>
+        /// <param name="isHearingImpaired">IsHearingImpaired (optional)</param>
         /// <returns>ApiResponse of List&lt;RemoteSubtitleInfo&gt;</returns>
-        ApiResponse<List<RemoteSubtitleInfo>> GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced);
+        ApiResponse<List<RemoteSubtitleInfo>> GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced, bool? isHearingImpaired);
         /// <summary>
         /// 
         /// </summary>
@@ -188,7 +190,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -205,7 +207,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -221,7 +223,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -238,7 +240,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -381,7 +383,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -398,7 +400,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -414,7 +416,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -431,7 +433,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -455,8 +457,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="language">Language</param>
         /// <param name="isPerfectMatch">IsPerfectMatch (optional)</param>
         /// <param name="isForced">IsForced (optional)</param>
+        /// <param name="isHearingImpaired">IsHearingImpaired (optional)</param>
         /// <returns>Task of List&lt;RemoteSubtitleInfo&gt;</returns>
-        System.Threading.Tasks.Task<List<RemoteSubtitleInfo>> GetItemsByIdRemotesearchSubtitlesByLanguageAsync (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced);
+        System.Threading.Tasks.Task<List<RemoteSubtitleInfo>> GetItemsByIdRemotesearchSubtitlesByLanguageAsync (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced, bool? isHearingImpaired);
 
         /// <summary>
         /// 
@@ -470,8 +473,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="language">Language</param>
         /// <param name="isPerfectMatch">IsPerfectMatch (optional)</param>
         /// <param name="isForced">IsForced (optional)</param>
+        /// <param name="isHearingImpaired">IsHearingImpaired (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSubtitleInfo&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RemoteSubtitleInfo>>> GetItemsByIdRemotesearchSubtitlesByLanguageAsyncWithHttpInfo (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced);
+        System.Threading.Tasks.Task<ApiResponse<List<RemoteSubtitleInfo>>> GetItemsByIdRemotesearchSubtitlesByLanguageAsyncWithHttpInfo (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced, bool? isHearingImpaired);
         /// <summary>
         /// 
         /// </summary>
@@ -497,7 +501,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -514,7 +518,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -530,7 +534,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -547,7 +551,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets subtitles in a specified format.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1092,7 +1096,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1109,7 +1113,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1165,6 +1169,17 @@ namespace EmbyClient.Dotnet.Api
             if (startPositionTicks != null) localVarPathParams.Add("StartPositionTicks", this.Configuration.ApiClient.ParameterToString(startPositionTicks)); // path parameter
             if (endPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndPositionTicks", endPositionTicks)); // query parameter
             if (copyTimestamps != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CopyTimestamps", copyTimestamps)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1185,7 +1200,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1203,7 +1218,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1259,6 +1274,17 @@ namespace EmbyClient.Dotnet.Api
             if (startPositionTicks != null) localVarPathParams.Add("StartPositionTicks", this.Configuration.ApiClient.ParameterToString(startPositionTicks)); // path parameter
             if (endPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndPositionTicks", endPositionTicks)); // query parameter
             if (copyTimestamps != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CopyTimestamps", copyTimestamps)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1279,7 +1305,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1296,7 +1322,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1349,6 +1375,17 @@ namespace EmbyClient.Dotnet.Api
             if (startPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartPositionTicks", startPositionTicks)); // query parameter
             if (endPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndPositionTicks", endPositionTicks)); // query parameter
             if (copyTimestamps != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CopyTimestamps", copyTimestamps)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1369,7 +1406,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1387,7 +1424,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1440,6 +1477,17 @@ namespace EmbyClient.Dotnet.Api
             if (startPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartPositionTicks", startPositionTicks)); // query parameter
             if (endPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndPositionTicks", endPositionTicks)); // query parameter
             if (copyTimestamps != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CopyTimestamps", copyTimestamps)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1468,10 +1516,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="language">Language</param>
         /// <param name="isPerfectMatch">IsPerfectMatch (optional)</param>
         /// <param name="isForced">IsForced (optional)</param>
+        /// <param name="isHearingImpaired">IsHearingImpaired (optional)</param>
         /// <returns>List&lt;RemoteSubtitleInfo&gt;</returns>
-        public List<RemoteSubtitleInfo> GetItemsByIdRemotesearchSubtitlesByLanguage (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced)
+        public List<RemoteSubtitleInfo> GetItemsByIdRemotesearchSubtitlesByLanguage (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced, bool? isHearingImpaired)
         {
-             ApiResponse<List<RemoteSubtitleInfo>> localVarResponse = GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo(id, mediaSourceId, language, isPerfectMatch, isForced);
+             ApiResponse<List<RemoteSubtitleInfo>> localVarResponse = GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired);
              return localVarResponse.Data;
         }
 
@@ -1484,8 +1533,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="language">Language</param>
         /// <param name="isPerfectMatch">IsPerfectMatch (optional)</param>
         /// <param name="isForced">IsForced (optional)</param>
+        /// <param name="isHearingImpaired">IsHearingImpaired (optional)</param>
         /// <returns>ApiResponse of List&lt;RemoteSubtitleInfo&gt;</returns>
-        public ApiResponse< List<RemoteSubtitleInfo> > GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced)
+        public ApiResponse< List<RemoteSubtitleInfo> > GetItemsByIdRemotesearchSubtitlesByLanguageWithHttpInfo (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced, bool? isHearingImpaired)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1524,6 +1574,7 @@ namespace EmbyClient.Dotnet.Api
             if (mediaSourceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MediaSourceId", mediaSourceId)); // query parameter
             if (isPerfectMatch != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsPerfectMatch", isPerfectMatch)); // query parameter
             if (isForced != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsForced", isForced)); // query parameter
+            if (isHearingImpaired != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsHearingImpaired", isHearingImpaired)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1563,10 +1614,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="language">Language</param>
         /// <param name="isPerfectMatch">IsPerfectMatch (optional)</param>
         /// <param name="isForced">IsForced (optional)</param>
+        /// <param name="isHearingImpaired">IsHearingImpaired (optional)</param>
         /// <returns>Task of List&lt;RemoteSubtitleInfo&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RemoteSubtitleInfo>> GetItemsByIdRemotesearchSubtitlesByLanguageAsync (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced)
+        public async System.Threading.Tasks.Task<List<RemoteSubtitleInfo>> GetItemsByIdRemotesearchSubtitlesByLanguageAsync (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced, bool? isHearingImpaired)
         {
-             ApiResponse<List<RemoteSubtitleInfo>> localVarResponse = await GetItemsByIdRemotesearchSubtitlesByLanguageAsyncWithHttpInfo(id, mediaSourceId, language, isPerfectMatch, isForced);
+             ApiResponse<List<RemoteSubtitleInfo>> localVarResponse = await GetItemsByIdRemotesearchSubtitlesByLanguageAsyncWithHttpInfo(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired);
              return localVarResponse.Data;
 
         }
@@ -1580,8 +1632,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="language">Language</param>
         /// <param name="isPerfectMatch">IsPerfectMatch (optional)</param>
         /// <param name="isForced">IsForced (optional)</param>
+        /// <param name="isHearingImpaired">IsHearingImpaired (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;RemoteSubtitleInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSubtitleInfo>>> GetItemsByIdRemotesearchSubtitlesByLanguageAsyncWithHttpInfo (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RemoteSubtitleInfo>>> GetItemsByIdRemotesearchSubtitlesByLanguageAsyncWithHttpInfo (string id, string mediaSourceId, string language, bool? isPerfectMatch, bool? isForced, bool? isHearingImpaired)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1620,6 +1673,7 @@ namespace EmbyClient.Dotnet.Api
             if (mediaSourceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MediaSourceId", mediaSourceId)); // query parameter
             if (isPerfectMatch != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsPerfectMatch", isPerfectMatch)); // query parameter
             if (isForced != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsForced", isForced)); // query parameter
+            if (isHearingImpaired != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsHearingImpaired", isHearingImpaired)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1800,7 +1854,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1817,7 +1871,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1873,6 +1927,17 @@ namespace EmbyClient.Dotnet.Api
             if (startPositionTicks != null) localVarPathParams.Add("StartPositionTicks", this.Configuration.ApiClient.ParameterToString(startPositionTicks)); // path parameter
             if (endPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndPositionTicks", endPositionTicks)); // query parameter
             if (copyTimestamps != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CopyTimestamps", copyTimestamps)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1893,7 +1958,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1911,7 +1976,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -1967,6 +2032,17 @@ namespace EmbyClient.Dotnet.Api
             if (startPositionTicks != null) localVarPathParams.Add("StartPositionTicks", this.Configuration.ApiClient.ParameterToString(startPositionTicks)); // path parameter
             if (endPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndPositionTicks", endPositionTicks)); // query parameter
             if (copyTimestamps != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CopyTimestamps", copyTimestamps)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1987,7 +2063,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -2004,7 +2080,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -2057,6 +2133,17 @@ namespace EmbyClient.Dotnet.Api
             if (startPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartPositionTicks", startPositionTicks)); // query parameter
             if (endPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndPositionTicks", endPositionTicks)); // query parameter
             if (copyTimestamps != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CopyTimestamps", copyTimestamps)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -2077,7 +2164,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -2095,7 +2182,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets subtitles in a specified format. No authentication required
+        /// Gets subtitles in a specified format. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
@@ -2148,6 +2235,17 @@ namespace EmbyClient.Dotnet.Api
             if (startPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartPositionTicks", startPositionTicks)); // query parameter
             if (endPositionTicks != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndPositionTicks", endPositionTicks)); // query parameter
             if (copyTimestamps != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "CopyTimestamps", copyTimestamps)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,

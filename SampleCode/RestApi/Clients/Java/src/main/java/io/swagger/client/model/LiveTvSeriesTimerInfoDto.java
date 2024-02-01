@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -24,9 +24,9 @@ import java.util.List;
 import java.util.Map;
 import org.threeten.bp.OffsetDateTime;
 /**
- * LiveTvSeriesTimerInfoDto
+ * Class SeriesTimerInfoDto.  
  */
-
+@Schema(description = "Class SeriesTimerInfoDto.  ")
 
 public class LiveTvSeriesTimerInfoDto {
   @SerializedName("RecordAnyTime")
@@ -92,6 +92,9 @@ public class LiveTvSeriesTimerInfoDto {
   @SerializedName("ChannelName")
   private String channelName = null;
 
+  @SerializedName("ChannelNumber")
+  private String channelNumber = null;
+
   @SerializedName("ChannelPrimaryImageTag")
   private String channelPrimaryImageTag = null;
 
@@ -103,6 +106,9 @@ public class LiveTvSeriesTimerInfoDto {
 
   @SerializedName("Overview")
   private String overview = null;
+
+  @SerializedName("ParentFolderId")
+  private String parentFolderId = null;
 
   @SerializedName("StartDate")
   private OffsetDateTime startDate = null;
@@ -140,10 +146,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get recordAnyTime
+   * A value indicating whether \\[record any time\\].
    * @return recordAnyTime
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[record any time\\].")
   public Boolean isRecordAnyTime() {
     return recordAnyTime;
   }
@@ -176,10 +182,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get recordAnyChannel
+   * A value indicating whether \\[record any channel\\].
    * @return recordAnyChannel
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[record any channel\\].")
   public Boolean isRecordAnyChannel() {
     return recordAnyChannel;
   }
@@ -230,10 +236,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get recordNewOnly
+   * A value indicating whether \\[record new only\\].
    * @return recordNewOnly
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether \\[record new only\\].")
   public Boolean isRecordNewOnly() {
     return recordNewOnly;
   }
@@ -282,10 +288,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get days
+   * The days.
    * @return days
   **/
-  @Schema(description = "")
+  @Schema(description = "The days.")
   public List<DayOfWeek> getDays() {
     return days;
   }
@@ -308,10 +314,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get imageTags
+   * The image tags.
    * @return imageTags
   **/
-  @Schema(description = "")
+  @Schema(description = "The image tags.")
   public Map<String, String> getImageTags() {
     return imageTags;
   }
@@ -326,10 +332,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get parentThumbItemId
+   * The parent thumb item id.
    * @return parentThumbItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent thumb item id.")
   public String getParentThumbItemId() {
     return parentThumbItemId;
   }
@@ -344,10 +350,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get parentThumbImageTag
+   * The parent thumb image tag.
    * @return parentThumbImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent thumb image tag.")
   public String getParentThumbImageTag() {
     return parentThumbImageTag;
   }
@@ -362,10 +368,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get parentPrimaryImageItemId
+   * The parent primary image item identifier.
    * @return parentPrimaryImageItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent primary image item identifier.")
   public String getParentPrimaryImageItemId() {
     return parentPrimaryImageItemId;
   }
@@ -380,10 +386,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get parentPrimaryImageTag
+   * The parent primary image tag.
    * @return parentPrimaryImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent primary image tag.")
   public String getParentPrimaryImageTag() {
     return parentPrimaryImageTag;
   }
@@ -460,10 +466,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get id
+   * Id of the recording.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "Id of the recording.")
   public String getId() {
     return id;
   }
@@ -496,10 +502,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get serverId
+   * The server identifier.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "The server identifier.")
   public String getServerId() {
     return serverId;
   }
@@ -514,10 +520,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get channelId
+   * ChannelId of the recording.
    * @return channelId
   **/
-  @Schema(description = "")
+  @Schema(description = "ChannelId of the recording.")
   public String getChannelId() {
     return channelId;
   }
@@ -532,16 +538,34 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get channelName
+   * ChannelName of the recording.
    * @return channelName
   **/
-  @Schema(description = "")
+  @Schema(description = "ChannelName of the recording.")
   public String getChannelName() {
     return channelName;
   }
 
   public void setChannelName(String channelName) {
     this.channelName = channelName;
+  }
+
+  public LiveTvSeriesTimerInfoDto channelNumber(String channelNumber) {
+    this.channelNumber = channelNumber;
+    return this;
+  }
+
+   /**
+   * Get channelNumber
+   * @return channelNumber
+  **/
+  @Schema(description = "")
+  public String getChannelNumber() {
+    return channelNumber;
+  }
+
+  public void setChannelNumber(String channelNumber) {
+    this.channelNumber = channelNumber;
   }
 
   public LiveTvSeriesTimerInfoDto channelPrimaryImageTag(String channelPrimaryImageTag) {
@@ -568,10 +592,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get programId
+   * The program identifier.
    * @return programId
   **/
-  @Schema(description = "")
+  @Schema(description = "The program identifier.")
   public String getProgramId() {
     return programId;
   }
@@ -586,10 +610,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get name
+   * Name of the recording.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "Name of the recording.")
   public String getName() {
     return name;
   }
@@ -604,10 +628,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get overview
+   * Description of the recording.
    * @return overview
   **/
-  @Schema(description = "")
+  @Schema(description = "Description of the recording.")
   public String getOverview() {
     return overview;
   }
@@ -616,16 +640,34 @@ public class LiveTvSeriesTimerInfoDto {
     this.overview = overview;
   }
 
+  public LiveTvSeriesTimerInfoDto parentFolderId(String parentFolderId) {
+    this.parentFolderId = parentFolderId;
+    return this;
+  }
+
+   /**
+   * Get parentFolderId
+   * @return parentFolderId
+  **/
+  @Schema(description = "")
+  public String getParentFolderId() {
+    return parentFolderId;
+  }
+
+  public void setParentFolderId(String parentFolderId) {
+    this.parentFolderId = parentFolderId;
+  }
+
   public LiveTvSeriesTimerInfoDto startDate(OffsetDateTime startDate) {
     this.startDate = startDate;
     return this;
   }
 
    /**
-   * Get startDate
+   * The start date of the recording, in UTC.
    * @return startDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The start date of the recording, in UTC.")
   public OffsetDateTime getStartDate() {
     return startDate;
   }
@@ -640,10 +682,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get endDate
+   * The end date of the recording, in UTC.
    * @return endDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The end date of the recording, in UTC.")
   public OffsetDateTime getEndDate() {
     return endDate;
   }
@@ -658,10 +700,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get priority
+   * The priority.
    * @return priority
   **/
-  @Schema(description = "")
+  @Schema(description = "The priority.")
   public Integer getPriority() {
     return priority;
   }
@@ -676,10 +718,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get prePaddingSeconds
+   * The pre padding seconds.
    * @return prePaddingSeconds
   **/
-  @Schema(description = "")
+  @Schema(description = "The pre padding seconds.")
   public Integer getPrePaddingSeconds() {
     return prePaddingSeconds;
   }
@@ -694,10 +736,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get postPaddingSeconds
+   * The post padding seconds.
    * @return postPaddingSeconds
   **/
-  @Schema(description = "")
+  @Schema(description = "The post padding seconds.")
   public Integer getPostPaddingSeconds() {
     return postPaddingSeconds;
   }
@@ -712,10 +754,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get isPrePaddingRequired
+   * A value indicating whether this instance is pre padding required.
    * @return isPrePaddingRequired
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is pre padding required.")
   public Boolean isIsPrePaddingRequired() {
     return isPrePaddingRequired;
   }
@@ -730,10 +772,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get parentBackdropItemId
+   * If the item does not have any backdrops, this will hold the Id of the Parent that has one.
    * @return parentBackdropItemId
   **/
-  @Schema(description = "")
+  @Schema(description = "If the item does not have any backdrops, this will hold the Id of the Parent that has one.")
   public String getParentBackdropItemId() {
     return parentBackdropItemId;
   }
@@ -756,10 +798,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get parentBackdropImageTags
+   * The parent backdrop image tags.
    * @return parentBackdropImageTags
   **/
-  @Schema(description = "")
+  @Schema(description = "The parent backdrop image tags.")
   public List<String> getParentBackdropImageTags() {
     return parentBackdropImageTags;
   }
@@ -774,10 +816,10 @@ public class LiveTvSeriesTimerInfoDto {
   }
 
    /**
-   * Get isPostPaddingRequired
+   * A value indicating whether this instance is post padding required.
    * @return isPostPaddingRequired
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is post padding required.")
   public Boolean isIsPostPaddingRequired() {
     return isPostPaddingRequired;
   }
@@ -835,10 +877,12 @@ public class LiveTvSeriesTimerInfoDto {
         Objects.equals(this.serverId, liveTvSeriesTimerInfoDto.serverId) &&
         Objects.equals(this.channelId, liveTvSeriesTimerInfoDto.channelId) &&
         Objects.equals(this.channelName, liveTvSeriesTimerInfoDto.channelName) &&
+        Objects.equals(this.channelNumber, liveTvSeriesTimerInfoDto.channelNumber) &&
         Objects.equals(this.channelPrimaryImageTag, liveTvSeriesTimerInfoDto.channelPrimaryImageTag) &&
         Objects.equals(this.programId, liveTvSeriesTimerInfoDto.programId) &&
         Objects.equals(this.name, liveTvSeriesTimerInfoDto.name) &&
         Objects.equals(this.overview, liveTvSeriesTimerInfoDto.overview) &&
+        Objects.equals(this.parentFolderId, liveTvSeriesTimerInfoDto.parentFolderId) &&
         Objects.equals(this.startDate, liveTvSeriesTimerInfoDto.startDate) &&
         Objects.equals(this.endDate, liveTvSeriesTimerInfoDto.endDate) &&
         Objects.equals(this.priority, liveTvSeriesTimerInfoDto.priority) &&
@@ -853,7 +897,7 @@ public class LiveTvSeriesTimerInfoDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(recordAnyTime, skipEpisodesInLibrary, recordAnyChannel, keepUpTo, maxRecordingSeconds, recordNewOnly, channelIds, days, imageTags, parentThumbItemId, parentThumbImageTag, parentPrimaryImageItemId, parentPrimaryImageTag, seriesId, keywords, timerType, id, type, serverId, channelId, channelName, channelPrimaryImageTag, programId, name, overview, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
+    return Objects.hash(recordAnyTime, skipEpisodesInLibrary, recordAnyChannel, keepUpTo, maxRecordingSeconds, recordNewOnly, channelIds, days, imageTags, parentThumbItemId, parentThumbImageTag, parentPrimaryImageItemId, parentPrimaryImageTag, seriesId, keywords, timerType, id, type, serverId, channelId, channelName, channelNumber, channelPrimaryImageTag, programId, name, overview, parentFolderId, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
   }
 
 
@@ -883,10 +927,12 @@ public class LiveTvSeriesTimerInfoDto {
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
     sb.append("    channelId: ").append(toIndentedString(channelId)).append("\n");
     sb.append("    channelName: ").append(toIndentedString(channelName)).append("\n");
+    sb.append("    channelNumber: ").append(toIndentedString(channelNumber)).append("\n");
     sb.append("    channelPrimaryImageTag: ").append(toIndentedString(channelPrimaryImageTag)).append("\n");
     sb.append("    programId: ").append(toIndentedString(programId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    overview: ").append(toIndentedString(overview)).append("\n");
+    sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");

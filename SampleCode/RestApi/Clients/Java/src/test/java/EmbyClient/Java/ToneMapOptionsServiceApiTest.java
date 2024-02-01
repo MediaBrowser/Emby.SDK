@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.EmbyWebGenericEditEditObjectContainer;
+import io.swagger.client.model.EditObjectContainer;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,7 +34,7 @@ public class ToneMapOptionsServiceApiTest {
      */
     @Test
     public void getEncodingFulltonemapoptionsTest() throws Exception {
-        EmbyWebGenericEditEditObjectContainer response = api.getEncodingFulltonemapoptions();
+        EditObjectContainer response = api.getEncodingFulltonemapoptions();
 
         // TODO: test validations
     }
@@ -48,7 +48,7 @@ public class ToneMapOptionsServiceApiTest {
      */
     @Test
     public void getEncodingPublictonemapoptionsTest() throws Exception {
-        EmbyWebGenericEditEditObjectContainer response = api.getEncodingPublictonemapoptions();
+        EditObjectContainer response = api.getEncodingPublictonemapoptions();
 
         // TODO: test validations
     }

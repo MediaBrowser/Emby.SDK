@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -11,17 +11,17 @@
 
 import ApiClient from "../ApiClient";
 import NetEndPointInfo from '../model/NetEndPointInfo';
+import PackageVersionInfo from '../model/PackageVersionInfo';
 import PublicSystemInfo from '../model/PublicSystemInfo';
 import QueryResultLogFile from '../model/QueryResultLogFile';
 import QueryResultString from '../model/QueryResultString';
 import SystemInfo from '../model/SystemInfo';
-import UpdatesPackageVersionInfo from '../model/UpdatesPackageVersionInfo';
 import WakeOnLanInfo from '../model/WakeOnLanInfo';
 
 /**
 * SystemService service.
 * @module EmbyClient.JavaScript/SystemServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class SystemServiceApi {
 
@@ -120,7 +120,7 @@ export default class SystemServiceApi {
 
     /**
      * Gets public information about the server
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/SystemServiceApi~getSystemInfoPublicCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/PublicSystemInfo}
      */
@@ -136,7 +136,7 @@ export default class SystemServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = PublicSystemInfo;
@@ -275,7 +275,7 @@ export default class SystemServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/SystemServiceApi~getSystemPingCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getSystemPing() {
@@ -290,7 +290,7 @@ export default class SystemServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -305,7 +305,7 @@ export default class SystemServiceApi {
      * Callback function to receive the result of the getSystemReleasenotes operation.
      * @callback module:EmbyClient.JavaScript/SystemServiceApi~getSystemReleasenotesCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/UpdatesPackageVersionInfo} data The data returned by the service call.
+     * @param {module:model/PackageVersionInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -313,7 +313,7 @@ export default class SystemServiceApi {
      * Gets release notes
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/SystemServiceApi~getSystemReleasenotesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UpdatesPackageVersionInfo}
+     * data is of type: {@link module:model/PackageVersionInfo}
      */
     getSystemReleasenotes() {
       let postBody = null;
@@ -330,7 +330,7 @@ export default class SystemServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = UpdatesPackageVersionInfo;
+      let returnType = PackageVersionInfo;
 
       return this.apiClient.callApi(
         '/System/ReleaseNotes', 'GET',
@@ -342,7 +342,7 @@ export default class SystemServiceApi {
      * Callback function to receive the result of the getSystemReleasenotesVersions operation.
      * @callback module:EmbyClient.JavaScript/SystemServiceApi~getSystemReleasenotesVersionsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/UpdatesPackageVersionInfo>} data The data returned by the service call.
+     * @param {Array.<module:model/PackageVersionInfo>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -350,7 +350,7 @@ export default class SystemServiceApi {
      * Gets release notes
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/SystemServiceApi~getSystemReleasenotesVersionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/UpdatesPackageVersionInfo>}
+     * data is of type: {@link Array.<module:model/PackageVersionInfo>}
      */
     getSystemReleasenotesVersions() {
       let postBody = null;
@@ -367,7 +367,7 @@ export default class SystemServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [UpdatesPackageVersionInfo];
+      let returnType = [PackageVersionInfo];
 
       return this.apiClient.callApi(
         '/System/ReleaseNotes/Versions', 'GET',
@@ -421,7 +421,7 @@ export default class SystemServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/SystemServiceApi~postSystemPingCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postSystemPing() {
@@ -436,7 +436,7 @@ export default class SystemServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

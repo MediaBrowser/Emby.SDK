@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import EmbyDlnaProfilesDlnaProfile from '../model/EmbyDlnaProfilesDlnaProfile';
+import DlnaProfilesDlnaProfile from '../model/DlnaProfilesDlnaProfile';
 
 /**
 * DlnaService service.
 * @module EmbyClient.JavaScript/DlnaServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class DlnaServiceApi {
 
@@ -71,7 +71,7 @@ export default class DlnaServiceApi {
      * Callback function to receive the result of the getDlnaProfileinfos operation.
      * @callback module:EmbyClient.JavaScript/DlnaServiceApi~getDlnaProfileinfosCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/EmbyDlnaProfilesDlnaProfile>} data The data returned by the service call.
+     * @param {Array.<module:model/DlnaProfilesDlnaProfile>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -79,7 +79,7 @@ export default class DlnaServiceApi {
      * Gets a list of profiles
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/DlnaServiceApi~getDlnaProfileinfosCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/EmbyDlnaProfilesDlnaProfile>}
+     * data is of type: {@link Array.<module:model/DlnaProfilesDlnaProfile>}
      */
     getDlnaProfileinfos() {
       let postBody = null;
@@ -96,7 +96,7 @@ export default class DlnaServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = [EmbyDlnaProfilesDlnaProfile];
+      let returnType = [DlnaProfilesDlnaProfile];
 
       return this.apiClient.callApi(
         '/Dlna/ProfileInfos', 'GET',
@@ -108,7 +108,7 @@ export default class DlnaServiceApi {
      * Callback function to receive the result of the getDlnaProfilesById operation.
      * @callback module:EmbyClient.JavaScript/DlnaServiceApi~getDlnaProfilesByIdCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyDlnaProfilesDlnaProfile} data The data returned by the service call.
+     * @param {module:model/DlnaProfilesDlnaProfile} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -116,7 +116,7 @@ export default class DlnaServiceApi {
      * Gets a single profile
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/DlnaServiceApi~getDlnaProfilesByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyDlnaProfilesDlnaProfile}
+     * data is of type: {@link module:model/DlnaProfilesDlnaProfile}
      */
     getDlnaProfilesById() {
       let postBody = null;
@@ -134,7 +134,7 @@ export default class DlnaServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyDlnaProfilesDlnaProfile;
+      let returnType = DlnaProfilesDlnaProfile;
 
       return this.apiClient.callApi(
         '/Dlna/Profiles/{Id}', 'GET',
@@ -146,7 +146,7 @@ export default class DlnaServiceApi {
      * Callback function to receive the result of the getDlnaProfilesDefault operation.
      * @callback module:EmbyClient.JavaScript/DlnaServiceApi~getDlnaProfilesDefaultCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EmbyDlnaProfilesDlnaProfile} data The data returned by the service call.
+     * @param {module:model/DlnaProfilesDlnaProfile} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -154,7 +154,7 @@ export default class DlnaServiceApi {
      * Gets the default profile
      * Requires authentication as administrator
      * @param {module:EmbyClient.JavaScript/DlnaServiceApi~getDlnaProfilesDefaultCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EmbyDlnaProfilesDlnaProfile}
+     * data is of type: {@link module:model/DlnaProfilesDlnaProfile}
      */
     getDlnaProfilesDefault() {
       let postBody = null;
@@ -171,7 +171,7 @@ export default class DlnaServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = EmbyDlnaProfilesDlnaProfile;
+      let returnType = DlnaProfilesDlnaProfile;
 
       return this.apiClient.callApi(
         '/Dlna/Profiles/Default', 'GET',

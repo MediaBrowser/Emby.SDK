@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -33,10 +33,10 @@ public class LiveTvGuideInfo {
   }
 
    /**
-   * Get startDate
+   * The start date.
    * @return startDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The start date.")
   public OffsetDateTime getStartDate() {
     return startDate;
   }
@@ -51,10 +51,10 @@ public class LiveTvGuideInfo {
   }
 
    /**
-   * Get endDate
+   * The end date.
    * @return endDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The end date.")
   public OffsetDateTime getEndDate() {
     return endDate;
   }

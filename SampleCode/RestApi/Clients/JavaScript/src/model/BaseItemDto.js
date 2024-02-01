@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,7 +15,6 @@ import ChapterInfo from './ChapterInfo';
 import DayOfWeek from './DayOfWeek';
 import DrawingImageOrientation from './DrawingImageOrientation';
 import ExternalUrl from './ExternalUrl';
-import LibraryPlayAccess from './LibraryPlayAccess';
 import LiveTvTimerType from './LiveTvTimerType';
 import LocationType from './LocationType';
 import MediaSourceInfo from './MediaSourceInfo';
@@ -25,17 +24,19 @@ import MetadataFields from './MetadataFields';
 import NameIdPair from './NameIdPair';
 import NameLongIdPair from './NameLongIdPair';
 import ProviderIdDictionary from './ProviderIdDictionary';
+import SyncJobItemStatus from './SyncJobItemStatus';
 import UserItemDataDto from './UserItemDataDto';
 import Video3DFormat from './Video3DFormat';
 
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class BaseItemDto {
     /**
     * Constructs a new <code>BaseItemDto</code>.
+    * This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.  
     * @alias module:model/BaseItemDto
     * @class
     */
@@ -70,6 +71,9 @@ export default class BaseItemDto {
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
+            if (data.hasOwnProperty('Guid')) {
+                obj['Guid'] = ApiClient.convertToType(data['Guid'], 'String');
+            }
             if (data.hasOwnProperty('Etag')) {
                 obj['Etag'] = ApiClient.convertToType(data['Etag'], 'String');
             }
@@ -91,20 +95,14 @@ export default class BaseItemDto {
             if (data.hasOwnProperty('SortParentIndexNumber')) {
                 obj['SortParentIndexNumber'] = ApiClient.convertToType(data['SortParentIndexNumber'], 'Number');
             }
-            if (data.hasOwnProperty('AirsBeforeSeasonNumber')) {
-                obj['AirsBeforeSeasonNumber'] = ApiClient.convertToType(data['AirsBeforeSeasonNumber'], 'Number');
-            }
-            if (data.hasOwnProperty('AirsAfterSeasonNumber')) {
-                obj['AirsAfterSeasonNumber'] = ApiClient.convertToType(data['AirsAfterSeasonNumber'], 'Number');
-            }
-            if (data.hasOwnProperty('AirsBeforeEpisodeNumber')) {
-                obj['AirsBeforeEpisodeNumber'] = ApiClient.convertToType(data['AirsBeforeEpisodeNumber'], 'Number');
-            }
             if (data.hasOwnProperty('CanDelete')) {
                 obj['CanDelete'] = ApiClient.convertToType(data['CanDelete'], 'Boolean');
             }
             if (data.hasOwnProperty('CanDownload')) {
                 obj['CanDownload'] = ApiClient.convertToType(data['CanDownload'], 'Boolean');
+            }
+            if (data.hasOwnProperty('CanEditItems')) {
+                obj['CanEditItems'] = ApiClient.convertToType(data['CanEditItems'], 'Boolean');
             }
             if (data.hasOwnProperty('SupportsResume')) {
                 obj['SupportsResume'] = ApiClient.convertToType(data['SupportsResume'], 'Boolean');
@@ -120,6 +118,18 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('SupportsSync')) {
                 obj['SupportsSync'] = ApiClient.convertToType(data['SupportsSync'], 'Boolean');
+            }
+            if (data.hasOwnProperty('SyncStatus')) {
+                obj['SyncStatus'] = SyncJobItemStatus.constructFromObject(data['SyncStatus']);
+            }
+            if (data.hasOwnProperty('CanManageAccess')) {
+                obj['CanManageAccess'] = ApiClient.convertToType(data['CanManageAccess'], 'Boolean');
+            }
+            if (data.hasOwnProperty('CanLeaveContent')) {
+                obj['CanLeaveContent'] = ApiClient.convertToType(data['CanLeaveContent'], 'Boolean');
+            }
+            if (data.hasOwnProperty('CanMakePublic')) {
+                obj['CanMakePublic'] = ApiClient.convertToType(data['CanMakePublic'], 'Boolean');
             }
             if (data.hasOwnProperty('Container')) {
                 obj['Container'] = ApiClient.convertToType(data['Container'], 'String');
@@ -195,9 +205,6 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('Bitrate')) {
                 obj['Bitrate'] = ApiClient.convertToType(data['Bitrate'], 'Number');
-            }
-            if (data.hasOwnProperty('PlayAccess')) {
-                obj['PlayAccess'] = LibraryPlayAccess.constructFromObject(data['PlayAccess']);
             }
             if (data.hasOwnProperty('ProductionYear')) {
                 obj['ProductionYear'] = ApiClient.convertToType(data['ProductionYear'], 'Number');
@@ -345,6 +352,12 @@ export default class BaseItemDto {
             }
             if (data.hasOwnProperty('SeriesStudio')) {
                 obj['SeriesStudio'] = ApiClient.convertToType(data['SeriesStudio'], 'String');
+            }
+            if (data.hasOwnProperty('PrimaryImageItemId')) {
+                obj['PrimaryImageItemId'] = ApiClient.convertToType(data['PrimaryImageItemId'], 'String');
+            }
+            if (data.hasOwnProperty('PrimaryImageTag')) {
+                obj['PrimaryImageTag'] = ApiClient.convertToType(data['PrimaryImageTag'], 'String');
             }
             if (data.hasOwnProperty('ParentThumbItemId')) {
                 obj['ParentThumbItemId'] = ApiClient.convertToType(data['ParentThumbItemId'], 'String');
@@ -513,6 +526,7 @@ export default class BaseItemDto {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
@@ -521,26 +535,36 @@ export default class BaseItemDto {
     */
     'OriginalTitle' = undefined;
     /**
+    * The server identifier.
     * @member {String} ServerId
     */
     'ServerId' = undefined;
     /**
+    * The id.
     * @member {String} Id
     */
     'Id' = undefined;
     /**
+    * @member {String} Guid
+    */
+    'Guid' = undefined;
+    /**
+    * The etag.
     * @member {String} Etag
     */
     'Etag' = undefined;
     /**
+    * The Prefix.
     * @member {String} Prefix
     */
     'Prefix' = undefined;
     /**
+    * The playlist item identifier.
     * @member {String} PlaylistItemId
     */
     'PlaylistItemId' = undefined;
     /**
+    * The date created.
     * @member {Date} DateCreated
     */
     'DateCreated' = undefined;
@@ -557,18 +581,6 @@ export default class BaseItemDto {
     */
     'SortParentIndexNumber' = undefined;
     /**
-    * @member {Number} AirsBeforeSeasonNumber
-    */
-    'AirsBeforeSeasonNumber' = undefined;
-    /**
-    * @member {Number} AirsAfterSeasonNumber
-    */
-    'AirsAfterSeasonNumber' = undefined;
-    /**
-    * @member {Number} AirsBeforeEpisodeNumber
-    */
-    'AirsBeforeEpisodeNumber' = undefined;
-    /**
     * @member {Boolean} CanDelete
     */
     'CanDelete' = undefined;
@@ -576,6 +588,10 @@ export default class BaseItemDto {
     * @member {Boolean} CanDownload
     */
     'CanDownload' = undefined;
+    /**
+    * @member {Boolean} CanEditItems
+    */
+    'CanEditItems' = undefined;
     /**
     * @member {Boolean} SupportsResume
     */
@@ -593,14 +609,32 @@ export default class BaseItemDto {
     */
     'PreferredMetadataCountryCode' = undefined;
     /**
+    * A value indicating whether \\[supports synchronize\\].
     * @member {Boolean} SupportsSync
     */
     'SupportsSync' = undefined;
+    /**
+    * @member {module:model/SyncJobItemStatus} SyncStatus
+    */
+    'SyncStatus' = undefined;
+    /**
+    * @member {Boolean} CanManageAccess
+    */
+    'CanManageAccess' = undefined;
+    /**
+    * @member {Boolean} CanLeaveContent
+    */
+    'CanLeaveContent' = undefined;
+    /**
+    * @member {Boolean} CanMakePublic
+    */
+    'CanMakePublic' = undefined;
     /**
     * @member {String} Container
     */
     'Container' = undefined;
     /**
+    * The name of the sort.
     * @member {String} SortName
     */
     'SortName' = undefined;
@@ -613,18 +647,22 @@ export default class BaseItemDto {
     */
     'Video3DFormat' = undefined;
     /**
+    * The premiere date.
     * @member {Date} PremiereDate
     */
     'PremiereDate' = undefined;
     /**
+    * The external urls.
     * @member {Array.<module:model/ExternalUrl>} ExternalUrls
     */
     'ExternalUrls' = undefined;
     /**
+    * The media versions.
     * @member {Array.<module:model/MediaSourceInfo>} MediaSources
     */
     'MediaSources' = undefined;
     /**
+    * The critic rating.
     * @member {Number} CriticRating
     */
     'CriticRating' = undefined;
@@ -637,6 +675,7 @@ export default class BaseItemDto {
     */
     'AsSeries' = undefined;
     /**
+    * The game system.
     * @member {String} GameSystem
     */
     'GameSystem' = undefined;
@@ -645,18 +684,22 @@ export default class BaseItemDto {
     */
     'ProductionLocations' = undefined;
     /**
+    * The path.
     * @member {String} Path
     */
     'Path' = undefined;
     /**
+    * The official rating.
     * @member {String} OfficialRating
     */
     'OfficialRating' = undefined;
     /**
+    * The custom rating.
     * @member {String} CustomRating
     */
     'CustomRating' = undefined;
     /**
+    * The channel identifier.
     * @member {String} ChannelId
     */
     'ChannelId' = undefined;
@@ -665,22 +708,27 @@ export default class BaseItemDto {
     */
     'ChannelName' = undefined;
     /**
+    * The overview.
     * @member {String} Overview
     */
     'Overview' = undefined;
     /**
+    * The taglines.
     * @member {Array.<String>} Taglines
     */
     'Taglines' = undefined;
     /**
+    * The genres.
     * @member {Array.<String>} Genres
     */
     'Genres' = undefined;
     /**
+    * The community rating.
     * @member {Number} CommunityRating
     */
     'CommunityRating' = undefined;
     /**
+    * The run time ticks.
     * @member {Number} RunTimeTicks
     */
     'RunTimeTicks' = undefined;
@@ -697,14 +745,12 @@ export default class BaseItemDto {
     */
     'Bitrate' = undefined;
     /**
-    * @member {module:model/LibraryPlayAccess} PlayAccess
-    */
-    'PlayAccess' = undefined;
-    /**
+    * The production year.
     * @member {Number} ProductionYear
     */
     'ProductionYear' = undefined;
     /**
+    * The number.
     * @member {String} Number
     */
     'Number' = undefined;
@@ -713,18 +759,22 @@ export default class BaseItemDto {
     */
     'ChannelNumber' = undefined;
     /**
+    * The index number.
     * @member {Number} IndexNumber
     */
     'IndexNumber' = undefined;
     /**
+    * The index number end.
     * @member {Number} IndexNumberEnd
     */
     'IndexNumberEnd' = undefined;
     /**
+    * The parent index number.
     * @member {Number} ParentIndexNumber
     */
     'ParentIndexNumber' = undefined;
     /**
+    * The trailer urls.
     * @member {Array.<module:model/MediaUrl>} RemoteTrailers
     */
     'RemoteTrailers' = undefined;
@@ -733,22 +783,27 @@ export default class BaseItemDto {
     */
     'ProviderIds' = undefined;
     /**
+    * A value indicating whether this instance is folder.
     * @member {Boolean} IsFolder
     */
     'IsFolder' = undefined;
     /**
+    * The parent id.
     * @member {String} ParentId
     */
     'ParentId' = undefined;
     /**
+    * The type.
     * @member {String} Type
     */
     'Type' = undefined;
     /**
+    * The people.
     * @member {Array.<module:model/BaseItemPerson>} People
     */
     'People' = undefined;
     /**
+    * The studios.
     * @member {Array.<module:model/NameLongIdPair>} Studios
     */
     'Studios' = undefined;
@@ -761,18 +816,22 @@ export default class BaseItemDto {
     */
     'TagItems' = undefined;
     /**
+    * If the item does not have a logo, this will hold the Id of the Parent that has one.
     * @member {String} ParentLogoItemId
     */
     'ParentLogoItemId' = undefined;
     /**
+    * If the item does not have any backdrops, this will hold the Id of the Parent that has one.
     * @member {String} ParentBackdropItemId
     */
     'ParentBackdropItemId' = undefined;
     /**
+    * The parent backdrop image tags.
     * @member {Array.<String>} ParentBackdropImageTags
     */
     'ParentBackdropImageTags' = undefined;
     /**
+    * The local trailer count.
     * @member {Number} LocalTrailerCount
     */
     'LocalTrailerCount' = undefined;
@@ -781,54 +840,67 @@ export default class BaseItemDto {
     */
     'UserData' = undefined;
     /**
+    * The recursive item count.
     * @member {Number} RecursiveItemCount
     */
     'RecursiveItemCount' = undefined;
     /**
+    * The child count.
     * @member {Number} ChildCount
     */
     'ChildCount' = undefined;
     /**
+    * The name of the series.
     * @member {String} SeriesName
     */
     'SeriesName' = undefined;
     /**
+    * The series id.
     * @member {String} SeriesId
     */
     'SeriesId' = undefined;
     /**
+    * The season identifier.
     * @member {String} SeasonId
     */
     'SeasonId' = undefined;
     /**
+    * The special feature count.
     * @member {Number} SpecialFeatureCount
     */
     'SpecialFeatureCount' = undefined;
     /**
+    * The display preferences id.
     * @member {String} DisplayPreferencesId
     */
     'DisplayPreferencesId' = undefined;
     /**
+    * The status.
     * @member {String} Status
     */
     'Status' = undefined;
     /**
+    * The air days.
     * @member {Array.<module:model/DayOfWeek>} AirDays
     */
     'AirDays' = undefined;
     /**
+    * The tags.
     * @member {Array.<String>} Tags
     */
     'Tags' = undefined;
     /**
+    * The primary image aspect ratio, after image enhancements.
     * @member {Number} PrimaryImageAspectRatio
     */
     'PrimaryImageAspectRatio' = undefined;
     /**
+    * The artists.
     * @member {Array.<String>} Artists
     */
     'Artists' = undefined;
     /**
+    * The artist items.
     * @member {Array.<module:model/NameIdPair>} ArtistItems
     */
     'ArtistItems' = undefined;
@@ -837,74 +909,100 @@ export default class BaseItemDto {
     */
     'Composers' = undefined;
     /**
+    * The album.
     * @member {String} Album
     */
     'Album' = undefined;
     /**
+    * The type of the collection.
     * @member {String} CollectionType
     */
     'CollectionType' = undefined;
     /**
+    * The display order.
     * @member {String} DisplayOrder
     */
     'DisplayOrder' = undefined;
     /**
+    * The album id.
     * @member {String} AlbumId
     */
     'AlbumId' = undefined;
     /**
+    * The album image tag.
     * @member {String} AlbumPrimaryImageTag
     */
     'AlbumPrimaryImageTag' = undefined;
     /**
+    * The series primary image tag.
     * @member {String} SeriesPrimaryImageTag
     */
     'SeriesPrimaryImageTag' = undefined;
     /**
+    * The album artist.
     * @member {String} AlbumArtist
     */
     'AlbumArtist' = undefined;
     /**
+    * The album artists.
     * @member {Array.<module:model/NameIdPair>} AlbumArtists
     */
     'AlbumArtists' = undefined;
     /**
+    * The name of the season.
     * @member {String} SeasonName
     */
     'SeasonName' = undefined;
     /**
+    * The media streams.
     * @member {Array.<module:model/MediaStream>} MediaStreams
     */
     'MediaStreams' = undefined;
     /**
+    * The part count.
     * @member {Number} PartCount
     */
     'PartCount' = undefined;
     /**
+    * The image tags.
     * @member {Object.<String, String>} ImageTags
     */
     'ImageTags' = undefined;
     /**
+    * The backdrop image tags.
     * @member {Array.<String>} BackdropImageTags
     */
     'BackdropImageTags' = undefined;
     /**
+    * The parent logo image tag.
     * @member {String} ParentLogoImageTag
     */
     'ParentLogoImageTag' = undefined;
     /**
+    * The series studio.
     * @member {String} SeriesStudio
     */
     'SeriesStudio' = undefined;
     /**
+    * @member {String} PrimaryImageItemId
+    */
+    'PrimaryImageItemId' = undefined;
+    /**
+    * @member {String} PrimaryImageTag
+    */
+    'PrimaryImageTag' = undefined;
+    /**
+    * The parent thumb item id.
     * @member {String} ParentThumbItemId
     */
     'ParentThumbItemId' = undefined;
     /**
+    * The parent thumb image tag.
     * @member {String} ParentThumbImageTag
     */
     'ParentThumbImageTag' = undefined;
     /**
+    * The chapters.
     * @member {Array.<module:model/ChapterInfo>} Chapters
     */
     'Chapters' = undefined;
@@ -913,18 +1011,22 @@ export default class BaseItemDto {
     */
     'LocationType' = undefined;
     /**
+    * The type of the media.
     * @member {String} MediaType
     */
     'MediaType' = undefined;
     /**
+    * The end date.
     * @member {Date} EndDate
     */
     'EndDate' = undefined;
     /**
+    * The locked fields.
     * @member {Array.<module:model/MetadataFields>} LockedFields
     */
     'LockedFields' = undefined;
     /**
+    * A value indicating whether \\[enable internet providers\\].
     * @member {Boolean} LockData
     */
     'LockData' = undefined;
@@ -985,22 +1087,27 @@ export default class BaseItemDto {
     */
     'IsoSpeedRating' = undefined;
     /**
+    * The series timer identifier.
     * @member {String} SeriesTimerId
     */
     'SeriesTimerId' = undefined;
     /**
+    * The channel primary image tag.
     * @member {String} ChannelPrimaryImageTag
     */
     'ChannelPrimaryImageTag' = undefined;
     /**
+    * The start date of the recording, in UTC.
     * @member {Date} StartDate
     */
     'StartDate' = undefined;
     /**
+    * The completion percentage.
     * @member {Number} CompletionPercentage
     */
     'CompletionPercentage' = undefined;
     /**
+    * A value indicating whether this instance is repeat.
     * @member {Boolean} IsRepeat
     */
     'IsRepeat' = undefined;
@@ -1009,34 +1116,42 @@ export default class BaseItemDto {
     */
     'IsNew' = undefined;
     /**
+    * The episode title.
     * @member {String} EpisodeTitle
     */
     'EpisodeTitle' = undefined;
     /**
+    * A value indicating whether this instance is movie.
     * @member {Boolean} IsMovie
     */
     'IsMovie' = undefined;
     /**
+    * A value indicating whether this instance is sports.
     * @member {Boolean} IsSports
     */
     'IsSports' = undefined;
     /**
+    * A value indicating whether this instance is series.
     * @member {Boolean} IsSeries
     */
     'IsSeries' = undefined;
     /**
+    * A value indicating whether this instance is live.
     * @member {Boolean} IsLive
     */
     'IsLive' = undefined;
     /**
+    * A value indicating whether this instance is news.
     * @member {Boolean} IsNews
     */
     'IsNews' = undefined;
     /**
+    * A value indicating whether this instance is kids.
     * @member {Boolean} IsKids
     */
     'IsKids' = undefined;
     /**
+    * A value indicating whether this instance is premiere.
     * @member {Boolean} IsPremiere
     */
     'IsPremiere' = undefined;
@@ -1053,6 +1168,7 @@ export default class BaseItemDto {
     */
     'ManagementId' = undefined;
     /**
+    * The timer identifier.
     * @member {String} TimerId
     */
     'TimerId' = undefined;

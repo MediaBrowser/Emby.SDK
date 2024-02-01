@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -107,15 +107,15 @@ func (a *DlnaServiceApiService) DeleteDlnaProfilesById(ctx context.Context, id s
 DlnaServiceApiService Gets a list of profiles
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return []EmbyDlnaProfilesDlnaProfile
+@return []DlnaProfilesDlnaProfile
 */
-func (a *DlnaServiceApiService) GetDlnaProfileinfos(ctx context.Context) ([]EmbyDlnaProfilesDlnaProfile, *http.Response, error) {
+func (a *DlnaServiceApiService) GetDlnaProfileinfos(ctx context.Context) ([]DlnaProfilesDlnaProfile, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []EmbyDlnaProfilesDlnaProfile
+		localVarReturnValue []DlnaProfilesDlnaProfile
 	)
 
 	// create path and map variables
@@ -185,7 +185,7 @@ func (a *DlnaServiceApiService) GetDlnaProfileinfos(ctx context.Context) ([]Emby
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []EmbyDlnaProfilesDlnaProfile
+			var v []DlnaProfilesDlnaProfile
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -204,15 +204,15 @@ DlnaServiceApiService Gets a single profile
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Profile Id
-@return EmbyDlnaProfilesDlnaProfile
+@return DlnaProfilesDlnaProfile
 */
-func (a *DlnaServiceApiService) GetDlnaProfilesById(ctx context.Context, id string) (EmbyDlnaProfilesDlnaProfile, *http.Response, error) {
+func (a *DlnaServiceApiService) GetDlnaProfilesById(ctx context.Context, id string) (DlnaProfilesDlnaProfile, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyDlnaProfilesDlnaProfile
+		localVarReturnValue DlnaProfilesDlnaProfile
 	)
 
 	// create path and map variables
@@ -283,7 +283,7 @@ func (a *DlnaServiceApiService) GetDlnaProfilesById(ctx context.Context, id stri
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyDlnaProfilesDlnaProfile
+			var v DlnaProfilesDlnaProfile
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -301,15 +301,15 @@ func (a *DlnaServiceApiService) GetDlnaProfilesById(ctx context.Context, id stri
 DlnaServiceApiService Gets the default profile
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return EmbyDlnaProfilesDlnaProfile
+@return DlnaProfilesDlnaProfile
 */
-func (a *DlnaServiceApiService) GetDlnaProfilesDefault(ctx context.Context) (EmbyDlnaProfilesDlnaProfile, *http.Response, error) {
+func (a *DlnaServiceApiService) GetDlnaProfilesDefault(ctx context.Context) (DlnaProfilesDlnaProfile, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue EmbyDlnaProfilesDlnaProfile
+		localVarReturnValue DlnaProfilesDlnaProfile
 	)
 
 	// create path and map variables
@@ -379,7 +379,7 @@ func (a *DlnaServiceApiService) GetDlnaProfilesDefault(ctx context.Context) (Emb
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v EmbyDlnaProfilesDlnaProfile
+			var v DlnaProfilesDlnaProfile
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -400,7 +400,7 @@ Requires authentication as administrator
  * @param body DlnaProfile: 
 
 */
-func (a *DlnaServiceApiService) PostDlnaProfiles(ctx context.Context, body EmbyDlnaProfilesDlnaProfile) (*http.Response, error) {
+func (a *DlnaServiceApiService) PostDlnaProfiles(ctx context.Context, body DlnaProfilesDlnaProfile) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -483,7 +483,7 @@ Requires authentication as administrator
  * @param id
 
 */
-func (a *DlnaServiceApiService) PostDlnaProfilesById(ctx context.Context, body EmbyDlnaProfilesDlnaProfile, id string) (*http.Response, error) {
+func (a *DlnaServiceApiService) PostDlnaProfilesById(ctx context.Context, body DlnaProfilesDlnaProfile, id string) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalUrl" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="url">url.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="url">The type of the item..</param>
         public ExternalUrl(string name = default(string), string url = default(string))
         {
             this.Name = name;
@@ -35,14 +35,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Url
+        /// The type of the item.
         /// </summary>
+        /// <value>The type of the item.</value>
         [DataMember(Name="Url", EmitDefaultValue=false)]
         public string Url { get; set; }
 

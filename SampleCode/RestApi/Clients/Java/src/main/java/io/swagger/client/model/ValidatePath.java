@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -25,6 +25,12 @@ public class ValidatePath {
 
   @SerializedName("IsFile")
   private Boolean isFile = null;
+
+  @SerializedName("Username")
+  private String username = null;
+
+  @SerializedName("Password")
+  private String password = null;
 
   public ValidatePath validateWriteable(Boolean validateWriteable) {
     this.validateWriteable = validateWriteable;
@@ -62,6 +68,42 @@ public class ValidatePath {
     this.isFile = isFile;
   }
 
+  public ValidatePath username(String username) {
+    this.username = username;
+    return this;
+  }
+
+   /**
+   * Get username
+   * @return username
+  **/
+  @Schema(description = "")
+  public String getUsername() {
+    return username;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public ValidatePath password(String password) {
+    this.password = password;
+    return this;
+  }
+
+   /**
+   * Get password
+   * @return password
+  **/
+  @Schema(description = "")
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,12 +115,14 @@ public class ValidatePath {
     }
     ValidatePath validatePath = (ValidatePath) o;
     return Objects.equals(this.validateWriteable, validatePath.validateWriteable) &&
-        Objects.equals(this.isFile, validatePath.isFile);
+        Objects.equals(this.isFile, validatePath.isFile) &&
+        Objects.equals(this.username, validatePath.username) &&
+        Objects.equals(this.password, validatePath.password);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(validateWriteable, isFile);
+    return Objects.hash(validateWriteable, isFile, username, password);
   }
 
 
@@ -89,6 +133,8 @@ public class ValidatePath {
     
     sb.append("    validateWriteable: ").append(toIndentedString(validateWriteable)).append("\n");
     sb.append("    isFile: ").append(toIndentedString(isFile)).append("\n");
+    sb.append("    username: ").append(toIndentedString(username)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("}");
     return sb.toString();
   }

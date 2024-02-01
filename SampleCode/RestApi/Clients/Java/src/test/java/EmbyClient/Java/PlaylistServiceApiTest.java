@@ -1,10 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
 package EmbyClient.Java;
 
+import io.swagger.client.model.PlaylistsAddToPlaylistResult;
 import io.swagger.client.model.PlaylistsPlaylistCreationResult;
 import io.swagger.client.model.QueryResultBaseItemDto;
 import org.junit.Test;
@@ -38,6 +39,23 @@ public class PlaylistServiceApiTest {
         String id = null;
         String entryIds = null;
         api.deletePlaylistsByIdItems(id, entryIds);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets add to playlist info
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getPlaylistsByIdAddtoplaylistinfoTest() throws Exception {
+        String ids = null;
+        String id = null;
+        String userId = null;
+        Object response = api.getPlaylistsByIdAddtoplaylistinfo(ids, id, userId);
 
         // TODO: test validations
     }
@@ -94,7 +112,7 @@ public class PlaylistServiceApiTest {
         String ids = null;
         String id = null;
         String userId = null;
-        api.postPlaylistsByIdItems(ids, id, userId);
+        PlaylistsAddToPlaylistResult response = api.postPlaylistsByIdItems(ids, id, userId);
 
         // TODO: test validations
     }

@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -12,7 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.ConfigurationLibraryOptions;
+import io.swagger.client.model.LibraryOptions;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
@@ -25,7 +25,7 @@ public class LibraryUpdateLibraryOptions {
   private String id = null;
 
   @SerializedName("LibraryOptions")
-  private ConfigurationLibraryOptions libraryOptions = null;
+  private LibraryOptions libraryOptions = null;
 
   public LibraryUpdateLibraryOptions id(String id) {
     this.id = id;
@@ -45,7 +45,7 @@ public class LibraryUpdateLibraryOptions {
     this.id = id;
   }
 
-  public LibraryUpdateLibraryOptions libraryOptions(ConfigurationLibraryOptions libraryOptions) {
+  public LibraryUpdateLibraryOptions libraryOptions(LibraryOptions libraryOptions) {
     this.libraryOptions = libraryOptions;
     return this;
   }
@@ -55,11 +55,11 @@ public class LibraryUpdateLibraryOptions {
    * @return libraryOptions
   **/
   @Schema(description = "")
-  public ConfigurationLibraryOptions getLibraryOptions() {
+  public LibraryOptions getLibraryOptions() {
     return libraryOptions;
   }
 
-  public void setLibraryOptions(ConfigurationLibraryOptions libraryOptions) {
+  public void setLibraryOptions(LibraryOptions libraryOptions) {
     this.libraryOptions = libraryOptions;
   }
 

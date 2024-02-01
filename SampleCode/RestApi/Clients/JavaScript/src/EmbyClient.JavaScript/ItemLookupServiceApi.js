@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -11,22 +11,22 @@
 
 import ApiClient from "../ApiClient";
 import ExternalIdInfo from '../model/ExternalIdInfo';
-import ProvidersRemoteSearchQueryProvidersAlbumInfo from '../model/ProvidersRemoteSearchQueryProvidersAlbumInfo';
-import ProvidersRemoteSearchQueryProvidersArtistInfo from '../model/ProvidersRemoteSearchQueryProvidersArtistInfo';
-import ProvidersRemoteSearchQueryProvidersBookInfo from '../model/ProvidersRemoteSearchQueryProvidersBookInfo';
-import ProvidersRemoteSearchQueryProvidersGameInfo from '../model/ProvidersRemoteSearchQueryProvidersGameInfo';
-import ProvidersRemoteSearchQueryProvidersItemLookupInfo from '../model/ProvidersRemoteSearchQueryProvidersItemLookupInfo';
-import ProvidersRemoteSearchQueryProvidersMovieInfo from '../model/ProvidersRemoteSearchQueryProvidersMovieInfo';
-import ProvidersRemoteSearchQueryProvidersMusicVideoInfo from '../model/ProvidersRemoteSearchQueryProvidersMusicVideoInfo';
-import ProvidersRemoteSearchQueryProvidersPersonLookupInfo from '../model/ProvidersRemoteSearchQueryProvidersPersonLookupInfo';
-import ProvidersRemoteSearchQueryProvidersSeriesInfo from '../model/ProvidersRemoteSearchQueryProvidersSeriesInfo';
-import ProvidersRemoteSearchQueryProvidersTrailerInfo from '../model/ProvidersRemoteSearchQueryProvidersTrailerInfo';
+import RemoteSearchQueryAlbumInfo from '../model/RemoteSearchQueryAlbumInfo';
+import RemoteSearchQueryArtistInfo from '../model/RemoteSearchQueryArtistInfo';
+import RemoteSearchQueryBookInfo from '../model/RemoteSearchQueryBookInfo';
+import RemoteSearchQueryGameInfo from '../model/RemoteSearchQueryGameInfo';
+import RemoteSearchQueryItemLookupInfo from '../model/RemoteSearchQueryItemLookupInfo';
+import RemoteSearchQueryMovieInfo from '../model/RemoteSearchQueryMovieInfo';
+import RemoteSearchQueryMusicVideoInfo from '../model/RemoteSearchQueryMusicVideoInfo';
+import RemoteSearchQueryPersonLookupInfo from '../model/RemoteSearchQueryPersonLookupInfo';
+import RemoteSearchQuerySeriesInfo from '../model/RemoteSearchQuerySeriesInfo';
+import RemoteSearchQueryTrailerInfo from '../model/RemoteSearchQueryTrailerInfo';
 import RemoteSearchResult from '../model/RemoteSearchResult';
 
 /**
 * ItemLookupService service.
 * @module EmbyClient.JavaScript/ItemLookupServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ItemLookupServiceApi {
 
@@ -113,6 +113,43 @@ export default class ItemLookupServiceApi {
 
       return this.apiClient.callApi(
         '/Items/RemoteSearch/Image', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsMetadataReset operation.
+     * @callback module:EmbyClient.JavaScript/ItemLookupServiceApi~postItemsMetadataResetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Resets metadata for one or more items
+     * Requires authentication as administrator
+     * @param {module:EmbyClient.JavaScript/ItemLookupServiceApi~postItemsMetadataResetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsMetadataReset() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'ItemIds': itemIds
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/Metadata/Reset', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

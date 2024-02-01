@@ -28,7 +28,7 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="libraryOptions">libraryOptions.</param>
-        public LibraryUpdateLibraryOptions(string id = default(string), ConfigurationLibraryOptions libraryOptions = default(ConfigurationLibraryOptions))
+        public LibraryUpdateLibraryOptions(string id = default(string), LibraryOptions libraryOptions = default(LibraryOptions))
         {
             this.Id = id;
             this.LibraryOptions = libraryOptions;
@@ -44,7 +44,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets LibraryOptions
         /// </summary>
         [DataMember(Name="LibraryOptions", EmitDefaultValue=false)]
-        public ConfigurationLibraryOptions LibraryOptions { get; set; }
+        public LibraryOptions LibraryOptions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

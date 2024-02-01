@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -240,7 +240,7 @@ class SubtitleServiceApi(object):
     def get_items_by_id_by_mediasourceid_subtitles_by_index_by_startpositionticks_stream_by_format(self, id, media_source_id, index, format, start_position_ticks, **kwargs):  # noqa: E501
         """Gets subtitles in a specified format.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_by_mediasourceid_subtitles_by_index_by_startpositionticks_stream_by_format(id, media_source_id, index, format, start_position_ticks, async_req=True)
@@ -268,7 +268,7 @@ class SubtitleServiceApi(object):
     def get_items_by_id_by_mediasourceid_subtitles_by_index_by_startpositionticks_stream_by_format_with_http_info(self, id, media_source_id, index, format, start_position_ticks, **kwargs):  # noqa: E501
         """Gets subtitles in a specified format.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_by_mediasourceid_subtitles_by_index_by_startpositionticks_stream_by_format_with_http_info(id, media_source_id, index, format, start_position_ticks, async_req=True)
@@ -350,7 +350,7 @@ class SubtitleServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}', 'GET',
@@ -371,7 +371,7 @@ class SubtitleServiceApi(object):
     def get_items_by_id_by_mediasourceid_subtitles_by_index_stream_by_format(self, id, media_source_id, index, format, **kwargs):  # noqa: E501
         """Gets subtitles in a specified format.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_by_mediasourceid_subtitles_by_index_stream_by_format(id, media_source_id, index, format, async_req=True)
@@ -399,7 +399,7 @@ class SubtitleServiceApi(object):
     def get_items_by_id_by_mediasourceid_subtitles_by_index_stream_by_format_with_http_info(self, id, media_source_id, index, format, **kwargs):  # noqa: E501
         """Gets subtitles in a specified format.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_by_mediasourceid_subtitles_by_index_stream_by_format_with_http_info(id, media_source_id, index, format, async_req=True)
@@ -477,7 +477,7 @@ class SubtitleServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}', 'GET',
@@ -510,6 +510,7 @@ class SubtitleServiceApi(object):
         :param str language: Language (required)
         :param bool is_perfect_match: IsPerfectMatch
         :param bool is_forced: IsForced
+        :param bool is_hearing_impaired: IsHearingImpaired
         :return: list[RemoteSubtitleInfo]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -536,12 +537,13 @@ class SubtitleServiceApi(object):
         :param str language: Language (required)
         :param bool is_perfect_match: IsPerfectMatch
         :param bool is_forced: IsForced
+        :param bool is_hearing_impaired: IsHearingImpaired
         :return: list[RemoteSubtitleInfo]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'media_source_id', 'language', 'is_perfect_match', 'is_forced']  # noqa: E501
+        all_params = ['id', 'media_source_id', 'language', 'is_perfect_match', 'is_forced', 'is_hearing_impaired']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -584,6 +586,8 @@ class SubtitleServiceApi(object):
             query_params.append(('IsPerfectMatch', params['is_perfect_match']))  # noqa: E501
         if 'is_forced' in params:
             query_params.append(('IsForced', params['is_forced']))  # noqa: E501
+        if 'is_hearing_impaired' in params:
+            query_params.append(('IsHearingImpaired', params['is_hearing_impaired']))  # noqa: E501
 
         header_params = {}
 
@@ -708,7 +712,7 @@ class SubtitleServiceApi(object):
     def get_videos_by_id_by_mediasourceid_subtitles_by_index_by_startpositionticks_stream_by_format(self, id, media_source_id, index, format, start_position_ticks, **kwargs):  # noqa: E501
         """Gets subtitles in a specified format.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_videos_by_id_by_mediasourceid_subtitles_by_index_by_startpositionticks_stream_by_format(id, media_source_id, index, format, start_position_ticks, async_req=True)
@@ -736,7 +740,7 @@ class SubtitleServiceApi(object):
     def get_videos_by_id_by_mediasourceid_subtitles_by_index_by_startpositionticks_stream_by_format_with_http_info(self, id, media_source_id, index, format, start_position_ticks, **kwargs):  # noqa: E501
         """Gets subtitles in a specified format.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_videos_by_id_by_mediasourceid_subtitles_by_index_by_startpositionticks_stream_by_format_with_http_info(id, media_source_id, index, format, start_position_ticks, async_req=True)
@@ -818,7 +822,7 @@ class SubtitleServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}', 'GET',
@@ -839,7 +843,7 @@ class SubtitleServiceApi(object):
     def get_videos_by_id_by_mediasourceid_subtitles_by_index_stream_by_format(self, id, media_source_id, index, format, **kwargs):  # noqa: E501
         """Gets subtitles in a specified format.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_videos_by_id_by_mediasourceid_subtitles_by_index_stream_by_format(id, media_source_id, index, format, async_req=True)
@@ -867,7 +871,7 @@ class SubtitleServiceApi(object):
     def get_videos_by_id_by_mediasourceid_subtitles_by_index_stream_by_format_with_http_info(self, id, media_source_id, index, format, **kwargs):  # noqa: E501
         """Gets subtitles in a specified format.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_videos_by_id_by_mediasourceid_subtitles_by_index_stream_by_format_with_http_info(id, media_source_id, index, format, async_req=True)
@@ -945,7 +949,7 @@ class SubtitleServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}', 'GET',

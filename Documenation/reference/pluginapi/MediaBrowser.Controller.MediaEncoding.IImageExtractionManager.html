@@ -186,19 +186,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">path</span></td>
         <td><p>The path.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">streamIndex</span></td>
         <td><p>Index of the image stream.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -215,7 +215,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><p>Task{Stream}.</p>
 </td>
       </tr>
@@ -224,13 +224,13 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage(System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractAudioImage(String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage(System.String,System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractAudioImage(String, Nullable&lt;MediaContainers&gt;, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Extracts the audio image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractAudioImage(string path, string container, int? streamIndex, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractAudioImage(string path, MediaContainers? container, int? streamIndex, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,25 +243,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
         <td><p>The path.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaContainers.html">MediaContainers</a>&gt;</td>
         <td><span class="parametername">container</span></td>
         <td><p>The container.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">streamIndex</span></td>
         <td><p>Index of the image stream.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -278,7 +278,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><p>Task{Stream}.</p>
 </td>
       </tr>
@@ -287,13 +287,13 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__MediaBrowser_Model_MediaInfo_MediaProtocol_MediaBrowser_Model_Entities_MediaStream_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_Nullable_System_TimeSpan__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage(System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},MediaBrowser.Model.MediaInfo.MediaProtocol,MediaBrowser.Model.Entities.MediaStream,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">ExtractVideoImage(ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, MediaProtocol, MediaStream, Nullable&lt;Video3DFormat&gt;, Nullable&lt;TimeSpan&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_System_ReadOnlyMemory_System_Char__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_MediaInfo_MediaProtocol_MediaBrowser_Model_Entities_MediaStream_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_Nullable_System_TimeSpan__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage(System.ReadOnlyMemory{System.Char},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.MediaInfo.MediaProtocol,MediaBrowser.Model.Entities.MediaStream,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">ExtractVideoImage(ReadOnlyMemory&lt;Char&gt;, Nullable&lt;MediaContainers&gt;, MediaProtocol, MediaStream, Nullable&lt;Video3DFormat&gt;, Nullable&lt;TimeSpan&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Extracts the video image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractVideoImage(ReadOnlyMemory&lt;char&gt; inputPath, ReadOnlyMemory&lt;char&gt; container, MediaProtocol protocol, MediaStream videoStream, Video3DFormat? threedFormat, TimeSpan? offset, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractVideoImage(ReadOnlyMemory&lt;char&gt; inputPath, MediaContainers? container, MediaProtocol protocol, MediaStream videoStream, Video3DFormat? threedFormat, TimeSpan? offset, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,13 +306,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">inputPath</span></td>
         <td><p>The input path.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaContainers.html">MediaContainers</a>&gt;</td>
         <td><span class="parametername">container</span></td>
         <td><p>The container.</p>
 </td>
@@ -330,19 +330,19 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.Video3DFormat.html">Video3DFormat</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.Video3DFormat.html">Video3DFormat</a>&gt;</td>
         <td><span class="parametername">threedFormat</span></td>
         <td><p>The threed format.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>&gt;</td>
         <td><span class="parametername">offset</span></td>
         <td><p>The offset.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -359,7 +359,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -367,13 +367,13 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__MediaBrowser_Model_MediaInfo_MediaProtocol_MediaBrowser_Model_Entities_MediaStream_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage(System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},MediaBrowser.Model.MediaInfo.MediaProtocol,MediaBrowser.Model.Entities.MediaStream,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImage(ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, MediaProtocol, MediaStream, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_System_ReadOnlyMemory_System_Char__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_MediaInfo_MediaProtocol_MediaBrowser_Model_Entities_MediaStream_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage(System.ReadOnlyMemory{System.Char},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.MediaInfo.MediaProtocol,MediaBrowser.Model.Entities.MediaStream,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImage(ReadOnlyMemory&lt;Char&gt;, Nullable&lt;MediaContainers&gt;, MediaProtocol, MediaStream, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Extracts the video image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractVideoImage(ReadOnlyMemory&lt;char&gt; inputPath, ReadOnlyMemory&lt;char&gt; container, MediaProtocol protocol, MediaStream imageStream, int? streamIndex, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractVideoImage(ReadOnlyMemory&lt;char&gt; inputPath, MediaContainers? container, MediaProtocol protocol, MediaStream imageStream, int? streamIndex, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,13 +386,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">inputPath</span></td>
         <td><p>The input path.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaContainers.html">MediaContainers</a>&gt;</td>
         <td><span class="parametername">container</span></td>
         <td><p>The container.</p>
 </td>
@@ -410,13 +410,13 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">streamIndex</span></td>
         <td><p>Index of the stream.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -433,7 +433,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -441,13 +441,13 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan___System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList(System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan[],System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesFromList(ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan[], String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList_System_ReadOnlyMemory_System_Char__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan___System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList(System.ReadOnlyMemory{System.Char},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan[],System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesFromList(ReadOnlyMemory&lt;Char&gt;, Nullable&lt;MediaContainers&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan[], String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Extracts the video images from a list of time points.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ExtractVideoImagesFromList(ReadOnlyMemory&lt;char&gt; inputPath, ReadOnlyMemory&lt;char&gt; container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan[] extractionTimes, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ExtractVideoImagesFromList(ReadOnlyMemory&lt;char&gt; inputPath, MediaContainers? container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan[] extractionTimes, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,13 +460,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">inputPath</span></td>
         <td><p>The input path.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaContainers.html">MediaContainers</a>&gt;</td>
         <td><span class="parametername">container</span></td>
         <td><p>The container.</p>
 </td>
@@ -484,37 +484,37 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.Video3DFormat.html">Video3DFormat</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.Video3DFormat.html">Video3DFormat</a>&gt;</td>
         <td><span class="parametername">threedFormat</span></td>
         <td><p>The threed format.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>[]</td>
         <td><span class="parametername">extractionTimes</span></td>
         <td><p>The extraction times.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">targetDirectory</span></td>
         <td><p>The target directory.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">filenamePrefix</span></td>
         <td><p>The filename prefix.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">maxWidth</span></td>
         <td><p>The maximum width.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -531,7 +531,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -539,13 +539,13 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesOnInterval_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesOnInterval*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesOnInterval_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesOnInterval(System.ReadOnlyMemory{System.Char},System.ReadOnlyMemory{System.Char},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesOnInterval(ReadOnlyMemory&lt;Char&gt;, ReadOnlyMemory&lt;Char&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan, String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesOnInterval_System_ReadOnlyMemory_System_Char__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesOnInterval(System.ReadOnlyMemory{System.Char},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesOnInterval(ReadOnlyMemory&lt;Char&gt;, Nullable&lt;MediaContainers&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan, String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Extracts the video images on interval.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ExtractVideoImagesOnInterval(ReadOnlyMemory&lt;char&gt; inputPath, ReadOnlyMemory&lt;char&gt; container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan interval, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ExtractVideoImagesOnInterval(ReadOnlyMemory&lt;char&gt; inputPath, MediaContainers? container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan interval, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -558,13 +558,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">inputPath</span></td>
         <td><p>The input path.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlymemory-1">ReadOnlyMemory</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaContainers.html">MediaContainers</a>&gt;</td>
         <td><span class="parametername">container</span></td>
         <td><p>The container.</p>
 </td>
@@ -582,37 +582,37 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.Video3DFormat.html">Video3DFormat</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.Video3DFormat.html">Video3DFormat</a>&gt;</td>
         <td><span class="parametername">threedFormat</span></td>
         <td><p>The threed format.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
         <td><span class="parametername">interval</span></td>
         <td><p>The interval.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">targetDirectory</span></td>
         <td><p>The target directory.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">filenamePrefix</span></td>
         <td><p>The filename prefix.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">maxWidth</span></td>
         <td><p>The maximum width.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -629,11 +629,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>

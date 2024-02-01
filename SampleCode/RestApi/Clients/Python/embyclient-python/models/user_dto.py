@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -33,13 +33,14 @@ class UserDto(object):
         'primary_image_tag': 'str',
         'has_password': 'bool',
         'has_configured_password': 'bool',
-        'has_configured_easy_password': 'bool',
         'enable_auto_login': 'bool',
         'last_login_date': 'datetime',
         'last_activity_date': 'datetime',
-        'configuration': 'ConfigurationUserConfiguration',
-        'policy': 'UsersUserPolicy',
-        'primary_image_aspect_ratio': 'float'
+        'configuration': 'UserConfiguration',
+        'policy': 'UserPolicy',
+        'primary_image_aspect_ratio': 'float',
+        'has_configured_easy_password': 'bool',
+        'user_item_share_level': 'UserItemShareLevel'
     }
 
     attribute_map = {
@@ -54,16 +55,17 @@ class UserDto(object):
         'primary_image_tag': 'PrimaryImageTag',
         'has_password': 'HasPassword',
         'has_configured_password': 'HasConfiguredPassword',
-        'has_configured_easy_password': 'HasConfiguredEasyPassword',
         'enable_auto_login': 'EnableAutoLogin',
         'last_login_date': 'LastLoginDate',
         'last_activity_date': 'LastActivityDate',
         'configuration': 'Configuration',
         'policy': 'Policy',
-        'primary_image_aspect_ratio': 'PrimaryImageAspectRatio'
+        'primary_image_aspect_ratio': 'PrimaryImageAspectRatio',
+        'has_configured_easy_password': 'HasConfiguredEasyPassword',
+        'user_item_share_level': 'UserItemShareLevel'
     }
 
-    def __init__(self, name=None, server_id=None, server_name=None, prefix=None, connect_user_name=None, date_created=None, connect_link_type=None, id=None, primary_image_tag=None, has_password=None, has_configured_password=None, has_configured_easy_password=None, enable_auto_login=None, last_login_date=None, last_activity_date=None, configuration=None, policy=None, primary_image_aspect_ratio=None):  # noqa: E501
+    def __init__(self, name=None, server_id=None, server_name=None, prefix=None, connect_user_name=None, date_created=None, connect_link_type=None, id=None, primary_image_tag=None, has_password=None, has_configured_password=None, enable_auto_login=None, last_login_date=None, last_activity_date=None, configuration=None, policy=None, primary_image_aspect_ratio=None, has_configured_easy_password=None, user_item_share_level=None):  # noqa: E501
         """UserDto - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._server_id = None
@@ -76,13 +78,14 @@ class UserDto(object):
         self._primary_image_tag = None
         self._has_password = None
         self._has_configured_password = None
-        self._has_configured_easy_password = None
         self._enable_auto_login = None
         self._last_login_date = None
         self._last_activity_date = None
         self._configuration = None
         self._policy = None
         self._primary_image_aspect_ratio = None
+        self._has_configured_easy_password = None
+        self._user_item_share_level = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -106,8 +109,6 @@ class UserDto(object):
             self.has_password = has_password
         if has_configured_password is not None:
             self.has_configured_password = has_configured_password
-        if has_configured_easy_password is not None:
-            self.has_configured_easy_password = has_configured_easy_password
         if enable_auto_login is not None:
             self.enable_auto_login = enable_auto_login
         if last_login_date is not None:
@@ -120,11 +121,16 @@ class UserDto(object):
             self.policy = policy
         if primary_image_aspect_ratio is not None:
             self.primary_image_aspect_ratio = primary_image_aspect_ratio
+        if has_configured_easy_password is not None:
+            self.has_configured_easy_password = has_configured_easy_password
+        if user_item_share_level is not None:
+            self.user_item_share_level = user_item_share_level
 
     @property
     def name(self):
         """Gets the name of this UserDto.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this UserDto.  # noqa: E501
         :rtype: str
@@ -135,6 +141,7 @@ class UserDto(object):
     def name(self, name):
         """Sets the name of this UserDto.
 
+        The name.  # noqa: E501
 
         :param name: The name of this UserDto.  # noqa: E501
         :type: str
@@ -146,6 +153,7 @@ class UserDto(object):
     def server_id(self):
         """Gets the server_id of this UserDto.  # noqa: E501
 
+        The server identifier.  # noqa: E501
 
         :return: The server_id of this UserDto.  # noqa: E501
         :rtype: str
@@ -156,6 +164,7 @@ class UserDto(object):
     def server_id(self, server_id):
         """Sets the server_id of this UserDto.
 
+        The server identifier.  # noqa: E501
 
         :param server_id: The server_id of this UserDto.  # noqa: E501
         :type: str
@@ -167,6 +176,7 @@ class UserDto(object):
     def server_name(self):
         """Gets the server_name of this UserDto.  # noqa: E501
 
+        The name of the server. This is not used by the server and is for client\\-side usage only.  # noqa: E501
 
         :return: The server_name of this UserDto.  # noqa: E501
         :rtype: str
@@ -177,6 +187,7 @@ class UserDto(object):
     def server_name(self, server_name):
         """Sets the server_name of this UserDto.
 
+        The name of the server. This is not used by the server and is for client\\-side usage only.  # noqa: E501
 
         :param server_name: The server_name of this UserDto.  # noqa: E501
         :type: str
@@ -209,6 +220,7 @@ class UserDto(object):
     def connect_user_name(self):
         """Gets the connect_user_name of this UserDto.  # noqa: E501
 
+        The name of the connect user.  # noqa: E501
 
         :return: The connect_user_name of this UserDto.  # noqa: E501
         :rtype: str
@@ -219,6 +231,7 @@ class UserDto(object):
     def connect_user_name(self, connect_user_name):
         """Sets the connect_user_name of this UserDto.
 
+        The name of the connect user.  # noqa: E501
 
         :param connect_user_name: The connect_user_name of this UserDto.  # noqa: E501
         :type: str
@@ -272,6 +285,7 @@ class UserDto(object):
     def id(self):
         """Gets the id of this UserDto.  # noqa: E501
 
+        The id.  # noqa: E501
 
         :return: The id of this UserDto.  # noqa: E501
         :rtype: str
@@ -282,6 +296,7 @@ class UserDto(object):
     def id(self, id):
         """Sets the id of this UserDto.
 
+        The id.  # noqa: E501
 
         :param id: The id of this UserDto.  # noqa: E501
         :type: str
@@ -293,6 +308,7 @@ class UserDto(object):
     def primary_image_tag(self):
         """Gets the primary_image_tag of this UserDto.  # noqa: E501
 
+        The primary image tag.  # noqa: E501
 
         :return: The primary_image_tag of this UserDto.  # noqa: E501
         :rtype: str
@@ -303,6 +319,7 @@ class UserDto(object):
     def primary_image_tag(self, primary_image_tag):
         """Sets the primary_image_tag of this UserDto.
 
+        The primary image tag.  # noqa: E501
 
         :param primary_image_tag: The primary_image_tag of this UserDto.  # noqa: E501
         :type: str
@@ -314,6 +331,7 @@ class UserDto(object):
     def has_password(self):
         """Gets the has_password of this UserDto.  # noqa: E501
 
+        A value indicating whether this instance has password.  # noqa: E501
 
         :return: The has_password of this UserDto.  # noqa: E501
         :rtype: bool
@@ -324,6 +342,7 @@ class UserDto(object):
     def has_password(self, has_password):
         """Sets the has_password of this UserDto.
 
+        A value indicating whether this instance has password.  # noqa: E501
 
         :param has_password: The has_password of this UserDto.  # noqa: E501
         :type: bool
@@ -335,6 +354,7 @@ class UserDto(object):
     def has_configured_password(self):
         """Gets the has_configured_password of this UserDto.  # noqa: E501
 
+        A value indicating whether this instance has configured password.  # noqa: E501
 
         :return: The has_configured_password of this UserDto.  # noqa: E501
         :rtype: bool
@@ -345,33 +365,13 @@ class UserDto(object):
     def has_configured_password(self, has_configured_password):
         """Sets the has_configured_password of this UserDto.
 
+        A value indicating whether this instance has configured password.  # noqa: E501
 
         :param has_configured_password: The has_configured_password of this UserDto.  # noqa: E501
         :type: bool
         """
 
         self._has_configured_password = has_configured_password
-
-    @property
-    def has_configured_easy_password(self):
-        """Gets the has_configured_easy_password of this UserDto.  # noqa: E501
-
-
-        :return: The has_configured_easy_password of this UserDto.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_configured_easy_password
-
-    @has_configured_easy_password.setter
-    def has_configured_easy_password(self, has_configured_easy_password):
-        """Sets the has_configured_easy_password of this UserDto.
-
-
-        :param has_configured_easy_password: The has_configured_easy_password of this UserDto.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_configured_easy_password = has_configured_easy_password
 
     @property
     def enable_auto_login(self):
@@ -398,6 +398,7 @@ class UserDto(object):
     def last_login_date(self):
         """Gets the last_login_date of this UserDto.  # noqa: E501
 
+        The last login date.  # noqa: E501
 
         :return: The last_login_date of this UserDto.  # noqa: E501
         :rtype: datetime
@@ -408,6 +409,7 @@ class UserDto(object):
     def last_login_date(self, last_login_date):
         """Sets the last_login_date of this UserDto.
 
+        The last login date.  # noqa: E501
 
         :param last_login_date: The last_login_date of this UserDto.  # noqa: E501
         :type: datetime
@@ -419,6 +421,7 @@ class UserDto(object):
     def last_activity_date(self):
         """Gets the last_activity_date of this UserDto.  # noqa: E501
 
+        The last activity date.  # noqa: E501
 
         :return: The last_activity_date of this UserDto.  # noqa: E501
         :rtype: datetime
@@ -429,6 +432,7 @@ class UserDto(object):
     def last_activity_date(self, last_activity_date):
         """Sets the last_activity_date of this UserDto.
 
+        The last activity date.  # noqa: E501
 
         :param last_activity_date: The last_activity_date of this UserDto.  # noqa: E501
         :type: datetime
@@ -442,7 +446,7 @@ class UserDto(object):
 
 
         :return: The configuration of this UserDto.  # noqa: E501
-        :rtype: ConfigurationUserConfiguration
+        :rtype: UserConfiguration
         """
         return self._configuration
 
@@ -452,7 +456,7 @@ class UserDto(object):
 
 
         :param configuration: The configuration of this UserDto.  # noqa: E501
-        :type: ConfigurationUserConfiguration
+        :type: UserConfiguration
         """
 
         self._configuration = configuration
@@ -463,7 +467,7 @@ class UserDto(object):
 
 
         :return: The policy of this UserDto.  # noqa: E501
-        :rtype: UsersUserPolicy
+        :rtype: UserPolicy
         """
         return self._policy
 
@@ -473,7 +477,7 @@ class UserDto(object):
 
 
         :param policy: The policy of this UserDto.  # noqa: E501
-        :type: UsersUserPolicy
+        :type: UserPolicy
         """
 
         self._policy = policy
@@ -482,6 +486,7 @@ class UserDto(object):
     def primary_image_aspect_ratio(self):
         """Gets the primary_image_aspect_ratio of this UserDto.  # noqa: E501
 
+        The primary image aspect ratio.  # noqa: E501
 
         :return: The primary_image_aspect_ratio of this UserDto.  # noqa: E501
         :rtype: float
@@ -492,12 +497,55 @@ class UserDto(object):
     def primary_image_aspect_ratio(self, primary_image_aspect_ratio):
         """Sets the primary_image_aspect_ratio of this UserDto.
 
+        The primary image aspect ratio.  # noqa: E501
 
         :param primary_image_aspect_ratio: The primary_image_aspect_ratio of this UserDto.  # noqa: E501
         :type: float
         """
 
         self._primary_image_aspect_ratio = primary_image_aspect_ratio
+
+    @property
+    def has_configured_easy_password(self):
+        """Gets the has_configured_easy_password of this UserDto.  # noqa: E501
+
+
+        :return: The has_configured_easy_password of this UserDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_configured_easy_password
+
+    @has_configured_easy_password.setter
+    def has_configured_easy_password(self, has_configured_easy_password):
+        """Sets the has_configured_easy_password of this UserDto.
+
+
+        :param has_configured_easy_password: The has_configured_easy_password of this UserDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_configured_easy_password = has_configured_easy_password
+
+    @property
+    def user_item_share_level(self):
+        """Gets the user_item_share_level of this UserDto.  # noqa: E501
+
+
+        :return: The user_item_share_level of this UserDto.  # noqa: E501
+        :rtype: UserItemShareLevel
+        """
+        return self._user_item_share_level
+
+    @user_item_share_level.setter
+    def user_item_share_level(self, user_item_share_level):
+        """Sets the user_item_share_level of this UserDto.
+
+
+        :param user_item_share_level: The user_item_share_level of this UserDto.  # noqa: E501
+        :type: UserItemShareLevel
+        """
+
+        self._user_item_share_level = user_item_share_level
 
     def to_dict(self):
         """Returns the model properties as a dict"""

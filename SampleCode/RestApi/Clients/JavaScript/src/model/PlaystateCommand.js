@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -69,6 +69,12 @@ export default class PlaystateCommand {
          * @const
          */
         playPause = "PlayPause";
+
+        /**
+         * value: "SeekRelative"
+         * @const
+         */
+        seekRelative = "SeekRelative";
 
 
     /**

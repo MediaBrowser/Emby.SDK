@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -20,11 +20,11 @@ import java.io.IOException;
 
 
 import io.swagger.client.model.NetEndPointInfo;
+import io.swagger.client.model.PackageVersionInfo;
 import io.swagger.client.model.PublicSystemInfo;
 import io.swagger.client.model.QueryResultLogFile;
 import io.swagger.client.model.QueryResultString;
 import io.swagger.client.model.SystemInfo;
-import io.swagger.client.model.UpdatesPackageVersionInfo;
 import io.swagger.client.model.WakeOnLanInfo;
 
 import java.lang.reflect.Type;
@@ -328,7 +328,7 @@ public class SystemServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -346,7 +346,7 @@ public class SystemServiceApi {
 
     /**
      * Gets public information about the server
-     * No authentication required
+     * Requires authentication as user
      * @return PublicSystemInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -357,7 +357,7 @@ public class SystemServiceApi {
 
     /**
      * Gets public information about the server
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;PublicSystemInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -369,7 +369,7 @@ public class SystemServiceApi {
 
     /**
      * Gets public information about the server (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -824,7 +824,7 @@ public class SystemServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -842,7 +842,7 @@ public class SystemServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void getSystemPing() throws ApiException {
@@ -851,7 +851,7 @@ public class SystemServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -862,7 +862,7 @@ public class SystemServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -955,23 +955,23 @@ public class SystemServiceApi {
     /**
      * Gets release notes
      * Requires authentication as user
-     * @return UpdatesPackageVersionInfo
+     * @return PackageVersionInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public UpdatesPackageVersionInfo getSystemReleasenotes() throws ApiException {
-        ApiResponse<UpdatesPackageVersionInfo> resp = getSystemReleasenotesWithHttpInfo();
+    public PackageVersionInfo getSystemReleasenotes() throws ApiException {
+        ApiResponse<PackageVersionInfo> resp = getSystemReleasenotesWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets release notes
      * Requires authentication as user
-     * @return ApiResponse&lt;UpdatesPackageVersionInfo&gt;
+     * @return ApiResponse&lt;PackageVersionInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<UpdatesPackageVersionInfo> getSystemReleasenotesWithHttpInfo() throws ApiException {
+    public ApiResponse<PackageVersionInfo> getSystemReleasenotesWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getSystemReleasenotesValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<UpdatesPackageVersionInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<PackageVersionInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -982,7 +982,7 @@ public class SystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSystemReleasenotesAsync(final ApiCallback<UpdatesPackageVersionInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSystemReleasenotesAsync(final ApiCallback<PackageVersionInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1004,7 +1004,7 @@ public class SystemServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSystemReleasenotesValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<UpdatesPackageVersionInfo>(){}.getType();
+        Type localVarReturnType = new TypeToken<PackageVersionInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1071,23 +1071,23 @@ public class SystemServiceApi {
     /**
      * Gets release notes
      * Requires authentication as user
-     * @return List&lt;UpdatesPackageVersionInfo&gt;
+     * @return List&lt;PackageVersionInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<UpdatesPackageVersionInfo> getSystemReleasenotesVersions() throws ApiException {
-        ApiResponse<List<UpdatesPackageVersionInfo>> resp = getSystemReleasenotesVersionsWithHttpInfo();
+    public List<PackageVersionInfo> getSystemReleasenotesVersions() throws ApiException {
+        ApiResponse<List<PackageVersionInfo>> resp = getSystemReleasenotesVersionsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets release notes
      * Requires authentication as user
-     * @return ApiResponse&lt;List&lt;UpdatesPackageVersionInfo&gt;&gt;
+     * @return ApiResponse&lt;List&lt;PackageVersionInfo&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<UpdatesPackageVersionInfo>> getSystemReleasenotesVersionsWithHttpInfo() throws ApiException {
+    public ApiResponse<List<PackageVersionInfo>> getSystemReleasenotesVersionsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getSystemReleasenotesVersionsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<List<UpdatesPackageVersionInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<PackageVersionInfo>>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -1098,7 +1098,7 @@ public class SystemServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getSystemReleasenotesVersionsAsync(final ApiCallback<List<UpdatesPackageVersionInfo>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getSystemReleasenotesVersionsAsync(final ApiCallback<List<PackageVersionInfo>> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1120,7 +1120,7 @@ public class SystemServiceApi {
         }
 
         com.squareup.okhttp.Call call = getSystemReleasenotesVersionsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<UpdatesPackageVersionInfo>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<PackageVersionInfo>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -1284,7 +1284,7 @@ public class SystemServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1302,7 +1302,7 @@ public class SystemServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
     public void postSystemPing() throws ApiException {
@@ -1311,7 +1311,7 @@ public class SystemServiceApi {
 
     /**
      * 
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
@@ -1322,7 +1322,7 @@ public class SystemServiceApi {
 
     /**
      *  (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -173,12 +173,13 @@ public class DeviceServiceApi {
     }
     /**
      * Build call for getDevices
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getDevicesCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getDevicesCall(String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -186,6 +187,8 @@ public class DeviceServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (sortOrder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("SortOrder", sortOrder));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -220,9 +223,9 @@ public class DeviceServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getDevicesValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getDevicesValidateBeforeCall(String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = getDevicesCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDevicesCall(sortOrder, progressListener, progressRequestListener);
         return call;
 
         
@@ -234,22 +237,24 @@ public class DeviceServiceApi {
     /**
      * Gets all devices
      * Requires authentication as administrator
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return QueryResultDevicesDeviceInfo
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultDevicesDeviceInfo getDevices() throws ApiException {
-        ApiResponse<QueryResultDevicesDeviceInfo> resp = getDevicesWithHttpInfo();
+    public QueryResultDevicesDeviceInfo getDevices(String sortOrder) throws ApiException {
+        ApiResponse<QueryResultDevicesDeviceInfo> resp = getDevicesWithHttpInfo(sortOrder);
         return resp.getData();
     }
 
     /**
      * Gets all devices
      * Requires authentication as administrator
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return ApiResponse&lt;QueryResultDevicesDeviceInfo&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultDevicesDeviceInfo> getDevicesWithHttpInfo() throws ApiException {
-        com.squareup.okhttp.Call call = getDevicesValidateBeforeCall(null, null);
+    public ApiResponse<QueryResultDevicesDeviceInfo> getDevicesWithHttpInfo(String sortOrder) throws ApiException {
+        com.squareup.okhttp.Call call = getDevicesValidateBeforeCall(sortOrder, null, null);
         Type localVarReturnType = new TypeToken<QueryResultDevicesDeviceInfo>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -257,11 +262,12 @@ public class DeviceServiceApi {
     /**
      * Gets all devices (asynchronously)
      * Requires authentication as administrator
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getDevicesAsync(final ApiCallback<QueryResultDevicesDeviceInfo> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDevicesAsync(String sortOrder, final ApiCallback<QueryResultDevicesDeviceInfo> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -282,20 +288,19 @@ public class DeviceServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getDevicesValidateBeforeCall(progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDevicesValidateBeforeCall(sortOrder, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<QueryResultDevicesDeviceInfo>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for getDevicesCamerauploads
-     * @param deviceId Device Id (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getDevicesCamerauploadsCall(String deviceId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getDevicesCamerauploadsCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -303,8 +308,6 @@ public class DeviceServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (deviceId != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("DeviceId", deviceId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -339,13 +342,9 @@ public class DeviceServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getDevicesCamerauploadsValidateBeforeCall(String deviceId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'deviceId' is set
-        if (deviceId == null) {
-            throw new ApiException("Missing the required parameter 'deviceId' when calling getDevicesCamerauploads(Async)");
-        }
+    private com.squareup.okhttp.Call getDevicesCamerauploadsValidateBeforeCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = getDevicesCamerauploadsCall(deviceId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDevicesCamerauploadsCall(progressListener, progressRequestListener);
         return call;
 
         
@@ -357,24 +356,22 @@ public class DeviceServiceApi {
     /**
      * Gets camera upload history for a device
      * Requires authentication as user
-     * @param deviceId Device Id (required)
      * @return DevicesContentUploadHistory
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public DevicesContentUploadHistory getDevicesCamerauploads(String deviceId) throws ApiException {
-        ApiResponse<DevicesContentUploadHistory> resp = getDevicesCamerauploadsWithHttpInfo(deviceId);
+    public DevicesContentUploadHistory getDevicesCamerauploads() throws ApiException {
+        ApiResponse<DevicesContentUploadHistory> resp = getDevicesCamerauploadsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets camera upload history for a device
      * Requires authentication as user
-     * @param deviceId Device Id (required)
      * @return ApiResponse&lt;DevicesContentUploadHistory&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<DevicesContentUploadHistory> getDevicesCamerauploadsWithHttpInfo(String deviceId) throws ApiException {
-        com.squareup.okhttp.Call call = getDevicesCamerauploadsValidateBeforeCall(deviceId, null, null);
+    public ApiResponse<DevicesContentUploadHistory> getDevicesCamerauploadsWithHttpInfo() throws ApiException {
+        com.squareup.okhttp.Call call = getDevicesCamerauploadsValidateBeforeCall(null, null);
         Type localVarReturnType = new TypeToken<DevicesContentUploadHistory>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -382,12 +379,11 @@ public class DeviceServiceApi {
     /**
      * Gets camera upload history for a device (asynchronously)
      * Requires authentication as user
-     * @param deviceId Device Id (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getDevicesCamerauploadsAsync(String deviceId, final ApiCallback<DevicesContentUploadHistory> callback) throws ApiException {
+    public com.squareup.okhttp.Call getDevicesCamerauploadsAsync(final ApiCallback<DevicesContentUploadHistory> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -408,7 +404,7 @@ public class DeviceServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getDevicesCamerauploadsValidateBeforeCall(deviceId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getDevicesCamerauploadsValidateBeforeCall(progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<DevicesContentUploadHistory>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -668,7 +664,6 @@ public class DeviceServiceApi {
     /**
      * Build call for postDevicesCamerauploads
      * @param body Binary stream (required)
-     * @param deviceId Device Id (required)
      * @param album Album (required)
      * @param name Name (required)
      * @param id Id (required)
@@ -677,7 +672,7 @@ public class DeviceServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postDevicesCamerauploadsCall(Object body, String deviceId, String album, String name, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postDevicesCamerauploadsCall(Object body, String album, String name, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -685,8 +680,6 @@ public class DeviceServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (deviceId != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("DeviceId", deviceId));
         if (album != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("Album", album));
         if (name != null)
@@ -727,14 +720,10 @@ public class DeviceServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postDevicesCamerauploadsValidateBeforeCall(Object body, String deviceId, String album, String name, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postDevicesCamerauploadsValidateBeforeCall(Object body, String album, String name, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postDevicesCamerauploads(Async)");
-        }
-        // verify the required parameter 'deviceId' is set
-        if (deviceId == null) {
-            throw new ApiException("Missing the required parameter 'deviceId' when calling postDevicesCamerauploads(Async)");
         }
         // verify the required parameter 'album' is set
         if (album == null) {
@@ -749,7 +738,7 @@ public class DeviceServiceApi {
             throw new ApiException("Missing the required parameter 'id' when calling postDevicesCamerauploads(Async)");
         }
         
-        com.squareup.okhttp.Call call = postDevicesCamerauploadsCall(body, deviceId, album, name, id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postDevicesCamerauploadsCall(body, album, name, id, progressListener, progressRequestListener);
         return call;
 
         
@@ -762,29 +751,27 @@ public class DeviceServiceApi {
      * Uploads content
      * Requires authentication as user
      * @param body Binary stream (required)
-     * @param deviceId Device Id (required)
      * @param album Album (required)
      * @param name Name (required)
      * @param id Id (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postDevicesCamerauploads(Object body, String deviceId, String album, String name, String id) throws ApiException {
-        postDevicesCamerauploadsWithHttpInfo(body, deviceId, album, name, id);
+    public void postDevicesCamerauploads(Object body, String album, String name, String id) throws ApiException {
+        postDevicesCamerauploadsWithHttpInfo(body, album, name, id);
     }
 
     /**
      * Uploads content
      * Requires authentication as user
      * @param body Binary stream (required)
-     * @param deviceId Device Id (required)
      * @param album Album (required)
      * @param name Name (required)
      * @param id Id (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postDevicesCamerauploadsWithHttpInfo(Object body, String deviceId, String album, String name, String id) throws ApiException {
-        com.squareup.okhttp.Call call = postDevicesCamerauploadsValidateBeforeCall(body, deviceId, album, name, id, null, null);
+    public ApiResponse<Void> postDevicesCamerauploadsWithHttpInfo(Object body, String album, String name, String id) throws ApiException {
+        com.squareup.okhttp.Call call = postDevicesCamerauploadsValidateBeforeCall(body, album, name, id, null, null);
         return apiClient.execute(call);
     }
 
@@ -792,7 +779,6 @@ public class DeviceServiceApi {
      * Uploads content (asynchronously)
      * Requires authentication as user
      * @param body Binary stream (required)
-     * @param deviceId Device Id (required)
      * @param album Album (required)
      * @param name Name (required)
      * @param id Id (required)
@@ -800,7 +786,7 @@ public class DeviceServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postDevicesCamerauploadsAsync(Object body, String deviceId, String album, String name, String id, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postDevicesCamerauploadsAsync(Object body, String album, String name, String id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -821,7 +807,7 @@ public class DeviceServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postDevicesCamerauploadsValidateBeforeCall(body, deviceId, album, name, id, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postDevicesCamerauploadsValidateBeforeCall(body, album, name, id, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

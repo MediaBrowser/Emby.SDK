@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -16,7 +16,7 @@ import SubtitlesSubtitleDownloadResult from '../model/SubtitlesSubtitleDownloadR
 /**
 * SubtitleService service.
 * @module EmbyClient.JavaScript/SubtitleServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class SubtitleServiceApi {
 
@@ -119,7 +119,7 @@ export default class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/SubtitleServiceApi~getItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -143,7 +143,7 @@ export default class SubtitleServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -164,7 +164,7 @@ export default class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/SubtitleServiceApi~getItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -188,7 +188,7 @@ export default class SubtitleServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -224,7 +224,8 @@ export default class SubtitleServiceApi {
       let queryParams = {
         'MediaSourceId': mediaSourceId,
         'IsPerfectMatch': opts['isPerfectMatch'],
-        'IsForced': opts['isForced']
+        'IsForced': opts['isForced'],
+        'IsHearingImpaired': opts['isHearingImpaired']
       };
       let headerParams = {
       };
@@ -288,7 +289,7 @@ export default class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/SubtitleServiceApi~getVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -312,7 +313,7 @@ export default class SubtitleServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -333,7 +334,7 @@ export default class SubtitleServiceApi {
 
     /**
      * Gets subtitles in a specified format.
-     * No authentication required
+     * Requires authentication as user
      * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript/SubtitleServiceApi~getVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -357,7 +358,7 @@ export default class SubtitleServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

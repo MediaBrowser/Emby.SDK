@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines MediaStreamType
+    /// Enum MediaStreamType  
     /// </summary>
+    /// <value>Enum MediaStreamType  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum MediaStreamType
     {

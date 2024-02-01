@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,7 +15,7 @@ import LoggingLogSeverity from './LoggingLogSeverity';
 /**
 * The ActivityLogEntry model module.
 * @module model/ActivityLogEntry
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ActivityLogEntry {
     /**
@@ -77,38 +77,47 @@ export default class ActivityLogEntry {
     }
 
     /**
+    * The identifier.
     * @member {Number} Id
     */
     'Id' = undefined;
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The overview.
     * @member {String} Overview
     */
     'Overview' = undefined;
     /**
+    * The short overview.
     * @member {String} ShortOverview
     */
     'ShortOverview' = undefined;
     /**
+    * The type.
     * @member {String} Type
     */
     'Type' = undefined;
     /**
+    * The item identifier.
     * @member {String} ItemId
     */
     'ItemId' = undefined;
     /**
+    * The date.
     * @member {Date} Date
     */
     'Date' = undefined;
     /**
+    * The user identifier.
     * @member {String} UserId
     */
     'UserId' = undefined;
     /**
+    * The user primary image tag.
     * @member {String} UserPrimaryImageTag
     */
     'UserPrimaryImageTag' = undefined;

@@ -158,7 +158,7 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></div>
     <div class="level2"><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a></div>
     <div class="level3"><span class="xref">MusicAlbum</span></div>
@@ -167,6 +167,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.IItemByName.html">IItemByName</a></div>
+    <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasAlbumArtist.html">IHasAlbumArtist</a></div>
     <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasArtist.html">IHasArtist</a></div>
@@ -177,6 +178,9 @@
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_UserViewManager">Folder.UserViewManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsPreSorted">Folder.IsPreSorted</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsPhysicalRoot">Folder.IsPhysicalRoot</a>
@@ -191,13 +195,16 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsExternalTransfer">Folder.SupportsExternalTransfer</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FileNameWithoutExtension">Folder.FileNameWithoutExtension</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsShortcutChildren">Folder.SupportsShortcutChildren</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AddChild_MediaBrowser_Controller_Entities_BaseItem_">Folder.AddChild(BaseItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AddChild_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_BaseItem___">Folder.AddChild(BaseItem, BaseItem[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.GetNonCachedChildren(IDirectoryService, LibraryOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildrenForValidation">Folder.GetChildrenForValidation()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildren_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetChildren(InternalItemsQuery)</a>
@@ -206,16 +213,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildrenIds_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetChildrenIds(InternalItemsQuery)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsVisibleViaTags_MediaBrowser_Controller_Entities_User_">Folder.IsVisibleViaTags(User)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsVisible_MediaBrowser_Controller_Entities_User_">Folder.IsVisible(User)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetRefreshProgress">Folder.GetRefreshProgress()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_ValidateChildren_System_IProgress_System_Double__System_Threading_CancellationToken_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_">Folder.ValidateChildren(IProgress&lt;Double&gt;, CancellationToken, MetadataRefreshOptions, Boolean)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshStart">Folder.TriggerOnRefreshStart()</a>
@@ -224,19 +222,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshComplete">Folder.TriggerOnRefreshComplete()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SortChildrenForValidation_MediaBrowser_Controller_Entities_BaseItem___">Folder.SortChildrenForValidation(BaseItem[])</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.GetNonCachedChildren(IDirectoryService, LibraryOptions)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_">Folder.GetRecursiveChildCount(User)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_QueryRecursiveForItemIds_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.QueryRecursiveForItemIds(InternalItemsQuery)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_QueryRecursive_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.QueryRecursive(InternalItemsQuery)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItems_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItems(InternalItemsQuery)</a>
@@ -254,10 +240,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetRecursiveChildren">Folder.GetRecursiveChildren()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsOwnedItems">Folder.SupportsOwnedItems</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_System_DateTimeOffset__System_Boolean_">Folder.MarkPlayed(User, Nullable&lt;DateTimeOffset&gt;, Boolean)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_MarkPlayed_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_BaseItem___System_Nullable_System_DateTimeOffset__System_Boolean_">Folder.MarkPlayed(User, BaseItem[], Nullable&lt;DateTimeOffset&gt;, Boolean)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_MarkUnplayed_MediaBrowser_Controller_Entities_User_">Folder.MarkUnplayed(User)</a>
@@ -272,7 +255,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AllowRecursiveCounts">Folder.AllowRecursiveCounts</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_">Folder.FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlayCount">BaseItem.PlayCount</a>
@@ -296,6 +279,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFavorite">BaseItem.IsFavorite</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserRating">BaseItem.UserRating</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlaybackPositionTicks">BaseItem.PlaybackPositionTicks</a>
     </div>
     <div>
@@ -311,16 +297,25 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ListItemEntryId">BaseItem.ListItemEntryId</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugReplaceChars">BaseItem.SlugReplaceChars</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSecondaryMergedItemInSameFolder">BaseItem.IsSecondaryMergedItemInSameFolder</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugChar">BaseItem.SlugChar</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPublic">BaseItem.IsPublic</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaStreams">BaseItem.MediaStreams</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AdditionalPartCount">BaseItem.AdditionalPartCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalTrailerCount">BaseItem.LocalTrailerCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SpecialFeatureCount">BaseItem.SpecialFeatureCount</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensions">BaseItem.SupportedImageExtensions</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensionsList">BaseItem.SupportedImageExtensionsList</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrailerFolderName">BaseItem.TrailerFolderName</a>
@@ -341,22 +336,16 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsUserData">BaseItem.SupportsUserData</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongIds">BaseItem.ThemeSongIds</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPlaceHolder">BaseItem.IsPlaceHolder</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeVideoIds">BaseItem.ThemeVideoIds</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsExtras">BaseItem.SupportsExtras</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsCompleteMedia">BaseItem.IsCompleteMedia</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAdditionalParts">BaseItem.SupportsAdditionalParts</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds">BaseItem.LocalTrailerIds</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsCompleteMedia">BaseItem.IsCompleteMedia</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayExtraTypes">BaseItem.DisplayExtraTypes</a>
@@ -365,13 +354,58 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayExtraIds">BaseItem.GetDisplayExtraIds()</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongIds">BaseItem.ThemeSongIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeVideoIds">BaseItem.ThemeVideoIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds">BaseItem.LocalTrailerIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasPlaceholderMatadata">BaseItem.HasPlaceholderMatadata()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsManageAccess">BaseItem.SupportsManageAccess()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanManageAccess_MediaBrowser_Model_Dto_UserItemShareLevel_">BaseItem.CanManageAccess(UserItemShareLevel)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsMakePublicOrPrivate">BaseItem.SupportsMakePublicOrPrivate()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AssertHasMinimumShareLevel_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_">BaseItem.AssertHasMinimumShareLevel(User, UserItemShareLevel)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetShareLevel_MediaBrowser_Controller_Entities_User_">BaseItem.GetShareLevel(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanLeaveSharedContent_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_">BaseItem.CanLeaveSharedContent(User, UserItemShareLevel)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanMakePublic_MediaBrowser_Controller_Entities_User_">BaseItem.CanMakePublic(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanMakePrivate_MediaBrowser_Controller_Entities_User_">BaseItem.CanMakePrivate(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanMakePublic_MediaBrowser_Model_Dto_UserItemShareLevel_">BaseItem.CanMakePublic(UserItemShareLevel)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanMakePrivate_MediaBrowser_Model_Dto_UserItemShareLevel_">BaseItem.CanMakePrivate(UserItemShareLevel)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtraGuids_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtraGuids(ExtraType[])</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAdditionalParts_System_Int64_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Controller_Entities_User_">BaseItem.GetAdditionalParts(Int64, DtoOptions, User)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAdditionalParts_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Controller_Entities_User_">BaseItem.GetAdditionalParts(DtoOptions, User)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAdditionalPartIds_System_Int64_">BaseItem.GetAdditionalPartIds(Int64)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAdditionalPartIds">BaseItem.GetAdditionalPartIds()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtraTypes_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtraTypes(ExtraType[])</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtraIds_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtraIds(ExtraType[])</a>
@@ -380,16 +414,19 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_MediaBrowser_Model_Entities_ExtraType___">BaseItem.GetExtras(ExtraType[])</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_MediaBrowser_Model_Entities_ExtraType___MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetExtras(ExtraType[], DtoOptions)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Int64_System_String_MediaBrowser_Model_Entities_ExtraType___MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetExtras(Int64, String, ExtraType[], DtoOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Int64_MediaBrowser_Model_Entities_ExtraType___MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetExtras(Int64, ExtraType[], DtoOptions)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeSongs">BaseItem.GetThemeSongs()</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeSongs_MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetThemeSongs(DtoOptions)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeVideos">BaseItem.GetThemeVideos()</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeVideos_MediaBrowser_Controller_Dto_DtoOptions_">BaseItem.GetThemeVideos(DtoOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRunTimeTicksForPlayState">BaseItem.GetRunTimeTicksForPlayState()</a>
@@ -407,7 +444,16 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Prefix">BaseItem.Prefix</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ShareLevel">BaseItem.ShareLevel</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SyncStatus">BaseItem.SyncStatus</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Container">BaseItem.Container</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaContainer">BaseItem.MediaContainer</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Tagline">BaseItem.Tagline</a>
@@ -422,6 +468,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AlbumId">BaseItem.AlbumId</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SeriesId">BaseItem.SeriesId</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Album">BaseItem.Album</a>
     </div>
     <div>
@@ -432,6 +481,15 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsInMixedFolder">BaseItem.IsInMixedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OwnsFolder">BaseItem.OwnsFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OriginalParsedName">BaseItem.OriginalParsedName</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsNameParsedFromFolder">BaseItem.IsNameParsedFromFolder</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayOrderIntValue">BaseItem.GetDisplayOrderIntValue()</a>
@@ -447,6 +505,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsShortcut">BaseItem.IsShortcut</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFileShortcut_System_String_">BaseItem.IsFileShortcut(String)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsUnaired">BaseItem.IsUnaired</a>
@@ -468,9 +529,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultMediaSourceId">BaseItem.GetDefaultMediaSourceId()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_OwnerId">BaseItem.OwnerId</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
@@ -500,9 +558,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHidden">BaseItem.IsHidden</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetOwner">BaseItem.GetOwner()</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocationType">BaseItem.LocationType</a>
     </div>
     <div>
@@ -516,6 +571,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasPathProtocol">BaseItem.HasPathProtocol</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FileNameWithoutExtension">BaseItem.FileNameWithoutExtension</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FileName">BaseItem.FileName</a>
@@ -533,10 +591,13 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsImageFetcherEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsImageFetcherEnabled(LibraryOptions, String)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, Folder[])</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___">BaseItem.IsAuthorizedToDelete(User, UserItemShareLevel, Folder[])</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(User, Folder[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Dto_UserItemShareLevel_MediaBrowser_Controller_Entities_Folder___">BaseItem.CanDelete(User, UserItemShareLevel, Folder[])</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload">BaseItem.CanDownload()</a>
@@ -563,6 +624,15 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateModifiedChanged_System_DateTimeOffset_">BaseItem.HasDateModifiedChanged(DateTimeOffset)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_DateTimeOffset_System_DateTimeOffset_">BaseItem.HasDateChanged(DateTimeOffset, DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_Nullable_System_DateTimeOffset__System_DateTimeOffset_">BaseItem.HasDateChanged(Nullable&lt;DateTimeOffset&gt;, DateTimeOffset)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasDateChanged_System_Nullable_System_DateTimeOffset__System_Nullable_System_DateTimeOffset__">BaseItem.HasDateChanged(Nullable&lt;DateTimeOffset&gt;, Nullable&lt;DateTimeOffset&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateLastSaved">BaseItem.DateLastSaved</a>
     </div>
     <div>
@@ -576,6 +646,12 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LibraryManager">BaseItem.LibraryManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LiveTvManager">BaseItem.LiveTvManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FeatureManager">BaseItem.FeatureManager</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserManager">BaseItem.UserManager</a>
@@ -647,7 +723,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Parent">BaseItem.Parent</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetParent_MediaBrowser_Controller_Entities_Folder_">BaseItem.SetParent(Folder)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetParent_MediaBrowser_Controller_Entities_BaseItem_">BaseItem.SetParent(BaseItem)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParent">BaseItem.GetParent()</a>
@@ -755,9 +831,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CustomRatingForComparison">BaseItem.CustomRatingForComparison</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPlayAccess_MediaBrowser_Controller_Entities_User_">BaseItem.GetPlayAccess(User)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaStreams">BaseItem.GetMediaStreams()</a>
     </div>
     <div>
@@ -785,6 +858,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetAllItemsForMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_">BaseItem.GetAllItemsForMediaSources(User, Boolean)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(BaseItem[], LibraryOptions, CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(CancellationToken)</a>
     </div>
     <div>
@@ -794,13 +870,16 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientId">BaseItem.GetClientId()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientId_System_Boolean_">BaseItem.GetClientId(Boolean)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, LibraryOptions, CancellationToken)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, BaseItem[], LibraryOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsOwnedItems">BaseItem.SupportsOwnedItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsStudios">BaseItem.SupportsStudios</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsTags">BaseItem.SupportsTags</a>
@@ -815,13 +894,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsLocalTrailers">BaseItem.SupportsLocalTrailers</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_">BaseItem.RefreshedOwnedItems(MetadataRefreshOptions, LibraryOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetFileSystemChildren_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.GetFileSystemChildren(IDirectoryService)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSecondaryMergedItemInSameFolder">BaseItem.IsSecondaryMergedItemInSameFolder()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUniquelyIdentifiableProviderIds">BaseItem.GetUniquelyIdentifiableProviderIds()</a>
@@ -836,7 +909,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey">BaseItem.CreatePresentationUniqueKey()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.CreatePresentationUniqueKey(LibraryOptions)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.CreatePresentationUniqueKey(BaseItem[], LibraryOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPresentationUniqueKey">BaseItem.GetDefaultPresentationUniqueKey()</a>
@@ -848,7 +921,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey">BaseItem.GetPresentationUniqueKey()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RequiresRefresh_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.RequiresRefresh(IDirectoryService)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AfterMetadataRefresh">BaseItem.AfterMetadataRefresh()</a>
@@ -869,10 +942,10 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataCountryCode_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPreferredMetadataCountryCode(LibraryOptions)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IsSaveLocalMetadataEnabled(LibraryOptions)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsLocalMetadataReaderEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsLocalMetadataReaderEnabled(LibraryOptions, String)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsParentalAllowed_MediaBrowser_Controller_Entities_User_">BaseItem.IsParentalAllowed(User)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IsSaveLocalMetadataEnabled(LibraryOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParentalRatingValue">BaseItem.GetParentalRatingValue()</a>
@@ -881,10 +954,10 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInheritedParentalRatingValue">BaseItem.GetInheritedParentalRatingValue()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandalone_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleStandalone(User)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisible_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisible(User)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandaloneInternal_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleStandaloneInternal(User)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandalone_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleStandalone(User)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientTypeName">BaseItem.GetClientTypeName()</a>
@@ -917,7 +990,13 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveCollection_System_Int64_">BaseItem.RemoveCollection(Int64)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_System_DateTimeOffset__System_Boolean_">BaseItem.MarkPlayed(User, Nullable&lt;DateTimeOffset&gt;, Boolean)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateHideFromResume_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_UserItemData_System_Boolean_">BaseItem.UpdateHideFromResume(User, UserItemData, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateHideFromResume_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Entities_UserItemData_MediaBrowser_Controller_Entities_BaseItem___System_Boolean_">BaseItem.UpdateHideFromResume(User, UserItemData, BaseItem[], Boolean)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasImage_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.HasImage(ImageType, Int32)</a>
@@ -947,7 +1026,13 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_">BaseItem.UpdateToRepository(ItemUpdateType)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_MediaBrowser_Controller_Entities_BaseItem_">BaseItem.UpdateToRepository(ItemUpdateType, BaseItem)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_MediaBrowser_Controller_Providers_MetadataRefreshOptions_">BaseItem.UpdateToRepository(ItemUpdateType, MetadataRefreshOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_">BaseItem.UpdateToRepository(ItemUpdateType, BaseItem, MetadataRefreshOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetImagePath_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.GetImagePath(ImageType, Int32)</a>
@@ -960,9 +1045,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddImages_MediaBrowser_Model_Entities_ImageType_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Boolean_">BaseItem.AddImages(ImageType, List&lt;FileSystemMetadata&gt;, Boolean)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetLocalMetadataFilesToDelete">BaseItem.GetLocalMetadataFilesToDelete()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowsMultipleImages_MediaBrowser_Model_Entities_ImageType_">BaseItem.AllowsMultipleImages(ImageType)</a>
@@ -983,6 +1065,12 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemLookupInfo__1_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetItemLookupInfo&lt;T&gt;(LibraryOptions)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_">BaseItem.GetItemsForAncestorIdsQuery(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_">BaseItem.GetIdsForAncestorIdsQuery(User)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetNameForMetadataLookup">BaseItem.GetNameForMetadataLookup()</a>
     </div>
     <div>
@@ -992,22 +1080,16 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMappedPath_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaProtocol__MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMappedPath(String, Nullable&lt;MediaProtocol&gt;, LibraryOptions)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedItem_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Model_Configuration_LibraryOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadataForOwnedItem(BaseItem, MetadataRefreshOptions, LibraryOptions, CancellationToken)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetEtag_MediaBrowser_Controller_Entities_User_">BaseItem.GetEtag(User)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetEtagValues_MediaBrowser_Controller_Entities_User_">BaseItem.GetEtagValues(User)</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalAncestorIds">BaseItem.GetInternalAncestorIds()</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParent">BaseItem.GetTopParent()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParentId">BaseItem.GetTopParentId()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorQuery">BaseItem.GetIdsForAncestorQuery()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRelatedUrls">BaseItem.GetRelatedUrls()</a>
@@ -1015,12 +1097,36 @@
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateRatingToItems_MediaBrowser_Controller_Entities_BaseItem___">BaseItem.UpdateRatingToItems(BaseItem[])</a>
     </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ResetMetadata">BaseItem.ResetMetadata()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ResetMetadataInternal">BaseItem.ResetMetadataInternal()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetChildrenForValidationSorted">BaseItem.GetChildrenForValidationSorted()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ValidateChildren_System_IProgress_System_Double__System_Threading_CancellationToken_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_">BaseItem.ValidateChildren(IProgress&lt;Double&gt;, CancellationToken, MetadataRefreshOptions, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ResolvedExtras">BaseItem.ResolvedExtras</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_System_Collections_Generic_Dictionary_System_Int64_System_Boolean__MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.ValidateChildrenInternal(IProgress&lt;Double&gt;, CancellationToken, Boolean, Boolean, BaseItem[], LibraryOptions, Dictionary&lt;Int64, Boolean&gt;, MetadataRefreshOptions, IDirectoryService)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SortChildrenForValidation_MediaBrowser_Controller_Entities_BaseItem___">BaseItem.SortChildrenForValidation(BaseItem[])</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableImageCaching_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.EnableImageCaching(LibraryOptions)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.Audio.html">MediaBrowser.Controller.Entities.Audio</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MusicAlbum : Folder, IHasLookupInfo&lt;ItemLookupInfo&gt;, IItemByName, IHasAlbumArtist, IHasProviderIds, IHasArtist, IHasMusicGenres, IHasLookupInfo&lt;AlbumInfo&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class MusicAlbum : Folder, IHasLookupInfo&lt;ItemLookupInfo&gt;, IItemByName, IHasFolderGrouping, IHasAlbumArtist, IHasProviderIds, IHasArtist, IHasMusicGenres, IHasLookupInfo&lt;AlbumInfo&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -1057,7 +1163,7 @@ public string AlbumArtist { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1111,7 +1217,7 @@ public string[] AlbumArtists { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1165,7 +1271,7 @@ public string[] Artists { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1219,7 +1325,7 @@ public override bool ForceDefaultAspectRatio { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1247,7 +1353,7 @@ public override bool IsDisplayedAsFolder { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1275,41 +1381,13 @@ public override bool IsFolder { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsFolder">Folder.IsFolder</a></div>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_IsPreSorted_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsPreSorted*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_IsPreSorted" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsPreSorted">IsPreSorted</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public override bool IsPreSorted { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsPreSorted">Folder.IsPreSorted</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_MarkDirectlyAsPlayed_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.MarkDirectlyAsPlayed*"></a>
@@ -1331,7 +1409,7 @@ protected override bool MarkDirectlyAsPlayed { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1359,7 +1437,7 @@ public override bool SupportsAncestors { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1387,7 +1465,7 @@ public override bool SupportsCumulativeRunTimeTicks { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1415,7 +1493,7 @@ public override bool SupportsGenres { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1443,7 +1521,7 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1471,7 +1549,7 @@ public override bool SupportsPeople { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1480,14 +1558,14 @@ public override bool SupportsPeople { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPeople">BaseItem.SupportsPeople</a></div>
   
   
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsStudios_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsStudios*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsStudios" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsStudios">SupportsStudios</h4>
+  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsResetMetadata_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsResetMetadata*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsResetMetadata" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsResetMetadata">SupportsResetMetadata</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public override bool SupportsStudios { get; }</code></pre>
+public override bool SupportsResetMetadata { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1499,13 +1577,41 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsStudios">BaseItem.SupportsStudios</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsResetMetadata">BaseItem.SupportsResetMetadata</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_ValidatesChildren_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.ValidatesChildren*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_ValidatesChildren" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.ValidatesChildren">ValidatesChildren</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+protected override bool ValidatesChildren { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ValidatesChildren">BaseItem.ValidatesChildren</a></div>
   <h3 id="methods">Methods
   </h3>
   
@@ -1545,7 +1651,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1555,30 +1661,13 @@ public override bool SupportsStudios { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_CanDelete_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.CanDelete*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_CanDelete_MediaBrowser_Controller_Entities_Folder___" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.CanDelete(MediaBrowser.Controller.Entities.Folder[])">CanDelete(Folder[])</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_CanDelete" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.CanDelete">CanDelete()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool CanDelete(Folder[] collectionFolders)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool CanDelete()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>[]</td>
-        <td><span class="parametername">collectionFolders</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -1589,22 +1678,22 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CanDelete_MediaBrowser_Controller_Entities_Folder___">Folder.CanDelete(Folder[])</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CanDelete">Folder.CanDelete()</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_FillPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.FillPlayedStatus*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.FillPlayedStatus(MediaBrowser.Model.Dto.UserItemDataDto,System.Nullable{System.Int32},MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions)">FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions, LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.FillPlayedStatus(MediaBrowser.Model.Dto.UserItemDataDto,System.Nullable{System.Int32},MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions)">FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void FillPlayedStatus(UserItemDataDto dto, int? recursiveItemCount, User user, DtoOptions options, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void FillPlayedStatus(UserItemDataDto dto, int? recursiveItemCount, User user, DtoOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1622,7 +1711,7 @@ public override bool SupportsStudios { get; }</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">recursiveItemCount</span></td>
         <td></td>
       </tr>
@@ -1636,15 +1725,10 @@ public override bool SupportsStudios { get; }</code></pre>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions, LibraryOptions)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillPlayedStatus_MediaBrowser_Model_Dto_UserItemDataDto_System_Nullable_System_Int32__MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_">Folder.FillPlayedStatus(UserItemDataDto, Nullable&lt;Int32&gt;, User, DtoOptions)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetAlbumFolderFromMediaPath_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetAlbumFolderFromMediaPath*"></a>
@@ -1666,7 +1750,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">mediaPath</span></td>
         <td></td>
       </tr>
@@ -1682,82 +1766,11 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetBlockUnratedType_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetBlockUnratedType*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetBlockUnratedType" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetBlockUnratedType">GetBlockUnratedType()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override UnratedItem GetBlockUnratedType()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.UnratedItem.html">UnratedItem</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedType">BaseItem.GetBlockUnratedType()</a></div>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetBlockUnratedValue_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetBlockUnratedValue*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetBlockUnratedValue_MediaBrowser_Model_Users_UserPolicy_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetBlockUnratedValue(MediaBrowser.Model.Users.UserPolicy)">GetBlockUnratedValue(UserPolicy)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override bool GetBlockUnratedValue(UserPolicy config)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Users.UserPolicy.html">UserPolicy</a></td>
-        <td><span class="parametername">config</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetBlockUnratedValue_MediaBrowser_Model_Users_UserPolicy_">BaseItem.GetBlockUnratedValue(UserPolicy)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetChildCount_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetChildCount*"></a>
@@ -1795,7 +1808,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1822,7 +1835,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1832,12 +1845,12 @@ public override bool SupportsStudios { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetDeletePaths_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetDeletePaths*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetDeletePaths_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetDeletePaths(System.Boolean)">GetDeletePaths(Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetDeletePaths_System_Boolean_MediaBrowser_Controller_Entities_BaseItem___" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetDeletePaths(System.Boolean,MediaBrowser.Controller.Entities.BaseItem[])">GetDeletePaths(Boolean, BaseItem[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override List&lt;FileSystemMetadata&gt; GetDeletePaths(bool mediaFilesOnly)</code></pre>
+    <pre><code class="lang-csharp hljs">public override List&lt;FileSystemMetadata&gt; GetDeletePaths(bool mediaFilesOnly, BaseItem[] collectionFolders)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1850,10 +1863,15 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">mediaFilesOnly</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">collectionFolders</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -1866,40 +1884,13 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDeletePaths_System_Boolean_">BaseItem.GetDeletePaths(Boolean)</a></div>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetInternalAncestorIds_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetInternalAncestorIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetInternalAncestorIds" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetInternalAncestorIds">GetInternalAncestorIds()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;long&gt; GetInternalAncestorIds()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalAncestorIds">BaseItem.GetInternalAncestorIds()</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDeletePaths_System_Boolean_MediaBrowser_Controller_Entities_BaseItem___">BaseItem.GetDeletePaths(Boolean, BaseItem[])</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetInternalMetadataPath_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetInternalMetadataPath*"></a>
@@ -1921,7 +1912,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">basePath</span></td>
         <td></td>
       </tr>
@@ -1937,7 +1928,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1981,7 +1972,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2111,7 +2102,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2155,7 +2146,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2199,7 +2190,7 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2248,97 +2239,13 @@ public override bool SupportsStudios { get; }</code></pre>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetTrackIds_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetTrackIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetTrackIds_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetTrackIds(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetTrackIds(InternalItemsQuery)</h4>
+  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetUserDataKeyInternal_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetUserDataKeyInternal*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetUserDataKeyInternal" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetUserDataKeyInternal">GetUserDataKeyInternal()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long[] GetTrackIds(InternalItemsQuery query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetTracks_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetTracks*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetTracks_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetTracks(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetTracks(InternalItemsQuery)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QueryResult&lt;BaseItem&gt; GetTracks(InternalItemsQuery query)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
-        <td><span class="parametername">query</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetUserDataKey_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetUserDataKey*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_GetUserDataKey" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.GetUserDataKey">GetUserDataKey()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string GetUserDataKey()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override string GetUserDataKeyInternal()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2350,40 +2257,23 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal">BaseItem.GetUserDataKeyInternal()</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsPlayedStatus*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsPlayedStatus(MediaBrowser.Model.Configuration.LibraryOptions)">SupportsPlayedStatus(LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.SupportsPlayedStatus">SupportsPlayedStatus()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus(LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -2394,88 +2284,22 @@ public override bool SupportsStudios { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsPlayedStatus_MediaBrowser_Model_Configuration_LibraryOptions_">Folder.SupportsPlayedStatus(LibraryOptions)</a></div>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_ValidateChildrenInternal_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.ValidateChildrenInternal*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_MusicAlbum_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Audio.MusicAlbum.ValidateChildrenInternal(System.IProgress{System.Double},System.Threading.CancellationToken,System.Boolean,System.Boolean,MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Controller.Providers.IDirectoryService)">ValidateChildrenInternal(IProgress&lt;Double&gt;, CancellationToken, Boolean, Boolean, MetadataRefreshOptions, IDirectoryService)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Task ValidateChildrenInternal(IProgress&lt;double&gt; progress, CancellationToken cancellationToken, bool recursive, bool refreshChildMetadata, MetadataRefreshOptions refreshOptions, IDirectoryService directoryService)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
-        <td><span class="parametername">progress</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">recursive</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">refreshChildMetadata</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.MetadataRefreshOptions.html">MetadataRefreshOptions</a></td>
-        <td><span class="parametername">refreshOptions</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
-        <td><span class="parametername">directoryService</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_">Folder.ValidateChildrenInternal(IProgress&lt;Double&gt;, CancellationToken, Boolean, Boolean, MetadataRefreshOptions, IDirectoryService)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus">BaseItem.SupportsPlayedStatus()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.IItemByName.html">IItemByName</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasAlbumArtist.html">IHasAlbumArtist</a>
@@ -2503,6 +2327,15 @@ public override bool SupportsStudios { get; }</code></pre>
       <a class="xref" href="MediaBrowser.Controller.Entities.Extensions.html#MediaBrowser_Controller_Entities_Extensions_AddTrailerUrl_MediaBrowser_Controller_Entities_BaseItem_System_String_">Extensions.AddTrailerUrl(BaseItem, String)</a>
   </div>
   <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetTaggedItems_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetTaggedItems(IItemByName, InternalItemsQuery)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetTaggedItemsResult_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetTaggedItemsResult(IItemByName, InternalItemsQuery)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetItemList_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetItemList(IItemByName, InternalItemsQuery)</a>
+  </div>
+  <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.TagExtensions.html#MediaBrowser_Controller_Entities_TagExtensions_AddTag_MediaBrowser_Controller_Entities_BaseItem_System_String_">TagExtensions.AddTag(BaseItem, String)</a>
   </div>
   <div>
@@ -2519,6 +2352,9 @@ public override bool SupportsStudios { get; }</code></pre>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Audio.HasArtistExtensions.html#MediaBrowser_Controller_Entities_Audio_HasArtistExtensions_SetAlbumArtists_MediaBrowser_Controller_Entities_Audio_IHasAlbumArtist_System_Collections_Generic_IEnumerable_System_String__">HasArtistExtensions.SetAlbumArtists(IHasAlbumArtist, IEnumerable&lt;String&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
   </div>
 </div>
 </article>

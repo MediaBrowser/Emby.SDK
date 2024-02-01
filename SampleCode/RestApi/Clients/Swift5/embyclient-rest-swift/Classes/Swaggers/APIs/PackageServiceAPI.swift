@@ -64,7 +64,7 @@ open class PackageServiceAPI {
      - parameter isAdult: (query) Optional. Filter by package that contain adult content. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPackages(packageType: String? = nil, targetSystems: String? = nil, isPremium: Bool? = nil, isAdult: Bool? = nil, completion: @escaping ((_ data: [UpdatesPackageInfo]?,_ error: Error?) -> Void)) {
+    open class func getPackages(packageType: String? = nil, targetSystems: String? = nil, isPremium: Bool? = nil, isAdult: Bool? = nil, completion: @escaping ((_ data: [PackageInfo]?,_ error: Error?) -> Void)) {
         getPackagesWithRequestBuilder(packageType: packageType, targetSystems: targetSystems, isPremium: isPremium, isAdult: isAdult).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -82,23 +82,17 @@ open class PackageServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
-  "type" : "type",
-  "regInfo" : "regInfo",
-  "richDescUrl" : "richDescUrl",
-  "expDate" : "2000-01-23T04:56:07.000+00:00",
-  "thumbImage" : "thumbImage",
-  "price" : 0.8008282,
-  "avgRating" : 1.4658129,
-  "id" : "id",
-  "featureId" : "featureId",
   "owner" : "owner",
   "overview" : "overview",
-  "totalRatings" : 6,
   "tileColor" : "tileColor",
   "shortDescription" : "shortDescription",
+  "type" : "type",
+  "richDescUrl" : "richDescUrl",
   "targetSystem" : "Server",
-  "installs" : 5,
+  "expDate" : "2000-01-23T04:56:07.000+00:00",
+  "installs" : 6,
   "enableInAppStore" : true,
+  "thumbImage" : "thumbImage",
   "versions" : [ {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -110,7 +104,8 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -122,34 +117,32 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   } ],
+  "price" : 0.8008282,
   "targetFilename" : "targetFilename",
   "name" : "name",
   "guid" : "guid",
   "isRegistered" : true,
+  "id" : "id",
   "isPremium" : true,
   "adult" : true,
   "category" : "category",
-  "previewImage" : "previewImage"
+  "previewImage" : "previewImage",
+  "featureId" : "featureId"
 }, {
-  "type" : "type",
-  "regInfo" : "regInfo",
-  "richDescUrl" : "richDescUrl",
-  "expDate" : "2000-01-23T04:56:07.000+00:00",
-  "thumbImage" : "thumbImage",
-  "price" : 0.8008282,
-  "avgRating" : 1.4658129,
-  "id" : "id",
-  "featureId" : "featureId",
   "owner" : "owner",
   "overview" : "overview",
-  "totalRatings" : 6,
   "tileColor" : "tileColor",
   "shortDescription" : "shortDescription",
+  "type" : "type",
+  "richDescUrl" : "richDescUrl",
   "targetSystem" : "Server",
-  "installs" : 5,
+  "expDate" : "2000-01-23T04:56:07.000+00:00",
+  "installs" : 6,
   "enableInAppStore" : true,
+  "thumbImage" : "thumbImage",
   "versions" : [ {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -161,7 +154,8 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -173,25 +167,29 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   } ],
+  "price" : 0.8008282,
   "targetFilename" : "targetFilename",
   "name" : "name",
   "guid" : "guid",
   "isRegistered" : true,
+  "id" : "id",
   "isPremium" : true,
   "adult" : true,
   "category" : "category",
-  "previewImage" : "previewImage"
+  "previewImage" : "previewImage",
+  "featureId" : "featureId"
 } ]}]
      - parameter packageType: (query) Optional package type filter (System/UserInstalled) (optional)
      - parameter targetSystems: (query) Optional. Filter by target system type. Allows multiple, comma delimited. (optional)
      - parameter isPremium: (query) Optional. Filter by premium status (optional)
      - parameter isAdult: (query) Optional. Filter by package that contain adult content. (optional)
 
-     - returns: RequestBuilder<[UpdatesPackageInfo]> 
+     - returns: RequestBuilder<[PackageInfo]> 
      */
-    open class func getPackagesWithRequestBuilder(packageType: String? = nil, targetSystems: String? = nil, isPremium: Bool? = nil, isAdult: Bool? = nil) -> RequestBuilder<[UpdatesPackageInfo]> {
+    open class func getPackagesWithRequestBuilder(packageType: String? = nil, targetSystems: String? = nil, isPremium: Bool? = nil, isAdult: Bool? = nil) -> RequestBuilder<[PackageInfo]> {
         let path = "/Packages"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -204,7 +202,7 @@ open class PackageServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[UpdatesPackageInfo]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[PackageInfo]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -215,7 +213,7 @@ open class PackageServiceAPI {
      - parameter assemblyGuid: (query) The guid of the associated assembly (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPackagesByName(name: String, assemblyGuid: String? = nil, completion: @escaping ((_ data: UpdatesPackageInfo?,_ error: Error?) -> Void)) {
+    open class func getPackagesByName(name: String, assemblyGuid: String? = nil, completion: @escaping ((_ data: PackageInfo?,_ error: Error?) -> Void)) {
         getPackagesByNameWithRequestBuilder(name: name, assemblyGuid: assemblyGuid).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -233,23 +231,17 @@ open class PackageServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "type" : "type",
-  "regInfo" : "regInfo",
-  "richDescUrl" : "richDescUrl",
-  "expDate" : "2000-01-23T04:56:07.000+00:00",
-  "thumbImage" : "thumbImage",
-  "price" : 0.8008282,
-  "avgRating" : 1.4658129,
-  "id" : "id",
-  "featureId" : "featureId",
   "owner" : "owner",
   "overview" : "overview",
-  "totalRatings" : 6,
   "tileColor" : "tileColor",
   "shortDescription" : "shortDescription",
+  "type" : "type",
+  "richDescUrl" : "richDescUrl",
   "targetSystem" : "Server",
-  "installs" : 5,
+  "expDate" : "2000-01-23T04:56:07.000+00:00",
+  "installs" : 6,
   "enableInAppStore" : true,
+  "thumbImage" : "thumbImage",
   "versions" : [ {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -261,7 +253,8 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "sourceUrl" : "sourceUrl",
     "versionStr" : "versionStr",
@@ -273,23 +266,27 @@ open class PackageServiceAPI {
     "checksum" : "checksum",
     "guid" : "guid",
     "description" : "description",
-    "classification" : "Release"
+    "classification" : "Release",
+    "timestamp" : "2000-01-23T04:56:07.000+00:00"
   } ],
+  "price" : 0.8008282,
   "targetFilename" : "targetFilename",
   "name" : "name",
   "guid" : "guid",
   "isRegistered" : true,
+  "id" : "id",
   "isPremium" : true,
   "adult" : true,
   "category" : "category",
-  "previewImage" : "previewImage"
+  "previewImage" : "previewImage",
+  "featureId" : "featureId"
 }}]
      - parameter name: (path) The name of the package 
      - parameter assemblyGuid: (query) The guid of the associated assembly (optional)
 
-     - returns: RequestBuilder<UpdatesPackageInfo> 
+     - returns: RequestBuilder<PackageInfo> 
      */
-    open class func getPackagesByNameWithRequestBuilder(name: String, assemblyGuid: String? = nil) -> RequestBuilder<UpdatesPackageInfo> {
+    open class func getPackagesByNameWithRequestBuilder(name: String, assemblyGuid: String? = nil) -> RequestBuilder<PackageInfo> {
         var path = "/Packages/{Name}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -302,7 +299,7 @@ open class PackageServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<UpdatesPackageInfo>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<PackageInfo>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -312,7 +309,7 @@ open class PackageServiceAPI {
      - parameter packageType: (query) Package type filter (System/UserInstalled) 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPackagesUpdates(packageType: String, completion: @escaping ((_ data: [UpdatesPackageVersionInfo]?,_ error: Error?) -> Void)) {
+    open class func getPackagesUpdates(packageType: String, completion: @escaping ((_ data: [PackageVersionInfo]?,_ error: Error?) -> Void)) {
         getPackagesUpdatesWithRequestBuilder(packageType: packageType).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -340,7 +337,8 @@ open class PackageServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 }, {
   "sourceUrl" : "sourceUrl",
   "versionStr" : "versionStr",
@@ -352,13 +350,14 @@ open class PackageServiceAPI {
   "checksum" : "checksum",
   "guid" : "guid",
   "description" : "description",
-  "classification" : "Release"
+  "classification" : "Release",
+  "timestamp" : "2000-01-23T04:56:07.000+00:00"
 } ]}]
      - parameter packageType: (query) Package type filter (System/UserInstalled) 
 
-     - returns: RequestBuilder<[UpdatesPackageVersionInfo]> 
+     - returns: RequestBuilder<[PackageVersionInfo]> 
      */
-    open class func getPackagesUpdatesWithRequestBuilder(packageType: String) -> RequestBuilder<[UpdatesPackageVersionInfo]> {
+    open class func getPackagesUpdatesWithRequestBuilder(packageType: String) -> RequestBuilder<[PackageVersionInfo]> {
         let path = "/Packages/Updates"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -368,7 +367,7 @@ open class PackageServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[UpdatesPackageVersionInfo]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[PackageVersionInfo]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -381,7 +380,7 @@ open class PackageServiceAPI {
      - parameter updateClass: (query) Optional update class (Dev, Beta, Release). Defaults to Release. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postPackagesInstalledByName(name: String, assemblyGuid: String? = nil, version: String? = nil, updateClass: UpdatesPackageVersionClass? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postPackagesInstalledByName(name: String, assemblyGuid: String? = nil, version: String? = nil, updateClass: PackageVersionClass? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postPackagesInstalledByNameWithRequestBuilder(name: name, assemblyGuid: assemblyGuid, version: version, updateClass: updateClass).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -409,7 +408,7 @@ open class PackageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postPackagesInstalledByNameWithRequestBuilder(name: String, assemblyGuid: String? = nil, version: String? = nil, updateClass: UpdatesPackageVersionClass? = nil) -> RequestBuilder<Void> {
+    open class func postPackagesInstalledByNameWithRequestBuilder(name: String, assemblyGuid: String? = nil, version: String? = nil, updateClass: PackageVersionClass? = nil) -> RequestBuilder<Void> {
         var path = "/Packages/Installed/{Name}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines MetadataFields
+    /// Enum MetadataFields  
     /// </summary>
+    /// <value>Enum MetadataFields  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum MetadataFields
     {
@@ -87,5 +88,30 @@ namespace EmbyClient.Dotnet.Model
         /// Enum OriginalTitle for value: OriginalTitle
         /// </summary>
         [EnumMember(Value = "OriginalTitle")]
-        OriginalTitle = 13    }
+        OriginalTitle = 13,
+        /// <summary>
+        /// Enum SortIndexNumber for value: SortIndexNumber
+        /// </summary>
+        [EnumMember(Value = "SortIndexNumber")]
+        SortIndexNumber = 14,
+        /// <summary>
+        /// Enum SortParentIndexNumber for value: SortParentIndexNumber
+        /// </summary>
+        [EnumMember(Value = "SortParentIndexNumber")]
+        SortParentIndexNumber = 15,
+        /// <summary>
+        /// Enum CommunityRating for value: CommunityRating
+        /// </summary>
+        [EnumMember(Value = "CommunityRating")]
+        CommunityRating = 16,
+        /// <summary>
+        /// Enum CriticRating for value: CriticRating
+        /// </summary>
+        [EnumMember(Value = "CriticRating")]
+        CriticRating = 17,
+        /// <summary>
+        /// Enum Tagline for value: Tagline
+        /// </summary>
+        [EnumMember(Value = "Tagline")]
+        Tagline = 18    }
 }

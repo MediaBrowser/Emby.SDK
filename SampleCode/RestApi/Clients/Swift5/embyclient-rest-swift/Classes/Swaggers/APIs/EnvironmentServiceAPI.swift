@@ -290,6 +290,64 @@ open class EnvironmentServiceAPI {
     /**
      Gets the contents of a given directory in the file system
 
+     - parameter body: (body) GetDirectoryContents 
+     - parameter path: (query)  
+     - parameter includeFiles: (query) An optional filter to include or exclude files from the results. true/false (optional)
+     - parameter includeDirectories: (query) An optional filter to include or exclude folders from the results. true/false (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postEnvironmentDirectorycontents(body: GetDirectoryContents, path: String, includeFiles: Bool? = nil, includeDirectories: Bool? = nil, completion: @escaping ((_ data: [IOFileSystemEntryInfo]?,_ error: Error?) -> Void)) {
+        postEnvironmentDirectorycontentsWithRequestBuilder(body: body, path: path, includeFiles: includeFiles, includeDirectories: includeDirectories).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets the contents of a given directory in the file system
+     - POST /Environment/DirectoryContents
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example=[ {
+  "Path" : "Path",
+  "Type" : "File",
+  "Name" : "Name"
+}, {
+  "Path" : "Path",
+  "Type" : "File",
+  "Name" : "Name"
+} ]}]
+     - parameter body: (body) GetDirectoryContents 
+     - parameter path: (query)  
+     - parameter includeFiles: (query) An optional filter to include or exclude files from the results. true/false (optional)
+     - parameter includeDirectories: (query) An optional filter to include or exclude folders from the results. true/false (optional)
+
+     - returns: RequestBuilder<[IOFileSystemEntryInfo]> 
+     */
+    open class func postEnvironmentDirectorycontentsWithRequestBuilder(body: GetDirectoryContents, path: String, includeFiles: Bool? = nil, includeDirectories: Bool? = nil) -> RequestBuilder<[IOFileSystemEntryInfo]> {
+        let path = "/Environment/DirectoryContents"
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "Path": path, 
+                        "IncludeFiles": includeFiles, 
+                        "IncludeDirectories": includeDirectories
+        ])
+
+
+        let requestBuilder: RequestBuilder<[IOFileSystemEntryInfo]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
+     Gets the contents of a given directory in the file system
+
      - parameter body: (body) ValidatePath 
      - parameter path: (query)  
      - parameter completion: completion handler to receive the data and the error objects

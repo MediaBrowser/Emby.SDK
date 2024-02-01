@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -62,7 +62,7 @@ public class SubtitleServiceApiTest {
     /**
      * Gets subtitles in a specified format.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -83,7 +83,7 @@ public class SubtitleServiceApiTest {
     /**
      * Gets subtitles in a specified format.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -116,7 +116,8 @@ public class SubtitleServiceApiTest {
         String language = null;
         Boolean isPerfectMatch = null;
         Boolean isForced = null;
-        List<RemoteSubtitleInfo> response = api.getItemsByIdRemotesearchSubtitlesByLanguage(id, mediaSourceId, language, isPerfectMatch, isForced);
+        Boolean isHearingImpaired = null;
+        List<RemoteSubtitleInfo> response = api.getItemsByIdRemotesearchSubtitlesByLanguage(id, mediaSourceId, language, isPerfectMatch, isForced, isHearingImpaired);
 
         // TODO: test validations
     }
@@ -138,7 +139,7 @@ public class SubtitleServiceApiTest {
     /**
      * Gets subtitles in a specified format.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -159,7 +160,7 @@ public class SubtitleServiceApiTest {
     /**
      * Gets subtitles in a specified format.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails

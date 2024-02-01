@@ -1,6 +1,6 @@
 
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -37,14 +37,15 @@ Requires authentication as user
      * @param "HasTrailer" (optional.Bool) -  Optional filter by items with trailers.
      * @param "AdjacentTo" (optional.String) -  Optional. Return items that are siblings of a supplied item.
      * @param "MinIndexNumber" (optional.Int32) -  Optional filter by minimum index number.
+     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "MinPlayers" (optional.Int32) -  Optional filter by minimum number of game players.
      * @param "MaxPlayers" (optional.Int32) -  Optional filter by maximum number of game players.
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -72,9 +73,15 @@ Requires authentication as user
      * @param "IsFavorite" (optional.Bool) -  Optional filter by items that are marked as favorite, or not.
      * @param "IsMovie" (optional.Bool) -  Optional filter for movies.
      * @param "IsSeries" (optional.Bool) -  Optional filter for series.
+     * @param "IsFolder" (optional.Bool) -  Optional filter for folders.
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
+     * @param "IsNew" (optional.Bool) -  Optional filter for IsNew.
+     * @param "IsPremiere" (optional.Bool) -  Optional filter for IsPremiere.
+     * @param "IsNewOrPremiere" (optional.Bool) -  Optional filter for IsNewOrPremiere.
+     * @param "IsRepeat" (optional.Bool) -  Optional filter for IsRepeat.
+     * @param "ProjectToMedia" (optional.Bool) -  ProjectToMedia
      * @param "MediaTypes" (optional.String) -  Optional filter by MediaType. Allows multiple, comma delimited.
      * @param "ImageTypes" (optional.String) -  Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
      * @param "SortBy" (optional.String) -  Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -82,6 +89,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -99,7 +107,9 @@ Requires authentication as user
      * @param "VideoTypes" (optional.String) -  Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
      * @param "Containers" (optional.String) -  Optional filter by Container. Allows multiple, comma delimeted.
      * @param "AudioCodecs" (optional.String) -  Optional filter by AudioCodec. Allows multiple, comma delimeted.
+     * @param "AudioLayouts" (optional.String) -  Optional filter by AudioLayout. Allows multiple, comma delimeted.
      * @param "VideoCodecs" (optional.String) -  Optional filter by VideoCodec. Allows multiple, comma delimeted.
+     * @param "ExtendedVideoTypes" (optional.String) -  Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
      * @param "SubtitleCodecs" (optional.String) -  Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
      * @param "Path" (optional.String) -  Optional filter by Path.
      * @param "UserId" (optional.String) -  User Id
@@ -128,14 +138,15 @@ type ArtistsServiceApiGetArtistsOpts struct {
     HasTrailer optional.Bool
     AdjacentTo optional.String
     MinIndexNumber optional.Int32
+    MinStartDate optional.String
+    MaxStartDate optional.String
+    MinEndDate optional.String
+    MaxEndDate optional.String
     MinPlayers optional.Int32
     MaxPlayers optional.Int32
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -163,9 +174,15 @@ type ArtistsServiceApiGetArtistsOpts struct {
     IsFavorite optional.Bool
     IsMovie optional.Bool
     IsSeries optional.Bool
+    IsFolder optional.Bool
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
+    IsNew optional.Bool
+    IsPremiere optional.Bool
+    IsNewOrPremiere optional.Bool
+    IsRepeat optional.Bool
+    ProjectToMedia optional.Bool
     MediaTypes optional.String
     ImageTypes optional.String
     SortBy optional.String
@@ -173,6 +190,7 @@ type ArtistsServiceApiGetArtistsOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -190,7 +208,9 @@ type ArtistsServiceApiGetArtistsOpts struct {
     VideoTypes optional.String
     Containers optional.String
     AudioCodecs optional.String
+    AudioLayouts optional.String
     VideoCodecs optional.String
+    ExtendedVideoTypes optional.String
     SubtitleCodecs optional.String
     Path optional.String
     UserId optional.String
@@ -251,6 +271,18 @@ func (a *ArtistsServiceApiService) GetArtists(ctx context.Context, localVarOptio
 	if localVarOptionals != nil && localVarOptionals.MinIndexNumber.IsSet() {
 		localVarQueryParams.Add("MinIndexNumber", parameterToString(localVarOptionals.MinIndexNumber.Value(), ""))
 	}
+	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
+		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
+		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
+		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
+		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.MinPlayers.IsSet() {
 		localVarQueryParams.Add("MinPlayers", parameterToString(localVarOptionals.MinPlayers.Value(), ""))
 	}
@@ -265,15 +297,6 @@ func (a *ArtistsServiceApiService) GetArtists(ctx context.Context, localVarOptio
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))
@@ -356,6 +379,9 @@ func (a *ArtistsServiceApiService) GetArtists(ctx context.Context, localVarOptio
 	if localVarOptionals != nil && localVarOptionals.IsSeries.IsSet() {
 		localVarQueryParams.Add("IsSeries", parameterToString(localVarOptionals.IsSeries.Value(), ""))
 	}
+	if localVarOptionals != nil && localVarOptionals.IsFolder.IsSet() {
+		localVarQueryParams.Add("IsFolder", parameterToString(localVarOptionals.IsFolder.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.IsNews.IsSet() {
 		localVarQueryParams.Add("IsNews", parameterToString(localVarOptionals.IsNews.Value(), ""))
 	}
@@ -364,6 +390,21 @@ func (a *ArtistsServiceApiService) GetArtists(ctx context.Context, localVarOptio
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSports.IsSet() {
 		localVarQueryParams.Add("IsSports", parameterToString(localVarOptionals.IsSports.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNew.IsSet() {
+		localVarQueryParams.Add("IsNew", parameterToString(localVarOptionals.IsNew.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsPremiere.IsSet() {
+		localVarQueryParams.Add("IsPremiere", parameterToString(localVarOptionals.IsPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNewOrPremiere.IsSet() {
+		localVarQueryParams.Add("IsNewOrPremiere", parameterToString(localVarOptionals.IsNewOrPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsRepeat.IsSet() {
+		localVarQueryParams.Add("IsRepeat", parameterToString(localVarOptionals.IsRepeat.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ProjectToMedia.IsSet() {
+		localVarQueryParams.Add("ProjectToMedia", parameterToString(localVarOptionals.ProjectToMedia.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MediaTypes.IsSet() {
 		localVarQueryParams.Add("MediaTypes", parameterToString(localVarOptionals.MediaTypes.Value(), ""))
@@ -385,6 +426,9 @@ func (a *ArtistsServiceApiService) GetArtists(ctx context.Context, localVarOptio
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -437,8 +481,14 @@ func (a *ArtistsServiceApiService) GetArtists(ctx context.Context, localVarOptio
 	if localVarOptionals != nil && localVarOptionals.AudioCodecs.IsSet() {
 		localVarQueryParams.Add("AudioCodecs", parameterToString(localVarOptionals.AudioCodecs.Value(), ""))
 	}
+	if localVarOptionals != nil && localVarOptionals.AudioLayouts.IsSet() {
+		localVarQueryParams.Add("AudioLayouts", parameterToString(localVarOptionals.AudioLayouts.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.VideoCodecs.IsSet() {
 		localVarQueryParams.Add("VideoCodecs", parameterToString(localVarOptionals.VideoCodecs.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExtendedVideoTypes.IsSet() {
+		localVarQueryParams.Add("ExtendedVideoTypes", parameterToString(localVarOptionals.ExtendedVideoTypes.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleCodecs.IsSet() {
 		localVarQueryParams.Add("SubtitleCodecs", parameterToString(localVarOptionals.SubtitleCodecs.Value(), ""))
@@ -573,14 +623,15 @@ Requires authentication as user
      * @param "HasTrailer" (optional.Bool) -  Optional filter by items with trailers.
      * @param "AdjacentTo" (optional.String) -  Optional. Return items that are siblings of a supplied item.
      * @param "MinIndexNumber" (optional.Int32) -  Optional filter by minimum index number.
+     * @param "MinStartDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxStartDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
+     * @param "MinEndDate" (optional.String) -  Optional. The minimum premiere date. Format &#x3D; ISO
+     * @param "MaxEndDate" (optional.String) -  Optional. The maximum premiere date. Format &#x3D; ISO
      * @param "MinPlayers" (optional.Int32) -  Optional filter by minimum number of game players.
      * @param "MaxPlayers" (optional.Int32) -  Optional filter by maximum number of game players.
      * @param "ParentIndexNumber" (optional.Int32) -  Optional filter by parent index number.
      * @param "HasParentalRating" (optional.Bool) -  Optional filter by items that have or do not have a parental rating
      * @param "IsHD" (optional.Bool) -  Optional filter by items that are HD or not.
-     * @param "LocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "ExcludeLocationTypes" (optional.String) -  Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted.
-     * @param "IsMissing" (optional.Bool) -  Optional filter by items that are missing episodes or not.
      * @param "IsUnaired" (optional.Bool) -  Optional filter by items that are unaired episodes or not.
      * @param "MinCommunityRating" (optional.Float64) -  Optional filter by minimum community rating.
      * @param "MinCriticRating" (optional.Float64) -  Optional filter by minimum critic rating.
@@ -608,9 +659,15 @@ Requires authentication as user
      * @param "IsFavorite" (optional.Bool) -  Optional filter by items that are marked as favorite, or not.
      * @param "IsMovie" (optional.Bool) -  Optional filter for movies.
      * @param "IsSeries" (optional.Bool) -  Optional filter for series.
+     * @param "IsFolder" (optional.Bool) -  Optional filter for folders.
      * @param "IsNews" (optional.Bool) -  Optional filter for news.
      * @param "IsKids" (optional.Bool) -  Optional filter for kids.
      * @param "IsSports" (optional.Bool) -  Optional filter for sports.
+     * @param "IsNew" (optional.Bool) -  Optional filter for IsNew.
+     * @param "IsPremiere" (optional.Bool) -  Optional filter for IsPremiere.
+     * @param "IsNewOrPremiere" (optional.Bool) -  Optional filter for IsNewOrPremiere.
+     * @param "IsRepeat" (optional.Bool) -  Optional filter for IsRepeat.
+     * @param "ProjectToMedia" (optional.Bool) -  ProjectToMedia
      * @param "MediaTypes" (optional.String) -  Optional filter by MediaType. Allows multiple, comma delimited.
      * @param "ImageTypes" (optional.String) -  Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.
      * @param "SortBy" (optional.String) -  Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime
@@ -618,6 +675,7 @@ Requires authentication as user
      * @param "Genres" (optional.String) -  Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.
      * @param "OfficialRatings" (optional.String) -  Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.
      * @param "Tags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
+     * @param "ExcludeTags" (optional.String) -  Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.
      * @param "Years" (optional.String) -  Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.
      * @param "EnableImages" (optional.Bool) -  Optional, include image information in output
      * @param "EnableUserData" (optional.Bool) -  Optional, include user data
@@ -635,7 +693,9 @@ Requires authentication as user
      * @param "VideoTypes" (optional.String) -  Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.
      * @param "Containers" (optional.String) -  Optional filter by Container. Allows multiple, comma delimeted.
      * @param "AudioCodecs" (optional.String) -  Optional filter by AudioCodec. Allows multiple, comma delimeted.
+     * @param "AudioLayouts" (optional.String) -  Optional filter by AudioLayout. Allows multiple, comma delimeted.
      * @param "VideoCodecs" (optional.String) -  Optional filter by VideoCodec. Allows multiple, comma delimeted.
+     * @param "ExtendedVideoTypes" (optional.String) -  Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
      * @param "SubtitleCodecs" (optional.String) -  Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
      * @param "Path" (optional.String) -  Optional filter by Path.
      * @param "UserId" (optional.String) -  User Id
@@ -664,14 +724,15 @@ type ArtistsServiceApiGetArtistsAlbumartistsOpts struct {
     HasTrailer optional.Bool
     AdjacentTo optional.String
     MinIndexNumber optional.Int32
+    MinStartDate optional.String
+    MaxStartDate optional.String
+    MinEndDate optional.String
+    MaxEndDate optional.String
     MinPlayers optional.Int32
     MaxPlayers optional.Int32
     ParentIndexNumber optional.Int32
     HasParentalRating optional.Bool
     IsHD optional.Bool
-    LocationTypes optional.String
-    ExcludeLocationTypes optional.String
-    IsMissing optional.Bool
     IsUnaired optional.Bool
     MinCommunityRating optional.Float64
     MinCriticRating optional.Float64
@@ -699,9 +760,15 @@ type ArtistsServiceApiGetArtistsAlbumartistsOpts struct {
     IsFavorite optional.Bool
     IsMovie optional.Bool
     IsSeries optional.Bool
+    IsFolder optional.Bool
     IsNews optional.Bool
     IsKids optional.Bool
     IsSports optional.Bool
+    IsNew optional.Bool
+    IsPremiere optional.Bool
+    IsNewOrPremiere optional.Bool
+    IsRepeat optional.Bool
+    ProjectToMedia optional.Bool
     MediaTypes optional.String
     ImageTypes optional.String
     SortBy optional.String
@@ -709,6 +776,7 @@ type ArtistsServiceApiGetArtistsAlbumartistsOpts struct {
     Genres optional.String
     OfficialRatings optional.String
     Tags optional.String
+    ExcludeTags optional.String
     Years optional.String
     EnableImages optional.Bool
     EnableUserData optional.Bool
@@ -726,7 +794,9 @@ type ArtistsServiceApiGetArtistsAlbumartistsOpts struct {
     VideoTypes optional.String
     Containers optional.String
     AudioCodecs optional.String
+    AudioLayouts optional.String
     VideoCodecs optional.String
+    ExtendedVideoTypes optional.String
     SubtitleCodecs optional.String
     Path optional.String
     UserId optional.String
@@ -787,6 +857,18 @@ func (a *ArtistsServiceApiService) GetArtistsAlbumartists(ctx context.Context, l
 	if localVarOptionals != nil && localVarOptionals.MinIndexNumber.IsSet() {
 		localVarQueryParams.Add("MinIndexNumber", parameterToString(localVarOptionals.MinIndexNumber.Value(), ""))
 	}
+	if localVarOptionals != nil && localVarOptionals.MinStartDate.IsSet() {
+		localVarQueryParams.Add("MinStartDate", parameterToString(localVarOptionals.MinStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxStartDate.IsSet() {
+		localVarQueryParams.Add("MaxStartDate", parameterToString(localVarOptionals.MaxStartDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MinEndDate.IsSet() {
+		localVarQueryParams.Add("MinEndDate", parameterToString(localVarOptionals.MinEndDate.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.MaxEndDate.IsSet() {
+		localVarQueryParams.Add("MaxEndDate", parameterToString(localVarOptionals.MaxEndDate.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.MinPlayers.IsSet() {
 		localVarQueryParams.Add("MinPlayers", parameterToString(localVarOptionals.MinPlayers.Value(), ""))
 	}
@@ -801,15 +883,6 @@ func (a *ArtistsServiceApiService) GetArtistsAlbumartists(ctx context.Context, l
 	}
 	if localVarOptionals != nil && localVarOptionals.IsHD.IsSet() {
 		localVarQueryParams.Add("IsHD", parameterToString(localVarOptionals.IsHD.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LocationTypes.IsSet() {
-		localVarQueryParams.Add("LocationTypes", parameterToString(localVarOptionals.LocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ExcludeLocationTypes.IsSet() {
-		localVarQueryParams.Add("ExcludeLocationTypes", parameterToString(localVarOptionals.ExcludeLocationTypes.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.IsMissing.IsSet() {
-		localVarQueryParams.Add("IsMissing", parameterToString(localVarOptionals.IsMissing.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.IsUnaired.IsSet() {
 		localVarQueryParams.Add("IsUnaired", parameterToString(localVarOptionals.IsUnaired.Value(), ""))
@@ -892,6 +965,9 @@ func (a *ArtistsServiceApiService) GetArtistsAlbumartists(ctx context.Context, l
 	if localVarOptionals != nil && localVarOptionals.IsSeries.IsSet() {
 		localVarQueryParams.Add("IsSeries", parameterToString(localVarOptionals.IsSeries.Value(), ""))
 	}
+	if localVarOptionals != nil && localVarOptionals.IsFolder.IsSet() {
+		localVarQueryParams.Add("IsFolder", parameterToString(localVarOptionals.IsFolder.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.IsNews.IsSet() {
 		localVarQueryParams.Add("IsNews", parameterToString(localVarOptionals.IsNews.Value(), ""))
 	}
@@ -900,6 +976,21 @@ func (a *ArtistsServiceApiService) GetArtistsAlbumartists(ctx context.Context, l
 	}
 	if localVarOptionals != nil && localVarOptionals.IsSports.IsSet() {
 		localVarQueryParams.Add("IsSports", parameterToString(localVarOptionals.IsSports.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNew.IsSet() {
+		localVarQueryParams.Add("IsNew", parameterToString(localVarOptionals.IsNew.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsPremiere.IsSet() {
+		localVarQueryParams.Add("IsPremiere", parameterToString(localVarOptionals.IsPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsNewOrPremiere.IsSet() {
+		localVarQueryParams.Add("IsNewOrPremiere", parameterToString(localVarOptionals.IsNewOrPremiere.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.IsRepeat.IsSet() {
+		localVarQueryParams.Add("IsRepeat", parameterToString(localVarOptionals.IsRepeat.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ProjectToMedia.IsSet() {
+		localVarQueryParams.Add("ProjectToMedia", parameterToString(localVarOptionals.ProjectToMedia.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.MediaTypes.IsSet() {
 		localVarQueryParams.Add("MediaTypes", parameterToString(localVarOptionals.MediaTypes.Value(), ""))
@@ -921,6 +1012,9 @@ func (a *ArtistsServiceApiService) GetArtistsAlbumartists(ctx context.Context, l
 	}
 	if localVarOptionals != nil && localVarOptionals.Tags.IsSet() {
 		localVarQueryParams.Add("Tags", parameterToString(localVarOptionals.Tags.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExcludeTags.IsSet() {
+		localVarQueryParams.Add("ExcludeTags", parameterToString(localVarOptionals.ExcludeTags.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.Years.IsSet() {
 		localVarQueryParams.Add("Years", parameterToString(localVarOptionals.Years.Value(), ""))
@@ -973,8 +1067,14 @@ func (a *ArtistsServiceApiService) GetArtistsAlbumartists(ctx context.Context, l
 	if localVarOptionals != nil && localVarOptionals.AudioCodecs.IsSet() {
 		localVarQueryParams.Add("AudioCodecs", parameterToString(localVarOptionals.AudioCodecs.Value(), ""))
 	}
+	if localVarOptionals != nil && localVarOptionals.AudioLayouts.IsSet() {
+		localVarQueryParams.Add("AudioLayouts", parameterToString(localVarOptionals.AudioLayouts.Value(), ""))
+	}
 	if localVarOptionals != nil && localVarOptionals.VideoCodecs.IsSet() {
 		localVarQueryParams.Add("VideoCodecs", parameterToString(localVarOptionals.VideoCodecs.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.ExtendedVideoTypes.IsSet() {
+		localVarQueryParams.Add("ExtendedVideoTypes", parameterToString(localVarOptionals.ExtendedVideoTypes.Value(), ""))
 	}
 	if localVarOptionals != nil && localVarOptionals.SubtitleCodecs.IsSet() {
 		localVarQueryParams.Add("SubtitleCodecs", parameterToString(localVarOptionals.SubtitleCodecs.Value(), ""))

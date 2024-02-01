@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -26,7 +26,7 @@ class SuggestionsServiceApi(object):
     def get_users_by_userid_suggestions(self, user_id, **kwargs):  # noqa: E501
         """Gets items based on a query.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_userid_suggestions(user_id, async_req=True)
@@ -34,6 +34,11 @@ class SuggestionsServiceApi(object):
 
         :param async_req bool
         :param str user_id: (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
@@ -48,7 +53,7 @@ class SuggestionsServiceApi(object):
     def get_users_by_userid_suggestions_with_http_info(self, user_id, **kwargs):  # noqa: E501
         """Gets items based on a query.  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_userid_suggestions_with_http_info(user_id, async_req=True)
@@ -56,12 +61,17 @@ class SuggestionsServiceApi(object):
 
         :param async_req bool
         :param str user_id: (required)
+        :param str fields: Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls
+        :param bool enable_images: Optional, include image information in output
+        :param int image_type_limit: Optional, the max number of images to return, per image type
+        :param str enable_image_types: Optional. The image types to include in the output.
+        :param bool enable_user_data: Optional, include user data
         :return: QueryResultBaseItemDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id']  # noqa: E501
+        all_params = ['user_id', 'fields', 'enable_images', 'image_type_limit', 'enable_image_types', 'enable_user_data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -88,6 +98,16 @@ class SuggestionsServiceApi(object):
             path_params['UserId'] = params['user_id']  # noqa: E501
 
         query_params = []
+        if 'fields' in params:
+            query_params.append(('Fields', params['fields']))  # noqa: E501
+        if 'enable_images' in params:
+            query_params.append(('EnableImages', params['enable_images']))  # noqa: E501
+        if 'image_type_limit' in params:
+            query_params.append(('ImageTypeLimit', params['image_type_limit']))  # noqa: E501
+        if 'enable_image_types' in params:
+            query_params.append(('EnableImageTypes', params['enable_image_types']))  # noqa: E501
+        if 'enable_user_data' in params:
+            query_params.append(('EnableUserData', params['enable_user_data']))  # noqa: E501
 
         header_params = {}
 
@@ -100,7 +120,7 @@ class SuggestionsServiceApi(object):
             ['application/json', 'application/xml'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{UserId}/Suggestions', 'GET',

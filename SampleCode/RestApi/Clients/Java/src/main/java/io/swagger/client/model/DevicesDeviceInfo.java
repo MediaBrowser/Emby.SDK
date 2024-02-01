@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -27,6 +27,12 @@ public class DevicesDeviceInfo {
   @SerializedName("Id")
   private String id = null;
 
+  @SerializedName("InternalId")
+  private Long internalId = null;
+
+  @SerializedName("ReportedDeviceId")
+  private String reportedDeviceId = null;
+
   @SerializedName("LastUserName")
   private String lastUserName = null;
 
@@ -44,6 +50,9 @@ public class DevicesDeviceInfo {
 
   @SerializedName("IconUrl")
   private String iconUrl = null;
+
+  @SerializedName("IpAddress")
+  private String ipAddress = null;
 
   public DevicesDeviceInfo name(String name) {
     this.name = name;
@@ -69,10 +78,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get id
+   * The identifier.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The identifier.")
   public String getId() {
     return id;
   }
@@ -81,16 +90,52 @@ public class DevicesDeviceInfo {
     this.id = id;
   }
 
+  public DevicesDeviceInfo internalId(Long internalId) {
+    this.internalId = internalId;
+    return this;
+  }
+
+   /**
+   * Get internalId
+   * @return internalId
+  **/
+  @Schema(description = "")
+  public Long getInternalId() {
+    return internalId;
+  }
+
+  public void setInternalId(Long internalId) {
+    this.internalId = internalId;
+  }
+
+  public DevicesDeviceInfo reportedDeviceId(String reportedDeviceId) {
+    this.reportedDeviceId = reportedDeviceId;
+    return this;
+  }
+
+   /**
+   * Get reportedDeviceId
+   * @return reportedDeviceId
+  **/
+  @Schema(description = "")
+  public String getReportedDeviceId() {
+    return reportedDeviceId;
+  }
+
+  public void setReportedDeviceId(String reportedDeviceId) {
+    this.reportedDeviceId = reportedDeviceId;
+  }
+
   public DevicesDeviceInfo lastUserName(String lastUserName) {
     this.lastUserName = lastUserName;
     return this;
   }
 
    /**
-   * Get lastUserName
+   * The last name of the user.
    * @return lastUserName
   **/
-  @Schema(description = "")
+  @Schema(description = "The last name of the user.")
   public String getLastUserName() {
     return lastUserName;
   }
@@ -105,10 +150,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get appName
+   * The name of the application.
    * @return appName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the application.")
   public String getAppName() {
     return appName;
   }
@@ -123,10 +168,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get appVersion
+   * The application version.
    * @return appVersion
   **/
-  @Schema(description = "")
+  @Schema(description = "The application version.")
   public String getAppVersion() {
     return appVersion;
   }
@@ -141,10 +186,10 @@ public class DevicesDeviceInfo {
   }
 
    /**
-   * Get lastUserId
+   * The last user identifier.
    * @return lastUserId
   **/
-  @Schema(description = "")
+  @Schema(description = "The last user identifier.")
   public String getLastUserId() {
     return lastUserId;
   }
@@ -189,6 +234,24 @@ public class DevicesDeviceInfo {
     this.iconUrl = iconUrl;
   }
 
+  public DevicesDeviceInfo ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+   /**
+   * Get ipAddress
+   * @return ipAddress
+  **/
+  @Schema(description = "")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -201,17 +264,20 @@ public class DevicesDeviceInfo {
     DevicesDeviceInfo devicesDeviceInfo = (DevicesDeviceInfo) o;
     return Objects.equals(this.name, devicesDeviceInfo.name) &&
         Objects.equals(this.id, devicesDeviceInfo.id) &&
+        Objects.equals(this.internalId, devicesDeviceInfo.internalId) &&
+        Objects.equals(this.reportedDeviceId, devicesDeviceInfo.reportedDeviceId) &&
         Objects.equals(this.lastUserName, devicesDeviceInfo.lastUserName) &&
         Objects.equals(this.appName, devicesDeviceInfo.appName) &&
         Objects.equals(this.appVersion, devicesDeviceInfo.appVersion) &&
         Objects.equals(this.lastUserId, devicesDeviceInfo.lastUserId) &&
         Objects.equals(this.dateLastActivity, devicesDeviceInfo.dateLastActivity) &&
-        Objects.equals(this.iconUrl, devicesDeviceInfo.iconUrl);
+        Objects.equals(this.iconUrl, devicesDeviceInfo.iconUrl) &&
+        Objects.equals(this.ipAddress, devicesDeviceInfo.ipAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, id, lastUserName, appName, appVersion, lastUserId, dateLastActivity, iconUrl);
+    return Objects.hash(name, id, internalId, reportedDeviceId, lastUserName, appName, appVersion, lastUserId, dateLastActivity, iconUrl, ipAddress);
   }
 
 
@@ -222,12 +288,15 @@ public class DevicesDeviceInfo {
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    internalId: ").append(toIndentedString(internalId)).append("\n");
+    sb.append("    reportedDeviceId: ").append(toIndentedString(reportedDeviceId)).append("\n");
     sb.append("    lastUserName: ").append(toIndentedString(lastUserName)).append("\n");
     sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
     sb.append("    appVersion: ").append(toIndentedString(appVersion)).append("\n");
     sb.append("    lastUserId: ").append(toIndentedString(lastUserId)).append("\n");
     sb.append("    dateLastActivity: ").append(toIndentedString(dateLastActivity)).append("\n");
     sb.append("    iconUrl: ").append(toIndentedString(iconUrl)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

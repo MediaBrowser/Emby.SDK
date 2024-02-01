@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,11 +14,12 @@ import ApiClient from '../ApiClient';
 /**
 * The ParentalRating model module.
 * @module model/ParentalRating
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ParentalRating {
     /**
     * Constructs a new <code>ParentalRating</code>.
+    * Class ParentalRating  
     * @alias module:model/ParentalRating
     * @class
     */
@@ -52,10 +53,12 @@ export default class ParentalRating {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The value.
     * @member {Number} Value
     */
     'Value' = undefined;

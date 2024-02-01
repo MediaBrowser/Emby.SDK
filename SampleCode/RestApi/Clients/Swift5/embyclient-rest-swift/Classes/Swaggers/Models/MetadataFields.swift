@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum MetadataFields   */
 public enum MetadataFields: String, Codable {
     case cast = "Cast"
     case genres = "Genres"
@@ -22,4 +23,9 @@ public enum MetadataFields: String, Codable {
     case channelNumber = "ChannelNumber"
     case sortName = "SortName"
     case originalTitle = "OriginalTitle"
+    case sortIndexNumber = "SortIndexNumber"
+    case sortParentIndexNumber = "SortParentIndexNumber"
+    case communityRating = "CommunityRating"
+    case criticRating = "CriticRating"
+    case tagline = "Tagline"
 }

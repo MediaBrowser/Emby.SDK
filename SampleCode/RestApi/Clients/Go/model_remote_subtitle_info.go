@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -10,6 +10,7 @@ import (
 )
 
 type RemoteSubtitleInfo struct {
+	// Use language instead to return the language specified by the subtitle provider
 	ThreeLetterISOLanguageName string `json:"ThreeLetterISOLanguageName,omitempty"`
 	Id string `json:"Id,omitempty"`
 	ProviderName string `json:"ProviderName,omitempty"`
@@ -22,5 +23,6 @@ type RemoteSubtitleInfo struct {
 	DownloadCount int32 `json:"DownloadCount,omitempty"`
 	IsHashMatch bool `json:"IsHashMatch,omitempty"`
 	IsForced bool `json:"IsForced,omitempty"`
+	IsHearingImpaired bool `json:"IsHearingImpaired,omitempty"`
 	Language string `json:"Language,omitempty"`
 }

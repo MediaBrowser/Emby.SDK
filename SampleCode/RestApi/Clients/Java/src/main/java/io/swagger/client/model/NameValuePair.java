@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -32,10 +32,10 @@ public class NameValuePair {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -50,10 +50,10 @@ public class NameValuePair {
   }
 
    /**
-   * Get value
+   * The value.
    * @return value
   **/
-  @Schema(description = "")
+  @Schema(description = "The value.")
   public String getValue() {
     return value;
   }

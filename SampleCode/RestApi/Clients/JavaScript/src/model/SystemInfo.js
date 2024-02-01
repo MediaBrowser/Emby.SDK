@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,17 +10,18 @@
  */
 
 import ApiClient from '../ApiClient';
-import UpdatesInstallationInfo from './UpdatesInstallationInfo';
-import UpdatesPackageVersionClass from './UpdatesPackageVersionClass';
+import InstallationInfo from './InstallationInfo';
+import PackageVersionClass from './PackageVersionClass';
 
 /**
 * The SystemInfo model module.
 * @module model/SystemInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class SystemInfo {
     /**
     * Constructs a new <code>SystemInfo</code>.
+    * Class SystemInfo  
     * @alias module:model/SystemInfo
     * @class
     */
@@ -44,7 +45,7 @@ export default class SystemInfo {
                         
             
             if (data.hasOwnProperty('SystemUpdateLevel')) {
-                obj['SystemUpdateLevel'] = UpdatesPackageVersionClass.constructFromObject(data['SystemUpdateLevel']);
+                obj['SystemUpdateLevel'] = PackageVersionClass.constructFromObject(data['SystemUpdateLevel']);
             }
             if (data.hasOwnProperty('OperatingSystemDisplayName')) {
                 obj['OperatingSystemDisplayName'] = ApiClient.convertToType(data['OperatingSystemDisplayName'], 'String');
@@ -74,7 +75,7 @@ export default class SystemInfo {
                 obj['WebSocketPortNumber'] = ApiClient.convertToType(data['WebSocketPortNumber'], 'Number');
             }
             if (data.hasOwnProperty('CompletedInstallations')) {
-                obj['CompletedInstallations'] = ApiClient.convertToType(data['CompletedInstallations'], [UpdatesInstallationInfo]);
+                obj['CompletedInstallations'] = ApiClient.convertToType(data['CompletedInstallations'], [InstallationInfo]);
             }
             if (data.hasOwnProperty('CanSelfRestart')) {
                 obj['CanSelfRestart'] = ApiClient.convertToType(data['CanSelfRestart'], 'Boolean');
@@ -147,10 +148,11 @@ export default class SystemInfo {
     }
 
     /**
-    * @member {module:model/UpdatesPackageVersionClass} SystemUpdateLevel
+    * @member {module:model/PackageVersionClass} SystemUpdateLevel
     */
     'SystemUpdateLevel' = undefined;
     /**
+    * The display name of the operating system.
     * @member {String} OperatingSystemDisplayName
     */
     'OperatingSystemDisplayName' = undefined;
@@ -159,6 +161,7 @@ export default class SystemInfo {
     */
     'PackageName' = undefined;
     /**
+    * A value indicating whether this instance has pending restart.
     * @member {Boolean} HasPendingRestart
     */
     'HasPendingRestart' = undefined;
@@ -167,10 +170,12 @@ export default class SystemInfo {
     */
     'IsShuttingDown' = undefined;
     /**
+    * The operating sytem.
     * @member {String} OperatingSystem
     */
     'OperatingSystem' = undefined;
     /**
+    * A value indicating whether \\[supports library monitor\\].
     * @member {Boolean} SupportsLibraryMonitor
     */
     'SupportsLibraryMonitor' = undefined;
@@ -183,18 +188,22 @@ export default class SystemInfo {
     */
     'SupportsWakeServer' = undefined;
     /**
+    * The web socket port number.
     * @member {Number} WebSocketPortNumber
     */
     'WebSocketPortNumber' = undefined;
     /**
-    * @member {Array.<module:model/UpdatesInstallationInfo>} CompletedInstallations
+    * The completed installations.
+    * @member {Array.<module:model/InstallationInfo>} CompletedInstallations
     */
     'CompletedInstallations' = undefined;
     /**
+    * A value indicating whether this instance can self restart.
     * @member {Boolean} CanSelfRestart
     */
     'CanSelfRestart' = undefined;
     /**
+    * A value indicating whether this instance can self update.
     * @member {Boolean} CanSelfUpdate
     */
     'CanSelfUpdate' = undefined;
@@ -203,46 +212,57 @@ export default class SystemInfo {
     */
     'CanLaunchWebBrowser' = undefined;
     /**
+    * The program data path.
     * @member {String} ProgramDataPath
     */
     'ProgramDataPath' = undefined;
     /**
+    * The items by name path.
     * @member {String} ItemsByNamePath
     */
     'ItemsByNamePath' = undefined;
     /**
+    * The cache path.
     * @member {String} CachePath
     */
     'CachePath' = undefined;
     /**
+    * The log path.
     * @member {String} LogPath
     */
     'LogPath' = undefined;
     /**
+    * The internal metadata path.
     * @member {String} InternalMetadataPath
     */
     'InternalMetadataPath' = undefined;
     /**
+    * The transcoding temporary path.
     * @member {String} TranscodingTempPath
     */
     'TranscodingTempPath' = undefined;
     /**
+    * The HTTP server port number.
     * @member {Number} HttpServerPortNumber
     */
     'HttpServerPortNumber' = undefined;
     /**
+    * A value indicating whether \\[enable HTTPS\\].
     * @member {Boolean} SupportsHttps
     */
     'SupportsHttps' = undefined;
     /**
+    * The HTTPS server port number.
     * @member {Number} HttpsPortNumber
     */
     'HttpsPortNumber' = undefined;
     /**
+    * A value indicating whether this instance has update available.
     * @member {Boolean} HasUpdateAvailable
     */
     'HasUpdateAvailable' = undefined;
     /**
+    * A value indicating whether \\[supports automatic run at startup\\].
     * @member {Boolean} SupportsAutoRunAtStartup
     */
     'SupportsAutoRunAtStartup' = undefined;
@@ -251,6 +271,7 @@ export default class SystemInfo {
     */
     'HardwareAccelerationRequiresPremiere' = undefined;
     /**
+    * The local address.
     * @member {String} LocalAddress
     */
     'LocalAddress' = undefined;
@@ -259,6 +280,7 @@ export default class SystemInfo {
     */
     'LocalAddresses' = undefined;
     /**
+    * The wan address.
     * @member {String} WanAddress
     */
     'WanAddress' = undefined;
@@ -267,14 +289,17 @@ export default class SystemInfo {
     */
     'RemoteAddresses' = undefined;
     /**
+    * The name of the server.
     * @member {String} ServerName
     */
     'ServerName' = undefined;
     /**
+    * The version.
     * @member {String} Version
     */
     'Version' = undefined;
     /**
+    * The id.
     * @member {String} Id
     */
     'Id' = undefined;

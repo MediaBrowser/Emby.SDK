@@ -46,8 +46,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>QueryResultDevicesDeviceInfo</returns>
-        QueryResultDevicesDeviceInfo GetDevices ();
+        QueryResultDevicesDeviceInfo GetDevices (string sortOrder);
 
         /// <summary>
         /// Gets all devices
@@ -56,8 +57,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of QueryResultDevicesDeviceInfo</returns>
-        ApiResponse<QueryResultDevicesDeviceInfo> GetDevicesWithHttpInfo ();
+        ApiResponse<QueryResultDevicesDeviceInfo> GetDevicesWithHttpInfo (string sortOrder);
         /// <summary>
         /// Gets camera upload history for a device
         /// </summary>
@@ -65,9 +67,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device Id</param>
         /// <returns>DevicesContentUploadHistory</returns>
-        DevicesContentUploadHistory GetDevicesCamerauploads (string deviceId);
+        DevicesContentUploadHistory GetDevicesCamerauploads ();
 
         /// <summary>
         /// Gets camera upload history for a device
@@ -76,9 +77,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device Id</param>
         /// <returns>ApiResponse of DevicesContentUploadHistory</returns>
-        ApiResponse<DevicesContentUploadHistory> GetDevicesCamerauploadsWithHttpInfo (string deviceId);
+        ApiResponse<DevicesContentUploadHistory> GetDevicesCamerauploadsWithHttpInfo ();
         /// <summary>
         /// Gets info for a device
         /// </summary>
@@ -129,12 +129,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
-        /// <param name="deviceId">Device Id</param>
         /// <param name="album">Album</param>
         /// <param name="name">Name</param>
         /// <param name="id">Id</param>
         /// <returns></returns>
-        void PostDevicesCamerauploads (Object body, string deviceId, string album, string name, string id);
+        void PostDevicesCamerauploads (Object body, string album, string name, string id);
 
         /// <summary>
         /// Uploads content
@@ -144,12 +143,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
-        /// <param name="deviceId">Device Id</param>
         /// <param name="album">Album</param>
         /// <param name="name">Name</param>
         /// <param name="id">Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostDevicesCamerauploadsWithHttpInfo (Object body, string deviceId, string album, string name, string id);
+        ApiResponse<Object> PostDevicesCamerauploadsWithHttpInfo (Object body, string album, string name, string id);
         /// <summary>
         /// Deletes a device
         /// </summary>
@@ -224,8 +222,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of QueryResultDevicesDeviceInfo</returns>
-        System.Threading.Tasks.Task<QueryResultDevicesDeviceInfo> GetDevicesAsync ();
+        System.Threading.Tasks.Task<QueryResultDevicesDeviceInfo> GetDevicesAsync (string sortOrder);
 
         /// <summary>
         /// Gets all devices
@@ -234,8 +233,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultDevicesDeviceInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultDevicesDeviceInfo>> GetDevicesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<QueryResultDevicesDeviceInfo>> GetDevicesAsyncWithHttpInfo (string sortOrder);
         /// <summary>
         /// Gets camera upload history for a device
         /// </summary>
@@ -243,9 +243,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device Id</param>
         /// <returns>Task of DevicesContentUploadHistory</returns>
-        System.Threading.Tasks.Task<DevicesContentUploadHistory> GetDevicesCamerauploadsAsync (string deviceId);
+        System.Threading.Tasks.Task<DevicesContentUploadHistory> GetDevicesCamerauploadsAsync ();
 
         /// <summary>
         /// Gets camera upload history for a device
@@ -254,9 +253,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device Id</param>
         /// <returns>Task of ApiResponse (DevicesContentUploadHistory)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DevicesContentUploadHistory>> GetDevicesCamerauploadsAsyncWithHttpInfo (string deviceId);
+        System.Threading.Tasks.Task<ApiResponse<DevicesContentUploadHistory>> GetDevicesCamerauploadsAsyncWithHttpInfo ();
         /// <summary>
         /// Gets info for a device
         /// </summary>
@@ -307,12 +305,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
-        /// <param name="deviceId">Device Id</param>
         /// <param name="album">Album</param>
         /// <param name="name">Name</param>
         /// <param name="id">Id</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostDevicesCamerauploadsAsync (Object body, string deviceId, string album, string name, string id);
+        System.Threading.Tasks.Task PostDevicesCamerauploadsAsync (Object body, string album, string name, string id);
 
         /// <summary>
         /// Uploads content
@@ -322,12 +319,11 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
-        /// <param name="deviceId">Device Id</param>
         /// <param name="album">Album</param>
         /// <param name="name">Name</param>
         /// <param name="id">Id</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostDevicesCamerauploadsAsyncWithHttpInfo (Object body, string deviceId, string album, string name, string id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostDevicesCamerauploadsAsyncWithHttpInfo (Object body, string album, string name, string id);
         /// <summary>
         /// Deletes a device
         /// </summary>
@@ -636,10 +632,11 @@ namespace EmbyClient.Dotnet.Api
         /// Gets all devices Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>QueryResultDevicesDeviceInfo</returns>
-        public QueryResultDevicesDeviceInfo GetDevices ()
+        public QueryResultDevicesDeviceInfo GetDevices (string sortOrder)
         {
-             ApiResponse<QueryResultDevicesDeviceInfo> localVarResponse = GetDevicesWithHttpInfo();
+             ApiResponse<QueryResultDevicesDeviceInfo> localVarResponse = GetDevicesWithHttpInfo(sortOrder);
              return localVarResponse.Data;
         }
 
@@ -647,8 +644,9 @@ namespace EmbyClient.Dotnet.Api
         /// Gets all devices Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of QueryResultDevicesDeviceInfo</returns>
-        public ApiResponse< QueryResultDevicesDeviceInfo > GetDevicesWithHttpInfo ()
+        public ApiResponse< QueryResultDevicesDeviceInfo > GetDevicesWithHttpInfo (string sortOrder)
         {
 
             var localVarPath = "/Devices";
@@ -673,6 +671,7 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -707,10 +706,11 @@ namespace EmbyClient.Dotnet.Api
         /// Gets all devices Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of QueryResultDevicesDeviceInfo</returns>
-        public async System.Threading.Tasks.Task<QueryResultDevicesDeviceInfo> GetDevicesAsync ()
+        public async System.Threading.Tasks.Task<QueryResultDevicesDeviceInfo> GetDevicesAsync (string sortOrder)
         {
-             ApiResponse<QueryResultDevicesDeviceInfo> localVarResponse = await GetDevicesAsyncWithHttpInfo();
+             ApiResponse<QueryResultDevicesDeviceInfo> localVarResponse = await GetDevicesAsyncWithHttpInfo(sortOrder);
              return localVarResponse.Data;
 
         }
@@ -719,8 +719,9 @@ namespace EmbyClient.Dotnet.Api
         /// Gets all devices Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultDevicesDeviceInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultDevicesDeviceInfo>> GetDevicesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultDevicesDeviceInfo>> GetDevicesAsyncWithHttpInfo (string sortOrder)
         {
 
             var localVarPath = "/Devices";
@@ -745,6 +746,7 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -779,11 +781,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets camera upload history for a device Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device Id</param>
         /// <returns>DevicesContentUploadHistory</returns>
-        public DevicesContentUploadHistory GetDevicesCamerauploads (string deviceId)
+        public DevicesContentUploadHistory GetDevicesCamerauploads ()
         {
-             ApiResponse<DevicesContentUploadHistory> localVarResponse = GetDevicesCamerauploadsWithHttpInfo(deviceId);
+             ApiResponse<DevicesContentUploadHistory> localVarResponse = GetDevicesCamerauploadsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -791,13 +792,9 @@ namespace EmbyClient.Dotnet.Api
         /// Gets camera upload history for a device Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device Id</param>
         /// <returns>ApiResponse of DevicesContentUploadHistory</returns>
-        public ApiResponse< DevicesContentUploadHistory > GetDevicesCamerauploadsWithHttpInfo (string deviceId)
+        public ApiResponse< DevicesContentUploadHistory > GetDevicesCamerauploadsWithHttpInfo ()
         {
-            // verify the required parameter 'deviceId' is set
-            if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling DeviceServiceApi->GetDevicesCamerauploads");
 
             var localVarPath = "/Devices/CameraUploads";
             var localVarPathParams = new Dictionary<String, String>();
@@ -821,7 +818,6 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (deviceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "DeviceId", deviceId)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -856,11 +852,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets camera upload history for a device Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device Id</param>
         /// <returns>Task of DevicesContentUploadHistory</returns>
-        public async System.Threading.Tasks.Task<DevicesContentUploadHistory> GetDevicesCamerauploadsAsync (string deviceId)
+        public async System.Threading.Tasks.Task<DevicesContentUploadHistory> GetDevicesCamerauploadsAsync ()
         {
-             ApiResponse<DevicesContentUploadHistory> localVarResponse = await GetDevicesCamerauploadsAsyncWithHttpInfo(deviceId);
+             ApiResponse<DevicesContentUploadHistory> localVarResponse = await GetDevicesCamerauploadsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -869,13 +864,9 @@ namespace EmbyClient.Dotnet.Api
         /// Gets camera upload history for a device Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deviceId">Device Id</param>
         /// <returns>Task of ApiResponse (DevicesContentUploadHistory)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DevicesContentUploadHistory>> GetDevicesCamerauploadsAsyncWithHttpInfo (string deviceId)
+        public async System.Threading.Tasks.Task<ApiResponse<DevicesContentUploadHistory>> GetDevicesCamerauploadsAsyncWithHttpInfo ()
         {
-            // verify the required parameter 'deviceId' is set
-            if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling DeviceServiceApi->GetDevicesCamerauploads");
 
             var localVarPath = "/Devices/CameraUploads";
             var localVarPathParams = new Dictionary<String, String>();
@@ -899,7 +890,6 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (deviceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "DeviceId", deviceId)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1245,14 +1235,13 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
-        /// <param name="deviceId">Device Id</param>
         /// <param name="album">Album</param>
         /// <param name="name">Name</param>
         /// <param name="id">Id</param>
         /// <returns></returns>
-        public void PostDevicesCamerauploads (Object body, string deviceId, string album, string name, string id)
+        public void PostDevicesCamerauploads (Object body, string album, string name, string id)
         {
-             PostDevicesCamerauploadsWithHttpInfo(body, deviceId, album, name, id);
+             PostDevicesCamerauploadsWithHttpInfo(body, album, name, id);
         }
 
         /// <summary>
@@ -1260,19 +1249,15 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
-        /// <param name="deviceId">Device Id</param>
         /// <param name="album">Album</param>
         /// <param name="name">Name</param>
         /// <param name="id">Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostDevicesCamerauploadsWithHttpInfo (Object body, string deviceId, string album, string name, string id)
+        public ApiResponse<Object> PostDevicesCamerauploadsWithHttpInfo (Object body, string album, string name, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling DeviceServiceApi->PostDevicesCamerauploads");
-            // verify the required parameter 'deviceId' is set
-            if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling DeviceServiceApi->PostDevicesCamerauploads");
             // verify the required parameter 'album' is set
             if (album == null)
                 throw new ApiException(400, "Missing required parameter 'album' when calling DeviceServiceApi->PostDevicesCamerauploads");
@@ -1304,7 +1289,6 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (deviceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "DeviceId", deviceId)); // query parameter
             if (album != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Album", album)); // query parameter
             if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Name", name)); // query parameter
             if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Id", id)); // query parameter
@@ -1351,14 +1335,13 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
-        /// <param name="deviceId">Device Id</param>
         /// <param name="album">Album</param>
         /// <param name="name">Name</param>
         /// <param name="id">Id</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostDevicesCamerauploadsAsync (Object body, string deviceId, string album, string name, string id)
+        public async System.Threading.Tasks.Task PostDevicesCamerauploadsAsync (Object body, string album, string name, string id)
         {
-             await PostDevicesCamerauploadsAsyncWithHttpInfo(body, deviceId, album, name, id);
+             await PostDevicesCamerauploadsAsyncWithHttpInfo(body, album, name, id);
 
         }
 
@@ -1367,19 +1350,15 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
-        /// <param name="deviceId">Device Id</param>
         /// <param name="album">Album</param>
         /// <param name="name">Name</param>
         /// <param name="id">Id</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDevicesCamerauploadsAsyncWithHttpInfo (Object body, string deviceId, string album, string name, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDevicesCamerauploadsAsyncWithHttpInfo (Object body, string album, string name, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling DeviceServiceApi->PostDevicesCamerauploads");
-            // verify the required parameter 'deviceId' is set
-            if (deviceId == null)
-                throw new ApiException(400, "Missing required parameter 'deviceId' when calling DeviceServiceApi->PostDevicesCamerauploads");
             // verify the required parameter 'album' is set
             if (album == null)
                 throw new ApiException(400, "Missing required parameter 'album' when calling DeviceServiceApi->PostDevicesCamerauploads");
@@ -1411,7 +1390,6 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (deviceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "DeviceId", deviceId)); // query parameter
             if (album != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Album", album)); // query parameter
             if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Name", name)); // query parameter
             if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Id", id)); // query parameter

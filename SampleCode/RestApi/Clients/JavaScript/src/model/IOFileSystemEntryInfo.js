@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,11 +15,12 @@ import IOFileSystemEntryType from './IOFileSystemEntryType';
 /**
 * The IOFileSystemEntryInfo model module.
 * @module model/IOFileSystemEntryInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class IOFileSystemEntryInfo {
     /**
     * Constructs a new <code>IOFileSystemEntryInfo</code>.
+    * Class FileSystemEntryInfo  
     * @alias module:model/IOFileSystemEntryInfo
     * @class
     */
@@ -56,10 +57,12 @@ export default class IOFileSystemEntryInfo {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The path.
     * @member {String} Path
     */
     'Path' = undefined;

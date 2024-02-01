@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -36,8 +36,13 @@ public class ChannelServiceApiTest {
     public void getChannelsTest() throws Exception {
         String userId = null;
         Integer startIndex = null;
+        String fields = null;
         Integer limit = null;
-        QueryResultBaseItemDto response = api.getChannels(userId, startIndex, limit);
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        QueryResultBaseItemDto response = api.getChannels(userId, startIndex, fields, limit, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }

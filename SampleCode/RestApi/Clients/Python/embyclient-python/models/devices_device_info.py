@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -24,40 +24,53 @@ class DevicesDeviceInfo(object):
     swagger_types = {
         'name': 'str',
         'id': 'str',
+        'internal_id': 'int',
+        'reported_device_id': 'str',
         'last_user_name': 'str',
         'app_name': 'str',
         'app_version': 'str',
         'last_user_id': 'str',
         'date_last_activity': 'datetime',
-        'icon_url': 'str'
+        'icon_url': 'str',
+        'ip_address': 'str'
     }
 
     attribute_map = {
         'name': 'Name',
         'id': 'Id',
+        'internal_id': 'InternalId',
+        'reported_device_id': 'ReportedDeviceId',
         'last_user_name': 'LastUserName',
         'app_name': 'AppName',
         'app_version': 'AppVersion',
         'last_user_id': 'LastUserId',
         'date_last_activity': 'DateLastActivity',
-        'icon_url': 'IconUrl'
+        'icon_url': 'IconUrl',
+        'ip_address': 'IpAddress'
     }
 
-    def __init__(self, name=None, id=None, last_user_name=None, app_name=None, app_version=None, last_user_id=None, date_last_activity=None, icon_url=None):  # noqa: E501
+    def __init__(self, name=None, id=None, internal_id=None, reported_device_id=None, last_user_name=None, app_name=None, app_version=None, last_user_id=None, date_last_activity=None, icon_url=None, ip_address=None):  # noqa: E501
         """DevicesDeviceInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._id = None
+        self._internal_id = None
+        self._reported_device_id = None
         self._last_user_name = None
         self._app_name = None
         self._app_version = None
         self._last_user_id = None
         self._date_last_activity = None
         self._icon_url = None
+        self._ip_address = None
         self.discriminator = None
         if name is not None:
             self.name = name
         if id is not None:
             self.id = id
+        if internal_id is not None:
+            self.internal_id = internal_id
+        if reported_device_id is not None:
+            self.reported_device_id = reported_device_id
         if last_user_name is not None:
             self.last_user_name = last_user_name
         if app_name is not None:
@@ -70,6 +83,8 @@ class DevicesDeviceInfo(object):
             self.date_last_activity = date_last_activity
         if icon_url is not None:
             self.icon_url = icon_url
+        if ip_address is not None:
+            self.ip_address = ip_address
 
     @property
     def name(self):
@@ -96,6 +111,7 @@ class DevicesDeviceInfo(object):
     def id(self):
         """Gets the id of this DevicesDeviceInfo.  # noqa: E501
 
+        The identifier.  # noqa: E501
 
         :return: The id of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -106,6 +122,7 @@ class DevicesDeviceInfo(object):
     def id(self, id):
         """Sets the id of this DevicesDeviceInfo.
 
+        The identifier.  # noqa: E501
 
         :param id: The id of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -114,9 +131,52 @@ class DevicesDeviceInfo(object):
         self._id = id
 
     @property
+    def internal_id(self):
+        """Gets the internal_id of this DevicesDeviceInfo.  # noqa: E501
+
+
+        :return: The internal_id of this DevicesDeviceInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._internal_id
+
+    @internal_id.setter
+    def internal_id(self, internal_id):
+        """Sets the internal_id of this DevicesDeviceInfo.
+
+
+        :param internal_id: The internal_id of this DevicesDeviceInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._internal_id = internal_id
+
+    @property
+    def reported_device_id(self):
+        """Gets the reported_device_id of this DevicesDeviceInfo.  # noqa: E501
+
+
+        :return: The reported_device_id of this DevicesDeviceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._reported_device_id
+
+    @reported_device_id.setter
+    def reported_device_id(self, reported_device_id):
+        """Sets the reported_device_id of this DevicesDeviceInfo.
+
+
+        :param reported_device_id: The reported_device_id of this DevicesDeviceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._reported_device_id = reported_device_id
+
+    @property
     def last_user_name(self):
         """Gets the last_user_name of this DevicesDeviceInfo.  # noqa: E501
 
+        The last name of the user.  # noqa: E501
 
         :return: The last_user_name of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -127,6 +187,7 @@ class DevicesDeviceInfo(object):
     def last_user_name(self, last_user_name):
         """Sets the last_user_name of this DevicesDeviceInfo.
 
+        The last name of the user.  # noqa: E501
 
         :param last_user_name: The last_user_name of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -138,6 +199,7 @@ class DevicesDeviceInfo(object):
     def app_name(self):
         """Gets the app_name of this DevicesDeviceInfo.  # noqa: E501
 
+        The name of the application.  # noqa: E501
 
         :return: The app_name of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -148,6 +210,7 @@ class DevicesDeviceInfo(object):
     def app_name(self, app_name):
         """Sets the app_name of this DevicesDeviceInfo.
 
+        The name of the application.  # noqa: E501
 
         :param app_name: The app_name of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -159,6 +222,7 @@ class DevicesDeviceInfo(object):
     def app_version(self):
         """Gets the app_version of this DevicesDeviceInfo.  # noqa: E501
 
+        The application version.  # noqa: E501
 
         :return: The app_version of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -169,6 +233,7 @@ class DevicesDeviceInfo(object):
     def app_version(self, app_version):
         """Sets the app_version of this DevicesDeviceInfo.
 
+        The application version.  # noqa: E501
 
         :param app_version: The app_version of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -180,6 +245,7 @@ class DevicesDeviceInfo(object):
     def last_user_id(self):
         """Gets the last_user_id of this DevicesDeviceInfo.  # noqa: E501
 
+        The last user identifier.  # noqa: E501
 
         :return: The last_user_id of this DevicesDeviceInfo.  # noqa: E501
         :rtype: str
@@ -190,6 +256,7 @@ class DevicesDeviceInfo(object):
     def last_user_id(self, last_user_id):
         """Sets the last_user_id of this DevicesDeviceInfo.
 
+        The last user identifier.  # noqa: E501
 
         :param last_user_id: The last_user_id of this DevicesDeviceInfo.  # noqa: E501
         :type: str
@@ -238,6 +305,27 @@ class DevicesDeviceInfo(object):
         """
 
         self._icon_url = icon_url
+
+    @property
+    def ip_address(self):
+        """Gets the ip_address of this DevicesDeviceInfo.  # noqa: E501
+
+
+        :return: The ip_address of this DevicesDeviceInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._ip_address
+
+    @ip_address.setter
+    def ip_address(self, ip_address):
+        """Sets the ip_address of this DevicesDeviceInfo.
+
+
+        :param ip_address: The ip_address of this DevicesDeviceInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._ip_address = ip_address
 
     def to_dict(self):
         """Returns the model properties as a dict"""

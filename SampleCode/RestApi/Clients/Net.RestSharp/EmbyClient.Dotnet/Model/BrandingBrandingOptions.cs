@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandingBrandingOptions" /> class.
         /// </summary>
-        /// <param name="loginDisclaimer">loginDisclaimer.</param>
-        /// <param name="customCss">customCss.</param>
+        /// <param name="loginDisclaimer">The login disclaimer..</param>
+        /// <param name="customCss">The custom CSS..</param>
         public BrandingBrandingOptions(string loginDisclaimer = default(string), string customCss = default(string))
         {
             this.LoginDisclaimer = loginDisclaimer;
@@ -35,14 +35,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets LoginDisclaimer
+        /// The login disclaimer.
         /// </summary>
+        /// <value>The login disclaimer.</value>
         [DataMember(Name="LoginDisclaimer", EmitDefaultValue=false)]
         public string LoginDisclaimer { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomCss
+        /// The custom CSS.
         /// </summary>
+        /// <value>The custom CSS.</value>
         [DataMember(Name="CustomCss", EmitDefaultValue=false)]
         public string CustomCss { get; set; }
 

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 from __future__ import absolute_import
@@ -446,7 +446,7 @@ class ImageServiceApi(object):
     def get_artists_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_artists_by_name_images_by_type(name, type, async_req=True)
@@ -464,12 +464,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -485,7 +483,7 @@ class ImageServiceApi(object):
     def get_artists_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_artists_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -503,19 +501,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -566,18 +562,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -588,7 +580,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Artists/{Name}/Images/{Type}', 'GET',
@@ -609,7 +601,7 @@ class ImageServiceApi(object):
     def get_artists_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_artists_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -628,12 +620,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -648,7 +638,7 @@ class ImageServiceApi(object):
     def get_artists_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -667,18 +657,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -735,18 +723,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -755,7 +739,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Artists/{Name}/Images/{Type}/{Index}', 'GET',
@@ -776,7 +760,7 @@ class ImageServiceApi(object):
     def get_gamegenres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gamegenres_by_name_images_by_type(name, type, async_req=True)
@@ -794,12 +778,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -815,7 +797,7 @@ class ImageServiceApi(object):
     def get_gamegenres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gamegenres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -833,19 +815,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -896,18 +876,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -918,7 +894,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/GameGenres/{Name}/Images/{Type}', 'GET',
@@ -939,7 +915,7 @@ class ImageServiceApi(object):
     def get_gamegenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gamegenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -958,12 +934,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -978,7 +952,7 @@ class ImageServiceApi(object):
     def get_gamegenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -997,18 +971,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1065,18 +1037,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -1085,7 +1053,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/GameGenres/{Name}/Images/{Type}/{Index}', 'GET',
@@ -1106,7 +1074,7 @@ class ImageServiceApi(object):
     def get_genres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_genres_by_name_images_by_type(name, type, async_req=True)
@@ -1124,12 +1092,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -1145,7 +1111,7 @@ class ImageServiceApi(object):
     def get_genres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_genres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -1163,19 +1129,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1226,18 +1190,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -1248,7 +1208,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Genres/{Name}/Images/{Type}', 'GET',
@@ -1269,7 +1229,7 @@ class ImageServiceApi(object):
     def get_genres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_genres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -1288,12 +1248,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1308,7 +1266,7 @@ class ImageServiceApi(object):
     def get_genres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -1327,18 +1285,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1395,18 +1351,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -1415,7 +1367,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Genres/{Name}/Images/{Type}/{Index}', 'GET',
@@ -1531,7 +1483,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type(self, id, type, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type(id, type, async_req=True)
@@ -1549,12 +1501,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -1570,7 +1520,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type_with_http_info(self, id, type, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type_with_http_info(id, type, async_req=True)
@@ -1588,19 +1538,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1651,18 +1599,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -1673,7 +1617,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}', 'GET',
@@ -1694,7 +1638,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type_by_index(id, type, index, async_req=True)
@@ -1713,12 +1657,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1733,7 +1675,7 @@ class ImageServiceApi(object):
     def get_items_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_items_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
@@ -1752,18 +1694,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1820,18 +1760,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -1840,7 +1776,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}/{Index}', 'GET',
@@ -1858,23 +1794,23 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int percent_played: (required)
+        :param int un_played_count: (required)
         :param str id: Item Id (required)
         :param int max_width: The maximum image width to return. (required)
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param float percent_played: Optional percent to render for the percent played overlay (required)
-        :param int unplayed_count: Optional unplayed count overlay to render (required)
         :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
         :param int width: The fixed image width to return.
@@ -1882,38 +1818,38 @@ class ImageServiceApi(object):
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
-        :param bool add_played_indicator: Optional. Add a played indicator
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs)  # noqa: E501
+            return self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
             return data
 
-    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int percent_played: (required)
+        :param int un_played_count: (required)
         :param str id: Item Id (required)
         :param int max_width: The maximum image width to return. (required)
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param float percent_played: Optional percent to render for the percent played overlay (required)
-        :param int unplayed_count: Optional unplayed count overlay to render (required)
         :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
         :param int width: The fixed image width to return.
@@ -1921,16 +1857,16 @@ class ImageServiceApi(object):
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
-        :param bool add_played_indicator: Optional. Add a played indicator
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'max_width', 'max_height', 'tag', 'format', 'percent_played', 'unplayed_count', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'add_played_indicator', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1945,6 +1881,14 @@ class ImageServiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'percent_played' is set
+        if ('percent_played' not in params or
+                params['percent_played'] is None):
+            raise ValueError("Missing the required parameter `percent_played` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
+        # verify the required parameter 'un_played_count' is set
+        if ('un_played_count' not in params or
+                params['un_played_count'] is None):
+            raise ValueError("Missing the required parameter `un_played_count` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -1965,14 +1909,6 @@ class ImageServiceApi(object):
         if ('format' not in params or
                 params['format'] is None):
             raise ValueError("Missing the required parameter `format` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'percent_played' is set
-        if ('percent_played' not in params or
-                params['percent_played'] is None):
-            raise ValueError("Missing the required parameter `percent_played` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'unplayed_count' is set
-        if ('unplayed_count' not in params or
-                params['unplayed_count'] is None):
-            raise ValueError("Missing the required parameter `unplayed_count` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'type' is set
         if ('type' not in params or
                 params['type'] is None):
@@ -1985,6 +1921,10 @@ class ImageServiceApi(object):
         collection_formats = {}
 
         path_params = {}
+        if 'percent_played' in params:
+            path_params['PercentPlayed'] = params['percent_played']  # noqa: E501
+        if 'un_played_count' in params:
+            path_params['UnPlayedCount'] = params['un_played_count']  # noqa: E501
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
         if 'max_width' in params:
@@ -1995,10 +1935,6 @@ class ImageServiceApi(object):
             path_params['Tag'] = params['tag']  # noqa: E501
         if 'format' in params:
             path_params['Format'] = params['format']  # noqa: E501
-        if 'percent_played' in params:
-            path_params['PercentPlayed'] = params['percent_played']  # noqa: E501
-        if 'unplayed_count' in params:
-            path_params['UnplayedCount'] = params['unplayed_count']  # noqa: E501
         if 'type' in params:
             path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
@@ -2015,14 +1951,14 @@ class ImageServiceApi(object):
             query_params.append(('CropWhitespace', params['crop_whitespace']))  # noqa: E501
         if 'enable_image_enhancers' in params:
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -2031,7 +1967,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}', 'GET',
@@ -2052,7 +1988,7 @@ class ImageServiceApi(object):
     def get_musicgenres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_musicgenres_by_name_images_by_type(name, type, async_req=True)
@@ -2070,12 +2006,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -2091,7 +2025,7 @@ class ImageServiceApi(object):
     def get_musicgenres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_musicgenres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -2109,19 +2043,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2172,18 +2104,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -2194,7 +2122,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/MusicGenres/{Name}/Images/{Type}', 'GET',
@@ -2215,7 +2143,7 @@ class ImageServiceApi(object):
     def get_musicgenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_musicgenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -2234,12 +2162,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2254,7 +2180,7 @@ class ImageServiceApi(object):
     def get_musicgenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -2273,18 +2199,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2341,18 +2265,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -2361,7 +2281,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/MusicGenres/{Name}/Images/{Type}/{Index}', 'GET',
@@ -2382,7 +2302,7 @@ class ImageServiceApi(object):
     def get_persons_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_persons_by_name_images_by_type(name, type, async_req=True)
@@ -2400,12 +2320,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -2421,7 +2339,7 @@ class ImageServiceApi(object):
     def get_persons_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_persons_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -2439,19 +2357,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2502,18 +2418,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -2524,7 +2436,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Persons/{Name}/Images/{Type}', 'GET',
@@ -2545,7 +2457,7 @@ class ImageServiceApi(object):
     def get_persons_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_persons_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -2564,12 +2476,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2584,7 +2494,7 @@ class ImageServiceApi(object):
     def get_persons_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -2603,18 +2513,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2671,18 +2579,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -2691,7 +2595,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Persons/{Name}/Images/{Type}/{Index}', 'GET',
@@ -2712,7 +2616,7 @@ class ImageServiceApi(object):
     def get_studios_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_studios_by_name_images_by_type(name, type, async_req=True)
@@ -2730,12 +2634,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -2751,7 +2653,7 @@ class ImageServiceApi(object):
     def get_studios_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_studios_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -2769,19 +2671,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2832,18 +2732,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -2854,7 +2750,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Studios/{Name}/Images/{Type}', 'GET',
@@ -2875,7 +2771,7 @@ class ImageServiceApi(object):
     def get_studios_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_studios_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -2894,12 +2790,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2914,7 +2808,7 @@ class ImageServiceApi(object):
     def get_studios_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -2933,18 +2827,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3001,18 +2893,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -3021,7 +2909,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Studios/{Name}/Images/{Type}/{Index}', 'GET',
@@ -3042,7 +2930,7 @@ class ImageServiceApi(object):
     def get_users_by_id_images_by_type(self, id, type, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_id_images_by_type(id, type, async_req=True)
@@ -3060,12 +2948,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -3081,7 +2967,7 @@ class ImageServiceApi(object):
     def get_users_by_id_images_by_type_with_http_info(self, id, type, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_id_images_by_type_with_http_info(id, type, async_req=True)
@@ -3099,19 +2985,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3162,18 +3046,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -3184,7 +3064,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Images/{Type}', 'GET',
@@ -3205,7 +3085,7 @@ class ImageServiceApi(object):
     def get_users_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_id_images_by_type_by_index(id, type, index, async_req=True)
@@ -3224,12 +3104,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3244,7 +3122,7 @@ class ImageServiceApi(object):
     def get_users_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_users_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
@@ -3263,18 +3141,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3331,18 +3207,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -3351,7 +3223,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Images/{Type}/{Index}', 'GET',
@@ -3372,7 +3244,7 @@ class ImageServiceApi(object):
     def head_artists_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_artists_by_name_images_by_type(name, type, async_req=True)
@@ -3390,12 +3262,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -3411,7 +3281,7 @@ class ImageServiceApi(object):
     def head_artists_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_artists_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -3429,19 +3299,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3492,18 +3360,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -3514,7 +3378,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Artists/{Name}/Images/{Type}', 'HEAD',
@@ -3535,7 +3399,7 @@ class ImageServiceApi(object):
     def head_artists_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_artists_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -3554,12 +3418,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3574,7 +3436,7 @@ class ImageServiceApi(object):
     def head_artists_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -3593,18 +3455,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3661,18 +3521,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -3681,7 +3537,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Artists/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -3702,7 +3558,7 @@ class ImageServiceApi(object):
     def head_gamegenres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_gamegenres_by_name_images_by_type(name, type, async_req=True)
@@ -3720,12 +3576,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -3741,7 +3595,7 @@ class ImageServiceApi(object):
     def head_gamegenres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_gamegenres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -3759,19 +3613,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3822,18 +3674,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -3844,7 +3692,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/GameGenres/{Name}/Images/{Type}', 'HEAD',
@@ -3865,7 +3713,7 @@ class ImageServiceApi(object):
     def head_gamegenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_gamegenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -3884,12 +3732,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3904,7 +3750,7 @@ class ImageServiceApi(object):
     def head_gamegenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -3923,18 +3769,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3991,18 +3835,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -4011,7 +3851,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/GameGenres/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -4032,7 +3872,7 @@ class ImageServiceApi(object):
     def head_genres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_genres_by_name_images_by_type(name, type, async_req=True)
@@ -4050,12 +3890,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -4071,7 +3909,7 @@ class ImageServiceApi(object):
     def head_genres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_genres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -4089,19 +3927,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4152,18 +3988,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -4174,7 +4006,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Genres/{Name}/Images/{Type}', 'HEAD',
@@ -4195,7 +4027,7 @@ class ImageServiceApi(object):
     def head_genres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_genres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -4214,12 +4046,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4234,7 +4064,7 @@ class ImageServiceApi(object):
     def head_genres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -4253,18 +4083,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4321,18 +4149,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -4341,7 +4165,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Genres/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -4362,7 +4186,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type(self, id, type, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type(id, type, async_req=True)
@@ -4380,12 +4204,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -4401,7 +4223,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type_with_http_info(self, id, type, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type_with_http_info(id, type, async_req=True)
@@ -4419,19 +4241,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4482,18 +4302,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -4504,7 +4320,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}', 'HEAD',
@@ -4525,7 +4341,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type_by_index(id, type, index, async_req=True)
@@ -4544,12 +4360,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4564,7 +4378,7 @@ class ImageServiceApi(object):
     def head_items_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_items_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
@@ -4583,18 +4397,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4651,18 +4463,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -4671,7 +4479,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}/{Index}', 'HEAD',
@@ -4689,23 +4497,23 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int percent_played: (required)
+        :param int un_played_count: (required)
         :param str id: Item Id (required)
         :param int max_width: The maximum image width to return. (required)
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param float percent_played: Optional percent to render for the percent played overlay (required)
-        :param int unplayed_count: Optional unplayed count overlay to render (required)
         :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
         :param int width: The fixed image width to return.
@@ -4713,38 +4521,38 @@ class ImageServiceApi(object):
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
-        :param bool add_played_indicator: Optional. Add a played indicator
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs)  # noqa: E501
+            return self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
             return data
 
-    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(id, max_width, max_height, tag, format, percent_played, unplayed_count, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int percent_played: (required)
+        :param int un_played_count: (required)
         :param str id: Item Id (required)
         :param int max_width: The maximum image width to return. (required)
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param float percent_played: Optional percent to render for the percent played overlay (required)
-        :param int unplayed_count: Optional unplayed count overlay to render (required)
         :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
         :param int width: The fixed image width to return.
@@ -4752,16 +4560,16 @@ class ImageServiceApi(object):
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
-        :param bool add_played_indicator: Optional. Add a played indicator
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'max_width', 'max_height', 'tag', 'format', 'percent_played', 'unplayed_count', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'add_played_indicator', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4776,6 +4584,14 @@ class ImageServiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'percent_played' is set
+        if ('percent_played' not in params or
+                params['percent_played'] is None):
+            raise ValueError("Missing the required parameter `percent_played` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
+        # verify the required parameter 'un_played_count' is set
+        if ('un_played_count' not in params or
+                params['un_played_count'] is None):
+            raise ValueError("Missing the required parameter `un_played_count` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4796,14 +4612,6 @@ class ImageServiceApi(object):
         if ('format' not in params or
                 params['format'] is None):
             raise ValueError("Missing the required parameter `format` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'percent_played' is set
-        if ('percent_played' not in params or
-                params['percent_played'] is None):
-            raise ValueError("Missing the required parameter `percent_played` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'unplayed_count' is set
-        if ('unplayed_count' not in params or
-                params['unplayed_count'] is None):
-            raise ValueError("Missing the required parameter `unplayed_count` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'type' is set
         if ('type' not in params or
                 params['type'] is None):
@@ -4816,6 +4624,10 @@ class ImageServiceApi(object):
         collection_formats = {}
 
         path_params = {}
+        if 'percent_played' in params:
+            path_params['PercentPlayed'] = params['percent_played']  # noqa: E501
+        if 'un_played_count' in params:
+            path_params['UnPlayedCount'] = params['un_played_count']  # noqa: E501
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
         if 'max_width' in params:
@@ -4826,10 +4638,6 @@ class ImageServiceApi(object):
             path_params['Tag'] = params['tag']  # noqa: E501
         if 'format' in params:
             path_params['Format'] = params['format']  # noqa: E501
-        if 'percent_played' in params:
-            path_params['PercentPlayed'] = params['percent_played']  # noqa: E501
-        if 'unplayed_count' in params:
-            path_params['UnplayedCount'] = params['unplayed_count']  # noqa: E501
         if 'type' in params:
             path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
@@ -4846,14 +4654,14 @@ class ImageServiceApi(object):
             query_params.append(('CropWhitespace', params['crop_whitespace']))  # noqa: E501
         if 'enable_image_enhancers' in params:
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -4862,7 +4670,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}', 'HEAD',
@@ -4883,7 +4691,7 @@ class ImageServiceApi(object):
     def head_musicgenres_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_musicgenres_by_name_images_by_type(name, type, async_req=True)
@@ -4901,12 +4709,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -4922,7 +4728,7 @@ class ImageServiceApi(object):
     def head_musicgenres_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_musicgenres_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -4940,19 +4746,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5003,18 +4807,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -5025,7 +4825,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/MusicGenres/{Name}/Images/{Type}', 'HEAD',
@@ -5046,7 +4846,7 @@ class ImageServiceApi(object):
     def head_musicgenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_musicgenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -5065,12 +4865,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5085,7 +4883,7 @@ class ImageServiceApi(object):
     def head_musicgenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -5104,18 +4902,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5172,18 +4968,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -5192,7 +4984,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/MusicGenres/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -5213,7 +5005,7 @@ class ImageServiceApi(object):
     def head_persons_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_persons_by_name_images_by_type(name, type, async_req=True)
@@ -5231,12 +5023,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -5252,7 +5042,7 @@ class ImageServiceApi(object):
     def head_persons_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_persons_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -5270,19 +5060,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5333,18 +5121,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -5355,7 +5139,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Persons/{Name}/Images/{Type}', 'HEAD',
@@ -5376,7 +5160,7 @@ class ImageServiceApi(object):
     def head_persons_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_persons_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -5395,12 +5179,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5415,7 +5197,7 @@ class ImageServiceApi(object):
     def head_persons_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -5434,18 +5216,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5502,18 +5282,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -5522,7 +5298,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Persons/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -5543,7 +5319,7 @@ class ImageServiceApi(object):
     def head_studios_by_name_images_by_type(self, name, type, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_studios_by_name_images_by_type(name, type, async_req=True)
@@ -5561,12 +5337,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -5582,7 +5356,7 @@ class ImageServiceApi(object):
     def head_studios_by_name_images_by_type_with_http_info(self, name, type, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_studios_by_name_images_by_type_with_http_info(name, type, async_req=True)
@@ -5600,19 +5374,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['name', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5663,18 +5435,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -5685,7 +5453,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Studios/{Name}/Images/{Type}', 'HEAD',
@@ -5706,7 +5474,7 @@ class ImageServiceApi(object):
     def head_studios_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_studios_by_name_images_by_type_by_index(name, type, index, async_req=True)
@@ -5725,12 +5493,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5745,7 +5511,7 @@ class ImageServiceApi(object):
     def head_studios_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
@@ -5764,18 +5530,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5832,18 +5596,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -5852,7 +5612,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Studios/{Name}/Images/{Type}/{Index}', 'HEAD',
@@ -5873,7 +5633,7 @@ class ImageServiceApi(object):
     def head_users_by_id_images_by_type(self, id, type, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_users_by_id_images_by_type(id, type, async_req=True)
@@ -5891,12 +5651,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
@@ -5912,7 +5670,7 @@ class ImageServiceApi(object):
     def head_users_by_id_images_by_type_with_http_info(self, id, type, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_users_by_id_images_by_type_with_http_info(id, type, async_req=True)
@@ -5930,19 +5688,17 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient', 'index']  # noqa: E501
+        all_params = ['id', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation', 'index']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5993,18 +5749,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
         if 'index' in params:
             query_params.append(('Index', params['index']))  # noqa: E501
 
@@ -6015,7 +5767,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Images/{Type}', 'HEAD',
@@ -6036,7 +5788,7 @@ class ImageServiceApi(object):
     def head_users_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_users_by_id_images_by_type_by_index(id, type, index, async_req=True)
@@ -6055,12 +5807,10 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -6075,7 +5825,7 @@ class ImageServiceApi(object):
     def head_users_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type_by_index  # noqa: E501
 
-        No authentication required  # noqa: E501
+        Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.head_users_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
@@ -6094,18 +5844,16 @@ class ImageServiceApi(object):
         :param bool crop_whitespace: Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art.
         :param bool enable_image_enhancers: Enable or disable image enhancers such as cover art.
         :param str format: Determines the output foramt of the image - original,gif,jpg,png
-        :param bool add_played_indicator: Optional. Add a played indicator
-        :param float percent_played: Optional percent to render for the percent played overlay
-        :param int unplayed_count: Optional unplayed count overlay to render
         :param str background_color: Optional. Apply a background color for transparent images.
         :param str foreground_layer: Optional. Apply a foreground layer on top of the image.
         :param bool auto_orient: Set to true to force normalization of orientation in the event the renderer does not support it.
+        :param bool keep_animation: Set to true to retain image animation (when supported).
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'add_played_indicator', 'percent_played', 'unplayed_count', 'background_color', 'foreground_layer', 'auto_orient']  # noqa: E501
+        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6162,18 +5910,14 @@ class ImageServiceApi(object):
             query_params.append(('EnableImageEnhancers', params['enable_image_enhancers']))  # noqa: E501
         if 'format' in params:
             query_params.append(('Format', params['format']))  # noqa: E501
-        if 'add_played_indicator' in params:
-            query_params.append(('AddPlayedIndicator', params['add_played_indicator']))  # noqa: E501
-        if 'percent_played' in params:
-            query_params.append(('PercentPlayed', params['percent_played']))  # noqa: E501
-        if 'unplayed_count' in params:
-            query_params.append(('UnplayedCount', params['unplayed_count']))  # noqa: E501
         if 'background_color' in params:
             query_params.append(('BackgroundColor', params['background_color']))  # noqa: E501
         if 'foreground_layer' in params:
             query_params.append(('ForegroundLayer', params['foreground_layer']))  # noqa: E501
         if 'auto_orient' in params:
             query_params.append(('AutoOrient', params['auto_orient']))  # noqa: E501
+        if 'keep_animation' in params:
+            query_params.append(('KeepAnimation', params['keep_animation']))  # noqa: E501
 
         header_params = {}
 
@@ -6182,7 +5926,7 @@ class ImageServiceApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 
         return self.api_client.call_api(
             '/Users/{Id}/Images/{Type}/{Index}', 'HEAD',

@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
@@ -11,5 +11,5 @@ type LibraryAddVirtualFolder struct {
 	CollectionType string `json:"CollectionType,omitempty"`
 	RefreshLibrary bool `json:"RefreshLibrary,omitempty"`
 	Paths []string `json:"Paths,omitempty"`
-	LibraryOptions *ConfigurationLibraryOptions `json:"LibraryOptions,omitempty"`
+	LibraryOptions *LibraryOptions `json:"LibraryOptions,omitempty"`
 }

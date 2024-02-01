@@ -13,6 +13,7 @@ public struct PlaystateRequest: Codable {
 
     public var command: PlaystateCommand?
     public var seekPositionTicks: Int64?
+    /** The controlling user identifier. */
     public var controllingUserId: String?
 
     public init(command: PlaystateCommand? = nil, seekPositionTicks: Int64? = nil, controllingUserId: String? = nil) {

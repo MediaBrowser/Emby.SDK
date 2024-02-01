@@ -189,25 +189,157 @@
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">UserId</span></td>
+        <td><span class="parametername">IsLiked</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional filter by user and attach user data.</p>
+        <td><p>Filter by channels that are liked, or not.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">GenreIds</span></td>
+        <td><span class="parametername">IsDisliked</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>The genres to return guide information for.</p>
+        <td><p>Filter by channels that are disliked, or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">EnableFavoriteSorting</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Incorporate favorite and like status into channel sorting.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AddCurrentProgram</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Adds current program info to each channel</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ChannelIds</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>The channels to return guide information for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ArtistType</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Artist or AlbumArtist</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxOfficialRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasThemeSong</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with theme songs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasThemeVideo</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with theme videos.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasSubtitles</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with subtitles.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasSpecialFeature</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with special features.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasTrailer</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items with trailers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AdjacentTo</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Return items that are siblings of a supplied item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinIndexNumber</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum index number.</p>
 </td>
       </tr>
       <tr>
@@ -255,6 +387,204 @@
 </td>
       </tr>
       <tr>
+        <td><span class="parametername">MinPlayers</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum number of game players.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxPlayers</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by maximum number of game players.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ParentIndexNumber</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by parent index number.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasParentalRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have or do not have a parental rating</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsHD</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are HD or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsUnaired</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are unaired episodes or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinCommunityRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum community rating.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinCriticRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum critic rating.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AiredDuringSeason</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Gets all episodes that aired during a season, including specials.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinPremiereDate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The minimum premiere date. Format = ISO</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinDateLastSaved</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The minimum premiere date. Format = ISO</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinDateLastSavedForUser</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The minimum premiere date. Format = ISO</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MaxPremiereDate</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The maximum premiere date. Format = ISO</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasOverview</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have an overview or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasImdbId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have an imdb id or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasTmdbId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have a tmdb id or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasTvdbId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have a tvdb id or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ExcludeItemIds</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="parametername">StartIndex</span></td>
         <td>query</td>
         <td>
@@ -263,6 +593,127 @@
         </td>
         <td></td>
         <td><p>Optional. The record index to start at. All items with a lower index will be dropped from the results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Limit</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. The maximum number of records to return</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Recursive</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>When searching within folders, this determines whether or not the search will be recursive. true/false</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SearchTerm</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Enter a search term to perform a search request</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SortOrder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Sort Order - Ascending,Descending</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ParentId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Specify this to localize the search to a specific item or folder. Omit to use the root</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Fields</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ExcludeItemTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IncludeItemTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AnyProviderIdEquals</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value pairs.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Filters</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsFavorite</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are marked as favorite, or not.</p>
 </td>
       </tr>
       <tr>
@@ -285,6 +736,17 @@
         </td>
         <td></td>
         <td><p>Optional filter for series.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsFolder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter for folders.</p>
 </td>
       </tr>
       <tr>
@@ -321,58 +783,157 @@
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">Limit</span></td>
+        <td><span class="parametername">IsNew</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional. The maximum number of records to return</p>
+        <td><p>Optional filter for IsNew.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">IsFavorite</span></td>
+        <td><span class="parametername">IsPremiere</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Filter by channels that are favorites, or not.</p>
+        <td><p>Optional filter for IsPremiere.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">IsLiked</span></td>
+        <td><span class="parametername">IsNewOrPremiere</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Filter by channels that are liked, or not.</p>
+        <td><p>Optional filter for IsNewOrPremiere.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">IsDisliked</span></td>
+        <td><span class="parametername">IsRepeat</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Filter by channels that are disliked, or not.</p>
+        <td><p>Optional filter for IsRepeat.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">EnableFavoriteSorting</span></td>
+        <td><span class="parametername">ProjectToMedia</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Incorporate favorite and like status into channel sorting.</p>
+        <td><p>ProjectToMedia</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MediaTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by MediaType. Allows multiple, comma delimited.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ImageTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SortBy</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsPlayed</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are played, or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Genres</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">OfficialRatings</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Tags</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ExcludeTags</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Years</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.</p>
 </td>
       </tr>
       <tr>
@@ -384,6 +945,17 @@
         </td>
         <td></td>
         <td><p>Optional, include image information in output</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">EnableUserData</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional, include user data</p>
 </td>
       </tr>
       <tr>
@@ -409,47 +981,333 @@
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">Fields</span></td>
+        <td><span class="parametername">Person</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines</p>
+        <td><p>Optional. If specified, results will be filtered to include only those containing the specified person.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">AddCurrentProgram</span></td>
+        <td><span class="parametername">PersonIds</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional. Adds current program info to each channel</p>
+        <td><p>Optional. If specified, results will be filtered to include only those containing the specified person.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">EnableUserData</span></td>
+        <td><span class="parametername">PersonTypes</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>Optional, include user data</p>
+        <td><p>Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited</p>
 </td>
       </tr>
       <tr>
-        <td><span class="parametername">ChannelIds</span></td>
+        <td><span class="parametername">Studios</span></td>
         <td>query</td>
         <td>
               
   
         </td>
         <td></td>
-        <td><p>The channels to return guide information for.</p>
+        <td><p>Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">StudioIds</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Artists</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ArtistIds</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Albums</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Ids</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional. If specific items are needed, specify a list of item id's to retrieve. This allows multiple, comma delimited.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">VideoTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Containers</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by Container. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioCodecs</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by AudioCodec. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AudioLayouts</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by AudioLayout. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">VideoCodecs</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by VideoCodec. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ExtendedVideoTypes</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SubtitleCodecs</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by SubtitleCodec. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Path</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by Path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">UserId</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>User Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">MinOfficialRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsLocked</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are locked.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">IsPlaceHolder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are placeholders</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">HasOfficialRating</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that have official ratings</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">GroupItemsIntoCollections</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Whether or not to hide items behind their boxsets.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">Is3D</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items that are 3D, or not.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">SeriesStatus</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by Series Status. Allows multiple, comma delimeted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">NameStartsWithOrGreater</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ArtistStartsWithOrGreater</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">AlbumArtistStartsWithOrGreater</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">NameStartsWith</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is sorted equally than a given input string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">NameLessThan</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Optional filter by items whose name is equally or lesser than a given input string.</p>
 </td>
       </tr>
     </tbody>
@@ -470,7 +1328,7 @@
         <td><span class="status">200</span></td>
         <td>
   
-              <a href="#QueryResult_LiveTV_Api_EpgRow" class="typelink">EpgRow</a>
+              <a href="#QueryResult_Api_EpgRow" class="typelink">EpgRow</a>
               
         </td>
         <td><p>Operation successful. Returning a QueryResult<epgrow> object.<p>
@@ -538,9 +1396,9 @@
   </div>
 <h2 id="definitions">Definitions</h2>
   
-  <h3 id="QueryResult_LiveTV_Api_EpgRow" class="text-capitalize">EpgRow</h3>
+  <h3 id="QueryResult_Api_EpgRow" class="text-capitalize">EpgRow</h3>
   <div>
-      <span class="xref">QueryResult_LiveTV.Api.EpgRow</span>
+      <span class="xref">QueryResult_Api.EpgRow</span>
   </div>
   <table class="table table-bordered table-striped table-condensed">
       <thead>
@@ -555,7 +1413,7 @@
               <td><span class="parametername">Items</span></td>
               <td>
   
-                      <a href="#MediaBrowser_LiveTV_Api_EpgRow" class="typelink">EpgRow[]</a>
+                      <a href="#Emby_LiveTV_Api_EpgRow" class="typelink">EpgRow[]</a>
                   
               </td>
               <td></td>
@@ -573,9 +1431,9 @@
       </tbody>
   </table>
   
-  <h3 id="MediaBrowser_LiveTV_Api_EpgRow" class="text-capitalize">EpgRow</h3>
+  <h3 id="Emby_LiveTV_Api_EpgRow" class="text-capitalize">EpgRow</h3>
   <div>
-      <span class="xref">MediaBrowser.LiveTV.Api.EpgRow</span>
+      <span class="xref">Emby.LiveTV.Api.EpgRow</span>
   </div>
   <table class="table table-bordered table-striped table-condensed">
       <thead>
@@ -593,7 +1451,8 @@
                       <a href="#MediaBrowser_Model_Dto_BaseItemDto" class="typelink">BaseItemDto[]</a>
                   
               </td>
-              <td></td>
+              <td><p>This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Programs</span></td>
@@ -628,7 +1487,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">OriginalTitle</span></td>
@@ -646,10 +1506,21 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The server identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The id.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Guid</span></td>
               <td>
                     string
   
@@ -664,7 +1535,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The etag.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Prefix</span></td>
@@ -673,7 +1545,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The Prefix.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PlaylistItemId</span></td>
@@ -682,7 +1555,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The playlist item identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DateCreated</span></td>
@@ -692,7 +1566,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The date created.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ExtraType</span></td>
@@ -724,36 +1599,6 @@
               <td></td>
           </tr>
           <tr>
-              <td><span class="parametername">AirsBeforeSeasonNumber</span></td>
-              <td>
-                    integer
-                      (int32)
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">AirsAfterSeasonNumber</span></td>
-              <td>
-                    integer
-                      (int32)
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">AirsBeforeEpisodeNumber</span></td>
-              <td>
-                    integer
-                      (int32)
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
               <td><span class="parametername">CanDelete</span></td>
               <td>
                     boolean
@@ -764,6 +1609,15 @@
           </tr>
           <tr>
               <td><span class="parametername">CanDownload</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CanEditItems</span></td>
               <td>
                     boolean
   
@@ -814,6 +1668,43 @@
   
                   
               </td>
+              <td><p>A value indicating whether [supports synchronize].</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SyncStatus</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Sync_SyncJobItemStatus" class="typelink">SyncJobItemStatus</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CanManageAccess</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CanLeaveContent</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">CanMakePublic</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
               <td></td>
           </tr>
           <tr>
@@ -832,7 +1723,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name of the sort.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ForcedSortName</span></td>
@@ -860,7 +1752,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The premiere date.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ExternalUrls</span></td>
@@ -869,7 +1762,8 @@
                       <a href="#MediaBrowser_Model_Providers_ExternalUrl" class="typelink">ExternalUrl[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The external urls.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MediaSources</span></td>
@@ -878,7 +1772,8 @@
                       <a href="#MediaBrowser_Model_Dto_MediaSourceInfo" class="typelink">MediaSourceInfo[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The media versions.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CriticRating</span></td>
@@ -888,7 +1783,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The critic rating.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">GameSystemId</span></td>
@@ -916,7 +1812,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The game system.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ProductionLocations</span></td>
@@ -934,7 +1831,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The path.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">OfficialRating</span></td>
@@ -943,7 +1841,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The official rating.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CustomRating</span></td>
@@ -952,7 +1851,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The custom rating.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ChannelId</span></td>
@@ -961,7 +1861,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The channel identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ChannelName</span></td>
@@ -979,7 +1880,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The overview.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Taglines</span></td>
@@ -988,7 +1890,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The taglines.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Genres</span></td>
@@ -997,7 +1900,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The genres.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CommunityRating</span></td>
@@ -1007,7 +1911,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The community rating.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RunTimeTicks</span></td>
@@ -1017,7 +1922,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The run time ticks.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Size</span></td>
@@ -1049,15 +1955,6 @@
               <td></td>
           </tr>
           <tr>
-              <td><span class="parametername">PlayAccess</span></td>
-              <td>
-  
-                      <a href="#MediaBrowser_Model_Library_PlayAccess" class="typelink">PlayAccess</a>
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
               <td><span class="parametername">ProductionYear</span></td>
               <td>
                     integer
@@ -1065,7 +1962,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The production year.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Number</span></td>
@@ -1074,7 +1972,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The number.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ChannelNumber</span></td>
@@ -1093,7 +1992,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The index number.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IndexNumberEnd</span></td>
@@ -1103,7 +2003,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The index number end.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ParentIndexNumber</span></td>
@@ -1113,7 +2014,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The parent index number.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RemoteTrailers</span></td>
@@ -1122,7 +2024,8 @@
                       <a href="#MediaBrowser_Model_Entities_MediaUrl" class="typelink">MediaUrl[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The trailer urls.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ProviderIds</span></td>
@@ -1140,7 +2043,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is folder.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ParentId</span></td>
@@ -1149,7 +2053,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The parent id.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Type</span></td>
@@ -1158,7 +2063,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The type.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">People</span></td>
@@ -1167,7 +2073,8 @@
                       <a href="#MediaBrowser_Model_Dto_BaseItemPerson" class="typelink">BaseItemPerson[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The people.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Studios</span></td>
@@ -1176,7 +2083,8 @@
                       <a href="#MediaBrowser_Model_Dto_NameLongIdPair" class="typelink">NameLongIdPair[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The studios.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">GenreItems</span></td>
@@ -1203,7 +2111,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>If the item does not have a logo, this will hold the Id of the Parent that has one.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ParentBackdropItemId</span></td>
@@ -1212,7 +2121,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>If the item does not have any backdrops, this will hold the Id of the Parent that has one.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ParentBackdropImageTags</span></td>
@@ -1221,7 +2131,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The parent backdrop image tags.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">LocalTrailerCount</span></td>
@@ -1231,7 +2142,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The local trailer count.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">UserData</span></td>
@@ -1240,7 +2152,8 @@
                       <a href="#MediaBrowser_Model_Dto_UserItemDataDto" class="typelink">UserItemDataDto[]</a>
                   
               </td>
-              <td></td>
+              <td><p>Class UserItemDataDto</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RecursiveItemCount</span></td>
@@ -1250,7 +2163,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The recursive item count.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ChildCount</span></td>
@@ -1260,7 +2174,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The child count.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SeriesName</span></td>
@@ -1269,7 +2184,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name of the series.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SeriesId</span></td>
@@ -1278,7 +2194,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The series id.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SeasonId</span></td>
@@ -1287,7 +2204,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The season identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SpecialFeatureCount</span></td>
@@ -1297,7 +2215,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The special feature count.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DisplayPreferencesId</span></td>
@@ -1306,7 +2225,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The display preferences id.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Status</span></td>
@@ -1315,7 +2235,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The status.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AirDays</span></td>
@@ -1324,7 +2245,8 @@
                       <a href="#System_DayOfWeek" class="typelink">DayOfWeek[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The air days.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Tags</span></td>
@@ -1333,7 +2255,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The tags.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PrimaryImageAspectRatio</span></td>
@@ -1343,7 +2266,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The primary image aspect ratio, after image enhancements.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Artists</span></td>
@@ -1352,7 +2276,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The artists.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ArtistItems</span></td>
@@ -1361,7 +2286,8 @@
                       <a href="#MediaBrowser_Model_Dto_NameIdPair" class="typelink">NameIdPair[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The artist items.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Composers</span></td>
@@ -1379,7 +2305,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The album.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CollectionType</span></td>
@@ -1388,7 +2315,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The type of the collection.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DisplayOrder</span></td>
@@ -1397,7 +2325,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The display order.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AlbumId</span></td>
@@ -1406,7 +2335,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The album id.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AlbumPrimaryImageTag</span></td>
@@ -1415,7 +2345,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The album image tag.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SeriesPrimaryImageTag</span></td>
@@ -1424,7 +2355,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The series primary image tag.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AlbumArtist</span></td>
@@ -1433,7 +2365,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The album artist.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AlbumArtists</span></td>
@@ -1442,7 +2375,8 @@
                       <a href="#MediaBrowser_Model_Dto_NameIdPair" class="typelink">NameIdPair[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The album artists.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SeasonName</span></td>
@@ -1451,7 +2385,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name of the season.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MediaStreams</span></td>
@@ -1460,7 +2395,8 @@
                       <a href="#MediaBrowser_Model_Entities_MediaStream" class="typelink">MediaStream[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The media streams.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PartCount</span></td>
@@ -1470,7 +2406,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The part count.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ImageTags</span></td>
@@ -1479,7 +2416,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The image tags.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">BackdropImageTags</span></td>
@@ -1488,7 +2426,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The backdrop image tags.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ParentLogoImageTag</span></td>
@@ -1497,10 +2436,30 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The parent logo image tag.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SeriesStudio</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The series studio.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryImageItemId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PrimaryImageTag</span></td>
               <td>
                     string
   
@@ -1515,7 +2474,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The parent thumb item id.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ParentThumbImageTag</span></td>
@@ -1524,7 +2484,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The parent thumb image tag.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Chapters</span></td>
@@ -1533,7 +2494,8 @@
                       <a href="#MediaBrowser_Model_Entities_ChapterInfo" class="typelink">ChapterInfo[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The chapters.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">LocationType</span></td>
@@ -1542,7 +2504,8 @@
                       <a href="#MediaBrowser_Model_Entities_LocationType" class="typelink">LocationType</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum LocationType</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MediaType</span></td>
@@ -1551,7 +2514,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The type of the media.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">EndDate</span></td>
@@ -1561,7 +2525,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The end date.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">LockedFields</span></td>
@@ -1570,7 +2535,8 @@
                       <a href="#MediaBrowser_Model_Entities_MetadataFields" class="typelink">MetadataFields[]</a>
                   
               </td>
-              <td></td>
+              <td><p>The locked fields.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">LockData</span></td>
@@ -1579,7 +2545,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether [enable internet providers].</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Width</span></td>
@@ -1724,7 +2691,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The series timer identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ChannelPrimaryImageTag</span></td>
@@ -1733,7 +2701,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The channel primary image tag.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">StartDate</span></td>
@@ -1743,7 +2712,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The start date of the recording, in UTC.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CompletionPercentage</span></td>
@@ -1753,7 +2723,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The completion percentage.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsRepeat</span></td>
@@ -1762,7 +2733,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is repeat.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsNew</span></td>
@@ -1780,7 +2752,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The episode title.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsMovie</span></td>
@@ -1789,7 +2762,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is movie.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsSports</span></td>
@@ -1798,7 +2772,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is sports.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsSeries</span></td>
@@ -1807,7 +2782,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is series.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsLive</span></td>
@@ -1816,7 +2792,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is live.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsNews</span></td>
@@ -1825,7 +2802,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is news.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsKids</span></td>
@@ -1834,7 +2812,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is kids.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsPremiere</span></td>
@@ -1843,7 +2822,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is premiere.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">TimerType</span></td>
@@ -1879,7 +2859,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The timer identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CurrentProgram</span></td>
@@ -2015,6 +2996,21 @@
       </tbody>
   </table>
   
+  <h3 id="MediaBrowser_Model_Sync_SyncJobItemStatus" class="text-capitalize">SyncJobItemStatus</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Sync.SyncJobItemStatus.html">MediaBrowser.Model.Sync.SyncJobItemStatus</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Queued</li>
+  <li>Converting</li>
+  <li>ReadyToTransfer</li>
+  <li>Transferring</li>
+  <li>Synced</li>
+  <li>Failed</li>
+  </ul>
+  
   <h3 id="MediaBrowser_Model_Entities_Video3DFormat" class="text-capitalize">Video3DFormat</h3>
   <div>
       <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.Video3DFormat.html">MediaBrowser.Model.Entities.Video3DFormat</a></p>
@@ -2050,7 +3046,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Url</span></td>
@@ -2059,7 +3056,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The type of the item.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -2133,6 +3131,24 @@
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">ProbePath</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProbeProtocol</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_MediaInfo_MediaProtocol" class="typelink">MediaProtocol</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">Container</span></td>
               <td>
                     string
@@ -2176,6 +3192,16 @@
   
                   
               </td>
+              <td><p>Differentiate internet url vs local network</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HasMixedProtocols</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
               <td></td>
           </tr>
           <tr>
@@ -2202,6 +3228,26 @@
               <td><span class="parametername">SupportsTranscoding</span></td>
               <td>
                     boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TrancodeLiveStartIndex</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">WallClockStart</span></td>
+              <td>
+                    string
+                      (date-time)
   
                   
               </td>
@@ -2363,6 +3409,15 @@
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">AddApiKeyToDirectStreamUrl</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">TranscodingUrl</span></td>
               <td>
                     string
@@ -2435,7 +3490,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ServerId</span></td>
@@ -2444,7 +3500,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -2499,7 +3556,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The codec.</p>
+<p>Probe Field: <code>codec_name</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code><br>
+Related Enums: <code>T:Emby.Media.Model.Enums.VideoMediaTypes</code>, <code>Emby.Media.Model.Enums.AudioMediaTypes</code>, <code>Emby.Media.Model.Enums.SubtitleMediaTypes</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">CodecTag</span></td>
@@ -2508,7 +3569,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The codec tag.</p>
+<p>Probe Field: <code>codec_tag</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Language</span></td>
@@ -2517,7 +3581,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The language.</p>
+<p>Probe Field: <code>tags[&quot;language&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ColorTransfer</span></td>
@@ -2526,7 +3593,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The color transfer characteristics.</p>
+<p>Probe Field: <code>color_transfer</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code><br>
+Related Enum: <code>Emby.Media.Model.Enums.ColorTransfers</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ColorPrimaries</span></td>
@@ -2535,7 +3606,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The chromaticity coordinates of the source primaries.</p>
+<p>Probe Field: <code>color_primaries</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code><br>
+Related Enum: <code>Emby.Media.Model.Enums.ColorPrimaries</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ColorSpace</span></td>
@@ -2544,7 +3619,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The YUV colorspace type.</p>
+<p>Probe Field: <code>color_space</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code><br>
+Related Enum: <code>Emby.Media.Model.Enums.ColorSpaces</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Comment</span></td>
@@ -2553,7 +3632,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The comment.</p>
+<p>Probe Field: <code>tags[&quot;comment&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">StreamStartTimeTicks</span></td>
@@ -2563,7 +3645,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The start time of the stream.</p>
+<p>Probe Field: <code>start_time</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.<br>
+Actual type: <code>System.TimeSpan</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">TimeBase</span></td>
@@ -2572,16 +3658,11 @@
   
                   
               </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">CodecTimeBase</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
+              <td><p>The time-base.</p>
+<p>Probe Field: <code>time_base</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.<br>
+Actual type: <code>Emby.Media.Model.Types.Rational</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Title</span></td>
@@ -2590,7 +3671,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The title.</p>
+<p>Probe Field: <code>tags[&quot;title&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Extradata</span></td>
@@ -2599,7 +3683,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The extradata.</p>
+<p>Probe Field: <code>extradata</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+<p>Currently, this value is only parsed for subtitle streams with codec <code>Emby.Media.Model.Enums.SubtitleMediaTypes.dvb_teletext</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">VideoRange</span></td>
@@ -2617,7 +3705,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The display title.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DisplayLanguage</span></td>
@@ -2626,7 +3716,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The display language.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">NalLengthSize</span></td>
@@ -2635,7 +3727,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The nal length size.</p>
+<p>Probe Field: <code>nal_length_size</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code> of type <code>Emby.Media.Model.Enums.VideoMediaTypes.h264</code>.<br>
+Actual type: <code>System.Int32</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsInterlaced</span></td>
@@ -2644,7 +3740,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is interlaced.</p>
+<p>Probe Field: <code>field_order</code> != <code>progressive</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsAVC</span></td>
@@ -2662,7 +3761,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The channel layout.</p>
+<p>Probe Field: <code>channel_layout</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code><br>
+Related Enum: <code>MediaBrowser.Model.Entities.MediaStream.ChannelLayout</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">BitRate</span></td>
@@ -2672,7 +3775,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The bit rate.</p>
+<p>Probe Field: <code>bit_rate</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>.</p>
+<p>THIS VALUE IS PROCESSED BY CUSTOM LOGIC AND DOES NOT NECESSARILY MATCH FFPROBE RESULTS!</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">BitDepth</span></td>
@@ -2682,7 +3789,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The bit depth.</p>
+<p>Probe Field: <code>bits_per_sample</code> or <code>bits_per_raw_sample</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RefFrames</span></td>
@@ -2692,7 +3802,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The reference frames.</p>
+<p>Probe Field: <code>refs</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Rotation</span></td>
@@ -2712,7 +3825,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The audio channel count.</p>
+<p>Probe Field: <code>channels</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SampleRate</span></td>
@@ -2722,7 +3838,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The sample rate.</p>
+<p>Probe Field: <code>sample_rate</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code><br>
+Related Enum: <code>Emby.Media.Model.Enums.SampleRates</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsDefault</span></td>
@@ -2731,10 +3851,25 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is default.</p>
+<p>Probe Field: <code>disposition[&quot;default&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsForced</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>A value indicating whether this instance is forced.</p>
+<p>Probe Field: <code>disposition[&quot;forced&quot;]</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsHearingImpaired</span></td>
               <td>
                     boolean
   
@@ -2750,7 +3885,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The height.</p>
+<p>Probe Field: <code>height</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Width</span></td>
@@ -2760,7 +3898,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The width.</p>
+<p>Probe Field: <code>width</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AverageFrameRate</span></td>
@@ -2770,7 +3911,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The average frame rate..</p>
+<p>Probe Field: <code>avg_frame_rate</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.<br>
+Actual type: <code>Emby.Media.Model.Types.Rational</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">RealFrameRate</span></td>
@@ -2780,7 +3925,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The real frame rate..</p>
+<p>Probe Field: <code>r_frame_rate</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.<br>
+Actual type: <code>Emby.Media.Model.Types.Rational</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Profile</span></td>
@@ -2789,7 +3938,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The profile.</p>
+<p>Probe Field: <code>profile</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code><br>
+Related Enums: <code>Emby.Media.Model.Enums.AacProfiles</code>, <code>Emby.Media.Model.Enums.AvcProfiles</code>, <code>Emby.Media.Model.Enums.H263Profiles</code>, <code>Emby.Media.Model.Enums.HevcProfiles</code>, <code>Emby.Media.Model.Enums.Mpeg2Profiles</code>,<code>Emby.Media.Model.Enums.Vc1Profiles</code>, <code>Emby.Media.Model.Enums.Mpeg4Profiles</code>, <code>Emby.Media.Model.Enums.Vp8Profiles</code>, <code>Emby.Media.Model.Enums.Vp9Profiles</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Type</span></td>
@@ -2798,7 +3951,8 @@
                       <a href="#MediaBrowser_Model_Entities_MediaStreamType" class="typelink">MediaStreamType</a>
                   
               </td>
-              <td></td>
+              <td><p>Enum MediaStreamType</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AspectRatio</span></td>
@@ -2807,7 +3961,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The aspect ratio.</p>
+<p>Probe Field: <code>display_aspect_ratio</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.<br>
+Actual type: <code>Emby.Media.Model.Types.Rational</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Index</span></td>
@@ -2817,7 +3975,10 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The index of the stream inside its container.</p>
+<p>Probe Field: <code>index</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Audio</code>, <code>MediaBrowser.Model.Entities.MediaStreamType.Subtitle</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsExternal</span></td>
@@ -2826,7 +3987,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is external.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DeliveryMethod</span></td>
@@ -2844,7 +4007,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The delivery URL.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsExternalUrl</span></td>
@@ -2853,7 +4018,9 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is external URL.</p>
+<p>Custom property set by the application.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsTextSubtitleStream</span></td>
@@ -2871,7 +4038,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether [supports external stream].</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Path</span></td>
@@ -2880,7 +4048,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The filename.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Protocol</span></td>
@@ -2898,7 +4067,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The pixel format.</p>
+<p>Probe Field: <code>pix_fmt</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code>.<br>
+Actual type: <code>MediaBrowser.Model.Entities.MediaStream.PixelFormat</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Level</span></td>
@@ -2908,7 +4081,11 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The codec level.</p>
+<p>Probe Field: <code>level</code><br>
+Applies to: <code>MediaBrowser.Model.Entities.MediaStreamType.Video</code><br>
+Related Enums: <code>Emby.Media.Model.Enums.AvcLevels</code>, <code>Emby.Media.Model.Enums.H263Levels</code>, <code>Emby.Media.Model.Enums.HevcLevels</code>, <code>Emby.Media.Model.Enums.Mpeg2Levels</code>,<code>Emby.Media.Model.Enums.Vc1Levels</code>, <code>Emby.Media.Model.Enums.Mpeg4Levels</code>, <code>Emby.Media.Model.Enums.Vp8Levels</code>, <code>Emby.Media.Model.Enums.Vp9Levels</code>.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsAnamorphic</span></td>
@@ -2917,7 +4094,36 @@
   
                   
               </td>
+              <td><p>A value indicating whether this instance is anamorphic.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExtendedVideoType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ExtendedVideoTypes" class="typelink">ExtendedVideoTypes</a>
+                  
+              </td>
               <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExtendedVideoSubType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ExtendedVideoSubTypes" class="typelink">ExtendedVideoSubTypes</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ExtendedVideoSubTypeDescription</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The extended video sub-type description.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ItemId</span></td>
@@ -2926,7 +4132,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ServerId</span></td>
@@ -2935,7 +4142,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">AttachmentSize</span></td>
@@ -2945,7 +4153,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The size of the attachment.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MimeType</span></td>
@@ -2954,16 +4163,8 @@
   
                   
               </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">IsClosedCaptions</span></td>
-              <td>
-                    boolean
-  
-                  
-              </td>
-              <td></td>
+              <td><p>The type of the MIME.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SubtitleLocationType</span></td>
@@ -3007,6 +4208,47 @@
   <li>VideoSideData</li>
   </ul>
   
+  <h3 id="MediaBrowser_Model_Entities_ExtendedVideoTypes" class="text-capitalize">ExtendedVideoTypes</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ExtendedVideoTypes.html">MediaBrowser.Model.Entities.ExtendedVideoTypes</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>None</li>
+  <li>Hdr10</li>
+  <li>Hdr10Plus</li>
+  <li>HyperLogGamma</li>
+  <li>DolbyVision</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Entities_ExtendedVideoSubTypes" class="text-capitalize">ExtendedVideoSubTypes</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ExtendedVideoSubTypes.html">MediaBrowser.Model.Entities.ExtendedVideoSubTypes</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>None</li>
+  <li>Hdr10</li>
+  <li>HyperLogGamma</li>
+  <li>Hdr10Plus0</li>
+  <li>DoviProfile02</li>
+  <li>DoviProfile10</li>
+  <li>DoviProfile22</li>
+  <li>DoviProfile30</li>
+  <li>DoviProfile42</li>
+  <li>DoviProfile50</li>
+  <li>DoviProfile61</li>
+  <li>DoviProfile76</li>
+  <li>DoviProfile81</li>
+  <li>DoviProfile82</li>
+  <li>DoviProfile83</li>
+  <li>DoviProfile84</li>
+  <li>DoviProfile85</li>
+  <li>DoviProfile92</li>
+  </ul>
+  
   <h3 id="MediaBrowser_Model_Entities_SubtitleLocationType" class="text-capitalize">SubtitleLocationType</h3>
   <div>
       <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.SubtitleLocationType.html">MediaBrowser.Model.Entities.SubtitleLocationType</a></p>
@@ -3028,17 +4270,6 @@
   <li>None</li>
   <li>Zero</li>
   <li>Valid</li>
-  </ul>
-  
-  <h3 id="MediaBrowser_Model_Library_PlayAccess" class="text-capitalize">PlayAccess</h3>
-  <div>
-      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Library.PlayAccess.html">MediaBrowser.Model.Library.PlayAccess</a></p>
-
-  </div>
-  <h5>Enum Values</h5>
-  <ul>
-  <li>Full</li>
-  <li>None</li>
   </ul>
   
   <h3 id="MediaBrowser_Model_Entities_MediaUrl" class="text-capitalize">MediaUrl</h3>
@@ -3103,7 +4334,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Id</span></td>
@@ -3112,7 +4344,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Role</span></td>
@@ -3121,7 +4354,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The role.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Type</span></td>
@@ -3139,7 +4373,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The primary image tag.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -3182,7 +4417,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Id</span></td>
@@ -3192,7 +4428,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The identifier.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -3219,7 +4456,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The rating.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PlayedPercentage</span></td>
@@ -3229,7 +4467,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The played percentage.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">UnplayedItemCount</span></td>
@@ -3239,7 +4478,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The unplayed item count.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PlaybackPositionTicks</span></td>
@@ -3249,7 +4489,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The playback position ticks.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PlayCount</span></td>
@@ -3259,7 +4500,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The play count.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsFavorite</span></td>
@@ -3268,7 +4510,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is favorite.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">LastPlayedDate</span></td>
@@ -3278,7 +4521,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The last played date.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Played</span></td>
@@ -3287,7 +4531,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this <code>MediaBrowser.Model.Dto.UserItemDataDto</code> is played.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Key</span></td>
@@ -3296,7 +4541,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The key.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ItemId</span></td>
@@ -3305,7 +4551,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The item identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ServerId</span></td>
@@ -3314,14 +4561,15 @@
   
                   
               </td>
-              <td></td>
+              <td><p>Used only by our Windows app. Not used by Emby Server.</p>
+</td>
           </tr>
       </tbody>
   </table>
   
   <h3 id="System_DayOfWeek" class="text-capitalize">DayOfWeek</h3>
   <div>
-      <p>see also <a href="https://docs.microsoft.com/dotnet/api/system.dayofweek">System.DayOfWeek</a></p>
+      <p>see also <a href="https://learn.microsoft.com/dotnet/api/system.dayofweek">System.DayOfWeek</a></p>
 
   </div>
   
@@ -3346,7 +4594,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Id</span></td>
@@ -3355,7 +4604,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The identifier.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -3382,7 +4632,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The start position ticks.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Name</span></td>
@@ -3391,7 +4642,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ImageTag</span></td>

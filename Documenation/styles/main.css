@@ -558,3 +558,11 @@ header {
     padding-bottom: 3px;
     margin-top: 16px;
 }
+
+.hljs-keyword {
+    color: rgb(86,156,214);
+}
+
+.hljs-string, .hljs-meta-string {
+    color: rgb(214, 157, 133);
+}

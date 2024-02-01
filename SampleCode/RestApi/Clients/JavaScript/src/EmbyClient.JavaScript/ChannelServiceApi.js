@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ChannelService service.
 * @module EmbyClient.JavaScript/ChannelServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ChannelServiceApi {
 
@@ -54,7 +54,12 @@ export default class ChannelServiceApi {
       let queryParams = {
         'UserId': opts['userId'],
         'StartIndex': opts['startIndex'],
-        'Limit': opts['limit']
+        'Fields': opts['fields'],
+        'Limit': opts['limit'],
+        'EnableImages': opts['enableImages'],
+        'ImageTypeLimit': opts['imageTypeLimit'],
+        'EnableImageTypes': opts['enableImageTypes'],
+        'EnableUserData': opts['enableUserData']
       };
       let headerParams = {
       };

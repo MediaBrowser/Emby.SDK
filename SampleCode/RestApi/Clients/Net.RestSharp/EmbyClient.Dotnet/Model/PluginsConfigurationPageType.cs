@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines Plugins.ConfigurationPageType
+    /// Enum ConfigurationPageType  
     /// </summary>
+    /// <value>Enum ConfigurationPageType  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum PluginsConfigurationPageType
     {

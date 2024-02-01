@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -13,23 +13,22 @@ import ApiClient from "../ApiClient";
 import AuthenticateUser from '../model/AuthenticateUser';
 import AuthenticateUserByName from '../model/AuthenticateUserByName';
 import AuthenticationAuthenticationResult from '../model/AuthenticationAuthenticationResult';
-import ConfigurationUserConfiguration from '../model/ConfigurationUserConfiguration';
 import CreateUserByName from '../model/CreateUserByName';
 import ForgotPassword from '../model/ForgotPassword';
 import ForgotPasswordPin from '../model/ForgotPasswordPin';
+import ForgotPasswordResult from '../model/ForgotPasswordResult';
 import NameIdPair from '../model/NameIdPair';
+import PinRedeemResult from '../model/PinRedeemResult';
 import QueryResultUserDto from '../model/QueryResultUserDto';
-import UpdateUserEasyPassword from '../model/UpdateUserEasyPassword';
 import UpdateUserPassword from '../model/UpdateUserPassword';
+import UserConfiguration from '../model/UserConfiguration';
 import UserDto from '../model/UserDto';
-import UsersForgotPasswordResult from '../model/UsersForgotPasswordResult';
-import UsersPinRedeemResult from '../model/UsersPinRedeemResult';
-import UsersUserPolicy from '../model/UsersUserPolicy';
+import UserPolicy from '../model/UserPolicy';
 
 /**
 * UserService service.
 * @module EmbyClient.JavaScript/UserServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class UserServiceApi {
 
@@ -91,7 +90,7 @@ export default class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/UserServiceApi~deleteUsersByIdTrackselectionsByTracktypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
     deleteUsersByIdTrackselectionsByTracktype() {
@@ -108,7 +107,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -158,6 +157,89 @@ export default class UserServiceApi {
       );
     }
     /**
+     * Callback function to receive the result of the getUsersByUseridTypedsettingsByKey operation.
+     * @callback module:EmbyClient.JavaScript/UserServiceApi~getUsersByUseridTypedsettingsByKeyCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets a typed user setting
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/UserServiceApi~getUsersByUseridTypedsettingsByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getUsersByUseridTypedsettingsByKey() {
+      let postBody = null;
+
+      let pathParams = {
+        'Key': key,
+        'UserId': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{UserId}/TypedSettings/{Key}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getUsersItemaccess operation.
+     * @callback module:EmbyClient.JavaScript/UserServiceApi~getUsersItemaccessCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/QueryResultUserDto} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets a list of users
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript/UserServiceApi~getUsersItemaccessCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/QueryResultUserDto}
+     */
+    getUsersItemaccess() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'IsHidden': opts['isHidden'],
+        'IsDisabled': opts['isDisabled'],
+        'StartIndex': opts['startIndex'],
+        'Limit': opts['limit'],
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'SortOrder': opts['sortOrder']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = QueryResultUserDto;
+
+      return this.apiClient.callApi(
+        '/Users/ItemAccess', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
      * Callback function to receive the result of the getUsersPrefixes operation.
      * @callback module:EmbyClient.JavaScript/UserServiceApi~getUsersPrefixesCallback
      * @param {String} error Error message, if any.
@@ -183,7 +265,8 @@ export default class UserServiceApi {
         'IsDisabled': opts['isDisabled'],
         'StartIndex': opts['startIndex'],
         'Limit': opts['limit'],
-        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater']
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'SortOrder': opts['sortOrder']
       };
       let headerParams = {
       };
@@ -211,7 +294,7 @@ export default class UserServiceApi {
 
     /**
      * Gets a list of publicly visible users for display on a login screen.
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/UserServiceApi~getUsersPublicCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/UserDto>}
      */
@@ -227,7 +310,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
       let returnType = [UserDto];
@@ -264,7 +347,8 @@ export default class UserServiceApi {
         'IsDisabled': opts['isDisabled'],
         'StartIndex': opts['startIndex'],
         'Limit': opts['limit'],
-        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater']
+        'NameStartsWithOrGreater': opts['nameStartsWithOrGreater'],
+        'SortOrder': opts['sortOrder']
       };
       let headerParams = {
       };
@@ -292,7 +376,7 @@ export default class UserServiceApi {
 
     /**
      * Authenticates a user
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      * @param {module:EmbyClient.JavaScript/UserServiceApi~postUsersAuthenticatebynameCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AuthenticationAuthenticationResult}
      */
@@ -309,7 +393,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
       let returnType = AuthenticationAuthenticationResult;
@@ -367,7 +451,7 @@ export default class UserServiceApi {
 
     /**
      * Authenticates a user
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/UserServiceApi~postUsersByIdAuthenticateCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AuthenticationAuthenticationResult}
      */
@@ -384,7 +468,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
       let returnType = AuthenticationAuthenticationResult;
@@ -433,6 +517,43 @@ export default class UserServiceApi {
       );
     }
     /**
+     * Callback function to receive the result of the postUsersByIdConfigurationPartial operation.
+     * @callback module:EmbyClient.JavaScript/UserServiceApi~postUsersByIdConfigurationPartialCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates a user configuration
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/UserServiceApi~postUsersByIdConfigurationPartialCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postUsersByIdConfigurationPartial() {
+      let postBody = body;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/octet-stream'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{Id}/Configuration/Partial', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
      * Callback function to receive the result of the postUsersByIdDelete operation.
      * @callback module:EmbyClient.JavaScript/UserServiceApi~postUsersByIdDeleteCallback
      * @param {String} error Error message, if any.
@@ -465,43 +586,6 @@ export default class UserServiceApi {
 
       return this.apiClient.callApi(
         '/Users/{Id}/Delete', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-    /**
-     * Callback function to receive the result of the postUsersByIdEasypassword operation.
-     * @callback module:EmbyClient.JavaScript/UserServiceApi~postUsersByIdEasypasswordCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Updates a user&#x27;s easy password
-     * Requires authentication as user
-     * @param {module:EmbyClient.JavaScript/UserServiceApi~postUsersByIdEasypasswordCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    postUsersByIdEasypassword() {
-      let postBody = body;
-
-      let pathParams = {
-        'Id': id
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = ['application/json', 'application/xml'];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/Users/{Id}/EasyPassword', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -590,7 +674,7 @@ export default class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/UserServiceApi~postUsersByIdTrackselectionsByTracktypeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postUsersByIdTrackselectionsByTracktypeDelete() {
@@ -607,7 +691,7 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -619,18 +703,56 @@ export default class UserServiceApi {
       );
     }
     /**
+     * Callback function to receive the result of the postUsersByUseridTypedsettingsByKey operation.
+     * @callback module:EmbyClient.JavaScript/UserServiceApi~postUsersByUseridTypedsettingsByKeyCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates a typed user setting
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/UserServiceApi~postUsersByUseridTypedsettingsByKeyCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postUsersByUseridTypedsettingsByKey() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': userId,
+        'Key': key
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/octet-stream'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Users/{UserId}/TypedSettings/{Key}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
      * Callback function to receive the result of the postUsersForgotpassword operation.
      * @callback module:EmbyClient.JavaScript/UserServiceApi~postUsersForgotpasswordCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/UsersForgotPasswordResult} data The data returned by the service call.
+     * @param {module:model/ForgotPasswordResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Initiates the forgot password process for a local user
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/UserServiceApi~postUsersForgotpasswordCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UsersForgotPasswordResult}
+     * data is of type: {@link module:model/ForgotPasswordResult}
      */
     postUsersForgotpassword() {
       let postBody = body;
@@ -644,10 +766,10 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = UsersForgotPasswordResult;
+      let returnType = ForgotPasswordResult;
 
       return this.apiClient.callApi(
         '/Users/ForgotPassword', 'POST',
@@ -659,15 +781,15 @@ export default class UserServiceApi {
      * Callback function to receive the result of the postUsersForgotpasswordPin operation.
      * @callback module:EmbyClient.JavaScript/UserServiceApi~postUsersForgotpasswordPinCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/UsersPinRedeemResult} data The data returned by the service call.
+     * @param {module:model/PinRedeemResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Redeems a forgot password pin
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/UserServiceApi~postUsersForgotpasswordPinCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UsersPinRedeemResult}
+     * data is of type: {@link module:model/PinRedeemResult}
      */
     postUsersForgotpasswordPin() {
       let postBody = body;
@@ -681,10 +803,10 @@ export default class UserServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = UsersPinRedeemResult;
+      let returnType = PinRedeemResult;
 
       return this.apiClient.callApi(
         '/Users/ForgotPassword/Pin', 'POST',

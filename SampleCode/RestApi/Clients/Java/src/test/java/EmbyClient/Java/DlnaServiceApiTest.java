@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.EmbyDlnaProfilesDlnaProfile;
+import io.swagger.client.model.DlnaProfilesDlnaProfile;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -49,7 +49,7 @@ public class DlnaServiceApiTest {
      */
     @Test
     public void getDlnaProfileinfosTest() throws Exception {
-        List<EmbyDlnaProfilesDlnaProfile> response = api.getDlnaProfileinfos();
+        List<DlnaProfilesDlnaProfile> response = api.getDlnaProfileinfos();
 
         // TODO: test validations
     }
@@ -64,7 +64,7 @@ public class DlnaServiceApiTest {
     @Test
     public void getDlnaProfilesByIdTest() throws Exception {
         String id = null;
-        EmbyDlnaProfilesDlnaProfile response = api.getDlnaProfilesById(id);
+        DlnaProfilesDlnaProfile response = api.getDlnaProfilesById(id);
 
         // TODO: test validations
     }
@@ -78,7 +78,7 @@ public class DlnaServiceApiTest {
      */
     @Test
     public void getDlnaProfilesDefaultTest() throws Exception {
-        EmbyDlnaProfilesDlnaProfile response = api.getDlnaProfilesDefault();
+        DlnaProfilesDlnaProfile response = api.getDlnaProfilesDefault();
 
         // TODO: test validations
     }
@@ -92,7 +92,7 @@ public class DlnaServiceApiTest {
      */
     @Test
     public void postDlnaProfilesTest() throws Exception {
-        EmbyDlnaProfilesDlnaProfile body = null;
+        DlnaProfilesDlnaProfile body = null;
         api.postDlnaProfiles(body);
 
         // TODO: test validations
@@ -107,7 +107,7 @@ public class DlnaServiceApiTest {
      */
     @Test
     public void postDlnaProfilesByIdTest() throws Exception {
-        EmbyDlnaProfilesDlnaProfile body = null;
+        DlnaProfilesDlnaProfile body = null;
         String id = null;
         api.postDlnaProfilesById(body, id);
 

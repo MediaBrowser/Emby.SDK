@@ -1,9 +1,9 @@
 // tslint:disable
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.7.5.0
+ * OpenAPI spec version: 4.8.0.80
  * 
  *
  * NOTE: This file is auto generated.

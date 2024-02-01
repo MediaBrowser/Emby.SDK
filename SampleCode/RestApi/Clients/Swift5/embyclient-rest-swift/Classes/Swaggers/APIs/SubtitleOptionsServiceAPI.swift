@@ -15,7 +15,7 @@ open class SubtitleOptionsServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getEncodingSubtitleoptions(completion: @escaping ((_ data: EmbyWebGenericEditEditObjectContainer?,_ error: Error?) -> Void)) {
+    open class func getEncodingSubtitleoptions(completion: @escaping ((_ data: EditObjectContainer?,_ error: Error?) -> Void)) {
         getEncodingSubtitleoptionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -102,16 +102,16 @@ open class SubtitleOptionsServiceAPI {
   "Object" : { }
 }}]
 
-     - returns: RequestBuilder<EmbyWebGenericEditEditObjectContainer> 
+     - returns: RequestBuilder<EditObjectContainer> 
      */
-    open class func getEncodingSubtitleoptionsWithRequestBuilder() -> RequestBuilder<EmbyWebGenericEditEditObjectContainer> {
+    open class func getEncodingSubtitleoptionsWithRequestBuilder() -> RequestBuilder<EditObjectContainer> {
         let path = "/Encoding/SubtitleOptions"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<EmbyWebGenericEditEditObjectContainer>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<EditObjectContainer>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

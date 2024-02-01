@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -23,23 +23,33 @@ class ValidatePath(object):
     """
     swagger_types = {
         'validate_writeable': 'bool',
-        'is_file': 'bool'
+        'is_file': 'bool',
+        'username': 'str',
+        'password': 'str'
     }
 
     attribute_map = {
         'validate_writeable': 'ValidateWriteable',
-        'is_file': 'IsFile'
+        'is_file': 'IsFile',
+        'username': 'Username',
+        'password': 'Password'
     }
 
-    def __init__(self, validate_writeable=None, is_file=None):  # noqa: E501
+    def __init__(self, validate_writeable=None, is_file=None, username=None, password=None):  # noqa: E501
         """ValidatePath - a model defined in Swagger"""  # noqa: E501
         self._validate_writeable = None
         self._is_file = None
+        self._username = None
+        self._password = None
         self.discriminator = None
         if validate_writeable is not None:
             self.validate_writeable = validate_writeable
         if is_file is not None:
             self.is_file = is_file
+        if username is not None:
+            self.username = username
+        if password is not None:
+            self.password = password
 
     @property
     def validate_writeable(self):
@@ -82,6 +92,48 @@ class ValidatePath(object):
         """
 
         self._is_file = is_file
+
+    @property
+    def username(self):
+        """Gets the username of this ValidatePath.  # noqa: E501
+
+
+        :return: The username of this ValidatePath.  # noqa: E501
+        :rtype: str
+        """
+        return self._username
+
+    @username.setter
+    def username(self, username):
+        """Sets the username of this ValidatePath.
+
+
+        :param username: The username of this ValidatePath.  # noqa: E501
+        :type: str
+        """
+
+        self._username = username
+
+    @property
+    def password(self):
+        """Gets the password of this ValidatePath.  # noqa: E501
+
+
+        :return: The password of this ValidatePath.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this ValidatePath.
+
+
+        :param password: The password of this ValidatePath.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     def to_dict(self):
         """Returns the model properties as a dict"""

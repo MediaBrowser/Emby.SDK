@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// RemoteImageInfo
+    /// Class RemoteImageInfo  
     /// </summary>
     [DataContract]
         public partial class RemoteImageInfo :  IEquatable<RemoteImageInfo>
@@ -26,14 +26,14 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoteImageInfo" /> class.
         /// </summary>
-        /// <param name="providerName">providerName.</param>
-        /// <param name="url">url.</param>
-        /// <param name="thumbnailUrl">thumbnailUrl.</param>
-        /// <param name="height">height.</param>
-        /// <param name="width">width.</param>
-        /// <param name="communityRating">communityRating.</param>
-        /// <param name="voteCount">voteCount.</param>
-        /// <param name="language">language.</param>
+        /// <param name="providerName">The name of the provider..</param>
+        /// <param name="url">The URL..</param>
+        /// <param name="thumbnailUrl">A url used for previewing a smaller version.</param>
+        /// <param name="height">The height..</param>
+        /// <param name="width">The width..</param>
+        /// <param name="communityRating">The community rating..</param>
+        /// <param name="voteCount">The vote count..</param>
+        /// <param name="language">The language..</param>
         /// <param name="displayLanguage">displayLanguage.</param>
         /// <param name="type">type.</param>
         /// <param name="ratingType">ratingType.</param>
@@ -53,50 +53,58 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets ProviderName
+        /// The name of the provider.
         /// </summary>
+        /// <value>The name of the provider.</value>
         [DataMember(Name="ProviderName", EmitDefaultValue=false)]
         public string ProviderName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Url
+        /// The URL.
         /// </summary>
+        /// <value>The URL.</value>
         [DataMember(Name="Url", EmitDefaultValue=false)]
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or Sets ThumbnailUrl
+        /// A url used for previewing a smaller version
         /// </summary>
+        /// <value>A url used for previewing a smaller version</value>
         [DataMember(Name="ThumbnailUrl", EmitDefaultValue=false)]
         public string ThumbnailUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets Height
+        /// The height.
         /// </summary>
+        /// <value>The height.</value>
         [DataMember(Name="Height", EmitDefaultValue=false)]
         public int? Height { get; set; }
 
         /// <summary>
-        /// Gets or Sets Width
+        /// The width.
         /// </summary>
+        /// <value>The width.</value>
         [DataMember(Name="Width", EmitDefaultValue=false)]
         public int? Width { get; set; }
 
         /// <summary>
-        /// Gets or Sets CommunityRating
+        /// The community rating.
         /// </summary>
+        /// <value>The community rating.</value>
         [DataMember(Name="CommunityRating", EmitDefaultValue=false)]
         public double? CommunityRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets VoteCount
+        /// The vote count.
         /// </summary>
+        /// <value>The vote count.</value>
         [DataMember(Name="VoteCount", EmitDefaultValue=false)]
         public int? VoteCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Language
+        /// The language.
         /// </summary>
+        /// <value>The language.</value>
         [DataMember(Name="Language", EmitDefaultValue=false)]
         public string Language { get; set; }
 

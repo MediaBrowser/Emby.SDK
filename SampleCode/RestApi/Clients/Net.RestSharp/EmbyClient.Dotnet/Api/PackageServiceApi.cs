@@ -50,8 +50,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="targetSystems">Optional. Filter by target system type. Allows multiple, comma delimited. (optional)</param>
         /// <param name="isPremium">Optional. Filter by premium status (optional)</param>
         /// <param name="isAdult">Optional. Filter by package that contain adult content. (optional)</param>
-        /// <returns>List&lt;UpdatesPackageInfo&gt;</returns>
-        List<UpdatesPackageInfo> GetPackages (string packageType, string targetSystems, bool? isPremium, bool? isAdult);
+        /// <returns>List&lt;PackageInfo&gt;</returns>
+        List<PackageInfo> GetPackages (string packageType, string targetSystems, bool? isPremium, bool? isAdult);
 
         /// <summary>
         /// Gets available packages
@@ -64,8 +64,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="targetSystems">Optional. Filter by target system type. Allows multiple, comma delimited. (optional)</param>
         /// <param name="isPremium">Optional. Filter by premium status (optional)</param>
         /// <param name="isAdult">Optional. Filter by package that contain adult content. (optional)</param>
-        /// <returns>ApiResponse of List&lt;UpdatesPackageInfo&gt;</returns>
-        ApiResponse<List<UpdatesPackageInfo>> GetPackagesWithHttpInfo (string packageType, string targetSystems, bool? isPremium, bool? isAdult);
+        /// <returns>ApiResponse of List&lt;PackageInfo&gt;</returns>
+        ApiResponse<List<PackageInfo>> GetPackagesWithHttpInfo (string packageType, string targetSystems, bool? isPremium, bool? isAdult);
         /// <summary>
         /// Gets a package, by name or assembly guid
         /// </summary>
@@ -75,8 +75,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the package</param>
         /// <param name="assemblyGuid">The guid of the associated assembly (optional)</param>
-        /// <returns>UpdatesPackageInfo</returns>
-        UpdatesPackageInfo GetPackagesByName (string name, string assemblyGuid);
+        /// <returns>PackageInfo</returns>
+        PackageInfo GetPackagesByName (string name, string assemblyGuid);
 
         /// <summary>
         /// Gets a package, by name or assembly guid
@@ -87,8 +87,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the package</param>
         /// <param name="assemblyGuid">The guid of the associated assembly (optional)</param>
-        /// <returns>ApiResponse of UpdatesPackageInfo</returns>
-        ApiResponse<UpdatesPackageInfo> GetPackagesByNameWithHttpInfo (string name, string assemblyGuid);
+        /// <returns>ApiResponse of PackageInfo</returns>
+        ApiResponse<PackageInfo> GetPackagesByNameWithHttpInfo (string name, string assemblyGuid);
         /// <summary>
         /// Gets available package updates for currently installed packages
         /// </summary>
@@ -97,8 +97,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageType">Package type filter (System/UserInstalled)</param>
-        /// <returns>List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        List<UpdatesPackageVersionInfo> GetPackagesUpdates (string packageType);
+        /// <returns>List&lt;PackageVersionInfo&gt;</returns>
+        List<PackageVersionInfo> GetPackagesUpdates (string packageType);
 
         /// <summary>
         /// Gets available package updates for currently installed packages
@@ -108,8 +108,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageType">Package type filter (System/UserInstalled)</param>
-        /// <returns>ApiResponse of List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        ApiResponse<List<UpdatesPackageVersionInfo>> GetPackagesUpdatesWithHttpInfo (string packageType);
+        /// <returns>ApiResponse of List&lt;PackageVersionInfo&gt;</returns>
+        ApiResponse<List<PackageVersionInfo>> GetPackagesUpdatesWithHttpInfo (string packageType);
         /// <summary>
         /// Installs a package
         /// </summary>
@@ -122,7 +122,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="version">Optional version. Defaults to latest version. (optional)</param>
         /// <param name="updateClass">Optional update class (Dev, Beta, Release). Defaults to Release. (optional)</param>
         /// <returns></returns>
-        void PostPackagesInstalledByName (string name, string assemblyGuid, string version, UpdatesPackageVersionClass updateClass);
+        void PostPackagesInstalledByName (string name, string assemblyGuid, string version, PackageVersionClass updateClass);
 
         /// <summary>
         /// Installs a package
@@ -136,7 +136,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="version">Optional version. Defaults to latest version. (optional)</param>
         /// <param name="updateClass">Optional update class (Dev, Beta, Release). Defaults to Release. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostPackagesInstalledByNameWithHttpInfo (string name, string assemblyGuid, string version, UpdatesPackageVersionClass updateClass);
+        ApiResponse<Object> PostPackagesInstalledByNameWithHttpInfo (string name, string assemblyGuid, string version, PackageVersionClass updateClass);
         /// <summary>
         /// Cancels a package installation
         /// </summary>
@@ -192,8 +192,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="targetSystems">Optional. Filter by target system type. Allows multiple, comma delimited. (optional)</param>
         /// <param name="isPremium">Optional. Filter by premium status (optional)</param>
         /// <param name="isAdult">Optional. Filter by package that contain adult content. (optional)</param>
-        /// <returns>Task of List&lt;UpdatesPackageInfo&gt;</returns>
-        System.Threading.Tasks.Task<List<UpdatesPackageInfo>> GetPackagesAsync (string packageType, string targetSystems, bool? isPremium, bool? isAdult);
+        /// <returns>Task of List&lt;PackageInfo&gt;</returns>
+        System.Threading.Tasks.Task<List<PackageInfo>> GetPackagesAsync (string packageType, string targetSystems, bool? isPremium, bool? isAdult);
 
         /// <summary>
         /// Gets available packages
@@ -206,8 +206,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="targetSystems">Optional. Filter by target system type. Allows multiple, comma delimited. (optional)</param>
         /// <param name="isPremium">Optional. Filter by premium status (optional)</param>
         /// <param name="isAdult">Optional. Filter by package that contain adult content. (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;UpdatesPackageInfo&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UpdatesPackageInfo>>> GetPackagesAsyncWithHttpInfo (string packageType, string targetSystems, bool? isPremium, bool? isAdult);
+        /// <returns>Task of ApiResponse (List&lt;PackageInfo&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PackageInfo>>> GetPackagesAsyncWithHttpInfo (string packageType, string targetSystems, bool? isPremium, bool? isAdult);
         /// <summary>
         /// Gets a package, by name or assembly guid
         /// </summary>
@@ -217,8 +217,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the package</param>
         /// <param name="assemblyGuid">The guid of the associated assembly (optional)</param>
-        /// <returns>Task of UpdatesPackageInfo</returns>
-        System.Threading.Tasks.Task<UpdatesPackageInfo> GetPackagesByNameAsync (string name, string assemblyGuid);
+        /// <returns>Task of PackageInfo</returns>
+        System.Threading.Tasks.Task<PackageInfo> GetPackagesByNameAsync (string name, string assemblyGuid);
 
         /// <summary>
         /// Gets a package, by name or assembly guid
@@ -229,8 +229,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the package</param>
         /// <param name="assemblyGuid">The guid of the associated assembly (optional)</param>
-        /// <returns>Task of ApiResponse (UpdatesPackageInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UpdatesPackageInfo>> GetPackagesByNameAsyncWithHttpInfo (string name, string assemblyGuid);
+        /// <returns>Task of ApiResponse (PackageInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PackageInfo>> GetPackagesByNameAsyncWithHttpInfo (string name, string assemblyGuid);
         /// <summary>
         /// Gets available package updates for currently installed packages
         /// </summary>
@@ -239,8 +239,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageType">Package type filter (System/UserInstalled)</param>
-        /// <returns>Task of List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        System.Threading.Tasks.Task<List<UpdatesPackageVersionInfo>> GetPackagesUpdatesAsync (string packageType);
+        /// <returns>Task of List&lt;PackageVersionInfo&gt;</returns>
+        System.Threading.Tasks.Task<List<PackageVersionInfo>> GetPackagesUpdatesAsync (string packageType);
 
         /// <summary>
         /// Gets available package updates for currently installed packages
@@ -250,8 +250,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageType">Package type filter (System/UserInstalled)</param>
-        /// <returns>Task of ApiResponse (List&lt;UpdatesPackageVersionInfo&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UpdatesPackageVersionInfo>>> GetPackagesUpdatesAsyncWithHttpInfo (string packageType);
+        /// <returns>Task of ApiResponse (List&lt;PackageVersionInfo&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<PackageVersionInfo>>> GetPackagesUpdatesAsyncWithHttpInfo (string packageType);
         /// <summary>
         /// Installs a package
         /// </summary>
@@ -264,7 +264,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="version">Optional version. Defaults to latest version. (optional)</param>
         /// <param name="updateClass">Optional update class (Dev, Beta, Release). Defaults to Release. (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostPackagesInstalledByNameAsync (string name, string assemblyGuid, string version, UpdatesPackageVersionClass updateClass);
+        System.Threading.Tasks.Task PostPackagesInstalledByNameAsync (string name, string assemblyGuid, string version, PackageVersionClass updateClass);
 
         /// <summary>
         /// Installs a package
@@ -278,7 +278,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="version">Optional version. Defaults to latest version. (optional)</param>
         /// <param name="updateClass">Optional update class (Dev, Beta, Release). Defaults to Release. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostPackagesInstalledByNameAsyncWithHttpInfo (string name, string assemblyGuid, string version, UpdatesPackageVersionClass updateClass);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostPackagesInstalledByNameAsyncWithHttpInfo (string name, string assemblyGuid, string version, PackageVersionClass updateClass);
         /// <summary>
         /// Cancels a package installation
         /// </summary>
@@ -568,10 +568,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="targetSystems">Optional. Filter by target system type. Allows multiple, comma delimited. (optional)</param>
         /// <param name="isPremium">Optional. Filter by premium status (optional)</param>
         /// <param name="isAdult">Optional. Filter by package that contain adult content. (optional)</param>
-        /// <returns>List&lt;UpdatesPackageInfo&gt;</returns>
-        public List<UpdatesPackageInfo> GetPackages (string packageType, string targetSystems, bool? isPremium, bool? isAdult)
+        /// <returns>List&lt;PackageInfo&gt;</returns>
+        public List<PackageInfo> GetPackages (string packageType, string targetSystems, bool? isPremium, bool? isAdult)
         {
-             ApiResponse<List<UpdatesPackageInfo>> localVarResponse = GetPackagesWithHttpInfo(packageType, targetSystems, isPremium, isAdult);
+             ApiResponse<List<PackageInfo>> localVarResponse = GetPackagesWithHttpInfo(packageType, targetSystems, isPremium, isAdult);
              return localVarResponse.Data;
         }
 
@@ -583,8 +583,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="targetSystems">Optional. Filter by target system type. Allows multiple, comma delimited. (optional)</param>
         /// <param name="isPremium">Optional. Filter by premium status (optional)</param>
         /// <param name="isAdult">Optional. Filter by package that contain adult content. (optional)</param>
-        /// <returns>ApiResponse of List&lt;UpdatesPackageInfo&gt;</returns>
-        public ApiResponse< List<UpdatesPackageInfo> > GetPackagesWithHttpInfo (string packageType, string targetSystems, bool? isPremium, bool? isAdult)
+        /// <returns>ApiResponse of List&lt;PackageInfo&gt;</returns>
+        public ApiResponse< List<PackageInfo> > GetPackagesWithHttpInfo (string packageType, string targetSystems, bool? isPremium, bool? isAdult)
         {
 
             var localVarPath = "/Packages";
@@ -638,9 +638,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UpdatesPackageInfo>>(localVarStatusCode,
+            return new ApiResponse<List<PackageInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UpdatesPackageInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UpdatesPackageInfo>)));
+                (List<PackageInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PackageInfo>)));
         }
 
         /// <summary>
@@ -651,10 +651,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="targetSystems">Optional. Filter by target system type. Allows multiple, comma delimited. (optional)</param>
         /// <param name="isPremium">Optional. Filter by premium status (optional)</param>
         /// <param name="isAdult">Optional. Filter by package that contain adult content. (optional)</param>
-        /// <returns>Task of List&lt;UpdatesPackageInfo&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UpdatesPackageInfo>> GetPackagesAsync (string packageType, string targetSystems, bool? isPremium, bool? isAdult)
+        /// <returns>Task of List&lt;PackageInfo&gt;</returns>
+        public async System.Threading.Tasks.Task<List<PackageInfo>> GetPackagesAsync (string packageType, string targetSystems, bool? isPremium, bool? isAdult)
         {
-             ApiResponse<List<UpdatesPackageInfo>> localVarResponse = await GetPackagesAsyncWithHttpInfo(packageType, targetSystems, isPremium, isAdult);
+             ApiResponse<List<PackageInfo>> localVarResponse = await GetPackagesAsyncWithHttpInfo(packageType, targetSystems, isPremium, isAdult);
              return localVarResponse.Data;
 
         }
@@ -667,8 +667,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="targetSystems">Optional. Filter by target system type. Allows multiple, comma delimited. (optional)</param>
         /// <param name="isPremium">Optional. Filter by premium status (optional)</param>
         /// <param name="isAdult">Optional. Filter by package that contain adult content. (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;UpdatesPackageInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UpdatesPackageInfo>>> GetPackagesAsyncWithHttpInfo (string packageType, string targetSystems, bool? isPremium, bool? isAdult)
+        /// <returns>Task of ApiResponse (List&lt;PackageInfo&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PackageInfo>>> GetPackagesAsyncWithHttpInfo (string packageType, string targetSystems, bool? isPremium, bool? isAdult)
         {
 
             var localVarPath = "/Packages";
@@ -722,9 +722,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UpdatesPackageInfo>>(localVarStatusCode,
+            return new ApiResponse<List<PackageInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UpdatesPackageInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UpdatesPackageInfo>)));
+                (List<PackageInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PackageInfo>)));
         }
 
         /// <summary>
@@ -733,10 +733,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the package</param>
         /// <param name="assemblyGuid">The guid of the associated assembly (optional)</param>
-        /// <returns>UpdatesPackageInfo</returns>
-        public UpdatesPackageInfo GetPackagesByName (string name, string assemblyGuid)
+        /// <returns>PackageInfo</returns>
+        public PackageInfo GetPackagesByName (string name, string assemblyGuid)
         {
-             ApiResponse<UpdatesPackageInfo> localVarResponse = GetPackagesByNameWithHttpInfo(name, assemblyGuid);
+             ApiResponse<PackageInfo> localVarResponse = GetPackagesByNameWithHttpInfo(name, assemblyGuid);
              return localVarResponse.Data;
         }
 
@@ -746,8 +746,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the package</param>
         /// <param name="assemblyGuid">The guid of the associated assembly (optional)</param>
-        /// <returns>ApiResponse of UpdatesPackageInfo</returns>
-        public ApiResponse< UpdatesPackageInfo > GetPackagesByNameWithHttpInfo (string name, string assemblyGuid)
+        /// <returns>ApiResponse of PackageInfo</returns>
+        public ApiResponse< PackageInfo > GetPackagesByNameWithHttpInfo (string name, string assemblyGuid)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -802,9 +802,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UpdatesPackageInfo>(localVarStatusCode,
+            return new ApiResponse<PackageInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (UpdatesPackageInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdatesPackageInfo)));
+                (PackageInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PackageInfo)));
         }
 
         /// <summary>
@@ -813,10 +813,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the package</param>
         /// <param name="assemblyGuid">The guid of the associated assembly (optional)</param>
-        /// <returns>Task of UpdatesPackageInfo</returns>
-        public async System.Threading.Tasks.Task<UpdatesPackageInfo> GetPackagesByNameAsync (string name, string assemblyGuid)
+        /// <returns>Task of PackageInfo</returns>
+        public async System.Threading.Tasks.Task<PackageInfo> GetPackagesByNameAsync (string name, string assemblyGuid)
         {
-             ApiResponse<UpdatesPackageInfo> localVarResponse = await GetPackagesByNameAsyncWithHttpInfo(name, assemblyGuid);
+             ApiResponse<PackageInfo> localVarResponse = await GetPackagesByNameAsyncWithHttpInfo(name, assemblyGuid);
              return localVarResponse.Data;
 
         }
@@ -827,8 +827,8 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the package</param>
         /// <param name="assemblyGuid">The guid of the associated assembly (optional)</param>
-        /// <returns>Task of ApiResponse (UpdatesPackageInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UpdatesPackageInfo>> GetPackagesByNameAsyncWithHttpInfo (string name, string assemblyGuid)
+        /// <returns>Task of ApiResponse (PackageInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PackageInfo>> GetPackagesByNameAsyncWithHttpInfo (string name, string assemblyGuid)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -883,9 +883,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UpdatesPackageInfo>(localVarStatusCode,
+            return new ApiResponse<PackageInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (UpdatesPackageInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdatesPackageInfo)));
+                (PackageInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PackageInfo)));
         }
 
         /// <summary>
@@ -893,10 +893,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageType">Package type filter (System/UserInstalled)</param>
-        /// <returns>List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        public List<UpdatesPackageVersionInfo> GetPackagesUpdates (string packageType)
+        /// <returns>List&lt;PackageVersionInfo&gt;</returns>
+        public List<PackageVersionInfo> GetPackagesUpdates (string packageType)
         {
-             ApiResponse<List<UpdatesPackageVersionInfo>> localVarResponse = GetPackagesUpdatesWithHttpInfo(packageType);
+             ApiResponse<List<PackageVersionInfo>> localVarResponse = GetPackagesUpdatesWithHttpInfo(packageType);
              return localVarResponse.Data;
         }
 
@@ -905,8 +905,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageType">Package type filter (System/UserInstalled)</param>
-        /// <returns>ApiResponse of List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        public ApiResponse< List<UpdatesPackageVersionInfo> > GetPackagesUpdatesWithHttpInfo (string packageType)
+        /// <returns>ApiResponse of List&lt;PackageVersionInfo&gt;</returns>
+        public ApiResponse< List<PackageVersionInfo> > GetPackagesUpdatesWithHttpInfo (string packageType)
         {
             // verify the required parameter 'packageType' is set
             if (packageType == null)
@@ -960,9 +960,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UpdatesPackageVersionInfo>>(localVarStatusCode,
+            return new ApiResponse<List<PackageVersionInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UpdatesPackageVersionInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UpdatesPackageVersionInfo>)));
+                (List<PackageVersionInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PackageVersionInfo>)));
         }
 
         /// <summary>
@@ -970,10 +970,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageType">Package type filter (System/UserInstalled)</param>
-        /// <returns>Task of List&lt;UpdatesPackageVersionInfo&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UpdatesPackageVersionInfo>> GetPackagesUpdatesAsync (string packageType)
+        /// <returns>Task of List&lt;PackageVersionInfo&gt;</returns>
+        public async System.Threading.Tasks.Task<List<PackageVersionInfo>> GetPackagesUpdatesAsync (string packageType)
         {
-             ApiResponse<List<UpdatesPackageVersionInfo>> localVarResponse = await GetPackagesUpdatesAsyncWithHttpInfo(packageType);
+             ApiResponse<List<PackageVersionInfo>> localVarResponse = await GetPackagesUpdatesAsyncWithHttpInfo(packageType);
              return localVarResponse.Data;
 
         }
@@ -983,8 +983,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="packageType">Package type filter (System/UserInstalled)</param>
-        /// <returns>Task of ApiResponse (List&lt;UpdatesPackageVersionInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UpdatesPackageVersionInfo>>> GetPackagesUpdatesAsyncWithHttpInfo (string packageType)
+        /// <returns>Task of ApiResponse (List&lt;PackageVersionInfo&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<PackageVersionInfo>>> GetPackagesUpdatesAsyncWithHttpInfo (string packageType)
         {
             // verify the required parameter 'packageType' is set
             if (packageType == null)
@@ -1038,9 +1038,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<UpdatesPackageVersionInfo>>(localVarStatusCode,
+            return new ApiResponse<List<PackageVersionInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<UpdatesPackageVersionInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UpdatesPackageVersionInfo>)));
+                (List<PackageVersionInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PackageVersionInfo>)));
         }
 
         /// <summary>
@@ -1052,7 +1052,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="version">Optional version. Defaults to latest version. (optional)</param>
         /// <param name="updateClass">Optional update class (Dev, Beta, Release). Defaults to Release. (optional)</param>
         /// <returns></returns>
-        public void PostPackagesInstalledByName (string name, string assemblyGuid, string version, UpdatesPackageVersionClass updateClass)
+        public void PostPackagesInstalledByName (string name, string assemblyGuid, string version, PackageVersionClass updateClass)
         {
              PostPackagesInstalledByNameWithHttpInfo(name, assemblyGuid, version, updateClass);
         }
@@ -1066,7 +1066,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="version">Optional version. Defaults to latest version. (optional)</param>
         /// <param name="updateClass">Optional update class (Dev, Beta, Release). Defaults to Release. (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostPackagesInstalledByNameWithHttpInfo (string name, string assemblyGuid, string version, UpdatesPackageVersionClass updateClass)
+        public ApiResponse<Object> PostPackagesInstalledByNameWithHttpInfo (string name, string assemblyGuid, string version, PackageVersionClass updateClass)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1135,7 +1135,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="version">Optional version. Defaults to latest version. (optional)</param>
         /// <param name="updateClass">Optional update class (Dev, Beta, Release). Defaults to Release. (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostPackagesInstalledByNameAsync (string name, string assemblyGuid, string version, UpdatesPackageVersionClass updateClass)
+        public async System.Threading.Tasks.Task PostPackagesInstalledByNameAsync (string name, string assemblyGuid, string version, PackageVersionClass updateClass)
         {
              await PostPackagesInstalledByNameAsyncWithHttpInfo(name, assemblyGuid, version, updateClass);
 
@@ -1150,7 +1150,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="version">Optional version. Defaults to latest version. (optional)</param>
         /// <param name="updateClass">Optional update class (Dev, Beta, Release). Defaults to Release. (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostPackagesInstalledByNameAsyncWithHttpInfo (string name, string assemblyGuid, string version, UpdatesPackageVersionClass updateClass)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostPackagesInstalledByNameAsyncWithHttpInfo (string name, string assemblyGuid, string version, PackageVersionClass updateClass)
         {
             // verify the required parameter 'name' is set
             if (name == null)

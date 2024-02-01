@@ -34,14 +34,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="hasTrailer">Optional filter by items with trailers. (optional)</param>
         /// <param name="adjacentTo">Optional. Return items that are siblings of a supplied item. (optional)</param>
         /// <param name="minIndexNumber">Optional filter by minimum index number. (optional)</param>
+        /// <param name="minStartDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxStartDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="minEndDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxEndDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
         /// <param name="minPlayers">Optional filter by minimum number of game players. (optional)</param>
         /// <param name="maxPlayers">Optional filter by maximum number of game players. (optional)</param>
         /// <param name="parentIndexNumber">Optional filter by parent index number. (optional)</param>
         /// <param name="hasParentalRating">Optional filter by items that have or do not have a parental rating (optional)</param>
         /// <param name="isHD">Optional filter by items that are HD or not. (optional)</param>
-        /// <param name="locationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="excludeLocationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="isMissing">Optional filter by items that are missing episodes or not. (optional)</param>
         /// <param name="isUnaired">Optional filter by items that are unaired episodes or not. (optional)</param>
         /// <param name="minCommunityRating">Optional filter by minimum community rating. (optional)</param>
         /// <param name="minCriticRating">Optional filter by minimum critic rating. (optional)</param>
@@ -69,9 +70,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="isFavorite">Optional filter by items that are marked as favorite, or not. (optional)</param>
         /// <param name="isMovie">Optional filter for movies. (optional)</param>
         /// <param name="isSeries">Optional filter for series. (optional)</param>
+        /// <param name="isFolder">Optional filter for folders. (optional)</param>
         /// <param name="isNews">Optional filter for news. (optional)</param>
         /// <param name="isKids">Optional filter for kids. (optional)</param>
         /// <param name="isSports">Optional filter for sports. (optional)</param>
+        /// <param name="isNew">Optional filter for IsNew. (optional)</param>
+        /// <param name="isPremiere">Optional filter for IsPremiere. (optional)</param>
+        /// <param name="isNewOrPremiere">Optional filter for IsNewOrPremiere. (optional)</param>
+        /// <param name="isRepeat">Optional filter for IsRepeat. (optional)</param>
+        /// <param name="projectToMedia">ProjectToMedia (optional)</param>
         /// <param name="mediaTypes">Optional filter by MediaType. Allows multiple, comma delimited. (optional)</param>
         /// <param name="imageTypes">Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)</param>
         /// <param name="sortBy">Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)</param>
@@ -79,6 +86,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="genres">Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="officialRatings">Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="tags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
+        /// <param name="excludeTags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="years">Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)</param>
         /// <param name="enableImages">Optional, include image information in output (optional)</param>
         /// <param name="enableUserData">Optional, include user data (optional)</param>
@@ -96,7 +104,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="videoTypes">Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)</param>
         /// <param name="containers">Optional filter by Container. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="audioCodecs">Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="audioLayouts">Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="videoCodecs">Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="extendedVideoTypes">Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="subtitleCodecs">Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="path">Optional filter by Path. (optional)</param>
         /// <param name="userId">User Id (optional)</param>
@@ -113,7 +123,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>QueryResultBaseItemDto</returns>
-        QueryResultBaseItemDto GetTrailers (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, string locationTypes, string excludeLocationTypes, bool? isMissing, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isNews, bool? isKids, bool? isSports, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string videoCodecs, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        QueryResultBaseItemDto GetTrailers (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
 
         /// <summary>
         /// Finds movies and trailers similar to a given trailer.
@@ -131,14 +141,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="hasTrailer">Optional filter by items with trailers. (optional)</param>
         /// <param name="adjacentTo">Optional. Return items that are siblings of a supplied item. (optional)</param>
         /// <param name="minIndexNumber">Optional filter by minimum index number. (optional)</param>
+        /// <param name="minStartDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxStartDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="minEndDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxEndDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
         /// <param name="minPlayers">Optional filter by minimum number of game players. (optional)</param>
         /// <param name="maxPlayers">Optional filter by maximum number of game players. (optional)</param>
         /// <param name="parentIndexNumber">Optional filter by parent index number. (optional)</param>
         /// <param name="hasParentalRating">Optional filter by items that have or do not have a parental rating (optional)</param>
         /// <param name="isHD">Optional filter by items that are HD or not. (optional)</param>
-        /// <param name="locationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="excludeLocationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="isMissing">Optional filter by items that are missing episodes or not. (optional)</param>
         /// <param name="isUnaired">Optional filter by items that are unaired episodes or not. (optional)</param>
         /// <param name="minCommunityRating">Optional filter by minimum community rating. (optional)</param>
         /// <param name="minCriticRating">Optional filter by minimum critic rating. (optional)</param>
@@ -166,9 +177,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="isFavorite">Optional filter by items that are marked as favorite, or not. (optional)</param>
         /// <param name="isMovie">Optional filter for movies. (optional)</param>
         /// <param name="isSeries">Optional filter for series. (optional)</param>
+        /// <param name="isFolder">Optional filter for folders. (optional)</param>
         /// <param name="isNews">Optional filter for news. (optional)</param>
         /// <param name="isKids">Optional filter for kids. (optional)</param>
         /// <param name="isSports">Optional filter for sports. (optional)</param>
+        /// <param name="isNew">Optional filter for IsNew. (optional)</param>
+        /// <param name="isPremiere">Optional filter for IsPremiere. (optional)</param>
+        /// <param name="isNewOrPremiere">Optional filter for IsNewOrPremiere. (optional)</param>
+        /// <param name="isRepeat">Optional filter for IsRepeat. (optional)</param>
+        /// <param name="projectToMedia">ProjectToMedia (optional)</param>
         /// <param name="mediaTypes">Optional filter by MediaType. Allows multiple, comma delimited. (optional)</param>
         /// <param name="imageTypes">Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)</param>
         /// <param name="sortBy">Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)</param>
@@ -176,6 +193,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="genres">Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="officialRatings">Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="tags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
+        /// <param name="excludeTags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="years">Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)</param>
         /// <param name="enableImages">Optional, include image information in output (optional)</param>
         /// <param name="enableUserData">Optional, include user data (optional)</param>
@@ -193,7 +211,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="videoTypes">Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)</param>
         /// <param name="containers">Optional filter by Container. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="audioCodecs">Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="audioLayouts">Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="videoCodecs">Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="extendedVideoTypes">Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="subtitleCodecs">Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="path">Optional filter by Path. (optional)</param>
         /// <param name="userId">User Id (optional)</param>
@@ -210,7 +230,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
-        ApiResponse<QueryResultBaseItemDto> GetTrailersWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, string locationTypes, string excludeLocationTypes, bool? isMissing, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isNews, bool? isKids, bool? isSports, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string videoCodecs, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        ApiResponse<QueryResultBaseItemDto> GetTrailersWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -229,14 +249,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="hasTrailer">Optional filter by items with trailers. (optional)</param>
         /// <param name="adjacentTo">Optional. Return items that are siblings of a supplied item. (optional)</param>
         /// <param name="minIndexNumber">Optional filter by minimum index number. (optional)</param>
+        /// <param name="minStartDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxStartDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="minEndDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxEndDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
         /// <param name="minPlayers">Optional filter by minimum number of game players. (optional)</param>
         /// <param name="maxPlayers">Optional filter by maximum number of game players. (optional)</param>
         /// <param name="parentIndexNumber">Optional filter by parent index number. (optional)</param>
         /// <param name="hasParentalRating">Optional filter by items that have or do not have a parental rating (optional)</param>
         /// <param name="isHD">Optional filter by items that are HD or not. (optional)</param>
-        /// <param name="locationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="excludeLocationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="isMissing">Optional filter by items that are missing episodes or not. (optional)</param>
         /// <param name="isUnaired">Optional filter by items that are unaired episodes or not. (optional)</param>
         /// <param name="minCommunityRating">Optional filter by minimum community rating. (optional)</param>
         /// <param name="minCriticRating">Optional filter by minimum critic rating. (optional)</param>
@@ -264,9 +285,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="isFavorite">Optional filter by items that are marked as favorite, or not. (optional)</param>
         /// <param name="isMovie">Optional filter for movies. (optional)</param>
         /// <param name="isSeries">Optional filter for series. (optional)</param>
+        /// <param name="isFolder">Optional filter for folders. (optional)</param>
         /// <param name="isNews">Optional filter for news. (optional)</param>
         /// <param name="isKids">Optional filter for kids. (optional)</param>
         /// <param name="isSports">Optional filter for sports. (optional)</param>
+        /// <param name="isNew">Optional filter for IsNew. (optional)</param>
+        /// <param name="isPremiere">Optional filter for IsPremiere. (optional)</param>
+        /// <param name="isNewOrPremiere">Optional filter for IsNewOrPremiere. (optional)</param>
+        /// <param name="isRepeat">Optional filter for IsRepeat. (optional)</param>
+        /// <param name="projectToMedia">ProjectToMedia (optional)</param>
         /// <param name="mediaTypes">Optional filter by MediaType. Allows multiple, comma delimited. (optional)</param>
         /// <param name="imageTypes">Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)</param>
         /// <param name="sortBy">Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)</param>
@@ -274,6 +301,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="genres">Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="officialRatings">Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="tags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
+        /// <param name="excludeTags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="years">Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)</param>
         /// <param name="enableImages">Optional, include image information in output (optional)</param>
         /// <param name="enableUserData">Optional, include user data (optional)</param>
@@ -291,7 +319,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="videoTypes">Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)</param>
         /// <param name="containers">Optional filter by Container. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="audioCodecs">Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="audioLayouts">Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="videoCodecs">Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="extendedVideoTypes">Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="subtitleCodecs">Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="path">Optional filter by Path. (optional)</param>
         /// <param name="userId">User Id (optional)</param>
@@ -308,7 +338,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>Task of QueryResultBaseItemDto</returns>
-        System.Threading.Tasks.Task<QueryResultBaseItemDto> GetTrailersAsync (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, string locationTypes, string excludeLocationTypes, bool? isMissing, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isNews, bool? isKids, bool? isSports, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string videoCodecs, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        System.Threading.Tasks.Task<QueryResultBaseItemDto> GetTrailersAsync (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
 
         /// <summary>
         /// Finds movies and trailers similar to a given trailer.
@@ -326,14 +356,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="hasTrailer">Optional filter by items with trailers. (optional)</param>
         /// <param name="adjacentTo">Optional. Return items that are siblings of a supplied item. (optional)</param>
         /// <param name="minIndexNumber">Optional filter by minimum index number. (optional)</param>
+        /// <param name="minStartDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxStartDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="minEndDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxEndDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
         /// <param name="minPlayers">Optional filter by minimum number of game players. (optional)</param>
         /// <param name="maxPlayers">Optional filter by maximum number of game players. (optional)</param>
         /// <param name="parentIndexNumber">Optional filter by parent index number. (optional)</param>
         /// <param name="hasParentalRating">Optional filter by items that have or do not have a parental rating (optional)</param>
         /// <param name="isHD">Optional filter by items that are HD or not. (optional)</param>
-        /// <param name="locationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="excludeLocationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="isMissing">Optional filter by items that are missing episodes or not. (optional)</param>
         /// <param name="isUnaired">Optional filter by items that are unaired episodes or not. (optional)</param>
         /// <param name="minCommunityRating">Optional filter by minimum community rating. (optional)</param>
         /// <param name="minCriticRating">Optional filter by minimum critic rating. (optional)</param>
@@ -361,9 +392,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="isFavorite">Optional filter by items that are marked as favorite, or not. (optional)</param>
         /// <param name="isMovie">Optional filter for movies. (optional)</param>
         /// <param name="isSeries">Optional filter for series. (optional)</param>
+        /// <param name="isFolder">Optional filter for folders. (optional)</param>
         /// <param name="isNews">Optional filter for news. (optional)</param>
         /// <param name="isKids">Optional filter for kids. (optional)</param>
         /// <param name="isSports">Optional filter for sports. (optional)</param>
+        /// <param name="isNew">Optional filter for IsNew. (optional)</param>
+        /// <param name="isPremiere">Optional filter for IsPremiere. (optional)</param>
+        /// <param name="isNewOrPremiere">Optional filter for IsNewOrPremiere. (optional)</param>
+        /// <param name="isRepeat">Optional filter for IsRepeat. (optional)</param>
+        /// <param name="projectToMedia">ProjectToMedia (optional)</param>
         /// <param name="mediaTypes">Optional filter by MediaType. Allows multiple, comma delimited. (optional)</param>
         /// <param name="imageTypes">Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)</param>
         /// <param name="sortBy">Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)</param>
@@ -371,6 +408,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="genres">Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="officialRatings">Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="tags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
+        /// <param name="excludeTags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="years">Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)</param>
         /// <param name="enableImages">Optional, include image information in output (optional)</param>
         /// <param name="enableUserData">Optional, include user data (optional)</param>
@@ -388,7 +426,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="videoTypes">Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)</param>
         /// <param name="containers">Optional filter by Container. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="audioCodecs">Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="audioLayouts">Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="videoCodecs">Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="extendedVideoTypes">Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="subtitleCodecs">Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="path">Optional filter by Path. (optional)</param>
         /// <param name="userId">User Id (optional)</param>
@@ -405,7 +445,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetTrailersAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, string locationTypes, string excludeLocationTypes, bool? isMissing, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isNews, bool? isKids, bool? isSports, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string videoCodecs, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
+        System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetTrailersAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan);
         #endregion Asynchronous Operations
     }
 
@@ -530,14 +570,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="hasTrailer">Optional filter by items with trailers. (optional)</param>
         /// <param name="adjacentTo">Optional. Return items that are siblings of a supplied item. (optional)</param>
         /// <param name="minIndexNumber">Optional filter by minimum index number. (optional)</param>
+        /// <param name="minStartDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxStartDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="minEndDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxEndDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
         /// <param name="minPlayers">Optional filter by minimum number of game players. (optional)</param>
         /// <param name="maxPlayers">Optional filter by maximum number of game players. (optional)</param>
         /// <param name="parentIndexNumber">Optional filter by parent index number. (optional)</param>
         /// <param name="hasParentalRating">Optional filter by items that have or do not have a parental rating (optional)</param>
         /// <param name="isHD">Optional filter by items that are HD or not. (optional)</param>
-        /// <param name="locationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="excludeLocationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="isMissing">Optional filter by items that are missing episodes or not. (optional)</param>
         /// <param name="isUnaired">Optional filter by items that are unaired episodes or not. (optional)</param>
         /// <param name="minCommunityRating">Optional filter by minimum community rating. (optional)</param>
         /// <param name="minCriticRating">Optional filter by minimum critic rating. (optional)</param>
@@ -565,9 +606,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="isFavorite">Optional filter by items that are marked as favorite, or not. (optional)</param>
         /// <param name="isMovie">Optional filter for movies. (optional)</param>
         /// <param name="isSeries">Optional filter for series. (optional)</param>
+        /// <param name="isFolder">Optional filter for folders. (optional)</param>
         /// <param name="isNews">Optional filter for news. (optional)</param>
         /// <param name="isKids">Optional filter for kids. (optional)</param>
         /// <param name="isSports">Optional filter for sports. (optional)</param>
+        /// <param name="isNew">Optional filter for IsNew. (optional)</param>
+        /// <param name="isPremiere">Optional filter for IsPremiere. (optional)</param>
+        /// <param name="isNewOrPremiere">Optional filter for IsNewOrPremiere. (optional)</param>
+        /// <param name="isRepeat">Optional filter for IsRepeat. (optional)</param>
+        /// <param name="projectToMedia">ProjectToMedia (optional)</param>
         /// <param name="mediaTypes">Optional filter by MediaType. Allows multiple, comma delimited. (optional)</param>
         /// <param name="imageTypes">Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)</param>
         /// <param name="sortBy">Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)</param>
@@ -575,6 +622,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="genres">Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="officialRatings">Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="tags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
+        /// <param name="excludeTags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="years">Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)</param>
         /// <param name="enableImages">Optional, include image information in output (optional)</param>
         /// <param name="enableUserData">Optional, include user data (optional)</param>
@@ -592,7 +640,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="videoTypes">Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)</param>
         /// <param name="containers">Optional filter by Container. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="audioCodecs">Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="audioLayouts">Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="videoCodecs">Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="extendedVideoTypes">Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="subtitleCodecs">Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="path">Optional filter by Path. (optional)</param>
         /// <param name="userId">User Id (optional)</param>
@@ -609,9 +659,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>QueryResultBaseItemDto</returns>
-        public QueryResultBaseItemDto GetTrailers (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, string locationTypes, string excludeLocationTypes, bool? isMissing, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isNews, bool? isKids, bool? isSports, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string videoCodecs, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        public QueryResultBaseItemDto GetTrailers (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
-             ApiResponse<QueryResultBaseItemDto> localVarResponse = GetTrailersWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+             ApiResponse<QueryResultBaseItemDto> localVarResponse = GetTrailersWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
              return localVarResponse.Data;
         }
 
@@ -628,14 +678,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="hasTrailer">Optional filter by items with trailers. (optional)</param>
         /// <param name="adjacentTo">Optional. Return items that are siblings of a supplied item. (optional)</param>
         /// <param name="minIndexNumber">Optional filter by minimum index number. (optional)</param>
+        /// <param name="minStartDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxStartDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="minEndDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxEndDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
         /// <param name="minPlayers">Optional filter by minimum number of game players. (optional)</param>
         /// <param name="maxPlayers">Optional filter by maximum number of game players. (optional)</param>
         /// <param name="parentIndexNumber">Optional filter by parent index number. (optional)</param>
         /// <param name="hasParentalRating">Optional filter by items that have or do not have a parental rating (optional)</param>
         /// <param name="isHD">Optional filter by items that are HD or not. (optional)</param>
-        /// <param name="locationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="excludeLocationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="isMissing">Optional filter by items that are missing episodes or not. (optional)</param>
         /// <param name="isUnaired">Optional filter by items that are unaired episodes or not. (optional)</param>
         /// <param name="minCommunityRating">Optional filter by minimum community rating. (optional)</param>
         /// <param name="minCriticRating">Optional filter by minimum critic rating. (optional)</param>
@@ -663,9 +714,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="isFavorite">Optional filter by items that are marked as favorite, or not. (optional)</param>
         /// <param name="isMovie">Optional filter for movies. (optional)</param>
         /// <param name="isSeries">Optional filter for series. (optional)</param>
+        /// <param name="isFolder">Optional filter for folders. (optional)</param>
         /// <param name="isNews">Optional filter for news. (optional)</param>
         /// <param name="isKids">Optional filter for kids. (optional)</param>
         /// <param name="isSports">Optional filter for sports. (optional)</param>
+        /// <param name="isNew">Optional filter for IsNew. (optional)</param>
+        /// <param name="isPremiere">Optional filter for IsPremiere. (optional)</param>
+        /// <param name="isNewOrPremiere">Optional filter for IsNewOrPremiere. (optional)</param>
+        /// <param name="isRepeat">Optional filter for IsRepeat. (optional)</param>
+        /// <param name="projectToMedia">ProjectToMedia (optional)</param>
         /// <param name="mediaTypes">Optional filter by MediaType. Allows multiple, comma delimited. (optional)</param>
         /// <param name="imageTypes">Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)</param>
         /// <param name="sortBy">Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)</param>
@@ -673,6 +730,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="genres">Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="officialRatings">Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="tags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
+        /// <param name="excludeTags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="years">Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)</param>
         /// <param name="enableImages">Optional, include image information in output (optional)</param>
         /// <param name="enableUserData">Optional, include user data (optional)</param>
@@ -690,7 +748,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="videoTypes">Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)</param>
         /// <param name="containers">Optional filter by Container. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="audioCodecs">Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="audioLayouts">Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="videoCodecs">Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="extendedVideoTypes">Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="subtitleCodecs">Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="path">Optional filter by Path. (optional)</param>
         /// <param name="userId">User Id (optional)</param>
@@ -707,7 +767,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>ApiResponse of QueryResultBaseItemDto</returns>
-        public ApiResponse< QueryResultBaseItemDto > GetTrailersWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, string locationTypes, string excludeLocationTypes, bool? isMissing, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isNews, bool? isKids, bool? isSports, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string videoCodecs, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        public ApiResponse< QueryResultBaseItemDto > GetTrailersWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
 
             var localVarPath = "/Trailers";
@@ -741,14 +801,15 @@ namespace EmbyClient.Dotnet.Api
             if (hasTrailer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "HasTrailer", hasTrailer)); // query parameter
             if (adjacentTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AdjacentTo", adjacentTo)); // query parameter
             if (minIndexNumber != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinIndexNumber", minIndexNumber)); // query parameter
+            if (minStartDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinStartDate", minStartDate)); // query parameter
+            if (maxStartDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxStartDate", maxStartDate)); // query parameter
+            if (minEndDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinEndDate", minEndDate)); // query parameter
+            if (maxEndDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxEndDate", maxEndDate)); // query parameter
             if (minPlayers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinPlayers", minPlayers)); // query parameter
             if (maxPlayers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxPlayers", maxPlayers)); // query parameter
             if (parentIndexNumber != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ParentIndexNumber", parentIndexNumber)); // query parameter
             if (hasParentalRating != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "HasParentalRating", hasParentalRating)); // query parameter
             if (isHD != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsHD", isHD)); // query parameter
-            if (locationTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LocationTypes", locationTypes)); // query parameter
-            if (excludeLocationTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ExcludeLocationTypes", excludeLocationTypes)); // query parameter
-            if (isMissing != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsMissing", isMissing)); // query parameter
             if (isUnaired != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsUnaired", isUnaired)); // query parameter
             if (minCommunityRating != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinCommunityRating", minCommunityRating)); // query parameter
             if (minCriticRating != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinCriticRating", minCriticRating)); // query parameter
@@ -776,9 +837,15 @@ namespace EmbyClient.Dotnet.Api
             if (isFavorite != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsFavorite", isFavorite)); // query parameter
             if (isMovie != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsMovie", isMovie)); // query parameter
             if (isSeries != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsSeries", isSeries)); // query parameter
+            if (isFolder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsFolder", isFolder)); // query parameter
             if (isNews != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsNews", isNews)); // query parameter
             if (isKids != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsKids", isKids)); // query parameter
             if (isSports != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsSports", isSports)); // query parameter
+            if (isNew != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsNew", isNew)); // query parameter
+            if (isPremiere != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsPremiere", isPremiere)); // query parameter
+            if (isNewOrPremiere != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsNewOrPremiere", isNewOrPremiere)); // query parameter
+            if (isRepeat != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsRepeat", isRepeat)); // query parameter
+            if (projectToMedia != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ProjectToMedia", projectToMedia)); // query parameter
             if (mediaTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MediaTypes", mediaTypes)); // query parameter
             if (imageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypes", imageTypes)); // query parameter
             if (sortBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortBy", sortBy)); // query parameter
@@ -786,6 +853,7 @@ namespace EmbyClient.Dotnet.Api
             if (genres != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Genres", genres)); // query parameter
             if (officialRatings != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "OfficialRatings", officialRatings)); // query parameter
             if (tags != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Tags", tags)); // query parameter
+            if (excludeTags != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ExcludeTags", excludeTags)); // query parameter
             if (years != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Years", years)); // query parameter
             if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
             if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
@@ -803,7 +871,9 @@ namespace EmbyClient.Dotnet.Api
             if (videoTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "VideoTypes", videoTypes)); // query parameter
             if (containers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Containers", containers)); // query parameter
             if (audioCodecs != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AudioCodecs", audioCodecs)); // query parameter
+            if (audioLayouts != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AudioLayouts", audioLayouts)); // query parameter
             if (videoCodecs != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "VideoCodecs", videoCodecs)); // query parameter
+            if (extendedVideoTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ExtendedVideoTypes", extendedVideoTypes)); // query parameter
             if (subtitleCodecs != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SubtitleCodecs", subtitleCodecs)); // query parameter
             if (path != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Path", path)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
@@ -862,14 +932,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="hasTrailer">Optional filter by items with trailers. (optional)</param>
         /// <param name="adjacentTo">Optional. Return items that are siblings of a supplied item. (optional)</param>
         /// <param name="minIndexNumber">Optional filter by minimum index number. (optional)</param>
+        /// <param name="minStartDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxStartDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="minEndDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxEndDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
         /// <param name="minPlayers">Optional filter by minimum number of game players. (optional)</param>
         /// <param name="maxPlayers">Optional filter by maximum number of game players. (optional)</param>
         /// <param name="parentIndexNumber">Optional filter by parent index number. (optional)</param>
         /// <param name="hasParentalRating">Optional filter by items that have or do not have a parental rating (optional)</param>
         /// <param name="isHD">Optional filter by items that are HD or not. (optional)</param>
-        /// <param name="locationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="excludeLocationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="isMissing">Optional filter by items that are missing episodes or not. (optional)</param>
         /// <param name="isUnaired">Optional filter by items that are unaired episodes or not. (optional)</param>
         /// <param name="minCommunityRating">Optional filter by minimum community rating. (optional)</param>
         /// <param name="minCriticRating">Optional filter by minimum critic rating. (optional)</param>
@@ -897,9 +968,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="isFavorite">Optional filter by items that are marked as favorite, or not. (optional)</param>
         /// <param name="isMovie">Optional filter for movies. (optional)</param>
         /// <param name="isSeries">Optional filter for series. (optional)</param>
+        /// <param name="isFolder">Optional filter for folders. (optional)</param>
         /// <param name="isNews">Optional filter for news. (optional)</param>
         /// <param name="isKids">Optional filter for kids. (optional)</param>
         /// <param name="isSports">Optional filter for sports. (optional)</param>
+        /// <param name="isNew">Optional filter for IsNew. (optional)</param>
+        /// <param name="isPremiere">Optional filter for IsPremiere. (optional)</param>
+        /// <param name="isNewOrPremiere">Optional filter for IsNewOrPremiere. (optional)</param>
+        /// <param name="isRepeat">Optional filter for IsRepeat. (optional)</param>
+        /// <param name="projectToMedia">ProjectToMedia (optional)</param>
         /// <param name="mediaTypes">Optional filter by MediaType. Allows multiple, comma delimited. (optional)</param>
         /// <param name="imageTypes">Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)</param>
         /// <param name="sortBy">Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)</param>
@@ -907,6 +984,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="genres">Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="officialRatings">Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="tags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
+        /// <param name="excludeTags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="years">Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)</param>
         /// <param name="enableImages">Optional, include image information in output (optional)</param>
         /// <param name="enableUserData">Optional, include user data (optional)</param>
@@ -924,7 +1002,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="videoTypes">Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)</param>
         /// <param name="containers">Optional filter by Container. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="audioCodecs">Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="audioLayouts">Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="videoCodecs">Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="extendedVideoTypes">Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="subtitleCodecs">Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="path">Optional filter by Path. (optional)</param>
         /// <param name="userId">User Id (optional)</param>
@@ -941,9 +1021,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>Task of QueryResultBaseItemDto</returns>
-        public async System.Threading.Tasks.Task<QueryResultBaseItemDto> GetTrailersAsync (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, string locationTypes, string excludeLocationTypes, bool? isMissing, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isNews, bool? isKids, bool? isSports, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string videoCodecs, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        public async System.Threading.Tasks.Task<QueryResultBaseItemDto> GetTrailersAsync (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
-             ApiResponse<QueryResultBaseItemDto> localVarResponse = await GetTrailersAsyncWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+             ApiResponse<QueryResultBaseItemDto> localVarResponse = await GetTrailersAsyncWithHttpInfo(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
              return localVarResponse.Data;
 
         }
@@ -961,14 +1041,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="hasTrailer">Optional filter by items with trailers. (optional)</param>
         /// <param name="adjacentTo">Optional. Return items that are siblings of a supplied item. (optional)</param>
         /// <param name="minIndexNumber">Optional filter by minimum index number. (optional)</param>
+        /// <param name="minStartDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxStartDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="minEndDate">Optional. The minimum premiere date. Format &#x3D; ISO (optional)</param>
+        /// <param name="maxEndDate">Optional. The maximum premiere date. Format &#x3D; ISO (optional)</param>
         /// <param name="minPlayers">Optional filter by minimum number of game players. (optional)</param>
         /// <param name="maxPlayers">Optional filter by maximum number of game players. (optional)</param>
         /// <param name="parentIndexNumber">Optional filter by parent index number. (optional)</param>
         /// <param name="hasParentalRating">Optional filter by items that have or do not have a parental rating (optional)</param>
         /// <param name="isHD">Optional filter by items that are HD or not. (optional)</param>
-        /// <param name="locationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="excludeLocationTypes">Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)</param>
-        /// <param name="isMissing">Optional filter by items that are missing episodes or not. (optional)</param>
         /// <param name="isUnaired">Optional filter by items that are unaired episodes or not. (optional)</param>
         /// <param name="minCommunityRating">Optional filter by minimum community rating. (optional)</param>
         /// <param name="minCriticRating">Optional filter by minimum critic rating. (optional)</param>
@@ -996,9 +1077,15 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="isFavorite">Optional filter by items that are marked as favorite, or not. (optional)</param>
         /// <param name="isMovie">Optional filter for movies. (optional)</param>
         /// <param name="isSeries">Optional filter for series. (optional)</param>
+        /// <param name="isFolder">Optional filter for folders. (optional)</param>
         /// <param name="isNews">Optional filter for news. (optional)</param>
         /// <param name="isKids">Optional filter for kids. (optional)</param>
         /// <param name="isSports">Optional filter for sports. (optional)</param>
+        /// <param name="isNew">Optional filter for IsNew. (optional)</param>
+        /// <param name="isPremiere">Optional filter for IsPremiere. (optional)</param>
+        /// <param name="isNewOrPremiere">Optional filter for IsNewOrPremiere. (optional)</param>
+        /// <param name="isRepeat">Optional filter for IsRepeat. (optional)</param>
+        /// <param name="projectToMedia">ProjectToMedia (optional)</param>
         /// <param name="mediaTypes">Optional filter by MediaType. Allows multiple, comma delimited. (optional)</param>
         /// <param name="imageTypes">Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)</param>
         /// <param name="sortBy">Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)</param>
@@ -1006,6 +1093,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="genres">Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="officialRatings">Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="tags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
+        /// <param name="excludeTags">Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)</param>
         /// <param name="years">Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)</param>
         /// <param name="enableImages">Optional, include image information in output (optional)</param>
         /// <param name="enableUserData">Optional, include user data (optional)</param>
@@ -1023,7 +1111,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="videoTypes">Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)</param>
         /// <param name="containers">Optional filter by Container. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="audioCodecs">Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="audioLayouts">Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="videoCodecs">Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)</param>
+        /// <param name="extendedVideoTypes">Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="subtitleCodecs">Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)</param>
         /// <param name="path">Optional filter by Path. (optional)</param>
         /// <param name="userId">User Id (optional)</param>
@@ -1040,7 +1130,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="nameStartsWith">Optional filter by items whose name is sorted equally than a given input string. (optional)</param>
         /// <param name="nameLessThan">Optional filter by items whose name is equally or lesser than a given input string. (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultBaseItemDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetTrailersAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, string locationTypes, string excludeLocationTypes, bool? isMissing, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isNews, bool? isKids, bool? isSports, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string videoCodecs, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultBaseItemDto>> GetTrailersAsyncWithHttpInfo (string artistType, string maxOfficialRating, bool? hasThemeSong, bool? hasThemeVideo, bool? hasSubtitles, bool? hasSpecialFeature, bool? hasTrailer, string adjacentTo, int? minIndexNumber, string minStartDate, string maxStartDate, string minEndDate, string maxEndDate, int? minPlayers, int? maxPlayers, int? parentIndexNumber, bool? hasParentalRating, bool? isHD, bool? isUnaired, double? minCommunityRating, double? minCriticRating, int? airedDuringSeason, string minPremiereDate, string minDateLastSaved, string minDateLastSavedForUser, string maxPremiereDate, bool? hasOverview, bool? hasImdbId, bool? hasTmdbId, bool? hasTvdbId, string excludeItemIds, int? startIndex, int? limit, bool? recursive, string searchTerm, string sortOrder, string parentId, string fields, string excludeItemTypes, string includeItemTypes, string anyProviderIdEquals, string filters, bool? isFavorite, bool? isMovie, bool? isSeries, bool? isFolder, bool? isNews, bool? isKids, bool? isSports, bool? isNew, bool? isPremiere, bool? isNewOrPremiere, bool? isRepeat, bool? projectToMedia, string mediaTypes, string imageTypes, string sortBy, bool? isPlayed, string genres, string officialRatings, string tags, string excludeTags, string years, bool? enableImages, bool? enableUserData, int? imageTypeLimit, string enableImageTypes, string person, string personIds, string personTypes, string studios, string studioIds, string artists, string artistIds, string albums, string ids, string videoTypes, string containers, string audioCodecs, string audioLayouts, string videoCodecs, string extendedVideoTypes, string subtitleCodecs, string path, string userId, string minOfficialRating, bool? isLocked, bool? isPlaceHolder, bool? hasOfficialRating, bool? groupItemsIntoCollections, bool? is3D, string seriesStatus, string nameStartsWithOrGreater, string artistStartsWithOrGreater, string albumArtistStartsWithOrGreater, string nameStartsWith, string nameLessThan)
         {
 
             var localVarPath = "/Trailers";
@@ -1074,14 +1164,15 @@ namespace EmbyClient.Dotnet.Api
             if (hasTrailer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "HasTrailer", hasTrailer)); // query parameter
             if (adjacentTo != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AdjacentTo", adjacentTo)); // query parameter
             if (minIndexNumber != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinIndexNumber", minIndexNumber)); // query parameter
+            if (minStartDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinStartDate", minStartDate)); // query parameter
+            if (maxStartDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxStartDate", maxStartDate)); // query parameter
+            if (minEndDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinEndDate", minEndDate)); // query parameter
+            if (maxEndDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxEndDate", maxEndDate)); // query parameter
             if (minPlayers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinPlayers", minPlayers)); // query parameter
             if (maxPlayers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxPlayers", maxPlayers)); // query parameter
             if (parentIndexNumber != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ParentIndexNumber", parentIndexNumber)); // query parameter
             if (hasParentalRating != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "HasParentalRating", hasParentalRating)); // query parameter
             if (isHD != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsHD", isHD)); // query parameter
-            if (locationTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "LocationTypes", locationTypes)); // query parameter
-            if (excludeLocationTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ExcludeLocationTypes", excludeLocationTypes)); // query parameter
-            if (isMissing != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsMissing", isMissing)); // query parameter
             if (isUnaired != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsUnaired", isUnaired)); // query parameter
             if (minCommunityRating != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinCommunityRating", minCommunityRating)); // query parameter
             if (minCriticRating != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MinCriticRating", minCriticRating)); // query parameter
@@ -1109,9 +1200,15 @@ namespace EmbyClient.Dotnet.Api
             if (isFavorite != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsFavorite", isFavorite)); // query parameter
             if (isMovie != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsMovie", isMovie)); // query parameter
             if (isSeries != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsSeries", isSeries)); // query parameter
+            if (isFolder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsFolder", isFolder)); // query parameter
             if (isNews != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsNews", isNews)); // query parameter
             if (isKids != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsKids", isKids)); // query parameter
             if (isSports != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsSports", isSports)); // query parameter
+            if (isNew != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsNew", isNew)); // query parameter
+            if (isPremiere != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsPremiere", isPremiere)); // query parameter
+            if (isNewOrPremiere != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsNewOrPremiere", isNewOrPremiere)); // query parameter
+            if (isRepeat != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsRepeat", isRepeat)); // query parameter
+            if (projectToMedia != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ProjectToMedia", projectToMedia)); // query parameter
             if (mediaTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MediaTypes", mediaTypes)); // query parameter
             if (imageTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageTypes", imageTypes)); // query parameter
             if (sortBy != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortBy", sortBy)); // query parameter
@@ -1119,6 +1216,7 @@ namespace EmbyClient.Dotnet.Api
             if (genres != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Genres", genres)); // query parameter
             if (officialRatings != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "OfficialRatings", officialRatings)); // query parameter
             if (tags != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Tags", tags)); // query parameter
+            if (excludeTags != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ExcludeTags", excludeTags)); // query parameter
             if (years != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Years", years)); // query parameter
             if (enableImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableImages", enableImages)); // query parameter
             if (enableUserData != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableUserData", enableUserData)); // query parameter
@@ -1136,7 +1234,9 @@ namespace EmbyClient.Dotnet.Api
             if (videoTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "VideoTypes", videoTypes)); // query parameter
             if (containers != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Containers", containers)); // query parameter
             if (audioCodecs != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AudioCodecs", audioCodecs)); // query parameter
+            if (audioLayouts != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "AudioLayouts", audioLayouts)); // query parameter
             if (videoCodecs != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "VideoCodecs", videoCodecs)); // query parameter
+            if (extendedVideoTypes != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ExtendedVideoTypes", extendedVideoTypes)); // query parameter
             if (subtitleCodecs != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SubtitleCodecs", subtitleCodecs)); // query parameter
             if (path != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Path", path)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter

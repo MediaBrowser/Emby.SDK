@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting your Plugin in the catalog </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting your Plugin in the catalog ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="doc-plugins-Getting-your-plug-in-in-the-catalog">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-plugins-Getting-your-plug-in-in-the-catalog">
+<h1 id="getting-your-plugin-in-the-catalog">Getting your Plugin in the catalog</h1>
+
+<p>After you have developed a plug-in for Emby, the next step is to get it into the catalog so users can install it.  Please be sure your plug-in adheres to our <a href="Development-Policy.html">Development Policy</a> before placing it in the catalog.  It will be removed by an administrator if it violates this policy.</p>
+<ul>
+<li><p>First, request a developer id from the Emby team by sending a PM to ebr or posting in the dev forum that you are ready to publish.</p>
+</li>
+<li><p>Once you have your credentials you'll need to go to: <a href="https://plugins.emby.tv/admin/packages.html">https://plugins.emby.tv/admin/packages.html</a> and login with the user and password you were provided.</p>
+</li>
+<li><p>Then go to the &quot;Packages&quot; area.  This is where you will define your plug-ins (as a user-installed package) and upload versions of them.</p>
+</li>
+</ul>
+<p><img src="../../../images/packageadmin2.jpg" alt="Package Admin"></p>
+<p>Create a New Package to define your plug-in and fill in the fields appropriately.</p>
+<p><img src="../../../images/editpackage2.jpg" alt="New Package"></p>
+<ul>
+<li><strong>Name</strong> - The name that will appear for this plug-in in the catalog</li>
+<li><strong>GUID</strong> - The Assembly unique id.  Paste this from your assemblyinfo.cs file.  It is used to identify this item for updates</li>
+<li><strong>Short Description</strong> - A one line description of the plug-in</li>
+<li><strong>Overview</strong> - A full description of the plug-in and its features.  This can be html.</li>
+<li><strong>Website</strong> - A link to a developer website for more information.</li>
+<li><strong>Thumb Image</strong> - This is the image that will be shown in the main catalog page.  It should be a 16x9 tile.</li>
+<li><strong>Preview Image</strong> - This is the image that will show at the top of the catalog detail page for this item.  It can be a screen shot or other graphic.</li>
+<li><strong>Target System</strong> - Select which system this plug-in is installed on (Server, MB Classic or MB Theater).</li>
+<li><strong>Package Type</strong> - For plug-ins this should be &quot;Userinstalled&quot;.</li>
+<li><strong>Cagegory</strong> - Select the category of plug-in this is.</li>
+<li><strong>Tile Color</strong> - This is the color for the background of the tile on the catalog page (behind the text).</li>
+<li><strong>Target File Name</strong> - This is the name of the file that will be placed in the plugins folder on the target system when it is installed by the user.  It should be the name of your dll assembly including .dll.</li>
+<li><strong>Premium Plug-in</strong> - Check this if users will be required to register this plug-in (pay for it).  All premium plug-ins will automatically have a 14-day free trial after first install.</li>
+<li><strong>Feature ID</strong> - Enter the string that you will use to validate against for registration.</li>
+<li><strong>Price</strong> - The price for registering this plug-in.  This full amount will be directed to your PayPal account.</li>
+<li><strong>Registration Information</strong> - Optionally enter any additional information you would like to appear in the registration section on the plug-in detail page.</li>
+</ul>
+<p>Once your package is defined, you can create and upload versions for them.  Expand the package by clicking the '&gt;' next to it and click New Version.  Fill out the fields in this for with the appropriate information:</p>
+<p><img src="../../../images/editversion.jpg" alt="Package Admin"></p>
+<ul>
+<li><strong>Version</strong> - This is the full version number of this version of the plug-in.  Enter the exact version that will be reported from your dll via AssemblyInfo.</li>
+<li><strong>Version Class</strong> - This is the update class of this version.  You can release different versions of your plug-ins as Dev, Beta or release classes.  Users will only see the ones for the level which they have set for this plug-in.</li>
+<li><strong>Description</strong> - Enter details about this particular version.  Short bullets on what has changed or been fixed.  This information will display in the change log area of the catalog page.</li>
+<li><strong>Required Version</strong> - Optionally enter a version number for the minimum supported version of the target system.  If this is a server plug-in, enter the server version, if for MBC, then the MBC version, etc.  The system will fill this in automatically with the latest version of the target system but you can change it.  It can also be a partial version to allow matches for anything above that partial.  e.g. 3.0.4890.</li>
+</ul>
+<p>Then select the dll file from your local computer and save.  This will upload the dll and make it available in the plug-in catalog.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

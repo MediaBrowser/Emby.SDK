@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -31,6 +31,11 @@ class MetadataFields(object):
     CHANNELNUMBER = "ChannelNumber"
     SORTNAME = "SortName"
     ORIGINALTITLE = "OriginalTitle"
+    SORTINDEXNUMBER = "SortIndexNumber"
+    SORTPARENTINDEXNUMBER = "SortParentIndexNumber"
+    COMMUNITYRATING = "CommunityRating"
+    CRITICRATING = "CriticRating"
+    TAGLINE = "Tagline"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

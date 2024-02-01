@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -45,6 +45,7 @@ class ParentalRating(object):
     def name(self):
         """Gets the name of this ParentalRating.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this ParentalRating.  # noqa: E501
         :rtype: str
@@ -55,6 +56,7 @@ class ParentalRating(object):
     def name(self, name):
         """Sets the name of this ParentalRating.
 
+        The name.  # noqa: E501
 
         :param name: The name of this ParentalRating.  # noqa: E501
         :type: str
@@ -66,6 +68,7 @@ class ParentalRating(object):
     def value(self):
         """Gets the value of this ParentalRating.  # noqa: E501
 
+        The value.  # noqa: E501
 
         :return: The value of this ParentalRating.  # noqa: E501
         :rtype: int
@@ -76,6 +79,7 @@ class ParentalRating(object):
     def value(self, value):
         """Sets the value of this ParentalRating.
 
+        The value.  # noqa: E501
 
         :param value: The value of this ParentalRating.  # noqa: E501
         :type: int

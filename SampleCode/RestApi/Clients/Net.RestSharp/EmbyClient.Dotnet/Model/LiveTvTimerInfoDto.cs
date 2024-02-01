@@ -27,30 +27,32 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="LiveTvTimerInfoDto" /> class.
         /// </summary>
         /// <param name="status">status.</param>
-        /// <param name="seriesTimerId">seriesTimerId.</param>
-        /// <param name="runTimeTicks">runTimeTicks.</param>
+        /// <param name="seriesTimerId">The series timer identifier..</param>
+        /// <param name="runTimeTicks">The run time ticks..</param>
         /// <param name="programInfo">programInfo.</param>
         /// <param name="timerType">timerType.</param>
-        /// <param name="id">id.</param>
+        /// <param name="id">Id of the recording..</param>
         /// <param name="type">type.</param>
-        /// <param name="serverId">serverId.</param>
-        /// <param name="channelId">channelId.</param>
-        /// <param name="channelName">channelName.</param>
+        /// <param name="serverId">The server identifier..</param>
+        /// <param name="channelId">ChannelId of the recording..</param>
+        /// <param name="channelName">ChannelName of the recording..</param>
+        /// <param name="channelNumber">channelNumber.</param>
         /// <param name="channelPrimaryImageTag">channelPrimaryImageTag.</param>
-        /// <param name="programId">programId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="overview">overview.</param>
-        /// <param name="startDate">startDate.</param>
-        /// <param name="endDate">endDate.</param>
-        /// <param name="priority">priority.</param>
-        /// <param name="prePaddingSeconds">prePaddingSeconds.</param>
-        /// <param name="postPaddingSeconds">postPaddingSeconds.</param>
-        /// <param name="isPrePaddingRequired">isPrePaddingRequired.</param>
-        /// <param name="parentBackdropItemId">parentBackdropItemId.</param>
-        /// <param name="parentBackdropImageTags">parentBackdropImageTags.</param>
-        /// <param name="isPostPaddingRequired">isPostPaddingRequired.</param>
+        /// <param name="programId">The program identifier..</param>
+        /// <param name="name">Name of the recording..</param>
+        /// <param name="overview">Description of the recording..</param>
+        /// <param name="parentFolderId">parentFolderId.</param>
+        /// <param name="startDate">The start date of the recording, in UTC..</param>
+        /// <param name="endDate">The end date of the recording, in UTC..</param>
+        /// <param name="priority">The priority..</param>
+        /// <param name="prePaddingSeconds">The pre padding seconds..</param>
+        /// <param name="postPaddingSeconds">The post padding seconds..</param>
+        /// <param name="isPrePaddingRequired">A value indicating whether this instance is pre padding required..</param>
+        /// <param name="parentBackdropItemId">If the item does not have any backdrops, this will hold the Id of the Parent that has one..</param>
+        /// <param name="parentBackdropImageTags">The parent backdrop image tags..</param>
+        /// <param name="isPostPaddingRequired">A value indicating whether this instance is post padding required..</param>
         /// <param name="keepUntil">keepUntil.</param>
-        public LiveTvTimerInfoDto(LiveTvRecordingStatus status = default(LiveTvRecordingStatus), string seriesTimerId = default(string), long? runTimeTicks = default(long?), BaseItemDto programInfo = default(BaseItemDto), LiveTvTimerType timerType = default(LiveTvTimerType), string id = default(string), string type = default(string), string serverId = default(string), string channelId = default(string), string channelName = default(string), string channelPrimaryImageTag = default(string), string programId = default(string), string name = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), bool? isPostPaddingRequired = default(bool?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil))
+        public LiveTvTimerInfoDto(LiveTvRecordingStatus status = default(LiveTvRecordingStatus), string seriesTimerId = default(string), long? runTimeTicks = default(long?), BaseItemDto programInfo = default(BaseItemDto), LiveTvTimerType timerType = default(LiveTvTimerType), string id = default(string), string type = default(string), string serverId = default(string), string channelId = default(string), string channelName = default(string), string channelNumber = default(string), string channelPrimaryImageTag = default(string), string programId = default(string), string name = default(string), string overview = default(string), string parentFolderId = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), bool? isPostPaddingRequired = default(bool?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil))
         {
             this.Status = status;
             this.SeriesTimerId = seriesTimerId;
@@ -62,10 +64,12 @@ namespace EmbyClient.Dotnet.Model
             this.ServerId = serverId;
             this.ChannelId = channelId;
             this.ChannelName = channelName;
+            this.ChannelNumber = channelNumber;
             this.ChannelPrimaryImageTag = channelPrimaryImageTag;
             this.ProgramId = programId;
             this.Name = name;
             this.Overview = overview;
+            this.ParentFolderId = parentFolderId;
             this.StartDate = startDate;
             this.EndDate = endDate;
             this.Priority = priority;
@@ -85,14 +89,16 @@ namespace EmbyClient.Dotnet.Model
         public LiveTvRecordingStatus Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesTimerId
+        /// The series timer identifier.
         /// </summary>
+        /// <value>The series timer identifier.</value>
         [DataMember(Name="SeriesTimerId", EmitDefaultValue=false)]
         public string SeriesTimerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RunTimeTicks
+        /// The run time ticks.
         /// </summary>
+        /// <value>The run time ticks.</value>
         [DataMember(Name="RunTimeTicks", EmitDefaultValue=false)]
         public long? RunTimeTicks { get; set; }
 
@@ -109,8 +115,9 @@ namespace EmbyClient.Dotnet.Model
         public LiveTvTimerType TimerType { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Id of the recording.
         /// </summary>
+        /// <value>Id of the recording.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
@@ -121,22 +128,31 @@ namespace EmbyClient.Dotnet.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServerId
+        /// The server identifier.
         /// </summary>
+        /// <value>The server identifier.</value>
         [DataMember(Name="ServerId", EmitDefaultValue=false)]
         public string ServerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChannelId
+        /// ChannelId of the recording.
         /// </summary>
+        /// <value>ChannelId of the recording.</value>
         [DataMember(Name="ChannelId", EmitDefaultValue=false)]
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChannelName
+        /// ChannelName of the recording.
         /// </summary>
+        /// <value>ChannelName of the recording.</value>
         [DataMember(Name="ChannelName", EmitDefaultValue=false)]
         public string ChannelName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ChannelNumber
+        /// </summary>
+        [DataMember(Name="ChannelNumber", EmitDefaultValue=false)]
+        public string ChannelNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets ChannelPrimaryImageTag
@@ -145,74 +161,92 @@ namespace EmbyClient.Dotnet.Model
         public string ChannelPrimaryImageTag { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProgramId
+        /// The program identifier.
         /// </summary>
+        /// <value>The program identifier.</value>
         [DataMember(Name="ProgramId", EmitDefaultValue=false)]
         public string ProgramId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name of the recording.
         /// </summary>
+        /// <value>Name of the recording.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Overview
+        /// Description of the recording.
         /// </summary>
+        /// <value>Description of the recording.</value>
         [DataMember(Name="Overview", EmitDefaultValue=false)]
         public string Overview { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartDate
+        /// Gets or Sets ParentFolderId
         /// </summary>
+        [DataMember(Name="ParentFolderId", EmitDefaultValue=false)]
+        public string ParentFolderId { get; set; }
+
+        /// <summary>
+        /// The start date of the recording, in UTC.
+        /// </summary>
+        /// <value>The start date of the recording, in UTC.</value>
         [DataMember(Name="StartDate", EmitDefaultValue=false)]
         public DateTimeOffset? StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndDate
+        /// The end date of the recording, in UTC.
         /// </summary>
+        /// <value>The end date of the recording, in UTC.</value>
         [DataMember(Name="EndDate", EmitDefaultValue=false)]
         public DateTimeOffset? EndDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets Priority
+        /// The priority.
         /// </summary>
+        /// <value>The priority.</value>
         [DataMember(Name="Priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrePaddingSeconds
+        /// The pre padding seconds.
         /// </summary>
+        /// <value>The pre padding seconds.</value>
         [DataMember(Name="PrePaddingSeconds", EmitDefaultValue=false)]
         public int? PrePaddingSeconds { get; set; }
 
         /// <summary>
-        /// Gets or Sets PostPaddingSeconds
+        /// The post padding seconds.
         /// </summary>
+        /// <value>The post padding seconds.</value>
         [DataMember(Name="PostPaddingSeconds", EmitDefaultValue=false)]
         public int? PostPaddingSeconds { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPrePaddingRequired
+        /// A value indicating whether this instance is pre padding required.
         /// </summary>
+        /// <value>A value indicating whether this instance is pre padding required.</value>
         [DataMember(Name="IsPrePaddingRequired", EmitDefaultValue=false)]
         public bool? IsPrePaddingRequired { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBackdropItemId
+        /// If the item does not have any backdrops, this will hold the Id of the Parent that has one.
         /// </summary>
+        /// <value>If the item does not have any backdrops, this will hold the Id of the Parent that has one.</value>
         [DataMember(Name="ParentBackdropItemId", EmitDefaultValue=false)]
         public string ParentBackdropItemId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ParentBackdropImageTags
+        /// The parent backdrop image tags.
         /// </summary>
+        /// <value>The parent backdrop image tags.</value>
         [DataMember(Name="ParentBackdropImageTags", EmitDefaultValue=false)]
         public List<string> ParentBackdropImageTags { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPostPaddingRequired
+        /// A value indicating whether this instance is post padding required.
         /// </summary>
+        /// <value>A value indicating whether this instance is post padding required.</value>
         [DataMember(Name="IsPostPaddingRequired", EmitDefaultValue=false)]
         public bool? IsPostPaddingRequired { get; set; }
 
@@ -240,10 +274,12 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  ServerId: ").Append(ServerId).Append("\n");
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  ChannelName: ").Append(ChannelName).Append("\n");
+            sb.Append("  ChannelNumber: ").Append(ChannelNumber).Append("\n");
             sb.Append("  ChannelPrimaryImageTag: ").Append(ChannelPrimaryImageTag).Append("\n");
             sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Overview: ").Append(Overview).Append("\n");
+            sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
@@ -339,6 +375,11 @@ namespace EmbyClient.Dotnet.Model
                     this.ChannelName.Equals(input.ChannelName))
                 ) && 
                 (
+                    this.ChannelNumber == input.ChannelNumber ||
+                    (this.ChannelNumber != null &&
+                    this.ChannelNumber.Equals(input.ChannelNumber))
+                ) && 
+                (
                     this.ChannelPrimaryImageTag == input.ChannelPrimaryImageTag ||
                     (this.ChannelPrimaryImageTag != null &&
                     this.ChannelPrimaryImageTag.Equals(input.ChannelPrimaryImageTag))
@@ -357,6 +398,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Overview == input.Overview ||
                     (this.Overview != null &&
                     this.Overview.Equals(input.Overview))
+                ) && 
+                (
+                    this.ParentFolderId == input.ParentFolderId ||
+                    (this.ParentFolderId != null &&
+                    this.ParentFolderId.Equals(input.ParentFolderId))
                 ) && 
                 (
                     this.StartDate == input.StartDate ||
@@ -440,6 +486,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ChannelId.GetHashCode();
                 if (this.ChannelName != null)
                     hashCode = hashCode * 59 + this.ChannelName.GetHashCode();
+                if (this.ChannelNumber != null)
+                    hashCode = hashCode * 59 + this.ChannelNumber.GetHashCode();
                 if (this.ChannelPrimaryImageTag != null)
                     hashCode = hashCode * 59 + this.ChannelPrimaryImageTag.GetHashCode();
                 if (this.ProgramId != null)
@@ -448,6 +496,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Overview != null)
                     hashCode = hashCode * 59 + this.Overview.GetHashCode();
+                if (this.ParentFolderId != null)
+                    hashCode = hashCode * 59 + this.ParentFolderId.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)

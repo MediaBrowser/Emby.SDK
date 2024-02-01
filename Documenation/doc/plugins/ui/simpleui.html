@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Simple Plugin UI </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Simple Plugin UI ">
+    <meta name="generator" content="docfx 2.59.2.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="doc-plugins-ui-simpleui">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <div class="mb-socials-heading" style="height: 40px;">
+        	<div class="mb-socials-heading-inner container">
+        		<div class="mb-socials-heading-right">
+        			<div class="mb-socials-list">
+                          
+        				<div class="mb-socials-item facebook">
+        					<a class="mb-socials-item-link" target="_blank" href="https://facebook.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Facebook</span>
+        					</div>
+        				</div><div class="mb-socials-item twitter">
+        					<a class="mb-socials-item-link" target="_blank" href="https://twitter.com/embyapp"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Twitter</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item pinterest">
+        					<a class="mb-socials-item-link" target="_blank" href="https://www.pinterest.com/emby0240/emby-news/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Pinterest</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item tumblr">
+        					<a class="mb-socials-item-link" target="_blank" href="https://embyapp.tumblr.com/"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>Tumblr</span>
+        					</div>
+        				</div>
+        				<div class="mb-socials-item github">
+        					<a class="mb-socials-item-link" target="_blank" href="https://github.com/MediaBrowser"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>GitHub</span>
+        					</div>
+        				</div><div class="mb-socials-item rss">
+        					<a class="mb-socials-item-link" target="_blank" href="https://emby.media/blog.xml"></a>
+        					<div class="mb-socials-item-popup">
+        						<span>RSS</span>
+        					</div>
+        				</div>
+                          
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="container">
+        	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        		  
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo.png" alt="">
+        		  </a>
+        		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        		  </button>
+        		<div class="collapse navbar-collapse" id="navbar">
+        			
+        			<ul class="nav level1 navbar-nav">
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
+        			      </li>
+        			      <li class="nav-item">
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
+        			      </li>
+        			</ul>		</div>
+        	</nav>
+        </div>
+        <div class="nav-overlay d-none"></div>        
+        <div class="subnav navbar navbar-default">
+          <div class="container">
+            <div class="hide-when-search" id="breadcrumb">
+        	  <ul class="breadcrumb">
+        		<li></li>
+        	  </ul>
+        	</div>
+        
+        	<div class="breadcrumpsearch">
+        	  <form class="navbar-form navbar-right" role="search" id="search">
+        		<div class="form-group">
+        		  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+        		</div>
+        	  </form>
+        	</div>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="doc-plugins-ui-simpleui">
+<h1 id="simple-plugin-ui">Simple Plugin UI</h1>
+
+<p>Creating UI for a plugin has never been easier. For the simple case of having a single settings page for your plugin, you don't need to do anything else than adding a single class to your plugin.<br>
+No HTML files, no Javascript files are needed to be added.</p>
+<h2 id="template-plugin">Template Plugin</h2>
+<p>The easiest way to create such plugin is to start by copying the <a href="../../../home/sdk/plugins/template_simple_ui.html">Simple UI Plugin Template</a> which is included in the SDK.</p>
+<h2 id="manual-steps">Manual Steps</h2>
+<ul>
+<li>Make sure to derive your plugin class from <a class="xref" href="../../../reference/pluginapi/MediaBrowser.Controller.Plugins.BasePluginSimpleUI-1.html">BasePluginSimpleUI&lt;TOptionType&gt;</a></li>
+<li>Add another class to your project which is derived from <a class="xref" href="../../../reference/pluginapi/Emby.Web.GenericEdit.EditableOptionsBase.html">EditableOptionsBase</a> and name it to your liking, e.g. <code>PluginOptions</code></li>
+<li>Use this class for the <code>&lt;TOptionType&gt;</code> parameter of the <code>BasePluginSimpleUI</code> base class from which your plugin is derived</li>
+<li>Add properties to your option class. Please look at the <a href="features/basics.html">Features</a> section for details</li>
+</ul>
+<h2 id="working-with-options">Working with Options</h2>
+<h3 id="option-page-display">Option Page Display</h3>
+<p>There's no further action required to display your plugin options on the Emby Server dashboard. When a user clicks on the &quot;Settings&quot; item of your plugin's context menu, the server will automatically create a UI page according to your options class.</p>
+<h5 id="make-adjustments-before-presentation">Make adjustments before presentation</h5>
+<p>You are able to make adjustments to the options object before being shown at the client by overriding the @MediaBrowser.Controller.Plugins.BasePluginSimpleUI`1.OnBeforeShowUI method.</p>
+<h3 id="processing-option-changes">Processing Option Changes</h3>
+<p>When a user submits option changes from the UI, there are multiple ways to interact with that submission:</p>
+<h5 id="validation">Validation</h5>
+<p>This is the primary and preferred way for validating user input.<br>
+Please see <a href="features/validation.html">Validation</a> for details and an example.</p>
+<h5 id="override-onoptionssaving">Override <code>OnOptionsSaving</code></h5>
+<p>Allows to cancel saving options to disk.</p>
+<h5 id="override-onoptionssaved">Override <code>OnOptionsSaved</code></h5>
+<p>Override <code>OnOptionsSaved</code> to get notified about option changes.</p>
+<h3 id="accessing-options-from-your-plugin">Accessing Options from your Plugin</h3>
+<p>You can call the <code>GetOptions()</code> and <code>SaveOptions()</code> methods of the plugin base class to retrieve or save your options data.</p>
+<h3 id="option-page-visibility">Option Page Visibility</h3>
+<p>By default, the option page will only be accessible by navigating to the &quot;Plugins&quot; section on the server dashboard and select the &quot;Settings&quot; context menu entry on your plugin.<br>
+This is the recommended way and should be sufficient for most plugins.</p>
+<p><strong>Only when your plugin provides significant extra value</strong> other than just some settings, you can add your plugin UI page to be shown as a separate entry in the navigation bar of the server dashboard.</p>
+<p>To do so, override the <code>OnCreatePageInfo()</code> method of the base class and adjust the properties of the <a class="xref" href="../../../reference/pluginapi/MediaBrowser.Model.Plugins.PluginPageInfo.html">PluginPageInfo</a> object accordingly.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="sdkversion Release">
+                  SDK <span class="sdkVersionSpan"></span>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>On this Page</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to Top</a>
+            </span>
+            Copyright 2022 © EMBY LLC.  Please see our <a class="lnk" href="https://emby.media/terms.html">terms of use</a> and <a class="lnk" href="https://emby.media/privacy.html">privacy policy</a>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

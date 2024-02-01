@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,7 +15,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The RemoteSearchResult model module.
 * @module model/RemoteSearchResult
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class RemoteSearchResult {
     /**
@@ -60,6 +60,12 @@ export default class RemoteSearchResult {
             if (data.hasOwnProperty('ParentIndexNumber')) {
                 obj['ParentIndexNumber'] = ApiClient.convertToType(data['ParentIndexNumber'], 'Number');
             }
+            if (data.hasOwnProperty('SortIndexNumber')) {
+                obj['SortIndexNumber'] = ApiClient.convertToType(data['SortIndexNumber'], 'Number');
+            }
+            if (data.hasOwnProperty('SortParentIndexNumber')) {
+                obj['SortParentIndexNumber'] = ApiClient.convertToType(data['SortParentIndexNumber'], 'Number');
+            }
             if (data.hasOwnProperty('PremiereDate')) {
                 obj['PremiereDate'] = ApiClient.convertToType(data['PremiereDate'], 'Date');
             }
@@ -89,6 +95,7 @@ export default class RemoteSearchResult {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
@@ -97,6 +104,7 @@ export default class RemoteSearchResult {
     */
     'ProviderIds' = undefined;
     /**
+    * The year.
     * @member {Number} ProductionYear
     */
     'ProductionYear' = undefined;
@@ -112,6 +120,14 @@ export default class RemoteSearchResult {
     * @member {Number} ParentIndexNumber
     */
     'ParentIndexNumber' = undefined;
+    /**
+    * @member {Number} SortIndexNumber
+    */
+    'SortIndexNumber' = undefined;
+    /**
+    * @member {Number} SortParentIndexNumber
+    */
+    'SortParentIndexNumber' = undefined;
     /**
     * @member {Date} PremiereDate
     */

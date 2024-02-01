@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,11 +15,12 @@ import ImageType from './ImageType';
 /**
 * The ImageProviderInfo model module.
 * @module model/ImageProviderInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ImageProviderInfo {
     /**
     * Constructs a new <code>ImageProviderInfo</code>.
+    * Class ImageProviderInfo.  
     * @alias module:model/ImageProviderInfo
     * @class
     */
@@ -53,6 +54,7 @@ export default class ImageProviderInfo {
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;

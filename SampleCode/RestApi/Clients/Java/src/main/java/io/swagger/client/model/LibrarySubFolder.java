@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -28,6 +28,9 @@ public class LibrarySubFolder {
 
   @SerializedName("Path")
   private String path = null;
+
+  @SerializedName("IsUserAccessConfigurable")
+  private Boolean isUserAccessConfigurable = null;
 
   public LibrarySubFolder name(String name) {
     this.name = name;
@@ -83,6 +86,24 @@ public class LibrarySubFolder {
     this.path = path;
   }
 
+  public LibrarySubFolder isUserAccessConfigurable(Boolean isUserAccessConfigurable) {
+    this.isUserAccessConfigurable = isUserAccessConfigurable;
+    return this;
+  }
+
+   /**
+   * Get isUserAccessConfigurable
+   * @return isUserAccessConfigurable
+  **/
+  @Schema(description = "")
+  public Boolean isIsUserAccessConfigurable() {
+    return isUserAccessConfigurable;
+  }
+
+  public void setIsUserAccessConfigurable(Boolean isUserAccessConfigurable) {
+    this.isUserAccessConfigurable = isUserAccessConfigurable;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -95,12 +116,13 @@ public class LibrarySubFolder {
     LibrarySubFolder librarySubFolder = (LibrarySubFolder) o;
     return Objects.equals(this.name, librarySubFolder.name) &&
         Objects.equals(this.id, librarySubFolder.id) &&
-        Objects.equals(this.path, librarySubFolder.path);
+        Objects.equals(this.path, librarySubFolder.path) &&
+        Objects.equals(this.isUserAccessConfigurable, librarySubFolder.isUserAccessConfigurable);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, id, path);
+    return Objects.hash(name, id, path, isUserAccessConfigurable);
   }
 
 
@@ -112,6 +134,7 @@ public class LibrarySubFolder {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    isUserAccessConfigurable: ").append(toIndentedString(isUserAccessConfigurable)).append("\n");
     sb.append("}");
     return sb.toString();
   }

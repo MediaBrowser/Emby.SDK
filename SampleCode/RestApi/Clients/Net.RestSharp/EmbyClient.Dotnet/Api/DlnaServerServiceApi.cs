@@ -173,10 +173,10 @@ namespace EmbyClient.Dotnet.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filename">The icon filename</param>
         /// <param name="uuId">Server UuId (optional)</param>
+        /// <param name="filename">The icon filename</param>
         /// <returns></returns>
-        void GetDlnaIconsByFilename (string filename, string uuId);
+        void GetDlnaIconsByFilename (string uuId, string filename);
 
         /// <summary>
         /// Gets a server icon
@@ -185,10 +185,10 @@ namespace EmbyClient.Dotnet.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filename">The icon filename</param>
         /// <param name="uuId">Server UuId (optional)</param>
+        /// <param name="filename">The icon filename</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetDlnaIconsByFilenameWithHttpInfo (string filename, string uuId);
+        ApiResponse<Object> GetDlnaIconsByFilenameWithHttpInfo (string uuId, string filename);
         /// <summary>
         /// Processes a control request
         /// </summary>
@@ -393,10 +393,10 @@ namespace EmbyClient.Dotnet.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filename">The icon filename</param>
         /// <param name="uuId">Server UuId (optional)</param>
+        /// <param name="filename">The icon filename</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetDlnaIconsByFilenameAsync (string filename, string uuId);
+        System.Threading.Tasks.Task GetDlnaIconsByFilenameAsync (string uuId, string filename);
 
         /// <summary>
         /// Gets a server icon
@@ -405,10 +405,10 @@ namespace EmbyClient.Dotnet.Api
         /// No authentication required
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filename">The icon filename</param>
         /// <param name="uuId">Server UuId (optional)</param>
+        /// <param name="filename">The icon filename</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetDlnaIconsByFilenameAsyncWithHttpInfo (string filename, string uuId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetDlnaIconsByFilenameAsyncWithHttpInfo (string uuId, string filename);
         /// <summary>
         /// Processes a control request
         /// </summary>
@@ -1471,22 +1471,22 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filename">The icon filename</param>
         /// <param name="uuId">Server UuId (optional)</param>
+        /// <param name="filename">The icon filename</param>
         /// <returns></returns>
-        public void GetDlnaIconsByFilename (string filename, string uuId)
+        public void GetDlnaIconsByFilename (string uuId, string filename)
         {
-             GetDlnaIconsByFilenameWithHttpInfo(filename, uuId);
+             GetDlnaIconsByFilenameWithHttpInfo(uuId, filename);
         }
 
         /// <summary>
         /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filename">The icon filename</param>
         /// <param name="uuId">Server UuId (optional)</param>
+        /// <param name="filename">The icon filename</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetDlnaIconsByFilenameWithHttpInfo (string filename, string uuId)
+        public ApiResponse<Object> GetDlnaIconsByFilenameWithHttpInfo (string uuId, string filename)
         {
             // verify the required parameter 'filename' is set
             if (filename == null)
@@ -1537,12 +1537,12 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filename">The icon filename</param>
         /// <param name="uuId">Server UuId (optional)</param>
+        /// <param name="filename">The icon filename</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetDlnaIconsByFilenameAsync (string filename, string uuId)
+        public async System.Threading.Tasks.Task GetDlnaIconsByFilenameAsync (string uuId, string filename)
         {
-             await GetDlnaIconsByFilenameAsyncWithHttpInfo(filename, uuId);
+             await GetDlnaIconsByFilenameAsyncWithHttpInfo(uuId, filename);
 
         }
 
@@ -1550,10 +1550,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a server icon No authentication required
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filename">The icon filename</param>
         /// <param name="uuId">Server UuId (optional)</param>
+        /// <param name="filename">The icon filename</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetDlnaIconsByFilenameAsyncWithHttpInfo (string filename, string uuId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetDlnaIconsByFilenameAsyncWithHttpInfo (string uuId, string filename)
         {
             // verify the required parameter 'filename' is set
             if (filename == null)

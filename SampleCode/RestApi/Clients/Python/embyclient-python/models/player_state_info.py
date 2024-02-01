@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -95,6 +95,7 @@ class PlayerStateInfo(object):
     def position_ticks(self):
         """Gets the position_ticks of this PlayerStateInfo.  # noqa: E501
 
+        The now playing position ticks.  # noqa: E501
 
         :return: The position_ticks of this PlayerStateInfo.  # noqa: E501
         :rtype: int
@@ -105,6 +106,7 @@ class PlayerStateInfo(object):
     def position_ticks(self, position_ticks):
         """Sets the position_ticks of this PlayerStateInfo.
 
+        The now playing position ticks.  # noqa: E501
 
         :param position_ticks: The position_ticks of this PlayerStateInfo.  # noqa: E501
         :type: int
@@ -116,6 +118,7 @@ class PlayerStateInfo(object):
     def can_seek(self):
         """Gets the can_seek of this PlayerStateInfo.  # noqa: E501
 
+        A value indicating whether this instance can seek.  # noqa: E501
 
         :return: The can_seek of this PlayerStateInfo.  # noqa: E501
         :rtype: bool
@@ -126,6 +129,7 @@ class PlayerStateInfo(object):
     def can_seek(self, can_seek):
         """Sets the can_seek of this PlayerStateInfo.
 
+        A value indicating whether this instance can seek.  # noqa: E501
 
         :param can_seek: The can_seek of this PlayerStateInfo.  # noqa: E501
         :type: bool
@@ -137,6 +141,7 @@ class PlayerStateInfo(object):
     def is_paused(self):
         """Gets the is_paused of this PlayerStateInfo.  # noqa: E501
 
+        A value indicating whether this instance is paused.  # noqa: E501
 
         :return: The is_paused of this PlayerStateInfo.  # noqa: E501
         :rtype: bool
@@ -147,6 +152,7 @@ class PlayerStateInfo(object):
     def is_paused(self, is_paused):
         """Sets the is_paused of this PlayerStateInfo.
 
+        A value indicating whether this instance is paused.  # noqa: E501
 
         :param is_paused: The is_paused of this PlayerStateInfo.  # noqa: E501
         :type: bool
@@ -158,6 +164,7 @@ class PlayerStateInfo(object):
     def is_muted(self):
         """Gets the is_muted of this PlayerStateInfo.  # noqa: E501
 
+        A value indicating whether this instance is muted.  # noqa: E501
 
         :return: The is_muted of this PlayerStateInfo.  # noqa: E501
         :rtype: bool
@@ -168,6 +175,7 @@ class PlayerStateInfo(object):
     def is_muted(self, is_muted):
         """Sets the is_muted of this PlayerStateInfo.
 
+        A value indicating whether this instance is muted.  # noqa: E501
 
         :param is_muted: The is_muted of this PlayerStateInfo.  # noqa: E501
         :type: bool
@@ -179,6 +187,7 @@ class PlayerStateInfo(object):
     def volume_level(self):
         """Gets the volume_level of this PlayerStateInfo.  # noqa: E501
 
+        The volume level.  # noqa: E501
 
         :return: The volume_level of this PlayerStateInfo.  # noqa: E501
         :rtype: int
@@ -189,6 +198,7 @@ class PlayerStateInfo(object):
     def volume_level(self, volume_level):
         """Sets the volume_level of this PlayerStateInfo.
 
+        The volume level.  # noqa: E501
 
         :param volume_level: The volume_level of this PlayerStateInfo.  # noqa: E501
         :type: int
@@ -200,6 +210,7 @@ class PlayerStateInfo(object):
     def audio_stream_index(self):
         """Gets the audio_stream_index of this PlayerStateInfo.  # noqa: E501
 
+        The index of the now playing audio stream.  # noqa: E501
 
         :return: The audio_stream_index of this PlayerStateInfo.  # noqa: E501
         :rtype: int
@@ -210,6 +221,7 @@ class PlayerStateInfo(object):
     def audio_stream_index(self, audio_stream_index):
         """Sets the audio_stream_index of this PlayerStateInfo.
 
+        The index of the now playing audio stream.  # noqa: E501
 
         :param audio_stream_index: The audio_stream_index of this PlayerStateInfo.  # noqa: E501
         :type: int
@@ -221,6 +233,7 @@ class PlayerStateInfo(object):
     def subtitle_stream_index(self):
         """Gets the subtitle_stream_index of this PlayerStateInfo.  # noqa: E501
 
+        The index of the now playing subtitle stream.  # noqa: E501
 
         :return: The subtitle_stream_index of this PlayerStateInfo.  # noqa: E501
         :rtype: int
@@ -231,6 +244,7 @@ class PlayerStateInfo(object):
     def subtitle_stream_index(self, subtitle_stream_index):
         """Sets the subtitle_stream_index of this PlayerStateInfo.
 
+        The index of the now playing subtitle stream.  # noqa: E501
 
         :param subtitle_stream_index: The subtitle_stream_index of this PlayerStateInfo.  # noqa: E501
         :type: int
@@ -242,6 +256,7 @@ class PlayerStateInfo(object):
     def media_source_id(self):
         """Gets the media_source_id of this PlayerStateInfo.  # noqa: E501
 
+        The now playing media version identifier.  # noqa: E501
 
         :return: The media_source_id of this PlayerStateInfo.  # noqa: E501
         :rtype: str
@@ -252,6 +267,7 @@ class PlayerStateInfo(object):
     def media_source_id(self, media_source_id):
         """Sets the media_source_id of this PlayerStateInfo.
 
+        The now playing media version identifier.  # noqa: E501
 
         :param media_source_id: The media_source_id of this PlayerStateInfo.  # noqa: E501
         :type: str

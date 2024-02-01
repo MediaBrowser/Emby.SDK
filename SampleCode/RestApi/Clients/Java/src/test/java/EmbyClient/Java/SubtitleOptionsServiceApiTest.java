@@ -1,11 +1,11 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
 package EmbyClient.Java;
 
-import io.swagger.client.model.EmbyWebGenericEditEditObjectContainer;
+import io.swagger.client.model.EditObjectContainer;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -34,7 +34,7 @@ public class SubtitleOptionsServiceApiTest {
      */
     @Test
     public void getEncodingSubtitleoptionsTest() throws Exception {
-        EmbyWebGenericEditEditObjectContainer response = api.getEncodingSubtitleoptions();
+        EditObjectContainer response = api.getEncodingSubtitleoptions();
 
         // TODO: test validations
     }

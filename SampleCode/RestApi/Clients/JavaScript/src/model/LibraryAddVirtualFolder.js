@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,12 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import ConfigurationLibraryOptions from './ConfigurationLibraryOptions';
+import LibraryOptions from './LibraryOptions';
 
 /**
 * The LibraryAddVirtualFolder model module.
 * @module model/LibraryAddVirtualFolder
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LibraryAddVirtualFolder {
     /**
@@ -55,7 +55,7 @@ export default class LibraryAddVirtualFolder {
                 obj['Paths'] = ApiClient.convertToType(data['Paths'], ['String']);
             }
             if (data.hasOwnProperty('LibraryOptions')) {
-                obj['LibraryOptions'] = ConfigurationLibraryOptions.constructFromObject(data['LibraryOptions']);
+                obj['LibraryOptions'] = LibraryOptions.constructFromObject(data['LibraryOptions']);
             }
         }
         return obj;
@@ -78,7 +78,7 @@ export default class LibraryAddVirtualFolder {
     */
     'Paths' = undefined;
     /**
-    * @member {module:model/ConfigurationLibraryOptions} LibraryOptions
+    * @member {module:model/LibraryOptions} LibraryOptions
     */
     'LibraryOptions' = undefined;
 

@@ -8,112 +8,190 @@
 import Foundation
 
 
+/** This is strictly used as a data transfer object from the api layer. This holds information about a BaseItem in a format that is convenient for the client.   */
 
 public struct BaseItemDto: Codable {
 
+    /** The name. */
     public var name: String?
     public var originalTitle: String?
+    /** The server identifier. */
     public var serverId: String?
+    /** The id. */
     public var _id: String?
+    public var guid: String?
+    /** The etag. */
     public var etag: String?
+    /** The Prefix. */
     public var _prefix: String?
+    /** The playlist item identifier. */
     public var playlistItemId: String?
+    /** The date created. */
     public var dateCreated: Date?
     public var extraType: String?
     public var sortIndexNumber: Int?
     public var sortParentIndexNumber: Int?
-    public var airsBeforeSeasonNumber: Int?
-    public var airsAfterSeasonNumber: Int?
-    public var airsBeforeEpisodeNumber: Int?
     public var canDelete: Bool?
     public var canDownload: Bool?
+    public var canEditItems: Bool?
     public var supportsResume: Bool?
     public var presentationUniqueKey: String?
     public var preferredMetadataLanguage: String?
     public var preferredMetadataCountryCode: String?
+    /** A value indicating whether \\[supports synchronize\\]. */
     public var supportsSync: Bool?
+    public var syncStatus: SyncJobItemStatus?
+    public var canManageAccess: Bool?
+    public var canLeaveContent: Bool?
+    public var canMakePublic: Bool?
     public var container: String?
+    /** The name of the sort. */
     public var sortName: String?
     public var forcedSortName: String?
     public var video3DFormat: Video3DFormat?
+    /** The premiere date. */
     public var premiereDate: Date?
+    /** The external urls. */
     public var externalUrls: [ExternalUrl]?
+    /** The media versions. */
     public var mediaSources: [MediaSourceInfo]?
+    /** The critic rating. */
     public var criticRating: Float?
     public var gameSystemId: Int64?
     public var asSeries: Bool?
+    /** The game system. */
     public var gameSystem: String?
     public var productionLocations: [String]?
+    /** The path. */
     public var path: String?
+    /** The official rating. */
     public var officialRating: String?
+    /** The custom rating. */
     public var customRating: String?
+    /** The channel identifier. */
     public var channelId: String?
     public var channelName: String?
+    /** The overview. */
     public var overview: String?
+    /** The taglines. */
     public var taglines: [String]?
+    /** The genres. */
     public var genres: [String]?
+    /** The community rating. */
     public var communityRating: Float?
+    /** The run time ticks. */
     public var runTimeTicks: Int64?
     public var size: Int64?
     public var fileName: String?
     public var bitrate: Int?
-    public var playAccess: LibraryPlayAccess?
+    /** The production year. */
     public var productionYear: Int?
+    /** The number. */
     public var number: String?
     public var channelNumber: String?
+    /** The index number. */
     public var indexNumber: Int?
+    /** The index number end. */
     public var indexNumberEnd: Int?
+    /** The parent index number. */
     public var parentIndexNumber: Int?
+    /** The trailer urls. */
     public var remoteTrailers: [MediaUrl]?
     public var providerIds: ProviderIdDictionary?
+    /** A value indicating whether this instance is folder. */
     public var isFolder: Bool?
+    /** The parent id. */
     public var parentId: String?
+    /** The type. */
     public var type: String?
+    /** The people. */
     public var people: [BaseItemPerson]?
+    /** The studios. */
     public var studios: [NameLongIdPair]?
     public var genreItems: [NameLongIdPair]?
     public var tagItems: [NameLongIdPair]?
+    /** If the item does not have a logo, this will hold the Id of the Parent that has one. */
     public var parentLogoItemId: String?
+    /** If the item does not have any backdrops, this will hold the Id of the Parent that has one. */
     public var parentBackdropItemId: String?
+    /** The parent backdrop image tags. */
     public var parentBackdropImageTags: [String]?
+    /** The local trailer count. */
     public var localTrailerCount: Int?
     public var userData: UserItemDataDto?
+    /** The recursive item count. */
     public var recursiveItemCount: Int?
+    /** The child count. */
     public var childCount: Int?
+    /** The name of the series. */
     public var seriesName: String?
+    /** The series id. */
     public var seriesId: String?
+    /** The season identifier. */
     public var seasonId: String?
+    /** The special feature count. */
     public var specialFeatureCount: Int?
+    /** The display preferences id. */
     public var displayPreferencesId: String?
+    /** The status. */
     public var status: String?
+    /** The air days. */
     public var airDays: [DayOfWeek]?
+    /** The tags. */
     public var tags: [String]?
+    /** The primary image aspect ratio, after image enhancements. */
     public var primaryImageAspectRatio: Double?
+    /** The artists. */
     public var artists: [String]?
+    /** The artist items. */
     public var artistItems: [NameIdPair]?
     public var composers: [NameIdPair]?
+    /** The album. */
     public var album: String?
+    /** The type of the collection. */
     public var collectionType: String?
+    /** The display order. */
     public var displayOrder: String?
+    /** The album id. */
     public var albumId: String?
+    /** The album image tag. */
     public var albumPrimaryImageTag: String?
+    /** The series primary image tag. */
     public var seriesPrimaryImageTag: String?
+    /** The album artist. */
     public var albumArtist: String?
+    /** The album artists. */
     public var albumArtists: [NameIdPair]?
+    /** The name of the season. */
     public var seasonName: String?
+    /** The media streams. */
     public var mediaStreams: [MediaStream]?
+    /** The part count. */
     public var partCount: Int?
+    /** The image tags. */
     public var imageTags: [String:String]?
+    /** The backdrop image tags. */
     public var backdropImageTags: [String]?
+    /** The parent logo image tag. */
     public var parentLogoImageTag: String?
+    /** The series studio. */
     public var seriesStudio: String?
+    public var primaryImageItemId: String?
+    public var primaryImageTag: String?
+    /** The parent thumb item id. */
     public var parentThumbItemId: String?
+    /** The parent thumb image tag. */
     public var parentThumbImageTag: String?
+    /** The chapters. */
     public var chapters: [ChapterInfo]?
     public var locationType: LocationType?
+    /** The type of the media. */
     public var mediaType: String?
+    /** The end date. */
     public var endDate: Date?
+    /** The locked fields. */
     public var lockedFields: [MetadataFields]?
+    /** A value indicating whether \\[enable internet providers\\]. */
     public var lockData: Bool?
     public var width: Int?
     public var height: Int?
@@ -129,23 +207,37 @@ public struct BaseItemDto: Codable {
     public var longitude: Double?
     public var altitude: Double?
     public var isoSpeedRating: Int?
+    /** The series timer identifier. */
     public var seriesTimerId: String?
+    /** The channel primary image tag. */
     public var channelPrimaryImageTag: String?
+    /** The start date of the recording, in UTC. */
     public var startDate: Date?
+    /** The completion percentage. */
     public var completionPercentage: Double?
+    /** A value indicating whether this instance is repeat. */
     public var isRepeat: Bool?
     public var isNew: Bool?
+    /** The episode title. */
     public var episodeTitle: String?
+    /** A value indicating whether this instance is movie. */
     public var isMovie: Bool?
+    /** A value indicating whether this instance is sports. */
     public var isSports: Bool?
+    /** A value indicating whether this instance is series. */
     public var isSeries: Bool?
+    /** A value indicating whether this instance is live. */
     public var isLive: Bool?
+    /** A value indicating whether this instance is news. */
     public var isNews: Bool?
+    /** A value indicating whether this instance is kids. */
     public var isKids: Bool?
+    /** A value indicating whether this instance is premiere. */
     public var isPremiere: Bool?
     public var timerType: LiveTvTimerType?
     public var disabled: Bool?
     public var managementId: String?
+    /** The timer identifier. */
     public var timerId: String?
     public var currentProgram: BaseItemDto?
     public var movieCount: Int?
@@ -162,11 +254,12 @@ public struct BaseItemDto: Codable {
     public var listingsChannelNumber: String?
     public var affiliateCallSign: String?
 
-    public init(name: String? = nil, originalTitle: String? = nil, serverId: String? = nil, _id: String? = nil, etag: String? = nil, _prefix: String? = nil, playlistItemId: String? = nil, dateCreated: Date? = nil, extraType: String? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, airsBeforeSeasonNumber: Int? = nil, airsAfterSeasonNumber: Int? = nil, airsBeforeEpisodeNumber: Int? = nil, canDelete: Bool? = nil, canDownload: Bool? = nil, supportsResume: Bool? = nil, presentationUniqueKey: String? = nil, preferredMetadataLanguage: String? = nil, preferredMetadataCountryCode: String? = nil, supportsSync: Bool? = nil, container: String? = nil, sortName: String? = nil, forcedSortName: String? = nil, video3DFormat: Video3DFormat? = nil, premiereDate: Date? = nil, externalUrls: [ExternalUrl]? = nil, mediaSources: [MediaSourceInfo]? = nil, criticRating: Float? = nil, gameSystemId: Int64? = nil, asSeries: Bool? = nil, gameSystem: String? = nil, productionLocations: [String]? = nil, path: String? = nil, officialRating: String? = nil, customRating: String? = nil, channelId: String? = nil, channelName: String? = nil, overview: String? = nil, taglines: [String]? = nil, genres: [String]? = nil, communityRating: Float? = nil, runTimeTicks: Int64? = nil, size: Int64? = nil, fileName: String? = nil, bitrate: Int? = nil, playAccess: LibraryPlayAccess? = nil, productionYear: Int? = nil, number: String? = nil, channelNumber: String? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, remoteTrailers: [MediaUrl]? = nil, providerIds: ProviderIdDictionary? = nil, isFolder: Bool? = nil, parentId: String? = nil, type: String? = nil, people: [BaseItemPerson]? = nil, studios: [NameLongIdPair]? = nil, genreItems: [NameLongIdPair]? = nil, tagItems: [NameLongIdPair]? = nil, parentLogoItemId: String? = nil, parentBackdropItemId: String? = nil, parentBackdropImageTags: [String]? = nil, localTrailerCount: Int? = nil, userData: UserItemDataDto? = nil, recursiveItemCount: Int? = nil, childCount: Int? = nil, seriesName: String? = nil, seriesId: String? = nil, seasonId: String? = nil, specialFeatureCount: Int? = nil, displayPreferencesId: String? = nil, status: String? = nil, airDays: [DayOfWeek]? = nil, tags: [String]? = nil, primaryImageAspectRatio: Double? = nil, artists: [String]? = nil, artistItems: [NameIdPair]? = nil, composers: [NameIdPair]? = nil, album: String? = nil, collectionType: String? = nil, displayOrder: String? = nil, albumId: String? = nil, albumPrimaryImageTag: String? = nil, seriesPrimaryImageTag: String? = nil, albumArtist: String? = nil, albumArtists: [NameIdPair]? = nil, seasonName: String? = nil, mediaStreams: [MediaStream]? = nil, partCount: Int? = nil, imageTags: [String:String]? = nil, backdropImageTags: [String]? = nil, parentLogoImageTag: String? = nil, seriesStudio: String? = nil, parentThumbItemId: String? = nil, parentThumbImageTag: String? = nil, chapters: [ChapterInfo]? = nil, locationType: LocationType? = nil, mediaType: String? = nil, endDate: Date? = nil, lockedFields: [MetadataFields]? = nil, lockData: Bool? = nil, width: Int? = nil, height: Int? = nil, cameraMake: String? = nil, cameraModel: String? = nil, software: String? = nil, exposureTime: Double? = nil, focalLength: Double? = nil, imageOrientation: DrawingImageOrientation? = nil, aperture: Double? = nil, shutterSpeed: Double? = nil, latitude: Double? = nil, longitude: Double? = nil, altitude: Double? = nil, isoSpeedRating: Int? = nil, seriesTimerId: String? = nil, channelPrimaryImageTag: String? = nil, startDate: Date? = nil, completionPercentage: Double? = nil, isRepeat: Bool? = nil, isNew: Bool? = nil, episodeTitle: String? = nil, isMovie: Bool? = nil, isSports: Bool? = nil, isSeries: Bool? = nil, isLive: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isPremiere: Bool? = nil, timerType: LiveTvTimerType? = nil, disabled: Bool? = nil, managementId: String? = nil, timerId: String? = nil, currentProgram: BaseItemDto? = nil, movieCount: Int? = nil, seriesCount: Int? = nil, albumCount: Int? = nil, songCount: Int? = nil, musicVideoCount: Int? = nil, subviews: [String]? = nil, listingsProviderId: String? = nil, listingsChannelId: String? = nil, listingsPath: String? = nil, listingsId: String? = nil, listingsChannelName: String? = nil, listingsChannelNumber: String? = nil, affiliateCallSign: String? = nil) {
+    public init(name: String? = nil, originalTitle: String? = nil, serverId: String? = nil, _id: String? = nil, guid: String? = nil, etag: String? = nil, _prefix: String? = nil, playlistItemId: String? = nil, dateCreated: Date? = nil, extraType: String? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, canDelete: Bool? = nil, canDownload: Bool? = nil, canEditItems: Bool? = nil, supportsResume: Bool? = nil, presentationUniqueKey: String? = nil, preferredMetadataLanguage: String? = nil, preferredMetadataCountryCode: String? = nil, supportsSync: Bool? = nil, syncStatus: SyncJobItemStatus? = nil, canManageAccess: Bool? = nil, canLeaveContent: Bool? = nil, canMakePublic: Bool? = nil, container: String? = nil, sortName: String? = nil, forcedSortName: String? = nil, video3DFormat: Video3DFormat? = nil, premiereDate: Date? = nil, externalUrls: [ExternalUrl]? = nil, mediaSources: [MediaSourceInfo]? = nil, criticRating: Float? = nil, gameSystemId: Int64? = nil, asSeries: Bool? = nil, gameSystem: String? = nil, productionLocations: [String]? = nil, path: String? = nil, officialRating: String? = nil, customRating: String? = nil, channelId: String? = nil, channelName: String? = nil, overview: String? = nil, taglines: [String]? = nil, genres: [String]? = nil, communityRating: Float? = nil, runTimeTicks: Int64? = nil, size: Int64? = nil, fileName: String? = nil, bitrate: Int? = nil, productionYear: Int? = nil, number: String? = nil, channelNumber: String? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, remoteTrailers: [MediaUrl]? = nil, providerIds: ProviderIdDictionary? = nil, isFolder: Bool? = nil, parentId: String? = nil, type: String? = nil, people: [BaseItemPerson]? = nil, studios: [NameLongIdPair]? = nil, genreItems: [NameLongIdPair]? = nil, tagItems: [NameLongIdPair]? = nil, parentLogoItemId: String? = nil, parentBackdropItemId: String? = nil, parentBackdropImageTags: [String]? = nil, localTrailerCount: Int? = nil, userData: UserItemDataDto? = nil, recursiveItemCount: Int? = nil, childCount: Int? = nil, seriesName: String? = nil, seriesId: String? = nil, seasonId: String? = nil, specialFeatureCount: Int? = nil, displayPreferencesId: String? = nil, status: String? = nil, airDays: [DayOfWeek]? = nil, tags: [String]? = nil, primaryImageAspectRatio: Double? = nil, artists: [String]? = nil, artistItems: [NameIdPair]? = nil, composers: [NameIdPair]? = nil, album: String? = nil, collectionType: String? = nil, displayOrder: String? = nil, albumId: String? = nil, albumPrimaryImageTag: String? = nil, seriesPrimaryImageTag: String? = nil, albumArtist: String? = nil, albumArtists: [NameIdPair]? = nil, seasonName: String? = nil, mediaStreams: [MediaStream]? = nil, partCount: Int? = nil, imageTags: [String:String]? = nil, backdropImageTags: [String]? = nil, parentLogoImageTag: String? = nil, seriesStudio: String? = nil, primaryImageItemId: String? = nil, primaryImageTag: String? = nil, parentThumbItemId: String? = nil, parentThumbImageTag: String? = nil, chapters: [ChapterInfo]? = nil, locationType: LocationType? = nil, mediaType: String? = nil, endDate: Date? = nil, lockedFields: [MetadataFields]? = nil, lockData: Bool? = nil, width: Int? = nil, height: Int? = nil, cameraMake: String? = nil, cameraModel: String? = nil, software: String? = nil, exposureTime: Double? = nil, focalLength: Double? = nil, imageOrientation: DrawingImageOrientation? = nil, aperture: Double? = nil, shutterSpeed: Double? = nil, latitude: Double? = nil, longitude: Double? = nil, altitude: Double? = nil, isoSpeedRating: Int? = nil, seriesTimerId: String? = nil, channelPrimaryImageTag: String? = nil, startDate: Date? = nil, completionPercentage: Double? = nil, isRepeat: Bool? = nil, isNew: Bool? = nil, episodeTitle: String? = nil, isMovie: Bool? = nil, isSports: Bool? = nil, isSeries: Bool? = nil, isLive: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isPremiere: Bool? = nil, timerType: LiveTvTimerType? = nil, disabled: Bool? = nil, managementId: String? = nil, timerId: String? = nil, currentProgram: BaseItemDto? = nil, movieCount: Int? = nil, seriesCount: Int? = nil, albumCount: Int? = nil, songCount: Int? = nil, musicVideoCount: Int? = nil, subviews: [String]? = nil, listingsProviderId: String? = nil, listingsChannelId: String? = nil, listingsPath: String? = nil, listingsId: String? = nil, listingsChannelName: String? = nil, listingsChannelNumber: String? = nil, affiliateCallSign: String? = nil) {
         self.name = name
         self.originalTitle = originalTitle
         self.serverId = serverId
         self._id = _id
+        self.guid = guid
         self.etag = etag
         self._prefix = _prefix
         self.playlistItemId = playlistItemId
@@ -174,16 +267,18 @@ public struct BaseItemDto: Codable {
         self.extraType = extraType
         self.sortIndexNumber = sortIndexNumber
         self.sortParentIndexNumber = sortParentIndexNumber
-        self.airsBeforeSeasonNumber = airsBeforeSeasonNumber
-        self.airsAfterSeasonNumber = airsAfterSeasonNumber
-        self.airsBeforeEpisodeNumber = airsBeforeEpisodeNumber
         self.canDelete = canDelete
         self.canDownload = canDownload
+        self.canEditItems = canEditItems
         self.supportsResume = supportsResume
         self.presentationUniqueKey = presentationUniqueKey
         self.preferredMetadataLanguage = preferredMetadataLanguage
         self.preferredMetadataCountryCode = preferredMetadataCountryCode
         self.supportsSync = supportsSync
+        self.syncStatus = syncStatus
+        self.canManageAccess = canManageAccess
+        self.canLeaveContent = canLeaveContent
+        self.canMakePublic = canMakePublic
         self.container = container
         self.sortName = sortName
         self.forcedSortName = forcedSortName
@@ -209,7 +304,6 @@ public struct BaseItemDto: Codable {
         self.size = size
         self.fileName = fileName
         self.bitrate = bitrate
-        self.playAccess = playAccess
         self.productionYear = productionYear
         self.number = number
         self.channelNumber = channelNumber
@@ -259,6 +353,8 @@ public struct BaseItemDto: Codable {
         self.backdropImageTags = backdropImageTags
         self.parentLogoImageTag = parentLogoImageTag
         self.seriesStudio = seriesStudio
+        self.primaryImageItemId = primaryImageItemId
+        self.primaryImageTag = primaryImageTag
         self.parentThumbItemId = parentThumbItemId
         self.parentThumbImageTag = parentThumbImageTag
         self.chapters = chapters
@@ -320,6 +416,7 @@ public struct BaseItemDto: Codable {
         case originalTitle = "OriginalTitle"
         case serverId = "ServerId"
         case _id = "Id"
+        case guid = "Guid"
         case etag = "Etag"
         case _prefix = "Prefix"
         case playlistItemId = "PlaylistItemId"
@@ -327,16 +424,18 @@ public struct BaseItemDto: Codable {
         case extraType = "ExtraType"
         case sortIndexNumber = "SortIndexNumber"
         case sortParentIndexNumber = "SortParentIndexNumber"
-        case airsBeforeSeasonNumber = "AirsBeforeSeasonNumber"
-        case airsAfterSeasonNumber = "AirsAfterSeasonNumber"
-        case airsBeforeEpisodeNumber = "AirsBeforeEpisodeNumber"
         case canDelete = "CanDelete"
         case canDownload = "CanDownload"
+        case canEditItems = "CanEditItems"
         case supportsResume = "SupportsResume"
         case presentationUniqueKey = "PresentationUniqueKey"
         case preferredMetadataLanguage = "PreferredMetadataLanguage"
         case preferredMetadataCountryCode = "PreferredMetadataCountryCode"
         case supportsSync = "SupportsSync"
+        case syncStatus = "SyncStatus"
+        case canManageAccess = "CanManageAccess"
+        case canLeaveContent = "CanLeaveContent"
+        case canMakePublic = "CanMakePublic"
         case container = "Container"
         case sortName = "SortName"
         case forcedSortName = "ForcedSortName"
@@ -362,7 +461,6 @@ public struct BaseItemDto: Codable {
         case size = "Size"
         case fileName = "FileName"
         case bitrate = "Bitrate"
-        case playAccess = "PlayAccess"
         case productionYear = "ProductionYear"
         case number = "Number"
         case channelNumber = "ChannelNumber"
@@ -412,6 +510,8 @@ public struct BaseItemDto: Codable {
         case backdropImageTags = "BackdropImageTags"
         case parentLogoImageTag = "ParentLogoImageTag"
         case seriesStudio = "SeriesStudio"
+        case primaryImageItemId = "PrimaryImageItemId"
+        case primaryImageTag = "PrimaryImageTag"
         case parentThumbItemId = "ParentThumbItemId"
         case parentThumbImageTag = "ParentThumbImageTag"
         case chapters = "Chapters"

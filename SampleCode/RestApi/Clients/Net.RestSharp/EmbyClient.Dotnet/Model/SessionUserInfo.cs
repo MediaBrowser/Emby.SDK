@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// SessionUserInfo
+    /// Class SessionUserInfo.  
     /// </summary>
     [DataContract]
         public partial class SessionUserInfo :  IEquatable<SessionUserInfo>
@@ -26,8 +26,8 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionUserInfo" /> class.
         /// </summary>
-        /// <param name="userId">userId.</param>
-        /// <param name="userName">userName.</param>
+        /// <param name="userId">The user identifier..</param>
+        /// <param name="userName">The name of the user..</param>
         /// <param name="userInternalId">userInternalId.</param>
         public SessionUserInfo(string userId = default(string), string userName = default(string), long? userInternalId = default(long?))
         {
@@ -37,14 +37,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets UserId
+        /// The user identifier.
         /// </summary>
+        /// <value>The user identifier.</value>
         [DataMember(Name="UserId", EmitDefaultValue=false)]
         public string UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserName
+        /// The name of the user.
         /// </summary>
+        /// <value>The name of the user.</value>
         [DataMember(Name="UserName", EmitDefaultValue=false)]
         public string UserName { get; set; }
 

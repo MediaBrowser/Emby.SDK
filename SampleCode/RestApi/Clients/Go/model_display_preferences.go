@@ -1,23 +1,20 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  *
  * Explore the Emby Server API
  *
  */
 package embyclient-rest-go
 
+// Defines the display preferences for any item that supports them (usually Folders)  
 type DisplayPreferences struct {
+	// The user id.
 	Id string `json:"Id,omitempty"`
-	ViewType string `json:"ViewType,omitempty"`
+	// The sort by.
 	SortBy string `json:"SortBy,omitempty"`
-	IndexBy string `json:"IndexBy,omitempty"`
-	RememberIndexing bool `json:"RememberIndexing,omitempty"`
-	PrimaryImageHeight int32 `json:"PrimaryImageHeight,omitempty"`
-	PrimaryImageWidth int32 `json:"PrimaryImageWidth,omitempty"`
+	// The custom prefs.
 	CustomPrefs map[string]string `json:"CustomPrefs,omitempty"`
-	ScrollDirection *ScrollDirection `json:"ScrollDirection,omitempty"`
-	ShowBackdrop bool `json:"ShowBackdrop,omitempty"`
-	RememberSorting bool `json:"RememberSorting,omitempty"`
 	SortOrder *SortOrder `json:"SortOrder,omitempty"`
+	// The client
 	Client string `json:"Client,omitempty"`
 }

@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -16,9 +16,9 @@ import io.swagger.client.model.PersonType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * BaseItemPerson
+ * This is used by the api to get information about a Person within a BaseItem  
  */
-
+@Schema(description = "This is used by the api to get information about a Person within a BaseItem  ")
 
 public class BaseItemPerson {
   @SerializedName("Name")
@@ -42,10 +42,10 @@ public class BaseItemPerson {
   }
 
    /**
-   * Get name
+   * The name.
    * @return name
   **/
-  @Schema(description = "")
+  @Schema(description = "The name.")
   public String getName() {
     return name;
   }
@@ -60,10 +60,10 @@ public class BaseItemPerson {
   }
 
    /**
-   * Get id
+   * The identifier.
    * @return id
   **/
-  @Schema(description = "")
+  @Schema(description = "The identifier.")
   public String getId() {
     return id;
   }
@@ -78,10 +78,10 @@ public class BaseItemPerson {
   }
 
    /**
-   * Get role
+   * The role.
    * @return role
   **/
-  @Schema(description = "")
+  @Schema(description = "The role.")
   public String getRole() {
     return role;
   }
@@ -114,10 +114,10 @@ public class BaseItemPerson {
   }
 
    /**
-   * Get primaryImageTag
+   * The primary image tag.
    * @return primaryImageTag
   **/
-  @Schema(description = "")
+  @Schema(description = "The primary image tag.")
   public String getPrimaryImageTag() {
     return primaryImageTag;
   }

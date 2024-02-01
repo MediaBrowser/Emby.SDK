@@ -166,13 +166,13 @@
   
   
   <a id="MediaBrowser_Controller_Devices_IDeviceManager_AcceptCameraUpload_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.AcceptCameraUpload*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_AcceptCameraUpload_System_String_System_IO_Stream_MediaBrowser_Model_Devices_LocalFileInfo_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.AcceptCameraUpload(System.String,System.IO.Stream,MediaBrowser.Model.Devices.LocalFileInfo)">AcceptCameraUpload(String, Stream, LocalFileInfo)</h4>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_AcceptCameraUpload_System_Int64_System_IO_Stream_MediaBrowser_Model_Devices_LocalFileInfo_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.AcceptCameraUpload(System.Int64,System.IO.Stream,MediaBrowser.Model.Devices.LocalFileInfo)">AcceptCameraUpload(Int64, Stream, LocalFileInfo)</h4>
   <div class="markdown level1 summary"><p>Accepts the upload.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task AcceptCameraUpload(string deviceId, Stream stream, LocalFileInfo file)</code></pre>
+    <pre><code class="lang-csharp hljs">Task AcceptCameraUpload(long deviceId, Stream stream, LocalFileInfo file)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">deviceId</span></td>
         <td><p>The device identifier.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
         <td><p>The stream.</p>
 </td>
@@ -214,7 +214,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Task.</p>
 </td>
       </tr>
@@ -241,7 +241,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dlna.IDeviceProfileResolver.html">IDeviceProfileResolver</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dlna.IDeviceProfileResolver.html">IDeviceProfileResolver</a>&gt;</td>
         <td><span class="parametername">resolvers</span></td>
         <td></td>
       </tr>
@@ -255,7 +255,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool CanAccessDevice(User user, string deviceId)</code></pre>
+    <pre><code class="lang-csharp hljs">bool CanAccessDevice(User user, string reportedDevceId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -273,8 +273,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">deviceId</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">reportedDevceId</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -289,21 +289,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Devices_IDeviceManager_GetCameraUploadHistory_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetCameraUploadHistory*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetCameraUploadHistory_System_String_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetCameraUploadHistory(System.String)">GetCameraUploadHistory(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the upload history.</p>
-</div>
+  <a id="MediaBrowser_Controller_Devices_IDeviceManager_DeleteDevices_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.DeleteDevices*"></a>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_DeleteDevices_System_Int64___" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.DeleteDevices(System.Int64[])">DeleteDevices(Int64[])</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ContentUploadHistory GetCameraUploadHistory(string deviceId)</code></pre>
+    <pre><code class="lang-csharp hljs">void DeleteDevices(long[] ids)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,7 +315,35 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="parametername">ids</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Devices_IDeviceManager_GetCameraUploadHistory_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetCameraUploadHistory*"></a>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetCameraUploadHistory_System_Int64_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetCameraUploadHistory(System.Int64)">GetCameraUploadHistory(Int64)</h4>
+  <div class="markdown level1 summary"><p>Gets the upload history.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ContentUploadHistory GetCameraUploadHistory(long deviceId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">deviceId</span></td>
         <td><p>The device identifier.</p>
 </td>
@@ -342,13 +369,13 @@
   
   
   <a id="MediaBrowser_Controller_Devices_IDeviceManager_GetCapabilities_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetCapabilities*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetCapabilities_System_String_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetCapabilities(System.String)">GetCapabilities(String)</h4>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetCapabilities_System_Int64_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetCapabilities(System.Int64)">GetCapabilities(Int64)</h4>
   <div class="markdown level1 summary"><p>Gets the capabilities.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ClientCapabilities GetCapabilities(string reportedId)</code></pre>
+    <pre><code class="lang-csharp hljs">ClientCapabilities GetCapabilities(long deviceId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,10 +388,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">reportedId</span></td>
-        <td><p>The reported identifier.</p>
-</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">deviceId</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -387,12 +413,12 @@
   
   
   <a id="MediaBrowser_Controller_Devices_IDeviceManager_GetDevice_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetDevice*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetDevice_System_String_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetDevice(System.String)">GetDevice(String)</h4>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetDevice_System_Int64_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetDevice(System.Int64)">GetDevice(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DeviceInfo GetDevice(string id)</code></pre>
+    <pre><code class="lang-csharp hljs">DeviceInfo GetDevice(long id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -405,7 +431,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
@@ -429,12 +455,12 @@
   
   
   <a id="MediaBrowser_Controller_Devices_IDeviceManager_GetDeviceOptions_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetDeviceOptions*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetDeviceOptions_System_String_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetDeviceOptions(System.String)">GetDeviceOptions(String)</h4>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetDeviceOptions_System_Int64_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetDeviceOptions(System.Int64)">GetDeviceOptions(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DeviceOptions GetDeviceOptions(string deviceId)</code></pre>
+    <pre><code class="lang-csharp hljs">DeviceOptions GetDeviceOptions(long deviceId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -447,7 +473,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">deviceId</span></td>
         <td></td>
       </tr>
@@ -533,7 +559,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">profileId</span></td>
         <td></td>
       </tr>
@@ -556,13 +582,13 @@
   </table>
   
   
-  <a id="MediaBrowser_Controller_Devices_IDeviceManager_GetUserHistory_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetUserHistory*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetUserHistory_System_String_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetUserHistory(System.String)">GetUserHistory(String)</h4>
+  <a id="MediaBrowser_Controller_Devices_IDeviceManager_GetInternalId_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetInternalId*"></a>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetInternalId_System_String_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetInternalId(System.String)">GetInternalId(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long[] GetUserHistory(string deviceId)</code></pre>
+    <pre><code class="lang-csharp hljs">long GetInternalId(string reportedDeviceId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -575,8 +601,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">deviceId</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">reportedDeviceId</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -591,7 +617,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Devices_IDeviceManager_GetUserHistory_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetUserHistory*"></a>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_GetUserHistory_System_String_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.GetUserHistory(System.String)">GetUserHistory(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long[] GetUserHistory(string reportedDevceId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">reportedDevceId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -599,13 +667,13 @@
   
   
   <a id="MediaBrowser_Controller_Devices_IDeviceManager_SaveCapabilities_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.SaveCapabilities*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_SaveCapabilities_System_String_MediaBrowser_Model_Session_ClientCapabilities_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.SaveCapabilities(System.String,MediaBrowser.Model.Session.ClientCapabilities)">SaveCapabilities(String, ClientCapabilities)</h4>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_SaveCapabilities_System_Int64_MediaBrowser_Model_Session_ClientCapabilities_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.SaveCapabilities(System.Int64,MediaBrowser.Model.Session.ClientCapabilities)">SaveCapabilities(Int64, ClientCapabilities)</h4>
   <div class="markdown level1 summary"><p>Saves the capabilities.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void SaveCapabilities(string reportedId, ClientCapabilities capabilities)</code></pre>
+    <pre><code class="lang-csharp hljs">void SaveCapabilities(long deviceId, ClientCapabilities capabilities)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -618,28 +686,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">reportedId</span></td>
-        <td><p>The reported identifier.</p>
-</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">deviceId</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.ClientCapabilities.html">ClientCapabilities</a></td>
         <td><span class="parametername">capabilities</span></td>
-        <td><p>The capabilities.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
   <a id="MediaBrowser_Controller_Devices_IDeviceManager_UpdateDeviceOptions_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.UpdateDeviceOptions*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_UpdateDeviceOptions_System_String_MediaBrowser_Model_Devices_DeviceOptions_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.UpdateDeviceOptions(System.String,MediaBrowser.Model.Devices.DeviceOptions)">UpdateDeviceOptions(String, DeviceOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_UpdateDeviceOptions_System_Int64_MediaBrowser_Model_Devices_DeviceOptions_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.UpdateDeviceOptions(System.Int64,MediaBrowser.Model.Devices.DeviceOptions)">UpdateDeviceOptions(Int64, DeviceOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void UpdateDeviceOptions(string deviceId, DeviceOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">void UpdateDeviceOptions(long deviceId, DeviceOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -652,7 +718,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">deviceId</span></td>
         <td></td>
       </tr>
@@ -685,7 +751,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Devices.CameraImageUploadInfo.html">CameraImageUploadInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Controller.Devices.CameraImageUploadInfo.html">CameraImageUploadInfo</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -697,7 +763,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;Tuple&lt;string, DeviceOptions&gt;&gt;&gt; DeviceOptionsUpdated</code></pre>
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;Tuple&lt;long, DeviceOptions&gt;&gt;&gt; DeviceOptionsUpdated</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -709,11 +775,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="MediaBrowser.Model.Devices.DeviceOptions.html">DeviceOptions</a>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="MediaBrowser.Model.Devices.DeviceOptions.html">DeviceOptions</a>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>
+  </div>
 </div>
 </article>
           </div>

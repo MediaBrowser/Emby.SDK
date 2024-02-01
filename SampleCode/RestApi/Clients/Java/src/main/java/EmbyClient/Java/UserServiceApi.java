@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -22,18 +22,17 @@ import java.io.IOException;
 import io.swagger.client.model.AuthenticateUser;
 import io.swagger.client.model.AuthenticateUserByName;
 import io.swagger.client.model.AuthenticationAuthenticationResult;
-import io.swagger.client.model.ConfigurationUserConfiguration;
 import io.swagger.client.model.CreateUserByName;
 import io.swagger.client.model.ForgotPassword;
 import io.swagger.client.model.ForgotPasswordPin;
+import io.swagger.client.model.ForgotPasswordResult;
 import io.swagger.client.model.NameIdPair;
+import io.swagger.client.model.PinRedeemResult;
 import io.swagger.client.model.QueryResultUserDto;
-import io.swagger.client.model.UpdateUserEasyPassword;
 import io.swagger.client.model.UpdateUserPassword;
+import io.swagger.client.model.UserConfiguration;
 import io.swagger.client.model.UserDto;
-import io.swagger.client.model.UsersForgotPasswordResult;
-import io.swagger.client.model.UsersPinRedeemResult;
-import io.swagger.client.model.UsersUserPolicy;
+import io.swagger.client.model.UserPolicy;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -229,7 +228,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -255,7 +254,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -266,7 +265,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -279,7 +278,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -437,22 +436,153 @@ public class UserServiceApi {
         return call;
     }
     /**
-     * Build call for getUsersPrefixes
-     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
-     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
-     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
-     * @param limit Optional. The maximum number of records to return (optional)
-     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * Build call for getUsersByUseridTypedsettingsByKey
+     * @param key Key (required)
+     * @param userId  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUsersPrefixesCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByUseridTypedsettingsByKeyCall(String key, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
-        String localVarPath = "/Users/Prefixes";
+        String localVarPath = "/Users/{UserId}/TypedSettings/{Key}"
+            .replaceAll("\\{" + "Key" + "\\}", apiClient.escapeString(key.toString()))
+            .replaceAll("\\{" + "UserId" + "\\}", apiClient.escapeString(userId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getUsersByUseridTypedsettingsByKeyValidateBeforeCall(String key, String userId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'key' is set
+        if (key == null) {
+            throw new ApiException("Missing the required parameter 'key' when calling getUsersByUseridTypedsettingsByKey(Async)");
+        }
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling getUsersByUseridTypedsettingsByKey(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = getUsersByUseridTypedsettingsByKeyCall(key, userId, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets a typed user setting
+     * Requires authentication as user
+     * @param key Key (required)
+     * @param userId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void getUsersByUseridTypedsettingsByKey(String key, String userId) throws ApiException {
+        getUsersByUseridTypedsettingsByKeyWithHttpInfo(key, userId);
+    }
+
+    /**
+     * Gets a typed user setting
+     * Requires authentication as user
+     * @param key Key (required)
+     * @param userId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> getUsersByUseridTypedsettingsByKeyWithHttpInfo(String key, String userId) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersByUseridTypedsettingsByKeyValidateBeforeCall(key, userId, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Gets a typed user setting (asynchronously)
+     * Requires authentication as user
+     * @param key Key (required)
+     * @param userId  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getUsersByUseridTypedsettingsByKeyAsync(String key, String userId, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getUsersByUseridTypedsettingsByKeyValidateBeforeCall(key, userId, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for getUsersItemaccess
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getUsersItemaccessCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Users/ItemAccess";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -466,6 +596,8 @@ public class UserServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("Limit", limit));
         if (nameStartsWithOrGreater != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("NameStartsWithOrGreater", nameStartsWithOrGreater));
+        if (sortOrder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("SortOrder", sortOrder));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -500,9 +632,9 @@ public class UserServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersPrefixesValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersItemaccessValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = getUsersPrefixesCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersItemaccessCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
         return call;
 
         
@@ -513,50 +645,53 @@ public class UserServiceApi {
 
     /**
      * Gets a list of users
-     * Requires authentication as administrator
+     * Requires authentication as user
      * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
      * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
-     * @return List&lt;NameIdPair&gt;
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @return QueryResultUserDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<NameIdPair> getUsersPrefixes(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater) throws ApiException {
-        ApiResponse<List<NameIdPair>> resp = getUsersPrefixesWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+    public QueryResultUserDto getUsersItemaccess(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        ApiResponse<QueryResultUserDto> resp = getUsersItemaccessWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
         return resp.getData();
     }
 
     /**
      * Gets a list of users
-     * Requires authentication as administrator
+     * Requires authentication as user
      * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
      * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
-     * @return ApiResponse&lt;List&lt;NameIdPair&gt;&gt;
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @return ApiResponse&lt;QueryResultUserDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<NameIdPair>> getUsersPrefixesWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersPrefixesValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, null, null);
-        Type localVarReturnType = new TypeToken<List<NameIdPair>>(){}.getType();
+    public ApiResponse<QueryResultUserDto> getUsersItemaccessWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersItemaccessValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, null, null);
+        Type localVarReturnType = new TypeToken<QueryResultUserDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
      * Gets a list of users (asynchronously)
-     * Requires authentication as administrator
+     * Requires authentication as user
      * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
      * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUsersPrefixesAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ApiCallback<List<NameIdPair>> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersItemaccessAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ApiCallback<QueryResultUserDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -577,7 +712,159 @@ public class UserServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersPrefixesValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersItemaccessValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<QueryResultUserDto>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for getUsersPrefixes
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call getUsersPrefixesCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Users/Prefixes";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (isHidden != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("IsHidden", isHidden));
+        if (isDisabled != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("IsDisabled", isDisabled));
+        if (startIndex != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("StartIndex", startIndex));
+        if (limit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("Limit", limit));
+        if (nameStartsWithOrGreater != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("NameStartsWithOrGreater", nameStartsWithOrGreater));
+        if (sortOrder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("SortOrder", sortOrder));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "application/xml"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call getUsersPrefixesValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        com.squareup.okhttp.Call call = getUsersPrefixesCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets a list of users
+     * Requires authentication as administrator
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @return List&lt;NameIdPair&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public List<NameIdPair> getUsersPrefixes(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        ApiResponse<List<NameIdPair>> resp = getUsersPrefixesWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
+        return resp.getData();
+    }
+
+    /**
+     * Gets a list of users
+     * Requires authentication as administrator
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @return ApiResponse&lt;List&lt;NameIdPair&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<List<NameIdPair>> getUsersPrefixesWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersPrefixesValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, null, null);
+        Type localVarReturnType = new TypeToken<List<NameIdPair>>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Gets a list of users (asynchronously)
+     * Requires authentication as administrator
+     * @param isHidden Optional filter by IsHidden&#x3D;true or false (optional)
+     * @param isDisabled Optional filter by IsDisabled&#x3D;true or false (optional)
+     * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     * @param limit Optional. The maximum number of records to return (optional)
+     * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call getUsersPrefixesAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ApiCallback<List<NameIdPair>> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = getUsersPrefixesValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<List<NameIdPair>>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -589,7 +876,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Gets a list of publicly visible users for display on a login screen. Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Gets a list of publicly visible users for display on a login screen. Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersPublicCall(final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
@@ -628,7 +915,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -646,11 +933,11 @@ public class UserServiceApi {
 
     /**
      * Gets a list of publicly visible users for display on a login screen.
-     * No authentication required
+     * Requires authentication as user
      * @return List&lt;UserDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Gets a list of publicly visible users for display on a login screen. Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Gets a list of publicly visible users for display on a login screen. Documentation</a>
      */
     public List<UserDto> getUsersPublic() throws ApiException {
         ApiResponse<List<UserDto>> resp = getUsersPublicWithHttpInfo();
@@ -659,11 +946,11 @@ public class UserServiceApi {
 
     /**
      * Gets a list of publicly visible users for display on a login screen.
-     * No authentication required
+     * Requires authentication as user
      * @return ApiResponse&lt;List&lt;UserDto&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Gets a list of publicly visible users for display on a login screen. Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Gets a list of publicly visible users for display on a login screen. Documentation</a>
      */
     public ApiResponse<List<UserDto>> getUsersPublicWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getUsersPublicValidateBeforeCall(null, null);
@@ -673,12 +960,12 @@ public class UserServiceApi {
 
     /**
      * Gets a list of publicly visible users for display on a login screen. (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Gets a list of publicly visible users for display on a login screen. Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Gets a list of publicly visible users for display on a login screen. Documentation</a>
      */
     public com.squareup.okhttp.Call getUsersPublicAsync(final ApiCallback<List<UserDto>> callback) throws ApiException {
 
@@ -713,12 +1000,13 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUsersQueryCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersQueryCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -736,6 +1024,8 @@ public class UserServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("Limit", limit));
         if (nameStartsWithOrGreater != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("NameStartsWithOrGreater", nameStartsWithOrGreater));
+        if (sortOrder != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("SortOrder", sortOrder));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -770,9 +1060,9 @@ public class UserServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersQueryValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersQueryValidateBeforeCall(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = getUsersQueryCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersQueryCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
         return call;
 
         
@@ -789,11 +1079,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return QueryResultUserDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public QueryResultUserDto getUsersQuery(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater) throws ApiException {
-        ApiResponse<QueryResultUserDto> resp = getUsersQueryWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+    public QueryResultUserDto getUsersQuery(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        ApiResponse<QueryResultUserDto> resp = getUsersQueryWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
         return resp.getData();
     }
 
@@ -805,11 +1096,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @return ApiResponse&lt;QueryResultUserDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<QueryResultUserDto> getUsersQueryWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersQueryValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, null, null);
+    public ApiResponse<QueryResultUserDto> getUsersQueryWithHttpInfo(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersQueryValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, null, null);
         Type localVarReturnType = new TypeToken<QueryResultUserDto>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -822,11 +1114,12 @@ public class UserServiceApi {
      * @param startIndex Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      * @param limit Optional. The maximum number of records to return (optional)
      * @param nameStartsWithOrGreater Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     * @param sortOrder Sort Order - Ascending,Descending (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUsersQueryAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, final ApiCallback<QueryResultUserDto> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersQueryAsync(Boolean isHidden, Boolean isDisabled, Integer startIndex, Integer limit, String nameStartsWithOrGreater, String sortOrder, final ApiCallback<QueryResultUserDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -847,7 +1140,7 @@ public class UserServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersQueryValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersQueryValidateBeforeCall(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<QueryResultUserDto>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -861,7 +1154,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersAuthenticatebynameCall(AuthenticateUserByName body, String xEmbyAuthorization, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
@@ -902,7 +1195,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -928,13 +1221,13 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      * @param body AuthenticateUserByName (required)
      * @param xEmbyAuthorization The authorization header can be either named &#x27;Authorization&#x27; or &#x27;X-Emby-Authorization&#x27;.    It must be of the following schema:     Emby UserId&#x3D;\&quot;(guid)\&quot;, Client&#x3D;\&quot;(string)\&quot;, Device&#x3D;\&quot;(string)\&quot;, DeviceId&#x3D;\&quot;(string)\&quot;, Version&#x3D;\&quot;string\&quot;, Token&#x3D;\&quot;(string)\&quot;     Please consult the documentation for further details. (required)
      * @return AuthenticationAuthenticationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public AuthenticationAuthenticationResult postUsersAuthenticatebyname(AuthenticateUserByName body, String xEmbyAuthorization) throws ApiException {
         ApiResponse<AuthenticationAuthenticationResult> resp = postUsersAuthenticatebynameWithHttpInfo(body, xEmbyAuthorization);
@@ -943,13 +1236,13 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      * @param body AuthenticateUserByName (required)
      * @param xEmbyAuthorization The authorization header can be either named &#x27;Authorization&#x27; or &#x27;X-Emby-Authorization&#x27;.    It must be of the following schema:     Emby UserId&#x3D;\&quot;(guid)\&quot;, Client&#x3D;\&quot;(string)\&quot;, Device&#x3D;\&quot;(string)\&quot;, DeviceId&#x3D;\&quot;(string)\&quot;, Version&#x3D;\&quot;string\&quot;, Token&#x3D;\&quot;(string)\&quot;     Please consult the documentation for further details. (required)
      * @return ApiResponse&lt;AuthenticationAuthenticationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public ApiResponse<AuthenticationAuthenticationResult> postUsersAuthenticatebynameWithHttpInfo(AuthenticateUserByName body, String xEmbyAuthorization) throws ApiException {
         com.squareup.okhttp.Call call = postUsersAuthenticatebynameValidateBeforeCall(body, xEmbyAuthorization, null, null);
@@ -959,14 +1252,14 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user (asynchronously)
-     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- No authentication required
+     * Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure --- Requires authentication as user
      * @param body AuthenticateUserByName (required)
      * @param xEmbyAuthorization The authorization header can be either named &#x27;Authorization&#x27; or &#x27;X-Emby-Authorization&#x27;.    It must be of the following schema:     Emby UserId&#x3D;\&quot;(guid)\&quot;, Client&#x3D;\&quot;(string)\&quot;, Device&#x3D;\&quot;(string)\&quot;, DeviceId&#x3D;\&quot;(string)\&quot;, Version&#x3D;\&quot;string\&quot;, Token&#x3D;\&quot;(string)\&quot;     Please consult the documentation for further details. (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersAuthenticatebynameAsync(AuthenticateUserByName body, String xEmbyAuthorization, final ApiCallback<AuthenticationAuthenticationResult> callback) throws ApiException {
 
@@ -1132,7 +1425,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersByIdAuthenticateCall(AuthenticateUser body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
@@ -1172,7 +1465,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1198,13 +1491,13 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user
-     * No authentication required
+     * Requires authentication as user
      * @param body AuthenticateUser (required)
      * @param id  (required)
      * @return AuthenticationAuthenticationResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public AuthenticationAuthenticationResult postUsersByIdAuthenticate(AuthenticateUser body, String id) throws ApiException {
         ApiResponse<AuthenticationAuthenticationResult> resp = postUsersByIdAuthenticateWithHttpInfo(body, id);
@@ -1213,13 +1506,13 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user
-     * No authentication required
+     * Requires authentication as user
      * @param body AuthenticateUser (required)
      * @param id  (required)
      * @return ApiResponse&lt;AuthenticationAuthenticationResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public ApiResponse<AuthenticationAuthenticationResult> postUsersByIdAuthenticateWithHttpInfo(AuthenticateUser body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postUsersByIdAuthenticateValidateBeforeCall(body, id, null, null);
@@ -1229,14 +1522,14 @@ public class UserServiceApi {
 
     /**
      * Authenticates a user (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param body AuthenticateUser (required)
      * @param id  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * API Documentation: Authentication
-     * @see <a href="https://github.com/MediaBrowser/Emby/wiki/User-Authentication">Authenticates a user Documentation</a>
+     * @see <a href="https://dev.emby.media/doc/restapi/User-Authentication.html">Authenticates a user Documentation</a>
      */
     public com.squareup.okhttp.Call postUsersByIdAuthenticateAsync(AuthenticateUser body, String id, final ApiCallback<AuthenticationAuthenticationResult> callback) throws ApiException {
 
@@ -1273,7 +1566,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdConfigurationCall(ConfigurationUserConfiguration body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdConfigurationCall(UserConfiguration body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1316,7 +1609,7 @@ public class UserServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByIdConfigurationValidateBeforeCall(ConfigurationUserConfiguration body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUsersByIdConfigurationValidateBeforeCall(UserConfiguration body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postUsersByIdConfiguration(Async)");
@@ -1342,7 +1635,7 @@ public class UserServiceApi {
      * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postUsersByIdConfiguration(ConfigurationUserConfiguration body, String id) throws ApiException {
+    public void postUsersByIdConfiguration(UserConfiguration body, String id) throws ApiException {
         postUsersByIdConfigurationWithHttpInfo(body, id);
     }
 
@@ -1354,7 +1647,7 @@ public class UserServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postUsersByIdConfigurationWithHttpInfo(ConfigurationUserConfiguration body, String id) throws ApiException {
+    public ApiResponse<Void> postUsersByIdConfigurationWithHttpInfo(UserConfiguration body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postUsersByIdConfigurationValidateBeforeCall(body, id, null, null);
         return apiClient.execute(call);
     }
@@ -1368,7 +1661,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdConfigurationAsync(ConfigurationUserConfiguration body, String id, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdConfigurationAsync(UserConfiguration body, String id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1390,6 +1683,135 @@ public class UserServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUsersByIdConfigurationValidateBeforeCall(body, id, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for postUsersByIdConfigurationPartial
+     * @param body Binary stream (required)
+     * @param id  (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call postUsersByIdConfigurationPartialCall(Object body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+        
+        // create path and map variables
+        String localVarPath = "/Users/{Id}/Configuration/Partial"
+            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/octet-stream"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call postUsersByIdConfigurationPartialValidateBeforeCall(Object body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling postUsersByIdConfigurationPartial(Async)");
+        }
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling postUsersByIdConfigurationPartial(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = postUsersByIdConfigurationPartialCall(body, id, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Updates a user configuration
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param id  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void postUsersByIdConfigurationPartial(Object body, String id) throws ApiException {
+        postUsersByIdConfigurationPartialWithHttpInfo(body, id);
+    }
+
+    /**
+     * Updates a user configuration
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param id  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> postUsersByIdConfigurationPartialWithHttpInfo(Object body, String id) throws ApiException {
+        com.squareup.okhttp.Call call = postUsersByIdConfigurationPartialValidateBeforeCall(body, id, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Updates a user configuration (asynchronously)
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param id  (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call postUsersByIdConfigurationPartialAsync(Object body, String id, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = postUsersByIdConfigurationPartialValidateBeforeCall(body, id, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1511,135 +1933,6 @@ public class UserServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUsersByIdDeleteValidateBeforeCall(id, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
-        return call;
-    }
-    /**
-     * Build call for postUsersByIdEasypassword
-     * @param body UpdateUserEasyPassword (required)
-     * @param id  (required)
-     * @param progressListener Progress listener
-     * @param progressRequestListener Progress request listener
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     */
-    public com.squareup.okhttp.Call postUsersByIdEasypasswordCall(UpdateUserEasyPassword body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = body;
-        
-        // create path and map variables
-        String localVarPath = "/Users/{Id}/EasyPassword"
-            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            
-        };
-        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-        final String[] localVarContentTypes = {
-            "application/json", "application/xml"
-        };
-        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
-
-        if(progressListener != null) {
-            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                    return originalResponse.newBuilder()
-                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                    .build();
-                }
-            });
-        }
-
-        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
-        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
-    }
-    
-    @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByIdEasypasswordValidateBeforeCall(UpdateUserEasyPassword body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'body' is set
-        if (body == null) {
-            throw new ApiException("Missing the required parameter 'body' when calling postUsersByIdEasypassword(Async)");
-        }
-        // verify the required parameter 'id' is set
-        if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling postUsersByIdEasypassword(Async)");
-        }
-        
-        com.squareup.okhttp.Call call = postUsersByIdEasypasswordCall(body, id, progressListener, progressRequestListener);
-        return call;
-
-        
-        
-        
-        
-    }
-
-    /**
-     * Updates a user&#x27;s easy password
-     * Requires authentication as user
-     * @param body UpdateUserEasyPassword (required)
-     * @param id  (required)
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public void postUsersByIdEasypassword(UpdateUserEasyPassword body, String id) throws ApiException {
-        postUsersByIdEasypasswordWithHttpInfo(body, id);
-    }
-
-    /**
-     * Updates a user&#x27;s easy password
-     * Requires authentication as user
-     * @param body UpdateUserEasyPassword (required)
-     * @param id  (required)
-     * @return ApiResponse&lt;Void&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     */
-    public ApiResponse<Void> postUsersByIdEasypasswordWithHttpInfo(UpdateUserEasyPassword body, String id) throws ApiException {
-        com.squareup.okhttp.Call call = postUsersByIdEasypasswordValidateBeforeCall(body, id, null, null);
-        return apiClient.execute(call);
-    }
-
-    /**
-     * Updates a user&#x27;s easy password (asynchronously)
-     * Requires authentication as user
-     * @param body UpdateUserEasyPassword (required)
-     * @param id  (required)
-     * @param callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     */
-    public com.squareup.okhttp.Call postUsersByIdEasypasswordAsync(UpdateUserEasyPassword body, String id, final ApiCallback<Void> callback) throws ApiException {
-
-        ProgressResponseBody.ProgressListener progressListener = null;
-        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-        if (callback != null) {
-            progressListener = new ProgressResponseBody.ProgressListener() {
-                @Override
-                public void update(long bytesRead, long contentLength, boolean done) {
-                    callback.onDownloadProgress(bytesRead, contentLength, done);
-                }
-            };
-
-            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
-                @Override
-                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                    callback.onUploadProgress(bytesWritten, contentLength, done);
-                }
-            };
-        }
-
-        com.squareup.okhttp.Call call = postUsersByIdEasypasswordValidateBeforeCall(body, id, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1781,7 +2074,7 @@ public class UserServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdPolicyCall(UsersUserPolicy body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdPolicyCall(UserPolicy body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -1824,7 +2117,7 @@ public class UserServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByIdPolicyValidateBeforeCall(UsersUserPolicy body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUsersByIdPolicyValidateBeforeCall(UserPolicy body, String id, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postUsersByIdPolicy(Async)");
@@ -1850,7 +2143,7 @@ public class UserServiceApi {
      * @param id  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postUsersByIdPolicy(UsersUserPolicy body, String id) throws ApiException {
+    public void postUsersByIdPolicy(UserPolicy body, String id) throws ApiException {
         postUsersByIdPolicyWithHttpInfo(body, id);
     }
 
@@ -1862,7 +2155,7 @@ public class UserServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postUsersByIdPolicyWithHttpInfo(UsersUserPolicy body, String id) throws ApiException {
+    public ApiResponse<Void> postUsersByIdPolicyWithHttpInfo(UserPolicy body, String id) throws ApiException {
         com.squareup.okhttp.Call call = postUsersByIdPolicyValidateBeforeCall(body, id, null, null);
         return apiClient.execute(call);
     }
@@ -1876,7 +2169,7 @@ public class UserServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdPolicyAsync(UsersUserPolicy body, String id, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdPolicyAsync(UserPolicy body, String id, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1949,7 +2242,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -1975,7 +2268,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1986,7 +2279,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @return ApiResponse&lt;Void&gt;
@@ -1999,7 +2292,7 @@ public class UserServiceApi {
 
     /**
      * Clears audio or subtitle track selections for a user (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param id  (required)
      * @param trackType  (required)
      * @param callback The callback to be executed when the API call finishes
@@ -2028,6 +2321,144 @@ public class UserServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUsersByIdTrackselectionsByTracktypeDeleteValidateBeforeCall(id, trackType, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for postUsersByUseridTypedsettingsByKey
+     * @param body Binary stream (required)
+     * @param userId  (required)
+     * @param key Key (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call postUsersByUseridTypedsettingsByKeyCall(Object body, String userId, String key, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+        
+        // create path and map variables
+        String localVarPath = "/Users/{UserId}/TypedSettings/{Key}"
+            .replaceAll("\\{" + "UserId" + "\\}", apiClient.escapeString(userId.toString()))
+            .replaceAll("\\{" + "Key" + "\\}", apiClient.escapeString(key.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/octet-stream"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call postUsersByUseridTypedsettingsByKeyValidateBeforeCall(Object body, String userId, String key, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling postUsersByUseridTypedsettingsByKey(Async)");
+        }
+        // verify the required parameter 'userId' is set
+        if (userId == null) {
+            throw new ApiException("Missing the required parameter 'userId' when calling postUsersByUseridTypedsettingsByKey(Async)");
+        }
+        // verify the required parameter 'key' is set
+        if (key == null) {
+            throw new ApiException("Missing the required parameter 'key' when calling postUsersByUseridTypedsettingsByKey(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = postUsersByUseridTypedsettingsByKeyCall(body, userId, key, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Updates a typed user setting
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param userId  (required)
+     * @param key Key (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void postUsersByUseridTypedsettingsByKey(Object body, String userId, String key) throws ApiException {
+        postUsersByUseridTypedsettingsByKeyWithHttpInfo(body, userId, key);
+    }
+
+    /**
+     * Updates a typed user setting
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param userId  (required)
+     * @param key Key (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> postUsersByUseridTypedsettingsByKeyWithHttpInfo(Object body, String userId, String key) throws ApiException {
+        com.squareup.okhttp.Call call = postUsersByUseridTypedsettingsByKeyValidateBeforeCall(body, userId, key, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Updates a typed user setting (asynchronously)
+     * Requires authentication as user
+     * @param body Binary stream (required)
+     * @param userId  (required)
+     * @param key Key (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call postUsersByUseridTypedsettingsByKeyAsync(Object body, String userId, String key, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = postUsersByUseridTypedsettingsByKeyValidateBeforeCall(body, userId, key, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -2076,7 +2507,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2098,38 +2529,38 @@ public class UserServiceApi {
 
     /**
      * Initiates the forgot password process for a local user
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPassword (required)
-     * @return UsersForgotPasswordResult
+     * @return ForgotPasswordResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public UsersForgotPasswordResult postUsersForgotpassword(ForgotPassword body) throws ApiException {
-        ApiResponse<UsersForgotPasswordResult> resp = postUsersForgotpasswordWithHttpInfo(body);
+    public ForgotPasswordResult postUsersForgotpassword(ForgotPassword body) throws ApiException {
+        ApiResponse<ForgotPasswordResult> resp = postUsersForgotpasswordWithHttpInfo(body);
         return resp.getData();
     }
 
     /**
      * Initiates the forgot password process for a local user
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPassword (required)
-     * @return ApiResponse&lt;UsersForgotPasswordResult&gt;
+     * @return ApiResponse&lt;ForgotPasswordResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<UsersForgotPasswordResult> postUsersForgotpasswordWithHttpInfo(ForgotPassword body) throws ApiException {
+    public ApiResponse<ForgotPasswordResult> postUsersForgotpasswordWithHttpInfo(ForgotPassword body) throws ApiException {
         com.squareup.okhttp.Call call = postUsersForgotpasswordValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<UsersForgotPasswordResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<ForgotPasswordResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
      * Initiates the forgot password process for a local user (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPassword (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersForgotpasswordAsync(ForgotPassword body, final ApiCallback<UsersForgotPasswordResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersForgotpasswordAsync(ForgotPassword body, final ApiCallback<ForgotPasswordResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2151,7 +2582,7 @@ public class UserServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUsersForgotpasswordValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<UsersForgotPasswordResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<ForgotPasswordResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -2200,7 +2631,7 @@ public class UserServiceApi {
             });
         }
 
-        String[] localVarAuthNames = new String[] {  };
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
     
@@ -2222,38 +2653,38 @@ public class UserServiceApi {
 
     /**
      * Redeems a forgot password pin
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPasswordPin (required)
-     * @return UsersPinRedeemResult
+     * @return PinRedeemResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public UsersPinRedeemResult postUsersForgotpasswordPin(ForgotPasswordPin body) throws ApiException {
-        ApiResponse<UsersPinRedeemResult> resp = postUsersForgotpasswordPinWithHttpInfo(body);
+    public PinRedeemResult postUsersForgotpasswordPin(ForgotPasswordPin body) throws ApiException {
+        ApiResponse<PinRedeemResult> resp = postUsersForgotpasswordPinWithHttpInfo(body);
         return resp.getData();
     }
 
     /**
      * Redeems a forgot password pin
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPasswordPin (required)
-     * @return ApiResponse&lt;UsersPinRedeemResult&gt;
+     * @return ApiResponse&lt;PinRedeemResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<UsersPinRedeemResult> postUsersForgotpasswordPinWithHttpInfo(ForgotPasswordPin body) throws ApiException {
+    public ApiResponse<PinRedeemResult> postUsersForgotpasswordPinWithHttpInfo(ForgotPasswordPin body) throws ApiException {
         com.squareup.okhttp.Call call = postUsersForgotpasswordPinValidateBeforeCall(body, null, null);
-        Type localVarReturnType = new TypeToken<UsersPinRedeemResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<PinRedeemResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
      * Redeems a forgot password pin (asynchronously)
-     * No authentication required
+     * Requires authentication as user
      * @param body ForgotPasswordPin (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersForgotpasswordPinAsync(ForgotPasswordPin body, final ApiCallback<UsersPinRedeemResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersForgotpasswordPinAsync(ForgotPasswordPin body, final ApiCallback<PinRedeemResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2275,7 +2706,7 @@ public class UserServiceApi {
         }
 
         com.squareup.okhttp.Call call = postUsersForgotpasswordPinValidateBeforeCall(body, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<UsersPinRedeemResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<PinRedeemResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

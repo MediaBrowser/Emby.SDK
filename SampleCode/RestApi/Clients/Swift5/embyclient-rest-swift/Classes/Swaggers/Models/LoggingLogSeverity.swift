@@ -8,6 +8,7 @@
 import Foundation
 
 
+/** Enum LogSeverity   */
 public enum LoggingLogSeverity: String, Codable {
     case info = "Info"
     case debug = "Debug"

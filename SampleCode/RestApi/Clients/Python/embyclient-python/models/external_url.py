@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -45,6 +45,7 @@ class ExternalUrl(object):
     def name(self):
         """Gets the name of this ExternalUrl.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this ExternalUrl.  # noqa: E501
         :rtype: str
@@ -55,6 +56,7 @@ class ExternalUrl(object):
     def name(self, name):
         """Sets the name of this ExternalUrl.
 
+        The name.  # noqa: E501
 
         :param name: The name of this ExternalUrl.  # noqa: E501
         :type: str
@@ -66,6 +68,7 @@ class ExternalUrl(object):
     def url(self):
         """Gets the url of this ExternalUrl.  # noqa: E501
 
+        The type of the item.  # noqa: E501
 
         :return: The url of this ExternalUrl.  # noqa: E501
         :rtype: str
@@ -76,6 +79,7 @@ class ExternalUrl(object):
     def url(self, url):
         """Sets the url of this ExternalUrl.
 
+        The type of the item.  # noqa: E501
 
         :param url: The url of this ExternalUrl.  # noqa: E501
         :type: str

@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -16,9 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import org.threeten.bp.OffsetDateTime;
 /**
- * UserItemDataDto
+ * Class UserItemDataDto  
  */
-
+@Schema(description = "Class UserItemDataDto  ")
 
 public class UserItemDataDto {
   @SerializedName("Rating")
@@ -60,10 +60,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get rating
+   * The rating.
    * @return rating
   **/
-  @Schema(description = "")
+  @Schema(description = "The rating.")
   public Double getRating() {
     return rating;
   }
@@ -78,10 +78,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get playedPercentage
+   * The played percentage.
    * @return playedPercentage
   **/
-  @Schema(description = "")
+  @Schema(description = "The played percentage.")
   public Double getPlayedPercentage() {
     return playedPercentage;
   }
@@ -96,10 +96,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get unplayedItemCount
+   * The unplayed item count.
    * @return unplayedItemCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The unplayed item count.")
   public Integer getUnplayedItemCount() {
     return unplayedItemCount;
   }
@@ -114,10 +114,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get playbackPositionTicks
+   * The playback position ticks.
    * @return playbackPositionTicks
   **/
-  @Schema(description = "")
+  @Schema(description = "The playback position ticks.")
   public Long getPlaybackPositionTicks() {
     return playbackPositionTicks;
   }
@@ -132,10 +132,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get playCount
+   * The play count.
    * @return playCount
   **/
-  @Schema(description = "")
+  @Schema(description = "The play count.")
   public Integer getPlayCount() {
     return playCount;
   }
@@ -150,10 +150,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get isFavorite
+   * A value indicating whether this instance is favorite.
    * @return isFavorite
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this instance is favorite.")
   public Boolean isIsFavorite() {
     return isFavorite;
   }
@@ -168,10 +168,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get lastPlayedDate
+   * The last played date.
    * @return lastPlayedDate
   **/
-  @Schema(description = "")
+  @Schema(description = "The last played date.")
   public OffsetDateTime getLastPlayedDate() {
     return lastPlayedDate;
   }
@@ -186,10 +186,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get played
+   * A value indicating whether this &#x60;MediaBrowser.Model.Dto.UserItemDataDto&#x60; is played.
    * @return played
   **/
-  @Schema(description = "")
+  @Schema(description = "A value indicating whether this `MediaBrowser.Model.Dto.UserItemDataDto` is played.")
   public Boolean isPlayed() {
     return played;
   }
@@ -204,10 +204,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get key
+   * The key.
    * @return key
   **/
-  @Schema(description = "")
+  @Schema(description = "The key.")
   public String getKey() {
     return key;
   }
@@ -222,10 +222,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get itemId
+   * The item identifier.
    * @return itemId
   **/
-  @Schema(description = "")
+  @Schema(description = "The item identifier.")
   public String getItemId() {
     return itemId;
   }
@@ -240,10 +240,10 @@ public class UserItemDataDto {
   }
 
    /**
-   * Get serverId
+   * Used only by our Windows app. Not used by Emby Server.
    * @return serverId
   **/
-  @Schema(description = "")
+  @Schema(description = "Used only by our Windows app. Not used by Emby Server.")
   public String getServerId() {
     return serverId;
   }

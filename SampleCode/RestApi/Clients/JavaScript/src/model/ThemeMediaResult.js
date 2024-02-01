@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,11 +15,12 @@ import BaseItemDto from './BaseItemDto';
 /**
 * The ThemeMediaResult model module.
 * @module model/ThemeMediaResult
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ThemeMediaResult {
     /**
     * Constructs a new <code>ThemeMediaResult</code>.
+    * Class ThemeMediaResult  
     * @alias module:model/ThemeMediaResult
     * @class
     */
@@ -56,6 +57,7 @@ export default class ThemeMediaResult {
     }
 
     /**
+    * The owner id.
     * @member {Number} OwnerId
     */
     'OwnerId' = undefined;

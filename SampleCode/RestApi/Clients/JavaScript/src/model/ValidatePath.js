@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ValidatePath model module.
 * @module model/ValidatePath
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class ValidatePath {
     /**
@@ -47,6 +47,12 @@ export default class ValidatePath {
             if (data.hasOwnProperty('IsFile')) {
                 obj['IsFile'] = ApiClient.convertToType(data['IsFile'], 'Boolean');
             }
+            if (data.hasOwnProperty('Username')) {
+                obj['Username'] = ApiClient.convertToType(data['Username'], 'String');
+            }
+            if (data.hasOwnProperty('Password')) {
+                obj['Password'] = ApiClient.convertToType(data['Password'], 'String');
+            }
         }
         return obj;
     }
@@ -59,6 +65,14 @@ export default class ValidatePath {
     * @member {Boolean} IsFile
     */
     'IsFile' = undefined;
+    /**
+    * @member {String} Username
+    */
+    'Username' = undefined;
+    /**
+    * @member {String} Password
+    */
+    'Password' = undefined;
 
 
 

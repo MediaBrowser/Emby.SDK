@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -92,6 +92,7 @@ class PlaystateRequest(object):
     def controlling_user_id(self):
         """Gets the controlling_user_id of this PlaystateRequest.  # noqa: E501
 
+        The controlling user identifier.  # noqa: E501
 
         :return: The controlling_user_id of this PlaystateRequest.  # noqa: E501
         :rtype: str
@@ -102,6 +103,7 @@ class PlaystateRequest(object):
     def controlling_user_id(self, controlling_user_id):
         """Sets the controlling_user_id of this PlaystateRequest.
 
+        The controlling user identifier.  # noqa: E501
 
         :param controlling_user_id: The controlling_user_id of this PlaystateRequest.  # noqa: E501
         :type: str

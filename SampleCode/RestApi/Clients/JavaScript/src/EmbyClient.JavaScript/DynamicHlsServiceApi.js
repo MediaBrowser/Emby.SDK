@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import DlnaSubtitleDeliveryMethod from '../model/DlnaSubtitleDeliveryMethod';
+import SubtitleDeliveryMethod from '../model/SubtitleDeliveryMethod';
 
 /**
 * DynamicHlsService service.
 * @module EmbyClient.JavaScript/DynamicHlsServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class DynamicHlsServiceApi {
 
@@ -39,7 +39,7 @@ export default class DynamicHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/DynamicHlsServiceApi~getAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer() {
@@ -58,13 +58,74 @@ export default class DynamicHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
 
       return this.apiClient.callApi(
         '/Audio/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getAudioByIdLiveM3u8 operation.
+     * @callback module:EmbyClient.JavaScript/DynamicHlsServiceApi~getAudioByIdLiveM3u8Callback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript/DynamicHlsServiceApi~getAudioByIdLiveM3u8Callback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getAudioByIdLiveM3u8() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+        'DeviceProfileId': opts['deviceProfileId'],
+        'DeviceId': opts['deviceId'],
+        'Container': container,
+        'AudioCodec': opts['audioCodec'],
+        'EnableAutoStreamCopy': opts['enableAutoStreamCopy'],
+        'AudioSampleRate': opts['audioSampleRate'],
+        'AudioBitRate': opts['audioBitRate'],
+        'AudioChannels': opts['audioChannels'],
+        'MaxAudioChannels': opts['maxAudioChannels'],
+        'Static': opts['_static'],
+        'CopyTimestamps': opts['copyTimestamps'],
+        'StartTimeTicks': opts['startTimeTicks'],
+        'Width': opts['width'],
+        'Height': opts['height'],
+        'MaxWidth': opts['maxWidth'],
+        'MaxHeight': opts['maxHeight'],
+        'VideoBitRate': opts['videoBitRate'],
+        'SubtitleStreamIndex': opts['subtitleStreamIndex'],
+        'SubtitleMethod': opts['subtitleMethod'],
+        'MaxVideoBitDepth': opts['maxVideoBitDepth'],
+        'VideoCodec': opts['videoCodec'],
+        'AudioStreamIndex': opts['audioStreamIndex'],
+        'VideoStreamIndex': opts['videoStreamIndex']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Audio/{Id}/live.m3u8', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -101,10 +162,6 @@ export default class DynamicHlsServiceApi {
         'AudioChannels': opts['audioChannels'],
         'MaxAudioChannels': opts['maxAudioChannels'],
         'Static': opts['_static'],
-        'Profile': opts['profile'],
-        'Level': opts['level'],
-        'Framerate': opts['framerate'],
-        'MaxFramerate': opts['maxFramerate'],
         'CopyTimestamps': opts['copyTimestamps'],
         'StartTimeTicks': opts['startTimeTicks'],
         'Width': opts['width'],
@@ -114,7 +171,6 @@ export default class DynamicHlsServiceApi {
         'VideoBitRate': opts['videoBitRate'],
         'SubtitleStreamIndex': opts['subtitleStreamIndex'],
         'SubtitleMethod': opts['subtitleMethod'],
-        'MaxRefFrames': opts['maxRefFrames'],
         'MaxVideoBitDepth': opts['maxVideoBitDepth'],
         'VideoCodec': opts['videoCodec'],
         'AudioStreamIndex': opts['audioStreamIndex'],
@@ -168,10 +224,6 @@ export default class DynamicHlsServiceApi {
         'AudioChannels': opts['audioChannels'],
         'MaxAudioChannels': opts['maxAudioChannels'],
         'Static': opts['_static'],
-        'Profile': opts['profile'],
-        'Level': opts['level'],
-        'Framerate': opts['framerate'],
-        'MaxFramerate': opts['maxFramerate'],
         'CopyTimestamps': opts['copyTimestamps'],
         'StartTimeTicks': opts['startTimeTicks'],
         'Width': opts['width'],
@@ -181,7 +233,6 @@ export default class DynamicHlsServiceApi {
         'VideoBitRate': opts['videoBitRate'],
         'SubtitleStreamIndex': opts['subtitleStreamIndex'],
         'SubtitleMethod': opts['subtitleMethod'],
-        'MaxRefFrames': opts['maxRefFrames'],
         'MaxVideoBitDepth': opts['maxVideoBitDepth'],
         'VideoCodec': opts['videoCodec'],
         'AudioStreamIndex': opts['audioStreamIndex'],
@@ -212,7 +263,7 @@ export default class DynamicHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/DynamicHlsServiceApi~getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     getVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer() {
@@ -231,13 +282,74 @@ export default class DynamicHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
 
       return this.apiClient.callApi(
         '/Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getVideosByIdLiveM3u8 operation.
+     * @callback module:EmbyClient.JavaScript/DynamicHlsServiceApi~getVideosByIdLiveM3u8Callback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript/DynamicHlsServiceApi~getVideosByIdLiveM3u8Callback} callback The callback function, accepting three arguments: error, data, response
+     */
+    getVideosByIdLiveM3u8() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+        'DeviceProfileId': opts['deviceProfileId'],
+        'DeviceId': opts['deviceId'],
+        'Container': container,
+        'AudioCodec': opts['audioCodec'],
+        'EnableAutoStreamCopy': opts['enableAutoStreamCopy'],
+        'AudioSampleRate': opts['audioSampleRate'],
+        'AudioBitRate': opts['audioBitRate'],
+        'AudioChannels': opts['audioChannels'],
+        'MaxAudioChannels': opts['maxAudioChannels'],
+        'Static': opts['_static'],
+        'CopyTimestamps': opts['copyTimestamps'],
+        'StartTimeTicks': opts['startTimeTicks'],
+        'Width': opts['width'],
+        'Height': opts['height'],
+        'MaxWidth': opts['maxWidth'],
+        'MaxHeight': opts['maxHeight'],
+        'VideoBitRate': opts['videoBitRate'],
+        'SubtitleStreamIndex': opts['subtitleStreamIndex'],
+        'SubtitleMethod': opts['subtitleMethod'],
+        'MaxVideoBitDepth': opts['maxVideoBitDepth'],
+        'VideoCodec': opts['videoCodec'],
+        'AudioStreamIndex': opts['audioStreamIndex'],
+        'VideoStreamIndex': opts['videoStreamIndex']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Videos/{Id}/live.m3u8', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -313,10 +425,6 @@ export default class DynamicHlsServiceApi {
         'AudioChannels': opts['audioChannels'],
         'MaxAudioChannels': opts['maxAudioChannels'],
         'Static': opts['_static'],
-        'Profile': opts['profile'],
-        'Level': opts['level'],
-        'Framerate': opts['framerate'],
-        'MaxFramerate': opts['maxFramerate'],
         'CopyTimestamps': opts['copyTimestamps'],
         'StartTimeTicks': opts['startTimeTicks'],
         'Width': opts['width'],
@@ -326,7 +434,6 @@ export default class DynamicHlsServiceApi {
         'VideoBitRate': opts['videoBitRate'],
         'SubtitleStreamIndex': opts['subtitleStreamIndex'],
         'SubtitleMethod': opts['subtitleMethod'],
-        'MaxRefFrames': opts['maxRefFrames'],
         'MaxVideoBitDepth': opts['maxVideoBitDepth'],
         'VideoCodec': opts['videoCodec'],
         'AudioStreamIndex': opts['audioStreamIndex'],
@@ -380,10 +487,6 @@ export default class DynamicHlsServiceApi {
         'AudioChannels': opts['audioChannels'],
         'MaxAudioChannels': opts['maxAudioChannels'],
         'Static': opts['_static'],
-        'Profile': opts['profile'],
-        'Level': opts['level'],
-        'Framerate': opts['framerate'],
-        'MaxFramerate': opts['maxFramerate'],
         'CopyTimestamps': opts['copyTimestamps'],
         'StartTimeTicks': opts['startTimeTicks'],
         'Width': opts['width'],
@@ -393,7 +496,6 @@ export default class DynamicHlsServiceApi {
         'VideoBitRate': opts['videoBitRate'],
         'SubtitleStreamIndex': opts['subtitleStreamIndex'],
         'SubtitleMethod': opts['subtitleMethod'],
-        'MaxRefFrames': opts['maxRefFrames'],
         'MaxVideoBitDepth': opts['maxVideoBitDepth'],
         'VideoCodec': opts['videoCodec'],
         'AudioStreamIndex': opts['audioStreamIndex'],
@@ -463,7 +565,7 @@ export default class DynamicHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/DynamicHlsServiceApi~headAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     headAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer() {
@@ -482,7 +584,7 @@ export default class DynamicHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -525,10 +627,6 @@ export default class DynamicHlsServiceApi {
         'AudioChannels': opts['audioChannels'],
         'MaxAudioChannels': opts['maxAudioChannels'],
         'Static': opts['_static'],
-        'Profile': opts['profile'],
-        'Level': opts['level'],
-        'Framerate': opts['framerate'],
-        'MaxFramerate': opts['maxFramerate'],
         'CopyTimestamps': opts['copyTimestamps'],
         'StartTimeTicks': opts['startTimeTicks'],
         'Width': opts['width'],
@@ -538,7 +636,6 @@ export default class DynamicHlsServiceApi {
         'VideoBitRate': opts['videoBitRate'],
         'SubtitleStreamIndex': opts['subtitleStreamIndex'],
         'SubtitleMethod': opts['subtitleMethod'],
-        'MaxRefFrames': opts['maxRefFrames'],
         'MaxVideoBitDepth': opts['maxVideoBitDepth'],
         'VideoCodec': opts['videoCodec'],
         'AudioStreamIndex': opts['audioStreamIndex'],
@@ -569,7 +666,7 @@ export default class DynamicHlsServiceApi {
      */
 
     /**
-     * No authentication required
+     * Requires authentication as user
      * @param {module:EmbyClient.JavaScript/DynamicHlsServiceApi~headVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerCallback} callback The callback function, accepting three arguments: error, data, response
      */
     headVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer() {
@@ -588,7 +685,7 @@ export default class DynamicHlsServiceApi {
       let formParams = {
       };
 
-      let authNames = [];
+      let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -631,10 +728,6 @@ export default class DynamicHlsServiceApi {
         'AudioChannels': opts['audioChannels'],
         'MaxAudioChannels': opts['maxAudioChannels'],
         'Static': opts['_static'],
-        'Profile': opts['profile'],
-        'Level': opts['level'],
-        'Framerate': opts['framerate'],
-        'MaxFramerate': opts['maxFramerate'],
         'CopyTimestamps': opts['copyTimestamps'],
         'StartTimeTicks': opts['startTimeTicks'],
         'Width': opts['width'],
@@ -644,7 +737,6 @@ export default class DynamicHlsServiceApi {
         'VideoBitRate': opts['videoBitRate'],
         'SubtitleStreamIndex': opts['subtitleStreamIndex'],
         'SubtitleMethod': opts['subtitleMethod'],
-        'MaxRefFrames': opts['maxRefFrames'],
         'MaxVideoBitDepth': opts['maxVideoBitDepth'],
         'VideoCodec': opts['videoCodec'],
         'AudioStreamIndex': opts['audioStreamIndex'],

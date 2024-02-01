@@ -28,7 +28,7 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="command">command.</param>
         /// <param name="seekPositionTicks">seekPositionTicks.</param>
-        /// <param name="controllingUserId">controllingUserId.</param>
+        /// <param name="controllingUserId">The controlling user identifier..</param>
         public PlaystateRequest(PlaystateCommand command = default(PlaystateCommand), long? seekPositionTicks = default(long?), string controllingUserId = default(string))
         {
             this.Command = command;
@@ -49,8 +49,9 @@ namespace EmbyClient.Dotnet.Model
         public long? SeekPositionTicks { get; set; }
 
         /// <summary>
-        /// Gets or Sets ControllingUserId
+        /// The controlling user identifier.
         /// </summary>
+        /// <value>The controlling user identifier.</value>
         [DataMember(Name="ControllingUserId", EmitDefaultValue=false)]
         public string ControllingUserId { get; set; }
 

@@ -11,9 +11,13 @@ import Foundation
 
 public struct LogFile: Codable {
 
+    /** The date created. */
     public var dateCreated: Date?
+    /** The date modified. */
     public var dateModified: Date?
+    /** The size. */
     public var size: Int64?
+    /** The name. */
     public var name: String?
 
     public init(dateCreated: Date? = nil, dateModified: Date? = nil, size: Int64? = nil, name: String? = nil) {

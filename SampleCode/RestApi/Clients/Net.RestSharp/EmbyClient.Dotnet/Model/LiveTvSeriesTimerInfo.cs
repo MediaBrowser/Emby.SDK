@@ -26,36 +26,38 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LiveTvSeriesTimerInfo" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="channelId">channelId.</param>
+        /// <param name="id">Id of the recording..</param>
+        /// <param name="channelId">ChannelId of the recording..</param>
         /// <param name="channelIds">channelIds.</param>
-        /// <param name="programId">programId.</param>
-        /// <param name="name">name.</param>
+        /// <param name="parentFolderId">parentFolderId.</param>
+        /// <param name="programId">The program identifier..</param>
+        /// <param name="name">Name of the recording..</param>
         /// <param name="serviceName">serviceName.</param>
-        /// <param name="overview">overview.</param>
-        /// <param name="startDate">startDate.</param>
-        /// <param name="endDate">endDate.</param>
-        /// <param name="recordAnyTime">recordAnyTime.</param>
+        /// <param name="overview">Description of the recording..</param>
+        /// <param name="startDate">The start date of the recording, in UTC..</param>
+        /// <param name="endDate">The end date of the recording, in UTC..</param>
+        /// <param name="recordAnyTime">A value indicating whether \\[record any time\\]..</param>
         /// <param name="keepUpTo">keepUpTo.</param>
         /// <param name="keepUntil">keepUntil.</param>
         /// <param name="skipEpisodesInLibrary">skipEpisodesInLibrary.</param>
-        /// <param name="recordNewOnly">recordNewOnly.</param>
-        /// <param name="days">days.</param>
-        /// <param name="priority">priority.</param>
-        /// <param name="prePaddingSeconds">prePaddingSeconds.</param>
-        /// <param name="postPaddingSeconds">postPaddingSeconds.</param>
-        /// <param name="isPrePaddingRequired">isPrePaddingRequired.</param>
-        /// <param name="isPostPaddingRequired">isPostPaddingRequired.</param>
-        /// <param name="seriesId">seriesId.</param>
+        /// <param name="recordNewOnly">A value indicating whether \\[record new only\\]..</param>
+        /// <param name="days">The days..</param>
+        /// <param name="priority">The priority..</param>
+        /// <param name="prePaddingSeconds">The pre padding seconds..</param>
+        /// <param name="postPaddingSeconds">The post padding seconds..</param>
+        /// <param name="isPrePaddingRequired">A value indicating whether this instance is pre padding required..</param>
+        /// <param name="isPostPaddingRequired">A value indicating whether this instance is post padding required..</param>
+        /// <param name="seriesId">The series identifier..</param>
         /// <param name="providerIds">providerIds.</param>
         /// <param name="maxRecordingSeconds">maxRecordingSeconds.</param>
         /// <param name="keywords">keywords.</param>
         /// <param name="timerType">timerType.</param>
-        public LiveTvSeriesTimerInfo(string id = default(string), string channelId = default(string), List<string> channelIds = default(List<string>), string programId = default(string), string name = default(string), string serviceName = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), bool? recordAnyTime = default(bool?), int? keepUpTo = default(int?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil), bool? skipEpisodesInLibrary = default(bool?), bool? recordNewOnly = default(bool?), List<DayOfWeek> days = default(List<DayOfWeek>), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), bool? isPostPaddingRequired = default(bool?), string seriesId = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? maxRecordingSeconds = default(int?), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType))
+        public LiveTvSeriesTimerInfo(string id = default(string), string channelId = default(string), List<string> channelIds = default(List<string>), long? parentFolderId = default(long?), string programId = default(string), string name = default(string), string serviceName = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), bool? recordAnyTime = default(bool?), int? keepUpTo = default(int?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil), bool? skipEpisodesInLibrary = default(bool?), bool? recordNewOnly = default(bool?), List<DayOfWeek> days = default(List<DayOfWeek>), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), bool? isPostPaddingRequired = default(bool?), string seriesId = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? maxRecordingSeconds = default(int?), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType))
         {
             this.Id = id;
             this.ChannelId = channelId;
             this.ChannelIds = channelIds;
+            this.ParentFolderId = parentFolderId;
             this.ProgramId = programId;
             this.Name = name;
             this.ServiceName = serviceName;
@@ -81,14 +83,16 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Id of the recording.
         /// </summary>
+        /// <value>Id of the recording.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChannelId
+        /// ChannelId of the recording.
         /// </summary>
+        /// <value>ChannelId of the recording.</value>
         [DataMember(Name="ChannelId", EmitDefaultValue=false)]
         public string ChannelId { get; set; }
 
@@ -99,14 +103,22 @@ namespace EmbyClient.Dotnet.Model
         public List<string> ChannelIds { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProgramId
+        /// Gets or Sets ParentFolderId
         /// </summary>
+        [DataMember(Name="ParentFolderId", EmitDefaultValue=false)]
+        public long? ParentFolderId { get; set; }
+
+        /// <summary>
+        /// The program identifier.
+        /// </summary>
+        /// <value>The program identifier.</value>
         [DataMember(Name="ProgramId", EmitDefaultValue=false)]
         public string ProgramId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name of the recording.
         /// </summary>
+        /// <value>Name of the recording.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -117,26 +129,30 @@ namespace EmbyClient.Dotnet.Model
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Overview
+        /// Description of the recording.
         /// </summary>
+        /// <value>Description of the recording.</value>
         [DataMember(Name="Overview", EmitDefaultValue=false)]
         public string Overview { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartDate
+        /// The start date of the recording, in UTC.
         /// </summary>
+        /// <value>The start date of the recording, in UTC.</value>
         [DataMember(Name="StartDate", EmitDefaultValue=false)]
         public DateTimeOffset? StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndDate
+        /// The end date of the recording, in UTC.
         /// </summary>
+        /// <value>The end date of the recording, in UTC.</value>
         [DataMember(Name="EndDate", EmitDefaultValue=false)]
         public DateTimeOffset? EndDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets RecordAnyTime
+        /// A value indicating whether \\[record any time\\].
         /// </summary>
+        /// <value>A value indicating whether \\[record any time\\].</value>
         [DataMember(Name="RecordAnyTime", EmitDefaultValue=false)]
         public bool? RecordAnyTime { get; set; }
 
@@ -159,50 +175,58 @@ namespace EmbyClient.Dotnet.Model
         public bool? SkipEpisodesInLibrary { get; set; }
 
         /// <summary>
-        /// Gets or Sets RecordNewOnly
+        /// A value indicating whether \\[record new only\\].
         /// </summary>
+        /// <value>A value indicating whether \\[record new only\\].</value>
         [DataMember(Name="RecordNewOnly", EmitDefaultValue=false)]
         public bool? RecordNewOnly { get; set; }
 
         /// <summary>
-        /// Gets or Sets Days
+        /// The days.
         /// </summary>
+        /// <value>The days.</value>
         [DataMember(Name="Days", EmitDefaultValue=false)]
         public List<DayOfWeek> Days { get; set; }
 
         /// <summary>
-        /// Gets or Sets Priority
+        /// The priority.
         /// </summary>
+        /// <value>The priority.</value>
         [DataMember(Name="Priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrePaddingSeconds
+        /// The pre padding seconds.
         /// </summary>
+        /// <value>The pre padding seconds.</value>
         [DataMember(Name="PrePaddingSeconds", EmitDefaultValue=false)]
         public int? PrePaddingSeconds { get; set; }
 
         /// <summary>
-        /// Gets or Sets PostPaddingSeconds
+        /// The post padding seconds.
         /// </summary>
+        /// <value>The post padding seconds.</value>
         [DataMember(Name="PostPaddingSeconds", EmitDefaultValue=false)]
         public int? PostPaddingSeconds { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPrePaddingRequired
+        /// A value indicating whether this instance is pre padding required.
         /// </summary>
+        /// <value>A value indicating whether this instance is pre padding required.</value>
         [DataMember(Name="IsPrePaddingRequired", EmitDefaultValue=false)]
         public bool? IsPrePaddingRequired { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPostPaddingRequired
+        /// A value indicating whether this instance is post padding required.
         /// </summary>
+        /// <value>A value indicating whether this instance is post padding required.</value>
         [DataMember(Name="IsPostPaddingRequired", EmitDefaultValue=false)]
         public bool? IsPostPaddingRequired { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesId
+        /// The series identifier.
         /// </summary>
+        /// <value>The series identifier.</value>
         [DataMember(Name="SeriesId", EmitDefaultValue=false)]
         public string SeriesId { get; set; }
 
@@ -241,6 +265,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ChannelId: ").Append(ChannelId).Append("\n");
             sb.Append("  ChannelIds: ").Append(ChannelIds).Append("\n");
+            sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append("\n");
             sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
@@ -312,6 +337,11 @@ namespace EmbyClient.Dotnet.Model
                     this.ChannelIds != null &&
                     input.ChannelIds != null &&
                     this.ChannelIds.SequenceEqual(input.ChannelIds)
+                ) && 
+                (
+                    this.ParentFolderId == input.ParentFolderId ||
+                    (this.ParentFolderId != null &&
+                    this.ParentFolderId.Equals(input.ParentFolderId))
                 ) && 
                 (
                     this.ProgramId == input.ProgramId ||
@@ -442,6 +472,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.ChannelId.GetHashCode();
                 if (this.ChannelIds != null)
                     hashCode = hashCode * 59 + this.ChannelIds.GetHashCode();
+                if (this.ParentFolderId != null)
+                    hashCode = hashCode * 59 + this.ParentFolderId.GetHashCode();
                 if (this.ProgramId != null)
                     hashCode = hashCode * 59 + this.ProgramId.GetHashCode();
                 if (this.Name != null)

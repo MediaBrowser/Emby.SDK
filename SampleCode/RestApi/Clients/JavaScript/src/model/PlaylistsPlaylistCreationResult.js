@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The PlaylistsPlaylistCreationResult model module.
 * @module model/PlaylistsPlaylistCreationResult
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class PlaylistsPlaylistCreationResult {
     /**
@@ -47,6 +47,9 @@ export default class PlaylistsPlaylistCreationResult {
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
+            if (data.hasOwnProperty('ItemAddedCount')) {
+                obj['ItemAddedCount'] = ApiClient.convertToType(data['ItemAddedCount'], 'Number');
+            }
         }
         return obj;
     }
@@ -59,6 +62,10 @@ export default class PlaylistsPlaylistCreationResult {
     * @member {String} Name
     */
     'Name' = undefined;
+    /**
+    * @member {Number} ItemAddedCount
+    */
+    'ItemAddedCount' = undefined;
 
 
 

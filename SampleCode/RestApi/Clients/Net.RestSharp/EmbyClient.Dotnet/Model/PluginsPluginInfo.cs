@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// PluginsPluginInfo
+    /// This is a serializable stub class that is used by the api to provide information about installed plugins.  
     /// </summary>
     [DataContract]
         public partial class PluginsPluginInfo :  IEquatable<PluginsPluginInfo>
@@ -26,12 +26,12 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PluginsPluginInfo" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="version">version.</param>
-        /// <param name="configurationFileName">configurationFileName.</param>
-        /// <param name="description">description.</param>
-        /// <param name="id">id.</param>
-        /// <param name="imageTag">imageTag.</param>
+        /// <param name="name">The name..</param>
+        /// <param name="version">The version..</param>
+        /// <param name="configurationFileName">The name of the configuration file..</param>
+        /// <param name="description">The description..</param>
+        /// <param name="id">The unique id..</param>
+        /// <param name="imageTag">The image URL..</param>
         public PluginsPluginInfo(string name = default(string), string version = default(string), string configurationFileName = default(string), string description = default(string), string id = default(string), string imageTag = default(string))
         {
             this.Name = name;
@@ -43,38 +43,44 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Version
+        /// The version.
         /// </summary>
+        /// <value>The version.</value>
         [DataMember(Name="Version", EmitDefaultValue=false)]
         public string Version { get; set; }
 
         /// <summary>
-        /// Gets or Sets ConfigurationFileName
+        /// The name of the configuration file.
         /// </summary>
+        /// <value>The name of the configuration file.</value>
         [DataMember(Name="ConfigurationFileName", EmitDefaultValue=false)]
         public string ConfigurationFileName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// The description.
         /// </summary>
+        /// <value>The description.</value>
         [DataMember(Name="Description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The unique id.
         /// </summary>
+        /// <value>The unique id.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageTag
+        /// The image URL.
         /// </summary>
+        /// <value>The image URL.</value>
         [DataMember(Name="ImageTag", EmitDefaultValue=false)]
         public string ImageTag { get; set; }
 

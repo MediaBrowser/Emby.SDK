@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -27,7 +27,7 @@ public class SuggestionsServiceApiTest {
     /**
      * Gets items based on a query.
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -35,7 +35,12 @@ public class SuggestionsServiceApiTest {
     @Test
     public void getUsersByUseridSuggestionsTest() throws Exception {
         String userId = null;
-        QueryResultBaseItemDto response = api.getUsersByUseridSuggestions(userId);
+        String fields = null;
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        QueryResultBaseItemDto response = api.getUsersByUseridSuggestions(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }

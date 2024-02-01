@@ -232,6 +232,17 @@
         <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="parametername">SortOrder</span></td>
+        <td>query</td>
+        <td>
+              
+  
+        </td>
+        <td></td>
+        <td><p>Sort Order - Ascending,Descending</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <div class="responses">
@@ -374,7 +385,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ServerId</span></td>
@@ -383,7 +395,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The server identifier.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ServerName</span></td>
@@ -392,7 +405,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name of the server. This is not used by the server and is for client-side usage only.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Prefix</span></td>
@@ -410,7 +424,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name of the connect user.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">DateCreated</span></td>
@@ -435,11 +450,11 @@
               <td><span class="parametername">Id</span></td>
               <td>
                     string
-                      (guid)
   
                   
               </td>
-              <td></td>
+              <td><p>The id.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PrimaryImageTag</span></td>
@@ -448,7 +463,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The primary image tag.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">HasPassword</span></td>
@@ -457,7 +473,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance has password.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">HasConfiguredPassword</span></td>
@@ -466,16 +483,8 @@
   
                   
               </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">HasConfiguredEasyPassword</span></td>
-              <td>
-                    boolean
-  
-                  
-              </td>
-              <td></td>
+              <td><p>A value indicating whether this instance has configured password.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">EnableAutoLogin</span></td>
@@ -494,7 +503,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The last login date.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">LastActivityDate</span></td>
@@ -504,7 +514,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The last activity date.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Configuration</span></td>
@@ -513,7 +524,8 @@
                       <a href="#MediaBrowser_Model_Configuration_UserConfiguration" class="typelink">UserConfiguration[]</a>
                   
               </td>
-              <td></td>
+              <td><p>Class UserConfiguration</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">Policy</span></td>
@@ -530,6 +542,25 @@
                     number
                       (double)
   
+                  
+              </td>
+              <td><p>The primary image aspect ratio.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HasConfiguredEasyPassword</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">UserItemShareLevel</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_UserItemShareLevel" class="typelink">UserItemShareLevel</a>
                   
               </td>
               <td></td>
@@ -569,7 +600,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The audio language preference.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">PlayDefaultAudioTrack</span></td>
@@ -578,10 +610,21 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether [play default audio track].</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">SubtitleLanguagePreference</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The subtitle language preference.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ProfilePin</span></td>
               <td>
                     string
   
@@ -603,15 +646,6 @@
               <td>
   
                       <a href="#MediaBrowser_Model_Configuration_SubtitlePlaybackMode" class="typelink">SubtitlePlaybackMode</a>
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">EnableLocalPassword</span></td>
-              <td>
-                    boolean
-  
                   
               </td>
               <td></td>
@@ -645,6 +679,24 @@
           </tr>
           <tr>
               <td><span class="parametername">HidePlayedInLatest</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HidePlayedInMoreLikeThis</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">HidePlayedInSuggestions</span></td>
               <td>
                     boolean
   
@@ -698,6 +750,15 @@
               </td>
               <td></td>
           </tr>
+          <tr>
+              <td><span class="parametername">EnableLocalPassword</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
       </tbody>
   </table>
   
@@ -713,6 +774,7 @@
   <li>OnlyForced</li>
   <li>None</li>
   <li>Smart</li>
+  <li>HearingImpaired</li>
   </ul>
   
   <h3 id="MediaBrowser_Model_Configuration_SegmentSkipMode" class="text-capitalize">SegmentSkipMode</h3>
@@ -748,7 +810,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is administrator.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsHidden</span></td>
@@ -757,7 +820,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether this instance is hidden.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IsHiddenRemotely</span></td>
@@ -784,6 +848,17 @@
   
                   
               </td>
+              <td><p>A value indicating whether this instance is disabled.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LockedOutDate</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
               <td></td>
           </tr>
           <tr>
@@ -791,6 +866,16 @@
               <td>
                     integer
                       (int32)
+  
+                  
+              </td>
+              <td><p>The max parental rating.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowTagOrRating</span></td>
+              <td>
+                    boolean
   
                   
               </td>
@@ -941,6 +1026,15 @@
               <td></td>
           </tr>
           <tr>
+              <td><span class="parametername">RestrictedFeatures</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
               <td><span class="parametername">EnableContentDeletionFromFolders</span></td>
               <td>
                     array
@@ -983,7 +1077,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>A value indicating whether [enable synchronize].</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">EnableMediaConversion</span></td>
@@ -1114,6 +1209,24 @@
               </td>
               <td></td>
           </tr>
+          <tr>
+              <td><span class="parametername">AllowCameraUpload</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">AllowSharingPersonalItems</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
       </tbody>
   </table>
   
@@ -1148,7 +1261,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The start hour.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">EndHour</span></td>
@@ -1158,7 +1272,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The end hour.</p>
+</td>
           </tr>
       </tbody>
   </table>
@@ -1187,6 +1302,20 @@
       <p>see also <a href="../../pluginapi/MediaBrowser.Model.Configuration.UnratedItem.html">MediaBrowser.Model.Configuration.UnratedItem</a></p>
 
   </div>
+  
+  <h3 id="MediaBrowser_Model_Dto_UserItemShareLevel" class="text-capitalize">UserItemShareLevel</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.UserItemShareLevel.html">MediaBrowser.Model.Dto.UserItemShareLevel</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>None</li>
+  <li>Read</li>
+  <li>Write</li>
+  <li>Manage</li>
+  <li>ManageDelete</li>
+  </ul>
 </div>
 </article>
           </div>

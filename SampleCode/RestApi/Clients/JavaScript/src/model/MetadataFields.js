@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -93,6 +93,36 @@ export default class MetadataFields {
          * @const
          */
         originalTitle = "OriginalTitle";
+
+        /**
+         * value: "SortIndexNumber"
+         * @const
+         */
+        sortIndexNumber = "SortIndexNumber";
+
+        /**
+         * value: "SortParentIndexNumber"
+         * @const
+         */
+        sortParentIndexNumber = "SortParentIndexNumber";
+
+        /**
+         * value: "CommunityRating"
+         * @const
+         */
+        communityRating = "CommunityRating";
+
+        /**
+         * value: "CriticRating"
+         * @const
+         */
+        criticRating = "CriticRating";
+
+        /**
+         * value: "Tagline"
+         * @const
+         */
+        tagline = "Tagline";
 
 
     /**

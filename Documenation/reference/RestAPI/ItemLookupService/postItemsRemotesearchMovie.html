@@ -180,7 +180,7 @@
         <td>body</td>
         <td>
   
-              <a href="#Providers_RemoteSearchQuery_Providers_MovieInfo" class="typelink">MovieInfo</a>
+              <a href="#RemoteSearchQuery_MovieInfo" class="typelink">RemoteSearchQuery_MovieInfo</a>
               
         </td>
         <td></td>
@@ -273,9 +273,9 @@
   </div>
 <h2 id="definitions">Definitions</h2>
   
-  <h3 id="Providers_RemoteSearchQuery_Providers_MovieInfo" class="text-capitalize">MovieInfo</h3>
+  <h3 id="RemoteSearchQuery_MovieInfo" class="text-capitalize">RemoteSearchQuery_MovieInfo</h3>
   <div>
-      <span class="xref">Providers.RemoteSearchQuery_Providers.MovieInfo</span>
+      <span class="xref">RemoteSearchQuery_MovieInfo</span>
   </div>
   <table class="table table-bordered table-striped table-condensed">
       <thead>
@@ -356,7 +356,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MetadataLanguage</span></td>
@@ -365,13 +366,24 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The metadata language.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">MetadataCountryCode</span></td>
               <td>
                     string
   
+                  
+              </td>
+              <td><p>The metadata country code.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">MetadataLanguages</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Globalization_CultureDto" class="typelink">CultureDto[]</a>
                   
               </td>
               <td></td>
@@ -393,7 +405,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The year.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IndexNumber</span></td>
@@ -446,6 +459,81 @@
       </tbody>
   </table>
   
+  <h3 id="MediaBrowser_Model_Globalization_CultureDto" class="text-capitalize">CultureDto</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Globalization.CultureDto.html">MediaBrowser.Model.Globalization.CultureDto</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DisplayName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The display name.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TwoLetterISOLanguageName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name of the two letter ISO language.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ThreeLetterISOLanguageName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name of the three letter ISO language.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ThreeLetterISOLanguageNames</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">TwoLetterISOLanguageNames</span></td>
+              <td>
+                    array
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
   <h3 id="MediaBrowser_Model_Entities_ProviderIdDictionary" class="text-capitalize">ProviderIdDictionary</h3>
   <div>
       <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ProviderIdDictionary.html">MediaBrowser.Model.Entities.ProviderIdDictionary</a></p>
@@ -473,7 +561,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The name.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">ProviderIds</span></td>
@@ -492,7 +581,8 @@
   
                   
               </td>
-              <td></td>
+              <td><p>The year.</p>
+</td>
           </tr>
           <tr>
               <td><span class="parametername">IndexNumber</span></td>
@@ -516,6 +606,26 @@
           </tr>
           <tr>
               <td><span class="parametername">ParentIndexNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SortIndexNumber</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">SortParentIndexNumber</span></td>
               <td>
                     integer
                       (int32)

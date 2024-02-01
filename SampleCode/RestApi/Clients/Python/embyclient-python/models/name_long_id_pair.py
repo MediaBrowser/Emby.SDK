@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -45,6 +45,7 @@ class NameLongIdPair(object):
     def name(self):
         """Gets the name of this NameLongIdPair.  # noqa: E501
 
+        The name.  # noqa: E501
 
         :return: The name of this NameLongIdPair.  # noqa: E501
         :rtype: str
@@ -55,6 +56,7 @@ class NameLongIdPair(object):
     def name(self, name):
         """Sets the name of this NameLongIdPair.
 
+        The name.  # noqa: E501
 
         :param name: The name of this NameLongIdPair.  # noqa: E501
         :type: str
@@ -66,6 +68,7 @@ class NameLongIdPair(object):
     def id(self):
         """Gets the id of this NameLongIdPair.  # noqa: E501
 
+        The identifier.  # noqa: E501
 
         :return: The id of this NameLongIdPair.  # noqa: E501
         :rtype: int
@@ -76,6 +79,7 @@ class NameLongIdPair(object):
     def id(self, id):
         """Sets the id of this NameLongIdPair.
 
+        The identifier.  # noqa: E501
 
         :param id: The id of this NameLongIdPair.  # noqa: E501
         :type: int

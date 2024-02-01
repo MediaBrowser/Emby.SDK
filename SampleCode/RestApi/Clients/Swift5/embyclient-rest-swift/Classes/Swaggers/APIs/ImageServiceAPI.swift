@@ -235,17 +235,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArtistsByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getArtistsByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func getArtistsByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getArtistsByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -258,6 +256,12 @@ open class ImageServiceAPI {
     /**
      - GET /Artists/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -269,17 +273,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getArtistsByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func getArtistsByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Artists/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -300,12 +302,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -328,16 +328,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArtistsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getArtistsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -350,6 +348,12 @@ open class ImageServiceAPI {
     /**
      - GET /Artists/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -362,16 +366,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Artists/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -395,12 +397,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -421,17 +421,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamegenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getGamegenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func getGamegenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getGamegenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -444,6 +442,12 @@ open class ImageServiceAPI {
     /**
      - GET /GameGenres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -455,17 +459,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getGamegenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func getGamegenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/GameGenres/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -486,12 +488,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -514,16 +514,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamegenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getGamegenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -536,6 +534,12 @@ open class ImageServiceAPI {
     /**
      - GET /GameGenres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -548,16 +552,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/GameGenres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -581,12 +583,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -607,17 +607,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getGenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func getGenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getGenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -630,6 +628,12 @@ open class ImageServiceAPI {
     /**
      - GET /Genres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -641,17 +645,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getGenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func getGenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Genres/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -672,12 +674,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -700,16 +700,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getGenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getGenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getGenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -722,6 +720,12 @@ open class ImageServiceAPI {
     /**
      - GET /Genres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -734,16 +738,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getGenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getGenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Genres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -767,12 +769,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -851,17 +851,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdImagesByType(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getItemsByIdImagesByTypeWithRequestBuilder(_id: _id, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func getItemsByIdImagesByType(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getItemsByIdImagesByTypeWithRequestBuilder(_id: _id, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -874,6 +872,12 @@ open class ImageServiceAPI {
     /**
      - GET /Items/{Id}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -885,17 +889,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getItemsByIdImagesByTypeWithRequestBuilder(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func getItemsByIdImagesByTypeWithRequestBuilder(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -916,12 +918,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -944,16 +944,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getItemsByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -966,6 +964,12 @@ open class ImageServiceAPI {
     /**
      - GET /Items/{Id}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -978,16 +982,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1011,12 +1013,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -1026,13 +1026,13 @@ open class ImageServiceAPI {
     }
     /**
 
+     - parameter percentPlayed: (path)  
+     - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
      - parameter maxWidth: (path) The maximum image width to return. 
      - parameter maxHeight: (path) The maximum image height to return. 
      - parameter tag: (path) Optional. Supply the cache tag from the item object to receive strong caching headers. 
      - parameter format: (path) Determines the output foramt of the image - original,gif,jpg,png 
-     - parameter percentPlayed: (path) Optional percent to render for the percent played overlay 
-     - parameter unplayedCount: (path) Optional unplayed count overlay to render 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1040,14 +1040,14 @@ open class ImageServiceAPI {
      - parameter quality: (query) Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(_id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, percentPlayed: Double, unplayedCount: Int, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, addPlayedIndicator: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(_id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, percentPlayed: percentPlayed, unplayedCount: unplayedCount, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, addPlayedIndicator: addPlayedIndicator, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: percentPlayed, unPlayedCount: unPlayedCount, _id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1060,13 +1060,19 @@ open class ImageServiceAPI {
     /**
      - GET /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter percentPlayed: (path)  
+     - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
      - parameter maxWidth: (path) The maximum image width to return. 
      - parameter maxHeight: (path) The maximum image height to return. 
      - parameter tag: (path) Optional. Supply the cache tag from the item object to receive strong caching headers. 
      - parameter format: (path) Determines the output foramt of the image - original,gif,jpg,png 
-     - parameter percentPlayed: (path) Optional percent to render for the percent played overlay 
-     - parameter unplayedCount: (path) Optional unplayed count overlay to render 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1074,15 +1080,21 @@ open class ImageServiceAPI {
      - parameter quality: (query) Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(_id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, percentPlayed: Double, unplayedCount: Int, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, addPlayedIndicator: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+        let percentPlayedPreEscape = "\(percentPlayed)"
+        let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{PercentPlayed}", with: percentPlayedPostEscape, options: .literal, range: nil)
+        let unPlayedCountPreEscape = "\(unPlayedCount)"
+        let unPlayedCountPostEscape = unPlayedCountPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UnPlayedCount}", with: unPlayedCountPostEscape, options: .literal, range: nil)
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
@@ -1098,12 +1110,6 @@ open class ImageServiceAPI {
         let formatPreEscape = "\(format)"
         let formatPostEscape = formatPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Format}", with: formatPostEscape, options: .literal, range: nil)
-        let percentPlayedPreEscape = "\(percentPlayed)"
-        let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{PercentPlayed}", with: percentPlayedPostEscape, options: .literal, range: nil)
-        let unplayedCountPreEscape = "\(unplayedCount)"
-        let unplayedCountPostEscape = unplayedCountPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{UnplayedCount}", with: unplayedCountPostEscape, options: .literal, range: nil)
         let typePreEscape = "\(type)"
         let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
@@ -1119,10 +1125,10 @@ open class ImageServiceAPI {
                         "Quality": quality?.encodeToJSON(), 
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -1143,17 +1149,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getMusicgenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getMusicgenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func getMusicgenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getMusicgenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1166,6 +1170,12 @@ open class ImageServiceAPI {
     /**
      - GET /MusicGenres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -1177,17 +1187,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getMusicgenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func getMusicgenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/MusicGenres/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1208,12 +1216,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -1236,16 +1242,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getMusicgenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getMusicgenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1258,6 +1262,12 @@ open class ImageServiceAPI {
     /**
      - GET /MusicGenres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1270,16 +1280,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/MusicGenres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1303,12 +1311,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -1329,17 +1335,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPersonsByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getPersonsByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func getPersonsByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getPersonsByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1352,6 +1356,12 @@ open class ImageServiceAPI {
     /**
      - GET /Persons/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -1363,17 +1373,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getPersonsByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func getPersonsByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Persons/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1394,12 +1402,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -1422,16 +1428,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPersonsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getPersonsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1444,6 +1448,12 @@ open class ImageServiceAPI {
     /**
      - GET /Persons/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1456,16 +1466,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Persons/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1489,12 +1497,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -1515,17 +1521,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getStudiosByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getStudiosByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func getStudiosByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getStudiosByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1538,6 +1542,12 @@ open class ImageServiceAPI {
     /**
      - GET /Studios/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -1549,17 +1559,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getStudiosByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func getStudiosByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Studios/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1580,12 +1588,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -1608,16 +1614,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getStudiosByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getStudiosByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1630,6 +1634,12 @@ open class ImageServiceAPI {
     /**
      - GET /Studios/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1642,16 +1652,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Studios/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1675,12 +1683,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -1701,17 +1707,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersByIdImagesByType(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getUsersByIdImagesByTypeWithRequestBuilder(_id: _id, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func getUsersByIdImagesByType(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getUsersByIdImagesByTypeWithRequestBuilder(_id: _id, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1724,9 +1728,15 @@ open class ImageServiceAPI {
     /**
      - GET /Users/{Id}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Authentication
-    url: https://github.com/MediaBrowser/Emby/wiki/User-Authentication
+    url: https://dev.emby.media/doc/restapi/User-Authentication.html
 }
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
@@ -1739,17 +1749,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getUsersByIdImagesByTypeWithRequestBuilder(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func getUsersByIdImagesByTypeWithRequestBuilder(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1770,12 +1778,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -1798,16 +1804,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func getUsersByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1820,6 +1824,12 @@ open class ImageServiceAPI {
     /**
      - GET /Users/{Id}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -1832,16 +1842,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1865,12 +1873,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -1891,17 +1897,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headArtistsByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headArtistsByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func headArtistsByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headArtistsByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1914,6 +1918,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Artists/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -1925,17 +1935,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headArtistsByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func headArtistsByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Artists/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1956,12 +1964,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -1984,16 +1990,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headArtistsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headArtistsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2006,6 +2010,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Artists/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2018,16 +2028,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Artists/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2051,12 +2059,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -2077,17 +2083,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headGamegenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headGamegenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func headGamegenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headGamegenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2100,6 +2104,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /GameGenres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2111,17 +2121,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headGamegenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func headGamegenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/GameGenres/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2142,12 +2150,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -2170,16 +2176,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headGamegenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headGamegenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2192,6 +2196,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /GameGenres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2204,16 +2214,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/GameGenres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2237,12 +2245,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -2263,17 +2269,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headGenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headGenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func headGenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headGenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2286,6 +2290,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Genres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2297,17 +2307,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headGenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func headGenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Genres/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2328,12 +2336,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -2356,16 +2362,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headGenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headGenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headGenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headGenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2378,6 +2382,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Genres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2390,16 +2400,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headGenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headGenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Genres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2423,12 +2431,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -2449,17 +2455,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headItemsByIdImagesByType(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headItemsByIdImagesByTypeWithRequestBuilder(_id: _id, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func headItemsByIdImagesByType(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headItemsByIdImagesByTypeWithRequestBuilder(_id: _id, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2472,6 +2476,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Items/{Id}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2483,17 +2493,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headItemsByIdImagesByTypeWithRequestBuilder(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func headItemsByIdImagesByTypeWithRequestBuilder(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2514,12 +2522,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -2542,16 +2548,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headItemsByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headItemsByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2564,6 +2568,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Items/{Id}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) Item Id 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2576,16 +2586,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2609,12 +2617,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -2624,13 +2630,13 @@ open class ImageServiceAPI {
     }
     /**
 
+     - parameter percentPlayed: (path)  
+     - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
      - parameter maxWidth: (path) The maximum image width to return. 
      - parameter maxHeight: (path) The maximum image height to return. 
      - parameter tag: (path) Optional. Supply the cache tag from the item object to receive strong caching headers. 
      - parameter format: (path) Determines the output foramt of the image - original,gif,jpg,png 
-     - parameter percentPlayed: (path) Optional percent to render for the percent played overlay 
-     - parameter unplayedCount: (path) Optional unplayed count overlay to render 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2638,14 +2644,14 @@ open class ImageServiceAPI {
      - parameter quality: (query) Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(_id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, percentPlayed: Double, unplayedCount: Int, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, addPlayedIndicator: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(_id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, percentPlayed: percentPlayed, unplayedCount: unplayedCount, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, addPlayedIndicator: addPlayedIndicator, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: percentPlayed, unPlayedCount: unPlayedCount, _id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2658,13 +2664,19 @@ open class ImageServiceAPI {
     /**
      - HEAD /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter percentPlayed: (path)  
+     - parameter unPlayedCount: (path)  
      - parameter _id: (path) Item Id 
      - parameter maxWidth: (path) The maximum image width to return. 
      - parameter maxHeight: (path) The maximum image height to return. 
      - parameter tag: (path) Optional. Supply the cache tag from the item object to receive strong caching headers. 
      - parameter format: (path) Determines the output foramt of the image - original,gif,jpg,png 
-     - parameter percentPlayed: (path) Optional percent to render for the percent played overlay 
-     - parameter unplayedCount: (path) Optional unplayed count overlay to render 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2672,15 +2684,21 @@ open class ImageServiceAPI {
      - parameter quality: (query) Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(_id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, percentPlayed: Double, unplayedCount: Int, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, addPlayedIndicator: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+        let percentPlayedPreEscape = "\(percentPlayed)"
+        let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{PercentPlayed}", with: percentPlayedPostEscape, options: .literal, range: nil)
+        let unPlayedCountPreEscape = "\(unPlayedCount)"
+        let unPlayedCountPostEscape = unPlayedCountPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UnPlayedCount}", with: unPlayedCountPostEscape, options: .literal, range: nil)
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
@@ -2696,12 +2714,6 @@ open class ImageServiceAPI {
         let formatPreEscape = "\(format)"
         let formatPostEscape = formatPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Format}", with: formatPostEscape, options: .literal, range: nil)
-        let percentPlayedPreEscape = "\(percentPlayed)"
-        let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{PercentPlayed}", with: percentPlayedPostEscape, options: .literal, range: nil)
-        let unplayedCountPreEscape = "\(unplayedCount)"
-        let unplayedCountPostEscape = unplayedCountPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{UnplayedCount}", with: unplayedCountPostEscape, options: .literal, range: nil)
         let typePreEscape = "\(type)"
         let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
@@ -2717,10 +2729,10 @@ open class ImageServiceAPI {
                         "Quality": quality?.encodeToJSON(), 
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -2741,17 +2753,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headMusicgenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headMusicgenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func headMusicgenresByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headMusicgenresByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2764,6 +2774,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /MusicGenres/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2775,17 +2791,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headMusicgenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func headMusicgenresByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/MusicGenres/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2806,12 +2820,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -2834,16 +2846,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headMusicgenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headMusicgenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2856,6 +2866,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /MusicGenres/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -2868,16 +2884,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/MusicGenres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2901,12 +2915,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -2927,17 +2939,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headPersonsByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headPersonsByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func headPersonsByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headPersonsByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2950,6 +2960,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Persons/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -2961,17 +2977,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headPersonsByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func headPersonsByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Persons/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2992,12 +3006,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -3020,16 +3032,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headPersonsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headPersonsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3042,6 +3052,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Persons/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -3054,16 +3070,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Persons/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3087,12 +3101,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -3113,17 +3125,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headStudiosByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headStudiosByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func headStudiosByNameImagesByType(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headStudiosByNameImagesByTypeWithRequestBuilder(name: name, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3136,6 +3146,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Studios/{Name}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -3147,17 +3163,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headStudiosByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func headStudiosByNameImagesByTypeWithRequestBuilder(name: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Studios/{Name}/Images/{Type}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3178,12 +3192,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -3206,16 +3218,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headStudiosByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headStudiosByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3228,6 +3238,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Studios/{Name}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter name: (path) Item name 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -3240,16 +3256,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Studios/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3273,12 +3287,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 
@@ -3299,17 +3311,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headUsersByIdImagesByType(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headUsersByIdImagesByTypeWithRequestBuilder(_id: _id, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, index: index).execute { (response, error) -> Void in
+    open class func headUsersByIdImagesByType(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headUsersByIdImagesByTypeWithRequestBuilder(_id: _id, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation, index: index).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3322,6 +3332,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Users/{Id}/Images/{Type}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
@@ -3333,17 +3349,15 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headUsersByIdImagesByTypeWithRequestBuilder(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func headUsersByIdImagesByTypeWithRequestBuilder(_id: String, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, index: Int? = nil) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3364,12 +3378,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
                         "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation, 
                         "Index": index?.encodeToJSON()
         ])
 
@@ -3392,16 +3404,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headUsersByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, addPlayedIndicator: addPlayedIndicator, percentPlayed: percentPlayed, unplayedCount: unplayedCount, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient).execute { (response, error) -> Void in
+    open class func headUsersByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3414,6 +3424,12 @@ open class ImageServiceAPI {
     /**
      - HEAD /Users/{Id}/Images/{Type}/{Index}
 
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
@@ -3426,16 +3442,14 @@ open class ImageServiceAPI {
      - parameter cropWhitespace: (query) Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)
      - parameter enableImageEnhancers: (query) Enable or disable image enhancers such as cover art. (optional)
      - parameter format: (query) Determines the output foramt of the image - original,gif,jpg,png (optional)
-     - parameter addPlayedIndicator: (query) Optional. Add a played indicator (optional)
-     - parameter percentPlayed: (query) Optional percent to render for the percent played overlay (optional)
-     - parameter unplayedCount: (query) Optional unplayed count overlay to render (optional)
      - parameter backgroundColor: (query) Optional. Apply a background color for transparent images. (optional)
      - parameter foregroundLayer: (query) Optional. Apply a foreground layer on top of the image. (optional)
      - parameter autoOrient: (query) Set to true to force normalization of orientation in the event the renderer does not support it. (optional)
+     - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, addPlayedIndicator: Bool? = nil, percentPlayed: Double? = nil, unplayedCount: Int? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3459,12 +3473,10 @@ open class ImageServiceAPI {
                         "CropWhitespace": cropWhitespace, 
                         "EnableImageEnhancers": enableImageEnhancers, 
                         "Format": format, 
-                        "AddPlayedIndicator": addPlayedIndicator, 
-                        "PercentPlayed": percentPlayed, 
-                        "UnplayedCount": unplayedCount?.encodeToJSON(), 
                         "BackgroundColor": backgroundColor, 
                         "ForegroundLayer": foregroundLayer, 
-                        "AutoOrient": autoOrient
+                        "AutoOrient": autoOrient, 
+                        "KeepAnimation": keepAnimation
         ])
 
 

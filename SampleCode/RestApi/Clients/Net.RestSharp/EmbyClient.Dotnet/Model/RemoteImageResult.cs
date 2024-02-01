@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// RemoteImageResult
+    /// Class RemoteImageResult.  
     /// </summary>
     [DataContract]
         public partial class RemoteImageResult :  IEquatable<RemoteImageResult>
@@ -26,9 +26,9 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RemoteImageResult" /> class.
         /// </summary>
-        /// <param name="images">images.</param>
-        /// <param name="totalRecordCount">totalRecordCount.</param>
-        /// <param name="providers">providers.</param>
+        /// <param name="images">The images..</param>
+        /// <param name="totalRecordCount">The total record count..</param>
+        /// <param name="providers">The providers..</param>
         public RemoteImageResult(List<RemoteImageInfo> images = default(List<RemoteImageInfo>), int? totalRecordCount = default(int?), List<string> providers = default(List<string>))
         {
             this.Images = images;
@@ -37,20 +37,23 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Images
+        /// The images.
         /// </summary>
+        /// <value>The images.</value>
         [DataMember(Name="Images", EmitDefaultValue=false)]
         public List<RemoteImageInfo> Images { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalRecordCount
+        /// The total record count.
         /// </summary>
+        /// <value>The total record count.</value>
         [DataMember(Name="TotalRecordCount", EmitDefaultValue=false)]
         public int? TotalRecordCount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Providers
+        /// The providers.
         /// </summary>
+        /// <value>The providers.</value>
         [DataMember(Name="Providers", EmitDefaultValue=false)]
         public List<string> Providers { get; set; }
 

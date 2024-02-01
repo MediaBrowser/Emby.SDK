@@ -1,5 +1,5 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
@@ -15,9 +15,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * SessionUserInfo
+ * Class SessionUserInfo.  
  */
-
+@Schema(description = "Class SessionUserInfo.  ")
 
 public class SessionUserInfo {
   @SerializedName("UserId")
@@ -35,10 +35,10 @@ public class SessionUserInfo {
   }
 
    /**
-   * Get userId
+   * The user identifier.
    * @return userId
   **/
-  @Schema(description = "")
+  @Schema(description = "The user identifier.")
   public String getUserId() {
     return userId;
   }
@@ -53,10 +53,10 @@ public class SessionUserInfo {
   }
 
    /**
-   * Get userName
+   * The name of the user.
    * @return userName
   **/
-  @Schema(description = "")
+  @Schema(description = "The name of the user.")
   public String getUserName() {
     return userName;
   }

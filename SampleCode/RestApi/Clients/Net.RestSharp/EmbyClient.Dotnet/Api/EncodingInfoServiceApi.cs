@@ -25,8 +25,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;ConfigurationCodecConfiguration&gt;</returns>
-        List<ConfigurationCodecConfiguration> GetEncodingCodecconfigurationDefaults ();
+        /// <returns>List&lt;CodecConfiguration&gt;</returns>
+        List<CodecConfiguration> GetEncodingCodecconfigurationDefaults ();
 
         /// <summary>
         /// Gets default codec configurations
@@ -35,8 +35,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;ConfigurationCodecConfiguration&gt;</returns>
-        ApiResponse<List<ConfigurationCodecConfiguration>> GetEncodingCodecconfigurationDefaultsWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;CodecConfiguration&gt;</returns>
+        ApiResponse<List<CodecConfiguration>> GetEncodingCodecconfigurationDefaultsWithHttpInfo ();
         /// <summary>
         /// Gets details about available video encoders and decoders
         /// </summary>
@@ -44,8 +44,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;</returns>
-        List<MediaEncodingCodecsVideoCodecsVideoCodecBase> GetEncodingCodecinformationVideo ();
+        /// <returns>List&lt;VideoCodecBase&gt;</returns>
+        List<VideoCodecBase> GetEncodingCodecinformationVideo ();
 
         /// <summary>
         /// Gets details about available video encoders and decoders
@@ -54,8 +54,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;</returns>
-        ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>> GetEncodingCodecinformationVideoWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;VideoCodecBase&gt;</returns>
+        ApiResponse<List<VideoCodecBase>> GetEncodingCodecinformationVideoWithHttpInfo ();
         /// <summary>
         /// Gets available tone mapping options
         /// </summary>
@@ -63,8 +63,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>MediaEncodingConfigurationToneMappingToneMapOptionsVisibility</returns>
-        MediaEncodingConfigurationToneMappingToneMapOptionsVisibility GetEncodingTonemapoptions ();
+        /// <returns>ConfigurationToneMappingToneMapOptionsVisibility</returns>
+        ConfigurationToneMappingToneMapOptionsVisibility GetEncodingTonemapoptions ();
 
         /// <summary>
         /// Gets available tone mapping options
@@ -73,8 +73,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of MediaEncodingConfigurationToneMappingToneMapOptionsVisibility</returns>
-        ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> GetEncodingTonemapoptionsWithHttpInfo ();
+        /// <returns>ApiResponse of ConfigurationToneMappingToneMapOptionsVisibility</returns>
+        ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility> GetEncodingTonemapoptionsWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -84,8 +84,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;ConfigurationCodecConfiguration&gt;</returns>
-        System.Threading.Tasks.Task<List<ConfigurationCodecConfiguration>> GetEncodingCodecconfigurationDefaultsAsync ();
+        /// <returns>Task of List&lt;CodecConfiguration&gt;</returns>
+        System.Threading.Tasks.Task<List<CodecConfiguration>> GetEncodingCodecconfigurationDefaultsAsync ();
 
         /// <summary>
         /// Gets default codec configurations
@@ -94,8 +94,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;ConfigurationCodecConfiguration&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ConfigurationCodecConfiguration>>> GetEncodingCodecconfigurationDefaultsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;CodecConfiguration&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CodecConfiguration>>> GetEncodingCodecconfigurationDefaultsAsyncWithHttpInfo ();
         /// <summary>
         /// Gets details about available video encoders and decoders
         /// </summary>
@@ -103,8 +103,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;</returns>
-        System.Threading.Tasks.Task<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>> GetEncodingCodecinformationVideoAsync ();
+        /// <returns>Task of List&lt;VideoCodecBase&gt;</returns>
+        System.Threading.Tasks.Task<List<VideoCodecBase>> GetEncodingCodecinformationVideoAsync ();
 
         /// <summary>
         /// Gets details about available video encoders and decoders
@@ -113,8 +113,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>>> GetEncodingCodecinformationVideoAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;VideoCodecBase&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<VideoCodecBase>>> GetEncodingCodecinformationVideoAsyncWithHttpInfo ();
         /// <summary>
         /// Gets available tone mapping options
         /// </summary>
@@ -122,8 +122,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of MediaEncodingConfigurationToneMappingToneMapOptionsVisibility</returns>
-        System.Threading.Tasks.Task<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> GetEncodingTonemapoptionsAsync ();
+        /// <returns>Task of ConfigurationToneMappingToneMapOptionsVisibility</returns>
+        System.Threading.Tasks.Task<ConfigurationToneMappingToneMapOptionsVisibility> GetEncodingTonemapoptionsAsync ();
 
         /// <summary>
         /// Gets available tone mapping options
@@ -132,8 +132,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (MediaEncodingConfigurationToneMappingToneMapOptionsVisibility)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility>> GetEncodingTonemapoptionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (ConfigurationToneMappingToneMapOptionsVisibility)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility>> GetEncodingTonemapoptionsAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -249,10 +249,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets default codec configurations Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;ConfigurationCodecConfiguration&gt;</returns>
-        public List<ConfigurationCodecConfiguration> GetEncodingCodecconfigurationDefaults ()
+        /// <returns>List&lt;CodecConfiguration&gt;</returns>
+        public List<CodecConfiguration> GetEncodingCodecconfigurationDefaults ()
         {
-             ApiResponse<List<ConfigurationCodecConfiguration>> localVarResponse = GetEncodingCodecconfigurationDefaultsWithHttpInfo();
+             ApiResponse<List<CodecConfiguration>> localVarResponse = GetEncodingCodecconfigurationDefaultsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -260,8 +260,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets default codec configurations Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;ConfigurationCodecConfiguration&gt;</returns>
-        public ApiResponse< List<ConfigurationCodecConfiguration> > GetEncodingCodecconfigurationDefaultsWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;CodecConfiguration&gt;</returns>
+        public ApiResponse< List<CodecConfiguration> > GetEncodingCodecconfigurationDefaultsWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/CodecConfiguration/Defaults";
@@ -311,19 +311,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<ConfigurationCodecConfiguration>>(localVarStatusCode,
+            return new ApiResponse<List<CodecConfiguration>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<ConfigurationCodecConfiguration>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ConfigurationCodecConfiguration>)));
+                (List<CodecConfiguration>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CodecConfiguration>)));
         }
 
         /// <summary>
         /// Gets default codec configurations Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;ConfigurationCodecConfiguration&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ConfigurationCodecConfiguration>> GetEncodingCodecconfigurationDefaultsAsync ()
+        /// <returns>Task of List&lt;CodecConfiguration&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CodecConfiguration>> GetEncodingCodecconfigurationDefaultsAsync ()
         {
-             ApiResponse<List<ConfigurationCodecConfiguration>> localVarResponse = await GetEncodingCodecconfigurationDefaultsAsyncWithHttpInfo();
+             ApiResponse<List<CodecConfiguration>> localVarResponse = await GetEncodingCodecconfigurationDefaultsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -332,8 +332,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets default codec configurations Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;ConfigurationCodecConfiguration&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<ConfigurationCodecConfiguration>>> GetEncodingCodecconfigurationDefaultsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;CodecConfiguration&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CodecConfiguration>>> GetEncodingCodecconfigurationDefaultsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/CodecConfiguration/Defaults";
@@ -383,19 +383,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<ConfigurationCodecConfiguration>>(localVarStatusCode,
+            return new ApiResponse<List<CodecConfiguration>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<ConfigurationCodecConfiguration>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ConfigurationCodecConfiguration>)));
+                (List<CodecConfiguration>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CodecConfiguration>)));
         }
 
         /// <summary>
         /// Gets details about available video encoders and decoders Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;</returns>
-        public List<MediaEncodingCodecsVideoCodecsVideoCodecBase> GetEncodingCodecinformationVideo ()
+        /// <returns>List&lt;VideoCodecBase&gt;</returns>
+        public List<VideoCodecBase> GetEncodingCodecinformationVideo ()
         {
-             ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>> localVarResponse = GetEncodingCodecinformationVideoWithHttpInfo();
+             ApiResponse<List<VideoCodecBase>> localVarResponse = GetEncodingCodecinformationVideoWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -403,8 +403,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets details about available video encoders and decoders Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;</returns>
-        public ApiResponse< List<MediaEncodingCodecsVideoCodecsVideoCodecBase> > GetEncodingCodecinformationVideoWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;VideoCodecBase&gt;</returns>
+        public ApiResponse< List<VideoCodecBase> > GetEncodingCodecinformationVideoWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/CodecInformation/Video";
@@ -454,19 +454,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>>(localVarStatusCode,
+            return new ApiResponse<List<VideoCodecBase>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<MediaEncodingCodecsVideoCodecsVideoCodecBase>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<MediaEncodingCodecsVideoCodecsVideoCodecBase>)));
+                (List<VideoCodecBase>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<VideoCodecBase>)));
         }
 
         /// <summary>
         /// Gets details about available video encoders and decoders Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;</returns>
-        public async System.Threading.Tasks.Task<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>> GetEncodingCodecinformationVideoAsync ()
+        /// <returns>Task of List&lt;VideoCodecBase&gt;</returns>
+        public async System.Threading.Tasks.Task<List<VideoCodecBase>> GetEncodingCodecinformationVideoAsync ()
         {
-             ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>> localVarResponse = await GetEncodingCodecinformationVideoAsyncWithHttpInfo();
+             ApiResponse<List<VideoCodecBase>> localVarResponse = await GetEncodingCodecinformationVideoAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -475,8 +475,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets details about available video encoders and decoders Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (List&lt;MediaEncodingCodecsVideoCodecsVideoCodecBase&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>>> GetEncodingCodecinformationVideoAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;VideoCodecBase&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<VideoCodecBase>>> GetEncodingCodecinformationVideoAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/CodecInformation/Video";
@@ -526,19 +526,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<MediaEncodingCodecsVideoCodecsVideoCodecBase>>(localVarStatusCode,
+            return new ApiResponse<List<VideoCodecBase>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (List<MediaEncodingCodecsVideoCodecsVideoCodecBase>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<MediaEncodingCodecsVideoCodecsVideoCodecBase>)));
+                (List<VideoCodecBase>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<VideoCodecBase>)));
         }
 
         /// <summary>
         /// Gets available tone mapping options Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>MediaEncodingConfigurationToneMappingToneMapOptionsVisibility</returns>
-        public MediaEncodingConfigurationToneMappingToneMapOptionsVisibility GetEncodingTonemapoptions ()
+        /// <returns>ConfigurationToneMappingToneMapOptionsVisibility</returns>
+        public ConfigurationToneMappingToneMapOptionsVisibility GetEncodingTonemapoptions ()
         {
-             ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> localVarResponse = GetEncodingTonemapoptionsWithHttpInfo();
+             ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility> localVarResponse = GetEncodingTonemapoptionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -546,8 +546,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets available tone mapping options Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of MediaEncodingConfigurationToneMappingToneMapOptionsVisibility</returns>
-        public ApiResponse< MediaEncodingConfigurationToneMappingToneMapOptionsVisibility > GetEncodingTonemapoptionsWithHttpInfo ()
+        /// <returns>ApiResponse of ConfigurationToneMappingToneMapOptionsVisibility</returns>
+        public ApiResponse< ConfigurationToneMappingToneMapOptionsVisibility > GetEncodingTonemapoptionsWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/ToneMapOptions";
@@ -597,19 +597,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility>(localVarStatusCode,
+            return new ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MediaEncodingConfigurationToneMappingToneMapOptionsVisibility) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaEncodingConfigurationToneMappingToneMapOptionsVisibility)));
+                (ConfigurationToneMappingToneMapOptionsVisibility) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfigurationToneMappingToneMapOptionsVisibility)));
         }
 
         /// <summary>
         /// Gets available tone mapping options Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of MediaEncodingConfigurationToneMappingToneMapOptionsVisibility</returns>
-        public async System.Threading.Tasks.Task<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> GetEncodingTonemapoptionsAsync ()
+        /// <returns>Task of ConfigurationToneMappingToneMapOptionsVisibility</returns>
+        public async System.Threading.Tasks.Task<ConfigurationToneMappingToneMapOptionsVisibility> GetEncodingTonemapoptionsAsync ()
         {
-             ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility> localVarResponse = await GetEncodingTonemapoptionsAsyncWithHttpInfo();
+             ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility> localVarResponse = await GetEncodingTonemapoptionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -618,8 +618,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets available tone mapping options Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (MediaEncodingConfigurationToneMappingToneMapOptionsVisibility)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility>> GetEncodingTonemapoptionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (ConfigurationToneMappingToneMapOptionsVisibility)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility>> GetEncodingTonemapoptionsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Encoding/ToneMapOptions";
@@ -669,9 +669,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MediaEncodingConfigurationToneMappingToneMapOptionsVisibility>(localVarStatusCode,
+            return new ApiResponse<ConfigurationToneMappingToneMapOptionsVisibility>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MediaEncodingConfigurationToneMappingToneMapOptionsVisibility) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MediaEncodingConfigurationToneMappingToneMapOptionsVisibility)));
+                (ConfigurationToneMappingToneMapOptionsVisibility) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfigurationToneMappingToneMapOptionsVisibility)));
         }
 
     }

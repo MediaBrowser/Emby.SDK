@@ -26,14 +26,15 @@ open class TvShowsServiceAPI {
      - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
      - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
      - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
      - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
      - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
      - parameter hasParentalRating: (query) Optional filter by items that have or do not have a parental rating (optional)
      - parameter isHD: (query) Optional filter by items that are HD or not. (optional)
-     - parameter locationTypes: (query) Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)
-     - parameter excludeLocationTypes: (query) Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)
-     - parameter isMissing: (query) Optional filter by items that are missing episodes or not. (optional)
      - parameter isUnaired: (query) Optional filter by items that are unaired episodes or not. (optional)
      - parameter minCommunityRating: (query) Optional filter by minimum community rating. (optional)
      - parameter minCriticRating: (query) Optional filter by minimum critic rating. (optional)
@@ -61,9 +62,15 @@ open class TvShowsServiceAPI {
      - parameter isFavorite: (query) Optional filter by items that are marked as favorite, or not. (optional)
      - parameter isMovie: (query) Optional filter for movies. (optional)
      - parameter isSeries: (query) Optional filter for series. (optional)
+     - parameter isFolder: (query) Optional filter for folders. (optional)
      - parameter isNews: (query) Optional filter for news. (optional)
      - parameter isKids: (query) Optional filter for kids. (optional)
      - parameter isSports: (query) Optional filter for sports. (optional)
+     - parameter isNew: (query) Optional filter for IsNew. (optional)
+     - parameter isPremiere: (query) Optional filter for IsPremiere. (optional)
+     - parameter isNewOrPremiere: (query) Optional filter for IsNewOrPremiere. (optional)
+     - parameter isRepeat: (query) Optional filter for IsRepeat. (optional)
+     - parameter projectToMedia: (query) ProjectToMedia (optional)
      - parameter mediaTypes: (query) Optional filter by MediaType. Allows multiple, comma delimited. (optional)
      - parameter imageTypes: (query) Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)
      - parameter sortBy: (query) Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)
@@ -71,6 +78,7 @@ open class TvShowsServiceAPI {
      - parameter genres: (query) Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)
      - parameter officialRatings: (query) Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)
      - parameter tags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter excludeTags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
      - parameter years: (query) Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)
      - parameter enableImages: (query) Optional, include image information in output (optional)
      - parameter enableUserData: (query) Optional, include user data (optional)
@@ -88,7 +96,9 @@ open class TvShowsServiceAPI {
      - parameter videoTypes: (query) Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)
      - parameter containers: (query) Optional filter by Container. Allows multiple, comma delimeted. (optional)
      - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
+     - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
      - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
      - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
      - parameter path: (query) Optional filter by Path. (optional)
      - parameter userId: (query) User Id (optional)
@@ -106,8 +116,8 @@ open class TvShowsServiceAPI {
      - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getShowsByIdEpisodes(_id: String, season: Int? = nil, seasonId: String? = nil, startItemId: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, videoCodecs: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getShowsByIdEpisodesWithRequestBuilder(_id: _id, season: season, seasonId: seasonId, startItemId: startItemId, artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, locationTypes: locationTypes, excludeLocationTypes: excludeLocationTypes, isMissing: isMissing, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isNews: isNews, isKids: isKids, isSports: isSports, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, videoCodecs: videoCodecs, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
+    open class func getShowsByIdEpisodes(_id: String, season: Int? = nil, seasonId: String? = nil, startItemId: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getShowsByIdEpisodesWithRequestBuilder(_id: _id, season: season, seasonId: seasonId, startItemId: startItemId, artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, excludeTags: excludeTags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -140,14 +150,15 @@ open class TvShowsServiceAPI {
      - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
      - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
      - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
      - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
      - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
      - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
      - parameter hasParentalRating: (query) Optional filter by items that have or do not have a parental rating (optional)
      - parameter isHD: (query) Optional filter by items that are HD or not. (optional)
-     - parameter locationTypes: (query) Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)
-     - parameter excludeLocationTypes: (query) Optional. If specified, results will be filtered based on LocationType. This allows multiple, comma delimeted. (optional)
-     - parameter isMissing: (query) Optional filter by items that are missing episodes or not. (optional)
      - parameter isUnaired: (query) Optional filter by items that are unaired episodes or not. (optional)
      - parameter minCommunityRating: (query) Optional filter by minimum community rating. (optional)
      - parameter minCriticRating: (query) Optional filter by minimum critic rating. (optional)
@@ -175,9 +186,15 @@ open class TvShowsServiceAPI {
      - parameter isFavorite: (query) Optional filter by items that are marked as favorite, or not. (optional)
      - parameter isMovie: (query) Optional filter for movies. (optional)
      - parameter isSeries: (query) Optional filter for series. (optional)
+     - parameter isFolder: (query) Optional filter for folders. (optional)
      - parameter isNews: (query) Optional filter for news. (optional)
      - parameter isKids: (query) Optional filter for kids. (optional)
      - parameter isSports: (query) Optional filter for sports. (optional)
+     - parameter isNew: (query) Optional filter for IsNew. (optional)
+     - parameter isPremiere: (query) Optional filter for IsPremiere. (optional)
+     - parameter isNewOrPremiere: (query) Optional filter for IsNewOrPremiere. (optional)
+     - parameter isRepeat: (query) Optional filter for IsRepeat. (optional)
+     - parameter projectToMedia: (query) ProjectToMedia (optional)
      - parameter mediaTypes: (query) Optional filter by MediaType. Allows multiple, comma delimited. (optional)
      - parameter imageTypes: (query) Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)
      - parameter sortBy: (query) Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)
@@ -185,6 +202,7 @@ open class TvShowsServiceAPI {
      - parameter genres: (query) Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)
      - parameter officialRatings: (query) Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)
      - parameter tags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter excludeTags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
      - parameter years: (query) Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)
      - parameter enableImages: (query) Optional, include image information in output (optional)
      - parameter enableUserData: (query) Optional, include user data (optional)
@@ -202,7 +220,9 @@ open class TvShowsServiceAPI {
      - parameter videoTypes: (query) Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)
      - parameter containers: (query) Optional filter by Container. Allows multiple, comma delimeted. (optional)
      - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
+     - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
      - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
      - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
      - parameter path: (query) Optional filter by Path. (optional)
      - parameter userId: (query) User Id (optional)
@@ -221,7 +241,7 @@ open class TvShowsServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getShowsByIdEpisodesWithRequestBuilder(_id: String, season: Int? = nil, seasonId: String? = nil, startItemId: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, locationTypes: String? = nil, excludeLocationTypes: String? = nil, isMissing: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, videoCodecs: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<Void> {
+    open class func getShowsByIdEpisodesWithRequestBuilder(_id: String, season: Int? = nil, seasonId: String? = nil, startItemId: String? = nil, artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<Void> {
         var path = "/Shows/{Id}/Episodes"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -242,14 +262,15 @@ open class TvShowsServiceAPI {
                         "HasTrailer": hasTrailer, 
                         "AdjacentTo": adjacentTo, 
                         "MinIndexNumber": minIndexNumber?.encodeToJSON(), 
+                        "MinStartDate": minStartDate, 
+                        "MaxStartDate": maxStartDate, 
+                        "MinEndDate": minEndDate, 
+                        "MaxEndDate": maxEndDate, 
                         "MinPlayers": minPlayers?.encodeToJSON(), 
                         "MaxPlayers": maxPlayers?.encodeToJSON(), 
                         "ParentIndexNumber": parentIndexNumber?.encodeToJSON(), 
                         "HasParentalRating": hasParentalRating, 
                         "IsHD": isHD, 
-                        "LocationTypes": locationTypes, 
-                        "ExcludeLocationTypes": excludeLocationTypes, 
-                        "IsMissing": isMissing, 
                         "IsUnaired": isUnaired, 
                         "MinCommunityRating": minCommunityRating, 
                         "MinCriticRating": minCriticRating, 
@@ -277,9 +298,15 @@ open class TvShowsServiceAPI {
                         "IsFavorite": isFavorite, 
                         "IsMovie": isMovie, 
                         "IsSeries": isSeries, 
+                        "IsFolder": isFolder, 
                         "IsNews": isNews, 
                         "IsKids": isKids, 
                         "IsSports": isSports, 
+                        "IsNew": isNew, 
+                        "IsPremiere": isPremiere, 
+                        "IsNewOrPremiere": isNewOrPremiere, 
+                        "IsRepeat": isRepeat, 
+                        "ProjectToMedia": projectToMedia, 
                         "MediaTypes": mediaTypes, 
                         "ImageTypes": imageTypes, 
                         "SortBy": sortBy, 
@@ -287,6 +314,7 @@ open class TvShowsServiceAPI {
                         "Genres": genres, 
                         "OfficialRatings": officialRatings, 
                         "Tags": tags, 
+                        "ExcludeTags": excludeTags, 
                         "Years": years, 
                         "EnableImages": enableImages, 
                         "EnableUserData": enableUserData, 
@@ -304,7 +332,9 @@ open class TvShowsServiceAPI {
                         "VideoTypes": videoTypes, 
                         "Containers": containers, 
                         "AudioCodecs": audioCodecs, 
+                        "AudioLayouts": audioLayouts, 
                         "VideoCodecs": videoCodecs, 
+                        "ExtendedVideoTypes": extendedVideoTypes, 
                         "SubtitleCodecs": subtitleCodecs, 
                         "Path": path, 
                         "UserId": userId, 
@@ -334,7 +364,6 @@ open class TvShowsServiceAPI {
      - parameter _id: (path) The series id 
      - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      - parameter isSpecialSeason: (query) Optional. Filter by special season. (optional)
-     - parameter isMissing: (query) Optional filter by items that are missing episodes or not. (optional)
      - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
      - parameter enableImages: (query) Optional, include image information in output (optional)
      - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
@@ -342,8 +371,8 @@ open class TvShowsServiceAPI {
      - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getShowsByIdSeasons(userId: String, _id: String, fields: String? = nil, isSpecialSeason: Bool? = nil, isMissing: Bool? = nil, adjacentTo: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
-        getShowsByIdSeasonsWithRequestBuilder(userId: userId, _id: _id, fields: fields, isSpecialSeason: isSpecialSeason, isMissing: isMissing, adjacentTo: adjacentTo, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
+    open class func getShowsByIdSeasons(userId: String, _id: String, fields: String? = nil, isSpecialSeason: Bool? = nil, adjacentTo: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
+        getShowsByIdSeasonsWithRequestBuilder(userId: userId, _id: _id, fields: fields, isSpecialSeason: isSpecialSeason, adjacentTo: adjacentTo, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -360,33 +389,33 @@ open class TvShowsServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "TotalRecordCount" : 0,
+  "TotalRecordCount" : 4,
   "Items" : [ {
     "SeasonName" : "SeasonName",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-    "Size" : 6,
-    "CriticRating" : 6.965118,
-    "GameSystemId" : 1,
+    "Size" : 2,
+    "CriticRating" : 6.4384236,
+    "GameSystemId" : 3,
     "Studios" : [ {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     }, {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     } ],
     "CameraMake" : "CameraMake",
-    "Aperture" : 7.260521264802104,
+    "Aperture" : 1.041444916118296,
     "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
     "ExtraType" : "ExtraType",
     "ParentBackdropItemId" : "ParentBackdropItemId",
     "Etag" : "Etag",
     "ParentLogoImageTag" : "ParentLogoImageTag",
-    "ExposureTime" : 1.041444916118296,
+    "ExposureTime" : 6.628464275087742,
     "MediaType" : "MediaType",
     "ManagementId" : "ManagementId",
     "Tags" : [ "Tags", "Tags" ],
     "Status" : "Status",
-    "IndexNumberEnd" : 3,
+    "IndexNumberEnd" : 6,
     "ArtistItems" : [ {
       "Id" : "Id",
       "Name" : "Name"
@@ -399,34 +428,35 @@ open class TvShowsServiceAPI {
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -436,8 +466,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -445,40 +475,42 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -488,8 +520,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -497,17 +529,19 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -521,57 +555,62 @@ open class TvShowsServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     }, {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -581,8 +620,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -590,40 +629,42 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -633,8 +674,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -642,17 +683,19 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -666,50 +709,56 @@ open class TvShowsServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     } ],
     "GenreItems" : [ null, null ],
     "OfficialRating" : "OfficialRating",
-    "Longitude" : 9.702963800023566,
+    "Longitude" : 9.132027271330688,
     "Composers" : [ null, null ],
     "LockData" : true,
-    "FocalLength" : 4.678947989005849,
+    "FocalLength" : 4.258773108174356,
     "IsNews" : true,
-    "ShutterSpeed" : 9.132027271330688,
+    "ShutterSpeed" : 4.678947989005849,
     "Id" : "Id",
     "SortIndexNumber" : 0,
     "IsFolder" : true,
+    "CanMakePublic" : true,
     "SeriesTimerId" : "SeriesTimerId",
     "SeriesId" : "SeriesId",
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
-    "SeriesCount" : 6,
+    "SeriesCount" : 5,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
-    "PlayAccess" : "Full",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
-    "Width" : 6,
+    "Width" : 4,
     "ExternalUrls" : [ {
       "Url" : "Url",
       "Name" : "Name"
@@ -717,29 +766,29 @@ open class TvShowsServiceAPI {
       "Url" : "Url",
       "Name" : "Name"
     } ],
-    "RecursiveItemCount" : 3,
+    "RecursiveItemCount" : 8,
     "Path" : "Path",
     "ParentId" : "ParentId",
     "TimerType" : "Program",
     "GameSystem" : "GameSystem",
-    "MusicVideoCount" : 3,
+    "MusicVideoCount" : 8,
     "IsSeries" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
-    "Bitrate" : 5,
+    "Bitrate" : 6,
     "EndDate" : "2000-01-23T04:56:07.000+00:00",
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-    "AirsBeforeEpisodeNumber" : 5,
-    "ChildCount" : 3,
+    "ChildCount" : 7,
     "TagItems" : [ null, null ],
     "Artists" : [ "Artists", "Artists" ],
     "ListingsChannelName" : "ListingsChannelName",
-    "RunTimeTicks" : 6,
+    "RunTimeTicks" : 1,
     "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
     "Video3DFormat" : "HalfSideBySide",
     "CanDelete" : true,
@@ -747,7 +796,8 @@ open class TvShowsServiceAPI {
     "SortParentIndexNumber" : 6,
     "DisplayPreferencesId" : "DisplayPreferencesId",
     "Album" : "Album",
-    "Latitude" : 0.8774076871421566,
+    "Latitude" : 7.260521264802104,
+    "Guid" : "Guid",
     "SortName" : "SortName",
     "Name" : "Name",
     "StartDate" : "2000-01-23T04:56:07.000+00:00",
@@ -758,8 +808,8 @@ open class TvShowsServiceAPI {
     "AlbumId" : "AlbumId",
     "SupportsSync" : true,
     "LocalTrailerCount" : 7,
-    "IndexNumber" : 3,
-    "CompletionPercentage" : 5.507386964179881,
+    "IndexNumber" : 5,
+    "CompletionPercentage" : 0.5199002018724985,
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
@@ -777,43 +827,44 @@ open class TvShowsServiceAPI {
     "PresentationUniqueKey" : "PresentationUniqueKey",
     "CustomRating" : "CustomRating",
     "ListingsChannelNumber" : "ListingsChannelNumber",
-    "AirsAfterSeasonNumber" : 5,
+    "SyncStatus" : "Queued",
+    "CanManageAccess" : true,
     "AirDays" : [ "Sunday", "Sunday" ],
     "ParentLogoItemId" : "ParentLogoItemId",
-    "PartCount" : 3,
+    "PartCount" : 7,
     "ListingsProviderId" : "ListingsProviderId",
+    "CanEditItems" : true,
     "ChannelName" : "ChannelName",
     "EpisodeTitle" : "EpisodeTitle",
-    "IsoSpeedRating" : 7,
-    "CommunityRating" : 2.8841622,
+    "IsoSpeedRating" : 9,
+    "CommunityRating" : 6.965118,
     "Software" : "Software",
     "Chapters" : [ {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     }, {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     } ],
-    "SongCount" : 4,
+    "SongCount" : 6,
     "Taglines" : [ "Taglines", "Taglines" ],
-    "AirsBeforeSeasonNumber" : 1,
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
-      "UnplayedItemCount" : 4,
+      "UnplayedItemCount" : 6,
       "Played" : true,
       "ServerId" : "ServerId",
-      "PlayedPercentage" : 0.10263654006109402,
-      "Rating" : 6.519180951018382,
-      "PlayCount" : 7,
-      "PlaybackPositionTicks" : 8,
+      "PlayedPercentage" : 7.058770351582356,
+      "Rating" : 0.8851374739011653,
+      "PlayCount" : 4,
+      "PlaybackPositionTicks" : 0,
       "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
       "IsFavorite" : true,
       "ItemId" : "ItemId",
@@ -824,21 +875,21 @@ open class TvShowsServiceAPI {
     "ParentThumbImageTag" : "ParentThumbImageTag",
     "IsSports" : true,
     "ChannelId" : "ChannelId",
-    "ParentIndexNumber" : 7,
+    "ParentIndexNumber" : 3,
     "IsNew" : true,
     "AffiliateCallSign" : "AffiliateCallSign",
     "ListingsId" : "ListingsId",
     "AlbumArtists" : [ null, null ],
     "ServerId" : "ServerId",
     "Number" : "Number",
-    "AlbumCount" : 8,
+    "AlbumCount" : 4,
     "IsRepeat" : true,
     "CollectionType" : "CollectionType",
-    "PrimaryImageAspectRatio" : 5.533258397034986,
-    "Height" : 4,
+    "PrimaryImageAspectRatio" : 3.0576100241049344,
+    "Height" : 0,
     "IsKids" : true,
     "DisplayOrder" : "DisplayOrder",
-    "MovieCount" : 4,
+    "MovieCount" : 7,
     "People" : [ {
       "Role" : "Role",
       "Type" : "Actor",
@@ -853,7 +904,7 @@ open class TvShowsServiceAPI {
       "Name" : "Name"
     } ],
     "Overview" : "Overview",
-    "SpecialFeatureCount" : 7,
+    "SpecialFeatureCount" : 3,
     "ImageOrientation" : "TopLeft",
     "AlbumArtist" : "AlbumArtist",
     "ImageTags" : {
@@ -864,33 +915,33 @@ open class TvShowsServiceAPI {
     "SupportsResume" : true,
     "LocationType" : "FileSystem",
     "IsPremiere" : true,
-    "Altitude" : 0.5199002018724985
+    "Altitude" : 0.8774076871421566
   }, {
     "SeasonName" : "SeasonName",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-    "Size" : 6,
-    "CriticRating" : 6.965118,
-    "GameSystemId" : 1,
+    "Size" : 2,
+    "CriticRating" : 6.4384236,
+    "GameSystemId" : 3,
     "Studios" : [ {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     }, {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     } ],
     "CameraMake" : "CameraMake",
-    "Aperture" : 7.260521264802104,
+    "Aperture" : 1.041444916118296,
     "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
     "ExtraType" : "ExtraType",
     "ParentBackdropItemId" : "ParentBackdropItemId",
     "Etag" : "Etag",
     "ParentLogoImageTag" : "ParentLogoImageTag",
-    "ExposureTime" : 1.041444916118296,
+    "ExposureTime" : 6.628464275087742,
     "MediaType" : "MediaType",
     "ManagementId" : "ManagementId",
     "Tags" : [ "Tags", "Tags" ],
     "Status" : "Status",
-    "IndexNumberEnd" : 3,
+    "IndexNumberEnd" : 6,
     "ArtistItems" : [ {
       "Id" : "Id",
       "Name" : "Name"
@@ -903,34 +954,35 @@ open class TvShowsServiceAPI {
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -940,8 +992,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -949,40 +1001,42 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -992,8 +1046,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1001,17 +1055,19 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1025,57 +1081,62 @@ open class TvShowsServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     }, {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1085,8 +1146,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1094,40 +1155,42 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1137,8 +1200,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1146,17 +1209,19 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1170,50 +1235,56 @@ open class TvShowsServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     } ],
     "GenreItems" : [ null, null ],
     "OfficialRating" : "OfficialRating",
-    "Longitude" : 9.702963800023566,
+    "Longitude" : 9.132027271330688,
     "Composers" : [ null, null ],
     "LockData" : true,
-    "FocalLength" : 4.678947989005849,
+    "FocalLength" : 4.258773108174356,
     "IsNews" : true,
-    "ShutterSpeed" : 9.132027271330688,
+    "ShutterSpeed" : 4.678947989005849,
     "Id" : "Id",
     "SortIndexNumber" : 0,
     "IsFolder" : true,
+    "CanMakePublic" : true,
     "SeriesTimerId" : "SeriesTimerId",
     "SeriesId" : "SeriesId",
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
-    "SeriesCount" : 6,
+    "SeriesCount" : 5,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
-    "PlayAccess" : "Full",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
-    "Width" : 6,
+    "Width" : 4,
     "ExternalUrls" : [ {
       "Url" : "Url",
       "Name" : "Name"
@@ -1221,29 +1292,29 @@ open class TvShowsServiceAPI {
       "Url" : "Url",
       "Name" : "Name"
     } ],
-    "RecursiveItemCount" : 3,
+    "RecursiveItemCount" : 8,
     "Path" : "Path",
     "ParentId" : "ParentId",
     "TimerType" : "Program",
     "GameSystem" : "GameSystem",
-    "MusicVideoCount" : 3,
+    "MusicVideoCount" : 8,
     "IsSeries" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
-    "Bitrate" : 5,
+    "Bitrate" : 6,
     "EndDate" : "2000-01-23T04:56:07.000+00:00",
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-    "AirsBeforeEpisodeNumber" : 5,
-    "ChildCount" : 3,
+    "ChildCount" : 7,
     "TagItems" : [ null, null ],
     "Artists" : [ "Artists", "Artists" ],
     "ListingsChannelName" : "ListingsChannelName",
-    "RunTimeTicks" : 6,
+    "RunTimeTicks" : 1,
     "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
     "Video3DFormat" : "HalfSideBySide",
     "CanDelete" : true,
@@ -1251,7 +1322,8 @@ open class TvShowsServiceAPI {
     "SortParentIndexNumber" : 6,
     "DisplayPreferencesId" : "DisplayPreferencesId",
     "Album" : "Album",
-    "Latitude" : 0.8774076871421566,
+    "Latitude" : 7.260521264802104,
+    "Guid" : "Guid",
     "SortName" : "SortName",
     "Name" : "Name",
     "StartDate" : "2000-01-23T04:56:07.000+00:00",
@@ -1262,8 +1334,8 @@ open class TvShowsServiceAPI {
     "AlbumId" : "AlbumId",
     "SupportsSync" : true,
     "LocalTrailerCount" : 7,
-    "IndexNumber" : 3,
-    "CompletionPercentage" : 5.507386964179881,
+    "IndexNumber" : 5,
+    "CompletionPercentage" : 0.5199002018724985,
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
@@ -1281,43 +1353,44 @@ open class TvShowsServiceAPI {
     "PresentationUniqueKey" : "PresentationUniqueKey",
     "CustomRating" : "CustomRating",
     "ListingsChannelNumber" : "ListingsChannelNumber",
-    "AirsAfterSeasonNumber" : 5,
+    "SyncStatus" : "Queued",
+    "CanManageAccess" : true,
     "AirDays" : [ "Sunday", "Sunday" ],
     "ParentLogoItemId" : "ParentLogoItemId",
-    "PartCount" : 3,
+    "PartCount" : 7,
     "ListingsProviderId" : "ListingsProviderId",
+    "CanEditItems" : true,
     "ChannelName" : "ChannelName",
     "EpisodeTitle" : "EpisodeTitle",
-    "IsoSpeedRating" : 7,
-    "CommunityRating" : 2.8841622,
+    "IsoSpeedRating" : 9,
+    "CommunityRating" : 6.965118,
     "Software" : "Software",
     "Chapters" : [ {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     }, {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     } ],
-    "SongCount" : 4,
+    "SongCount" : 6,
     "Taglines" : [ "Taglines", "Taglines" ],
-    "AirsBeforeSeasonNumber" : 1,
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
-      "UnplayedItemCount" : 4,
+      "UnplayedItemCount" : 6,
       "Played" : true,
       "ServerId" : "ServerId",
-      "PlayedPercentage" : 0.10263654006109402,
-      "Rating" : 6.519180951018382,
-      "PlayCount" : 7,
-      "PlaybackPositionTicks" : 8,
+      "PlayedPercentage" : 7.058770351582356,
+      "Rating" : 0.8851374739011653,
+      "PlayCount" : 4,
+      "PlaybackPositionTicks" : 0,
       "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
       "IsFavorite" : true,
       "ItemId" : "ItemId",
@@ -1328,21 +1401,21 @@ open class TvShowsServiceAPI {
     "ParentThumbImageTag" : "ParentThumbImageTag",
     "IsSports" : true,
     "ChannelId" : "ChannelId",
-    "ParentIndexNumber" : 7,
+    "ParentIndexNumber" : 3,
     "IsNew" : true,
     "AffiliateCallSign" : "AffiliateCallSign",
     "ListingsId" : "ListingsId",
     "AlbumArtists" : [ null, null ],
     "ServerId" : "ServerId",
     "Number" : "Number",
-    "AlbumCount" : 8,
+    "AlbumCount" : 4,
     "IsRepeat" : true,
     "CollectionType" : "CollectionType",
-    "PrimaryImageAspectRatio" : 5.533258397034986,
-    "Height" : 4,
+    "PrimaryImageAspectRatio" : 3.0576100241049344,
+    "Height" : 0,
     "IsKids" : true,
     "DisplayOrder" : "DisplayOrder",
-    "MovieCount" : 4,
+    "MovieCount" : 7,
     "People" : [ {
       "Role" : "Role",
       "Type" : "Actor",
@@ -1357,7 +1430,7 @@ open class TvShowsServiceAPI {
       "Name" : "Name"
     } ],
     "Overview" : "Overview",
-    "SpecialFeatureCount" : 7,
+    "SpecialFeatureCount" : 3,
     "ImageOrientation" : "TopLeft",
     "AlbumArtist" : "AlbumArtist",
     "ImageTags" : {
@@ -1368,18 +1441,17 @@ open class TvShowsServiceAPI {
     "SupportsResume" : true,
     "LocationType" : "FileSystem",
     "IsPremiere" : true,
-    "Altitude" : 0.5199002018724985
+    "Altitude" : 0.8774076871421566
   } ]
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://dev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (query) User Id 
      - parameter _id: (path) The series id 
      - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
      - parameter isSpecialSeason: (query) Optional. Filter by special season. (optional)
-     - parameter isMissing: (query) Optional filter by items that are missing episodes or not. (optional)
      - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
      - parameter enableImages: (query) Optional, include image information in output (optional)
      - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
@@ -1388,7 +1460,7 @@ open class TvShowsServiceAPI {
 
      - returns: RequestBuilder<QueryResultBaseItemDto> 
      */
-    open class func getShowsByIdSeasonsWithRequestBuilder(userId: String, _id: String, fields: String? = nil, isSpecialSeason: Bool? = nil, isMissing: Bool? = nil, adjacentTo: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
+    open class func getShowsByIdSeasonsWithRequestBuilder(userId: String, _id: String, fields: String? = nil, isSpecialSeason: Bool? = nil, adjacentTo: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
         var path = "/Shows/{Id}/Seasons"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1400,7 +1472,6 @@ open class TvShowsServiceAPI {
                         "UserId": userId, 
                         "Fields": fields, 
                         "IsSpecialSeason": isSpecialSeason, 
-                        "IsMissing": isMissing, 
                         "AdjacentTo": adjacentTo, 
                         "EnableImages": enableImages, 
                         "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
@@ -1410,6 +1481,339 @@ open class TvShowsServiceAPI {
 
 
         let requestBuilder: RequestBuilder<QueryResultBaseItemDto>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets a list of missing episodes
+
+     - parameter artistType: (query) Artist or AlbumArtist (optional)
+     - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
+     - parameter hasThemeSong: (query) Optional filter by items with theme songs. (optional)
+     - parameter hasThemeVideo: (query) Optional filter by items with theme videos. (optional)
+     - parameter hasSubtitles: (query) Optional filter by items with subtitles. (optional)
+     - parameter hasSpecialFeature: (query) Optional filter by items with special features. (optional)
+     - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
+     - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
+     - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
+     - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
+     - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
+     - parameter hasParentalRating: (query) Optional filter by items that have or do not have a parental rating (optional)
+     - parameter isHD: (query) Optional filter by items that are HD or not. (optional)
+     - parameter isUnaired: (query) Optional filter by items that are unaired episodes or not. (optional)
+     - parameter minCommunityRating: (query) Optional filter by minimum community rating. (optional)
+     - parameter minCriticRating: (query) Optional filter by minimum critic rating. (optional)
+     - parameter airedDuringSeason: (query) Gets all episodes that aired during a season, including specials. (optional)
+     - parameter minPremiereDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter minDateLastSaved: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter minDateLastSavedForUser: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxPremiereDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter hasOverview: (query) Optional filter by items that have an overview or not. (optional)
+     - parameter hasImdbId: (query) Optional filter by items that have an imdb id or not. (optional)
+     - parameter hasTmdbId: (query) Optional filter by items that have a tmdb id or not. (optional)
+     - parameter hasTvdbId: (query) Optional filter by items that have a tvdb id or not. (optional)
+     - parameter excludeItemIds: (query) Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted. (optional)
+     - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     - parameter limit: (query) Optional. The maximum number of records to return (optional)
+     - parameter recursive: (query) When searching within folders, this determines whether or not the search will be recursive. true/false (optional)
+     - parameter searchTerm: (query) Enter a search term to perform a search request (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
+     - parameter parentId: (query) Specify this to localize the search to a specific item or folder. Omit to use the root (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines (optional)
+     - parameter excludeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
+     - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
+     - parameter anyProviderIdEquals: (query) Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs. (optional)
+     - parameter filters: (query) Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes (optional)
+     - parameter isFavorite: (query) Optional filter by items that are marked as favorite, or not. (optional)
+     - parameter isMovie: (query) Optional filter for movies. (optional)
+     - parameter isSeries: (query) Optional filter for series. (optional)
+     - parameter isFolder: (query) Optional filter for folders. (optional)
+     - parameter isNews: (query) Optional filter for news. (optional)
+     - parameter isKids: (query) Optional filter for kids. (optional)
+     - parameter isSports: (query) Optional filter for sports. (optional)
+     - parameter isNew: (query) Optional filter for IsNew. (optional)
+     - parameter isPremiere: (query) Optional filter for IsPremiere. (optional)
+     - parameter isNewOrPremiere: (query) Optional filter for IsNewOrPremiere. (optional)
+     - parameter isRepeat: (query) Optional filter for IsRepeat. (optional)
+     - parameter projectToMedia: (query) ProjectToMedia (optional)
+     - parameter mediaTypes: (query) Optional filter by MediaType. Allows multiple, comma delimited. (optional)
+     - parameter imageTypes: (query) Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)
+     - parameter sortBy: (query) Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)
+     - parameter isPlayed: (query) Optional filter by items that are played, or not. (optional)
+     - parameter genres: (query) Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)
+     - parameter officialRatings: (query) Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)
+     - parameter tags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter excludeTags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter years: (query) Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter person: (query) Optional. If specified, results will be filtered to include only those containing the specified person. (optional)
+     - parameter personIds: (query) Optional. If specified, results will be filtered to include only those containing the specified person. (optional)
+     - parameter personTypes: (query) Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited (optional)
+     - parameter studios: (query) Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted. (optional)
+     - parameter studioIds: (query) Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted. (optional)
+     - parameter artists: (query) Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted. (optional)
+     - parameter artistIds: (query) Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted. (optional)
+     - parameter albums: (query) Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted. (optional)
+     - parameter ids: (query) Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited. (optional)
+     - parameter videoTypes: (query) Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)
+     - parameter containers: (query) Optional filter by Container. Allows multiple, comma delimeted. (optional)
+     - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
+     - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
+     - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
+     - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
+     - parameter path: (query) Optional filter by Path. (optional)
+     - parameter userId: (query) User Id (optional)
+     - parameter minOfficialRating: (query) Optional filter by minimum official rating (PG, PG-13, TV-MA, etc). (optional)
+     - parameter isLocked: (query) Optional filter by items that are locked. (optional)
+     - parameter isPlaceHolder: (query) Optional filter by items that are placeholders (optional)
+     - parameter hasOfficialRating: (query) Optional filter by items that have official ratings (optional)
+     - parameter groupItemsIntoCollections: (query) Whether or not to hide items behind their boxsets. (optional)
+     - parameter is3D: (query) Optional filter by items that are 3D, or not. (optional)
+     - parameter seriesStatus: (query) Optional filter by Series Status. Allows multiple, comma delimeted. (optional)
+     - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter artistStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter albumArtistStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter nameStartsWith: (query) Optional filter by items whose name is sorted equally than a given input string. (optional)
+     - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getShowsMissing(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getShowsMissingWithRequestBuilder(artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, excludeTags: excludeTags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a list of missing episodes
+     - GET /Shows/Missing
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter artistType: (query) Artist or AlbumArtist (optional)
+     - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
+     - parameter hasThemeSong: (query) Optional filter by items with theme songs. (optional)
+     - parameter hasThemeVideo: (query) Optional filter by items with theme videos. (optional)
+     - parameter hasSubtitles: (query) Optional filter by items with subtitles. (optional)
+     - parameter hasSpecialFeature: (query) Optional filter by items with special features. (optional)
+     - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
+     - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
+     - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
+     - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
+     - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
+     - parameter hasParentalRating: (query) Optional filter by items that have or do not have a parental rating (optional)
+     - parameter isHD: (query) Optional filter by items that are HD or not. (optional)
+     - parameter isUnaired: (query) Optional filter by items that are unaired episodes or not. (optional)
+     - parameter minCommunityRating: (query) Optional filter by minimum community rating. (optional)
+     - parameter minCriticRating: (query) Optional filter by minimum critic rating. (optional)
+     - parameter airedDuringSeason: (query) Gets all episodes that aired during a season, including specials. (optional)
+     - parameter minPremiereDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter minDateLastSaved: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter minDateLastSavedForUser: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxPremiereDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter hasOverview: (query) Optional filter by items that have an overview or not. (optional)
+     - parameter hasImdbId: (query) Optional filter by items that have an imdb id or not. (optional)
+     - parameter hasTmdbId: (query) Optional filter by items that have a tmdb id or not. (optional)
+     - parameter hasTvdbId: (query) Optional filter by items that have a tvdb id or not. (optional)
+     - parameter excludeItemIds: (query) Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted. (optional)
+     - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
+     - parameter limit: (query) Optional. The maximum number of records to return (optional)
+     - parameter recursive: (query) When searching within folders, this determines whether or not the search will be recursive. true/false (optional)
+     - parameter searchTerm: (query) Enter a search term to perform a search request (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
+     - parameter parentId: (query) Specify this to localize the search to a specific item or folder. Omit to use the root (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines (optional)
+     - parameter excludeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
+     - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
+     - parameter anyProviderIdEquals: (query) Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs. (optional)
+     - parameter filters: (query) Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes (optional)
+     - parameter isFavorite: (query) Optional filter by items that are marked as favorite, or not. (optional)
+     - parameter isMovie: (query) Optional filter for movies. (optional)
+     - parameter isSeries: (query) Optional filter for series. (optional)
+     - parameter isFolder: (query) Optional filter for folders. (optional)
+     - parameter isNews: (query) Optional filter for news. (optional)
+     - parameter isKids: (query) Optional filter for kids. (optional)
+     - parameter isSports: (query) Optional filter for sports. (optional)
+     - parameter isNew: (query) Optional filter for IsNew. (optional)
+     - parameter isPremiere: (query) Optional filter for IsPremiere. (optional)
+     - parameter isNewOrPremiere: (query) Optional filter for IsNewOrPremiere. (optional)
+     - parameter isRepeat: (query) Optional filter for IsRepeat. (optional)
+     - parameter projectToMedia: (query) ProjectToMedia (optional)
+     - parameter mediaTypes: (query) Optional filter by MediaType. Allows multiple, comma delimited. (optional)
+     - parameter imageTypes: (query) Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)
+     - parameter sortBy: (query) Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)
+     - parameter isPlayed: (query) Optional filter by items that are played, or not. (optional)
+     - parameter genres: (query) Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)
+     - parameter officialRatings: (query) Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)
+     - parameter tags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter excludeTags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter years: (query) Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)
+     - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
+     - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
+     - parameter person: (query) Optional. If specified, results will be filtered to include only those containing the specified person. (optional)
+     - parameter personIds: (query) Optional. If specified, results will be filtered to include only those containing the specified person. (optional)
+     - parameter personTypes: (query) Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited (optional)
+     - parameter studios: (query) Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted. (optional)
+     - parameter studioIds: (query) Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted. (optional)
+     - parameter artists: (query) Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted. (optional)
+     - parameter artistIds: (query) Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted. (optional)
+     - parameter albums: (query) Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted. (optional)
+     - parameter ids: (query) Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited. (optional)
+     - parameter videoTypes: (query) Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)
+     - parameter containers: (query) Optional filter by Container. Allows multiple, comma delimeted. (optional)
+     - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
+     - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
+     - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
+     - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
+     - parameter path: (query) Optional filter by Path. (optional)
+     - parameter userId: (query) User Id (optional)
+     - parameter minOfficialRating: (query) Optional filter by minimum official rating (PG, PG-13, TV-MA, etc). (optional)
+     - parameter isLocked: (query) Optional filter by items that are locked. (optional)
+     - parameter isPlaceHolder: (query) Optional filter by items that are placeholders (optional)
+     - parameter hasOfficialRating: (query) Optional filter by items that have official ratings (optional)
+     - parameter groupItemsIntoCollections: (query) Whether or not to hide items behind their boxsets. (optional)
+     - parameter is3D: (query) Optional filter by items that are 3D, or not. (optional)
+     - parameter seriesStatus: (query) Optional filter by Series Status. Allows multiple, comma delimeted. (optional)
+     - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter artistStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter albumArtistStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter nameStartsWith: (query) Optional filter by items whose name is sorted equally than a given input string. (optional)
+     - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func getShowsMissingWithRequestBuilder(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<Void> {
+        let path = "/Shows/Missing"
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "ArtistType": artistType, 
+                        "MaxOfficialRating": maxOfficialRating, 
+                        "HasThemeSong": hasThemeSong, 
+                        "HasThemeVideo": hasThemeVideo, 
+                        "HasSubtitles": hasSubtitles, 
+                        "HasSpecialFeature": hasSpecialFeature, 
+                        "HasTrailer": hasTrailer, 
+                        "AdjacentTo": adjacentTo, 
+                        "MinIndexNumber": minIndexNumber?.encodeToJSON(), 
+                        "MinStartDate": minStartDate, 
+                        "MaxStartDate": maxStartDate, 
+                        "MinEndDate": minEndDate, 
+                        "MaxEndDate": maxEndDate, 
+                        "MinPlayers": minPlayers?.encodeToJSON(), 
+                        "MaxPlayers": maxPlayers?.encodeToJSON(), 
+                        "ParentIndexNumber": parentIndexNumber?.encodeToJSON(), 
+                        "HasParentalRating": hasParentalRating, 
+                        "IsHD": isHD, 
+                        "IsUnaired": isUnaired, 
+                        "MinCommunityRating": minCommunityRating, 
+                        "MinCriticRating": minCriticRating, 
+                        "AiredDuringSeason": airedDuringSeason?.encodeToJSON(), 
+                        "MinPremiereDate": minPremiereDate, 
+                        "MinDateLastSaved": minDateLastSaved, 
+                        "MinDateLastSavedForUser": minDateLastSavedForUser, 
+                        "MaxPremiereDate": maxPremiereDate, 
+                        "HasOverview": hasOverview, 
+                        "HasImdbId": hasImdbId, 
+                        "HasTmdbId": hasTmdbId, 
+                        "HasTvdbId": hasTvdbId, 
+                        "ExcludeItemIds": excludeItemIds, 
+                        "StartIndex": startIndex?.encodeToJSON(), 
+                        "Limit": limit?.encodeToJSON(), 
+                        "Recursive": recursive, 
+                        "SearchTerm": searchTerm, 
+                        "SortOrder": sortOrder, 
+                        "ParentId": parentId, 
+                        "Fields": fields, 
+                        "ExcludeItemTypes": excludeItemTypes, 
+                        "IncludeItemTypes": includeItemTypes, 
+                        "AnyProviderIdEquals": anyProviderIdEquals, 
+                        "Filters": filters, 
+                        "IsFavorite": isFavorite, 
+                        "IsMovie": isMovie, 
+                        "IsSeries": isSeries, 
+                        "IsFolder": isFolder, 
+                        "IsNews": isNews, 
+                        "IsKids": isKids, 
+                        "IsSports": isSports, 
+                        "IsNew": isNew, 
+                        "IsPremiere": isPremiere, 
+                        "IsNewOrPremiere": isNewOrPremiere, 
+                        "IsRepeat": isRepeat, 
+                        "ProjectToMedia": projectToMedia, 
+                        "MediaTypes": mediaTypes, 
+                        "ImageTypes": imageTypes, 
+                        "SortBy": sortBy, 
+                        "IsPlayed": isPlayed, 
+                        "Genres": genres, 
+                        "OfficialRatings": officialRatings, 
+                        "Tags": tags, 
+                        "ExcludeTags": excludeTags, 
+                        "Years": years, 
+                        "EnableImages": enableImages, 
+                        "EnableUserData": enableUserData, 
+                        "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
+                        "EnableImageTypes": enableImageTypes, 
+                        "Person": person, 
+                        "PersonIds": personIds, 
+                        "PersonTypes": personTypes, 
+                        "Studios": studios, 
+                        "StudioIds": studioIds, 
+                        "Artists": artists, 
+                        "ArtistIds": artistIds, 
+                        "Albums": albums, 
+                        "Ids": ids, 
+                        "VideoTypes": videoTypes, 
+                        "Containers": containers, 
+                        "AudioCodecs": audioCodecs, 
+                        "AudioLayouts": audioLayouts, 
+                        "VideoCodecs": videoCodecs, 
+                        "ExtendedVideoTypes": extendedVideoTypes, 
+                        "SubtitleCodecs": subtitleCodecs, 
+                        "Path": path, 
+                        "UserId": userId, 
+                        "MinOfficialRating": minOfficialRating, 
+                        "IsLocked": isLocked, 
+                        "IsPlaceHolder": isPlaceHolder, 
+                        "HasOfficialRating": hasOfficialRating, 
+                        "GroupItemsIntoCollections": groupItemsIntoCollections, 
+                        "Is3D": is3D, 
+                        "SeriesStatus": seriesStatus, 
+                        "NameStartsWithOrGreater": nameStartsWithOrGreater, 
+                        "ArtistStartsWithOrGreater": artistStartsWithOrGreater, 
+                        "AlbumArtistStartsWithOrGreater": albumArtistStartsWithOrGreater, 
+                        "NameStartsWith": nameStartsWith, 
+                        "NameLessThan": nameLessThan
+        ])
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1446,33 +1850,33 @@ open class TvShowsServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "TotalRecordCount" : 0,
+  "TotalRecordCount" : 4,
   "Items" : [ {
     "SeasonName" : "SeasonName",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-    "Size" : 6,
-    "CriticRating" : 6.965118,
-    "GameSystemId" : 1,
+    "Size" : 2,
+    "CriticRating" : 6.4384236,
+    "GameSystemId" : 3,
     "Studios" : [ {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     }, {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     } ],
     "CameraMake" : "CameraMake",
-    "Aperture" : 7.260521264802104,
+    "Aperture" : 1.041444916118296,
     "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
     "ExtraType" : "ExtraType",
     "ParentBackdropItemId" : "ParentBackdropItemId",
     "Etag" : "Etag",
     "ParentLogoImageTag" : "ParentLogoImageTag",
-    "ExposureTime" : 1.041444916118296,
+    "ExposureTime" : 6.628464275087742,
     "MediaType" : "MediaType",
     "ManagementId" : "ManagementId",
     "Tags" : [ "Tags", "Tags" ],
     "Status" : "Status",
-    "IndexNumberEnd" : 3,
+    "IndexNumberEnd" : 6,
     "ArtistItems" : [ {
       "Id" : "Id",
       "Name" : "Name"
@@ -1485,34 +1889,35 @@ open class TvShowsServiceAPI {
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1522,8 +1927,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1531,40 +1936,42 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1574,8 +1981,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1583,17 +1990,19 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1607,57 +2016,62 @@ open class TvShowsServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     }, {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1667,8 +2081,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1676,40 +2090,42 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1719,8 +2135,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1728,17 +2144,19 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1752,50 +2170,56 @@ open class TvShowsServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     } ],
     "GenreItems" : [ null, null ],
     "OfficialRating" : "OfficialRating",
-    "Longitude" : 9.702963800023566,
+    "Longitude" : 9.132027271330688,
     "Composers" : [ null, null ],
     "LockData" : true,
-    "FocalLength" : 4.678947989005849,
+    "FocalLength" : 4.258773108174356,
     "IsNews" : true,
-    "ShutterSpeed" : 9.132027271330688,
+    "ShutterSpeed" : 4.678947989005849,
     "Id" : "Id",
     "SortIndexNumber" : 0,
     "IsFolder" : true,
+    "CanMakePublic" : true,
     "SeriesTimerId" : "SeriesTimerId",
     "SeriesId" : "SeriesId",
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
-    "SeriesCount" : 6,
+    "SeriesCount" : 5,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
-    "PlayAccess" : "Full",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
-    "Width" : 6,
+    "Width" : 4,
     "ExternalUrls" : [ {
       "Url" : "Url",
       "Name" : "Name"
@@ -1803,29 +2227,29 @@ open class TvShowsServiceAPI {
       "Url" : "Url",
       "Name" : "Name"
     } ],
-    "RecursiveItemCount" : 3,
+    "RecursiveItemCount" : 8,
     "Path" : "Path",
     "ParentId" : "ParentId",
     "TimerType" : "Program",
     "GameSystem" : "GameSystem",
-    "MusicVideoCount" : 3,
+    "MusicVideoCount" : 8,
     "IsSeries" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
-    "Bitrate" : 5,
+    "Bitrate" : 6,
     "EndDate" : "2000-01-23T04:56:07.000+00:00",
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-    "AirsBeforeEpisodeNumber" : 5,
-    "ChildCount" : 3,
+    "ChildCount" : 7,
     "TagItems" : [ null, null ],
     "Artists" : [ "Artists", "Artists" ],
     "ListingsChannelName" : "ListingsChannelName",
-    "RunTimeTicks" : 6,
+    "RunTimeTicks" : 1,
     "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
     "Video3DFormat" : "HalfSideBySide",
     "CanDelete" : true,
@@ -1833,7 +2257,8 @@ open class TvShowsServiceAPI {
     "SortParentIndexNumber" : 6,
     "DisplayPreferencesId" : "DisplayPreferencesId",
     "Album" : "Album",
-    "Latitude" : 0.8774076871421566,
+    "Latitude" : 7.260521264802104,
+    "Guid" : "Guid",
     "SortName" : "SortName",
     "Name" : "Name",
     "StartDate" : "2000-01-23T04:56:07.000+00:00",
@@ -1844,8 +2269,8 @@ open class TvShowsServiceAPI {
     "AlbumId" : "AlbumId",
     "SupportsSync" : true,
     "LocalTrailerCount" : 7,
-    "IndexNumber" : 3,
-    "CompletionPercentage" : 5.507386964179881,
+    "IndexNumber" : 5,
+    "CompletionPercentage" : 0.5199002018724985,
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
@@ -1863,43 +2288,44 @@ open class TvShowsServiceAPI {
     "PresentationUniqueKey" : "PresentationUniqueKey",
     "CustomRating" : "CustomRating",
     "ListingsChannelNumber" : "ListingsChannelNumber",
-    "AirsAfterSeasonNumber" : 5,
+    "SyncStatus" : "Queued",
+    "CanManageAccess" : true,
     "AirDays" : [ "Sunday", "Sunday" ],
     "ParentLogoItemId" : "ParentLogoItemId",
-    "PartCount" : 3,
+    "PartCount" : 7,
     "ListingsProviderId" : "ListingsProviderId",
+    "CanEditItems" : true,
     "ChannelName" : "ChannelName",
     "EpisodeTitle" : "EpisodeTitle",
-    "IsoSpeedRating" : 7,
-    "CommunityRating" : 2.8841622,
+    "IsoSpeedRating" : 9,
+    "CommunityRating" : 6.965118,
     "Software" : "Software",
     "Chapters" : [ {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     }, {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     } ],
-    "SongCount" : 4,
+    "SongCount" : 6,
     "Taglines" : [ "Taglines", "Taglines" ],
-    "AirsBeforeSeasonNumber" : 1,
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
-      "UnplayedItemCount" : 4,
+      "UnplayedItemCount" : 6,
       "Played" : true,
       "ServerId" : "ServerId",
-      "PlayedPercentage" : 0.10263654006109402,
-      "Rating" : 6.519180951018382,
-      "PlayCount" : 7,
-      "PlaybackPositionTicks" : 8,
+      "PlayedPercentage" : 7.058770351582356,
+      "Rating" : 0.8851374739011653,
+      "PlayCount" : 4,
+      "PlaybackPositionTicks" : 0,
       "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
       "IsFavorite" : true,
       "ItemId" : "ItemId",
@@ -1910,21 +2336,21 @@ open class TvShowsServiceAPI {
     "ParentThumbImageTag" : "ParentThumbImageTag",
     "IsSports" : true,
     "ChannelId" : "ChannelId",
-    "ParentIndexNumber" : 7,
+    "ParentIndexNumber" : 3,
     "IsNew" : true,
     "AffiliateCallSign" : "AffiliateCallSign",
     "ListingsId" : "ListingsId",
     "AlbumArtists" : [ null, null ],
     "ServerId" : "ServerId",
     "Number" : "Number",
-    "AlbumCount" : 8,
+    "AlbumCount" : 4,
     "IsRepeat" : true,
     "CollectionType" : "CollectionType",
-    "PrimaryImageAspectRatio" : 5.533258397034986,
-    "Height" : 4,
+    "PrimaryImageAspectRatio" : 3.0576100241049344,
+    "Height" : 0,
     "IsKids" : true,
     "DisplayOrder" : "DisplayOrder",
-    "MovieCount" : 4,
+    "MovieCount" : 7,
     "People" : [ {
       "Role" : "Role",
       "Type" : "Actor",
@@ -1939,7 +2365,7 @@ open class TvShowsServiceAPI {
       "Name" : "Name"
     } ],
     "Overview" : "Overview",
-    "SpecialFeatureCount" : 7,
+    "SpecialFeatureCount" : 3,
     "ImageOrientation" : "TopLeft",
     "AlbumArtist" : "AlbumArtist",
     "ImageTags" : {
@@ -1950,33 +2376,33 @@ open class TvShowsServiceAPI {
     "SupportsResume" : true,
     "LocationType" : "FileSystem",
     "IsPremiere" : true,
-    "Altitude" : 0.5199002018724985
+    "Altitude" : 0.8774076871421566
   }, {
     "SeasonName" : "SeasonName",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-    "Size" : 6,
-    "CriticRating" : 6.965118,
-    "GameSystemId" : 1,
+    "Size" : 2,
+    "CriticRating" : 6.4384236,
+    "GameSystemId" : 3,
     "Studios" : [ {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     }, {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     } ],
     "CameraMake" : "CameraMake",
-    "Aperture" : 7.260521264802104,
+    "Aperture" : 1.041444916118296,
     "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
     "ExtraType" : "ExtraType",
     "ParentBackdropItemId" : "ParentBackdropItemId",
     "Etag" : "Etag",
     "ParentLogoImageTag" : "ParentLogoImageTag",
-    "ExposureTime" : 1.041444916118296,
+    "ExposureTime" : 6.628464275087742,
     "MediaType" : "MediaType",
     "ManagementId" : "ManagementId",
     "Tags" : [ "Tags", "Tags" ],
     "Status" : "Status",
-    "IndexNumberEnd" : 3,
+    "IndexNumberEnd" : 6,
     "ArtistItems" : [ {
       "Id" : "Id",
       "Name" : "Name"
@@ -1989,34 +2415,35 @@ open class TvShowsServiceAPI {
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2026,8 +2453,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -2035,40 +2462,42 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2078,8 +2507,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -2087,17 +2516,19 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -2111,57 +2542,62 @@ open class TvShowsServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     }, {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2171,8 +2607,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -2180,40 +2616,42 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2223,8 +2661,8 @@ open class TvShowsServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -2232,17 +2670,19 @@ open class TvShowsServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -2256,50 +2696,56 @@ open class TvShowsServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     } ],
     "GenreItems" : [ null, null ],
     "OfficialRating" : "OfficialRating",
-    "Longitude" : 9.702963800023566,
+    "Longitude" : 9.132027271330688,
     "Composers" : [ null, null ],
     "LockData" : true,
-    "FocalLength" : 4.678947989005849,
+    "FocalLength" : 4.258773108174356,
     "IsNews" : true,
-    "ShutterSpeed" : 9.132027271330688,
+    "ShutterSpeed" : 4.678947989005849,
     "Id" : "Id",
     "SortIndexNumber" : 0,
     "IsFolder" : true,
+    "CanMakePublic" : true,
     "SeriesTimerId" : "SeriesTimerId",
     "SeriesId" : "SeriesId",
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
-    "SeriesCount" : 6,
+    "SeriesCount" : 5,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
-    "PlayAccess" : "Full",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
-    "Width" : 6,
+    "Width" : 4,
     "ExternalUrls" : [ {
       "Url" : "Url",
       "Name" : "Name"
@@ -2307,29 +2753,29 @@ open class TvShowsServiceAPI {
       "Url" : "Url",
       "Name" : "Name"
     } ],
-    "RecursiveItemCount" : 3,
+    "RecursiveItemCount" : 8,
     "Path" : "Path",
     "ParentId" : "ParentId",
     "TimerType" : "Program",
     "GameSystem" : "GameSystem",
-    "MusicVideoCount" : 3,
+    "MusicVideoCount" : 8,
     "IsSeries" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
-    "Bitrate" : 5,
+    "Bitrate" : 6,
     "EndDate" : "2000-01-23T04:56:07.000+00:00",
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-    "AirsBeforeEpisodeNumber" : 5,
-    "ChildCount" : 3,
+    "ChildCount" : 7,
     "TagItems" : [ null, null ],
     "Artists" : [ "Artists", "Artists" ],
     "ListingsChannelName" : "ListingsChannelName",
-    "RunTimeTicks" : 6,
+    "RunTimeTicks" : 1,
     "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
     "Video3DFormat" : "HalfSideBySide",
     "CanDelete" : true,
@@ -2337,7 +2783,8 @@ open class TvShowsServiceAPI {
     "SortParentIndexNumber" : 6,
     "DisplayPreferencesId" : "DisplayPreferencesId",
     "Album" : "Album",
-    "Latitude" : 0.8774076871421566,
+    "Latitude" : 7.260521264802104,
+    "Guid" : "Guid",
     "SortName" : "SortName",
     "Name" : "Name",
     "StartDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2348,8 +2795,8 @@ open class TvShowsServiceAPI {
     "AlbumId" : "AlbumId",
     "SupportsSync" : true,
     "LocalTrailerCount" : 7,
-    "IndexNumber" : 3,
-    "CompletionPercentage" : 5.507386964179881,
+    "IndexNumber" : 5,
+    "CompletionPercentage" : 0.5199002018724985,
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
@@ -2367,43 +2814,44 @@ open class TvShowsServiceAPI {
     "PresentationUniqueKey" : "PresentationUniqueKey",
     "CustomRating" : "CustomRating",
     "ListingsChannelNumber" : "ListingsChannelNumber",
-    "AirsAfterSeasonNumber" : 5,
+    "SyncStatus" : "Queued",
+    "CanManageAccess" : true,
     "AirDays" : [ "Sunday", "Sunday" ],
     "ParentLogoItemId" : "ParentLogoItemId",
-    "PartCount" : 3,
+    "PartCount" : 7,
     "ListingsProviderId" : "ListingsProviderId",
+    "CanEditItems" : true,
     "ChannelName" : "ChannelName",
     "EpisodeTitle" : "EpisodeTitle",
-    "IsoSpeedRating" : 7,
-    "CommunityRating" : 2.8841622,
+    "IsoSpeedRating" : 9,
+    "CommunityRating" : 6.965118,
     "Software" : "Software",
     "Chapters" : [ {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     }, {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     } ],
-    "SongCount" : 4,
+    "SongCount" : 6,
     "Taglines" : [ "Taglines", "Taglines" ],
-    "AirsBeforeSeasonNumber" : 1,
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
-      "UnplayedItemCount" : 4,
+      "UnplayedItemCount" : 6,
       "Played" : true,
       "ServerId" : "ServerId",
-      "PlayedPercentage" : 0.10263654006109402,
-      "Rating" : 6.519180951018382,
-      "PlayCount" : 7,
-      "PlaybackPositionTicks" : 8,
+      "PlayedPercentage" : 7.058770351582356,
+      "Rating" : 0.8851374739011653,
+      "PlayCount" : 4,
+      "PlaybackPositionTicks" : 0,
       "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
       "IsFavorite" : true,
       "ItemId" : "ItemId",
@@ -2414,21 +2862,21 @@ open class TvShowsServiceAPI {
     "ParentThumbImageTag" : "ParentThumbImageTag",
     "IsSports" : true,
     "ChannelId" : "ChannelId",
-    "ParentIndexNumber" : 7,
+    "ParentIndexNumber" : 3,
     "IsNew" : true,
     "AffiliateCallSign" : "AffiliateCallSign",
     "ListingsId" : "ListingsId",
     "AlbumArtists" : [ null, null ],
     "ServerId" : "ServerId",
     "Number" : "Number",
-    "AlbumCount" : 8,
+    "AlbumCount" : 4,
     "IsRepeat" : true,
     "CollectionType" : "CollectionType",
-    "PrimaryImageAspectRatio" : 5.533258397034986,
-    "Height" : 4,
+    "PrimaryImageAspectRatio" : 3.0576100241049344,
+    "Height" : 0,
     "IsKids" : true,
     "DisplayOrder" : "DisplayOrder",
-    "MovieCount" : 4,
+    "MovieCount" : 7,
     "People" : [ {
       "Role" : "Role",
       "Type" : "Actor",
@@ -2443,7 +2891,7 @@ open class TvShowsServiceAPI {
       "Name" : "Name"
     } ],
     "Overview" : "Overview",
-    "SpecialFeatureCount" : 7,
+    "SpecialFeatureCount" : 3,
     "ImageOrientation" : "TopLeft",
     "AlbumArtist" : "AlbumArtist",
     "ImageTags" : {
@@ -2454,12 +2902,12 @@ open class TvShowsServiceAPI {
     "SupportsResume" : true,
     "LocationType" : "FileSystem",
     "IsPremiere" : true,
-    "Altitude" : 0.5199002018724985
+    "Altitude" : 0.8774076871421566
   } ]
 }}]
      - externalDocs: class ExternalDocumentation {
     description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
+    url: https://dev.emby.media/doc/restapi/Item-Information.html
 }
      - parameter userId: (query) User Id 
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
@@ -2500,20 +2948,112 @@ open class TvShowsServiceAPI {
     /**
      Gets a list of upcoming episodes
 
-     - parameter userId: (query) User Id 
+     - parameter artistType: (query) Artist or AlbumArtist (optional)
+     - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
+     - parameter hasThemeSong: (query) Optional filter by items with theme songs. (optional)
+     - parameter hasThemeVideo: (query) Optional filter by items with theme videos. (optional)
+     - parameter hasSubtitles: (query) Optional filter by items with subtitles. (optional)
+     - parameter hasSpecialFeature: (query) Optional filter by items with special features. (optional)
+     - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
+     - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
+     - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
+     - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
+     - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
+     - parameter hasParentalRating: (query) Optional filter by items that have or do not have a parental rating (optional)
+     - parameter isHD: (query) Optional filter by items that are HD or not. (optional)
+     - parameter isUnaired: (query) Optional filter by items that are unaired episodes or not. (optional)
+     - parameter minCommunityRating: (query) Optional filter by minimum community rating. (optional)
+     - parameter minCriticRating: (query) Optional filter by minimum critic rating. (optional)
+     - parameter airedDuringSeason: (query) Gets all episodes that aired during a season, including specials. (optional)
+     - parameter minPremiereDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter minDateLastSaved: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter minDateLastSavedForUser: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxPremiereDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter hasOverview: (query) Optional filter by items that have an overview or not. (optional)
+     - parameter hasImdbId: (query) Optional filter by items that have an imdb id or not. (optional)
+     - parameter hasTmdbId: (query) Optional filter by items that have a tmdb id or not. (optional)
+     - parameter hasTvdbId: (query) Optional filter by items that have a tvdb id or not. (optional)
+     - parameter excludeItemIds: (query) Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted. (optional)
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
-     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter recursive: (query) When searching within folders, this determines whether or not the search will be recursive. true/false (optional)
+     - parameter searchTerm: (query) Enter a search term to perform a search request (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter parentId: (query) Specify this to localize the search to a specific item or folder. Omit to use the root (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines (optional)
+     - parameter excludeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
+     - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
+     - parameter anyProviderIdEquals: (query) Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs. (optional)
+     - parameter filters: (query) Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes (optional)
+     - parameter isFavorite: (query) Optional filter by items that are marked as favorite, or not. (optional)
+     - parameter isMovie: (query) Optional filter for movies. (optional)
+     - parameter isSeries: (query) Optional filter for series. (optional)
+     - parameter isFolder: (query) Optional filter for folders. (optional)
+     - parameter isNews: (query) Optional filter for news. (optional)
+     - parameter isKids: (query) Optional filter for kids. (optional)
+     - parameter isSports: (query) Optional filter for sports. (optional)
+     - parameter isNew: (query) Optional filter for IsNew. (optional)
+     - parameter isPremiere: (query) Optional filter for IsPremiere. (optional)
+     - parameter isNewOrPremiere: (query) Optional filter for IsNewOrPremiere. (optional)
+     - parameter isRepeat: (query) Optional filter for IsRepeat. (optional)
+     - parameter projectToMedia: (query) ProjectToMedia (optional)
+     - parameter mediaTypes: (query) Optional filter by MediaType. Allows multiple, comma delimited. (optional)
+     - parameter imageTypes: (query) Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)
+     - parameter sortBy: (query) Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)
+     - parameter isPlayed: (query) Optional filter by items that are played, or not. (optional)
+     - parameter genres: (query) Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)
+     - parameter officialRatings: (query) Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)
+     - parameter tags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter excludeTags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter years: (query) Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)
      - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
      - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
-     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter person: (query) Optional. If specified, results will be filtered to include only those containing the specified person. (optional)
+     - parameter personIds: (query) Optional. If specified, results will be filtered to include only those containing the specified person. (optional)
+     - parameter personTypes: (query) Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited (optional)
+     - parameter studios: (query) Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted. (optional)
+     - parameter studioIds: (query) Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted. (optional)
+     - parameter artists: (query) Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted. (optional)
+     - parameter artistIds: (query) Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted. (optional)
+     - parameter albums: (query) Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted. (optional)
+     - parameter ids: (query) Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited. (optional)
+     - parameter videoTypes: (query) Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)
+     - parameter containers: (query) Optional filter by Container. Allows multiple, comma delimeted. (optional)
+     - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
+     - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
+     - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
+     - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
+     - parameter path: (query) Optional filter by Path. (optional)
+     - parameter userId: (query) User Id (optional)
+     - parameter minOfficialRating: (query) Optional filter by minimum official rating (PG, PG-13, TV-MA, etc). (optional)
+     - parameter isLocked: (query) Optional filter by items that are locked. (optional)
+     - parameter isPlaceHolder: (query) Optional filter by items that are placeholders (optional)
+     - parameter hasOfficialRating: (query) Optional filter by items that have official ratings (optional)
+     - parameter groupItemsIntoCollections: (query) Whether or not to hide items behind their boxsets. (optional)
+     - parameter is3D: (query) Optional filter by items that are 3D, or not. (optional)
+     - parameter seriesStatus: (query) Optional filter by Series Status. Allows multiple, comma delimeted. (optional)
+     - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter artistStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter albumArtistStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter nameStartsWith: (query) Optional filter by items whose name is sorted equally than a given input string. (optional)
+     - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getShowsUpcoming(userId: String, startIndex: Int? = nil, limit: Int? = nil, fields: String? = nil, parentId: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil, completion: @escaping ((_ data: QueryResultBaseItemDto?,_ error: Error?) -> Void)) {
-        getShowsUpcomingWithRequestBuilder(userId: userId, startIndex: startIndex, limit: limit, fields: fields, parentId: parentId, enableImages: enableImages, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, enableUserData: enableUserData).execute { (response, error) -> Void in
-            completion(response?.body, error)
+    open class func getShowsUpcoming(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getShowsUpcomingWithRequestBuilder(artistType: artistType, maxOfficialRating: maxOfficialRating, hasThemeSong: hasThemeSong, hasThemeVideo: hasThemeVideo, hasSubtitles: hasSubtitles, hasSpecialFeature: hasSpecialFeature, hasTrailer: hasTrailer, adjacentTo: adjacentTo, minIndexNumber: minIndexNumber, minStartDate: minStartDate, maxStartDate: maxStartDate, minEndDate: minEndDate, maxEndDate: maxEndDate, minPlayers: minPlayers, maxPlayers: maxPlayers, parentIndexNumber: parentIndexNumber, hasParentalRating: hasParentalRating, isHD: isHD, isUnaired: isUnaired, minCommunityRating: minCommunityRating, minCriticRating: minCriticRating, airedDuringSeason: airedDuringSeason, minPremiereDate: minPremiereDate, minDateLastSaved: minDateLastSaved, minDateLastSavedForUser: minDateLastSavedForUser, maxPremiereDate: maxPremiereDate, hasOverview: hasOverview, hasImdbId: hasImdbId, hasTmdbId: hasTmdbId, hasTvdbId: hasTvdbId, excludeItemIds: excludeItemIds, startIndex: startIndex, limit: limit, recursive: recursive, searchTerm: searchTerm, sortOrder: sortOrder, parentId: parentId, fields: fields, excludeItemTypes: excludeItemTypes, includeItemTypes: includeItemTypes, anyProviderIdEquals: anyProviderIdEquals, filters: filters, isFavorite: isFavorite, isMovie: isMovie, isSeries: isSeries, isFolder: isFolder, isNews: isNews, isKids: isKids, isSports: isSports, isNew: isNew, isPremiere: isPremiere, isNewOrPremiere: isNewOrPremiere, isRepeat: isRepeat, projectToMedia: projectToMedia, mediaTypes: mediaTypes, imageTypes: imageTypes, sortBy: sortBy, isPlayed: isPlayed, genres: genres, officialRatings: officialRatings, tags: tags, excludeTags: excludeTags, years: years, enableImages: enableImages, enableUserData: enableUserData, imageTypeLimit: imageTypeLimit, enableImageTypes: enableImageTypes, person: person, personIds: personIds, personTypes: personTypes, studios: studios, studioIds: studioIds, artists: artists, artistIds: artistIds, albums: albums, ids: ids, videoTypes: videoTypes, containers: containers, audioCodecs: audioCodecs, audioLayouts: audioLayouts, videoCodecs: videoCodecs, extendedVideoTypes: extendedVideoTypes, subtitleCodecs: subtitleCodecs, path: path, userId: userId, minOfficialRating: minOfficialRating, isLocked: isLocked, isPlaceHolder: isPlaceHolder, hasOfficialRating: hasOfficialRating, groupItemsIntoCollections: groupItemsIntoCollections, is3D: is3D, seriesStatus: seriesStatus, nameStartsWithOrGreater: nameStartsWithOrGreater, artistStartsWithOrGreater: artistStartsWithOrGreater, albumArtistStartsWithOrGreater: albumArtistStartsWithOrGreater, nameStartsWith: nameStartsWith, nameLessThan: nameLessThan).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
         }
     }
 
@@ -2528,1053 +3068,213 @@ open class TvShowsServiceAPI {
      - :
        - type: http
        - name: embyauth
-     - examples: [{contentType=application/json, example={
-  "TotalRecordCount" : 0,
-  "Items" : [ {
-    "SeasonName" : "SeasonName",
-    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-    "Size" : 6,
-    "CriticRating" : 6.965118,
-    "GameSystemId" : 1,
-    "Studios" : [ {
-      "Id" : 0,
-      "Name" : "Name"
-    }, {
-      "Id" : 0,
-      "Name" : "Name"
-    } ],
-    "CameraMake" : "CameraMake",
-    "Aperture" : 7.260521264802104,
-    "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
-    "ExtraType" : "ExtraType",
-    "ParentBackdropItemId" : "ParentBackdropItemId",
-    "Etag" : "Etag",
-    "ParentLogoImageTag" : "ParentLogoImageTag",
-    "ExposureTime" : 1.041444916118296,
-    "MediaType" : "MediaType",
-    "ManagementId" : "ManagementId",
-    "Tags" : [ "Tags", "Tags" ],
-    "Status" : "Status",
-    "IndexNumberEnd" : 3,
-    "ArtistItems" : [ {
-      "Id" : "Id",
-      "Name" : "Name"
-    }, {
-      "Id" : "Id",
-      "Name" : "Name"
-    } ],
-    "MediaSources" : [ {
-      "EncoderPath" : "EncoderPath",
-      "RequiredHttpHeaders" : {
-        "key" : "RequiredHttpHeaders"
-      },
-      "RunTimeTicks" : 7,
-      "MediaStreams" : [ {
-        "VideoRange" : "VideoRange",
-        "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
-        "ItemId" : "ItemId",
-        "SupportsExternalStream" : true,
-        "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
-        "IsAnamorphic" : true,
-        "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
-        "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
-        "IsAVC" : true,
-        "ColorTransfer" : "ColorTransfer",
-        "IsExternalUrl" : true,
-        "DisplayTitle" : "DisplayTitle",
-        "IsForced" : true,
-        "ChannelLayout" : "ChannelLayout",
-        "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
-        "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
-        "Channels" : 1,
-        "Profile" : "Profile",
-        "MimeType" : "MimeType",
-        "DeliveryUrl" : "DeliveryUrl",
-        "ColorPrimaries" : "ColorPrimaries",
-        "ServerId" : "ServerId",
-        "Language" : "Language",
-        "IsTextSubtitleStream" : true,
-        "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
-        "TimeBase" : "TimeBase",
-        "CodecTag" : "CodecTag",
-        "IsDefault" : true,
-        "Path" : "Path",
-        "Comment" : "Comment",
-        "DeliveryMethod" : "Encode",
-        "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
-        "AspectRatio" : "AspectRatio",
-        "Type" : "Unknown",
-        "IsInterlaced" : true,
-        "Extradata" : "Extradata",
-        "BitRate" : 4
-      }, {
-        "VideoRange" : "VideoRange",
-        "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
-        "ItemId" : "ItemId",
-        "SupportsExternalStream" : true,
-        "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
-        "IsAnamorphic" : true,
-        "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
-        "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
-        "IsAVC" : true,
-        "ColorTransfer" : "ColorTransfer",
-        "IsExternalUrl" : true,
-        "DisplayTitle" : "DisplayTitle",
-        "IsForced" : true,
-        "ChannelLayout" : "ChannelLayout",
-        "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
-        "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
-        "Channels" : 1,
-        "Profile" : "Profile",
-        "MimeType" : "MimeType",
-        "DeliveryUrl" : "DeliveryUrl",
-        "ColorPrimaries" : "ColorPrimaries",
-        "ServerId" : "ServerId",
-        "Language" : "Language",
-        "IsTextSubtitleStream" : true,
-        "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
-        "TimeBase" : "TimeBase",
-        "CodecTag" : "CodecTag",
-        "IsDefault" : true,
-        "Path" : "Path",
-        "Comment" : "Comment",
-        "DeliveryMethod" : "Encode",
-        "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
-        "AspectRatio" : "AspectRatio",
-        "Type" : "Unknown",
-        "IsInterlaced" : true,
-        "Extradata" : "Extradata",
-        "BitRate" : 4
-      } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
-      "SortName" : "SortName",
-      "Timestamp" : "None",
-      "ItemId" : "ItemId",
-      "Name" : "Name",
-      "RequiresOpening" : true,
-      "DirectStreamUrl" : "DirectStreamUrl",
-      "SupportsDirectStream" : true,
-      "RequiresClosing" : true,
-      "Container" : "Container",
-      "ServerId" : "ServerId",
-      "LiveStreamId" : "LiveStreamId",
-      "RequiresLooping" : true,
-      "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
-      "IsInfiniteStream" : true,
-      "Path" : "Path",
-      "IsRemote" : true,
-      "SupportsDirectPlay" : true,
-      "TranscodingSubProtocol" : "TranscodingSubProtocol",
-      "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
-      "OpenToken" : "OpenToken",
-      "SupportsProbing" : true,
-      "Type" : "Default",
-      "ReadAtNativeFramerate" : true,
-      "TranscodingContainer" : "TranscodingContainer",
-      "TranscodingUrl" : "TranscodingUrl",
-      "Id" : "Id",
-      "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
-    }, {
-      "EncoderPath" : "EncoderPath",
-      "RequiredHttpHeaders" : {
-        "key" : "RequiredHttpHeaders"
-      },
-      "RunTimeTicks" : 7,
-      "MediaStreams" : [ {
-        "VideoRange" : "VideoRange",
-        "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
-        "ItemId" : "ItemId",
-        "SupportsExternalStream" : true,
-        "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
-        "IsAnamorphic" : true,
-        "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
-        "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
-        "IsAVC" : true,
-        "ColorTransfer" : "ColorTransfer",
-        "IsExternalUrl" : true,
-        "DisplayTitle" : "DisplayTitle",
-        "IsForced" : true,
-        "ChannelLayout" : "ChannelLayout",
-        "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
-        "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
-        "Channels" : 1,
-        "Profile" : "Profile",
-        "MimeType" : "MimeType",
-        "DeliveryUrl" : "DeliveryUrl",
-        "ColorPrimaries" : "ColorPrimaries",
-        "ServerId" : "ServerId",
-        "Language" : "Language",
-        "IsTextSubtitleStream" : true,
-        "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
-        "TimeBase" : "TimeBase",
-        "CodecTag" : "CodecTag",
-        "IsDefault" : true,
-        "Path" : "Path",
-        "Comment" : "Comment",
-        "DeliveryMethod" : "Encode",
-        "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
-        "AspectRatio" : "AspectRatio",
-        "Type" : "Unknown",
-        "IsInterlaced" : true,
-        "Extradata" : "Extradata",
-        "BitRate" : 4
-      }, {
-        "VideoRange" : "VideoRange",
-        "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
-        "ItemId" : "ItemId",
-        "SupportsExternalStream" : true,
-        "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
-        "IsAnamorphic" : true,
-        "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
-        "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
-        "IsAVC" : true,
-        "ColorTransfer" : "ColorTransfer",
-        "IsExternalUrl" : true,
-        "DisplayTitle" : "DisplayTitle",
-        "IsForced" : true,
-        "ChannelLayout" : "ChannelLayout",
-        "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
-        "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
-        "Channels" : 1,
-        "Profile" : "Profile",
-        "MimeType" : "MimeType",
-        "DeliveryUrl" : "DeliveryUrl",
-        "ColorPrimaries" : "ColorPrimaries",
-        "ServerId" : "ServerId",
-        "Language" : "Language",
-        "IsTextSubtitleStream" : true,
-        "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
-        "TimeBase" : "TimeBase",
-        "CodecTag" : "CodecTag",
-        "IsDefault" : true,
-        "Path" : "Path",
-        "Comment" : "Comment",
-        "DeliveryMethod" : "Encode",
-        "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
-        "AspectRatio" : "AspectRatio",
-        "Type" : "Unknown",
-        "IsInterlaced" : true,
-        "Extradata" : "Extradata",
-        "BitRate" : 4
-      } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
-      "SortName" : "SortName",
-      "Timestamp" : "None",
-      "ItemId" : "ItemId",
-      "Name" : "Name",
-      "RequiresOpening" : true,
-      "DirectStreamUrl" : "DirectStreamUrl",
-      "SupportsDirectStream" : true,
-      "RequiresClosing" : true,
-      "Container" : "Container",
-      "ServerId" : "ServerId",
-      "LiveStreamId" : "LiveStreamId",
-      "RequiresLooping" : true,
-      "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
-      "IsInfiniteStream" : true,
-      "Path" : "Path",
-      "IsRemote" : true,
-      "SupportsDirectPlay" : true,
-      "TranscodingSubProtocol" : "TranscodingSubProtocol",
-      "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
-      "OpenToken" : "OpenToken",
-      "SupportsProbing" : true,
-      "Type" : "Default",
-      "ReadAtNativeFramerate" : true,
-      "TranscodingContainer" : "TranscodingContainer",
-      "TranscodingUrl" : "TranscodingUrl",
-      "Id" : "Id",
-      "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
-    } ],
-    "GenreItems" : [ null, null ],
-    "OfficialRating" : "OfficialRating",
-    "Longitude" : 9.702963800023566,
-    "Composers" : [ null, null ],
-    "LockData" : true,
-    "FocalLength" : 4.678947989005849,
-    "IsNews" : true,
-    "ShutterSpeed" : 9.132027271330688,
-    "Id" : "Id",
-    "SortIndexNumber" : 0,
-    "IsFolder" : true,
-    "SeriesTimerId" : "SeriesTimerId",
-    "SeriesId" : "SeriesId",
-    "ListingsPath" : "ListingsPath",
-    "MediaStreams" : [ null, null ],
-    "FileName" : "FileName",
-    "Prefix" : "Prefix",
-    "CanDownload" : true,
-    "IsMovie" : true,
-    "SeriesCount" : 6,
-    "ListingsChannelId" : "ListingsChannelId",
-    "PlayAccess" : "Full",
-    "SeriesStudio" : "SeriesStudio",
-    "IsLive" : true,
-    "Width" : 6,
-    "ExternalUrls" : [ {
-      "Url" : "Url",
-      "Name" : "Name"
-    }, {
-      "Url" : "Url",
-      "Name" : "Name"
-    } ],
-    "RecursiveItemCount" : 3,
-    "Path" : "Path",
-    "ParentId" : "ParentId",
-    "TimerType" : "Program",
-    "GameSystem" : "GameSystem",
-    "MusicVideoCount" : 3,
-    "IsSeries" : true,
-    "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
-    "Subviews" : [ "Subviews", "Subviews" ],
-    "Bitrate" : 5,
-    "EndDate" : "2000-01-23T04:56:07.000+00:00",
-    "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
-    "ParentThumbItemId" : "ParentThumbItemId",
-    "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
-    "Type" : "Type",
-    "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
-    "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-    "AirsBeforeEpisodeNumber" : 5,
-    "ChildCount" : 3,
-    "TagItems" : [ null, null ],
-    "Artists" : [ "Artists", "Artists" ],
-    "ListingsChannelName" : "ListingsChannelName",
-    "RunTimeTicks" : 6,
-    "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
-    "Video3DFormat" : "HalfSideBySide",
-    "CanDelete" : true,
-    "PlaylistItemId" : "PlaylistItemId",
-    "SortParentIndexNumber" : 6,
-    "DisplayPreferencesId" : "DisplayPreferencesId",
-    "Album" : "Album",
-    "Latitude" : 0.8774076871421566,
-    "SortName" : "SortName",
-    "Name" : "Name",
-    "StartDate" : "2000-01-23T04:56:07.000+00:00",
-    "Container" : "Container",
-    "ProductionYear" : 6,
-    "SeriesName" : "SeriesName",
-    "AsSeries" : true,
-    "AlbumId" : "AlbumId",
-    "SupportsSync" : true,
-    "LocalTrailerCount" : 7,
-    "IndexNumber" : 3,
-    "CompletionPercentage" : 5.507386964179881,
-    "Genres" : [ "Genres", "Genres" ],
-    "SeasonId" : "SeasonId",
-    "LockedFields" : [ "Cast", "Cast" ],
-    "Disabled" : true,
-    "ProviderIds" : {
-      "key" : "ProviderIds"
-    },
-    "RemoteTrailers" : [ {
-      "Url" : "Url",
-      "Name" : "Name"
-    }, {
-      "Url" : "Url",
-      "Name" : "Name"
-    } ],
-    "PresentationUniqueKey" : "PresentationUniqueKey",
-    "CustomRating" : "CustomRating",
-    "ListingsChannelNumber" : "ListingsChannelNumber",
-    "AirsAfterSeasonNumber" : 5,
-    "AirDays" : [ "Sunday", "Sunday" ],
-    "ParentLogoItemId" : "ParentLogoItemId",
-    "PartCount" : 3,
-    "ListingsProviderId" : "ListingsProviderId",
-    "ChannelName" : "ChannelName",
-    "EpisodeTitle" : "EpisodeTitle",
-    "IsoSpeedRating" : 7,
-    "CommunityRating" : 2.8841622,
-    "Software" : "Software",
-    "Chapters" : [ {
-      "StartPositionTicks" : 4,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 4,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
-      "Name" : "Name"
-    } ],
-    "SongCount" : 4,
-    "Taglines" : [ "Taglines", "Taglines" ],
-    "AirsBeforeSeasonNumber" : 1,
-    "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
-    "CameraModel" : "CameraModel",
-    "ChannelNumber" : "ChannelNumber",
-    "UserData" : {
-      "UnplayedItemCount" : 4,
-      "Played" : true,
-      "ServerId" : "ServerId",
-      "PlayedPercentage" : 0.10263654006109402,
-      "Rating" : 6.519180951018382,
-      "PlayCount" : 7,
-      "PlaybackPositionTicks" : 8,
-      "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsFavorite" : true,
-      "ItemId" : "ItemId",
-      "Key" : "Key"
-    },
-    "TimerId" : "TimerId",
-    "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "ParentThumbImageTag" : "ParentThumbImageTag",
-    "IsSports" : true,
-    "ChannelId" : "ChannelId",
-    "ParentIndexNumber" : 7,
-    "IsNew" : true,
-    "AffiliateCallSign" : "AffiliateCallSign",
-    "ListingsId" : "ListingsId",
-    "AlbumArtists" : [ null, null ],
-    "ServerId" : "ServerId",
-    "Number" : "Number",
-    "AlbumCount" : 8,
-    "IsRepeat" : true,
-    "CollectionType" : "CollectionType",
-    "PrimaryImageAspectRatio" : 5.533258397034986,
-    "Height" : 4,
-    "IsKids" : true,
-    "DisplayOrder" : "DisplayOrder",
-    "MovieCount" : 4,
-    "People" : [ {
-      "Role" : "Role",
-      "Type" : "Actor",
-      "PrimaryImageTag" : "PrimaryImageTag",
-      "Id" : "Id",
-      "Name" : "Name"
-    }, {
-      "Role" : "Role",
-      "Type" : "Actor",
-      "PrimaryImageTag" : "PrimaryImageTag",
-      "Id" : "Id",
-      "Name" : "Name"
-    } ],
-    "Overview" : "Overview",
-    "SpecialFeatureCount" : 7,
-    "ImageOrientation" : "TopLeft",
-    "AlbumArtist" : "AlbumArtist",
-    "ImageTags" : {
-      "key" : "ImageTags"
-    },
-    "OriginalTitle" : "OriginalTitle",
-    "ForcedSortName" : "ForcedSortName",
-    "SupportsResume" : true,
-    "LocationType" : "FileSystem",
-    "IsPremiere" : true,
-    "Altitude" : 0.5199002018724985
-  }, {
-    "SeasonName" : "SeasonName",
-    "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-    "Size" : 6,
-    "CriticRating" : 6.965118,
-    "GameSystemId" : 1,
-    "Studios" : [ {
-      "Id" : 0,
-      "Name" : "Name"
-    }, {
-      "Id" : 0,
-      "Name" : "Name"
-    } ],
-    "CameraMake" : "CameraMake",
-    "Aperture" : 7.260521264802104,
-    "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
-    "ExtraType" : "ExtraType",
-    "ParentBackdropItemId" : "ParentBackdropItemId",
-    "Etag" : "Etag",
-    "ParentLogoImageTag" : "ParentLogoImageTag",
-    "ExposureTime" : 1.041444916118296,
-    "MediaType" : "MediaType",
-    "ManagementId" : "ManagementId",
-    "Tags" : [ "Tags", "Tags" ],
-    "Status" : "Status",
-    "IndexNumberEnd" : 3,
-    "ArtistItems" : [ {
-      "Id" : "Id",
-      "Name" : "Name"
-    }, {
-      "Id" : "Id",
-      "Name" : "Name"
-    } ],
-    "MediaSources" : [ {
-      "EncoderPath" : "EncoderPath",
-      "RequiredHttpHeaders" : {
-        "key" : "RequiredHttpHeaders"
-      },
-      "RunTimeTicks" : 7,
-      "MediaStreams" : [ {
-        "VideoRange" : "VideoRange",
-        "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
-        "ItemId" : "ItemId",
-        "SupportsExternalStream" : true,
-        "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
-        "IsAnamorphic" : true,
-        "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
-        "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
-        "IsAVC" : true,
-        "ColorTransfer" : "ColorTransfer",
-        "IsExternalUrl" : true,
-        "DisplayTitle" : "DisplayTitle",
-        "IsForced" : true,
-        "ChannelLayout" : "ChannelLayout",
-        "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
-        "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
-        "Channels" : 1,
-        "Profile" : "Profile",
-        "MimeType" : "MimeType",
-        "DeliveryUrl" : "DeliveryUrl",
-        "ColorPrimaries" : "ColorPrimaries",
-        "ServerId" : "ServerId",
-        "Language" : "Language",
-        "IsTextSubtitleStream" : true,
-        "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
-        "TimeBase" : "TimeBase",
-        "CodecTag" : "CodecTag",
-        "IsDefault" : true,
-        "Path" : "Path",
-        "Comment" : "Comment",
-        "DeliveryMethod" : "Encode",
-        "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
-        "AspectRatio" : "AspectRatio",
-        "Type" : "Unknown",
-        "IsInterlaced" : true,
-        "Extradata" : "Extradata",
-        "BitRate" : 4
-      }, {
-        "VideoRange" : "VideoRange",
-        "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
-        "ItemId" : "ItemId",
-        "SupportsExternalStream" : true,
-        "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
-        "IsAnamorphic" : true,
-        "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
-        "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
-        "IsAVC" : true,
-        "ColorTransfer" : "ColorTransfer",
-        "IsExternalUrl" : true,
-        "DisplayTitle" : "DisplayTitle",
-        "IsForced" : true,
-        "ChannelLayout" : "ChannelLayout",
-        "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
-        "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
-        "Channels" : 1,
-        "Profile" : "Profile",
-        "MimeType" : "MimeType",
-        "DeliveryUrl" : "DeliveryUrl",
-        "ColorPrimaries" : "ColorPrimaries",
-        "ServerId" : "ServerId",
-        "Language" : "Language",
-        "IsTextSubtitleStream" : true,
-        "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
-        "TimeBase" : "TimeBase",
-        "CodecTag" : "CodecTag",
-        "IsDefault" : true,
-        "Path" : "Path",
-        "Comment" : "Comment",
-        "DeliveryMethod" : "Encode",
-        "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
-        "AspectRatio" : "AspectRatio",
-        "Type" : "Unknown",
-        "IsInterlaced" : true,
-        "Extradata" : "Extradata",
-        "BitRate" : 4
-      } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
-      "SortName" : "SortName",
-      "Timestamp" : "None",
-      "ItemId" : "ItemId",
-      "Name" : "Name",
-      "RequiresOpening" : true,
-      "DirectStreamUrl" : "DirectStreamUrl",
-      "SupportsDirectStream" : true,
-      "RequiresClosing" : true,
-      "Container" : "Container",
-      "ServerId" : "ServerId",
-      "LiveStreamId" : "LiveStreamId",
-      "RequiresLooping" : true,
-      "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
-      "IsInfiniteStream" : true,
-      "Path" : "Path",
-      "IsRemote" : true,
-      "SupportsDirectPlay" : true,
-      "TranscodingSubProtocol" : "TranscodingSubProtocol",
-      "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
-      "OpenToken" : "OpenToken",
-      "SupportsProbing" : true,
-      "Type" : "Default",
-      "ReadAtNativeFramerate" : true,
-      "TranscodingContainer" : "TranscodingContainer",
-      "TranscodingUrl" : "TranscodingUrl",
-      "Id" : "Id",
-      "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
-    }, {
-      "EncoderPath" : "EncoderPath",
-      "RequiredHttpHeaders" : {
-        "key" : "RequiredHttpHeaders"
-      },
-      "RunTimeTicks" : 7,
-      "MediaStreams" : [ {
-        "VideoRange" : "VideoRange",
-        "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
-        "ItemId" : "ItemId",
-        "SupportsExternalStream" : true,
-        "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
-        "IsAnamorphic" : true,
-        "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
-        "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
-        "IsAVC" : true,
-        "ColorTransfer" : "ColorTransfer",
-        "IsExternalUrl" : true,
-        "DisplayTitle" : "DisplayTitle",
-        "IsForced" : true,
-        "ChannelLayout" : "ChannelLayout",
-        "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
-        "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
-        "Channels" : 1,
-        "Profile" : "Profile",
-        "MimeType" : "MimeType",
-        "DeliveryUrl" : "DeliveryUrl",
-        "ColorPrimaries" : "ColorPrimaries",
-        "ServerId" : "ServerId",
-        "Language" : "Language",
-        "IsTextSubtitleStream" : true,
-        "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
-        "TimeBase" : "TimeBase",
-        "CodecTag" : "CodecTag",
-        "IsDefault" : true,
-        "Path" : "Path",
-        "Comment" : "Comment",
-        "DeliveryMethod" : "Encode",
-        "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
-        "AspectRatio" : "AspectRatio",
-        "Type" : "Unknown",
-        "IsInterlaced" : true,
-        "Extradata" : "Extradata",
-        "BitRate" : 4
-      }, {
-        "VideoRange" : "VideoRange",
-        "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
-        "ItemId" : "ItemId",
-        "SupportsExternalStream" : true,
-        "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
-        "IsAnamorphic" : true,
-        "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
-        "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
-        "IsAVC" : true,
-        "ColorTransfer" : "ColorTransfer",
-        "IsExternalUrl" : true,
-        "DisplayTitle" : "DisplayTitle",
-        "IsForced" : true,
-        "ChannelLayout" : "ChannelLayout",
-        "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
-        "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
-        "Channels" : 1,
-        "Profile" : "Profile",
-        "MimeType" : "MimeType",
-        "DeliveryUrl" : "DeliveryUrl",
-        "ColorPrimaries" : "ColorPrimaries",
-        "ServerId" : "ServerId",
-        "Language" : "Language",
-        "IsTextSubtitleStream" : true,
-        "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
-        "TimeBase" : "TimeBase",
-        "CodecTag" : "CodecTag",
-        "IsDefault" : true,
-        "Path" : "Path",
-        "Comment" : "Comment",
-        "DeliveryMethod" : "Encode",
-        "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
-        "AspectRatio" : "AspectRatio",
-        "Type" : "Unknown",
-        "IsInterlaced" : true,
-        "Extradata" : "Extradata",
-        "BitRate" : 4
-      } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
-      "SortName" : "SortName",
-      "Timestamp" : "None",
-      "ItemId" : "ItemId",
-      "Name" : "Name",
-      "RequiresOpening" : true,
-      "DirectStreamUrl" : "DirectStreamUrl",
-      "SupportsDirectStream" : true,
-      "RequiresClosing" : true,
-      "Container" : "Container",
-      "ServerId" : "ServerId",
-      "LiveStreamId" : "LiveStreamId",
-      "RequiresLooping" : true,
-      "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
-      "IsInfiniteStream" : true,
-      "Path" : "Path",
-      "IsRemote" : true,
-      "SupportsDirectPlay" : true,
-      "TranscodingSubProtocol" : "TranscodingSubProtocol",
-      "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
-      "OpenToken" : "OpenToken",
-      "SupportsProbing" : true,
-      "Type" : "Default",
-      "ReadAtNativeFramerate" : true,
-      "TranscodingContainer" : "TranscodingContainer",
-      "TranscodingUrl" : "TranscodingUrl",
-      "Id" : "Id",
-      "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
-    } ],
-    "GenreItems" : [ null, null ],
-    "OfficialRating" : "OfficialRating",
-    "Longitude" : 9.702963800023566,
-    "Composers" : [ null, null ],
-    "LockData" : true,
-    "FocalLength" : 4.678947989005849,
-    "IsNews" : true,
-    "ShutterSpeed" : 9.132027271330688,
-    "Id" : "Id",
-    "SortIndexNumber" : 0,
-    "IsFolder" : true,
-    "SeriesTimerId" : "SeriesTimerId",
-    "SeriesId" : "SeriesId",
-    "ListingsPath" : "ListingsPath",
-    "MediaStreams" : [ null, null ],
-    "FileName" : "FileName",
-    "Prefix" : "Prefix",
-    "CanDownload" : true,
-    "IsMovie" : true,
-    "SeriesCount" : 6,
-    "ListingsChannelId" : "ListingsChannelId",
-    "PlayAccess" : "Full",
-    "SeriesStudio" : "SeriesStudio",
-    "IsLive" : true,
-    "Width" : 6,
-    "ExternalUrls" : [ {
-      "Url" : "Url",
-      "Name" : "Name"
-    }, {
-      "Url" : "Url",
-      "Name" : "Name"
-    } ],
-    "RecursiveItemCount" : 3,
-    "Path" : "Path",
-    "ParentId" : "ParentId",
-    "TimerType" : "Program",
-    "GameSystem" : "GameSystem",
-    "MusicVideoCount" : 3,
-    "IsSeries" : true,
-    "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
-    "Subviews" : [ "Subviews", "Subviews" ],
-    "Bitrate" : 5,
-    "EndDate" : "2000-01-23T04:56:07.000+00:00",
-    "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
-    "ParentThumbItemId" : "ParentThumbItemId",
-    "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
-    "Type" : "Type",
-    "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
-    "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-    "AirsBeforeEpisodeNumber" : 5,
-    "ChildCount" : 3,
-    "TagItems" : [ null, null ],
-    "Artists" : [ "Artists", "Artists" ],
-    "ListingsChannelName" : "ListingsChannelName",
-    "RunTimeTicks" : 6,
-    "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
-    "Video3DFormat" : "HalfSideBySide",
-    "CanDelete" : true,
-    "PlaylistItemId" : "PlaylistItemId",
-    "SortParentIndexNumber" : 6,
-    "DisplayPreferencesId" : "DisplayPreferencesId",
-    "Album" : "Album",
-    "Latitude" : 0.8774076871421566,
-    "SortName" : "SortName",
-    "Name" : "Name",
-    "StartDate" : "2000-01-23T04:56:07.000+00:00",
-    "Container" : "Container",
-    "ProductionYear" : 6,
-    "SeriesName" : "SeriesName",
-    "AsSeries" : true,
-    "AlbumId" : "AlbumId",
-    "SupportsSync" : true,
-    "LocalTrailerCount" : 7,
-    "IndexNumber" : 3,
-    "CompletionPercentage" : 5.507386964179881,
-    "Genres" : [ "Genres", "Genres" ],
-    "SeasonId" : "SeasonId",
-    "LockedFields" : [ "Cast", "Cast" ],
-    "Disabled" : true,
-    "ProviderIds" : {
-      "key" : "ProviderIds"
-    },
-    "RemoteTrailers" : [ {
-      "Url" : "Url",
-      "Name" : "Name"
-    }, {
-      "Url" : "Url",
-      "Name" : "Name"
-    } ],
-    "PresentationUniqueKey" : "PresentationUniqueKey",
-    "CustomRating" : "CustomRating",
-    "ListingsChannelNumber" : "ListingsChannelNumber",
-    "AirsAfterSeasonNumber" : 5,
-    "AirDays" : [ "Sunday", "Sunday" ],
-    "ParentLogoItemId" : "ParentLogoItemId",
-    "PartCount" : 3,
-    "ListingsProviderId" : "ListingsProviderId",
-    "ChannelName" : "ChannelName",
-    "EpisodeTitle" : "EpisodeTitle",
-    "IsoSpeedRating" : 7,
-    "CommunityRating" : 2.8841622,
-    "Software" : "Software",
-    "Chapters" : [ {
-      "StartPositionTicks" : 4,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
-      "Name" : "Name"
-    }, {
-      "StartPositionTicks" : 4,
-      "ImageTag" : "ImageTag",
-      "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
-      "Name" : "Name"
-    } ],
-    "SongCount" : 4,
-    "Taglines" : [ "Taglines", "Taglines" ],
-    "AirsBeforeSeasonNumber" : 1,
-    "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
-    "CameraModel" : "CameraModel",
-    "ChannelNumber" : "ChannelNumber",
-    "UserData" : {
-      "UnplayedItemCount" : 4,
-      "Played" : true,
-      "ServerId" : "ServerId",
-      "PlayedPercentage" : 0.10263654006109402,
-      "Rating" : 6.519180951018382,
-      "PlayCount" : 7,
-      "PlaybackPositionTicks" : 8,
-      "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
-      "IsFavorite" : true,
-      "ItemId" : "ItemId",
-      "Key" : "Key"
-    },
-    "TimerId" : "TimerId",
-    "DateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "ParentThumbImageTag" : "ParentThumbImageTag",
-    "IsSports" : true,
-    "ChannelId" : "ChannelId",
-    "ParentIndexNumber" : 7,
-    "IsNew" : true,
-    "AffiliateCallSign" : "AffiliateCallSign",
-    "ListingsId" : "ListingsId",
-    "AlbumArtists" : [ null, null ],
-    "ServerId" : "ServerId",
-    "Number" : "Number",
-    "AlbumCount" : 8,
-    "IsRepeat" : true,
-    "CollectionType" : "CollectionType",
-    "PrimaryImageAspectRatio" : 5.533258397034986,
-    "Height" : 4,
-    "IsKids" : true,
-    "DisplayOrder" : "DisplayOrder",
-    "MovieCount" : 4,
-    "People" : [ {
-      "Role" : "Role",
-      "Type" : "Actor",
-      "PrimaryImageTag" : "PrimaryImageTag",
-      "Id" : "Id",
-      "Name" : "Name"
-    }, {
-      "Role" : "Role",
-      "Type" : "Actor",
-      "PrimaryImageTag" : "PrimaryImageTag",
-      "Id" : "Id",
-      "Name" : "Name"
-    } ],
-    "Overview" : "Overview",
-    "SpecialFeatureCount" : 7,
-    "ImageOrientation" : "TopLeft",
-    "AlbumArtist" : "AlbumArtist",
-    "ImageTags" : {
-      "key" : "ImageTags"
-    },
-    "OriginalTitle" : "OriginalTitle",
-    "ForcedSortName" : "ForcedSortName",
-    "SupportsResume" : true,
-    "LocationType" : "FileSystem",
-    "IsPremiere" : true,
-    "Altitude" : 0.5199002018724985
-  } ]
-}}]
-     - externalDocs: class ExternalDocumentation {
-    description: API Documentation: Item Information
-    url: https://github.com/MediaBrowser/Emby/wiki/Item-Information
-}
-     - parameter userId: (query) User Id 
+     - parameter artistType: (query) Artist or AlbumArtist (optional)
+     - parameter maxOfficialRating: (query) Optional filter by maximum official rating (PG, PG-13, TV-MA, etc). (optional)
+     - parameter hasThemeSong: (query) Optional filter by items with theme songs. (optional)
+     - parameter hasThemeVideo: (query) Optional filter by items with theme videos. (optional)
+     - parameter hasSubtitles: (query) Optional filter by items with subtitles. (optional)
+     - parameter hasSpecialFeature: (query) Optional filter by items with special features. (optional)
+     - parameter hasTrailer: (query) Optional filter by items with trailers. (optional)
+     - parameter adjacentTo: (query) Optional. Return items that are siblings of a supplied item. (optional)
+     - parameter minIndexNumber: (query) Optional filter by minimum index number. (optional)
+     - parameter minStartDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxStartDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minEndDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxEndDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter minPlayers: (query) Optional filter by minimum number of game players. (optional)
+     - parameter maxPlayers: (query) Optional filter by maximum number of game players. (optional)
+     - parameter parentIndexNumber: (query) Optional filter by parent index number. (optional)
+     - parameter hasParentalRating: (query) Optional filter by items that have or do not have a parental rating (optional)
+     - parameter isHD: (query) Optional filter by items that are HD or not. (optional)
+     - parameter isUnaired: (query) Optional filter by items that are unaired episodes or not. (optional)
+     - parameter minCommunityRating: (query) Optional filter by minimum community rating. (optional)
+     - parameter minCriticRating: (query) Optional filter by minimum critic rating. (optional)
+     - parameter airedDuringSeason: (query) Gets all episodes that aired during a season, including specials. (optional)
+     - parameter minPremiereDate: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter minDateLastSaved: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter minDateLastSavedForUser: (query) Optional. The minimum premiere date. Format &#x3D; ISO (optional)
+     - parameter maxPremiereDate: (query) Optional. The maximum premiere date. Format &#x3D; ISO (optional)
+     - parameter hasOverview: (query) Optional filter by items that have an overview or not. (optional)
+     - parameter hasImdbId: (query) Optional filter by items that have an imdb id or not. (optional)
+     - parameter hasTmdbId: (query) Optional filter by items that have a tmdb id or not. (optional)
+     - parameter hasTvdbId: (query) Optional filter by items that have a tvdb id or not. (optional)
+     - parameter excludeItemIds: (query) Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted. (optional)
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
-     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls (optional)
+     - parameter recursive: (query) When searching within folders, this determines whether or not the search will be recursive. true/false (optional)
+     - parameter searchTerm: (query) Enter a search term to perform a search request (optional)
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter parentId: (query) Specify this to localize the search to a specific item or folder. Omit to use the root (optional)
+     - parameter fields: (query) Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines (optional)
+     - parameter excludeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
+     - parameter includeItemTypes: (query) Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted. (optional)
+     - parameter anyProviderIdEquals: (query) Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form &#x27;prov.id&#x27;, e.g. &#x27;imdb.tt123456&#x27;. This allows multiple, comma delimeted value pairs. (optional)
+     - parameter filters: (query) Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes (optional)
+     - parameter isFavorite: (query) Optional filter by items that are marked as favorite, or not. (optional)
+     - parameter isMovie: (query) Optional filter for movies. (optional)
+     - parameter isSeries: (query) Optional filter for series. (optional)
+     - parameter isFolder: (query) Optional filter for folders. (optional)
+     - parameter isNews: (query) Optional filter for news. (optional)
+     - parameter isKids: (query) Optional filter for kids. (optional)
+     - parameter isSports: (query) Optional filter for sports. (optional)
+     - parameter isNew: (query) Optional filter for IsNew. (optional)
+     - parameter isPremiere: (query) Optional filter for IsPremiere. (optional)
+     - parameter isNewOrPremiere: (query) Optional filter for IsNewOrPremiere. (optional)
+     - parameter isRepeat: (query) Optional filter for IsRepeat. (optional)
+     - parameter projectToMedia: (query) ProjectToMedia (optional)
+     - parameter mediaTypes: (query) Optional filter by MediaType. Allows multiple, comma delimited. (optional)
+     - parameter imageTypes: (query) Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited. (optional)
+     - parameter sortBy: (query) Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime (optional)
+     - parameter isPlayed: (query) Optional filter by items that are played, or not. (optional)
+     - parameter genres: (query) Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted. (optional)
+     - parameter officialRatings: (query) Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted. (optional)
+     - parameter tags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter excludeTags: (query) Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted. (optional)
+     - parameter years: (query) Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted. (optional)
      - parameter enableImages: (query) Optional, include image information in output (optional)
+     - parameter enableUserData: (query) Optional, include user data (optional)
      - parameter imageTypeLimit: (query) Optional, the max number of images to return, per image type (optional)
      - parameter enableImageTypes: (query) Optional. The image types to include in the output. (optional)
-     - parameter enableUserData: (query) Optional, include user data (optional)
+     - parameter person: (query) Optional. If specified, results will be filtered to include only those containing the specified person. (optional)
+     - parameter personIds: (query) Optional. If specified, results will be filtered to include only those containing the specified person. (optional)
+     - parameter personTypes: (query) Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited (optional)
+     - parameter studios: (query) Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted. (optional)
+     - parameter studioIds: (query) Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted. (optional)
+     - parameter artists: (query) Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted. (optional)
+     - parameter artistIds: (query) Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted. (optional)
+     - parameter albums: (query) Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted. (optional)
+     - parameter ids: (query) Optional. If specific items are needed, specify a list of item id&#x27;s to retrieve. This allows multiple, comma delimited. (optional)
+     - parameter videoTypes: (query) Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted. (optional)
+     - parameter containers: (query) Optional filter by Container. Allows multiple, comma delimeted. (optional)
+     - parameter audioCodecs: (query) Optional filter by AudioCodec. Allows multiple, comma delimeted. (optional)
+     - parameter audioLayouts: (query) Optional filter by AudioLayout. Allows multiple, comma delimeted. (optional)
+     - parameter videoCodecs: (query) Optional filter by VideoCodec. Allows multiple, comma delimeted. (optional)
+     - parameter extendedVideoTypes: (query) Optional filter by ExtendedVideoType. Allows multiple, comma delimeted. (optional)
+     - parameter subtitleCodecs: (query) Optional filter by SubtitleCodec. Allows multiple, comma delimeted. (optional)
+     - parameter path: (query) Optional filter by Path. (optional)
+     - parameter userId: (query) User Id (optional)
+     - parameter minOfficialRating: (query) Optional filter by minimum official rating (PG, PG-13, TV-MA, etc). (optional)
+     - parameter isLocked: (query) Optional filter by items that are locked. (optional)
+     - parameter isPlaceHolder: (query) Optional filter by items that are placeholders (optional)
+     - parameter hasOfficialRating: (query) Optional filter by items that have official ratings (optional)
+     - parameter groupItemsIntoCollections: (query) Whether or not to hide items behind their boxsets. (optional)
+     - parameter is3D: (query) Optional filter by items that are 3D, or not. (optional)
+     - parameter seriesStatus: (query) Optional filter by Series Status. Allows multiple, comma delimeted. (optional)
+     - parameter nameStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter artistStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter albumArtistStartsWithOrGreater: (query) Optional filter by items whose name is sorted equally or greater than a given input string. (optional)
+     - parameter nameStartsWith: (query) Optional filter by items whose name is sorted equally than a given input string. (optional)
+     - parameter nameLessThan: (query) Optional filter by items whose name is equally or lesser than a given input string. (optional)
 
-     - returns: RequestBuilder<QueryResultBaseItemDto> 
+     - returns: RequestBuilder<Void> 
      */
-    open class func getShowsUpcomingWithRequestBuilder(userId: String, startIndex: Int? = nil, limit: Int? = nil, fields: String? = nil, parentId: String? = nil, enableImages: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, enableUserData: Bool? = nil) -> RequestBuilder<QueryResultBaseItemDto> {
+    open class func getShowsUpcomingWithRequestBuilder(artistType: String? = nil, maxOfficialRating: String? = nil, hasThemeSong: Bool? = nil, hasThemeVideo: Bool? = nil, hasSubtitles: Bool? = nil, hasSpecialFeature: Bool? = nil, hasTrailer: Bool? = nil, adjacentTo: String? = nil, minIndexNumber: Int? = nil, minStartDate: String? = nil, maxStartDate: String? = nil, minEndDate: String? = nil, maxEndDate: String? = nil, minPlayers: Int? = nil, maxPlayers: Int? = nil, parentIndexNumber: Int? = nil, hasParentalRating: Bool? = nil, isHD: Bool? = nil, isUnaired: Bool? = nil, minCommunityRating: Double? = nil, minCriticRating: Double? = nil, airedDuringSeason: Int? = nil, minPremiereDate: String? = nil, minDateLastSaved: String? = nil, minDateLastSavedForUser: String? = nil, maxPremiereDate: String? = nil, hasOverview: Bool? = nil, hasImdbId: Bool? = nil, hasTmdbId: Bool? = nil, hasTvdbId: Bool? = nil, excludeItemIds: String? = nil, startIndex: Int? = nil, limit: Int? = nil, recursive: Bool? = nil, searchTerm: String? = nil, sortOrder: String? = nil, parentId: String? = nil, fields: String? = nil, excludeItemTypes: String? = nil, includeItemTypes: String? = nil, anyProviderIdEquals: String? = nil, filters: String? = nil, isFavorite: Bool? = nil, isMovie: Bool? = nil, isSeries: Bool? = nil, isFolder: Bool? = nil, isNews: Bool? = nil, isKids: Bool? = nil, isSports: Bool? = nil, isNew: Bool? = nil, isPremiere: Bool? = nil, isNewOrPremiere: Bool? = nil, isRepeat: Bool? = nil, projectToMedia: Bool? = nil, mediaTypes: String? = nil, imageTypes: String? = nil, sortBy: String? = nil, isPlayed: Bool? = nil, genres: String? = nil, officialRatings: String? = nil, tags: String? = nil, excludeTags: String? = nil, years: String? = nil, enableImages: Bool? = nil, enableUserData: Bool? = nil, imageTypeLimit: Int? = nil, enableImageTypes: String? = nil, person: String? = nil, personIds: String? = nil, personTypes: String? = nil, studios: String? = nil, studioIds: String? = nil, artists: String? = nil, artistIds: String? = nil, albums: String? = nil, ids: String? = nil, videoTypes: String? = nil, containers: String? = nil, audioCodecs: String? = nil, audioLayouts: String? = nil, videoCodecs: String? = nil, extendedVideoTypes: String? = nil, subtitleCodecs: String? = nil, path: String? = nil, userId: String? = nil, minOfficialRating: String? = nil, isLocked: Bool? = nil, isPlaceHolder: Bool? = nil, hasOfficialRating: Bool? = nil, groupItemsIntoCollections: Bool? = nil, is3D: Bool? = nil, seriesStatus: String? = nil, nameStartsWithOrGreater: String? = nil, artistStartsWithOrGreater: String? = nil, albumArtistStartsWithOrGreater: String? = nil, nameStartsWith: String? = nil, nameLessThan: String? = nil) -> RequestBuilder<Void> {
         let path = "/Shows/Upcoming"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-                        "UserId": userId, 
+                        "ArtistType": artistType, 
+                        "MaxOfficialRating": maxOfficialRating, 
+                        "HasThemeSong": hasThemeSong, 
+                        "HasThemeVideo": hasThemeVideo, 
+                        "HasSubtitles": hasSubtitles, 
+                        "HasSpecialFeature": hasSpecialFeature, 
+                        "HasTrailer": hasTrailer, 
+                        "AdjacentTo": adjacentTo, 
+                        "MinIndexNumber": minIndexNumber?.encodeToJSON(), 
+                        "MinStartDate": minStartDate, 
+                        "MaxStartDate": maxStartDate, 
+                        "MinEndDate": minEndDate, 
+                        "MaxEndDate": maxEndDate, 
+                        "MinPlayers": minPlayers?.encodeToJSON(), 
+                        "MaxPlayers": maxPlayers?.encodeToJSON(), 
+                        "ParentIndexNumber": parentIndexNumber?.encodeToJSON(), 
+                        "HasParentalRating": hasParentalRating, 
+                        "IsHD": isHD, 
+                        "IsUnaired": isUnaired, 
+                        "MinCommunityRating": minCommunityRating, 
+                        "MinCriticRating": minCriticRating, 
+                        "AiredDuringSeason": airedDuringSeason?.encodeToJSON(), 
+                        "MinPremiereDate": minPremiereDate, 
+                        "MinDateLastSaved": minDateLastSaved, 
+                        "MinDateLastSavedForUser": minDateLastSavedForUser, 
+                        "MaxPremiereDate": maxPremiereDate, 
+                        "HasOverview": hasOverview, 
+                        "HasImdbId": hasImdbId, 
+                        "HasTmdbId": hasTmdbId, 
+                        "HasTvdbId": hasTvdbId, 
+                        "ExcludeItemIds": excludeItemIds, 
                         "StartIndex": startIndex?.encodeToJSON(), 
                         "Limit": limit?.encodeToJSON(), 
-                        "Fields": fields, 
+                        "Recursive": recursive, 
+                        "SearchTerm": searchTerm, 
+                        "SortOrder": sortOrder, 
                         "ParentId": parentId, 
+                        "Fields": fields, 
+                        "ExcludeItemTypes": excludeItemTypes, 
+                        "IncludeItemTypes": includeItemTypes, 
+                        "AnyProviderIdEquals": anyProviderIdEquals, 
+                        "Filters": filters, 
+                        "IsFavorite": isFavorite, 
+                        "IsMovie": isMovie, 
+                        "IsSeries": isSeries, 
+                        "IsFolder": isFolder, 
+                        "IsNews": isNews, 
+                        "IsKids": isKids, 
+                        "IsSports": isSports, 
+                        "IsNew": isNew, 
+                        "IsPremiere": isPremiere, 
+                        "IsNewOrPremiere": isNewOrPremiere, 
+                        "IsRepeat": isRepeat, 
+                        "ProjectToMedia": projectToMedia, 
+                        "MediaTypes": mediaTypes, 
+                        "ImageTypes": imageTypes, 
+                        "SortBy": sortBy, 
+                        "IsPlayed": isPlayed, 
+                        "Genres": genres, 
+                        "OfficialRatings": officialRatings, 
+                        "Tags": tags, 
+                        "ExcludeTags": excludeTags, 
+                        "Years": years, 
                         "EnableImages": enableImages, 
+                        "EnableUserData": enableUserData, 
                         "ImageTypeLimit": imageTypeLimit?.encodeToJSON(), 
                         "EnableImageTypes": enableImageTypes, 
-                        "EnableUserData": enableUserData
+                        "Person": person, 
+                        "PersonIds": personIds, 
+                        "PersonTypes": personTypes, 
+                        "Studios": studios, 
+                        "StudioIds": studioIds, 
+                        "Artists": artists, 
+                        "ArtistIds": artistIds, 
+                        "Albums": albums, 
+                        "Ids": ids, 
+                        "VideoTypes": videoTypes, 
+                        "Containers": containers, 
+                        "AudioCodecs": audioCodecs, 
+                        "AudioLayouts": audioLayouts, 
+                        "VideoCodecs": videoCodecs, 
+                        "ExtendedVideoTypes": extendedVideoTypes, 
+                        "SubtitleCodecs": subtitleCodecs, 
+                        "Path": path, 
+                        "UserId": userId, 
+                        "MinOfficialRating": minOfficialRating, 
+                        "IsLocked": isLocked, 
+                        "IsPlaceHolder": isPlaceHolder, 
+                        "HasOfficialRating": hasOfficialRating, 
+                        "GroupItemsIntoCollections": groupItemsIntoCollections, 
+                        "Is3D": is3D, 
+                        "SeriesStatus": seriesStatus, 
+                        "NameStartsWithOrGreater": nameStartsWithOrGreater, 
+                        "ArtistStartsWithOrGreater": artistStartsWithOrGreater, 
+                        "AlbumArtistStartsWithOrGreater": albumArtistStartsWithOrGreater, 
+                        "NameStartsWith": nameStartsWith, 
+                        "NameLessThan": nameLessThan
         ])
 
 
-        let requestBuilder: RequestBuilder<QueryResultBaseItemDto>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

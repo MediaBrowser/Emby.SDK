@@ -17,11 +17,11 @@ public struct ClientCapabilities: Codable {
     public var pushToken: String?
     public var pushTokenType: String?
     public var supportsSync: Bool?
-    public var deviceProfile: DlnaDeviceProfile?
+    public var deviceProfile: DeviceProfile?
     public var iconUrl: String?
     public var appId: String?
 
-    public init(playableMediaTypes: [String]? = nil, supportedCommands: [String]? = nil, supportsMediaControl: Bool? = nil, pushToken: String? = nil, pushTokenType: String? = nil, supportsSync: Bool? = nil, deviceProfile: DlnaDeviceProfile? = nil, iconUrl: String? = nil, appId: String? = nil) {
+    public init(playableMediaTypes: [String]? = nil, supportedCommands: [String]? = nil, supportsMediaControl: Bool? = nil, pushToken: String? = nil, pushTokenType: String? = nil, supportsSync: Bool? = nil, deviceProfile: DeviceProfile? = nil, iconUrl: String? = nil, appId: String? = nil) {
         self.playableMediaTypes = playableMediaTypes
         self.supportedCommands = supportedCommands
         self.supportsMediaControl = supportsMediaControl

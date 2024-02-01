@@ -43,7 +43,7 @@ namespace EmbyClient.Dotnet.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -55,7 +55,7 @@ namespace EmbyClient.Dotnet.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -84,6 +84,60 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of UserDto</returns>
         ApiResponse<UserDto> GetUsersByIdWithHttpInfo (string id);
         /// <summary>
+        /// Gets a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        void GetUsersByUseridTypedsettingsByKey (string key, string userId);
+
+        /// <summary>
+        /// Gets a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetUsersByUseridTypedsettingsByKeyWithHttpInfo (string key, string userId);
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>QueryResultUserDto</returns>
+        QueryResultUserDto GetUsersItemaccess (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
+
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>ApiResponse of QueryResultUserDto</returns>
+        ApiResponse<QueryResultUserDto> GetUsersItemaccessWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
+        /// <summary>
         /// Gets a list of users
         /// </summary>
         /// <remarks>
@@ -95,8 +149,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>List&lt;NameIdPair&gt;</returns>
-        List<NameIdPair> GetUsersPrefixes (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        List<NameIdPair> GetUsersPrefixes (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
 
         /// <summary>
         /// Gets a list of users
@@ -110,13 +165,14 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of List&lt;NameIdPair&gt;</returns>
-        ApiResponse<List<NameIdPair>> GetUsersPrefixesWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        ApiResponse<List<NameIdPair>> GetUsersPrefixesWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;UserDto&gt;</returns>
@@ -126,7 +182,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;UserDto&gt;</returns>
@@ -143,8 +199,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>QueryResultUserDto</returns>
-        QueryResultUserDto GetUsersQuery (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        QueryResultUserDto GetUsersQuery (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
 
         /// <summary>
         /// Gets a list of users
@@ -158,13 +215,14 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of QueryResultUserDto</returns>
-        ApiResponse<QueryResultUserDto> GetUsersQueryWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        ApiResponse<QueryResultUserDto> GetUsersQueryWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -176,7 +234,7 @@ namespace EmbyClient.Dotnet.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -210,7 +268,7 @@ namespace EmbyClient.Dotnet.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -222,7 +280,7 @@ namespace EmbyClient.Dotnet.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -239,7 +297,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserConfiguration: </param>
         /// <param name="id"></param>
         /// <returns></returns>
-        void PostUsersByIdConfiguration (ConfigurationUserConfiguration body, string id);
+        void PostUsersByIdConfiguration (UserConfiguration body, string id);
 
         /// <summary>
         /// Updates a user configuration
@@ -251,7 +309,30 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserConfiguration: </param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostUsersByIdConfigurationWithHttpInfo (ConfigurationUserConfiguration body, string id);
+        ApiResponse<Object> PostUsersByIdConfigurationWithHttpInfo (UserConfiguration body, string id);
+        /// <summary>
+        /// Updates a user configuration
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        void PostUsersByIdConfigurationPartial (Object body, string id);
+
+        /// <summary>
+        /// Updates a user configuration
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersByIdConfigurationPartialWithHttpInfo (Object body, string id);
         /// <summary>
         /// Deletes a user
         /// </summary>
@@ -273,29 +354,6 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostUsersByIdDeleteWithHttpInfo (string id);
-        /// <summary>
-        /// Updates a user&#x27;s easy password
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UpdateUserEasyPassword</param>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        void PostUsersByIdEasypassword (UpdateUserEasyPassword body, string id);
-
-        /// <summary>
-        /// Updates a user&#x27;s easy password
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UpdateUserEasyPassword</param>
-        /// <param name="id"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostUsersByIdEasypasswordWithHttpInfo (UpdateUserEasyPassword body, string id);
         /// <summary>
         /// Updates a user&#x27;s password
         /// </summary>
@@ -329,7 +387,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserPolicy: </param>
         /// <param name="id"></param>
         /// <returns></returns>
-        void PostUsersByIdPolicy (UsersUserPolicy body, string id);
+        void PostUsersByIdPolicy (UserPolicy body, string id);
 
         /// <summary>
         /// Updates a user policy
@@ -341,12 +399,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserPolicy: </param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostUsersByIdPolicyWithHttpInfo (UsersUserPolicy body, string id);
+        ApiResponse<Object> PostUsersByIdPolicyWithHttpInfo (UserPolicy body, string id);
         /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -358,7 +416,7 @@ namespace EmbyClient.Dotnet.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -366,47 +424,72 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostUsersByIdTrackselectionsByTracktypeDeleteWithHttpInfo (string id, string trackType);
         /// <summary>
+        /// Updates a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns></returns>
+        void PostUsersByUseridTypedsettingsByKey (Object body, string userId, string key);
+
+        /// <summary>
+        /// Updates a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostUsersByUseridTypedsettingsByKeyWithHttpInfo (Object body, string userId, string key);
+        /// <summary>
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
-        /// <returns>UsersForgotPasswordResult</returns>
-        UsersForgotPasswordResult PostUsersForgotpassword (ForgotPassword body);
+        /// <returns>ForgotPasswordResult</returns>
+        ForgotPasswordResult PostUsersForgotpassword (ForgotPassword body);
 
         /// <summary>
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
-        /// <returns>ApiResponse of UsersForgotPasswordResult</returns>
-        ApiResponse<UsersForgotPasswordResult> PostUsersForgotpasswordWithHttpInfo (ForgotPassword body);
+        /// <returns>ApiResponse of ForgotPasswordResult</returns>
+        ApiResponse<ForgotPasswordResult> PostUsersForgotpasswordWithHttpInfo (ForgotPassword body);
         /// <summary>
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
-        /// <returns>UsersPinRedeemResult</returns>
-        UsersPinRedeemResult PostUsersForgotpasswordPin (ForgotPasswordPin body);
+        /// <returns>PinRedeemResult</returns>
+        PinRedeemResult PostUsersForgotpasswordPin (ForgotPasswordPin body);
 
         /// <summary>
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
-        /// <returns>ApiResponse of UsersPinRedeemResult</returns>
-        ApiResponse<UsersPinRedeemResult> PostUsersForgotpasswordPinWithHttpInfo (ForgotPasswordPin body);
+        /// <returns>ApiResponse of PinRedeemResult</returns>
+        ApiResponse<PinRedeemResult> PostUsersForgotpasswordPinWithHttpInfo (ForgotPasswordPin body);
         /// <summary>
         /// Creates a user
         /// </summary>
@@ -455,7 +538,7 @@ namespace EmbyClient.Dotnet.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -467,7 +550,7 @@ namespace EmbyClient.Dotnet.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -496,6 +579,60 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>Task of ApiResponse (UserDto)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserDto>> GetUsersByIdAsyncWithHttpInfo (string id);
         /// <summary>
+        /// Gets a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetUsersByUseridTypedsettingsByKeyAsync (string key, string userId);
+
+        /// <summary>
+        /// Gets a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (string key, string userId);
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of QueryResultUserDto</returns>
+        System.Threading.Tasks.Task<QueryResultUserDto> GetUsersItemaccessAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
+
+        /// <summary>
+        /// Gets a list of users
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersItemaccessAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
+        /// <summary>
         /// Gets a list of users
         /// </summary>
         /// <remarks>
@@ -507,8 +644,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of List&lt;NameIdPair&gt;</returns>
-        System.Threading.Tasks.Task<List<NameIdPair>> GetUsersPrefixesAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        System.Threading.Tasks.Task<List<NameIdPair>> GetUsersPrefixesAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
 
         /// <summary>
         /// Gets a list of users
@@ -522,13 +660,14 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;NameIdPair&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetUsersPrefixesAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetUsersPrefixesAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;UserDto&gt;</returns>
@@ -538,7 +677,7 @@ namespace EmbyClient.Dotnet.Api
         /// Gets a list of publicly visible users for display on a login screen.
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;UserDto&gt;)</returns>
@@ -555,8 +694,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of QueryResultUserDto</returns>
-        System.Threading.Tasks.Task<QueryResultUserDto> GetUsersQueryAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        System.Threading.Tasks.Task<QueryResultUserDto> GetUsersQueryAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
 
         /// <summary>
         /// Gets a list of users
@@ -570,13 +710,14 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersQueryAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater);
+        System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersQueryAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder);
         /// <summary>
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -588,7 +729,7 @@ namespace EmbyClient.Dotnet.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -622,7 +763,7 @@ namespace EmbyClient.Dotnet.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -634,7 +775,7 @@ namespace EmbyClient.Dotnet.Api
         /// Authenticates a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -651,7 +792,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserConfiguration: </param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostUsersByIdConfigurationAsync (ConfigurationUserConfiguration body, string id);
+        System.Threading.Tasks.Task PostUsersByIdConfigurationAsync (UserConfiguration body, string id);
 
         /// <summary>
         /// Updates a user configuration
@@ -663,7 +804,30 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserConfiguration: </param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdConfigurationAsyncWithHttpInfo (ConfigurationUserConfiguration body, string id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdConfigurationAsyncWithHttpInfo (UserConfiguration body, string id);
+        /// <summary>
+        /// Updates a user configuration
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="id"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersByIdConfigurationPartialAsync (Object body, string id);
+
+        /// <summary>
+        /// Updates a user configuration
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdConfigurationPartialAsyncWithHttpInfo (Object body, string id);
         /// <summary>
         /// Deletes a user
         /// </summary>
@@ -685,29 +849,6 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdDeleteAsyncWithHttpInfo (string id);
-        /// <summary>
-        /// Updates a user&#x27;s easy password
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UpdateUserEasyPassword</param>
-        /// <param name="id"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostUsersByIdEasypasswordAsync (UpdateUserEasyPassword body, string id);
-
-        /// <summary>
-        /// Updates a user&#x27;s easy password
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UpdateUserEasyPassword</param>
-        /// <param name="id"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdEasypasswordAsyncWithHttpInfo (UpdateUserEasyPassword body, string id);
         /// <summary>
         /// Updates a user&#x27;s password
         /// </summary>
@@ -741,7 +882,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserPolicy: </param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostUsersByIdPolicyAsync (UsersUserPolicy body, string id);
+        System.Threading.Tasks.Task PostUsersByIdPolicyAsync (UserPolicy body, string id);
 
         /// <summary>
         /// Updates a user policy
@@ -753,12 +894,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserPolicy: </param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdPolicyAsyncWithHttpInfo (UsersUserPolicy body, string id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdPolicyAsyncWithHttpInfo (UserPolicy body, string id);
         /// <summary>
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -770,7 +911,7 @@ namespace EmbyClient.Dotnet.Api
         /// Clears audio or subtitle track selections for a user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -778,47 +919,72 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdTrackselectionsByTracktypeDeleteAsyncWithHttpInfo (string id, string trackType);
         /// <summary>
+        /// Updates a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostUsersByUseridTypedsettingsByKeyAsync (Object body, string userId, string key);
+
+        /// <summary>
+        /// Updates a typed user setting
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (Object body, string userId, string key);
+        /// <summary>
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
-        /// <returns>Task of UsersForgotPasswordResult</returns>
-        System.Threading.Tasks.Task<UsersForgotPasswordResult> PostUsersForgotpasswordAsync (ForgotPassword body);
+        /// <returns>Task of ForgotPasswordResult</returns>
+        System.Threading.Tasks.Task<ForgotPasswordResult> PostUsersForgotpasswordAsync (ForgotPassword body);
 
         /// <summary>
         /// Initiates the forgot password process for a local user
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
-        /// <returns>Task of ApiResponse (UsersForgotPasswordResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersForgotPasswordResult>> PostUsersForgotpasswordAsyncWithHttpInfo (ForgotPassword body);
+        /// <returns>Task of ApiResponse (ForgotPasswordResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ForgotPasswordResult>> PostUsersForgotpasswordAsyncWithHttpInfo (ForgotPassword body);
         /// <summary>
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
-        /// <returns>Task of UsersPinRedeemResult</returns>
-        System.Threading.Tasks.Task<UsersPinRedeemResult> PostUsersForgotpasswordPinAsync (ForgotPasswordPin body);
+        /// <returns>Task of PinRedeemResult</returns>
+        System.Threading.Tasks.Task<PinRedeemResult> PostUsersForgotpasswordPinAsync (ForgotPasswordPin body);
 
         /// <summary>
         /// Redeems a forgot password pin
         /// </summary>
         /// <remarks>
-        /// No authentication required
+        /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
-        /// <returns>Task of ApiResponse (UsersPinRedeemResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersPinRedeemResult>> PostUsersForgotpasswordPinAsyncWithHttpInfo (ForgotPasswordPin body);
+        /// <returns>Task of ApiResponse (PinRedeemResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PinRedeemResult>> PostUsersForgotpasswordPinAsyncWithHttpInfo (ForgotPasswordPin body);
         /// <summary>
         /// Creates a user
         /// </summary>
@@ -1101,7 +1267,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -1113,7 +1279,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -1150,6 +1316,17 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (trackType != null) localVarPathParams.Add("TrackType", this.Configuration.ApiClient.ParameterToString(trackType)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1170,7 +1347,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -1183,7 +1360,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -1220,6 +1397,17 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (trackType != null) localVarPathParams.Add("TrackType", this.Configuration.ApiClient.ParameterToString(trackType)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1395,6 +1583,346 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
+        /// Gets a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public void GetUsersByUseridTypedsettingsByKey (string key, string userId)
+        {
+             GetUsersByUseridTypedsettingsByKeyWithHttpInfo(key, userId);
+        }
+
+        /// <summary>
+        /// Gets a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetUsersByUseridTypedsettingsByKeyWithHttpInfo (string key, string userId)
+        {
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling UserServiceApi->GetUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->GetUsersByUseridTypedsettingsByKey");
+
+            var localVarPath = "/Users/{UserId}/TypedSettings/{Key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (key != null) localVarPathParams.Add("Key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersByUseridTypedsettingsByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetUsersByUseridTypedsettingsByKeyAsync (string key, string userId)
+        {
+             await GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo(key, userId);
+
+        }
+
+        /// <summary>
+        /// Gets a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="key">Key</param>
+        /// <param name="userId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (string key, string userId)
+        {
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling UserServiceApi->GetUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->GetUsersByUseridTypedsettingsByKey");
+
+            var localVarPath = "/Users/{UserId}/TypedSettings/{Key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (key != null) localVarPathParams.Add("Key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersByUseridTypedsettingsByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets a list of users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>QueryResultUserDto</returns>
+        public QueryResultUserDto GetUsersItemaccess (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+             ApiResponse<QueryResultUserDto> localVarResponse = GetUsersItemaccessWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a list of users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>ApiResponse of QueryResultUserDto</returns>
+        public ApiResponse< QueryResultUserDto > GetUsersItemaccessWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+
+            var localVarPath = "/Users/ItemAccess";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (isHidden != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsHidden", isHidden)); // query parameter
+            if (isDisabled != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsDisabled", isDisabled)); // query parameter
+            if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
+            if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersItemaccess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<QueryResultUserDto>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (QueryResultUserDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultUserDto)));
+        }
+
+        /// <summary>
+        /// Gets a list of users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of QueryResultUserDto</returns>
+        public async System.Threading.Tasks.Task<QueryResultUserDto> GetUsersItemaccessAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+             ApiResponse<QueryResultUserDto> localVarResponse = await GetUsersItemaccessAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a list of users Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="isHidden">Optional filter by IsHidden&#x3D;true or false (optional)</param>
+        /// <param name="isDisabled">Optional filter by IsDisabled&#x3D;true or false (optional)</param>
+        /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
+        /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
+        /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
+        /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersItemaccessAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
+        {
+
+            var localVarPath = "/Users/ItemAccess";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (isHidden != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsHidden", isHidden)); // query parameter
+            if (isDisabled != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IsDisabled", isDisabled)); // query parameter
+            if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
+            if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetUsersItemaccess", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<QueryResultUserDto>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (QueryResultUserDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueryResultUserDto)));
+        }
+
+        /// <summary>
         /// Gets a list of users Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1403,10 +1931,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>List&lt;NameIdPair&gt;</returns>
-        public List<NameIdPair> GetUsersPrefixes (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public List<NameIdPair> GetUsersPrefixes (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
-             ApiResponse<List<NameIdPair>> localVarResponse = GetUsersPrefixesWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+             ApiResponse<List<NameIdPair>> localVarResponse = GetUsersPrefixesWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -1419,8 +1948,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of List&lt;NameIdPair&gt;</returns>
-        public ApiResponse< List<NameIdPair> > GetUsersPrefixesWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public ApiResponse< List<NameIdPair> > GetUsersPrefixesWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
 
             var localVarPath = "/Users/Prefixes";
@@ -1450,6 +1980,7 @@ namespace EmbyClient.Dotnet.Api
             if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1489,10 +2020,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of List&lt;NameIdPair&gt;</returns>
-        public async System.Threading.Tasks.Task<List<NameIdPair>> GetUsersPrefixesAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public async System.Threading.Tasks.Task<List<NameIdPair>> GetUsersPrefixesAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
-             ApiResponse<List<NameIdPair>> localVarResponse = await GetUsersPrefixesAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+             ApiResponse<List<NameIdPair>> localVarResponse = await GetUsersPrefixesAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -1506,8 +2038,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;NameIdPair&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetUsersPrefixesAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public async System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetUsersPrefixesAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
 
             var localVarPath = "/Users/Prefixes";
@@ -1537,6 +2070,7 @@ namespace EmbyClient.Dotnet.Api
             if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1568,7 +2102,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets a list of publicly visible users for display on a login screen. No authentication required
+        /// Gets a list of publicly visible users for display on a login screen. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;UserDto&gt;</returns>
@@ -1579,7 +2113,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets a list of publicly visible users for display on a login screen. No authentication required
+        /// Gets a list of publicly visible users for display on a login screen. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;UserDto&gt;</returns>
@@ -1608,6 +2142,17 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1628,7 +2173,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets a list of publicly visible users for display on a login screen. No authentication required
+        /// Gets a list of publicly visible users for display on a login screen. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;UserDto&gt;</returns>
@@ -1640,7 +2185,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Gets a list of publicly visible users for display on a login screen. No authentication required
+        /// Gets a list of publicly visible users for display on a login screen. Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;UserDto&gt;)</returns>
@@ -1669,6 +2214,17 @@ namespace EmbyClient.Dotnet.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1697,10 +2253,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>QueryResultUserDto</returns>
-        public QueryResultUserDto GetUsersQuery (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public QueryResultUserDto GetUsersQuery (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
-             ApiResponse<QueryResultUserDto> localVarResponse = GetUsersQueryWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+             ApiResponse<QueryResultUserDto> localVarResponse = GetUsersQueryWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -1713,8 +2270,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>ApiResponse of QueryResultUserDto</returns>
-        public ApiResponse< QueryResultUserDto > GetUsersQueryWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public ApiResponse< QueryResultUserDto > GetUsersQueryWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
 
             var localVarPath = "/Users/Query";
@@ -1744,6 +2302,7 @@ namespace EmbyClient.Dotnet.Api
             if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1783,10 +2342,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of QueryResultUserDto</returns>
-        public async System.Threading.Tasks.Task<QueryResultUserDto> GetUsersQueryAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public async System.Threading.Tasks.Task<QueryResultUserDto> GetUsersQueryAsync (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
-             ApiResponse<QueryResultUserDto> localVarResponse = await GetUsersQueryAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater);
+             ApiResponse<QueryResultUserDto> localVarResponse = await GetUsersQueryAsyncWithHttpInfo(isHidden, isDisabled, startIndex, limit, nameStartsWithOrGreater, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -1800,8 +2360,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="startIndex">Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)</param>
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="nameStartsWithOrGreater">Optional filter by items whose name is sorted equally or greater than a given input string. (optional)</param>
+        /// <param name="sortOrder">Sort Order - Ascending,Descending (optional)</param>
         /// <returns>Task of ApiResponse (QueryResultUserDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersQueryAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResultUserDto>> GetUsersQueryAsyncWithHttpInfo (bool? isHidden, bool? isDisabled, int? startIndex, int? limit, string nameStartsWithOrGreater, string sortOrder)
         {
 
             var localVarPath = "/Users/Query";
@@ -1831,6 +2392,7 @@ namespace EmbyClient.Dotnet.Api
             if (startIndex != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartIndex", startIndex)); // query parameter
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (nameStartsWithOrGreater != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NameStartsWithOrGreater", nameStartsWithOrGreater)); // query parameter
+            if (sortOrder != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "SortOrder", sortOrder)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -1862,7 +2424,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -1875,7 +2437,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -1923,6 +2485,17 @@ namespace EmbyClient.Dotnet.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -1943,7 +2516,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -1957,7 +2530,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- No authentication required
+        /// Authenticates a user Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure - -- Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUserByName</param>
@@ -2004,6 +2577,17 @@ namespace EmbyClient.Dotnet.Api
             else
             {
                 localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
@@ -2204,7 +2788,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Authenticates a user No authentication required
+        /// Authenticates a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -2217,7 +2801,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Authenticates a user No authentication required
+        /// Authenticates a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -2265,6 +2849,17 @@ namespace EmbyClient.Dotnet.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -2285,7 +2880,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Authenticates a user No authentication required
+        /// Authenticates a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -2299,7 +2894,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Authenticates a user No authentication required
+        /// Authenticates a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AuthenticateUser</param>
@@ -2347,6 +2942,17 @@ namespace EmbyClient.Dotnet.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2373,7 +2979,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserConfiguration: </param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public void PostUsersByIdConfiguration (ConfigurationUserConfiguration body, string id)
+        public void PostUsersByIdConfiguration (UserConfiguration body, string id)
         {
              PostUsersByIdConfigurationWithHttpInfo(body, id);
         }
@@ -2385,7 +2991,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserConfiguration: </param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostUsersByIdConfigurationWithHttpInfo (ConfigurationUserConfiguration body, string id)
+        public ApiResponse<Object> PostUsersByIdConfigurationWithHttpInfo (UserConfiguration body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2462,7 +3068,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserConfiguration: </param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostUsersByIdConfigurationAsync (ConfigurationUserConfiguration body, string id)
+        public async System.Threading.Tasks.Task PostUsersByIdConfigurationAsync (UserConfiguration body, string id)
         {
              await PostUsersByIdConfigurationAsyncWithHttpInfo(body, id);
 
@@ -2475,7 +3081,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserConfiguration: </param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdConfigurationAsyncWithHttpInfo (ConfigurationUserConfiguration body, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdConfigurationAsyncWithHttpInfo (UserConfiguration body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2537,6 +3143,183 @@ namespace EmbyClient.Dotnet.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PostUsersByIdConfiguration", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Updates a user configuration Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public void PostUsersByIdConfigurationPartial (Object body, string id)
+        {
+             PostUsersByIdConfigurationPartialWithHttpInfo(body, id);
+        }
+
+        /// <summary>
+        /// Updates a user configuration Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostUsersByIdConfigurationPartialWithHttpInfo (Object body, string id)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByIdConfigurationPartial");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserServiceApi->PostUsersByIdConfigurationPartial");
+
+            var localVarPath = "/Users/{Id}/Configuration/Partial";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByIdConfigurationPartial", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Updates a user configuration Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="id"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersByIdConfigurationPartialAsync (Object body, string id)
+        {
+             await PostUsersByIdConfigurationPartialAsyncWithHttpInfo(body, id);
+
+        }
+
+        /// <summary>
+        /// Updates a user configuration Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="id"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdConfigurationPartialAsyncWithHttpInfo (Object body, string id)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByIdConfigurationPartial");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling UserServiceApi->PostUsersByIdConfigurationPartial");
+
+            var localVarPath = "/Users/{Id}/Configuration/Partial";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByIdConfigurationPartial", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2686,185 +3469,6 @@ namespace EmbyClient.Dotnet.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PostUsersByIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Updates a user&#x27;s easy password Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UpdateUserEasyPassword</param>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public void PostUsersByIdEasypassword (UpdateUserEasyPassword body, string id)
-        {
-             PostUsersByIdEasypasswordWithHttpInfo(body, id);
-        }
-
-        /// <summary>
-        /// Updates a user&#x27;s easy password Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UpdateUserEasyPassword</param>
-        /// <param name="id"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostUsersByIdEasypasswordWithHttpInfo (UpdateUserEasyPassword body, string id)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByIdEasypassword");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UserServiceApi->PostUsersByIdEasypassword");
-
-            var localVarPath = "/Users/{Id}/EasyPassword";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "application/xml"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("PostUsersByIdEasypassword", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        /// Updates a user&#x27;s easy password Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UpdateUserEasyPassword</param>
-        /// <param name="id"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostUsersByIdEasypasswordAsync (UpdateUserEasyPassword body, string id)
-        {
-             await PostUsersByIdEasypasswordAsyncWithHttpInfo(body, id);
-
-        }
-
-        /// <summary>
-        /// Updates a user&#x27;s easy password Requires authentication as user
-        /// </summary>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">UpdateUserEasyPassword</param>
-        /// <param name="id"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdEasypasswordAsyncWithHttpInfo (UpdateUserEasyPassword body, string id)
-        {
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByIdEasypassword");
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UserServiceApi->PostUsersByIdEasypassword");
-
-            var localVarPath = "/Users/{Id}/EasyPassword";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "application/xml"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (apikeyauth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
-            {
-                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
-            }
-            // authentication (embyauth) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("PostUsersByIdEasypassword", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3059,7 +3663,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserPolicy: </param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public void PostUsersByIdPolicy (UsersUserPolicy body, string id)
+        public void PostUsersByIdPolicy (UserPolicy body, string id)
         {
              PostUsersByIdPolicyWithHttpInfo(body, id);
         }
@@ -3071,7 +3675,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserPolicy: </param>
         /// <param name="id"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostUsersByIdPolicyWithHttpInfo (UsersUserPolicy body, string id)
+        public ApiResponse<Object> PostUsersByIdPolicyWithHttpInfo (UserPolicy body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3148,7 +3752,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserPolicy: </param>
         /// <param name="id"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostUsersByIdPolicyAsync (UsersUserPolicy body, string id)
+        public async System.Threading.Tasks.Task PostUsersByIdPolicyAsync (UserPolicy body, string id)
         {
              await PostUsersByIdPolicyAsyncWithHttpInfo(body, id);
 
@@ -3161,7 +3765,7 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">UserPolicy: </param>
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdPolicyAsyncWithHttpInfo (UsersUserPolicy body, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdPolicyAsyncWithHttpInfo (UserPolicy body, string id)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3232,7 +3836,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -3244,7 +3848,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -3281,6 +3885,17 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (trackType != null) localVarPathParams.Add("TrackType", this.Configuration.ApiClient.ParameterToString(trackType)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -3301,7 +3916,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -3314,7 +3929,7 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Clears audio or subtitle track selections for a user No authentication required
+        /// Clears audio or subtitle track selections for a user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
@@ -3351,6 +3966,17 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (trackType != null) localVarPathParams.Add("TrackType", this.Configuration.ApiClient.ParameterToString(trackType)); // path parameter
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3371,24 +3997,213 @@ namespace EmbyClient.Dotnet.Api
         }
 
         /// <summary>
-        /// Initiates the forgot password process for a local user No authentication required
+        /// Updates a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns></returns>
+        public void PostUsersByUseridTypedsettingsByKey (Object body, string userId, string key)
+        {
+             PostUsersByUseridTypedsettingsByKeyWithHttpInfo(body, userId, key);
+        }
+
+        /// <summary>
+        /// Updates a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostUsersByUseridTypedsettingsByKeyWithHttpInfo (Object body, string userId, string key)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+
+            var localVarPath = "/Users/{UserId}/TypedSettings/{Key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (key != null) localVarPathParams.Add("Key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridTypedsettingsByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Updates a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostUsersByUseridTypedsettingsByKeyAsync (Object body, string userId, string key)
+        {
+             await PostUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo(body, userId, key);
+
+        }
+
+        /// <summary>
+        /// Updates a typed user setting Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId"></param>
+        /// <param name="key">Key</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByUseridTypedsettingsByKeyAsyncWithHttpInfo (Object body, string userId, string key)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+            // verify the required parameter 'key' is set
+            if (key == null)
+                throw new ApiException(400, "Missing required parameter 'key' when calling UserServiceApi->PostUsersByUseridTypedsettingsByKey");
+
+            var localVarPath = "/Users/{UserId}/TypedSettings/{Key}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (userId != null) localVarPathParams.Add("UserId", this.Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (key != null) localVarPathParams.Add("Key", this.Configuration.ApiClient.ParameterToString(key)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUsersByUseridTypedsettingsByKey", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Initiates the forgot password process for a local user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
-        /// <returns>UsersForgotPasswordResult</returns>
-        public UsersForgotPasswordResult PostUsersForgotpassword (ForgotPassword body)
+        /// <returns>ForgotPasswordResult</returns>
+        public ForgotPasswordResult PostUsersForgotpassword (ForgotPassword body)
         {
-             ApiResponse<UsersForgotPasswordResult> localVarResponse = PostUsersForgotpasswordWithHttpInfo(body);
+             ApiResponse<ForgotPasswordResult> localVarResponse = PostUsersForgotpasswordWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Initiates the forgot password process for a local user No authentication required
+        /// Initiates the forgot password process for a local user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
-        /// <returns>ApiResponse of UsersForgotPasswordResult</returns>
-        public ApiResponse< UsersForgotPasswordResult > PostUsersForgotpasswordWithHttpInfo (ForgotPassword body)
+        /// <returns>ApiResponse of ForgotPasswordResult</returns>
+        public ApiResponse< ForgotPasswordResult > PostUsersForgotpasswordWithHttpInfo (ForgotPassword body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3426,6 +4241,17 @@ namespace EmbyClient.Dotnet.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
@@ -3440,31 +4266,31 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UsersForgotPasswordResult>(localVarStatusCode,
+            return new ApiResponse<ForgotPasswordResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (UsersForgotPasswordResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersForgotPasswordResult)));
+                (ForgotPasswordResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ForgotPasswordResult)));
         }
 
         /// <summary>
-        /// Initiates the forgot password process for a local user No authentication required
+        /// Initiates the forgot password process for a local user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
-        /// <returns>Task of UsersForgotPasswordResult</returns>
-        public async System.Threading.Tasks.Task<UsersForgotPasswordResult> PostUsersForgotpasswordAsync (ForgotPassword body)
+        /// <returns>Task of ForgotPasswordResult</returns>
+        public async System.Threading.Tasks.Task<ForgotPasswordResult> PostUsersForgotpasswordAsync (ForgotPassword body)
         {
-             ApiResponse<UsersForgotPasswordResult> localVarResponse = await PostUsersForgotpasswordAsyncWithHttpInfo(body);
+             ApiResponse<ForgotPasswordResult> localVarResponse = await PostUsersForgotpasswordAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Initiates the forgot password process for a local user No authentication required
+        /// Initiates the forgot password process for a local user Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPassword</param>
-        /// <returns>Task of ApiResponse (UsersForgotPasswordResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersForgotPasswordResult>> PostUsersForgotpasswordAsyncWithHttpInfo (ForgotPassword body)
+        /// <returns>Task of ApiResponse (ForgotPasswordResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ForgotPasswordResult>> PostUsersForgotpasswordAsyncWithHttpInfo (ForgotPassword body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3502,6 +4328,17 @@ namespace EmbyClient.Dotnet.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3516,30 +4353,30 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UsersForgotPasswordResult>(localVarStatusCode,
+            return new ApiResponse<ForgotPasswordResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (UsersForgotPasswordResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersForgotPasswordResult)));
+                (ForgotPasswordResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ForgotPasswordResult)));
         }
 
         /// <summary>
-        /// Redeems a forgot password pin No authentication required
+        /// Redeems a forgot password pin Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
-        /// <returns>UsersPinRedeemResult</returns>
-        public UsersPinRedeemResult PostUsersForgotpasswordPin (ForgotPasswordPin body)
+        /// <returns>PinRedeemResult</returns>
+        public PinRedeemResult PostUsersForgotpasswordPin (ForgotPasswordPin body)
         {
-             ApiResponse<UsersPinRedeemResult> localVarResponse = PostUsersForgotpasswordPinWithHttpInfo(body);
+             ApiResponse<PinRedeemResult> localVarResponse = PostUsersForgotpasswordPinWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Redeems a forgot password pin No authentication required
+        /// Redeems a forgot password pin Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
-        /// <returns>ApiResponse of UsersPinRedeemResult</returns>
-        public ApiResponse< UsersPinRedeemResult > PostUsersForgotpasswordPinWithHttpInfo (ForgotPasswordPin body)
+        /// <returns>ApiResponse of PinRedeemResult</returns>
+        public ApiResponse< PinRedeemResult > PostUsersForgotpasswordPinWithHttpInfo (ForgotPasswordPin body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3576,6 +4413,17 @@ namespace EmbyClient.Dotnet.Api
             else
             {
                 localVarPostBody = body; // byte array
+            }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
@@ -3591,31 +4439,31 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UsersPinRedeemResult>(localVarStatusCode,
+            return new ApiResponse<PinRedeemResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (UsersPinRedeemResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersPinRedeemResult)));
+                (PinRedeemResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PinRedeemResult)));
         }
 
         /// <summary>
-        /// Redeems a forgot password pin No authentication required
+        /// Redeems a forgot password pin Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
-        /// <returns>Task of UsersPinRedeemResult</returns>
-        public async System.Threading.Tasks.Task<UsersPinRedeemResult> PostUsersForgotpasswordPinAsync (ForgotPasswordPin body)
+        /// <returns>Task of PinRedeemResult</returns>
+        public async System.Threading.Tasks.Task<PinRedeemResult> PostUsersForgotpasswordPinAsync (ForgotPasswordPin body)
         {
-             ApiResponse<UsersPinRedeemResult> localVarResponse = await PostUsersForgotpasswordPinAsyncWithHttpInfo(body);
+             ApiResponse<PinRedeemResult> localVarResponse = await PostUsersForgotpasswordPinAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Redeems a forgot password pin No authentication required
+        /// Redeems a forgot password pin Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ForgotPasswordPin</param>
-        /// <returns>Task of ApiResponse (UsersPinRedeemResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UsersPinRedeemResult>> PostUsersForgotpasswordPinAsyncWithHttpInfo (ForgotPasswordPin body)
+        /// <returns>Task of ApiResponse (PinRedeemResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PinRedeemResult>> PostUsersForgotpasswordPinAsyncWithHttpInfo (ForgotPasswordPin body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3653,6 +4501,17 @@ namespace EmbyClient.Dotnet.Api
             {
                 localVarPostBody = body; // byte array
             }
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3667,9 +4526,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<UsersPinRedeemResult>(localVarStatusCode,
+            return new ApiResponse<PinRedeemResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (UsersPinRedeemResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersPinRedeemResult)));
+                (PinRedeemResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PinRedeemResult)));
         }
 
         /// <summary>

@@ -1,17 +1,18 @@
 /*
- * Emby REST API
+ * Emby Server REST API
  * 
  */
 
 package EmbyClient.Java;
 
+import io.swagger.client.model.ApiAvailableRecordingOptions;
+import io.swagger.client.model.ApiBaseItemsRequest;
+import io.swagger.client.model.ApiListingProviderTypeInfo;
+import io.swagger.client.model.ApiSetChannelDisabled;
+import io.swagger.client.model.ApiSetChannelMapping;
+import io.swagger.client.model.ApiSetChannelSortIndex;
+import io.swagger.client.model.ApiTagItem;
 import io.swagger.client.model.BaseItemDto;
-import io.swagger.client.model.LiveTVApiGetPrograms;
-import io.swagger.client.model.LiveTVApiListingProviderTypeInfo;
-import io.swagger.client.model.LiveTVApiSetChannelDisabled;
-import io.swagger.client.model.LiveTVApiSetChannelMapping;
-import io.swagger.client.model.LiveTVApiSetChannelSortIndex;
-import io.swagger.client.model.LiveTVApiTagItem;
 import io.swagger.client.model.LiveTvChannelType;
 import io.swagger.client.model.LiveTvGuideInfo;
 import io.swagger.client.model.LiveTvListingsProviderInfo;
@@ -22,9 +23,9 @@ import io.swagger.client.model.LiveTvSeriesTimerInfoDto;
 import io.swagger.client.model.LiveTvTimerInfoDto;
 import io.swagger.client.model.LiveTvTunerHostInfo;
 import io.swagger.client.model.NameIdPair;
+import io.swagger.client.model.QueryResultApiEpgRow;
 import io.swagger.client.model.QueryResultBaseItemDto;
-import io.swagger.client.model.QueryResultEmbyLiveTVChannelManagementInfo;
-import io.swagger.client.model.QueryResultLiveTVApiEpgRow;
+import io.swagger.client.model.QueryResultChannelManagementInfo;
 import io.swagger.client.model.QueryResultLiveTvSeriesTimerInfoDto;
 import io.swagger.client.model.QueryResultLiveTvTimerInfoDto;
 import io.swagger.client.model.SortOrder;
@@ -152,6 +153,20 @@ public class LiveTvServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Gets available recording options
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getLivetvAvailablerecordingoptionsTest() throws Exception {
+        ApiAvailableRecordingOptions response = api.getLivetvAvailablerecordingoptions();
+
+        // TODO: test validations
+    }
+    /**
      * 
      *
      * Requires authentication as administrator
@@ -205,14 +220,15 @@ public class LiveTvServiceApiTest {
         Boolean hasTrailer = null;
         String adjacentTo = null;
         Integer minIndexNumber = null;
+        String minStartDate = null;
+        String maxStartDate = null;
+        String minEndDate = null;
+        String maxEndDate = null;
         Integer minPlayers = null;
         Integer maxPlayers = null;
         Integer parentIndexNumber = null;
         Boolean hasParentalRating = null;
         Boolean isHD = null;
-        String locationTypes = null;
-        String excludeLocationTypes = null;
-        Boolean isMissing = null;
         Boolean isUnaired = null;
         Double minCommunityRating = null;
         Double minCriticRating = null;
@@ -240,9 +256,15 @@ public class LiveTvServiceApiTest {
         Boolean isFavorite = null;
         Boolean isMovie = null;
         Boolean isSeries = null;
+        Boolean isFolder = null;
         Boolean isNews = null;
         Boolean isKids = null;
         Boolean isSports = null;
+        Boolean isNew = null;
+        Boolean isPremiere = null;
+        Boolean isNewOrPremiere = null;
+        Boolean isRepeat = null;
+        Boolean projectToMedia = null;
         String mediaTypes = null;
         String imageTypes = null;
         String sortBy = null;
@@ -250,6 +272,7 @@ public class LiveTvServiceApiTest {
         String genres = null;
         String officialRatings = null;
         String tags = null;
+        String excludeTags = null;
         String years = null;
         Boolean enableImages = null;
         Boolean enableUserData = null;
@@ -267,7 +290,9 @@ public class LiveTvServiceApiTest {
         String videoTypes = null;
         String containers = null;
         String audioCodecs = null;
+        String audioLayouts = null;
         String videoCodecs = null;
+        String extendedVideoTypes = null;
         String subtitleCodecs = null;
         String path = null;
         String userId = null;
@@ -283,7 +308,7 @@ public class LiveTvServiceApiTest {
         String albumArtistStartsWithOrGreater = null;
         String nameStartsWith = null;
         String nameLessThan = null;
-        QueryResultBaseItemDto response = api.getLivetvChannels(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+        QueryResultBaseItemDto response = api.getLivetvChannels(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
@@ -306,7 +331,7 @@ public class LiveTvServiceApiTest {
     /**
      * Gets live tv channel tags
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -322,14 +347,15 @@ public class LiveTvServiceApiTest {
         Boolean hasTrailer = null;
         String adjacentTo = null;
         Integer minIndexNumber = null;
+        String minStartDate = null;
+        String maxStartDate = null;
+        String minEndDate = null;
+        String maxEndDate = null;
         Integer minPlayers = null;
         Integer maxPlayers = null;
         Integer parentIndexNumber = null;
         Boolean hasParentalRating = null;
         Boolean isHD = null;
-        String locationTypes = null;
-        String excludeLocationTypes = null;
-        Boolean isMissing = null;
         Boolean isUnaired = null;
         Double minCommunityRating = null;
         Double minCriticRating = null;
@@ -357,9 +383,15 @@ public class LiveTvServiceApiTest {
         Boolean isFavorite = null;
         Boolean isMovie = null;
         Boolean isSeries = null;
+        Boolean isFolder = null;
         Boolean isNews = null;
         Boolean isKids = null;
         Boolean isSports = null;
+        Boolean isNew = null;
+        Boolean isPremiere = null;
+        Boolean isNewOrPremiere = null;
+        Boolean isRepeat = null;
+        Boolean projectToMedia = null;
         String mediaTypes = null;
         String imageTypes = null;
         String sortBy = null;
@@ -367,6 +399,7 @@ public class LiveTvServiceApiTest {
         String genres = null;
         String officialRatings = null;
         String tags = null;
+        String excludeTags = null;
         String years = null;
         Boolean enableImages = null;
         Boolean enableUserData = null;
@@ -384,7 +417,9 @@ public class LiveTvServiceApiTest {
         String videoTypes = null;
         String containers = null;
         String audioCodecs = null;
+        String audioLayouts = null;
         String videoCodecs = null;
+        String extendedVideoTypes = null;
         String subtitleCodecs = null;
         String path = null;
         String userId = null;
@@ -400,14 +435,14 @@ public class LiveTvServiceApiTest {
         String albumArtistStartsWithOrGreater = null;
         String nameStartsWith = null;
         String nameLessThan = null;
-        QueryResultBaseItemDto response = api.getLivetvChanneltags(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+        QueryResultBaseItemDto response = api.getLivetvChanneltags(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
     /**
      * Gets live tv channel tag prefixes
      *
-     * No authentication required
+     * Requires authentication as user
      *
      * @throws Exception
      *          if the Api call fails
@@ -423,14 +458,15 @@ public class LiveTvServiceApiTest {
         Boolean hasTrailer = null;
         String adjacentTo = null;
         Integer minIndexNumber = null;
+        String minStartDate = null;
+        String maxStartDate = null;
+        String minEndDate = null;
+        String maxEndDate = null;
         Integer minPlayers = null;
         Integer maxPlayers = null;
         Integer parentIndexNumber = null;
         Boolean hasParentalRating = null;
         Boolean isHD = null;
-        String locationTypes = null;
-        String excludeLocationTypes = null;
-        Boolean isMissing = null;
         Boolean isUnaired = null;
         Double minCommunityRating = null;
         Double minCriticRating = null;
@@ -458,9 +494,15 @@ public class LiveTvServiceApiTest {
         Boolean isFavorite = null;
         Boolean isMovie = null;
         Boolean isSeries = null;
+        Boolean isFolder = null;
         Boolean isNews = null;
         Boolean isKids = null;
         Boolean isSports = null;
+        Boolean isNew = null;
+        Boolean isPremiere = null;
+        Boolean isNewOrPremiere = null;
+        Boolean isRepeat = null;
+        Boolean projectToMedia = null;
         String mediaTypes = null;
         String imageTypes = null;
         String sortBy = null;
@@ -468,6 +510,7 @@ public class LiveTvServiceApiTest {
         String genres = null;
         String officialRatings = null;
         String tags = null;
+        String excludeTags = null;
         String years = null;
         Boolean enableImages = null;
         Boolean enableUserData = null;
@@ -485,7 +528,9 @@ public class LiveTvServiceApiTest {
         String videoTypes = null;
         String containers = null;
         String audioCodecs = null;
+        String audioLayouts = null;
         String videoCodecs = null;
+        String extendedVideoTypes = null;
         String subtitleCodecs = null;
         String path = null;
         String userId = null;
@@ -501,7 +546,7 @@ public class LiveTvServiceApiTest {
         String albumArtistStartsWithOrGreater = null;
         String nameStartsWith = null;
         String nameLessThan = null;
-        List<LiveTVApiTagItem> response = api.getLivetvChanneltagsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+        List<ApiTagItem> response = api.getLivetvChanneltagsPrefixes(artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
@@ -516,31 +561,109 @@ public class LiveTvServiceApiTest {
     @Test
     public void getLivetvEPGTest() throws Exception {
         LiveTvChannelType type = null;
-        String userId = null;
-        String genreIds = null;
+        Boolean isLiked = null;
+        Boolean isDisliked = null;
+        Boolean enableFavoriteSorting = null;
+        Boolean addCurrentProgram = null;
+        String channelIds = null;
+        String artistType = null;
+        String maxOfficialRating = null;
+        Boolean hasThemeSong = null;
+        Boolean hasThemeVideo = null;
+        Boolean hasSubtitles = null;
+        Boolean hasSpecialFeature = null;
+        Boolean hasTrailer = null;
+        String adjacentTo = null;
+        Integer minIndexNumber = null;
         String minStartDate = null;
         String maxStartDate = null;
         String minEndDate = null;
         String maxEndDate = null;
+        Integer minPlayers = null;
+        Integer maxPlayers = null;
+        Integer parentIndexNumber = null;
+        Boolean hasParentalRating = null;
+        Boolean isHD = null;
+        Boolean isUnaired = null;
+        Double minCommunityRating = null;
+        Double minCriticRating = null;
+        Integer airedDuringSeason = null;
+        String minPremiereDate = null;
+        String minDateLastSaved = null;
+        String minDateLastSavedForUser = null;
+        String maxPremiereDate = null;
+        Boolean hasOverview = null;
+        Boolean hasImdbId = null;
+        Boolean hasTmdbId = null;
+        Boolean hasTvdbId = null;
+        String excludeItemIds = null;
         Integer startIndex = null;
+        Integer limit = null;
+        Boolean recursive = null;
+        String searchTerm = null;
+        String sortOrder = null;
+        String parentId = null;
+        String fields = null;
+        String excludeItemTypes = null;
+        String includeItemTypes = null;
+        String anyProviderIdEquals = null;
+        String filters = null;
+        Boolean isFavorite = null;
         Boolean isMovie = null;
         Boolean isSeries = null;
+        Boolean isFolder = null;
         Boolean isNews = null;
         Boolean isKids = null;
         Boolean isSports = null;
-        Integer limit = null;
-        Boolean isFavorite = null;
-        Boolean isLiked = null;
-        Boolean isDisliked = null;
-        Boolean enableFavoriteSorting = null;
+        Boolean isNew = null;
+        Boolean isPremiere = null;
+        Boolean isNewOrPremiere = null;
+        Boolean isRepeat = null;
+        Boolean projectToMedia = null;
+        String mediaTypes = null;
+        String imageTypes = null;
+        String sortBy = null;
+        Boolean isPlayed = null;
+        String genres = null;
+        String officialRatings = null;
+        String tags = null;
+        String excludeTags = null;
+        String years = null;
         Boolean enableImages = null;
+        Boolean enableUserData = null;
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
-        String fields = null;
-        Boolean addCurrentProgram = null;
-        Boolean enableUserData = null;
-        String channelIds = null;
-        QueryResultLiveTVApiEpgRow response = api.getLivetvEPG(type, userId, genreIds, minStartDate, maxStartDate, minEndDate, maxEndDate, startIndex, isMovie, isSeries, isNews, isKids, isSports, limit, isFavorite, isLiked, isDisliked, enableFavoriteSorting, enableImages, imageTypeLimit, enableImageTypes, fields, addCurrentProgram, enableUserData, channelIds);
+        String person = null;
+        String personIds = null;
+        String personTypes = null;
+        String studios = null;
+        String studioIds = null;
+        String artists = null;
+        String artistIds = null;
+        String albums = null;
+        String ids = null;
+        String videoTypes = null;
+        String containers = null;
+        String audioCodecs = null;
+        String audioLayouts = null;
+        String videoCodecs = null;
+        String extendedVideoTypes = null;
+        String subtitleCodecs = null;
+        String path = null;
+        String userId = null;
+        String minOfficialRating = null;
+        Boolean isLocked = null;
+        Boolean isPlaceHolder = null;
+        Boolean hasOfficialRating = null;
+        Boolean groupItemsIntoCollections = null;
+        Boolean is3D = null;
+        String seriesStatus = null;
+        String nameStartsWithOrGreater = null;
+        String artistStartsWithOrGreater = null;
+        String albumArtistStartsWithOrGreater = null;
+        String nameStartsWith = null;
+        String nameLessThan = null;
+        QueryResultApiEpgRow response = api.getLivetvEPG(type, isLiked, isDisliked, enableFavoriteSorting, addCurrentProgram, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
@@ -611,7 +734,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void getLivetvListingprovidersAvailableTest() throws Exception {
-        List<LiveTVApiListingProviderTypeInfo> response = api.getLivetvListingprovidersAvailable();
+        List<ApiListingProviderTypeInfo> response = api.getLivetvListingprovidersAvailable();
 
         // TODO: test validations
     }
@@ -662,37 +785,6 @@ public class LiveTvServiceApiTest {
         // TODO: test validations
     }
     /**
-     * Gets a live tv channel
-     *
-     * No authentication required
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void getLivetvLiverecordingsByIdStreamTest() throws Exception {
-        String id = null;
-        api.getLivetvLiverecordingsByIdStream(id);
-
-        // TODO: test validations
-    }
-    /**
-     * Gets a live tv channel
-     *
-     * No authentication required
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void getLivetvLivestreamfilesByIdStreamByContainerTest() throws Exception {
-        String id = null;
-        String container = null;
-        api.getLivetvLivestreamfilesByIdStreamByContainer(id, container);
-
-        // TODO: test validations
-    }
-    /**
      * Gets the channel management list
      *
      * Requires authentication as administrator
@@ -706,7 +798,7 @@ public class LiveTvServiceApiTest {
         Integer limit = null;
         String sortBy = null;
         String sortOrder = null;
-        QueryResultEmbyLiveTVChannelManagementInfo response = api.getLivetvManageChannels(startIndex, limit, sortBy, sortOrder);
+        QueryResultChannelManagementInfo response = api.getLivetvManageChannels(startIndex, limit, sortBy, sortOrder);
 
         // TODO: test validations
     }
@@ -721,28 +813,104 @@ public class LiveTvServiceApiTest {
     @Test
     public void getLivetvProgramsTest() throws Exception {
         String channelIds = null;
-        String userId = null;
-        Boolean hasAired = null;
+        String artistType = null;
+        String maxOfficialRating = null;
+        Boolean hasThemeSong = null;
+        Boolean hasThemeVideo = null;
+        Boolean hasSubtitles = null;
+        Boolean hasSpecialFeature = null;
+        Boolean hasTrailer = null;
+        String adjacentTo = null;
+        Integer minIndexNumber = null;
         String minStartDate = null;
         String maxStartDate = null;
         String minEndDate = null;
         String maxEndDate = null;
+        Integer minPlayers = null;
+        Integer maxPlayers = null;
+        Integer parentIndexNumber = null;
+        Boolean hasParentalRating = null;
+        Boolean isHD = null;
+        Boolean isUnaired = null;
+        Double minCommunityRating = null;
+        Double minCriticRating = null;
+        Integer airedDuringSeason = null;
+        String minPremiereDate = null;
+        String minDateLastSaved = null;
+        String minDateLastSavedForUser = null;
+        String maxPremiereDate = null;
+        Boolean hasOverview = null;
+        Boolean hasImdbId = null;
+        Boolean hasTmdbId = null;
+        Boolean hasTvdbId = null;
+        String excludeItemIds = null;
+        Integer startIndex = null;
+        Integer limit = null;
+        Boolean recursive = null;
+        String searchTerm = null;
+        String sortOrder = null;
+        String parentId = null;
+        String fields = null;
+        String excludeItemTypes = null;
+        String includeItemTypes = null;
+        String anyProviderIdEquals = null;
+        String filters = null;
+        Boolean isFavorite = null;
         Boolean isMovie = null;
         Boolean isSeries = null;
+        Boolean isFolder = null;
         Boolean isNews = null;
         Boolean isKids = null;
         Boolean isSports = null;
-        Integer startIndex = null;
-        Integer limit = null;
+        Boolean isNew = null;
+        Boolean isPremiere = null;
+        Boolean isNewOrPremiere = null;
+        Boolean isRepeat = null;
+        Boolean projectToMedia = null;
+        String mediaTypes = null;
+        String imageTypes = null;
         String sortBy = null;
-        String sortOrder = null;
-        String genreIds = null;
+        Boolean isPlayed = null;
+        String genres = null;
+        String officialRatings = null;
+        String tags = null;
+        String excludeTags = null;
+        String years = null;
         Boolean enableImages = null;
+        Boolean enableUserData = null;
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
-        Boolean enableUserData = null;
-        String fields = null;
-        QueryResultBaseItemDto response = api.getLivetvPrograms(channelIds, userId, hasAired, minStartDate, maxStartDate, minEndDate, maxEndDate, isMovie, isSeries, isNews, isKids, isSports, startIndex, limit, sortBy, sortOrder, genreIds, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
+        String person = null;
+        String personIds = null;
+        String personTypes = null;
+        String studios = null;
+        String studioIds = null;
+        String artists = null;
+        String artistIds = null;
+        String albums = null;
+        String ids = null;
+        String videoTypes = null;
+        String containers = null;
+        String audioCodecs = null;
+        String audioLayouts = null;
+        String videoCodecs = null;
+        String extendedVideoTypes = null;
+        String subtitleCodecs = null;
+        String path = null;
+        String userId = null;
+        String minOfficialRating = null;
+        Boolean isLocked = null;
+        Boolean isPlaceHolder = null;
+        Boolean hasOfficialRating = null;
+        Boolean groupItemsIntoCollections = null;
+        Boolean is3D = null;
+        String seriesStatus = null;
+        String nameStartsWithOrGreater = null;
+        String artistStartsWithOrGreater = null;
+        String albumArtistStartsWithOrGreater = null;
+        String nameStartsWith = null;
+        String nameLessThan = null;
+        api.getLivetvPrograms(channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
@@ -798,14 +966,15 @@ public class LiveTvServiceApiTest {
         Boolean hasTrailer = null;
         String adjacentTo = null;
         Integer minIndexNumber = null;
+        String minStartDate = null;
+        String maxStartDate = null;
+        String minEndDate = null;
+        String maxEndDate = null;
         Integer minPlayers = null;
         Integer maxPlayers = null;
         Integer parentIndexNumber = null;
         Boolean hasParentalRating = null;
         Boolean isHD = null;
-        String locationTypes = null;
-        String excludeLocationTypes = null;
-        Boolean isMissing = null;
         Boolean isUnaired = null;
         Double minCommunityRating = null;
         Double minCriticRating = null;
@@ -833,9 +1002,15 @@ public class LiveTvServiceApiTest {
         Boolean isFavorite = null;
         Boolean isMovie = null;
         Boolean isSeries = null;
+        Boolean isFolder = null;
         Boolean isNews = null;
         Boolean isKids = null;
         Boolean isSports = null;
+        Boolean isNew = null;
+        Boolean isPremiere = null;
+        Boolean isNewOrPremiere = null;
+        Boolean isRepeat = null;
+        Boolean projectToMedia = null;
         String mediaTypes = null;
         String imageTypes = null;
         String sortBy = null;
@@ -843,6 +1018,7 @@ public class LiveTvServiceApiTest {
         String genres = null;
         String officialRatings = null;
         String tags = null;
+        String excludeTags = null;
         String years = null;
         Boolean enableImages = null;
         Boolean enableUserData = null;
@@ -860,7 +1036,9 @@ public class LiveTvServiceApiTest {
         String videoTypes = null;
         String containers = null;
         String audioCodecs = null;
+        String audioLayouts = null;
         String videoCodecs = null;
+        String extendedVideoTypes = null;
         String subtitleCodecs = null;
         String path = null;
         String userId = null;
@@ -876,7 +1054,7 @@ public class LiveTvServiceApiTest {
         String albumArtistStartsWithOrGreater = null;
         String nameStartsWith = null;
         String nameLessThan = null;
-        api.getLivetvRecordings(channelId, status, isInProgress, seriesTimerId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, locationTypes, excludeLocationTypes, isMissing, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isNews, isKids, isSports, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, videoCodecs, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
+        api.getLivetvRecordings(channelId, status, isInProgress, seriesTimerId, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
@@ -907,7 +1085,12 @@ public class LiveTvServiceApiTest {
     @Test
     public void getLivetvRecordingsFoldersTest() throws Exception {
         String userId = null;
-        List<BaseItemDto> response = api.getLivetvRecordingsFolders(userId);
+        String fields = null;
+        Boolean enableImages = null;
+        Integer imageTypeLimit = null;
+        String enableImageTypes = null;
+        Boolean enableUserData = null;
+        List<BaseItemDto> response = api.getLivetvRecordingsFolders(userId, fields, enableImages, imageTypeLimit, enableImageTypes, enableUserData);
 
         // TODO: test validations
     }
@@ -1130,7 +1313,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void postLivetvChannelmappingsTest() throws Exception {
-        LiveTVApiSetChannelMapping body = null;
+        ApiSetChannelMapping body = null;
         String providerId = null;
         api.postLivetvChannelmappings(body, providerId);
 
@@ -1176,9 +1359,9 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void postLivetvManageChannelsByIdDisabledTest() throws Exception {
-        LiveTVApiSetChannelDisabled body = null;
+        ApiSetChannelDisabled body = null;
         String id = null;
-        QueryResultEmbyLiveTVChannelManagementInfo response = api.postLivetvManageChannelsByIdDisabled(body, id);
+        QueryResultChannelManagementInfo response = api.postLivetvManageChannelsByIdDisabled(body, id);
 
         // TODO: test validations
     }
@@ -1192,9 +1375,9 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void postLivetvManageChannelsByIdSortindexTest() throws Exception {
-        LiveTVApiSetChannelSortIndex body = null;
+        ApiSetChannelSortIndex body = null;
         String id = null;
-        QueryResultEmbyLiveTVChannelManagementInfo response = api.postLivetvManageChannelsByIdSortindex(body, id);
+        QueryResultChannelManagementInfo response = api.postLivetvManageChannelsByIdSortindex(body, id);
 
         // TODO: test validations
     }
@@ -1208,30 +1391,106 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void postLivetvProgramsTest() throws Exception {
-        LiveTVApiGetPrograms body = null;
+        ApiBaseItemsRequest body = null;
         String channelIds = null;
-        String userId = null;
-        Boolean hasAired = null;
+        String artistType = null;
+        String maxOfficialRating = null;
+        Boolean hasThemeSong = null;
+        Boolean hasThemeVideo = null;
+        Boolean hasSubtitles = null;
+        Boolean hasSpecialFeature = null;
+        Boolean hasTrailer = null;
+        String adjacentTo = null;
+        Integer minIndexNumber = null;
         String minStartDate = null;
         String maxStartDate = null;
         String minEndDate = null;
         String maxEndDate = null;
+        Integer minPlayers = null;
+        Integer maxPlayers = null;
+        Integer parentIndexNumber = null;
+        Boolean hasParentalRating = null;
+        Boolean isHD = null;
+        Boolean isUnaired = null;
+        Double minCommunityRating = null;
+        Double minCriticRating = null;
+        Integer airedDuringSeason = null;
+        String minPremiereDate = null;
+        String minDateLastSaved = null;
+        String minDateLastSavedForUser = null;
+        String maxPremiereDate = null;
+        Boolean hasOverview = null;
+        Boolean hasImdbId = null;
+        Boolean hasTmdbId = null;
+        Boolean hasTvdbId = null;
+        String excludeItemIds = null;
+        Integer startIndex = null;
+        Integer limit = null;
+        Boolean recursive = null;
+        String searchTerm = null;
+        String sortOrder = null;
+        String parentId = null;
+        String fields = null;
+        String excludeItemTypes = null;
+        String includeItemTypes = null;
+        String anyProviderIdEquals = null;
+        String filters = null;
+        Boolean isFavorite = null;
         Boolean isMovie = null;
         Boolean isSeries = null;
+        Boolean isFolder = null;
         Boolean isNews = null;
         Boolean isKids = null;
         Boolean isSports = null;
-        Integer startIndex = null;
-        Integer limit = null;
+        Boolean isNew = null;
+        Boolean isPremiere = null;
+        Boolean isNewOrPremiere = null;
+        Boolean isRepeat = null;
+        Boolean projectToMedia = null;
+        String mediaTypes = null;
+        String imageTypes = null;
         String sortBy = null;
-        String sortOrder = null;
-        String genreIds = null;
+        Boolean isPlayed = null;
+        String genres = null;
+        String officialRatings = null;
+        String tags = null;
+        String excludeTags = null;
+        String years = null;
         Boolean enableImages = null;
+        Boolean enableUserData = null;
         Integer imageTypeLimit = null;
         String enableImageTypes = null;
-        Boolean enableUserData = null;
-        String fields = null;
-        QueryResultBaseItemDto response = api.postLivetvPrograms(body, channelIds, userId, hasAired, minStartDate, maxStartDate, minEndDate, maxEndDate, isMovie, isSeries, isNews, isKids, isSports, startIndex, limit, sortBy, sortOrder, genreIds, enableImages, imageTypeLimit, enableImageTypes, enableUserData, fields);
+        String person = null;
+        String personIds = null;
+        String personTypes = null;
+        String studios = null;
+        String studioIds = null;
+        String artists = null;
+        String artistIds = null;
+        String albums = null;
+        String ids = null;
+        String videoTypes = null;
+        String containers = null;
+        String audioCodecs = null;
+        String audioLayouts = null;
+        String videoCodecs = null;
+        String extendedVideoTypes = null;
+        String subtitleCodecs = null;
+        String path = null;
+        String userId = null;
+        String minOfficialRating = null;
+        Boolean isLocked = null;
+        Boolean isPlaceHolder = null;
+        Boolean hasOfficialRating = null;
+        Boolean groupItemsIntoCollections = null;
+        Boolean is3D = null;
+        String seriesStatus = null;
+        String nameStartsWithOrGreater = null;
+        String artistStartsWithOrGreater = null;
+        String albumArtistStartsWithOrGreater = null;
+        String nameStartsWith = null;
+        String nameLessThan = null;
+        api.postLivetvPrograms(body, channelIds, artistType, maxOfficialRating, hasThemeSong, hasThemeVideo, hasSubtitles, hasSpecialFeature, hasTrailer, adjacentTo, minIndexNumber, minStartDate, maxStartDate, minEndDate, maxEndDate, minPlayers, maxPlayers, parentIndexNumber, hasParentalRating, isHD, isUnaired, minCommunityRating, minCriticRating, airedDuringSeason, minPremiereDate, minDateLastSaved, minDateLastSavedForUser, maxPremiereDate, hasOverview, hasImdbId, hasTmdbId, hasTvdbId, excludeItemIds, startIndex, limit, recursive, searchTerm, sortOrder, parentId, fields, excludeItemTypes, includeItemTypes, anyProviderIdEquals, filters, isFavorite, isMovie, isSeries, isFolder, isNews, isKids, isSports, isNew, isPremiere, isNewOrPremiere, isRepeat, projectToMedia, mediaTypes, imageTypes, sortBy, isPlayed, genres, officialRatings, tags, excludeTags, years, enableImages, enableUserData, imageTypeLimit, enableImageTypes, person, personIds, personTypes, studios, studioIds, artists, artistIds, albums, ids, videoTypes, containers, audioCodecs, audioLayouts, videoCodecs, extendedVideoTypes, subtitleCodecs, path, userId, minOfficialRating, isLocked, isPlaceHolder, hasOfficialRating, groupItemsIntoCollections, is3D, seriesStatus, nameStartsWithOrGreater, artistStartsWithOrGreater, albumArtistStartsWithOrGreater, nameStartsWith, nameLessThan);
 
         // TODO: test validations
     }
@@ -1412,7 +1671,7 @@ public class LiveTvServiceApiTest {
      */
     @Test
     public void putLivetvChannelmappingsTest() throws Exception {
-        LiveTVApiSetChannelMapping body = null;
+        ApiSetChannelMapping body = null;
         String providerId = null;
         api.putLivetvChannelmappings(body, providerId);
 

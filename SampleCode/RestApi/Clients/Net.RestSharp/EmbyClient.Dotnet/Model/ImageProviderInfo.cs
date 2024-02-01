@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// ImageProviderInfo
+    /// Class ImageProviderInfo.  
     /// </summary>
     [DataContract]
         public partial class ImageProviderInfo :  IEquatable<ImageProviderInfo>
@@ -26,7 +26,7 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImageProviderInfo" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
+        /// <param name="name">The name..</param>
         /// <param name="supportedImages">supportedImages.</param>
         public ImageProviderInfo(string name = default(string), List<ImageType> supportedImages = default(List<ImageType>))
         {
@@ -35,8 +35,9 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name.
         /// </summary>
+        /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

@@ -30,7 +30,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="path">path.</param>
         /// <param name="pathInfo">pathInfo.</param>
         /// <param name="refreshLibrary">refreshLibrary.</param>
-        public LibraryAddMediaPath(string id = default(string), string path = default(string), ConfigurationMediaPathInfo pathInfo = default(ConfigurationMediaPathInfo), bool? refreshLibrary = default(bool?))
+        public LibraryAddMediaPath(string id = default(string), string path = default(string), MediaPathInfo pathInfo = default(MediaPathInfo), bool? refreshLibrary = default(bool?))
         {
             this.Id = id;
             this.Path = path;
@@ -54,7 +54,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets PathInfo
         /// </summary>
         [DataMember(Name="PathInfo", EmitDefaultValue=false)]
-        public ConfigurationMediaPathInfo PathInfo { get; set; }
+        public MediaPathInfo PathInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets RefreshLibrary

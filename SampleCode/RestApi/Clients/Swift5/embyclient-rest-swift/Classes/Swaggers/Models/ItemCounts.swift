@@ -8,21 +8,33 @@
 import Foundation
 
 
+/** Class LibrarySummary   */
 
 public struct ItemCounts: Codable {
 
+    /** The movie count. */
     public var movieCount: Int?
+    /** The series count. */
     public var seriesCount: Int?
+    /** The episode count. */
     public var episodeCount: Int?
+    /** The game count. */
     public var gameCount: Int?
     public var artistCount: Int?
     public var programCount: Int?
+    /** The game system count. */
     public var gameSystemCount: Int?
+    /** The trailer count. */
     public var trailerCount: Int?
+    /** The song count. */
     public var songCount: Int?
+    /** The album count. */
     public var albumCount: Int?
+    /** The music video count. */
     public var musicVideoCount: Int?
+    /** The box set count. */
     public var boxSetCount: Int?
+    /** The book count. */
     public var bookCount: Int?
     public var itemCount: Int?
 

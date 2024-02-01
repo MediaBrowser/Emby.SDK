@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -16,11 +16,12 @@ import QueueItem from './QueueItem';
 /**
 * The PlaybackStopInfo model module.
 * @module model/PlaybackStopInfo
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class PlaybackStopInfo {
     /**
     * Constructs a new <code>PlaybackStopInfo</code>.
+    * Class PlaybackStopInfo.  
     * @alias module:model/PlaybackStopInfo
     * @class
     */
@@ -79,6 +80,9 @@ export default class PlaybackStopInfo {
             if (data.hasOwnProperty('Failed')) {
                 obj['Failed'] = ApiClient.convertToType(data['Failed'], 'Boolean');
             }
+            if (data.hasOwnProperty('IsAutomated')) {
+                obj['IsAutomated'] = ApiClient.convertToType(data['IsAutomated'], 'Boolean');
+            }
             if (data.hasOwnProperty('NextMediaType')) {
                 obj['NextMediaType'] = ApiClient.convertToType(data['NextMediaType'], 'String');
             }
@@ -107,33 +111,44 @@ export default class PlaybackStopInfo {
     */
     'Item' = undefined;
     /**
+    * The item identifier.
     * @member {String} ItemId
     */
     'ItemId' = undefined;
     /**
+    * The session id.
     * @member {String} SessionId
     */
     'SessionId' = undefined;
     /**
+    * The media version identifier.
     * @member {String} MediaSourceId
     */
     'MediaSourceId' = undefined;
     /**
+    * The position ticks.
     * @member {Number} PositionTicks
     */
     'PositionTicks' = undefined;
     /**
+    * The live stream identifier.
     * @member {String} LiveStreamId
     */
     'LiveStreamId' = undefined;
     /**
+    * The play session identifier.
     * @member {String} PlaySessionId
     */
     'PlaySessionId' = undefined;
     /**
+    * A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.
     * @member {Boolean} Failed
     */
     'Failed' = undefined;
+    /**
+    * @member {Boolean} IsAutomated
+    */
+    'IsAutomated' = undefined;
     /**
     * @member {String} NextMediaType
     */

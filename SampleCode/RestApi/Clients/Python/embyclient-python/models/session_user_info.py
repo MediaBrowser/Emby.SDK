@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -50,6 +50,7 @@ class SessionUserInfo(object):
     def user_id(self):
         """Gets the user_id of this SessionUserInfo.  # noqa: E501
 
+        The user identifier.  # noqa: E501
 
         :return: The user_id of this SessionUserInfo.  # noqa: E501
         :rtype: str
@@ -60,6 +61,7 @@ class SessionUserInfo(object):
     def user_id(self, user_id):
         """Sets the user_id of this SessionUserInfo.
 
+        The user identifier.  # noqa: E501
 
         :param user_id: The user_id of this SessionUserInfo.  # noqa: E501
         :type: str
@@ -71,6 +73,7 @@ class SessionUserInfo(object):
     def user_name(self):
         """Gets the user_name of this SessionUserInfo.  # noqa: E501
 
+        The name of the user.  # noqa: E501
 
         :return: The user_name of this SessionUserInfo.  # noqa: E501
         :rtype: str
@@ -81,6 +84,7 @@ class SessionUserInfo(object):
     def user_name(self, user_name):
         """Sets the user_name of this SessionUserInfo.
 
+        The name of the user.  # noqa: E501
 
         :param user_name: The user_name of this SessionUserInfo.  # noqa: E501
         :type: str

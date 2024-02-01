@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-    Emby REST API
+    Emby Server REST API
 """
 
 import pprint
@@ -65,6 +65,7 @@ class CommonPluginsIPlugin(object):
     def name(self):
         """Gets the name of this CommonPluginsIPlugin.  # noqa: E501
 
+        The name of the plugin  # noqa: E501
 
         :return: The name of this CommonPluginsIPlugin.  # noqa: E501
         :rtype: str
@@ -75,6 +76,7 @@ class CommonPluginsIPlugin(object):
     def name(self, name):
         """Sets the name of this CommonPluginsIPlugin.
 
+        The name of the plugin  # noqa: E501
 
         :param name: The name of this CommonPluginsIPlugin.  # noqa: E501
         :type: str
@@ -86,6 +88,7 @@ class CommonPluginsIPlugin(object):
     def description(self):
         """Gets the description of this CommonPluginsIPlugin.  # noqa: E501
 
+        The description.  # noqa: E501
 
         :return: The description of this CommonPluginsIPlugin.  # noqa: E501
         :rtype: str
@@ -96,6 +99,7 @@ class CommonPluginsIPlugin(object):
     def description(self, description):
         """Sets the description of this CommonPluginsIPlugin.
 
+        The description.  # noqa: E501
 
         :param description: The description of this CommonPluginsIPlugin.  # noqa: E501
         :type: str
@@ -107,6 +111,7 @@ class CommonPluginsIPlugin(object):
     def id(self):
         """Gets the id of this CommonPluginsIPlugin.  # noqa: E501
 
+        The unique id.  # noqa: E501
 
         :return: The id of this CommonPluginsIPlugin.  # noqa: E501
         :rtype: str
@@ -117,6 +122,7 @@ class CommonPluginsIPlugin(object):
     def id(self, id):
         """Sets the id of this CommonPluginsIPlugin.
 
+        The unique id.  # noqa: E501
 
         :param id: The id of this CommonPluginsIPlugin.  # noqa: E501
         :type: str
@@ -149,6 +155,7 @@ class CommonPluginsIPlugin(object):
     def assembly_file_path(self):
         """Gets the assembly_file_path of this CommonPluginsIPlugin.  # noqa: E501
 
+        The path to the assembly file  # noqa: E501
 
         :return: The assembly_file_path of this CommonPluginsIPlugin.  # noqa: E501
         :rtype: str
@@ -159,6 +166,7 @@ class CommonPluginsIPlugin(object):
     def assembly_file_path(self, assembly_file_path):
         """Sets the assembly_file_path of this CommonPluginsIPlugin.
 
+        The path to the assembly file  # noqa: E501
 
         :param assembly_file_path: The assembly_file_path of this CommonPluginsIPlugin.  # noqa: E501
         :type: str
@@ -170,6 +178,7 @@ class CommonPluginsIPlugin(object):
     def data_folder_path(self):
         """Gets the data_folder_path of this CommonPluginsIPlugin.  # noqa: E501
 
+        The full path to the data folder, where the plugin can store any miscellaneous files needed  # noqa: E501
 
         :return: The data_folder_path of this CommonPluginsIPlugin.  # noqa: E501
         :rtype: str
@@ -180,6 +189,7 @@ class CommonPluginsIPlugin(object):
     def data_folder_path(self, data_folder_path):
         """Sets the data_folder_path of this CommonPluginsIPlugin.
 
+        The full path to the data folder, where the plugin can store any miscellaneous files needed  # noqa: E501
 
         :param data_folder_path: The data_folder_path of this CommonPluginsIPlugin.  # noqa: E501
         :type: str

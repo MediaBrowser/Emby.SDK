@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -15,7 +15,7 @@ import LibrarySubFolder from './LibrarySubFolder';
 /**
 * The LibraryMediaFolder model module.
 * @module model/LibraryMediaFolder
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class LibraryMediaFolder {
     /**
@@ -48,8 +48,14 @@ export default class LibraryMediaFolder {
             if (data.hasOwnProperty('Id')) {
                 obj['Id'] = ApiClient.convertToType(data['Id'], 'String');
             }
+            if (data.hasOwnProperty('Guid')) {
+                obj['Guid'] = ApiClient.convertToType(data['Guid'], 'String');
+            }
             if (data.hasOwnProperty('SubFolders')) {
                 obj['SubFolders'] = ApiClient.convertToType(data['SubFolders'], [LibrarySubFolder]);
+            }
+            if (data.hasOwnProperty('IsUserAccessConfigurable')) {
+                obj['IsUserAccessConfigurable'] = ApiClient.convertToType(data['IsUserAccessConfigurable'], 'Boolean');
             }
         }
         return obj;
@@ -64,9 +70,17 @@ export default class LibraryMediaFolder {
     */
     'Id' = undefined;
     /**
+    * @member {String} Guid
+    */
+    'Guid' = undefined;
+    /**
     * @member {Array.<module:model/LibrarySubFolder>} SubFolders
     */
     'SubFolders' = undefined;
+    /**
+    * @member {Boolean} IsUserAccessConfigurable
+    */
+    'IsUserAccessConfigurable' = undefined;
 
 
 

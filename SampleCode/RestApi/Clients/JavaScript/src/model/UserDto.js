@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,18 +10,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import ConfigurationUserConfiguration from './ConfigurationUserConfiguration';
 import ConnectUserLinkType from './ConnectUserLinkType';
-import UsersUserPolicy from './UsersUserPolicy';
+import UserConfiguration from './UserConfiguration';
+import UserItemShareLevel from './UserItemShareLevel';
+import UserPolicy from './UserPolicy';
 
 /**
 * The UserDto model module.
 * @module model/UserDto
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class UserDto {
     /**
     * Constructs a new <code>UserDto</code>.
+    * Class UserDto  
     * @alias module:model/UserDto
     * @class
     */
@@ -77,9 +79,6 @@ export default class UserDto {
             if (data.hasOwnProperty('HasConfiguredPassword')) {
                 obj['HasConfiguredPassword'] = ApiClient.convertToType(data['HasConfiguredPassword'], 'Boolean');
             }
-            if (data.hasOwnProperty('HasConfiguredEasyPassword')) {
-                obj['HasConfiguredEasyPassword'] = ApiClient.convertToType(data['HasConfiguredEasyPassword'], 'Boolean');
-            }
             if (data.hasOwnProperty('EnableAutoLogin')) {
                 obj['EnableAutoLogin'] = ApiClient.convertToType(data['EnableAutoLogin'], 'Boolean');
             }
@@ -90,27 +89,36 @@ export default class UserDto {
                 obj['LastActivityDate'] = ApiClient.convertToType(data['LastActivityDate'], 'Date');
             }
             if (data.hasOwnProperty('Configuration')) {
-                obj['Configuration'] = ConfigurationUserConfiguration.constructFromObject(data['Configuration']);
+                obj['Configuration'] = UserConfiguration.constructFromObject(data['Configuration']);
             }
             if (data.hasOwnProperty('Policy')) {
-                obj['Policy'] = UsersUserPolicy.constructFromObject(data['Policy']);
+                obj['Policy'] = UserPolicy.constructFromObject(data['Policy']);
             }
             if (data.hasOwnProperty('PrimaryImageAspectRatio')) {
                 obj['PrimaryImageAspectRatio'] = ApiClient.convertToType(data['PrimaryImageAspectRatio'], 'Number');
+            }
+            if (data.hasOwnProperty('HasConfiguredEasyPassword')) {
+                obj['HasConfiguredEasyPassword'] = ApiClient.convertToType(data['HasConfiguredEasyPassword'], 'Boolean');
+            }
+            if (data.hasOwnProperty('UserItemShareLevel')) {
+                obj['UserItemShareLevel'] = UserItemShareLevel.constructFromObject(data['UserItemShareLevel']);
             }
         }
         return obj;
     }
 
     /**
+    * The name.
     * @member {String} Name
     */
     'Name' = undefined;
     /**
+    * The server identifier.
     * @member {String} ServerId
     */
     'ServerId' = undefined;
     /**
+    * The name of the server. This is not used by the server and is for client\\-side usage only.
     * @member {String} ServerName
     */
     'ServerName' = undefined;
@@ -119,6 +127,7 @@ export default class UserDto {
     */
     'Prefix' = undefined;
     /**
+    * The name of the connect user.
     * @member {String} ConnectUserName
     */
     'ConnectUserName' = undefined;
@@ -131,49 +140,60 @@ export default class UserDto {
     */
     'ConnectLinkType' = undefined;
     /**
+    * The id.
     * @member {String} Id
     */
     'Id' = undefined;
     /**
+    * The primary image tag.
     * @member {String} PrimaryImageTag
     */
     'PrimaryImageTag' = undefined;
     /**
+    * A value indicating whether this instance has password.
     * @member {Boolean} HasPassword
     */
     'HasPassword' = undefined;
     /**
+    * A value indicating whether this instance has configured password.
     * @member {Boolean} HasConfiguredPassword
     */
     'HasConfiguredPassword' = undefined;
-    /**
-    * @member {Boolean} HasConfiguredEasyPassword
-    */
-    'HasConfiguredEasyPassword' = undefined;
     /**
     * @member {Boolean} EnableAutoLogin
     */
     'EnableAutoLogin' = undefined;
     /**
+    * The last login date.
     * @member {Date} LastLoginDate
     */
     'LastLoginDate' = undefined;
     /**
+    * The last activity date.
     * @member {Date} LastActivityDate
     */
     'LastActivityDate' = undefined;
     /**
-    * @member {module:model/ConfigurationUserConfiguration} Configuration
+    * @member {module:model/UserConfiguration} Configuration
     */
     'Configuration' = undefined;
     /**
-    * @member {module:model/UsersUserPolicy} Policy
+    * @member {module:model/UserPolicy} Policy
     */
     'Policy' = undefined;
     /**
+    * The primary image aspect ratio.
     * @member {Number} PrimaryImageAspectRatio
     */
     'PrimaryImageAspectRatio' = undefined;
+    /**
+    * @member {Boolean} HasConfiguredEasyPassword
+    */
+    'HasConfiguredEasyPassword' = undefined;
+    /**
+    * @member {module:model/UserItemShareLevel} UserItemShareLevel
+    */
+    'UserItemShareLevel' = undefined;
 
 
 

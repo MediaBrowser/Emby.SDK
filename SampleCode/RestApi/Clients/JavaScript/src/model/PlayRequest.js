@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -14,11 +14,12 @@ import ApiClient from '../ApiClient';
 /**
 * The PlayRequest model module.
 * @module model/PlayRequest
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class PlayRequest {
     /**
     * Constructs a new <code>PlayRequest</code>.
+    * Class PlayRequest  
     * @alias module:model/PlayRequest
     * @class
     */
@@ -61,6 +62,7 @@ export default class PlayRequest {
     }
 
     /**
+    * The controlling user identifier.
     * @member {String} ControllingUserId
     */
     'ControllingUserId' = undefined;

@@ -151,7 +151,7 @@
 <h1 id="emby_restapi_tag_UserService" data-uid="emby.restapi/tag/UserService" class="text-capitalize text-break">UserService</h1>
 
 
-<a href="https://github.com/MediaBrowser/Emby/wiki" class=""><p>API Documentation Wiki</p>
+<a href="https://betadev.emby.media/reference/RestAPI/UserService.html" class=""><p>API Reference: UserService</p>
 </a>
 
  <a class="xref" href="UserService/deleteUsersById.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/deleteUsersById/operationlistitem" class="text-capitalize">deleteUsersById</h3></a>
@@ -171,6 +171,18 @@
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/{Id}</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Gets a user by Id</p>
+</div>
+ <a class="xref" href="UserService/getUsersByUseridTypedsettingsByKey.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/getUsersByUseridTypedsettingsByKey/operationlistitem" class="text-capitalize">getUsersByUseridTypedsettingsByKey</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/{UserId}/TypedSettings/{Key}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a typed user setting</p>
+</div>
+ <a class="xref" href="UserService/getUsersItemaccess.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/getUsersItemaccess/operationlistitem" class="text-capitalize">getUsersItemaccess</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /Users/ItemAccess</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Gets a list of users</p>
 </div>
  <a class="xref" href="UserService/getUsersPrefixes.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/getUsersPrefixes/operationlistitem" class="text-capitalize">getUsersPrefixes</h3></a>
 <div class="codewrapper">
@@ -214,17 +226,17 @@
 </div>
 <div class="markdown level1 summary"><p>Updates a user configuration</p>
 </div>
+ <a class="xref" href="UserService/postUsersByIdConfigurationPartial.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdConfigurationPartial/operationlistitem" class="text-capitalize">postUsersByIdConfigurationPartial</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Configuration/Partial</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a user configuration</p>
+</div>
  <a class="xref" href="UserService/postUsersByIdDelete.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdDelete/operationlistitem" class="text-capitalize">postUsersByIdDelete</h3></a>
 <div class="codewrapper">
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/Delete</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Deletes a user</p>
-</div>
- <a class="xref" href="UserService/postUsersByIdEasypassword.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdEasypassword/operationlistitem" class="text-capitalize">postUsersByIdEasypassword</h3></a>
-<div class="codewrapper">
-  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/EasyPassword</code></pre>
-</div>
-<div class="markdown level1 summary"><p>Updates a user's easy password</p>
 </div>
  <a class="xref" href="UserService/postUsersByIdPassword.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByIdPassword/operationlistitem" class="text-capitalize">postUsersByIdPassword</h3></a>
 <div class="codewrapper">
@@ -243,6 +255,12 @@
   <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{Id}/TrackSelections/{TrackType}/Delete</code></pre>
 </div>
 <div class="markdown level1 summary"><p>Clears audio or subtitle track selections for a user</p>
+</div>
+ <a class="xref" href="UserService/postUsersByUseridTypedsettingsByKey.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersByUseridTypedsettingsByKey/operationlistitem" class="text-capitalize">postUsersByUseridTypedsettingsByKey</h3></a>
+<div class="codewrapper">
+  <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Users/{UserId}/TypedSettings/{Key}</code></pre>
+</div>
+<div class="markdown level1 summary"><p>Updates a typed user setting</p>
 </div>
  <a class="xref" href="UserService/postUsersForgotpassword.html"><h3 id="emby_restapi_tag_UserService" data-uid="emby.restapi/postUsersForgotpassword/operationlistitem" class="text-capitalize">postUsersForgotpassword</h3></a>
 <div class="codewrapper">

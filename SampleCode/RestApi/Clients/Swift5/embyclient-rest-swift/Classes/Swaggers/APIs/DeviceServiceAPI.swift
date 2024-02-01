@@ -58,10 +58,11 @@ open class DeviceServiceAPI {
     /**
      Gets all devices
 
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDevices(completion: @escaping ((_ data: QueryResultDevicesDeviceInfo?,_ error: Error?) -> Void)) {
-        getDevicesWithRequestBuilder().execute { (response, error) -> Void in
+    open class func getDevices(sortOrder: String? = nil, completion: @escaping ((_ data: QueryResultDevicesDeviceInfo?,_ error: Error?) -> Void)) {
+        getDevicesWithRequestBuilder(sortOrder: sortOrder).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -78,35 +79,45 @@ open class DeviceServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "TotalRecordCount" : 0,
+  "TotalRecordCount" : 6,
   "Items" : [ {
     "AppVersion" : "AppVersion",
     "IconUrl" : "IconUrl",
+    "InternalId" : 0,
     "LastUserName" : "LastUserName",
     "LastUserId" : "LastUserId",
+    "IpAddress" : "IpAddress",
     "Id" : "Id",
     "DateLastActivity" : "2000-01-23T04:56:07.000+00:00",
+    "ReportedDeviceId" : "ReportedDeviceId",
     "Name" : "Name",
     "AppName" : "AppName"
   }, {
     "AppVersion" : "AppVersion",
     "IconUrl" : "IconUrl",
+    "InternalId" : 0,
     "LastUserName" : "LastUserName",
     "LastUserId" : "LastUserId",
+    "IpAddress" : "IpAddress",
     "Id" : "Id",
     "DateLastActivity" : "2000-01-23T04:56:07.000+00:00",
+    "ReportedDeviceId" : "ReportedDeviceId",
     "Name" : "Name",
     "AppName" : "AppName"
   } ]
 }}]
+     - parameter sortOrder: (query) Sort Order - Ascending,Descending (optional)
 
      - returns: RequestBuilder<QueryResultDevicesDeviceInfo> 
      */
-    open class func getDevicesWithRequestBuilder() -> RequestBuilder<QueryResultDevicesDeviceInfo> {
+    open class func getDevicesWithRequestBuilder(sortOrder: String? = nil) -> RequestBuilder<QueryResultDevicesDeviceInfo> {
         let path = "/Devices"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "SortOrder": sortOrder
+        ])
 
 
         let requestBuilder: RequestBuilder<QueryResultDevicesDeviceInfo>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
@@ -116,11 +127,10 @@ open class DeviceServiceAPI {
     /**
      Gets camera upload history for a device
 
-     - parameter deviceId: (query) Device Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getDevicesCamerauploads(deviceId: String, completion: @escaping ((_ data: DevicesContentUploadHistory?,_ error: Error?) -> Void)) {
-        getDevicesCamerauploadsWithRequestBuilder(deviceId: deviceId).execute { (response, error) -> Void in
+    open class func getDevicesCamerauploads(completion: @escaping ((_ data: DevicesContentUploadHistory?,_ error: Error?) -> Void)) {
+        getDevicesCamerauploadsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -150,18 +160,14 @@ open class DeviceServiceAPI {
   } ],
   "DeviceId" : "DeviceId"
 }}]
-     - parameter deviceId: (query) Device Id 
 
      - returns: RequestBuilder<DevicesContentUploadHistory> 
      */
-    open class func getDevicesCamerauploadsWithRequestBuilder(deviceId: String) -> RequestBuilder<DevicesContentUploadHistory> {
+    open class func getDevicesCamerauploadsWithRequestBuilder() -> RequestBuilder<DevicesContentUploadHistory> {
         let path = "/Devices/CameraUploads"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-                        "DeviceId": deviceId
-        ])
+        let url = URLComponents(string: URLString)
 
 
         let requestBuilder: RequestBuilder<DevicesContentUploadHistory>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
@@ -194,10 +200,13 @@ open class DeviceServiceAPI {
      - examples: [{contentType=application/json, example={
   "AppVersion" : "AppVersion",
   "IconUrl" : "IconUrl",
+  "InternalId" : 0,
   "LastUserName" : "LastUserName",
   "LastUserId" : "LastUserId",
+  "IpAddress" : "IpAddress",
   "Id" : "Id",
   "DateLastActivity" : "2000-01-23T04:56:07.000+00:00",
+  "ReportedDeviceId" : "ReportedDeviceId",
   "Name" : "Name",
   "AppName" : "AppName"
 }}]
@@ -267,14 +276,13 @@ open class DeviceServiceAPI {
      Uploads content
 
      - parameter body: (body) Binary stream 
-     - parameter deviceId: (query) Device Id 
      - parameter album: (query) Album 
      - parameter name: (query) Name 
      - parameter _id: (query) Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postDevicesCamerauploads(body: Object, deviceId: String, album: String, name: String, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postDevicesCamerauploadsWithRequestBuilder(body: body, deviceId: deviceId, album: album, name: name, _id: _id).execute { (response, error) -> Void in
+    open class func postDevicesCamerauploads(body: Object, album: String, name: String, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postDevicesCamerauploadsWithRequestBuilder(body: body, album: album, name: name, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -295,20 +303,18 @@ open class DeviceServiceAPI {
        - type: http
        - name: embyauth
      - parameter body: (body) Binary stream 
-     - parameter deviceId: (query) Device Id 
      - parameter album: (query) Album 
      - parameter name: (query) Name 
      - parameter _id: (query) Id 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postDevicesCamerauploadsWithRequestBuilder(body: Object, deviceId: String, album: String, name: String, _id: String) -> RequestBuilder<Void> {
+    open class func postDevicesCamerauploadsWithRequestBuilder(body: Object, album: String, name: String, _id: String) -> RequestBuilder<Void> {
         let path = "/Devices/CameraUploads"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
-                        "DeviceId": deviceId, 
                         "Album": album, 
                         "Name": name, 
                         "Id": _id

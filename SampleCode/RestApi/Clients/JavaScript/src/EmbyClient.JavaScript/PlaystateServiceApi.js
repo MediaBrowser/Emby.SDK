@@ -1,5 +1,5 @@
 /**
- * Emby REST API
+ * Emby Server REST API
  * Explore the Emby Server API
  *
  * 
@@ -10,7 +10,7 @@
  */
 
 import ApiClient from "../ApiClient";
-import MediaEncodingApiOnPlaybackProgress from '../model/MediaEncodingApiOnPlaybackProgress';
+import ApiOnPlaybackProgress from '../model/ApiOnPlaybackProgress';
 import PlayMethod from '../model/PlayMethod';
 import PlaybackProgressInfo from '../model/PlaybackProgressInfo';
 import PlaybackStartInfo from '../model/PlaybackStartInfo';
@@ -21,7 +21,7 @@ import UserItemDataDto from '../model/UserItemDataDto';
 /**
 * PlaystateService service.
 * @module EmbyClient.JavaScript/PlaystateServiceApi
-* @version 4.7.5.0
+* @version 4.8.0.80
 */
 export default class PlaystateServiceApi {
 

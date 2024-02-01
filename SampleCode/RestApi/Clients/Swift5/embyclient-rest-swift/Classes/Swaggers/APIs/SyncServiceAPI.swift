@@ -156,7 +156,7 @@ open class SyncServiceAPI {
      - parameter targetId: (query) TargetId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncItemsReady(targetId: String, completion: @escaping ((_ data: [SyncModelSyncedItem]?,_ error: Error?) -> Void)) {
+    open class func getSyncItemsReady(targetId: String, completion: @escaping ((_ data: [SyncedItem]?,_ error: Error?) -> Void)) {
         getSyncItemsReadyWithRequestBuilder(targetId: targetId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -177,29 +177,29 @@ open class SyncServiceAPI {
   "Item" : {
     "SeasonName" : "SeasonName",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-    "Size" : 6,
-    "CriticRating" : 6.965118,
-    "GameSystemId" : 1,
+    "Size" : 2,
+    "CriticRating" : 6.4384236,
+    "GameSystemId" : 3,
     "Studios" : [ {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     }, {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     } ],
     "CameraMake" : "CameraMake",
-    "Aperture" : 7.260521264802104,
+    "Aperture" : 1.041444916118296,
     "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
     "ExtraType" : "ExtraType",
     "ParentBackdropItemId" : "ParentBackdropItemId",
     "Etag" : "Etag",
     "ParentLogoImageTag" : "ParentLogoImageTag",
-    "ExposureTime" : 1.041444916118296,
+    "ExposureTime" : 6.628464275087742,
     "MediaType" : "MediaType",
     "ManagementId" : "ManagementId",
     "Tags" : [ "Tags", "Tags" ],
     "Status" : "Status",
-    "IndexNumberEnd" : 3,
+    "IndexNumberEnd" : 6,
     "ArtistItems" : [ {
       "Id" : "Id",
       "Name" : "Name"
@@ -212,34 +212,35 @@ open class SyncServiceAPI {
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -249,8 +250,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -258,40 +259,42 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -301,8 +304,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -310,17 +313,19 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -334,57 +339,62 @@ open class SyncServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     }, {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -394,8 +404,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -403,40 +413,42 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -446,8 +458,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -455,17 +467,19 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -479,50 +493,56 @@ open class SyncServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     } ],
     "GenreItems" : [ null, null ],
     "OfficialRating" : "OfficialRating",
-    "Longitude" : 9.702963800023566,
+    "Longitude" : 9.132027271330688,
     "Composers" : [ null, null ],
     "LockData" : true,
-    "FocalLength" : 4.678947989005849,
+    "FocalLength" : 4.258773108174356,
     "IsNews" : true,
-    "ShutterSpeed" : 9.132027271330688,
+    "ShutterSpeed" : 4.678947989005849,
     "Id" : "Id",
     "SortIndexNumber" : 0,
     "IsFolder" : true,
+    "CanMakePublic" : true,
     "SeriesTimerId" : "SeriesTimerId",
     "SeriesId" : "SeriesId",
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
-    "SeriesCount" : 6,
+    "SeriesCount" : 5,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
-    "PlayAccess" : "Full",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
-    "Width" : 6,
+    "Width" : 4,
     "ExternalUrls" : [ {
       "Url" : "Url",
       "Name" : "Name"
@@ -530,29 +550,29 @@ open class SyncServiceAPI {
       "Url" : "Url",
       "Name" : "Name"
     } ],
-    "RecursiveItemCount" : 3,
+    "RecursiveItemCount" : 8,
     "Path" : "Path",
     "ParentId" : "ParentId",
     "TimerType" : "Program",
     "GameSystem" : "GameSystem",
-    "MusicVideoCount" : 3,
+    "MusicVideoCount" : 8,
     "IsSeries" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
-    "Bitrate" : 5,
+    "Bitrate" : 6,
     "EndDate" : "2000-01-23T04:56:07.000+00:00",
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-    "AirsBeforeEpisodeNumber" : 5,
-    "ChildCount" : 3,
+    "ChildCount" : 7,
     "TagItems" : [ null, null ],
     "Artists" : [ "Artists", "Artists" ],
     "ListingsChannelName" : "ListingsChannelName",
-    "RunTimeTicks" : 6,
+    "RunTimeTicks" : 1,
     "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
     "Video3DFormat" : "HalfSideBySide",
     "CanDelete" : true,
@@ -560,7 +580,8 @@ open class SyncServiceAPI {
     "SortParentIndexNumber" : 6,
     "DisplayPreferencesId" : "DisplayPreferencesId",
     "Album" : "Album",
-    "Latitude" : 0.8774076871421566,
+    "Latitude" : 7.260521264802104,
+    "Guid" : "Guid",
     "SortName" : "SortName",
     "Name" : "Name",
     "StartDate" : "2000-01-23T04:56:07.000+00:00",
@@ -571,8 +592,8 @@ open class SyncServiceAPI {
     "AlbumId" : "AlbumId",
     "SupportsSync" : true,
     "LocalTrailerCount" : 7,
-    "IndexNumber" : 3,
-    "CompletionPercentage" : 5.507386964179881,
+    "IndexNumber" : 5,
+    "CompletionPercentage" : 0.5199002018724985,
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
@@ -590,43 +611,44 @@ open class SyncServiceAPI {
     "PresentationUniqueKey" : "PresentationUniqueKey",
     "CustomRating" : "CustomRating",
     "ListingsChannelNumber" : "ListingsChannelNumber",
-    "AirsAfterSeasonNumber" : 5,
+    "SyncStatus" : "Queued",
+    "CanManageAccess" : true,
     "AirDays" : [ "Sunday", "Sunday" ],
     "ParentLogoItemId" : "ParentLogoItemId",
-    "PartCount" : 3,
+    "PartCount" : 7,
     "ListingsProviderId" : "ListingsProviderId",
+    "CanEditItems" : true,
     "ChannelName" : "ChannelName",
     "EpisodeTitle" : "EpisodeTitle",
-    "IsoSpeedRating" : 7,
-    "CommunityRating" : 2.8841622,
+    "IsoSpeedRating" : 9,
+    "CommunityRating" : 6.965118,
     "Software" : "Software",
     "Chapters" : [ {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     }, {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     } ],
-    "SongCount" : 4,
+    "SongCount" : 6,
     "Taglines" : [ "Taglines", "Taglines" ],
-    "AirsBeforeSeasonNumber" : 1,
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
-      "UnplayedItemCount" : 4,
+      "UnplayedItemCount" : 6,
       "Played" : true,
       "ServerId" : "ServerId",
-      "PlayedPercentage" : 0.10263654006109402,
-      "Rating" : 6.519180951018382,
-      "PlayCount" : 7,
-      "PlaybackPositionTicks" : 8,
+      "PlayedPercentage" : 7.058770351582356,
+      "Rating" : 0.8851374739011653,
+      "PlayCount" : 4,
+      "PlaybackPositionTicks" : 0,
       "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
       "IsFavorite" : true,
       "ItemId" : "ItemId",
@@ -637,21 +659,21 @@ open class SyncServiceAPI {
     "ParentThumbImageTag" : "ParentThumbImageTag",
     "IsSports" : true,
     "ChannelId" : "ChannelId",
-    "ParentIndexNumber" : 7,
+    "ParentIndexNumber" : 3,
     "IsNew" : true,
     "AffiliateCallSign" : "AffiliateCallSign",
     "ListingsId" : "ListingsId",
     "AlbumArtists" : [ null, null ],
     "ServerId" : "ServerId",
     "Number" : "Number",
-    "AlbumCount" : 8,
+    "AlbumCount" : 4,
     "IsRepeat" : true,
     "CollectionType" : "CollectionType",
-    "PrimaryImageAspectRatio" : 5.533258397034986,
-    "Height" : 4,
+    "PrimaryImageAspectRatio" : 3.0576100241049344,
+    "Height" : 0,
     "IsKids" : true,
     "DisplayOrder" : "DisplayOrder",
-    "MovieCount" : 4,
+    "MovieCount" : 7,
     "People" : [ {
       "Role" : "Role",
       "Type" : "Actor",
@@ -666,7 +688,7 @@ open class SyncServiceAPI {
       "Name" : "Name"
     } ],
     "Overview" : "Overview",
-    "SpecialFeatureCount" : 7,
+    "SpecialFeatureCount" : 3,
     "ImageOrientation" : "TopLeft",
     "AlbumArtist" : "AlbumArtist",
     "ImageTags" : {
@@ -677,7 +699,7 @@ open class SyncServiceAPI {
     "SupportsResume" : true,
     "LocationType" : "FileSystem",
     "IsPremiere" : true,
-    "Altitude" : 0.5199002018724985
+    "Altitude" : 0.8774076871421566
   },
   "ServerId" : "ServerId",
   "SyncJobName" : "SyncJobName",
@@ -685,13 +707,13 @@ open class SyncServiceAPI {
   "AdditionalFiles" : [ {
     "Path" : "Path",
     "Type" : "Media",
-    "Index" : 5,
+    "Index" : 2,
     "Name" : "Name",
     "ImageType" : "Primary"
   }, {
     "Path" : "Path",
     "Type" : "Media",
-    "Index" : 5,
+    "Index" : 2,
     "Name" : "Name",
     "ImageType" : "Primary"
   } ],
@@ -703,29 +725,29 @@ open class SyncServiceAPI {
   "Item" : {
     "SeasonName" : "SeasonName",
     "PremiereDate" : "2000-01-23T04:56:07.000+00:00",
-    "Size" : 6,
-    "CriticRating" : 6.965118,
-    "GameSystemId" : 1,
+    "Size" : 2,
+    "CriticRating" : 6.4384236,
+    "GameSystemId" : 3,
     "Studios" : [ {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     }, {
-      "Id" : 0,
+      "Id" : 3,
       "Name" : "Name"
     } ],
     "CameraMake" : "CameraMake",
-    "Aperture" : 7.260521264802104,
+    "Aperture" : 1.041444916118296,
     "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
     "ExtraType" : "ExtraType",
     "ParentBackdropItemId" : "ParentBackdropItemId",
     "Etag" : "Etag",
     "ParentLogoImageTag" : "ParentLogoImageTag",
-    "ExposureTime" : 1.041444916118296,
+    "ExposureTime" : 6.628464275087742,
     "MediaType" : "MediaType",
     "ManagementId" : "ManagementId",
     "Tags" : [ "Tags", "Tags" ],
     "Status" : "Status",
-    "IndexNumberEnd" : 3,
+    "IndexNumberEnd" : 6,
     "ArtistItems" : [ {
       "Id" : "Id",
       "Name" : "Name"
@@ -738,34 +760,35 @@ open class SyncServiceAPI {
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -775,8 +798,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -784,40 +807,42 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -827,8 +852,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -836,17 +861,19 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -860,57 +887,62 @@ open class SyncServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     }, {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -920,8 +952,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -929,40 +961,42 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -972,8 +1006,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -981,17 +1015,19 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1005,50 +1041,56 @@ open class SyncServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     } ],
     "GenreItems" : [ null, null ],
     "OfficialRating" : "OfficialRating",
-    "Longitude" : 9.702963800023566,
+    "Longitude" : 9.132027271330688,
     "Composers" : [ null, null ],
     "LockData" : true,
-    "FocalLength" : 4.678947989005849,
+    "FocalLength" : 4.258773108174356,
     "IsNews" : true,
-    "ShutterSpeed" : 9.132027271330688,
+    "ShutterSpeed" : 4.678947989005849,
     "Id" : "Id",
     "SortIndexNumber" : 0,
     "IsFolder" : true,
+    "CanMakePublic" : true,
     "SeriesTimerId" : "SeriesTimerId",
     "SeriesId" : "SeriesId",
     "ListingsPath" : "ListingsPath",
     "MediaStreams" : [ null, null ],
     "FileName" : "FileName",
+    "PrimaryImageTag" : "PrimaryImageTag",
     "Prefix" : "Prefix",
     "CanDownload" : true,
     "IsMovie" : true,
-    "SeriesCount" : 6,
+    "SeriesCount" : 5,
+    "PrimaryImageItemId" : "PrimaryImageItemId",
     "ListingsChannelId" : "ListingsChannelId",
-    "PlayAccess" : "Full",
     "SeriesStudio" : "SeriesStudio",
     "IsLive" : true,
-    "Width" : 6,
+    "Width" : 4,
     "ExternalUrls" : [ {
       "Url" : "Url",
       "Name" : "Name"
@@ -1056,29 +1098,29 @@ open class SyncServiceAPI {
       "Url" : "Url",
       "Name" : "Name"
     } ],
-    "RecursiveItemCount" : 3,
+    "RecursiveItemCount" : 8,
     "Path" : "Path",
     "ParentId" : "ParentId",
     "TimerType" : "Program",
     "GameSystem" : "GameSystem",
-    "MusicVideoCount" : 3,
+    "MusicVideoCount" : 8,
     "IsSeries" : true,
     "ProductionLocations" : [ "ProductionLocations", "ProductionLocations" ],
     "Subviews" : [ "Subviews", "Subviews" ],
-    "Bitrate" : 5,
+    "Bitrate" : 6,
     "EndDate" : "2000-01-23T04:56:07.000+00:00",
     "SeriesPrimaryImageTag" : "SeriesPrimaryImageTag",
     "ParentThumbItemId" : "ParentThumbItemId",
     "PreferredMetadataLanguage" : "PreferredMetadataLanguage",
+    "CanLeaveContent" : true,
     "Type" : "Type",
     "BackdropImageTags" : [ "BackdropImageTags", "BackdropImageTags" ],
     "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
-    "AirsBeforeEpisodeNumber" : 5,
-    "ChildCount" : 3,
+    "ChildCount" : 7,
     "TagItems" : [ null, null ],
     "Artists" : [ "Artists", "Artists" ],
     "ListingsChannelName" : "ListingsChannelName",
-    "RunTimeTicks" : 6,
+    "RunTimeTicks" : 1,
     "AlbumPrimaryImageTag" : "AlbumPrimaryImageTag",
     "Video3DFormat" : "HalfSideBySide",
     "CanDelete" : true,
@@ -1086,7 +1128,8 @@ open class SyncServiceAPI {
     "SortParentIndexNumber" : 6,
     "DisplayPreferencesId" : "DisplayPreferencesId",
     "Album" : "Album",
-    "Latitude" : 0.8774076871421566,
+    "Latitude" : 7.260521264802104,
+    "Guid" : "Guid",
     "SortName" : "SortName",
     "Name" : "Name",
     "StartDate" : "2000-01-23T04:56:07.000+00:00",
@@ -1097,8 +1140,8 @@ open class SyncServiceAPI {
     "AlbumId" : "AlbumId",
     "SupportsSync" : true,
     "LocalTrailerCount" : 7,
-    "IndexNumber" : 3,
-    "CompletionPercentage" : 5.507386964179881,
+    "IndexNumber" : 5,
+    "CompletionPercentage" : 0.5199002018724985,
     "Genres" : [ "Genres", "Genres" ],
     "SeasonId" : "SeasonId",
     "LockedFields" : [ "Cast", "Cast" ],
@@ -1116,43 +1159,44 @@ open class SyncServiceAPI {
     "PresentationUniqueKey" : "PresentationUniqueKey",
     "CustomRating" : "CustomRating",
     "ListingsChannelNumber" : "ListingsChannelNumber",
-    "AirsAfterSeasonNumber" : 5,
+    "SyncStatus" : "Queued",
+    "CanManageAccess" : true,
     "AirDays" : [ "Sunday", "Sunday" ],
     "ParentLogoItemId" : "ParentLogoItemId",
-    "PartCount" : 3,
+    "PartCount" : 7,
     "ListingsProviderId" : "ListingsProviderId",
+    "CanEditItems" : true,
     "ChannelName" : "ChannelName",
     "EpisodeTitle" : "EpisodeTitle",
-    "IsoSpeedRating" : 7,
-    "CommunityRating" : 2.8841622,
+    "IsoSpeedRating" : 9,
+    "CommunityRating" : 6.965118,
     "Software" : "Software",
     "Chapters" : [ {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     }, {
-      "StartPositionTicks" : 4,
+      "StartPositionTicks" : 5,
       "ImageTag" : "ImageTag",
       "MarkerType" : "Chapter",
-      "ChapterIndex" : 0,
+      "ChapterIndex" : 3,
       "Name" : "Name"
     } ],
-    "SongCount" : 4,
+    "SongCount" : 6,
     "Taglines" : [ "Taglines", "Taglines" ],
-    "AirsBeforeSeasonNumber" : 1,
     "PreferredMetadataCountryCode" : "PreferredMetadataCountryCode",
     "CameraModel" : "CameraModel",
     "ChannelNumber" : "ChannelNumber",
     "UserData" : {
-      "UnplayedItemCount" : 4,
+      "UnplayedItemCount" : 6,
       "Played" : true,
       "ServerId" : "ServerId",
-      "PlayedPercentage" : 0.10263654006109402,
-      "Rating" : 6.519180951018382,
-      "PlayCount" : 7,
-      "PlaybackPositionTicks" : 8,
+      "PlayedPercentage" : 7.058770351582356,
+      "Rating" : 0.8851374739011653,
+      "PlayCount" : 4,
+      "PlaybackPositionTicks" : 0,
       "LastPlayedDate" : "2000-01-23T04:56:07.000+00:00",
       "IsFavorite" : true,
       "ItemId" : "ItemId",
@@ -1163,21 +1207,21 @@ open class SyncServiceAPI {
     "ParentThumbImageTag" : "ParentThumbImageTag",
     "IsSports" : true,
     "ChannelId" : "ChannelId",
-    "ParentIndexNumber" : 7,
+    "ParentIndexNumber" : 3,
     "IsNew" : true,
     "AffiliateCallSign" : "AffiliateCallSign",
     "ListingsId" : "ListingsId",
     "AlbumArtists" : [ null, null ],
     "ServerId" : "ServerId",
     "Number" : "Number",
-    "AlbumCount" : 8,
+    "AlbumCount" : 4,
     "IsRepeat" : true,
     "CollectionType" : "CollectionType",
-    "PrimaryImageAspectRatio" : 5.533258397034986,
-    "Height" : 4,
+    "PrimaryImageAspectRatio" : 3.0576100241049344,
+    "Height" : 0,
     "IsKids" : true,
     "DisplayOrder" : "DisplayOrder",
-    "MovieCount" : 4,
+    "MovieCount" : 7,
     "People" : [ {
       "Role" : "Role",
       "Type" : "Actor",
@@ -1192,7 +1236,7 @@ open class SyncServiceAPI {
       "Name" : "Name"
     } ],
     "Overview" : "Overview",
-    "SpecialFeatureCount" : 7,
+    "SpecialFeatureCount" : 3,
     "ImageOrientation" : "TopLeft",
     "AlbumArtist" : "AlbumArtist",
     "ImageTags" : {
@@ -1203,7 +1247,7 @@ open class SyncServiceAPI {
     "SupportsResume" : true,
     "LocationType" : "FileSystem",
     "IsPremiere" : true,
-    "Altitude" : 0.5199002018724985
+    "Altitude" : 0.8774076871421566
   },
   "ServerId" : "ServerId",
   "SyncJobName" : "SyncJobName",
@@ -1211,13 +1255,13 @@ open class SyncServiceAPI {
   "AdditionalFiles" : [ {
     "Path" : "Path",
     "Type" : "Media",
-    "Index" : 5,
+    "Index" : 2,
     "Name" : "Name",
     "ImageType" : "Primary"
   }, {
     "Path" : "Path",
     "Type" : "Media",
-    "Index" : 5,
+    "Index" : 2,
     "Name" : "Name",
     "ImageType" : "Primary"
   } ],
@@ -1228,9 +1272,9 @@ open class SyncServiceAPI {
 } ]}]
      - parameter targetId: (query) TargetId 
 
-     - returns: RequestBuilder<[SyncModelSyncedItem]> 
+     - returns: RequestBuilder<[SyncedItem]> 
      */
-    open class func getSyncItemsReadyWithRequestBuilder(targetId: String) -> RequestBuilder<[SyncModelSyncedItem]> {
+    open class func getSyncItemsReadyWithRequestBuilder(targetId: String) -> RequestBuilder<[SyncedItem]> {
         let path = "/Sync/Items/Ready"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -1240,17 +1284,18 @@ open class SyncServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[SyncModelSyncedItem]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[SyncedItem]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
      Gets sync job items.
 
+     - parameter targetId: (query) TargetId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncJobitems(completion: @escaping ((_ data: QueryResultSyncModelSyncJobItem?,_ error: Error?) -> Void)) {
-        getSyncJobitemsWithRequestBuilder().execute { (response, error) -> Void in
+    open class func getSyncJobitems(targetId: String, completion: @escaping ((_ data: QueryResultSyncJobItem?,_ error: Error?) -> Void)) {
+        getSyncJobitemsWithRequestBuilder(targetId: targetId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -1270,48 +1315,49 @@ open class SyncServiceAPI {
   "TotalRecordCount" : 0,
   "Items" : [ {
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
+    "Progress" : 5.637376656633329,
     "OutputPath" : "OutputPath",
-    "ItemDateModifiedTicks" : 2,
     "MediaSourceId" : "MediaSourceId",
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
     "ItemId" : 1,
     "TemporaryPath" : "TemporaryPath",
     "TargetId" : "TargetId",
+    "InternalTargetId" : 5,
     "MediaSource" : {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1321,8 +1367,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1330,40 +1376,42 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1373,8 +1421,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1382,17 +1430,19 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1406,35 +1456,39 @@ open class SyncServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     },
     "AdditionalFiles" : [ {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     }, {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     } ],
@@ -1444,48 +1498,49 @@ open class SyncServiceAPI {
     "JobId" : 6
   }, {
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
+    "Progress" : 5.637376656633329,
     "OutputPath" : "OutputPath",
-    "ItemDateModifiedTicks" : 2,
     "MediaSourceId" : "MediaSourceId",
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
     "ItemId" : 1,
     "TemporaryPath" : "TemporaryPath",
     "TargetId" : "TargetId",
+    "InternalTargetId" : 5,
     "MediaSource" : {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1495,8 +1550,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1504,40 +1559,42 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -1547,8 +1604,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -1556,17 +1613,19 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1580,35 +1639,39 @@ open class SyncServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     },
     "AdditionalFiles" : [ {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     }, {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     } ],
@@ -1618,17 +1681,21 @@ open class SyncServiceAPI {
     "JobId" : 6
   } ]
 }}]
+     - parameter targetId: (query) TargetId 
 
-     - returns: RequestBuilder<QueryResultSyncModelSyncJobItem> 
+     - returns: RequestBuilder<QueryResultSyncJobItem> 
      */
-    open class func getSyncJobitemsWithRequestBuilder() -> RequestBuilder<QueryResultSyncModelSyncJobItem> {
+    open class func getSyncJobitemsWithRequestBuilder(targetId: String) -> RequestBuilder<QueryResultSyncJobItem> {
         let path = "/Sync/JobItems"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "TargetId": targetId
+        ])
 
 
-        let requestBuilder: RequestBuilder<QueryResultSyncModelSyncJobItem>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueryResultSyncJobItem>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1732,7 +1799,7 @@ open class SyncServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncJobs(completion: @escaping ((_ data: QueryResultSyncSyncJob?,_ error: Error?) -> Void)) {
+    open class func getSyncJobs(completion: @escaping ((_ data: QueryResultSyncJob?,_ error: Error?) -> Void)) {
         getSyncJobsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1750,72 +1817,76 @@ open class SyncServiceAPI {
        - type: http
        - name: embyauth
      - examples: [{contentType=application/json, example={
-  "TotalRecordCount" : 3,
+  "TotalRecordCount" : 4,
   "Items" : [ {
     "Category" : "Latest",
-    "ItemLimit" : 2,
+    "ItemLimit" : 7,
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
-    "RequestedItemIds" : [ 7, 7 ],
+    "RequestedItemIds" : [ 9, 9 ],
     "TargetName" : "TargetName",
     "SyncNewContent" : true,
     "ParentName" : "ParentName",
+    "ItemId" : 3,
     "Profile" : "Profile",
     "Name" : "Name",
     "DateLastModified" : "2000-01-23T04:56:07.000+00:00",
     "Container" : "Container",
     "Quality" : "Quality",
     "PrimaryImageItemId" : "PrimaryImageItemId",
-    "ItemCount" : 9,
+    "ItemCount" : 2,
     "AudioCodec" : "AudioCodec",
-    "ParentId" : 1,
+    "ParentId" : 5,
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
-    "Bitrate" : 6,
+    "Progress" : 5.637376656633329,
+    "Bitrate" : 1,
     "VideoCodec" : "VideoCodec",
     "TargetId" : "TargetId",
-    "UserId" : 5,
+    "InternalTargetId" : 6,
+    "UserId" : 2,
     "UnwatchedOnly" : true,
     "Id" : 0
   }, {
     "Category" : "Latest",
-    "ItemLimit" : 2,
+    "ItemLimit" : 7,
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
-    "RequestedItemIds" : [ 7, 7 ],
+    "RequestedItemIds" : [ 9, 9 ],
     "TargetName" : "TargetName",
     "SyncNewContent" : true,
     "ParentName" : "ParentName",
+    "ItemId" : 3,
     "Profile" : "Profile",
     "Name" : "Name",
     "DateLastModified" : "2000-01-23T04:56:07.000+00:00",
     "Container" : "Container",
     "Quality" : "Quality",
     "PrimaryImageItemId" : "PrimaryImageItemId",
-    "ItemCount" : 9,
+    "ItemCount" : 2,
     "AudioCodec" : "AudioCodec",
-    "ParentId" : 1,
+    "ParentId" : 5,
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
-    "Bitrate" : 6,
+    "Progress" : 5.637376656633329,
+    "Bitrate" : 1,
     "VideoCodec" : "VideoCodec",
     "TargetId" : "TargetId",
-    "UserId" : 5,
+    "InternalTargetId" : 6,
+    "UserId" : 2,
     "UnwatchedOnly" : true,
     "Id" : 0
   } ]
 }}]
 
-     - returns: RequestBuilder<QueryResultSyncSyncJob> 
+     - returns: RequestBuilder<QueryResultSyncJob> 
      */
-    open class func getSyncJobsWithRequestBuilder() -> RequestBuilder<QueryResultSyncSyncJob> {
+    open class func getSyncJobsWithRequestBuilder() -> RequestBuilder<QueryResultSyncJob> {
         let path = "/Sync/Jobs"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<QueryResultSyncSyncJob>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<QueryResultSyncJob>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1825,7 +1896,7 @@ open class SyncServiceAPI {
      - parameter _id: (path) Id 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncJobsById(_id: String, completion: @escaping ((_ data: SyncSyncJob?,_ error: Error?) -> Void)) {
+    open class func getSyncJobsById(_id: String, completion: @escaping ((_ data: SyncJob?,_ error: Error?) -> Void)) {
         getSyncJobsByIdWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1844,36 +1915,38 @@ open class SyncServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "Category" : "Latest",
-  "ItemLimit" : 2,
+  "ItemLimit" : 7,
   "DateCreated" : "2000-01-23T04:56:07.000+00:00",
   "PrimaryImageTag" : "PrimaryImageTag",
-  "RequestedItemIds" : [ 7, 7 ],
+  "RequestedItemIds" : [ 9, 9 ],
   "TargetName" : "TargetName",
   "SyncNewContent" : true,
   "ParentName" : "ParentName",
+  "ItemId" : 3,
   "Profile" : "Profile",
   "Name" : "Name",
   "DateLastModified" : "2000-01-23T04:56:07.000+00:00",
   "Container" : "Container",
   "Quality" : "Quality",
   "PrimaryImageItemId" : "PrimaryImageItemId",
-  "ItemCount" : 9,
+  "ItemCount" : 2,
   "AudioCodec" : "AudioCodec",
-  "ParentId" : 1,
+  "ParentId" : 5,
   "Status" : "Queued",
-  "Progress" : 5.962133916683182,
-  "Bitrate" : 6,
+  "Progress" : 5.637376656633329,
+  "Bitrate" : 1,
   "VideoCodec" : "VideoCodec",
   "TargetId" : "TargetId",
-  "UserId" : 5,
+  "InternalTargetId" : 6,
+  "UserId" : 2,
   "UnwatchedOnly" : true,
   "Id" : 0
 }}]
      - parameter _id: (path) Id 
 
-     - returns: RequestBuilder<SyncSyncJob> 
+     - returns: RequestBuilder<SyncJob> 
      */
-    open class func getSyncJobsByIdWithRequestBuilder(_id: String) -> RequestBuilder<SyncSyncJob> {
+    open class func getSyncJobsByIdWithRequestBuilder(_id: String) -> RequestBuilder<SyncJob> {
         var path = "/Sync/Jobs/{Id}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1883,7 +1956,7 @@ open class SyncServiceAPI {
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<SyncSyncJob>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SyncJob>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1897,7 +1970,7 @@ open class SyncServiceAPI {
      - parameter category: (query) Category (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncOptions(userId: String, itemIds: String? = nil, parentId: String? = nil, targetId: String? = nil, category: SyncSyncCategory? = nil, completion: @escaping ((_ data: SyncModelSyncDialogOptions?,_ error: Error?) -> Void)) {
+    open class func getSyncOptions(userId: String, itemIds: String? = nil, parentId: String? = nil, targetId: String? = nil, category: SyncCategory? = nil, completion: @escaping ((_ data: SyncDialogOptions?,_ error: Error?) -> Void)) {
         getSyncOptionsWithRequestBuilder(userId: userId, itemIds: itemIds, parentId: parentId, targetId: targetId, category: category).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -1956,9 +2029,9 @@ open class SyncServiceAPI {
      - parameter targetId: (query) TargetId (optional)
      - parameter category: (query) Category (optional)
 
-     - returns: RequestBuilder<SyncModelSyncDialogOptions> 
+     - returns: RequestBuilder<SyncDialogOptions> 
      */
-    open class func getSyncOptionsWithRequestBuilder(userId: String, itemIds: String? = nil, parentId: String? = nil, targetId: String? = nil, category: SyncSyncCategory? = nil) -> RequestBuilder<SyncModelSyncDialogOptions> {
+    open class func getSyncOptionsWithRequestBuilder(userId: String, itemIds: String? = nil, parentId: String? = nil, targetId: String? = nil, category: SyncCategory? = nil) -> RequestBuilder<SyncDialogOptions> {
         let path = "/Sync/Options"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -1972,7 +2045,7 @@ open class SyncServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<SyncModelSyncDialogOptions>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SyncDialogOptions>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -1982,7 +2055,7 @@ open class SyncServiceAPI {
      - parameter userId: (query) UserId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getSyncTargets(userId: String, completion: @escaping ((_ data: [SyncSyncTarget]?,_ error: Error?) -> Void)) {
+    open class func getSyncTargets(userId: String, completion: @escaping ((_ data: [SyncTarget]?,_ error: Error?) -> Void)) {
         getSyncTargetsWithRequestBuilder(userId: userId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2008,9 +2081,9 @@ open class SyncServiceAPI {
 } ]}]
      - parameter userId: (query) UserId 
 
-     - returns: RequestBuilder<[SyncSyncTarget]> 
+     - returns: RequestBuilder<[SyncTarget]> 
      */
-    open class func getSyncTargetsWithRequestBuilder(userId: String) -> RequestBuilder<[SyncSyncTarget]> {
+    open class func getSyncTargetsWithRequestBuilder(userId: String) -> RequestBuilder<[SyncTarget]> {
         let path = "/Sync/Targets"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters: [String:Any]? = nil
@@ -2020,7 +2093,7 @@ open class SyncServiceAPI {
         ])
 
 
-        let requestBuilder: RequestBuilder<[SyncSyncTarget]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<[SyncTarget]>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -2031,7 +2104,7 @@ open class SyncServiceAPI {
      - parameter itemId: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncByItemidStatus(body: SyncModelSyncedItemProgress, itemId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSyncByItemidStatus(body: SyncedItemProgress, itemId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSyncByItemidStatusWithRequestBuilder(body: body, itemId: itemId).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2057,7 +2130,7 @@ open class SyncServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSyncByItemidStatusWithRequestBuilder(body: SyncModelSyncedItemProgress, itemId: String) -> RequestBuilder<Void> {
+    open class func postSyncByItemidStatusWithRequestBuilder(body: SyncedItemProgress, itemId: String) -> RequestBuilder<Void> {
         var path = "/Sync/{ItemId}/Status"
         let itemIdPreEscape = "\(itemId)"
         let itemIdPostEscape = itemIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2125,10 +2198,11 @@ open class SyncServiceAPI {
      Syncs data between device and server
 
      - parameter body: (body) SyncDataRequest:  
+     - parameter targetId: (query) TargetId 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncData(body: SyncModelSyncDataRequest, completion: @escaping ((_ data: SyncModelSyncDataResponse?,_ error: Error?) -> Void)) {
-        postSyncDataWithRequestBuilder(body: body).execute { (response, error) -> Void in
+    open class func postSyncData(body: SyncDataRequest, targetId: String, completion: @escaping ((_ data: SyncDataResponse?,_ error: Error?) -> Void)) {
+        postSyncDataWithRequestBuilder(body: body, targetId: targetId).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -2148,17 +2222,21 @@ open class SyncServiceAPI {
   "ItemIdsToRemove" : [ "ItemIdsToRemove", "ItemIdsToRemove" ]
 }}]
      - parameter body: (body) SyncDataRequest:  
+     - parameter targetId: (query) TargetId 
 
-     - returns: RequestBuilder<SyncModelSyncDataResponse> 
+     - returns: RequestBuilder<SyncDataResponse> 
      */
-    open class func postSyncDataWithRequestBuilder(body: SyncModelSyncDataRequest) -> RequestBuilder<SyncModelSyncDataResponse> {
+    open class func postSyncDataWithRequestBuilder(body: SyncDataRequest, targetId: String) -> RequestBuilder<SyncDataResponse> {
         let path = "/Sync/Data"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        let url = URLComponents(string: URLString)
+        var url = URLComponents(string: URLString)
+        url?.queryItems = APIHelper.mapValuesToQueryItems([
+                        "TargetId": targetId
+        ])
 
 
-        let requestBuilder: RequestBuilder<SyncModelSyncDataResponse>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SyncDataResponse>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -2438,7 +2516,7 @@ open class SyncServiceAPI {
      - parameter body: (body) SyncJobRequest:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncJobs(body: SyncModelSyncJobRequest, completion: @escaping ((_ data: SyncModelSyncJobCreationResult?,_ error: Error?) -> Void)) {
+    open class func postSyncJobs(body: SyncJobRequest, completion: @escaping ((_ data: SyncJobCreationResult?,_ error: Error?) -> Void)) {
         postSyncJobsWithRequestBuilder(body: body).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -2458,48 +2536,49 @@ open class SyncServiceAPI {
      - examples: [{contentType=application/json, example={
   "JobItems" : [ {
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
+    "Progress" : 5.637376656633329,
     "OutputPath" : "OutputPath",
-    "ItemDateModifiedTicks" : 2,
     "MediaSourceId" : "MediaSourceId",
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
     "ItemId" : 1,
     "TemporaryPath" : "TemporaryPath",
     "TargetId" : "TargetId",
+    "InternalTargetId" : 5,
     "MediaSource" : {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2509,8 +2588,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -2518,40 +2597,42 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2561,8 +2642,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -2570,17 +2651,19 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -2594,35 +2677,39 @@ open class SyncServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     },
     "AdditionalFiles" : [ {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     }, {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     } ],
@@ -2632,48 +2719,49 @@ open class SyncServiceAPI {
     "JobId" : 6
   }, {
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
+    "Progress" : 5.637376656633329,
     "OutputPath" : "OutputPath",
-    "ItemDateModifiedTicks" : 2,
     "MediaSourceId" : "MediaSourceId",
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
     "ItemId" : 1,
     "TemporaryPath" : "TemporaryPath",
     "TargetId" : "TargetId",
+    "InternalTargetId" : 5,
     "MediaSource" : {
       "EncoderPath" : "EncoderPath",
       "RequiredHttpHeaders" : {
         "key" : "RequiredHttpHeaders"
       },
-      "RunTimeTicks" : 7,
+      "RunTimeTicks" : 5,
+      "HasMixedProtocols" : true,
       "MediaStreams" : [ {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2683,8 +2771,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -2692,40 +2780,42 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       }, {
         "VideoRange" : "VideoRange",
         "ColorSpace" : "ColorSpace",
-        "Index" : 9,
-        "BitDepth" : 7,
+        "Index" : 4,
+        "BitDepth" : 2,
         "ItemId" : "ItemId",
         "SupportsExternalStream" : true,
         "Codec" : "Codec",
-        "IsClosedCaptions" : true,
-        "SampleRate" : 6,
+        "SampleRate" : 1,
         "IsAnamorphic" : true,
         "PixelFormat" : "PixelFormat",
-        "AttachmentSize" : 6,
+        "AttachmentSize" : 9,
         "SubtitleLocationType" : "InternalStream",
-        "RefFrames" : 1,
+        "RefFrames" : 4,
         "IsAVC" : true,
         "ColorTransfer" : "ColorTransfer",
+        "ExtendedVideoSubTypeDescription" : "ExtendedVideoSubTypeDescription",
         "IsExternalUrl" : true,
         "DisplayTitle" : "DisplayTitle",
         "IsForced" : true,
         "ChannelLayout" : "ChannelLayout",
         "DisplayLanguage" : "DisplayLanguage",
-        "AverageFrameRate" : 4.9652185,
-        "StreamStartTimeTicks" : 2,
+        "AverageFrameRate" : 7.4577446,
+        "StreamStartTimeTicks" : 9,
         "IsExternal" : true,
-        "Level" : 9.369310271410669,
-        "CodecTimeBase" : "CodecTimeBase",
+        "Level" : 5.025004791520295,
+        "ExtendedVideoSubType" : "None",
         "Channels" : 1,
         "Profile" : "Profile",
         "MimeType" : "MimeType",
@@ -2735,8 +2825,8 @@ open class SyncServiceAPI {
         "Language" : "Language",
         "IsTextSubtitleStream" : true,
         "NalLengthSize" : "NalLengthSize",
-        "Height" : 7,
-        "Width" : 1,
+        "Height" : 1,
+        "Width" : 6,
         "TimeBase" : "TimeBase",
         "CodecTag" : "CodecTag",
         "IsDefault" : true,
@@ -2744,17 +2834,19 @@ open class SyncServiceAPI {
         "Comment" : "Comment",
         "DeliveryMethod" : "Encode",
         "Title" : "Title",
-        "Rotation" : 1,
-        "RealFrameRate" : 5.025005,
+        "ExtendedVideoType" : "None",
+        "Rotation" : 7,
+        "RealFrameRate" : 1.1730742,
+        "IsHearingImpaired" : true,
         "AspectRatio" : "AspectRatio",
         "Type" : "Unknown",
         "IsInterlaced" : true,
         "Extradata" : "Extradata",
-        "BitRate" : 4
+        "BitRate" : 3
       } ],
-      "Size" : 2,
-      "BufferMs" : 3,
-      "ContainerStartTimeTicks" : 9,
+      "Size" : 1,
+      "BufferMs" : 7,
+      "ContainerStartTimeTicks" : 5,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -2768,35 +2860,39 @@ open class SyncServiceAPI {
       "LiveStreamId" : "LiveStreamId",
       "RequiresLooping" : true,
       "Protocol" : "File",
-      "DefaultSubtitleStreamIndex" : 3,
+      "AddApiKeyToDirectStreamUrl" : true,
+      "DefaultSubtitleStreamIndex" : 9,
+      "TrancodeLiveStartIndex" : 2,
       "IsInfiniteStream" : true,
       "Path" : "Path",
       "IsRemote" : true,
       "SupportsDirectPlay" : true,
       "TranscodingSubProtocol" : "TranscodingSubProtocol",
       "Formats" : [ "Formats", "Formats" ],
-      "AnalyzeDurationMs" : 9,
-      "Bitrate" : 8,
+      "AnalyzeDurationMs" : 6,
+      "WallClockStart" : "2000-01-23T04:56:07.000+00:00",
+      "Bitrate" : 9,
       "OpenToken" : "OpenToken",
       "SupportsProbing" : true,
       "Type" : "Default",
       "ReadAtNativeFramerate" : true,
       "TranscodingContainer" : "TranscodingContainer",
+      "ProbePath" : "ProbePath",
       "TranscodingUrl" : "TranscodingUrl",
       "Id" : "Id",
       "SupportsTranscoding" : true,
-      "DefaultAudioStreamIndex" : 6
+      "DefaultAudioStreamIndex" : 8
     },
     "AdditionalFiles" : [ {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     }, {
       "Path" : "Path",
       "Type" : "Media",
-      "Index" : 5,
+      "Index" : 2,
       "Name" : "Name",
       "ImageType" : "Primary"
     } ],
@@ -2807,44 +2903,46 @@ open class SyncServiceAPI {
   } ],
   "Job" : {
     "Category" : "Latest",
-    "ItemLimit" : 2,
+    "ItemLimit" : 7,
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
     "PrimaryImageTag" : "PrimaryImageTag",
-    "RequestedItemIds" : [ 7, 7 ],
+    "RequestedItemIds" : [ 9, 9 ],
     "TargetName" : "TargetName",
     "SyncNewContent" : true,
     "ParentName" : "ParentName",
+    "ItemId" : 3,
     "Profile" : "Profile",
     "Name" : "Name",
     "DateLastModified" : "2000-01-23T04:56:07.000+00:00",
     "Container" : "Container",
     "Quality" : "Quality",
     "PrimaryImageItemId" : "PrimaryImageItemId",
-    "ItemCount" : 9,
+    "ItemCount" : 2,
     "AudioCodec" : "AudioCodec",
-    "ParentId" : 1,
+    "ParentId" : 5,
     "Status" : "Queued",
-    "Progress" : 5.962133916683182,
-    "Bitrate" : 6,
+    "Progress" : 5.637376656633329,
+    "Bitrate" : 1,
     "VideoCodec" : "VideoCodec",
     "TargetId" : "TargetId",
-    "UserId" : 5,
+    "InternalTargetId" : 6,
+    "UserId" : 2,
     "UnwatchedOnly" : true,
     "Id" : 0
   }
 }}]
      - parameter body: (body) SyncJobRequest:  
 
-     - returns: RequestBuilder<SyncModelSyncJobCreationResult> 
+     - returns: RequestBuilder<SyncJobCreationResult> 
      */
-    open class func postSyncJobsWithRequestBuilder(body: SyncModelSyncJobRequest) -> RequestBuilder<SyncModelSyncJobCreationResult> {
+    open class func postSyncJobsWithRequestBuilder(body: SyncJobRequest) -> RequestBuilder<SyncJobCreationResult> {
         let path = "/Sync/Jobs"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<SyncModelSyncJobCreationResult>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SyncJobCreationResult>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
@@ -2855,7 +2953,7 @@ open class SyncServiceAPI {
      - parameter _id: (path)  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncJobsById(body: SyncSyncJob, _id: Int64, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSyncJobsById(body: SyncJob, _id: Int64, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSyncJobsByIdWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2881,7 +2979,7 @@ open class SyncServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSyncJobsByIdWithRequestBuilder(body: SyncSyncJob, _id: Int64) -> RequestBuilder<Void> {
+    open class func postSyncJobsByIdWithRequestBuilder(body: SyncJob, _id: Int64) -> RequestBuilder<Void> {
         var path = "/Sync/Jobs/{Id}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2946,7 +3044,7 @@ open class SyncServiceAPI {
      - parameter body: (body) List&#x60;1:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSyncOfflineactions(body: [UsersUserAction], completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSyncOfflineactions(body: [UserAction], completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSyncOfflineactionsWithRequestBuilder(body: body).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -2971,7 +3069,7 @@ open class SyncServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSyncOfflineactionsWithRequestBuilder(body: [UsersUserAction]) -> RequestBuilder<Void> {
+    open class func postSyncOfflineactionsWithRequestBuilder(body: [UserAction]) -> RequestBuilder<Void> {
         let path = "/Sync/OfflineActions"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

@@ -18,8 +18,9 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines SortOrder
+    /// Enum SortOrder  
     /// </summary>
+    /// <value>Enum SortOrder  </value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum SortOrder
     {
