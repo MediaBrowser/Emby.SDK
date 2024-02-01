@@ -23,7 +23,7 @@ import TranscodingProfile from './TranscodingProfile';
 /**
 * The DlnaProfilesDlnaProfile model module.
 * @module model/DlnaProfilesDlnaProfile
-* @version 4.8.0.77
+* @version 4.8.0.78
 */
 export default class DlnaProfilesDlnaProfile {
     /**
