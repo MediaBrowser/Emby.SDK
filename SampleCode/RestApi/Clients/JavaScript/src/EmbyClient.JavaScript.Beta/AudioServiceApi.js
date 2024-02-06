@@ -15,7 +15,7 @@ import SubtitleDeliveryMethod from '../model/SubtitleDeliveryMethod';
 /**
 * AudioService service.
 * @module EmbyClient.JavaScript.Beta/AudioServiceApi
-* @version 4.8.0.78
+* @version 4.9.0.0
 */
 export default class AudioServiceApi {
 

@@ -76,7 +76,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="optimizeDatabaseOnShutdown">optimizeDatabaseOnShutdown.</param>
         /// <param name="databaseAnalysisLimit">databaseAnalysisLimit.</param>
         /// <param name="disableAsyncIO">disableAsyncIO.</param>
-        /// <param name="migratedToUserItemShares4">migratedToUserItemShares4.</param>
+        /// <param name="migratedToUserItemShares5">migratedToUserItemShares5.</param>
         /// <param name="migratedLibraryOptionsToDb">migratedLibraryOptionsToDb.</param>
         /// <param name="allowLegacyLocalNetworkPassword">allowLegacyLocalNetworkPassword.</param>
         /// <param name="enableSavedMetadataForPeople">enableSavedMetadataForPeople.</param>
@@ -88,7 +88,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="runAtStartup">A value indicating whether \\[run at startup\\]..</param>
         /// <param name="isStartupWizardCompleted">A value indicating whether this instance is first run..</param>
         /// <param name="cachePath">The cache path..</param>
-        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares4 = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
+        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares5 = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
         {
             this.EnableUPnP = enableUPnP;
             this.PublicPort = publicPort;
@@ -140,7 +140,7 @@ namespace EmbyClient.Dotnet.Model
             this.OptimizeDatabaseOnShutdown = optimizeDatabaseOnShutdown;
             this.DatabaseAnalysisLimit = databaseAnalysisLimit;
             this.DisableAsyncIO = disableAsyncIO;
-            this.MigratedToUserItemShares4 = migratedToUserItemShares4;
+            this.MigratedToUserItemShares5 = migratedToUserItemShares5;
             this.MigratedLibraryOptionsToDb = migratedLibraryOptionsToDb;
             this.AllowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword;
             this.EnableSavedMetadataForPeople = enableSavedMetadataForPeople;
@@ -471,10 +471,10 @@ namespace EmbyClient.Dotnet.Model
         public bool? DisableAsyncIO { get; set; }
 
         /// <summary>
-        /// Gets or Sets MigratedToUserItemShares4
+        /// Gets or Sets MigratedToUserItemShares5
         /// </summary>
-        [DataMember(Name="MigratedToUserItemShares4", EmitDefaultValue=false)]
-        public bool? MigratedToUserItemShares4 { get; set; }
+        [DataMember(Name="MigratedToUserItemShares5", EmitDefaultValue=false)]
+        public bool? MigratedToUserItemShares5 { get; set; }
 
         /// <summary>
         /// Gets or Sets MigratedLibraryOptionsToDb
@@ -606,7 +606,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  OptimizeDatabaseOnShutdown: ").Append(OptimizeDatabaseOnShutdown).Append("\n");
             sb.Append("  DatabaseAnalysisLimit: ").Append(DatabaseAnalysisLimit).Append("\n");
             sb.Append("  DisableAsyncIO: ").Append(DisableAsyncIO).Append("\n");
-            sb.Append("  MigratedToUserItemShares4: ").Append(MigratedToUserItemShares4).Append("\n");
+            sb.Append("  MigratedToUserItemShares5: ").Append(MigratedToUserItemShares5).Append("\n");
             sb.Append("  MigratedLibraryOptionsToDb: ").Append(MigratedLibraryOptionsToDb).Append("\n");
             sb.Append("  AllowLegacyLocalNetworkPassword: ").Append(AllowLegacyLocalNetworkPassword).Append("\n");
             sb.Append("  EnableSavedMetadataForPeople: ").Append(EnableSavedMetadataForPeople).Append("\n");
@@ -909,9 +909,9 @@ namespace EmbyClient.Dotnet.Model
                     this.DisableAsyncIO.Equals(input.DisableAsyncIO))
                 ) && 
                 (
-                    this.MigratedToUserItemShares4 == input.MigratedToUserItemShares4 ||
-                    (this.MigratedToUserItemShares4 != null &&
-                    this.MigratedToUserItemShares4.Equals(input.MigratedToUserItemShares4))
+                    this.MigratedToUserItemShares5 == input.MigratedToUserItemShares5 ||
+                    (this.MigratedToUserItemShares5 != null &&
+                    this.MigratedToUserItemShares5.Equals(input.MigratedToUserItemShares5))
                 ) && 
                 (
                     this.MigratedLibraryOptionsToDb == input.MigratedLibraryOptionsToDb ||
@@ -1079,8 +1079,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.DatabaseAnalysisLimit.GetHashCode();
                 if (this.DisableAsyncIO != null)
                     hashCode = hashCode * 59 + this.DisableAsyncIO.GetHashCode();
-                if (this.MigratedToUserItemShares4 != null)
-                    hashCode = hashCode * 59 + this.MigratedToUserItemShares4.GetHashCode();
+                if (this.MigratedToUserItemShares5 != null)
+                    hashCode = hashCode * 59 + this.MigratedToUserItemShares5.GetHashCode();
                 if (this.MigratedLibraryOptionsToDb != null)
                     hashCode = hashCode * 59 + this.MigratedLibraryOptionsToDb.GetHashCode();
                 if (this.AllowLegacyLocalNetworkPassword != null)

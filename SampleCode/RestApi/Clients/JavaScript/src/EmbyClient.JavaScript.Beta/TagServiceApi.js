@@ -17,7 +17,7 @@ import UserLibraryAddTags from '../model/UserLibraryAddTags';
 /**
 * TagService service.
 * @module EmbyClient.JavaScript.Beta/TagServiceApi
-* @version 4.8.0.78
+* @version 4.9.0.0
 */
 export default class TagServiceApi {
 

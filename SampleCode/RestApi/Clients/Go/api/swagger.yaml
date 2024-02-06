@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.78
+  version: 4.9.0.0
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -76740,7 +76740,7 @@ components:
           format: int32
         DisableAsyncIO:
           type: boolean
-        MigratedToUserItemShares4:
+        MigratedToUserItemShares5:
           type: boolean
         MigratedLibraryOptionsToDb:
           type: boolean
@@ -76823,8 +76823,8 @@ components:
           To: To
         - From: From
           To: To
-        MigratedToUserItemShares4: true
         CachePath: CachePath
+        MigratedToUserItemShares5: true
         WanDdns: WanDdns
         IsBehindProxy: true
         UninstalledPlugins:

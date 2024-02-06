@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The DevicesLocalFileInfo model module.
 * @module model/DevicesLocalFileInfo
-* @version 4.8.0.78
+* @version 4.9.0.0
 */
 export default class DevicesLocalFileInfo {
     /**

@@ -78,8 +78,8 @@ open class ConfigurationServiceAPI {
     "From" : "From",
     "To" : "To"
   } ],
-  "MigratedToUserItemShares4" : true,
   "CachePath" : "CachePath",
+  "MigratedToUserItemShares5" : true,
   "WanDdns" : "WanDdns",
   "IsBehindProxy" : true,
   "UninstalledPlugins" : [ "UninstalledPlugins", "UninstalledPlugins" ],

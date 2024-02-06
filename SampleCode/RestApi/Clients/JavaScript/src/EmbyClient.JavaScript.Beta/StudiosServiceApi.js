@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * StudiosService service.
 * @module EmbyClient.JavaScript.Beta/StudiosServiceApi
-* @version 4.8.0.78
+* @version 4.9.0.0
 */
 export default class StudiosServiceApi {
 
