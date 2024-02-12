@@ -166,8 +166,6 @@
     <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.BookInfo.html">BookInfo</a>&gt;</div>
-    <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasSeries.html">IHasSeries</a></div>
-    <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasSeriesName.html">IHasSeriesName</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -382,6 +380,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVirtualItem">BaseItem.IsVirtualItem</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_InternalAlbumId">BaseItem.InternalAlbumId</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AlbumId">BaseItem.AlbumId</a>
     </div>
     <div>
@@ -389,6 +390,12 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Album">BaseItem.Album</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AlbumItem">BaseItem.AlbumItem</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetAlbumItem_MediaBrowser_Controller_Entities_BaseItem_">BaseItem.SetAlbumItem(BaseItem)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsEditingAlbum">BaseItem.SupportsEditingAlbum</a>
@@ -1115,7 +1122,7 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_Book_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Book : BaseItem, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasLookupInfo&lt;BookInfo&gt;, IHasSeries, IHasSeriesName</code></pre>
+    <pre><code class="lang-csharp hljs">public class Book : BaseItem, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasLookupInfo&lt;BookInfo&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -1147,32 +1154,6 @@ public override string MediaType { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaType">BaseItem.MediaType</a></div>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Book_SeriesName_" data-uid="MediaBrowser.Controller.Entities.Book.SeriesName*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Book_SeriesName" data-uid="MediaBrowser.Controller.Entities.Book.SeriesName">SeriesName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public string SeriesName { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="MediaBrowser_Controller_Entities_Book_SupportsExternalTransfer_" data-uid="MediaBrowser.Controller.Entities.Book.SupportsExternalTransfer*"></a>
@@ -1316,106 +1297,6 @@ public override bool SupportsStudios { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload">BaseItem.CanDownload()</a></div>
   
   
-  <a id="MediaBrowser_Controller_Entities_Book_FindSeriesId_" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesId*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Book_FindSeriesId" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesId">FindSeriesId()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long FindSeriesId()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Book_FindSeriesName_" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesName*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Book_FindSeriesName" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesName">FindSeriesName()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FindSeriesName()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Book_FindSeriesPresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesPresentationUniqueKey*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Book_FindSeriesPresentationUniqueKey" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesPresentationUniqueKey">FindSeriesPresentationUniqueKey()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FindSeriesPresentationUniqueKey()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_Book_FindSeriesSortName_" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesSortName*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Book_FindSeriesSortName" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesSortName">FindSeriesSortName()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FindSeriesSortName()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Entities_Book_GetLookupInfo_" data-uid="MediaBrowser.Controller.Entities.Book.GetLookupInfo*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_GetLookupInfo_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Book.GetLookupInfo(MediaBrowser.Model.Configuration.LibraryOptions)">GetLookupInfo(LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
@@ -1465,12 +1346,6 @@ public override bool SupportsStudios { get; }</code></pre>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.IHasSeries.html">IHasSeries</a>
-  </div>
-  <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.IHasSeriesName.html">IHasSeriesName</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>

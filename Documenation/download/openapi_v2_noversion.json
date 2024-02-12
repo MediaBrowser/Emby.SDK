@@ -62438,7 +62438,7 @@
         "PlaylistsUpgradedToM3U": {
           "type": "boolean"
         },
-        "ImageExtractorUpgraded": {
+        "ImageExtractorUpgraded1": {
           "type": "boolean"
         },
         "EnablePeopleLetterSubFolders": {
@@ -62454,7 +62454,7 @@
         "DisableAsyncIO": {
           "type": "boolean"
         },
-        "MigratedToUserItemShares5": {
+        "MigratedToUserItemShares6": {
           "type": "boolean"
         },
         "MigratedLibraryOptionsToDb": {
@@ -62606,6 +62606,9 @@
         "IsShuttingDown": {
           "type": "boolean"
         },
+        "HasImageEnhancers": {
+          "type": "boolean"
+        },
         "OperatingSystem": {
           "description": "The operating sytem.",
           "type": "string"
@@ -62691,6 +62694,12 @@
         },
         "HardwareAccelerationRequiresPremiere": {
           "type": "boolean"
+        },
+        "WakeOnLanInfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WakeOnLanInfo"
+          }
         },
         "LocalAddress": {
           "description": "The local address.",

@@ -12,11 +12,12 @@
 import ApiClient from '../ApiClient';
 import InstallationInfo from './InstallationInfo';
 import PackageVersionClass from './PackageVersionClass';
+import WakeOnLanInfo from './WakeOnLanInfo';
 
 /**
 * The SystemInfo model module.
 * @module model/SystemInfo
-* @version 4.9.0.0
+* @version 4.9.0.2
 */
 export default class SystemInfo {
     /**
@@ -58,6 +59,9 @@ export default class SystemInfo {
             }
             if (data.hasOwnProperty('IsShuttingDown')) {
                 obj['IsShuttingDown'] = ApiClient.convertToType(data['IsShuttingDown'], 'Boolean');
+            }
+            if (data.hasOwnProperty('HasImageEnhancers')) {
+                obj['HasImageEnhancers'] = ApiClient.convertToType(data['HasImageEnhancers'], 'Boolean');
             }
             if (data.hasOwnProperty('OperatingSystem')) {
                 obj['OperatingSystem'] = ApiClient.convertToType(data['OperatingSystem'], 'String');
@@ -122,6 +126,9 @@ export default class SystemInfo {
             if (data.hasOwnProperty('HardwareAccelerationRequiresPremiere')) {
                 obj['HardwareAccelerationRequiresPremiere'] = ApiClient.convertToType(data['HardwareAccelerationRequiresPremiere'], 'Boolean');
             }
+            if (data.hasOwnProperty('WakeOnLanInfo')) {
+                obj['WakeOnLanInfo'] = ApiClient.convertToType(data['WakeOnLanInfo'], [WakeOnLanInfo]);
+            }
             if (data.hasOwnProperty('LocalAddress')) {
                 obj['LocalAddress'] = ApiClient.convertToType(data['LocalAddress'], 'String');
             }
@@ -169,6 +176,10 @@ export default class SystemInfo {
     * @member {Boolean} IsShuttingDown
     */
     'IsShuttingDown' = undefined;
+    /**
+    * @member {Boolean} HasImageEnhancers
+    */
+    'HasImageEnhancers' = undefined;
     /**
     * The operating sytem.
     * @member {String} OperatingSystem
@@ -270,6 +281,10 @@ export default class SystemInfo {
     * @member {Boolean} HardwareAccelerationRequiresPremiere
     */
     'HardwareAccelerationRequiresPremiere' = undefined;
+    /**
+    * @member {Array.<module:model/WakeOnLanInfo>} WakeOnLanInfo
+    */
+    'WakeOnLanInfo' = undefined;
     /**
     * The local address.
     * @member {String} LocalAddress

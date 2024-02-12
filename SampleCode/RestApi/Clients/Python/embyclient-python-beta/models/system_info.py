@@ -27,6 +27,7 @@ class SystemInfo(object):
         'package_name': 'str',
         'has_pending_restart': 'bool',
         'is_shutting_down': 'bool',
+        'has_image_enhancers': 'bool',
         'operating_system': 'str',
         'supports_library_monitor': 'bool',
         'supports_local_port_configuration': 'bool',
@@ -48,6 +49,7 @@ class SystemInfo(object):
         'has_update_available': 'bool',
         'supports_auto_run_at_startup': 'bool',
         'hardware_acceleration_requires_premiere': 'bool',
+        'wake_on_lan_info': 'list[WakeOnLanInfo]',
         'local_address': 'str',
         'local_addresses': 'list[str]',
         'wan_address': 'str',
@@ -63,6 +65,7 @@ class SystemInfo(object):
         'package_name': 'PackageName',
         'has_pending_restart': 'HasPendingRestart',
         'is_shutting_down': 'IsShuttingDown',
+        'has_image_enhancers': 'HasImageEnhancers',
         'operating_system': 'OperatingSystem',
         'supports_library_monitor': 'SupportsLibraryMonitor',
         'supports_local_port_configuration': 'SupportsLocalPortConfiguration',
@@ -84,6 +87,7 @@ class SystemInfo(object):
         'has_update_available': 'HasUpdateAvailable',
         'supports_auto_run_at_startup': 'SupportsAutoRunAtStartup',
         'hardware_acceleration_requires_premiere': 'HardwareAccelerationRequiresPremiere',
+        'wake_on_lan_info': 'WakeOnLanInfo',
         'local_address': 'LocalAddress',
         'local_addresses': 'LocalAddresses',
         'wan_address': 'WanAddress',
@@ -93,13 +97,14 @@ class SystemInfo(object):
         'id': 'Id'
     }
 
-    def __init__(self, system_update_level=None, operating_system_display_name=None, package_name=None, has_pending_restart=None, is_shutting_down=None, operating_system=None, supports_library_monitor=None, supports_local_port_configuration=None, supports_wake_server=None, web_socket_port_number=None, completed_installations=None, can_self_restart=None, can_self_update=None, can_launch_web_browser=None, program_data_path=None, items_by_name_path=None, cache_path=None, log_path=None, internal_metadata_path=None, transcoding_temp_path=None, http_server_port_number=None, supports_https=None, https_port_number=None, has_update_available=None, supports_auto_run_at_startup=None, hardware_acceleration_requires_premiere=None, local_address=None, local_addresses=None, wan_address=None, remote_addresses=None, server_name=None, version=None, id=None):  # noqa: E501
+    def __init__(self, system_update_level=None, operating_system_display_name=None, package_name=None, has_pending_restart=None, is_shutting_down=None, has_image_enhancers=None, operating_system=None, supports_library_monitor=None, supports_local_port_configuration=None, supports_wake_server=None, web_socket_port_number=None, completed_installations=None, can_self_restart=None, can_self_update=None, can_launch_web_browser=None, program_data_path=None, items_by_name_path=None, cache_path=None, log_path=None, internal_metadata_path=None, transcoding_temp_path=None, http_server_port_number=None, supports_https=None, https_port_number=None, has_update_available=None, supports_auto_run_at_startup=None, hardware_acceleration_requires_premiere=None, wake_on_lan_info=None, local_address=None, local_addresses=None, wan_address=None, remote_addresses=None, server_name=None, version=None, id=None):  # noqa: E501
         """SystemInfo - a model defined in Swagger"""  # noqa: E501
         self._system_update_level = None
         self._operating_system_display_name = None
         self._package_name = None
         self._has_pending_restart = None
         self._is_shutting_down = None
+        self._has_image_enhancers = None
         self._operating_system = None
         self._supports_library_monitor = None
         self._supports_local_port_configuration = None
@@ -121,6 +126,7 @@ class SystemInfo(object):
         self._has_update_available = None
         self._supports_auto_run_at_startup = None
         self._hardware_acceleration_requires_premiere = None
+        self._wake_on_lan_info = None
         self._local_address = None
         self._local_addresses = None
         self._wan_address = None
@@ -139,6 +145,8 @@ class SystemInfo(object):
             self.has_pending_restart = has_pending_restart
         if is_shutting_down is not None:
             self.is_shutting_down = is_shutting_down
+        if has_image_enhancers is not None:
+            self.has_image_enhancers = has_image_enhancers
         if operating_system is not None:
             self.operating_system = operating_system
         if supports_library_monitor is not None:
@@ -181,6 +189,8 @@ class SystemInfo(object):
             self.supports_auto_run_at_startup = supports_auto_run_at_startup
         if hardware_acceleration_requires_premiere is not None:
             self.hardware_acceleration_requires_premiere = hardware_acceleration_requires_premiere
+        if wake_on_lan_info is not None:
+            self.wake_on_lan_info = wake_on_lan_info
         if local_address is not None:
             self.local_address = local_address
         if local_addresses is not None:
@@ -304,6 +314,27 @@ class SystemInfo(object):
         """
 
         self._is_shutting_down = is_shutting_down
+
+    @property
+    def has_image_enhancers(self):
+        """Gets the has_image_enhancers of this SystemInfo.  # noqa: E501
+
+
+        :return: The has_image_enhancers of this SystemInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_image_enhancers
+
+    @has_image_enhancers.setter
+    def has_image_enhancers(self, has_image_enhancers):
+        """Sets the has_image_enhancers of this SystemInfo.
+
+
+        :param has_image_enhancers: The has_image_enhancers of this SystemInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_image_enhancers = has_image_enhancers
 
     @property
     def operating_system(self):
@@ -779,6 +810,27 @@ class SystemInfo(object):
         """
 
         self._hardware_acceleration_requires_premiere = hardware_acceleration_requires_premiere
+
+    @property
+    def wake_on_lan_info(self):
+        """Gets the wake_on_lan_info of this SystemInfo.  # noqa: E501
+
+
+        :return: The wake_on_lan_info of this SystemInfo.  # noqa: E501
+        :rtype: list[WakeOnLanInfo]
+        """
+        return self._wake_on_lan_info
+
+    @wake_on_lan_info.setter
+    def wake_on_lan_info(self, wake_on_lan_info):
+        """Sets the wake_on_lan_info of this SystemInfo.
+
+
+        :param wake_on_lan_info: The wake_on_lan_info of this SystemInfo.  # noqa: E501
+        :type: list[WakeOnLanInfo]
+        """
+
+        self._wake_on_lan_info = wake_on_lan_info
 
     @property
     def local_address(self):

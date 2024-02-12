@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.0
+  version: 4.9.0.2
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -76729,7 +76729,7 @@ components:
           type: boolean
         PlaylistsUpgradedToM3U:
           type: boolean
-        ImageExtractorUpgraded:
+        ImageExtractorUpgraded1:
           type: boolean
         EnablePeopleLetterSubFolders:
           type: boolean
@@ -76740,7 +76740,7 @@ components:
           format: int32
         DisableAsyncIO:
           type: boolean
-        MigratedToUserItemShares5:
+        MigratedToUserItemShares6:
           type: boolean
         MigratedLibraryOptionsToDb:
           type: boolean
@@ -76799,7 +76799,6 @@ components:
         LogAllQueryTimes: true
         PlaylistsUpgradedToM3U: true
         AllowLegacyLocalNetworkPassword: true
-        ImageExtractorUpgraded: true
         RunAtStartup: true
         HttpServerPortNumber: 1
         RequireHttps: true
@@ -76816,6 +76815,7 @@ components:
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true
         PreferredDetectedRemoteAddressFamily: Unspecified
+        MigratedToUserItemShares6: true
         MigratedLibraryOptionsToDb: true
         SimultaneousStreamLimit: 9
         PathSubstitutions:
@@ -76824,13 +76824,13 @@ components:
         - From: From
           To: To
         CachePath: CachePath
-        MigratedToUserItemShares5: true
         WanDdns: WanDdns
         IsBehindProxy: true
         UninstalledPlugins:
         - UninstalledPlugins
         - UninstalledPlugins
         EnableDashboardResponseCaching: true
+        ImageExtractorUpgraded1: true
         EnableRemoteAccess: true
         CertificatePath: CertificatePath
         CollapseVideoFolders: true
@@ -76943,6 +76943,8 @@ components:
           description: A value indicating whether this instance has pending restart.
         IsShuttingDown:
           type: boolean
+        HasImageEnhancers:
+          type: boolean
         OperatingSystem:
           type: string
           description: The operating sytem.
@@ -77008,6 +77010,10 @@ components:
             ]."
         HardwareAccelerationRequiresPremiere:
           type: boolean
+        WakeOnLanInfo:
+          type: array
+          items:
+            $ref: '#/components/schemas/WakeOnLanInfo'
         LocalAddress:
           type: string
           description: The local address.
@@ -77034,6 +77040,7 @@ components:
       description: "Class SystemInfo\r\n"
       example:
         OperatingSystem: OperatingSystem
+        HasImageEnhancers: true
         PackageName: PackageName
         LocalAddresses:
         - LocalAddresses
@@ -77074,6 +77081,13 @@ components:
           PercentComplete: 6.027456183070403
           Id: Id
           Name: Name
+        WakeOnLanInfo:
+        - BroadcastAddress: BroadcastAddress
+          Port: 0
+          MacAddress: MacAddress
+        - BroadcastAddress: BroadcastAddress
+          Port: 0
+          MacAddress: MacAddress
         OperatingSystemDisplayName: OperatingSystemDisplayName
         InternalMetadataPath: InternalMetadataPath
         ServerName: ServerName

@@ -16,7 +16,7 @@ import MBBackupApiRestoreOptions from '../model/MBBackupApiRestoreOptions';
 /**
 * BackupApi service.
 * @module EmbyClient.JavaScript.Beta/BackupApiApi
-* @version 4.9.0.0
+* @version 4.9.0.2
 */
 export default class BackupApiApi {
 

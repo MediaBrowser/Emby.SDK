@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.9.0.0
+* @version 4.9.0.2
 */
 export default class ServerConfiguration {
     /**
@@ -181,8 +181,8 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('PlaylistsUpgradedToM3U')) {
                 obj['PlaylistsUpgradedToM3U'] = ApiClient.convertToType(data['PlaylistsUpgradedToM3U'], 'Boolean');
             }
-            if (data.hasOwnProperty('ImageExtractorUpgraded')) {
-                obj['ImageExtractorUpgraded'] = ApiClient.convertToType(data['ImageExtractorUpgraded'], 'Boolean');
+            if (data.hasOwnProperty('ImageExtractorUpgraded1')) {
+                obj['ImageExtractorUpgraded1'] = ApiClient.convertToType(data['ImageExtractorUpgraded1'], 'Boolean');
             }
             if (data.hasOwnProperty('EnablePeopleLetterSubFolders')) {
                 obj['EnablePeopleLetterSubFolders'] = ApiClient.convertToType(data['EnablePeopleLetterSubFolders'], 'Boolean');
@@ -196,8 +196,8 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('DisableAsyncIO')) {
                 obj['DisableAsyncIO'] = ApiClient.convertToType(data['DisableAsyncIO'], 'Boolean');
             }
-            if (data.hasOwnProperty('MigratedToUserItemShares5')) {
-                obj['MigratedToUserItemShares5'] = ApiClient.convertToType(data['MigratedToUserItemShares5'], 'Boolean');
+            if (data.hasOwnProperty('MigratedToUserItemShares6')) {
+                obj['MigratedToUserItemShares6'] = ApiClient.convertToType(data['MigratedToUserItemShares6'], 'Boolean');
             }
             if (data.hasOwnProperty('MigratedLibraryOptionsToDb')) {
                 obj['MigratedLibraryOptionsToDb'] = ApiClient.convertToType(data['MigratedLibraryOptionsToDb'], 'Boolean');
@@ -433,9 +433,9 @@ export default class ServerConfiguration {
     */
     'PlaylistsUpgradedToM3U' = undefined;
     /**
-    * @member {Boolean} ImageExtractorUpgraded
+    * @member {Boolean} ImageExtractorUpgraded1
     */
-    'ImageExtractorUpgraded' = undefined;
+    'ImageExtractorUpgraded1' = undefined;
     /**
     * @member {Boolean} EnablePeopleLetterSubFolders
     */
@@ -453,9 +453,9 @@ export default class ServerConfiguration {
     */
     'DisableAsyncIO' = undefined;
     /**
-    * @member {Boolean} MigratedToUserItemShares5
+    * @member {Boolean} MigratedToUserItemShares6
     */
-    'MigratedToUserItemShares5' = undefined;
+    'MigratedToUserItemShares6' = undefined;
     /**
     * @member {Boolean} MigratedLibraryOptionsToDb
     */

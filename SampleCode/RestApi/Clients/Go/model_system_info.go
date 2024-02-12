@@ -15,6 +15,7 @@ type SystemInfo struct {
 	// A value indicating whether this instance has pending restart.
 	HasPendingRestart bool `json:"HasPendingRestart,omitempty"`
 	IsShuttingDown bool `json:"IsShuttingDown,omitempty"`
+	HasImageEnhancers bool `json:"HasImageEnhancers,omitempty"`
 	// The operating sytem.
 	OperatingSystem string `json:"OperatingSystem,omitempty"`
 	// A value indicating whether \\[supports library monitor\\].
@@ -53,6 +54,7 @@ type SystemInfo struct {
 	// A value indicating whether \\[supports automatic run at startup\\].
 	SupportsAutoRunAtStartup bool `json:"SupportsAutoRunAtStartup,omitempty"`
 	HardwareAccelerationRequiresPremiere bool `json:"HardwareAccelerationRequiresPremiere,omitempty"`
+	WakeOnLanInfo []WakeOnLanInfo `json:"WakeOnLanInfo,omitempty"`
 	// The local address.
 	LocalAddress string `json:"LocalAddress,omitempty"`
 	LocalAddresses []string `json:"LocalAddresses,omitempty"`

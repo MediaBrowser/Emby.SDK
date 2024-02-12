@@ -31,6 +31,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="packageName">packageName.</param>
         /// <param name="hasPendingRestart">A value indicating whether this instance has pending restart..</param>
         /// <param name="isShuttingDown">isShuttingDown.</param>
+        /// <param name="hasImageEnhancers">hasImageEnhancers.</param>
         /// <param name="operatingSystem">The operating sytem..</param>
         /// <param name="supportsLibraryMonitor">A value indicating whether \\[supports library monitor\\]..</param>
         /// <param name="supportsLocalPortConfiguration">supportsLocalPortConfiguration.</param>
@@ -52,6 +53,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="hasUpdateAvailable">A value indicating whether this instance has update available..</param>
         /// <param name="supportsAutoRunAtStartup">A value indicating whether \\[supports automatic run at startup\\]..</param>
         /// <param name="hardwareAccelerationRequiresPremiere">hardwareAccelerationRequiresPremiere.</param>
+        /// <param name="wakeOnLanInfo">wakeOnLanInfo.</param>
         /// <param name="localAddress">The local address..</param>
         /// <param name="localAddresses">localAddresses.</param>
         /// <param name="wanAddress">The wan address..</param>
@@ -59,13 +61,14 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="serverName">The name of the server..</param>
         /// <param name="version">The version..</param>
         /// <param name="id">The id..</param>
-        public SystemInfo(PackageVersionClass systemUpdateLevel = default(PackageVersionClass), string operatingSystemDisplayName = default(string), string packageName = default(string), bool? hasPendingRestart = default(bool?), bool? isShuttingDown = default(bool?), string operatingSystem = default(string), bool? supportsLibraryMonitor = default(bool?), bool? supportsLocalPortConfiguration = default(bool?), bool? supportsWakeServer = default(bool?), int? webSocketPortNumber = default(int?), List<InstallationInfo> completedInstallations = default(List<InstallationInfo>), bool? canSelfRestart = default(bool?), bool? canSelfUpdate = default(bool?), bool? canLaunchWebBrowser = default(bool?), string programDataPath = default(string), string itemsByNamePath = default(string), string cachePath = default(string), string logPath = default(string), string internalMetadataPath = default(string), string transcodingTempPath = default(string), int? httpServerPortNumber = default(int?), bool? supportsHttps = default(bool?), int? httpsPortNumber = default(int?), bool? hasUpdateAvailable = default(bool?), bool? supportsAutoRunAtStartup = default(bool?), bool? hardwareAccelerationRequiresPremiere = default(bool?), string localAddress = default(string), List<string> localAddresses = default(List<string>), string wanAddress = default(string), List<string> remoteAddresses = default(List<string>), string serverName = default(string), string version = default(string), string id = default(string))
+        public SystemInfo(PackageVersionClass systemUpdateLevel = default(PackageVersionClass), string operatingSystemDisplayName = default(string), string packageName = default(string), bool? hasPendingRestart = default(bool?), bool? isShuttingDown = default(bool?), bool? hasImageEnhancers = default(bool?), string operatingSystem = default(string), bool? supportsLibraryMonitor = default(bool?), bool? supportsLocalPortConfiguration = default(bool?), bool? supportsWakeServer = default(bool?), int? webSocketPortNumber = default(int?), List<InstallationInfo> completedInstallations = default(List<InstallationInfo>), bool? canSelfRestart = default(bool?), bool? canSelfUpdate = default(bool?), bool? canLaunchWebBrowser = default(bool?), string programDataPath = default(string), string itemsByNamePath = default(string), string cachePath = default(string), string logPath = default(string), string internalMetadataPath = default(string), string transcodingTempPath = default(string), int? httpServerPortNumber = default(int?), bool? supportsHttps = default(bool?), int? httpsPortNumber = default(int?), bool? hasUpdateAvailable = default(bool?), bool? supportsAutoRunAtStartup = default(bool?), bool? hardwareAccelerationRequiresPremiere = default(bool?), List<WakeOnLanInfo> wakeOnLanInfo = default(List<WakeOnLanInfo>), string localAddress = default(string), List<string> localAddresses = default(List<string>), string wanAddress = default(string), List<string> remoteAddresses = default(List<string>), string serverName = default(string), string version = default(string), string id = default(string))
         {
             this.SystemUpdateLevel = systemUpdateLevel;
             this.OperatingSystemDisplayName = operatingSystemDisplayName;
             this.PackageName = packageName;
             this.HasPendingRestart = hasPendingRestart;
             this.IsShuttingDown = isShuttingDown;
+            this.HasImageEnhancers = hasImageEnhancers;
             this.OperatingSystem = operatingSystem;
             this.SupportsLibraryMonitor = supportsLibraryMonitor;
             this.SupportsLocalPortConfiguration = supportsLocalPortConfiguration;
@@ -87,6 +90,7 @@ namespace EmbyClient.Dotnet.Model
             this.HasUpdateAvailable = hasUpdateAvailable;
             this.SupportsAutoRunAtStartup = supportsAutoRunAtStartup;
             this.HardwareAccelerationRequiresPremiere = hardwareAccelerationRequiresPremiere;
+            this.WakeOnLanInfo = wakeOnLanInfo;
             this.LocalAddress = localAddress;
             this.LocalAddresses = localAddresses;
             this.WanAddress = wanAddress;
@@ -127,6 +131,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="IsShuttingDown", EmitDefaultValue=false)]
         public bool? IsShuttingDown { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HasImageEnhancers
+        /// </summary>
+        [DataMember(Name="HasImageEnhancers", EmitDefaultValue=false)]
+        public bool? HasImageEnhancers { get; set; }
 
         /// <summary>
         /// The operating sytem.
@@ -272,6 +282,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? HardwareAccelerationRequiresPremiere { get; set; }
 
         /// <summary>
+        /// Gets or Sets WakeOnLanInfo
+        /// </summary>
+        [DataMember(Name="WakeOnLanInfo", EmitDefaultValue=false)]
+        public List<WakeOnLanInfo> WakeOnLanInfo { get; set; }
+
+        /// <summary>
         /// The local address.
         /// </summary>
         /// <value>The local address.</value>
@@ -331,6 +347,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PackageName: ").Append(PackageName).Append("\n");
             sb.Append("  HasPendingRestart: ").Append(HasPendingRestart).Append("\n");
             sb.Append("  IsShuttingDown: ").Append(IsShuttingDown).Append("\n");
+            sb.Append("  HasImageEnhancers: ").Append(HasImageEnhancers).Append("\n");
             sb.Append("  OperatingSystem: ").Append(OperatingSystem).Append("\n");
             sb.Append("  SupportsLibraryMonitor: ").Append(SupportsLibraryMonitor).Append("\n");
             sb.Append("  SupportsLocalPortConfiguration: ").Append(SupportsLocalPortConfiguration).Append("\n");
@@ -352,6 +369,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  HasUpdateAvailable: ").Append(HasUpdateAvailable).Append("\n");
             sb.Append("  SupportsAutoRunAtStartup: ").Append(SupportsAutoRunAtStartup).Append("\n");
             sb.Append("  HardwareAccelerationRequiresPremiere: ").Append(HardwareAccelerationRequiresPremiere).Append("\n");
+            sb.Append("  WakeOnLanInfo: ").Append(WakeOnLanInfo).Append("\n");
             sb.Append("  LocalAddress: ").Append(LocalAddress).Append("\n");
             sb.Append("  LocalAddresses: ").Append(LocalAddresses).Append("\n");
             sb.Append("  WanAddress: ").Append(WanAddress).Append("\n");
@@ -417,6 +435,11 @@ namespace EmbyClient.Dotnet.Model
                     this.IsShuttingDown == input.IsShuttingDown ||
                     (this.IsShuttingDown != null &&
                     this.IsShuttingDown.Equals(input.IsShuttingDown))
+                ) && 
+                (
+                    this.HasImageEnhancers == input.HasImageEnhancers ||
+                    (this.HasImageEnhancers != null &&
+                    this.HasImageEnhancers.Equals(input.HasImageEnhancers))
                 ) && 
                 (
                     this.OperatingSystem == input.OperatingSystem ||
@@ -525,6 +548,12 @@ namespace EmbyClient.Dotnet.Model
                     this.HardwareAccelerationRequiresPremiere.Equals(input.HardwareAccelerationRequiresPremiere))
                 ) && 
                 (
+                    this.WakeOnLanInfo == input.WakeOnLanInfo ||
+                    this.WakeOnLanInfo != null &&
+                    input.WakeOnLanInfo != null &&
+                    this.WakeOnLanInfo.SequenceEqual(input.WakeOnLanInfo)
+                ) && 
+                (
                     this.LocalAddress == input.LocalAddress ||
                     (this.LocalAddress != null &&
                     this.LocalAddress.Equals(input.LocalAddress))
@@ -582,6 +611,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.HasPendingRestart.GetHashCode();
                 if (this.IsShuttingDown != null)
                     hashCode = hashCode * 59 + this.IsShuttingDown.GetHashCode();
+                if (this.HasImageEnhancers != null)
+                    hashCode = hashCode * 59 + this.HasImageEnhancers.GetHashCode();
                 if (this.OperatingSystem != null)
                     hashCode = hashCode * 59 + this.OperatingSystem.GetHashCode();
                 if (this.SupportsLibraryMonitor != null)
@@ -624,6 +655,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.SupportsAutoRunAtStartup.GetHashCode();
                 if (this.HardwareAccelerationRequiresPremiere != null)
                     hashCode = hashCode * 59 + this.HardwareAccelerationRequiresPremiere.GetHashCode();
+                if (this.WakeOnLanInfo != null)
+                    hashCode = hashCode * 59 + this.WakeOnLanInfo.GetHashCode();
                 if (this.LocalAddress != null)
                     hashCode = hashCode * 59 + this.LocalAddress.GetHashCode();
                 if (this.LocalAddresses != null)

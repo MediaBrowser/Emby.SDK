@@ -297,10 +297,10 @@ namespace Emby.ApiClient.Model
         public bool? PlaylistsUpgradedToM3U { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageExtractorUpgraded
+        /// Gets or Sets ImageExtractorUpgraded1
         /// </summary>
-        /// <value>The ImageExtractorUpgraded.</value>
-        public bool? ImageExtractorUpgraded { get; set; }
+        /// <value>The ImageExtractorUpgraded1.</value>
+        public bool? ImageExtractorUpgraded1 { get; set; }
 
         /// <summary>
         /// Gets or Sets EnablePeopleLetterSubFolders
@@ -327,10 +327,10 @@ namespace Emby.ApiClient.Model
         public bool? DisableAsyncIO { get; set; }
 
         /// <summary>
-        /// Gets or Sets MigratedToUserItemShares5
+        /// Gets or Sets MigratedToUserItemShares6
         /// </summary>
-        /// <value>The MigratedToUserItemShares5.</value>
-        public bool? MigratedToUserItemShares5 { get; set; }
+        /// <value>The MigratedToUserItemShares6.</value>
+        public bool? MigratedToUserItemShares6 { get; set; }
 
         /// <summary>
         /// Gets or Sets MigratedLibraryOptionsToDb
@@ -451,12 +451,12 @@ namespace Emby.ApiClient.Model
             sb.Append("  DatabaseCacheSizeMB: ").Append(DatabaseCacheSizeMB).Append("\n");
             sb.Append("  EnableSqLiteMmio: ").Append(EnableSqLiteMmio).Append("\n");
             sb.Append("  PlaylistsUpgradedToM3U: ").Append(PlaylistsUpgradedToM3U).Append("\n");
-            sb.Append("  ImageExtractorUpgraded: ").Append(ImageExtractorUpgraded).Append("\n");
+            sb.Append("  ImageExtractorUpgraded1: ").Append(ImageExtractorUpgraded1).Append("\n");
             sb.Append("  EnablePeopleLetterSubFolders: ").Append(EnablePeopleLetterSubFolders).Append("\n");
             sb.Append("  OptimizeDatabaseOnShutdown: ").Append(OptimizeDatabaseOnShutdown).Append("\n");
             sb.Append("  DatabaseAnalysisLimit: ").Append(DatabaseAnalysisLimit).Append("\n");
             sb.Append("  DisableAsyncIO: ").Append(DisableAsyncIO).Append("\n");
-            sb.Append("  MigratedToUserItemShares5: ").Append(MigratedToUserItemShares5).Append("\n");
+            sb.Append("  MigratedToUserItemShares6: ").Append(MigratedToUserItemShares6).Append("\n");
             sb.Append("  MigratedLibraryOptionsToDb: ").Append(MigratedLibraryOptionsToDb).Append("\n");
             sb.Append("  AllowLegacyLocalNetworkPassword: ").Append(AllowLegacyLocalNetworkPassword).Append("\n");
             sb.Append("  EnableSavedMetadataForPeople: ").Append(EnableSavedMetadataForPeople).Append("\n");
@@ -725,9 +725,9 @@ namespace Emby.ApiClient.Model
                     this.PlaylistsUpgradedToM3U.Equals(input.PlaylistsUpgradedToM3U))
                 ) && 
                 (
-                    this.ImageExtractorUpgraded == input.ImageExtractorUpgraded ||
-                    (this.ImageExtractorUpgraded != null &&
-                    this.ImageExtractorUpgraded.Equals(input.ImageExtractorUpgraded))
+                    this.ImageExtractorUpgraded1 == input.ImageExtractorUpgraded1 ||
+                    (this.ImageExtractorUpgraded1 != null &&
+                    this.ImageExtractorUpgraded1.Equals(input.ImageExtractorUpgraded1))
                 ) && 
                 (
                     this.EnablePeopleLetterSubFolders == input.EnablePeopleLetterSubFolders ||
@@ -750,9 +750,9 @@ namespace Emby.ApiClient.Model
                     this.DisableAsyncIO.Equals(input.DisableAsyncIO))
                 ) && 
                 (
-                    this.MigratedToUserItemShares5 == input.MigratedToUserItemShares5 ||
-                    (this.MigratedToUserItemShares5 != null &&
-                    this.MigratedToUserItemShares5.Equals(input.MigratedToUserItemShares5))
+                    this.MigratedToUserItemShares6 == input.MigratedToUserItemShares6 ||
+                    (this.MigratedToUserItemShares6 != null &&
+                    this.MigratedToUserItemShares6.Equals(input.MigratedToUserItemShares6))
                 ) && 
                 (
                     this.MigratedLibraryOptionsToDb == input.MigratedLibraryOptionsToDb ||
@@ -910,8 +910,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.EnableSqLiteMmio.GetHashCode();
                 if (this.PlaylistsUpgradedToM3U != null)
                     hashCode = hashCode * 59 + this.PlaylistsUpgradedToM3U.GetHashCode();
-                if (this.ImageExtractorUpgraded != null)
-                    hashCode = hashCode * 59 + this.ImageExtractorUpgraded.GetHashCode();
+                if (this.ImageExtractorUpgraded1 != null)
+                    hashCode = hashCode * 59 + this.ImageExtractorUpgraded1.GetHashCode();
                 if (this.EnablePeopleLetterSubFolders != null)
                     hashCode = hashCode * 59 + this.EnablePeopleLetterSubFolders.GetHashCode();
                 if (this.OptimizeDatabaseOnShutdown != null)
@@ -920,8 +920,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.DatabaseAnalysisLimit.GetHashCode();
                 if (this.DisableAsyncIO != null)
                     hashCode = hashCode * 59 + this.DisableAsyncIO.GetHashCode();
-                if (this.MigratedToUserItemShares5 != null)
-                    hashCode = hashCode * 59 + this.MigratedToUserItemShares5.GetHashCode();
+                if (this.MigratedToUserItemShares6 != null)
+                    hashCode = hashCode * 59 + this.MigratedToUserItemShares6.GetHashCode();
                 if (this.MigratedLibraryOptionsToDb != null)
                     hashCode = hashCode * 59 + this.MigratedLibraryOptionsToDb.GetHashCode();
                 if (this.AllowLegacyLocalNetworkPassword != null)

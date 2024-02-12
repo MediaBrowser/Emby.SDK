@@ -73,12 +73,12 @@ public struct ServerConfiguration: Codable {
     public var databaseCacheSizeMB: Int?
     public var enableSqLiteMmio: Bool?
     public var playlistsUpgradedToM3U: Bool?
-    public var imageExtractorUpgraded: Bool?
+    public var imageExtractorUpgraded1: Bool?
     public var enablePeopleLetterSubFolders: Bool?
     public var optimizeDatabaseOnShutdown: Bool?
     public var databaseAnalysisLimit: Int?
     public var disableAsyncIO: Bool?
-    public var migratedToUserItemShares5: Bool?
+    public var migratedToUserItemShares6: Bool?
     public var migratedLibraryOptionsToDb: Bool?
     public var allowLegacyLocalNetworkPassword: Bool?
     public var enableSavedMetadataForPeople: Bool?
@@ -97,7 +97,7 @@ public struct ServerConfiguration: Codable {
     /** The cache path. */
     public var cachePath: String?
 
-    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, logAllQueryTimes: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelay: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, preferredDetectedRemoteAddressFamily: NetSocketsAddressFamily? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [PathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, playlistsUpgradedToM3U: Bool? = nil, imageExtractorUpgraded: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares5: Bool? = nil, migratedLibraryOptionsToDb: Bool? = nil, allowLegacyLocalNetworkPassword: Bool? = nil, enableSavedMetadataForPeople: Bool? = nil, proxyHeaderMode: ProxyHeaderMode? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
+    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, logAllQueryTimes: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelay: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, preferredDetectedRemoteAddressFamily: NetSocketsAddressFamily? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [PathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, playlistsUpgradedToM3U: Bool? = nil, imageExtractorUpgraded1: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares6: Bool? = nil, migratedLibraryOptionsToDb: Bool? = nil, allowLegacyLocalNetworkPassword: Bool? = nil, enableSavedMetadataForPeople: Bool? = nil, proxyHeaderMode: ProxyHeaderMode? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
         self.enableUPnP = enableUPnP
         self.publicPort = publicPort
         self.publicHttpsPort = publicHttpsPort
@@ -143,12 +143,12 @@ public struct ServerConfiguration: Codable {
         self.databaseCacheSizeMB = databaseCacheSizeMB
         self.enableSqLiteMmio = enableSqLiteMmio
         self.playlistsUpgradedToM3U = playlistsUpgradedToM3U
-        self.imageExtractorUpgraded = imageExtractorUpgraded
+        self.imageExtractorUpgraded1 = imageExtractorUpgraded1
         self.enablePeopleLetterSubFolders = enablePeopleLetterSubFolders
         self.optimizeDatabaseOnShutdown = optimizeDatabaseOnShutdown
         self.databaseAnalysisLimit = databaseAnalysisLimit
         self.disableAsyncIO = disableAsyncIO
-        self.migratedToUserItemShares5 = migratedToUserItemShares5
+        self.migratedToUserItemShares6 = migratedToUserItemShares6
         self.migratedLibraryOptionsToDb = migratedLibraryOptionsToDb
         self.allowLegacyLocalNetworkPassword = allowLegacyLocalNetworkPassword
         self.enableSavedMetadataForPeople = enableSavedMetadataForPeople
@@ -208,12 +208,12 @@ public struct ServerConfiguration: Codable {
         case databaseCacheSizeMB = "DatabaseCacheSizeMB"
         case enableSqLiteMmio = "EnableSqLiteMmio"
         case playlistsUpgradedToM3U = "PlaylistsUpgradedToM3U"
-        case imageExtractorUpgraded = "ImageExtractorUpgraded"
+        case imageExtractorUpgraded1 = "ImageExtractorUpgraded1"
         case enablePeopleLetterSubFolders = "EnablePeopleLetterSubFolders"
         case optimizeDatabaseOnShutdown = "OptimizeDatabaseOnShutdown"
         case databaseAnalysisLimit = "DatabaseAnalysisLimit"
         case disableAsyncIO = "DisableAsyncIO"
-        case migratedToUserItemShares5 = "MigratedToUserItemShares5"
+        case migratedToUserItemShares6 = "MigratedToUserItemShares6"
         case migratedLibraryOptionsToDb = "MigratedLibraryOptionsToDb"
         case allowLegacyLocalNetworkPassword = "AllowLegacyLocalNetworkPassword"
         case enableSavedMetadataForPeople = "EnableSavedMetadataForPeople"

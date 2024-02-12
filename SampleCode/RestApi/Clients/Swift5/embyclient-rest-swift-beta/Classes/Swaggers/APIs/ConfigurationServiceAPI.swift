@@ -52,7 +52,6 @@ open class ConfigurationServiceAPI {
   "LogAllQueryTimes" : true,
   "PlaylistsUpgradedToM3U" : true,
   "AllowLegacyLocalNetworkPassword" : true,
-  "ImageExtractorUpgraded" : true,
   "RunAtStartup" : true,
   "HttpServerPortNumber" : 1,
   "RequireHttps" : true,
@@ -69,6 +68,7 @@ open class ConfigurationServiceAPI {
   "EnablePeopleLetterSubFolders" : true,
   "DisableAsyncIO" : true,
   "PreferredDetectedRemoteAddressFamily" : "Unspecified",
+  "MigratedToUserItemShares6" : true,
   "MigratedLibraryOptionsToDb" : true,
   "SimultaneousStreamLimit" : 9,
   "PathSubstitutions" : [ {
@@ -79,11 +79,11 @@ open class ConfigurationServiceAPI {
     "To" : "To"
   } ],
   "CachePath" : "CachePath",
-  "MigratedToUserItemShares5" : true,
   "WanDdns" : "WanDdns",
   "IsBehindProxy" : true,
   "UninstalledPlugins" : [ "UninstalledPlugins", "UninstalledPlugins" ],
   "EnableDashboardResponseCaching" : true,
+  "ImageExtractorUpgraded1" : true,
   "EnableRemoteAccess" : true,
   "CertificatePath" : "CertificatePath",
   "CollapseVideoFolders" : true,

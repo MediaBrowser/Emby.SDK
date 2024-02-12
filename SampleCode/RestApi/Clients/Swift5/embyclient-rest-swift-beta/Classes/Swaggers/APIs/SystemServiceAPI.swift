@@ -74,6 +74,7 @@ open class SystemServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example={
   "OperatingSystem" : "OperatingSystem",
+  "HasImageEnhancers" : true,
   "PackageName" : "PackageName",
   "LocalAddresses" : [ "LocalAddresses", "LocalAddresses" ],
   "CanSelfUpdate" : true,
@@ -109,6 +110,15 @@ open class SystemServiceAPI {
     "PercentComplete" : 6.027456183070403,
     "Id" : "Id",
     "Name" : "Name"
+  } ],
+  "WakeOnLanInfo" : [ {
+    "BroadcastAddress" : "BroadcastAddress",
+    "Port" : 0,
+    "MacAddress" : "MacAddress"
+  }, {
+    "BroadcastAddress" : "BroadcastAddress",
+    "Port" : 0,
+    "MacAddress" : "MacAddress"
   } ],
   "OperatingSystemDisplayName" : "OperatingSystemDisplayName",
   "InternalMetadataPath" : "InternalMetadataPath",

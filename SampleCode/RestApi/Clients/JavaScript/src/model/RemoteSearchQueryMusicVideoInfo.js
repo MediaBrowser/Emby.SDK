@@ -15,7 +15,7 @@ import MusicVideoInfo from './MusicVideoInfo';
 /**
 * The RemoteSearchQueryMusicVideoInfo model module.
 * @module model/RemoteSearchQueryMusicVideoInfo
-* @version 4.9.0.0
+* @version 4.9.0.2
 */
 export default class RemoteSearchQueryMusicVideoInfo {
     /**
