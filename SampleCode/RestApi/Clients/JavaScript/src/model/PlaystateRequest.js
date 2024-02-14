@@ -15,7 +15,7 @@ import PlaystateCommand from './PlaystateCommand';
 /**
 * The PlaystateRequest model module.
 * @module model/PlaystateRequest
-* @version 4.9.0.2
+* @version 4.9.0.3
 */
 export default class PlaystateRequest {
     /**
