@@ -62466,6 +62466,9 @@
         "EnableSavedMetadataForPeople": {
           "type": "boolean"
         },
+        "TvChannelsRefreshed": {
+          "type": "boolean"
+        },
         "ProxyHeaderMode": {
           "$ref": "#/definitions/ProxyHeaderMode"
         },

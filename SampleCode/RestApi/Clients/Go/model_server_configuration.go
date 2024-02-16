@@ -78,6 +78,7 @@ type ServerConfiguration struct {
 	MigratedLibraryOptionsToDb bool `json:"MigratedLibraryOptionsToDb,omitempty"`
 	AllowLegacyLocalNetworkPassword bool `json:"AllowLegacyLocalNetworkPassword,omitempty"`
 	EnableSavedMetadataForPeople bool `json:"EnableSavedMetadataForPeople,omitempty"`
+	TvChannelsRefreshed bool `json:"TvChannelsRefreshed,omitempty"`
 	ProxyHeaderMode *ProxyHeaderMode `json:"ProxyHeaderMode,omitempty"`
 	// A value indicating whether \\[enable debug level logging\\].
 	EnableDebugLevelLogging bool `json:"EnableDebugLevelLogging,omitempty"`

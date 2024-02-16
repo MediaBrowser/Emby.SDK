@@ -351,6 +351,12 @@ namespace Emby.ApiClient.Model
         public bool? EnableSavedMetadataForPeople { get; set; }
 
         /// <summary>
+        /// Gets or Sets TvChannelsRefreshed
+        /// </summary>
+        /// <value>The TvChannelsRefreshed.</value>
+        public bool? TvChannelsRefreshed { get; set; }
+
+        /// <summary>
         /// Gets or Sets ProxyHeaderMode
         /// </summary>
         /// <value>The ProxyHeaderMode.</value>
@@ -460,6 +466,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  MigratedLibraryOptionsToDb: ").Append(MigratedLibraryOptionsToDb).Append("\n");
             sb.Append("  AllowLegacyLocalNetworkPassword: ").Append(AllowLegacyLocalNetworkPassword).Append("\n");
             sb.Append("  EnableSavedMetadataForPeople: ").Append(EnableSavedMetadataForPeople).Append("\n");
+            sb.Append("  TvChannelsRefreshed: ").Append(TvChannelsRefreshed).Append("\n");
             sb.Append("  ProxyHeaderMode: ").Append(ProxyHeaderMode).Append("\n");
             sb.Append("  EnableDebugLevelLogging: ").Append(EnableDebugLevelLogging).Append("\n");
             sb.Append("  RevertDebugLogging: ").Append(RevertDebugLogging).Append("\n");
@@ -770,6 +777,11 @@ namespace Emby.ApiClient.Model
                     this.EnableSavedMetadataForPeople.Equals(input.EnableSavedMetadataForPeople))
                 ) && 
                 (
+                    this.TvChannelsRefreshed == input.TvChannelsRefreshed ||
+                    (this.TvChannelsRefreshed != null &&
+                    this.TvChannelsRefreshed.Equals(input.TvChannelsRefreshed))
+                ) && 
+                (
                     this.ProxyHeaderMode == input.ProxyHeaderMode ||
                     (this.ProxyHeaderMode != null &&
                     this.ProxyHeaderMode.Equals(input.ProxyHeaderMode))
@@ -928,6 +940,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.AllowLegacyLocalNetworkPassword.GetHashCode();
                 if (this.EnableSavedMetadataForPeople != null)
                     hashCode = hashCode * 59 + this.EnableSavedMetadataForPeople.GetHashCode();
+                if (this.TvChannelsRefreshed != null)
+                    hashCode = hashCode * 59 + this.TvChannelsRefreshed.GetHashCode();
                 if (this.ProxyHeaderMode != null)
                     hashCode = hashCode * 59 + this.ProxyHeaderMode.GetHashCode();
                 if (this.EnableDebugLevelLogging != null)

@@ -61,6 +61,7 @@ open class ConfigurationServiceAPI {
   "CertificatePassword" : "CertificatePassword",
   "EnableOriginalTrackTitles" : true,
   "RemoteClientBitrateLimit" : 2,
+  "TvChannelsRefreshed" : true,
   "ImageExtractionTimeoutMs" : 7,
   "EnableExternalContentInSuggestions" : true,
   "LibraryMonitorDelay" : 5,

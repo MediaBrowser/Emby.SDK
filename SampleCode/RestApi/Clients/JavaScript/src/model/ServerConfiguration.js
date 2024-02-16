@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.9.0.3
+* @version 4.9.0.4
 */
 export default class ServerConfiguration {
     /**
@@ -207,6 +207,9 @@ export default class ServerConfiguration {
             }
             if (data.hasOwnProperty('EnableSavedMetadataForPeople')) {
                 obj['EnableSavedMetadataForPeople'] = ApiClient.convertToType(data['EnableSavedMetadataForPeople'], 'Boolean');
+            }
+            if (data.hasOwnProperty('TvChannelsRefreshed')) {
+                obj['TvChannelsRefreshed'] = ApiClient.convertToType(data['TvChannelsRefreshed'], 'Boolean');
             }
             if (data.hasOwnProperty('ProxyHeaderMode')) {
                 obj['ProxyHeaderMode'] = ProxyHeaderMode.constructFromObject(data['ProxyHeaderMode']);
@@ -468,6 +471,10 @@ export default class ServerConfiguration {
     * @member {Boolean} EnableSavedMetadataForPeople
     */
     'EnableSavedMetadataForPeople' = undefined;
+    /**
+    * @member {Boolean} TvChannelsRefreshed
+    */
+    'TvChannelsRefreshed' = undefined;
     /**
     * @member {module:model/ProxyHeaderMode} ProxyHeaderMode
     */

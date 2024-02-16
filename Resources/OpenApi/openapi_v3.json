@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.3"
+    "version": "4.9.0.4"
   },
   "servers": [
     {
@@ -85236,6 +85236,9 @@
             "type": "boolean"
           },
           "EnableSavedMetadataForPeople": {
+            "type": "boolean"
+          },
+          "TvChannelsRefreshed": {
             "type": "boolean"
           },
           "ProxyHeaderMode": {
