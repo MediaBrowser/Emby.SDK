@@ -19,4 +19,5 @@ const (
 	COLLECTIONS_LibraryItemLinkType LibraryItemLinkType = "Collections"
 	ALBUMS_LibraryItemLinkType LibraryItemLinkType = "Albums"
 	COLLECTION_FOLDERS_LibraryItemLinkType LibraryItemLinkType = "CollectionFolders"
+	LIVE_TV_SERIES_LibraryItemLinkType LibraryItemLinkType = "LiveTVSeries"
 )

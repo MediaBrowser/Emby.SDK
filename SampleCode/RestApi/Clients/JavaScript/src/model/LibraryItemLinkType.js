@@ -70,6 +70,12 @@ export default class LibraryItemLinkType {
          */
         collectionFolders = "CollectionFolders";
 
+        /**
+         * value: "LiveTVSeries"
+         * @const
+         */
+        liveTVSeries = "LiveTVSeries";
+
 
     /**
     * Returns a <code>LibraryItemLinkType</code> enum value from a Javascript object name.

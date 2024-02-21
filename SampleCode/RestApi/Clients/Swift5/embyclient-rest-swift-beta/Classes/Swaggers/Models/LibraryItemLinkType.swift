@@ -18,4 +18,5 @@ public enum LibraryItemLinkType: String, Codable {
     case collections = "Collections"
     case albums = "Albums"
     case collectionFolders = "CollectionFolders"
+    case liveTVSeries = "LiveTVSeries"
 }

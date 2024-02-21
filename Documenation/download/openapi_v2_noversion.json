@@ -60914,7 +60914,8 @@
         "Composers",
         "Collections",
         "Albums",
-        "CollectionFolders"
+        "CollectionFolders",
+        "LiveTVSeries"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Controller.Library.ItemLinkType"

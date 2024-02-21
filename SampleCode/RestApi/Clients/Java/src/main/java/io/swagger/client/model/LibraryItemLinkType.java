@@ -27,7 +27,8 @@ public enum LibraryItemLinkType {
   COMPOSERS("Composers"),
   COLLECTIONS("Collections"),
   ALBUMS("Albums"),
-  COLLECTIONFOLDERS("CollectionFolders");
+  COLLECTIONFOLDERS("CollectionFolders"),
+  LIVETVSERIES("LiveTVSeries");
 
   private String value;
 
