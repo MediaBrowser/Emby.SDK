@@ -37,13 +37,14 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="preferEpgChannelNumbers">preferEpgChannelNumbers.</param>
         /// <param name="allowHWTranscoding">allowHWTranscoding.</param>
         /// <param name="allowMappingByNumber">allowMappingByNumber.</param>
+        /// <param name="importGuideData">importGuideData.</param>
         /// <param name="source">source.</param>
         /// <param name="tunerCount">tunerCount.</param>
         /// <param name="userAgent">userAgent.</param>
         /// <param name="referrer">referrer.</param>
         /// <param name="providerOptions">providerOptions.</param>
         /// <param name="dataVersion">dataVersion.</param>
-        public LiveTvTunerHostInfo(string id = default(string), string url = default(string), string type = default(string), string deviceId = default(string), string friendlyName = default(string), string setupUrl = default(string), bool? importFavoritesOnly = default(bool?), bool? preferEpgChannelImages = default(bool?), bool? preferEpgChannelNumbers = default(bool?), bool? allowHWTranscoding = default(bool?), bool? allowMappingByNumber = default(bool?), string source = default(string), int? tunerCount = default(int?), string userAgent = default(string), string referrer = default(string), string providerOptions = default(string), int? dataVersion = default(int?))
+        public LiveTvTunerHostInfo(string id = default(string), string url = default(string), string type = default(string), string deviceId = default(string), string friendlyName = default(string), string setupUrl = default(string), bool? importFavoritesOnly = default(bool?), bool? preferEpgChannelImages = default(bool?), bool? preferEpgChannelNumbers = default(bool?), bool? allowHWTranscoding = default(bool?), bool? allowMappingByNumber = default(bool?), bool? importGuideData = default(bool?), string source = default(string), int? tunerCount = default(int?), string userAgent = default(string), string referrer = default(string), string providerOptions = default(string), int? dataVersion = default(int?))
         {
             this.Id = id;
             this.Url = url;
@@ -56,6 +57,7 @@ namespace EmbyClient.Dotnet.Model
             this.PreferEpgChannelNumbers = preferEpgChannelNumbers;
             this.AllowHWTranscoding = allowHWTranscoding;
             this.AllowMappingByNumber = allowMappingByNumber;
+            this.ImportGuideData = importGuideData;
             this.Source = source;
             this.TunerCount = tunerCount;
             this.UserAgent = userAgent;
@@ -131,6 +133,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? AllowMappingByNumber { get; set; }
 
         /// <summary>
+        /// Gets or Sets ImportGuideData
+        /// </summary>
+        [DataMember(Name="ImportGuideData", EmitDefaultValue=false)]
+        public bool? ImportGuideData { get; set; }
+
+        /// <summary>
         /// Gets or Sets Source
         /// </summary>
         [DataMember(Name="Source", EmitDefaultValue=false)]
@@ -185,6 +193,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PreferEpgChannelNumbers: ").Append(PreferEpgChannelNumbers).Append("\n");
             sb.Append("  AllowHWTranscoding: ").Append(AllowHWTranscoding).Append("\n");
             sb.Append("  AllowMappingByNumber: ").Append(AllowMappingByNumber).Append("\n");
+            sb.Append("  ImportGuideData: ").Append(ImportGuideData).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  TunerCount: ").Append(TunerCount).Append("\n");
             sb.Append("  UserAgent: ").Append(UserAgent).Append("\n");
@@ -281,6 +290,11 @@ namespace EmbyClient.Dotnet.Model
                     this.AllowMappingByNumber.Equals(input.AllowMappingByNumber))
                 ) && 
                 (
+                    this.ImportGuideData == input.ImportGuideData ||
+                    (this.ImportGuideData != null &&
+                    this.ImportGuideData.Equals(input.ImportGuideData))
+                ) && 
+                (
                     this.Source == input.Source ||
                     (this.Source != null &&
                     this.Source.Equals(input.Source))
@@ -343,6 +357,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.AllowHWTranscoding.GetHashCode();
                 if (this.AllowMappingByNumber != null)
                     hashCode = hashCode * 59 + this.AllowMappingByNumber.GetHashCode();
+                if (this.ImportGuideData != null)
+                    hashCode = hashCode * 59 + this.ImportGuideData.GetHashCode();
                 if (this.Source != null)
                     hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.TunerCount != null)

@@ -15,7 +15,7 @@ import EditObjectContainer from '../model/EditObjectContainer';
 /**
 * SubtitleOptionsService service.
 * @module EmbyClient.JavaScript.Beta/SubtitleOptionsServiceApi
-* @version 4.9.0.5
+* @version 4.9.0.6
 */
 export default class SubtitleOptionsServiceApi {
 

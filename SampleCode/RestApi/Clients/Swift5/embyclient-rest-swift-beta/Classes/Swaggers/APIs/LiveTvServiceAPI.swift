@@ -14904,7 +14904,8 @@ open class LiveTvServiceAPI {
   "UserAgent" : "UserAgent",
   "Id" : "Id",
   "DataVersion" : 6,
-  "SetupUrl" : "SetupUrl"
+  "SetupUrl" : "SetupUrl",
+  "ImportGuideData" : true
 }, {
   "PreferEpgChannelImages" : true,
   "ProviderOptions" : "ProviderOptions",
@@ -14922,7 +14923,8 @@ open class LiveTvServiceAPI {
   "UserAgent" : "UserAgent",
   "Id" : "Id",
   "DataVersion" : 6,
-  "SetupUrl" : "SetupUrl"
+  "SetupUrl" : "SetupUrl",
+  "ImportGuideData" : true
 } ]}]
 
      - returns: RequestBuilder<[LiveTvTunerHostInfo]> 
@@ -14978,7 +14980,8 @@ open class LiveTvServiceAPI {
   "UserAgent" : "UserAgent",
   "Id" : "Id",
   "DataVersion" : 6,
-  "SetupUrl" : "SetupUrl"
+  "SetupUrl" : "SetupUrl",
+  "ImportGuideData" : true
 }}]
      - parameter type: (path) Type 
 
@@ -15076,7 +15079,8 @@ open class LiveTvServiceAPI {
   "UserAgent" : "UserAgent",
   "Id" : "Id",
   "DataVersion" : 6,
-  "SetupUrl" : "SetupUrl"
+  "SetupUrl" : "SetupUrl",
+  "ImportGuideData" : true
 }, {
   "PreferEpgChannelImages" : true,
   "ProviderOptions" : "ProviderOptions",
@@ -15094,7 +15098,8 @@ open class LiveTvServiceAPI {
   "UserAgent" : "UserAgent",
   "Id" : "Id",
   "DataVersion" : 6,
-  "SetupUrl" : "SetupUrl"
+  "SetupUrl" : "SetupUrl",
+  "ImportGuideData" : true
 } ]}]
 
      - returns: RequestBuilder<[LiveTvTunerHostInfo]> 
@@ -16193,7 +16198,8 @@ open class LiveTvServiceAPI {
   "UserAgent" : "UserAgent",
   "Id" : "Id",
   "DataVersion" : 6,
-  "SetupUrl" : "SetupUrl"
+  "SetupUrl" : "SetupUrl",
+  "ImportGuideData" : true
 }}]
      - parameter body: (body) TunerHostInfo:  
 

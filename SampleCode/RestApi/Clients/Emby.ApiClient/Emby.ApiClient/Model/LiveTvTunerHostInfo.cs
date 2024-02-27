@@ -93,6 +93,12 @@ namespace Emby.ApiClient.Model
         public bool? AllowMappingByNumber { get; set; }
 
         /// <summary>
+        /// Gets or Sets ImportGuideData
+        /// </summary>
+        /// <value>The ImportGuideData.</value>
+        public bool? ImportGuideData { get; set; }
+
+        /// <summary>
         /// Gets or Sets Source
         /// </summary>
         /// <value>The Source.</value>
@@ -147,6 +153,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  PreferEpgChannelNumbers: ").Append(PreferEpgChannelNumbers).Append("\n");
             sb.Append("  AllowHWTranscoding: ").Append(AllowHWTranscoding).Append("\n");
             sb.Append("  AllowMappingByNumber: ").Append(AllowMappingByNumber).Append("\n");
+            sb.Append("  ImportGuideData: ").Append(ImportGuideData).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  TunerCount: ").Append(TunerCount).Append("\n");
             sb.Append("  UserAgent: ").Append(UserAgent).Append("\n");
@@ -234,6 +241,11 @@ namespace Emby.ApiClient.Model
                     this.AllowMappingByNumber.Equals(input.AllowMappingByNumber))
                 ) && 
                 (
+                    this.ImportGuideData == input.ImportGuideData ||
+                    (this.ImportGuideData != null &&
+                    this.ImportGuideData.Equals(input.ImportGuideData))
+                ) && 
+                (
                     this.Source == input.Source ||
                     (this.Source != null &&
                     this.Source.Equals(input.Source))
@@ -296,6 +308,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.AllowHWTranscoding.GetHashCode();
                 if (this.AllowMappingByNumber != null)
                     hashCode = hashCode * 59 + this.AllowMappingByNumber.GetHashCode();
+                if (this.ImportGuideData != null)
+                    hashCode = hashCode * 59 + this.ImportGuideData.GetHashCode();
                 if (this.Source != null)
                     hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.TunerCount != null)

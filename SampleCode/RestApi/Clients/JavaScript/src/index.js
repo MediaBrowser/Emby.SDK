@@ -315,6 +315,7 @@ import UserItemShareLevel from './model/UserItemShareLevel';
 import UserLibraryAddTags from './model/UserLibraryAddTags';
 import UserLibraryLeaveSharedItems from './model/UserLibraryLeaveSharedItems';
 import UserLibraryOfficialRatingItem from './model/UserLibraryOfficialRatingItem';
+import UserLibraryRemoveTags from './model/UserLibraryRemoveTags';
 import UserLibraryTagItem from './model/UserLibraryTagItem';
 import UserLibraryUpdateUserItemAccess from './model/UserLibraryUpdateUserItemAccess';
 import UserNotificationInfo from './model/UserNotificationInfo';
@@ -424,7 +425,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.9.0.5
+* @version 4.9.0.6
 */
 export {
     /**
@@ -2262,6 +2263,12 @@ export {
      * @property {module:model/UserLibraryOfficialRatingItem}
      */
     UserLibraryOfficialRatingItem,
+
+    /**
+     * The UserLibraryRemoveTags model constructor.
+     * @property {module:model/UserLibraryRemoveTags}
+     */
+    UserLibraryRemoveTags,
 
     /**
      * The UserLibraryTagItem model constructor.

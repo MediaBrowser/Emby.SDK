@@ -386,6 +386,7 @@ from embyclient-python-beta.models.user_item_share_level import UserItemShareLev
 from embyclient-python-beta.models.user_library_add_tags import UserLibraryAddTags
 from embyclient-python-beta.models.user_library_leave_shared_items import UserLibraryLeaveSharedItems
 from embyclient-python-beta.models.user_library_official_rating_item import UserLibraryOfficialRatingItem
+from embyclient-python-beta.models.user_library_remove_tags import UserLibraryRemoveTags
 from embyclient-python-beta.models.user_library_tag_item import UserLibraryTagItem
 from embyclient-python-beta.models.user_library_update_user_item_access import UserLibraryUpdateUserItemAccess
 from embyclient-python-beta.models.user_notification_info import UserNotificationInfo

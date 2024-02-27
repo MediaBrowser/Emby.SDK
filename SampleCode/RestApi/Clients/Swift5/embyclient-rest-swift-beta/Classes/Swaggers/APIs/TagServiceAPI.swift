@@ -4119,4 +4119,51 @@ open class TagServiceAPI {
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
+    /**
+     Removes tags from an item
+
+     - parameter body: (body) RemoveTags 
+     - parameter _id: (path) Item Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postItemsByIdTagsDelete(body: UserLibraryRemoveTags, _id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postItemsByIdTagsDeleteWithRequestBuilder(body: body, _id: _id).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Removes tags from an item
+     - POST /Items/{Id}/Tags/Delete
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) RemoveTags 
+     - parameter _id: (path) Item Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postItemsByIdTagsDeleteWithRequestBuilder(body: UserLibraryRemoveTags, _id: String) -> RequestBuilder<Void> {
+        var path = "/Items/{Id}/Tags/Delete"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
 }

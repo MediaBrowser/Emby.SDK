@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTvTunerHostInfo model module.
 * @module model/LiveTvTunerHostInfo
-* @version 4.9.0.5
+* @version 4.9.0.6
 */
 export default class LiveTvTunerHostInfo {
     /**
@@ -73,6 +73,9 @@ export default class LiveTvTunerHostInfo {
             }
             if (data.hasOwnProperty('AllowMappingByNumber')) {
                 obj['AllowMappingByNumber'] = ApiClient.convertToType(data['AllowMappingByNumber'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ImportGuideData')) {
+                obj['ImportGuideData'] = ApiClient.convertToType(data['ImportGuideData'], 'Boolean');
             }
             if (data.hasOwnProperty('Source')) {
                 obj['Source'] = ApiClient.convertToType(data['Source'], 'String');
@@ -140,6 +143,10 @@ export default class LiveTvTunerHostInfo {
     * @member {Boolean} AllowMappingByNumber
     */
     'AllowMappingByNumber' = undefined;
+    /**
+    * @member {Boolean} ImportGuideData
+    */
+    'ImportGuideData' = undefined;
     /**
     * @member {String} Source
     */

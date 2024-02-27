@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.5"
+    "version": "4.9.0.6"
   },
   "servers": [
     {
@@ -64600,6 +64600,74 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Items/{Id}/Tags/Delete": {
+      "summary": "Removes tags from an item",
+      "post": {
+        "tags": [
+          "TagService"
+        ],
+        "summary": "Removes tags from an item",
+        "description": "Requires authentication as user",
+        "operationId": "postItemsByIdTagsDelete",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "RemoveTags",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.RemoveTags"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.RemoveTags"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Items/{Id}/Subtitles/{Index}": {
       "summary": "Deletes an external subtitle file",
       "delete": {
@@ -83468,6 +83536,9 @@
           "AllowMappingByNumber": {
             "type": "boolean"
           },
+          "ImportGuideData": {
+            "type": "boolean"
+          },
           "Source": {
             "type": "string"
           },
@@ -85295,8 +85366,8 @@
           "Chaos",
           "NS",
           "Ipx",
-          "Osi",
           "Iso",
+          "Osi",
           "Ecma",
           "DataKit",
           "Ccitt",
@@ -87159,6 +87230,9 @@
           "Key": {
             "type": "string",
             "description": "The key."
+          },
+          "Website": {
+            "type": "string"
           },
           "UrlFormatString": {
             "type": "string",
@@ -89333,6 +89407,18 @@
           }
         },
         "x-internal-ref-name": "Emby.Api.UserLibrary.AddTags"
+      },
+      "UserLibrary.RemoveTags": {
+        "type": "object",
+        "properties": {
+          "Tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NameIdPair"
+            }
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.UserLibrary.RemoveTags"
       },
       "ImageProviderInfo": {
         "type": "object",

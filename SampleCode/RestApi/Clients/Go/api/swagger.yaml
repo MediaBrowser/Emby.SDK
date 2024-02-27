@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.5
+  version: 4.9.0.6
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -51799,6 +51799,50 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /Items/{Id}/Tags/Delete:
+    summary: Removes tags from an item
+    post:
+      tags:
+      - TagService
+      summary: Removes tags from an item
+      description: Requires authentication as user
+      operationId: postItemsByIdTagsDelete
+      parameters:
+      - name: Id
+        in: path
+        description: Item Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: RemoveTags
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.RemoveTags'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.RemoveTags'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/Subtitles/{Index}:
     summary: Deletes an external subtitle file
     delete:
@@ -69641,6 +69685,8 @@ components:
           type: boolean
         AllowMappingByNumber:
           type: boolean
+        ImportGuideData:
+          type: boolean
         Source:
           type: string
         TunerCount:
@@ -69673,6 +69719,7 @@ components:
         Id: Id
         DataVersion: 6
         SetupUrl: SetupUrl
+        ImportGuideData: true
       x-internal-ref-name: MediaBrowser.Model.LiveTv.TunerHostInfo
     LiveTv.LiveTvInfo:
       type: object
@@ -76872,8 +76919,8 @@ components:
       - Chaos
       - NS
       - Ipx
-      - Osi
       - Iso
+      - Osi
       - Ecma
       - DataKit
       - Ccitt
@@ -80020,6 +80067,8 @@ components:
         Key:
           type: string
           description: The key.
+        Website:
+          type: string
         UrlFormatString:
           type: string
           description: The URL format string.
@@ -80027,6 +80076,7 @@ components:
           type: boolean
       example:
         IsSupportedAsIdentifier: true
+        Website: Website
         Key: Key
         Name: Name
         UrlFormatString: UrlFormatString
@@ -80813,10 +80863,12 @@ components:
           TwoLetterISOLanguageName: TwoLetterISOLanguageName
         ExternalIdInfos:
         - IsSupportedAsIdentifier: true
+          Website: Website
           Key: Key
           Name: Name
           UrlFormatString: UrlFormatString
         - IsSupportedAsIdentifier: true
+          Website: Website
           Key: Key
           Name: Name
           UrlFormatString: UrlFormatString
@@ -85324,6 +85376,14 @@ components:
           items:
             $ref: '#/components/schemas/NameIdPair'
       x-internal-ref-name: Emby.Api.UserLibrary.AddTags
+    UserLibrary.RemoveTags:
+      type: object
+      properties:
+        Tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/NameIdPair'
+      x-internal-ref-name: Emby.Api.UserLibrary.RemoveTags
     ImageProviderInfo:
       type: object
       properties:

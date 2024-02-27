@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ExternalIdInfo model module.
 * @module model/ExternalIdInfo
-* @version 4.9.0.5
+* @version 4.9.0.6
 */
 export default class ExternalIdInfo {
     /**
@@ -47,6 +47,9 @@ export default class ExternalIdInfo {
             if (data.hasOwnProperty('Key')) {
                 obj['Key'] = ApiClient.convertToType(data['Key'], 'String');
             }
+            if (data.hasOwnProperty('Website')) {
+                obj['Website'] = ApiClient.convertToType(data['Website'], 'String');
+            }
             if (data.hasOwnProperty('UrlFormatString')) {
                 obj['UrlFormatString'] = ApiClient.convertToType(data['UrlFormatString'], 'String');
             }
@@ -67,6 +70,10 @@ export default class ExternalIdInfo {
     * @member {String} Key
     */
     'Key' = undefined;
+    /**
+    * @member {String} Website
+    */
+    'Website' = undefined;
     /**
     * The URL format string.
     * @member {String} UrlFormatString

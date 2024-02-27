@@ -22,6 +22,7 @@ public struct LiveTvTunerHostInfo: Codable {
     public var preferEpgChannelNumbers: Bool?
     public var allowHWTranscoding: Bool?
     public var allowMappingByNumber: Bool?
+    public var importGuideData: Bool?
     public var source: String?
     public var tunerCount: Int?
     public var userAgent: String?
@@ -29,7 +30,7 @@ public struct LiveTvTunerHostInfo: Codable {
     public var providerOptions: String?
     public var dataVersion: Int?
 
-    public init(_id: String? = nil, url: String? = nil, type: String? = nil, deviceId: String? = nil, friendlyName: String? = nil, setupUrl: String? = nil, importFavoritesOnly: Bool? = nil, preferEpgChannelImages: Bool? = nil, preferEpgChannelNumbers: Bool? = nil, allowHWTranscoding: Bool? = nil, allowMappingByNumber: Bool? = nil, source: String? = nil, tunerCount: Int? = nil, userAgent: String? = nil, referrer: String? = nil, providerOptions: String? = nil, dataVersion: Int? = nil) {
+    public init(_id: String? = nil, url: String? = nil, type: String? = nil, deviceId: String? = nil, friendlyName: String? = nil, setupUrl: String? = nil, importFavoritesOnly: Bool? = nil, preferEpgChannelImages: Bool? = nil, preferEpgChannelNumbers: Bool? = nil, allowHWTranscoding: Bool? = nil, allowMappingByNumber: Bool? = nil, importGuideData: Bool? = nil, source: String? = nil, tunerCount: Int? = nil, userAgent: String? = nil, referrer: String? = nil, providerOptions: String? = nil, dataVersion: Int? = nil) {
         self._id = _id
         self.url = url
         self.type = type
@@ -41,6 +42,7 @@ public struct LiveTvTunerHostInfo: Codable {
         self.preferEpgChannelNumbers = preferEpgChannelNumbers
         self.allowHWTranscoding = allowHWTranscoding
         self.allowMappingByNumber = allowMappingByNumber
+        self.importGuideData = importGuideData
         self.source = source
         self.tunerCount = tunerCount
         self.userAgent = userAgent
@@ -61,6 +63,7 @@ public struct LiveTvTunerHostInfo: Codable {
         case preferEpgChannelNumbers = "PreferEpgChannelNumbers"
         case allowHWTranscoding = "AllowHWTranscoding"
         case allowMappingByNumber = "AllowMappingByNumber"
+        case importGuideData = "ImportGuideData"
         case source = "Source"
         case tunerCount = "TunerCount"
         case userAgent = "UserAgent"

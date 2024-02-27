@@ -17,7 +17,7 @@ import RemoteImageResult from '../model/RemoteImageResult';
 /**
 * RemoteImageService service.
 * @module EmbyClient.JavaScript.Beta/RemoteImageServiceApi
-* @version 4.9.0.5
+* @version 4.9.0.6
 */
 export default class RemoteImageServiceApi {
 

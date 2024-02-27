@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * LiveStreamService service.
 * @module EmbyClient.JavaScript.Beta/LiveStreamServiceApi
-* @version 4.9.0.5
+* @version 4.9.0.6
 */
 export default class LiveStreamServiceApi {
 

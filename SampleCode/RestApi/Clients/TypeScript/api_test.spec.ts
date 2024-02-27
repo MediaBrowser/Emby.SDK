@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.0.5
+ * OpenAPI spec version: 4.9.0.6
  * 
  *
  * NOTE: This file is auto generated.
@@ -6353,6 +6353,11 @@ describe("TagServiceApi", () => {
     const body: api.UserLibraryAddTags = undefined
     const id: string = "id_example"
     return expect(instance.postItemsByIdTagsAdd(body, id, {})).resolves.toBe(null)
+  })
+  test("postItemsByIdTagsDelete", () => {
+    const body: api.UserLibraryRemoveTags = undefined
+    const id: string = "id_example"
+    return expect(instance.postItemsByIdTagsDelete(body, id, {})).resolves.toBe(null)
   })
 })
 

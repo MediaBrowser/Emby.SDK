@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.5"
+    "version": "4.9.0.6"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -45205,6 +45205,68 @@
       },
       "x-summary": "Adds new tags to an item"
     },
+    "/Items/{Id}/Tags/Delete": {
+      "post": {
+        "tags": [
+          "TagService"
+        ],
+        "summary": "Removes tags from an item",
+        "description": "Requires authentication as user",
+        "operationId": "postItemsByIdTagsDelete",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Item Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "RemoveTags",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLibrary.RemoveTags"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Removes tags from an item"
+    },
     "/Items/{Id}/Subtitles/{Index}": {
       "delete": {
         "tags": [
@@ -60721,6 +60783,9 @@
         "AllowMappingByNumber": {
           "type": "boolean"
         },
+        "ImportGuideData": {
+          "type": "boolean"
+        },
         "Source": {
           "type": "string"
         },
@@ -62524,8 +62589,8 @@
         "Chaos",
         "NS",
         "Ipx",
-        "Osi",
         "Iso",
+        "Osi",
         "Ecma",
         "DataKit",
         "Ccitt",
@@ -64369,6 +64434,9 @@
         },
         "Key": {
           "description": "The key.",
+          "type": "string"
+        },
+        "Website": {
           "type": "string"
         },
         "UrlFormatString": {
@@ -66466,6 +66534,18 @@
         }
       },
       "x-internal-ref-name": "Emby.Api.UserLibrary.AddTags"
+    },
+    "UserLibrary.RemoveTags": {
+      "type": "object",
+      "properties": {
+        "Tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/NameIdPair"
+          }
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.UserLibrary.RemoveTags"
     },
     "ImageProviderInfo": {
       "description": "Class ImageProviderInfo.\r\n",

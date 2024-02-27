@@ -8,6 +8,7 @@ package EmbyClient.Java.Beta;
 import io.swagger.client.model.NameValuePair;
 import io.swagger.client.model.QueryResultUserLibraryTagItem;
 import io.swagger.client.model.UserLibraryAddTags;
+import io.swagger.client.model.UserLibraryRemoveTags;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -1371,6 +1372,22 @@ public class TagServiceApiTest {
         UserLibraryAddTags body = null;
         String id = null;
         api.postItemsByIdTagsAdd(body, id);
+
+        // TODO: test validations
+    }
+    /**
+     * Removes tags from an item
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postItemsByIdTagsDeleteTest() throws Exception {
+        UserLibraryRemoveTags body = null;
+        String id = null;
+        api.postItemsByIdTagsDelete(body, id);
 
         // TODO: test validations
     }

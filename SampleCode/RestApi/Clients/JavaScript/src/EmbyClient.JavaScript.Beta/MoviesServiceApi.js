@@ -15,7 +15,7 @@ import RecommendationDto from '../model/RecommendationDto';
 /**
 * MoviesService service.
 * @module EmbyClient.JavaScript.Beta/MoviesServiceApi
-* @version 4.9.0.5
+* @version 4.9.0.6
 */
 export default class MoviesServiceApi {
 

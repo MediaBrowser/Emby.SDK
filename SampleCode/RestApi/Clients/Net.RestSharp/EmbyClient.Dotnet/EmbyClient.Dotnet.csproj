@@ -9,7 +9,7 @@
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
         <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
         <RootNamespace>EmbyClient.Dotnet</RootNamespace>
-        <Version>4.9.0.5</Version>
+        <Version>4.9.0.6</Version>
     </PropertyGroup>
 
     <PropertyGroup>

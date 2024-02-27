@@ -28,12 +28,14 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="name">The name..</param>
         /// <param name="key">The key..</param>
+        /// <param name="website">website.</param>
         /// <param name="urlFormatString">The URL format string..</param>
         /// <param name="isSupportedAsIdentifier">isSupportedAsIdentifier.</param>
-        public ExternalIdInfo(string name = default(string), string key = default(string), string urlFormatString = default(string), bool? isSupportedAsIdentifier = default(bool?))
+        public ExternalIdInfo(string name = default(string), string key = default(string), string website = default(string), string urlFormatString = default(string), bool? isSupportedAsIdentifier = default(bool?))
         {
             this.Name = name;
             this.Key = key;
+            this.Website = website;
             this.UrlFormatString = urlFormatString;
             this.IsSupportedAsIdentifier = isSupportedAsIdentifier;
         }
@@ -51,6 +53,12 @@ namespace EmbyClient.Dotnet.Model
         /// <value>The key.</value>
         [DataMember(Name="Key", EmitDefaultValue=false)]
         public string Key { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Website
+        /// </summary>
+        [DataMember(Name="Website", EmitDefaultValue=false)]
+        public string Website { get; set; }
 
         /// <summary>
         /// The URL format string.
@@ -75,6 +83,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class ExternalIdInfo {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
+            sb.Append("  Website: ").Append(Website).Append("\n");
             sb.Append("  UrlFormatString: ").Append(UrlFormatString).Append("\n");
             sb.Append("  IsSupportedAsIdentifier: ").Append(IsSupportedAsIdentifier).Append("\n");
             sb.Append("}\n");
@@ -122,6 +131,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Key.Equals(input.Key))
                 ) && 
                 (
+                    this.Website == input.Website ||
+                    (this.Website != null &&
+                    this.Website.Equals(input.Website))
+                ) && 
+                (
                     this.UrlFormatString == input.UrlFormatString ||
                     (this.UrlFormatString != null &&
                     this.UrlFormatString.Equals(input.UrlFormatString))
@@ -146,6 +160,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Key != null)
                     hashCode = hashCode * 59 + this.Key.GetHashCode();
+                if (this.Website != null)
+                    hashCode = hashCode * 59 + this.Website.GetHashCode();
                 if (this.UrlFormatString != null)
                     hashCode = hashCode * 59 + this.UrlFormatString.GetHashCode();
                 if (this.IsSupportedAsIdentifier != null)

@@ -5,30 +5,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CollectionHelper
-   </title>
+    <title>postItemsByIdTagsDelete </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CollectionHelper
-   ">
+    <meta name="title" content="postItemsByIdTagsDelete ">
     <meta name="generator" content="docfx 2.59.2.0">
     
-    <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="../../styles/socialbar.css">
-    <link rel="stylesheet" href="../../styles/header.css">
-    <link rel="stylesheet" href="../../styles/version.css">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/socialbar.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+    <link rel="stylesheet" href="../../../styles/version.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,100italic,300italic,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
-    <meta property="docfx:uid" content="MediaBrowser.Controller.Entities.CollectionHelper">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    <meta property="docfx:uid" content="emby.restapi/postItemsByIdTagsDelete">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../">
     
-    <script type="text/javascript" src="../../nav.js"></script>
-    <script type="text/javascript" src="../toc.js"></script>
+    <script type="text/javascript" src="../../../nav.js"></script>
+    <script type="text/javascript" src="../../toc.js"></script>
   
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
@@ -81,8 +79,8 @@
         <div class="container">
         	<nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
         		  
-        		  <a class="navbar-brand" href="../../index.html">
-        		    <img id="logo" class="svg" src="../../images/emby_dev_logo_beta.png" alt="">
+        		  <a class="navbar-brand" href="../../../index.html">
+        		    <img id="logo" class="svg" src="../../../images/emby_dev_logo_beta.png" alt="">
         		  </a>
         		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
         			<span class="sr-only">Toggle navigation</span>
@@ -94,16 +92,16 @@
         			
         			<ul class="nav level1 navbar-nav">
         			      <li class="nav-item">
-        			          <a class="nav-link" href="../../index.html" title="DEV Home">DEV Home</a>
+        			          <a class="nav-link" href="../../../index.html" title="DEV Home">DEV Home</a>
         			      </li>
         			      <li class="nav-item">
-        			          <a class="nav-link" href="../../doc/index.html" title="Documentation">Documentation</a>
+        			          <a class="nav-link" href="../../../doc/index.html" title="Documentation">Documentation</a>
         			      </li>
         			      <li class="nav-item">
-        			          <a class="nav-link" href="../../reference/index.html" title="Reference">Reference</a>
+        			          <a class="nav-link" href="../../../reference/index.html" title="Reference">Reference</a>
         			      </li>
         			      <li class="nav-item">
-        			          <a class="nav-link" href="../../download/index.html" title="Download">Download</a>
+        			          <a class="nav-link" href="../../../download/index.html" title="Download">Download</a>
         			      </li>
         			</ul>		</div>
         	</nav>
@@ -147,73 +145,206 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Entities.CollectionHelper">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/postItemsByIdTagsDelete">
 <div class="refdoc">
+
+<h1 id="emby_restapi_postItemsByIdTagsDelete" data-uid="emby.restapi/postItemsByIdTagsDelete" class="text-capitalize text-break">postItemsByIdTagsDelete</h1>
+<div class="markdown level0 summary"><p>Removes tags from an item</p>
+</div>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
+</div>
+
+
+
+
   
   
-  <h1 id="MediaBrowser_Controller_Entities_CollectionHelper" data-uid="MediaBrowser.Controller.Entities.CollectionHelper" class="text-break">Class CollectionHelper
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">CollectionHelper</span></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.html">MediaBrowser.Controller.Entities</a></h6>
-  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
-  <h5 id="MediaBrowser_Controller_Entities_CollectionHelper_syntax">Syntax</h5>
+  
+   <h3 id="emby_restapi_postItemsByIdTagsDelete_operation" data-uid="emby.restapi/postItemsByIdTagsDelete/operation" style="display:none;" class="text-capitalize">postItemsByIdTagsDelete</h3>
+  <h5>Request</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class CollectionHelper</code></pre>
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-post">post</span> /Items/{Id}/Tags/Delete</code></pre>
   </div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_CollectionHelper_AddCollection_" data-uid="MediaBrowser.Controller.Entities.CollectionHelper.AddCollection*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_CollectionHelper_AddCollection_System_Collections_Generic_List_MediaBrowser_Model_Dto_LinkedItemInfo__MediaBrowser_Model_Dto_LinkedItemInfo_" data-uid="MediaBrowser.Controller.Entities.CollectionHelper.AddCollection(System.Collections.Generic.List{MediaBrowser.Model.Dto.LinkedItemInfo},MediaBrowser.Model.Dto.LinkedItemInfo)">AddCollection(List&lt;LinkedItemInfo&gt;, LinkedItemInfo)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool AddCollection(List&lt;LinkedItemInfo&gt; current, LinkedItemInfo newEntry)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5>Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
+        <th>In</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Notes</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.LinkedItemInfo.html">LinkedItemInfo</a>&gt;</td>
-        <td><span class="parametername">current</span></td>
+        <td><span class="parametername">*Id</span></td>
+        <td>path</td>
+        <td>
+              
+  
+        </td>
         <td></td>
+        <td><p>Item Id</p>
+</td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Dto.LinkedItemInfo.html">LinkedItemInfo</a></td>
-        <td><span class="parametername">newEntry</span></td>
+        <td><span class="parametername">*body</span></td>
+        <td>body</td>
+        <td>
+  
+              <a href="#Emby_Api_UserLibrary_RemoveTags" class="typelink">RemoveTags</a>
+              
+        </td>
         <td></td>
+        <td><p>RemoveTags</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
+  <div class="responses">
+    <h5>Responses</h5>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Operation successful. Empty response.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Bad Request. Server cannot process request.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">401</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Unauthorized. Client needs to authenticate.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">403</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Forbidden. No permission for the reqested operation.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">404</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Resource not found or unavailable.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">500</span></td>
+        <td>
+              
+  
+        </td>
+        <td><p>Server error.</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<h2 id="definitions">Definitions</h2>
+  
+  <h3 id="Emby_Api_UserLibrary_RemoveTags" class="text-capitalize">RemoveTags</h3>
+  <div>
+      <span class="xref">Emby.Api.UserLibrary.RemoveTags</span>
+  </div>
   <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Tags</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_NameIdPair" class="typelink">NameIdPair[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Dto_NameIdPair" class="text-capitalize">NameIdPair</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.NameIdPair.html">MediaBrowser.Model.Dto.NameIdPair</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The identifier.</p>
+</td>
+          </tr>
+      </tbody>
   </table>
 </div>
 </article>
@@ -251,10 +382,10 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../searchIndex.js"></script>
-    <script type="text/javascript" src="../../styles/lunr.min.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../searchIndex.js"></script>
+    <script type="text/javascript" src="../../../styles/lunr.min.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

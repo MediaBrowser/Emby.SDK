@@ -65,16 +65,16 @@ export default class NetSocketsAddressFamily {
         ipx = "Ipx";
 
         /**
-         * value: "Osi"
-         * @const
-         */
-        osi = "Osi";
-
-        /**
          * value: "Iso"
          * @const
          */
         iso = "Iso";
+
+        /**
+         * value: "Osi"
+         * @const
+         */
+        osi = "Osi";
 
         /**
          * value: "Ecma"

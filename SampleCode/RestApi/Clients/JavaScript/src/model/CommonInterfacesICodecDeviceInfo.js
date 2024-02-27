@@ -17,7 +17,7 @@ import Version from './Version';
 /**
 * The CommonInterfacesICodecDeviceInfo model module.
 * @module model/CommonInterfacesICodecDeviceInfo
-* @version 4.9.0.5
+* @version 4.9.0.6
 */
 export default class CommonInterfacesICodecDeviceInfo {
     /**

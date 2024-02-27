@@ -60,15 +60,15 @@ namespace Emby.ApiClient.Model
         [EnumMember(Value = "Ipx")]
         Ipx = 8,
         /// <summary>
-        /// Enum Osi for value: Osi
-        /// </summary>
-        [EnumMember(Value = "Osi")]
-        Osi = 9,
-        /// <summary>
         /// Enum Iso for value: Iso
         /// </summary>
         [EnumMember(Value = "Iso")]
-        Iso = 10,
+        Iso = 9,
+        /// <summary>
+        /// Enum Osi for value: Osi
+        /// </summary>
+        [EnumMember(Value = "Osi")]
+        Osi = 10,
         /// <summary>
         /// Enum Ecma for value: Ecma
         /// </summary>
