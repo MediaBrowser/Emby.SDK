@@ -84,5 +84,33 @@ namespace Emby.ApiClient.Api
             return localVarResponse;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as administrator
+        /// </remarks>
+        /// <param name="body">DataRestoreOptions: </param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostBackuprestoreRestoredata (MBBackupApiDataRestoreOptions body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling BackupApiApi->PostBackuprestoreRestoredata");
+            }
+            
+            var request = new RestRequest("/BackupRestore/RestoreData", Method.Post);
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
     }
 }

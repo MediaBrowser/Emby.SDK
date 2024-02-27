@@ -151,7 +151,9 @@ import LocationType from './model/LocationType';
 import LogFile from './model/LogFile';
 import LoggingLogSeverity from './model/LoggingLogSeverity';
 import MBBackupApiAllBackupsInfo from './model/MBBackupApiAllBackupsInfo';
+import MBBackupApiDataRestoreOptions from './model/MBBackupApiDataRestoreOptions';
 import MBBackupApiRestoreOptions from './model/MBBackupApiRestoreOptions';
+import MBBackupApiUserRestoreInfo from './model/MBBackupApiUserRestoreInfo';
 import MBBackupBackupInfo from './model/MBBackupBackupInfo';
 import MarkerType from './model/MarkerType';
 import MediaEncodingCodecParameterContext from './model/MediaEncodingCodecParameterContext';
@@ -425,7 +427,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.9.0.6
+* @version 4.9.0.7
 */
 export {
     /**
@@ -1281,10 +1283,22 @@ export {
     MBBackupApiAllBackupsInfo,
 
     /**
+     * The MBBackupApiDataRestoreOptions model constructor.
+     * @property {module:model/MBBackupApiDataRestoreOptions}
+     */
+    MBBackupApiDataRestoreOptions,
+
+    /**
      * The MBBackupApiRestoreOptions model constructor.
      * @property {module:model/MBBackupApiRestoreOptions}
      */
     MBBackupApiRestoreOptions,
+
+    /**
+     * The MBBackupApiUserRestoreInfo model constructor.
+     * @property {module:model/MBBackupApiUserRestoreInfo}
+     */
+    MBBackupApiUserRestoreInfo,
 
     /**
      * The MBBackupBackupInfo model constructor.

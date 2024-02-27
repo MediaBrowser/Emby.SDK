@@ -16,4 +16,5 @@ type MbBackupBackupInfo struct {
 	CanRestore bool `json:"CanRestore,omitempty"`
 	IsFullBackup bool `json:"IsFullBackup,omitempty"`
 	DateCreated time.Time `json:"DateCreated,omitempty"`
+	Users []NameIdPair `json:"Users,omitempty"`
 }

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.6
+  version: 4.9.0.7
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -20803,6 +20803,39 @@ paths:
           application/xml:
             schema:
               $ref: '#/components/schemas/MBBackup.Api.RestoreOptions'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
+  /BackupRestore/RestoreData:
+    post:
+      tags:
+      - BackupApi
+      description: Requires authentication as administrator
+      operationId: postBackuprestoreRestoredata
+      requestBody:
+        description: "DataRestoreOptions: "
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MBBackup.Api.DataRestoreOptions'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/MBBackup.Api.DataRestoreOptions'
         required: true
       responses:
         "200":
@@ -67368,6 +67401,22 @@ components:
         UseFiles:
           type: string
       x-internal-ref-name: MBBackup.Api.RestoreOptions
+    MBBackup.Api.DataRestoreOptions:
+      type: object
+      properties:
+        Users:
+          type: array
+          items:
+            $ref: '#/components/schemas/MBBackup.Api.UserRestoreInfo'
+      x-internal-ref-name: MBBackup.Api.DataRestoreOptions
+    MBBackup.Api.UserRestoreInfo:
+      type: object
+      properties:
+        SourceUserId:
+          type: string
+        TargetUserId:
+          type: string
+      x-internal-ref-name: MBBackup.Api.UserRestoreInfo
     MBBackup.Api.AllBackupsInfo:
       type: object
       properties:
@@ -67386,6 +67435,11 @@ components:
           PluginVersion: PluginVersion
           CanRestore: true
           DateCreated: 2000-01-23T04:56:07.000+00:00
+          Users:
+          - Id: Id
+            Name: Name
+          - Id: Id
+            Name: Name
           IsFullBackup: true
           Name: Name
       x-internal-ref-name: MBBackup.Api.AllBackupsInfo
@@ -67405,11 +67459,20 @@ components:
         DateCreated:
           type: string
           format: date-time
+        Users:
+          type: array
+          items:
+            $ref: '#/components/schemas/NameIdPair'
       example:
         ServerVersion: ServerVersion
         PluginVersion: PluginVersion
         CanRestore: true
         DateCreated: 2000-01-23T04:56:07.000+00:00
+        Users:
+        - Id: Id
+          Name: Name
+        - Id: Id
+          Name: Name
         IsFullBackup: true
         Name: Name
       x-internal-ref-name: MBBackup.BackupInfo

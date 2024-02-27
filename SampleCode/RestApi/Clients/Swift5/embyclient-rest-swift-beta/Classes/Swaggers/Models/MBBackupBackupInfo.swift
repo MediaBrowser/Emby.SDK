@@ -17,14 +17,16 @@ public struct MBBackupBackupInfo: Codable {
     public var canRestore: Bool?
     public var isFullBackup: Bool?
     public var dateCreated: Date?
+    public var users: [NameIdPair]?
 
-    public init(serverVersion: String? = nil, pluginVersion: String? = nil, name: String? = nil, canRestore: Bool? = nil, isFullBackup: Bool? = nil, dateCreated: Date? = nil) {
+    public init(serverVersion: String? = nil, pluginVersion: String? = nil, name: String? = nil, canRestore: Bool? = nil, isFullBackup: Bool? = nil, dateCreated: Date? = nil, users: [NameIdPair]? = nil) {
         self.serverVersion = serverVersion
         self.pluginVersion = pluginVersion
         self.name = name
         self.canRestore = canRestore
         self.isFullBackup = isFullBackup
         self.dateCreated = dateCreated
+        self.users = users
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -34,6 +36,7 @@ public struct MBBackupBackupInfo: Codable {
         case canRestore = "CanRestore"
         case isFullBackup = "IsFullBackup"
         case dateCreated = "DateCreated"
+        case users = "Users"
     }
 
 }

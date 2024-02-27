@@ -222,7 +222,9 @@ from embyclient-python-beta.models.location_type import LocationType
 from embyclient-python-beta.models.log_file import LogFile
 from embyclient-python-beta.models.logging_log_severity import LoggingLogSeverity
 from embyclient-python-beta.models.mb_backup_api_all_backups_info import MBBackupApiAllBackupsInfo
+from embyclient-python-beta.models.mb_backup_api_data_restore_options import MBBackupApiDataRestoreOptions
 from embyclient-python-beta.models.mb_backup_api_restore_options import MBBackupApiRestoreOptions
+from embyclient-python-beta.models.mb_backup_api_user_restore_info import MBBackupApiUserRestoreInfo
 from embyclient-python-beta.models.mb_backup_backup_info import MBBackupBackupInfo
 from embyclient-python-beta.models.marker_type import MarkerType
 from embyclient-python-beta.models.media_encoding_codec_parameter_context import MediaEncodingCodecParameterContext

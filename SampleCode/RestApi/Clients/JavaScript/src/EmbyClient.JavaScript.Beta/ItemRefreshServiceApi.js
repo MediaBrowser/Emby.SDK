@@ -15,7 +15,7 @@ import MetadataRefreshMode from '../model/MetadataRefreshMode';
 /**
 * ItemRefreshService service.
 * @module EmbyClient.JavaScript.Beta/ItemRefreshServiceApi
-* @version 4.9.0.6
+* @version 4.9.0.7
 */
 export default class ItemRefreshServiceApi {
 

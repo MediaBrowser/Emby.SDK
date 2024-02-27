@@ -15,7 +15,7 @@ import LibraryUserCopyOptions from './LibraryUserCopyOptions';
 /**
 * The CreateUserByName model module.
 * @module model/CreateUserByName
-* @version 4.9.0.6
+* @version 4.9.0.7
 */
 export default class CreateUserByName {
     /**

@@ -6,6 +6,7 @@
 package EmbyClient.Java.Beta;
 
 import io.swagger.client.model.MBBackupApiAllBackupsInfo;
+import io.swagger.client.model.MBBackupApiDataRestoreOptions;
 import io.swagger.client.model.MBBackupApiRestoreOptions;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -51,6 +52,21 @@ public class BackupApiApiTest {
     public void postBackuprestoreRestoreTest() throws Exception {
         MBBackupApiRestoreOptions body = null;
         api.postBackuprestoreRestore(body);
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * Requires authentication as administrator
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postBackuprestoreRestoredataTest() throws Exception {
+        MBBackupApiDataRestoreOptions body = null;
+        api.postBackuprestoreRestoredata(body);
 
         // TODO: test validations
     }

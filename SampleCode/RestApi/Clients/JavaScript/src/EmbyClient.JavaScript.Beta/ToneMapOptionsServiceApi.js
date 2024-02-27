@@ -15,7 +15,7 @@ import EditObjectContainer from '../model/EditObjectContainer';
 /**
 * ToneMapOptionsService service.
 * @module EmbyClient.JavaScript.Beta/ToneMapOptionsServiceApi
-* @version 4.9.0.6
+* @version 4.9.0.7
 */
 export default class ToneMapOptionsServiceApi {
 

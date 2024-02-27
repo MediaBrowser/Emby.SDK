@@ -18,7 +18,7 @@ import PlaybackInfoResponse from '../model/PlaybackInfoResponse';
 /**
 * MediaInfoService service.
 * @module EmbyClient.JavaScript.Beta/MediaInfoServiceApi
-* @version 4.9.0.6
+* @version 4.9.0.7
 */
 export default class MediaInfoServiceApi {
 

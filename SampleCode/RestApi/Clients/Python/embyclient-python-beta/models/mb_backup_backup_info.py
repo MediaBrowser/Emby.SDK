@@ -27,7 +27,8 @@ class MBBackupBackupInfo(object):
         'name': 'str',
         'can_restore': 'bool',
         'is_full_backup': 'bool',
-        'date_created': 'datetime'
+        'date_created': 'datetime',
+        'users': 'list[NameIdPair]'
     }
 
     attribute_map = {
@@ -36,10 +37,11 @@ class MBBackupBackupInfo(object):
         'name': 'Name',
         'can_restore': 'CanRestore',
         'is_full_backup': 'IsFullBackup',
-        'date_created': 'DateCreated'
+        'date_created': 'DateCreated',
+        'users': 'Users'
     }
 
-    def __init__(self, server_version=None, plugin_version=None, name=None, can_restore=None, is_full_backup=None, date_created=None):  # noqa: E501
+    def __init__(self, server_version=None, plugin_version=None, name=None, can_restore=None, is_full_backup=None, date_created=None, users=None):  # noqa: E501
         """MBBackupBackupInfo - a model defined in Swagger"""  # noqa: E501
         self._server_version = None
         self._plugin_version = None
@@ -47,6 +49,7 @@ class MBBackupBackupInfo(object):
         self._can_restore = None
         self._is_full_backup = None
         self._date_created = None
+        self._users = None
         self.discriminator = None
         if server_version is not None:
             self.server_version = server_version
@@ -60,6 +63,8 @@ class MBBackupBackupInfo(object):
             self.is_full_backup = is_full_backup
         if date_created is not None:
             self.date_created = date_created
+        if users is not None:
+            self.users = users
 
     @property
     def server_version(self):
@@ -186,6 +191,27 @@ class MBBackupBackupInfo(object):
         """
 
         self._date_created = date_created
+
+    @property
+    def users(self):
+        """Gets the users of this MBBackupBackupInfo.  # noqa: E501
+
+
+        :return: The users of this MBBackupBackupInfo.  # noqa: E501
+        :rtype: list[NameIdPair]
+        """
+        return self._users
+
+    @users.setter
+    def users(self, users):
+        """Sets the users of this MBBackupBackupInfo.
+
+
+        :param users: The users of this MBBackupBackupInfo.  # noqa: E501
+        :type: list[NameIdPair]
+        """
+
+        self._users = users
 
     def to_dict(self):
         """Returns the model properties as a dict"""
