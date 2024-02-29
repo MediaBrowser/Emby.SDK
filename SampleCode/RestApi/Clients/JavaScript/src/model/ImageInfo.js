@@ -15,7 +15,7 @@ import ImageType from './ImageType';
 /**
 * The ImageInfo model module.
 * @module model/ImageInfo
-* @version 4.9.0.7
+* @version 4.9.0.8
 */
 export default class ImageInfo {
     /**

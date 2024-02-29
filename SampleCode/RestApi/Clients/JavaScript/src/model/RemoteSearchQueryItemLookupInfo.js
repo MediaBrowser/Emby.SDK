@@ -15,7 +15,7 @@ import ItemLookupInfo from './ItemLookupInfo';
 /**
 * The RemoteSearchQueryItemLookupInfo model module.
 * @module model/RemoteSearchQueryItemLookupInfo
-* @version 4.9.0.7
+* @version 4.9.0.8
 */
 export default class RemoteSearchQueryItemLookupInfo {
     /**

@@ -274,33 +274,6 @@
   </h3>
   
   
-  <a id="MediaBrowser_Controller_Drawing_IImageProcessor_AddImageEncoder_" data-uid="MediaBrowser.Controller.Drawing.IImageProcessor.AddImageEncoder*"></a>
-  <h4 id="MediaBrowser_Controller_Drawing_IImageProcessor_AddImageEncoder_MediaBrowser_Controller_Drawing_IImageEncoder_" data-uid="MediaBrowser.Controller.Drawing.IImageProcessor.AddImageEncoder(MediaBrowser.Controller.Drawing.IImageEncoder)">AddImageEncoder(IImageEncoder)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddImageEncoder(IImageEncoder imageEncoder)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Drawing.IImageEncoder.html">IImageEncoder</a></td>
-        <td><span class="parametername">imageEncoder</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="MediaBrowser_Controller_Drawing_IImageProcessor_AddParts_" data-uid="MediaBrowser.Controller.Drawing.IImageProcessor.AddParts*"></a>
   <h4 id="MediaBrowser_Controller_Drawing_IImageProcessor_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Providers_IImageEnhancer__" data-uid="MediaBrowser.Controller.Drawing.IImageProcessor.AddParts(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Providers.IImageEnhancer})">AddParts(IEnumerable&lt;IImageEnhancer&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds the parts.</p>
@@ -815,7 +788,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; GetSupportedImage(ItemImageInfo originalImage, IImageEncoder imageEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">string GetSupportedImage(ItemImageInfo originalImage, IImageEncoder imageEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -849,7 +822,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1016,9 +989,36 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-3">Tuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">System.Tuple</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;&gt;</td>
         <td><p>Task.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Drawing_IImageProcessor_SetImageEncoders_" data-uid="MediaBrowser.Controller.Drawing.IImageProcessor.SetImageEncoders*"></a>
+  <h4 id="MediaBrowser_Controller_Drawing_IImageProcessor_SetImageEncoders_System_Collections_Generic_List_MediaBrowser_Controller_Drawing_IImageEncoder__" data-uid="MediaBrowser.Controller.Drawing.IImageProcessor.SetImageEncoders(System.Collections.Generic.List{MediaBrowser.Controller.Drawing.IImageEncoder})">SetImageEncoders(List&lt;IImageEncoder&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetImageEncoders(List&lt;IImageEncoder&gt; imageEncoders)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Drawing.IImageEncoder.html">IImageEncoder</a>&gt;</td>
+        <td><span class="parametername">imageEncoders</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

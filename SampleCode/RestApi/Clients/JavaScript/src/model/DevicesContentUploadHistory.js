@@ -15,7 +15,7 @@ import DevicesLocalFileInfo from './DevicesLocalFileInfo';
 /**
 * The DevicesContentUploadHistory model module.
 * @module model/DevicesContentUploadHistory
-* @version 4.9.0.7
+* @version 4.9.0.8
 */
 export default class DevicesContentUploadHistory {
     /**
