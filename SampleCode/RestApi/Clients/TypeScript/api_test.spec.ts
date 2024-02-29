@@ -2,7 +2,7 @@
  * Emby Server REST API
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.0.80
+ * OpenAPI spec version: 4.8.3.0
  * 
  *
  * NOTE: This file is auto generated.
@@ -425,6 +425,10 @@ describe("BackupApiApi", () => {
   test("postBackuprestoreRestore", () => {
     const body: api.MBBackupApiRestoreOptions = undefined
     return expect(instance.postBackuprestoreRestore(body, {})).resolves.toBe(null)
+  })
+  test("postBackuprestoreRestoredata", () => {
+    const body: api.MBBackupApiDataRestoreOptions = undefined
+    return expect(instance.postBackuprestoreRestoredata(body, {})).resolves.toBe(null)
   })
 })
 
@@ -6353,6 +6357,11 @@ describe("TagServiceApi", () => {
     const body: api.UserLibraryAddTags = undefined
     const id: string = "id_example"
     return expect(instance.postItemsByIdTagsAdd(body, id, {})).resolves.toBe(null)
+  })
+  test("postItemsByIdTagsDelete", () => {
+    const body: api.UserLibraryRemoveTags = undefined
+    const id: string = "id_example"
+    return expect(instance.postItemsByIdTagsDelete(body, id, {})).resolves.toBe(null)
   })
 })
 

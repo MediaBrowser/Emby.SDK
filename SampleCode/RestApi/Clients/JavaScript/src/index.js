@@ -151,7 +151,9 @@ import LocationType from './model/LocationType';
 import LogFile from './model/LogFile';
 import LoggingLogSeverity from './model/LoggingLogSeverity';
 import MBBackupApiAllBackupsInfo from './model/MBBackupApiAllBackupsInfo';
+import MBBackupApiDataRestoreOptions from './model/MBBackupApiDataRestoreOptions';
 import MBBackupApiRestoreOptions from './model/MBBackupApiRestoreOptions';
+import MBBackupApiUserRestoreInfo from './model/MBBackupApiUserRestoreInfo';
 import MBBackupBackupInfo from './model/MBBackupBackupInfo';
 import MarkerType from './model/MarkerType';
 import MediaEncodingCodecParameterContext from './model/MediaEncodingCodecParameterContext';
@@ -315,6 +317,7 @@ import UserItemShareLevel from './model/UserItemShareLevel';
 import UserLibraryAddTags from './model/UserLibraryAddTags';
 import UserLibraryLeaveSharedItems from './model/UserLibraryLeaveSharedItems';
 import UserLibraryOfficialRatingItem from './model/UserLibraryOfficialRatingItem';
+import UserLibraryRemoveTags from './model/UserLibraryRemoveTags';
 import UserLibraryTagItem from './model/UserLibraryTagItem';
 import UserLibraryUpdateUserItemAccess from './model/UserLibraryUpdateUserItemAccess';
 import UserNotificationInfo from './model/UserNotificationInfo';
@@ -424,7 +427,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export {
     /**
@@ -1280,10 +1283,22 @@ export {
     MBBackupApiAllBackupsInfo,
 
     /**
+     * The MBBackupApiDataRestoreOptions model constructor.
+     * @property {module:model/MBBackupApiDataRestoreOptions}
+     */
+    MBBackupApiDataRestoreOptions,
+
+    /**
      * The MBBackupApiRestoreOptions model constructor.
      * @property {module:model/MBBackupApiRestoreOptions}
      */
     MBBackupApiRestoreOptions,
+
+    /**
+     * The MBBackupApiUserRestoreInfo model constructor.
+     * @property {module:model/MBBackupApiUserRestoreInfo}
+     */
+    MBBackupApiUserRestoreInfo,
 
     /**
      * The MBBackupBackupInfo model constructor.
@@ -2262,6 +2277,12 @@ export {
      * @property {module:model/UserLibraryOfficialRatingItem}
      */
     UserLibraryOfficialRatingItem,
+
+    /**
+     * The UserLibraryRemoveTags model constructor.
+     * @property {module:model/UserLibraryRemoveTags}
+     */
+    UserLibraryRemoveTags,
 
     /**
      * The UserLibraryTagItem model constructor.

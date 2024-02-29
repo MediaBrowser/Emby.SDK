@@ -211,12 +211,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><span class="parametername">minDate</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">hasUserId</span></td>
         <td></td>
       </tr>
@@ -228,6 +228,68 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">limit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Activity.ActivityLogEntry.html">ActivityLogEntry</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Activity_IActivityManager_GetActivityLogEntries_" data-uid="MediaBrowser.Model.Activity.IActivityManager.GetActivityLogEntries*"></a>
+  <h4 id="MediaBrowser_Model_Activity_IActivityManager_GetActivityLogEntries_System_Nullable_System_DateTimeOffset__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_" data-uid="MediaBrowser.Model.Activity.IActivityManager.GetActivityLogEntries(System.Nullable{System.DateTimeOffset},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean)">GetActivityLogEntries(Nullable&lt;DateTimeOffset&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;ActivityLogEntry&gt; GetActivityLogEntries(DateTimeOffset? minDate, bool? hasUserId, int? startIndex, int? limit, bool enableTotalRecordCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">minDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">hasUserId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enableTotalRecordCount</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -268,7 +330,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><span class="parametername">minDate</span></td>
         <td></td>
       </tr>
@@ -280,6 +342,63 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">limit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Activity.ActivityLogEntry.html">ActivityLogEntry</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_Activity_IActivityManager_GetActivityLogEntries_" data-uid="MediaBrowser.Model.Activity.IActivityManager.GetActivityLogEntries*"></a>
+  <h4 id="MediaBrowser_Model_Activity_IActivityManager_GetActivityLogEntries_System_Nullable_System_DateTimeOffset__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_" data-uid="MediaBrowser.Model.Activity.IActivityManager.GetActivityLogEntries(System.Nullable{System.DateTimeOffset},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean)">GetActivityLogEntries(Nullable&lt;DateTimeOffset&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">QueryResult&lt;ActivityLogEntry&gt; GetActivityLogEntries(DateTimeOffset? minDate, int? startIndex, int? limit, bool enableTotalRecordCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+        <td><span class="parametername">minDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">startIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">enableTotalRecordCount</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -320,7 +439,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Model.Activity.ActivityLogEntry.html">ActivityLogEntry</a>&gt;&gt;</td>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Model.Activity.ActivityLogEntry.html">ActivityLogEntry</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -10,11 +10,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import NameIdPair from './NameIdPair';
 
 /**
 * The MBBackupBackupInfo model module.
 * @module model/MBBackupBackupInfo
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class MBBackupBackupInfo {
     /**
@@ -59,6 +60,9 @@ export default class MBBackupBackupInfo {
             if (data.hasOwnProperty('DateCreated')) {
                 obj['DateCreated'] = ApiClient.convertToType(data['DateCreated'], 'Date');
             }
+            if (data.hasOwnProperty('Users')) {
+                obj['Users'] = ApiClient.convertToType(data['Users'], [NameIdPair]);
+            }
         }
         return obj;
     }
@@ -87,6 +91,10 @@ export default class MBBackupBackupInfo {
     * @member {Date} DateCreated
     */
     'DateCreated' = undefined;
+    /**
+    * @member {Array.<module:model/NameIdPair>} Users
+    */
+    'Users' = undefined;
 
 
 

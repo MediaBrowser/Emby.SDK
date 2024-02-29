@@ -222,7 +222,9 @@ from embyclient-python.models.location_type import LocationType
 from embyclient-python.models.log_file import LogFile
 from embyclient-python.models.logging_log_severity import LoggingLogSeverity
 from embyclient-python.models.mb_backup_api_all_backups_info import MBBackupApiAllBackupsInfo
+from embyclient-python.models.mb_backup_api_data_restore_options import MBBackupApiDataRestoreOptions
 from embyclient-python.models.mb_backup_api_restore_options import MBBackupApiRestoreOptions
+from embyclient-python.models.mb_backup_api_user_restore_info import MBBackupApiUserRestoreInfo
 from embyclient-python.models.mb_backup_backup_info import MBBackupBackupInfo
 from embyclient-python.models.marker_type import MarkerType
 from embyclient-python.models.media_encoding_codec_parameter_context import MediaEncodingCodecParameterContext
@@ -386,6 +388,7 @@ from embyclient-python.models.user_item_share_level import UserItemShareLevel
 from embyclient-python.models.user_library_add_tags import UserLibraryAddTags
 from embyclient-python.models.user_library_leave_shared_items import UserLibraryLeaveSharedItems
 from embyclient-python.models.user_library_official_rating_item import UserLibraryOfficialRatingItem
+from embyclient-python.models.user_library_remove_tags import UserLibraryRemoveTags
 from embyclient-python.models.user_library_tag_item import UserLibraryTagItem
 from embyclient-python.models.user_library_update_user_item_access import UserLibraryUpdateUserItemAccess
 from embyclient-python.models.user_notification_info import UserNotificationInfo

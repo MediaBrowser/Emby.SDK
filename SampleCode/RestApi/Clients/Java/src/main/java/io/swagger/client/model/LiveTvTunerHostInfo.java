@@ -53,6 +53,9 @@ public class LiveTvTunerHostInfo {
   @SerializedName("AllowMappingByNumber")
   private Boolean allowMappingByNumber = null;
 
+  @SerializedName("ImportGuideData")
+  private Boolean importGuideData = null;
+
   @SerializedName("Source")
   private String source = null;
 
@@ -269,6 +272,24 @@ public class LiveTvTunerHostInfo {
     this.allowMappingByNumber = allowMappingByNumber;
   }
 
+  public LiveTvTunerHostInfo importGuideData(Boolean importGuideData) {
+    this.importGuideData = importGuideData;
+    return this;
+  }
+
+   /**
+   * Get importGuideData
+   * @return importGuideData
+  **/
+  @Schema(description = "")
+  public Boolean isImportGuideData() {
+    return importGuideData;
+  }
+
+  public void setImportGuideData(Boolean importGuideData) {
+    this.importGuideData = importGuideData;
+  }
+
   public LiveTvTunerHostInfo source(String source) {
     this.source = source;
     return this;
@@ -398,6 +419,7 @@ public class LiveTvTunerHostInfo {
         Objects.equals(this.preferEpgChannelNumbers, liveTvTunerHostInfo.preferEpgChannelNumbers) &&
         Objects.equals(this.allowHWTranscoding, liveTvTunerHostInfo.allowHWTranscoding) &&
         Objects.equals(this.allowMappingByNumber, liveTvTunerHostInfo.allowMappingByNumber) &&
+        Objects.equals(this.importGuideData, liveTvTunerHostInfo.importGuideData) &&
         Objects.equals(this.source, liveTvTunerHostInfo.source) &&
         Objects.equals(this.tunerCount, liveTvTunerHostInfo.tunerCount) &&
         Objects.equals(this.userAgent, liveTvTunerHostInfo.userAgent) &&
@@ -408,7 +430,7 @@ public class LiveTvTunerHostInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, url, type, deviceId, friendlyName, setupUrl, importFavoritesOnly, preferEpgChannelImages, preferEpgChannelNumbers, allowHWTranscoding, allowMappingByNumber, source, tunerCount, userAgent, referrer, providerOptions, dataVersion);
+    return Objects.hash(id, url, type, deviceId, friendlyName, setupUrl, importFavoritesOnly, preferEpgChannelImages, preferEpgChannelNumbers, allowHWTranscoding, allowMappingByNumber, importGuideData, source, tunerCount, userAgent, referrer, providerOptions, dataVersion);
   }
 
 
@@ -428,6 +450,7 @@ public class LiveTvTunerHostInfo {
     sb.append("    preferEpgChannelNumbers: ").append(toIndentedString(preferEpgChannelNumbers)).append("\n");
     sb.append("    allowHWTranscoding: ").append(toIndentedString(allowHWTranscoding)).append("\n");
     sb.append("    allowMappingByNumber: ").append(toIndentedString(allowMappingByNumber)).append("\n");
+    sb.append("    importGuideData: ").append(toIndentedString(importGuideData)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    tunerCount: ").append(toIndentedString(tunerCount)).append("\n");
     sb.append("    userAgent: ").append(toIndentedString(userAgent)).append("\n");

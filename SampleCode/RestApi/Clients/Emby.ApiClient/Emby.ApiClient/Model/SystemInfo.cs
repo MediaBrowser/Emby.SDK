@@ -57,6 +57,12 @@ namespace Emby.ApiClient.Model
         public bool? IsShuttingDown { get; set; }
 
         /// <summary>
+        /// Gets or Sets HasImageEnhancers
+        /// </summary>
+        /// <value>The HasImageEnhancers.</value>
+        public bool? HasImageEnhancers { get; set; }
+
+        /// <summary>
         /// The operating sytem.
         /// </summary>
         /// <value>The OperatingSystem.</value>
@@ -183,6 +189,12 @@ namespace Emby.ApiClient.Model
         public bool? HardwareAccelerationRequiresPremiere { get; set; }
 
         /// <summary>
+        /// Gets or Sets WakeOnLanInfo
+        /// </summary>
+        /// <value>The WakeOnLanInfo.</value>
+        public List<WakeOnLanInfo> WakeOnLanInfo { get; set; }
+
+        /// <summary>
         /// The local address.
         /// </summary>
         /// <value>The LocalAddress.</value>
@@ -237,6 +249,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  PackageName: ").Append(PackageName).Append("\n");
             sb.Append("  HasPendingRestart: ").Append(HasPendingRestart).Append("\n");
             sb.Append("  IsShuttingDown: ").Append(IsShuttingDown).Append("\n");
+            sb.Append("  HasImageEnhancers: ").Append(HasImageEnhancers).Append("\n");
             sb.Append("  OperatingSystem: ").Append(OperatingSystem).Append("\n");
             sb.Append("  SupportsLibraryMonitor: ").Append(SupportsLibraryMonitor).Append("\n");
             sb.Append("  SupportsLocalPortConfiguration: ").Append(SupportsLocalPortConfiguration).Append("\n");
@@ -258,6 +271,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  HasUpdateAvailable: ").Append(HasUpdateAvailable).Append("\n");
             sb.Append("  SupportsAutoRunAtStartup: ").Append(SupportsAutoRunAtStartup).Append("\n");
             sb.Append("  HardwareAccelerationRequiresPremiere: ").Append(HardwareAccelerationRequiresPremiere).Append("\n");
+            sb.Append("  WakeOnLanInfo: ").Append(WakeOnLanInfo).Append("\n");
             sb.Append("  LocalAddress: ").Append(LocalAddress).Append("\n");
             sb.Append("  LocalAddresses: ").Append(LocalAddresses).Append("\n");
             sb.Append("  WanAddress: ").Append(WanAddress).Append("\n");
@@ -314,6 +328,11 @@ namespace Emby.ApiClient.Model
                     this.IsShuttingDown == input.IsShuttingDown ||
                     (this.IsShuttingDown != null &&
                     this.IsShuttingDown.Equals(input.IsShuttingDown))
+                ) && 
+                (
+                    this.HasImageEnhancers == input.HasImageEnhancers ||
+                    (this.HasImageEnhancers != null &&
+                    this.HasImageEnhancers.Equals(input.HasImageEnhancers))
                 ) && 
                 (
                     this.OperatingSystem == input.OperatingSystem ||
@@ -422,6 +441,12 @@ namespace Emby.ApiClient.Model
                     this.HardwareAccelerationRequiresPremiere.Equals(input.HardwareAccelerationRequiresPremiere))
                 ) && 
                 (
+                    this.WakeOnLanInfo == input.WakeOnLanInfo ||
+                    this.WakeOnLanInfo != null &&
+                    input.WakeOnLanInfo != null &&
+                    this.WakeOnLanInfo.SequenceEqual(input.WakeOnLanInfo)
+                ) && 
+                (
                     this.LocalAddress == input.LocalAddress ||
                     (this.LocalAddress != null &&
                     this.LocalAddress.Equals(input.LocalAddress))
@@ -479,6 +504,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.HasPendingRestart.GetHashCode();
                 if (this.IsShuttingDown != null)
                     hashCode = hashCode * 59 + this.IsShuttingDown.GetHashCode();
+                if (this.HasImageEnhancers != null)
+                    hashCode = hashCode * 59 + this.HasImageEnhancers.GetHashCode();
                 if (this.OperatingSystem != null)
                     hashCode = hashCode * 59 + this.OperatingSystem.GetHashCode();
                 if (this.SupportsLibraryMonitor != null)
@@ -521,6 +548,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.SupportsAutoRunAtStartup.GetHashCode();
                 if (this.HardwareAccelerationRequiresPremiere != null)
                     hashCode = hashCode * 59 + this.HardwareAccelerationRequiresPremiere.GetHashCode();
+                if (this.WakeOnLanInfo != null)
+                    hashCode = hashCode * 59 + this.WakeOnLanInfo.GetHashCode();
                 if (this.LocalAddress != null)
                     hashCode = hashCode * 59 + this.LocalAddress.GetHashCode();
                 if (this.LocalAddresses != null)

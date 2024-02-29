@@ -7256,5 +7256,45 @@ namespace Emby.ApiClient.Api
             return localVarResponse;
         }
 
+        /// <summary>
+        /// Removes tags from an item
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">RemoveTags</param>
+        /// <param name="id">Item Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostItemsByIdTagsDelete (UserLibraryRemoveTags body, string id)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling TagServiceApi->PostItemsByIdTagsDelete");
+            }
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling TagServiceApi->PostItemsByIdTagsDelete");
+            }
+            
+            var request = new RestRequest("/Items/{Id}/Tags/Delete", Method.Post);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
     }
 }

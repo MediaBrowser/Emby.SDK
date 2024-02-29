@@ -14,6 +14,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.InstallationInfo;
 import io.swagger.client.model.PackageVersionClass;
+import io.swagger.client.model.WakeOnLanInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,6 +39,9 @@ public class SystemInfo {
 
   @SerializedName("IsShuttingDown")
   private Boolean isShuttingDown = null;
+
+  @SerializedName("HasImageEnhancers")
+  private Boolean hasImageEnhancers = null;
 
   @SerializedName("OperatingSystem")
   private String operatingSystem = null;
@@ -101,6 +105,9 @@ public class SystemInfo {
 
   @SerializedName("HardwareAccelerationRequiresPremiere")
   private Boolean hardwareAccelerationRequiresPremiere = null;
+
+  @SerializedName("WakeOnLanInfo")
+  private List<WakeOnLanInfo> wakeOnLanInfo = null;
 
   @SerializedName("LocalAddress")
   private String localAddress = null;
@@ -211,6 +218,24 @@ public class SystemInfo {
 
   public void setIsShuttingDown(Boolean isShuttingDown) {
     this.isShuttingDown = isShuttingDown;
+  }
+
+  public SystemInfo hasImageEnhancers(Boolean hasImageEnhancers) {
+    this.hasImageEnhancers = hasImageEnhancers;
+    return this;
+  }
+
+   /**
+   * Get hasImageEnhancers
+   * @return hasImageEnhancers
+  **/
+  @Schema(description = "")
+  public Boolean isHasImageEnhancers() {
+    return hasImageEnhancers;
+  }
+
+  public void setHasImageEnhancers(Boolean hasImageEnhancers) {
+    this.hasImageEnhancers = hasImageEnhancers;
   }
 
   public SystemInfo operatingSystem(String operatingSystem) {
@@ -599,6 +624,32 @@ public class SystemInfo {
     this.hardwareAccelerationRequiresPremiere = hardwareAccelerationRequiresPremiere;
   }
 
+  public SystemInfo wakeOnLanInfo(List<WakeOnLanInfo> wakeOnLanInfo) {
+    this.wakeOnLanInfo = wakeOnLanInfo;
+    return this;
+  }
+
+  public SystemInfo addWakeOnLanInfoItem(WakeOnLanInfo wakeOnLanInfoItem) {
+    if (this.wakeOnLanInfo == null) {
+      this.wakeOnLanInfo = new ArrayList<WakeOnLanInfo>();
+    }
+    this.wakeOnLanInfo.add(wakeOnLanInfoItem);
+    return this;
+  }
+
+   /**
+   * Get wakeOnLanInfo
+   * @return wakeOnLanInfo
+  **/
+  @Schema(description = "")
+  public List<WakeOnLanInfo> getWakeOnLanInfo() {
+    return wakeOnLanInfo;
+  }
+
+  public void setWakeOnLanInfo(List<WakeOnLanInfo> wakeOnLanInfo) {
+    this.wakeOnLanInfo = wakeOnLanInfo;
+  }
+
   public SystemInfo localAddress(String localAddress) {
     this.localAddress = localAddress;
     return this;
@@ -756,6 +807,7 @@ public class SystemInfo {
         Objects.equals(this.packageName, systemInfo.packageName) &&
         Objects.equals(this.hasPendingRestart, systemInfo.hasPendingRestart) &&
         Objects.equals(this.isShuttingDown, systemInfo.isShuttingDown) &&
+        Objects.equals(this.hasImageEnhancers, systemInfo.hasImageEnhancers) &&
         Objects.equals(this.operatingSystem, systemInfo.operatingSystem) &&
         Objects.equals(this.supportsLibraryMonitor, systemInfo.supportsLibraryMonitor) &&
         Objects.equals(this.supportsLocalPortConfiguration, systemInfo.supportsLocalPortConfiguration) &&
@@ -777,6 +829,7 @@ public class SystemInfo {
         Objects.equals(this.hasUpdateAvailable, systemInfo.hasUpdateAvailable) &&
         Objects.equals(this.supportsAutoRunAtStartup, systemInfo.supportsAutoRunAtStartup) &&
         Objects.equals(this.hardwareAccelerationRequiresPremiere, systemInfo.hardwareAccelerationRequiresPremiere) &&
+        Objects.equals(this.wakeOnLanInfo, systemInfo.wakeOnLanInfo) &&
         Objects.equals(this.localAddress, systemInfo.localAddress) &&
         Objects.equals(this.localAddresses, systemInfo.localAddresses) &&
         Objects.equals(this.wanAddress, systemInfo.wanAddress) &&
@@ -788,7 +841,7 @@ public class SystemInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(systemUpdateLevel, operatingSystemDisplayName, packageName, hasPendingRestart, isShuttingDown, operatingSystem, supportsLibraryMonitor, supportsLocalPortConfiguration, supportsWakeServer, webSocketPortNumber, completedInstallations, canSelfRestart, canSelfUpdate, canLaunchWebBrowser, programDataPath, itemsByNamePath, cachePath, logPath, internalMetadataPath, transcodingTempPath, httpServerPortNumber, supportsHttps, httpsPortNumber, hasUpdateAvailable, supportsAutoRunAtStartup, hardwareAccelerationRequiresPremiere, localAddress, localAddresses, wanAddress, remoteAddresses, serverName, version, id);
+    return Objects.hash(systemUpdateLevel, operatingSystemDisplayName, packageName, hasPendingRestart, isShuttingDown, hasImageEnhancers, operatingSystem, supportsLibraryMonitor, supportsLocalPortConfiguration, supportsWakeServer, webSocketPortNumber, completedInstallations, canSelfRestart, canSelfUpdate, canLaunchWebBrowser, programDataPath, itemsByNamePath, cachePath, logPath, internalMetadataPath, transcodingTempPath, httpServerPortNumber, supportsHttps, httpsPortNumber, hasUpdateAvailable, supportsAutoRunAtStartup, hardwareAccelerationRequiresPremiere, wakeOnLanInfo, localAddress, localAddresses, wanAddress, remoteAddresses, serverName, version, id);
   }
 
 
@@ -802,6 +855,7 @@ public class SystemInfo {
     sb.append("    packageName: ").append(toIndentedString(packageName)).append("\n");
     sb.append("    hasPendingRestart: ").append(toIndentedString(hasPendingRestart)).append("\n");
     sb.append("    isShuttingDown: ").append(toIndentedString(isShuttingDown)).append("\n");
+    sb.append("    hasImageEnhancers: ").append(toIndentedString(hasImageEnhancers)).append("\n");
     sb.append("    operatingSystem: ").append(toIndentedString(operatingSystem)).append("\n");
     sb.append("    supportsLibraryMonitor: ").append(toIndentedString(supportsLibraryMonitor)).append("\n");
     sb.append("    supportsLocalPortConfiguration: ").append(toIndentedString(supportsLocalPortConfiguration)).append("\n");
@@ -823,6 +877,7 @@ public class SystemInfo {
     sb.append("    hasUpdateAvailable: ").append(toIndentedString(hasUpdateAvailable)).append("\n");
     sb.append("    supportsAutoRunAtStartup: ").append(toIndentedString(supportsAutoRunAtStartup)).append("\n");
     sb.append("    hardwareAccelerationRequiresPremiere: ").append(toIndentedString(hardwareAccelerationRequiresPremiere)).append("\n");
+    sb.append("    wakeOnLanInfo: ").append(toIndentedString(wakeOnLanInfo)).append("\n");
     sb.append("    localAddress: ").append(toIndentedString(localAddress)).append("\n");
     sb.append("    localAddresses: ").append(toIndentedString(localAddresses)).append("\n");
     sb.append("    wanAddress: ").append(toIndentedString(wanAddress)).append("\n");

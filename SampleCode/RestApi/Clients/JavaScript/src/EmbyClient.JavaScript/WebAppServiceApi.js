@@ -15,7 +15,7 @@ import ApiConfigurationPageInfo from '../model/ApiConfigurationPageInfo';
 /**
 * WebAppService service.
 * @module EmbyClient.JavaScript/WebAppServiceApi
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class WebAppServiceApi {
 

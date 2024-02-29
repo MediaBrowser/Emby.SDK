@@ -39,6 +39,12 @@ namespace Emby.ApiClient.Model
         public string Key { get; set; }
 
         /// <summary>
+        /// Gets or Sets Website
+        /// </summary>
+        /// <value>The Website.</value>
+        public string Website { get; set; }
+
+        /// <summary>
         /// The URL format string.
         /// </summary>
         /// <value>The UrlFormatString.</value>
@@ -60,6 +66,7 @@ namespace Emby.ApiClient.Model
             sb.Append("class ExternalIdInfo {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Key: ").Append(Key).Append("\n");
+            sb.Append("  Website: ").Append(Website).Append("\n");
             sb.Append("  UrlFormatString: ").Append(UrlFormatString).Append("\n");
             sb.Append("  IsSupportedAsIdentifier: ").Append(IsSupportedAsIdentifier).Append("\n");
             sb.Append("}\n");
@@ -98,6 +105,11 @@ namespace Emby.ApiClient.Model
                     this.Key.Equals(input.Key))
                 ) && 
                 (
+                    this.Website == input.Website ||
+                    (this.Website != null &&
+                    this.Website.Equals(input.Website))
+                ) && 
+                (
                     this.UrlFormatString == input.UrlFormatString ||
                     (this.UrlFormatString != null &&
                     this.UrlFormatString.Equals(input.UrlFormatString))
@@ -122,6 +134,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Key != null)
                     hashCode = hashCode * 59 + this.Key.GetHashCode();
+                if (this.Website != null)
+                    hashCode = hashCode * 59 + this.Website.GetHashCode();
                 if (this.UrlFormatString != null)
                     hashCode = hashCode * 59 + this.UrlFormatString.GetHashCode();
                 if (this.IsSupportedAsIdentifier != null)

@@ -71,11 +71,13 @@ open class ItemUpdateServiceAPI {
   } ],
   "ExternalIdInfos" : [ {
     "IsSupportedAsIdentifier" : true,
+    "Website" : "Website",
     "Key" : "Key",
     "Name" : "Name",
     "UrlFormatString" : "UrlFormatString"
   }, {
     "IsSupportedAsIdentifier" : true,
+    "Website" : "Website",
     "Key" : "Key",
     "Name" : "Name",
     "UrlFormatString" : "UrlFormatString"

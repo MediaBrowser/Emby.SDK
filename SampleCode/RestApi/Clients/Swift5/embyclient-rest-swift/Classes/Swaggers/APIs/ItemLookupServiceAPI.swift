@@ -35,11 +35,13 @@ open class ItemLookupServiceAPI {
        - name: embyauth
      - examples: [{contentType=application/json, example=[ {
   "IsSupportedAsIdentifier" : true,
+  "Website" : "Website",
   "Key" : "Key",
   "Name" : "Name",
   "UrlFormatString" : "UrlFormatString"
 }, {
   "IsSupportedAsIdentifier" : true,
+  "Website" : "Website",
   "Key" : "Key",
   "Name" : "Name",
   "UrlFormatString" : "UrlFormatString"

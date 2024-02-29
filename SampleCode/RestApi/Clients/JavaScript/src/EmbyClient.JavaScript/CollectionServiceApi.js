@@ -15,7 +15,7 @@ import CollectionsCollectionCreationResult from '../model/CollectionsCollectionC
 /**
 * CollectionService service.
 * @module EmbyClient.JavaScript/CollectionServiceApi
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class CollectionServiceApi {
 

@@ -16,7 +16,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The ItemLookupInfo model module.
 * @module model/ItemLookupInfo
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class ItemLookupInfo {
     /**

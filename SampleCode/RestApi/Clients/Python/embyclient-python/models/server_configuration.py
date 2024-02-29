@@ -67,15 +67,16 @@ class ServerConfiguration(object):
         'database_cache_size_mb': 'int',
         'enable_sq_lite_mmio': 'bool',
         'playlists_upgraded_to_m3_u': 'bool',
-        'image_extractor_upgraded': 'bool',
+        'image_extractor_upgraded1': 'bool',
         'enable_people_letter_sub_folders': 'bool',
         'optimize_database_on_shutdown': 'bool',
         'database_analysis_limit': 'int',
         'disable_async_io': 'bool',
-        'migrated_to_user_item_shares4': 'bool',
+        'migrated_to_user_item_shares6': 'bool',
         'migrated_library_options_to_db': 'bool',
         'allow_legacy_local_network_password': 'bool',
         'enable_saved_metadata_for_people': 'bool',
+        'tv_channels_refreshed': 'bool',
         'proxy_header_mode': 'ProxyHeaderMode',
         'enable_debug_level_logging': 'bool',
         'revert_debug_logging': 'str',
@@ -132,15 +133,16 @@ class ServerConfiguration(object):
         'database_cache_size_mb': 'DatabaseCacheSizeMB',
         'enable_sq_lite_mmio': 'EnableSqLiteMmio',
         'playlists_upgraded_to_m3_u': 'PlaylistsUpgradedToM3U',
-        'image_extractor_upgraded': 'ImageExtractorUpgraded',
+        'image_extractor_upgraded1': 'ImageExtractorUpgraded1',
         'enable_people_letter_sub_folders': 'EnablePeopleLetterSubFolders',
         'optimize_database_on_shutdown': 'OptimizeDatabaseOnShutdown',
         'database_analysis_limit': 'DatabaseAnalysisLimit',
         'disable_async_io': 'DisableAsyncIO',
-        'migrated_to_user_item_shares4': 'MigratedToUserItemShares4',
+        'migrated_to_user_item_shares6': 'MigratedToUserItemShares6',
         'migrated_library_options_to_db': 'MigratedLibraryOptionsToDb',
         'allow_legacy_local_network_password': 'AllowLegacyLocalNetworkPassword',
         'enable_saved_metadata_for_people': 'EnableSavedMetadataForPeople',
+        'tv_channels_refreshed': 'TvChannelsRefreshed',
         'proxy_header_mode': 'ProxyHeaderMode',
         'enable_debug_level_logging': 'EnableDebugLevelLogging',
         'revert_debug_logging': 'RevertDebugLogging',
@@ -151,7 +153,7 @@ class ServerConfiguration(object):
         'cache_path': 'CachePath'
     }
 
-    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares4=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
+    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded1=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares6=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, tv_channels_refreshed=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
         """ServerConfiguration - a model defined in Swagger"""  # noqa: E501
         self._enable_u_pn_p = None
         self._public_port = None
@@ -198,15 +200,16 @@ class ServerConfiguration(object):
         self._database_cache_size_mb = None
         self._enable_sq_lite_mmio = None
         self._playlists_upgraded_to_m3_u = None
-        self._image_extractor_upgraded = None
+        self._image_extractor_upgraded1 = None
         self._enable_people_letter_sub_folders = None
         self._optimize_database_on_shutdown = None
         self._database_analysis_limit = None
         self._disable_async_io = None
-        self._migrated_to_user_item_shares4 = None
+        self._migrated_to_user_item_shares6 = None
         self._migrated_library_options_to_db = None
         self._allow_legacy_local_network_password = None
         self._enable_saved_metadata_for_people = None
+        self._tv_channels_refreshed = None
         self._proxy_header_mode = None
         self._enable_debug_level_logging = None
         self._revert_debug_logging = None
@@ -306,8 +309,8 @@ class ServerConfiguration(object):
             self.enable_sq_lite_mmio = enable_sq_lite_mmio
         if playlists_upgraded_to_m3_u is not None:
             self.playlists_upgraded_to_m3_u = playlists_upgraded_to_m3_u
-        if image_extractor_upgraded is not None:
-            self.image_extractor_upgraded = image_extractor_upgraded
+        if image_extractor_upgraded1 is not None:
+            self.image_extractor_upgraded1 = image_extractor_upgraded1
         if enable_people_letter_sub_folders is not None:
             self.enable_people_letter_sub_folders = enable_people_letter_sub_folders
         if optimize_database_on_shutdown is not None:
@@ -316,14 +319,16 @@ class ServerConfiguration(object):
             self.database_analysis_limit = database_analysis_limit
         if disable_async_io is not None:
             self.disable_async_io = disable_async_io
-        if migrated_to_user_item_shares4 is not None:
-            self.migrated_to_user_item_shares4 = migrated_to_user_item_shares4
+        if migrated_to_user_item_shares6 is not None:
+            self.migrated_to_user_item_shares6 = migrated_to_user_item_shares6
         if migrated_library_options_to_db is not None:
             self.migrated_library_options_to_db = migrated_library_options_to_db
         if allow_legacy_local_network_password is not None:
             self.allow_legacy_local_network_password = allow_legacy_local_network_password
         if enable_saved_metadata_for_people is not None:
             self.enable_saved_metadata_for_people = enable_saved_metadata_for_people
+        if tv_channels_refreshed is not None:
+            self.tv_channels_refreshed = tv_channels_refreshed
         if proxy_header_mode is not None:
             self.proxy_header_mode = proxy_header_mode
         if enable_debug_level_logging is not None:
@@ -1319,25 +1324,25 @@ class ServerConfiguration(object):
         self._playlists_upgraded_to_m3_u = playlists_upgraded_to_m3_u
 
     @property
-    def image_extractor_upgraded(self):
-        """Gets the image_extractor_upgraded of this ServerConfiguration.  # noqa: E501
+    def image_extractor_upgraded1(self):
+        """Gets the image_extractor_upgraded1 of this ServerConfiguration.  # noqa: E501
 
 
-        :return: The image_extractor_upgraded of this ServerConfiguration.  # noqa: E501
+        :return: The image_extractor_upgraded1 of this ServerConfiguration.  # noqa: E501
         :rtype: bool
         """
-        return self._image_extractor_upgraded
+        return self._image_extractor_upgraded1
 
-    @image_extractor_upgraded.setter
-    def image_extractor_upgraded(self, image_extractor_upgraded):
-        """Sets the image_extractor_upgraded of this ServerConfiguration.
+    @image_extractor_upgraded1.setter
+    def image_extractor_upgraded1(self, image_extractor_upgraded1):
+        """Sets the image_extractor_upgraded1 of this ServerConfiguration.
 
 
-        :param image_extractor_upgraded: The image_extractor_upgraded of this ServerConfiguration.  # noqa: E501
+        :param image_extractor_upgraded1: The image_extractor_upgraded1 of this ServerConfiguration.  # noqa: E501
         :type: bool
         """
 
-        self._image_extractor_upgraded = image_extractor_upgraded
+        self._image_extractor_upgraded1 = image_extractor_upgraded1
 
     @property
     def enable_people_letter_sub_folders(self):
@@ -1424,25 +1429,25 @@ class ServerConfiguration(object):
         self._disable_async_io = disable_async_io
 
     @property
-    def migrated_to_user_item_shares4(self):
-        """Gets the migrated_to_user_item_shares4 of this ServerConfiguration.  # noqa: E501
+    def migrated_to_user_item_shares6(self):
+        """Gets the migrated_to_user_item_shares6 of this ServerConfiguration.  # noqa: E501
 
 
-        :return: The migrated_to_user_item_shares4 of this ServerConfiguration.  # noqa: E501
+        :return: The migrated_to_user_item_shares6 of this ServerConfiguration.  # noqa: E501
         :rtype: bool
         """
-        return self._migrated_to_user_item_shares4
+        return self._migrated_to_user_item_shares6
 
-    @migrated_to_user_item_shares4.setter
-    def migrated_to_user_item_shares4(self, migrated_to_user_item_shares4):
-        """Sets the migrated_to_user_item_shares4 of this ServerConfiguration.
+    @migrated_to_user_item_shares6.setter
+    def migrated_to_user_item_shares6(self, migrated_to_user_item_shares6):
+        """Sets the migrated_to_user_item_shares6 of this ServerConfiguration.
 
 
-        :param migrated_to_user_item_shares4: The migrated_to_user_item_shares4 of this ServerConfiguration.  # noqa: E501
+        :param migrated_to_user_item_shares6: The migrated_to_user_item_shares6 of this ServerConfiguration.  # noqa: E501
         :type: bool
         """
 
-        self._migrated_to_user_item_shares4 = migrated_to_user_item_shares4
+        self._migrated_to_user_item_shares6 = migrated_to_user_item_shares6
 
     @property
     def migrated_library_options_to_db(self):
@@ -1506,6 +1511,27 @@ class ServerConfiguration(object):
         """
 
         self._enable_saved_metadata_for_people = enable_saved_metadata_for_people
+
+    @property
+    def tv_channels_refreshed(self):
+        """Gets the tv_channels_refreshed of this ServerConfiguration.  # noqa: E501
+
+
+        :return: The tv_channels_refreshed of this ServerConfiguration.  # noqa: E501
+        :rtype: bool
+        """
+        return self._tv_channels_refreshed
+
+    @tv_channels_refreshed.setter
+    def tv_channels_refreshed(self, tv_channels_refreshed):
+        """Sets the tv_channels_refreshed of this ServerConfiguration.
+
+
+        :param tv_channels_refreshed: The tv_channels_refreshed of this ServerConfiguration.  # noqa: E501
+        :type: bool
+        """
+
+        self._tv_channels_refreshed = tv_channels_refreshed
 
     @property
     def proxy_header_mode(self):

@@ -18,6 +18,7 @@ type LiveTvTunerHostInfo struct {
 	PreferEpgChannelNumbers bool `json:"PreferEpgChannelNumbers,omitempty"`
 	AllowHWTranscoding bool `json:"AllowHWTranscoding,omitempty"`
 	AllowMappingByNumber bool `json:"AllowMappingByNumber,omitempty"`
+	ImportGuideData bool `json:"ImportGuideData,omitempty"`
 	Source string `json:"Source,omitempty"`
 	TunerCount int32 `json:"TunerCount,omitempty"`
 	UserAgent string `json:"UserAgent,omitempty"`

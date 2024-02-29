@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.0.80
+  version: 4.8.3.0
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -20803,6 +20803,39 @@ paths:
           application/xml:
             schema:
               $ref: '#/components/schemas/MBBackup.Api.RestoreOptions'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as administrator
+  /BackupRestore/RestoreData:
+    post:
+      tags:
+      - BackupApi
+      description: Requires authentication as administrator
+      operationId: postBackuprestoreRestoredata
+      requestBody:
+        description: "DataRestoreOptions: "
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MBBackup.Api.DataRestoreOptions'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/MBBackup.Api.DataRestoreOptions'
         required: true
       responses:
         "200":
@@ -51799,6 +51832,50 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /Items/{Id}/Tags/Delete:
+    summary: Removes tags from an item
+    post:
+      tags:
+      - TagService
+      summary: Removes tags from an item
+      description: Requires authentication as user
+      operationId: postItemsByIdTagsDelete
+      parameters:
+      - name: Id
+        in: path
+        description: Item Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: RemoveTags
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.RemoveTags'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UserLibrary.RemoveTags'
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/Subtitles/{Index}:
     summary: Deletes an external subtitle file
     delete:
@@ -67324,6 +67401,22 @@ components:
         UseFiles:
           type: string
       x-internal-ref-name: MBBackup.Api.RestoreOptions
+    MBBackup.Api.DataRestoreOptions:
+      type: object
+      properties:
+        Users:
+          type: array
+          items:
+            $ref: '#/components/schemas/MBBackup.Api.UserRestoreInfo'
+      x-internal-ref-name: MBBackup.Api.DataRestoreOptions
+    MBBackup.Api.UserRestoreInfo:
+      type: object
+      properties:
+        SourceUserId:
+          type: string
+        TargetUserId:
+          type: string
+      x-internal-ref-name: MBBackup.Api.UserRestoreInfo
     MBBackup.Api.AllBackupsInfo:
       type: object
       properties:
@@ -67342,6 +67435,11 @@ components:
           PluginVersion: PluginVersion
           CanRestore: true
           DateCreated: 2000-01-23T04:56:07.000+00:00
+          Users:
+          - Id: Id
+            Name: Name
+          - Id: Id
+            Name: Name
           IsFullBackup: true
           Name: Name
       x-internal-ref-name: MBBackup.Api.AllBackupsInfo
@@ -67361,11 +67459,20 @@ components:
         DateCreated:
           type: string
           format: date-time
+        Users:
+          type: array
+          items:
+            $ref: '#/components/schemas/NameIdPair'
       example:
         ServerVersion: ServerVersion
         PluginVersion: PluginVersion
         CanRestore: true
         DateCreated: 2000-01-23T04:56:07.000+00:00
+        Users:
+        - Id: Id
+          Name: Name
+        - Id: Id
+          Name: Name
         IsFullBackup: true
         Name: Name
       x-internal-ref-name: MBBackup.BackupInfo
@@ -69641,6 +69748,8 @@ components:
           type: boolean
         AllowMappingByNumber:
           type: boolean
+        ImportGuideData:
+          type: boolean
         Source:
           type: string
         TunerCount:
@@ -69673,6 +69782,7 @@ components:
         Id: Id
         DataVersion: 6
         SetupUrl: SetupUrl
+        ImportGuideData: true
       x-internal-ref-name: MediaBrowser.Model.LiveTv.TunerHostInfo
     LiveTv.LiveTvInfo:
       type: object
@@ -76729,7 +76839,7 @@ components:
           type: boolean
         PlaylistsUpgradedToM3U:
           type: boolean
-        ImageExtractorUpgraded:
+        ImageExtractorUpgraded1:
           type: boolean
         EnablePeopleLetterSubFolders:
           type: boolean
@@ -76740,13 +76850,15 @@ components:
           format: int32
         DisableAsyncIO:
           type: boolean
-        MigratedToUserItemShares4:
+        MigratedToUserItemShares6:
           type: boolean
         MigratedLibraryOptionsToDb:
           type: boolean
         AllowLegacyLocalNetworkPassword:
           type: boolean
         EnableSavedMetadataForPeople:
+          type: boolean
+        TvChannelsRefreshed:
           type: boolean
         ProxyHeaderMode:
           $ref: '#/components/schemas/ProxyHeaderMode'
@@ -76799,7 +76911,6 @@ components:
         LogAllQueryTimes: true
         PlaylistsUpgradedToM3U: true
         AllowLegacyLocalNetworkPassword: true
-        ImageExtractorUpgraded: true
         RunAtStartup: true
         HttpServerPortNumber: 1
         RequireHttps: true
@@ -76809,6 +76920,7 @@ components:
         CertificatePassword: CertificatePassword
         EnableOriginalTrackTitles: true
         RemoteClientBitrateLimit: 2
+        TvChannelsRefreshed: true
         ImageExtractionTimeoutMs: 7
         EnableExternalContentInSuggestions: true
         LibraryMonitorDelay: 5
@@ -76816,6 +76928,7 @@ components:
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true
         PreferredDetectedRemoteAddressFamily: Unspecified
+        MigratedToUserItemShares6: true
         MigratedLibraryOptionsToDb: true
         SimultaneousStreamLimit: 9
         PathSubstitutions:
@@ -76823,7 +76936,6 @@ components:
           To: To
         - From: From
           To: To
-        MigratedToUserItemShares4: true
         CachePath: CachePath
         WanDdns: WanDdns
         IsBehindProxy: true
@@ -76831,6 +76943,7 @@ components:
         - UninstalledPlugins
         - UninstalledPlugins
         EnableDashboardResponseCaching: true
+        ImageExtractorUpgraded1: true
         EnableRemoteAccess: true
         CertificatePath: CertificatePath
         CollapseVideoFolders: true
@@ -76943,6 +77056,8 @@ components:
           description: A value indicating whether this instance has pending restart.
         IsShuttingDown:
           type: boolean
+        HasImageEnhancers:
+          type: boolean
         OperatingSystem:
           type: string
           description: The operating sytem.
@@ -77008,6 +77123,10 @@ components:
             ]."
         HardwareAccelerationRequiresPremiere:
           type: boolean
+        WakeOnLanInfo:
+          type: array
+          items:
+            $ref: '#/components/schemas/WakeOnLanInfo'
         LocalAddress:
           type: string
           description: The local address.
@@ -77034,6 +77153,7 @@ components:
       description: "Class SystemInfo\r\n"
       example:
         OperatingSystem: OperatingSystem
+        HasImageEnhancers: true
         PackageName: PackageName
         LocalAddresses:
         - LocalAddresses
@@ -77074,6 +77194,13 @@ components:
           PercentComplete: 6.027456183070403
           Id: Id
           Name: Name
+        WakeOnLanInfo:
+        - BroadcastAddress: BroadcastAddress
+          Port: 0
+          MacAddress: MacAddress
+        - BroadcastAddress: BroadcastAddress
+          Port: 0
+          MacAddress: MacAddress
         OperatingSystemDisplayName: OperatingSystemDisplayName
         InternalMetadataPath: InternalMetadataPath
         ServerName: ServerName
@@ -80002,6 +80129,8 @@ components:
         Key:
           type: string
           description: The key.
+        Website:
+          type: string
         UrlFormatString:
           type: string
           description: The URL format string.
@@ -80009,6 +80138,7 @@ components:
           type: boolean
       example:
         IsSupportedAsIdentifier: true
+        Website: Website
         Key: Key
         Name: Name
         UrlFormatString: UrlFormatString
@@ -80795,10 +80925,12 @@ components:
           TwoLetterISOLanguageName: TwoLetterISOLanguageName
         ExternalIdInfos:
         - IsSupportedAsIdentifier: true
+          Website: Website
           Key: Key
           Name: Name
           UrlFormatString: UrlFormatString
         - IsSupportedAsIdentifier: true
+          Website: Website
           Key: Key
           Name: Name
           UrlFormatString: UrlFormatString
@@ -85306,6 +85438,14 @@ components:
           items:
             $ref: '#/components/schemas/NameIdPair'
       x-internal-ref-name: Emby.Api.UserLibrary.AddTags
+    UserLibrary.RemoveTags:
+      type: object
+      properties:
+        Tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/NameIdPair'
+      x-internal-ref-name: Emby.Api.UserLibrary.RemoveTags
     ImageProviderInfo:
       type: object
       properties:

@@ -32,7 +32,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="canRestore">canRestore.</param>
         /// <param name="isFullBackup">isFullBackup.</param>
         /// <param name="dateCreated">dateCreated.</param>
-        public MBBackupBackupInfo(string serverVersion = default(string), string pluginVersion = default(string), string name = default(string), bool? canRestore = default(bool?), bool? isFullBackup = default(bool?), DateTimeOffset? dateCreated = default(DateTimeOffset?))
+        /// <param name="users">users.</param>
+        public MBBackupBackupInfo(string serverVersion = default(string), string pluginVersion = default(string), string name = default(string), bool? canRestore = default(bool?), bool? isFullBackup = default(bool?), DateTimeOffset? dateCreated = default(DateTimeOffset?), List<NameIdPair> users = default(List<NameIdPair>))
         {
             this.ServerVersion = serverVersion;
             this.PluginVersion = pluginVersion;
@@ -40,6 +41,7 @@ namespace EmbyClient.Dotnet.Model
             this.CanRestore = canRestore;
             this.IsFullBackup = isFullBackup;
             this.DateCreated = dateCreated;
+            this.Users = users;
         }
         
         /// <summary>
@@ -79,6 +81,12 @@ namespace EmbyClient.Dotnet.Model
         public DateTimeOffset? DateCreated { get; set; }
 
         /// <summary>
+        /// Gets or Sets Users
+        /// </summary>
+        [DataMember(Name="Users", EmitDefaultValue=false)]
+        public List<NameIdPair> Users { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -92,6 +100,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  CanRestore: ").Append(CanRestore).Append("\n");
             sb.Append("  IsFullBackup: ").Append(IsFullBackup).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,6 +164,12 @@ namespace EmbyClient.Dotnet.Model
                     this.DateCreated == input.DateCreated ||
                     (this.DateCreated != null &&
                     this.DateCreated.Equals(input.DateCreated))
+                ) && 
+                (
+                    this.Users == input.Users ||
+                    this.Users != null &&
+                    input.Users != null &&
+                    this.Users.SequenceEqual(input.Users)
                 );
         }
 
@@ -179,6 +194,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IsFullBackup.GetHashCode();
                 if (this.DateCreated != null)
                     hashCode = hashCode * 59 + this.DateCreated.GetHashCode();
+                if (this.Users != null)
+                    hashCode = hashCode * 59 + this.Users.GetHashCode();
                 return hashCode;
             }
         }

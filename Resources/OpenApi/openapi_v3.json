@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.0.80"
+    "version": "4.8.3.0"
   },
   "servers": [
     {
@@ -24079,6 +24079,60 @@
             "application/xml": {
               "schema": {
                 "$ref": "#/components/schemas/MBBackup.Api.RestoreOptions"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as administrator"
+      }
+    },
+    "/BackupRestore/RestoreData": {
+      "post": {
+        "tags": [
+          "BackupApi"
+        ],
+        "description": "Requires authentication as administrator",
+        "operationId": "postBackuprestoreRestoredata",
+        "requestBody": {
+          "description": "DataRestoreOptions: ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MBBackup.Api.DataRestoreOptions"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/MBBackup.Api.DataRestoreOptions"
               }
             }
           },
@@ -64600,6 +64654,74 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/Items/{Id}/Tags/Delete": {
+      "summary": "Removes tags from an item",
+      "post": {
+        "tags": [
+          "TagService"
+        ],
+        "summary": "Removes tags from an item",
+        "description": "Requires authentication as user",
+        "operationId": "postItemsByIdTagsDelete",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "RemoveTags",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.RemoveTags"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLibrary.RemoveTags"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Items/{Id}/Subtitles/{Index}": {
       "summary": "Deletes an external subtitle file",
       "delete": {
@@ -81552,6 +81674,30 @@
         },
         "x-internal-ref-name": "MBBackup.Api.RestoreOptions"
       },
+      "MBBackup.Api.DataRestoreOptions": {
+        "type": "object",
+        "properties": {
+          "Users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MBBackup.Api.UserRestoreInfo"
+            }
+          }
+        },
+        "x-internal-ref-name": "MBBackup.Api.DataRestoreOptions"
+      },
+      "MBBackup.Api.UserRestoreInfo": {
+        "type": "object",
+        "properties": {
+          "SourceUserId": {
+            "type": "string"
+          },
+          "TargetUserId": {
+            "type": "string"
+          }
+        },
+        "x-internal-ref-name": "MBBackup.Api.UserRestoreInfo"
+      },
       "MBBackup.Api.AllBackupsInfo": {
         "type": "object",
         "properties": {
@@ -81588,6 +81734,12 @@
           "DateCreated": {
             "type": "string",
             "format": "date-time"
+          },
+          "Users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NameIdPair"
+            }
           }
         },
         "x-internal-ref-name": "MBBackup.BackupInfo"
@@ -83468,6 +83620,9 @@
           "AllowMappingByNumber": {
             "type": "boolean"
           },
+          "ImportGuideData": {
+            "type": "boolean"
+          },
           "Source": {
             "type": "string"
           },
@@ -85210,7 +85365,7 @@
           "PlaylistsUpgradedToM3U": {
             "type": "boolean"
           },
-          "ImageExtractorUpgraded": {
+          "ImageExtractorUpgraded1": {
             "type": "boolean"
           },
           "EnablePeopleLetterSubFolders": {
@@ -85226,7 +85381,7 @@
           "DisableAsyncIO": {
             "type": "boolean"
           },
-          "MigratedToUserItemShares4": {
+          "MigratedToUserItemShares6": {
             "type": "boolean"
           },
           "MigratedLibraryOptionsToDb": {
@@ -85236,6 +85391,9 @@
             "type": "boolean"
           },
           "EnableSavedMetadataForPeople": {
+            "type": "boolean"
+          },
+          "TvChannelsRefreshed": {
             "type": "boolean"
           },
           "ProxyHeaderMode": {
@@ -85378,6 +85536,9 @@
           "IsShuttingDown": {
             "type": "boolean"
           },
+          "HasImageEnhancers": {
+            "type": "boolean"
+          },
           "OperatingSystem": {
             "type": "string",
             "description": "The operating sytem."
@@ -85463,6 +85624,12 @@
           },
           "HardwareAccelerationRequiresPremiere": {
             "type": "boolean"
+          },
+          "WakeOnLanInfo": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WakeOnLanInfo"
+            }
           },
           "LocalAddress": {
             "type": "string",
@@ -87146,6 +87313,9 @@
           "Key": {
             "type": "string",
             "description": "The key."
+          },
+          "Website": {
+            "type": "string"
           },
           "UrlFormatString": {
             "type": "string",
@@ -89320,6 +89490,18 @@
           }
         },
         "x-internal-ref-name": "Emby.Api.UserLibrary.AddTags"
+      },
+      "UserLibrary.RemoveTags": {
+        "type": "object",
+        "properties": {
+          "Tags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NameIdPair"
+            }
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.UserLibrary.RemoveTags"
       },
       "ImageProviderInfo": {
         "type": "object",

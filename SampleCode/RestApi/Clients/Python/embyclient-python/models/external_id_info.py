@@ -24,6 +24,7 @@ class ExternalIdInfo(object):
     swagger_types = {
         'name': 'str',
         'key': 'str',
+        'website': 'str',
         'url_format_string': 'str',
         'is_supported_as_identifier': 'bool'
     }
@@ -31,14 +32,16 @@ class ExternalIdInfo(object):
     attribute_map = {
         'name': 'Name',
         'key': 'Key',
+        'website': 'Website',
         'url_format_string': 'UrlFormatString',
         'is_supported_as_identifier': 'IsSupportedAsIdentifier'
     }
 
-    def __init__(self, name=None, key=None, url_format_string=None, is_supported_as_identifier=None):  # noqa: E501
+    def __init__(self, name=None, key=None, website=None, url_format_string=None, is_supported_as_identifier=None):  # noqa: E501
         """ExternalIdInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._key = None
+        self._website = None
         self._url_format_string = None
         self._is_supported_as_identifier = None
         self.discriminator = None
@@ -46,6 +49,8 @@ class ExternalIdInfo(object):
             self.name = name
         if key is not None:
             self.key = key
+        if website is not None:
+            self.website = website
         if url_format_string is not None:
             self.url_format_string = url_format_string
         if is_supported_as_identifier is not None:
@@ -96,6 +101,27 @@ class ExternalIdInfo(object):
         """
 
         self._key = key
+
+    @property
+    def website(self):
+        """Gets the website of this ExternalIdInfo.  # noqa: E501
+
+
+        :return: The website of this ExternalIdInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._website
+
+    @website.setter
+    def website(self, website):
+        """Sets the website of this ExternalIdInfo.
+
+
+        :param website: The website of this ExternalIdInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._website = website
 
     @property
     def url_format_string(self):

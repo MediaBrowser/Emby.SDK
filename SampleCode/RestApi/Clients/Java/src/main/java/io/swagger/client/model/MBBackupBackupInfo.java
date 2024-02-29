@@ -12,8 +12,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.NameIdPair;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.threeten.bp.OffsetDateTime;
 /**
  * MBBackupBackupInfo
@@ -38,6 +41,9 @@ public class MBBackupBackupInfo {
 
   @SerializedName("DateCreated")
   private OffsetDateTime dateCreated = null;
+
+  @SerializedName("Users")
+  private List<NameIdPair> users = null;
 
   public MBBackupBackupInfo serverVersion(String serverVersion) {
     this.serverVersion = serverVersion;
@@ -147,6 +153,32 @@ public class MBBackupBackupInfo {
     this.dateCreated = dateCreated;
   }
 
+  public MBBackupBackupInfo users(List<NameIdPair> users) {
+    this.users = users;
+    return this;
+  }
+
+  public MBBackupBackupInfo addUsersItem(NameIdPair usersItem) {
+    if (this.users == null) {
+      this.users = new ArrayList<NameIdPair>();
+    }
+    this.users.add(usersItem);
+    return this;
+  }
+
+   /**
+   * Get users
+   * @return users
+  **/
+  @Schema(description = "")
+  public List<NameIdPair> getUsers() {
+    return users;
+  }
+
+  public void setUsers(List<NameIdPair> users) {
+    this.users = users;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -162,12 +194,13 @@ public class MBBackupBackupInfo {
         Objects.equals(this.name, mbBackupBackupInfo.name) &&
         Objects.equals(this.canRestore, mbBackupBackupInfo.canRestore) &&
         Objects.equals(this.isFullBackup, mbBackupBackupInfo.isFullBackup) &&
-        Objects.equals(this.dateCreated, mbBackupBackupInfo.dateCreated);
+        Objects.equals(this.dateCreated, mbBackupBackupInfo.dateCreated) &&
+        Objects.equals(this.users, mbBackupBackupInfo.users);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(serverVersion, pluginVersion, name, canRestore, isFullBackup, dateCreated);
+    return Objects.hash(serverVersion, pluginVersion, name, canRestore, isFullBackup, dateCreated, users);
   }
 
 
@@ -182,6 +215,7 @@ public class MBBackupBackupInfo {
     sb.append("    canRestore: ").append(toIndentedString(canRestore)).append("\n");
     sb.append("    isFullBackup: ").append(toIndentedString(isFullBackup)).append("\n");
     sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
+    sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }

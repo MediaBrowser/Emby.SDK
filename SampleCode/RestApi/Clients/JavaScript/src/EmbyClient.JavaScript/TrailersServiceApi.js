@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * TrailersService service.
 * @module EmbyClient.JavaScript/TrailersServiceApi
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class TrailersServiceApi {
 

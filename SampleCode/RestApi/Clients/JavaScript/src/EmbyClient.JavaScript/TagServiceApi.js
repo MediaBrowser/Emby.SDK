@@ -13,11 +13,12 @@ import ApiClient from "../ApiClient";
 import NameValuePair from '../model/NameValuePair';
 import QueryResultUserLibraryTagItem from '../model/QueryResultUserLibraryTagItem';
 import UserLibraryAddTags from '../model/UserLibraryAddTags';
+import UserLibraryRemoveTags from '../model/UserLibraryRemoveTags';
 
 /**
 * TagService service.
 * @module EmbyClient.JavaScript/TagServiceApi
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class TagServiceApi {
 
@@ -1697,6 +1698,43 @@ export default class TagServiceApi {
 
       return this.apiClient.callApi(
         '/Items/{Id}/Tags/Add', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postItemsByIdTagsDelete operation.
+     * @callback module:EmbyClient.JavaScript/TagServiceApi~postItemsByIdTagsDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Removes tags from an item
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/TagServiceApi~postItemsByIdTagsDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postItemsByIdTagsDelete() {
+      let postBody = body;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/Tags/Delete', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

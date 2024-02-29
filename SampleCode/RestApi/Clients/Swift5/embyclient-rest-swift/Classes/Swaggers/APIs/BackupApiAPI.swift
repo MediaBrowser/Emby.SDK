@@ -37,6 +37,13 @@ open class BackupApiAPI {
     "PluginVersion" : "PluginVersion",
     "CanRestore" : true,
     "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "Users" : [ {
+      "Id" : "Id",
+      "Name" : "Name"
+    }, {
+      "Id" : "Id",
+      "Name" : "Name"
+    } ],
     "IsFullBackup" : true,
     "Name" : "Name"
   }
@@ -86,6 +93,46 @@ open class BackupApiAPI {
      */
     open class func postBackuprestoreRestoreWithRequestBuilder(body: MBBackupApiRestoreOptions) -> RequestBuilder<Void> {
         let path = "/BackupRestore/Restore"
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
+
+     - parameter body: (body) DataRestoreOptions:  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postBackuprestoreRestoredata(body: MBBackupApiDataRestoreOptions, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postBackuprestoreRestoredataWithRequestBuilder(body: body).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     - POST /BackupRestore/RestoreData
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) DataRestoreOptions:  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postBackuprestoreRestoredataWithRequestBuilder(body: MBBackupApiDataRestoreOptions) -> RequestBuilder<Void> {
+        let path = "/BackupRestore/RestoreData"
         let URLString = embyclient-rest-swiftAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)

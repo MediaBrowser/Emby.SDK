@@ -16,7 +16,7 @@ import ItemFileType from './ItemFileType';
 /**
 * The ItemFileInfo model module.
 * @module model/ItemFileInfo
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class ItemFileInfo {
     /**

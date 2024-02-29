@@ -63,6 +63,12 @@ namespace Emby.ApiClient.Model
         public DateTimeOffset? DateCreated { get; set; }
 
         /// <summary>
+        /// Gets or Sets Users
+        /// </summary>
+        /// <value>The Users.</value>
+        public List<NameIdPair> Users { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -76,6 +82,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  CanRestore: ").Append(CanRestore).Append("\n");
             sb.Append("  IsFullBackup: ").Append(IsFullBackup).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,6 +137,12 @@ namespace Emby.ApiClient.Model
                     this.DateCreated == input.DateCreated ||
                     (this.DateCreated != null &&
                     this.DateCreated.Equals(input.DateCreated))
+                ) && 
+                (
+                    this.Users == input.Users ||
+                    this.Users != null &&
+                    input.Users != null &&
+                    this.Users.SequenceEqual(input.Users)
                 );
         }
 
@@ -154,6 +167,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IsFullBackup.GetHashCode();
                 if (this.DateCreated != null)
                     hashCode = hashCode * 59 + this.DateCreated.GetHashCode();
+                if (this.Users != null)
+                    hashCode = hashCode * 59 + this.Users.GetHashCode();
                 return hashCode;
             }
         }

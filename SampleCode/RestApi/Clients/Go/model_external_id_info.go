@@ -11,6 +11,7 @@ type ExternalIdInfo struct {
 	Name string `json:"Name,omitempty"`
 	// The key.
 	Key string `json:"Key,omitempty"`
+	Website string `json:"Website,omitempty"`
 	// The URL format string.
 	UrlFormatString string `json:"UrlFormatString,omitempty"`
 	IsSupportedAsIdentifier bool `json:"IsSupportedAsIdentifier,omitempty"`

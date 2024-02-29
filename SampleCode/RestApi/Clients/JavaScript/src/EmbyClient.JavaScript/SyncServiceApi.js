@@ -27,7 +27,7 @@ import UserAction from '../model/UserAction';
 /**
 * SyncService service.
 * @module EmbyClient.JavaScript/SyncServiceApi
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class SyncServiceApi {
 

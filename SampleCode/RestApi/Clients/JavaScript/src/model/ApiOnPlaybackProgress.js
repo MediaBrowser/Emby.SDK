@@ -15,7 +15,7 @@ import ProgressEvent from './ProgressEvent';
 /**
 * The ApiOnPlaybackProgress model module.
 * @module model/ApiOnPlaybackProgress
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class ApiOnPlaybackProgress {
     /**

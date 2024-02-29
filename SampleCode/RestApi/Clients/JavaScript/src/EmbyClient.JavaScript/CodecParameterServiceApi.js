@@ -16,7 +16,7 @@ import MediaEncodingCodecParameterContext from '../model/MediaEncodingCodecParam
 /**
 * CodecParameterService service.
 * @module EmbyClient.JavaScript/CodecParameterServiceApi
-* @version 4.8.0.80
+* @version 4.8.3.0
 */
 export default class CodecParameterServiceApi {
 
