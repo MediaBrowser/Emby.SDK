@@ -19,7 +19,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The LiveTvSeriesTimerInfo model module.
 * @module model/LiveTvSeriesTimerInfo
-* @version 4.9.0.8
+* @version 4.9.0.9
 */
 export default class LiveTvSeriesTimerInfo {
     /**
@@ -87,6 +87,9 @@ export default class LiveTvSeriesTimerInfo {
             }
             if (data.hasOwnProperty('SkipEpisodesInLibrary')) {
                 obj['SkipEpisodesInLibrary'] = ApiClient.convertToType(data['SkipEpisodesInLibrary'], 'Boolean');
+            }
+            if (data.hasOwnProperty('MatchExistingItemsWithAnyLibrary')) {
+                obj['MatchExistingItemsWithAnyLibrary'] = ApiClient.convertToType(data['MatchExistingItemsWithAnyLibrary'], 'Boolean');
             }
             if (data.hasOwnProperty('RecordNewOnly')) {
                 obj['RecordNewOnly'] = ApiClient.convertToType(data['RecordNewOnly'], 'Boolean');
@@ -192,6 +195,10 @@ export default class LiveTvSeriesTimerInfo {
     * @member {Boolean} SkipEpisodesInLibrary
     */
     'SkipEpisodesInLibrary' = undefined;
+    /**
+    * @member {Boolean} MatchExistingItemsWithAnyLibrary
+    */
+    'MatchExistingItemsWithAnyLibrary' = undefined;
     /**
     * A value indicating whether \\[record new only\\].
     * @member {Boolean} RecordNewOnly

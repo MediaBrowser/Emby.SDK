@@ -404,6 +404,33 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Api_BaseApiService_AssertAPIAvailable_" data-uid="MediaBrowser.Controller.Api.BaseApiService.AssertAPIAvailable*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseApiService_AssertAPIAvailable_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Api.BaseApiService.AssertAPIAvailable(MediaBrowser.Controller.Entities.User)">AssertAPIAvailable(User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AssertAPIAvailable(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Api_BaseApiService_AssertCanManageUser_" data-uid="MediaBrowser.Controller.Api.BaseApiService.AssertCanManageUser*"></a>
   <h4 id="MediaBrowser_Controller_Api_BaseApiService_AssertCanManageUser_System_Int64_" data-uid="MediaBrowser.Controller.Api.BaseApiService.AssertCanManageUser(System.Int64)">AssertCanManageUser(Int64)</h4>
   <div class="markdown level1 summary"></div>
@@ -537,6 +564,48 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Api_BaseApiService_GetDirectoryNotFoundException_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetDirectoryNotFoundException*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseApiService_GetDirectoryNotFoundException_System_String_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetDirectoryNotFoundException(System.String)">GetDirectoryNotFoundException(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Exception GetDirectoryNotFoundException(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Api_BaseApiService_GetDtoOptions_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetDtoOptions*"></a>
   <h4 id="MediaBrowser_Controller_Api_BaseApiService_GetDtoOptions_MediaBrowser_Controller_Net_IAuthorizationContext_System_Object_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetDtoOptions(MediaBrowser.Controller.Net.IAuthorizationContext,System.Object)">GetDtoOptions(IAuthorizationContext, Object)</h4>
   <div class="markdown level1 summary"></div>
@@ -578,6 +647,48 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Api_BaseApiService_GetFileNotFoundException_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetFileNotFoundException*"></a>
+  <h4 id="MediaBrowser_Controller_Api_BaseApiService_GetFileNotFoundException_System_String_" data-uid="MediaBrowser.Controller.Api.BaseApiService.GetFileNotFoundException(System.String)">GetFileNotFoundException(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected FileNotFoundException GetFileNotFoundException(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1341,7 +1452,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="xref">System.ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">requestedUserId</span></td>
         <td></td>
       </tr>

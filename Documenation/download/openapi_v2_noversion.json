@@ -61243,6 +61243,9 @@
         "SkipEpisodesInLibrary": {
           "type": "boolean"
         },
+        "MatchExistingItemsWithAnyLibrary": {
+          "type": "boolean"
+        },
         "RecordAnyChannel": {
           "description": "A value indicating whether \\[record any channel\\].",
           "type": "boolean"
@@ -61467,6 +61470,9 @@
           "$ref": "#/definitions/LiveTv.KeepUntil"
         },
         "SkipEpisodesInLibrary": {
+          "type": "boolean"
+        },
+        "MatchExistingItemsWithAnyLibrary": {
           "type": "boolean"
         },
         "RecordNewOnly": {

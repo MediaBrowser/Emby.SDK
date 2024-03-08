@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * HlsSegmentService service.
 * @module EmbyClient.JavaScript.Beta/HlsSegmentServiceApi
-* @version 4.9.0.8
+* @version 4.9.0.9
 */
 export default class HlsSegmentServiceApi {
 

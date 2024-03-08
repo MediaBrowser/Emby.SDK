@@ -35,6 +35,9 @@ public class LiveTvSeriesTimerInfoDto {
   @SerializedName("SkipEpisodesInLibrary")
   private Boolean skipEpisodesInLibrary = null;
 
+  @SerializedName("MatchExistingItemsWithAnyLibrary")
+  private Boolean matchExistingItemsWithAnyLibrary = null;
+
   @SerializedName("RecordAnyChannel")
   private Boolean recordAnyChannel = null;
 
@@ -174,6 +177,24 @@ public class LiveTvSeriesTimerInfoDto {
 
   public void setSkipEpisodesInLibrary(Boolean skipEpisodesInLibrary) {
     this.skipEpisodesInLibrary = skipEpisodesInLibrary;
+  }
+
+  public LiveTvSeriesTimerInfoDto matchExistingItemsWithAnyLibrary(Boolean matchExistingItemsWithAnyLibrary) {
+    this.matchExistingItemsWithAnyLibrary = matchExistingItemsWithAnyLibrary;
+    return this;
+  }
+
+   /**
+   * Get matchExistingItemsWithAnyLibrary
+   * @return matchExistingItemsWithAnyLibrary
+  **/
+  @Schema(description = "")
+  public Boolean isMatchExistingItemsWithAnyLibrary() {
+    return matchExistingItemsWithAnyLibrary;
+  }
+
+  public void setMatchExistingItemsWithAnyLibrary(Boolean matchExistingItemsWithAnyLibrary) {
+    this.matchExistingItemsWithAnyLibrary = matchExistingItemsWithAnyLibrary;
   }
 
   public LiveTvSeriesTimerInfoDto recordAnyChannel(Boolean recordAnyChannel) {
@@ -858,6 +879,7 @@ public class LiveTvSeriesTimerInfoDto {
     LiveTvSeriesTimerInfoDto liveTvSeriesTimerInfoDto = (LiveTvSeriesTimerInfoDto) o;
     return Objects.equals(this.recordAnyTime, liveTvSeriesTimerInfoDto.recordAnyTime) &&
         Objects.equals(this.skipEpisodesInLibrary, liveTvSeriesTimerInfoDto.skipEpisodesInLibrary) &&
+        Objects.equals(this.matchExistingItemsWithAnyLibrary, liveTvSeriesTimerInfoDto.matchExistingItemsWithAnyLibrary) &&
         Objects.equals(this.recordAnyChannel, liveTvSeriesTimerInfoDto.recordAnyChannel) &&
         Objects.equals(this.keepUpTo, liveTvSeriesTimerInfoDto.keepUpTo) &&
         Objects.equals(this.maxRecordingSeconds, liveTvSeriesTimerInfoDto.maxRecordingSeconds) &&
@@ -897,7 +919,7 @@ public class LiveTvSeriesTimerInfoDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(recordAnyTime, skipEpisodesInLibrary, recordAnyChannel, keepUpTo, maxRecordingSeconds, recordNewOnly, channelIds, days, imageTags, parentThumbItemId, parentThumbImageTag, parentPrimaryImageItemId, parentPrimaryImageTag, seriesId, keywords, timerType, id, type, serverId, channelId, channelName, channelNumber, channelPrimaryImageTag, programId, name, overview, parentFolderId, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
+    return Objects.hash(recordAnyTime, skipEpisodesInLibrary, matchExistingItemsWithAnyLibrary, recordAnyChannel, keepUpTo, maxRecordingSeconds, recordNewOnly, channelIds, days, imageTags, parentThumbItemId, parentThumbImageTag, parentPrimaryImageItemId, parentPrimaryImageTag, seriesId, keywords, timerType, id, type, serverId, channelId, channelName, channelNumber, channelPrimaryImageTag, programId, name, overview, parentFolderId, startDate, endDate, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, parentBackdropItemId, parentBackdropImageTags, isPostPaddingRequired, keepUntil);
   }
 
 
@@ -908,6 +930,7 @@ public class LiveTvSeriesTimerInfoDto {
     
     sb.append("    recordAnyTime: ").append(toIndentedString(recordAnyTime)).append("\n");
     sb.append("    skipEpisodesInLibrary: ").append(toIndentedString(skipEpisodesInLibrary)).append("\n");
+    sb.append("    matchExistingItemsWithAnyLibrary: ").append(toIndentedString(matchExistingItemsWithAnyLibrary)).append("\n");
     sb.append("    recordAnyChannel: ").append(toIndentedString(recordAnyChannel)).append("\n");
     sb.append("    keepUpTo: ").append(toIndentedString(keepUpTo)).append("\n");
     sb.append("    maxRecordingSeconds: ").append(toIndentedString(maxRecordingSeconds)).append("\n");

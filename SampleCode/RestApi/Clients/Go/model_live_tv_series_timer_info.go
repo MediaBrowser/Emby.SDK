@@ -32,6 +32,7 @@ type LiveTvSeriesTimerInfo struct {
 	KeepUpTo int32 `json:"KeepUpTo,omitempty"`
 	KeepUntil *LiveTvKeepUntil `json:"KeepUntil,omitempty"`
 	SkipEpisodesInLibrary bool `json:"SkipEpisodesInLibrary,omitempty"`
+	MatchExistingItemsWithAnyLibrary bool `json:"MatchExistingItemsWithAnyLibrary,omitempty"`
 	// A value indicating whether \\[record new only\\].
 	RecordNewOnly bool `json:"RecordNewOnly,omitempty"`
 	// The days.

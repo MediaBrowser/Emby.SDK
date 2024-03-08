@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.8"
+    "version": "4.9.0.9"
   },
   "servers": [
     {
@@ -84007,6 +84007,9 @@
           "SkipEpisodesInLibrary": {
             "type": "boolean"
           },
+          "MatchExistingItemsWithAnyLibrary": {
+            "type": "boolean"
+          },
           "RecordAnyChannel": {
             "type": "boolean",
             "description": "A value indicating whether \\[record any channel\\]."
@@ -84232,6 +84235,9 @@
             "$ref": "#/components/schemas/LiveTv.KeepUntil"
           },
           "SkipEpisodesInLibrary": {
+            "type": "boolean"
+          },
+          "MatchExistingItemsWithAnyLibrary": {
             "type": "boolean"
           },
           "RecordNewOnly": {

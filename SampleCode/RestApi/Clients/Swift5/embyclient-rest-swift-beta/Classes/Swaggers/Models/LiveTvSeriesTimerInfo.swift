@@ -33,6 +33,7 @@ public struct LiveTvSeriesTimerInfo: Codable {
     public var keepUpTo: Int?
     public var keepUntil: LiveTvKeepUntil?
     public var skipEpisodesInLibrary: Bool?
+    public var matchExistingItemsWithAnyLibrary: Bool?
     /** A value indicating whether \\[record new only\\]. */
     public var recordNewOnly: Bool?
     /** The days. */
@@ -54,7 +55,7 @@ public struct LiveTvSeriesTimerInfo: Codable {
     public var keywords: [LiveTvKeywordInfo]?
     public var timerType: LiveTvTimerType?
 
-    public init(_id: String? = nil, channelId: String? = nil, channelIds: [String]? = nil, parentFolderId: Int64? = nil, programId: String? = nil, name: String? = nil, serviceName: String? = nil, overview: String? = nil, startDate: Date? = nil, endDate: Date? = nil, recordAnyTime: Bool? = nil, keepUpTo: Int? = nil, keepUntil: LiveTvKeepUntil? = nil, skipEpisodesInLibrary: Bool? = nil, recordNewOnly: Bool? = nil, days: [DayOfWeek]? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, isPostPaddingRequired: Bool? = nil, seriesId: String? = nil, providerIds: ProviderIdDictionary? = nil, maxRecordingSeconds: Int? = nil, keywords: [LiveTvKeywordInfo]? = nil, timerType: LiveTvTimerType? = nil) {
+    public init(_id: String? = nil, channelId: String? = nil, channelIds: [String]? = nil, parentFolderId: Int64? = nil, programId: String? = nil, name: String? = nil, serviceName: String? = nil, overview: String? = nil, startDate: Date? = nil, endDate: Date? = nil, recordAnyTime: Bool? = nil, keepUpTo: Int? = nil, keepUntil: LiveTvKeepUntil? = nil, skipEpisodesInLibrary: Bool? = nil, matchExistingItemsWithAnyLibrary: Bool? = nil, recordNewOnly: Bool? = nil, days: [DayOfWeek]? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, isPostPaddingRequired: Bool? = nil, seriesId: String? = nil, providerIds: ProviderIdDictionary? = nil, maxRecordingSeconds: Int? = nil, keywords: [LiveTvKeywordInfo]? = nil, timerType: LiveTvTimerType? = nil) {
         self._id = _id
         self.channelId = channelId
         self.channelIds = channelIds
@@ -69,6 +70,7 @@ public struct LiveTvSeriesTimerInfo: Codable {
         self.keepUpTo = keepUpTo
         self.keepUntil = keepUntil
         self.skipEpisodesInLibrary = skipEpisodesInLibrary
+        self.matchExistingItemsWithAnyLibrary = matchExistingItemsWithAnyLibrary
         self.recordNewOnly = recordNewOnly
         self.days = days
         self.priority = priority
@@ -98,6 +100,7 @@ public struct LiveTvSeriesTimerInfo: Codable {
         case keepUpTo = "KeepUpTo"
         case keepUntil = "KeepUntil"
         case skipEpisodesInLibrary = "SkipEpisodesInLibrary"
+        case matchExistingItemsWithAnyLibrary = "MatchExistingItemsWithAnyLibrary"
         case recordNewOnly = "RecordNewOnly"
         case days = "Days"
         case priority = "Priority"
