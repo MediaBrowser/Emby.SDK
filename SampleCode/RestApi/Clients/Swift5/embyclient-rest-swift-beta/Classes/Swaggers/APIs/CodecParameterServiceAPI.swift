@@ -64,6 +64,7 @@ open class CodecParameterServiceAPI {
       "Id" : "Id",
       "IsAdvanced" : true,
       "IsReadOnly" : true,
+      "FeatureRequiresPremiere" : true,
       "Name" : "Name"
     },
     "Name" : "Name",
@@ -84,6 +85,7 @@ open class CodecParameterServiceAPI {
       "Id" : "Id",
       "IsAdvanced" : true,
       "IsReadOnly" : true,
+      "FeatureRequiresPremiere" : true,
       "Name" : "Name"
     }, {
       "ParentId" : "ParentId",
@@ -93,12 +95,14 @@ open class CodecParameterServiceAPI {
       "Id" : "Id",
       "IsAdvanced" : true,
       "IsReadOnly" : true,
+      "FeatureRequiresPremiere" : true,
       "Name" : "Name"
     } ],
     "DisplayName" : "DisplayName",
     "Id" : "Id",
     "IsAdvanced" : true,
-    "IsReadOnly" : true
+    "IsReadOnly" : true,
+    "FeatureRequiresPremiere" : true
   },
   "DefaultObject" : { },
   "Object" : { }

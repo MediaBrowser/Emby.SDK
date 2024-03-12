@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.9
+  version: 4.9.0.10
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -68313,6 +68313,7 @@ components:
             Id: Id
             IsAdvanced: true
             IsReadOnly: true
+            FeatureRequiresPremiere: true
             Name: Name
           Name: Name
           PostbackActions:
@@ -68331,6 +68332,7 @@ components:
             Id: Id
             IsAdvanced: true
             IsReadOnly: true
+            FeatureRequiresPremiere: true
             Name: Name
           - ParentId: ParentId
             AllowEmpty: true
@@ -68340,11 +68342,13 @@ components:
             Id: Id
             IsAdvanced: true
             IsReadOnly: true
+            FeatureRequiresPremiere: true
             Name: Name
           DisplayName: DisplayName
           Id: Id
           IsAdvanced: true
           IsReadOnly: true
+          FeatureRequiresPremiere: true
         DefaultObject: {}
         Object: {}
       x-internal-ref-name: Emby.Web.GenericEdit.EditObjectContainer
@@ -68381,6 +68385,8 @@ components:
           type: string
         Description:
           type: string
+        FeatureRequiresPremiere:
+          type: boolean
         ParentId:
           type: string
       example:
@@ -68410,6 +68416,7 @@ components:
           Id: Id
           IsAdvanced: true
           IsReadOnly: true
+          FeatureRequiresPremiere: true
           Name: Name
         Name: Name
         PostbackActions:
@@ -68428,6 +68435,7 @@ components:
           Id: Id
           IsAdvanced: true
           IsReadOnly: true
+          FeatureRequiresPremiere: true
           Name: Name
         - ParentId: ParentId
           AllowEmpty: true
@@ -68437,11 +68445,13 @@ components:
           Id: Id
           IsAdvanced: true
           IsReadOnly: true
+          FeatureRequiresPremiere: true
           Name: Name
         DisplayName: DisplayName
         Id: Id
         IsAdvanced: true
         IsReadOnly: true
+        FeatureRequiresPremiere: true
       x-internal-ref-name: Emby.Web.GenericEdit.Editors.EditorRoot
     Conditions.PropertyCondition:
       type: object
@@ -68527,6 +68537,8 @@ components:
           type: string
         Description:
           type: string
+        FeatureRequiresPremiere:
+          type: boolean
         ParentId:
           type: string
       example:
@@ -68538,6 +68550,7 @@ components:
         Id: Id
         IsAdvanced: true
         IsReadOnly: true
+        FeatureRequiresPremiere: true
         Name: Name
       x-internal-ref-name: Emby.Web.GenericEdit.Editors.EditorButtonItem
     Common.EditorTypes:
@@ -68583,6 +68596,8 @@ components:
           type: string
         Description:
           type: string
+        FeatureRequiresPremiere:
+          type: boolean
         ParentId:
           type: string
       example:
@@ -68594,6 +68609,7 @@ components:
         Id: Id
         IsAdvanced: true
         IsReadOnly: true
+        FeatureRequiresPremiere: true
         Name: Name
       x-internal-ref-name: Emby.Web.GenericEdit.Editors.EditorBase
     MediaEncoding.CodecParameterContext:

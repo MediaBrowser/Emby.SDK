@@ -15,7 +15,7 @@ import CommonEditorTypes from './CommonEditorTypes';
 /**
 * The EditorsEditorButtonItem model module.
 * @module model/EditorsEditorButtonItem
-* @version 4.9.0.9
+* @version 4.9.0.10
 */
 export default class EditorsEditorButtonItem {
     /**
@@ -66,6 +66,9 @@ export default class EditorsEditorButtonItem {
             if (data.hasOwnProperty('Description')) {
                 obj['Description'] = ApiClient.convertToType(data['Description'], 'String');
             }
+            if (data.hasOwnProperty('FeatureRequiresPremiere')) {
+                obj['FeatureRequiresPremiere'] = ApiClient.convertToType(data['FeatureRequiresPremiere'], 'Boolean');
+            }
             if (data.hasOwnProperty('ParentId')) {
                 obj['ParentId'] = ApiClient.convertToType(data['ParentId'], 'String');
             }
@@ -105,6 +108,10 @@ export default class EditorsEditorButtonItem {
     * @member {String} Description
     */
     'Description' = undefined;
+    /**
+    * @member {Boolean} FeatureRequiresPremiere
+    */
+    'FeatureRequiresPremiere' = undefined;
     /**
     * @member {String} ParentId
     */

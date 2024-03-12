@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.9"
+    "version": "4.9.0.10"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -59746,6 +59746,9 @@
         "Description": {
           "type": "string"
         },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
+        },
         "ParentId": {
           "type": "string"
         }
@@ -59852,6 +59855,9 @@
         "Description": {
           "type": "string"
         },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
+        },
         "ParentId": {
           "type": "string"
         }
@@ -59910,6 +59916,9 @@
         },
         "Description": {
           "type": "string"
+        },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
         },
         "ParentId": {
           "type": "string"

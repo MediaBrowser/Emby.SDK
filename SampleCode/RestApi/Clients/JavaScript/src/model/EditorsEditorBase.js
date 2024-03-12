@@ -15,7 +15,7 @@ import CommonEditorTypes from './CommonEditorTypes';
 /**
 * The EditorsEditorBase model module.
 * @module model/EditorsEditorBase
-* @version 4.9.0.9
+* @version 4.9.0.10
 */
 export default class EditorsEditorBase {
     /**
@@ -66,6 +66,9 @@ export default class EditorsEditorBase {
             if (data.hasOwnProperty('Description')) {
                 obj['Description'] = ApiClient.convertToType(data['Description'], 'String');
             }
+            if (data.hasOwnProperty('FeatureRequiresPremiere')) {
+                obj['FeatureRequiresPremiere'] = ApiClient.convertToType(data['FeatureRequiresPremiere'], 'Boolean');
+            }
             if (data.hasOwnProperty('ParentId')) {
                 obj['ParentId'] = ApiClient.convertToType(data['ParentId'], 'String');
             }
@@ -105,6 +108,10 @@ export default class EditorsEditorBase {
     * @member {String} Description
     */
     'Description' = undefined;
+    /**
+    * @member {Boolean} FeatureRequiresPremiere
+    */
+    'FeatureRequiresPremiere' = undefined;
     /**
     * @member {String} ParentId
     */

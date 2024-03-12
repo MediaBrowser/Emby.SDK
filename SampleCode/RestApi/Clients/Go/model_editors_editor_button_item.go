@@ -15,5 +15,6 @@ type EditorsEditorButtonItem struct {
 	IsAdvanced bool `json:"IsAdvanced,omitempty"`
 	DisplayName string `json:"DisplayName,omitempty"`
 	Description string `json:"Description,omitempty"`
+	FeatureRequiresPremiere bool `json:"FeatureRequiresPremiere,omitempty"`
 	ParentId string `json:"ParentId,omitempty"`
 }

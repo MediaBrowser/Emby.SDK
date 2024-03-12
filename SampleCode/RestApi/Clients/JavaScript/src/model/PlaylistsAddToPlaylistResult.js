@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The PlaylistsAddToPlaylistResult model module.
 * @module model/PlaylistsAddToPlaylistResult
-* @version 4.9.0.9
+* @version 4.9.0.10
 */
 export default class PlaylistsAddToPlaylistResult {
     /**

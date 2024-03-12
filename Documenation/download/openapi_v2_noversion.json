@@ -59744,6 +59744,9 @@
         "Description": {
           "type": "string"
         },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
+        },
         "ParentId": {
           "type": "string"
         }
@@ -59850,6 +59853,9 @@
         "Description": {
           "type": "string"
         },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
+        },
         "ParentId": {
           "type": "string"
         }
@@ -59908,6 +59914,9 @@
         },
         "Description": {
           "type": "string"
+        },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
         },
         "ParentId": {
           "type": "string"
