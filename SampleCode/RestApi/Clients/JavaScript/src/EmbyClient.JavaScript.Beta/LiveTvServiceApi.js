@@ -38,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.9.0.10
+* @version 4.9.0.11
 */
 export default class LiveTvServiceApi {
 
@@ -2159,6 +2159,42 @@ export default class LiveTvServiceApi {
 
       return this.apiClient.callApi(
         '/LiveTv/TunerHosts/Types', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the getLivetvTunersDiscover operation.
+     * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvTunersDiscoverCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/LiveTvTunerHostInfo>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~getLivetvTunersDiscoverCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/LiveTvTunerHostInfo>}
+     */
+    getLivetvTunersDiscover() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = [LiveTvTunerHostInfo];
+
+      return this.apiClient.callApi(
+        '/LiveTv/Tuners/Discover', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

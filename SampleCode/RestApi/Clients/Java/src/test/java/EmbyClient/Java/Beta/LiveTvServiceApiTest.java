@@ -1253,6 +1253,20 @@ public class LiveTvServiceApiTest {
      *          if the Api call fails
      */
     @Test
+    public void getLivetvTunersDiscoverTest() throws Exception {
+        List<LiveTvTunerHostInfo> response = api.getLivetvTunersDiscover();
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void getLivetvTunersDiscvoverTest() throws Exception {
         List<LiveTvTunerHostInfo> response = api.getLivetvTunersDiscvover();
 

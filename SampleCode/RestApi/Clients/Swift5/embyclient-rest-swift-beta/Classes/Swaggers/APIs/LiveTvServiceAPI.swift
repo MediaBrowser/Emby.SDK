@@ -15049,6 +15049,79 @@ open class LiveTvServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
+    open class func getLivetvTunersDiscover(completion: @escaping ((_ data: [LiveTvTunerHostInfo]?,_ error: Error?) -> Void)) {
+        getLivetvTunersDiscoverWithRequestBuilder().execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     - GET /LiveTv/Tuners/Discover
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example=[ {
+  "PreferEpgChannelImages" : true,
+  "ProviderOptions" : "ProviderOptions",
+  "FriendlyName" : "FriendlyName",
+  "DeviceId" : "DeviceId",
+  "PreferEpgChannelNumbers" : true,
+  "ImportFavoritesOnly" : true,
+  "AllowMappingByNumber" : true,
+  "Url" : "Url",
+  "Source" : "Source",
+  "Type" : "Type",
+  "AllowHWTranscoding" : true,
+  "TunerCount" : 0,
+  "Referrer" : "Referrer",
+  "UserAgent" : "UserAgent",
+  "Id" : "Id",
+  "DataVersion" : 6,
+  "SetupUrl" : "SetupUrl",
+  "ImportGuideData" : true
+}, {
+  "PreferEpgChannelImages" : true,
+  "ProviderOptions" : "ProviderOptions",
+  "FriendlyName" : "FriendlyName",
+  "DeviceId" : "DeviceId",
+  "PreferEpgChannelNumbers" : true,
+  "ImportFavoritesOnly" : true,
+  "AllowMappingByNumber" : true,
+  "Url" : "Url",
+  "Source" : "Source",
+  "Type" : "Type",
+  "AllowHWTranscoding" : true,
+  "TunerCount" : 0,
+  "Referrer" : "Referrer",
+  "UserAgent" : "UserAgent",
+  "Id" : "Id",
+  "DataVersion" : 6,
+  "SetupUrl" : "SetupUrl",
+  "ImportGuideData" : true
+} ]}]
+
+     - returns: RequestBuilder<[LiveTvTunerHostInfo]> 
+     */
+    open class func getLivetvTunersDiscoverWithRequestBuilder() -> RequestBuilder<[LiveTvTunerHostInfo]> {
+        let path = "/LiveTv/Tuners/Discover"
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<[LiveTvTunerHostInfo]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+
+     - parameter completion: completion handler to receive the data and the error objects
+     */
     open class func getLivetvTunersDiscvover(completion: @escaping ((_ data: [LiveTvTunerHostInfo]?,_ error: Error?) -> Void)) {
         getLivetvTunersDiscvoverWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)

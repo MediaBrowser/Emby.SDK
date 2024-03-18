@@ -28,7 +28,7 @@ import UserPolicy from '../model/UserPolicy';
 /**
 * UserService service.
 * @module EmbyClient.JavaScript.Beta/UserServiceApi
-* @version 4.9.0.10
+* @version 4.9.0.11
 */
 export default class UserServiceApi {
 

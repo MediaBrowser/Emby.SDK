@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.0.10
+ * OpenAPI spec version: 4.9.0.11
  * 
  *
  * NOTE: This file is auto generated.
@@ -3705,6 +3705,9 @@ describe("LiveTvServiceApi", () => {
   })
   test("getLivetvTunerhostsTypes", () => {
     return expect(instance.getLivetvTunerhostsTypes({})).resolves.toBe(null)
+  })
+  test("getLivetvTunersDiscover", () => {
+    return expect(instance.getLivetvTunersDiscover({})).resolves.toBe(null)
   })
   test("getLivetvTunersDiscvover", () => {
     return expect(instance.getLivetvTunersDiscvover({})).resolves.toBe(null)

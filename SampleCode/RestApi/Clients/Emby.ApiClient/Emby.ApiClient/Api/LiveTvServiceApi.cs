@@ -4655,6 +4655,22 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <returns>Task of ApiResponse (List&lt;LiveTvTunerHostInfo&gt;)</returns>
+        public async Task<RestResponse<List<LiveTvTunerHostInfo>>> GetLivetvTunersDiscover ()
+        {
+            var request = new RestRequest("/LiveTv/Tuners/Discover", Method.Get);
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<List<LiveTvTunerHostInfo>>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <returns>Task of ApiResponse (List&lt;LiveTvTunerHostInfo&gt;)</returns>
         public async Task<RestResponse<List<LiveTvTunerHostInfo>>> GetLivetvTunersDiscvover ()
         {
             var request = new RestRequest("/LiveTv/Tuners/Discvover", Method.Get);

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UserNotificationInfo model module.
 * @module model/UserNotificationInfo
-* @version 4.9.0.10
+* @version 4.9.0.11
 */
 export default class UserNotificationInfo {
     /**

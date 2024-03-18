@@ -2069,6 +2069,25 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;LiveTvTunerHostInfo&gt;</returns>
+        List<LiveTvTunerHostInfo> GetLivetvTunersDiscover ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;LiveTvTunerHostInfo&gt;</returns>
+        ApiResponse<List<LiveTvTunerHostInfo>> GetLivetvTunersDiscoverWithHttpInfo ();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;LiveTvTunerHostInfo&gt;</returns>
         List<LiveTvTunerHostInfo> GetLivetvTunersDiscvover ();
 
         /// <summary>
@@ -4774,6 +4793,25 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;NameIdPair&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<NameIdPair>>> GetLivetvTunerhostsTypesAsyncWithHttpInfo ();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;LiveTvTunerHostInfo&gt;</returns>
+        System.Threading.Tasks.Task<List<LiveTvTunerHostInfo>> GetLivetvTunersDiscoverAsync ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;LiveTvTunerHostInfo&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<LiveTvTunerHostInfo>>> GetLivetvTunersDiscoverAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -15040,6 +15078,149 @@ namespace EmbyClient.Dotnet.Api
             return new ApiResponse<List<NameIdPair>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (List<NameIdPair>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<NameIdPair>)));
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;LiveTvTunerHostInfo&gt;</returns>
+        public List<LiveTvTunerHostInfo> GetLivetvTunersDiscover ()
+        {
+             ApiResponse<List<LiveTvTunerHostInfo>> localVarResponse = GetLivetvTunersDiscoverWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;LiveTvTunerHostInfo&gt;</returns>
+        public ApiResponse< List<LiveTvTunerHostInfo> > GetLivetvTunersDiscoverWithHttpInfo ()
+        {
+
+            var localVarPath = "/LiveTv/Tuners/Discover";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLivetvTunersDiscover", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<LiveTvTunerHostInfo>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<LiveTvTunerHostInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LiveTvTunerHostInfo>)));
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;LiveTvTunerHostInfo&gt;</returns>
+        public async System.Threading.Tasks.Task<List<LiveTvTunerHostInfo>> GetLivetvTunersDiscoverAsync ()
+        {
+             ApiResponse<List<LiveTvTunerHostInfo>> localVarResponse = await GetLivetvTunersDiscoverAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  Requires authentication as user
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;LiveTvTunerHostInfo&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<LiveTvTunerHostInfo>>> GetLivetvTunersDiscoverAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/LiveTv/Tuners/Discover";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (apikeyauth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
+            {
+                localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "api_key", this.Configuration.GetApiKeyWithPrefix("api_key")));
+            }
+            // authentication (embyauth) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLivetvTunersDiscover", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<LiveTvTunerHostInfo>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (List<LiveTvTunerHostInfo>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LiveTvTunerHostInfo>)));
         }
 
         /// <summary>

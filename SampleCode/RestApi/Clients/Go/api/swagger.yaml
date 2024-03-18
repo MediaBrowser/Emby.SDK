@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.10
+  version: 4.9.0.11
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -41839,6 +41839,41 @@ paths:
       - LiveTvService
       description: Requires authentication as user
       operationId: getLivetvTunersDiscvover
+      responses:
+        "200":
+          description: Operation successful. Returning a List<TunerHostInfo> object.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LiveTv.TunerHostInfo'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LiveTv.TunerHostInfo'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /LiveTv/Tuners/Discover:
+    get:
+      tags:
+      - LiveTvService
+      description: Requires authentication as user
+      operationId: getLivetvTunersDiscover
       responses:
         "200":
           description: Operation successful. Returning a List<TunerHostInfo> object.

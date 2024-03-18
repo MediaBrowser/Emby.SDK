@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.10"
+    "version": "4.9.0.11"
   },
   "servers": [
     {
@@ -51601,6 +51601,62 @@
         ],
         "description": "Requires authentication as user",
         "operationId": "getLivetvTunersDiscvover",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a List<TunerHostInfo> object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LiveTv.TunerHostInfo"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LiveTv.TunerHostInfo"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/LiveTv/Tuners/Discover": {
+      "get": {
+        "tags": [
+          "LiveTvService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "getLivetvTunersDiscover",
         "responses": {
           "200": {
             "description": "Operation successful. Returning a List<TunerHostInfo> object.",
