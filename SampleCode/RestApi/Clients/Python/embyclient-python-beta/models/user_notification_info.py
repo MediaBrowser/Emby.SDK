@@ -35,6 +35,7 @@ class UserNotificationInfo(object):
         'event_ids': 'list[str]',
         'user_id': 'str',
         'is_self_notification': 'bool',
+        'group_items': 'bool',
         'options': 'dict(str, str)'
     }
 
@@ -52,10 +53,11 @@ class UserNotificationInfo(object):
         'event_ids': 'EventIds',
         'user_id': 'UserId',
         'is_self_notification': 'IsSelfNotification',
+        'group_items': 'GroupItems',
         'options': 'Options'
     }
 
-    def __init__(self, notifier_key=None, setup_module_url=None, service_name=None, plugin_id=None, friendly_name=None, id=None, enabled=None, user_ids=None, device_ids=None, library_ids=None, event_ids=None, user_id=None, is_self_notification=None, options=None):  # noqa: E501
+    def __init__(self, notifier_key=None, setup_module_url=None, service_name=None, plugin_id=None, friendly_name=None, id=None, enabled=None, user_ids=None, device_ids=None, library_ids=None, event_ids=None, user_id=None, is_self_notification=None, group_items=None, options=None):  # noqa: E501
         """UserNotificationInfo - a model defined in Swagger"""  # noqa: E501
         self._notifier_key = None
         self._setup_module_url = None
@@ -70,6 +72,7 @@ class UserNotificationInfo(object):
         self._event_ids = None
         self._user_id = None
         self._is_self_notification = None
+        self._group_items = None
         self._options = None
         self.discriminator = None
         if notifier_key is not None:
@@ -98,6 +101,8 @@ class UserNotificationInfo(object):
             self.user_id = user_id
         if is_self_notification is not None:
             self.is_self_notification = is_self_notification
+        if group_items is not None:
+            self.group_items = group_items
         if options is not None:
             self.options = options
 
@@ -377,6 +382,27 @@ class UserNotificationInfo(object):
         """
 
         self._is_self_notification = is_self_notification
+
+    @property
+    def group_items(self):
+        """Gets the group_items of this UserNotificationInfo.  # noqa: E501
+
+
+        :return: The group_items of this UserNotificationInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._group_items
+
+    @group_items.setter
+    def group_items(self, group_items):
+        """Sets the group_items of this UserNotificationInfo.
+
+
+        :param group_items: The group_items of this UserNotificationInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._group_items = group_items
 
     @property
     def options(self):

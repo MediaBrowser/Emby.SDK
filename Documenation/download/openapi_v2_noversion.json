@@ -66116,6 +66116,9 @@
         "IsSelfNotification": {
           "type": "boolean"
         },
+        "GroupItems": {
+          "type": "boolean"
+        },
         "Options": {
           "description": "This is for webhooks since this will cause xml serialization to fail",
           "type": "object",

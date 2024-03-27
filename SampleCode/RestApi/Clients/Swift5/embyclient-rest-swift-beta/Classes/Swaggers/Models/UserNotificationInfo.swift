@@ -26,10 +26,11 @@ public struct UserNotificationInfo: Codable {
     /** Notification intended for a specific user */
     public var userId: String?
     public var isSelfNotification: Bool?
+    public var groupItems: Bool?
     /** This is for webhooks since this will cause xml serialization to fail */
     public var options: [String:String]?
 
-    public init(notifierKey: String? = nil, setupModuleUrl: String? = nil, serviceName: String? = nil, pluginId: String? = nil, friendlyName: String? = nil, _id: String? = nil, enabled: Bool? = nil, userIds: [String]? = nil, deviceIds: [String]? = nil, libraryIds: [String]? = nil, eventIds: [String]? = nil, userId: String? = nil, isSelfNotification: Bool? = nil, options: [String:String]? = nil) {
+    public init(notifierKey: String? = nil, setupModuleUrl: String? = nil, serviceName: String? = nil, pluginId: String? = nil, friendlyName: String? = nil, _id: String? = nil, enabled: Bool? = nil, userIds: [String]? = nil, deviceIds: [String]? = nil, libraryIds: [String]? = nil, eventIds: [String]? = nil, userId: String? = nil, isSelfNotification: Bool? = nil, groupItems: Bool? = nil, options: [String:String]? = nil) {
         self.notifierKey = notifierKey
         self.setupModuleUrl = setupModuleUrl
         self.serviceName = serviceName
@@ -43,6 +44,7 @@ public struct UserNotificationInfo: Codable {
         self.eventIds = eventIds
         self.userId = userId
         self.isSelfNotification = isSelfNotification
+        self.groupItems = groupItems
         self.options = options
     }
 
@@ -60,6 +62,7 @@ public struct UserNotificationInfo: Codable {
         case eventIds = "EventIds"
         case userId = "UserId"
         case isSelfNotification = "IsSelfNotification"
+        case groupItems = "GroupItems"
         case options = "Options"
     }
 

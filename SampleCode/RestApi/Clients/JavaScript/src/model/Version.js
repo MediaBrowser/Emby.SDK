@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The Version model module.
 * @module model/Version
-* @version 4.9.0.11
+* @version 4.9.0.12
 */
 export default class Version {
     /**

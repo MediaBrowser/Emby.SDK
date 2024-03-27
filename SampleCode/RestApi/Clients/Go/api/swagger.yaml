@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.11
+  version: 4.9.0.12
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -84419,6 +84419,8 @@ components:
           description: Notification intended for a specific user
         IsSelfNotification:
           type: boolean
+        GroupItems:
+          type: boolean
         Options:
           type: object
           additionalProperties:
@@ -84436,6 +84438,7 @@ components:
         SetupModuleUrl: SetupModuleUrl
         Enabled: true
         PluginId: PluginId
+        GroupItems: true
         IsSelfNotification: true
         DeviceIds:
         - DeviceIds

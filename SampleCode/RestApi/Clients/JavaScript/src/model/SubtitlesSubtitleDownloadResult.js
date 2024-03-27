@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The SubtitlesSubtitleDownloadResult model module.
 * @module model/SubtitlesSubtitleDownloadResult
-* @version 4.9.0.11
+* @version 4.9.0.12
 */
 export default class SubtitlesSubtitleDownloadResult {
     /**

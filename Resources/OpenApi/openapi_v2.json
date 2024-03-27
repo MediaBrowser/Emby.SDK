@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.11"
+    "version": "4.9.0.12"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -66116,6 +66116,9 @@
           "type": "string"
         },
         "IsSelfNotification": {
+          "type": "boolean"
+        },
+        "GroupItems": {
           "type": "boolean"
         },
         "Options": {

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The UserNotificationInfo model module.
 * @module model/UserNotificationInfo
-* @version 4.9.0.11
+* @version 4.9.0.12
 */
 export default class UserNotificationInfo {
     /**
@@ -80,6 +80,9 @@ export default class UserNotificationInfo {
             if (data.hasOwnProperty('IsSelfNotification')) {
                 obj['IsSelfNotification'] = ApiClient.convertToType(data['IsSelfNotification'], 'Boolean');
             }
+            if (data.hasOwnProperty('GroupItems')) {
+                obj['GroupItems'] = ApiClient.convertToType(data['GroupItems'], 'Boolean');
+            }
             if (data.hasOwnProperty('Options')) {
                 obj['Options'] = ApiClient.convertToType(data['Options'], {'String': 'String'});
             }
@@ -141,6 +144,10 @@ export default class UserNotificationInfo {
     * @member {Boolean} IsSelfNotification
     */
     'IsSelfNotification' = undefined;
+    /**
+    * @member {Boolean} GroupItems
+    */
+    'GroupItems' = undefined;
     /**
     * This is for webhooks since this will cause xml serialization to fail
     * @member {Object.<String, String>} Options
