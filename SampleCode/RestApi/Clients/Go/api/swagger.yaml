@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.12
+  version: 4.9.0.13
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -18351,14 +18351,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -18368,6 +18360,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -18531,14 +18531,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -18548,6 +18540,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -30195,7 +30195,14 @@ paths:
         required: true
       responses:
         "200":
-          description: Operation successful. Empty response.
+          description: Operation successful. Returning a SeriesTimerInfoDto object.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LiveTv.SeriesTimerInfoDto'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/LiveTv.SeriesTimerInfoDto'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -38032,6 +38039,31 @@ paths:
         "500":
           description: Server error.
       x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna server info
+      description: No authentication required
+      operationId: headDlnaByUuidDescriptionXml
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/description:
     summary: Gets dlna server info
     get:
@@ -38040,6 +38072,31 @@ paths:
       summary: Gets dlna server info
       description: No authentication required
       operationId: getDlnaByUuidDescription
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna server info
+      description: No authentication required
+      operationId: headDlnaByUuidDescription
       parameters:
       - name: UuId
         in: path
@@ -50639,14 +50696,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -50656,6 +50705,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -50801,14 +50858,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -50818,6 +50867,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -50935,6 +50992,31 @@ paths:
         "500":
           description: Server error.
       x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna content directory xml
+      description: No authentication required
+      operationId: headDlnaByUuidContentdirectoryContentdirectoryXml
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/contentdirectory/contentdirectory:
     summary: Gets dlna content directory xml
     get:
@@ -50943,6 +51025,31 @@ paths:
       summary: Gets dlna content directory xml
       description: No authentication required
       operationId: getDlnaByUuidContentdirectoryContentdirectory
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna content directory xml
+      description: No authentication required
+      operationId: headDlnaByUuidContentdirectoryContentdirectory
       parameters:
       - name: UuId
         in: path
@@ -50989,6 +51096,31 @@ paths:
         "500":
           description: Server error.
       x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna connection manager xml
+      description: No authentication required
+      operationId: headDlnaByUuidConnectionmanagerConnectionmanagerXml
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/connectionmanager/connectionmanager:
     summary: Gets dlna connection manager xml
     get:
@@ -50997,6 +51129,31 @@ paths:
       summary: Gets dlna connection manager xml
       description: No authentication required
       operationId: getDlnaByUuidConnectionmanagerConnectionmanager
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna connection manager xml
+      description: No authentication required
+      operationId: headDlnaByUuidConnectionmanagerConnectionmanager
       parameters:
       - name: UuId
         in: path
@@ -51250,14 +51407,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -51267,6 +51416,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -51412,14 +51569,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -51429,6 +51578,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -51575,14 +51732,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -51592,6 +51741,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -51737,14 +51894,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -51754,6 +51903,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -52091,14 +52248,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -52108,6 +52257,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -52140,14 +52297,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -52157,6 +52306,15 @@ paths:
         schema:
           type: integer
           format: int32
+          nullable: true
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       requestBody:
         description: Binary stream
         content:
@@ -52196,14 +52354,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -52213,6 +52363,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -52358,14 +52516,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -52375,6 +52525,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -52479,6 +52637,16 @@ paths:
         explode: false
         schema:
           type: string
+      requestBody:
+        description: "BaseDownloadRemoteImage: "
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Images.BaseDownloadRemoteImage'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Images.BaseDownloadRemoteImage'
+        required: true
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -52966,14 +53134,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -52983,6 +53143,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -53128,14 +53296,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -53145,6 +53305,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -53325,14 +53493,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -53342,6 +53502,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -53487,14 +53655,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -53504,6 +53664,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -53972,14 +54140,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -53989,6 +54149,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -54134,14 +54302,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -54151,6 +54311,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -54286,6 +54454,38 @@ paths:
       summary: Gets a sync job item file
       description: Requires authentication as user
       operationId: getSyncJobitemsByIdFile
+      parameters:
+      - name: Id
+        in: path
+        description: Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - SyncService
+      summary: Gets a sync job item file
+      description: Requires authentication as user
+      operationId: headSyncJobitemsByIdFile
       parameters:
       - name: Id
         in: path
@@ -56092,14 +56292,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -56109,6 +56301,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -56149,15 +56349,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/ImageType'
-      - name: Index
-        in: query
-        description: Image Index
-        required: false
-        style: form
-        explode: false
-        schema:
-          type: integer
-          format: int32
       requestBody:
         description: Binary stream
         content:
@@ -56197,14 +56388,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -56214,6 +56397,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -56359,14 +56550,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -56376,6 +56559,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -56978,14 +57169,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -56995,6 +57178,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -57140,14 +57331,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -57157,6 +57340,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -57458,14 +57649,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -57475,6 +57658,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -57620,14 +57811,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -57637,6 +57820,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -57783,14 +57974,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -57800,6 +57983,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -57945,14 +58136,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -57962,6 +58145,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -58301,14 +58492,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -58318,6 +58501,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -58350,14 +58541,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -58367,6 +58550,15 @@ paths:
         schema:
           type: integer
           format: int32
+          nullable: true
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       requestBody:
         description: Binary stream
         content:
@@ -58406,14 +58598,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -58423,6 +58607,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -58568,14 +58760,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -58585,6 +58769,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -58617,14 +58809,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -58634,6 +58818,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -59294,14 +59486,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -59311,6 +59495,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -59456,14 +59648,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -59473,6 +59657,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -59619,14 +59811,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -59636,6 +59820,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -59781,14 +59973,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -59798,6 +59982,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -59986,14 +60178,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -60003,6 +60187,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -60148,14 +60340,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -60165,6 +60349,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -60875,14 +61067,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -60892,6 +61076,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -60932,15 +61124,6 @@ paths:
         explode: false
         schema:
           $ref: '#/components/schemas/ImageType'
-      - name: Index
-        in: path
-        description: Image Index
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: integer
-          format: int32
       requestBody:
         description: Binary stream
         content:
@@ -60980,14 +61163,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -60997,6 +61172,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -61142,14 +61325,6 @@ paths:
         explode: false
         schema:
           type: boolean
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -61159,6 +61334,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Response content unknown.
@@ -61191,14 +61374,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: query
         description: Image Index
@@ -61208,6 +61383,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -61908,14 +62091,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -61925,6 +62100,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -62176,14 +62359,6 @@ paths:
         explode: false
         schema:
           type: string
-      - name: Type
-        in: path
-        description: Image Type
-        required: true
-        style: simple
-        explode: false
-        schema:
-          $ref: '#/components/schemas/ImageType'
       - name: Index
         in: path
         description: Image Index
@@ -62193,6 +62368,14 @@ paths:
         schema:
           type: integer
           format: int32
+      - name: Type
+        in: path
+        description: Image Type
+        required: true
+        style: simple
+        explode: false
+        schema:
+          $ref: '#/components/schemas/ImageType'
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -71631,6 +71814,7 @@ components:
       - Albums
       - CollectionFolders
       - LiveTVSeries
+      - GameSystems
       x-internal-ref-name: MediaBrowser.Controller.Library.ItemLinkType
     LiveTv.RecordingStatus:
       type: string
@@ -85525,6 +85709,14 @@ components:
         - Primary
         Name: Name
       x-internal-ref-name: MediaBrowser.Model.Providers.ImageProviderInfo
+    Images.BaseDownloadRemoteImage:
+      type: object
+      properties:
+        ImageIndex:
+          type: integer
+          format: int32
+          nullable: true
+      x-internal-ref-name: Emby.Api.Images.BaseDownloadRemoteImage
     Library.UpdateMediaPath:
       type: object
       properties:

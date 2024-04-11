@@ -186,21 +186,21 @@ public class ImageServiceApi {
     /**
      * Build call for deleteItemsByIdImagesByTypeByIndex
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteItemsByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call deleteItemsByIdImagesByTypeByIndexCall(String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Items/{Id}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -238,21 +238,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call deleteItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteItemsByIdImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling deleteItemsByIdImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling deleteItemsByIdImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling deleteItemsByIdImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = deleteItemsByIdImagesByTypeByIndexCall(id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteItemsByIdImagesByTypeByIndexCall(id, index, type, progressListener, progressRequestListener);
         return call;
 
         
@@ -265,25 +265,25 @@ public class ImageServiceApi {
      * 
      * Requires authentication as administrator
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void deleteItemsByIdImagesByTypeByIndex(String id, ImageType type, Integer index) throws ApiException {
-        deleteItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index);
+    public void deleteItemsByIdImagesByTypeByIndex(String id, Integer index, ImageType type) throws ApiException {
+        deleteItemsByIdImagesByTypeByIndexWithHttpInfo(id, index, type);
     }
 
     /**
      * 
      * Requires authentication as administrator
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> deleteItemsByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = deleteItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, null, null);
+    public ApiResponse<Void> deleteItemsByIdImagesByTypeByIndexWithHttpInfo(String id, Integer index, ImageType type) throws ApiException {
+        com.squareup.okhttp.Call call = deleteItemsByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, null, null);
         return apiClient.execute(call);
     }
 
@@ -291,13 +291,13 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as administrator
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteItemsByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call deleteItemsByIdImagesByTypeByIndexAsync(String id, Integer index, ImageType type, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -318,7 +318,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteItemsByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -461,21 +461,21 @@ public class ImageServiceApi {
     /**
      * Build call for deleteUsersByIdImagesByTypeByIndex
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call deleteUsersByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call deleteUsersByIdImagesByTypeByIndexCall(String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Users/{Id}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -513,21 +513,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call deleteUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call deleteUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteUsersByIdImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling deleteUsersByIdImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling deleteUsersByIdImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling deleteUsersByIdImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = deleteUsersByIdImagesByTypeByIndexCall(id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteUsersByIdImagesByTypeByIndexCall(id, index, type, progressListener, progressRequestListener);
         return call;
 
         
@@ -540,25 +540,25 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void deleteUsersByIdImagesByTypeByIndex(String id, ImageType type, Integer index) throws ApiException {
-        deleteUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index);
+    public void deleteUsersByIdImagesByTypeByIndex(String id, Integer index, ImageType type) throws ApiException {
+        deleteUsersByIdImagesByTypeByIndexWithHttpInfo(id, index, type);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> deleteUsersByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = deleteUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, null, null);
+    public ApiResponse<Void> deleteUsersByIdImagesByTypeByIndexWithHttpInfo(String id, Integer index, ImageType type) throws ApiException {
+        com.squareup.okhttp.Call call = deleteUsersByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, null, null);
         return apiClient.execute(call);
     }
 
@@ -566,13 +566,13 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call deleteUsersByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call deleteUsersByIdImagesByTypeByIndexAsync(String id, Integer index, ImageType type, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -593,7 +593,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = deleteUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = deleteUsersByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -814,8 +814,8 @@ public class ImageServiceApi {
     /**
      * Build call for getArtistsByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -834,14 +834,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Artists/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -905,21 +905,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getArtistsByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getArtistsByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getArtistsByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getArtistsByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -932,8 +932,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -949,16 +949,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getArtistsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getArtistsByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getArtistsByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -975,8 +975,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getArtistsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getArtistsByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -984,8 +984,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1003,7 +1003,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getArtistsByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1024,7 +1024,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1245,8 +1245,8 @@ public class ImageServiceApi {
     /**
      * Build call for getGamegenresByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1265,14 +1265,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/GameGenres/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1336,21 +1336,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getGamegenresByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getGamegenresByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getGamegenresByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getGamegenresByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -1363,8 +1363,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1380,16 +1380,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getGamegenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getGamegenresByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1406,8 +1406,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getGamegenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getGamegenresByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -1415,8 +1415,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1434,7 +1434,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGamegenresByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1455,7 +1455,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -1676,8 +1676,8 @@ public class ImageServiceApi {
     /**
      * Build call for getGenresByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1696,14 +1696,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Genres/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1767,21 +1767,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getGenresByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getGenresByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getGenresByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getGenresByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -1794,8 +1794,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1811,16 +1811,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getGenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getGenresByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getGenresByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1837,8 +1837,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getGenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getGenresByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -1846,8 +1846,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -1865,7 +1865,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getGenresByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1886,7 +1886,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getGenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -2232,8 +2232,8 @@ public class ImageServiceApi {
     /**
      * Build call for getItemsByIdImagesByTypeByIndex
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -2252,14 +2252,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexCall(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Items/{Id}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2323,21 +2323,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getItemsByIdImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getItemsByIdImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getItemsByIdImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -2350,8 +2350,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -2367,16 +2367,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getItemsByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getItemsByIdImagesByTypeByIndex(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getItemsByIdImagesByTypeByIndexWithHttpInfo(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -2393,8 +2393,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexWithHttpInfo(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -2402,8 +2402,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -2421,7 +2421,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexAsync(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2442,7 +2442,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -2455,8 +2455,8 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param width The fixed image width to return. (optional)
      * @param height The fixed image height to return. (optional)
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -2471,7 +2471,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -2483,8 +2483,8 @@ public class ImageServiceApi {
             .replaceAll("\\{" + "MaxHeight" + "\\}", apiClient.escapeString(maxHeight.toString()))
             .replaceAll("\\{" + "Tag" + "\\}", apiClient.escapeString(tag.toString()))
             .replaceAll("\\{" + "Format" + "\\}", apiClient.escapeString(format.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2540,7 +2540,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'percentPlayed' is set
         if (percentPlayed == null) {
             throw new ApiException("Missing the required parameter 'percentPlayed' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
@@ -2569,16 +2569,16 @@ public class ImageServiceApi {
         if (format == null) {
             throw new ApiException("Missing the required parameter 'format' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
-        }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -2597,8 +2597,8 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param width The fixed image width to return. (optional)
      * @param height The fixed image height to return. (optional)
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -2610,8 +2610,8 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
@@ -2624,8 +2624,8 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param width The fixed image width to return. (optional)
      * @param height The fixed image height to return. (optional)
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -2638,8 +2638,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -2653,8 +2653,8 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param width The fixed image width to return. (optional)
      * @param height The fixed image height to return. (optional)
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -2668,7 +2668,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2689,7 +2689,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -2910,8 +2910,8 @@ public class ImageServiceApi {
     /**
      * Build call for getMusicgenresByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -2930,14 +2930,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/MusicGenres/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3001,21 +3001,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getMusicgenresByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getMusicgenresByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getMusicgenresByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getMusicgenresByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -3028,8 +3028,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3045,16 +3045,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getMusicgenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getMusicgenresByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3071,8 +3071,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getMusicgenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getMusicgenresByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -3080,8 +3080,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3099,7 +3099,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getMusicgenresByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3120,7 +3120,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -3341,8 +3341,8 @@ public class ImageServiceApi {
     /**
      * Build call for getPersonsByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3361,14 +3361,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Persons/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3432,21 +3432,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getPersonsByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getPersonsByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getPersonsByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getPersonsByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -3459,8 +3459,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3476,16 +3476,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getPersonsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getPersonsByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getPersonsByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3502,8 +3502,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getPersonsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getPersonsByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -3511,8 +3511,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3530,7 +3530,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPersonsByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3551,7 +3551,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -3772,8 +3772,8 @@ public class ImageServiceApi {
     /**
      * Build call for getStudiosByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3792,14 +3792,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Studios/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3863,21 +3863,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getStudiosByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getStudiosByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getStudiosByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getStudiosByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -3890,8 +3890,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3907,16 +3907,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getStudiosByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getStudiosByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getStudiosByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3933,8 +3933,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getStudiosByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getStudiosByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -3942,8 +3942,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -3961,7 +3961,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getStudiosByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -3982,7 +3982,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -4211,8 +4211,8 @@ public class ImageServiceApi {
     /**
      * Build call for getUsersByIdImagesByTypeByIndex
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -4231,14 +4231,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexCall(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Users/{Id}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4302,21 +4302,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getUsersByIdImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling getUsersByIdImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling getUsersByIdImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling getUsersByIdImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -4329,8 +4329,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -4346,16 +4346,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void getUsersByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        getUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void getUsersByIdImagesByTypeByIndex(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        getUsersByIdImagesByTypeByIndexWithHttpInfo(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -4372,8 +4372,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> getUsersByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> getUsersByIdImagesByTypeByIndexWithHttpInfo(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -4381,8 +4381,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -4400,7 +4400,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call getUsersByIdImagesByTypeByIndexAsync(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4421,7 +4421,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getUsersByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -4642,8 +4642,8 @@ public class ImageServiceApi {
     /**
      * Build call for headArtistsByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -4662,14 +4662,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Artists/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4733,21 +4733,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headArtistsByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headArtistsByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headArtistsByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headArtistsByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -4760,8 +4760,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -4777,16 +4777,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headArtistsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headArtistsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headArtistsByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headArtistsByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -4803,8 +4803,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headArtistsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headArtistsByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -4812,8 +4812,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -4831,7 +4831,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headArtistsByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4852,7 +4852,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headArtistsByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5073,8 +5073,8 @@ public class ImageServiceApi {
     /**
      * Build call for headGamegenresByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5093,14 +5093,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/GameGenres/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5164,21 +5164,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headGamegenresByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headGamegenresByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headGamegenresByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headGamegenresByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -5191,8 +5191,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5208,16 +5208,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headGamegenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headGamegenresByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5234,8 +5234,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headGamegenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headGamegenresByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -5243,8 +5243,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5262,7 +5262,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headGamegenresByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -5283,7 +5283,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGamegenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5504,8 +5504,8 @@ public class ImageServiceApi {
     /**
      * Build call for headGenresByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5524,14 +5524,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Genres/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -5595,21 +5595,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headGenresByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headGenresByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headGenresByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headGenresByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -5622,8 +5622,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5639,16 +5639,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headGenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headGenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headGenresByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headGenresByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5665,8 +5665,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headGenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headGenresByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -5674,8 +5674,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5693,7 +5693,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headGenresByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -5714,7 +5714,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headGenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -5935,8 +5935,8 @@ public class ImageServiceApi {
     /**
      * Build call for headItemsByIdImagesByTypeByIndex
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -5955,14 +5955,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexCall(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Items/{Id}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -6026,21 +6026,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexValidateBeforeCall(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling headItemsByIdImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headItemsByIdImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headItemsByIdImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headItemsByIdImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -6053,8 +6053,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -6070,16 +6070,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headItemsByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headItemsByIdImagesByTypeByIndex(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headItemsByIdImagesByTypeByIndexWithHttpInfo(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -6096,8 +6096,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexWithHttpInfo(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -6105,8 +6105,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -6124,7 +6124,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexAsync(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -6145,7 +6145,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -6158,8 +6158,8 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param width The fixed image width to return. (optional)
      * @param height The fixed image height to return. (optional)
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -6174,7 +6174,7 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -6186,8 +6186,8 @@ public class ImageServiceApi {
             .replaceAll("\\{" + "MaxHeight" + "\\}", apiClient.escapeString(maxHeight.toString()))
             .replaceAll("\\{" + "Tag" + "\\}", apiClient.escapeString(tag.toString()))
             .replaceAll("\\{" + "Format" + "\\}", apiClient.escapeString(format.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -6243,7 +6243,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'percentPlayed' is set
         if (percentPlayed == null) {
             throw new ApiException("Missing the required parameter 'percentPlayed' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
@@ -6272,16 +6272,16 @@ public class ImageServiceApi {
         if (format == null) {
             throw new ApiException("Missing the required parameter 'format' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
-        }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -6300,8 +6300,8 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param width The fixed image width to return. (optional)
      * @param height The fixed image height to return. (optional)
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -6313,8 +6313,8 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
@@ -6327,8 +6327,8 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param width The fixed image width to return. (optional)
      * @param height The fixed image height to return. (optional)
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -6341,8 +6341,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -6356,8 +6356,8 @@ public class ImageServiceApi {
      * @param maxHeight The maximum image height to return. (required)
      * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
      * @param format Determines the output foramt of the image - original,gif,jpg,png (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param width The fixed image width to return. (optional)
      * @param height The fixed image height to return. (optional)
      * @param quality Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -6371,7 +6371,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, ImageType type, Integer index, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync(Integer percentPlayed, Integer unPlayedCount, String id, Integer maxWidth, Integer maxHeight, String tag, String format, Integer index, ImageType type, Integer width, Integer height, Integer quality, Boolean cropWhitespace, Boolean enableImageEnhancers, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -6392,7 +6392,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountValidateBeforeCall(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -6613,8 +6613,8 @@ public class ImageServiceApi {
     /**
      * Build call for headMusicgenresByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -6633,14 +6633,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/MusicGenres/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -6704,21 +6704,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headMusicgenresByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headMusicgenresByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headMusicgenresByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headMusicgenresByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -6731,8 +6731,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -6748,16 +6748,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headMusicgenresByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headMusicgenresByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -6774,8 +6774,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headMusicgenresByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headMusicgenresByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -6783,8 +6783,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -6802,7 +6802,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headMusicgenresByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -6823,7 +6823,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headMusicgenresByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -7044,8 +7044,8 @@ public class ImageServiceApi {
     /**
      * Build call for headPersonsByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7064,14 +7064,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Persons/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -7135,21 +7135,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headPersonsByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headPersonsByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headPersonsByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headPersonsByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -7162,8 +7162,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7179,16 +7179,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headPersonsByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headPersonsByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headPersonsByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headPersonsByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7205,8 +7205,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headPersonsByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headPersonsByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -7214,8 +7214,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7233,7 +7233,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headPersonsByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -7254,7 +7254,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headPersonsByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -7475,8 +7475,8 @@ public class ImageServiceApi {
     /**
      * Build call for headStudiosByNameImagesByTypeByIndex
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7495,14 +7495,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Studios/{Name}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Name" + "\\}", apiClient.escapeString(name.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -7566,21 +7566,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexValidateBeforeCall(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexValidateBeforeCall(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling headStudiosByNameImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headStudiosByNameImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headStudiosByNameImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headStudiosByNameImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -7593,8 +7593,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7610,16 +7610,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headStudiosByNameImagesByTypeByIndex(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headStudiosByNameImagesByTypeByIndexWithHttpInfo(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headStudiosByNameImagesByTypeByIndex(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headStudiosByNameImagesByTypeByIndexWithHttpInfo(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7636,8 +7636,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headStudiosByNameImagesByTypeByIndexWithHttpInfo(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headStudiosByNameImagesByTypeByIndexWithHttpInfo(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -7645,8 +7645,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param name Item name (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7664,7 +7664,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexAsync(String name, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headStudiosByNameImagesByTypeByIndexAsync(String name, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -7685,7 +7685,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headStudiosByNameImagesByTypeByIndexValidateBeforeCall(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -7906,8 +7906,8 @@ public class ImageServiceApi {
     /**
      * Build call for headUsersByIdImagesByTypeByIndex
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -7926,14 +7926,14 @@ public class ImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexCall(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Users/{Id}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -7997,21 +7997,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexValidateBeforeCall(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling headUsersByIdImagesByTypeByIndex(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling headUsersByIdImagesByTypeByIndex(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling headUsersByIdImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling headUsersByIdImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         return call;
 
         
@@ -8024,8 +8024,8 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -8041,16 +8041,16 @@ public class ImageServiceApi {
      * @param keepAnimation Set to true to retain image animation (when supported). (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void headUsersByIdImagesByTypeByIndex(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        headUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+    public void headUsersByIdImagesByTypeByIndex(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        headUsersByIdImagesByTypeByIndexWithHttpInfo(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -8067,8 +8067,8 @@ public class ImageServiceApi {
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> headUsersByIdImagesByTypeByIndexWithHttpInfo(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
+    public ApiResponse<Void> headUsersByIdImagesByTypeByIndexWithHttpInfo(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation) throws ApiException {
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, null, null);
         return apiClient.execute(call);
     }
 
@@ -8076,8 +8076,8 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param maxWidth The maximum image width to return. (optional)
      * @param maxHeight The maximum image height to return. (optional)
      * @param width The fixed image width to return. (optional)
@@ -8095,7 +8095,7 @@ public class ImageServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexAsync(String id, ImageType type, Integer index, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call headUsersByIdImagesByTypeByIndexAsync(String id, Integer index, ImageType type, Integer maxWidth, Integer maxHeight, Integer width, Integer height, Integer quality, String tag, Boolean cropWhitespace, Boolean enableImageEnhancers, String format, String backgroundColor, String foregroundLayer, Boolean autoOrient, Boolean keepAnimation, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -8116,7 +8116,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexValidateBeforeCall(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = headUsersByIdImagesByTypeByIndexValidateBeforeCall(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -8268,21 +8268,21 @@ public class ImageServiceApi {
      * Build call for postItemsByIdImagesByTypeByIndex
      * @param body Binary stream (required)
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexCall(Object body, String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexCall(Object body, String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
         String localVarPath = "/Items/{Id}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8320,7 +8320,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexValidateBeforeCall(Object body, String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexValidateBeforeCall(Object body, String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postItemsByIdImagesByTypeByIndex(Async)");
@@ -8329,16 +8329,16 @@ public class ImageServiceApi {
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling postItemsByIdImagesByTypeByIndex(Async)");
         }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling postItemsByIdImagesByTypeByIndex(Async)");
-        }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling postItemsByIdImagesByTypeByIndex(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling postItemsByIdImagesByTypeByIndex(Async)");
+        }
         
-        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexCall(body, id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexCall(body, id, index, type, progressListener, progressRequestListener);
         return call;
 
         
@@ -8352,12 +8352,12 @@ public class ImageServiceApi {
      * Requires authentication as administrator
      * @param body Binary stream (required)
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postItemsByIdImagesByTypeByIndex(Object body, String id, ImageType type, Integer index) throws ApiException {
-        postItemsByIdImagesByTypeByIndexWithHttpInfo(body, id, type, index);
+    public void postItemsByIdImagesByTypeByIndex(Object body, String id, Integer index, ImageType type) throws ApiException {
+        postItemsByIdImagesByTypeByIndexWithHttpInfo(body, id, index, type);
     }
 
     /**
@@ -8365,13 +8365,13 @@ public class ImageServiceApi {
      * Requires authentication as administrator
      * @param body Binary stream (required)
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postItemsByIdImagesByTypeByIndexWithHttpInfo(Object body, String id, ImageType type, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexValidateBeforeCall(body, id, type, index, null, null);
+    public ApiResponse<Void> postItemsByIdImagesByTypeByIndexWithHttpInfo(Object body, String id, Integer index, ImageType type) throws ApiException {
+        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexValidateBeforeCall(body, id, index, type, null, null);
         return apiClient.execute(call);
     }
 
@@ -8380,13 +8380,13 @@ public class ImageServiceApi {
      * Requires authentication as administrator
      * @param body Binary stream (required)
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexAsync(Object body, String id, ImageType type, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexAsync(Object body, String id, Integer index, ImageType type, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -8407,28 +8407,28 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexValidateBeforeCall(body, id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexValidateBeforeCall(body, id, index, type, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
     /**
      * Build call for postItemsByIdImagesByTypeByIndexDelete
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexDeleteCall(String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexDeleteCall(String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Items/{Id}/Images/{Type}/{Index}/Delete"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -8466,21 +8466,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexDeleteValidateBeforeCall(String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexDeleteValidateBeforeCall(String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling postItemsByIdImagesByTypeByIndexDelete(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling postItemsByIdImagesByTypeByIndexDelete(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling postItemsByIdImagesByTypeByIndexDelete(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling postItemsByIdImagesByTypeByIndexDelete(Async)");
+        }
         
-        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexDeleteCall(id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexDeleteCall(id, index, type, progressListener, progressRequestListener);
         return call;
 
         
@@ -8493,25 +8493,25 @@ public class ImageServiceApi {
      * 
      * Requires authentication as administrator
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postItemsByIdImagesByTypeByIndexDelete(String id, ImageType type, Integer index) throws ApiException {
-        postItemsByIdImagesByTypeByIndexDeleteWithHttpInfo(id, type, index);
+    public void postItemsByIdImagesByTypeByIndexDelete(String id, Integer index, ImageType type) throws ApiException {
+        postItemsByIdImagesByTypeByIndexDeleteWithHttpInfo(id, index, type);
     }
 
     /**
      * 
      * Requires authentication as administrator
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postItemsByIdImagesByTypeByIndexDeleteWithHttpInfo(String id, ImageType type, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexDeleteValidateBeforeCall(id, type, index, null, null);
+    public ApiResponse<Void> postItemsByIdImagesByTypeByIndexDeleteWithHttpInfo(String id, Integer index, ImageType type) throws ApiException {
+        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexDeleteValidateBeforeCall(id, index, type, null, null);
         return apiClient.execute(call);
     }
 
@@ -8519,13 +8519,13 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as administrator
      * @param id Item Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexDeleteAsync(String id, ImageType type, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdImagesByTypeByIndexDeleteAsync(String id, Integer index, ImageType type, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -8546,7 +8546,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexDeleteValidateBeforeCall(id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postItemsByIdImagesByTypeByIndexDeleteValidateBeforeCall(id, index, type, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -8989,13 +8989,12 @@ public class ImageServiceApi {
      * @param body Binary stream (required)
      * @param id User Id (required)
      * @param type Image Type (required)
-     * @param index Image Index (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdImagesByTypeCall(Object body, String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdImagesByTypeCall(Object body, String id, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -9005,8 +9004,6 @@ public class ImageServiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (index != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("Index", index));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -9041,7 +9038,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByIdImagesByTypeValidateBeforeCall(Object body, String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUsersByIdImagesByTypeValidateBeforeCall(Object body, String id, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postUsersByIdImagesByType(Async)");
@@ -9055,7 +9052,7 @@ public class ImageServiceApi {
             throw new ApiException("Missing the required parameter 'type' when calling postUsersByIdImagesByType(Async)");
         }
         
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeCall(body, id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeCall(body, id, type, progressListener, progressRequestListener);
         return call;
 
         
@@ -9070,11 +9067,10 @@ public class ImageServiceApi {
      * @param body Binary stream (required)
      * @param id User Id (required)
      * @param type Image Type (required)
-     * @param index Image Index (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postUsersByIdImagesByType(Object body, String id, ImageType type, Integer index) throws ApiException {
-        postUsersByIdImagesByTypeWithHttpInfo(body, id, type, index);
+    public void postUsersByIdImagesByType(Object body, String id, ImageType type) throws ApiException {
+        postUsersByIdImagesByTypeWithHttpInfo(body, id, type);
     }
 
     /**
@@ -9083,12 +9079,11 @@ public class ImageServiceApi {
      * @param body Binary stream (required)
      * @param id User Id (required)
      * @param type Image Type (required)
-     * @param index Image Index (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postUsersByIdImagesByTypeWithHttpInfo(Object body, String id, ImageType type, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeValidateBeforeCall(body, id, type, index, null, null);
+    public ApiResponse<Void> postUsersByIdImagesByTypeWithHttpInfo(Object body, String id, ImageType type) throws ApiException {
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeValidateBeforeCall(body, id, type, null, null);
         return apiClient.execute(call);
     }
 
@@ -9098,12 +9093,11 @@ public class ImageServiceApi {
      * @param body Binary stream (required)
      * @param id User Id (required)
      * @param type Image Type (required)
-     * @param index Image Index (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdImagesByTypeAsync(Object body, String id, ImageType type, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdImagesByTypeAsync(Object body, String id, ImageType type, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -9124,7 +9118,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeValidateBeforeCall(body, id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeValidateBeforeCall(body, id, type, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
@@ -9133,20 +9127,18 @@ public class ImageServiceApi {
      * @param body Binary stream (required)
      * @param id User Id (required)
      * @param type Image Type (required)
-     * @param index Image Index (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexCall(Object body, String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexCall(Object body, String id, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
         String localVarPath = "/Users/{Id}/Images/{Type}/{Index}"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -9184,7 +9176,7 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexValidateBeforeCall(Object body, String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexValidateBeforeCall(Object body, String id, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postUsersByIdImagesByTypeByIndex(Async)");
@@ -9197,12 +9189,8 @@ public class ImageServiceApi {
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling postUsersByIdImagesByTypeByIndex(Async)");
         }
-        // verify the required parameter 'index' is set
-        if (index == null) {
-            throw new ApiException("Missing the required parameter 'index' when calling postUsersByIdImagesByTypeByIndex(Async)");
-        }
         
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexCall(body, id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexCall(body, id, type, progressListener, progressRequestListener);
         return call;
 
         
@@ -9217,11 +9205,10 @@ public class ImageServiceApi {
      * @param body Binary stream (required)
      * @param id User Id (required)
      * @param type Image Type (required)
-     * @param index Image Index (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postUsersByIdImagesByTypeByIndex(Object body, String id, ImageType type, Integer index) throws ApiException {
-        postUsersByIdImagesByTypeByIndexWithHttpInfo(body, id, type, index);
+    public void postUsersByIdImagesByTypeByIndex(Object body, String id, ImageType type) throws ApiException {
+        postUsersByIdImagesByTypeByIndexWithHttpInfo(body, id, type);
     }
 
     /**
@@ -9230,12 +9217,11 @@ public class ImageServiceApi {
      * @param body Binary stream (required)
      * @param id User Id (required)
      * @param type Image Type (required)
-     * @param index Image Index (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postUsersByIdImagesByTypeByIndexWithHttpInfo(Object body, String id, ImageType type, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexValidateBeforeCall(body, id, type, index, null, null);
+    public ApiResponse<Void> postUsersByIdImagesByTypeByIndexWithHttpInfo(Object body, String id, ImageType type) throws ApiException {
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexValidateBeforeCall(body, id, type, null, null);
         return apiClient.execute(call);
     }
 
@@ -9245,12 +9231,11 @@ public class ImageServiceApi {
      * @param body Binary stream (required)
      * @param id User Id (required)
      * @param type Image Type (required)
-     * @param index Image Index (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexAsync(Object body, String id, ImageType type, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexAsync(Object body, String id, ImageType type, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -9271,28 +9256,28 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexValidateBeforeCall(body, id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexValidateBeforeCall(body, id, type, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }
     /**
      * Build call for postUsersByIdImagesByTypeByIndexDelete
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexDeleteCall(String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexDeleteCall(String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
         String localVarPath = "/Users/{Id}/Images/{Type}/{Index}/Delete"
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
-            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()))
-            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()));
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Type" + "\\}", apiClient.escapeString(type.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -9330,21 +9315,21 @@ public class ImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexDeleteValidateBeforeCall(String id, ImageType type, Integer index, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexDeleteValidateBeforeCall(String id, Integer index, ImageType type, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling postUsersByIdImagesByTypeByIndexDelete(Async)");
-        }
-        // verify the required parameter 'type' is set
-        if (type == null) {
-            throw new ApiException("Missing the required parameter 'type' when calling postUsersByIdImagesByTypeByIndexDelete(Async)");
         }
         // verify the required parameter 'index' is set
         if (index == null) {
             throw new ApiException("Missing the required parameter 'index' when calling postUsersByIdImagesByTypeByIndexDelete(Async)");
         }
+        // verify the required parameter 'type' is set
+        if (type == null) {
+            throw new ApiException("Missing the required parameter 'type' when calling postUsersByIdImagesByTypeByIndexDelete(Async)");
+        }
         
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexDeleteCall(id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexDeleteCall(id, index, type, progressListener, progressRequestListener);
         return call;
 
         
@@ -9357,25 +9342,25 @@ public class ImageServiceApi {
      * 
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postUsersByIdImagesByTypeByIndexDelete(String id, ImageType type, Integer index) throws ApiException {
-        postUsersByIdImagesByTypeByIndexDeleteWithHttpInfo(id, type, index);
+    public void postUsersByIdImagesByTypeByIndexDelete(String id, Integer index, ImageType type) throws ApiException {
+        postUsersByIdImagesByTypeByIndexDeleteWithHttpInfo(id, index, type);
     }
 
     /**
      * 
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postUsersByIdImagesByTypeByIndexDeleteWithHttpInfo(String id, ImageType type, Integer index) throws ApiException {
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexDeleteValidateBeforeCall(id, type, index, null, null);
+    public ApiResponse<Void> postUsersByIdImagesByTypeByIndexDeleteWithHttpInfo(String id, Integer index, ImageType type) throws ApiException {
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexDeleteValidateBeforeCall(id, index, type, null, null);
         return apiClient.execute(call);
     }
 
@@ -9383,13 +9368,13 @@ public class ImageServiceApi {
      *  (asynchronously)
      * Requires authentication as user
      * @param id User Id (required)
-     * @param type Image Type (required)
      * @param index Image Index (required)
+     * @param type Image Type (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexDeleteAsync(String id, ImageType type, Integer index, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postUsersByIdImagesByTypeByIndexDeleteAsync(String id, Integer index, ImageType type, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -9410,7 +9395,7 @@ public class ImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexDeleteValidateBeforeCall(id, type, index, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postUsersByIdImagesByTypeByIndexDeleteValidateBeforeCall(id, index, type, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

@@ -28,6 +28,7 @@ class LibraryItemLinkType(object):
     ALBUMS = "Albums"
     COLLECTIONFOLDERS = "CollectionFolders"
     LIVETVSERIES = "LiveTVSeries"
+    GAMESYSTEMS = "GameSystems"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

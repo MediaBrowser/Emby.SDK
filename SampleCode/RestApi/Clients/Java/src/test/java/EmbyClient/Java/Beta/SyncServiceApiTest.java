@@ -207,6 +207,21 @@ public class SyncServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Gets a sync job item file
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headSyncJobitemsByIdFileTest() throws Exception {
+        String id = null;
+        api.headSyncJobitemsByIdFile(id);
+
+        // TODO: test validations
+    }
+    /**
      * Gets sync status for an item.
      *
      * Requires authentication as user

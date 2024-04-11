@@ -179,6 +179,7 @@ from embyclient-python-beta.models.image_option import ImageOption
 from embyclient-python-beta.models.image_provider_info import ImageProviderInfo
 from embyclient-python-beta.models.image_saving_convention import ImageSavingConvention
 from embyclient-python-beta.models.image_type import ImageType
+from embyclient-python-beta.models.images_base_download_remote_image import ImagesBaseDownloadRemoteImage
 from embyclient-python-beta.models.installation_info import InstallationInfo
 from embyclient-python-beta.models.item_counts import ItemCounts
 from embyclient-python-beta.models.item_file_info import ItemFileInfo

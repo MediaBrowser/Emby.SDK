@@ -12,12 +12,13 @@
 import ApiClient from "../ApiClient";
 import ImageProviderInfo from '../model/ImageProviderInfo';
 import ImageType from '../model/ImageType';
+import ImagesBaseDownloadRemoteImage from '../model/ImagesBaseDownloadRemoteImage';
 import RemoteImageResult from '../model/RemoteImageResult';
 
 /**
 * RemoteImageService service.
 * @module EmbyClient.JavaScript.Beta/RemoteImageServiceApi
-* @version 4.9.0.12
+* @version 4.9.0.13
 */
 export default class RemoteImageServiceApi {
 
@@ -168,7 +169,7 @@ export default class RemoteImageServiceApi {
      */
     postItemsByIdRemoteimagesDownload() {
       opts = opts || {};
-      let postBody = null;
+      let postBody = body;
 
       let pathParams = {
         'Id': id
@@ -184,7 +185,7 @@ export default class RemoteImageServiceApi {
       };
 
       let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
+      let contentTypes = ['application/json', 'application/xml'];
       let accepts = [];
       let returnType = null;
 

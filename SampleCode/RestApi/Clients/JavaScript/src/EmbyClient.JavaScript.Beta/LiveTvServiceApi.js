@@ -38,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript.Beta/LiveTvServiceApi
-* @version 4.9.0.12
+* @version 4.9.0.13
 */
 export default class LiveTvServiceApi {
 
@@ -2708,7 +2708,7 @@ export default class LiveTvServiceApi {
      * Callback function to receive the result of the postLivetvSeriestimers operation.
      * @callback module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~postLivetvSeriestimersCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/LiveTvSeriesTimerInfoDto} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -2716,6 +2716,7 @@ export default class LiveTvServiceApi {
      * Creates a live tv series timer
      * Requires authentication as user
      * @param {module:EmbyClient.JavaScript.Beta/LiveTvServiceApi~postLivetvSeriestimersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LiveTvSeriesTimerInfoDto}
      */
     postLivetvSeriestimers() {
       let postBody = body;
@@ -2731,8 +2732,8 @@ export default class LiveTvServiceApi {
 
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = ['application/json', 'application/xml'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = LiveTvSeriesTimerInfoDto;
 
       return this.apiClient.callApi(
         '/LiveTv/SeriesTimers', 'POST',

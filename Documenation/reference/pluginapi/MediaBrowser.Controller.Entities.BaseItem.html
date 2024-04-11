@@ -609,7 +609,7 @@ public float? CommunityRating { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
         <td><p>The community rating.</p>
 </td>
       </tr>
@@ -716,7 +716,7 @@ public float? CriticRating { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
         <td><p>The critic rating.</p>
 </td>
       </tr>
@@ -7024,7 +7024,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><span class="xref">System.InvalidOperationException</span></td>
         <td></td>
       </tr>
       <tr>
@@ -7418,7 +7418,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -7991,6 +7991,53 @@ This overload is for CoverArt</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string GetPresentationUniqueKey()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPresentationUniqueKey*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPresentationUniqueKey(MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Model.Configuration.LibraryOptions)">GetPresentationUniqueKey(BaseItem[], LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetPresentationUniqueKey(BaseItem[] collectionFolders, LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">collectionFolders</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -9240,13 +9287,13 @@ This overload is for CoverArt</p>
   </table>
   
   
-  <a id="MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsSaveLocalMetadataEnabled*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsSaveLocalMetadataEnabled(MediaBrowser.Model.Configuration.LibraryOptions)">IsSaveLocalMetadataEnabled(LibraryOptions)</h4>
+  <a id="MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalImagesEnabled_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsSaveLocalImagesEnabled*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalImagesEnabled_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsSaveLocalImagesEnabled(MediaBrowser.Model.Configuration.LibraryOptions)">IsSaveLocalImagesEnabled(LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool IsSaveLocalMetadataEnabled(LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool IsSaveLocalImagesEnabled(LibraryOptions libraryOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -9696,7 +9743,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -9746,7 +9793,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td><p>true if a provider reports we changed</p>
 </td>
       </tr>
@@ -10556,7 +10603,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Object.ToString()</span></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_TriggerOnRefreshComplete_" data-uid="MediaBrowser.Controller.Entities.BaseItem.TriggerOnRefreshComplete*"></a>

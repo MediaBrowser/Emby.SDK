@@ -21,6 +21,7 @@ import java.io.IOException;
 
 import io.swagger.client.model.ImageProviderInfo;
 import io.swagger.client.model.ImageType;
+import io.swagger.client.model.ImagesBaseDownloadRemoteImage;
 import io.swagger.client.model.RemoteImageResult;
 
 import java.lang.reflect.Type;
@@ -452,8 +453,9 @@ public class RemoteImageServiceApi {
     }
     /**
      * Build call for postItemsByIdRemoteimagesDownload
-     * @param id Item Id (required)
+     * @param body BaseDownloadRemoteImage:  (required)
      * @param type The image type (required)
+     * @param id Item Id (required)
      * @param providerName The image provider (optional)
      * @param imageUrl The image url (optional)
      * @param progressListener Progress listener
@@ -461,8 +463,8 @@ public class RemoteImageServiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdRemoteimagesDownloadCall(String id, ImageType type, String providerName, String imageUrl, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call postItemsByIdRemoteimagesDownloadCall(ImagesBaseDownloadRemoteImage body, ImageType type, String id, String providerName, String imageUrl, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
         
         // create path and map variables
         String localVarPath = "/Items/{Id}/RemoteImages/Download"
@@ -488,7 +490,7 @@ public class RemoteImageServiceApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            
+            "application/json", "application/xml"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -510,17 +512,21 @@ public class RemoteImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postItemsByIdRemoteimagesDownloadValidateBeforeCall(String id, ImageType type, String providerName, String imageUrl, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        // verify the required parameter 'id' is set
-        if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling postItemsByIdRemoteimagesDownload(Async)");
+    private com.squareup.okhttp.Call postItemsByIdRemoteimagesDownloadValidateBeforeCall(ImagesBaseDownloadRemoteImage body, ImageType type, String id, String providerName, String imageUrl, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling postItemsByIdRemoteimagesDownload(Async)");
         }
         // verify the required parameter 'type' is set
         if (type == null) {
             throw new ApiException("Missing the required parameter 'type' when calling postItemsByIdRemoteimagesDownload(Async)");
         }
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling postItemsByIdRemoteimagesDownload(Async)");
+        }
         
-        com.squareup.okhttp.Call call = postItemsByIdRemoteimagesDownloadCall(id, type, providerName, imageUrl, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postItemsByIdRemoteimagesDownloadCall(body, type, id, providerName, imageUrl, progressListener, progressRequestListener);
         return call;
 
         
@@ -532,43 +538,46 @@ public class RemoteImageServiceApi {
     /**
      * Downloads a remote image for an item
      * Requires authentication as administrator
-     * @param id Item Id (required)
+     * @param body BaseDownloadRemoteImage:  (required)
      * @param type The image type (required)
+     * @param id Item Id (required)
      * @param providerName The image provider (optional)
      * @param imageUrl The image url (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postItemsByIdRemoteimagesDownload(String id, ImageType type, String providerName, String imageUrl) throws ApiException {
-        postItemsByIdRemoteimagesDownloadWithHttpInfo(id, type, providerName, imageUrl);
+    public void postItemsByIdRemoteimagesDownload(ImagesBaseDownloadRemoteImage body, ImageType type, String id, String providerName, String imageUrl) throws ApiException {
+        postItemsByIdRemoteimagesDownloadWithHttpInfo(body, type, id, providerName, imageUrl);
     }
 
     /**
      * Downloads a remote image for an item
      * Requires authentication as administrator
-     * @param id Item Id (required)
+     * @param body BaseDownloadRemoteImage:  (required)
      * @param type The image type (required)
+     * @param id Item Id (required)
      * @param providerName The image provider (optional)
      * @param imageUrl The image url (optional)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postItemsByIdRemoteimagesDownloadWithHttpInfo(String id, ImageType type, String providerName, String imageUrl) throws ApiException {
-        com.squareup.okhttp.Call call = postItemsByIdRemoteimagesDownloadValidateBeforeCall(id, type, providerName, imageUrl, null, null);
+    public ApiResponse<Void> postItemsByIdRemoteimagesDownloadWithHttpInfo(ImagesBaseDownloadRemoteImage body, ImageType type, String id, String providerName, String imageUrl) throws ApiException {
+        com.squareup.okhttp.Call call = postItemsByIdRemoteimagesDownloadValidateBeforeCall(body, type, id, providerName, imageUrl, null, null);
         return apiClient.execute(call);
     }
 
     /**
      * Downloads a remote image for an item (asynchronously)
      * Requires authentication as administrator
-     * @param id Item Id (required)
+     * @param body BaseDownloadRemoteImage:  (required)
      * @param type The image type (required)
+     * @param id Item Id (required)
      * @param providerName The image provider (optional)
      * @param imageUrl The image url (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postItemsByIdRemoteimagesDownloadAsync(String id, ImageType type, String providerName, String imageUrl, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postItemsByIdRemoteimagesDownloadAsync(ImagesBaseDownloadRemoteImage body, ImageType type, String id, String providerName, String imageUrl, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -589,7 +598,7 @@ public class RemoteImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = postItemsByIdRemoteimagesDownloadValidateBeforeCall(id, type, providerName, imageUrl, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = postItemsByIdRemoteimagesDownloadValidateBeforeCall(body, type, id, providerName, imageUrl, progressListener, progressRequestListener);
         apiClient.executeAsync(call, callback);
         return call;
     }

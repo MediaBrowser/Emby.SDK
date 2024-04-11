@@ -121,11 +121,11 @@ ImageServiceApiService
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
 
 */
-func (a *ImageServiceApiService) DeleteItemsByIdImagesByTypeByIndex(ctx context.Context, id string, type_ ImageType, index int32) (*http.Response, error) {
+func (a *ImageServiceApiService) DeleteItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -137,8 +137,8 @@ func (a *ImageServiceApiService) DeleteItemsByIdImagesByTypeByIndex(ctx context.
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -299,11 +299,11 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id User Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
 
 */
-func (a *ImageServiceApiService) DeleteUsersByIdImagesByTypeByIndex(ctx context.Context, id string, type_ ImageType, index int32) (*http.Response, error) {
+func (a *ImageServiceApiService) DeleteUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Delete")
 		localVarPostBody   interface{}
@@ -315,8 +315,8 @@ func (a *ImageServiceApiService) DeleteUsersByIdImagesByTypeByIndex(ctx context.
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Users/{Id}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -542,8 +542,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetArtistsByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -577,7 +577,7 @@ type ImageServiceApiGetArtistsByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetArtistsByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetArtistsByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetArtistsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetArtistsByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -589,8 +589,8 @@ func (a *ImageServiceApiService) GetArtistsByNameImagesByTypeByIndex(ctx context
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Artists/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -855,8 +855,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetGamegenresByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -890,7 +890,7 @@ type ImageServiceApiGetGamegenresByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetGamegenresByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetGamegenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetGamegenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetGamegenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -902,8 +902,8 @@ func (a *ImageServiceApiService) GetGamegenresByNameImagesByTypeByIndex(ctx cont
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/GameGenres/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1168,8 +1168,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetGenresByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -1203,7 +1203,7 @@ type ImageServiceApiGetGenresByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetGenresByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetGenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetGenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetGenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1215,8 +1215,8 @@ func (a *ImageServiceApiService) GetGenresByNameImagesByTypeByIndex(ctx context.
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Genres/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1579,8 +1579,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetItemsByIdImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -1614,7 +1614,7 @@ type ImageServiceApiGetItemsByIdImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndex(ctx context.Context, id string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetItemsByIdImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetItemsByIdImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1626,8 +1626,8 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndex(ctx context.Con
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1740,8 +1740,8 @@ Requires authentication as user
  * @param maxHeight The maximum image height to return.
  * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
  * @param format Determines the output foramt of the image - original,gif,jpg,png
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts - Optional Parameters:
      * @param "Width" (optional.Int32) -  The fixed image width to return.
      * @param "Height" (optional.Int32) -  The fixed image height to return.
@@ -1767,7 +1767,7 @@ type ImageServiceApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxh
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -1785,8 +1785,8 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByM
 	localVarPath = strings.Replace(localVarPath, "{"+"MaxHeight"+"}", fmt.Sprintf("%v", maxHeight), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Tag"+"}", fmt.Sprintf("%v", tag), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Format"+"}", fmt.Sprintf("%v", format), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2039,8 +2039,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetMusicgenresByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -2074,7 +2074,7 @@ type ImageServiceApiGetMusicgenresByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetMusicgenresByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetMusicgenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetMusicgenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetMusicgenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2086,8 +2086,8 @@ func (a *ImageServiceApiService) GetMusicgenresByNameImagesByTypeByIndex(ctx con
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/MusicGenres/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2352,8 +2352,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetPersonsByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -2387,7 +2387,7 @@ type ImageServiceApiGetPersonsByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetPersonsByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetPersonsByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetPersonsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetPersonsByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2399,8 +2399,8 @@ func (a *ImageServiceApiService) GetPersonsByNameImagesByTypeByIndex(ctx context
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Persons/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2665,8 +2665,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetStudiosByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -2700,7 +2700,7 @@ type ImageServiceApiGetStudiosByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetStudiosByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetStudiosByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetStudiosByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetStudiosByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -2712,8 +2712,8 @@ func (a *ImageServiceApiService) GetStudiosByNameImagesByTypeByIndex(ctx context
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Studios/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2978,8 +2978,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id User Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiGetUsersByIdImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -3013,7 +3013,7 @@ type ImageServiceApiGetUsersByIdImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) GetUsersByIdImagesByTypeByIndex(ctx context.Context, id string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiGetUsersByIdImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) GetUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiGetUsersByIdImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
@@ -3025,8 +3025,8 @@ func (a *ImageServiceApiService) GetUsersByIdImagesByTypeByIndex(ctx context.Con
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Users/{Id}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3291,8 +3291,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadArtistsByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -3326,7 +3326,7 @@ type ImageServiceApiHeadArtistsByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadArtistsByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadArtistsByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadArtistsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadArtistsByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -3338,8 +3338,8 @@ func (a *ImageServiceApiService) HeadArtistsByNameImagesByTypeByIndex(ctx contex
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Artists/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3604,8 +3604,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadGamegenresByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -3639,7 +3639,7 @@ type ImageServiceApiHeadGamegenresByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadGamegenresByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadGamegenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadGamegenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadGamegenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -3651,8 +3651,8 @@ func (a *ImageServiceApiService) HeadGamegenresByNameImagesByTypeByIndex(ctx con
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/GameGenres/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3917,8 +3917,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadGenresByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -3952,7 +3952,7 @@ type ImageServiceApiHeadGenresByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadGenresByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadGenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadGenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadGenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -3964,8 +3964,8 @@ func (a *ImageServiceApiService) HeadGenresByNameImagesByTypeByIndex(ctx context
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Genres/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4230,8 +4230,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadItemsByIdImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -4265,7 +4265,7 @@ type ImageServiceApiHeadItemsByIdImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndex(ctx context.Context, id string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadItemsByIdImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadItemsByIdImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -4277,8 +4277,8 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndex(ctx context.Co
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4391,8 +4391,8 @@ Requires authentication as user
  * @param maxHeight The maximum image height to return.
  * @param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
  * @param format Determines the output foramt of the image - original,gif,jpg,png
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts - Optional Parameters:
      * @param "Width" (optional.Int32) -  The fixed image width to return.
      * @param "Height" (optional.Int32) -  The fixed image height to return.
@@ -4418,7 +4418,7 @@ type ImageServiceApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMax
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -4436,8 +4436,8 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatBy
 	localVarPath = strings.Replace(localVarPath, "{"+"MaxHeight"+"}", fmt.Sprintf("%v", maxHeight), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Tag"+"}", fmt.Sprintf("%v", tag), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Format"+"}", fmt.Sprintf("%v", format), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4690,8 +4690,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadMusicgenresByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -4725,7 +4725,7 @@ type ImageServiceApiHeadMusicgenresByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadMusicgenresByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadMusicgenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadMusicgenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadMusicgenresByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -4737,8 +4737,8 @@ func (a *ImageServiceApiService) HeadMusicgenresByNameImagesByTypeByIndex(ctx co
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/MusicGenres/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -5003,8 +5003,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadPersonsByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -5038,7 +5038,7 @@ type ImageServiceApiHeadPersonsByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadPersonsByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadPersonsByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadPersonsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadPersonsByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -5050,8 +5050,8 @@ func (a *ImageServiceApiService) HeadPersonsByNameImagesByTypeByIndex(ctx contex
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Persons/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -5316,8 +5316,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param name Item name
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadStudiosByNameImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -5351,7 +5351,7 @@ type ImageServiceApiHeadStudiosByNameImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadStudiosByNameImagesByTypeByIndex(ctx context.Context, name string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadStudiosByNameImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadStudiosByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadStudiosByNameImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -5363,8 +5363,8 @@ func (a *ImageServiceApiService) HeadStudiosByNameImagesByTypeByIndex(ctx contex
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Studios/{Name}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Name"+"}", fmt.Sprintf("%v", name), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -5629,8 +5629,8 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id User Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
  * @param optional nil or *ImageServiceApiHeadUsersByIdImagesByTypeByIndexOpts - Optional Parameters:
      * @param "MaxWidth" (optional.Int32) -  The maximum image width to return.
      * @param "MaxHeight" (optional.Int32) -  The maximum image height to return.
@@ -5664,7 +5664,7 @@ type ImageServiceApiHeadUsersByIdImagesByTypeByIndexOpts struct {
     KeepAnimation optional.Bool
 }
 
-func (a *ImageServiceApiService) HeadUsersByIdImagesByTypeByIndex(ctx context.Context, id string, type_ ImageType, index int32, localVarOptionals *ImageServiceApiHeadUsersByIdImagesByTypeByIndexOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) HeadUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType, localVarOptionals *ImageServiceApiHeadUsersByIdImagesByTypeByIndexOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Head")
 		localVarPostBody   interface{}
@@ -5676,8 +5676,8 @@ func (a *ImageServiceApiService) HeadUsersByIdImagesByTypeByIndex(ctx context.Co
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Users/{Id}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -5881,11 +5881,11 @@ Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param body Binary stream
  * @param id Item Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
 
 */
-func (a *ImageServiceApiService) PostItemsByIdImagesByTypeByIndex(ctx context.Context, body Object, id string, type_ ImageType, index int32) (*http.Response, error) {
+func (a *ImageServiceApiService) PostItemsByIdImagesByTypeByIndex(ctx context.Context, body Object, id string, index int32, type_ ImageType) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -5897,8 +5897,8 @@ func (a *ImageServiceApiService) PostItemsByIdImagesByTypeByIndex(ctx context.Co
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -5968,11 +5968,11 @@ ImageServiceApiService
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Item Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
 
 */
-func (a *ImageServiceApiService) PostItemsByIdImagesByTypeByIndexDelete(ctx context.Context, id string, type_ ImageType, index int32) (*http.Response, error) {
+func (a *ImageServiceApiService) PostItemsByIdImagesByTypeByIndexDelete(ctx context.Context, id string, index int32, type_ ImageType) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -5984,8 +5984,8 @@ func (a *ImageServiceApiService) PostItemsByIdImagesByTypeByIndexDelete(ctx cont
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}/Delete"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -6322,16 +6322,9 @@ Requires authentication as user
  * @param body Binary stream
  * @param id User Id
  * @param type_ Image Type
- * @param optional nil or *ImageServiceApiPostUsersByIdImagesByTypeOpts - Optional Parameters:
-     * @param "Index" (optional.Int32) -  Image Index
 
 */
-
-type ImageServiceApiPostUsersByIdImagesByTypeOpts struct {
-    Index optional.Int32
-}
-
-func (a *ImageServiceApiService) PostUsersByIdImagesByType(ctx context.Context, body Object, id string, type_ ImageType, localVarOptionals *ImageServiceApiPostUsersByIdImagesByTypeOpts) (*http.Response, error) {
+func (a *ImageServiceApiService) PostUsersByIdImagesByType(ctx context.Context, body Object, id string, type_ ImageType) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -6349,9 +6342,6 @@ func (a *ImageServiceApiService) PostUsersByIdImagesByType(ctx context.Context, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Index.IsSet() {
-		localVarQueryParams.Add("Index", parameterToString(localVarOptionals.Index.Value(), ""))
-	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/octet-stream"}
 
@@ -6418,10 +6408,9 @@ Requires authentication as user
  * @param body Binary stream
  * @param id User Id
  * @param type_ Image Type
- * @param index Image Index
 
 */
-func (a *ImageServiceApiService) PostUsersByIdImagesByTypeByIndex(ctx context.Context, body Object, id string, type_ ImageType, index int32) (*http.Response, error) {
+func (a *ImageServiceApiService) PostUsersByIdImagesByTypeByIndex(ctx context.Context, body Object, id string, type_ ImageType) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -6434,7 +6423,6 @@ func (a *ImageServiceApiService) PostUsersByIdImagesByTypeByIndex(ctx context.Co
 	localVarPath := a.client.cfg.BasePath + "/Users/{Id}/Images/{Type}/{Index}"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -6504,11 +6492,11 @@ ImageServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id User Id
- * @param type_ Image Type
  * @param index Image Index
+ * @param type_ Image Type
 
 */
-func (a *ImageServiceApiService) PostUsersByIdImagesByTypeByIndexDelete(ctx context.Context, id string, type_ ImageType, index int32) (*http.Response, error) {
+func (a *ImageServiceApiService) PostUsersByIdImagesByTypeByIndexDelete(ctx context.Context, id string, index int32, type_ ImageType) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -6520,8 +6508,8 @@ func (a *ImageServiceApiService) PostUsersByIdImagesByTypeByIndexDelete(ctx cont
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/Users/{Id}/Images/{Type}/{Index}/Delete"
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
-	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Index"+"}", fmt.Sprintf("%v", index), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"Type"+"}", fmt.Sprintf("%v", type_), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

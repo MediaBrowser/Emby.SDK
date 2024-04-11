@@ -193,14 +193,15 @@ open class RemoteImageServiceAPI {
     /**
      Downloads a remote image for an item
 
-     - parameter _id: (path) Item Id 
+     - parameter body: (body) BaseDownloadRemoteImage:  
      - parameter type: (query) The image type 
+     - parameter _id: (path) Item Id 
      - parameter providerName: (query) The image provider (optional)
      - parameter imageUrl: (query) The image url (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsByIdRemoteimagesDownload(_id: String, type: ImageType, providerName: String? = nil, imageUrl: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postItemsByIdRemoteimagesDownloadWithRequestBuilder(_id: _id, type: type, providerName: providerName, imageUrl: imageUrl).execute { (response, error) -> Void in
+    open class func postItemsByIdRemoteimagesDownload(body: ImagesBaseDownloadRemoteImage, type: ImageType, _id: String, providerName: String? = nil, imageUrl: String? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postItemsByIdRemoteimagesDownloadWithRequestBuilder(body: body, type: type, _id: _id, providerName: providerName, imageUrl: imageUrl).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -220,20 +221,21 @@ open class RemoteImageServiceAPI {
      - :
        - type: http
        - name: embyauth
-     - parameter _id: (path) Item Id 
+     - parameter body: (body) BaseDownloadRemoteImage:  
      - parameter type: (query) The image type 
+     - parameter _id: (path) Item Id 
      - parameter providerName: (query) The image provider (optional)
      - parameter imageUrl: (query) The image url (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postItemsByIdRemoteimagesDownloadWithRequestBuilder(_id: String, type: ImageType, providerName: String? = nil, imageUrl: String? = nil) -> RequestBuilder<Void> {
+    open class func postItemsByIdRemoteimagesDownloadWithRequestBuilder(body: ImagesBaseDownloadRemoteImage, type: ImageType, _id: String, providerName: String? = nil, imageUrl: String? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/RemoteImages/Download"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
-        let parameters: [String:Any]? = nil
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         var url = URLComponents(string: URLString)
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "Type": type, 
@@ -244,6 +246,6 @@ open class RemoteImageServiceAPI {
 
         let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
 
-        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }
 }

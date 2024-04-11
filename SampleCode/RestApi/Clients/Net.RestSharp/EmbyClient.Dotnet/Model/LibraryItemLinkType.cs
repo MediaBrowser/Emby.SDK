@@ -72,5 +72,10 @@ namespace EmbyClient.Dotnet.Model
         /// Enum LiveTVSeries for value: LiveTVSeries
         /// </summary>
         [EnumMember(Value = "LiveTVSeries")]
-        LiveTVSeries = 10    }
+        LiveTVSeries = 10,
+        /// <summary>
+        /// Enum GameSystems for value: GameSystems
+        /// </summary>
+        [EnumMember(Value = "GameSystems")]
+        GameSystems = 11    }
 }

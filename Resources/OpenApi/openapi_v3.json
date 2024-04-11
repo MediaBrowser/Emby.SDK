@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.12"
+    "version": "4.9.0.13"
   },
   "servers": [
     {
@@ -21125,16 +21125,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -21143,6 +21133,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -21352,16 +21352,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -21370,6 +21360,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -36125,7 +36125,19 @@
         },
         "responses": {
           "200": {
-            "description": "Operation successful. Empty response."
+            "description": "Operation successful. Returning a SeriesTimerInfoDto object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LiveTv.SeriesTimerInfoDto"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LiveTv.SeriesTimerInfoDto"
+                }
+              }
+            }
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -46311,6 +46323,41 @@
           }
         },
         "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna server info",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidDescriptionXml",
+        "parameters": [
+          {
+            "name": "UuId",
+            "in": "path",
+            "description": "Server UuId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/description": {
@@ -46322,6 +46369,41 @@
         "summary": "Gets dlna server info",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidDescription",
+        "parameters": [
+          {
+            "name": "UuId",
+            "in": "path",
+            "description": "Server UuId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna server info",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidDescription",
         "parameters": [
           {
             "name": "UuId",
@@ -63071,16 +63153,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -63089,6 +63161,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -63276,16 +63358,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -63294,6 +63366,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -63476,6 +63558,41 @@
           }
         },
         "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna content directory xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidContentdirectoryContentdirectoryXml",
+        "parameters": [
+          {
+            "name": "UuId",
+            "in": "path",
+            "description": "Server UuId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/contentdirectory/contentdirectory": {
@@ -63487,6 +63604,41 @@
         "summary": "Gets dlna content directory xml",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidContentdirectoryContentdirectory",
+        "parameters": [
+          {
+            "name": "UuId",
+            "in": "path",
+            "description": "Server UuId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna content directory xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidContentdirectoryContentdirectory",
         "parameters": [
           {
             "name": "UuId",
@@ -63552,6 +63704,41 @@
           }
         },
         "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna connection manager xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidConnectionmanagerConnectionmanagerXml",
+        "parameters": [
+          {
+            "name": "UuId",
+            "in": "path",
+            "description": "Server UuId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
       }
     },
     "/Dlna/{UuId}/connectionmanager/connectionmanager": {
@@ -63563,6 +63750,41 @@
         "summary": "Gets dlna connection manager xml",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidConnectionmanagerConnectionmanager",
+        "parameters": [
+          {
+            "name": "UuId",
+            "in": "path",
+            "description": "Server UuId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna connection manager xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidConnectionmanagerConnectionmanager",
         "parameters": [
           {
             "name": "UuId",
@@ -63895,16 +64117,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -63913,6 +64125,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -64100,16 +64322,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -64118,6 +64330,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -64307,16 +64529,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -64325,6 +64537,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -64512,16 +64734,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -64530,6 +64742,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -65007,16 +65229,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -65025,6 +65237,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -65212,16 +65434,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -65230,6 +65442,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -65282,16 +65504,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -65299,7 +65511,18 @@
             "explode": false,
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -65363,16 +65586,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -65381,6 +65594,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -65537,6 +65760,22 @@
             }
           }
         ],
+        "requestBody": {
+          "description": "BaseDownloadRemoteImage: ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Images.BaseDownloadRemoteImage"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/Images.BaseDownloadRemoteImage"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "Operation successful. Empty response."
@@ -66254,16 +66493,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -66272,6 +66501,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -66459,16 +66698,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -66477,6 +66706,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -66718,16 +66957,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -66736,6 +66965,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -66923,16 +67162,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -66941,6 +67170,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -67614,16 +67853,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -67632,6 +67861,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -67819,16 +68058,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -67837,6 +68066,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -68039,6 +68278,55 @@
     },
     "/Sync/JobItems/{Id}/File": {
       "summary": "Gets a sync job item file",
+      "head": {
+        "tags": [
+          "SyncService"
+        ],
+        "summary": "Gets a sync job item file",
+        "description": "Requires authentication as user",
+        "operationId": "headSyncJobitemsByIdFile",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
       "get": {
         "tags": [
           "SyncService"
@@ -70379,16 +70667,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -70397,6 +70675,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -70584,16 +70872,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -70602,6 +70880,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -70661,17 +70949,6 @@
             "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
-            "name": "Index",
-            "in": "query",
-            "description": "Image Index",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
             }
           }
         ],
@@ -70735,16 +71012,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -70753,6 +71020,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -71600,16 +71877,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -71618,6 +71885,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -71805,16 +72082,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -71823,6 +72090,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -72238,16 +72515,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -72256,6 +72523,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -72443,16 +72720,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -72461,6 +72728,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -72650,16 +72927,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -72668,6 +72935,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -72855,16 +73132,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -72873,6 +73140,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -73341,16 +73618,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -73359,6 +73626,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -73546,16 +73823,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -73564,6 +73831,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -73616,16 +73893,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -73633,7 +73900,18 @@
             "style": "simple",
             "schema": {
               "type": "integer",
-              "format": "int32"
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -73697,16 +73975,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -73715,6 +73983,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -73768,16 +74046,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -73786,6 +74054,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -74763,16 +75041,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -74781,6 +75049,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -74968,16 +75246,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -74986,6 +75254,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -75175,16 +75453,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -75193,6 +75461,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -75380,16 +75658,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -75398,6 +75666,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -75649,16 +75927,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -75667,6 +75935,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -75854,16 +76132,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -75872,6 +76140,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -76844,16 +77122,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -76862,6 +77130,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -77049,16 +77327,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -77067,6 +77335,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -77126,17 +77404,6 @@
             "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
-            "name": "Index",
-            "in": "path",
-            "description": "Image Index",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
             }
           }
         ],
@@ -77200,16 +77467,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -77218,6 +77475,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -77271,16 +77538,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "query",
             "description": "Image Index",
@@ -77289,6 +77546,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -78287,16 +78554,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -78305,6 +78562,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -78674,16 +78941,6 @@
             }
           },
           {
-            "name": "Type",
-            "in": "path",
-            "description": "Image Type",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "$ref": "#/components/schemas/ImageType"
-            }
-          },
-          {
             "name": "Index",
             "in": "path",
             "description": "Image Index",
@@ -78692,6 +78949,16 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "Type",
+            "in": "path",
+            "description": "Image Type",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "$ref": "#/components/schemas/ImageType"
             }
           }
         ],
@@ -83892,7 +84159,8 @@
           "Collections",
           "Albums",
           "CollectionFolders",
-          "LiveTVSeries"
+          "LiveTVSeries",
+          "GameSystems"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Controller.Library.ItemLinkType"
@@ -89594,6 +89862,17 @@
         },
         "description": "Class ImageProviderInfo.\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Providers.ImageProviderInfo"
+      },
+      "Images.BaseDownloadRemoteImage": {
+        "type": "object",
+        "properties": {
+          "ImageIndex": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.Images.BaseDownloadRemoteImage"
       },
       "Library.UpdateMediaPath": {
         "type": "object",

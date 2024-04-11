@@ -16,7 +16,7 @@ import ImageType from '../model/ImageType';
 /**
 * ImageService service.
 * @module EmbyClient.JavaScript.Beta/ImageServiceApi
-* @version 4.9.0.12
+* @version 4.9.0.13
 */
 export default class ImageServiceApi {
 
@@ -88,8 +88,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
       };
@@ -166,8 +166,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
       };
@@ -259,8 +259,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -365,8 +365,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -471,8 +471,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -615,8 +615,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -674,8 +674,8 @@ export default class ImageServiceApi {
         'MaxHeight': maxHeight,
         'Tag': tag,
         'Format': format,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'Width': opts['width'],
@@ -776,8 +776,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -882,8 +882,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -988,8 +988,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1094,8 +1094,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1200,8 +1200,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1306,8 +1306,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1412,8 +1412,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1518,8 +1518,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1577,8 +1577,8 @@ export default class ImageServiceApi {
         'MaxHeight': maxHeight,
         'Tag': tag,
         'Format': format,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'Width': opts['width'],
@@ -1679,8 +1679,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1785,8 +1785,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1891,8 +1891,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Name': name,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -1997,8 +1997,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
         'MaxWidth': opts['maxWidth'],
@@ -2090,8 +2090,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
       };
@@ -2128,8 +2128,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
       };
@@ -2280,11 +2280,9 @@ export default class ImageServiceApi {
     /**
      * Uploads an image for an item, must be base64 encoded.
      * Requires authentication as user
-     * @param {Object} opts Optional parameters
      * @param {module:EmbyClient.JavaScript.Beta/ImageServiceApi~postUsersByIdImagesByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postUsersByIdImagesByType() {
-      opts = opts || {};
       let postBody = body;
 
       let pathParams = {
@@ -2292,7 +2290,6 @@ export default class ImageServiceApi {
         'Type': type
       };
       let queryParams = {
-        'Index': opts['index']
       };
       let headerParams = {
       };
@@ -2328,8 +2325,7 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Type': type
       };
       let queryParams = {
       };
@@ -2366,8 +2362,8 @@ export default class ImageServiceApi {
 
       let pathParams = {
         'Id': id,
-        'Type': type,
-        'Index': index
+        'Index': index,
+        'Type': type
       };
       let queryParams = {
       };

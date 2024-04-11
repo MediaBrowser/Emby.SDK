@@ -334,8 +334,9 @@ func (a *RemoteImageServiceApiService) GetItemsByIdRemoteimagesProviders(ctx con
 RemoteImageServiceApiService Downloads a remote image for an item
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id Item Id
+ * @param body BaseDownloadRemoteImage: 
  * @param type_ The image type
+ * @param id Item Id
  * @param optional nil or *RemoteImageServiceApiPostItemsByIdRemoteimagesDownloadOpts - Optional Parameters:
      * @param "ProviderName" (optional.String) -  The image provider
      * @param "ImageUrl" (optional.String) -  The image url
@@ -347,7 +348,7 @@ type RemoteImageServiceApiPostItemsByIdRemoteimagesDownloadOpts struct {
     ImageUrl optional.String
 }
 
-func (a *RemoteImageServiceApiService) PostItemsByIdRemoteimagesDownload(ctx context.Context, id string, type_ ImageType, localVarOptionals *RemoteImageServiceApiPostItemsByIdRemoteimagesDownloadOpts) (*http.Response, error) {
+func (a *RemoteImageServiceApiService) PostItemsByIdRemoteimagesDownload(ctx context.Context, body ImagesBaseDownloadRemoteImage, type_ ImageType, id string, localVarOptionals *RemoteImageServiceApiPostItemsByIdRemoteimagesDownloadOpts) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -372,7 +373,7 @@ func (a *RemoteImageServiceApiService) PostItemsByIdRemoteimagesDownload(ctx con
 		localVarQueryParams.Add("ImageUrl", parameterToString(localVarOptionals.ImageUrl.Value(), ""))
 	}
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{}
+	localVarHttpContentTypes := []string{"application/json", "application/xml"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
@@ -388,6 +389,8 @@ func (a *RemoteImageServiceApiService) PostItemsByIdRemoteimagesDownload(ctx con
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
+	// body params
+	localVarPostBody = &body
 	if ctx != nil {
 		// API Key Authentication
 		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {

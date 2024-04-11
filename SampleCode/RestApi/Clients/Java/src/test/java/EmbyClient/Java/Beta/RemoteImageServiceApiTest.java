@@ -7,6 +7,7 @@ package EmbyClient.Java.Beta;
 
 import io.swagger.client.model.ImageProviderInfo;
 import io.swagger.client.model.ImageType;
+import io.swagger.client.model.ImagesBaseDownloadRemoteImage;
 import io.swagger.client.model.RemoteImageResult;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -86,11 +87,12 @@ public class RemoteImageServiceApiTest {
      */
     @Test
     public void postItemsByIdRemoteimagesDownloadTest() throws Exception {
-        String id = null;
+        ImagesBaseDownloadRemoteImage body = null;
         ImageType type = null;
+        String id = null;
         String providerName = null;
         String imageUrl = null;
-        api.postItemsByIdRemoteimagesDownload(id, type, providerName, imageUrl);
+        api.postItemsByIdRemoteimagesDownload(body, type, id, providerName, imageUrl);
 
         // TODO: test validations
     }

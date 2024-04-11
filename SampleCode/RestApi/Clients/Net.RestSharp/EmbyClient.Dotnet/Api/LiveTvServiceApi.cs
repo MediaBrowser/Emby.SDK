@@ -2519,8 +2519,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns></returns>
-        void PostLivetvSeriestimers (LiveTvSeriesTimerInfo body);
+        /// <returns>LiveTvSeriesTimerInfoDto</returns>
+        LiveTvSeriesTimerInfoDto PostLivetvSeriestimers (LiveTvSeriesTimerInfo body);
 
         /// <summary>
         /// Creates a live tv series timer
@@ -2530,8 +2530,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostLivetvSeriestimersWithHttpInfo (LiveTvSeriesTimerInfo body);
+        /// <returns>ApiResponse of LiveTvSeriesTimerInfoDto</returns>
+        ApiResponse<LiveTvSeriesTimerInfoDto> PostLivetvSeriestimersWithHttpInfo (LiveTvSeriesTimerInfo body);
         /// <summary>
         /// Updates a live tv series timer
         /// </summary>
@@ -5251,8 +5251,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostLivetvSeriestimersAsync (LiveTvSeriesTimerInfo body);
+        /// <returns>Task of LiveTvSeriesTimerInfoDto</returns>
+        System.Threading.Tasks.Task<LiveTvSeriesTimerInfoDto> PostLivetvSeriestimersAsync (LiveTvSeriesTimerInfo body);
 
         /// <summary>
         /// Creates a live tv series timer
@@ -5262,8 +5262,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostLivetvSeriestimersAsyncWithHttpInfo (LiveTvSeriesTimerInfo body);
+        /// <returns>Task of ApiResponse (LiveTvSeriesTimerInfoDto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LiveTvSeriesTimerInfoDto>> PostLivetvSeriestimersAsyncWithHttpInfo (LiveTvSeriesTimerInfo body);
         /// <summary>
         /// Updates a live tv series timer
         /// </summary>
@@ -17587,10 +17587,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns></returns>
-        public void PostLivetvSeriestimers (LiveTvSeriesTimerInfo body)
+        /// <returns>LiveTvSeriesTimerInfoDto</returns>
+        public LiveTvSeriesTimerInfoDto PostLivetvSeriestimers (LiveTvSeriesTimerInfo body)
         {
-             PostLivetvSeriestimersWithHttpInfo(body);
+             ApiResponse<LiveTvSeriesTimerInfoDto> localVarResponse = PostLivetvSeriestimersWithHttpInfo(body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -17598,8 +17599,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostLivetvSeriestimersWithHttpInfo (LiveTvSeriesTimerInfo body)
+        /// <returns>ApiResponse of LiveTvSeriesTimerInfoDto</returns>
+        public ApiResponse< LiveTvSeriesTimerInfoDto > PostLivetvSeriestimersWithHttpInfo (LiveTvSeriesTimerInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -17622,6 +17623,8 @@ namespace EmbyClient.Dotnet.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17660,9 +17663,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<LiveTvSeriesTimerInfoDto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                (LiveTvSeriesTimerInfoDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LiveTvSeriesTimerInfoDto)));
         }
 
         /// <summary>
@@ -17670,10 +17673,11 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostLivetvSeriestimersAsync (LiveTvSeriesTimerInfo body)
+        /// <returns>Task of LiveTvSeriesTimerInfoDto</returns>
+        public async System.Threading.Tasks.Task<LiveTvSeriesTimerInfoDto> PostLivetvSeriestimersAsync (LiveTvSeriesTimerInfo body)
         {
-             await PostLivetvSeriestimersAsyncWithHttpInfo(body);
+             ApiResponse<LiveTvSeriesTimerInfoDto> localVarResponse = await PostLivetvSeriestimersAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
 
         }
 
@@ -17682,8 +17686,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostLivetvSeriestimersAsyncWithHttpInfo (LiveTvSeriesTimerInfo body)
+        /// <returns>Task of ApiResponse (LiveTvSeriesTimerInfoDto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LiveTvSeriesTimerInfoDto>> PostLivetvSeriestimersAsyncWithHttpInfo (LiveTvSeriesTimerInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -17706,6 +17710,8 @@ namespace EmbyClient.Dotnet.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "application/xml"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -17744,9 +17750,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<LiveTvSeriesTimerInfoDto>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                (LiveTvSeriesTimerInfoDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LiveTvSeriesTimerInfoDto)));
         }
 
         /// <summary>

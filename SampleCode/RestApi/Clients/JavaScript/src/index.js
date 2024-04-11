@@ -108,6 +108,7 @@ import ImageOption from './model/ImageOption';
 import ImageProviderInfo from './model/ImageProviderInfo';
 import ImageSavingConvention from './model/ImageSavingConvention';
 import ImageType from './model/ImageType';
+import ImagesBaseDownloadRemoteImage from './model/ImagesBaseDownloadRemoteImage';
 import InstallationInfo from './model/InstallationInfo';
 import ItemCounts from './model/ItemCounts';
 import ItemFileInfo from './model/ItemFileInfo';
@@ -427,7 +428,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript.Beta/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.9.0.12
+* @version 4.9.0.13
 */
 export {
     /**
@@ -1023,6 +1024,12 @@ export {
      * @property {module:model/ImageType}
      */
     ImageType,
+
+    /**
+     * The ImagesBaseDownloadRemoteImage model constructor.
+     * @property {module:model/ImagesBaseDownloadRemoteImage}
+     */
+    ImagesBaseDownloadRemoteImage,
 
     /**
      * The InstallationInfo model constructor.

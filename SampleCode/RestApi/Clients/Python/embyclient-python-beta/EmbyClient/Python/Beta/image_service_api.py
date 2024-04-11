@@ -126,49 +126,49 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_items_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
+    def delete_items_by_id_images_by_type_by_index(self, id, index, type, **kwargs):  # noqa: E501
         """delete_items_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_items_by_id_images_by_type_by_index(id, type, index, async_req=True)
+        >>> thread = api.delete_items_by_id_images_by_type_by_index(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.delete_items_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            return self.delete_items_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_items_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            (data) = self.delete_items_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def delete_items_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
+    def delete_items_by_id_images_by_type_by_index_with_http_info(self, id, index, type, **kwargs):  # noqa: E501
         """delete_items_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_items_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
+        >>> thread = api.delete_items_by_id_images_by_type_by_index_with_http_info(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index']  # noqa: E501
+        all_params = ['id', 'index', 'type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -187,24 +187,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_items_by_id_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `delete_items_by_id_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `delete_items_by_id_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `delete_items_by_id_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
 
@@ -336,49 +336,49 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_users_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
+    def delete_users_by_id_images_by_type_by_index(self, id, index, type, **kwargs):  # noqa: E501
         """delete_users_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_users_by_id_images_by_type_by_index(id, type, index, async_req=True)
+        >>> thread = api.delete_users_by_id_images_by_type_by_index(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: User Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.delete_users_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            return self.delete_users_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_users_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            (data) = self.delete_users_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def delete_users_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
+    def delete_users_by_id_images_by_type_by_index_with_http_info(self, id, index, type, **kwargs):  # noqa: E501
         """delete_users_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_users_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
+        >>> thread = api.delete_users_by_id_images_by_type_by_index_with_http_info(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: User Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index']  # noqa: E501
+        all_params = ['id', 'index', 'type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -397,24 +397,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_users_by_id_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `delete_users_by_id_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `delete_users_by_id_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `delete_users_by_id_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
 
@@ -598,19 +598,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_artists_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def get_artists_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_artists_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.get_artists_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -630,24 +630,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.get_artists_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_artists_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_artists_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def get_artists_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """get_artists_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.get_artists_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -666,7 +666,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -685,24 +685,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `get_artists_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_artists_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_artists_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_artists_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -912,19 +912,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_gamegenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def get_gamegenres_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_gamegenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.get_gamegenres_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -944,24 +944,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.get_gamegenres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_gamegenres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_gamegenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def get_gamegenres_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """get_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.get_gamegenres_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -980,7 +980,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -999,24 +999,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `get_gamegenres_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_gamegenres_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_gamegenres_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_gamegenres_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -1226,19 +1226,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_genres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def get_genres_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_genres_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.get_genres_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -1258,24 +1258,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.get_genres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_genres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_genres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def get_genres_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """get_genres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.get_genres_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -1294,7 +1294,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1313,24 +1313,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `get_genres_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_genres_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_genres_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_genres_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -1635,19 +1635,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_items_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index(self, id, index, type, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index(id, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -1667,24 +1667,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_items_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            return self.get_items_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_items_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_items_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_items_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_with_http_info(self, id, index, type, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_with_http_info(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -1703,7 +1703,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['id', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1722,24 +1722,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_items_by_id_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_items_by_id_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_items_by_id_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_items_by_id_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -1794,13 +1794,13 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1811,8 +1811,8 @@ class ImageServiceApi(object):
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int width: The fixed image width to return.
         :param int height: The fixed image height to return.
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
@@ -1828,18 +1828,18 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
+            return self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
+    def get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, **kwargs):  # noqa: E501
         """get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
+        >>> thread = api.get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1850,8 +1850,8 @@ class ImageServiceApi(object):
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int width: The fixed image width to return.
         :param int height: The fixed image height to return.
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
@@ -1866,7 +1866,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'index', 'type', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1909,14 +1909,14 @@ class ImageServiceApi(object):
         if ('format' not in params or
                 params['format'] is None):
             raise ValueError("Missing the required parameter `format` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1935,10 +1935,10 @@ class ImageServiceApi(object):
             path_params['Tag'] = params['tag']  # noqa: E501
         if 'format' in params:
             path_params['Format'] = params['format']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'width' in params:
@@ -2140,19 +2140,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_musicgenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def get_musicgenres_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_musicgenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.get_musicgenres_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -2172,24 +2172,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.get_musicgenres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_musicgenres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_musicgenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def get_musicgenres_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """get_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.get_musicgenres_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -2208,7 +2208,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2227,24 +2227,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `get_musicgenres_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_musicgenres_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_musicgenres_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_musicgenres_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -2454,19 +2454,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_persons_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def get_persons_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_persons_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.get_persons_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -2486,24 +2486,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.get_persons_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_persons_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_persons_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def get_persons_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """get_persons_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.get_persons_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -2522,7 +2522,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2541,24 +2541,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `get_persons_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_persons_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_persons_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_persons_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -2768,19 +2768,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_studios_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def get_studios_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_studios_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.get_studios_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -2800,24 +2800,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.get_studios_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_studios_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_studios_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def get_studios_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """get_studios_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.get_studios_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -2836,7 +2836,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2855,24 +2855,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `get_studios_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_studios_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_studios_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_studios_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -3082,19 +3082,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_users_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
+    def get_users_by_id_images_by_type_by_index(self, id, index, type, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_users_by_id_images_by_type_by_index(id, type, index, async_req=True)
+        >>> thread = api.get_users_by_id_images_by_type_by_index(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: User Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -3114,24 +3114,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_users_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            return self.get_users_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_users_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            (data) = self.get_users_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def get_users_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
+    def get_users_by_id_images_by_type_by_index_with_http_info(self, id, index, type, **kwargs):  # noqa: E501
         """get_users_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_users_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
+        >>> thread = api.get_users_by_id_images_by_type_by_index_with_http_info(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: User Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -3150,7 +3150,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['id', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3169,24 +3169,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_users_by_id_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `get_users_by_id_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `get_users_by_id_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `get_users_by_id_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -3396,19 +3396,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_artists_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def head_artists_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_artists_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.head_artists_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -3428,24 +3428,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.head_artists_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_artists_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_artists_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def head_artists_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """head_artists_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_artists_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.head_artists_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -3464,7 +3464,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3483,24 +3483,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `head_artists_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_artists_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_artists_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_artists_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -3710,19 +3710,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_gamegenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def head_gamegenres_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_gamegenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.head_gamegenres_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -3742,24 +3742,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.head_gamegenres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_gamegenres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_gamegenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def head_gamegenres_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """head_gamegenres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_gamegenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.head_gamegenres_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -3778,7 +3778,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3797,24 +3797,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `head_gamegenres_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_gamegenres_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_gamegenres_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_gamegenres_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -4024,19 +4024,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_genres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def head_genres_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_genres_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.head_genres_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -4056,24 +4056,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.head_genres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_genres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_genres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def head_genres_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """head_genres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_genres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.head_genres_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -4092,7 +4092,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4111,24 +4111,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `head_genres_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_genres_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_genres_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_genres_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -4338,19 +4338,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_items_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index(self, id, index, type, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index(id, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -4370,24 +4370,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_items_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            return self.head_items_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_items_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_items_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_items_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_with_http_info(self, id, index, type, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_with_http_info(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -4406,7 +4406,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['id', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4425,24 +4425,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `head_items_by_id_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_items_by_id_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_items_by_id_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_items_by_id_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -4497,13 +4497,13 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(self, percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount(percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -4514,8 +4514,8 @@ class ImageServiceApi(object):
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int width: The fixed image width to return.
         :param int height: The fixed image height to return.
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
@@ -4531,18 +4531,18 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
+            return self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, **kwargs):  # noqa: E501
+    def head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(self, percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, **kwargs):  # noqa: E501
         """head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, type, index, async_req=True)
+        >>> thread = api.head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount_with_http_info(percent_played, un_played_count, id, max_width, max_height, tag, format, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -4553,8 +4553,8 @@ class ImageServiceApi(object):
         :param int max_height: The maximum image height to return. (required)
         :param str tag: Optional. Supply the cache tag from the item object to receive strong caching headers. (required)
         :param str format: Determines the output foramt of the image - original,gif,jpg,png (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int width: The fixed image width to return.
         :param int height: The fixed image height to return.
         :param int quality: Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases.
@@ -4569,7 +4569,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'type', 'index', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['percent_played', 'un_played_count', 'id', 'max_width', 'max_height', 'tag', 'format', 'index', 'type', 'width', 'height', 'quality', 'crop_whitespace', 'enable_image_enhancers', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4612,14 +4612,14 @@ class ImageServiceApi(object):
         if ('format' not in params or
                 params['format'] is None):
             raise ValueError("Missing the required parameter `format` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_items_by_id_images_by_type_by_index_by_tag_by_format_by_maxwidth_by_maxheight_by_percentplayed_by_unplayedcount`")  # noqa: E501
 
         collection_formats = {}
 
@@ -4638,10 +4638,10 @@ class ImageServiceApi(object):
             path_params['Tag'] = params['tag']  # noqa: E501
         if 'format' in params:
             path_params['Format'] = params['format']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'width' in params:
@@ -4843,19 +4843,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_musicgenres_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def head_musicgenres_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_musicgenres_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.head_musicgenres_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -4875,24 +4875,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.head_musicgenres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_musicgenres_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_musicgenres_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def head_musicgenres_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """head_musicgenres_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_musicgenres_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.head_musicgenres_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -4911,7 +4911,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4930,24 +4930,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `head_musicgenres_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_musicgenres_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_musicgenres_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_musicgenres_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -5157,19 +5157,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_persons_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def head_persons_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_persons_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.head_persons_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -5189,24 +5189,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.head_persons_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_persons_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_persons_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def head_persons_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """head_persons_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_persons_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.head_persons_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -5225,7 +5225,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5244,24 +5244,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `head_persons_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_persons_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_persons_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_persons_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -5471,19 +5471,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_studios_by_name_images_by_type_by_index(self, name, type, index, **kwargs):  # noqa: E501
+    def head_studios_by_name_images_by_type_by_index(self, name, index, type, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_studios_by_name_images_by_type_by_index(name, type, index, async_req=True)
+        >>> thread = api.head_studios_by_name_images_by_type_by_index(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -5503,24 +5503,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            return self.head_studios_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_studios_by_name_images_by_type_by_index_with_http_info(name, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_studios_by_name_images_by_type_by_index_with_http_info(self, name, type, index, **kwargs):  # noqa: E501
+    def head_studios_by_name_images_by_type_by_index_with_http_info(self, name, index, type, **kwargs):  # noqa: E501
         """head_studios_by_name_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_studios_by_name_images_by_type_by_index_with_http_info(name, type, index, async_req=True)
+        >>> thread = api.head_studios_by_name_images_by_type_by_index_with_http_info(name, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str name: Item name (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -5539,7 +5539,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['name', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['name', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5558,24 +5558,24 @@ class ImageServiceApi(object):
         if ('name' not in params or
                 params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `head_studios_by_name_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_studios_by_name_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_studios_by_name_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_studios_by_name_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'name' in params:
             path_params['Name'] = params['name']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -5785,19 +5785,19 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def head_users_by_id_images_by_type_by_index(self, id, type, index, **kwargs):  # noqa: E501
+    def head_users_by_id_images_by_type_by_index(self, id, index, type, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_users_by_id_images_by_type_by_index(id, type, index, async_req=True)
+        >>> thread = api.head_users_by_id_images_by_type_by_index(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: User Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -5817,24 +5817,24 @@ class ImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.head_users_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            return self.head_users_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.head_users_by_id_images_by_type_by_index_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            (data) = self.head_users_by_id_images_by_type_by_index_with_http_info(id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def head_users_by_id_images_by_type_by_index_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
+    def head_users_by_id_images_by_type_by_index_with_http_info(self, id, index, type, **kwargs):  # noqa: E501
         """head_users_by_id_images_by_type_by_index  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.head_users_by_id_images_by_type_by_index_with_http_info(id, type, index, async_req=True)
+        >>> thread = api.head_users_by_id_images_by_type_by_index_with_http_info(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: User Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :param int max_width: The maximum image width to return.
         :param int max_height: The maximum image height to return.
         :param int width: The fixed image width to return.
@@ -5853,7 +5853,7 @@ class ImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
+        all_params = ['id', 'index', 'type', 'max_width', 'max_height', 'width', 'height', 'quality', 'tag', 'crop_whitespace', 'enable_image_enhancers', 'format', 'background_color', 'foreground_layer', 'auto_orient', 'keep_animation']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5872,24 +5872,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `head_users_by_id_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `head_users_by_id_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `head_users_by_id_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `head_users_by_id_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
         if 'max_width' in params:
@@ -6059,51 +6059,51 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_items_by_id_images_by_type_by_index(self, body, id, type, index, **kwargs):  # noqa: E501
+    def post_items_by_id_images_by_type_by_index(self, body, id, index, type, **kwargs):  # noqa: E501
         """Uploads an image for an item, must be base64 encoded.  # noqa: E501
 
         Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_items_by_id_images_by_type_by_index(body, id, type, index, async_req=True)
+        >>> thread = api.post_items_by_id_images_by_type_by_index(body, id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param Object body: Binary stream (required)
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_items_by_id_images_by_type_by_index_with_http_info(body, id, type, index, **kwargs)  # noqa: E501
+            return self.post_items_by_id_images_by_type_by_index_with_http_info(body, id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_items_by_id_images_by_type_by_index_with_http_info(body, id, type, index, **kwargs)  # noqa: E501
+            (data) = self.post_items_by_id_images_by_type_by_index_with_http_info(body, id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def post_items_by_id_images_by_type_by_index_with_http_info(self, body, id, type, index, **kwargs):  # noqa: E501
+    def post_items_by_id_images_by_type_by_index_with_http_info(self, body, id, index, type, **kwargs):  # noqa: E501
         """Uploads an image for an item, must be base64 encoded.  # noqa: E501
 
         Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_items_by_id_images_by_type_by_index_with_http_info(body, id, type, index, async_req=True)
+        >>> thread = api.post_items_by_id_images_by_type_by_index_with_http_info(body, id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param Object body: Binary stream (required)
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'id', 'type', 'index']  # noqa: E501
+        all_params = ['body', 'id', 'index', 'type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6126,24 +6126,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `post_items_by_id_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `post_items_by_id_images_by_type_by_index`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `post_items_by_id_images_by_type_by_index`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `post_items_by_id_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
 
@@ -6178,49 +6178,49 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_items_by_id_images_by_type_by_index_delete(self, id, type, index, **kwargs):  # noqa: E501
+    def post_items_by_id_images_by_type_by_index_delete(self, id, index, type, **kwargs):  # noqa: E501
         """post_items_by_id_images_by_type_by_index_delete  # noqa: E501
 
         Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_items_by_id_images_by_type_by_index_delete(id, type, index, async_req=True)
+        >>> thread = api.post_items_by_id_images_by_type_by_index_delete(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_items_by_id_images_by_type_by_index_delete_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            return self.post_items_by_id_images_by_type_by_index_delete_with_http_info(id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_items_by_id_images_by_type_by_index_delete_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            (data) = self.post_items_by_id_images_by_type_by_index_delete_with_http_info(id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def post_items_by_id_images_by_type_by_index_delete_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
+    def post_items_by_id_images_by_type_by_index_delete_with_http_info(self, id, index, type, **kwargs):  # noqa: E501
         """post_items_by_id_images_by_type_by_index_delete  # noqa: E501
 
         Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_items_by_id_images_by_type_by_index_delete_with_http_info(id, type, index, async_req=True)
+        >>> thread = api.post_items_by_id_images_by_type_by_index_delete_with_http_info(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: Item Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index']  # noqa: E501
+        all_params = ['id', 'index', 'type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6239,24 +6239,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `post_items_by_id_images_by_type_by_index_delete`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `post_items_by_id_images_by_type_by_index_delete`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `post_items_by_id_images_by_type_by_index_delete`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `post_items_by_id_images_by_type_by_index_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
 
@@ -6631,7 +6631,6 @@ class ImageServiceApi(object):
         :param Object body: Binary stream (required)
         :param str id: User Id (required)
         :param ImageType type: Image Type (required)
-        :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -6656,13 +6655,12 @@ class ImageServiceApi(object):
         :param Object body: Binary stream (required)
         :param str id: User Id (required)
         :param ImageType type: Image Type (required)
-        :param int index: Image Index
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'id', 'type', 'index']  # noqa: E501
+        all_params = ['body', 'id', 'type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6699,8 +6697,6 @@ class ImageServiceApi(object):
             path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
-        if 'index' in params:
-            query_params.append(('Index', params['index']))  # noqa: E501
 
         header_params = {}
 
@@ -6733,51 +6729,49 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_users_by_id_images_by_type_by_index(self, body, id, type, index, **kwargs):  # noqa: E501
+    def post_users_by_id_images_by_type_by_index(self, body, id, type, **kwargs):  # noqa: E501
         """Uploads an image for an item, must be base64 encoded.  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_users_by_id_images_by_type_by_index(body, id, type, index, async_req=True)
+        >>> thread = api.post_users_by_id_images_by_type_by_index(body, id, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param Object body: Binary stream (required)
         :param str id: User Id (required)
         :param ImageType type: Image Type (required)
-        :param int index: Image Index (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_users_by_id_images_by_type_by_index_with_http_info(body, id, type, index, **kwargs)  # noqa: E501
+            return self.post_users_by_id_images_by_type_by_index_with_http_info(body, id, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_users_by_id_images_by_type_by_index_with_http_info(body, id, type, index, **kwargs)  # noqa: E501
+            (data) = self.post_users_by_id_images_by_type_by_index_with_http_info(body, id, type, **kwargs)  # noqa: E501
             return data
 
-    def post_users_by_id_images_by_type_by_index_with_http_info(self, body, id, type, index, **kwargs):  # noqa: E501
+    def post_users_by_id_images_by_type_by_index_with_http_info(self, body, id, type, **kwargs):  # noqa: E501
         """Uploads an image for an item, must be base64 encoded.  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_users_by_id_images_by_type_by_index_with_http_info(body, id, type, index, async_req=True)
+        >>> thread = api.post_users_by_id_images_by_type_by_index_with_http_info(body, id, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param Object body: Binary stream (required)
         :param str id: User Id (required)
         :param ImageType type: Image Type (required)
-        :param int index: Image Index (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'id', 'type', 'index']  # noqa: E501
+        all_params = ['body', 'id', 'type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6804,10 +6798,6 @@ class ImageServiceApi(object):
         if ('type' not in params or
                 params['type'] is None):
             raise ValueError("Missing the required parameter `type` when calling `post_users_by_id_images_by_type_by_index`")  # noqa: E501
-        # verify the required parameter 'index' is set
-        if ('index' not in params or
-                params['index'] is None):
-            raise ValueError("Missing the required parameter `index` when calling `post_users_by_id_images_by_type_by_index`")  # noqa: E501
 
         collection_formats = {}
 
@@ -6816,8 +6806,6 @@ class ImageServiceApi(object):
             path_params['Id'] = params['id']  # noqa: E501
         if 'type' in params:
             path_params['Type'] = params['type']  # noqa: E501
-        if 'index' in params:
-            path_params['Index'] = params['index']  # noqa: E501
 
         query_params = []
 
@@ -6852,49 +6840,49 @@ class ImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_users_by_id_images_by_type_by_index_delete(self, id, type, index, **kwargs):  # noqa: E501
+    def post_users_by_id_images_by_type_by_index_delete(self, id, index, type, **kwargs):  # noqa: E501
         """post_users_by_id_images_by_type_by_index_delete  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_users_by_id_images_by_type_by_index_delete(id, type, index, async_req=True)
+        >>> thread = api.post_users_by_id_images_by_type_by_index_delete(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: User Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_users_by_id_images_by_type_by_index_delete_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            return self.post_users_by_id_images_by_type_by_index_delete_with_http_info(id, index, type, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_users_by_id_images_by_type_by_index_delete_with_http_info(id, type, index, **kwargs)  # noqa: E501
+            (data) = self.post_users_by_id_images_by_type_by_index_delete_with_http_info(id, index, type, **kwargs)  # noqa: E501
             return data
 
-    def post_users_by_id_images_by_type_by_index_delete_with_http_info(self, id, type, index, **kwargs):  # noqa: E501
+    def post_users_by_id_images_by_type_by_index_delete_with_http_info(self, id, index, type, **kwargs):  # noqa: E501
         """post_users_by_id_images_by_type_by_index_delete  # noqa: E501
 
         Requires authentication as user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_users_by_id_images_by_type_by_index_delete_with_http_info(id, type, index, async_req=True)
+        >>> thread = api.post_users_by_id_images_by_type_by_index_delete_with_http_info(id, index, type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: User Id (required)
-        :param ImageType type: Image Type (required)
         :param int index: Image Index (required)
+        :param ImageType type: Image Type (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'index']  # noqa: E501
+        all_params = ['id', 'index', 'type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6913,24 +6901,24 @@ class ImageServiceApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `post_users_by_id_images_by_type_by_index_delete`")  # noqa: E501
-        # verify the required parameter 'type' is set
-        if ('type' not in params or
-                params['type'] is None):
-            raise ValueError("Missing the required parameter `type` when calling `post_users_by_id_images_by_type_by_index_delete`")  # noqa: E501
         # verify the required parameter 'index' is set
         if ('index' not in params or
                 params['index'] is None):
             raise ValueError("Missing the required parameter `index` when calling `post_users_by_id_images_by_type_by_index_delete`")  # noqa: E501
+        # verify the required parameter 'type' is set
+        if ('type' not in params or
+                params['type'] is None):
+            raise ValueError("Missing the required parameter `type` when calling `post_users_by_id_images_by_type_by_index_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'id' in params:
             path_params['Id'] = params['id']  # noqa: E501
-        if 'type' in params:
-            path_params['Type'] = params['type']  # noqa: E501
         if 'index' in params:
             path_params['Index'] = params['index']  # noqa: E501
+        if 'type' in params:
+            path_params['Type'] = params['type']  # noqa: E501
 
         query_params = []
 

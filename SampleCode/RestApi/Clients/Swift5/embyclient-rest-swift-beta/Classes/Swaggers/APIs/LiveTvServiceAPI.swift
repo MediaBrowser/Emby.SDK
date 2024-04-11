@@ -15972,13 +15972,9 @@ open class LiveTvServiceAPI {
      - parameter body: (body) SeriesTimerInfo:  
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postLivetvSeriestimers(body: LiveTvSeriesTimerInfo, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postLivetvSeriestimers(body: LiveTvSeriesTimerInfo, completion: @escaping ((_ data: LiveTvSeriesTimerInfoDto?,_ error: Error?) -> Void)) {
         postLivetvSeriestimersWithRequestBuilder(body: body).execute { (response, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
+            completion(response?.body, error)
         }
     }
 
@@ -15993,18 +15989,66 @@ open class LiveTvServiceAPI {
      - :
        - type: http
        - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "PrePaddingSeconds" : 5,
+  "KeepUntil" : "UntilDeleted",
+  "SkipEpisodesInLibrary" : true,
+  "KeepUpTo" : 0,
+  "RecordNewOnly" : true,
+  "Keywords" : [ {
+    "KeywordType" : "Name",
+    "Keyword" : "Keyword"
+  }, {
+    "KeywordType" : "Name",
+    "Keyword" : "Keyword"
+  } ],
+  "SeriesId" : "SeriesId",
+  "ChannelNumber" : "ChannelNumber",
+  "RecordAnyChannel" : true,
+  "ParentThumbImageTag" : "ParentThumbImageTag",
+  "ChannelId" : "ChannelId",
+  "MaxRecordingSeconds" : 6,
+  "ChannelPrimaryImageTag" : "ChannelPrimaryImageTag",
+  "Name" : "Name",
+  "StartDate" : "2000-01-23T04:56:07.000+00:00",
+  "IsPostPaddingRequired" : true,
+  "ServerId" : "ServerId",
+  "ParentBackdropItemId" : "ParentBackdropItemId",
+  "Days" : [ "Sunday", "Sunday" ],
+  "ParentPrimaryImageTag" : "ParentPrimaryImageTag",
+  "TimerType" : "Program",
+  "IsPrePaddingRequired" : true,
+  "Priority" : 1,
+  "RecordAnyTime" : true,
+  "MatchExistingItemsWithAnyLibrary" : true,
+  "Overview" : "Overview",
+  "PostPaddingSeconds" : 5,
+  "ParentPrimaryImageItemId" : "ParentPrimaryImageItemId",
+  "ProgramId" : "ProgramId",
+  "EndDate" : "2000-01-23T04:56:07.000+00:00",
+  "ChannelIds" : [ "ChannelIds", "ChannelIds" ],
+  "ImageTags" : {
+    "key" : "ImageTags"
+  },
+  "ParentFolderId" : "ParentFolderId",
+  "ParentThumbItemId" : "ParentThumbItemId",
+  "Type" : "Type",
+  "ChannelName" : "ChannelName",
+  "ParentBackdropImageTags" : [ "ParentBackdropImageTags", "ParentBackdropImageTags" ],
+  "Id" : "Id"
+}}]
      - parameter body: (body) SeriesTimerInfo:  
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<LiveTvSeriesTimerInfoDto> 
      */
-    open class func postLivetvSeriestimersWithRequestBuilder(body: LiveTvSeriesTimerInfo) -> RequestBuilder<Void> {
+    open class func postLivetvSeriestimersWithRequestBuilder(body: LiveTvSeriesTimerInfo) -> RequestBuilder<LiveTvSeriesTimerInfoDto> {
         let path = "/LiveTv/SeriesTimers"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+        let requestBuilder: RequestBuilder<LiveTvSeriesTimerInfoDto>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
     }

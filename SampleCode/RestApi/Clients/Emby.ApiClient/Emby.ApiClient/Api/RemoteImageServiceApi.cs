@@ -160,23 +160,30 @@ namespace Emby.ApiClient.Api
         /// <remarks>
         /// Requires authentication as administrator
         /// </remarks>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostItemsByIdRemoteimagesDownload (string id, ImageType type, string providerName, string imageUrl)
+        public async Task<RestResponse<Object>> PostItemsByIdRemoteimagesDownload (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
+            // verify the required parameter 'body' is set
+            if (body == null)
             {
-                throw new ApiException("Missing required parameter 'id' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
+                throw new ApiException("Missing required parameter 'body' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
             }
             
             // verify the required parameter 'type' is set
             if (type == null)
             {
                 throw new ApiException("Missing required parameter 'type' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
+            }
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
             }
             
             var request = new RestRequest("/Items/{Id}/RemoteImages/Download", Method.Post);
@@ -201,6 +208,11 @@ namespace Emby.ApiClient.Api
                 request.AddQueryParameter("ImageUrl", this.ApiClient.ParameterToString(imageUrl));
             }
 
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
             // make the HTTP request
             var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
             return localVarResponse;

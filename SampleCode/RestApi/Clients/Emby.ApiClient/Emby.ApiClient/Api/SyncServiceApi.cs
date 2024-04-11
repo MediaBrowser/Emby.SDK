@@ -379,6 +379,34 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets a sync job item file
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id">Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadSyncJobitemsByIdFile (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling SyncServiceApi->HeadSyncJobitemsByIdFile");
+            }
+            
+            var request = new RestRequest("/Sync/JobItems/{Id}/File", Method.Head);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Gets sync status for an item.
         /// </summary>
         /// <remarks>

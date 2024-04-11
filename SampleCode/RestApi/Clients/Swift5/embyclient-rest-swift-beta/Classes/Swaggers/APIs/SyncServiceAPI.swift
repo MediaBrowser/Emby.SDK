@@ -2098,6 +2098,51 @@ open class SyncServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets a sync job item file
+
+     - parameter _id: (path) Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headSyncJobitemsByIdFile(_id: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headSyncJobitemsByIdFileWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets a sync job item file
+     - HEAD /Sync/JobItems/{Id}/File
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter _id: (path) Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headSyncJobitemsByIdFileWithRequestBuilder(_id: String) -> RequestBuilder<Void> {
+        var path = "/Sync/JobItems/{Id}/File"
+        let _idPreEscape = "\(_id)"
+        let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Gets sync status for an item.
 
      - parameter body: (body) SyncedItemProgress:  

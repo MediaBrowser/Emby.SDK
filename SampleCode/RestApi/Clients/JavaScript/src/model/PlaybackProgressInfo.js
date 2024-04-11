@@ -19,7 +19,7 @@ import RepeatMode from './RepeatMode';
 /**
 * The PlaybackProgressInfo model module.
 * @module model/PlaybackProgressInfo
-* @version 4.9.0.12
+* @version 4.9.0.13
 */
 export default class PlaybackProgressInfo {
     /**

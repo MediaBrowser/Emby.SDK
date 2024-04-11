@@ -282,6 +282,174 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadDlnaByUuidConnectionmanagerConnectionmanager (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+            {
+                throw new ApiException("Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidConnectionmanagerConnectionmanager");
+            }
+            
+            var request = new RestRequest("/Dlna/{UuId}/connectionmanager/connectionmanager", Method.Head);
+
+            if (uuId != null)
+            {
+                request.AddParameter("UuId", this.ApiClient.ParameterToString(uuId), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadDlnaByUuidConnectionmanagerConnectionmanagerXml (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+            {
+                throw new ApiException("Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidConnectionmanagerConnectionmanagerXml");
+            }
+            
+            var request = new RestRequest("/Dlna/{UuId}/connectionmanager/connectionmanager.xml", Method.Head);
+
+            if (uuId != null)
+            {
+                request.AddParameter("UuId", this.ApiClient.ParameterToString(uuId), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadDlnaByUuidContentdirectoryContentdirectory (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+            {
+                throw new ApiException("Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidContentdirectoryContentdirectory");
+            }
+            
+            var request = new RestRequest("/Dlna/{UuId}/contentdirectory/contentdirectory", Method.Head);
+
+            if (uuId != null)
+            {
+                request.AddParameter("UuId", this.ApiClient.ParameterToString(uuId), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadDlnaByUuidContentdirectoryContentdirectoryXml (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+            {
+                throw new ApiException("Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidContentdirectoryContentdirectoryXml");
+            }
+            
+            var request = new RestRequest("/Dlna/{UuId}/contentdirectory/contentdirectory.xml", Method.Head);
+
+            if (uuId != null)
+            {
+                request.AddParameter("UuId", this.ApiClient.ParameterToString(uuId), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadDlnaByUuidDescription (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+            {
+                throw new ApiException("Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidDescription");
+            }
+            
+            var request = new RestRequest("/Dlna/{UuId}/description", Method.Head);
+
+            if (uuId != null)
+            {
+                request.AddParameter("UuId", this.ApiClient.ParameterToString(uuId), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadDlnaByUuidDescriptionXml (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+            {
+                throw new ApiException("Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidDescriptionXml");
+            }
+            
+            var request = new RestRequest("/Dlna/{UuId}/description.xml", Method.Head);
+
+            if (uuId != null)
+            {
+                request.AddParameter("UuId", this.ApiClient.ParameterToString(uuId), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Processes a control request
         /// </summary>
         /// <remarks>

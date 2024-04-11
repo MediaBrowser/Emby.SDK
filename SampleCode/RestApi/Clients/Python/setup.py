@@ -7,7 +7,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "embyclient-python-beta"
-VERSION = "4.9.0.12"
+VERSION = "4.9.0.13"
 # To install the library, run the following
 #
 # python setup.py install

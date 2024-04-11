@@ -26,10 +26,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void DeleteItemsByIdImagesByType (string id, ImageType type, int? index);
+        void DeleteItemsByIdImagesByType (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -39,10 +39,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? index);
+        ApiResponse<Object> DeleteItemsByIdImagesByTypeWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -51,10 +51,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void DeleteItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index);
+        void DeleteItemsByIdImagesByTypeByIndex (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -64,10 +64,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index);
+        ApiResponse<Object> DeleteItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -76,35 +76,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void DeleteUsersByIdImagesByType (string id, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns></returns>
-        void DeleteUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index);
+        void DeleteUsersByIdImagesByType (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -114,10 +89,35 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
+        /// <param name="index">Image Index (optional)</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index);
+        ApiResponse<Object> DeleteUsersByIdImagesByTypeWithHttpInfo (string id, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void DeleteUsersByIdImagesByTypeByIndex (string id, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -139,10 +139,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -165,10 +165,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetArtistsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetArtistsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -190,10 +190,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -216,10 +216,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -241,10 +241,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -267,10 +267,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetGamegenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetGamegenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -292,10 +292,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -318,10 +318,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -343,10 +343,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -369,10 +369,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetGenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetGenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -394,10 +394,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -420,10 +420,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetGenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetGenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// Gets information about an item&#x27;s images
         /// </summary>
@@ -466,10 +466,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -492,10 +492,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetItemsByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetItemsByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -517,10 +517,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -543,10 +543,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -570,881 +570,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="percentPlayed"></param>
-        /// <param name="unPlayedCount"></param>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return.</param>
-        /// <param name="maxHeight">The maximum image height to return.</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void GetMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetMusicgenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void GetMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void GetPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetPersonsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void GetPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void GetStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetStudiosByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void GetStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void GetUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUsersByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void GetUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void HeadArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadArtistsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void HeadArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void HeadGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadGamegenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void HeadGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void HeadGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadGenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void HeadGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadGenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void HeadItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadItemsByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void HeadItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="percentPlayed"></param>
-        /// <param name="unPlayedCount"></param>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return.</param>
-        /// <param name="maxHeight">The maximum image height to return.</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns></returns>
-        void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1469,10 +598,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -1494,10 +623,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void HeadMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1520,10 +649,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadMusicgenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetMusicgenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -1545,10 +674,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void HeadMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1571,10 +700,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -1596,10 +725,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void HeadPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1622,10 +751,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadPersonsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetPersonsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -1647,10 +776,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void HeadPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1673,10 +802,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -1698,10 +827,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void HeadStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1724,10 +853,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadStudiosByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetStudiosByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -1749,10 +878,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void HeadStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1775,10 +904,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -1800,61 +929,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
-        /// <returns></returns>
-        void HeadUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadUsersByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns></returns>
-        void HeadUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        void GetUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1877,10 +955,932 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> HeadUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        ApiResponse<Object> GetUsersByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void GetUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadArtistsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadGamegenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadGenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadGenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadItemsByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return.</param>
+        /// <param name="maxHeight">The maximum image height to return.</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return.</param>
+        /// <param name="maxHeight">The maximum image height to return.</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadMusicgenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadPersonsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadStudiosByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadUsersByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns></returns>
+        void HeadUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
         /// </summary>
@@ -1917,10 +1917,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void PostItemsByIdImagesByTypeByIndex (Object body, string id, ImageType type, int? index);
+        void PostItemsByIdImagesByTypeByIndex (Object body, string id, int? index, ImageType type);
 
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
@@ -1931,10 +1931,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostItemsByIdImagesByTypeByIndexWithHttpInfo (Object body, string id, ImageType type, int? index);
+        ApiResponse<Object> PostItemsByIdImagesByTypeByIndexWithHttpInfo (Object body, string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -1943,10 +1943,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void PostItemsByIdImagesByTypeByIndexDelete (string id, ImageType type, int? index);
+        void PostItemsByIdImagesByTypeByIndexDelete (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -1956,10 +1956,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostItemsByIdImagesByTypeByIndexDeleteWithHttpInfo (string id, ImageType type, int? index);
+        ApiResponse<Object> PostItemsByIdImagesByTypeByIndexDeleteWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// Updates the index for an item image
         /// </summary>
@@ -2022,10 +2022,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void PostItemsByIdImagesByTypeDelete (string id, ImageType type, int? index);
+        void PostItemsByIdImagesByTypeDelete (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2035,10 +2035,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostItemsByIdImagesByTypeDeleteWithHttpInfo (string id, ImageType type, int? index);
+        ApiResponse<Object> PostItemsByIdImagesByTypeDeleteWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
         /// </summary>
@@ -2049,9 +2049,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        void PostUsersByIdImagesByType (Object body, string id, ImageType type, int? index);
+        void PostUsersByIdImagesByType (Object body, string id, ImageType type);
 
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
@@ -2063,9 +2062,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostUsersByIdImagesByTypeWithHttpInfo (Object body, string id, ImageType type, int? index);
+        ApiResponse<Object> PostUsersByIdImagesByTypeWithHttpInfo (Object body, string id, ImageType type);
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
         /// </summary>
@@ -2076,9 +2074,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns></returns>
-        void PostUsersByIdImagesByTypeByIndex (Object body, string id, ImageType type, int? index);
+        void PostUsersByIdImagesByTypeByIndex (Object body, string id, ImageType type);
 
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
@@ -2090,9 +2087,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostUsersByIdImagesByTypeByIndexWithHttpInfo (Object body, string id, ImageType type, int? index);
+        ApiResponse<Object> PostUsersByIdImagesByTypeByIndexWithHttpInfo (Object body, string id, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2101,10 +2097,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void PostUsersByIdImagesByTypeByIndexDelete (string id, ImageType type, int? index);
+        void PostUsersByIdImagesByTypeByIndexDelete (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2114,10 +2110,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostUsersByIdImagesByTypeByIndexDeleteWithHttpInfo (string id, ImageType type, int? index);
+        ApiResponse<Object> PostUsersByIdImagesByTypeByIndexDeleteWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2126,10 +2122,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        void PostUsersByIdImagesByTypeDelete (string id, ImageType type, int? index);
+        void PostUsersByIdImagesByTypeDelete (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2139,10 +2135,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostUsersByIdImagesByTypeDeleteWithHttpInfo (string id, ImageType type, int? index);
+        ApiResponse<Object> PostUsersByIdImagesByTypeDeleteWithHttpInfo (string id, int? index, ImageType type);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -2153,10 +2149,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteItemsByIdImagesByTypeAsync (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task DeleteItemsByIdImagesByTypeAsync (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2166,10 +2162,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2178,10 +2174,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task DeleteItemsByIdImagesByTypeByIndexAsync (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2191,10 +2187,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2203,35 +2199,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteUsersByIdImagesByTypeAsync (string id, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task DeleteUsersByIdImagesByTypeAsync (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2241,10 +2212,35 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
+        /// <param name="index">Image Index (optional)</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteUsersByIdImagesByTypeByIndexAsync (string id, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2266,10 +2262,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetArtistsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetArtistsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2292,10 +2288,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2317,10 +2313,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetArtistsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetArtistsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2343,10 +2339,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2368,10 +2364,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2394,10 +2390,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2419,10 +2415,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2445,10 +2441,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2470,10 +2466,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetGenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetGenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2496,10 +2492,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2521,10 +2517,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetGenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetGenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2547,10 +2543,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// Gets information about an item&#x27;s images
         /// </summary>
@@ -2593,10 +2589,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetItemsByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetItemsByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2619,10 +2615,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2644,10 +2640,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -2670,10 +2666,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -2697,881 +2693,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="percentPlayed"></param>
-        /// <param name="unPlayedCount"></param>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return.</param>
-        /// <param name="maxHeight">The maximum image height to return.</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetPersonsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetPersonsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetStudiosByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetStudiosByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUsersByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetUsersByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadGenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadGenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Item name</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="percentPlayed"></param>
-        /// <param name="unPlayedCount"></param>
-        /// <param name="id">Item Id</param>
-        /// <param name="maxWidth">The maximum image width to return.</param>
-        /// <param name="maxHeight">The maximum image height to return.</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -3596,10 +2721,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -3621,10 +2746,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -3647,10 +2772,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -3672,10 +2797,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -3698,10 +2823,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -3723,10 +2848,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetPersonsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -3749,10 +2874,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -3774,10 +2899,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetPersonsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -3800,10 +2925,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -3825,10 +2950,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetStudiosByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -3851,10 +2976,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -3876,10 +3001,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetStudiosByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -3902,10 +3027,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -3927,61 +3052,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadUsersByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as user
-        /// </remarks>
-        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">User Id</param>
-        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
-        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
-        /// <param name="width">The fixed image width to return. (optional)</param>
-        /// <param name="height">The fixed image height to return. (optional)</param>
-        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
-        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
-        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
-        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
-        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
-        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
-        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
-        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
-        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task HeadUsersByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task GetUsersByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -4004,10 +3078,932 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetUsersByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadGenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadGenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return.</param>
+        /// <param name="maxHeight">The maximum image height to return.</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="percentPlayed"></param>
+        /// <param name="unPlayedCount"></param>
+        /// <param name="id">Item Id</param>
+        /// <param name="maxWidth">The maximum image width to return.</param>
+        /// <param name="maxHeight">The maximum image height to return.</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers.</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Item name</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadUsersByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadUsersByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">User Id</param>
+        /// <param name="maxWidth">The maximum image width to return. (optional)</param>
+        /// <param name="maxHeight">The maximum image height to return. (optional)</param>
+        /// <param name="width">The fixed image width to return. (optional)</param>
+        /// <param name="height">The fixed image height to return. (optional)</param>
+        /// <param name="quality">Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)</param>
+        /// <param name="tag">Optional. Supply the cache tag from the item object to receive strong caching headers. (optional)</param>
+        /// <param name="cropWhitespace">Specify if whitespace should be cropped out of the image. True/False. If unspecified, whitespace will be cropped from logos and clear art. (optional)</param>
+        /// <param name="enableImageEnhancers">Enable or disable image enhancers such as cover art. (optional)</param>
+        /// <param name="format">Determines the output foramt of the image - original,gif,jpg,png (optional)</param>
+        /// <param name="backgroundColor">Optional. Apply a background color for transparent images. (optional)</param>
+        /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
+        /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
+        /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
+        /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type);
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
         /// </summary>
@@ -4044,10 +4040,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostItemsByIdImagesByTypeByIndexAsync (Object body, string id, ImageType type, int? index);
+        System.Threading.Tasks.Task PostItemsByIdImagesByTypeByIndexAsync (Object body, string id, int? index, ImageType type);
 
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
@@ -4058,10 +4054,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (Object body, string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (Object body, string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -4070,10 +4066,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostItemsByIdImagesByTypeByIndexDeleteAsync (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task PostItemsByIdImagesByTypeByIndexDeleteAsync (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -4083,10 +4079,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// Updates the index for an item image
         /// </summary>
@@ -4149,10 +4145,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostItemsByIdImagesByTypeDeleteAsync (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task PostItemsByIdImagesByTypeDeleteAsync (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -4162,10 +4158,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeDeleteAsyncWithHttpInfo (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeDeleteAsyncWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
         /// </summary>
@@ -4176,9 +4172,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostUsersByIdImagesByTypeAsync (Object body, string id, ImageType type, int? index);
+        System.Threading.Tasks.Task PostUsersByIdImagesByTypeAsync (Object body, string id, ImageType type);
 
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
@@ -4190,9 +4185,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeAsyncWithHttpInfo (Object body, string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeAsyncWithHttpInfo (Object body, string id, ImageType type);
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
         /// </summary>
@@ -4203,9 +4197,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostUsersByIdImagesByTypeByIndexAsync (Object body, string id, ImageType type, int? index);
+        System.Threading.Tasks.Task PostUsersByIdImagesByTypeByIndexAsync (Object body, string id, ImageType type);
 
         /// <summary>
         /// Uploads an image for an item, must be base64 encoded.
@@ -4217,9 +4210,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (Object body, string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (Object body, string id, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -4228,10 +4220,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostUsersByIdImagesByTypeByIndexDeleteAsync (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task PostUsersByIdImagesByTypeByIndexDeleteAsync (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -4241,10 +4233,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo (string id, int? index, ImageType type);
         /// <summary>
         /// 
         /// </summary>
@@ -4253,10 +4245,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostUsersByIdImagesByTypeDeleteAsync (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task PostUsersByIdImagesByTypeDeleteAsync (string id, int? index, ImageType type);
 
         /// <summary>
         /// 
@@ -4266,10 +4258,10 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeDeleteAsyncWithHttpInfo (string id, ImageType type, int? index);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeDeleteAsyncWithHttpInfo (string id, int? index, ImageType type);
         #endregion Asynchronous Operations
     }
 
@@ -4386,12 +4378,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void DeleteItemsByIdImagesByType (string id, ImageType type, int? index)
+        public void DeleteItemsByIdImagesByType (string id, int? index, ImageType type)
         {
-             DeleteItemsByIdImagesByTypeWithHttpInfo(id, type, index);
+             DeleteItemsByIdImagesByTypeWithHttpInfo(id, index, type);
         }
 
         /// <summary>
@@ -4399,10 +4391,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteItemsByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? index)
+        public ApiResponse<Object> DeleteItemsByIdImagesByTypeWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4469,12 +4461,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteItemsByIdImagesByTypeAsync (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task DeleteItemsByIdImagesByTypeAsync (string id, int? index, ImageType type)
         {
-             await DeleteItemsByIdImagesByTypeAsyncWithHttpInfo(id, type, index);
+             await DeleteItemsByIdImagesByTypeAsyncWithHttpInfo(id, index, type);
 
         }
 
@@ -4483,10 +4475,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteItemsByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4553,12 +4545,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void DeleteItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index)
+        public void DeleteItemsByIdImagesByTypeByIndex (string id, int? index, ImageType type)
         {
-             DeleteItemsByIdImagesByTypeByIndexWithHttpInfo(id, type, index);
+             DeleteItemsByIdImagesByTypeByIndexWithHttpInfo(id, index, type);
         }
 
         /// <summary>
@@ -4566,20 +4558,20 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteItemsByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index)
+        public ApiResponse<Object> DeleteItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4602,8 +4594,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -4639,12 +4631,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteItemsByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task DeleteItemsByIdImagesByTypeByIndexAsync (string id, int? index, ImageType type)
         {
-             await DeleteItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index);
+             await DeleteItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, index, type);
 
         }
 
@@ -4653,20 +4645,20 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4689,8 +4681,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -4726,12 +4718,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void DeleteUsersByIdImagesByType (string id, ImageType type, int? index)
+        public void DeleteUsersByIdImagesByType (string id, int? index, ImageType type)
         {
-             DeleteUsersByIdImagesByTypeWithHttpInfo(id, type, index);
+             DeleteUsersByIdImagesByTypeWithHttpInfo(id, index, type);
         }
 
         /// <summary>
@@ -4739,10 +4731,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteUsersByIdImagesByTypeWithHttpInfo (string id, ImageType type, int? index)
+        public ApiResponse<Object> DeleteUsersByIdImagesByTypeWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4809,12 +4801,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteUsersByIdImagesByTypeAsync (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task DeleteUsersByIdImagesByTypeAsync (string id, int? index, ImageType type)
         {
-             await DeleteUsersByIdImagesByTypeAsyncWithHttpInfo(id, type, index);
+             await DeleteUsersByIdImagesByTypeAsyncWithHttpInfo(id, index, type);
 
         }
 
@@ -4823,10 +4815,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdImagesByTypeAsyncWithHttpInfo (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4893,12 +4885,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void DeleteUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index)
+        public void DeleteUsersByIdImagesByTypeByIndex (string id, int? index, ImageType type)
         {
-             DeleteUsersByIdImagesByTypeByIndexWithHttpInfo(id, type, index);
+             DeleteUsersByIdImagesByTypeByIndexWithHttpInfo(id, index, type);
         }
 
         /// <summary>
@@ -4906,20 +4898,20 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteUsersByIdImagesByTypeByIndexWithHttpInfo (string id, ImageType type, int? index)
+        public ApiResponse<Object> DeleteUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4942,8 +4934,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -4979,12 +4971,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteUsersByIdImagesByTypeByIndexAsync (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task DeleteUsersByIdImagesByTypeByIndexAsync (string id, int? index, ImageType type)
         {
-             await DeleteUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, type, index);
+             await DeleteUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, index, type);
 
         }
 
@@ -4993,20 +4985,20 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5029,8 +5021,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -5079,12 +5071,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetArtistsByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetArtistsByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -5105,10 +5097,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetArtistsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetArtistsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5201,12 +5193,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetArtistsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetArtistsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetArtistsByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetArtistsByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -5228,10 +5220,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5324,12 +5316,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetArtistsByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetArtistsByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -5350,20 +5342,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
 
             var localVarPath = "/Artists/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5386,8 +5378,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -5449,12 +5441,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetArtistsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetArtistsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -5476,20 +5468,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
 
             var localVarPath = "/Artists/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5512,8 +5504,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -5575,12 +5567,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetGamegenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetGamegenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -5601,10 +5593,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetGamegenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetGamegenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5697,12 +5689,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetGamegenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetGamegenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -5724,10 +5716,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5820,12 +5812,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -5846,20 +5838,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/GameGenres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5882,8 +5874,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -5945,12 +5937,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetGamegenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -5972,20 +5964,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/GameGenres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6008,8 +6000,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -6071,12 +6063,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetGenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetGenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -6097,10 +6089,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetGenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetGenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6193,12 +6185,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetGenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetGenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetGenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetGenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -6220,10 +6212,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6316,12 +6308,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetGenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetGenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -6342,20 +6334,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetGenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetGenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/Genres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6378,8 +6370,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -6441,12 +6433,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetGenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetGenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -6468,20 +6460,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/Genres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6504,8 +6496,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -6722,12 +6714,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetItemsByIdImagesByTypeWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetItemsByIdImagesByTypeWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -6748,10 +6740,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetItemsByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetItemsByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6844,12 +6836,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetItemsByIdImagesByTypeAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetItemsByIdImagesByTypeAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -6871,10 +6863,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -6967,12 +6959,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetItemsByIdImagesByTypeByIndexWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetItemsByIdImagesByTypeByIndexWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -6993,20 +6985,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7029,8 +7021,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -7092,12 +7084,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -7119,20 +7111,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7155,8 +7147,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -7220,12 +7212,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -7248,10 +7240,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'percentPlayed' is set
             if (percentPlayed == null)
@@ -7274,12 +7266,12 @@ namespace EmbyClient.Dotnet.Api
             // verify the required parameter 'format' is set
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7308,8 +7300,8 @@ namespace EmbyClient.Dotnet.Api
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
             if (tag != null) localVarPathParams.Add("Tag", this.Configuration.ApiClient.ParameterToString(tag)); // path parameter
             if (format != null) localVarPathParams.Add("Format", this.Configuration.ApiClient.ParameterToString(format)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
             if (height != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Height", height)); // query parameter
             if (quality != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Quality", quality)); // query parameter
@@ -7369,12 +7361,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -7398,10 +7390,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'percentPlayed' is set
             if (percentPlayed == null)
@@ -7424,12 +7416,12 @@ namespace EmbyClient.Dotnet.Api
             // verify the required parameter 'format' is set
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7458,8 +7450,8 @@ namespace EmbyClient.Dotnet.Api
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
             if (tag != null) localVarPathParams.Add("Tag", this.Configuration.ApiClient.ParameterToString(tag)); // path parameter
             if (format != null) localVarPathParams.Add("Format", this.Configuration.ApiClient.ParameterToString(format)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
             if (height != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Height", height)); // query parameter
             if (quality != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Quality", quality)); // query parameter
@@ -7517,12 +7509,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetMusicgenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetMusicgenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -7543,10 +7535,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetMusicgenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetMusicgenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7639,12 +7631,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -7666,10 +7658,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7762,12 +7754,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -7788,20 +7780,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/MusicGenres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7824,8 +7816,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -7887,12 +7879,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetMusicgenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -7914,20 +7906,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/MusicGenres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7950,8 +7942,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -8013,12 +8005,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetPersonsByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetPersonsByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -8039,10 +8031,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetPersonsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetPersonsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8135,12 +8127,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetPersonsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetPersonsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetPersonsByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetPersonsByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -8162,10 +8154,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8258,12 +8250,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetPersonsByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetPersonsByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -8284,20 +8276,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
 
             var localVarPath = "/Persons/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8320,8 +8312,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -8383,12 +8375,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetPersonsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetPersonsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -8410,20 +8402,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
 
             var localVarPath = "/Persons/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8446,8 +8438,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -8509,12 +8501,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetStudiosByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetStudiosByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -8535,10 +8527,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetStudiosByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetStudiosByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8631,12 +8623,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetStudiosByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetStudiosByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetStudiosByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetStudiosByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -8658,10 +8650,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8754,12 +8746,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetStudiosByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetStudiosByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -8780,20 +8772,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
 
             var localVarPath = "/Studios/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8816,8 +8808,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -8879,12 +8871,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetStudiosByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetStudiosByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -8906,20 +8898,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
 
             var localVarPath = "/Studios/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8942,8 +8934,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -9005,12 +8997,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetUsersByIdImagesByTypeWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetUsersByIdImagesByTypeWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -9031,10 +9023,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUsersByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetUsersByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -9127,12 +9119,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUsersByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetUsersByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetUsersByIdImagesByTypeAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetUsersByIdImagesByTypeAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -9154,10 +9146,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -9250,12 +9242,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void GetUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void GetUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             GetUsersByIdImagesByTypeByIndexWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             GetUsersByIdImagesByTypeByIndexWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -9276,20 +9268,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> GetUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9312,8 +9304,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -9375,12 +9367,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetUsersByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task GetUsersByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -9402,20 +9394,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9438,8 +9430,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -9501,12 +9493,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadArtistsByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadArtistsByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -9527,10 +9519,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadArtistsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadArtistsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9623,12 +9615,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadArtistsByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadArtistsByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -9650,10 +9642,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -9746,12 +9738,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadArtistsByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadArtistsByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -9772,20 +9764,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadArtistsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
 
             var localVarPath = "/Artists/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9808,8 +9800,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -9871,12 +9863,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadArtistsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -9898,20 +9890,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadArtistsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
 
             var localVarPath = "/Artists/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9934,8 +9926,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -9997,12 +9989,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadGamegenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadGamegenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -10023,10 +10015,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadGamegenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadGamegenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10119,12 +10111,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -10146,10 +10138,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10242,12 +10234,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -10268,20 +10260,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadGamegenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/GameGenres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10304,8 +10296,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -10367,12 +10359,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadGamegenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -10394,20 +10386,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGamegenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/GameGenres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10430,8 +10422,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -10493,12 +10485,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadGenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadGenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -10519,10 +10511,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadGenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadGenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10615,12 +10607,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadGenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadGenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadGenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadGenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -10642,10 +10634,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10738,12 +10730,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadGenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadGenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -10764,20 +10756,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadGenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadGenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/Genres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10800,8 +10792,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -10863,12 +10855,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadGenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadGenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -10890,20 +10882,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadGenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/Genres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10926,8 +10918,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -10989,12 +10981,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadItemsByIdImagesByTypeWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadItemsByIdImagesByTypeWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -11015,10 +11007,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadItemsByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadItemsByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -11111,12 +11103,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadItemsByIdImagesByTypeAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadItemsByIdImagesByTypeAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -11138,10 +11130,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -11234,12 +11226,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadItemsByIdImagesByTypeByIndexWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadItemsByIdImagesByTypeByIndexWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -11260,20 +11252,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11296,8 +11288,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -11359,12 +11351,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -11386,20 +11378,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11422,8 +11414,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -11487,12 +11479,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -11515,10 +11507,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'percentPlayed' is set
             if (percentPlayed == null)
@@ -11541,12 +11533,12 @@ namespace EmbyClient.Dotnet.Api
             // verify the required parameter 'format' is set
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11575,8 +11567,8 @@ namespace EmbyClient.Dotnet.Api
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
             if (tag != null) localVarPathParams.Add("Tag", this.Configuration.ApiClient.ParameterToString(tag)); // path parameter
             if (format != null) localVarPathParams.Add("Format", this.Configuration.ApiClient.ParameterToString(format)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
             if (height != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Height", height)); // query parameter
             if (quality != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Quality", quality)); // query parameter
@@ -11636,12 +11628,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsync (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -11665,10 +11657,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountAsyncWithHttpInfo (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'percentPlayed' is set
             if (percentPlayed == null)
@@ -11691,12 +11683,12 @@ namespace EmbyClient.Dotnet.Api
             // verify the required parameter 'format' is set
             if (format == null)
                 throw new ApiException(400, "Missing required parameter 'format' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -11725,8 +11717,8 @@ namespace EmbyClient.Dotnet.Api
             if (maxHeight != null) localVarPathParams.Add("MaxHeight", this.Configuration.ApiClient.ParameterToString(maxHeight)); // path parameter
             if (tag != null) localVarPathParams.Add("Tag", this.Configuration.ApiClient.ParameterToString(tag)); // path parameter
             if (format != null) localVarPathParams.Add("Format", this.Configuration.ApiClient.ParameterToString(format)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
             if (height != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Height", height)); // query parameter
             if (quality != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Quality", quality)); // query parameter
@@ -11784,12 +11776,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadMusicgenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadMusicgenresByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -11810,10 +11802,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadMusicgenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadMusicgenresByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -11906,12 +11898,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -11933,10 +11925,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12029,12 +12021,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -12055,20 +12047,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadMusicgenresByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/MusicGenres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12091,8 +12083,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -12154,12 +12146,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadMusicgenresByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -12181,20 +12173,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
 
             var localVarPath = "/MusicGenres/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12217,8 +12209,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -12280,12 +12272,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadPersonsByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadPersonsByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -12306,10 +12298,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadPersonsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadPersonsByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12402,12 +12394,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadPersonsByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadPersonsByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -12429,10 +12421,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12525,12 +12517,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadPersonsByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadPersonsByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -12551,20 +12543,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadPersonsByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
 
             var localVarPath = "/Persons/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12587,8 +12579,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -12650,12 +12642,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadPersonsByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -12677,20 +12669,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadPersonsByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
 
             var localVarPath = "/Persons/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -12713,8 +12705,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -12776,12 +12768,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadStudiosByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadStudiosByNameImagesByTypeWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -12802,10 +12794,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadStudiosByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadStudiosByNameImagesByTypeWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -12898,12 +12890,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadStudiosByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadStudiosByNameImagesByTypeAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -12925,10 +12917,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -13021,12 +13013,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadStudiosByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadStudiosByNameImagesByTypeByIndexWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -13047,20 +13039,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadStudiosByNameImagesByTypeByIndexWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
 
             var localVarPath = "/Studios/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13083,8 +13075,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -13146,12 +13138,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadStudiosByNameImagesByTypeByIndexAsync (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo(name, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -13173,20 +13165,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadStudiosByNameImagesByTypeByIndexAsyncWithHttpInfo (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
 
             var localVarPath = "/Studios/{Name}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13209,8 +13201,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("Name", this.Configuration.ApiClient.ParameterToString(name)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -13272,12 +13264,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadUsersByIdImagesByTypeWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadUsersByIdImagesByTypeWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -13298,10 +13290,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadUsersByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadUsersByIdImagesByTypeWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -13394,12 +13386,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadUsersByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadUsersByIdImagesByTypeAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadUsersByIdImagesByTypeAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadUsersByIdImagesByTypeAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -13421,10 +13413,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -13517,12 +13509,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void HeadUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public void HeadUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             HeadUsersByIdImagesByTypeByIndexWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             HeadUsersByIdImagesByTypeByIndexWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
         }
 
         /// <summary>
@@ -13543,20 +13535,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> HeadUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public ApiResponse<Object> HeadUsersByIdImagesByTypeByIndexWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13579,8 +13571,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -13642,12 +13634,12 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task HeadUsersByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task HeadUsersByIdImagesByTypeByIndexAsync (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
-             await HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, type, index);
+             await HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(id, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, index, type);
 
         }
 
@@ -13669,20 +13661,20 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -13705,8 +13697,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (maxWidth != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxWidth", maxWidth)); // query parameter
             if (maxHeight != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "MaxHeight", maxHeight)); // query parameter
             if (width != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Width", width)); // query parameter
@@ -13951,12 +13943,12 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void PostItemsByIdImagesByTypeByIndex (Object body, string id, ImageType type, int? index)
+        public void PostItemsByIdImagesByTypeByIndex (Object body, string id, int? index, ImageType type)
         {
-             PostItemsByIdImagesByTypeByIndexWithHttpInfo(body, id, type, index);
+             PostItemsByIdImagesByTypeByIndexWithHttpInfo(body, id, index, type);
         }
 
         /// <summary>
@@ -13965,10 +13957,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostItemsByIdImagesByTypeByIndexWithHttpInfo (Object body, string id, ImageType type, int? index)
+        public ApiResponse<Object> PostItemsByIdImagesByTypeByIndexWithHttpInfo (Object body, string id, int? index, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -13976,12 +13968,12 @@ namespace EmbyClient.Dotnet.Api
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -14005,8 +13997,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -14051,12 +14043,12 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostItemsByIdImagesByTypeByIndexAsync (Object body, string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task PostItemsByIdImagesByTypeByIndexAsync (Object body, string id, int? index, ImageType type)
         {
-             await PostItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(body, id, type, index);
+             await PostItemsByIdImagesByTypeByIndexAsyncWithHttpInfo(body, id, index, type);
 
         }
 
@@ -14066,10 +14058,10 @@ namespace EmbyClient.Dotnet.Api
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (Object body, string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeByIndexAsyncWithHttpInfo (Object body, string id, int? index, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -14077,12 +14069,12 @@ namespace EmbyClient.Dotnet.Api
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -14106,8 +14098,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -14151,12 +14143,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void PostItemsByIdImagesByTypeByIndexDelete (string id, ImageType type, int? index)
+        public void PostItemsByIdImagesByTypeByIndexDelete (string id, int? index, ImageType type)
         {
-             PostItemsByIdImagesByTypeByIndexDeleteWithHttpInfo(id, type, index);
+             PostItemsByIdImagesByTypeByIndexDeleteWithHttpInfo(id, index, type);
         }
 
         /// <summary>
@@ -14164,20 +14156,20 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostItemsByIdImagesByTypeByIndexDeleteWithHttpInfo (string id, ImageType type, int? index)
+        public ApiResponse<Object> PostItemsByIdImagesByTypeByIndexDeleteWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}/Delete";
             var localVarPathParams = new Dictionary<String, String>();
@@ -14200,8 +14192,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -14237,12 +14229,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostItemsByIdImagesByTypeByIndexDeleteAsync (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task PostItemsByIdImagesByTypeByIndexDeleteAsync (string id, int? index, ImageType type)
         {
-             await PostItemsByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo(id, type, index);
+             await PostItemsByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo(id, index, type);
 
         }
 
@@ -14251,20 +14243,20 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
 
             var localVarPath = "/Items/{Id}/Images/{Type}/{Index}/Delete";
             var localVarPathParams = new Dictionary<String, String>();
@@ -14287,8 +14279,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -14694,12 +14686,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void PostItemsByIdImagesByTypeDelete (string id, ImageType type, int? index)
+        public void PostItemsByIdImagesByTypeDelete (string id, int? index, ImageType type)
         {
-             PostItemsByIdImagesByTypeDeleteWithHttpInfo(id, type, index);
+             PostItemsByIdImagesByTypeDeleteWithHttpInfo(id, index, type);
         }
 
         /// <summary>
@@ -14707,10 +14699,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostItemsByIdImagesByTypeDeleteWithHttpInfo (string id, ImageType type, int? index)
+        public ApiResponse<Object> PostItemsByIdImagesByTypeDeleteWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -14777,12 +14769,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostItemsByIdImagesByTypeDeleteAsync (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task PostItemsByIdImagesByTypeDeleteAsync (string id, int? index, ImageType type)
         {
-             await PostItemsByIdImagesByTypeDeleteAsyncWithHttpInfo(id, type, index);
+             await PostItemsByIdImagesByTypeDeleteAsyncWithHttpInfo(id, index, type);
 
         }
 
@@ -14791,10 +14783,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeDeleteAsyncWithHttpInfo (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdImagesByTypeDeleteAsyncWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -14863,11 +14855,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns></returns>
-        public void PostUsersByIdImagesByType (Object body, string id, ImageType type, int? index)
+        public void PostUsersByIdImagesByType (Object body, string id, ImageType type)
         {
-             PostUsersByIdImagesByTypeWithHttpInfo(body, id, type, index);
+             PostUsersByIdImagesByTypeWithHttpInfo(body, id, type);
         }
 
         /// <summary>
@@ -14877,9 +14868,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostUsersByIdImagesByTypeWithHttpInfo (Object body, string id, ImageType type, int? index)
+        public ApiResponse<Object> PostUsersByIdImagesByTypeWithHttpInfo (Object body, string id, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -14914,7 +14904,6 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
-            if (index != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Index", index)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -14960,11 +14949,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostUsersByIdImagesByTypeAsync (Object body, string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task PostUsersByIdImagesByTypeAsync (Object body, string id, ImageType type)
         {
-             await PostUsersByIdImagesByTypeAsyncWithHttpInfo(body, id, type, index);
+             await PostUsersByIdImagesByTypeAsyncWithHttpInfo(body, id, type);
 
         }
 
@@ -14975,9 +14963,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeAsyncWithHttpInfo (Object body, string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeAsyncWithHttpInfo (Object body, string id, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -15012,7 +14999,6 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
-            if (index != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Index", index)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -15058,11 +15044,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns></returns>
-        public void PostUsersByIdImagesByTypeByIndex (Object body, string id, ImageType type, int? index)
+        public void PostUsersByIdImagesByTypeByIndex (Object body, string id, ImageType type)
         {
-             PostUsersByIdImagesByTypeByIndexWithHttpInfo(body, id, type, index);
+             PostUsersByIdImagesByTypeByIndexWithHttpInfo(body, id, type);
         }
 
         /// <summary>
@@ -15072,9 +15057,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostUsersByIdImagesByTypeByIndexWithHttpInfo (Object body, string id, ImageType type, int? index)
+        public ApiResponse<Object> PostUsersByIdImagesByTypeByIndexWithHttpInfo (Object body, string id, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -15085,9 +15069,6 @@ namespace EmbyClient.Dotnet.Api
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndex");
-            // verify the required parameter 'index' is set
-            if (index == null)
-                throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndex");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15112,7 +15093,6 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
-            if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -15158,11 +15138,10 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostUsersByIdImagesByTypeByIndexAsync (Object body, string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task PostUsersByIdImagesByTypeByIndexAsync (Object body, string id, ImageType type)
         {
-             await PostUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(body, id, type, index);
+             await PostUsersByIdImagesByTypeByIndexAsyncWithHttpInfo(body, id, type);
 
         }
 
@@ -15173,9 +15152,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (Object body, string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeByIndexAsyncWithHttpInfo (Object body, string id, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -15186,9 +15164,6 @@ namespace EmbyClient.Dotnet.Api
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndex");
-            // verify the required parameter 'index' is set
-            if (index == null)
-                throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndex");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15213,7 +15188,6 @@ namespace EmbyClient.Dotnet.Api
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
-            if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -15257,12 +15231,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void PostUsersByIdImagesByTypeByIndexDelete (string id, ImageType type, int? index)
+        public void PostUsersByIdImagesByTypeByIndexDelete (string id, int? index, ImageType type)
         {
-             PostUsersByIdImagesByTypeByIndexDeleteWithHttpInfo(id, type, index);
+             PostUsersByIdImagesByTypeByIndexDeleteWithHttpInfo(id, index, type);
         }
 
         /// <summary>
@@ -15270,20 +15244,20 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostUsersByIdImagesByTypeByIndexDeleteWithHttpInfo (string id, ImageType type, int? index)
+        public ApiResponse<Object> PostUsersByIdImagesByTypeByIndexDeleteWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}/Delete";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15306,8 +15280,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -15343,12 +15317,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostUsersByIdImagesByTypeByIndexDeleteAsync (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task PostUsersByIdImagesByTypeByIndexDeleteAsync (string id, int? index, ImageType type)
         {
-             await PostUsersByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo(id, type, index);
+             await PostUsersByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo(id, index, type);
 
         }
 
@@ -15357,20 +15331,20 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeByIndexDeleteAsyncWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
             // verify the required parameter 'index' is set
             if (index == null)
                 throw new ApiException(400, "Missing required parameter 'index' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
 
             var localVarPath = "/Users/{Id}/Images/{Type}/{Index}/Delete";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15393,8 +15367,8 @@ namespace EmbyClient.Dotnet.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("Id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             if (index != null) localVarPathParams.Add("Index", this.Configuration.ApiClient.ParameterToString(index)); // path parameter
+            if (type != null) localVarPathParams.Add("Type", this.Configuration.ApiClient.ParameterToString(type)); // path parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -15430,12 +15404,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns></returns>
-        public void PostUsersByIdImagesByTypeDelete (string id, ImageType type, int? index)
+        public void PostUsersByIdImagesByTypeDelete (string id, int? index, ImageType type)
         {
-             PostUsersByIdImagesByTypeDeleteWithHttpInfo(id, type, index);
+             PostUsersByIdImagesByTypeDeleteWithHttpInfo(id, index, type);
         }
 
         /// <summary>
@@ -15443,10 +15417,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostUsersByIdImagesByTypeDeleteWithHttpInfo (string id, ImageType type, int? index)
+        public ApiResponse<Object> PostUsersByIdImagesByTypeDeleteWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -15513,12 +15487,12 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostUsersByIdImagesByTypeDeleteAsync (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task PostUsersByIdImagesByTypeDeleteAsync (string id, int? index, ImageType type)
         {
-             await PostUsersByIdImagesByTypeDeleteAsyncWithHttpInfo(id, type, index);
+             await PostUsersByIdImagesByTypeDeleteAsyncWithHttpInfo(id, index, type);
 
         }
 
@@ -15527,10 +15501,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeDeleteAsyncWithHttpInfo (string id, ImageType type, int? index)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostUsersByIdImagesByTypeDeleteAsyncWithHttpInfo (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)

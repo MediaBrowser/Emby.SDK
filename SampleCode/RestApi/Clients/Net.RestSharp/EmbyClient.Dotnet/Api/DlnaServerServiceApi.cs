@@ -190,6 +190,132 @@ namespace EmbyClient.Dotnet.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetDlnaIconsByFilenameWithHttpInfo (string uuId, string filename);
         /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        void HeadDlnaByUuidConnectionmanagerConnectionmanager (string uuId);
+
+        /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadDlnaByUuidConnectionmanagerConnectionmanagerWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        void HeadDlnaByUuidConnectionmanagerConnectionmanagerXml (string uuId);
+
+        /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        void HeadDlnaByUuidContentdirectoryContentdirectory (string uuId);
+
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadDlnaByUuidContentdirectoryContentdirectoryWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        void HeadDlnaByUuidContentdirectoryContentdirectoryXml (string uuId);
+
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadDlnaByUuidContentdirectoryContentdirectoryXmlWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        void HeadDlnaByUuidDescription (string uuId);
+
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadDlnaByUuidDescriptionWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        void HeadDlnaByUuidDescriptionXml (string uuId);
+
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> HeadDlnaByUuidDescriptionXmlWithHttpInfo (string uuId);
+        /// <summary>
         /// Processes a control request
         /// </summary>
         /// <remarks>
@@ -409,6 +535,132 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="filename">The icon filename</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetDlnaIconsByFilenameAsyncWithHttpInfo (string uuId, string filename);
+        /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadDlnaByUuidConnectionmanagerConnectionmanagerAsync (string uuId);
+
+        /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidConnectionmanagerConnectionmanagerAsyncWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlAsync (string uuId);
+
+        /// <summary>
+        /// Gets dlna connection manager xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlAsyncWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadDlnaByUuidContentdirectoryContentdirectoryAsync (string uuId);
+
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidContentdirectoryContentdirectoryAsyncWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadDlnaByUuidContentdirectoryContentdirectoryXmlAsync (string uuId);
+
+        /// <summary>
+        /// Gets dlna content directory xml
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidContentdirectoryContentdirectoryXmlAsyncWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadDlnaByUuidDescriptionAsync (string uuId);
+
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidDescriptionAsyncWithHttpInfo (string uuId);
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task HeadDlnaByUuidDescriptionXmlAsync (string uuId);
+
+        /// <summary>
+        /// Gets dlna server info
+        /// </summary>
+        /// <remarks>
+        /// No authentication required
+        /// </remarks>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidDescriptionXmlAsyncWithHttpInfo (string uuId);
         /// <summary>
         /// Processes a control request
         /// </summary>
@@ -1592,6 +1844,768 @@ namespace EmbyClient.Dotnet.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetDlnaIconsByFilename", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        public void HeadDlnaByUuidConnectionmanagerConnectionmanager (string uuId)
+        {
+             HeadDlnaByUuidConnectionmanagerConnectionmanagerWithHttpInfo(uuId);
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> HeadDlnaByUuidConnectionmanagerConnectionmanagerWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidConnectionmanagerConnectionmanager");
+
+            var localVarPath = "/Dlna/{UuId}/connectionmanager/connectionmanager";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidConnectionmanagerConnectionmanager", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task HeadDlnaByUuidConnectionmanagerConnectionmanagerAsync (string uuId)
+        {
+             await HeadDlnaByUuidConnectionmanagerConnectionmanagerAsyncWithHttpInfo(uuId);
+
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidConnectionmanagerConnectionmanagerAsyncWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidConnectionmanagerConnectionmanager");
+
+            var localVarPath = "/Dlna/{UuId}/connectionmanager/connectionmanager";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidConnectionmanagerConnectionmanager", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        public void HeadDlnaByUuidConnectionmanagerConnectionmanagerXml (string uuId)
+        {
+             HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlWithHttpInfo(uuId);
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidConnectionmanagerConnectionmanagerXml");
+
+            var localVarPath = "/Dlna/{UuId}/connectionmanager/connectionmanager.xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidConnectionmanagerConnectionmanagerXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlAsync (string uuId)
+        {
+             await HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlAsyncWithHttpInfo(uuId);
+
+        }
+
+        /// <summary>
+        /// Gets dlna connection manager xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlAsyncWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidConnectionmanagerConnectionmanagerXml");
+
+            var localVarPath = "/Dlna/{UuId}/connectionmanager/connectionmanager.xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidConnectionmanagerConnectionmanagerXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        public void HeadDlnaByUuidContentdirectoryContentdirectory (string uuId)
+        {
+             HeadDlnaByUuidContentdirectoryContentdirectoryWithHttpInfo(uuId);
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> HeadDlnaByUuidContentdirectoryContentdirectoryWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidContentdirectoryContentdirectory");
+
+            var localVarPath = "/Dlna/{UuId}/contentdirectory/contentdirectory";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidContentdirectoryContentdirectory", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task HeadDlnaByUuidContentdirectoryContentdirectoryAsync (string uuId)
+        {
+             await HeadDlnaByUuidContentdirectoryContentdirectoryAsyncWithHttpInfo(uuId);
+
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidContentdirectoryContentdirectoryAsyncWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidContentdirectoryContentdirectory");
+
+            var localVarPath = "/Dlna/{UuId}/contentdirectory/contentdirectory";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidContentdirectoryContentdirectory", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        public void HeadDlnaByUuidContentdirectoryContentdirectoryXml (string uuId)
+        {
+             HeadDlnaByUuidContentdirectoryContentdirectoryXmlWithHttpInfo(uuId);
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> HeadDlnaByUuidContentdirectoryContentdirectoryXmlWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidContentdirectoryContentdirectoryXml");
+
+            var localVarPath = "/Dlna/{UuId}/contentdirectory/contentdirectory.xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidContentdirectoryContentdirectoryXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task HeadDlnaByUuidContentdirectoryContentdirectoryXmlAsync (string uuId)
+        {
+             await HeadDlnaByUuidContentdirectoryContentdirectoryXmlAsyncWithHttpInfo(uuId);
+
+        }
+
+        /// <summary>
+        /// Gets dlna content directory xml No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidContentdirectoryContentdirectoryXmlAsyncWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidContentdirectoryContentdirectoryXml");
+
+            var localVarPath = "/Dlna/{UuId}/contentdirectory/contentdirectory.xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidContentdirectoryContentdirectoryXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna server info No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        public void HeadDlnaByUuidDescription (string uuId)
+        {
+             HeadDlnaByUuidDescriptionWithHttpInfo(uuId);
+        }
+
+        /// <summary>
+        /// Gets dlna server info No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> HeadDlnaByUuidDescriptionWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidDescription");
+
+            var localVarPath = "/Dlna/{UuId}/description";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidDescription", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna server info No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task HeadDlnaByUuidDescriptionAsync (string uuId)
+        {
+             await HeadDlnaByUuidDescriptionAsyncWithHttpInfo(uuId);
+
+        }
+
+        /// <summary>
+        /// Gets dlna server info No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidDescriptionAsyncWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidDescription");
+
+            var localVarPath = "/Dlna/{UuId}/description";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidDescription", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna server info No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns></returns>
+        public void HeadDlnaByUuidDescriptionXml (string uuId)
+        {
+             HeadDlnaByUuidDescriptionXmlWithHttpInfo(uuId);
+        }
+
+        /// <summary>
+        /// Gets dlna server info No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> HeadDlnaByUuidDescriptionXmlWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidDescriptionXml");
+
+            var localVarPath = "/Dlna/{UuId}/description.xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidDescriptionXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                null);
+        }
+
+        /// <summary>
+        /// Gets dlna server info No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task HeadDlnaByUuidDescriptionXmlAsync (string uuId)
+        {
+             await HeadDlnaByUuidDescriptionXmlAsyncWithHttpInfo(uuId);
+
+        }
+
+        /// <summary>
+        /// Gets dlna server info No authentication required
+        /// </summary>
+        /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uuId">Server UuId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadDlnaByUuidDescriptionXmlAsyncWithHttpInfo (string uuId)
+        {
+            // verify the required parameter 'uuId' is set
+            if (uuId == null)
+                throw new ApiException(400, "Missing required parameter 'uuId' when calling DlnaServerServiceApi->HeadDlnaByUuidDescriptionXml");
+
+            var localVarPath = "/Dlna/{UuId}/description.xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uuId != null) localVarPathParams.Add("UuId", this.Configuration.ApiClient.ParameterToString(uuId)); // path parameter
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.HEAD, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("HeadDlnaByUuidDescriptionXml", localVarResponse);
                 if (exception != null) throw exception;
             }
 

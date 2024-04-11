@@ -324,18 +324,19 @@ class RemoteImageServiceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_items_by_id_remoteimages_download(self, id, type, **kwargs):  # noqa: E501
+    def post_items_by_id_remoteimages_download(self, body, type, id, **kwargs):  # noqa: E501
         """Downloads a remote image for an item  # noqa: E501
 
         Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_items_by_id_remoteimages_download(id, type, async_req=True)
+        >>> thread = api.post_items_by_id_remoteimages_download(body, type, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: Item Id (required)
+        :param ImagesBaseDownloadRemoteImage body: BaseDownloadRemoteImage:  (required)
         :param ImageType type: The image type (required)
+        :param str id: Item Id (required)
         :param str provider_name: The image provider
         :param str image_url: The image url
         :return: None
@@ -344,23 +345,24 @@ class RemoteImageServiceApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_items_by_id_remoteimages_download_with_http_info(id, type, **kwargs)  # noqa: E501
+            return self.post_items_by_id_remoteimages_download_with_http_info(body, type, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_items_by_id_remoteimages_download_with_http_info(id, type, **kwargs)  # noqa: E501
+            (data) = self.post_items_by_id_remoteimages_download_with_http_info(body, type, id, **kwargs)  # noqa: E501
             return data
 
-    def post_items_by_id_remoteimages_download_with_http_info(self, id, type, **kwargs):  # noqa: E501
+    def post_items_by_id_remoteimages_download_with_http_info(self, body, type, id, **kwargs):  # noqa: E501
         """Downloads a remote image for an item  # noqa: E501
 
         Requires authentication as administrator  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_items_by_id_remoteimages_download_with_http_info(id, type, async_req=True)
+        >>> thread = api.post_items_by_id_remoteimages_download_with_http_info(body, type, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: Item Id (required)
+        :param ImagesBaseDownloadRemoteImage body: BaseDownloadRemoteImage:  (required)
         :param ImageType type: The image type (required)
+        :param str id: Item Id (required)
         :param str provider_name: The image provider
         :param str image_url: The image url
         :return: None
@@ -368,7 +370,7 @@ class RemoteImageServiceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'provider_name', 'image_url']  # noqa: E501
+        all_params = ['body', 'type', 'id', 'provider_name', 'image_url']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -383,14 +385,18 @@ class RemoteImageServiceApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `post_items_by_id_remoteimages_download`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `post_items_by_id_remoteimages_download`")  # noqa: E501
         # verify the required parameter 'type' is set
         if ('type' not in params or
                 params['type'] is None):
             raise ValueError("Missing the required parameter `type` when calling `post_items_by_id_remoteimages_download`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `post_items_by_id_remoteimages_download`")  # noqa: E501
 
         collection_formats = {}
 
@@ -412,6 +418,12 @@ class RemoteImageServiceApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json', 'application/xml'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501
 

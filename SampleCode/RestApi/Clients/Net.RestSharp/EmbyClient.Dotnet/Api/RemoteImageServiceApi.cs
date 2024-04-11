@@ -98,12 +98,13 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns></returns>
-        void PostItemsByIdRemoteimagesDownload (string id, ImageType type, string providerName, string imageUrl);
+        void PostItemsByIdRemoteimagesDownload (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl);
 
         /// <summary>
         /// Downloads a remote image for an item
@@ -112,12 +113,13 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostItemsByIdRemoteimagesDownloadWithHttpInfo (string id, ImageType type, string providerName, string imageUrl);
+        ApiResponse<Object> PostItemsByIdRemoteimagesDownloadWithHttpInfo (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -200,12 +202,13 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostItemsByIdRemoteimagesDownloadAsync (string id, ImageType type, string providerName, string imageUrl);
+        System.Threading.Tasks.Task PostItemsByIdRemoteimagesDownloadAsync (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl);
 
         /// <summary>
         /// Downloads a remote image for an item
@@ -214,12 +217,13 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdRemoteimagesDownloadAsyncWithHttpInfo (string id, ImageType type, string providerName, string imageUrl);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdRemoteimagesDownloadAsyncWithHttpInfo (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl);
         #endregion Asynchronous Operations
     }
 
@@ -824,33 +828,38 @@ namespace EmbyClient.Dotnet.Api
         /// Downloads a remote image for an item Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns></returns>
-        public void PostItemsByIdRemoteimagesDownload (string id, ImageType type, string providerName, string imageUrl)
+        public void PostItemsByIdRemoteimagesDownload (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl)
         {
-             PostItemsByIdRemoteimagesDownloadWithHttpInfo(id, type, providerName, imageUrl);
+             PostItemsByIdRemoteimagesDownloadWithHttpInfo(body, type, id, providerName, imageUrl);
         }
 
         /// <summary>
         /// Downloads a remote image for an item Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostItemsByIdRemoteimagesDownloadWithHttpInfo (string id, ImageType type, string providerName, string imageUrl)
+        public ApiResponse<Object> PostItemsByIdRemoteimagesDownloadWithHttpInfo (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
 
             var localVarPath = "/Items/{Id}/RemoteImages/Download";
             var localVarPathParams = new Dictionary<String, String>();
@@ -862,6 +871,8 @@ namespace EmbyClient.Dotnet.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -876,6 +887,14 @@ namespace EmbyClient.Dotnet.Api
             if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Type", type)); // query parameter
             if (providerName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ProviderName", providerName)); // query parameter
             if (imageUrl != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageUrl", imageUrl)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -910,14 +929,15 @@ namespace EmbyClient.Dotnet.Api
         /// Downloads a remote image for an item Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostItemsByIdRemoteimagesDownloadAsync (string id, ImageType type, string providerName, string imageUrl)
+        public async System.Threading.Tasks.Task PostItemsByIdRemoteimagesDownloadAsync (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl)
         {
-             await PostItemsByIdRemoteimagesDownloadAsyncWithHttpInfo(id, type, providerName, imageUrl);
+             await PostItemsByIdRemoteimagesDownloadAsyncWithHttpInfo(body, type, id, providerName, imageUrl);
 
         }
 
@@ -925,19 +945,23 @@ namespace EmbyClient.Dotnet.Api
         /// Downloads a remote image for an item Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Item Id</param>
+        /// <param name="body">BaseDownloadRemoteImage: </param>
         /// <param name="type">The image type</param>
+        /// <param name="id">Item Id</param>
         /// <param name="providerName">The image provider (optional)</param>
         /// <param name="imageUrl">The image url (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdRemoteimagesDownloadAsyncWithHttpInfo (string id, ImageType type, string providerName, string imageUrl)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostItemsByIdRemoteimagesDownloadAsyncWithHttpInfo (ImagesBaseDownloadRemoteImage body, ImageType type, string id, string providerName, string imageUrl)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling RemoteImageServiceApi->PostItemsByIdRemoteimagesDownload");
 
             var localVarPath = "/Items/{Id}/RemoteImages/Download";
             var localVarPathParams = new Dictionary<String, String>();
@@ -949,6 +973,8 @@ namespace EmbyClient.Dotnet.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "application/xml"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -963,6 +989,14 @@ namespace EmbyClient.Dotnet.Api
             if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Type", type)); // query parameter
             if (providerName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ProviderName", providerName)); // query parameter
             if (imageUrl != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ImageUrl", imageUrl)); // query parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {

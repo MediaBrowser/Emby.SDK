@@ -66,12 +66,12 @@ open class ImageServiceAPI {
     /**
 
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteItemsByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        deleteItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index).execute { (response, error) -> Void in
+    open class func deleteItemsByIdImagesByTypeByIndex(_id: String, index: Int, type: ImageType, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        deleteItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, index: index, type: type).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -91,22 +91,22 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int) -> RequestBuilder<Void> {
+    open class func deleteItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, index: Int, type: ImageType) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
@@ -172,12 +172,12 @@ open class ImageServiceAPI {
     /**
 
      - parameter _id: (path) User Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteUsersByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        deleteUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index).execute { (response, error) -> Void in
+    open class func deleteUsersByIdImagesByTypeByIndex(_id: String, index: Int, type: ImageType, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        deleteUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, index: index, type: type).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -197,22 +197,22 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter _id: (path) User Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func deleteUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int) -> RequestBuilder<Void> {
+    open class func deleteUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, index: Int, type: ImageType) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
@@ -317,8 +317,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -334,8 +334,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getArtistsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getArtistsByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -355,8 +355,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -373,17 +373,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Artists/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -503,8 +503,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -520,8 +520,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGamegenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getGamegenresByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -541,8 +541,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -559,17 +559,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/GameGenres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -689,8 +689,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -706,8 +706,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getGenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getGenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getGenresByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getGenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -727,8 +727,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -745,17 +745,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getGenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getGenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Genres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -933,8 +933,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -950,8 +950,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getItemsByIdImagesByTypeByIndex(_id: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -971,8 +971,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -989,17 +989,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -1033,8 +1033,8 @@ open class ImageServiceAPI {
      - parameter maxHeight: (path) The maximum image height to return. 
      - parameter tag: (path) Optional. Supply the cache tag from the item object to receive strong caching headers. 
      - parameter format: (path) Determines the output foramt of the image - original,gif,jpg,png 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter width: (query) The fixed image width to return. (optional)
      - parameter height: (query) The fixed image height to return. (optional)
      - parameter quality: (query) Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -1046,8 +1046,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: percentPlayed, unPlayedCount: unPlayedCount, _id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, index: Int, type: ImageType, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: percentPlayed, unPlayedCount: unPlayedCount, _id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, index: index, type: type, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1073,8 +1073,8 @@ open class ImageServiceAPI {
      - parameter maxHeight: (path) The maximum image height to return. 
      - parameter tag: (path) Optional. Supply the cache tag from the item object to receive strong caching headers. 
      - parameter format: (path) Determines the output foramt of the image - original,gif,jpg,png 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter width: (query) The fixed image width to return. (optional)
      - parameter height: (query) The fixed image height to return. (optional)
      - parameter quality: (query) Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -1087,7 +1087,7 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, index: Int, type: ImageType, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
         let percentPlayedPreEscape = "\(percentPlayed)"
         let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1110,12 +1110,12 @@ open class ImageServiceAPI {
         let formatPreEscape = "\(format)"
         let formatPostEscape = formatPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Format}", with: formatPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -1231,8 +1231,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1248,8 +1248,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getMusicgenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getMusicgenresByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1269,8 +1269,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1287,17 +1287,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/MusicGenres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -1417,8 +1417,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1434,8 +1434,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPersonsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getPersonsByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1455,8 +1455,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1473,17 +1473,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Persons/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -1603,8 +1603,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1620,8 +1620,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getStudiosByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getStudiosByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1641,8 +1641,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1659,17 +1659,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Studios/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -1793,8 +1793,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter _id: (path) User Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1810,8 +1810,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsersByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func getUsersByIdImagesByTypeByIndex(_id: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        getUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -1831,8 +1831,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter _id: (path) User Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1849,17 +1849,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func getUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func getUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -1979,8 +1979,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -1996,8 +1996,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headArtistsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headArtistsByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2017,8 +2017,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2035,17 +2035,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headArtistsByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Artists/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -2165,8 +2165,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2182,8 +2182,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headGamegenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headGamegenresByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2203,8 +2203,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2221,17 +2221,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headGamegenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/GameGenres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -2351,8 +2351,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2368,8 +2368,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headGenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headGenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headGenresByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headGenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2389,8 +2389,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2407,17 +2407,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headGenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headGenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Genres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -2537,8 +2537,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2554,8 +2554,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headItemsByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headItemsByIdImagesByTypeByIndex(_id: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2575,8 +2575,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2593,17 +2593,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headItemsByIdImagesByTypeByIndexWithRequestBuilder(_id: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -2637,8 +2637,8 @@ open class ImageServiceAPI {
      - parameter maxHeight: (path) The maximum image height to return. 
      - parameter tag: (path) Optional. Supply the cache tag from the item object to receive strong caching headers. 
      - parameter format: (path) Determines the output foramt of the image - original,gif,jpg,png 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter width: (query) The fixed image width to return. (optional)
      - parameter height: (query) The fixed image height to return. (optional)
      - parameter quality: (query) Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -2650,8 +2650,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: percentPlayed, unPlayedCount: unPlayedCount, _id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, type: type, index: index, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, index: Int, type: ImageType, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: percentPlayed, unPlayedCount: unPlayedCount, _id: _id, maxWidth: maxWidth, maxHeight: maxHeight, tag: tag, format: format, index: index, type: type, width: width, height: height, quality: quality, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2677,8 +2677,8 @@ open class ImageServiceAPI {
      - parameter maxHeight: (path) The maximum image height to return. 
      - parameter tag: (path) Optional. Supply the cache tag from the item object to receive strong caching headers. 
      - parameter format: (path) Determines the output foramt of the image - original,gif,jpg,png 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter width: (query) The fixed image width to return. (optional)
      - parameter height: (query) The fixed image height to return. (optional)
      - parameter quality: (query) Optional quality setting, from 0-100. Defaults to 90 and should suffice in most cases. (optional)
@@ -2691,7 +2691,7 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, type: ImageType, index: Int, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, index: Int, type: ImageType, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
         let percentPlayedPreEscape = "\(percentPlayed)"
         let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2714,12 +2714,12 @@ open class ImageServiceAPI {
         let formatPreEscape = "\(format)"
         let formatPostEscape = formatPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Format}", with: formatPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -2835,8 +2835,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2852,8 +2852,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headMusicgenresByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headMusicgenresByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -2873,8 +2873,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -2891,17 +2891,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headMusicgenresByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/MusicGenres/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -3021,8 +3021,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -3038,8 +3038,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headPersonsByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headPersonsByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3059,8 +3059,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -3077,17 +3077,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headPersonsByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Persons/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -3207,8 +3207,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -3224,8 +3224,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headStudiosByNameImagesByTypeByIndex(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: name, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headStudiosByNameImagesByTypeByIndex(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: name, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3245,8 +3245,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter name: (path) Item name 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -3263,17 +3263,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headStudiosByNameImagesByTypeByIndexWithRequestBuilder(name: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Studios/{Name}/Images/{Type}/{Index}"
         let namePreEscape = "\(name)"
         let namePostEscape = namePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Name}", with: namePostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -3393,8 +3393,8 @@ open class ImageServiceAPI {
     /**
 
      - parameter _id: (path) User Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -3410,8 +3410,8 @@ open class ImageServiceAPI {
      - parameter keepAnimation: (query) Set to true to retain image animation (when supported). (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func headUsersByIdImagesByTypeByIndex(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        headUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, type: type, index: index, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
+    open class func headUsersByIdImagesByTypeByIndex(_id: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: _id, index: index, type: type, maxWidth: maxWidth, maxHeight: maxHeight, width: width, height: height, quality: quality, tag: tag, cropWhitespace: cropWhitespace, enableImageEnhancers: enableImageEnhancers, format: format, backgroundColor: backgroundColor, foregroundLayer: foregroundLayer, autoOrient: autoOrient, keepAnimation: keepAnimation).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3431,8 +3431,8 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter _id: (path) User Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter maxWidth: (query) The maximum image width to return. (optional)
      - parameter maxHeight: (query) The maximum image height to return. (optional)
      - parameter width: (query) The fixed image width to return. (optional)
@@ -3449,17 +3449,17 @@ open class ImageServiceAPI {
 
      - returns: RequestBuilder<Void> 
      */
-    open class func headUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, type: ImageType, index: Int, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
+    open class func headUsersByIdImagesByTypeByIndexWithRequestBuilder(_id: String, index: Int, type: ImageType, maxWidth: Int? = nil, maxHeight: Int? = nil, width: Int? = nil, height: Int? = nil, quality: Int? = nil, tag: String? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, format: String? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         var url = URLComponents(string: URLString)
@@ -3546,12 +3546,12 @@ open class ImageServiceAPI {
 
      - parameter body: (body) Binary stream 
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsByIdImagesByTypeByIndex(body: Object, _id: String, type: ImageType, index: Int, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postItemsByIdImagesByTypeByIndexWithRequestBuilder(body: body, _id: _id, type: type, index: index).execute { (response, error) -> Void in
+    open class func postItemsByIdImagesByTypeByIndex(body: Object, _id: String, index: Int, type: ImageType, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postItemsByIdImagesByTypeByIndexWithRequestBuilder(body: body, _id: _id, index: index, type: type).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3573,22 +3573,22 @@ open class ImageServiceAPI {
        - name: embyauth
      - parameter body: (body) Binary stream 
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postItemsByIdImagesByTypeByIndexWithRequestBuilder(body: Object, _id: String, type: ImageType, index: Int) -> RequestBuilder<Void> {
+    open class func postItemsByIdImagesByTypeByIndexWithRequestBuilder(body: Object, _id: String, index: Int, type: ImageType) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
@@ -3601,12 +3601,12 @@ open class ImageServiceAPI {
     /**
 
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postItemsByIdImagesByTypeByIndexDelete(_id: String, type: ImageType, index: Int, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postItemsByIdImagesByTypeByIndexDeleteWithRequestBuilder(_id: _id, type: type, index: index).execute { (response, error) -> Void in
+    open class func postItemsByIdImagesByTypeByIndexDelete(_id: String, index: Int, type: ImageType, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postItemsByIdImagesByTypeByIndexDeleteWithRequestBuilder(_id: _id, index: index, type: type).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3626,22 +3626,22 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter _id: (path) Item Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postItemsByIdImagesByTypeByIndexDeleteWithRequestBuilder(_id: String, type: ImageType, index: Int) -> RequestBuilder<Void> {
+    open class func postItemsByIdImagesByTypeByIndexDeleteWithRequestBuilder(_id: String, index: Int, type: ImageType) -> RequestBuilder<Void> {
         var path = "/Items/{Id}/Images/{Type}/{Index}/Delete"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
@@ -3830,11 +3830,10 @@ open class ImageServiceAPI {
      - parameter body: (body) Binary stream 
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
-     - parameter index: (query) Image Index (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByIdImagesByType(body: Object, _id: String, type: ImageType, index: Int? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postUsersByIdImagesByTypeWithRequestBuilder(body: body, _id: _id, type: type, index: index).execute { (response, error) -> Void in
+    open class func postUsersByIdImagesByType(body: Object, _id: String, type: ImageType, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByIdImagesByTypeWithRequestBuilder(body: body, _id: _id, type: type).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3857,11 +3856,10 @@ open class ImageServiceAPI {
      - parameter body: (body) Binary stream 
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
-     - parameter index: (query) Image Index (optional)
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByIdImagesByTypeWithRequestBuilder(body: Object, _id: String, type: ImageType, index: Int? = nil) -> RequestBuilder<Void> {
+    open class func postUsersByIdImagesByTypeWithRequestBuilder(body: Object, _id: String, type: ImageType) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3871,10 +3869,7 @@ open class ImageServiceAPI {
         path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
-                        "Index": index?.encodeToJSON()
-        ])
+        let url = URLComponents(string: URLString)
 
 
         let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
@@ -3887,11 +3882,10 @@ open class ImageServiceAPI {
      - parameter body: (body) Binary stream 
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
-     - parameter index: (path) Image Index 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByIdImagesByTypeByIndex(body: Object, _id: String, type: ImageType, index: Int, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postUsersByIdImagesByTypeByIndexWithRequestBuilder(body: body, _id: _id, type: type, index: index).execute { (response, error) -> Void in
+    open class func postUsersByIdImagesByTypeByIndex(body: Object, _id: String, type: ImageType, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByIdImagesByTypeByIndexWithRequestBuilder(body: body, _id: _id, type: type).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3914,11 +3908,10 @@ open class ImageServiceAPI {
      - parameter body: (body) Binary stream 
      - parameter _id: (path) User Id 
      - parameter type: (path) Image Type 
-     - parameter index: (path) Image Index 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByIdImagesByTypeByIndexWithRequestBuilder(body: Object, _id: String, type: ImageType, index: Int) -> RequestBuilder<Void> {
+    open class func postUsersByIdImagesByTypeByIndexWithRequestBuilder(body: Object, _id: String, type: ImageType) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}/{Index}"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3926,9 +3919,6 @@ open class ImageServiceAPI {
         let typePreEscape = "\(type)"
         let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
-        let indexPreEscape = "\(index)"
-        let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
         let url = URLComponents(string: URLString)
@@ -3941,12 +3931,12 @@ open class ImageServiceAPI {
     /**
 
      - parameter _id: (path) User Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postUsersByIdImagesByTypeByIndexDelete(_id: String, type: ImageType, index: Int, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        postUsersByIdImagesByTypeByIndexDeleteWithRequestBuilder(_id: _id, type: type, index: index).execute { (response, error) -> Void in
+    open class func postUsersByIdImagesByTypeByIndexDelete(_id: String, index: Int, type: ImageType, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersByIdImagesByTypeByIndexDeleteWithRequestBuilder(_id: _id, index: index, type: type).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
             } else {
@@ -3966,22 +3956,22 @@ open class ImageServiceAPI {
        - type: http
        - name: embyauth
      - parameter _id: (path) User Id 
-     - parameter type: (path) Image Type 
      - parameter index: (path) Image Index 
+     - parameter type: (path) Image Type 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postUsersByIdImagesByTypeByIndexDeleteWithRequestBuilder(_id: String, type: ImageType, index: Int) -> RequestBuilder<Void> {
+    open class func postUsersByIdImagesByTypeByIndexDeleteWithRequestBuilder(_id: String, index: Int, type: ImageType) -> RequestBuilder<Void> {
         var path = "/Users/{Id}/Images/{Type}/{Index}/Delete"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Id}", with: _idPostEscape, options: .literal, range: nil)
-        let typePreEscape = "\(type)"
-        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let indexPreEscape = "\(index)"
         let indexPostEscape = indexPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{Index}", with: indexPostEscape, options: .literal, range: nil)
+        let typePreEscape = "\(type)"
+        let typePostEscape = typePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{Type}", with: typePostEscape, options: .literal, range: nil)
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)

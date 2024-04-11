@@ -167,6 +167,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
+    <div><a class="xref" href="MediaBrowser.Controller.Entities.IItemByName.html">IItemByName</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.GameSystemInfo.html">GameSystemInfo</a>&gt;</div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasGameGenres.html">IHasGameGenres</a></div>
@@ -189,19 +190,10 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsTopParent">Folder.IsTopParent</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsFolder">Folder.IsFolder</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsDisplayedAsFolder">Folder.IsDisplayedAsFolder</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsCumulativeRunTimeTicks">Folder.SupportsCumulativeRunTimeTicks</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsExternalTransfer">Folder.SupportsExternalTransfer</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CanDelete">Folder.CanDelete()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AddChild_MediaBrowser_Controller_Entities_BaseItem_">Folder.AddChild(BaseItem)</a>
@@ -231,9 +223,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshComplete">Folder.TriggerOnRefreshComplete()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildCount_MediaBrowser_Controller_Entities_User_">Folder.GetChildCount(User)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_">Folder.GetRecursiveChildCount(User)</a>
     </div>
     <div>
@@ -244,12 +233,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemList_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemList(InternalItemsQuery)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemIdsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemIdsInternal(InternalItemsQuery)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemsInternal(InternalItemsQuery)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildren_MediaBrowser_Controller_Entities_User_">Folder.GetChildren(User)</a>
@@ -538,9 +521,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetDisplayOrder_System_String_">BaseItem.SetDisplayOrder(String)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaContainingFolderPath_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaContainingFolderPath(LibraryOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetSupportsPositionTicksResume_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetSupportsPositionTicksResume(LibraryOptions)</a>
@@ -984,6 +964,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey">BaseItem.GetPresentationUniqueKey()</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetPresentationUniqueKey(BaseItem[], LibraryOptions)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey">BaseItem.GetUserDataKey()</a>
     </div>
     <div>
@@ -1011,7 +994,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsLocalMetadataReaderEnabled_MediaBrowser_Model_Configuration_LibraryOptions_System_String_">BaseItem.IsLocalMetadataReaderEnabled(LibraryOptions, String)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalMetadataEnabled_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IsSaveLocalMetadataEnabled(LibraryOptions)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsSaveLocalImagesEnabled_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.IsSaveLocalImagesEnabled(LibraryOptions)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParentalRatingValue">BaseItem.GetParentalRatingValue()</a>
@@ -1179,9 +1162,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParent">BaseItem.GetTopParent()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAncestors">BaseItem.SupportsAncestors</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRelatedUrls">BaseItem.GetRelatedUrls()</a>
     </div>
     <div>
@@ -1191,9 +1171,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowEditingField_MediaBrowser_Model_Entities_MetadataFields_">BaseItem.AllowEditingField(MetadataFields)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsResetMetadata">BaseItem.SupportsResetMetadata</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ResetMetadata">BaseItem.ResetMetadata()</a>
     </div>
     <div>
@@ -1201,9 +1178,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetChildrenForValidationSorted">BaseItem.GetChildrenForValidationSorted()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ValidatesChildren">BaseItem.ValidatesChildren</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ValidateChildren_System_IProgress_System_Double__System_Threading_CancellationToken_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_">BaseItem.ValidateChildren(IProgress&lt;Double&gt;, CancellationToken, MetadataRefreshOptions, Boolean)</a>
@@ -1234,7 +1208,7 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_GameSystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class GameSystem : Folder, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasFolderGrouping, IHasLookupInfo&lt;GameSystemInfo&gt;, IHasGameGenres</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class GameSystem : Folder, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IItemByName, IHasFolderGrouping, IHasLookupInfo&lt;GameSystemInfo&gt;, IHasGameGenres</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -1269,6 +1243,90 @@ public override Guid DisplayPreferencesId { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayPreferencesId">BaseItem.DisplayPreferencesId</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_IsDisplayedAsFolder_" data-uid="MediaBrowser.Controller.Entities.GameSystem.IsDisplayedAsFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_IsDisplayedAsFolder" data-uid="MediaBrowser.Controller.Entities.GameSystem.IsDisplayedAsFolder">IsDisplayedAsFolder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool IsDisplayedAsFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsDisplayedAsFolder">Folder.IsDisplayedAsFolder</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_IsFolder_" data-uid="MediaBrowser.Controller.Entities.GameSystem.IsFolder*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_IsFolder" data-uid="MediaBrowser.Controller.Entities.GameSystem.IsFolder">IsFolder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool IsFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsFolder">Folder.IsFolder</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_SupportsAncestors_" data-uid="MediaBrowser.Controller.Entities.GameSystem.SupportsAncestors*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_SupportsAncestors" data-uid="MediaBrowser.Controller.Entities.GameSystem.SupportsAncestors">SupportsAncestors</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsAncestors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAncestors">BaseItem.SupportsAncestors</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_GameSystem_SupportsInheritedParentImages_" data-uid="MediaBrowser.Controller.Entities.GameSystem.SupportsInheritedParentImages*"></a>
@@ -1325,8 +1383,223 @@ public override bool SupportsPeople { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPeople">BaseItem.SupportsPeople</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_SupportsResetMetadata_" data-uid="MediaBrowser.Controller.Entities.GameSystem.SupportsResetMetadata*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_SupportsResetMetadata" data-uid="MediaBrowser.Controller.Entities.GameSystem.SupportsResetMetadata">SupportsResetMetadata</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsResetMetadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsResetMetadata">BaseItem.SupportsResetMetadata</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_ValidatesChildren_" data-uid="MediaBrowser.Controller.Entities.GameSystem.ValidatesChildren*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_ValidatesChildren" data-uid="MediaBrowser.Controller.Entities.GameSystem.ValidatesChildren">ValidatesChildren</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+protected override bool ValidatesChildren { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ValidatesChildren">BaseItem.ValidatesChildren</a></div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_CanDelete_" data-uid="MediaBrowser.Controller.Entities.GameSystem.CanDelete*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_CanDelete" data-uid="MediaBrowser.Controller.Entities.GameSystem.CanDelete">CanDelete()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CanDelete()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CanDelete">Folder.CanDelete()</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_GetChildCount_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetChildCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_GetChildCount_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetChildCount(MediaBrowser.Controller.Entities.User)">GetChildCount(User)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetChildCount(User user)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetChildCount_MediaBrowser_Controller_Entities_User_">Folder.GetChildCount(User)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_GetItemIdsInternal_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetItemIdsInternal*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_GetItemIdsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetItemIdsInternal(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetItemIdsInternal(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override long[] GetItemIdsInternal(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemIdsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemIdsInternal(InternalItemsQuery)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_GetItemsInternal_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetItemsInternal*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_GetItemsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetItemsInternal(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetItemsInternal(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override QueryResult&lt;BaseItem&gt; GetItemsInternal(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemsInternal(InternalItemsQuery)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_GameSystem_GetLookupInfo_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetLookupInfo*"></a>
@@ -1369,12 +1642,143 @@ public override bool SupportsPeople { get; }</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_GetMediaContainingFolderPath_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetMediaContainingFolderPath*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_GetMediaContainingFolderPath_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetMediaContainingFolderPath(MediaBrowser.Model.Configuration.LibraryOptions)">GetMediaContainingFolderPath(LibraryOptions)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetMediaContainingFolderPath(LibraryOptions libraryOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaContainingFolderPath_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaContainingFolderPath(LibraryOptions)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_GetTaggedItems_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetTaggedItems*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_GetTaggedItems_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetTaggedItems(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetTaggedItems(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long[] GetTaggedItems(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_GameSystem_GetTaggedItemsResult_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetTaggedItemsResult*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_GameSystem_GetTaggedItemsResult_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.GameSystem.GetTaggedItemsResult(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetTaggedItemsResult(InternalItemsQuery)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueryResult&lt;BaseItem&gt; GetTaggedItemsResult(InternalItemsQuery query)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.InternalItemsQuery.html">InternalItemsQuery</a></td>
+        <td><span class="parametername">query</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.IItemByName.html">IItemByName</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.IHasFolderGrouping.html">IHasFolderGrouping</a>
@@ -1394,6 +1798,15 @@ public override bool SupportsPeople { get; }</code></pre>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Extensions.html#MediaBrowser_Controller_Entities_Extensions_AddTrailerUrl_MediaBrowser_Controller_Entities_BaseItem_System_String_">Extensions.AddTrailerUrl(BaseItem, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetTaggedItems_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetTaggedItems(IItemByName, InternalItemsQuery)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetTaggedItemsResult_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetTaggedItemsResult(IItemByName, InternalItemsQuery)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.ItemByNameExtensions.html#MediaBrowser_Controller_Entities_ItemByNameExtensions_GetItemList_MediaBrowser_Controller_Entities_IItemByName_MediaBrowser_Controller_Entities_InternalItemsQuery_">ItemByNameExtensions.GetItemList(IItemByName, InternalItemsQuery)</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.TagExtensions.html#MediaBrowser_Controller_Entities_TagExtensions_AddTag_MediaBrowser_Controller_Entities_BaseItem_System_String_">TagExtensions.AddTag(BaseItem, String)</a>

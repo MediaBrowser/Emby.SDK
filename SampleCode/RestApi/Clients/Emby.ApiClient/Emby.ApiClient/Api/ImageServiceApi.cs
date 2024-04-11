@@ -47,10 +47,10 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> DeleteItemsByIdImagesByType (string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> DeleteItemsByIdImagesByType (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -93,10 +93,10 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> DeleteItemsByIdImagesByTypeByIndex (string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> DeleteItemsByIdImagesByTypeByIndex (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -104,16 +104,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->DeleteItemsByIdImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}", Method.Delete);
@@ -123,14 +123,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             // make the HTTP request
@@ -145,10 +145,10 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> DeleteUsersByIdImagesByType (string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> DeleteUsersByIdImagesByType (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -191,10 +191,10 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> DeleteUsersByIdImagesByTypeByIndex (string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> DeleteUsersByIdImagesByTypeByIndex (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -202,16 +202,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->DeleteUsersByIdImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Users/{Id}/Images/{Type}/{Index}", Method.Delete);
@@ -221,14 +221,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             // make the HTTP request
@@ -256,10 +256,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -380,10 +380,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -391,16 +391,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetArtistsByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Artists/{Name}/Images/{Type}/{Index}", Method.Get);
@@ -410,14 +410,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -510,10 +510,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -634,10 +634,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -645,16 +645,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetGamegenresByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/GameGenres/{Name}/Images/{Type}/{Index}", Method.Get);
@@ -664,14 +664,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -764,10 +764,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -888,10 +888,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -899,16 +899,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetGenresByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Genres/{Name}/Images/{Type}/{Index}", Method.Get);
@@ -918,14 +918,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -1046,10 +1046,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1170,10 +1170,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -1181,16 +1181,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}", Method.Get);
@@ -1200,14 +1200,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -1302,10 +1302,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'percentPlayed' is set
             if (percentPlayed == null)
@@ -1349,16 +1349,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'format' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             }
             
             var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}", Method.Get);
@@ -1398,14 +1398,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Format", this.ApiClient.ParameterToString(format), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (width != null)
@@ -1478,10 +1478,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1602,10 +1602,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1613,16 +1613,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetMusicgenresByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/MusicGenres/{Name}/Images/{Type}/{Index}", Method.Get);
@@ -1632,14 +1632,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -1732,10 +1732,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1856,10 +1856,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1867,16 +1867,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetPersonsByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Persons/{Name}/Images/{Type}/{Index}", Method.Get);
@@ -1886,14 +1886,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -1986,10 +1986,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -2110,10 +2110,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -2121,16 +2121,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetStudiosByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Studios/{Name}/Images/{Type}/{Index}", Method.Get);
@@ -2140,14 +2140,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -2240,10 +2240,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2364,10 +2364,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> GetUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2375,16 +2375,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetUsersByIdImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Users/{Id}/Images/{Type}/{Index}", Method.Get);
@@ -2394,14 +2394,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -2494,10 +2494,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadArtistsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -2618,10 +2618,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadArtistsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -2629,16 +2629,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadArtistsByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Artists/{Name}/Images/{Type}/{Index}", Method.Head);
@@ -2648,14 +2648,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -2748,10 +2748,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadGamegenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -2872,10 +2872,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadGamegenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -2883,16 +2883,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadGamegenresByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/GameGenres/{Name}/Images/{Type}/{Index}", Method.Head);
@@ -2902,14 +2902,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -3002,10 +3002,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadGenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3126,10 +3126,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadGenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3137,16 +3137,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadGenresByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Genres/{Name}/Images/{Type}/{Index}", Method.Head);
@@ -3156,14 +3156,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -3256,10 +3256,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadItemsByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3380,10 +3380,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadItemsByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -3391,16 +3391,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}", Method.Head);
@@ -3410,14 +3410,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -3512,10 +3512,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount (int? percentPlayed, int? unPlayedCount, string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'percentPlayed' is set
             if (percentPlayed == null)
@@ -3559,16 +3559,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'format' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             }
             
             var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}", Method.Head);
@@ -3608,14 +3608,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Format", this.ApiClient.ParameterToString(format), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (width != null)
@@ -3688,10 +3688,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadMusicgenresByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3812,10 +3812,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadMusicgenresByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3823,16 +3823,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadMusicgenresByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/MusicGenres/{Name}/Images/{Type}/{Index}", Method.Head);
@@ -3842,14 +3842,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -3942,10 +3942,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadPersonsByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -4066,10 +4066,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadPersonsByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -4077,16 +4077,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadPersonsByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Persons/{Name}/Images/{Type}/{Index}", Method.Head);
@@ -4096,14 +4096,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -4196,10 +4196,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadStudiosByNameImagesByType (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -4320,10 +4320,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadStudiosByNameImagesByTypeByIndex (string name, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -4331,16 +4331,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'name' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadStudiosByNameImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Studios/{Name}/Images/{Type}/{Index}", Method.Head);
@@ -4350,14 +4350,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Name", this.ApiClient.ParameterToString(name), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -4450,10 +4450,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadUsersByIdImagesByType (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4574,10 +4574,10 @@ namespace Emby.ApiClient.Api
         /// <param name="foregroundLayer">Optional. Apply a foreground layer on top of the image. (optional)</param>
         /// <param name="autoOrient">Set to true to force normalization of orientation in the event the renderer does not support it. (optional)</param>
         /// <param name="keepAnimation">Set to true to retain image animation (when supported). (optional)</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> HeadUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, ImageType type, int? index)
+        public async Task<RestResponse<Object>> HeadUsersByIdImagesByTypeByIndex (string id, int? maxWidth, int? maxHeight, int? width, int? height, int? quality, string tag, bool? cropWhitespace, bool? enableImageEnhancers, string format, string backgroundColor, string foregroundLayer, bool? autoOrient, bool? keepAnimation, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4585,16 +4585,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadUsersByIdImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Users/{Id}/Images/{Type}/{Index}", Method.Head);
@@ -4604,14 +4604,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (maxWidth != null)
@@ -4750,10 +4750,10 @@ namespace Emby.ApiClient.Api
         /// </remarks>
         /// <param name="body">Binary stream</param>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostItemsByIdImagesByTypeByIndex (Object body, string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> PostItemsByIdImagesByTypeByIndex (Object body, string id, int? index, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4767,16 +4767,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndex");
             }
             
             var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}", Method.Post);
@@ -4786,14 +4786,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             if (body != null)
@@ -4813,10 +4813,10 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostItemsByIdImagesByTypeByIndexDelete (string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> PostItemsByIdImagesByTypeByIndexDelete (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -4824,16 +4824,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->PostItemsByIdImagesByTypeByIndexDelete");
             }
             
             var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}/Delete", Method.Post);
@@ -4843,14 +4843,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             // make the HTTP request
@@ -4993,10 +4993,10 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <param name="id">Item Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostItemsByIdImagesByTypeDelete (string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> PostItemsByIdImagesByTypeDelete (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5041,9 +5041,8 @@ namespace Emby.ApiClient.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostUsersByIdImagesByType (Object body, string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> PostUsersByIdImagesByType (Object body, string id, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5075,11 +5074,6 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
-            if (index != null)
-            {
-                request.AddQueryParameter("Index", this.ApiClient.ParameterToString(index));
-            }
-
             if (body != null)
             {
                 request.AddJsonBody(body);
@@ -5099,9 +5093,8 @@ namespace Emby.ApiClient.Api
         /// <param name="body">Binary stream</param>
         /// <param name="id">User Id</param>
         /// <param name="type">Image Type</param>
-        /// <param name="index">Image Index</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostUsersByIdImagesByTypeByIndex (Object body, string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> PostUsersByIdImagesByTypeByIndex (Object body, string id, ImageType type)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5121,12 +5114,6 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndex");
             }
             
-            // verify the required parameter 'index' is set
-            if (index == null)
-            {
-                throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndex");
-            }
-            
             var request = new RestRequest("/Users/{Id}/Images/{Type}/{Index}", Method.Post);
 
             if (id != null)
@@ -5137,11 +5124,6 @@ namespace Emby.ApiClient.Api
             if (type != null)
             {
                 request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
-            if (index != null)
-            {
-                request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
             }
 
             if (body != null)
@@ -5161,10 +5143,10 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostUsersByIdImagesByTypeByIndexDelete (string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> PostUsersByIdImagesByTypeByIndexDelete (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -5172,16 +5154,16 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'id' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
             }
             
-            // verify the required parameter 'type' is set
-            if (type == null)
-            {
-                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
-            }
-            
             // verify the required parameter 'index' is set
             if (index == null)
             {
                 throw new ApiException("Missing required parameter 'index' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
+            }
+            
+            // verify the required parameter 'type' is set
+            if (type == null)
+            {
+                throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->PostUsersByIdImagesByTypeByIndexDelete");
             }
             
             var request = new RestRequest("/Users/{Id}/Images/{Type}/{Index}/Delete", Method.Post);
@@ -5191,14 +5173,14 @@ namespace Emby.ApiClient.Api
                 request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
             }
 
-            if (type != null)
-            {
-                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
-            }
-
             if (index != null)
             {
                 request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (type != null)
+            {
+                request.AddParameter("Type", this.ApiClient.ParameterToString(type), ParameterType.UrlSegment);
             }
 
             // make the HTTP request
@@ -5213,10 +5195,10 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <param name="id">User Id</param>
-        /// <param name="type">Image Type</param>
         /// <param name="index">Image Index (optional)</param>
+        /// <param name="type">Image Type</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostUsersByIdImagesByTypeDelete (string id, ImageType type, int? index)
+        public async Task<RestResponse<Object>> PostUsersByIdImagesByTypeDelete (string id, int? index, ImageType type)
         {
             // verify the required parameter 'id' is set
             if (id == null)

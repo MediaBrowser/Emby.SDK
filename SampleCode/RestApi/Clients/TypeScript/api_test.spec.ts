@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.0.12
+ * OpenAPI spec version: 4.9.0.13
  * 
  *
  * NOTE: This file is auto generated.
@@ -694,6 +694,30 @@ describe("DlnaServerServiceApi", () => {
     const uuId: string = "uuId_example"
     return expect(instance.getDlnaIconsByFilename(filename, uuId, {})).resolves.toBe(null)
   })
+  test("headDlnaByUuidConnectionmanagerConnectionmanager", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidConnectionmanagerConnectionmanager(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidConnectionmanagerConnectionmanagerXml", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidConnectionmanagerConnectionmanagerXml(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidContentdirectoryContentdirectory", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidContentdirectoryContentdirectory(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidContentdirectoryContentdirectoryXml", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidContentdirectoryContentdirectoryXml(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidDescription", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidDescription(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidDescriptionXml", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidDescriptionXml(uuId, {})).resolves.toBe(null)
+  })
   test("postDlnaByUuidConnectionmanagerControl", () => {
     const body: Object = undefined
     const uuId: string = "uuId_example"
@@ -1362,9 +1386,9 @@ describe("ImageServiceApi", () => {
   })
   test("deleteItemsByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
-    return expect(instance.deleteItemsByIdImagesByTypeByIndex(id, type, index, {})).resolves.toBe(null)
+    const type: ImageType = undefined
+    return expect(instance.deleteItemsByIdImagesByTypeByIndex(id, index, type, {})).resolves.toBe(null)
   })
   test("deleteUsersByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1374,9 +1398,9 @@ describe("ImageServiceApi", () => {
   })
   test("deleteUsersByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
-    return expect(instance.deleteUsersByIdImagesByTypeByIndex(id, type, index, {})).resolves.toBe(null)
+    const type: ImageType = undefined
+    return expect(instance.deleteUsersByIdImagesByTypeByIndex(id, index, type, {})).resolves.toBe(null)
   })
   test("getArtistsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1399,8 +1423,8 @@ describe("ImageServiceApi", () => {
   })
   test("getArtistsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1414,7 +1438,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getArtistsByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getGamegenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1437,8 +1461,8 @@ describe("ImageServiceApi", () => {
   })
   test("getGamegenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1452,7 +1476,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getGamegenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getGenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1475,8 +1499,8 @@ describe("ImageServiceApi", () => {
   })
   test("getGenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1490,7 +1514,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getGenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getItemsByIdImages", () => {
     const id: string = "id_example"
@@ -1517,8 +1541,8 @@ describe("ImageServiceApi", () => {
   })
   test("getItemsByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1532,7 +1556,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getItemsByIdImagesByTypeByIndex(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount", () => {
     const percentPlayed: number = 56
@@ -1542,8 +1566,8 @@ describe("ImageServiceApi", () => {
     const maxHeight: number = 56
     const tag: string = "tag_example"
     const format: string = "format_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const width: number = 56
     const height: number = 56
     const quality: number = 56
@@ -1553,7 +1577,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getMusicgenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1576,8 +1600,8 @@ describe("ImageServiceApi", () => {
   })
   test("getMusicgenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1591,7 +1615,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getMusicgenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getPersonsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1614,8 +1638,8 @@ describe("ImageServiceApi", () => {
   })
   test("getPersonsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1629,7 +1653,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getPersonsByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getStudiosByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1652,8 +1676,8 @@ describe("ImageServiceApi", () => {
   })
   test("getStudiosByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1667,7 +1691,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getStudiosByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("getUsersByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1690,8 +1714,8 @@ describe("ImageServiceApi", () => {
   })
   test("getUsersByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1705,7 +1729,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.getUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.getUsersByIdImagesByTypeByIndex(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headArtistsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1728,8 +1752,8 @@ describe("ImageServiceApi", () => {
   })
   test("headArtistsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1743,7 +1767,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headArtistsByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headGamegenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1766,8 +1790,8 @@ describe("ImageServiceApi", () => {
   })
   test("headGamegenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1781,7 +1805,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headGamegenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headGenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1804,8 +1828,8 @@ describe("ImageServiceApi", () => {
   })
   test("headGenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1819,7 +1843,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headGenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headItemsByIdImagesByType", () => {
     const id: string = "id_example"
@@ -1842,8 +1866,8 @@ describe("ImageServiceApi", () => {
   })
   test("headItemsByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1857,7 +1881,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headItemsByIdImagesByTypeByIndex(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount", () => {
     const percentPlayed: number = 56
@@ -1867,8 +1891,8 @@ describe("ImageServiceApi", () => {
     const maxHeight: number = 56
     const tag: string = "tag_example"
     const format: string = "format_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const width: number = 56
     const height: number = 56
     const quality: number = 56
@@ -1878,7 +1902,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headMusicgenresByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1901,8 +1925,8 @@ describe("ImageServiceApi", () => {
   })
   test("headMusicgenresByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1916,7 +1940,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headMusicgenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headPersonsByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1939,8 +1963,8 @@ describe("ImageServiceApi", () => {
   })
   test("headPersonsByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1954,7 +1978,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headPersonsByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headStudiosByNameImagesByType", () => {
     const name: string = "name_example"
@@ -1977,8 +2001,8 @@ describe("ImageServiceApi", () => {
   })
   test("headStudiosByNameImagesByTypeByIndex", () => {
     const name: string = "name_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -1992,7 +2016,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headStudiosByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("headUsersByIdImagesByType", () => {
     const id: string = "id_example"
@@ -2015,8 +2039,8 @@ describe("ImageServiceApi", () => {
   })
   test("headUsersByIdImagesByTypeByIndex", () => {
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
+    const type: ImageType = undefined
     const maxWidth: number = 56
     const maxHeight: number = 56
     const width: number = 56
@@ -2030,7 +2054,7 @@ describe("ImageServiceApi", () => {
     const foregroundLayer: string = "foregroundLayer_example"
     const autoOrient: boolean = true
     const keepAnimation: boolean = true
-    return expect(instance.headUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
+    return expect(instance.headUsersByIdImagesByTypeByIndex(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation, {})).resolves.toBe(null)
   })
   test("postItemsByIdImagesByType", () => {
     const body: Object = undefined
@@ -2042,15 +2066,15 @@ describe("ImageServiceApi", () => {
   test("postItemsByIdImagesByTypeByIndex", () => {
     const body: Object = undefined
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
-    return expect(instance.postItemsByIdImagesByTypeByIndex(body, id, type, index, {})).resolves.toBe(null)
+    const type: ImageType = undefined
+    return expect(instance.postItemsByIdImagesByTypeByIndex(body, id, index, type, {})).resolves.toBe(null)
   })
   test("postItemsByIdImagesByTypeByIndexDelete", () => {
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
-    return expect(instance.postItemsByIdImagesByTypeByIndexDelete(id, type, index, {})).resolves.toBe(null)
+    const type: ImageType = undefined
+    return expect(instance.postItemsByIdImagesByTypeByIndexDelete(id, index, type, {})).resolves.toBe(null)
   })
   test("postItemsByIdImagesByTypeByIndexIndex", () => {
     const id: string = "id_example"
@@ -2076,21 +2100,19 @@ describe("ImageServiceApi", () => {
     const body: Object = undefined
     const id: string = "id_example"
     const type: ImageType = undefined
-    const index: number = 56
-    return expect(instance.postUsersByIdImagesByType(body, id, type, index, {})).resolves.toBe(null)
+    return expect(instance.postUsersByIdImagesByType(body, id, type, {})).resolves.toBe(null)
   })
   test("postUsersByIdImagesByTypeByIndex", () => {
     const body: Object = undefined
     const id: string = "id_example"
     const type: ImageType = undefined
-    const index: number = 56
-    return expect(instance.postUsersByIdImagesByTypeByIndex(body, id, type, index, {})).resolves.toBe(null)
+    return expect(instance.postUsersByIdImagesByTypeByIndex(body, id, type, {})).resolves.toBe(null)
   })
   test("postUsersByIdImagesByTypeByIndexDelete", () => {
     const id: string = "id_example"
-    const type: ImageType = undefined
     const index: number = 56
-    return expect(instance.postUsersByIdImagesByTypeByIndexDelete(id, type, index, {})).resolves.toBe(null)
+    const type: ImageType = undefined
+    return expect(instance.postUsersByIdImagesByTypeByIndexDelete(id, index, type, {})).resolves.toBe(null)
   })
   test("postUsersByIdImagesByTypeDelete", () => {
     const id: string = "id_example"
@@ -4594,11 +4616,12 @@ describe("RemoteImageServiceApi", () => {
     return expect(instance.getItemsByIdRemoteimagesProviders(id, {})).resolves.toBe(null)
   })
   test("postItemsByIdRemoteimagesDownload", () => {
-    const id: string = "id_example"
+    const body: api.ImagesBaseDownloadRemoteImage = undefined
     const type: ImageType = undefined
+    const id: string = "id_example"
     const providerName: string = "providerName_example"
     const imageUrl: string = "imageUrl_example"
-    return expect(instance.postItemsByIdRemoteimagesDownload(id, type, providerName, imageUrl, {})).resolves.toBe(null)
+    return expect(instance.postItemsByIdRemoteimagesDownload(body, type, id, providerName, imageUrl, {})).resolves.toBe(null)
   })
 })
 
@@ -5039,6 +5062,10 @@ describe("SyncServiceApi", () => {
   test("getSyncTargets", () => {
     const userId: string = "userId_example"
     return expect(instance.getSyncTargets(userId, {})).resolves.toBe(null)
+  })
+  test("headSyncJobitemsByIdFile", () => {
+    const id: string = "id_example"
+    return expect(instance.headSyncJobitemsByIdFile(id, {})).resolves.toBe(null)
   })
   test("postSyncByItemidStatus", () => {
     const body: api.SyncedItemProgress = undefined

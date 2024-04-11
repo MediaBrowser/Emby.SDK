@@ -189,56 +189,33 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="MediaBrowser_Controller_Providers_IProviderManager_AddParts_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.AddParts*"></a>
-  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Providers_IImageProvider__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Providers_IMetadataService__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Providers_IMetadataProvider__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Library_IMetadataSaver__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Providers_IExternalId__" data-uid="MediaBrowser.Controller.Providers.IProviderManager.AddParts(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Providers.IImageProvider},System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Providers.IMetadataService},System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Providers.IMetadataProvider},System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Library.IMetadataSaver},System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Providers.IExternalId})">AddParts(IEnumerable&lt;IImageProvider&gt;, IEnumerable&lt;IMetadataService&gt;, IEnumerable&lt;IMetadataProvider&gt;, IEnumerable&lt;IMetadataSaver&gt;, IEnumerable&lt;IExternalId&gt;)</h4>
-  <div class="markdown level1 summary"><p>Adds the metadata providers.</p>
-</div>
+  <a id="MediaBrowser_Controller_Providers_IProviderManager_IsProcessingRefreshQueue_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.IsProcessingRefreshQueue*"></a>
+  <h4 id="MediaBrowser_Controller_Providers_IProviderManager_IsProcessingRefreshQueue" data-uid="MediaBrowser.Controller.Providers.IProviderManager.IsProcessingRefreshQueue">IsProcessingRefreshQueue</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddParts(IEnumerable&lt;IImageProvider&gt; imageProviders, IEnumerable&lt;IMetadataService&gt; metadataServices, IEnumerable&lt;IMetadataProvider&gt; metadataProviders, IEnumerable&lt;IMetadataSaver&gt; savers, IEnumerable&lt;IExternalId&gt; externalIds)</code></pre>
+    <pre><code class="lang-csharp hljs">bool IsProcessingRefreshQueue { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.IImageProvider.html">IImageProvider</a>&gt;</td>
-        <td><span class="parametername">imageProviders</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.IMetadataService.html">IMetadataService</a>&gt;</td>
-        <td><span class="parametername">metadataServices</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.IMetadataProvider.html">IMetadataProvider</a>&gt;</td>
-        <td><span class="parametername">metadataProviders</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.IMetadataSaver.html">IMetadataSaver</a>&gt;</td>
-        <td><span class="parametername">savers</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.IExternalId.html">IExternalId</a>&gt;</td>
-        <td><span class="parametername">externalIds</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
   <a id="MediaBrowser_Controller_Providers_IProviderManager_CacheImage_" data-uid="MediaBrowser.Controller.Providers.IProviderManager.CacheImage*"></a>
@@ -424,7 +401,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteSearchResult.html">RemoteSearchResult</a>[]&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteSearchResult.html">RemoteSearchResult</a>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -512,7 +489,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteImageInfo.html">RemoteImageInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteImageInfo.html">RemoteImageInfo</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -574,7 +551,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteImageInfo.html">RemoteImageInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteImageInfo.html">RemoteImageInfo</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -879,7 +856,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteSearchResult.html">RemoteSearchResult</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteSearchResult.html">RemoteSearchResult</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -950,7 +927,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteSearchResult.html">RemoteSearchResult</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.RemoteSearchResult.html">RemoteSearchResult</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1027,7 +1004,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Common.Net.HttpResponseInfo.html">HttpResponseInfo</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.HttpResponseInfo.html">HttpResponseInfo</a>&gt;</td>
         <td><p>Task{HttpResponseInfo}.</p>
 </td>
       </tr>
@@ -1463,7 +1440,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td><p>Task.</p>
 </td>
       </tr>

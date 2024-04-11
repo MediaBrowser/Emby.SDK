@@ -10654,7 +10654,7 @@ public class LiveTvServiceApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
+            "application/json", "application/xml"
         };
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
@@ -10701,22 +10701,25 @@ public class LiveTvServiceApi {
      * Creates a live tv series timer
      * Requires authentication as user
      * @param body SeriesTimerInfo:  (required)
+     * @return LiveTvSeriesTimerInfoDto
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postLivetvSeriestimers(LiveTvSeriesTimerInfo body) throws ApiException {
-        postLivetvSeriestimersWithHttpInfo(body);
+    public LiveTvSeriesTimerInfoDto postLivetvSeriestimers(LiveTvSeriesTimerInfo body) throws ApiException {
+        ApiResponse<LiveTvSeriesTimerInfoDto> resp = postLivetvSeriestimersWithHttpInfo(body);
+        return resp.getData();
     }
 
     /**
      * Creates a live tv series timer
      * Requires authentication as user
      * @param body SeriesTimerInfo:  (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;LiveTvSeriesTimerInfoDto&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postLivetvSeriestimersWithHttpInfo(LiveTvSeriesTimerInfo body) throws ApiException {
+    public ApiResponse<LiveTvSeriesTimerInfoDto> postLivetvSeriestimersWithHttpInfo(LiveTvSeriesTimerInfo body) throws ApiException {
         com.squareup.okhttp.Call call = postLivetvSeriestimersValidateBeforeCall(body, null, null);
-        return apiClient.execute(call);
+        Type localVarReturnType = new TypeToken<LiveTvSeriesTimerInfoDto>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
     }
 
     /**
@@ -10727,7 +10730,7 @@ public class LiveTvServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postLivetvSeriestimersAsync(LiveTvSeriesTimerInfo body, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postLivetvSeriestimersAsync(LiveTvSeriesTimerInfo body, final ApiCallback<LiveTvSeriesTimerInfoDto> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -10749,7 +10752,8 @@ public class LiveTvServiceApi {
         }
 
         com.squareup.okhttp.Call call = postLivetvSeriestimersValidateBeforeCall(body, progressListener, progressRequestListener);
-        apiClient.executeAsync(call, callback);
+        Type localVarReturnType = new TypeToken<LiveTvSeriesTimerInfoDto>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**

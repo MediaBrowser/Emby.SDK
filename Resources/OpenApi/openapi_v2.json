@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.12"
+    "version": "4.9.0.13"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -13197,17 +13197,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -13357,17 +13357,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -23809,6 +23809,10 @@
           "application/json",
           "application/xml"
         ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
         "parameters": [
           {
             "in": "body",
@@ -23822,7 +23826,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Empty response."
+            "description": "Operation successful. Returning a SeriesTimerInfoDto object.",
+            "schema": {
+              "$ref": "#/definitions/LiveTv.SeriesTimerInfoDto"
+            }
           },
           "400": {
             "$ref": "#/responses/400"
@@ -31301,6 +31308,38 @@
         },
         "x-RequiredAuthentication": "No authentication required"
       },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna server info",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidDescriptionXml",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
       "x-summary": "Gets dlna server info"
     },
     "/Dlna/{UuId}/description": {
@@ -31311,6 +31350,38 @@
         "summary": "Gets dlna server info",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidDescription",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna server info",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidDescription",
         "parameters": [
           {
             "in": "path",
@@ -44043,17 +44114,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -44184,17 +44255,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -44363,6 +44434,38 @@
         },
         "x-RequiredAuthentication": "No authentication required"
       },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna content directory xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidContentdirectoryContentdirectoryXml",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
       "x-summary": "Gets dlna content directory xml"
     },
     "/Dlna/{UuId}/contentdirectory/contentdirectory": {
@@ -44373,6 +44476,38 @@
         "summary": "Gets dlna content directory xml",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidContentdirectoryContentdirectory",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna content directory xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidContentdirectoryContentdirectory",
         "parameters": [
           {
             "in": "path",
@@ -44433,6 +44568,38 @@
         },
         "x-RequiredAuthentication": "No authentication required"
       },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna connection manager xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidConnectionmanagerConnectionmanagerXml",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
       "x-summary": "Gets dlna connection manager xml"
     },
     "/Dlna/{UuId}/connectionmanager/connectionmanager": {
@@ -44443,6 +44610,38 @@
         "summary": "Gets dlna connection manager xml",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidConnectionmanagerConnectionmanager",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna connection manager xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidConnectionmanagerConnectionmanager",
         "parameters": [
           {
             "in": "path",
@@ -44707,17 +44906,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -44848,17 +45047,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -44991,17 +45190,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -45132,17 +45331,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -45531,17 +45730,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -45672,17 +45871,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -45734,17 +45933,17 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           },
           {
             "in": "body",
@@ -45802,17 +46001,17 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -45913,6 +46112,10 @@
         "summary": "Downloads a remote image for an item",
         "description": "Requires authentication as administrator",
         "operationId": "postItemsByIdRemoteimagesDownload",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -45938,6 +46141,15 @@
             "name": "ImageUrl",
             "description": "The image url",
             "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "BaseDownloadRemoteImage: ",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Images.BaseDownloadRemoteImage"
+            }
           }
         ],
         "responses": {
@@ -46571,17 +46783,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -46712,17 +46924,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -46904,17 +47116,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -47045,17 +47257,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -47625,17 +47837,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -47766,17 +47978,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -47964,6 +48176,52 @@
       "x-summary": "Reports that a sync job item has successfully been transferred."
     },
     "/Sync/JobItems/{Id}/File": {
+      "head": {
+        "tags": [
+          "SyncService"
+        ],
+        "summary": "Gets a sync job item file",
+        "description": "Requires authentication as user",
+        "operationId": "headSyncJobitemsByIdFile",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
       "get": {
         "tags": [
           "SyncService"
@@ -49694,17 +49952,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -49835,17 +50093,17 @@
             "type": "boolean"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -49903,13 +50161,6 @@
             "required": true
           },
           {
-            "in": "query",
-            "name": "Index",
-            "description": "Image Index",
-            "type": "integer",
-            "format": "int32"
-          },
-          {
             "in": "body",
             "name": "body",
             "description": "Binary stream",
@@ -49965,17 +50216,17 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -50649,17 +50900,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -50791,17 +51042,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -51125,17 +51376,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -51267,17 +51518,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -51411,17 +51662,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -51553,17 +51804,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -51918,17 +52169,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -52060,17 +52311,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -52123,17 +52374,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           },
           {
             "in": "body",
@@ -52192,17 +52443,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -52252,17 +52503,17 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -53114,17 +53365,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -53256,17 +53507,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -53400,17 +53651,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -53542,17 +53793,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -53742,17 +53993,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -53884,17 +54135,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -54648,17 +54899,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -54790,17 +55041,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -54856,14 +55107,6 @@
             "name": "Type",
             "description": "Image Type",
             "required": true
-          },
-          {
-            "in": "path",
-            "name": "Index",
-            "description": "Image Index",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "body",
@@ -54922,17 +55165,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -54982,17 +55225,17 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
             "in": "query",
             "name": "Index",
             "description": "Image Index",
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -55800,17 +56043,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -56129,17 +56372,17 @@
           },
           {
             "in": "path",
-            "name": "Type",
-            "description": "Image Type",
-            "required": true
-          },
-          {
-            "in": "path",
             "name": "Index",
             "description": "Image Index",
             "required": true,
             "type": "integer",
             "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Type",
+            "description": "Image Type",
+            "required": true
           }
         ],
         "responses": {
@@ -61122,7 +61365,8 @@
         "Collections",
         "Albums",
         "CollectionFolders",
-        "LiveTVSeries"
+        "LiveTVSeries",
+        "GameSystems"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Controller.Library.ItemLinkType"
@@ -66712,6 +66956,16 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Providers.ImageProviderInfo"
+    },
+    "Images.BaseDownloadRemoteImage": {
+      "type": "object",
+      "properties": {
+        "ImageIndex": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.Images.BaseDownloadRemoteImage"
     },
     "Library.UpdateMediaPath": {
       "type": "object",

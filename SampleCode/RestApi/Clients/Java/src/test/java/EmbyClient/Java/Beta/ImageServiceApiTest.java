@@ -53,9 +53,9 @@ public class ImageServiceApiTest {
     @Test
     public void deleteItemsByIdImagesByTypeByIndexTest() throws Exception {
         String id = null;
-        ImageType type = null;
         Integer index = null;
-        api.deleteItemsByIdImagesByTypeByIndex(id, type, index);
+        ImageType type = null;
+        api.deleteItemsByIdImagesByTypeByIndex(id, index, type);
 
         // TODO: test validations
     }
@@ -87,9 +87,9 @@ public class ImageServiceApiTest {
     @Test
     public void deleteUsersByIdImagesByTypeByIndexTest() throws Exception {
         String id = null;
-        ImageType type = null;
         Integer index = null;
-        api.deleteUsersByIdImagesByTypeByIndex(id, type, index);
+        ImageType type = null;
+        api.deleteUsersByIdImagesByTypeByIndex(id, index, type);
 
         // TODO: test validations
     }
@@ -134,8 +134,8 @@ public class ImageServiceApiTest {
     @Test
     public void getArtistsByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -149,7 +149,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getArtistsByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -194,8 +194,8 @@ public class ImageServiceApiTest {
     @Test
     public void getGamegenresByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -209,7 +209,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getGamegenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -254,8 +254,8 @@ public class ImageServiceApiTest {
     @Test
     public void getGenresByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -269,7 +269,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getGenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -329,8 +329,8 @@ public class ImageServiceApiTest {
     @Test
     public void getItemsByIdImagesByTypeByIndexTest() throws Exception {
         String id = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -344,7 +344,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getItemsByIdImagesByTypeByIndex(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -365,8 +365,8 @@ public class ImageServiceApiTest {
         Integer maxHeight = null;
         String tag = null;
         String format = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer width = null;
         Integer height = null;
         Integer quality = null;
@@ -376,7 +376,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -421,8 +421,8 @@ public class ImageServiceApiTest {
     @Test
     public void getMusicgenresByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -436,7 +436,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getMusicgenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -481,8 +481,8 @@ public class ImageServiceApiTest {
     @Test
     public void getPersonsByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -496,7 +496,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getPersonsByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -541,8 +541,8 @@ public class ImageServiceApiTest {
     @Test
     public void getStudiosByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -556,7 +556,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getStudiosByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -601,8 +601,8 @@ public class ImageServiceApiTest {
     @Test
     public void getUsersByIdImagesByTypeByIndexTest() throws Exception {
         String id = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -616,7 +616,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.getUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.getUsersByIdImagesByTypeByIndex(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -661,8 +661,8 @@ public class ImageServiceApiTest {
     @Test
     public void headArtistsByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -676,7 +676,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headArtistsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headArtistsByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -721,8 +721,8 @@ public class ImageServiceApiTest {
     @Test
     public void headGamegenresByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -736,7 +736,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headGamegenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headGamegenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -781,8 +781,8 @@ public class ImageServiceApiTest {
     @Test
     public void headGenresByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -796,7 +796,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headGenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headGenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -841,8 +841,8 @@ public class ImageServiceApiTest {
     @Test
     public void headItemsByIdImagesByTypeByIndexTest() throws Exception {
         String id = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -856,7 +856,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headItemsByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headItemsByIdImagesByTypeByIndex(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -877,8 +877,8 @@ public class ImageServiceApiTest {
         Integer maxHeight = null;
         String tag = null;
         String format = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer width = null;
         Integer height = null;
         Integer quality = null;
@@ -888,7 +888,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, type, index, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(percentPlayed, unPlayedCount, id, maxWidth, maxHeight, tag, format, index, type, width, height, quality, cropWhitespace, enableImageEnhancers, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -933,8 +933,8 @@ public class ImageServiceApiTest {
     @Test
     public void headMusicgenresByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -948,7 +948,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headMusicgenresByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headMusicgenresByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -993,8 +993,8 @@ public class ImageServiceApiTest {
     @Test
     public void headPersonsByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -1008,7 +1008,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headPersonsByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headPersonsByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -1053,8 +1053,8 @@ public class ImageServiceApiTest {
     @Test
     public void headStudiosByNameImagesByTypeByIndexTest() throws Exception {
         String name = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -1068,7 +1068,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headStudiosByNameImagesByTypeByIndex(name, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headStudiosByNameImagesByTypeByIndex(name, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -1113,8 +1113,8 @@ public class ImageServiceApiTest {
     @Test
     public void headUsersByIdImagesByTypeByIndexTest() throws Exception {
         String id = null;
-        ImageType type = null;
         Integer index = null;
+        ImageType type = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         Integer width = null;
@@ -1128,7 +1128,7 @@ public class ImageServiceApiTest {
         String foregroundLayer = null;
         Boolean autoOrient = null;
         Boolean keepAnimation = null;
-        api.headUsersByIdImagesByTypeByIndex(id, type, index, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
+        api.headUsersByIdImagesByTypeByIndex(id, index, type, maxWidth, maxHeight, width, height, quality, tag, cropWhitespace, enableImageEnhancers, format, backgroundColor, foregroundLayer, autoOrient, keepAnimation);
 
         // TODO: test validations
     }
@@ -1162,9 +1162,9 @@ public class ImageServiceApiTest {
     public void postItemsByIdImagesByTypeByIndexTest() throws Exception {
         Object body = null;
         String id = null;
-        ImageType type = null;
         Integer index = null;
-        api.postItemsByIdImagesByTypeByIndex(body, id, type, index);
+        ImageType type = null;
+        api.postItemsByIdImagesByTypeByIndex(body, id, index, type);
 
         // TODO: test validations
     }
@@ -1179,9 +1179,9 @@ public class ImageServiceApiTest {
     @Test
     public void postItemsByIdImagesByTypeByIndexDeleteTest() throws Exception {
         String id = null;
-        ImageType type = null;
         Integer index = null;
-        api.postItemsByIdImagesByTypeByIndexDelete(id, type, index);
+        ImageType type = null;
+        api.postItemsByIdImagesByTypeByIndexDelete(id, index, type);
 
         // TODO: test validations
     }
@@ -1251,8 +1251,7 @@ public class ImageServiceApiTest {
         Object body = null;
         String id = null;
         ImageType type = null;
-        Integer index = null;
-        api.postUsersByIdImagesByType(body, id, type, index);
+        api.postUsersByIdImagesByType(body, id, type);
 
         // TODO: test validations
     }
@@ -1269,8 +1268,7 @@ public class ImageServiceApiTest {
         Object body = null;
         String id = null;
         ImageType type = null;
-        Integer index = null;
-        api.postUsersByIdImagesByTypeByIndex(body, id, type, index);
+        api.postUsersByIdImagesByTypeByIndex(body, id, type);
 
         // TODO: test validations
     }
@@ -1285,9 +1283,9 @@ public class ImageServiceApiTest {
     @Test
     public void postUsersByIdImagesByTypeByIndexDeleteTest() throws Exception {
         String id = null;
-        ImageType type = null;
         Integer index = null;
-        api.postUsersByIdImagesByTypeByIndexDelete(id, type, index);
+        ImageType type = null;
+        api.postUsersByIdImagesByTypeByIndexDelete(id, index, type);
 
         // TODO: test validations
     }

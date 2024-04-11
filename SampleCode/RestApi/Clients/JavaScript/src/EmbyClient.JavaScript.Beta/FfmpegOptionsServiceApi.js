@@ -15,7 +15,7 @@ import EditObjectContainer from '../model/EditObjectContainer';
 /**
 * FfmpegOptionsService service.
 * @module EmbyClient.JavaScript.Beta/FfmpegOptionsServiceApi
-* @version 4.9.0.12
+* @version 4.9.0.13
 */
 export default class FfmpegOptionsServiceApi {
 

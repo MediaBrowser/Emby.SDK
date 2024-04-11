@@ -1534,7 +1534,7 @@ public class LiveTvServiceApiTest {
     @Test
     public void postLivetvSeriestimersTest() throws Exception {
         LiveTvSeriesTimerInfo body = null;
-        api.postLivetvSeriestimers(body);
+        LiveTvSeriesTimerInfoDto response = api.postLivetvSeriestimers(body);
 
         // TODO: test validations
     }

@@ -5585,8 +5585,8 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <param name="body">SeriesTimerInfo: </param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostLivetvSeriestimers (LiveTvSeriesTimerInfo body)
+        /// <returns>Task of ApiResponse (LiveTvSeriesTimerInfoDto)</returns>
+        public async Task<RestResponse<LiveTvSeriesTimerInfoDto>> PostLivetvSeriestimers (LiveTvSeriesTimerInfo body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5602,7 +5602,7 @@ namespace Emby.ApiClient.Api
             }
             
             // make the HTTP request
-            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<LiveTvSeriesTimerInfoDto>(request).ConfigureAwait(false);
             return localVarResponse;
         }
 

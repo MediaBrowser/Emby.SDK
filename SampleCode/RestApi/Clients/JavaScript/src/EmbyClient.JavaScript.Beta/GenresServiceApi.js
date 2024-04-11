@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * GenresService service.
 * @module EmbyClient.JavaScript.Beta/GenresServiceApi
-* @version 4.9.0.12
+* @version 4.9.0.13
 */
 export default class GenresServiceApi {
 

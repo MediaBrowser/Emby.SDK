@@ -247,13 +247,55 @@
   </h3>
   
   
-  <a id="MediaBrowser_Controller_Entities_ApiImageInfo_GetRemoteApiImageUrl_" data-uid="MediaBrowser.Controller.Entities.ApiImageInfo.GetRemoteApiImageUrl*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_ApiImageInfo_GetRemoteApiImageUrl_MediaBrowser_Controller_Entities_ApiImageOptions_" data-uid="MediaBrowser.Controller.Entities.ApiImageInfo.GetRemoteApiImageUrl(MediaBrowser.Controller.Entities.ApiImageOptions)">GetRemoteApiImageUrl(ApiImageOptions)</h4>
+  <a id="MediaBrowser_Controller_Entities_ApiImageInfo_ConvertImageToLocalIfNeeded_" data-uid="MediaBrowser.Controller.Entities.ApiImageInfo.ConvertImageToLocalIfNeeded*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_ApiImageInfo_ConvertImageToLocalIfNeeded_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.ApiImageInfo.ConvertImageToLocalIfNeeded(System.Threading.CancellationToken)">ConvertImageToLocalIfNeeded(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetRemoteApiImageUrl(ApiImageOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task ConvertImageToLocalIfNeeded(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_ApiImageInfo_GetRemoteApiImageUrl_" data-uid="MediaBrowser.Controller.Entities.ApiImageInfo.GetRemoteApiImageUrl*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_ApiImageInfo_GetRemoteApiImageUrl_MediaBrowser_Controller_Entities_ApiImageOptions_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.ApiImageInfo.GetRemoteApiImageUrl(MediaBrowser.Controller.Entities.ApiImageOptions,System.Threading.CancellationToken)">GetRemoteApiImageUrl(ApiImageOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;string&gt; GetRemoteApiImageUrl(ApiImageOptions options, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,6 +312,11 @@
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -282,7 +329,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_ApiImageInfo_GetRemoteApiImageUrl_" data-uid="MediaBrowser.Controller.Entities.ApiImageInfo.GetRemoteApiImageUrl*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_ApiImageInfo_GetRemoteApiImageUrl_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.ApiImageInfo.GetRemoteApiImageUrl(System.Threading.CancellationToken)">GetRemoteApiImageUrl(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; GetRemoteApiImageUrl(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
