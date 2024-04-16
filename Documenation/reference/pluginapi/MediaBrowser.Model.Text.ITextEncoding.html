@@ -165,14 +165,41 @@
   </h3>
   
   
-  <a id="MediaBrowser_Model_Text_ITextEncoding_GetASCIIEncoding_" data-uid="MediaBrowser.Model.Text.ITextEncoding.GetASCIIEncoding*"></a>
-  <h4 id="MediaBrowser_Model_Text_ITextEncoding_GetASCIIEncoding" data-uid="MediaBrowser.Model.Text.ITextEncoding.GetASCIIEncoding">GetASCIIEncoding()</h4>
+  <a id="MediaBrowser_Model_Text_ITextEncoding_GetDetectedEncoding_" data-uid="MediaBrowser.Model.Text.ITextEncoding.GetDetectedEncoding*"></a>
+  <h4 id="MediaBrowser_Model_Text_ITextEncoding_GetDetectedEncoding_System_ReadOnlySpan_System_Byte__MediaBrowser_Model_Globalization_CultureDto_System_Boolean_" data-uid="MediaBrowser.Model.Text.ITextEncoding.GetDetectedEncoding(System.ReadOnlySpan{System.Byte},MediaBrowser.Model.Globalization.CultureDto,System.Boolean)">GetDetectedEncoding(ReadOnlySpan&lt;Byte&gt;, CultureDto, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Encoding GetASCIIEncoding()</code></pre>
+    <pre><code class="lang-csharp hljs">EncodingDetectionInfo GetDetectedEncoding(ReadOnlySpan&lt;byte&gt; bytes, CultureDto language, bool enableLanguageDetection)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.CultureDto.html">CultureDto</a></td>
+        <td><span class="parametername">language</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableLanguageDetection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -183,7 +210,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Text.EncodingDetectionInfo.html">EncodingDetectionInfo</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -209,7 +236,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="xref">System.ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">bytes</span></td>
         <td></td>
       </tr>
@@ -236,48 +263,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Model_Text_ITextEncoding_GetEncodingFromCharset_" data-uid="MediaBrowser.Model.Text.ITextEncoding.GetEncodingFromCharset*"></a>
-  <h4 id="MediaBrowser_Model_Text_ITextEncoding_GetEncodingFromCharset_System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.Text.ITextEncoding.GetEncodingFromCharset(System.ReadOnlySpan{System.Char})">GetEncodingFromCharset(ReadOnlySpan&lt;Char&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Encoding GetEncodingFromCharset(ReadOnlySpan&lt;char&gt; charset)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
-        <td><span class="parametername">charset</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
         <td></td>
       </tr>
     </tbody>

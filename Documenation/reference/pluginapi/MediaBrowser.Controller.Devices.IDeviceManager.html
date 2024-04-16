@@ -166,13 +166,13 @@
   
   
   <a id="MediaBrowser_Controller_Devices_IDeviceManager_AcceptCameraUpload_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.AcceptCameraUpload*"></a>
-  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_AcceptCameraUpload_System_Int64_System_IO_Stream_MediaBrowser_Model_Devices_LocalFileInfo_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.AcceptCameraUpload(System.Int64,System.IO.Stream,MediaBrowser.Model.Devices.LocalFileInfo)">AcceptCameraUpload(Int64, Stream, LocalFileInfo)</h4>
+  <h4 id="MediaBrowser_Controller_Devices_IDeviceManager_AcceptCameraUpload_System_Int64_System_IO_Stream_MediaBrowser_Model_Devices_LocalFileInfo_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Devices.IDeviceManager.AcceptCameraUpload(System.Int64,System.IO.Stream,MediaBrowser.Model.Devices.LocalFileInfo,System.Threading.CancellationToken)">AcceptCameraUpload(Int64, Stream, LocalFileInfo, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Accepts the upload.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task AcceptCameraUpload(long deviceId, Stream stream, LocalFileInfo file)</code></pre>
+    <pre><code class="lang-csharp hljs">Task AcceptCameraUpload(long deviceId, Stream stream, LocalFileInfo file, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,20 +187,22 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">deviceId</span></td>
-        <td><p>The device identifier.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td><p>The stream.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Devices.LocalFileInfo.html">LocalFileInfo</a></td>
         <td><span class="parametername">file</span></td>
-        <td><p>The file.</p>
-</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -215,8 +217,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td><p>Task.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
