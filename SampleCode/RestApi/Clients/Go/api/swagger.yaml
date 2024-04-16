@@ -18204,7 +18204,7 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
-  /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}:
+  /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}:
     get:
       tags:
       - ImageService
@@ -79534,9 +79534,9 @@ components:
       - wmv1
       - wmv2
       - wmv3
-      - _012v
-      - _4xm
-      - _8bps
+      - "012v"
+      - "4xm"
+      - "8bps"
       - a64_multi
       - a64_multi5
       - aasc
@@ -79863,9 +79863,9 @@ components:
       - mmal
       - d3d11va_vld
       - cuda
-      - _0rgb
+      - "0rgb"
       - rgb0
-      - _0bgr
+      - "0bgr"
       - bgr0
       - yuv420p12
       - yuv420p14
