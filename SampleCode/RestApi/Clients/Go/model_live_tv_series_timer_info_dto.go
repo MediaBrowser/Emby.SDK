@@ -14,6 +14,7 @@ type LiveTvSeriesTimerInfoDto struct {
 	// A value indicating whether \\[record any time\\].
 	RecordAnyTime bool `json:"RecordAnyTime,omitempty"`
 	SkipEpisodesInLibrary bool `json:"SkipEpisodesInLibrary,omitempty"`
+	MatchExistingItemsWithAnyLibrary bool `json:"MatchExistingItemsWithAnyLibrary,omitempty"`
 	// A value indicating whether \\[record any channel\\].
 	RecordAnyChannel bool `json:"RecordAnyChannel,omitempty"`
 	KeepUpTo int32 `json:"KeepUpTo,omitempty"`

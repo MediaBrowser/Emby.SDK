@@ -19,7 +19,7 @@ import EditorsEditorButtonItem from './EditorsEditorButtonItem';
 /**
 * The EditorsEditorRoot model module.
 * @module model/EditorsEditorRoot
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export default class EditorsEditorRoot {
     /**
@@ -82,6 +82,9 @@ export default class EditorsEditorRoot {
             if (data.hasOwnProperty('Description')) {
                 obj['Description'] = ApiClient.convertToType(data['Description'], 'String');
             }
+            if (data.hasOwnProperty('FeatureRequiresPremiere')) {
+                obj['FeatureRequiresPremiere'] = ApiClient.convertToType(data['FeatureRequiresPremiere'], 'Boolean');
+            }
             if (data.hasOwnProperty('ParentId')) {
                 obj['ParentId'] = ApiClient.convertToType(data['ParentId'], 'String');
             }
@@ -137,6 +140,10 @@ export default class EditorsEditorRoot {
     * @member {String} Description
     */
     'Description' = undefined;
+    /**
+    * @member {Boolean} FeatureRequiresPremiere
+    */
+    'FeatureRequiresPremiere' = undefined;
     /**
     * @member {String} ParentId
     */

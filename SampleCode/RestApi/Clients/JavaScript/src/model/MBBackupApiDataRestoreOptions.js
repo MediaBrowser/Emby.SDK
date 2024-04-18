@@ -15,7 +15,7 @@ import MBBackupApiUserRestoreInfo from './MBBackupApiUserRestoreInfo';
 /**
 * The MBBackupApiDataRestoreOptions model module.
 * @module model/MBBackupApiDataRestoreOptions
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export default class MBBackupApiDataRestoreOptions {
     /**

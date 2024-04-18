@@ -694,6 +694,12 @@ It is created from the user-specific folders within the system root</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaSourceManager">BaseItem.MediaSourceManager</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_NetworkManager">BaseItem.NetworkManager</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ApplicationHost">BaseItem.ApplicationHost</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ToString">BaseItem.ToString()</a>
     </div>
     <div>
@@ -1125,6 +1131,18 @@ It is created from the user-specific folders within the system root</p>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableImageCaching_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.EnableImageCaching(LibraryOptions)</a>
     </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetApiImageUrl_MediaBrowser_Controller_Entities_ItemImageInfo_System_Int32_MediaBrowser_Controller_Entities_ApiImageOptions_System_String_">BaseItem.GetApiImageUrl(ItemImageInfo, Int32, ApiImageOptions, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetLocalApiImageUrl_MediaBrowser_Controller_Entities_ItemImageInfo_System_Int32_MediaBrowser_Controller_Entities_ApiImageOptions_System_Threading_CancellationToken_">BaseItem.GetLocalApiImageUrl(ItemImageInfo, Int32, ApiImageOptions, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRemoteApiImageUrl_MediaBrowser_Controller_Entities_ItemImageInfo_System_Int32_MediaBrowser_Controller_Entities_ApiImageOptions_">BaseItem.GetRemoteApiImageUrl(ItemImageInfo, Int32, ApiImageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRemoteApiImageUrl_MediaBrowser_Controller_Entities_ApiImageInfo_MediaBrowser_Controller_Entities_ApiImageOptions_">BaseItem.GetRemoteApiImageUrl(ApiImageInfo, ApiImageOptions)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.html">MediaBrowser.Controller.Entities</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
@@ -1134,31 +1152,6 @@ It is created from the user-specific folders within the system root</p>
   </div>
   <h3 id="properties">Properties
   </h3>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_CollectionFolder_ApplicationHost_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.ApplicationHost*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_ApplicationHost" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.ApplicationHost">ApplicationHost</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServerApplicationHost ApplicationHost { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationHost.html">IServerApplicationHost</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_CollectionType_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.CollectionType*"></a>
@@ -1880,7 +1873,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="MediaBrowser.Model.Entities.SortOrder.html">SortOrder</a>&gt;[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="MediaBrowser.Model.Entities.SortOrder.html">SortOrder</a>&gt;[]</td>
         <td></td>
       </tr>
     </tbody>

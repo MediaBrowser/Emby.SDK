@@ -45,6 +45,9 @@ public class EditorsEditorButtonItem {
   @SerializedName("Description")
   private String description = null;
 
+  @SerializedName("FeatureRequiresPremiere")
+  private Boolean featureRequiresPremiere = null;
+
   @SerializedName("ParentId")
   private String parentId = null;
 
@@ -192,6 +195,24 @@ public class EditorsEditorButtonItem {
     this.description = description;
   }
 
+  public EditorsEditorButtonItem featureRequiresPremiere(Boolean featureRequiresPremiere) {
+    this.featureRequiresPremiere = featureRequiresPremiere;
+    return this;
+  }
+
+   /**
+   * Get featureRequiresPremiere
+   * @return featureRequiresPremiere
+  **/
+  @Schema(description = "")
+  public Boolean isFeatureRequiresPremiere() {
+    return featureRequiresPremiere;
+  }
+
+  public void setFeatureRequiresPremiere(Boolean featureRequiresPremiere) {
+    this.featureRequiresPremiere = featureRequiresPremiere;
+  }
+
   public EditorsEditorButtonItem parentId(String parentId) {
     this.parentId = parentId;
     return this;
@@ -228,12 +249,13 @@ public class EditorsEditorButtonItem {
         Objects.equals(this.isAdvanced, editorsEditorButtonItem.isAdvanced) &&
         Objects.equals(this.displayName, editorsEditorButtonItem.displayName) &&
         Objects.equals(this.description, editorsEditorButtonItem.description) &&
+        Objects.equals(this.featureRequiresPremiere, editorsEditorButtonItem.featureRequiresPremiere) &&
         Objects.equals(this.parentId, editorsEditorButtonItem.parentId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(editorType, name, id, allowEmpty, isReadOnly, isAdvanced, displayName, description, parentId);
+    return Objects.hash(editorType, name, id, allowEmpty, isReadOnly, isAdvanced, displayName, description, featureRequiresPremiere, parentId);
   }
 
 
@@ -250,6 +272,7 @@ public class EditorsEditorButtonItem {
     sb.append("    isAdvanced: ").append(toIndentedString(isAdvanced)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    featureRequiresPremiere: ").append(toIndentedString(featureRequiresPremiere)).append("\n");
     sb.append("    parentId: ").append(toIndentedString(parentId)).append("\n");
     sb.append("}");
     return sb.toString();

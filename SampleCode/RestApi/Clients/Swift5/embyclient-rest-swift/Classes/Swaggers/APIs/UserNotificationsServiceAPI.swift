@@ -42,6 +42,7 @@ open class UserNotificationsServiceAPI {
   "SetupModuleUrl" : "SetupModuleUrl",
   "Enabled" : true,
   "PluginId" : "PluginId",
+  "GroupItems" : true,
   "IsSelfNotification" : true,
   "DeviceIds" : [ "DeviceIds", "DeviceIds" ],
   "EventIds" : [ "EventIds", "EventIds" ],

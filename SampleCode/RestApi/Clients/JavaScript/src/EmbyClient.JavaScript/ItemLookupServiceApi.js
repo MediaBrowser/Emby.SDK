@@ -26,7 +26,7 @@ import RemoteSearchResult from '../model/RemoteSearchResult';
 /**
 * ItemLookupService service.
 * @module EmbyClient.JavaScript/ItemLookupServiceApi
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export default class ItemLookupServiceApi {
 

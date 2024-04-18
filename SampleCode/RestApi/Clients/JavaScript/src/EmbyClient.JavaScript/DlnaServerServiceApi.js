@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * DlnaServerService service.
 * @module EmbyClient.JavaScript/DlnaServerServiceApi
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export default class DlnaServerServiceApi {
 
@@ -325,6 +325,228 @@ export default class DlnaServerServiceApi {
 
       return this.apiClient.callApi(
         '/Dlna/icons/{Filename}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headDlnaByUuidConnectionmanagerConnectionmanager operation.
+     * @callback module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidConnectionmanagerConnectionmanagerCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets dlna connection manager xml
+     * No authentication required
+     * @param {module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidConnectionmanagerConnectionmanagerCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headDlnaByUuidConnectionmanagerConnectionmanager() {
+      let postBody = null;
+
+      let pathParams = {
+        'UuId': uuId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Dlna/{UuId}/connectionmanager/connectionmanager', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headDlnaByUuidConnectionmanagerConnectionmanagerXml operation.
+     * @callback module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidConnectionmanagerConnectionmanagerXmlCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets dlna connection manager xml
+     * No authentication required
+     * @param {module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidConnectionmanagerConnectionmanagerXmlCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headDlnaByUuidConnectionmanagerConnectionmanagerXml() {
+      let postBody = null;
+
+      let pathParams = {
+        'UuId': uuId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Dlna/{UuId}/connectionmanager/connectionmanager.xml', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headDlnaByUuidContentdirectoryContentdirectory operation.
+     * @callback module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidContentdirectoryContentdirectoryCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets dlna content directory xml
+     * No authentication required
+     * @param {module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidContentdirectoryContentdirectoryCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headDlnaByUuidContentdirectoryContentdirectory() {
+      let postBody = null;
+
+      let pathParams = {
+        'UuId': uuId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Dlna/{UuId}/contentdirectory/contentdirectory', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headDlnaByUuidContentdirectoryContentdirectoryXml operation.
+     * @callback module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidContentdirectoryContentdirectoryXmlCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets dlna content directory xml
+     * No authentication required
+     * @param {module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidContentdirectoryContentdirectoryXmlCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headDlnaByUuidContentdirectoryContentdirectoryXml() {
+      let postBody = null;
+
+      let pathParams = {
+        'UuId': uuId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Dlna/{UuId}/contentdirectory/contentdirectory.xml', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headDlnaByUuidDescription operation.
+     * @callback module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidDescriptionCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets dlna server info
+     * No authentication required
+     * @param {module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidDescriptionCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headDlnaByUuidDescription() {
+      let postBody = null;
+
+      let pathParams = {
+        'UuId': uuId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Dlna/{UuId}/description', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headDlnaByUuidDescriptionXml operation.
+     * @callback module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidDescriptionXmlCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets dlna server info
+     * No authentication required
+     * @param {module:EmbyClient.JavaScript/DlnaServerServiceApi~headDlnaByUuidDescriptionXmlCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headDlnaByUuidDescriptionXml() {
+      let postBody = null;
+
+      let pathParams = {
+        'UuId': uuId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Dlna/{UuId}/description.xml', 'HEAD',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

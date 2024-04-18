@@ -111,6 +111,12 @@ namespace Emby.ApiClient.Model
         public bool? SkipEpisodesInLibrary { get; set; }
 
         /// <summary>
+        /// Gets or Sets MatchExistingItemsWithAnyLibrary
+        /// </summary>
+        /// <value>The MatchExistingItemsWithAnyLibrary.</value>
+        public bool? MatchExistingItemsWithAnyLibrary { get; set; }
+
+        /// <summary>
         /// A value indicating whether \\[record new only\\].
         /// </summary>
         /// <value>The RecordNewOnly.</value>
@@ -204,6 +210,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  KeepUpTo: ").Append(KeepUpTo).Append("\n");
             sb.Append("  KeepUntil: ").Append(KeepUntil).Append("\n");
             sb.Append("  SkipEpisodesInLibrary: ").Append(SkipEpisodesInLibrary).Append("\n");
+            sb.Append("  MatchExistingItemsWithAnyLibrary: ").Append(MatchExistingItemsWithAnyLibrary).Append("\n");
             sb.Append("  RecordNewOnly: ").Append(RecordNewOnly).Append("\n");
             sb.Append("  Days: ").Append(Days).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
@@ -313,6 +320,11 @@ namespace Emby.ApiClient.Model
                     this.SkipEpisodesInLibrary.Equals(input.SkipEpisodesInLibrary))
                 ) && 
                 (
+                    this.MatchExistingItemsWithAnyLibrary == input.MatchExistingItemsWithAnyLibrary ||
+                    (this.MatchExistingItemsWithAnyLibrary != null &&
+                    this.MatchExistingItemsWithAnyLibrary.Equals(input.MatchExistingItemsWithAnyLibrary))
+                ) && 
+                (
                     this.RecordNewOnly == input.RecordNewOnly ||
                     (this.RecordNewOnly != null &&
                     this.RecordNewOnly.Equals(input.RecordNewOnly))
@@ -413,6 +425,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.KeepUntil.GetHashCode();
                 if (this.SkipEpisodesInLibrary != null)
                     hashCode = hashCode * 59 + this.SkipEpisodesInLibrary.GetHashCode();
+                if (this.MatchExistingItemsWithAnyLibrary != null)
+                    hashCode = hashCode * 59 + this.MatchExistingItemsWithAnyLibrary.GetHashCode();
                 if (this.RecordNewOnly != null)
                     hashCode = hashCode * 59 + this.RecordNewOnly.GetHashCode();
                 if (this.Days != null)

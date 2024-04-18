@@ -63,6 +63,9 @@ public class UserNotificationInfo {
   @SerializedName("IsSelfNotification")
   private Boolean isSelfNotification = null;
 
+  @SerializedName("GroupItems")
+  private Boolean groupItems = null;
+
   @SerializedName("Options")
   private Map<String, String> options = null;
 
@@ -332,6 +335,24 @@ public class UserNotificationInfo {
     this.isSelfNotification = isSelfNotification;
   }
 
+  public UserNotificationInfo groupItems(Boolean groupItems) {
+    this.groupItems = groupItems;
+    return this;
+  }
+
+   /**
+   * Get groupItems
+   * @return groupItems
+  **/
+  @Schema(description = "")
+  public Boolean isGroupItems() {
+    return groupItems;
+  }
+
+  public void setGroupItems(Boolean groupItems) {
+    this.groupItems = groupItems;
+  }
+
   public UserNotificationInfo options(Map<String, String> options) {
     this.options = options;
     return this;
@@ -381,12 +402,13 @@ public class UserNotificationInfo {
         Objects.equals(this.eventIds, userNotificationInfo.eventIds) &&
         Objects.equals(this.userId, userNotificationInfo.userId) &&
         Objects.equals(this.isSelfNotification, userNotificationInfo.isSelfNotification) &&
+        Objects.equals(this.groupItems, userNotificationInfo.groupItems) &&
         Objects.equals(this.options, userNotificationInfo.options);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(notifierKey, setupModuleUrl, serviceName, pluginId, friendlyName, id, enabled, userIds, deviceIds, libraryIds, eventIds, userId, isSelfNotification, options);
+    return Objects.hash(notifierKey, setupModuleUrl, serviceName, pluginId, friendlyName, id, enabled, userIds, deviceIds, libraryIds, eventIds, userId, isSelfNotification, groupItems, options);
   }
 
 
@@ -408,6 +430,7 @@ public class UserNotificationInfo {
     sb.append("    eventIds: ").append(toIndentedString(eventIds)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    isSelfNotification: ").append(toIndentedString(isSelfNotification)).append("\n");
+    sb.append("    groupItems: ").append(toIndentedString(groupItems)).append("\n");
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("}");
     return sb.toString();

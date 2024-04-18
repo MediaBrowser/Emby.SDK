@@ -22,6 +22,7 @@ type UserNotificationInfo struct {
 	// Notification intended for a specific user
 	UserId string `json:"UserId,omitempty"`
 	IsSelfNotification bool `json:"IsSelfNotification,omitempty"`
+	GroupItems bool `json:"GroupItems,omitempty"`
 	// This is for webhooks since this will cause xml serialization to fail
 	Options map[string]string `json:"Options,omitempty"`
 }

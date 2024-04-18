@@ -31299,6 +31299,38 @@
         },
         "x-RequiredAuthentication": "No authentication required"
       },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna server info",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidDescriptionXml",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
       "x-summary": "Gets dlna server info"
     },
     "/Dlna/{UuId}/description": {
@@ -31309,6 +31341,38 @@
         "summary": "Gets dlna server info",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidDescription",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna server info",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidDescription",
         "parameters": [
           {
             "in": "path",
@@ -44313,6 +44377,38 @@
         },
         "x-RequiredAuthentication": "No authentication required"
       },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna content directory xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidContentdirectoryContentdirectoryXml",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
       "x-summary": "Gets dlna content directory xml"
     },
     "/Dlna/{UuId}/contentdirectory/contentdirectory": {
@@ -44323,6 +44419,38 @@
         "summary": "Gets dlna content directory xml",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidContentdirectoryContentdirectory",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna content directory xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidContentdirectoryContentdirectory",
         "parameters": [
           {
             "in": "path",
@@ -44383,6 +44511,38 @@
         },
         "x-RequiredAuthentication": "No authentication required"
       },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna connection manager xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidConnectionmanagerConnectionmanagerXml",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
       "x-summary": "Gets dlna connection manager xml"
     },
     "/Dlna/{UuId}/connectionmanager/connectionmanager": {
@@ -44393,6 +44553,38 @@
         "summary": "Gets dlna connection manager xml",
         "description": "No authentication required",
         "operationId": "getDlnaByUuidConnectionmanagerConnectionmanager",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UuId",
+            "description": "Server UuId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "x-RequiredAuthentication": "No authentication required"
+      },
+      "head": {
+        "tags": [
+          "DlnaServerService"
+        ],
+        "summary": "Gets dlna connection manager xml",
+        "description": "No authentication required",
+        "operationId": "headDlnaByUuidConnectionmanagerConnectionmanager",
         "parameters": [
           {
             "in": "path",
@@ -47914,6 +48106,52 @@
       "x-summary": "Reports that a sync job item has successfully been transferred."
     },
     "/Sync/JobItems/{Id}/File": {
+      "head": {
+        "tags": [
+          "SyncService"
+        ],
+        "summary": "Gets a sync job item file",
+        "description": "Requires authentication as user",
+        "operationId": "headSyncJobitemsByIdFile",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
       "get": {
         "tags": [
           "SyncService"
@@ -59744,6 +59982,9 @@
         "Description": {
           "type": "string"
         },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
+        },
         "ParentId": {
           "type": "string"
         }
@@ -59850,6 +60091,9 @@
         "Description": {
           "type": "string"
         },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
+        },
         "ParentId": {
           "type": "string"
         }
@@ -59908,6 +60152,9 @@
         },
         "Description": {
           "type": "string"
+        },
+        "FeatureRequiresPremiere": {
+          "type": "boolean"
         },
         "ParentId": {
           "type": "string"
@@ -61242,6 +61489,9 @@
         "SkipEpisodesInLibrary": {
           "type": "boolean"
         },
+        "MatchExistingItemsWithAnyLibrary": {
+          "type": "boolean"
+        },
         "RecordAnyChannel": {
           "description": "A value indicating whether \\[record any channel\\].",
           "type": "boolean"
@@ -61466,6 +61716,9 @@
           "$ref": "#/definitions/LiveTv.KeepUntil"
         },
         "SkipEpisodesInLibrary": {
+          "type": "boolean"
+        },
+        "MatchExistingItemsWithAnyLibrary": {
           "type": "boolean"
         },
         "RecordNewOnly": {
@@ -66050,6 +66303,9 @@
           "type": "string"
         },
         "IsSelfNotification": {
+          "type": "boolean"
+        },
+        "GroupItems": {
           "type": "boolean"
         },
         "Options": {

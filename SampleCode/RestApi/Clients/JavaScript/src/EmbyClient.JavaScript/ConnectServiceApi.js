@@ -16,7 +16,7 @@ import ConnectUserLinkResult from '../model/ConnectUserLinkResult';
 /**
 * ConnectService service.
 * @module EmbyClient.JavaScript/ConnectServiceApi
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export default class ConnectServiceApi {
 

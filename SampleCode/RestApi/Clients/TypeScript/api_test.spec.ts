@@ -2,7 +2,7 @@
  * Emby Server REST API
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.8.3.0
+ * OpenAPI spec version: 4.8.4.0
  * 
  *
  * NOTE: This file is auto generated.
@@ -693,6 +693,30 @@ describe("DlnaServerServiceApi", () => {
     const filename: string = "filename_example"
     const uuId: string = "uuId_example"
     return expect(instance.getDlnaIconsByFilename(filename, uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidConnectionmanagerConnectionmanager", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidConnectionmanagerConnectionmanager(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidConnectionmanagerConnectionmanagerXml", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidConnectionmanagerConnectionmanagerXml(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidContentdirectoryContentdirectory", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidContentdirectoryContentdirectory(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidContentdirectoryContentdirectoryXml", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidContentdirectoryContentdirectoryXml(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidDescription", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidDescription(uuId, {})).resolves.toBe(null)
+  })
+  test("headDlnaByUuidDescriptionXml", () => {
+    const uuId: string = "uuId_example"
+    return expect(instance.headDlnaByUuidDescriptionXml(uuId, {})).resolves.toBe(null)
   })
   test("postDlnaByUuidConnectionmanagerControl", () => {
     const body: Object = undefined
@@ -5036,6 +5060,10 @@ describe("SyncServiceApi", () => {
   test("getSyncTargets", () => {
     const userId: string = "userId_example"
     return expect(instance.getSyncTargets(userId, {})).resolves.toBe(null)
+  })
+  test("headSyncJobitemsByIdFile", () => {
+    const id: string = "id_example"
+    return expect(instance.headSyncJobitemsByIdFile(id, {})).resolves.toBe(null)
   })
   test("postSyncByItemidStatus", () => {
     const body: api.SyncedItemProgress = undefined

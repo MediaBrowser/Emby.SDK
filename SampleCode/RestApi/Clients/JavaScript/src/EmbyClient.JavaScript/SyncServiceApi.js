@@ -27,7 +27,7 @@ import UserAction from '../model/UserAction';
 /**
 * SyncService service.
 * @module EmbyClient.JavaScript/SyncServiceApi
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export default class SyncServiceApi {
 
@@ -460,6 +460,43 @@ export default class SyncServiceApi {
 
       return this.apiClient.callApi(
         '/Sync/Targets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headSyncJobitemsByIdFile operation.
+     * @callback module:EmbyClient.JavaScript/SyncServiceApi~headSyncJobitemsByIdFileCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets a sync job item file
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/SyncServiceApi~headSyncJobitemsByIdFileCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headSyncJobitemsByIdFile() {
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Sync/JobItems/{Id}/File', 'HEAD',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

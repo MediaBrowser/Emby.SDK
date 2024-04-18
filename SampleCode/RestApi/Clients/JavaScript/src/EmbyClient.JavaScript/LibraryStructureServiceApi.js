@@ -22,7 +22,7 @@ import QueryResultVirtualFolderInfo from '../model/QueryResultVirtualFolderInfo'
 /**
 * LibraryStructureService service.
 * @module EmbyClient.JavaScript/LibraryStructureServiceApi
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export default class LibraryStructureServiceApi {
 

@@ -161,11 +161,15 @@
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">CultureDto</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="MediaBrowser.Model.Globalization.CultureDto.html">CultureDto</a>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Globalization.html">MediaBrowser.Model.Globalization</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
   <h5 id="MediaBrowser_Model_Globalization_CultureDto_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CultureDto</code></pre>
+    <pre><code class="lang-csharp hljs">public class CultureDto : IEquatable&lt;CultureDto&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -502,6 +506,37 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="MediaBrowser_Model_Globalization_CultureDto_GetHashCode_" data-uid="MediaBrowser.Model.Globalization.CultureDto.GetHashCode*"></a>
+  <h4 id="MediaBrowser_Model_Globalization_CultureDto_GetHashCode" data-uid="MediaBrowser.Model.Globalization.CultureDto.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode#system-object-gethashcode">Object.GetHashCode()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>

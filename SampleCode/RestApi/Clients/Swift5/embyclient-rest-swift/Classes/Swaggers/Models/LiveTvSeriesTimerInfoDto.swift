@@ -15,6 +15,7 @@ public struct LiveTvSeriesTimerInfoDto: Codable {
     /** A value indicating whether \\[record any time\\]. */
     public var recordAnyTime: Bool?
     public var skipEpisodesInLibrary: Bool?
+    public var matchExistingItemsWithAnyLibrary: Bool?
     /** A value indicating whether \\[record any channel\\]. */
     public var recordAnyChannel: Bool?
     public var keepUpTo: Int?
@@ -75,9 +76,10 @@ public struct LiveTvSeriesTimerInfoDto: Codable {
     public var isPostPaddingRequired: Bool?
     public var keepUntil: LiveTvKeepUntil?
 
-    public init(recordAnyTime: Bool? = nil, skipEpisodesInLibrary: Bool? = nil, recordAnyChannel: Bool? = nil, keepUpTo: Int? = nil, maxRecordingSeconds: Int? = nil, recordNewOnly: Bool? = nil, channelIds: [String]? = nil, days: [DayOfWeek]? = nil, imageTags: [String:String]? = nil, parentThumbItemId: String? = nil, parentThumbImageTag: String? = nil, parentPrimaryImageItemId: String? = nil, parentPrimaryImageTag: String? = nil, seriesId: String? = nil, keywords: [LiveTvKeywordInfo]? = nil, timerType: LiveTvTimerType? = nil, _id: String? = nil, type: String? = nil, serverId: String? = nil, channelId: String? = nil, channelName: String? = nil, channelNumber: String? = nil, channelPrimaryImageTag: String? = nil, programId: String? = nil, name: String? = nil, overview: String? = nil, parentFolderId: String? = nil, startDate: Date? = nil, endDate: Date? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, parentBackdropItemId: String? = nil, parentBackdropImageTags: [String]? = nil, isPostPaddingRequired: Bool? = nil, keepUntil: LiveTvKeepUntil? = nil) {
+    public init(recordAnyTime: Bool? = nil, skipEpisodesInLibrary: Bool? = nil, matchExistingItemsWithAnyLibrary: Bool? = nil, recordAnyChannel: Bool? = nil, keepUpTo: Int? = nil, maxRecordingSeconds: Int? = nil, recordNewOnly: Bool? = nil, channelIds: [String]? = nil, days: [DayOfWeek]? = nil, imageTags: [String:String]? = nil, parentThumbItemId: String? = nil, parentThumbImageTag: String? = nil, parentPrimaryImageItemId: String? = nil, parentPrimaryImageTag: String? = nil, seriesId: String? = nil, keywords: [LiveTvKeywordInfo]? = nil, timerType: LiveTvTimerType? = nil, _id: String? = nil, type: String? = nil, serverId: String? = nil, channelId: String? = nil, channelName: String? = nil, channelNumber: String? = nil, channelPrimaryImageTag: String? = nil, programId: String? = nil, name: String? = nil, overview: String? = nil, parentFolderId: String? = nil, startDate: Date? = nil, endDate: Date? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, parentBackdropItemId: String? = nil, parentBackdropImageTags: [String]? = nil, isPostPaddingRequired: Bool? = nil, keepUntil: LiveTvKeepUntil? = nil) {
         self.recordAnyTime = recordAnyTime
         self.skipEpisodesInLibrary = skipEpisodesInLibrary
+        self.matchExistingItemsWithAnyLibrary = matchExistingItemsWithAnyLibrary
         self.recordAnyChannel = recordAnyChannel
         self.keepUpTo = keepUpTo
         self.maxRecordingSeconds = maxRecordingSeconds
@@ -118,6 +120,7 @@ public struct LiveTvSeriesTimerInfoDto: Codable {
     public enum CodingKeys: String, CodingKey { 
         case recordAnyTime = "RecordAnyTime"
         case skipEpisodesInLibrary = "SkipEpisodesInLibrary"
+        case matchExistingItemsWithAnyLibrary = "MatchExistingItemsWithAnyLibrary"
         case recordAnyChannel = "RecordAnyChannel"
         case keepUpTo = "KeepUpTo"
         case maxRecordingSeconds = "MaxRecordingSeconds"

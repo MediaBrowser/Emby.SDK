@@ -39,8 +39,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="eventIds">eventIds.</param>
         /// <param name="userId">Notification intended for a specific user.</param>
         /// <param name="isSelfNotification">isSelfNotification.</param>
+        /// <param name="groupItems">groupItems.</param>
         /// <param name="options">This is for webhooks since this will cause xml serialization to fail.</param>
-        public UserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string pluginId = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), List<string> userIds = default(List<string>), List<string> deviceIds = default(List<string>), List<string> libraryIds = default(List<string>), List<string> eventIds = default(List<string>), string userId = default(string), bool? isSelfNotification = default(bool?), Dictionary<string, string> options = default(Dictionary<string, string>))
+        public UserNotificationInfo(string notifierKey = default(string), string setupModuleUrl = default(string), string serviceName = default(string), string pluginId = default(string), string friendlyName = default(string), string id = default(string), bool? enabled = default(bool?), List<string> userIds = default(List<string>), List<string> deviceIds = default(List<string>), List<string> libraryIds = default(List<string>), List<string> eventIds = default(List<string>), string userId = default(string), bool? isSelfNotification = default(bool?), bool? groupItems = default(bool?), Dictionary<string, string> options = default(Dictionary<string, string>))
         {
             this.NotifierKey = notifierKey;
             this.SetupModuleUrl = setupModuleUrl;
@@ -55,6 +56,7 @@ namespace EmbyClient.Dotnet.Model
             this.EventIds = eventIds;
             this.UserId = userId;
             this.IsSelfNotification = isSelfNotification;
+            this.GroupItems = groupItems;
             this.Options = options;
         }
         
@@ -139,6 +141,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsSelfNotification { get; set; }
 
         /// <summary>
+        /// Gets or Sets GroupItems
+        /// </summary>
+        [DataMember(Name="GroupItems", EmitDefaultValue=false)]
+        public bool? GroupItems { get; set; }
+
+        /// <summary>
         /// This is for webhooks since this will cause xml serialization to fail
         /// </summary>
         /// <value>This is for webhooks since this will cause xml serialization to fail</value>
@@ -166,6 +174,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  EventIds: ").Append(EventIds).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  IsSelfNotification: ").Append(IsSelfNotification).Append("\n");
+            sb.Append("  GroupItems: ").Append(GroupItems).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -271,6 +280,11 @@ namespace EmbyClient.Dotnet.Model
                     this.IsSelfNotification.Equals(input.IsSelfNotification))
                 ) && 
                 (
+                    this.GroupItems == input.GroupItems ||
+                    (this.GroupItems != null &&
+                    this.GroupItems.Equals(input.GroupItems))
+                ) && 
+                (
                     this.Options == input.Options ||
                     this.Options != null &&
                     input.Options != null &&
@@ -313,6 +327,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.IsSelfNotification != null)
                     hashCode = hashCode * 59 + this.IsSelfNotification.GetHashCode();
+                if (this.GroupItems != null)
+                    hashCode = hashCode * 59 + this.GroupItems.GetHashCode();
                 if (this.Options != null)
                     hashCode = hashCode * 59 + this.Options.GetHashCode();
                 return hashCode;

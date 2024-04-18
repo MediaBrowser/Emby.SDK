@@ -38,8 +38,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="isAdvanced">isAdvanced.</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="description">description.</param>
+        /// <param name="featureRequiresPremiere">featureRequiresPremiere.</param>
         /// <param name="parentId">parentId.</param>
-        public EditorsEditorRoot(List<ConditionsPropertyCondition> propertyConditions = default(List<ConditionsPropertyCondition>), List<ActionsPostbackAction> postbackActions = default(List<ActionsPostbackAction>), EditorsEditorButtonItem titleButton = default(EditorsEditorButtonItem), List<EditorsEditorBase> editorItems = default(List<EditorsEditorBase>), CommonEditorTypes editorType = default(CommonEditorTypes), string name = default(string), string id = default(string), bool? allowEmpty = default(bool?), bool? isReadOnly = default(bool?), bool? isAdvanced = default(bool?), string displayName = default(string), string description = default(string), string parentId = default(string))
+        public EditorsEditorRoot(List<ConditionsPropertyCondition> propertyConditions = default(List<ConditionsPropertyCondition>), List<ActionsPostbackAction> postbackActions = default(List<ActionsPostbackAction>), EditorsEditorButtonItem titleButton = default(EditorsEditorButtonItem), List<EditorsEditorBase> editorItems = default(List<EditorsEditorBase>), CommonEditorTypes editorType = default(CommonEditorTypes), string name = default(string), string id = default(string), bool? allowEmpty = default(bool?), bool? isReadOnly = default(bool?), bool? isAdvanced = default(bool?), string displayName = default(string), string description = default(string), bool? featureRequiresPremiere = default(bool?), string parentId = default(string))
         {
             this.PropertyConditions = propertyConditions;
             this.PostbackActions = postbackActions;
@@ -53,6 +54,7 @@ namespace EmbyClient.Dotnet.Model
             this.IsAdvanced = isAdvanced;
             this.DisplayName = displayName;
             this.Description = description;
+            this.FeatureRequiresPremiere = featureRequiresPremiere;
             this.ParentId = parentId;
         }
         
@@ -129,6 +131,12 @@ namespace EmbyClient.Dotnet.Model
         public string Description { get; set; }
 
         /// <summary>
+        /// Gets or Sets FeatureRequiresPremiere
+        /// </summary>
+        [DataMember(Name="FeatureRequiresPremiere", EmitDefaultValue=false)]
+        public bool? FeatureRequiresPremiere { get; set; }
+
+        /// <summary>
         /// Gets or Sets ParentId
         /// </summary>
         [DataMember(Name="ParentId", EmitDefaultValue=false)]
@@ -154,6 +162,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  IsAdvanced: ").Append(IsAdvanced).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  FeatureRequiresPremiere: ").Append(FeatureRequiresPremiere).Append("\n");
             sb.Append("  ParentId: ").Append(ParentId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -253,6 +262,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Description.Equals(input.Description))
                 ) && 
                 (
+                    this.FeatureRequiresPremiere == input.FeatureRequiresPremiere ||
+                    (this.FeatureRequiresPremiere != null &&
+                    this.FeatureRequiresPremiere.Equals(input.FeatureRequiresPremiere))
+                ) && 
+                (
                     this.ParentId == input.ParentId ||
                     (this.ParentId != null &&
                     this.ParentId.Equals(input.ParentId))
@@ -292,6 +306,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.FeatureRequiresPremiere != null)
+                    hashCode = hashCode * 59 + this.FeatureRequiresPremiere.GetHashCode();
                 if (this.ParentId != null)
                     hashCode = hashCode * 59 + this.ParentId.GetHashCode();
                 return hashCode;

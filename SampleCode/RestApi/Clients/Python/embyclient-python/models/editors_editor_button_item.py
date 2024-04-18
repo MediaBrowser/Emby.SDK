@@ -30,6 +30,7 @@ class EditorsEditorButtonItem(object):
         'is_advanced': 'bool',
         'display_name': 'str',
         'description': 'str',
+        'feature_requires_premiere': 'bool',
         'parent_id': 'str'
     }
 
@@ -42,10 +43,11 @@ class EditorsEditorButtonItem(object):
         'is_advanced': 'IsAdvanced',
         'display_name': 'DisplayName',
         'description': 'Description',
+        'feature_requires_premiere': 'FeatureRequiresPremiere',
         'parent_id': 'ParentId'
     }
 
-    def __init__(self, editor_type=None, name=None, id=None, allow_empty=None, is_read_only=None, is_advanced=None, display_name=None, description=None, parent_id=None):  # noqa: E501
+    def __init__(self, editor_type=None, name=None, id=None, allow_empty=None, is_read_only=None, is_advanced=None, display_name=None, description=None, feature_requires_premiere=None, parent_id=None):  # noqa: E501
         """EditorsEditorButtonItem - a model defined in Swagger"""  # noqa: E501
         self._editor_type = None
         self._name = None
@@ -55,6 +57,7 @@ class EditorsEditorButtonItem(object):
         self._is_advanced = None
         self._display_name = None
         self._description = None
+        self._feature_requires_premiere = None
         self._parent_id = None
         self.discriminator = None
         if editor_type is not None:
@@ -73,6 +76,8 @@ class EditorsEditorButtonItem(object):
             self.display_name = display_name
         if description is not None:
             self.description = description
+        if feature_requires_premiere is not None:
+            self.feature_requires_premiere = feature_requires_premiere
         if parent_id is not None:
             self.parent_id = parent_id
 
@@ -243,6 +248,27 @@ class EditorsEditorButtonItem(object):
         """
 
         self._description = description
+
+    @property
+    def feature_requires_premiere(self):
+        """Gets the feature_requires_premiere of this EditorsEditorButtonItem.  # noqa: E501
+
+
+        :return: The feature_requires_premiere of this EditorsEditorButtonItem.  # noqa: E501
+        :rtype: bool
+        """
+        return self._feature_requires_premiere
+
+    @feature_requires_premiere.setter
+    def feature_requires_premiere(self, feature_requires_premiere):
+        """Sets the feature_requires_premiere of this EditorsEditorButtonItem.
+
+
+        :param feature_requires_premiere: The feature_requires_premiere of this EditorsEditorButtonItem.  # noqa: E501
+        :type: bool
+        """
+
+        self._feature_requires_premiere = feature_requires_premiere
 
     @property
     def parent_id(self):

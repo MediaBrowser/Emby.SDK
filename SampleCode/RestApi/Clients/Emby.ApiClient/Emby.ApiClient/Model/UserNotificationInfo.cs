@@ -105,6 +105,12 @@ namespace Emby.ApiClient.Model
         public bool? IsSelfNotification { get; set; }
 
         /// <summary>
+        /// Gets or Sets GroupItems
+        /// </summary>
+        /// <value>The GroupItems.</value>
+        public bool? GroupItems { get; set; }
+
+        /// <summary>
         /// This is for webhooks since this will cause xml serialization to fail
         /// </summary>
         /// <value>The Options.</value>
@@ -131,6 +137,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  EventIds: ").Append(EventIds).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  IsSelfNotification: ").Append(IsSelfNotification).Append("\n");
+            sb.Append("  GroupItems: ").Append(GroupItems).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -227,6 +234,11 @@ namespace Emby.ApiClient.Model
                     this.IsSelfNotification.Equals(input.IsSelfNotification))
                 ) && 
                 (
+                    this.GroupItems == input.GroupItems ||
+                    (this.GroupItems != null &&
+                    this.GroupItems.Equals(input.GroupItems))
+                ) && 
+                (
                     this.Options == input.Options ||
                     this.Options != null &&
                     input.Options != null &&
@@ -269,6 +281,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 if (this.IsSelfNotification != null)
                     hashCode = hashCode * 59 + this.IsSelfNotification.GetHashCode();
+                if (this.GroupItems != null)
+                    hashCode = hashCode * 59 + this.GroupItems.GetHashCode();
                 if (this.Options != null)
                     hashCode = hashCode * 59 + this.Options.GetHashCode();
                 return hashCode;

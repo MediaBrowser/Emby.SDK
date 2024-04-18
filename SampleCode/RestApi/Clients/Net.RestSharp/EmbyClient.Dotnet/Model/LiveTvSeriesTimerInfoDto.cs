@@ -28,6 +28,7 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="recordAnyTime">A value indicating whether \\[record any time\\]..</param>
         /// <param name="skipEpisodesInLibrary">skipEpisodesInLibrary.</param>
+        /// <param name="matchExistingItemsWithAnyLibrary">matchExistingItemsWithAnyLibrary.</param>
         /// <param name="recordAnyChannel">A value indicating whether \\[record any channel\\]..</param>
         /// <param name="keepUpTo">keepUpTo.</param>
         /// <param name="maxRecordingSeconds">maxRecordingSeconds.</param>
@@ -63,10 +64,11 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="parentBackdropImageTags">The parent backdrop image tags..</param>
         /// <param name="isPostPaddingRequired">A value indicating whether this instance is post padding required..</param>
         /// <param name="keepUntil">keepUntil.</param>
-        public LiveTvSeriesTimerInfoDto(bool? recordAnyTime = default(bool?), bool? skipEpisodesInLibrary = default(bool?), bool? recordAnyChannel = default(bool?), int? keepUpTo = default(int?), int? maxRecordingSeconds = default(int?), bool? recordNewOnly = default(bool?), List<string> channelIds = default(List<string>), List<DayOfWeek> days = default(List<DayOfWeek>), Dictionary<string, string> imageTags = default(Dictionary<string, string>), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), string parentPrimaryImageItemId = default(string), string parentPrimaryImageTag = default(string), string seriesId = default(string), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType), string id = default(string), string type = default(string), string serverId = default(string), string channelId = default(string), string channelName = default(string), string channelNumber = default(string), string channelPrimaryImageTag = default(string), string programId = default(string), string name = default(string), string overview = default(string), string parentFolderId = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), bool? isPostPaddingRequired = default(bool?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil))
+        public LiveTvSeriesTimerInfoDto(bool? recordAnyTime = default(bool?), bool? skipEpisodesInLibrary = default(bool?), bool? matchExistingItemsWithAnyLibrary = default(bool?), bool? recordAnyChannel = default(bool?), int? keepUpTo = default(int?), int? maxRecordingSeconds = default(int?), bool? recordNewOnly = default(bool?), List<string> channelIds = default(List<string>), List<DayOfWeek> days = default(List<DayOfWeek>), Dictionary<string, string> imageTags = default(Dictionary<string, string>), string parentThumbItemId = default(string), string parentThumbImageTag = default(string), string parentPrimaryImageItemId = default(string), string parentPrimaryImageTag = default(string), string seriesId = default(string), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType), string id = default(string), string type = default(string), string serverId = default(string), string channelId = default(string), string channelName = default(string), string channelNumber = default(string), string channelPrimaryImageTag = default(string), string programId = default(string), string name = default(string), string overview = default(string), string parentFolderId = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), string parentBackdropItemId = default(string), List<string> parentBackdropImageTags = default(List<string>), bool? isPostPaddingRequired = default(bool?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil))
         {
             this.RecordAnyTime = recordAnyTime;
             this.SkipEpisodesInLibrary = skipEpisodesInLibrary;
+            this.MatchExistingItemsWithAnyLibrary = matchExistingItemsWithAnyLibrary;
             this.RecordAnyChannel = recordAnyChannel;
             this.KeepUpTo = keepUpTo;
             this.MaxRecordingSeconds = maxRecordingSeconds;
@@ -116,6 +118,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="SkipEpisodesInLibrary", EmitDefaultValue=false)]
         public bool? SkipEpisodesInLibrary { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MatchExistingItemsWithAnyLibrary
+        /// </summary>
+        [DataMember(Name="MatchExistingItemsWithAnyLibrary", EmitDefaultValue=false)]
+        public bool? MatchExistingItemsWithAnyLibrary { get; set; }
 
         /// <summary>
         /// A value indicating whether \\[record any channel\\].
@@ -361,6 +369,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class LiveTvSeriesTimerInfoDto {\n");
             sb.Append("  RecordAnyTime: ").Append(RecordAnyTime).Append("\n");
             sb.Append("  SkipEpisodesInLibrary: ").Append(SkipEpisodesInLibrary).Append("\n");
+            sb.Append("  MatchExistingItemsWithAnyLibrary: ").Append(MatchExistingItemsWithAnyLibrary).Append("\n");
             sb.Append("  RecordAnyChannel: ").Append(RecordAnyChannel).Append("\n");
             sb.Append("  KeepUpTo: ").Append(KeepUpTo).Append("\n");
             sb.Append("  MaxRecordingSeconds: ").Append(MaxRecordingSeconds).Append("\n");
@@ -439,6 +448,11 @@ namespace EmbyClient.Dotnet.Model
                     this.SkipEpisodesInLibrary == input.SkipEpisodesInLibrary ||
                     (this.SkipEpisodesInLibrary != null &&
                     this.SkipEpisodesInLibrary.Equals(input.SkipEpisodesInLibrary))
+                ) && 
+                (
+                    this.MatchExistingItemsWithAnyLibrary == input.MatchExistingItemsWithAnyLibrary ||
+                    (this.MatchExistingItemsWithAnyLibrary != null &&
+                    this.MatchExistingItemsWithAnyLibrary.Equals(input.MatchExistingItemsWithAnyLibrary))
                 ) && 
                 (
                     this.RecordAnyChannel == input.RecordAnyChannel ||
@@ -635,6 +649,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.RecordAnyTime.GetHashCode();
                 if (this.SkipEpisodesInLibrary != null)
                     hashCode = hashCode * 59 + this.SkipEpisodesInLibrary.GetHashCode();
+                if (this.MatchExistingItemsWithAnyLibrary != null)
+                    hashCode = hashCode * 59 + this.MatchExistingItemsWithAnyLibrary.GetHashCode();
                 if (this.RecordAnyChannel != null)
                     hashCode = hashCode * 59 + this.RecordAnyChannel.GetHashCode();
                 if (this.KeepUpTo != null)

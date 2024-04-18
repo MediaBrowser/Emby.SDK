@@ -349,6 +349,32 @@ public NotificationInfo Configuration { get; set; }</code></pre>
   </table>
   
   
+  <a id="Emby_Notifications_InternalNotificationRequest_OriginalItem_" data-uid="Emby.Notifications.InternalNotificationRequest.OriginalItem*"></a>
+  <h4 id="Emby_Notifications_InternalNotificationRequest_OriginalItem" data-uid="Emby.Notifications.InternalNotificationRequest.OriginalItem">OriginalItem</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public BaseItem OriginalItem { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Emby_Notifications_InternalNotificationRequest_PackageVersionInfo_" data-uid="Emby.Notifications.InternalNotificationRequest.PackageVersionInfo*"></a>
   <h4 id="Emby_Notifications_InternalNotificationRequest_PackageVersionInfo" data-uid="Emby.Notifications.InternalNotificationRequest.PackageVersionInfo">PackageVersionInfo</h4>
   <div class="markdown level1 summary"></div>
@@ -670,6 +696,92 @@ public NotificationInfo Configuration { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Emby.Notifications.NotificationUserDto.html">NotificationUserDto</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Emby_Notifications_InternalNotificationRequest_GetImageInfo_" data-uid="Emby.Notifications.InternalNotificationRequest.GetImageInfo*"></a>
+  <h4 id="Emby_Notifications_InternalNotificationRequest_GetImageInfo_MediaBrowser_Model_Entities_ImageType_" data-uid="Emby.Notifications.InternalNotificationRequest.GetImageInfo(MediaBrowser.Model.Entities.ImageType)">GetImageInfo(ImageType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ApiImageInfo GetImageInfo(ImageType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.ApiImageInfo.html">ApiImageInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Emby_Notifications_InternalNotificationRequest_GetSeriesImageInfo_" data-uid="Emby.Notifications.InternalNotificationRequest.GetSeriesImageInfo*"></a>
+  <h4 id="Emby_Notifications_InternalNotificationRequest_GetSeriesImageInfo_MediaBrowser_Model_Entities_ImageType_" data-uid="Emby.Notifications.InternalNotificationRequest.GetSeriesImageInfo(MediaBrowser.Model.Entities.ImageType)">GetSeriesImageInfo(ImageType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ApiImageInfo GetSeriesImageInfo(ImageType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.ApiImageInfo.html">ApiImageInfo</a></td>
         <td></td>
       </tr>
     </tbody>

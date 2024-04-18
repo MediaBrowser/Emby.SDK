@@ -24,6 +24,7 @@ class LiveTvSeriesTimerInfoDto(object):
     swagger_types = {
         'record_any_time': 'bool',
         'skip_episodes_in_library': 'bool',
+        'match_existing_items_with_any_library': 'bool',
         'record_any_channel': 'bool',
         'keep_up_to': 'int',
         'max_recording_seconds': 'int',
@@ -64,6 +65,7 @@ class LiveTvSeriesTimerInfoDto(object):
     attribute_map = {
         'record_any_time': 'RecordAnyTime',
         'skip_episodes_in_library': 'SkipEpisodesInLibrary',
+        'match_existing_items_with_any_library': 'MatchExistingItemsWithAnyLibrary',
         'record_any_channel': 'RecordAnyChannel',
         'keep_up_to': 'KeepUpTo',
         'max_recording_seconds': 'MaxRecordingSeconds',
@@ -101,10 +103,11 @@ class LiveTvSeriesTimerInfoDto(object):
         'keep_until': 'KeepUntil'
     }
 
-    def __init__(self, record_any_time=None, skip_episodes_in_library=None, record_any_channel=None, keep_up_to=None, max_recording_seconds=None, record_new_only=None, channel_ids=None, days=None, image_tags=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, parent_primary_image_item_id=None, parent_primary_image_tag=None, series_id=None, keywords=None, timer_type=None, id=None, type=None, server_id=None, channel_id=None, channel_name=None, channel_number=None, channel_primary_image_tag=None, program_id=None, name=None, overview=None, parent_folder_id=None, start_date=None, end_date=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, is_post_padding_required=None, keep_until=None):  # noqa: E501
+    def __init__(self, record_any_time=None, skip_episodes_in_library=None, match_existing_items_with_any_library=None, record_any_channel=None, keep_up_to=None, max_recording_seconds=None, record_new_only=None, channel_ids=None, days=None, image_tags=None, parent_thumb_item_id=None, parent_thumb_image_tag=None, parent_primary_image_item_id=None, parent_primary_image_tag=None, series_id=None, keywords=None, timer_type=None, id=None, type=None, server_id=None, channel_id=None, channel_name=None, channel_number=None, channel_primary_image_tag=None, program_id=None, name=None, overview=None, parent_folder_id=None, start_date=None, end_date=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, parent_backdrop_item_id=None, parent_backdrop_image_tags=None, is_post_padding_required=None, keep_until=None):  # noqa: E501
         """LiveTvSeriesTimerInfoDto - a model defined in Swagger"""  # noqa: E501
         self._record_any_time = None
         self._skip_episodes_in_library = None
+        self._match_existing_items_with_any_library = None
         self._record_any_channel = None
         self._keep_up_to = None
         self._max_recording_seconds = None
@@ -145,6 +148,8 @@ class LiveTvSeriesTimerInfoDto(object):
             self.record_any_time = record_any_time
         if skip_episodes_in_library is not None:
             self.skip_episodes_in_library = skip_episodes_in_library
+        if match_existing_items_with_any_library is not None:
+            self.match_existing_items_with_any_library = match_existing_items_with_any_library
         if record_any_channel is not None:
             self.record_any_channel = record_any_channel
         if keep_up_to is not None:
@@ -259,6 +264,27 @@ class LiveTvSeriesTimerInfoDto(object):
         """
 
         self._skip_episodes_in_library = skip_episodes_in_library
+
+    @property
+    def match_existing_items_with_any_library(self):
+        """Gets the match_existing_items_with_any_library of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+
+
+        :return: The match_existing_items_with_any_library of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._match_existing_items_with_any_library
+
+    @match_existing_items_with_any_library.setter
+    def match_existing_items_with_any_library(self, match_existing_items_with_any_library):
+        """Sets the match_existing_items_with_any_library of this LiveTvSeriesTimerInfoDto.
+
+
+        :param match_existing_items_with_any_library: The match_existing_items_with_any_library of this LiveTvSeriesTimerInfoDto.  # noqa: E501
+        :type: bool
+        """
+
+        self._match_existing_items_with_any_library = match_existing_items_with_any_library
 
     @property
     def record_any_channel(self):

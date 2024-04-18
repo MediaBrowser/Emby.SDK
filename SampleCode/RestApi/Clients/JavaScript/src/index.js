@@ -427,7 +427,7 @@ import WebAppServiceApi from './EmbyClient.JavaScript/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export {
     /**

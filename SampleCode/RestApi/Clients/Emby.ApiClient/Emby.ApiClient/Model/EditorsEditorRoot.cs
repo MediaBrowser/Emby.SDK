@@ -99,6 +99,12 @@ namespace Emby.ApiClient.Model
         public string Description { get; set; }
 
         /// <summary>
+        /// Gets or Sets FeatureRequiresPremiere
+        /// </summary>
+        /// <value>The FeatureRequiresPremiere.</value>
+        public bool? FeatureRequiresPremiere { get; set; }
+
+        /// <summary>
         /// Gets or Sets ParentId
         /// </summary>
         /// <value>The ParentId.</value>
@@ -124,6 +130,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  IsAdvanced: ").Append(IsAdvanced).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  FeatureRequiresPremiere: ").Append(FeatureRequiresPremiere).Append("\n");
             sb.Append("  ParentId: ").Append(ParentId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -214,6 +221,11 @@ namespace Emby.ApiClient.Model
                     this.Description.Equals(input.Description))
                 ) && 
                 (
+                    this.FeatureRequiresPremiere == input.FeatureRequiresPremiere ||
+                    (this.FeatureRequiresPremiere != null &&
+                    this.FeatureRequiresPremiere.Equals(input.FeatureRequiresPremiere))
+                ) && 
+                (
                     this.ParentId == input.ParentId ||
                     (this.ParentId != null &&
                     this.ParentId.Equals(input.ParentId))
@@ -253,6 +265,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.FeatureRequiresPremiere != null)
+                    hashCode = hashCode * 59 + this.FeatureRequiresPremiere.GetHashCode();
                 if (this.ParentId != null)
                     hashCode = hashCode * 59 + this.ParentId.GetHashCode();
                 return hashCode;

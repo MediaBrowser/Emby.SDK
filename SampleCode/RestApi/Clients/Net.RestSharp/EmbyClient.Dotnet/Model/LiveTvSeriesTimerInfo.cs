@@ -40,6 +40,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="keepUpTo">keepUpTo.</param>
         /// <param name="keepUntil">keepUntil.</param>
         /// <param name="skipEpisodesInLibrary">skipEpisodesInLibrary.</param>
+        /// <param name="matchExistingItemsWithAnyLibrary">matchExistingItemsWithAnyLibrary.</param>
         /// <param name="recordNewOnly">A value indicating whether \\[record new only\\]..</param>
         /// <param name="days">The days..</param>
         /// <param name="priority">The priority..</param>
@@ -52,7 +53,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="maxRecordingSeconds">maxRecordingSeconds.</param>
         /// <param name="keywords">keywords.</param>
         /// <param name="timerType">timerType.</param>
-        public LiveTvSeriesTimerInfo(string id = default(string), string channelId = default(string), List<string> channelIds = default(List<string>), long? parentFolderId = default(long?), string programId = default(string), string name = default(string), string serviceName = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), bool? recordAnyTime = default(bool?), int? keepUpTo = default(int?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil), bool? skipEpisodesInLibrary = default(bool?), bool? recordNewOnly = default(bool?), List<DayOfWeek> days = default(List<DayOfWeek>), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), bool? isPostPaddingRequired = default(bool?), string seriesId = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? maxRecordingSeconds = default(int?), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType))
+        public LiveTvSeriesTimerInfo(string id = default(string), string channelId = default(string), List<string> channelIds = default(List<string>), long? parentFolderId = default(long?), string programId = default(string), string name = default(string), string serviceName = default(string), string overview = default(string), DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), bool? recordAnyTime = default(bool?), int? keepUpTo = default(int?), LiveTvKeepUntil keepUntil = default(LiveTvKeepUntil), bool? skipEpisodesInLibrary = default(bool?), bool? matchExistingItemsWithAnyLibrary = default(bool?), bool? recordNewOnly = default(bool?), List<DayOfWeek> days = default(List<DayOfWeek>), int? priority = default(int?), int? prePaddingSeconds = default(int?), int? postPaddingSeconds = default(int?), bool? isPrePaddingRequired = default(bool?), bool? isPostPaddingRequired = default(bool?), string seriesId = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? maxRecordingSeconds = default(int?), List<LiveTvKeywordInfo> keywords = default(List<LiveTvKeywordInfo>), LiveTvTimerType timerType = default(LiveTvTimerType))
         {
             this.Id = id;
             this.ChannelId = channelId;
@@ -68,6 +69,7 @@ namespace EmbyClient.Dotnet.Model
             this.KeepUpTo = keepUpTo;
             this.KeepUntil = keepUntil;
             this.SkipEpisodesInLibrary = skipEpisodesInLibrary;
+            this.MatchExistingItemsWithAnyLibrary = matchExistingItemsWithAnyLibrary;
             this.RecordNewOnly = recordNewOnly;
             this.Days = days;
             this.Priority = priority;
@@ -175,6 +177,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? SkipEpisodesInLibrary { get; set; }
 
         /// <summary>
+        /// Gets or Sets MatchExistingItemsWithAnyLibrary
+        /// </summary>
+        [DataMember(Name="MatchExistingItemsWithAnyLibrary", EmitDefaultValue=false)]
+        public bool? MatchExistingItemsWithAnyLibrary { get; set; }
+
+        /// <summary>
         /// A value indicating whether \\[record new only\\].
         /// </summary>
         /// <value>A value indicating whether \\[record new only\\].</value>
@@ -276,6 +284,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  KeepUpTo: ").Append(KeepUpTo).Append("\n");
             sb.Append("  KeepUntil: ").Append(KeepUntil).Append("\n");
             sb.Append("  SkipEpisodesInLibrary: ").Append(SkipEpisodesInLibrary).Append("\n");
+            sb.Append("  MatchExistingItemsWithAnyLibrary: ").Append(MatchExistingItemsWithAnyLibrary).Append("\n");
             sb.Append("  RecordNewOnly: ").Append(RecordNewOnly).Append("\n");
             sb.Append("  Days: ").Append(Days).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
@@ -394,6 +403,11 @@ namespace EmbyClient.Dotnet.Model
                     this.SkipEpisodesInLibrary.Equals(input.SkipEpisodesInLibrary))
                 ) && 
                 (
+                    this.MatchExistingItemsWithAnyLibrary == input.MatchExistingItemsWithAnyLibrary ||
+                    (this.MatchExistingItemsWithAnyLibrary != null &&
+                    this.MatchExistingItemsWithAnyLibrary.Equals(input.MatchExistingItemsWithAnyLibrary))
+                ) && 
+                (
                     this.RecordNewOnly == input.RecordNewOnly ||
                     (this.RecordNewOnly != null &&
                     this.RecordNewOnly.Equals(input.RecordNewOnly))
@@ -494,6 +508,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.KeepUntil.GetHashCode();
                 if (this.SkipEpisodesInLibrary != null)
                     hashCode = hashCode * 59 + this.SkipEpisodesInLibrary.GetHashCode();
+                if (this.MatchExistingItemsWithAnyLibrary != null)
+                    hashCode = hashCode * 59 + this.MatchExistingItemsWithAnyLibrary.GetHashCode();
                 if (this.RecordNewOnly != null)
                     hashCode = hashCode * 59 + this.RecordNewOnly.GetHashCode();
                 if (this.Days != null)

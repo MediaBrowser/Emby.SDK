@@ -36,6 +36,7 @@ class LiveTvSeriesTimerInfo(object):
         'keep_up_to': 'int',
         'keep_until': 'LiveTvKeepUntil',
         'skip_episodes_in_library': 'bool',
+        'match_existing_items_with_any_library': 'bool',
         'record_new_only': 'bool',
         'days': 'list[DayOfWeek]',
         'priority': 'int',
@@ -65,6 +66,7 @@ class LiveTvSeriesTimerInfo(object):
         'keep_up_to': 'KeepUpTo',
         'keep_until': 'KeepUntil',
         'skip_episodes_in_library': 'SkipEpisodesInLibrary',
+        'match_existing_items_with_any_library': 'MatchExistingItemsWithAnyLibrary',
         'record_new_only': 'RecordNewOnly',
         'days': 'Days',
         'priority': 'Priority',
@@ -79,7 +81,7 @@ class LiveTvSeriesTimerInfo(object):
         'timer_type': 'TimerType'
     }
 
-    def __init__(self, id=None, channel_id=None, channel_ids=None, parent_folder_id=None, program_id=None, name=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None):  # noqa: E501
+    def __init__(self, id=None, channel_id=None, channel_ids=None, parent_folder_id=None, program_id=None, name=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, match_existing_items_with_any_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None):  # noqa: E501
         """LiveTvSeriesTimerInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._channel_id = None
@@ -95,6 +97,7 @@ class LiveTvSeriesTimerInfo(object):
         self._keep_up_to = None
         self._keep_until = None
         self._skip_episodes_in_library = None
+        self._match_existing_items_with_any_library = None
         self._record_new_only = None
         self._days = None
         self._priority = None
@@ -136,6 +139,8 @@ class LiveTvSeriesTimerInfo(object):
             self.keep_until = keep_until
         if skip_episodes_in_library is not None:
             self.skip_episodes_in_library = skip_episodes_in_library
+        if match_existing_items_with_any_library is not None:
+            self.match_existing_items_with_any_library = match_existing_items_with_any_library
         if record_new_only is not None:
             self.record_new_only = record_new_only
         if days is not None:
@@ -470,6 +475,27 @@ class LiveTvSeriesTimerInfo(object):
         """
 
         self._skip_episodes_in_library = skip_episodes_in_library
+
+    @property
+    def match_existing_items_with_any_library(self):
+        """Gets the match_existing_items_with_any_library of this LiveTvSeriesTimerInfo.  # noqa: E501
+
+
+        :return: The match_existing_items_with_any_library of this LiveTvSeriesTimerInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._match_existing_items_with_any_library
+
+    @match_existing_items_with_any_library.setter
+    def match_existing_items_with_any_library(self, match_existing_items_with_any_library):
+        """Sets the match_existing_items_with_any_library of this LiveTvSeriesTimerInfo.
+
+
+        :param match_existing_items_with_any_library: The match_existing_items_with_any_library of this LiveTvSeriesTimerInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._match_existing_items_with_any_library = match_existing_items_with_any_library
 
     @property
     def record_new_only(self):

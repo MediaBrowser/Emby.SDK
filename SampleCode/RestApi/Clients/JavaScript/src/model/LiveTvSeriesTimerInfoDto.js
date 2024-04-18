@@ -18,7 +18,7 @@ import LiveTvTimerType from './LiveTvTimerType';
 /**
 * The LiveTvSeriesTimerInfoDto model module.
 * @module model/LiveTvSeriesTimerInfoDto
-* @version 4.8.3.0
+* @version 4.8.4.0
 */
 export default class LiveTvSeriesTimerInfoDto {
     /**
@@ -51,6 +51,9 @@ export default class LiveTvSeriesTimerInfoDto {
             }
             if (data.hasOwnProperty('SkipEpisodesInLibrary')) {
                 obj['SkipEpisodesInLibrary'] = ApiClient.convertToType(data['SkipEpisodesInLibrary'], 'Boolean');
+            }
+            if (data.hasOwnProperty('MatchExistingItemsWithAnyLibrary')) {
+                obj['MatchExistingItemsWithAnyLibrary'] = ApiClient.convertToType(data['MatchExistingItemsWithAnyLibrary'], 'Boolean');
             }
             if (data.hasOwnProperty('RecordAnyChannel')) {
                 obj['RecordAnyChannel'] = ApiClient.convertToType(data['RecordAnyChannel'], 'Boolean');
@@ -170,6 +173,10 @@ export default class LiveTvSeriesTimerInfoDto {
     * @member {Boolean} SkipEpisodesInLibrary
     */
     'SkipEpisodesInLibrary' = undefined;
+    /**
+    * @member {Boolean} MatchExistingItemsWithAnyLibrary
+    */
+    'MatchExistingItemsWithAnyLibrary' = undefined;
     /**
     * A value indicating whether \\[record any channel\\].
     * @member {Boolean} RecordAnyChannel

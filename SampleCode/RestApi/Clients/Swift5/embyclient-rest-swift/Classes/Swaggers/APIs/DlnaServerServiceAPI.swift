@@ -333,6 +333,240 @@ open class DlnaServerServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets dlna connection manager xml
+
+     - parameter uuId: (path) Server UuId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headDlnaByUuidConnectionmanagerConnectionmanager(uuId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headDlnaByUuidConnectionmanagerConnectionmanagerWithRequestBuilder(uuId: uuId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets dlna connection manager xml
+     - HEAD /Dlna/{UuId}/connectionmanager/connectionmanager
+
+     - parameter uuId: (path) Server UuId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headDlnaByUuidConnectionmanagerConnectionmanagerWithRequestBuilder(uuId: String) -> RequestBuilder<Void> {
+        var path = "/Dlna/{UuId}/connectionmanager/connectionmanager"
+        let uuIdPreEscape = "\(uuId)"
+        let uuIdPostEscape = uuIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UuId}", with: uuIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets dlna connection manager xml
+
+     - parameter uuId: (path) Server UuId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headDlnaByUuidConnectionmanagerConnectionmanagerXml(uuId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headDlnaByUuidConnectionmanagerConnectionmanagerXmlWithRequestBuilder(uuId: uuId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets dlna connection manager xml
+     - HEAD /Dlna/{UuId}/connectionmanager/connectionmanager.xml
+
+     - parameter uuId: (path) Server UuId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headDlnaByUuidConnectionmanagerConnectionmanagerXmlWithRequestBuilder(uuId: String) -> RequestBuilder<Void> {
+        var path = "/Dlna/{UuId}/connectionmanager/connectionmanager.xml"
+        let uuIdPreEscape = "\(uuId)"
+        let uuIdPostEscape = uuIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UuId}", with: uuIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets dlna content directory xml
+
+     - parameter uuId: (path) Server UuId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headDlnaByUuidContentdirectoryContentdirectory(uuId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headDlnaByUuidContentdirectoryContentdirectoryWithRequestBuilder(uuId: uuId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets dlna content directory xml
+     - HEAD /Dlna/{UuId}/contentdirectory/contentdirectory
+
+     - parameter uuId: (path) Server UuId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headDlnaByUuidContentdirectoryContentdirectoryWithRequestBuilder(uuId: String) -> RequestBuilder<Void> {
+        var path = "/Dlna/{UuId}/contentdirectory/contentdirectory"
+        let uuIdPreEscape = "\(uuId)"
+        let uuIdPostEscape = uuIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UuId}", with: uuIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets dlna content directory xml
+
+     - parameter uuId: (path) Server UuId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headDlnaByUuidContentdirectoryContentdirectoryXml(uuId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headDlnaByUuidContentdirectoryContentdirectoryXmlWithRequestBuilder(uuId: uuId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets dlna content directory xml
+     - HEAD /Dlna/{UuId}/contentdirectory/contentdirectory.xml
+
+     - parameter uuId: (path) Server UuId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headDlnaByUuidContentdirectoryContentdirectoryXmlWithRequestBuilder(uuId: String) -> RequestBuilder<Void> {
+        var path = "/Dlna/{UuId}/contentdirectory/contentdirectory.xml"
+        let uuIdPreEscape = "\(uuId)"
+        let uuIdPostEscape = uuIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UuId}", with: uuIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets dlna server info
+
+     - parameter uuId: (path) Server UuId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headDlnaByUuidDescription(uuId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headDlnaByUuidDescriptionWithRequestBuilder(uuId: uuId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets dlna server info
+     - HEAD /Dlna/{UuId}/description
+
+     - parameter uuId: (path) Server UuId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headDlnaByUuidDescriptionWithRequestBuilder(uuId: String) -> RequestBuilder<Void> {
+        var path = "/Dlna/{UuId}/description"
+        let uuIdPreEscape = "\(uuId)"
+        let uuIdPostEscape = uuIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UuId}", with: uuIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+     Gets dlna server info
+
+     - parameter uuId: (path) Server UuId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func headDlnaByUuidDescriptionXml(uuId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headDlnaByUuidDescriptionXmlWithRequestBuilder(uuId: uuId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Gets dlna server info
+     - HEAD /Dlna/{UuId}/description.xml
+
+     - parameter uuId: (path) Server UuId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headDlnaByUuidDescriptionXmlWithRequestBuilder(uuId: String) -> RequestBuilder<Void> {
+        var path = "/Dlna/{UuId}/description.xml"
+        let uuIdPreEscape = "\(uuId)"
+        let uuIdPostEscape = uuIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UuId}", with: uuIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swiftAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swiftAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Processes a control request
 
      - parameter body: (body) Binary stream 

@@ -19,9 +19,10 @@ public struct EditorsEditorBase: Codable {
     public var isAdvanced: Bool?
     public var displayName: String?
     public var _description: String?
+    public var featureRequiresPremiere: Bool?
     public var parentId: String?
 
-    public init(editorType: CommonEditorTypes? = nil, name: String? = nil, _id: String? = nil, allowEmpty: Bool? = nil, isReadOnly: Bool? = nil, isAdvanced: Bool? = nil, displayName: String? = nil, _description: String? = nil, parentId: String? = nil) {
+    public init(editorType: CommonEditorTypes? = nil, name: String? = nil, _id: String? = nil, allowEmpty: Bool? = nil, isReadOnly: Bool? = nil, isAdvanced: Bool? = nil, displayName: String? = nil, _description: String? = nil, featureRequiresPremiere: Bool? = nil, parentId: String? = nil) {
         self.editorType = editorType
         self.name = name
         self._id = _id
@@ -30,6 +31,7 @@ public struct EditorsEditorBase: Codable {
         self.isAdvanced = isAdvanced
         self.displayName = displayName
         self._description = _description
+        self.featureRequiresPremiere = featureRequiresPremiere
         self.parentId = parentId
     }
 
@@ -42,6 +44,7 @@ public struct EditorsEditorBase: Codable {
         case isAdvanced = "IsAdvanced"
         case displayName = "DisplayName"
         case _description = "Description"
+        case featureRequiresPremiere = "FeatureRequiresPremiere"
         case parentId = "ParentId"
     }
 

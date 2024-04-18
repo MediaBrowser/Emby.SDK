@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.3.0
+  version: 4.8.4.0
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -38032,6 +38032,31 @@ paths:
         "500":
           description: Server error.
       x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna server info
+      description: No authentication required
+      operationId: headDlnaByUuidDescriptionXml
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/description:
     summary: Gets dlna server info
     get:
@@ -38040,6 +38065,31 @@ paths:
       summary: Gets dlna server info
       description: No authentication required
       operationId: getDlnaByUuidDescription
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna server info
+      description: No authentication required
+      operationId: headDlnaByUuidDescription
       parameters:
       - name: UuId
         in: path
@@ -50900,6 +50950,31 @@ paths:
         "500":
           description: Server error.
       x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna content directory xml
+      description: No authentication required
+      operationId: headDlnaByUuidContentdirectoryContentdirectoryXml
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/contentdirectory/contentdirectory:
     summary: Gets dlna content directory xml
     get:
@@ -50908,6 +50983,31 @@ paths:
       summary: Gets dlna content directory xml
       description: No authentication required
       operationId: getDlnaByUuidContentdirectoryContentdirectory
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna content directory xml
+      description: No authentication required
+      operationId: headDlnaByUuidContentdirectoryContentdirectory
       parameters:
       - name: UuId
         in: path
@@ -50954,6 +51054,31 @@ paths:
         "500":
           description: Server error.
       x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna connection manager xml
+      description: No authentication required
+      operationId: headDlnaByUuidConnectionmanagerConnectionmanagerXml
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
   /Dlna/{UuId}/connectionmanager/connectionmanager:
     summary: Gets dlna connection manager xml
     get:
@@ -50962,6 +51087,31 @@ paths:
       summary: Gets dlna connection manager xml
       description: No authentication required
       operationId: getDlnaByUuidConnectionmanagerConnectionmanager
+      parameters:
+      - name: UuId
+        in: path
+        description: Server UuId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      x-RequiredAuthentication: No authentication required
+    head:
+      tags:
+      - DlnaServerService
+      summary: Gets dlna connection manager xml
+      description: No authentication required
+      operationId: headDlnaByUuidConnectionmanagerConnectionmanager
       parameters:
       - name: UuId
         in: path
@@ -54251,6 +54401,38 @@ paths:
       summary: Gets a sync job item file
       description: Requires authentication as user
       operationId: getSyncJobitemsByIdFile
+      parameters:
+      - name: Id
+        in: path
+        description: Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - SyncService
+      summary: Gets a sync job item file
+      description: Requires authentication as user
+      operationId: headSyncJobitemsByIdFile
       parameters:
       - name: Id
         in: path
@@ -68313,6 +68495,7 @@ components:
             Id: Id
             IsAdvanced: true
             IsReadOnly: true
+            FeatureRequiresPremiere: true
             Name: Name
           Name: Name
           PostbackActions:
@@ -68331,6 +68514,7 @@ components:
             Id: Id
             IsAdvanced: true
             IsReadOnly: true
+            FeatureRequiresPremiere: true
             Name: Name
           - ParentId: ParentId
             AllowEmpty: true
@@ -68340,11 +68524,13 @@ components:
             Id: Id
             IsAdvanced: true
             IsReadOnly: true
+            FeatureRequiresPremiere: true
             Name: Name
           DisplayName: DisplayName
           Id: Id
           IsAdvanced: true
           IsReadOnly: true
+          FeatureRequiresPremiere: true
         DefaultObject: {}
         Object: {}
       x-internal-ref-name: Emby.Web.GenericEdit.EditObjectContainer
@@ -68381,6 +68567,8 @@ components:
           type: string
         Description:
           type: string
+        FeatureRequiresPremiere:
+          type: boolean
         ParentId:
           type: string
       example:
@@ -68410,6 +68598,7 @@ components:
           Id: Id
           IsAdvanced: true
           IsReadOnly: true
+          FeatureRequiresPremiere: true
           Name: Name
         Name: Name
         PostbackActions:
@@ -68428,6 +68617,7 @@ components:
           Id: Id
           IsAdvanced: true
           IsReadOnly: true
+          FeatureRequiresPremiere: true
           Name: Name
         - ParentId: ParentId
           AllowEmpty: true
@@ -68437,11 +68627,13 @@ components:
           Id: Id
           IsAdvanced: true
           IsReadOnly: true
+          FeatureRequiresPremiere: true
           Name: Name
         DisplayName: DisplayName
         Id: Id
         IsAdvanced: true
         IsReadOnly: true
+        FeatureRequiresPremiere: true
       x-internal-ref-name: Emby.Web.GenericEdit.Editors.EditorRoot
     Conditions.PropertyCondition:
       type: object
@@ -68527,6 +68719,8 @@ components:
           type: string
         Description:
           type: string
+        FeatureRequiresPremiere:
+          type: boolean
         ParentId:
           type: string
       example:
@@ -68538,6 +68732,7 @@ components:
         Id: Id
         IsAdvanced: true
         IsReadOnly: true
+        FeatureRequiresPremiere: true
         Name: Name
       x-internal-ref-name: Emby.Web.GenericEdit.Editors.EditorButtonItem
     Common.EditorTypes:
@@ -68583,6 +68778,8 @@ components:
           type: string
         Description:
           type: string
+        FeatureRequiresPremiere:
+          type: boolean
         ParentId:
           type: string
       example:
@@ -68594,6 +68791,7 @@ components:
         Id: Id
         IsAdvanced: true
         IsReadOnly: true
+        FeatureRequiresPremiere: true
         Name: Name
       x-internal-ref-name: Emby.Web.GenericEdit.Editors.EditorBase
     MediaEncoding.CodecParameterContext:
@@ -73465,6 +73663,7 @@ components:
           IsPrePaddingRequired: true
           Priority: 1
           RecordAnyTime: true
+          MatchExistingItemsWithAnyLibrary: true
           Overview: Overview
           PostPaddingSeconds: 5
           ParentPrimaryImageItemId: ParentPrimaryImageItemId
@@ -73513,6 +73712,7 @@ components:
           IsPrePaddingRequired: true
           Priority: 1
           RecordAnyTime: true
+          MatchExistingItemsWithAnyLibrary: true
           Overview: Overview
           PostPaddingSeconds: 5
           ParentPrimaryImageItemId: ParentPrimaryImageItemId
@@ -73538,6 +73738,8 @@ components:
           type: boolean
           description: "A value indicating whether \\[record any time\\]."
         SkipEpisodesInLibrary:
+          type: boolean
+        MatchExistingItemsWithAnyLibrary:
           type: boolean
         RecordAnyChannel:
           type: boolean
@@ -73683,6 +73885,7 @@ components:
         IsPrePaddingRequired: true
         Priority: 1
         RecordAnyTime: true
+        MatchExistingItemsWithAnyLibrary: true
         Overview: Overview
         PostPaddingSeconds: 5
         ParentPrimaryImageItemId: ParentPrimaryImageItemId
@@ -73757,6 +73960,8 @@ components:
         KeepUntil:
           $ref: '#/components/schemas/LiveTv.KeepUntil'
         SkipEpisodesInLibrary:
+          type: boolean
+        MatchExistingItemsWithAnyLibrary:
           type: boolean
         RecordNewOnly:
           type: boolean
@@ -84360,6 +84565,8 @@ components:
           description: Notification intended for a specific user
         IsSelfNotification:
           type: boolean
+        GroupItems:
+          type: boolean
         Options:
           type: object
           additionalProperties:
@@ -84377,6 +84584,7 @@ components:
         SetupModuleUrl: SetupModuleUrl
         Enabled: true
         PluginId: PluginId
+        GroupItems: true
         IsSelfNotification: true
         DeviceIds:
         - DeviceIds

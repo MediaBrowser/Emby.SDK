@@ -146,6 +146,96 @@ public class DlnaServerServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Gets dlna connection manager xml
+     *
+     * No authentication required
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headDlnaByUuidConnectionmanagerConnectionmanagerTest() throws Exception {
+        String uuId = null;
+        api.headDlnaByUuidConnectionmanagerConnectionmanager(uuId);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets dlna connection manager xml
+     *
+     * No authentication required
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headDlnaByUuidConnectionmanagerConnectionmanagerXmlTest() throws Exception {
+        String uuId = null;
+        api.headDlnaByUuidConnectionmanagerConnectionmanagerXml(uuId);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets dlna content directory xml
+     *
+     * No authentication required
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headDlnaByUuidContentdirectoryContentdirectoryTest() throws Exception {
+        String uuId = null;
+        api.headDlnaByUuidContentdirectoryContentdirectory(uuId);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets dlna content directory xml
+     *
+     * No authentication required
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headDlnaByUuidContentdirectoryContentdirectoryXmlTest() throws Exception {
+        String uuId = null;
+        api.headDlnaByUuidContentdirectoryContentdirectoryXml(uuId);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets dlna server info
+     *
+     * No authentication required
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headDlnaByUuidDescriptionTest() throws Exception {
+        String uuId = null;
+        api.headDlnaByUuidDescription(uuId);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets dlna server info
+     *
+     * No authentication required
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headDlnaByUuidDescriptionXmlTest() throws Exception {
+        String uuId = null;
+        api.headDlnaByUuidDescriptionXml(uuId);
+
+        // TODO: test validations
+    }
+    /**
      * Processes a control request
      *
      * No authentication required
