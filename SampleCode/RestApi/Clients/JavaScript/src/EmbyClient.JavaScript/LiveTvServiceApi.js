@@ -38,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module EmbyClient.JavaScript/LiveTvServiceApi
-* @version 4.8.4.0
+* @version 4.8.5.0
 */
 export default class LiveTvServiceApi {
 

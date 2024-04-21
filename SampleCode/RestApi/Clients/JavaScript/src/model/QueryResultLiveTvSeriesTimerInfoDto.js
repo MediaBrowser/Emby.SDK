@@ -15,7 +15,7 @@ import LiveTvSeriesTimerInfoDto from './LiveTvSeriesTimerInfoDto';
 /**
 * The QueryResultLiveTvSeriesTimerInfoDto model module.
 * @module model/QueryResultLiveTvSeriesTimerInfoDto
-* @version 4.8.4.0
+* @version 4.8.5.0
 */
 export default class QueryResultLiveTvSeriesTimerInfoDto {
     /**

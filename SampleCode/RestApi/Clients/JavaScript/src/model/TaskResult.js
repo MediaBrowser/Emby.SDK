@@ -15,7 +15,7 @@ import TaskCompletionStatus from './TaskCompletionStatus';
 /**
 * The TaskResult model module.
 * @module model/TaskResult
-* @version 4.8.4.0
+* @version 4.8.5.0
 */
 export default class TaskResult {
     /**

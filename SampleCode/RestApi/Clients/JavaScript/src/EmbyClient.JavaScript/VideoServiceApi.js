@@ -15,7 +15,7 @@ import SubtitleDeliveryMethod from '../model/SubtitleDeliveryMethod';
 /**
 * VideoService service.
 * @module EmbyClient.JavaScript/VideoServiceApi
-* @version 4.8.4.0
+* @version 4.8.5.0
 */
 export default class VideoServiceApi {
 
