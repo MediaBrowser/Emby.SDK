@@ -1058,7 +1058,7 @@ open class ImageServiceAPI {
 
 
     /**
-     - GET /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}
+     - GET /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}
 
      - API Key:
        - type: apiKey api_key (QUERY)
@@ -1088,7 +1088,7 @@ open class ImageServiceAPI {
      - returns: RequestBuilder<Void> 
      */
     open class func getItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, index: Int, type: ImageType, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
-        var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+        var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}"
         let percentPlayedPreEscape = "\(percentPlayed)"
         let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{PercentPlayed}", with: percentPlayedPostEscape, options: .literal, range: nil)
@@ -2662,7 +2662,7 @@ open class ImageServiceAPI {
 
 
     /**
-     - HEAD /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}
+     - HEAD /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}
 
      - API Key:
        - type: apiKey api_key (QUERY)
@@ -2692,7 +2692,7 @@ open class ImageServiceAPI {
      - returns: RequestBuilder<Void> 
      */
     open class func headItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountWithRequestBuilder(percentPlayed: Int, unPlayedCount: Int, _id: String, maxWidth: Int, maxHeight: Int, tag: String, format: String, index: Int, type: ImageType, width: Int? = nil, height: Int? = nil, quality: Int? = nil, cropWhitespace: Bool? = nil, enableImageEnhancers: Bool? = nil, backgroundColor: String? = nil, foregroundLayer: String? = nil, autoOrient: Bool? = nil, keepAnimation: Bool? = nil) -> RequestBuilder<Void> {
-        var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+        var path = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}"
         let percentPlayedPreEscape = "\(percentPlayed)"
         let percentPlayedPostEscape = percentPlayedPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{PercentPlayed}", with: percentPlayedPostEscape, options: .literal, range: nil)

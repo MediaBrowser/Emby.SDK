@@ -15,7 +15,7 @@ import LibraryOptions from './LibraryOptions';
 /**
 * The VirtualFolderInfo model module.
 * @module model/VirtualFolderInfo
-* @version 4.9.0.14
+* @version 4.9.0.15
 */
 export default class VirtualFolderInfo {
     /**

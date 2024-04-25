@@ -1361,7 +1361,7 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             }
             
-            var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}", Method.Get);
+            var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}", Method.Get);
 
             if (percentPlayed != null)
             {
@@ -3571,7 +3571,7 @@ namespace Emby.ApiClient.Api
                 throw new ApiException("Missing required parameter 'type' when calling ImageServiceApi->HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount");
             }
             
-            var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}", Method.Head);
+            var request = new RestRequest("/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}", Method.Head);
 
             if (percentPlayed != null)
             {

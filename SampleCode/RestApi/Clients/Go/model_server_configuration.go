@@ -40,7 +40,7 @@ type ServerConfiguration struct {
 	// Words to be removed from strings to create a sort name
 	SortRemoveWords []string `json:"SortRemoveWords,omitempty"`
 	// The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.
-	LibraryMonitorDelay int32 `json:"LibraryMonitorDelay,omitempty"`
+	LibraryMonitorDelaySeconds int32 `json:"LibraryMonitorDelaySeconds,omitempty"`
 	// A value indicating whether \\[enable dashboard response caching\\]. Allows potential contributors without visual studio to modify production dashboard code and test changes.
 	EnableDashboardResponseCaching bool `json:"EnableDashboardResponseCaching,omitempty"`
 	// Allows the dashboard to be served from a custom path.

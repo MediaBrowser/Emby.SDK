@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.14
+  version: 4.9.0.15
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -18204,7 +18204,7 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
-  /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}:
+  /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}:
     get:
       tags:
       - ImageService
@@ -77005,7 +77005,7 @@ components:
           description: Words to be removed from strings to create a sort name
           items:
             type: string
-        LibraryMonitorDelay:
+        LibraryMonitorDelaySeconds:
           type: integer
           description: The delay in seconds that we will wait after a file system
             change to try and discover what has been added\/removed Some delay is
@@ -77160,13 +77160,13 @@ components:
         DashboardSourcePath: DashboardSourcePath
         LogFileRetentionDays: 4
         HttpsPortNumber: 5
+        LibraryMonitorDelaySeconds: 5
         CertificatePassword: CertificatePassword
         EnableOriginalTrackTitles: true
         RemoteClientBitrateLimit: 2
         TvChannelsRefreshed: true
         ImageExtractionTimeoutMs: 7
         EnableExternalContentInSuggestions: true
-        LibraryMonitorDelay: 5
         EnableCaseSensitiveItemIds: true
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true

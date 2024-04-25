@@ -1777,7 +1777,7 @@ func (a *ImageServiceApiService) GetItemsByIdImagesByTypeByIndexByTagByFormatByM
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}"
 	localVarPath = strings.Replace(localVarPath, "{"+"PercentPlayed"+"}", fmt.Sprintf("%v", percentPlayed), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"UnPlayedCount"+"}", fmt.Sprintf("%v", unPlayedCount), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)
@@ -4428,7 +4428,7 @@ func (a *ImageServiceApiService) HeadItemsByIdImagesByTypeByIndexByTagByFormatBy
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+	localVarPath := a.client.cfg.BasePath + "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}"
 	localVarPath = strings.Replace(localVarPath, "{"+"PercentPlayed"+"}", fmt.Sprintf("%v", percentPlayed), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"UnPlayedCount"+"}", fmt.Sprintf("%v", unPlayedCount), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"Id"+"}", fmt.Sprintf("%v", id), -1)

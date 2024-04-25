@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.9.0.14
+* @version 4.9.0.15
 */
 export default class ServerConfiguration {
     /**
@@ -100,8 +100,8 @@ export default class ServerConfiguration {
             if (data.hasOwnProperty('SortRemoveWords')) {
                 obj['SortRemoveWords'] = ApiClient.convertToType(data['SortRemoveWords'], ['String']);
             }
-            if (data.hasOwnProperty('LibraryMonitorDelay')) {
-                obj['LibraryMonitorDelay'] = ApiClient.convertToType(data['LibraryMonitorDelay'], 'Number');
+            if (data.hasOwnProperty('LibraryMonitorDelaySeconds')) {
+                obj['LibraryMonitorDelaySeconds'] = ApiClient.convertToType(data['LibraryMonitorDelaySeconds'], 'Number');
             }
             if (data.hasOwnProperty('EnableDashboardResponseCaching')) {
                 obj['EnableDashboardResponseCaching'] = ApiClient.convertToType(data['EnableDashboardResponseCaching'], 'Boolean');
@@ -326,9 +326,9 @@ export default class ServerConfiguration {
     'SortRemoveWords' = undefined;
     /**
     * The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.
-    * @member {Number} LibraryMonitorDelay
+    * @member {Number} LibraryMonitorDelaySeconds
     */
-    'LibraryMonitorDelay' = undefined;
+    'LibraryMonitorDelaySeconds' = undefined;
     /**
     * A value indicating whether \\[enable dashboard response caching\\]. Allows potential contributors without visual studio to modify production dashboard code and test changes.
     * @member {Boolean} EnableDashboardResponseCaching
