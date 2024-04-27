@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.15"
+    "version": "4.9.0.16"
   },
   "host": "emby.media",
   "basePath": "/emby",

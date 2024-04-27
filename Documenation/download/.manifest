@@ -10740,6 +10740,7 @@
   "MediaBrowser.Model.Dto.BaseItemDto.GameSystemId": "MediaBrowser.Model.Dto.BaseItemDto.yml",
   "MediaBrowser.Model.Dto.BaseItemDto.GenreItems": "MediaBrowser.Model.Dto.BaseItemDto.yml",
   "MediaBrowser.Model.Dto.BaseItemDto.Genres": "MediaBrowser.Model.Dto.BaseItemDto.yml",
+  "MediaBrowser.Model.Dto.BaseItemDto.GetStandaloneDisplayName": "MediaBrowser.Model.Dto.BaseItemDto.yml",
   "MediaBrowser.Model.Dto.BaseItemDto.Guid": "MediaBrowser.Model.Dto.BaseItemDto.yml",
   "MediaBrowser.Model.Dto.BaseItemDto.Height": "MediaBrowser.Model.Dto.BaseItemDto.yml",
   "MediaBrowser.Model.Dto.BaseItemDto.Id": "MediaBrowser.Model.Dto.BaseItemDto.yml",
