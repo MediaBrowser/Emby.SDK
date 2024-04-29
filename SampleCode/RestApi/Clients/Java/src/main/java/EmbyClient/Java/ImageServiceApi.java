@@ -2475,7 +2475,7 @@ public class ImageServiceApi {
         Object localVarPostBody = null;
         
         // create path and map variables
-        String localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+        String localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}"
             .replaceAll("\\{" + "PercentPlayed" + "\\}", apiClient.escapeString(percentPlayed.toString()))
             .replaceAll("\\{" + "UnPlayedCount" + "\\}", apiClient.escapeString(unPlayedCount.toString()))
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
@@ -6178,7 +6178,7 @@ public class ImageServiceApi {
         Object localVarPostBody = null;
         
         // create path and map variables
-        String localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}"
+        String localVarPath = "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}"
             .replaceAll("\\{" + "PercentPlayed" + "\\}", apiClient.escapeString(percentPlayed.toString()))
             .replaceAll("\\{" + "UnPlayedCount" + "\\}", apiClient.escapeString(unPlayedCount.toString()))
             .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))

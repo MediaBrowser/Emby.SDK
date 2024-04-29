@@ -40,7 +40,7 @@ class ServerConfiguration(object):
         'preferred_metadata_language': 'str',
         'metadata_country_code': 'str',
         'sort_remove_words': 'list[str]',
-        'library_monitor_delay': 'int',
+        'library_monitor_delay_seconds': 'int',
         'enable_dashboard_response_caching': 'bool',
         'dashboard_source_path': 'str',
         'image_saving_convention': 'ImageSavingConvention',
@@ -106,7 +106,7 @@ class ServerConfiguration(object):
         'preferred_metadata_language': 'PreferredMetadataLanguage',
         'metadata_country_code': 'MetadataCountryCode',
         'sort_remove_words': 'SortRemoveWords',
-        'library_monitor_delay': 'LibraryMonitorDelay',
+        'library_monitor_delay_seconds': 'LibraryMonitorDelaySeconds',
         'enable_dashboard_response_caching': 'EnableDashboardResponseCaching',
         'dashboard_source_path': 'DashboardSourcePath',
         'image_saving_convention': 'ImageSavingConvention',
@@ -153,7 +153,7 @@ class ServerConfiguration(object):
         'cache_path': 'CachePath'
     }
 
-    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded1=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares6=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, tv_channels_refreshed=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
+    def __init__(self, enable_u_pn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay_seconds=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded1=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, disable_async_io=None, migrated_to_user_item_shares6=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, tv_channels_refreshed=None, proxy_header_mode=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
         """ServerConfiguration - a model defined in Swagger"""  # noqa: E501
         self._enable_u_pn_p = None
         self._public_port = None
@@ -173,7 +173,7 @@ class ServerConfiguration(object):
         self._preferred_metadata_language = None
         self._metadata_country_code = None
         self._sort_remove_words = None
-        self._library_monitor_delay = None
+        self._library_monitor_delay_seconds = None
         self._enable_dashboard_response_caching = None
         self._dashboard_source_path = None
         self._image_saving_convention = None
@@ -255,8 +255,8 @@ class ServerConfiguration(object):
             self.metadata_country_code = metadata_country_code
         if sort_remove_words is not None:
             self.sort_remove_words = sort_remove_words
-        if library_monitor_delay is not None:
-            self.library_monitor_delay = library_monitor_delay
+        if library_monitor_delay_seconds is not None:
+            self.library_monitor_delay_seconds = library_monitor_delay_seconds
         if enable_dashboard_response_caching is not None:
             self.enable_dashboard_response_caching = enable_dashboard_response_caching
         if dashboard_source_path is not None:
@@ -751,27 +751,27 @@ class ServerConfiguration(object):
         self._sort_remove_words = sort_remove_words
 
     @property
-    def library_monitor_delay(self):
-        """Gets the library_monitor_delay of this ServerConfiguration.  # noqa: E501
+    def library_monitor_delay_seconds(self):
+        """Gets the library_monitor_delay_seconds of this ServerConfiguration.  # noqa: E501
 
         The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.  # noqa: E501
 
-        :return: The library_monitor_delay of this ServerConfiguration.  # noqa: E501
+        :return: The library_monitor_delay_seconds of this ServerConfiguration.  # noqa: E501
         :rtype: int
         """
-        return self._library_monitor_delay
+        return self._library_monitor_delay_seconds
 
-    @library_monitor_delay.setter
-    def library_monitor_delay(self, library_monitor_delay):
-        """Sets the library_monitor_delay of this ServerConfiguration.
+    @library_monitor_delay_seconds.setter
+    def library_monitor_delay_seconds(self, library_monitor_delay_seconds):
+        """Sets the library_monitor_delay_seconds of this ServerConfiguration.
 
         The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.  # noqa: E501
 
-        :param library_monitor_delay: The library_monitor_delay of this ServerConfiguration.  # noqa: E501
+        :param library_monitor_delay_seconds: The library_monitor_delay_seconds of this ServerConfiguration.  # noqa: E501
         :type: int
         """
 
-        self._library_monitor_delay = library_monitor_delay
+        self._library_monitor_delay_seconds = library_monitor_delay_seconds
 
     @property
     def enable_dashboard_response_caching(self):

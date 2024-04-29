@@ -44,7 +44,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="preferredMetadataLanguage">The preferred metadata language..</param>
         /// <param name="metadataCountryCode">The metadata country code..</param>
         /// <param name="sortRemoveWords">Words to be removed from strings to create a sort name.</param>
-        /// <param name="libraryMonitorDelay">The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files..</param>
+        /// <param name="libraryMonitorDelaySeconds">The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files..</param>
         /// <param name="enableDashboardResponseCaching">A value indicating whether \\[enable dashboard response caching\\]. Allows potential contributors without visual studio to modify production dashboard code and test changes..</param>
         /// <param name="dashboardSourcePath">Allows the dashboard to be served from a custom path..</param>
         /// <param name="imageSavingConvention">imageSavingConvention.</param>
@@ -89,7 +89,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="runAtStartup">A value indicating whether \\[run at startup\\]..</param>
         /// <param name="isStartupWizardCompleted">A value indicating whether this instance is first run..</param>
         /// <param name="cachePath">The cache path..</param>
-        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelay = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded1 = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares6 = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), bool? tvChannelsRefreshed = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
+        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelaySeconds = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded1 = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares6 = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), bool? tvChannelsRefreshed = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
         {
             this.EnableUPnP = enableUPnP;
             this.PublicPort = publicPort;
@@ -109,7 +109,7 @@ namespace EmbyClient.Dotnet.Model
             this.PreferredMetadataLanguage = preferredMetadataLanguage;
             this.MetadataCountryCode = metadataCountryCode;
             this.SortRemoveWords = sortRemoveWords;
-            this.LibraryMonitorDelay = libraryMonitorDelay;
+            this.LibraryMonitorDelaySeconds = libraryMonitorDelaySeconds;
             this.EnableDashboardResponseCaching = enableDashboardResponseCaching;
             this.DashboardSourcePath = dashboardSourcePath;
             this.ImageSavingConvention = imageSavingConvention;
@@ -281,8 +281,8 @@ namespace EmbyClient.Dotnet.Model
         /// The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.
         /// </summary>
         /// <value>The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.</value>
-        [DataMember(Name="LibraryMonitorDelay", EmitDefaultValue=false)]
-        public int? LibraryMonitorDelay { get; set; }
+        [DataMember(Name="LibraryMonitorDelaySeconds", EmitDefaultValue=false)]
+        public int? LibraryMonitorDelaySeconds { get; set; }
 
         /// <summary>
         /// A value indicating whether \\[enable dashboard response caching\\]. Allows potential contributors without visual studio to modify production dashboard code and test changes.
@@ -582,7 +582,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PreferredMetadataLanguage: ").Append(PreferredMetadataLanguage).Append("\n");
             sb.Append("  MetadataCountryCode: ").Append(MetadataCountryCode).Append("\n");
             sb.Append("  SortRemoveWords: ").Append(SortRemoveWords).Append("\n");
-            sb.Append("  LibraryMonitorDelay: ").Append(LibraryMonitorDelay).Append("\n");
+            sb.Append("  LibraryMonitorDelaySeconds: ").Append(LibraryMonitorDelaySeconds).Append("\n");
             sb.Append("  EnableDashboardResponseCaching: ").Append(EnableDashboardResponseCaching).Append("\n");
             sb.Append("  DashboardSourcePath: ").Append(DashboardSourcePath).Append("\n");
             sb.Append("  ImageSavingConvention: ").Append(ImageSavingConvention).Append("\n");
@@ -753,9 +753,9 @@ namespace EmbyClient.Dotnet.Model
                     this.SortRemoveWords.SequenceEqual(input.SortRemoveWords)
                 ) && 
                 (
-                    this.LibraryMonitorDelay == input.LibraryMonitorDelay ||
-                    (this.LibraryMonitorDelay != null &&
-                    this.LibraryMonitorDelay.Equals(input.LibraryMonitorDelay))
+                    this.LibraryMonitorDelaySeconds == input.LibraryMonitorDelaySeconds ||
+                    (this.LibraryMonitorDelaySeconds != null &&
+                    this.LibraryMonitorDelaySeconds.Equals(input.LibraryMonitorDelaySeconds))
                 ) && 
                 (
                     this.EnableDashboardResponseCaching == input.EnableDashboardResponseCaching ||
@@ -1029,8 +1029,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.MetadataCountryCode.GetHashCode();
                 if (this.SortRemoveWords != null)
                     hashCode = hashCode * 59 + this.SortRemoveWords.GetHashCode();
-                if (this.LibraryMonitorDelay != null)
-                    hashCode = hashCode * 59 + this.LibraryMonitorDelay.GetHashCode();
+                if (this.LibraryMonitorDelaySeconds != null)
+                    hashCode = hashCode * 59 + this.LibraryMonitorDelaySeconds.GetHashCode();
                 if (this.EnableDashboardResponseCaching != null)
                     hashCode = hashCode * 59 + this.EnableDashboardResponseCaching.GetHashCode();
                 if (this.DashboardSourcePath != null)

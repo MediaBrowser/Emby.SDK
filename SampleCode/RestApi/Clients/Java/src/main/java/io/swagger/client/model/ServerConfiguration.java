@@ -80,8 +80,8 @@ public class ServerConfiguration {
   @SerializedName("SortRemoveWords")
   private List<String> sortRemoveWords = null;
 
-  @SerializedName("LibraryMonitorDelay")
-  private Integer libraryMonitorDelay = null;
+  @SerializedName("LibraryMonitorDelaySeconds")
+  private Integer libraryMonitorDelaySeconds = null;
 
   @SerializedName("EnableDashboardResponseCaching")
   private Boolean enableDashboardResponseCaching = null;
@@ -547,22 +547,22 @@ public class ServerConfiguration {
     this.sortRemoveWords = sortRemoveWords;
   }
 
-  public ServerConfiguration libraryMonitorDelay(Integer libraryMonitorDelay) {
-    this.libraryMonitorDelay = libraryMonitorDelay;
+  public ServerConfiguration libraryMonitorDelaySeconds(Integer libraryMonitorDelaySeconds) {
+    this.libraryMonitorDelaySeconds = libraryMonitorDelaySeconds;
     return this;
   }
 
    /**
    * The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.
-   * @return libraryMonitorDelay
+   * @return libraryMonitorDelaySeconds
   **/
   @Schema(description = "The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.")
-  public Integer getLibraryMonitorDelay() {
-    return libraryMonitorDelay;
+  public Integer getLibraryMonitorDelaySeconds() {
+    return libraryMonitorDelaySeconds;
   }
 
-  public void setLibraryMonitorDelay(Integer libraryMonitorDelay) {
-    this.libraryMonitorDelay = libraryMonitorDelay;
+  public void setLibraryMonitorDelaySeconds(Integer libraryMonitorDelaySeconds) {
+    this.libraryMonitorDelaySeconds = libraryMonitorDelaySeconds;
   }
 
   public ServerConfiguration enableDashboardResponseCaching(Boolean enableDashboardResponseCaching) {
@@ -1425,7 +1425,7 @@ public class ServerConfiguration {
         Objects.equals(this.preferredMetadataLanguage, serverConfiguration.preferredMetadataLanguage) &&
         Objects.equals(this.metadataCountryCode, serverConfiguration.metadataCountryCode) &&
         Objects.equals(this.sortRemoveWords, serverConfiguration.sortRemoveWords) &&
-        Objects.equals(this.libraryMonitorDelay, serverConfiguration.libraryMonitorDelay) &&
+        Objects.equals(this.libraryMonitorDelaySeconds, serverConfiguration.libraryMonitorDelaySeconds) &&
         Objects.equals(this.enableDashboardResponseCaching, serverConfiguration.enableDashboardResponseCaching) &&
         Objects.equals(this.dashboardSourcePath, serverConfiguration.dashboardSourcePath) &&
         Objects.equals(this.imageSavingConvention, serverConfiguration.imageSavingConvention) &&
@@ -1474,7 +1474,7 @@ public class ServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelay, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares6, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares6, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1501,7 +1501,7 @@ public class ServerConfiguration {
     sb.append("    preferredMetadataLanguage: ").append(toIndentedString(preferredMetadataLanguage)).append("\n");
     sb.append("    metadataCountryCode: ").append(toIndentedString(metadataCountryCode)).append("\n");
     sb.append("    sortRemoveWords: ").append(toIndentedString(sortRemoveWords)).append("\n");
-    sb.append("    libraryMonitorDelay: ").append(toIndentedString(libraryMonitorDelay)).append("\n");
+    sb.append("    libraryMonitorDelaySeconds: ").append(toIndentedString(libraryMonitorDelaySeconds)).append("\n");
     sb.append("    enableDashboardResponseCaching: ").append(toIndentedString(enableDashboardResponseCaching)).append("\n");
     sb.append("    dashboardSourcePath: ").append(toIndentedString(dashboardSourcePath)).append("\n");
     sb.append("    imageSavingConvention: ").append(toIndentedString(imageSavingConvention)).append("\n");

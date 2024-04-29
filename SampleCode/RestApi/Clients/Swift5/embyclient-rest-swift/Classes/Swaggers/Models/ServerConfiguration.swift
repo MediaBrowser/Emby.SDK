@@ -44,7 +44,7 @@ public struct ServerConfiguration: Codable {
     /** Words to be removed from strings to create a sort name */
     public var sortRemoveWords: [String]?
     /** The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files. */
-    public var libraryMonitorDelay: Int?
+    public var libraryMonitorDelaySeconds: Int?
     /** A value indicating whether \\[enable dashboard response caching\\]. Allows potential contributors without visual studio to modify production dashboard code and test changes. */
     public var enableDashboardResponseCaching: Bool?
     /** Allows the dashboard to be served from a custom path. */
@@ -98,7 +98,7 @@ public struct ServerConfiguration: Codable {
     /** The cache path. */
     public var cachePath: String?
 
-    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, logAllQueryTimes: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelay: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, preferredDetectedRemoteAddressFamily: NetSocketsAddressFamily? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [PathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, playlistsUpgradedToM3U: Bool? = nil, imageExtractorUpgraded1: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares6: Bool? = nil, migratedLibraryOptionsToDb: Bool? = nil, allowLegacyLocalNetworkPassword: Bool? = nil, enableSavedMetadataForPeople: Bool? = nil, tvChannelsRefreshed: Bool? = nil, proxyHeaderMode: ProxyHeaderMode? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
+    public init(enableUPnP: Bool? = nil, publicPort: Int? = nil, publicHttpsPort: Int? = nil, httpServerPortNumber: Int? = nil, httpsPortNumber: Int? = nil, enableHttps: Bool? = nil, certificatePath: String? = nil, certificatePassword: String? = nil, isPortAuthorized: Bool? = nil, autoRunWebApp: Bool? = nil, enableRemoteAccess: Bool? = nil, logAllQueryTimes: Bool? = nil, enableCaseSensitiveItemIds: Bool? = nil, metadataPath: String? = nil, metadataNetworkPath: String? = nil, preferredMetadataLanguage: String? = nil, metadataCountryCode: String? = nil, sortRemoveWords: [String]? = nil, libraryMonitorDelaySeconds: Int? = nil, enableDashboardResponseCaching: Bool? = nil, dashboardSourcePath: String? = nil, imageSavingConvention: ImageSavingConvention? = nil, enableAutomaticRestart: Bool? = nil, serverName: String? = nil, preferredDetectedRemoteAddressFamily: NetSocketsAddressFamily? = nil, wanDdns: String? = nil, uICulture: String? = nil, remoteClientBitrateLimit: Int? = nil, localNetworkSubnets: [String]? = nil, localNetworkAddresses: [String]? = nil, enableExternalContentInSuggestions: Bool? = nil, requireHttps: Bool? = nil, isBehindProxy: Bool? = nil, remoteIPFilter: [String]? = nil, isRemoteIPFilterBlacklist: Bool? = nil, imageExtractionTimeoutMs: Int? = nil, pathSubstitutions: [PathSubstitution]? = nil, uninstalledPlugins: [String]? = nil, collapseVideoFolders: Bool? = nil, enableOriginalTrackTitles: Bool? = nil, vacuumDatabaseOnStartup: Bool? = nil, simultaneousStreamLimit: Int? = nil, databaseCacheSizeMB: Int? = nil, enableSqLiteMmio: Bool? = nil, playlistsUpgradedToM3U: Bool? = nil, imageExtractorUpgraded1: Bool? = nil, enablePeopleLetterSubFolders: Bool? = nil, optimizeDatabaseOnShutdown: Bool? = nil, databaseAnalysisLimit: Int? = nil, disableAsyncIO: Bool? = nil, migratedToUserItemShares6: Bool? = nil, migratedLibraryOptionsToDb: Bool? = nil, allowLegacyLocalNetworkPassword: Bool? = nil, enableSavedMetadataForPeople: Bool? = nil, tvChannelsRefreshed: Bool? = nil, proxyHeaderMode: ProxyHeaderMode? = nil, enableDebugLevelLogging: Bool? = nil, revertDebugLogging: String? = nil, enableAutoUpdate: Bool? = nil, logFileRetentionDays: Int? = nil, runAtStartup: Bool? = nil, isStartupWizardCompleted: Bool? = nil, cachePath: String? = nil) {
         self.enableUPnP = enableUPnP
         self.publicPort = publicPort
         self.publicHttpsPort = publicHttpsPort
@@ -117,7 +117,7 @@ public struct ServerConfiguration: Codable {
         self.preferredMetadataLanguage = preferredMetadataLanguage
         self.metadataCountryCode = metadataCountryCode
         self.sortRemoveWords = sortRemoveWords
-        self.libraryMonitorDelay = libraryMonitorDelay
+        self.libraryMonitorDelaySeconds = libraryMonitorDelaySeconds
         self.enableDashboardResponseCaching = enableDashboardResponseCaching
         self.dashboardSourcePath = dashboardSourcePath
         self.imageSavingConvention = imageSavingConvention
@@ -183,7 +183,7 @@ public struct ServerConfiguration: Codable {
         case preferredMetadataLanguage = "PreferredMetadataLanguage"
         case metadataCountryCode = "MetadataCountryCode"
         case sortRemoveWords = "SortRemoveWords"
-        case libraryMonitorDelay = "LibraryMonitorDelay"
+        case libraryMonitorDelaySeconds = "LibraryMonitorDelaySeconds"
         case enableDashboardResponseCaching = "EnableDashboardResponseCaching"
         case dashboardSourcePath = "DashboardSourcePath"
         case imageSavingConvention = "ImageSavingConvention"

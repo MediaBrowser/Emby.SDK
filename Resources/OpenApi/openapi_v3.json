@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.5.0"
+    "version": "4.8.6.0"
   },
   "servers": [
     {
@@ -20948,7 +20948,7 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
-    "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}": {
+    "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}": {
       "get": {
         "tags": [
           "ImageService"
@@ -85535,7 +85535,7 @@
             },
             "description": "Words to be removed from strings to create a sort name"
           },
-          "LibraryMonitorDelay": {
+          "LibraryMonitorDelaySeconds": {
             "type": "integer",
             "description": "The delay in seconds that we will wait after a file system change to try and discover what has been added\\/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.",
             "format": "int32"

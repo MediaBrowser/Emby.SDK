@@ -137,8 +137,8 @@ namespace Emby.ApiClient.Model
         /// <summary>
         /// The delay in seconds that we will wait after a file system change to try and discover what has been added/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.
         /// </summary>
-        /// <value>The LibraryMonitorDelay.</value>
-        public int? LibraryMonitorDelay { get; set; }
+        /// <value>The LibraryMonitorDelaySeconds.</value>
+        public int? LibraryMonitorDelaySeconds { get; set; }
 
         /// <summary>
         /// A value indicating whether \\[enable dashboard response caching\\]. Allows potential contributors without visual studio to modify production dashboard code and test changes.
@@ -430,7 +430,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  PreferredMetadataLanguage: ").Append(PreferredMetadataLanguage).Append("\n");
             sb.Append("  MetadataCountryCode: ").Append(MetadataCountryCode).Append("\n");
             sb.Append("  SortRemoveWords: ").Append(SortRemoveWords).Append("\n");
-            sb.Append("  LibraryMonitorDelay: ").Append(LibraryMonitorDelay).Append("\n");
+            sb.Append("  LibraryMonitorDelaySeconds: ").Append(LibraryMonitorDelaySeconds).Append("\n");
             sb.Append("  EnableDashboardResponseCaching: ").Append(EnableDashboardResponseCaching).Append("\n");
             sb.Append("  DashboardSourcePath: ").Append(DashboardSourcePath).Append("\n");
             sb.Append("  ImageSavingConvention: ").Append(ImageSavingConvention).Append("\n");
@@ -592,9 +592,9 @@ namespace Emby.ApiClient.Model
                     this.SortRemoveWords.SequenceEqual(input.SortRemoveWords)
                 ) && 
                 (
-                    this.LibraryMonitorDelay == input.LibraryMonitorDelay ||
-                    (this.LibraryMonitorDelay != null &&
-                    this.LibraryMonitorDelay.Equals(input.LibraryMonitorDelay))
+                    this.LibraryMonitorDelaySeconds == input.LibraryMonitorDelaySeconds ||
+                    (this.LibraryMonitorDelaySeconds != null &&
+                    this.LibraryMonitorDelaySeconds.Equals(input.LibraryMonitorDelaySeconds))
                 ) && 
                 (
                     this.EnableDashboardResponseCaching == input.EnableDashboardResponseCaching ||
@@ -868,8 +868,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.MetadataCountryCode.GetHashCode();
                 if (this.SortRemoveWords != null)
                     hashCode = hashCode * 59 + this.SortRemoveWords.GetHashCode();
-                if (this.LibraryMonitorDelay != null)
-                    hashCode = hashCode * 59 + this.LibraryMonitorDelay.GetHashCode();
+                if (this.LibraryMonitorDelaySeconds != null)
+                    hashCode = hashCode * 59 + this.LibraryMonitorDelaySeconds.GetHashCode();
                 if (this.EnableDashboardResponseCaching != null)
                     hashCode = hashCode * 59 + this.EnableDashboardResponseCaching.GetHashCode();
                 if (this.DashboardSourcePath != null)

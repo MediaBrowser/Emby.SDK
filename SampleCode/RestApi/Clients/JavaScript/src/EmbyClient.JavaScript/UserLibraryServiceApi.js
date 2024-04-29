@@ -19,7 +19,7 @@ import UserLibraryUpdateUserItemAccess from '../model/UserLibraryUpdateUserItemA
 /**
 * UserLibraryService service.
 * @module EmbyClient.JavaScript/UserLibraryServiceApi
-* @version 4.8.5.0
+* @version 4.8.6.0
 */
 export default class UserLibraryServiceApi {
 

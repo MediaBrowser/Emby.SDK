@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ExternalIdInfo model module.
 * @module model/ExternalIdInfo
-* @version 4.8.5.0
+* @version 4.8.6.0
 */
 export default class ExternalIdInfo {
     /**

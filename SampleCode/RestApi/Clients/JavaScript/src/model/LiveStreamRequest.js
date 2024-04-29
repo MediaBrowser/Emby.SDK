@@ -16,7 +16,7 @@ import MediaProtocol from './MediaProtocol';
 /**
 * The LiveStreamRequest model module.
 * @module model/LiveStreamRequest
-* @version 4.8.5.0
+* @version 4.8.6.0
 */
 export default class LiveStreamRequest {
     /**

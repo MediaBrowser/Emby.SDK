@@ -13077,7 +13077,7 @@
       },
       "x-summary": "Gets items based on a query."
     },
-    "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnplayedCount}": {
+    "/Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}": {
       "get": {
         "tags": [
           "ImageService"
@@ -62735,7 +62735,7 @@
             "type": "string"
           }
         },
-        "LibraryMonitorDelay": {
+        "LibraryMonitorDelaySeconds": {
           "format": "int32",
           "description": "The delay in seconds that we will wait after a file system change to try and discover what has been added\\/removed Some delay is necessary with some items because their creation is not atomic.  It involves the creation of several different directories and files.",
           "type": "integer"

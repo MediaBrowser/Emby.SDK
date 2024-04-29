@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * MusicGenresService service.
 * @module EmbyClient.JavaScript/MusicGenresServiceApi
-* @version 4.8.5.0
+* @version 4.8.6.0
 */
 export default class MusicGenresServiceApi {
 
