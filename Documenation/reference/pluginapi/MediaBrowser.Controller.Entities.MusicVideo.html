@@ -769,9 +769,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayParentId">BaseItem.DisplayParentId</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImageDisplayParentId">BaseItem.ImageDisplayParentId</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayParent">BaseItem.DisplayParent</a>
     </div>
     <div>
@@ -983,9 +980,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandalone_MediaBrowser_Controller_Entities_User_">BaseItem.IsVisibleStandalone(User)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsInheritedParentImages">BaseItem.SupportsInheritedParentImages</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFolder">BaseItem.IsFolder</a>
@@ -1222,18 +1216,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public sealed class MusicVideo : Video, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasMediaSources, IHasArtist, IHasAlbum, IHasMusicGenres, IHasLookupInfo&lt;MusicVideoInfo&gt;</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_MusicVideo__ctor_" data-uid="MediaBrowser.Controller.Entities.MusicVideo.#ctor*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_MusicVideo__ctor" data-uid="MediaBrowser.Controller.Entities.MusicVideo.#ctor">MusicVideo()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MusicVideo()</code></pre>
-  </div>
   <h3 id="properties">Properties
   </h3>
   
@@ -1318,6 +1300,62 @@ public LinkedItemInfo[] Composers { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_MusicVideo_ImageDisplayParentId_" data-uid="MediaBrowser.Controller.Entities.MusicVideo.ImageDisplayParentId*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_MusicVideo_ImageDisplayParentId" data-uid="MediaBrowser.Controller.Entities.MusicVideo.ImageDisplayParentId">ImageDisplayParentId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override long ImageDisplayParentId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImageDisplayParentId">BaseItem.ImageDisplayParentId</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_MusicVideo_SupportsInheritedParentImages_" data-uid="MediaBrowser.Controller.Entities.MusicVideo.SupportsInheritedParentImages*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_MusicVideo_SupportsInheritedParentImages" data-uid="MediaBrowser.Controller.Entities.MusicVideo.SupportsInheritedParentImages">SupportsInheritedParentImages</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool SupportsInheritedParentImages { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsInheritedParentImages">BaseItem.SupportsInheritedParentImages</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_MusicVideo_SupportsResetMetadata_" data-uid="MediaBrowser.Controller.Entities.MusicVideo.SupportsResetMetadata*"></a>

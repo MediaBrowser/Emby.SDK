@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'media.emby'
-version = '4.9.0.16'
+version = '4.9.0.17'
 
 buildscript {
     repositories {

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The NotificationTypeInfo model module.
 * @module model/NotificationTypeInfo
-* @version 4.9.0.16
+* @version 4.9.0.17
 */
 export default class NotificationTypeInfo {
     /**
