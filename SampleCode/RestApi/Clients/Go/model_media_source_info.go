@@ -55,7 +55,7 @@ type MediaSourceInfo struct {
 	ReadAtNativeFramerate bool `json:"ReadAtNativeFramerate,omitempty"`
 	DefaultAudioStreamIndex int32 `json:"DefaultAudioStreamIndex,omitempty"`
 	DefaultSubtitleStreamIndex int32 `json:"DefaultSubtitleStreamIndex,omitempty"`
-	// Used only by our Windows app. Not used by Emby Server.
+	// Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
 	ItemId string `json:"ItemId,omitempty"`
 	// Used only by our Windows app. Not used by Emby Server.
 	ServerId string `json:"ServerId,omitempty"`

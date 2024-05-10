@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.17
+  version: 4.9.0.18
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -65012,7 +65012,9 @@ components:
           nullable: true
         ItemId:
           type: string
-          description: Used only by our Windows app. Not used by Emby Server.
+          description: "Used only by our Windows app. Not used by Emby Server. The\
+            \ id of the item that this mediasource belongs to, if there is one Also\
+            \ used by Emby for Kodi"
         ServerId:
           type: string
           description: Used only by our Windows app. Not used by Emby Server.
@@ -77093,7 +77095,7 @@ components:
           format: int32
         DisableAsyncIO:
           type: boolean
-        MigratedToUserItemShares6:
+        MigratedToUserItemShares7:
           type: boolean
         MigratedLibraryOptionsToDb:
           type: boolean
@@ -77171,7 +77173,7 @@ components:
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true
         PreferredDetectedRemoteAddressFamily: Unspecified
-        MigratedToUserItemShares6: true
+        MigratedToUserItemShares7: true
         MigratedLibraryOptionsToDb: true
         SimultaneousStreamLimit: 9
         PathSubstitutions:

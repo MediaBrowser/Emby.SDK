@@ -1191,7 +1191,7 @@ class MediaSourceInfo(object):
     def item_id(self):
         """Gets the item_id of this MediaSourceInfo.  # noqa: E501
 
-        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
+        Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi  # noqa: E501
 
         :return: The item_id of this MediaSourceInfo.  # noqa: E501
         :rtype: str
@@ -1202,7 +1202,7 @@ class MediaSourceInfo(object):
     def item_id(self, item_id):
         """Sets the item_id of this MediaSourceInfo.
 
-        Used only by our Windows app. Not used by Emby Server.  # noqa: E501
+        Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi  # noqa: E501
 
         :param item_id: The item_id of this MediaSourceInfo.  # noqa: E501
         :type: str

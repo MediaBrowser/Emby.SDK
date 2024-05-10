@@ -10083,7 +10083,7 @@
   "MediaBrowser.Model.Configuration.ServerConfiguration.MetadataNetworkPath": "MediaBrowser.Model.Configuration.ServerConfiguration.yml",
   "MediaBrowser.Model.Configuration.ServerConfiguration.MetadataPath": "MediaBrowser.Model.Configuration.ServerConfiguration.yml",
   "MediaBrowser.Model.Configuration.ServerConfiguration.MigratedLibraryOptionsToDb": "MediaBrowser.Model.Configuration.ServerConfiguration.yml",
-  "MediaBrowser.Model.Configuration.ServerConfiguration.MigratedToUserItemShares6": "MediaBrowser.Model.Configuration.ServerConfiguration.yml",
+  "MediaBrowser.Model.Configuration.ServerConfiguration.MigratedToUserItemShares7": "MediaBrowser.Model.Configuration.ServerConfiguration.yml",
   "MediaBrowser.Model.Configuration.ServerConfiguration.OptimizeDatabaseOnShutdown": "MediaBrowser.Model.Configuration.ServerConfiguration.yml",
   "MediaBrowser.Model.Configuration.ServerConfiguration.PathSubstitutions": "MediaBrowser.Model.Configuration.ServerConfiguration.yml",
   "MediaBrowser.Model.Configuration.ServerConfiguration.PlaylistsUpgradedToM3U": "MediaBrowser.Model.Configuration.ServerConfiguration.yml",

@@ -74,7 +74,7 @@ type ServerConfiguration struct {
 	OptimizeDatabaseOnShutdown bool `json:"OptimizeDatabaseOnShutdown,omitempty"`
 	DatabaseAnalysisLimit int32 `json:"DatabaseAnalysisLimit,omitempty"`
 	DisableAsyncIO bool `json:"DisableAsyncIO,omitempty"`
-	MigratedToUserItemShares6 bool `json:"MigratedToUserItemShares6,omitempty"`
+	MigratedToUserItemShares7 bool `json:"MigratedToUserItemShares7,omitempty"`
 	MigratedLibraryOptionsToDb bool `json:"MigratedLibraryOptionsToDb,omitempty"`
 	AllowLegacyLocalNetworkPassword bool `json:"AllowLegacyLocalNetworkPassword,omitempty"`
 	EnableSavedMetadataForPeople bool `json:"EnableSavedMetadataForPeople,omitempty"`

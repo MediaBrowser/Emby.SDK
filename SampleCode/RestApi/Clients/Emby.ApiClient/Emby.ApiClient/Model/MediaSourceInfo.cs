@@ -291,7 +291,7 @@ namespace Emby.ApiClient.Model
         public int? DefaultSubtitleStreamIndex { get; set; }
 
         /// <summary>
-        /// Used only by our Windows app. Not used by Emby Server.
+        /// Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
         /// </summary>
         /// <value>The ItemId.</value>
         public string ItemId { get; set; }

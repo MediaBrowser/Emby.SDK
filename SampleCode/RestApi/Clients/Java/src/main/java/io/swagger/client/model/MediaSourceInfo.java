@@ -990,10 +990,10 @@ public class MediaSourceInfo {
   }
 
    /**
-   * Used only by our Windows app. Not used by Emby Server.
+   * Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
    * @return itemId
   **/
-  @Schema(description = "Used only by our Windows app. Not used by Emby Server.")
+  @Schema(description = "Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi")
   public String getItemId() {
     return itemId;
   }

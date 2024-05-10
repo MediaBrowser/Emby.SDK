@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The CommonInterfacesICodecDeviceCapabilities model module.
 * @module model/CommonInterfacesICodecDeviceCapabilities
-* @version 4.9.0.17
+* @version 4.9.0.18
 */
 export default class CommonInterfacesICodecDeviceCapabilities {
     /**
