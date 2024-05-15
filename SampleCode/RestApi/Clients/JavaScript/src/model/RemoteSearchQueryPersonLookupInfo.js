@@ -15,7 +15,7 @@ import PersonLookupInfo from './PersonLookupInfo';
 /**
 * The RemoteSearchQueryPersonLookupInfo model module.
 * @module model/RemoteSearchQueryPersonLookupInfo
-* @version 4.9.0.18
+* @version 4.9.0.19
 */
 export default class RemoteSearchQueryPersonLookupInfo {
     /**
