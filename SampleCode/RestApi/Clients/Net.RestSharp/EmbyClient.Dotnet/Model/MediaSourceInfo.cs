@@ -70,7 +70,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="readAtNativeFramerate">readAtNativeFramerate.</param>
         /// <param name="defaultAudioStreamIndex">defaultAudioStreamIndex.</param>
         /// <param name="defaultSubtitleStreamIndex">defaultSubtitleStreamIndex.</param>
-        /// <param name="itemId">Used only by our Windows app. Not used by Emby Server..</param>
+        /// <param name="itemId">Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi.</param>
         /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
         public MediaSourceInfo(MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string probePath = default(string), MediaProtocol probeProtocol = default(MediaProtocol), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
         {
@@ -388,9 +388,9 @@ namespace EmbyClient.Dotnet.Model
         public int? DefaultSubtitleStreamIndex { get; set; }
 
         /// <summary>
-        /// Used only by our Windows app. Not used by Emby Server.
+        /// Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
         /// </summary>
-        /// <value>Used only by our Windows app. Not used by Emby Server.</value>
+        /// <value>Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi</value>
         [DataMember(Name="ItemId", EmitDefaultValue=false)]
         public string ItemId { get; set; }
 

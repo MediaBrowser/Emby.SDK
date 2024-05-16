@@ -176,8 +176,8 @@ public class ServerConfiguration {
   @SerializedName("DisableAsyncIO")
   private Boolean disableAsyncIO = null;
 
-  @SerializedName("MigratedToUserItemShares6")
-  private Boolean migratedToUserItemShares6 = null;
+  @SerializedName("MigratedToUserItemShares7")
+  private Boolean migratedToUserItemShares7 = null;
 
   @SerializedName("MigratedLibraryOptionsToDb")
   private Boolean migratedLibraryOptionsToDb = null;
@@ -1163,22 +1163,22 @@ public class ServerConfiguration {
     this.disableAsyncIO = disableAsyncIO;
   }
 
-  public ServerConfiguration migratedToUserItemShares6(Boolean migratedToUserItemShares6) {
-    this.migratedToUserItemShares6 = migratedToUserItemShares6;
+  public ServerConfiguration migratedToUserItemShares7(Boolean migratedToUserItemShares7) {
+    this.migratedToUserItemShares7 = migratedToUserItemShares7;
     return this;
   }
 
    /**
-   * Get migratedToUserItemShares6
-   * @return migratedToUserItemShares6
+   * Get migratedToUserItemShares7
+   * @return migratedToUserItemShares7
   **/
   @Schema(description = "")
-  public Boolean isMigratedToUserItemShares6() {
-    return migratedToUserItemShares6;
+  public Boolean isMigratedToUserItemShares7() {
+    return migratedToUserItemShares7;
   }
 
-  public void setMigratedToUserItemShares6(Boolean migratedToUserItemShares6) {
-    this.migratedToUserItemShares6 = migratedToUserItemShares6;
+  public void setMigratedToUserItemShares7(Boolean migratedToUserItemShares7) {
+    this.migratedToUserItemShares7 = migratedToUserItemShares7;
   }
 
   public ServerConfiguration migratedLibraryOptionsToDb(Boolean migratedLibraryOptionsToDb) {
@@ -1457,7 +1457,7 @@ public class ServerConfiguration {
         Objects.equals(this.optimizeDatabaseOnShutdown, serverConfiguration.optimizeDatabaseOnShutdown) &&
         Objects.equals(this.databaseAnalysisLimit, serverConfiguration.databaseAnalysisLimit) &&
         Objects.equals(this.disableAsyncIO, serverConfiguration.disableAsyncIO) &&
-        Objects.equals(this.migratedToUserItemShares6, serverConfiguration.migratedToUserItemShares6) &&
+        Objects.equals(this.migratedToUserItemShares7, serverConfiguration.migratedToUserItemShares7) &&
         Objects.equals(this.migratedLibraryOptionsToDb, serverConfiguration.migratedLibraryOptionsToDb) &&
         Objects.equals(this.allowLegacyLocalNetworkPassword, serverConfiguration.allowLegacyLocalNetworkPassword) &&
         Objects.equals(this.enableSavedMetadataForPeople, serverConfiguration.enableSavedMetadataForPeople) &&
@@ -1474,7 +1474,7 @@ public class ServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares6, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, disableAsyncIO, migratedToUserItemShares7, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1533,7 +1533,7 @@ public class ServerConfiguration {
     sb.append("    optimizeDatabaseOnShutdown: ").append(toIndentedString(optimizeDatabaseOnShutdown)).append("\n");
     sb.append("    databaseAnalysisLimit: ").append(toIndentedString(databaseAnalysisLimit)).append("\n");
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");
-    sb.append("    migratedToUserItemShares6: ").append(toIndentedString(migratedToUserItemShares6)).append("\n");
+    sb.append("    migratedToUserItemShares7: ").append(toIndentedString(migratedToUserItemShares7)).append("\n");
     sb.append("    migratedLibraryOptionsToDb: ").append(toIndentedString(migratedLibraryOptionsToDb)).append("\n");
     sb.append("    allowLegacyLocalNetworkPassword: ").append(toIndentedString(allowLegacyLocalNetworkPassword)).append("\n");
     sb.append("    enableSavedMetadataForPeople: ").append(toIndentedString(enableSavedMetadataForPeople)).append("\n");

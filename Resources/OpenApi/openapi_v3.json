@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.6.0"
+    "version": "4.8.7.0"
   },
   "servers": [
     {
@@ -80225,7 +80225,7 @@
           },
           "ItemId": {
             "type": "string",
-            "description": "Used only by our Windows app. Not used by Emby Server."
+            "description": "Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi"
           },
           "ServerId": {
             "type": "string",
@@ -85655,7 +85655,7 @@
           "DisableAsyncIO": {
             "type": "boolean"
           },
-          "MigratedToUserItemShares6": {
+          "MigratedToUserItemShares7": {
             "type": "boolean"
           },
           "MigratedLibraryOptionsToDb": {

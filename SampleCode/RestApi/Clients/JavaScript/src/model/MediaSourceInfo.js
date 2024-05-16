@@ -19,7 +19,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.8.6.0
+* @version 4.8.7.0
 */
 export default class MediaSourceInfo {
     /**
@@ -366,7 +366,7 @@ export default class MediaSourceInfo {
     */
     'DefaultSubtitleStreamIndex' = undefined;
     /**
-    * Used only by our Windows app. Not used by Emby Server.
+    * Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi
     * @member {String} ItemId
     */
     'ItemId' = undefined;

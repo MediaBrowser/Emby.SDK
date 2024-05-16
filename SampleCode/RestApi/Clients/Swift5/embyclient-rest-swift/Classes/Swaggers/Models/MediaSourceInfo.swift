@@ -56,7 +56,7 @@ public struct MediaSourceInfo: Codable {
     public var readAtNativeFramerate: Bool?
     public var defaultAudioStreamIndex: Int?
     public var defaultSubtitleStreamIndex: Int?
-    /** Used only by our Windows app. Not used by Emby Server. */
+    /** Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi */
     public var itemId: String?
     /** Used only by our Windows app. Not used by Emby Server. */
     public var serverId: String?

@@ -16,7 +16,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ArtistsService service.
 * @module EmbyClient.JavaScript/ArtistsServiceApi
-* @version 4.8.6.0
+* @version 4.8.7.0
 */
 export default class ArtistsServiceApi {
 

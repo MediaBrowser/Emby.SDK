@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The QueueItem model module.
 * @module model/QueueItem
-* @version 4.8.6.0
+* @version 4.8.7.0
 */
 export default class QueueItem {
     /**
