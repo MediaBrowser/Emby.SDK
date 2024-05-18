@@ -30,6 +30,7 @@ class VirtualFolderInfo(object):
         'id': 'str',
         'guid': 'str',
         'primary_image_item_id': 'str',
+        'primary_image_tag': 'str',
         'refresh_progress': 'float',
         'refresh_status': 'str'
     }
@@ -43,11 +44,12 @@ class VirtualFolderInfo(object):
         'id': 'Id',
         'guid': 'Guid',
         'primary_image_item_id': 'PrimaryImageItemId',
+        'primary_image_tag': 'PrimaryImageTag',
         'refresh_progress': 'RefreshProgress',
         'refresh_status': 'RefreshStatus'
     }
 
-    def __init__(self, name=None, locations=None, collection_type=None, library_options=None, item_id=None, id=None, guid=None, primary_image_item_id=None, refresh_progress=None, refresh_status=None):  # noqa: E501
+    def __init__(self, name=None, locations=None, collection_type=None, library_options=None, item_id=None, id=None, guid=None, primary_image_item_id=None, primary_image_tag=None, refresh_progress=None, refresh_status=None):  # noqa: E501
         """VirtualFolderInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._locations = None
@@ -57,6 +59,7 @@ class VirtualFolderInfo(object):
         self._id = None
         self._guid = None
         self._primary_image_item_id = None
+        self._primary_image_tag = None
         self._refresh_progress = None
         self._refresh_status = None
         self.discriminator = None
@@ -76,6 +79,8 @@ class VirtualFolderInfo(object):
             self.guid = guid
         if primary_image_item_id is not None:
             self.primary_image_item_id = primary_image_item_id
+        if primary_image_tag is not None:
+            self.primary_image_tag = primary_image_tag
         if refresh_progress is not None:
             self.refresh_progress = refresh_progress
         if refresh_status is not None:
@@ -260,6 +265,27 @@ class VirtualFolderInfo(object):
         """
 
         self._primary_image_item_id = primary_image_item_id
+
+    @property
+    def primary_image_tag(self):
+        """Gets the primary_image_tag of this VirtualFolderInfo.  # noqa: E501
+
+
+        :return: The primary_image_tag of this VirtualFolderInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._primary_image_tag
+
+    @primary_image_tag.setter
+    def primary_image_tag(self, primary_image_tag):
+        """Sets the primary_image_tag of this VirtualFolderInfo.
+
+
+        :param primary_image_tag: The primary_image_tag of this VirtualFolderInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._primary_image_tag = primary_image_tag
 
     @property
     def refresh_progress(self):

@@ -75,6 +75,12 @@ namespace Emby.ApiClient.Model
         public string PrimaryImageItemId { get; set; }
 
         /// <summary>
+        /// Gets or Sets PrimaryImageTag
+        /// </summary>
+        /// <value>The PrimaryImageTag.</value>
+        public string PrimaryImageTag { get; set; }
+
+        /// <summary>
         /// Gets or Sets RefreshProgress
         /// </summary>
         /// <value>The RefreshProgress.</value>
@@ -102,6 +108,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  PrimaryImageItemId: ").Append(PrimaryImageItemId).Append("\n");
+            sb.Append("  PrimaryImageTag: ").Append(PrimaryImageTag).Append("\n");
             sb.Append("  RefreshProgress: ").Append(RefreshProgress).Append("\n");
             sb.Append("  RefreshStatus: ").Append(RefreshStatus).Append("\n");
             sb.Append("}\n");
@@ -171,6 +178,11 @@ namespace Emby.ApiClient.Model
                     this.PrimaryImageItemId.Equals(input.PrimaryImageItemId))
                 ) && 
                 (
+                    this.PrimaryImageTag == input.PrimaryImageTag ||
+                    (this.PrimaryImageTag != null &&
+                    this.PrimaryImageTag.Equals(input.PrimaryImageTag))
+                ) && 
+                (
                     this.RefreshProgress == input.RefreshProgress ||
                     (this.RefreshProgress != null &&
                     this.RefreshProgress.Equals(input.RefreshProgress))
@@ -207,6 +219,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 if (this.PrimaryImageItemId != null)
                     hashCode = hashCode * 59 + this.PrimaryImageItemId.GetHashCode();
+                if (this.PrimaryImageTag != null)
+                    hashCode = hashCode * 59 + this.PrimaryImageTag.GetHashCode();
                 if (this.RefreshProgress != null)
                     hashCode = hashCode * 59 + this.RefreshProgress.GetHashCode();
                 if (this.RefreshStatus != null)

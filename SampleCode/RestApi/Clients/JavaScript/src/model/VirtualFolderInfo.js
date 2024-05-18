@@ -15,7 +15,7 @@ import LibraryOptions from './LibraryOptions';
 /**
 * The VirtualFolderInfo model module.
 * @module model/VirtualFolderInfo
-* @version 4.9.0.19
+* @version 4.9.0.20
 */
 export default class VirtualFolderInfo {
     /**
@@ -67,6 +67,9 @@ export default class VirtualFolderInfo {
             if (data.hasOwnProperty('PrimaryImageItemId')) {
                 obj['PrimaryImageItemId'] = ApiClient.convertToType(data['PrimaryImageItemId'], 'String');
             }
+            if (data.hasOwnProperty('PrimaryImageTag')) {
+                obj['PrimaryImageTag'] = ApiClient.convertToType(data['PrimaryImageTag'], 'String');
+            }
             if (data.hasOwnProperty('RefreshProgress')) {
                 obj['RefreshProgress'] = ApiClient.convertToType(data['RefreshProgress'], 'Number');
             }
@@ -115,6 +118,10 @@ export default class VirtualFolderInfo {
     * @member {String} PrimaryImageItemId
     */
     'PrimaryImageItemId' = undefined;
+    /**
+    * @member {String} PrimaryImageTag
+    */
+    'PrimaryImageTag' = undefined;
     /**
     * @member {Number} RefreshProgress
     */

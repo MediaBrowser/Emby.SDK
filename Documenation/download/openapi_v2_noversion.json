@@ -66186,6 +66186,9 @@
           "description": "The primary image item identifier.",
           "type": "string"
         },
+        "PrimaryImageTag": {
+          "type": "string"
+        },
         "RefreshProgress": {
           "format": "double",
           "type": "number"

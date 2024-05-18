@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.19"
+    "version": "4.9.0.20"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -66186,6 +66186,9 @@
         },
         "PrimaryImageItemId": {
           "description": "The primary image item identifier.",
+          "type": "string"
+        },
+        "PrimaryImageTag": {
           "type": "string"
         },
         "RefreshProgress": {

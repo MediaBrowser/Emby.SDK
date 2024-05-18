@@ -47,6 +47,9 @@ public class VirtualFolderInfo {
   @SerializedName("PrimaryImageItemId")
   private String primaryImageItemId = null;
 
+  @SerializedName("PrimaryImageTag")
+  private String primaryImageTag = null;
+
   @SerializedName("RefreshProgress")
   private Double refreshProgress = null;
 
@@ -205,6 +208,24 @@ public class VirtualFolderInfo {
     this.primaryImageItemId = primaryImageItemId;
   }
 
+  public VirtualFolderInfo primaryImageTag(String primaryImageTag) {
+    this.primaryImageTag = primaryImageTag;
+    return this;
+  }
+
+   /**
+   * Get primaryImageTag
+   * @return primaryImageTag
+  **/
+  @Schema(description = "")
+  public String getPrimaryImageTag() {
+    return primaryImageTag;
+  }
+
+  public void setPrimaryImageTag(String primaryImageTag) {
+    this.primaryImageTag = primaryImageTag;
+  }
+
   public VirtualFolderInfo refreshProgress(Double refreshProgress) {
     this.refreshProgress = refreshProgress;
     return this;
@@ -259,13 +280,14 @@ public class VirtualFolderInfo {
         Objects.equals(this.id, virtualFolderInfo.id) &&
         Objects.equals(this.guid, virtualFolderInfo.guid) &&
         Objects.equals(this.primaryImageItemId, virtualFolderInfo.primaryImageItemId) &&
+        Objects.equals(this.primaryImageTag, virtualFolderInfo.primaryImageTag) &&
         Objects.equals(this.refreshProgress, virtualFolderInfo.refreshProgress) &&
         Objects.equals(this.refreshStatus, virtualFolderInfo.refreshStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, locations, collectionType, libraryOptions, itemId, id, guid, primaryImageItemId, refreshProgress, refreshStatus);
+    return Objects.hash(name, locations, collectionType, libraryOptions, itemId, id, guid, primaryImageItemId, primaryImageTag, refreshProgress, refreshStatus);
   }
 
 
@@ -282,6 +304,7 @@ public class VirtualFolderInfo {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    guid: ").append(toIndentedString(guid)).append("\n");
     sb.append("    primaryImageItemId: ").append(toIndentedString(primaryImageItemId)).append("\n");
+    sb.append("    primaryImageTag: ").append(toIndentedString(primaryImageTag)).append("\n");
     sb.append("    refreshProgress: ").append(toIndentedString(refreshProgress)).append("\n");
     sb.append("    refreshStatus: ").append(toIndentedString(refreshStatus)).append("\n");
     sb.append("}");

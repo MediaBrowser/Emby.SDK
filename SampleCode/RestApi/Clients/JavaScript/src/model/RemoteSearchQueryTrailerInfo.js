@@ -15,7 +15,7 @@ import TrailerInfo from './TrailerInfo';
 /**
 * The RemoteSearchQueryTrailerInfo model module.
 * @module model/RemoteSearchQueryTrailerInfo
-* @version 4.9.0.19
+* @version 4.9.0.20
 */
 export default class RemoteSearchQueryTrailerInfo {
     /**

@@ -15,7 +15,7 @@ import ImageOption from './ImageOption';
 /**
 * The TypeOptions model module.
 * @module model/TypeOptions
-* @version 4.9.0.19
+* @version 4.9.0.20
 */
 export default class TypeOptions {
     /**

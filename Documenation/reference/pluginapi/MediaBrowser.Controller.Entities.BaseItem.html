@@ -233,7 +233,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -384,7 +384,7 @@ public int? AdditionalPartCount { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -517,7 +517,7 @@ public int? AudioStreamIndex { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -597,7 +597,7 @@ public float? CommunityRating { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Single</span>&gt;</td>
         <td><p>The community rating.</p>
 </td>
       </tr>
@@ -704,7 +704,7 @@ public float? CriticRating { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Single</span>&gt;</td>
         <td><p>The critic rating.</p>
 </td>
       </tr>
@@ -1052,7 +1052,7 @@ public DateTimeOffset? EndDate { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
         <td><p>The end date.</p>
 </td>
       </tr>
@@ -1106,7 +1106,7 @@ public ExtraType? ExtraType { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1340,7 +1340,7 @@ public int Height { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1473,7 +1473,7 @@ public int? IndexNumber { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>The index number.</p>
 </td>
       </tr>
@@ -1645,6 +1645,7 @@ public bool IsFileProtocol { get; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+[Obsolete(&quot;Check is Folder by type or IsDisplayedAsFolder, depending on your use case.&quot;)]
 public virtual bool IsFolder { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -1753,6 +1754,32 @@ public bool IsInMixedFolder { get; set; }</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
 public bool IsLocked { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_IsMedia_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsMedia*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsMedia" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsMedia">IsMedia</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public virtual bool IsMedia { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2076,7 +2103,7 @@ public DateTimeOffset? LastPlayedDate { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2230,7 +2257,7 @@ public int? LocalTrailerCount { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2364,7 +2391,7 @@ public MediaContainers? MediaContainer { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaContainers.html">MediaContainers</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaContainers.html">MediaContainers</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2739,7 +2766,7 @@ public int? ParentIndexNumber { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>The parent index number.</p>
 </td>
       </tr>
@@ -2794,7 +2821,7 @@ public MediaProtocol? PathProtocol { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaProtocol</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaProtocol</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2846,7 +2873,7 @@ public int PlayCount { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2977,7 +3004,7 @@ public DateTimeOffset? PremiereDate { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
         <td><p>The premiere date.</p>
 </td>
       </tr>
@@ -3085,7 +3112,7 @@ public int? ProductionYear { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><p>The production year.</p>
 </td>
       </tr>
@@ -3219,7 +3246,7 @@ public long? RunTimeTicks { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int64</span>&gt;</td>
         <td><p>The run time ticks.</p>
 </td>
       </tr>
@@ -3298,7 +3325,7 @@ public UserItemShareLevel? ShareLevel { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserItemShareLevel.html">UserItemShareLevel</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3379,7 +3406,7 @@ public int? SpecialFeatureCount { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3459,7 +3486,7 @@ public int? SubtitleStreamIndex { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3927,7 +3954,7 @@ public SyncJobItemStatus? SyncStatus { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.Sync.SyncJobItemStatus.html">SyncJobItemStatus</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Sync.SyncJobItemStatus.html">SyncJobItemStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4085,7 +4112,7 @@ public int TotalBitrate { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -4213,7 +4240,7 @@ public double? UserRating { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4265,7 +4292,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -5597,37 +5624,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CreatePresentationUniqueKey*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey" data-uid="MediaBrowser.Controller.Entities.BaseItem.CreatePresentationUniqueKey">CreatePresentationUniqueKey()</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CreatePresentationUniqueKey(MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Model.Data.IDataContext)">CreatePresentationUniqueKey(BaseItem[], LibraryOptions, IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CreatePresentationUniqueKey()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CreatePresentationUniqueKey*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CreatePresentationUniqueKey(MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Model.Configuration.LibraryOptions)">CreatePresentationUniqueKey(BaseItem[], LibraryOptions)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual string CreatePresentationUniqueKey(BaseItem[] collectionFolders, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual string CreatePresentationUniqueKey(BaseItem[] collectionFolders, LibraryOptions libraryOptions, IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5647,6 +5649,53 @@ public int Width { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
         <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CreatePresentationUniqueKey*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CreatePresentationUniqueKey(MediaBrowser.Model.Data.IDataContext)">CreatePresentationUniqueKey(IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CreatePresentationUniqueKey(IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -5763,7 +5812,7 @@ public int Width { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
         <td><p>The index.</p>
 </td>
@@ -5824,6 +5873,33 @@ public int Width { get; set; }</code></pre>
   </div>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_EnsureTaggedItemsLoaded_" data-uid="MediaBrowser.Controller.Entities.BaseItem.EnsureTaggedItemsLoaded*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_EnsureTaggedItemsLoaded_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.EnsureTaggedItemsLoaded(MediaBrowser.Model.Data.IDataContext)">EnsureTaggedItemsLoaded(IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnsureTaggedItemsLoaded(IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_FillItemLinks_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillItemLinks*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_FillItemLinks_System_Collections_Generic_List_System_ValueTuple_MediaBrowser_Controller_Library_ItemLinkType_System_String_System_Int64___" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillItemLinks(System.Collections.Generic.List{System.ValueTuple{MediaBrowser.Controller.Library.ItemLinkType,System.String,System.Int64}})">FillItemLinks(List&lt;(ItemLinkType, String, Int64)&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -5852,12 +5928,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues(MediaBrowser.Model.Dto.UserItemDataDto,MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions)">FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues(MediaBrowser.Model.Dto.UserItemDataDto,MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions)">FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void FillUserDataDtoValues(UserItemDataDto dto, BaseItemDto itemDto, User user, DtoOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void FillUserDataDtoValues(UserItemDataDto dto, BaseItemDto itemDto, User user, DtoOptions options, LibraryOptions libraryOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5889,6 +5965,11 @@ public int Width { get; set; }</code></pre>
         <td><span class="parametername">options</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   
@@ -5916,6 +5997,64 @@ public int Width { get; set; }</code></pre>
         <td><span class="xref">T</span></td>
         <td><p>``0.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_FindParent_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FindParent*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FindParent__1_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FindParent``1(MediaBrowser.Model.Data.IDataContext)">FindParent&lt;T&gt;(IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T FindParent&lt;T&gt;(IDataContext dataContext)
+    where T : BaseItem</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -6048,7 +6187,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.MediaSourceType.html">MediaSourceType</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">System.Tuple</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.MediaSourceType.html">MediaSourceType</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -6104,7 +6243,7 @@ public int Width { get; set; }</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">imageIndex</span></td>
         <td></td>
       </tr>
@@ -6131,6 +6270,31 @@ public int Width { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_GetCachedParent_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetCachedParent*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetCachedParent" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetCachedParent">GetCachedParent()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseItem GetCachedParent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -6403,7 +6567,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -6861,12 +7025,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetIdsForAncestorIdsQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetIdsForAncestorIdsQuery(MediaBrowser.Controller.Entities.User)">GetIdsForAncestorIdsQuery(User)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetIdsForAncestorIdsQuery(MediaBrowser.Model.Data.IDataContext)">GetIdsForAncestorIdsQuery(IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual long[] GetIdsForAncestorIdsQuery(User user = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual long[] GetIdsForAncestorIdsQuery(IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -6879,8 +7043,8 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -6928,7 +7092,7 @@ public int Width { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">imageIndex</span></td>
         <td><p>Index of the image.</p>
 </td>
@@ -6979,7 +7143,7 @@ public int Width { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">imageIndex</span></td>
         <td><p>Index of the image.</p>
 </td>
@@ -7012,7 +7176,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><span class="xref">System.InvalidOperationException</span></td>
         <td></td>
       </tr>
       <tr>
@@ -7110,32 +7274,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Controller_Entities_BaseItem_GetInternalAncestorIds_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetInternalAncestorIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetInternalAncestorIds" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetInternalAncestorIds">GetInternalAncestorIds()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;long&gt; GetInternalAncestorIds()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -7315,12 +7454,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetItemsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetItemsForAncestorIdsQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetItemsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetItemsForAncestorIdsQuery(MediaBrowser.Controller.Entities.User)">GetItemsForAncestorIdsQuery(User)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetItemsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetItemsForAncestorIdsQuery(MediaBrowser.Model.Data.IDataContext)">GetItemsForAncestorIdsQuery(IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual BaseItem[] GetItemsForAncestorIdsQuery(User user = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual BaseItem[] GetItemsForAncestorIdsQuery(IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7333,8 +7472,8 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -7380,7 +7519,7 @@ public int Width { get; set; }</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">imageIndex</span></td>
         <td></td>
       </tr>
@@ -7406,7 +7545,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -7437,7 +7576,7 @@ public int Width { get; set; }</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaProtocol</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.MediaProtocol.html">MediaProtocol</a>&gt;</td>
         <td><span class="parametername">protocol</span></td>
         <td></td>
       </tr>
@@ -7741,6 +7880,48 @@ This overload is for CoverArt</p>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_GetParent_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetParent*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetParent_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetParent(MediaBrowser.Model.Data.IDataContext)">GetParent(IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseItem GetParent(IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetParentalRatingValue_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetParentalRatingValue*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetParentalRatingValue" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetParentalRatingValue">GetParentalRatingValue()</h4>
   <div class="markdown level1 summary"></div>
@@ -7759,7 +7940,7 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -7774,6 +7955,48 @@ This overload is for CoverArt</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;BaseItem&gt; GetParents()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_GetParents_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetParents*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetParents_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetParents(MediaBrowser.Model.Data.IDataContext)">GetParents(IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;BaseItem&gt; GetParents(IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -7971,6 +8194,53 @@ This overload is for CoverArt</p>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataLanguage_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPreferredMetadataLanguage*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetPreferredMetadataLanguage_MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPreferredMetadataLanguage(MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Model.Data.IDataContext)">GetPreferredMetadataLanguage(LibraryOptions, IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetPreferredMetadataLanguage(LibraryOptions libraryOptions, IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPresentationUniqueKey*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPresentationUniqueKey">GetPresentationUniqueKey()</h4>
   <div class="markdown level1 summary"></div>
@@ -7997,12 +8267,12 @@ This overload is for CoverArt</p>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPresentationUniqueKey*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPresentationUniqueKey(MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Model.Configuration.LibraryOptions)">GetPresentationUniqueKey(BaseItem[], LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetPresentationUniqueKey(MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Model.Data.IDataContext)">GetPresentationUniqueKey(BaseItem[], LibraryOptions, IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetPresentationUniqueKey(BaseItem[] collectionFolders, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public string GetPresentationUniqueKey(BaseItem[] collectionFolders, LibraryOptions libraryOptions, IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -8022,6 +8292,11 @@ This overload is for CoverArt</p>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
         <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -8061,7 +8336,7 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -8117,7 +8392,7 @@ This overload is for CoverArt</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">imageIndex</span></td>
         <td></td>
       </tr>
@@ -8439,13 +8714,30 @@ This overload is for CoverArt</p>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetUserDataKey*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetUserDataKey">GetUserDataKey()</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetUserDataKey_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetUserDataKey(MediaBrowser.Model.Data.IDataContext)">GetUserDataKey(IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetUserDataKey()</code></pre>
+    <pre><code class="lang-csharp hljs">public string GetUserDataKey(IDataContext dataContext)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -8464,13 +8756,30 @@ This overload is for CoverArt</p>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetUserDataKeyInternal*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetUserDataKeyInternal">GetUserDataKeyInternal()</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetUserDataKeyInternal_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetUserDataKeyInternal(MediaBrowser.Model.Data.IDataContext)">GetUserDataKeyInternal(IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual string GetUserDataKeyInternal()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual string GetUserDataKeyInternal(IDataContext dataContext)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -8554,7 +8863,7 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
         <td><span class="parametername">date</span></td>
         <td></td>
       </tr>
@@ -8601,12 +8910,12 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
         <td><span class="parametername">date</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
         <td><span class="parametername">newValue</span></td>
         <td></td>
       </tr>
@@ -8697,7 +9006,7 @@ This overload is for CoverArt</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">imageIndex</span></td>
         <td><p>Index of the image.</p>
 </td>
@@ -9493,7 +9802,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
         <td><span class="parametername">datePlayed</span></td>
         <td></td>
       </tr>
@@ -9530,7 +9839,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
         <td><span class="parametername">datePlayed</span></td>
         <td></td>
       </tr>
@@ -9731,7 +10040,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -9781,7 +10090,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td><p>true if a provider reports we changed</p>
 </td>
       </tr>
@@ -10077,12 +10386,12 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">originalIndex</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">newIndex</span></td>
         <td></td>
       </tr>
@@ -10131,6 +10440,33 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_SetCachedParent_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SetCachedParent*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SetCachedParent_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SetCachedParent(MediaBrowser.Controller.Entities.BaseItem)">SetCachedParent(BaseItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCachedParent(BaseItem parent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">parent</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -10242,7 +10578,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
         <td></td>
       </tr>
@@ -10274,7 +10610,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
         <td></td>
       </tr>
@@ -10618,7 +10954,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a></div>
+  <div><span class="xref">System.Object.ToString()</span></div>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_TriggerOnRefreshComplete_" data-uid="MediaBrowser.Controller.Entities.BaseItem.TriggerOnRefreshComplete*"></a>
@@ -10911,7 +11247,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td><span class="parametername">progress</span></td>
         <td></td>
       </tr>
@@ -10969,7 +11305,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><span class="xref">System.IProgress</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td><span class="parametername">progress</span></td>
         <td><p>The progress.</p>
 </td>

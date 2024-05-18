@@ -34,9 +34,10 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="id">ItemId came first, so that is left for compatability purposes.</param>
         /// <param name="guid">guid.</param>
         /// <param name="primaryImageItemId">The primary image item identifier..</param>
+        /// <param name="primaryImageTag">primaryImageTag.</param>
         /// <param name="refreshProgress">refreshProgress.</param>
         /// <param name="refreshStatus">refreshStatus.</param>
-        public VirtualFolderInfo(string name = default(string), List<string> locations = default(List<string>), string collectionType = default(string), LibraryOptions libraryOptions = default(LibraryOptions), string itemId = default(string), string id = default(string), string guid = default(string), string primaryImageItemId = default(string), double? refreshProgress = default(double?), string refreshStatus = default(string))
+        public VirtualFolderInfo(string name = default(string), List<string> locations = default(List<string>), string collectionType = default(string), LibraryOptions libraryOptions = default(LibraryOptions), string itemId = default(string), string id = default(string), string guid = default(string), string primaryImageItemId = default(string), string primaryImageTag = default(string), double? refreshProgress = default(double?), string refreshStatus = default(string))
         {
             this.Name = name;
             this.Locations = locations;
@@ -46,6 +47,7 @@ namespace EmbyClient.Dotnet.Model
             this.Id = id;
             this.Guid = guid;
             this.PrimaryImageItemId = primaryImageItemId;
+            this.PrimaryImageTag = primaryImageTag;
             this.RefreshProgress = refreshProgress;
             this.RefreshStatus = refreshStatus;
         }
@@ -105,6 +107,12 @@ namespace EmbyClient.Dotnet.Model
         public string PrimaryImageItemId { get; set; }
 
         /// <summary>
+        /// Gets or Sets PrimaryImageTag
+        /// </summary>
+        [DataMember(Name="PrimaryImageTag", EmitDefaultValue=false)]
+        public string PrimaryImageTag { get; set; }
+
+        /// <summary>
         /// Gets or Sets RefreshProgress
         /// </summary>
         [DataMember(Name="RefreshProgress", EmitDefaultValue=false)]
@@ -132,6 +140,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  PrimaryImageItemId: ").Append(PrimaryImageItemId).Append("\n");
+            sb.Append("  PrimaryImageTag: ").Append(PrimaryImageTag).Append("\n");
             sb.Append("  RefreshProgress: ").Append(RefreshProgress).Append("\n");
             sb.Append("  RefreshStatus: ").Append(RefreshStatus).Append("\n");
             sb.Append("}\n");
@@ -210,6 +219,11 @@ namespace EmbyClient.Dotnet.Model
                     this.PrimaryImageItemId.Equals(input.PrimaryImageItemId))
                 ) && 
                 (
+                    this.PrimaryImageTag == input.PrimaryImageTag ||
+                    (this.PrimaryImageTag != null &&
+                    this.PrimaryImageTag.Equals(input.PrimaryImageTag))
+                ) && 
+                (
                     this.RefreshProgress == input.RefreshProgress ||
                     (this.RefreshProgress != null &&
                     this.RefreshProgress.Equals(input.RefreshProgress))
@@ -246,6 +260,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 if (this.PrimaryImageItemId != null)
                     hashCode = hashCode * 59 + this.PrimaryImageItemId.GetHashCode();
+                if (this.PrimaryImageTag != null)
+                    hashCode = hashCode * 59 + this.PrimaryImageTag.GetHashCode();
                 if (this.RefreshProgress != null)
                     hashCode = hashCode * 59 + this.RefreshProgress.GetHashCode();
                 if (this.RefreshStatus != null)

@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * VideoHlsService service.
 * @module EmbyClient.JavaScript.Beta/VideoHlsServiceApi
-* @version 4.9.0.19
+* @version 4.9.0.20
 */
 export default class VideoHlsServiceApi {
 

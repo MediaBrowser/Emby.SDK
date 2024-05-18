@@ -115,6 +115,7 @@ open class LibraryStructureServiceAPI {
     "PrimaryImageItemId" : "PrimaryImageItemId",
     "CollectionType" : "CollectionType",
     "Locations" : [ "Locations", "Locations" ],
+    "PrimaryImageTag" : "PrimaryImageTag",
     "LibraryOptions" : {
       "LyricsDownloadMaxAgeDays" : 5,
       "SaveLyricsWithMedia" : true,
@@ -220,6 +221,7 @@ open class LibraryStructureServiceAPI {
     "PrimaryImageItemId" : "PrimaryImageItemId",
     "CollectionType" : "CollectionType",
     "Locations" : [ "Locations", "Locations" ],
+    "PrimaryImageTag" : "PrimaryImageTag",
     "LibraryOptions" : {
       "LyricsDownloadMaxAgeDays" : 5,
       "SaveLyricsWithMedia" : true,

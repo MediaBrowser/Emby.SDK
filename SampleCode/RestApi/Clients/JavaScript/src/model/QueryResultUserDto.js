@@ -15,7 +15,7 @@ import UserDto from './UserDto';
 /**
 * The QueryResultUserDto model module.
 * @module model/QueryResultUserDto
-* @version 4.9.0.19
+* @version 4.9.0.20
 */
 export default class QueryResultUserDto {
     /**
