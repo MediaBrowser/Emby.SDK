@@ -1403,7 +1403,7 @@ public long[] PhysicalFolderIds { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td><p>The tags.</p>
 </td>
       </tr>
@@ -1717,6 +1717,33 @@ protected override bool ValidatesChildren { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CanDelete">Folder.CanDelete()</a></div>
   
   
+  <a id="MediaBrowser_Controller_Entities_CollectionFolder_ClearCachedUserPermissions_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.ClearCachedUserPermissions*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_ClearCachedUserPermissions_System_Int64_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.ClearCachedUserPermissions(System.Int64)">ClearCachedUserPermissions(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearCachedUserPermissions(long userId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">userId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_FillItemLinks_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.FillItemLinks*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_FillItemLinks_System_Collections_Generic_List_System_ValueTuple_MediaBrowser_Controller_Library_ItemLinkType_System_String_System_Int64___" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.FillItemLinks(System.Collections.Generic.List{System.ValueTuple{MediaBrowser.Controller.Library.ItemLinkType,System.String,System.Int64}})">FillItemLinks(List&lt;(ItemLinkType, String, Int64)&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1736,7 +1763,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-3">(T1, T2, T3)</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">System.Int64</span>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-3">(T1, T2, T3)</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;&gt;</td>
         <td><span class="parametername">itemLinks</span></td>
         <td></td>
       </tr>
@@ -1774,12 +1801,12 @@ protected override bool ValidatesChildren { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetIdsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetIdsForAncestorIdsQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetIdsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetIdsForAncestorIdsQuery(MediaBrowser.Model.Data.IDataContext)">GetIdsForAncestorIdsQuery(IDataContext)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetIdsForAncestorIdsQuery(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Data.IDataContext)">GetIdsForAncestorIdsQuery(User, IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override long[] GetIdsForAncestorIdsQuery(IDataContext dataContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public override long[] GetIdsForAncestorIdsQuery(User user, IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1791,6 +1818,11 @@ protected override bool ValidatesChildren { get; }</code></pre>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
         <td><span class="parametername">dataContext</span></td>
@@ -1808,13 +1840,13 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetIdsForAncestorIdsQuery(IDataContext)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetIdsForAncestorIdsQuery(User, IDataContext)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetItemIdsInternal_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetItemIdsInternal*"></a>
@@ -1857,7 +1889,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1867,12 +1899,12 @@ protected override bool ValidatesChildren { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetItemsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetItemsForAncestorIdsQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetItemsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetItemsForAncestorIdsQuery(MediaBrowser.Model.Data.IDataContext)">GetItemsForAncestorIdsQuery(IDataContext)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetItemsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetItemsForAncestorIdsQuery(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Data.IDataContext)">GetItemsForAncestorIdsQuery(User, IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override BaseItem[] GetItemsForAncestorIdsQuery(IDataContext dataContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public override BaseItem[] GetItemsForAncestorIdsQuery(User user, IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1884,6 +1916,11 @@ protected override bool ValidatesChildren { get; }</code></pre>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
         <td><span class="parametername">dataContext</span></td>
@@ -1907,7 +1944,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetItemsForAncestorIdsQuery(IDataContext)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetItemsForAncestorIdsQuery(User, IDataContext)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetItemsInternal_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetItemsInternal*"></a>
@@ -2028,7 +2065,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">libraryItemId</span></td>
         <td></td>
       </tr>
@@ -2086,7 +2123,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2343,7 +2380,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">libraryItemId</span></td>
         <td></td>
       </tr>
@@ -2370,7 +2407,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">libraryItemId</span></td>
         <td></td>
       </tr>
@@ -2429,7 +2466,7 @@ protected override bool ValidatesChildren { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<span class="xref">System.Tuple</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.CollectionFolder.html">CollectionFolder</a>, <a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.CollectionFolder.html">CollectionFolder</a>, <a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.20
+  version: 4.9.0.21
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -67120,18 +67120,19 @@ components:
           UserId: UserId
           UserInternalId: 7
         PlayState:
-          RepeatMode: RepeatNone
-          CanSeek: true
-          PlayMethod: Transcode
-          SubtitleOffset: 5
+          Shuffle: true
           PositionTicks: 0
-          AudioStreamIndex: 1
-          IsMuted: true
-          VolumeLevel: 6
           MediaSourceId: MediaSourceId
           IsPaused: true
           SubtitleStreamIndex: 5
           PlaybackRate: 2.3021358869347655
+          RepeatMode: RepeatNone
+          CanSeek: true
+          PlayMethod: Transcode
+          SubtitleOffset: 5
+          AudioStreamIndex: 1
+          IsMuted: true
+          VolumeLevel: 6
         DeviceName: DeviceName
       x-internal-ref-name: MediaBrowser.Controller.Session.SessionInfo
     PlayerStateInfo:
@@ -67176,22 +67177,25 @@ components:
         SubtitleOffset:
           type: integer
           format: int32
+        Shuffle:
+          type: boolean
         PlaybackRate:
           type: number
           format: double
       example:
-        RepeatMode: RepeatNone
-        CanSeek: true
-        PlayMethod: Transcode
-        SubtitleOffset: 5
+        Shuffle: true
         PositionTicks: 0
-        AudioStreamIndex: 1
-        IsMuted: true
-        VolumeLevel: 6
         MediaSourceId: MediaSourceId
         IsPaused: true
         SubtitleStreamIndex: 5
         PlaybackRate: 2.3021358869347655
+        RepeatMode: RepeatNone
+        CanSeek: true
+        PlayMethod: Transcode
+        SubtitleOffset: 5
+        AudioStreamIndex: 1
+        IsMuted: true
+        VolumeLevel: 6
       x-internal-ref-name: MediaBrowser.Model.Session.PlayerStateInfo
     PlayMethod:
       type: string
@@ -75439,6 +75443,8 @@ components:
           description: The play session identifier.
         RepeatMode:
           $ref: '#/components/schemas/RepeatMode'
+        Shuffle:
+          type: boolean
         SubtitleOffset:
           type: integer
           format: int32
@@ -75477,6 +75483,7 @@ components:
       - StateChange
       - SubtitleOffsetChange
       - PlaybackRateChange
+      - ShuffleModeChange
       x-internal-ref-name: MediaBrowser.Model.Session.ProgressEvent
     SyncTarget:
       type: object
@@ -77095,7 +77102,7 @@ components:
           format: int32
         DisableAsyncIO:
           type: boolean
-        MigratedToUserItemShares7:
+        MigratedToUserItemShares8:
           type: boolean
         MigratedLibraryOptionsToDb:
           type: boolean
@@ -77173,7 +77180,7 @@ components:
         EnablePeopleLetterSubFolders: true
         DisableAsyncIO: true
         PreferredDetectedRemoteAddressFamily: Unspecified
-        MigratedToUserItemShares7: true
+        MigratedToUserItemShares8: true
         MigratedLibraryOptionsToDb: true
         SimultaneousStreamLimit: 9
         PathSubstitutions:
@@ -79247,18 +79254,19 @@ components:
             UserId: UserId
             UserInternalId: 7
           PlayState:
-            RepeatMode: RepeatNone
-            CanSeek: true
-            PlayMethod: Transcode
-            SubtitleOffset: 5
+            Shuffle: true
             PositionTicks: 0
-            AudioStreamIndex: 1
-            IsMuted: true
-            VolumeLevel: 6
             MediaSourceId: MediaSourceId
             IsPaused: true
             SubtitleStreamIndex: 5
             PlaybackRate: 2.3021358869347655
+            RepeatMode: RepeatNone
+            CanSeek: true
+            PlayMethod: Transcode
+            SubtitleOffset: 5
+            AudioStreamIndex: 1
+            IsMuted: true
+            VolumeLevel: 6
           DeviceName: DeviceName
       x-internal-ref-name: MediaBrowser.Controller.Authentication.AuthenticationResult
     CreateUserByName:
@@ -84807,6 +84815,8 @@ components:
           description: The play session identifier.
         RepeatMode:
           $ref: '#/components/schemas/RepeatMode'
+        Shuffle:
+          type: boolean
         SubtitleOffset:
           type: integer
           format: int32
@@ -85898,6 +85908,8 @@ components:
         PlaylistLength:
           type: integer
           format: int32
+        Shuffle:
+          type: boolean
         EventName:
           $ref: '#/components/schemas/ProgressEvent'
       x-internal-ref-name: Emby.Server.MediaEncoding.Api.OnPlaybackProgress

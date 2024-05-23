@@ -30,9 +30,10 @@ public struct PlayerStateInfo: Codable {
     public var playMethod: PlayMethod?
     public var repeatMode: RepeatMode?
     public var subtitleOffset: Int?
+    public var shuffle: Bool?
     public var playbackRate: Double?
 
-    public init(positionTicks: Int64? = nil, canSeek: Bool? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, volumeLevel: Int? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, mediaSourceId: String? = nil, playMethod: PlayMethod? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil) {
+    public init(positionTicks: Int64? = nil, canSeek: Bool? = nil, isPaused: Bool? = nil, isMuted: Bool? = nil, volumeLevel: Int? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, mediaSourceId: String? = nil, playMethod: PlayMethod? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, shuffle: Bool? = nil, playbackRate: Double? = nil) {
         self.positionTicks = positionTicks
         self.canSeek = canSeek
         self.isPaused = isPaused
@@ -44,6 +45,7 @@ public struct PlayerStateInfo: Codable {
         self.playMethod = playMethod
         self.repeatMode = repeatMode
         self.subtitleOffset = subtitleOffset
+        self.shuffle = shuffle
         self.playbackRate = playbackRate
     }
 
@@ -59,6 +61,7 @@ public struct PlayerStateInfo: Codable {
         case playMethod = "PlayMethod"
         case repeatMode = "RepeatMode"
         case subtitleOffset = "SubtitleOffset"
+        case shuffle = "Shuffle"
         case playbackRate = "PlaybackRate"
     }
 

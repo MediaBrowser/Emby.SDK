@@ -58830,6 +58830,9 @@
           "format": "int32",
           "type": "integer"
         },
+        "Shuffle": {
+          "type": "boolean"
+        },
         "PlaybackRate": {
           "format": "double",
           "type": "number"
@@ -62150,6 +62153,9 @@
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
+        "Shuffle": {
+          "type": "boolean"
+        },
         "SubtitleOffset": {
           "format": "int32",
           "type": "integer"
@@ -62195,7 +62201,8 @@
         "QualityChange",
         "StateChange",
         "SubtitleOffsetChange",
-        "PlaybackRateChange"
+        "PlaybackRateChange",
+        "ShuffleModeChange"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"
@@ -62910,7 +62917,7 @@
         "DisableAsyncIO": {
           "type": "boolean"
         },
-        "MigratedToUserItemShares7": {
+        "MigratedToUserItemShares8": {
           "type": "boolean"
         },
         "MigratedLibraryOptionsToDb": {
@@ -66584,6 +66591,9 @@
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
+        "Shuffle": {
+          "type": "boolean"
+        },
         "SubtitleOffset": {
           "format": "int32",
           "type": "integer"
@@ -67162,6 +67172,9 @@
         "PlaylistLength": {
           "format": "int32",
           "type": "integer"
+        },
+        "Shuffle": {
+          "type": "boolean"
         },
         "EventName": {
           "$ref": "#/definitions/ProgressEvent"

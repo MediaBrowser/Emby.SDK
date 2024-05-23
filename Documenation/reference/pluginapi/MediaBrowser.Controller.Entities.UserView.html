@@ -1600,12 +1600,12 @@ public string ViewType { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_UserView_GetIdsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Entities.UserView.GetIdsForAncestorIdsQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_UserView_GetIdsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.UserView.GetIdsForAncestorIdsQuery(MediaBrowser.Model.Data.IDataContext)">GetIdsForAncestorIdsQuery(IDataContext)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_UserView_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.UserView.GetIdsForAncestorIdsQuery(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Data.IDataContext)">GetIdsForAncestorIdsQuery(User, IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override long[] GetIdsForAncestorIdsQuery(IDataContext dataContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public override long[] GetIdsForAncestorIdsQuery(User user, IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1617,6 +1617,11 @@ public string ViewType { get; set; }</code></pre>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
         <td><span class="parametername">dataContext</span></td>
@@ -1634,13 +1639,13 @@ public string ViewType { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetIdsForAncestorIdsQuery(IDataContext)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetIdsForAncestorIdsQuery(User, IDataContext)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_UserView_GetItemIdsInternal_" data-uid="MediaBrowser.Controller.Entities.UserView.GetItemIdsInternal*"></a>
@@ -1683,7 +1688,7 @@ public string ViewType { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int64</span>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1693,12 +1698,12 @@ public string ViewType { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_UserView_GetItemsForAncestorIdsQuery_" data-uid="MediaBrowser.Controller.Entities.UserView.GetItemsForAncestorIdsQuery*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_UserView_GetItemsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.UserView.GetItemsForAncestorIdsQuery(MediaBrowser.Model.Data.IDataContext)">GetItemsForAncestorIdsQuery(IDataContext)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_UserView_GetItemsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.UserView.GetItemsForAncestorIdsQuery(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Data.IDataContext)">GetItemsForAncestorIdsQuery(User, IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override BaseItem[] GetItemsForAncestorIdsQuery(IDataContext dataContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public override BaseItem[] GetItemsForAncestorIdsQuery(User user, IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1710,6 +1715,11 @@ public string ViewType { get; set; }</code></pre>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
         <td><span class="parametername">dataContext</span></td>
@@ -1733,7 +1743,7 @@ public string ViewType { get; set; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemsForAncestorIdsQuery_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetItemsForAncestorIdsQuery(IDataContext)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetItemsForAncestorIdsQuery_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetItemsForAncestorIdsQuery(User, IDataContext)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_UserView_GetItemsInternal_" data-uid="MediaBrowser.Controller.Entities.UserView.GetItemsInternal*"></a>

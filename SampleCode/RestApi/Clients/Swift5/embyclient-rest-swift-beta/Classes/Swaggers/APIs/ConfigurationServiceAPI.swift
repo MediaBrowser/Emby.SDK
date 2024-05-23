@@ -69,7 +69,7 @@ open class ConfigurationServiceAPI {
   "EnablePeopleLetterSubFolders" : true,
   "DisableAsyncIO" : true,
   "PreferredDetectedRemoteAddressFamily" : "Unspecified",
-  "MigratedToUserItemShares7" : true,
+  "MigratedToUserItemShares8" : true,
   "MigratedLibraryOptionsToDb" : true,
   "SimultaneousStreamLimit" : 9,
   "PathSubstitutions" : [ {

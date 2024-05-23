@@ -13,17 +13,20 @@ public struct ApiOnPlaybackProgress: Codable {
 
     public var playlistIndex: Int?
     public var playlistLength: Int?
+    public var shuffle: Bool?
     public var eventName: ProgressEvent?
 
-    public init(playlistIndex: Int? = nil, playlistLength: Int? = nil, eventName: ProgressEvent? = nil) {
+    public init(playlistIndex: Int? = nil, playlistLength: Int? = nil, shuffle: Bool? = nil, eventName: ProgressEvent? = nil) {
         self.playlistIndex = playlistIndex
         self.playlistLength = playlistLength
+        self.shuffle = shuffle
         self.eventName = eventName
     }
 
     public enum CodingKeys: String, CodingKey { 
         case playlistIndex = "PlaylistIndex"
         case playlistLength = "PlaylistLength"
+        case shuffle = "Shuffle"
         case eventName = "EventName"
     }
 

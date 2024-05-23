@@ -50,10 +50,11 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="liveStreamId">The live stream identifier..</param>
         /// <param name="playSessionId">The play session identifier..</param>
         /// <param name="repeatMode">repeatMode.</param>
+        /// <param name="shuffle">shuffle.</param>
         /// <param name="subtitleOffset">subtitleOffset.</param>
         /// <param name="playbackRate">playbackRate.</param>
         /// <param name="playlistItemIds">playlistItemIds.</param>
-        public PlaybackProgressInfo(bool? canSeek = default(bool?), BaseItemDto item = default(BaseItemDto), List<QueueItem> nowPlayingQueue = default(List<QueueItem>), string playlistItemId = default(string), string itemId = default(string), string sessionId = default(string), string mediaSourceId = default(string), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), bool? isPaused = default(bool?), int? playlistIndex = default(int?), int? playlistLength = default(int?), bool? isMuted = default(bool?), long? positionTicks = default(long?), long? runTimeTicks = default(long?), long? playbackStartTimeTicks = default(long?), int? volumeLevel = default(int?), int? brightness = default(int?), string aspectRatio = default(string), ProgressEvent eventName = default(ProgressEvent), PlayMethod playMethod = default(PlayMethod), string liveStreamId = default(string), string playSessionId = default(string), RepeatMode repeatMode = default(RepeatMode), int? subtitleOffset = default(int?), double? playbackRate = default(double?), List<string> playlistItemIds = default(List<string>))
+        public PlaybackProgressInfo(bool? canSeek = default(bool?), BaseItemDto item = default(BaseItemDto), List<QueueItem> nowPlayingQueue = default(List<QueueItem>), string playlistItemId = default(string), string itemId = default(string), string sessionId = default(string), string mediaSourceId = default(string), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), bool? isPaused = default(bool?), int? playlistIndex = default(int?), int? playlistLength = default(int?), bool? isMuted = default(bool?), long? positionTicks = default(long?), long? runTimeTicks = default(long?), long? playbackStartTimeTicks = default(long?), int? volumeLevel = default(int?), int? brightness = default(int?), string aspectRatio = default(string), ProgressEvent eventName = default(ProgressEvent), PlayMethod playMethod = default(PlayMethod), string liveStreamId = default(string), string playSessionId = default(string), RepeatMode repeatMode = default(RepeatMode), bool? shuffle = default(bool?), int? subtitleOffset = default(int?), double? playbackRate = default(double?), List<string> playlistItemIds = default(List<string>))
         {
             this.CanSeek = canSeek;
             this.Item = item;
@@ -79,6 +80,7 @@ namespace EmbyClient.Dotnet.Model
             this.LiveStreamId = liveStreamId;
             this.PlaySessionId = playSessionId;
             this.RepeatMode = repeatMode;
+            this.Shuffle = shuffle;
             this.SubtitleOffset = subtitleOffset;
             this.PlaybackRate = playbackRate;
             this.PlaylistItemIds = playlistItemIds;
@@ -241,6 +243,12 @@ namespace EmbyClient.Dotnet.Model
         public RepeatMode RepeatMode { get; set; }
 
         /// <summary>
+        /// Gets or Sets Shuffle
+        /// </summary>
+        [DataMember(Name="Shuffle", EmitDefaultValue=false)]
+        public bool? Shuffle { get; set; }
+
+        /// <summary>
         /// Gets or Sets SubtitleOffset
         /// </summary>
         [DataMember(Name="SubtitleOffset", EmitDefaultValue=false)]
@@ -290,6 +298,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  LiveStreamId: ").Append(LiveStreamId).Append("\n");
             sb.Append("  PlaySessionId: ").Append(PlaySessionId).Append("\n");
             sb.Append("  RepeatMode: ").Append(RepeatMode).Append("\n");
+            sb.Append("  Shuffle: ").Append(Shuffle).Append("\n");
             sb.Append("  SubtitleOffset: ").Append(SubtitleOffset).Append("\n");
             sb.Append("  PlaybackRate: ").Append(PlaybackRate).Append("\n");
             sb.Append("  PlaylistItemIds: ").Append(PlaylistItemIds).Append("\n");
@@ -449,6 +458,11 @@ namespace EmbyClient.Dotnet.Model
                     this.RepeatMode.Equals(input.RepeatMode))
                 ) && 
                 (
+                    this.Shuffle == input.Shuffle ||
+                    (this.Shuffle != null &&
+                    this.Shuffle.Equals(input.Shuffle))
+                ) && 
+                (
                     this.SubtitleOffset == input.SubtitleOffset ||
                     (this.SubtitleOffset != null &&
                     this.SubtitleOffset.Equals(input.SubtitleOffset))
@@ -523,6 +537,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.PlaySessionId.GetHashCode();
                 if (this.RepeatMode != null)
                     hashCode = hashCode * 59 + this.RepeatMode.GetHashCode();
+                if (this.Shuffle != null)
+                    hashCode = hashCode * 59 + this.Shuffle.GetHashCode();
                 if (this.SubtitleOffset != null)
                     hashCode = hashCode * 59 + this.SubtitleOffset.GetHashCode();
                 if (this.PlaybackRate != null)

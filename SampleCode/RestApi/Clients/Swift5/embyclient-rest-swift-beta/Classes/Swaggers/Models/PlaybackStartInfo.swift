@@ -48,11 +48,12 @@ public struct PlaybackStartInfo: Codable {
     /** The play session identifier. */
     public var playSessionId: String?
     public var repeatMode: RepeatMode?
+    public var shuffle: Bool?
     public var subtitleOffset: Int?
     public var playbackRate: Double?
     public var playlistItemIds: [String]?
 
-    public init(canSeek: Bool? = nil, item: BaseItemDto? = nil, nowPlayingQueue: [QueueItem]? = nil, playlistItemId: String? = nil, itemId: String? = nil, sessionId: String? = nil, mediaSourceId: String? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, isPaused: Bool? = nil, playlistIndex: Int? = nil, playlistLength: Int? = nil, isMuted: Bool? = nil, positionTicks: Int64? = nil, runTimeTicks: Int64? = nil, playbackStartTimeTicks: Int64? = nil, volumeLevel: Int? = nil, brightness: Int? = nil, aspectRatio: String? = nil, eventName: ProgressEvent? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil, playlistItemIds: [String]? = nil) {
+    public init(canSeek: Bool? = nil, item: BaseItemDto? = nil, nowPlayingQueue: [QueueItem]? = nil, playlistItemId: String? = nil, itemId: String? = nil, sessionId: String? = nil, mediaSourceId: String? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, isPaused: Bool? = nil, playlistIndex: Int? = nil, playlistLength: Int? = nil, isMuted: Bool? = nil, positionTicks: Int64? = nil, runTimeTicks: Int64? = nil, playbackStartTimeTicks: Int64? = nil, volumeLevel: Int? = nil, brightness: Int? = nil, aspectRatio: String? = nil, eventName: ProgressEvent? = nil, playMethod: PlayMethod? = nil, liveStreamId: String? = nil, playSessionId: String? = nil, repeatMode: RepeatMode? = nil, shuffle: Bool? = nil, subtitleOffset: Int? = nil, playbackRate: Double? = nil, playlistItemIds: [String]? = nil) {
         self.canSeek = canSeek
         self.item = item
         self.nowPlayingQueue = nowPlayingQueue
@@ -77,6 +78,7 @@ public struct PlaybackStartInfo: Codable {
         self.liveStreamId = liveStreamId
         self.playSessionId = playSessionId
         self.repeatMode = repeatMode
+        self.shuffle = shuffle
         self.subtitleOffset = subtitleOffset
         self.playbackRate = playbackRate
         self.playlistItemIds = playlistItemIds
@@ -107,6 +109,7 @@ public struct PlaybackStartInfo: Codable {
         case liveStreamId = "LiveStreamId"
         case playSessionId = "PlaySessionId"
         case repeatMode = "RepeatMode"
+        case shuffle = "Shuffle"
         case subtitleOffset = "SubtitleOffset"
         case playbackRate = "PlaybackRate"
         case playlistItemIds = "PlaylistItemIds"

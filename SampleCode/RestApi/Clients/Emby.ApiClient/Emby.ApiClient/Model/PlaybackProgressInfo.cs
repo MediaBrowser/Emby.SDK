@@ -171,6 +171,12 @@ namespace Emby.ApiClient.Model
         public RepeatMode RepeatMode { get; set; }
 
         /// <summary>
+        /// Gets or Sets Shuffle
+        /// </summary>
+        /// <value>The Shuffle.</value>
+        public bool? Shuffle { get; set; }
+
+        /// <summary>
         /// Gets or Sets SubtitleOffset
         /// </summary>
         /// <value>The SubtitleOffset.</value>
@@ -220,6 +226,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  LiveStreamId: ").Append(LiveStreamId).Append("\n");
             sb.Append("  PlaySessionId: ").Append(PlaySessionId).Append("\n");
             sb.Append("  RepeatMode: ").Append(RepeatMode).Append("\n");
+            sb.Append("  Shuffle: ").Append(Shuffle).Append("\n");
             sb.Append("  SubtitleOffset: ").Append(SubtitleOffset).Append("\n");
             sb.Append("  PlaybackRate: ").Append(PlaybackRate).Append("\n");
             sb.Append("  PlaylistItemIds: ").Append(PlaylistItemIds).Append("\n");
@@ -370,6 +377,11 @@ namespace Emby.ApiClient.Model
                     this.RepeatMode.Equals(input.RepeatMode))
                 ) && 
                 (
+                    this.Shuffle == input.Shuffle ||
+                    (this.Shuffle != null &&
+                    this.Shuffle.Equals(input.Shuffle))
+                ) && 
+                (
                     this.SubtitleOffset == input.SubtitleOffset ||
                     (this.SubtitleOffset != null &&
                     this.SubtitleOffset.Equals(input.SubtitleOffset))
@@ -444,6 +456,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.PlaySessionId.GetHashCode();
                 if (this.RepeatMode != null)
                     hashCode = hashCode * 59 + this.RepeatMode.GetHashCode();
+                if (this.Shuffle != null)
+                    hashCode = hashCode * 59 + this.Shuffle.GetHashCode();
                 if (this.SubtitleOffset != null)
                     hashCode = hashCode * 59 + this.SubtitleOffset.GetHashCode();
                 if (this.PlaybackRate != null)

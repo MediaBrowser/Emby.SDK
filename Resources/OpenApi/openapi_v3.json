@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.20"
+    "version": "4.9.0.21"
   },
   "servers": [
     {
@@ -81588,6 +81588,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "Shuffle": {
+            "type": "boolean"
+          },
           "PlaybackRate": {
             "type": "number",
             "format": "double"
@@ -84953,6 +84956,9 @@
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
+          "Shuffle": {
+            "type": "boolean"
+          },
           "SubtitleOffset": {
             "type": "integer",
             "format": "int32"
@@ -84999,7 +85005,8 @@
           "QualityChange",
           "StateChange",
           "SubtitleOffsetChange",
-          "PlaybackRateChange"
+          "PlaybackRateChange",
+          "ShuffleModeChange"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"
@@ -85721,7 +85728,7 @@
           "DisableAsyncIO": {
             "type": "boolean"
           },
-          "MigratedToUserItemShares7": {
+          "MigratedToUserItemShares8": {
             "type": "boolean"
           },
           "MigratedLibraryOptionsToDb": {
@@ -89489,6 +89496,9 @@
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
+          "Shuffle": {
+            "type": "boolean"
+          },
           "SubtitleOffset": {
             "type": "integer",
             "format": "int32"
@@ -90080,6 +90090,9 @@
           "PlaylistLength": {
             "type": "integer",
             "format": "int32"
+          },
+          "Shuffle": {
+            "type": "boolean"
           },
           "EventName": {
             "$ref": "#/components/schemas/ProgressEvent"

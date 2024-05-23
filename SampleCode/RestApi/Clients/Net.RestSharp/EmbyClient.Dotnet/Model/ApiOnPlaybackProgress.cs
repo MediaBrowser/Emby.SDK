@@ -28,11 +28,13 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="playlistIndex">playlistIndex.</param>
         /// <param name="playlistLength">playlistLength.</param>
+        /// <param name="shuffle">shuffle.</param>
         /// <param name="eventName">eventName.</param>
-        public ApiOnPlaybackProgress(int? playlistIndex = default(int?), int? playlistLength = default(int?), ProgressEvent eventName = default(ProgressEvent))
+        public ApiOnPlaybackProgress(int? playlistIndex = default(int?), int? playlistLength = default(int?), bool? shuffle = default(bool?), ProgressEvent eventName = default(ProgressEvent))
         {
             this.PlaylistIndex = playlistIndex;
             this.PlaylistLength = playlistLength;
+            this.Shuffle = shuffle;
             this.EventName = eventName;
         }
         
@@ -47,6 +49,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="PlaylistLength", EmitDefaultValue=false)]
         public int? PlaylistLength { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Shuffle
+        /// </summary>
+        [DataMember(Name="Shuffle", EmitDefaultValue=false)]
+        public bool? Shuffle { get; set; }
 
         /// <summary>
         /// Gets or Sets EventName
@@ -64,6 +72,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class ApiOnPlaybackProgress {\n");
             sb.Append("  PlaylistIndex: ").Append(PlaylistIndex).Append("\n");
             sb.Append("  PlaylistLength: ").Append(PlaylistLength).Append("\n");
+            sb.Append("  Shuffle: ").Append(Shuffle).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -110,6 +119,11 @@ namespace EmbyClient.Dotnet.Model
                     this.PlaylistLength.Equals(input.PlaylistLength))
                 ) && 
                 (
+                    this.Shuffle == input.Shuffle ||
+                    (this.Shuffle != null &&
+                    this.Shuffle.Equals(input.Shuffle))
+                ) && 
+                (
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
@@ -129,6 +143,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.PlaylistIndex.GetHashCode();
                 if (this.PlaylistLength != null)
                     hashCode = hashCode * 59 + this.PlaylistLength.GetHashCode();
+                if (this.Shuffle != null)
+                    hashCode = hashCode * 59 + this.Shuffle.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 return hashCode;

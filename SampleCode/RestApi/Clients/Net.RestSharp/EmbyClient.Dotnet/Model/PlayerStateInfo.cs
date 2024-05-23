@@ -37,8 +37,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="playMethod">playMethod.</param>
         /// <param name="repeatMode">repeatMode.</param>
         /// <param name="subtitleOffset">subtitleOffset.</param>
+        /// <param name="shuffle">shuffle.</param>
         /// <param name="playbackRate">playbackRate.</param>
-        public PlayerStateInfo(long? positionTicks = default(long?), bool? canSeek = default(bool?), bool? isPaused = default(bool?), bool? isMuted = default(bool?), int? volumeLevel = default(int?), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), string mediaSourceId = default(string), PlayMethod playMethod = default(PlayMethod), RepeatMode repeatMode = default(RepeatMode), int? subtitleOffset = default(int?), double? playbackRate = default(double?))
+        public PlayerStateInfo(long? positionTicks = default(long?), bool? canSeek = default(bool?), bool? isPaused = default(bool?), bool? isMuted = default(bool?), int? volumeLevel = default(int?), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), string mediaSourceId = default(string), PlayMethod playMethod = default(PlayMethod), RepeatMode repeatMode = default(RepeatMode), int? subtitleOffset = default(int?), bool? shuffle = default(bool?), double? playbackRate = default(double?))
         {
             this.PositionTicks = positionTicks;
             this.CanSeek = canSeek;
@@ -51,6 +52,7 @@ namespace EmbyClient.Dotnet.Model
             this.PlayMethod = playMethod;
             this.RepeatMode = repeatMode;
             this.SubtitleOffset = subtitleOffset;
+            this.Shuffle = shuffle;
             this.PlaybackRate = playbackRate;
         }
         
@@ -129,6 +131,12 @@ namespace EmbyClient.Dotnet.Model
         public int? SubtitleOffset { get; set; }
 
         /// <summary>
+        /// Gets or Sets Shuffle
+        /// </summary>
+        [DataMember(Name="Shuffle", EmitDefaultValue=false)]
+        public bool? Shuffle { get; set; }
+
+        /// <summary>
         /// Gets or Sets PlaybackRate
         /// </summary>
         [DataMember(Name="PlaybackRate", EmitDefaultValue=false)]
@@ -153,6 +161,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  PlayMethod: ").Append(PlayMethod).Append("\n");
             sb.Append("  RepeatMode: ").Append(RepeatMode).Append("\n");
             sb.Append("  SubtitleOffset: ").Append(SubtitleOffset).Append("\n");
+            sb.Append("  Shuffle: ").Append(Shuffle).Append("\n");
             sb.Append("  PlaybackRate: ").Append(PlaybackRate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -244,6 +253,11 @@ namespace EmbyClient.Dotnet.Model
                     this.SubtitleOffset.Equals(input.SubtitleOffset))
                 ) && 
                 (
+                    this.Shuffle == input.Shuffle ||
+                    (this.Shuffle != null &&
+                    this.Shuffle.Equals(input.Shuffle))
+                ) && 
+                (
                     this.PlaybackRate == input.PlaybackRate ||
                     (this.PlaybackRate != null &&
                     this.PlaybackRate.Equals(input.PlaybackRate))
@@ -281,6 +295,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.RepeatMode.GetHashCode();
                 if (this.SubtitleOffset != null)
                     hashCode = hashCode * 59 + this.SubtitleOffset.GetHashCode();
+                if (this.Shuffle != null)
+                    hashCode = hashCode * 59 + this.Shuffle.GetHashCode();
                 if (this.PlaybackRate != null)
                     hashCode = hashCode * 59 + this.PlaybackRate.GetHashCode();
                 return hashCode;
