@@ -33,7 +33,7 @@ public enum ProgressEvent {
   STATECHANGE("StateChange"),
   SUBTITLEOFFSETCHANGE("SubtitleOffsetChange"),
   PLAYBACKRATECHANGE("PlaybackRateChange"),
-  SHUFFLEMODECHANGE("ShuffleModeChange");
+  SHUFFLECHANGE("ShuffleChange");
 
   private String value;
 

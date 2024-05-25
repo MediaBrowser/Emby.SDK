@@ -24,5 +24,5 @@ const (
 	STATE_CHANGE_ProgressEvent ProgressEvent = "StateChange"
 	SUBTITLE_OFFSET_CHANGE_ProgressEvent ProgressEvent = "SubtitleOffsetChange"
 	PLAYBACK_RATE_CHANGE_ProgressEvent ProgressEvent = "PlaybackRateChange"
-	SHUFFLE_MODE_CHANGE_ProgressEvent ProgressEvent = "ShuffleModeChange"
+	SHUFFLE_CHANGE_ProgressEvent ProgressEvent = "ShuffleChange"
 )

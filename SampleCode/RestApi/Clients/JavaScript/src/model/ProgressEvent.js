@@ -101,10 +101,10 @@ export default class ProgressEvent {
         playbackRateChange = "PlaybackRateChange";
 
         /**
-         * value: "ShuffleModeChange"
+         * value: "ShuffleChange"
          * @const
          */
-        shuffleModeChange = "ShuffleModeChange";
+        shuffleChange = "ShuffleChange";
 
 
     /**

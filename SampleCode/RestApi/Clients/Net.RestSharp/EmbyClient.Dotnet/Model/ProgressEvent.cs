@@ -94,8 +94,8 @@ namespace EmbyClient.Dotnet.Model
         [EnumMember(Value = "PlaybackRateChange")]
         PlaybackRateChange = 14,
         /// <summary>
-        /// Enum ShuffleModeChange for value: ShuffleModeChange
+        /// Enum ShuffleChange for value: ShuffleChange
         /// </summary>
-        [EnumMember(Value = "ShuffleModeChange")]
-        ShuffleModeChange = 15    }
+        [EnumMember(Value = "ShuffleChange")]
+        ShuffleChange = 15    }
 }

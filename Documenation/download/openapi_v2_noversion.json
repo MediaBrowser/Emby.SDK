@@ -62202,7 +62202,7 @@
         "StateChange",
         "SubtitleOffsetChange",
         "PlaybackRateChange",
-        "ShuffleModeChange"
+        "ShuffleChange"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"

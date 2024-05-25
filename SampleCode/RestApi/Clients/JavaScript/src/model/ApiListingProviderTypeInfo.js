@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ApiListingProviderTypeInfo model module.
 * @module model/ApiListingProviderTypeInfo
-* @version 4.9.0.21
+* @version 4.9.0.22
 */
 export default class ApiListingProviderTypeInfo {
     /**

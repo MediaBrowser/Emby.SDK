@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.21"
+    "version": "4.9.0.22"
   },
   "servers": [
     {
@@ -85006,7 +85006,7 @@
           "StateChange",
           "SubtitleOffsetChange",
           "PlaybackRateChange",
-          "ShuffleModeChange"
+          "ShuffleChange"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"
