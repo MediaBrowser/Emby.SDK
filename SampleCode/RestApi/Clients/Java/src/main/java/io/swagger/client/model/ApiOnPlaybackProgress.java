@@ -27,6 +27,9 @@ public class ApiOnPlaybackProgress {
   @SerializedName("PlaylistLength")
   private Integer playlistLength = null;
 
+  @SerializedName("Shuffle")
+  private Boolean shuffle = null;
+
   @SerializedName("EventName")
   private ProgressEvent eventName = null;
 
@@ -66,6 +69,24 @@ public class ApiOnPlaybackProgress {
     this.playlistLength = playlistLength;
   }
 
+  public ApiOnPlaybackProgress shuffle(Boolean shuffle) {
+    this.shuffle = shuffle;
+    return this;
+  }
+
+   /**
+   * Get shuffle
+   * @return shuffle
+  **/
+  @Schema(description = "")
+  public Boolean isShuffle() {
+    return shuffle;
+  }
+
+  public void setShuffle(Boolean shuffle) {
+    this.shuffle = shuffle;
+  }
+
   public ApiOnPlaybackProgress eventName(ProgressEvent eventName) {
     this.eventName = eventName;
     return this;
@@ -96,12 +117,13 @@ public class ApiOnPlaybackProgress {
     ApiOnPlaybackProgress apiOnPlaybackProgress = (ApiOnPlaybackProgress) o;
     return Objects.equals(this.playlistIndex, apiOnPlaybackProgress.playlistIndex) &&
         Objects.equals(this.playlistLength, apiOnPlaybackProgress.playlistLength) &&
+        Objects.equals(this.shuffle, apiOnPlaybackProgress.shuffle) &&
         Objects.equals(this.eventName, apiOnPlaybackProgress.eventName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(playlistIndex, playlistLength, eventName);
+    return Objects.hash(playlistIndex, playlistLength, shuffle, eventName);
   }
 
 
@@ -112,6 +134,7 @@ public class ApiOnPlaybackProgress {
     
     sb.append("    playlistIndex: ").append(toIndentedString(playlistIndex)).append("\n");
     sb.append("    playlistLength: ").append(toIndentedString(playlistLength)).append("\n");
+    sb.append("    shuffle: ").append(toIndentedString(shuffle)).append("\n");
     sb.append("    eventName: ").append(toIndentedString(eventName)).append("\n");
     sb.append("}");
     return sb.toString();

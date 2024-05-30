@@ -369,10 +369,10 @@ func (a *ConfigurationServiceApiService) PostSystemConfigurationByKey(ctx contex
 ConfigurationServiceApiService Updates application configuration
 Requires authentication as administrator
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body ServerConfiguration: 
+ * @param body Binary stream
 
 */
-func (a *ConfigurationServiceApiService) PostSystemConfigurationPartial(ctx context.Context, body ServerConfiguration) (*http.Response, error) {
+func (a *ConfigurationServiceApiService) PostSystemConfigurationPartial(ctx context.Context, body Object) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -389,7 +389,7 @@ func (a *ConfigurationServiceApiService) PostSystemConfigurationPartial(ctx cont
 	localVarFormParams := url.Values{}
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json", "application/xml"}
+	localVarHttpContentTypes := []string{"application/octet-stream"}
 
 	// set Content-Type header
 	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)

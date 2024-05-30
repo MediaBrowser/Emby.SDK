@@ -33,6 +33,7 @@ class PlayerStateInfo(object):
         'play_method': 'PlayMethod',
         'repeat_mode': 'RepeatMode',
         'subtitle_offset': 'int',
+        'shuffle': 'bool',
         'playback_rate': 'float'
     }
 
@@ -48,10 +49,11 @@ class PlayerStateInfo(object):
         'play_method': 'PlayMethod',
         'repeat_mode': 'RepeatMode',
         'subtitle_offset': 'SubtitleOffset',
+        'shuffle': 'Shuffle',
         'playback_rate': 'PlaybackRate'
     }
 
-    def __init__(self, position_ticks=None, can_seek=None, is_paused=None, is_muted=None, volume_level=None, audio_stream_index=None, subtitle_stream_index=None, media_source_id=None, play_method=None, repeat_mode=None, subtitle_offset=None, playback_rate=None):  # noqa: E501
+    def __init__(self, position_ticks=None, can_seek=None, is_paused=None, is_muted=None, volume_level=None, audio_stream_index=None, subtitle_stream_index=None, media_source_id=None, play_method=None, repeat_mode=None, subtitle_offset=None, shuffle=None, playback_rate=None):  # noqa: E501
         """PlayerStateInfo - a model defined in Swagger"""  # noqa: E501
         self._position_ticks = None
         self._can_seek = None
@@ -64,6 +66,7 @@ class PlayerStateInfo(object):
         self._play_method = None
         self._repeat_mode = None
         self._subtitle_offset = None
+        self._shuffle = None
         self._playback_rate = None
         self.discriminator = None
         if position_ticks is not None:
@@ -88,6 +91,8 @@ class PlayerStateInfo(object):
             self.repeat_mode = repeat_mode
         if subtitle_offset is not None:
             self.subtitle_offset = subtitle_offset
+        if shuffle is not None:
+            self.shuffle = shuffle
         if playback_rate is not None:
             self.playback_rate = playback_rate
 
@@ -337,6 +342,27 @@ class PlayerStateInfo(object):
         """
 
         self._subtitle_offset = subtitle_offset
+
+    @property
+    def shuffle(self):
+        """Gets the shuffle of this PlayerStateInfo.  # noqa: E501
+
+
+        :return: The shuffle of this PlayerStateInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._shuffle
+
+    @shuffle.setter
+    def shuffle(self, shuffle):
+        """Sets the shuffle of this PlayerStateInfo.
+
+
+        :param shuffle: The shuffle of this PlayerStateInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._shuffle = shuffle
 
     @property
     def playback_rate(self):

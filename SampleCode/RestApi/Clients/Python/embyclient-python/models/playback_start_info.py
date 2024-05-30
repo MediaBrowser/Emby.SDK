@@ -46,6 +46,7 @@ class PlaybackStartInfo(object):
         'live_stream_id': 'str',
         'play_session_id': 'str',
         'repeat_mode': 'RepeatMode',
+        'shuffle': 'bool',
         'subtitle_offset': 'int',
         'playback_rate': 'float',
         'playlist_item_ids': 'list[str]'
@@ -76,12 +77,13 @@ class PlaybackStartInfo(object):
         'live_stream_id': 'LiveStreamId',
         'play_session_id': 'PlaySessionId',
         'repeat_mode': 'RepeatMode',
+        'shuffle': 'Shuffle',
         'subtitle_offset': 'SubtitleOffset',
         'playback_rate': 'PlaybackRate',
         'playlist_item_ids': 'PlaylistItemIds'
     }
 
-    def __init__(self, can_seek=None, item=None, now_playing_queue=None, playlist_item_id=None, item_id=None, session_id=None, media_source_id=None, audio_stream_index=None, subtitle_stream_index=None, is_paused=None, playlist_index=None, playlist_length=None, is_muted=None, position_ticks=None, run_time_ticks=None, playback_start_time_ticks=None, volume_level=None, brightness=None, aspect_ratio=None, event_name=None, play_method=None, live_stream_id=None, play_session_id=None, repeat_mode=None, subtitle_offset=None, playback_rate=None, playlist_item_ids=None):  # noqa: E501
+    def __init__(self, can_seek=None, item=None, now_playing_queue=None, playlist_item_id=None, item_id=None, session_id=None, media_source_id=None, audio_stream_index=None, subtitle_stream_index=None, is_paused=None, playlist_index=None, playlist_length=None, is_muted=None, position_ticks=None, run_time_ticks=None, playback_start_time_ticks=None, volume_level=None, brightness=None, aspect_ratio=None, event_name=None, play_method=None, live_stream_id=None, play_session_id=None, repeat_mode=None, shuffle=None, subtitle_offset=None, playback_rate=None, playlist_item_ids=None):  # noqa: E501
         """PlaybackStartInfo - a model defined in Swagger"""  # noqa: E501
         self._can_seek = None
         self._item = None
@@ -107,6 +109,7 @@ class PlaybackStartInfo(object):
         self._live_stream_id = None
         self._play_session_id = None
         self._repeat_mode = None
+        self._shuffle = None
         self._subtitle_offset = None
         self._playback_rate = None
         self._playlist_item_ids = None
@@ -159,6 +162,8 @@ class PlaybackStartInfo(object):
             self.play_session_id = play_session_id
         if repeat_mode is not None:
             self.repeat_mode = repeat_mode
+        if shuffle is not None:
+            self.shuffle = shuffle
         if subtitle_offset is not None:
             self.subtitle_offset = subtitle_offset
         if playback_rate is not None:
@@ -693,6 +698,27 @@ class PlaybackStartInfo(object):
         """
 
         self._repeat_mode = repeat_mode
+
+    @property
+    def shuffle(self):
+        """Gets the shuffle of this PlaybackStartInfo.  # noqa: E501
+
+
+        :return: The shuffle of this PlaybackStartInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._shuffle
+
+    @shuffle.setter
+    def shuffle(self, shuffle):
+        """Sets the shuffle of this PlaybackStartInfo.
+
+
+        :param shuffle: The shuffle of this PlaybackStartInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._shuffle = shuffle
 
     @property
     def subtitle_offset(self):

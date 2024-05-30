@@ -55,6 +55,9 @@ public class PlayerStateInfo {
   @SerializedName("SubtitleOffset")
   private Integer subtitleOffset = null;
 
+  @SerializedName("Shuffle")
+  private Boolean shuffle = null;
+
   @SerializedName("PlaybackRate")
   private Double playbackRate = null;
 
@@ -256,6 +259,24 @@ public class PlayerStateInfo {
     this.subtitleOffset = subtitleOffset;
   }
 
+  public PlayerStateInfo shuffle(Boolean shuffle) {
+    this.shuffle = shuffle;
+    return this;
+  }
+
+   /**
+   * Get shuffle
+   * @return shuffle
+  **/
+  @Schema(description = "")
+  public Boolean isShuffle() {
+    return shuffle;
+  }
+
+  public void setShuffle(Boolean shuffle) {
+    this.shuffle = shuffle;
+  }
+
   public PlayerStateInfo playbackRate(Double playbackRate) {
     this.playbackRate = playbackRate;
     return this;
@@ -295,12 +316,13 @@ public class PlayerStateInfo {
         Objects.equals(this.playMethod, playerStateInfo.playMethod) &&
         Objects.equals(this.repeatMode, playerStateInfo.repeatMode) &&
         Objects.equals(this.subtitleOffset, playerStateInfo.subtitleOffset) &&
+        Objects.equals(this.shuffle, playerStateInfo.shuffle) &&
         Objects.equals(this.playbackRate, playerStateInfo.playbackRate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(positionTicks, canSeek, isPaused, isMuted, volumeLevel, audioStreamIndex, subtitleStreamIndex, mediaSourceId, playMethod, repeatMode, subtitleOffset, playbackRate);
+    return Objects.hash(positionTicks, canSeek, isPaused, isMuted, volumeLevel, audioStreamIndex, subtitleStreamIndex, mediaSourceId, playMethod, repeatMode, subtitleOffset, shuffle, playbackRate);
   }
 
 
@@ -320,6 +342,7 @@ public class PlayerStateInfo {
     sb.append("    playMethod: ").append(toIndentedString(playMethod)).append("\n");
     sb.append("    repeatMode: ").append(toIndentedString(repeatMode)).append("\n");
     sb.append("    subtitleOffset: ").append(toIndentedString(subtitleOffset)).append("\n");
+    sb.append("    shuffle: ").append(toIndentedString(shuffle)).append("\n");
     sb.append("    playbackRate: ").append(toIndentedString(playbackRate)).append("\n");
     sb.append("}");
     return sb.toString();

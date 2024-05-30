@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.7.0"
+    "version": "4.8.8.0"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -39854,17 +39854,17 @@
         "description": "Requires authentication as administrator",
         "operationId": "postSystemConfigurationPartial",
         "consumes": [
-          "application/json",
-          "application/xml"
+          "application/octet-stream"
         ],
         "parameters": [
           {
             "in": "body",
             "name": "body",
-            "description": "ServerConfiguration: ",
+            "description": "Binary stream",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ServerConfiguration"
+              "format": "binary",
+              "type": "string"
             }
           }
         ],
@@ -58779,6 +58779,9 @@
           "format": "int32",
           "type": "integer"
         },
+        "Shuffle": {
+          "type": "boolean"
+        },
         "PlaybackRate": {
           "format": "double",
           "type": "number"
@@ -62097,6 +62100,9 @@
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
+        "Shuffle": {
+          "type": "boolean"
+        },
         "SubtitleOffset": {
           "format": "int32",
           "type": "integer"
@@ -62142,7 +62148,8 @@
         "QualityChange",
         "StateChange",
         "SubtitleOffsetChange",
-        "PlaybackRateChange"
+        "PlaybackRateChange",
+        "ShuffleChange"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"
@@ -62857,7 +62864,7 @@
         "DisableAsyncIO": {
           "type": "boolean"
         },
-        "MigratedToUserItemShares7": {
+        "MigratedToUserItemShares8": {
           "type": "boolean"
         },
         "MigratedLibraryOptionsToDb": {
@@ -66528,6 +66535,9 @@
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
+        "Shuffle": {
+          "type": "boolean"
+        },
         "SubtitleOffset": {
           "format": "int32",
           "type": "integer"
@@ -67096,6 +67106,9 @@
         "PlaylistLength": {
           "format": "int32",
           "type": "integer"
+        },
+        "Shuffle": {
+          "type": "boolean"
         },
         "EventName": {
           "$ref": "#/definitions/ProgressEvent"

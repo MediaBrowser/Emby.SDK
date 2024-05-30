@@ -24,25 +24,30 @@ class ApiOnPlaybackProgress(object):
     swagger_types = {
         'playlist_index': 'int',
         'playlist_length': 'int',
+        'shuffle': 'bool',
         'event_name': 'ProgressEvent'
     }
 
     attribute_map = {
         'playlist_index': 'PlaylistIndex',
         'playlist_length': 'PlaylistLength',
+        'shuffle': 'Shuffle',
         'event_name': 'EventName'
     }
 
-    def __init__(self, playlist_index=None, playlist_length=None, event_name=None):  # noqa: E501
+    def __init__(self, playlist_index=None, playlist_length=None, shuffle=None, event_name=None):  # noqa: E501
         """ApiOnPlaybackProgress - a model defined in Swagger"""  # noqa: E501
         self._playlist_index = None
         self._playlist_length = None
+        self._shuffle = None
         self._event_name = None
         self.discriminator = None
         if playlist_index is not None:
             self.playlist_index = playlist_index
         if playlist_length is not None:
             self.playlist_length = playlist_length
+        if shuffle is not None:
+            self.shuffle = shuffle
         if event_name is not None:
             self.event_name = event_name
 
@@ -87,6 +92,27 @@ class ApiOnPlaybackProgress(object):
         """
 
         self._playlist_length = playlist_length
+
+    @property
+    def shuffle(self):
+        """Gets the shuffle of this ApiOnPlaybackProgress.  # noqa: E501
+
+
+        :return: The shuffle of this ApiOnPlaybackProgress.  # noqa: E501
+        :rtype: bool
+        """
+        return self._shuffle
+
+    @shuffle.setter
+    def shuffle(self, shuffle):
+        """Sets the shuffle of this ApiOnPlaybackProgress.
+
+
+        :param shuffle: The shuffle of this ApiOnPlaybackProgress.  # noqa: E501
+        :type: bool
+        """
+
+        self._shuffle = shuffle
 
     @property
     def event_name(self):

@@ -16,7 +16,7 @@ import RepeatMode from './RepeatMode';
 /**
 * The PlayerStateInfo model module.
 * @module model/PlayerStateInfo
-* @version 4.8.7.0
+* @version 4.8.8.0
 */
 export default class PlayerStateInfo {
     /**
@@ -75,6 +75,9 @@ export default class PlayerStateInfo {
             }
             if (data.hasOwnProperty('SubtitleOffset')) {
                 obj['SubtitleOffset'] = ApiClient.convertToType(data['SubtitleOffset'], 'Number');
+            }
+            if (data.hasOwnProperty('Shuffle')) {
+                obj['Shuffle'] = ApiClient.convertToType(data['Shuffle'], 'Boolean');
             }
             if (data.hasOwnProperty('PlaybackRate')) {
                 obj['PlaybackRate'] = ApiClient.convertToType(data['PlaybackRate'], 'Number');
@@ -135,6 +138,10 @@ export default class PlayerStateInfo {
     * @member {Number} SubtitleOffset
     */
     'SubtitleOffset' = undefined;
+    /**
+    * @member {Boolean} Shuffle
+    */
+    'Shuffle' = undefined;
     /**
     * @member {Number} PlaybackRate
     */

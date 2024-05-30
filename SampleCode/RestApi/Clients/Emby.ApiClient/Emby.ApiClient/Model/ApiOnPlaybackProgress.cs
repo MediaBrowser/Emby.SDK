@@ -39,6 +39,12 @@ namespace Emby.ApiClient.Model
         public int? PlaylistLength { get; set; }
 
         /// <summary>
+        /// Gets or Sets Shuffle
+        /// </summary>
+        /// <value>The Shuffle.</value>
+        public bool? Shuffle { get; set; }
+
+        /// <summary>
         /// Gets or Sets EventName
         /// </summary>
         /// <value>The EventName.</value>
@@ -54,6 +60,7 @@ namespace Emby.ApiClient.Model
             sb.Append("class ApiOnPlaybackProgress {\n");
             sb.Append("  PlaylistIndex: ").Append(PlaylistIndex).Append("\n");
             sb.Append("  PlaylistLength: ").Append(PlaylistLength).Append("\n");
+            sb.Append("  Shuffle: ").Append(Shuffle).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -91,6 +98,11 @@ namespace Emby.ApiClient.Model
                     this.PlaylistLength.Equals(input.PlaylistLength))
                 ) && 
                 (
+                    this.Shuffle == input.Shuffle ||
+                    (this.Shuffle != null &&
+                    this.Shuffle.Equals(input.Shuffle))
+                ) && 
+                (
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
@@ -110,6 +122,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.PlaylistIndex.GetHashCode();
                 if (this.PlaylistLength != null)
                     hashCode = hashCode * 59 + this.PlaylistLength.GetHashCode();
+                if (this.Shuffle != null)
+                    hashCode = hashCode * 59 + this.Shuffle.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 return hashCode;

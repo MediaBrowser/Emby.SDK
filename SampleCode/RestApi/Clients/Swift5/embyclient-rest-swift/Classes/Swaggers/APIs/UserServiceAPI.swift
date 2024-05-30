@@ -1839,18 +1839,19 @@ open class UserServiceAPI {
       "UserInternalId" : 7
     } ],
     "PlayState" : {
+      "Shuffle" : true,
+      "PositionTicks" : 0,
+      "MediaSourceId" : "MediaSourceId",
+      "IsPaused" : true,
+      "SubtitleStreamIndex" : 5,
+      "PlaybackRate" : 2.3021358869347655,
       "RepeatMode" : "RepeatNone",
       "CanSeek" : true,
       "PlayMethod" : "Transcode",
       "SubtitleOffset" : 5,
-      "PositionTicks" : 0,
       "AudioStreamIndex" : 1,
       "IsMuted" : true,
-      "VolumeLevel" : 6,
-      "MediaSourceId" : "MediaSourceId",
-      "IsPaused" : true,
-      "SubtitleStreamIndex" : 5,
-      "PlaybackRate" : 2.3021358869347655
+      "VolumeLevel" : 6
     },
     "DeviceName" : "DeviceName"
   }
@@ -2685,18 +2686,19 @@ open class UserServiceAPI {
       "UserInternalId" : 7
     } ],
     "PlayState" : {
+      "Shuffle" : true,
+      "PositionTicks" : 0,
+      "MediaSourceId" : "MediaSourceId",
+      "IsPaused" : true,
+      "SubtitleStreamIndex" : 5,
+      "PlaybackRate" : 2.3021358869347655,
       "RepeatMode" : "RepeatNone",
       "CanSeek" : true,
       "PlayMethod" : "Transcode",
       "SubtitleOffset" : 5,
-      "PositionTicks" : 0,
       "AudioStreamIndex" : 1,
       "IsMuted" : true,
-      "VolumeLevel" : 6,
-      "MediaSourceId" : "MediaSourceId",
-      "IsPaused" : true,
-      "SubtitleStreamIndex" : 5,
-      "PlaybackRate" : 2.3021358869347655
+      "VolumeLevel" : 6
     },
     "DeviceName" : "DeviceName"
   }

@@ -19,7 +19,7 @@ import RepeatMode from './RepeatMode';
 /**
 * The PlaybackStartInfo model module.
 * @module model/PlaybackStartInfo
-* @version 4.8.7.0
+* @version 4.8.8.0
 */
 export default class PlaybackStartInfo {
     /**
@@ -118,6 +118,9 @@ export default class PlaybackStartInfo {
             }
             if (data.hasOwnProperty('RepeatMode')) {
                 obj['RepeatMode'] = RepeatMode.constructFromObject(data['RepeatMode']);
+            }
+            if (data.hasOwnProperty('Shuffle')) {
+                obj['Shuffle'] = ApiClient.convertToType(data['Shuffle'], 'Boolean');
             }
             if (data.hasOwnProperty('SubtitleOffset')) {
                 obj['SubtitleOffset'] = ApiClient.convertToType(data['SubtitleOffset'], 'Number');
@@ -240,6 +243,10 @@ export default class PlaybackStartInfo {
     * @member {module:model/RepeatMode} RepeatMode
     */
     'RepeatMode' = undefined;
+    /**
+    * @member {Boolean} Shuffle
+    */
+    'Shuffle' = undefined;
     /**
     * @member {Number} SubtitleOffset
     */

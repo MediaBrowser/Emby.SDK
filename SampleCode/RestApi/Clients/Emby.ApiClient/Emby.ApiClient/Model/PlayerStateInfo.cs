@@ -93,6 +93,12 @@ namespace Emby.ApiClient.Model
         public int? SubtitleOffset { get; set; }
 
         /// <summary>
+        /// Gets or Sets Shuffle
+        /// </summary>
+        /// <value>The Shuffle.</value>
+        public bool? Shuffle { get; set; }
+
+        /// <summary>
         /// Gets or Sets PlaybackRate
         /// </summary>
         /// <value>The PlaybackRate.</value>
@@ -117,6 +123,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  PlayMethod: ").Append(PlayMethod).Append("\n");
             sb.Append("  RepeatMode: ").Append(RepeatMode).Append("\n");
             sb.Append("  SubtitleOffset: ").Append(SubtitleOffset).Append("\n");
+            sb.Append("  Shuffle: ").Append(Shuffle).Append("\n");
             sb.Append("  PlaybackRate: ").Append(PlaybackRate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -199,6 +206,11 @@ namespace Emby.ApiClient.Model
                     this.SubtitleOffset.Equals(input.SubtitleOffset))
                 ) && 
                 (
+                    this.Shuffle == input.Shuffle ||
+                    (this.Shuffle != null &&
+                    this.Shuffle.Equals(input.Shuffle))
+                ) && 
+                (
                     this.PlaybackRate == input.PlaybackRate ||
                     (this.PlaybackRate != null &&
                     this.PlaybackRate.Equals(input.PlaybackRate))
@@ -236,6 +248,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.RepeatMode.GetHashCode();
                 if (this.SubtitleOffset != null)
                     hashCode = hashCode * 59 + this.SubtitleOffset.GetHashCode();
+                if (this.Shuffle != null)
+                    hashCode = hashCode * 59 + this.Shuffle.GetHashCode();
                 if (this.PlaybackRate != null)
                     hashCode = hashCode * 59 + this.PlaybackRate.GetHashCode();
                 return hashCode;

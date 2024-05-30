@@ -99,6 +99,9 @@ public class PlaybackProgressInfo {
   @SerializedName("RepeatMode")
   private RepeatMode repeatMode = null;
 
+  @SerializedName("Shuffle")
+  private Boolean shuffle = null;
+
   @SerializedName("SubtitleOffset")
   private Integer subtitleOffset = null;
 
@@ -548,6 +551,24 @@ public class PlaybackProgressInfo {
     this.repeatMode = repeatMode;
   }
 
+  public PlaybackProgressInfo shuffle(Boolean shuffle) {
+    this.shuffle = shuffle;
+    return this;
+  }
+
+   /**
+   * Get shuffle
+   * @return shuffle
+  **/
+  @Schema(description = "")
+  public Boolean isShuffle() {
+    return shuffle;
+  }
+
+  public void setShuffle(Boolean shuffle) {
+    this.shuffle = shuffle;
+  }
+
   public PlaybackProgressInfo subtitleOffset(Integer subtitleOffset) {
     this.subtitleOffset = subtitleOffset;
     return this;
@@ -644,6 +665,7 @@ public class PlaybackProgressInfo {
         Objects.equals(this.liveStreamId, playbackProgressInfo.liveStreamId) &&
         Objects.equals(this.playSessionId, playbackProgressInfo.playSessionId) &&
         Objects.equals(this.repeatMode, playbackProgressInfo.repeatMode) &&
+        Objects.equals(this.shuffle, playbackProgressInfo.shuffle) &&
         Objects.equals(this.subtitleOffset, playbackProgressInfo.subtitleOffset) &&
         Objects.equals(this.playbackRate, playbackProgressInfo.playbackRate) &&
         Objects.equals(this.playlistItemIds, playbackProgressInfo.playlistItemIds);
@@ -651,7 +673,7 @@ public class PlaybackProgressInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(canSeek, item, nowPlayingQueue, playlistItemId, itemId, sessionId, mediaSourceId, audioStreamIndex, subtitleStreamIndex, isPaused, playlistIndex, playlistLength, isMuted, positionTicks, runTimeTicks, playbackStartTimeTicks, volumeLevel, brightness, aspectRatio, eventName, playMethod, liveStreamId, playSessionId, repeatMode, subtitleOffset, playbackRate, playlistItemIds);
+    return Objects.hash(canSeek, item, nowPlayingQueue, playlistItemId, itemId, sessionId, mediaSourceId, audioStreamIndex, subtitleStreamIndex, isPaused, playlistIndex, playlistLength, isMuted, positionTicks, runTimeTicks, playbackStartTimeTicks, volumeLevel, brightness, aspectRatio, eventName, playMethod, liveStreamId, playSessionId, repeatMode, shuffle, subtitleOffset, playbackRate, playlistItemIds);
   }
 
 
@@ -684,6 +706,7 @@ public class PlaybackProgressInfo {
     sb.append("    liveStreamId: ").append(toIndentedString(liveStreamId)).append("\n");
     sb.append("    playSessionId: ").append(toIndentedString(playSessionId)).append("\n");
     sb.append("    repeatMode: ").append(toIndentedString(repeatMode)).append("\n");
+    sb.append("    shuffle: ").append(toIndentedString(shuffle)).append("\n");
     sb.append("    subtitleOffset: ").append(toIndentedString(subtitleOffset)).append("\n");
     sb.append("    playbackRate: ").append(toIndentedString(playbackRate)).append("\n");
     sb.append("    playlistItemIds: ").append(toIndentedString(playlistItemIds)).append("\n");

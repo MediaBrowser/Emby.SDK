@@ -23,4 +23,5 @@ public enum ProgressEvent: String, Codable {
     case stateChange = "StateChange"
     case subtitleOffsetChange = "SubtitleOffsetChange"
     case playbackRateChange = "PlaybackRateChange"
+    case shuffleChange = "ShuffleChange"
 }

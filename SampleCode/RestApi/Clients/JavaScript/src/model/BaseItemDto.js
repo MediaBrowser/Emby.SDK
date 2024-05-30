@@ -31,7 +31,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The BaseItemDto model module.
 * @module model/BaseItemDto
-* @version 4.8.7.0
+* @version 4.8.8.0
 */
 export default class BaseItemDto {
     /**

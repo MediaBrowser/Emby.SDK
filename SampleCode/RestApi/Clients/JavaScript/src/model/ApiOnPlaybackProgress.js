@@ -15,7 +15,7 @@ import ProgressEvent from './ProgressEvent';
 /**
 * The ApiOnPlaybackProgress model module.
 * @module model/ApiOnPlaybackProgress
-* @version 4.8.7.0
+* @version 4.8.8.0
 */
 export default class ApiOnPlaybackProgress {
     /**
@@ -48,6 +48,9 @@ export default class ApiOnPlaybackProgress {
             if (data.hasOwnProperty('PlaylistLength')) {
                 obj['PlaylistLength'] = ApiClient.convertToType(data['PlaylistLength'], 'Number');
             }
+            if (data.hasOwnProperty('Shuffle')) {
+                obj['Shuffle'] = ApiClient.convertToType(data['Shuffle'], 'Boolean');
+            }
             if (data.hasOwnProperty('EventName')) {
                 obj['EventName'] = ProgressEvent.constructFromObject(data['EventName']);
             }
@@ -63,6 +66,10 @@ export default class ApiOnPlaybackProgress {
     * @member {Number} PlaylistLength
     */
     'PlaylistLength' = undefined;
+    /**
+    * @member {Boolean} Shuffle
+    */
+    'Shuffle' = undefined;
     /**
     * @member {module:model/ProgressEvent} EventName
     */

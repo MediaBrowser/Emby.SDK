@@ -534,13 +534,13 @@ public class ConfigurationServiceApi {
     }
     /**
      * Build call for postSystemConfigurationPartial
-     * @param body ServerConfiguration:  (required)
+     * @param body Binary stream (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call postSystemConfigurationPartialCall(ServerConfiguration body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call postSystemConfigurationPartialCall(Object body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
         
         // create path and map variables
@@ -560,7 +560,7 @@ public class ConfigurationServiceApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/json", "application/xml"
+            "application/octet-stream"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -582,7 +582,7 @@ public class ConfigurationServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call postSystemConfigurationPartialValidateBeforeCall(ServerConfiguration body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call postSystemConfigurationPartialValidateBeforeCall(Object body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'body' is set
         if (body == null) {
             throw new ApiException("Missing the required parameter 'body' when calling postSystemConfigurationPartial(Async)");
@@ -600,21 +600,21 @@ public class ConfigurationServiceApi {
     /**
      * Updates application configuration
      * Requires authentication as administrator
-     * @param body ServerConfiguration:  (required)
+     * @param body Binary stream (required)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public void postSystemConfigurationPartial(ServerConfiguration body) throws ApiException {
+    public void postSystemConfigurationPartial(Object body) throws ApiException {
         postSystemConfigurationPartialWithHttpInfo(body);
     }
 
     /**
      * Updates application configuration
      * Requires authentication as administrator
-     * @param body ServerConfiguration:  (required)
+     * @param body Binary stream (required)
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<Void> postSystemConfigurationPartialWithHttpInfo(ServerConfiguration body) throws ApiException {
+    public ApiResponse<Void> postSystemConfigurationPartialWithHttpInfo(Object body) throws ApiException {
         com.squareup.okhttp.Call call = postSystemConfigurationPartialValidateBeforeCall(body, null, null);
         return apiClient.execute(call);
     }
@@ -622,12 +622,12 @@ public class ConfigurationServiceApi {
     /**
      * Updates application configuration (asynchronously)
      * Requires authentication as administrator
-     * @param body ServerConfiguration:  (required)
+     * @param body Binary stream (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postSystemConfigurationPartialAsync(ServerConfiguration body, final ApiCallback<Void> callback) throws ApiException {
+    public com.squareup.okhttp.Call postSystemConfigurationPartialAsync(Object body, final ApiCallback<Void> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

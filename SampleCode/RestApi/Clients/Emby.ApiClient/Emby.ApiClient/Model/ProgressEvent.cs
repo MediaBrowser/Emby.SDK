@@ -88,5 +88,10 @@ namespace Emby.ApiClient.Model
         /// Enum PlaybackRateChange for value: PlaybackRateChange
         /// </summary>
         [EnumMember(Value = "PlaybackRateChange")]
-        PlaybackRateChange = 14    }
+        PlaybackRateChange = 14,
+        /// <summary>
+        /// Enum ShuffleChange for value: ShuffleChange
+        /// </summary>
+        [EnumMember(Value = "ShuffleChange")]
+        ShuffleChange = 15    }
 }

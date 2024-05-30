@@ -327,10 +327,10 @@ namespace Emby.ApiClient.Model
         public bool? DisableAsyncIO { get; set; }
 
         /// <summary>
-        /// Gets or Sets MigratedToUserItemShares7
+        /// Gets or Sets MigratedToUserItemShares8
         /// </summary>
-        /// <value>The MigratedToUserItemShares7.</value>
-        public bool? MigratedToUserItemShares7 { get; set; }
+        /// <value>The MigratedToUserItemShares8.</value>
+        public bool? MigratedToUserItemShares8 { get; set; }
 
         /// <summary>
         /// Gets or Sets MigratedLibraryOptionsToDb
@@ -462,7 +462,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  OptimizeDatabaseOnShutdown: ").Append(OptimizeDatabaseOnShutdown).Append("\n");
             sb.Append("  DatabaseAnalysisLimit: ").Append(DatabaseAnalysisLimit).Append("\n");
             sb.Append("  DisableAsyncIO: ").Append(DisableAsyncIO).Append("\n");
-            sb.Append("  MigratedToUserItemShares7: ").Append(MigratedToUserItemShares7).Append("\n");
+            sb.Append("  MigratedToUserItemShares8: ").Append(MigratedToUserItemShares8).Append("\n");
             sb.Append("  MigratedLibraryOptionsToDb: ").Append(MigratedLibraryOptionsToDb).Append("\n");
             sb.Append("  AllowLegacyLocalNetworkPassword: ").Append(AllowLegacyLocalNetworkPassword).Append("\n");
             sb.Append("  EnableSavedMetadataForPeople: ").Append(EnableSavedMetadataForPeople).Append("\n");
@@ -757,9 +757,9 @@ namespace Emby.ApiClient.Model
                     this.DisableAsyncIO.Equals(input.DisableAsyncIO))
                 ) && 
                 (
-                    this.MigratedToUserItemShares7 == input.MigratedToUserItemShares7 ||
-                    (this.MigratedToUserItemShares7 != null &&
-                    this.MigratedToUserItemShares7.Equals(input.MigratedToUserItemShares7))
+                    this.MigratedToUserItemShares8 == input.MigratedToUserItemShares8 ||
+                    (this.MigratedToUserItemShares8 != null &&
+                    this.MigratedToUserItemShares8.Equals(input.MigratedToUserItemShares8))
                 ) && 
                 (
                     this.MigratedLibraryOptionsToDb == input.MigratedLibraryOptionsToDb ||
@@ -932,8 +932,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.DatabaseAnalysisLimit.GetHashCode();
                 if (this.DisableAsyncIO != null)
                     hashCode = hashCode * 59 + this.DisableAsyncIO.GetHashCode();
-                if (this.MigratedToUserItemShares7 != null)
-                    hashCode = hashCode * 59 + this.MigratedToUserItemShares7.GetHashCode();
+                if (this.MigratedToUserItemShares8 != null)
+                    hashCode = hashCode * 59 + this.MigratedToUserItemShares8.GetHashCode();
                 if (this.MigratedLibraryOptionsToDb != null)
                     hashCode = hashCode * 59 + this.MigratedLibraryOptionsToDb.GetHashCode();
                 if (this.AllowLegacyLocalNetworkPassword != null)

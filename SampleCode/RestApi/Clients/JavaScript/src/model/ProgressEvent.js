@@ -100,6 +100,12 @@ export default class ProgressEvent {
          */
         playbackRateChange = "PlaybackRateChange";
 
+        /**
+         * value: "ShuffleChange"
+         * @const
+         */
+        shuffleChange = "ShuffleChange";
+
 
     /**
     * Returns a <code>ProgressEvent</code> enum value from a Javascript object name.

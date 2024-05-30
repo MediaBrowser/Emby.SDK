@@ -19,7 +19,7 @@ import RepeatMode from './RepeatMode';
 /**
 * The PlaybackProgressInfo model module.
 * @module model/PlaybackProgressInfo
-* @version 4.8.7.0
+* @version 4.8.8.0
 */
 export default class PlaybackProgressInfo {
     /**
@@ -118,6 +118,9 @@ export default class PlaybackProgressInfo {
             }
             if (data.hasOwnProperty('RepeatMode')) {
                 obj['RepeatMode'] = RepeatMode.constructFromObject(data['RepeatMode']);
+            }
+            if (data.hasOwnProperty('Shuffle')) {
+                obj['Shuffle'] = ApiClient.convertToType(data['Shuffle'], 'Boolean');
             }
             if (data.hasOwnProperty('SubtitleOffset')) {
                 obj['SubtitleOffset'] = ApiClient.convertToType(data['SubtitleOffset'], 'Number');
@@ -240,6 +243,10 @@ export default class PlaybackProgressInfo {
     * @member {module:model/RepeatMode} RepeatMode
     */
     'RepeatMode' = undefined;
+    /**
+    * @member {Boolean} Shuffle
+    */
+    'Shuffle' = undefined;
     /**
     * @member {Number} SubtitleOffset
     */

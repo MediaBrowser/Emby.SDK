@@ -26,5 +26,6 @@ type PlayerStateInfo struct {
 	PlayMethod *PlayMethod `json:"PlayMethod,omitempty"`
 	RepeatMode *RepeatMode `json:"RepeatMode,omitempty"`
 	SubtitleOffset int32 `json:"SubtitleOffset,omitempty"`
+	Shuffle bool `json:"Shuffle,omitempty"`
 	PlaybackRate float64 `json:"PlaybackRate,omitempty"`
 }

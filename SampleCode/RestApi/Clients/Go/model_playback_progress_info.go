@@ -44,6 +44,7 @@ type PlaybackProgressInfo struct {
 	// The play session identifier.
 	PlaySessionId string `json:"PlaySessionId,omitempty"`
 	RepeatMode *RepeatMode `json:"RepeatMode,omitempty"`
+	Shuffle bool `json:"Shuffle,omitempty"`
 	SubtitleOffset int32 `json:"SubtitleOffset,omitempty"`
 	PlaybackRate float64 `json:"PlaybackRate,omitempty"`
 	PlaylistItemIds []string `json:"PlaylistItemIds,omitempty"`

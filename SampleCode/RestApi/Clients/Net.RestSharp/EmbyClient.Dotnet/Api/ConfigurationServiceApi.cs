@@ -109,9 +109,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns></returns>
-        void PostSystemConfigurationPartial (ServerConfiguration body);
+        void PostSystemConfigurationPartial (Object body);
 
         /// <summary>
         /// Updates application configuration
@@ -120,9 +120,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSystemConfigurationPartialWithHttpInfo (ServerConfiguration body);
+        ApiResponse<Object> PostSystemConfigurationPartialWithHttpInfo (Object body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -216,9 +216,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostSystemConfigurationPartialAsync (ServerConfiguration body);
+        System.Threading.Tasks.Task PostSystemConfigurationPartialAsync (Object body);
 
         /// <summary>
         /// Updates application configuration
@@ -227,9 +227,9 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as administrator
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostSystemConfigurationPartialAsyncWithHttpInfo (ServerConfiguration body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostSystemConfigurationPartialAsyncWithHttpInfo (Object body);
         #endregion Asynchronous Operations
     }
 
@@ -981,9 +981,9 @@ namespace EmbyClient.Dotnet.Api
         /// Updates application configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns></returns>
-        public void PostSystemConfigurationPartial (ServerConfiguration body)
+        public void PostSystemConfigurationPartial (Object body)
         {
              PostSystemConfigurationPartialWithHttpInfo(body);
         }
@@ -992,9 +992,9 @@ namespace EmbyClient.Dotnet.Api
         /// Updates application configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSystemConfigurationPartialWithHttpInfo (ServerConfiguration body)
+        public ApiResponse<Object> PostSystemConfigurationPartialWithHttpInfo (Object body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1010,8 +1010,7 @@ namespace EmbyClient.Dotnet.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "application/xml"
+                "application/octet-stream"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1064,9 +1063,9 @@ namespace EmbyClient.Dotnet.Api
         /// Updates application configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostSystemConfigurationPartialAsync (ServerConfiguration body)
+        public async System.Threading.Tasks.Task PostSystemConfigurationPartialAsync (Object body)
         {
              await PostSystemConfigurationPartialAsyncWithHttpInfo(body);
 
@@ -1076,9 +1075,9 @@ namespace EmbyClient.Dotnet.Api
         /// Updates application configuration Requires authentication as administrator
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostSystemConfigurationPartialAsyncWithHttpInfo (ServerConfiguration body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostSystemConfigurationPartialAsyncWithHttpInfo (Object body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1094,8 +1093,7 @@ namespace EmbyClient.Dotnet.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "application/xml"
+                "application/octet-stream"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

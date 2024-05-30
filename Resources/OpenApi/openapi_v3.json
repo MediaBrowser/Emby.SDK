@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.7.0"
+    "version": "4.8.8.0"
   },
   "servers": [
     {
@@ -57062,16 +57062,12 @@
         "description": "Requires authentication as administrator",
         "operationId": "postSystemConfigurationPartial",
         "requestBody": {
-          "description": "ServerConfiguration: ",
+          "description": "Binary stream",
           "content": {
-            "application/json": {
+            "application/octet-stream": {
               "schema": {
-                "$ref": "#/components/schemas/ServerConfiguration"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/ServerConfiguration"
+                "type": "string",
+                "format": "binary"
               }
             }
           },
@@ -81524,6 +81520,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "Shuffle": {
+            "type": "boolean"
+          },
           "PlaybackRate": {
             "type": "number",
             "format": "double"
@@ -84887,6 +84886,9 @@
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
+          "Shuffle": {
+            "type": "boolean"
+          },
           "SubtitleOffset": {
             "type": "integer",
             "format": "int32"
@@ -84933,7 +84935,8 @@
           "QualityChange",
           "StateChange",
           "SubtitleOffsetChange",
-          "PlaybackRateChange"
+          "PlaybackRateChange",
+          "ShuffleChange"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"
@@ -85655,7 +85658,7 @@
           "DisableAsyncIO": {
             "type": "boolean"
           },
-          "MigratedToUserItemShares7": {
+          "MigratedToUserItemShares8": {
             "type": "boolean"
           },
           "MigratedLibraryOptionsToDb": {
@@ -89420,6 +89423,9 @@
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
+          "Shuffle": {
+            "type": "boolean"
+          },
           "SubtitleOffset": {
             "type": "integer",
             "format": "int32"
@@ -90000,6 +90006,9 @@
           "PlaylistLength": {
             "type": "integer",
             "format": "int32"
+          },
+          "Shuffle": {
+            "type": "boolean"
           },
           "EventName": {
             "$ref": "#/components/schemas/ProgressEvent"
