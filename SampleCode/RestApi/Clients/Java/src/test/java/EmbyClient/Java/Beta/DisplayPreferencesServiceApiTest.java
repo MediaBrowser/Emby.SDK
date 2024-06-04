@@ -42,6 +42,21 @@ public class DisplayPreferencesServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Gets user settings
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void getUsersettingsByUseridTest() throws Exception {
+        String userId = null;
+        Map<String, String> response = api.getUsersettingsByUserid(userId);
+
+        // TODO: test validations
+    }
+    /**
      * Updates a user&#x27;s display preferences for an item
      *
      * Requires authentication as user
@@ -55,6 +70,38 @@ public class DisplayPreferencesServiceApiTest {
         String userId = null;
         String displayPreferencesId = null;
         api.postDisplaypreferencesByDisplaypreferencesid(body, userId, displayPreferencesId);
+
+        // TODO: test validations
+    }
+    /**
+     * Updates a user&#x27;s display preferences for an item
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersettingsByUseridTest() throws Exception {
+        List<String> body = null;
+        String userId = null;
+        api.postUsersettingsByUserid(body, userId);
+
+        // TODO: test validations
+    }
+    /**
+     * Updates a user&#x27;s display preferences for an item
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void postUsersettingsByUseridPartialTest() throws Exception {
+        Object body = null;
+        String userId = null;
+        api.postUsersettingsByUseridPartial(body, userId);
 
         // TODO: test validations
     }

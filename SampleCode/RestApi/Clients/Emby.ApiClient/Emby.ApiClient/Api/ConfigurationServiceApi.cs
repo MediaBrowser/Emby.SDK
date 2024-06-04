@@ -158,9 +158,9 @@ namespace Emby.ApiClient.Api
         /// <remarks>
         /// Requires authentication as administrator
         /// </remarks>
-        /// <param name="body">ServerConfiguration: </param>
+        /// <param name="body">Binary stream</param>
         /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> PostSystemConfigurationPartial (ServerConfiguration body)
+        public async Task<RestResponse<Object>> PostSystemConfigurationPartial (Object body)
         {
             // verify the required parameter 'body' is set
             if (body == null)

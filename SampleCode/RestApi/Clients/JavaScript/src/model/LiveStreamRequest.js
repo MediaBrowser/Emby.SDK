@@ -11,12 +11,11 @@
 
 import ApiClient from '../ApiClient';
 import DeviceProfile from './DeviceProfile';
-import MediaProtocol from './MediaProtocol';
 
 /**
 * The LiveStreamRequest model module.
 * @module model/LiveStreamRequest
-* @version 4.9.0.22
+* @version 4.9.0.23
 */
 export default class LiveStreamRequest {
     /**
@@ -91,9 +90,6 @@ export default class LiveStreamRequest {
             if (data.hasOwnProperty('AllowAudioStreamCopy')) {
                 obj['AllowAudioStreamCopy'] = ApiClient.convertToType(data['AllowAudioStreamCopy'], 'Boolean');
             }
-            if (data.hasOwnProperty('DirectPlayProtocols')) {
-                obj['DirectPlayProtocols'] = ApiClient.convertToType(data['DirectPlayProtocols'], [MediaProtocol]);
-            }
         }
         return obj;
     }
@@ -162,10 +158,6 @@ export default class LiveStreamRequest {
     * @member {Boolean} AllowAudioStreamCopy
     */
     'AllowAudioStreamCopy' = undefined;
-    /**
-    * @member {Array.<module:model/MediaProtocol>} DirectPlayProtocols
-    */
-    'DirectPlayProtocols' = undefined;
 
 
 

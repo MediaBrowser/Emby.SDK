@@ -135,12 +135,6 @@ namespace Emby.ApiClient.Model
         public bool? AutoOpenLiveStream { get; set; }
 
         /// <summary>
-        /// Gets or Sets DirectPlayProtocols
-        /// </summary>
-        /// <value>The DirectPlayProtocols.</value>
-        public List<MediaProtocol> DirectPlayProtocols { get; set; }
-
-        /// <summary>
         /// Gets or Sets CurrentPlaySessionId
         /// </summary>
         /// <value>The CurrentPlaySessionId.</value>
@@ -172,7 +166,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  AllowAudioStreamCopy: ").Append(AllowAudioStreamCopy).Append("\n");
             sb.Append("  IsPlayback: ").Append(IsPlayback).Append("\n");
             sb.Append("  AutoOpenLiveStream: ").Append(AutoOpenLiveStream).Append("\n");
-            sb.Append("  DirectPlayProtocols: ").Append(DirectPlayProtocols).Append("\n");
             sb.Append("  CurrentPlaySessionId: ").Append(CurrentPlaySessionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -290,12 +283,6 @@ namespace Emby.ApiClient.Model
                     this.AutoOpenLiveStream.Equals(input.AutoOpenLiveStream))
                 ) && 
                 (
-                    this.DirectPlayProtocols == input.DirectPlayProtocols ||
-                    this.DirectPlayProtocols != null &&
-                    input.DirectPlayProtocols != null &&
-                    this.DirectPlayProtocols.SequenceEqual(input.DirectPlayProtocols)
-                ) && 
-                (
                     this.CurrentPlaySessionId == input.CurrentPlaySessionId ||
                     (this.CurrentPlaySessionId != null &&
                     this.CurrentPlaySessionId.Equals(input.CurrentPlaySessionId))
@@ -347,8 +334,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.IsPlayback.GetHashCode();
                 if (this.AutoOpenLiveStream != null)
                     hashCode = hashCode * 59 + this.AutoOpenLiveStream.GetHashCode();
-                if (this.DirectPlayProtocols != null)
-                    hashCode = hashCode * 59 + this.DirectPlayProtocols.GetHashCode();
                 if (this.CurrentPlaySessionId != null)
                     hashCode = hashCode * 59 + this.CurrentPlaySessionId.GetHashCode();
                 return hashCode;

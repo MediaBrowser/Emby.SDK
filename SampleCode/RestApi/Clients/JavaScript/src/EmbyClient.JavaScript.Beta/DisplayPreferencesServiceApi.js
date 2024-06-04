@@ -15,7 +15,7 @@ import DisplayPreferences from '../model/DisplayPreferences';
 /**
 * DisplayPreferencesService service.
 * @module EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi
-* @version 4.9.0.22
+* @version 4.9.0.23
 */
 export default class DisplayPreferencesServiceApi {
 
@@ -71,6 +71,44 @@ export default class DisplayPreferencesServiceApi {
       );
     }
     /**
+     * Callback function to receive the result of the getUsersettingsByUserid operation.
+     * @callback module:EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi~getUsersettingsByUseridCallback
+     * @param {String} error Error message, if any.
+     * @param {Object.<String, {'String': 'String'}>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets user settings
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi~getUsersettingsByUseridCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {'String': 'String'}>}
+     */
+    getUsersettingsByUserid() {
+      let postBody = null;
+
+      let pathParams = {
+        'UserId': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = {'String': 'String'};
+
+      return this.apiClient.callApi(
+        '/UserSettings/{UserId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
      * Callback function to receive the result of the postDisplaypreferencesByDisplaypreferencesid operation.
      * @callback module:EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi~postDisplaypreferencesByDisplaypreferencesidCallback
      * @param {String} error Error message, if any.
@@ -104,6 +142,80 @@ export default class DisplayPreferencesServiceApi {
 
       return this.apiClient.callApi(
         '/DisplayPreferences/{DisplayPreferencesId}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postUsersettingsByUserid operation.
+     * @callback module:EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi~postUsersettingsByUseridCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates a user&#x27;s display preferences for an item
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi~postUsersettingsByUseridCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postUsersettingsByUserid() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/json', 'application/xml'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/UserSettings/{UserId}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the postUsersettingsByUseridPartial operation.
+     * @callback module:EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi~postUsersettingsByUseridPartialCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Updates a user&#x27;s display preferences for an item
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript.Beta/DisplayPreferencesServiceApi~postUsersettingsByUseridPartialCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    postUsersettingsByUseridPartial() {
+      let postBody = body;
+
+      let pathParams = {
+        'UserId': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = ['application/octet-stream'];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/UserSettings/{UserId}/Partial', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

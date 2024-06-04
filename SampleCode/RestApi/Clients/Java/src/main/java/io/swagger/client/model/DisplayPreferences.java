@@ -19,9 +19,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 /**
- * Defines the display preferences for any item that supports them (usually Folders)  
+ * DisplayPreferences
  */
-@Schema(description = "Defines the display preferences for any item that supports them (usually Folders)  ")
+
 
 public class DisplayPreferences {
   @SerializedName("Id")
@@ -45,10 +45,10 @@ public class DisplayPreferences {
   }
 
    /**
-   * The user id.
+   * Get id
    * @return id
   **/
-  @Schema(description = "The user id.")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -63,10 +63,10 @@ public class DisplayPreferences {
   }
 
    /**
-   * The sort by.
+   * Get sortBy
    * @return sortBy
   **/
-  @Schema(description = "The sort by.")
+  @Schema(description = "")
   public String getSortBy() {
     return sortBy;
   }
@@ -89,10 +89,10 @@ public class DisplayPreferences {
   }
 
    /**
-   * The custom prefs.
+   * Get customPrefs
    * @return customPrefs
   **/
-  @Schema(description = "The custom prefs.")
+  @Schema(description = "")
   public Map<String, String> getCustomPrefs() {
     return customPrefs;
   }
@@ -125,10 +125,10 @@ public class DisplayPreferences {
   }
 
    /**
-   * The client
+   * Get client
    * @return client
   **/
-  @Schema(description = "The client")
+  @Schema(description = "")
   public String getClient() {
     return client;
   }

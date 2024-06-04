@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.22"
+    "version": "4.9.0.23"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -28255,6 +28255,127 @@
       },
       "x-summary": "Initiates the forgot password process for a local user"
     },
+    "/UserSettings/{UserId}": {
+      "get": {
+        "tags": [
+          "DisplayPreferencesService"
+        ],
+        "summary": "Gets user settings",
+        "description": "Requires authentication as user",
+        "operationId": "getUsersettingsByUserid",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a Dictionary<String,String> object.",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "DisplayPreferencesService"
+        ],
+        "summary": "Updates a user's display preferences for an item",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersettingsByUserid",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "UserSettings: ",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Gets user settings"
+    },
     "/Videos/MergeVersions": {
       "post": {
         "tags": [
@@ -39909,17 +40030,17 @@
         "description": "Requires authentication as administrator",
         "operationId": "postSystemConfigurationPartial",
         "consumes": [
-          "application/json",
-          "application/xml"
+          "application/octet-stream"
         ],
         "parameters": [
           {
             "in": "body",
             "name": "body",
-            "description": "ServerConfiguration: ",
+            "description": "Binary stream",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ServerConfiguration"
+              "format": "binary",
+              "type": "string"
             }
           }
         ],
@@ -41623,6 +41744,68 @@
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
       }
+    },
+    "/UserSettings/{UserId}/Partial": {
+      "post": {
+        "tags": [
+          "DisplayPreferencesService"
+        ],
+        "summary": "Updates a user's display preferences for an item",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersettingsByUseridPartial",
+        "consumes": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Binary stream",
+            "required": true,
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "x-summary": "Updates a user's display preferences for an item"
     },
     "/Videos/{Id}/AlternateSources": {
       "delete": {
@@ -59367,19 +59550,15 @@
       "x-internal-ref-name": "MediaBrowser.Model.Devices.LocalFileInfo"
     },
     "DisplayPreferences": {
-      "description": "Defines the display preferences for any item that supports them (usually Folders)\r\n",
       "type": "object",
       "properties": {
         "Id": {
-          "description": "The user id.",
           "type": "string"
         },
         "SortBy": {
-          "description": "The sort by.",
           "type": "string"
         },
         "CustomPrefs": {
-          "description": "The custom prefs.",
           "type": "object",
           "additionalProperties": {
             "type": "string"
@@ -59389,11 +59568,10 @@
           "$ref": "#/definitions/SortOrder"
         },
         "Client": {
-          "description": "The client",
           "type": "string"
         }
       },
-      "x-internal-ref-name": "MediaBrowser.Model.Entities.DisplayPreferences"
+      "x-internal-ref-name": "Emby.Api.DisplayPreferences"
     },
     "SortOrder": {
       "description": "Enum SortOrder\r\n",
@@ -60949,12 +61127,6 @@
         },
         "AllowAudioStreamCopy": {
           "type": "boolean"
-        },
-        "DirectPlayProtocols": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/MediaProtocol"
-          }
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.MediaInfo.LiveStreamRequest"
@@ -66106,12 +66278,6 @@
         },
         "AutoOpenLiveStream": {
           "type": "boolean"
-        },
-        "DirectPlayProtocols": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/MediaProtocol"
-          }
         },
         "CurrentPlaySessionId": {
           "type": "string"

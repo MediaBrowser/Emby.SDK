@@ -44,9 +44,8 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="allowAudioStreamCopy">allowAudioStreamCopy.</param>
         /// <param name="isPlayback">isPlayback.</param>
         /// <param name="autoOpenLiveStream">autoOpenLiveStream.</param>
-        /// <param name="directPlayProtocols">directPlayProtocols.</param>
         /// <param name="currentPlaySessionId">currentPlaySessionId.</param>
-        public PlaybackInfoRequest(string id = default(string), string userId = default(string), long? maxStreamingBitrate = default(long?), long? startTimeTicks = default(long?), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), int? maxAudioChannels = default(int?), string mediaSourceId = default(string), string liveStreamId = default(string), DeviceProfile deviceProfile = default(DeviceProfile), bool? enableDirectPlay = default(bool?), bool? enableDirectStream = default(bool?), bool? enableTranscoding = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), bool? allowVideoStreamCopy = default(bool?), bool? allowAudioStreamCopy = default(bool?), bool? isPlayback = default(bool?), bool? autoOpenLiveStream = default(bool?), List<MediaProtocol> directPlayProtocols = default(List<MediaProtocol>), string currentPlaySessionId = default(string))
+        public PlaybackInfoRequest(string id = default(string), string userId = default(string), long? maxStreamingBitrate = default(long?), long? startTimeTicks = default(long?), int? audioStreamIndex = default(int?), int? subtitleStreamIndex = default(int?), int? maxAudioChannels = default(int?), string mediaSourceId = default(string), string liveStreamId = default(string), DeviceProfile deviceProfile = default(DeviceProfile), bool? enableDirectPlay = default(bool?), bool? enableDirectStream = default(bool?), bool? enableTranscoding = default(bool?), bool? allowInterlacedVideoStreamCopy = default(bool?), bool? allowVideoStreamCopy = default(bool?), bool? allowAudioStreamCopy = default(bool?), bool? isPlayback = default(bool?), bool? autoOpenLiveStream = default(bool?), string currentPlaySessionId = default(string))
         {
             this.Id = id;
             this.UserId = userId;
@@ -66,7 +65,6 @@ namespace EmbyClient.Dotnet.Model
             this.AllowAudioStreamCopy = allowAudioStreamCopy;
             this.IsPlayback = isPlayback;
             this.AutoOpenLiveStream = autoOpenLiveStream;
-            this.DirectPlayProtocols = directPlayProtocols;
             this.CurrentPlaySessionId = currentPlaySessionId;
         }
         
@@ -179,12 +177,6 @@ namespace EmbyClient.Dotnet.Model
         public bool? AutoOpenLiveStream { get; set; }
 
         /// <summary>
-        /// Gets or Sets DirectPlayProtocols
-        /// </summary>
-        [DataMember(Name="DirectPlayProtocols", EmitDefaultValue=false)]
-        public List<MediaProtocol> DirectPlayProtocols { get; set; }
-
-        /// <summary>
         /// Gets or Sets CurrentPlaySessionId
         /// </summary>
         [DataMember(Name="CurrentPlaySessionId", EmitDefaultValue=false)]
@@ -216,7 +208,6 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  AllowAudioStreamCopy: ").Append(AllowAudioStreamCopy).Append("\n");
             sb.Append("  IsPlayback: ").Append(IsPlayback).Append("\n");
             sb.Append("  AutoOpenLiveStream: ").Append(AutoOpenLiveStream).Append("\n");
-            sb.Append("  DirectPlayProtocols: ").Append(DirectPlayProtocols).Append("\n");
             sb.Append("  CurrentPlaySessionId: ").Append(CurrentPlaySessionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -343,12 +334,6 @@ namespace EmbyClient.Dotnet.Model
                     this.AutoOpenLiveStream.Equals(input.AutoOpenLiveStream))
                 ) && 
                 (
-                    this.DirectPlayProtocols == input.DirectPlayProtocols ||
-                    this.DirectPlayProtocols != null &&
-                    input.DirectPlayProtocols != null &&
-                    this.DirectPlayProtocols.SequenceEqual(input.DirectPlayProtocols)
-                ) && 
-                (
                     this.CurrentPlaySessionId == input.CurrentPlaySessionId ||
                     (this.CurrentPlaySessionId != null &&
                     this.CurrentPlaySessionId.Equals(input.CurrentPlaySessionId))
@@ -400,8 +385,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.IsPlayback.GetHashCode();
                 if (this.AutoOpenLiveStream != null)
                     hashCode = hashCode * 59 + this.AutoOpenLiveStream.GetHashCode();
-                if (this.DirectPlayProtocols != null)
-                    hashCode = hashCode * 59 + this.DirectPlayProtocols.GetHashCode();
                 if (this.CurrentPlaySessionId != null)
                     hashCode = hashCode * 59 + this.CurrentPlaySessionId.GetHashCode();
                 return hashCode;

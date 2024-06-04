@@ -123,12 +123,6 @@ namespace Emby.ApiClient.Model
         public bool? AllowAudioStreamCopy { get; set; }
 
         /// <summary>
-        /// Gets or Sets DirectPlayProtocols
-        /// </summary>
-        /// <value>The DirectPlayProtocols.</value>
-        public List<MediaProtocol> DirectPlayProtocols { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -152,7 +146,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  AllowVideoStreamCopy: ").Append(AllowVideoStreamCopy).Append("\n");
             sb.Append("  AllowInterlacedVideoStreamCopy: ").Append(AllowInterlacedVideoStreamCopy).Append("\n");
             sb.Append("  AllowAudioStreamCopy: ").Append(AllowAudioStreamCopy).Append("\n");
-            sb.Append("  DirectPlayProtocols: ").Append(DirectPlayProtocols).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -257,12 +250,6 @@ namespace Emby.ApiClient.Model
                     this.AllowAudioStreamCopy == input.AllowAudioStreamCopy ||
                     (this.AllowAudioStreamCopy != null &&
                     this.AllowAudioStreamCopy.Equals(input.AllowAudioStreamCopy))
-                ) && 
-                (
-                    this.DirectPlayProtocols == input.DirectPlayProtocols ||
-                    this.DirectPlayProtocols != null &&
-                    input.DirectPlayProtocols != null &&
-                    this.DirectPlayProtocols.SequenceEqual(input.DirectPlayProtocols)
                 );
         }
 
@@ -307,8 +294,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.AllowInterlacedVideoStreamCopy.GetHashCode();
                 if (this.AllowAudioStreamCopy != null)
                     hashCode = hashCode * 59 + this.AllowAudioStreamCopy.GetHashCode();
-                if (this.DirectPlayProtocols != null)
-                    hashCode = hashCode * 59 + this.DirectPlayProtocols.GetHashCode();
                 return hashCode;
             }
         }

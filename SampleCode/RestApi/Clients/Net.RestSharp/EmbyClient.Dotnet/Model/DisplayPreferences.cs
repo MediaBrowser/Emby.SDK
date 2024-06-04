@@ -18,7 +18,7 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// Defines the display preferences for any item that supports them (usually Folders)  
+    /// DisplayPreferences
     /// </summary>
     [DataContract]
         public partial class DisplayPreferences :  IEquatable<DisplayPreferences>
@@ -26,11 +26,11 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DisplayPreferences" /> class.
         /// </summary>
-        /// <param name="id">The user id..</param>
-        /// <param name="sortBy">The sort by..</param>
-        /// <param name="customPrefs">The custom prefs..</param>
+        /// <param name="id">id.</param>
+        /// <param name="sortBy">sortBy.</param>
+        /// <param name="customPrefs">customPrefs.</param>
         /// <param name="sortOrder">sortOrder.</param>
-        /// <param name="_client">The client.</param>
+        /// <param name="_client">_client.</param>
         public DisplayPreferences(string id = default(string), string sortBy = default(string), Dictionary<string, string> customPrefs = default(Dictionary<string, string>), SortOrder sortOrder = default(SortOrder), string _client = default(string))
         {
             this.Id = id;
@@ -41,23 +41,20 @@ namespace EmbyClient.Dotnet.Model
         }
         
         /// <summary>
-        /// The user id.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The user id.</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// The sort by.
+        /// Gets or Sets SortBy
         /// </summary>
-        /// <value>The sort by.</value>
         [DataMember(Name="SortBy", EmitDefaultValue=false)]
         public string SortBy { get; set; }
 
         /// <summary>
-        /// The custom prefs.
+        /// Gets or Sets CustomPrefs
         /// </summary>
-        /// <value>The custom prefs.</value>
         [DataMember(Name="CustomPrefs", EmitDefaultValue=false)]
         public Dictionary<string, string> CustomPrefs { get; set; }
 
@@ -68,9 +65,8 @@ namespace EmbyClient.Dotnet.Model
         public SortOrder SortOrder { get; set; }
 
         /// <summary>
-        /// The client
+        /// Gets or Sets _Client
         /// </summary>
-        /// <value>The client</value>
         [DataMember(Name="Client", EmitDefaultValue=false)]
         public string _Client { get; set; }
 

@@ -438,7 +438,7 @@ public long AlbumId { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -468,6 +468,32 @@ public LinkedItemInfo AlbumItem { get; set; }</code></pre>
         <td><a class="xref" href="MediaBrowser.Model.Dto.LinkedItemInfo.html">LinkedItemInfo</a></td>
         <td><p>The artists.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_AllowRecursiveCounts_" data-uid="MediaBrowser.Controller.Entities.BaseItem.AllowRecursiveCounts*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_AllowRecursiveCounts" data-uid="MediaBrowser.Controller.Entities.BaseItem.AllowRecursiveCounts">AllowRecursiveCounts</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public virtual bool AllowRecursiveCounts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -549,6 +575,59 @@ public int? AudioStreamIndex { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_ChildCount_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ChildCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_ChildCount" data-uid="MediaBrowser.Controller.Entities.BaseItem.ChildCount">ChildCount</h4>
+  <div class="markdown level1 summary"><p>Internal use only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public int? ChildCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_CollectionFolders_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CollectionFolders*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CollectionFolders" data-uid="MediaBrowser.Controller.Entities.BaseItem.CollectionFolders">CollectionFolders</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public Folder[] CollectionFolders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_Collections_" data-uid="MediaBrowser.Controller.Entities.BaseItem.Collections*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_Collections" data-uid="MediaBrowser.Controller.Entities.BaseItem.Collections">Collections</h4>
   <div class="markdown level1 summary"><p>Gets or sets the collections.</p>
@@ -597,7 +676,7 @@ public float? CommunityRating { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Single</span>&gt;</td>
         <td><p>The community rating.</p>
 </td>
       </tr>
@@ -704,7 +783,7 @@ public float? CriticRating { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Single</span>&gt;</td>
         <td><p>The critic rating.</p>
 </td>
       </tr>
@@ -785,7 +864,7 @@ public ReadOnlySpan&lt;char&gt; CustomRatingForComparison { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td><p>The date created.</p>
 </td>
       </tr>
@@ -812,7 +891,7 @@ public DateTimeOffset DateLastRefreshed { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -838,7 +917,7 @@ public DateTimeOffset DateLastSaved { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -865,7 +944,7 @@ public DateTimeOffset DateModified { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td><p>The date modified.</p>
 </td>
       </tr>
@@ -918,7 +997,7 @@ public virtual long DisplayParentId { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1052,7 +1131,7 @@ public DateTimeOffset? EndDate { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><p>The end date.</p>
 </td>
       </tr>
@@ -1394,7 +1473,7 @@ public virtual long ImageDisplayParentId { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1500,7 +1579,7 @@ public long InternalAlbumId { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1526,7 +1605,7 @@ public long InternalId { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2103,7 +2182,7 @@ public DateTimeOffset? LastPlayedDate { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2129,7 +2208,7 @@ public virtual long LatestItemsContainerId { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2161,6 +2240,32 @@ public virtual long LatestItemsContainerId { get; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.LibraryOptions*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_LibraryOptions" data-uid="MediaBrowser.Controller.Entities.BaseItem.LibraryOptions">LibraryOptions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public LibraryOptions LibraryOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_ListItemEntryId_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ListItemEntryId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_ListItemEntryId" data-uid="MediaBrowser.Controller.Entities.BaseItem.ListItemEntryId">ListItemEntryId</h4>
   <div class="markdown level1 summary"></div>
@@ -2180,7 +2285,7 @@ public long ListItemEntryId { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2739,7 +2844,7 @@ public long ParentId { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2847,7 +2952,7 @@ public long PlaybackPositionTicks { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2900,6 +3005,31 @@ public bool Played { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_PlayedPercentage_" data-uid="MediaBrowser.Controller.Entities.BaseItem.PlayedPercentage*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_PlayedPercentage" data-uid="MediaBrowser.Controller.Entities.BaseItem.PlayedPercentage">PlayedPercentage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double? PlayedPercentage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -3004,7 +3134,7 @@ public DateTimeOffset? PremiereDate { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><p>The premiere date.</p>
 </td>
       </tr>
@@ -3173,6 +3303,58 @@ public ProviderIdDictionary ProviderIds { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_RecursiveChildCountEqualsChildCount_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RecursiveChildCountEqualsChildCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RecursiveChildCountEqualsChildCount" data-uid="MediaBrowser.Controller.Entities.BaseItem.RecursiveChildCountEqualsChildCount">RecursiveChildCountEqualsChildCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RecursiveChildCountEqualsChildCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_RecursiveItemCount_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RecursiveItemCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RecursiveItemCount" data-uid="MediaBrowser.Controller.Entities.BaseItem.RecursiveItemCount">RecursiveItemCount</h4>
+  <div class="markdown level1 summary"><p>Internal use only</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public int? RecursiveItemCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_RemoteTrailers_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RemoteTrailers*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_RemoteTrailers" data-uid="MediaBrowser.Controller.Entities.BaseItem.RemoteTrailers">RemoteTrailers</h4>
   <div class="markdown level1 summary"></div>
@@ -3246,7 +3428,7 @@ public long? RunTimeTicks { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.Int64</span>&gt;</td>
         <td><p>The run time ticks.</p>
 </td>
       </tr>
@@ -3273,7 +3455,7 @@ public long SeriesId { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3351,7 +3533,7 @@ public long Size { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -4119,6 +4301,32 @@ public int TotalBitrate { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_UnplayedItemCount_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UnplayedItemCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_UnplayedItemCount" data-uid="MediaBrowser.Controller.Entities.BaseItem.UnplayedItemCount">UnplayedItemCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public int? UnplayedItemCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_UserDataKey_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UserDataKey*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_UserDataKey" data-uid="MediaBrowser.Controller.Entities.BaseItem.UserDataKey">UserDataKey</h4>
   <div class="markdown level1 summary"></div>
@@ -4491,7 +4699,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><span class="xref">System.ArgumentNullException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -4902,7 +5110,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><span class="xref">System.ArgumentNullException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -5919,7 +6127,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-3">(T1, T2, T3)</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-3">(T1, T2, T3)</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemLinkType.html">ItemLinkType</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">System.Int64</span>&gt;&gt;</td>
         <td><span class="parametername">itemLinks</span></td>
         <td></td>
       </tr>
@@ -5928,12 +6136,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues(MediaBrowser.Model.Dto.UserItemDataDto,MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions)">FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataDtoValues(MediaBrowser.Model.Dto.UserItemDataDto,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions)">FillUserDataDtoValues(UserItemDataDto, User, DtoOptions, LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void FillUserDataDtoValues(UserItemDataDto dto, BaseItemDto itemDto, User user, DtoOptions options, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void FillUserDataDtoValues(UserItemDataDto dto, User user, DtoOptions options, LibraryOptions libraryOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -5951,10 +6159,42 @@ public int Width { get; set; }</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Dto.BaseItemDto.html">BaseItemDto</a></td>
-        <td><span class="parametername">itemDto</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataValues_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataValues*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_FillUserDataValues_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.FillUserDataValues(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Model.Data.IDataContext)">FillUserDataValues(User, DtoOptions, LibraryOptions, IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void FillUserDataValues(User user, DtoOptions options, LibraryOptions libraryOptions, IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
@@ -5968,6 +6208,11 @@ public int Width { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
         <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -6093,7 +6338,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="xref">System.Int64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -6295,6 +6540,53 @@ public int Width { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_GetChildCount_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetChildCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetChildCount_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetChildCount(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Data.IDataContext)">GetChildCount(User, IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int GetChildCount(User user, IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -6542,7 +6834,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="xref">System.Int64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -6735,7 +7027,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="xref">System.Int64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -6850,7 +7142,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">internalId</span></td>
         <td></td>
       </tr>
@@ -6902,7 +7194,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">internalId</span></td>
         <td></td>
       </tr>
@@ -7064,7 +7356,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="xref">System.Int64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -7185,7 +7477,7 @@ public int Width { get; set; }</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><span class="xref">System.ArgumentNullException</span></td>
         <td><p>item</p>
 </td>
       </tr>
@@ -7539,7 +7831,7 @@ public int Width { get; set; }</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -8328,6 +8620,53 @@ This overload is for CoverArt</p>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_GetRecursiveChildCount_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetRecursiveChildCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetRecursiveChildCount(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Data.IDataContext)">GetRecursiveChildCount(User, IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int GetRecursiveChildCount(User user, IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetRefreshProgress_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetRefreshProgress*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetRefreshProgress" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetRefreshProgress">GetRefreshProgress()</h4>
   <div class="markdown level1 summary"></div>
@@ -8448,7 +8787,7 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -8826,12 +9165,12 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td><span class="parametername">date</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td><span class="parametername">newValue</span></td>
         <td></td>
       </tr>
@@ -8873,12 +9212,12 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><span class="parametername">date</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td><span class="parametername">newValue</span></td>
         <td></td>
       </tr>
@@ -8920,12 +9259,12 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><span class="parametername">date</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><span class="parametername">newValue</span></td>
         <td></td>
       </tr>
@@ -8967,7 +9306,7 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td><span class="parametername">newValue</span></td>
         <td></td>
       </tr>
@@ -9346,7 +9685,7 @@ This overload is for CoverArt</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></td>
+        <td><span class="xref">System.DateTimeOffset</span></td>
         <td><span class="parametername">newValue</span></td>
         <td></td>
       </tr>
@@ -9732,7 +10071,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><span class="xref">System.ArgumentNullException</span></td>
         <td><p>user</p>
 </td>
       </tr>
@@ -9812,7 +10151,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><span class="parametername">datePlayed</span></td>
         <td></td>
       </tr>
@@ -9849,7 +10188,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><span class="parametername">datePlayed</span></td>
         <td></td>
       </tr>
@@ -9909,7 +10248,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><span class="xref">System.ArgumentNullException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -9977,7 +10316,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -9993,7 +10332,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -10034,7 +10373,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -10083,7 +10422,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -10127,7 +10466,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -10143,7 +10482,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -10169,7 +10508,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">collectionId</span></td>
         <td></td>
       </tr>
@@ -11262,7 +11601,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -11288,7 +11627,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -11321,7 +11660,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -11349,7 +11688,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<span class="xref">System.Int64</span>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">newItemIds</span></td>
         <td></td>
       </tr>
@@ -11377,7 +11716,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td><p>Task.</p>
 </td>
       </tr>

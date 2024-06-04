@@ -15,7 +15,7 @@ import ServerConfiguration from '../model/ServerConfiguration';
 /**
 * ConfigurationService service.
 * @module EmbyClient.JavaScript.Beta/ConfigurationServiceApi
-* @version 4.9.0.22
+* @version 4.9.0.23
 */
 export default class ConfigurationServiceApi {
 
@@ -203,7 +203,7 @@ export default class ConfigurationServiceApi {
       };
 
       let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = ['application/json', 'application/xml'];
+      let contentTypes = ['application/octet-stream'];
       let accepts = [];
       let returnType = null;
 

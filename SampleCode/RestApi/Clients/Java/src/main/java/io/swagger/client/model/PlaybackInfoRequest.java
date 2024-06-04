@@ -13,11 +13,8 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.DeviceProfile;
-import io.swagger.client.model.MediaProtocol;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 /**
  * PlaybackInfoRequest
  */
@@ -77,9 +74,6 @@ public class PlaybackInfoRequest {
 
   @SerializedName("AutoOpenLiveStream")
   private Boolean autoOpenLiveStream = null;
-
-  @SerializedName("DirectPlayProtocols")
-  private List<MediaProtocol> directPlayProtocols = null;
 
   @SerializedName("CurrentPlaySessionId")
   private String currentPlaySessionId = null;
@@ -408,32 +402,6 @@ public class PlaybackInfoRequest {
     this.autoOpenLiveStream = autoOpenLiveStream;
   }
 
-  public PlaybackInfoRequest directPlayProtocols(List<MediaProtocol> directPlayProtocols) {
-    this.directPlayProtocols = directPlayProtocols;
-    return this;
-  }
-
-  public PlaybackInfoRequest addDirectPlayProtocolsItem(MediaProtocol directPlayProtocolsItem) {
-    if (this.directPlayProtocols == null) {
-      this.directPlayProtocols = new ArrayList<MediaProtocol>();
-    }
-    this.directPlayProtocols.add(directPlayProtocolsItem);
-    return this;
-  }
-
-   /**
-   * Get directPlayProtocols
-   * @return directPlayProtocols
-  **/
-  @Schema(description = "")
-  public List<MediaProtocol> getDirectPlayProtocols() {
-    return directPlayProtocols;
-  }
-
-  public void setDirectPlayProtocols(List<MediaProtocol> directPlayProtocols) {
-    this.directPlayProtocols = directPlayProtocols;
-  }
-
   public PlaybackInfoRequest currentPlaySessionId(String currentPlaySessionId) {
     this.currentPlaySessionId = currentPlaySessionId;
     return this;
@@ -480,13 +448,12 @@ public class PlaybackInfoRequest {
         Objects.equals(this.allowAudioStreamCopy, playbackInfoRequest.allowAudioStreamCopy) &&
         Objects.equals(this.isPlayback, playbackInfoRequest.isPlayback) &&
         Objects.equals(this.autoOpenLiveStream, playbackInfoRequest.autoOpenLiveStream) &&
-        Objects.equals(this.directPlayProtocols, playbackInfoRequest.directPlayProtocols) &&
         Objects.equals(this.currentPlaySessionId, playbackInfoRequest.currentPlaySessionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, userId, maxStreamingBitrate, startTimeTicks, audioStreamIndex, subtitleStreamIndex, maxAudioChannels, mediaSourceId, liveStreamId, deviceProfile, enableDirectPlay, enableDirectStream, enableTranscoding, allowInterlacedVideoStreamCopy, allowVideoStreamCopy, allowAudioStreamCopy, isPlayback, autoOpenLiveStream, directPlayProtocols, currentPlaySessionId);
+    return Objects.hash(id, userId, maxStreamingBitrate, startTimeTicks, audioStreamIndex, subtitleStreamIndex, maxAudioChannels, mediaSourceId, liveStreamId, deviceProfile, enableDirectPlay, enableDirectStream, enableTranscoding, allowInterlacedVideoStreamCopy, allowVideoStreamCopy, allowAudioStreamCopy, isPlayback, autoOpenLiveStream, currentPlaySessionId);
   }
 
 
@@ -513,7 +480,6 @@ public class PlaybackInfoRequest {
     sb.append("    allowAudioStreamCopy: ").append(toIndentedString(allowAudioStreamCopy)).append("\n");
     sb.append("    isPlayback: ").append(toIndentedString(isPlayback)).append("\n");
     sb.append("    autoOpenLiveStream: ").append(toIndentedString(autoOpenLiveStream)).append("\n");
-    sb.append("    directPlayProtocols: ").append(toIndentedString(directPlayProtocols)).append("\n");
     sb.append("    currentPlaySessionId: ").append(toIndentedString(currentPlaySessionId)).append("\n");
     sb.append("}");
     return sb.toString();

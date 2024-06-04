@@ -40,7 +40,6 @@ class PlaybackInfoRequest(object):
         'allow_audio_stream_copy': 'bool',
         'is_playback': 'bool',
         'auto_open_live_stream': 'bool',
-        'direct_play_protocols': 'list[MediaProtocol]',
         'current_play_session_id': 'str'
     }
 
@@ -63,11 +62,10 @@ class PlaybackInfoRequest(object):
         'allow_audio_stream_copy': 'AllowAudioStreamCopy',
         'is_playback': 'IsPlayback',
         'auto_open_live_stream': 'AutoOpenLiveStream',
-        'direct_play_protocols': 'DirectPlayProtocols',
         'current_play_session_id': 'CurrentPlaySessionId'
     }
 
-    def __init__(self, id=None, user_id=None, max_streaming_bitrate=None, start_time_ticks=None, audio_stream_index=None, subtitle_stream_index=None, max_audio_channels=None, media_source_id=None, live_stream_id=None, device_profile=None, enable_direct_play=None, enable_direct_stream=None, enable_transcoding=None, allow_interlaced_video_stream_copy=None, allow_video_stream_copy=None, allow_audio_stream_copy=None, is_playback=None, auto_open_live_stream=None, direct_play_protocols=None, current_play_session_id=None):  # noqa: E501
+    def __init__(self, id=None, user_id=None, max_streaming_bitrate=None, start_time_ticks=None, audio_stream_index=None, subtitle_stream_index=None, max_audio_channels=None, media_source_id=None, live_stream_id=None, device_profile=None, enable_direct_play=None, enable_direct_stream=None, enable_transcoding=None, allow_interlaced_video_stream_copy=None, allow_video_stream_copy=None, allow_audio_stream_copy=None, is_playback=None, auto_open_live_stream=None, current_play_session_id=None):  # noqa: E501
         """PlaybackInfoRequest - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._user_id = None
@@ -87,7 +85,6 @@ class PlaybackInfoRequest(object):
         self._allow_audio_stream_copy = None
         self._is_playback = None
         self._auto_open_live_stream = None
-        self._direct_play_protocols = None
         self._current_play_session_id = None
         self.discriminator = None
         if id is not None:
@@ -126,8 +123,6 @@ class PlaybackInfoRequest(object):
             self.is_playback = is_playback
         if auto_open_live_stream is not None:
             self.auto_open_live_stream = auto_open_live_stream
-        if direct_play_protocols is not None:
-            self.direct_play_protocols = direct_play_protocols
         if current_play_session_id is not None:
             self.current_play_session_id = current_play_session_id
 
@@ -508,27 +503,6 @@ class PlaybackInfoRequest(object):
         """
 
         self._auto_open_live_stream = auto_open_live_stream
-
-    @property
-    def direct_play_protocols(self):
-        """Gets the direct_play_protocols of this PlaybackInfoRequest.  # noqa: E501
-
-
-        :return: The direct_play_protocols of this PlaybackInfoRequest.  # noqa: E501
-        :rtype: list[MediaProtocol]
-        """
-        return self._direct_play_protocols
-
-    @direct_play_protocols.setter
-    def direct_play_protocols(self, direct_play_protocols):
-        """Sets the direct_play_protocols of this PlaybackInfoRequest.
-
-
-        :param direct_play_protocols: The direct_play_protocols of this PlaybackInfoRequest.  # noqa: E501
-        :type: list[MediaProtocol]
-        """
-
-        self._direct_play_protocols = direct_play_protocols
 
     @property
     def current_play_session_id(self):

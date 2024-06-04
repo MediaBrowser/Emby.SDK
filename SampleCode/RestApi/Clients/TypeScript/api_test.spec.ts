@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.0.22
+ * OpenAPI spec version: 4.9.0.23
  * 
  *
  * NOTE: This file is auto generated.
@@ -558,7 +558,7 @@ describe("ConfigurationServiceApi", () => {
     return expect(instance.postSystemConfigurationByKey(body, key, {})).resolves.toBe(null)
   })
   test("postSystemConfigurationPartial", () => {
-    const body: api.ServerConfiguration = undefined
+    const body: Object = undefined
     return expect(instance.postSystemConfigurationPartial(body, {})).resolves.toBe(null)
   })
 })
@@ -646,11 +646,25 @@ describe("DisplayPreferencesServiceApi", () => {
     const client: string = "client_example"
     return expect(instance.getDisplaypreferencesById(id, userId, client, {})).resolves.toBe(null)
   })
+  test("getUsersettingsByUserid", () => {
+    const userId: string = "userId_example"
+    return expect(instance.getUsersettingsByUserid(userId, {})).resolves.toBe(null)
+  })
   test("postDisplaypreferencesByDisplaypreferencesid", () => {
     const body: api.DisplayPreferences = undefined
     const userId: string = "userId_example"
     const displayPreferencesId: string = "displayPreferencesId_example"
     return expect(instance.postDisplaypreferencesByDisplaypreferencesid(body, userId, displayPreferencesId, {})).resolves.toBe(null)
+  })
+  test("postUsersettingsByUserid", () => {
+    const body: Array<string> = undefined
+    const userId: string = "userId_example"
+    return expect(instance.postUsersettingsByUserid(body, userId, {})).resolves.toBe(null)
+  })
+  test("postUsersettingsByUseridPartial", () => {
+    const body: Object = undefined
+    const userId: string = "userId_example"
+    return expect(instance.postUsersettingsByUseridPartial(body, userId, {})).resolves.toBe(null)
   })
 })
 

@@ -15,7 +15,7 @@ import NameIdPair from './NameIdPair';
 /**
 * The UserLibraryRemoveTags model module.
 * @module model/UserLibraryRemoveTags
-* @version 4.9.0.22
+* @version 4.9.0.23
 */
 export default class UserLibraryRemoveTags {
     /**

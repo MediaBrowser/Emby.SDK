@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.22
+  version: 4.9.0.23
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -34502,6 +34502,99 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+  /UserSettings/{UserId}:
+    summary: Gets user settings
+    get:
+      tags:
+      - DisplayPreferencesService
+      summary: Gets user settings
+      description: Requires authentication as user
+      operationId: getUsersettingsByUserid
+      parameters:
+      - name: UserId
+        in: path
+        description: User Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "Operation successful. Returning a Dictionary<String,String>\
+            \ object."
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    post:
+      tags:
+      - DisplayPreferencesService
+      summary: Updates a user's display preferences for an item
+      description: Requires authentication as user
+      operationId: postUsersettingsByUserid
+      parameters:
+      - name: UserId
+        in: path
+        description: User Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: "UserSettings: "
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+          application/xml:
+            schema:
+              type: array
+              items:
+                type: string
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Videos/MergeVersions:
     summary: Merges videos into a single record
     post:
@@ -45867,14 +45960,12 @@ paths:
       description: Requires authentication as administrator
       operationId: postSystemConfigurationPartial
       requestBody:
-        description: "ServerConfiguration: "
+        description: Binary stream
         content:
-          application/json:
+          application/octet-stream:
             schema:
-              $ref: '#/components/schemas/ServerConfiguration'
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/ServerConfiguration'
+              type: string
+              format: binary
         required: true
       responses:
         "200":
@@ -47610,6 +47701,48 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/QueryResult_BaseItemDto'
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+  /UserSettings/{UserId}/Partial:
+    summary: Updates a user's display preferences for an item
+    post:
+      tags:
+      - DisplayPreferencesService
+      summary: Updates a user's display preferences for an item
+      description: Requires authentication as user
+      operationId: postUsersettingsByUseridPartial
+      parameters:
+      - name: UserId
+        in: path
+        description: User Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Binary stream
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        "200":
+          description: Operation successful. Empty response.
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -67775,22 +67908,16 @@ components:
       properties:
         Id:
           type: string
-          description: The user id.
         SortBy:
           type: string
-          description: The sort by.
         CustomPrefs:
           type: object
           additionalProperties:
             type: string
-          description: The custom prefs.
         SortOrder:
           $ref: '#/components/schemas/SortOrder'
         Client:
           type: string
-          description: The client
-      description: "Defines the display preferences for any item that supports them\
-        \ (usually Folders)\r\n"
       example:
         SortBy: SortBy
         SortOrder: Ascending
@@ -67798,7 +67925,7 @@ components:
         Client: Client
         CustomPrefs:
           key: CustomPrefs
-      x-internal-ref-name: MediaBrowser.Model.Entities.DisplayPreferences
+      x-internal-ref-name: Emby.Api.DisplayPreferences
     SortOrder:
       type: string
       description: "Enum SortOrder\r\n"
@@ -69642,10 +69769,6 @@ components:
           type: boolean
         AllowAudioStreamCopy:
           type: boolean
-        DirectPlayProtocols:
-          type: array
-          items:
-            $ref: '#/components/schemas/MediaProtocol'
       x-internal-ref-name: MediaBrowser.Model.MediaInfo.LiveStreamRequest
     DeviceProfile:
       type: object
@@ -84001,10 +84124,6 @@ components:
           type: boolean
         AutoOpenLiveStream:
           type: boolean
-        DirectPlayProtocols:
-          type: array
-          items:
-            $ref: '#/components/schemas/MediaProtocol'
         CurrentPlaySessionId:
           type: string
       x-internal-ref-name: MediaBrowser.Model.MediaInfo.PlaybackInfoRequest

@@ -254,10 +254,10 @@ open class ConfigurationServiceAPI {
     /**
      Updates application configuration
 
-     - parameter body: (body) ServerConfiguration:  
+     - parameter body: (body) Binary stream 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postSystemConfigurationPartial(body: ServerConfiguration, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postSystemConfigurationPartial(body: Object, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSystemConfigurationPartialWithRequestBuilder(body: body).execute { (response, error) -> Void in
             if error == nil {
                 completion((), error)
@@ -278,11 +278,11 @@ open class ConfigurationServiceAPI {
      - :
        - type: http
        - name: embyauth
-     - parameter body: (body) ServerConfiguration:  
+     - parameter body: (body) Binary stream 
 
      - returns: RequestBuilder<Void> 
      */
-    open class func postSystemConfigurationPartialWithRequestBuilder(body: ServerConfiguration) -> RequestBuilder<Void> {
+    open class func postSystemConfigurationPartialWithRequestBuilder(body: Object) -> RequestBuilder<Void> {
         let path = "/System/Configuration/Partial"
         let URLString = embyclient-rest-swift-betaAPI.basePath + path
         let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

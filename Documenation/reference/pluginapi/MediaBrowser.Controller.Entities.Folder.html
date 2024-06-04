@@ -208,6 +208,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UserRating">BaseItem.UserRating</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlayedPercentage">BaseItem.PlayedPercentage</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PlaybackPositionTicks">BaseItem.PlaybackPositionTicks</a>
     </div>
     <div>
@@ -229,7 +232,19 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPublic">BaseItem.IsPublic</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CollectionFolders">BaseItem.CollectionFolders</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LibraryOptions">BaseItem.LibraryOptions</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaStreams">BaseItem.MediaStreams</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ChildCount">BaseItem.ChildCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UnplayedItemCount">BaseItem.UnplayedItemCount</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AdditionalPartCount">BaseItem.AdditionalPartCount</a>
@@ -239,6 +254,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SpecialFeatureCount">BaseItem.SpecialFeatureCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RecursiveItemCount">BaseItem.RecursiveItemCount</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensions">BaseItem.SupportedImageExtensions</a>
@@ -290,6 +308,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocalTrailerIds">BaseItem.LocalTrailerIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RecursiveChildCountEqualsChildCount">BaseItem.RecursiveChildCountEqualsChildCount</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_HasPlaceholderMatadata">BaseItem.HasPlaceholderMatadata()</a>
@@ -1182,7 +1203,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[IgnoreDataMember]
-public bool AllowRecursiveCounts { get; }</code></pre>
+public override bool AllowRecursiveCounts { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1199,6 +1220,8 @@ public bool AllowRecursiveCounts { get; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowRecursiveCounts">BaseItem.AllowRecursiveCounts</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Folder_IsDisplayedAsFolder_" data-uid="MediaBrowser.Controller.Entities.Folder.IsDisplayedAsFolder*"></a>
@@ -1617,12 +1640,12 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_" data-uid="MediaBrowser.Controller.Entities.Folder.FillUserDataDtoValues*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Folder.FillUserDataDtoValues(MediaBrowser.Model.Dto.UserItemDataDto,MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions)">FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.Folder.FillUserDataDtoValues(MediaBrowser.Model.Dto.UserItemDataDto,MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions)">FillUserDataDtoValues(UserItemDataDto, User, DtoOptions, LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void FillUserDataDtoValues(UserItemDataDto dto, BaseItemDto itemDto, User user, DtoOptions options, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void FillUserDataDtoValues(UserItemDataDto dto, User user, DtoOptions options, LibraryOptions libraryOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1637,11 +1660,6 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Dto.UserItemDataDto.html">UserItemDataDto</a></td>
         <td><span class="parametername">dto</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Dto.BaseItemDto.html">BaseItemDto</a></td>
-        <td><span class="parametername">itemDto</span></td>
         <td></td>
       </tr>
       <tr>
@@ -1662,16 +1680,16 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.FillUserDataDtoValues(UserItemDataDto, BaseItemDto, User, DtoOptions, LibraryOptions)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.FillUserDataDtoValues(UserItemDataDto, User, DtoOptions, LibraryOptions)</a></div>
   
   
-  <a id="MediaBrowser_Controller_Entities_Folder_GetChildCount_" data-uid="MediaBrowser.Controller.Entities.Folder.GetChildCount*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Folder_GetChildCount_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.Folder.GetChildCount(MediaBrowser.Controller.Entities.User)">GetChildCount(User)</h4>
+  <a id="MediaBrowser_Controller_Entities_Folder_FillUserDataValues_" data-uid="MediaBrowser.Controller.Entities.Folder.FillUserDataValues*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Folder_FillUserDataValues_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.Folder.FillUserDataValues(MediaBrowser.Controller.Entities.User,MediaBrowser.Controller.Dto.DtoOptions,MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Model.Data.IDataContext)">FillUserDataValues(User, DtoOptions, LibraryOptions, IDataContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int GetChildCount(User user)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void FillUserDataValues(User user, DtoOptions options, LibraryOptions libraryOptions, IDataContext dataContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1686,6 +1704,55 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
+        <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FillUserDataValues_MediaBrowser_Controller_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Model_Data_IDataContext_">BaseItem.FillUserDataValues(User, DtoOptions, LibraryOptions, IDataContext)</a></div>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Folder_GetChildCount_" data-uid="MediaBrowser.Controller.Entities.Folder.GetChildCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Folder_GetChildCount_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.Folder.GetChildCount(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Data.IDataContext)">GetChildCount(User, IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetChildCount(User user, IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1705,6 +1772,8 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetChildCount_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetChildCount(User, IDataContext)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Folder_GetChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.GetChildren*"></a>
@@ -1900,7 +1969,7 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="xref">System.Int64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1942,7 +2011,7 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="xref">System.Int64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1989,7 +2058,7 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="xref">System.Int64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2036,7 +2105,7 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>[]</td>
+        <td><span class="xref">System.Int64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2324,7 +2393,7 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int GetRecursiveChildCount(User user)</code></pre>
+    <pre><code class="lang-csharp hljs">public int GetRecursiveChildCount(User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2358,6 +2427,55 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_" data-uid="MediaBrowser.Controller.Entities.Folder.GetRecursiveChildCount*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_" data-uid="MediaBrowser.Controller.Entities.Folder.GetRecursiveChildCount(MediaBrowser.Controller.Entities.User,MediaBrowser.Model.Data.IDataContext)">GetRecursiveChildCount(User, IDataContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetRecursiveChildCount(User user, IDataContext dataContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.User.html">User</a></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_MediaBrowser_Model_Data_IDataContext_">BaseItem.GetRecursiveChildCount(User, IDataContext)</a></div>
   
   
   <a id="MediaBrowser_Controller_Entities_Folder_GetRecursiveChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.GetRecursiveChildren*"></a>
@@ -2533,7 +2651,7 @@ public virtual bool UpdateChildrenOnLockStateChange { get; }</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
         <td><span class="parametername">datePlayed</span></td>
         <td><p>The date played.</p>
 </td>

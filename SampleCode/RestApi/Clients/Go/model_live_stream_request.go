@@ -23,5 +23,4 @@ type LiveStreamRequest struct {
 	AllowVideoStreamCopy bool `json:"AllowVideoStreamCopy,omitempty"`
 	AllowInterlacedVideoStreamCopy bool `json:"AllowInterlacedVideoStreamCopy,omitempty"`
 	AllowAudioStreamCopy bool `json:"AllowAudioStreamCopy,omitempty"`
-	DirectPlayProtocols []MediaProtocol `json:"DirectPlayProtocols,omitempty"`
 }

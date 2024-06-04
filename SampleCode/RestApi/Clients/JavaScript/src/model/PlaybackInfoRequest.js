@@ -11,12 +11,11 @@
 
 import ApiClient from '../ApiClient';
 import DeviceProfile from './DeviceProfile';
-import MediaProtocol from './MediaProtocol';
 
 /**
 * The PlaybackInfoRequest model module.
 * @module model/PlaybackInfoRequest
-* @version 4.9.0.22
+* @version 4.9.0.23
 */
 export default class PlaybackInfoRequest {
     /**
@@ -97,9 +96,6 @@ export default class PlaybackInfoRequest {
             if (data.hasOwnProperty('AutoOpenLiveStream')) {
                 obj['AutoOpenLiveStream'] = ApiClient.convertToType(data['AutoOpenLiveStream'], 'Boolean');
             }
-            if (data.hasOwnProperty('DirectPlayProtocols')) {
-                obj['DirectPlayProtocols'] = ApiClient.convertToType(data['DirectPlayProtocols'], [MediaProtocol]);
-            }
             if (data.hasOwnProperty('CurrentPlaySessionId')) {
                 obj['CurrentPlaySessionId'] = ApiClient.convertToType(data['CurrentPlaySessionId'], 'String');
             }
@@ -179,10 +175,6 @@ export default class PlaybackInfoRequest {
     * @member {Boolean} AutoOpenLiveStream
     */
     'AutoOpenLiveStream' = undefined;
-    /**
-    * @member {Array.<module:model/MediaProtocol>} DirectPlayProtocols
-    */
-    'DirectPlayProtocols' = undefined;
     /**
     * @member {String} CurrentPlaySessionId
     */

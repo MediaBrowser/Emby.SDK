@@ -8,18 +8,13 @@
 import Foundation
 
 
-/** Defines the display preferences for any item that supports them (usually Folders)   */
 
 public struct DisplayPreferences: Codable {
 
-    /** The user id. */
     public var _id: String?
-    /** The sort by. */
     public var sortBy: String?
-    /** The custom prefs. */
     public var customPrefs: [String:String]?
     public var sortOrder: SortOrder?
-    /** The client */
     public var client: String?
 
     public init(_id: String? = nil, sortBy: String? = nil, customPrefs: [String:String]? = nil, sortOrder: SortOrder? = nil, client: String? = nil) {

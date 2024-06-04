@@ -94,7 +94,7 @@ public class ConfigurationServiceApiTest {
      */
     @Test
     public void postSystemConfigurationPartialTest() throws Exception {
-        ServerConfiguration body = null;
+        Object body = null;
         api.postSystemConfigurationPartial(body);
 
         // TODO: test validations

@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * InstantMixService service.
 * @module EmbyClient.JavaScript.Beta/InstantMixServiceApi
-* @version 4.9.0.22
+* @version 4.9.0.23
 */
 export default class InstantMixServiceApi {
 

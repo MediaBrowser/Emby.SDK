@@ -69,6 +69,50 @@ open class DisplayPreferencesServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
+     Gets user settings
+
+     - parameter userId: (path) User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersettingsByUserid(userId: String, completion: @escaping ((_ data: [String:String]?,_ error: Error?) -> Void)) {
+        getUsersettingsByUseridWithRequestBuilder(userId: userId).execute { (response, error) -> Void in
+            completion(response?.body, error)
+        }
+    }
+
+
+    /**
+     Gets user settings
+     - GET /UserSettings/{UserId}
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - examples: [{contentType=application/json, example={
+  "key" : ""
+}}]
+     - parameter userId: (path) User Id 
+
+     - returns: RequestBuilder<[String:String]> 
+     */
+    open class func getUsersettingsByUseridWithRequestBuilder(userId: String) -> RequestBuilder<[String:String]> {
+        var path = "/UserSettings/{UserId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<[String:String]>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
      Updates a user's display preferences for an item
 
      - parameter body: (body) DisplayPreferences:  
@@ -114,6 +158,100 @@ open class DisplayPreferencesServiceAPI {
         url?.queryItems = APIHelper.mapValuesToQueryItems([
                         "UserId": userId
         ])
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
+     Updates a user's display preferences for an item
+
+     - parameter body: (body) UserSettings:  
+     - parameter userId: (path) User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersettingsByUserid(body: [String], userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersettingsByUseridWithRequestBuilder(body: body, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates a user's display preferences for an item
+     - POST /UserSettings/{UserId}
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) UserSettings:  
+     - parameter userId: (path) User Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersettingsByUseridWithRequestBuilder(body: [String], userId: String) -> RequestBuilder<Void> {
+        var path = "/UserSettings/{UserId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: true)
+    }
+    /**
+     Updates a user's display preferences for an item
+
+     - parameter body: (body) Binary stream 
+     - parameter userId: (path) User Id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsersettingsByUseridPartial(body: Object, userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        postUsersettingsByUseridPartialWithRequestBuilder(body: body, userId: userId).execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     Updates a user's display preferences for an item
+     - POST /UserSettings/{UserId}/Partial
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+     - parameter body: (body) Binary stream 
+     - parameter userId: (path) User Id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postUsersettingsByUseridPartialWithRequestBuilder(body: Object, userId: String) -> RequestBuilder<Void> {
+        var path = "/UserSettings/{UserId}/Partial"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{UserId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = embyclient-rest-swift-betaAPI.basePath + path
+        let parameters = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+        let url = URLComponents(string: URLString)
 
 
         let requestBuilder: RequestBuilder<Void>.Type = embyclient-rest-swift-betaAPI.requestBuilderFactory.getNonDecodableBuilder()

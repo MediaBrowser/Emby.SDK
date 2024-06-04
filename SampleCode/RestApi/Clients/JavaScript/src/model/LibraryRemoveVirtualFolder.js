@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LibraryRemoveVirtualFolder model module.
 * @module model/LibraryRemoveVirtualFolder
-* @version 4.9.0.22
+* @version 4.9.0.23
 */
 export default class LibraryRemoveVirtualFolder {
     /**

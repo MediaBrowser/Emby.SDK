@@ -29,10 +29,9 @@ public struct PlaybackInfoRequest: Codable {
     public var allowAudioStreamCopy: Bool?
     public var isPlayback: Bool?
     public var autoOpenLiveStream: Bool?
-    public var directPlayProtocols: [MediaProtocol]?
     public var currentPlaySessionId: String?
 
-    public init(_id: String? = nil, userId: String? = nil, maxStreamingBitrate: Int64? = nil, startTimeTicks: Int64? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, maxAudioChannels: Int? = nil, mediaSourceId: String? = nil, liveStreamId: String? = nil, deviceProfile: DeviceProfile? = nil, enableDirectPlay: Bool? = nil, enableDirectStream: Bool? = nil, enableTranscoding: Bool? = nil, allowInterlacedVideoStreamCopy: Bool? = nil, allowVideoStreamCopy: Bool? = nil, allowAudioStreamCopy: Bool? = nil, isPlayback: Bool? = nil, autoOpenLiveStream: Bool? = nil, directPlayProtocols: [MediaProtocol]? = nil, currentPlaySessionId: String? = nil) {
+    public init(_id: String? = nil, userId: String? = nil, maxStreamingBitrate: Int64? = nil, startTimeTicks: Int64? = nil, audioStreamIndex: Int? = nil, subtitleStreamIndex: Int? = nil, maxAudioChannels: Int? = nil, mediaSourceId: String? = nil, liveStreamId: String? = nil, deviceProfile: DeviceProfile? = nil, enableDirectPlay: Bool? = nil, enableDirectStream: Bool? = nil, enableTranscoding: Bool? = nil, allowInterlacedVideoStreamCopy: Bool? = nil, allowVideoStreamCopy: Bool? = nil, allowAudioStreamCopy: Bool? = nil, isPlayback: Bool? = nil, autoOpenLiveStream: Bool? = nil, currentPlaySessionId: String? = nil) {
         self._id = _id
         self.userId = userId
         self.maxStreamingBitrate = maxStreamingBitrate
@@ -51,7 +50,6 @@ public struct PlaybackInfoRequest: Codable {
         self.allowAudioStreamCopy = allowAudioStreamCopy
         self.isPlayback = isPlayback
         self.autoOpenLiveStream = autoOpenLiveStream
-        self.directPlayProtocols = directPlayProtocols
         self.currentPlaySessionId = currentPlaySessionId
     }
 
@@ -74,7 +72,6 @@ public struct PlaybackInfoRequest: Codable {
         case allowAudioStreamCopy = "AllowAudioStreamCopy"
         case isPlayback = "IsPlayback"
         case autoOpenLiveStream = "AutoOpenLiveStream"
-        case directPlayProtocols = "DirectPlayProtocols"
         case currentPlaySessionId = "CurrentPlaySessionId"
     }
 

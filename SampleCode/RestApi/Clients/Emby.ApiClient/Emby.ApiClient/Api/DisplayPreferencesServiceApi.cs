@@ -93,6 +93,34 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets user settings
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, string&gt;)</returns>
+        public async Task<RestResponse<Dictionary<string, string>>> GetUsersettingsByUserid (string userId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling DisplayPreferencesServiceApi->GetUsersettingsByUserid");
+            }
+            
+            var request = new RestRequest("/UserSettings/{UserId}", Method.Get);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Dictionary<string, string>>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Updates a user&#x27;s display preferences for an item
         /// </summary>
         /// <remarks>
@@ -132,6 +160,86 @@ namespace Emby.ApiClient.Api
             if (userId != null)
             {
                 request.AddQueryParameter("UserId", this.ApiClient.ParameterToString(userId));
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Updates a user&#x27;s display preferences for an item
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">UserSettings: </param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersettingsByUserid (List<string> body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling DisplayPreferencesServiceApi->PostUsersettingsByUserid");
+            }
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling DisplayPreferencesServiceApi->PostUsersettingsByUserid");
+            }
+            
+            var request = new RestRequest("/UserSettings/{UserId}", Method.Post);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
+            }
+
+            if (body != null)
+            {
+                request.AddJsonBody(body);
+            }
+            
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Updates a user&#x27;s display preferences for an item
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="body">Binary stream</param>
+        /// <param name="userId">User Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> PostUsersettingsByUseridPartial (Object body, string userId)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new ApiException("Missing required parameter 'body' when calling DisplayPreferencesServiceApi->PostUsersettingsByUseridPartial");
+            }
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+            {
+                throw new ApiException("Missing required parameter 'userId' when calling DisplayPreferencesServiceApi->PostUsersettingsByUseridPartial");
+            }
+            
+            var request = new RestRequest("/UserSettings/{UserId}/Partial", Method.Post);
+
+            if (userId != null)
+            {
+                request.AddParameter("UserId", this.ApiClient.ParameterToString(userId), ParameterType.UrlSegment);
             }
 
             if (body != null)

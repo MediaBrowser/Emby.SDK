@@ -14,9 +14,9 @@ namespace Emby.ApiClient.Model
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// Defines the display preferences for any item that supports them (usually Folders)  .
+    /// DisplayPreferences.
     /// </summary>
-    /// <seealso>MediaBrowser.Model.Entities.DisplayPreferences</seealso>
+    /// <seealso>Emby.Api.DisplayPreferences</seealso>
     public partial class DisplayPreferences :  IEquatable<DisplayPreferences>
     {
         /// <summary>
@@ -27,19 +27,19 @@ namespace Emby.ApiClient.Model
         }
         
         /// <summary>
-        /// The user id.
+        /// Gets or Sets Id
         /// </summary>
         /// <value>The Id.</value>
         public string Id { get; set; }
 
         /// <summary>
-        /// The sort by.
+        /// Gets or Sets SortBy
         /// </summary>
         /// <value>The SortBy.</value>
         public string SortBy { get; set; }
 
         /// <summary>
-        /// The custom prefs.
+        /// Gets or Sets CustomPrefs
         /// </summary>
         /// <value>The CustomPrefs.</value>
         public Dictionary<string, string> CustomPrefs { get; set; }
@@ -51,7 +51,7 @@ namespace Emby.ApiClient.Model
         public SortOrder SortOrder { get; set; }
 
         /// <summary>
-        /// The client
+        /// Gets or Sets _Client
         /// </summary>
         /// <value>The _Client.</value>
         public string _Client { get; set; }

@@ -60,7 +60,6 @@ class DisplayPreferences(object):
     def id(self):
         """Gets the id of this DisplayPreferences.  # noqa: E501
 
-        The user id.  # noqa: E501
 
         :return: The id of this DisplayPreferences.  # noqa: E501
         :rtype: str
@@ -71,7 +70,6 @@ class DisplayPreferences(object):
     def id(self, id):
         """Sets the id of this DisplayPreferences.
 
-        The user id.  # noqa: E501
 
         :param id: The id of this DisplayPreferences.  # noqa: E501
         :type: str
@@ -83,7 +81,6 @@ class DisplayPreferences(object):
     def sort_by(self):
         """Gets the sort_by of this DisplayPreferences.  # noqa: E501
 
-        The sort by.  # noqa: E501
 
         :return: The sort_by of this DisplayPreferences.  # noqa: E501
         :rtype: str
@@ -94,7 +91,6 @@ class DisplayPreferences(object):
     def sort_by(self, sort_by):
         """Sets the sort_by of this DisplayPreferences.
 
-        The sort by.  # noqa: E501
 
         :param sort_by: The sort_by of this DisplayPreferences.  # noqa: E501
         :type: str
@@ -106,7 +102,6 @@ class DisplayPreferences(object):
     def custom_prefs(self):
         """Gets the custom_prefs of this DisplayPreferences.  # noqa: E501
 
-        The custom prefs.  # noqa: E501
 
         :return: The custom_prefs of this DisplayPreferences.  # noqa: E501
         :rtype: dict(str, str)
@@ -117,7 +112,6 @@ class DisplayPreferences(object):
     def custom_prefs(self, custom_prefs):
         """Sets the custom_prefs of this DisplayPreferences.
 
-        The custom prefs.  # noqa: E501
 
         :param custom_prefs: The custom_prefs of this DisplayPreferences.  # noqa: E501
         :type: dict(str, str)
@@ -150,7 +144,6 @@ class DisplayPreferences(object):
     def client(self):
         """Gets the client of this DisplayPreferences.  # noqa: E501
 
-        The client  # noqa: E501
 
         :return: The client of this DisplayPreferences.  # noqa: E501
         :rtype: str
@@ -161,7 +154,6 @@ class DisplayPreferences(object):
     def client(self, client):
         """Sets the client of this DisplayPreferences.
 
-        The client  # noqa: E501
 
         :param client: The client of this DisplayPreferences.  # noqa: E501
         :type: str

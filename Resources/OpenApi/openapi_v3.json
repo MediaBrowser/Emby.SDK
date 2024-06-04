@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.22"
+    "version": "4.9.0.23"
   },
   "servers": [
     {
@@ -41939,6 +41939,147 @@
         "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
+    "/UserSettings/{UserId}": {
+      "summary": "Gets user settings",
+      "get": {
+        "tags": [
+          "DisplayPreferencesService"
+        ],
+        "summary": "Gets user settings",
+        "description": "Requires authentication as user",
+        "operationId": "getUsersettingsByUserid",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a Dictionary<String,String> object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "DisplayPreferencesService"
+        ],
+        "summary": "Updates a user's display preferences for an item",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersettingsByUserid",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "UserSettings: ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
     "/Videos/MergeVersions": {
       "summary": "Merges videos into a single record",
       "post": {
@@ -57130,16 +57271,12 @@
         "description": "Requires authentication as administrator",
         "operationId": "postSystemConfigurationPartial",
         "requestBody": {
-          "description": "ServerConfiguration: ",
+          "description": "Binary stream",
           "content": {
-            "application/json": {
+            "application/octet-stream": {
               "schema": {
-                "$ref": "#/components/schemas/ServerConfiguration"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/ServerConfiguration"
+                "type": "string",
+                "format": "binary"
               }
             }
           },
@@ -59401,6 +59538,70 @@
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/UserSettings/{UserId}/Partial": {
+      "summary": "Updates a user's display preferences for an item",
+      "post": {
+        "tags": [
+          "DisplayPreferencesService"
+        ],
+        "summary": "Updates a user's display preferences for an item",
+        "description": "Requires authentication as user",
+        "operationId": "postUsersettingsByUseridPartial",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Binary stream",
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -82142,30 +82343,25 @@
         "type": "object",
         "properties": {
           "Id": {
-            "type": "string",
-            "description": "The user id."
+            "type": "string"
           },
           "SortBy": {
-            "type": "string",
-            "description": "The sort by."
+            "type": "string"
           },
           "CustomPrefs": {
             "type": "object",
             "additionalProperties": {
               "type": "string"
-            },
-            "description": "The custom prefs."
+            }
           },
           "SortOrder": {
             "$ref": "#/components/schemas/SortOrder"
           },
           "Client": {
-            "type": "string",
-            "description": "The client"
+            "type": "string"
           }
         },
-        "description": "Defines the display preferences for any item that supports them (usually Folders)\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Entities.DisplayPreferences"
+        "x-internal-ref-name": "Emby.Api.DisplayPreferences"
       },
       "SortOrder": {
         "enum": [
@@ -83732,12 +83928,6 @@
           },
           "AllowAudioStreamCopy": {
             "type": "boolean"
-          },
-          "DirectPlayProtocols": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MediaProtocol"
-            }
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.MediaInfo.LiveStreamRequest"
@@ -88999,12 +89189,6 @@
           },
           "AutoOpenLiveStream": {
             "type": "boolean"
-          },
-          "DirectPlayProtocols": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/MediaProtocol"
-            }
           },
           "CurrentPlaySessionId": {
             "type": "string"

@@ -409,7 +409,7 @@ class ConfigurationServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ServerConfiguration body: ServerConfiguration:  (required)
+        :param Object body: Binary stream (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -431,7 +431,7 @@ class ConfigurationServiceApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param ServerConfiguration body: ServerConfiguration:  (required)
+        :param Object body: Binary stream (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -473,7 +473,7 @@ class ConfigurationServiceApi(object):
             body_params = params['body']
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json', 'application/xml'])  # noqa: E501
+            ['application/octet-stream'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['apikeyauth', 'embyauth']  # noqa: E501

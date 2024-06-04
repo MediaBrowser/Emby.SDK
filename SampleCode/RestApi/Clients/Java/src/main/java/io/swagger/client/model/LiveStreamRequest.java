@@ -13,11 +13,8 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.DeviceProfile;
-import io.swagger.client.model.MediaProtocol;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 /**
  * LiveStreamRequest
  */
@@ -71,9 +68,6 @@ public class LiveStreamRequest {
 
   @SerializedName("AllowAudioStreamCopy")
   private Boolean allowAudioStreamCopy = null;
-
-  @SerializedName("DirectPlayProtocols")
-  private List<MediaProtocol> directPlayProtocols = null;
 
   public LiveStreamRequest openToken(String openToken) {
     this.openToken = openToken;
@@ -363,32 +357,6 @@ public class LiveStreamRequest {
     this.allowAudioStreamCopy = allowAudioStreamCopy;
   }
 
-  public LiveStreamRequest directPlayProtocols(List<MediaProtocol> directPlayProtocols) {
-    this.directPlayProtocols = directPlayProtocols;
-    return this;
-  }
-
-  public LiveStreamRequest addDirectPlayProtocolsItem(MediaProtocol directPlayProtocolsItem) {
-    if (this.directPlayProtocols == null) {
-      this.directPlayProtocols = new ArrayList<MediaProtocol>();
-    }
-    this.directPlayProtocols.add(directPlayProtocolsItem);
-    return this;
-  }
-
-   /**
-   * Get directPlayProtocols
-   * @return directPlayProtocols
-  **/
-  @Schema(description = "")
-  public List<MediaProtocol> getDirectPlayProtocols() {
-    return directPlayProtocols;
-  }
-
-  public void setDirectPlayProtocols(List<MediaProtocol> directPlayProtocols) {
-    this.directPlayProtocols = directPlayProtocols;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -414,13 +382,12 @@ public class LiveStreamRequest {
         Objects.equals(this.enableTranscoding, liveStreamRequest.enableTranscoding) &&
         Objects.equals(this.allowVideoStreamCopy, liveStreamRequest.allowVideoStreamCopy) &&
         Objects.equals(this.allowInterlacedVideoStreamCopy, liveStreamRequest.allowInterlacedVideoStreamCopy) &&
-        Objects.equals(this.allowAudioStreamCopy, liveStreamRequest.allowAudioStreamCopy) &&
-        Objects.equals(this.directPlayProtocols, liveStreamRequest.directPlayProtocols);
+        Objects.equals(this.allowAudioStreamCopy, liveStreamRequest.allowAudioStreamCopy);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(openToken, userId, playSessionId, maxStreamingBitrate, startTimeTicks, audioStreamIndex, subtitleStreamIndex, maxAudioChannels, itemId, deviceProfile, enableDirectPlay, enableDirectStream, enableTranscoding, allowVideoStreamCopy, allowInterlacedVideoStreamCopy, allowAudioStreamCopy, directPlayProtocols);
+    return Objects.hash(openToken, userId, playSessionId, maxStreamingBitrate, startTimeTicks, audioStreamIndex, subtitleStreamIndex, maxAudioChannels, itemId, deviceProfile, enableDirectPlay, enableDirectStream, enableTranscoding, allowVideoStreamCopy, allowInterlacedVideoStreamCopy, allowAudioStreamCopy);
   }
 
 
@@ -445,7 +412,6 @@ public class LiveStreamRequest {
     sb.append("    allowVideoStreamCopy: ").append(toIndentedString(allowVideoStreamCopy)).append("\n");
     sb.append("    allowInterlacedVideoStreamCopy: ").append(toIndentedString(allowInterlacedVideoStreamCopy)).append("\n");
     sb.append("    allowAudioStreamCopy: ").append(toIndentedString(allowAudioStreamCopy)).append("\n");
-    sb.append("    directPlayProtocols: ").append(toIndentedString(directPlayProtocols)).append("\n");
     sb.append("}");
     return sb.toString();
   }
