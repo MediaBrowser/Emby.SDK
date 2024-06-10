@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 // This is used by the api to get information about a Person within a BaseItem  
 type BaseItemPerson struct {

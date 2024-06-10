@@ -35,7 +35,7 @@ please follow the procedure in ["Publishing npm packages"](https://docs.npmjs.co
 Then install it via:
 
 ```shell
-npm install EmbyClient.JavaScript --save
+npm install embyclient-js --save
 ```
 
 #### git

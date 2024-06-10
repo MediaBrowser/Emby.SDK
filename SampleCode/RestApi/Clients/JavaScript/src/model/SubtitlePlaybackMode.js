@@ -20,37 +20,37 @@ export default class SubtitlePlaybackMode {
          * value: "Default"
          * @const
          */
-        _default = "Default";
+        _Default = "Default";
 
         /**
          * value: "Always"
          * @const
          */
-        always = "Always";
+        Always = "Always";
 
         /**
          * value: "OnlyForced"
          * @const
          */
-        onlyForced = "OnlyForced";
+        OnlyForced = "OnlyForced";
 
         /**
          * value: "None"
          * @const
          */
-        none = "None";
+        None = "None";
 
         /**
          * value: "Smart"
          * @const
          */
-        smart = "Smart";
+        Smart = "Smart";
 
         /**
          * value: "HearingImpaired"
          * @const
          */
-        hearingImpaired = "HearingImpaired";
+        HearingImpaired = "HearingImpaired";
 
 
     /**

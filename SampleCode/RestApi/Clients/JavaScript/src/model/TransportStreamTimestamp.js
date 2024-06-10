@@ -20,19 +20,19 @@ export default class TransportStreamTimestamp {
          * value: "None"
          * @const
          */
-        none = "None";
+        None = "None";
 
         /**
          * value: "Zero"
          * @const
          */
-        zero = "Zero";
+        Zero = "Zero";
 
         /**
          * value: "Valid"
          * @const
          */
-        valid = "Valid";
+        Valid = "Valid";
 
 
     /**

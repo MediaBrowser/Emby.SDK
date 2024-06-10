@@ -20,19 +20,19 @@ export default class PackageVersionClass {
          * value: "Release"
          * @const
          */
-        release = "Release";
+        Release = "Release";
 
         /**
          * value: "Beta"
          * @const
          */
-        beta = "Beta";
+        Beta = "Beta";
 
         /**
          * value: "Dev"
          * @const
          */
-        dev = "Dev";
+        Dev = "Dev";
 
 
     /**

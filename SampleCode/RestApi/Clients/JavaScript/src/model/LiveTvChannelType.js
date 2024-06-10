@@ -26,7 +26,7 @@ export default class LiveTvChannelType {
          * value: "Radio"
          * @const
          */
-        radio = "Radio";
+        Radio = "Radio";
 
 
     /**

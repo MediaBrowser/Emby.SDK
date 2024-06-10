@@ -20,31 +20,31 @@ export default class PlayCommand {
          * value: "PlayNow"
          * @const
          */
-        playNow = "PlayNow";
+        PlayNow = "PlayNow";
 
         /**
          * value: "PlayNext"
          * @const
          */
-        playNext = "PlayNext";
+        PlayNext = "PlayNext";
 
         /**
          * value: "PlayLast"
          * @const
          */
-        playLast = "PlayLast";
+        PlayLast = "PlayLast";
 
         /**
          * value: "PlayInstantMix"
          * @const
          */
-        playInstantMix = "PlayInstantMix";
+        PlayInstantMix = "PlayInstantMix";
 
         /**
          * value: "PlayShuffle"
          * @const
          */
-        playShuffle = "PlayShuffle";
+        PlayShuffle = "PlayShuffle";
 
 
     /**

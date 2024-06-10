@@ -20,13 +20,13 @@ export default class ConnectUserLinkType {
          * value: "LinkedUser"
          * @const
          */
-        linkedUser = "LinkedUser";
+        LinkedUser = "LinkedUser";
 
         /**
          * value: "Guest"
          * @const
          */
-        guest = "Guest";
+        Guest = "Guest";
 
 
     /**

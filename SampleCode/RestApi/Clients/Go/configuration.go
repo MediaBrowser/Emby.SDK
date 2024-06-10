@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 import (
 	"net/http"
@@ -59,7 +59,7 @@ func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		BasePath:      "http://emby.media/emby",
 		DefaultHeader: make(map[string]string),
-		UserAgent:     "/4.9.0.23/go",
+		UserAgent:     "/4.9.0.24/go",
 	}
 	return cfg
 }

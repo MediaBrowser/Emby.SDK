@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type ContainerProfile struct {
 	Type_ *DlnaProfileType `json:"Type,omitempty"`

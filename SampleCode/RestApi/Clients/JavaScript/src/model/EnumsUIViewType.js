@@ -20,19 +20,19 @@ export default class EnumsUIViewType {
          * value: "RegularPage"
          * @const
          */
-        regularPage = "RegularPage";
+        RegularPage = "RegularPage";
 
         /**
          * value: "Dialog"
          * @const
          */
-        dialog = "Dialog";
+        Dialog = "Dialog";
 
         /**
          * value: "Wizard"
          * @const
          */
-        wizard = "Wizard";
+        Wizard = "Wizard";
 
 
     /**

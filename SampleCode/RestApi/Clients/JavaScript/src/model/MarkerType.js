@@ -20,25 +20,25 @@ export default class MarkerType {
          * value: "Chapter"
          * @const
          */
-        chapter = "Chapter";
+        Chapter = "Chapter";
 
         /**
          * value: "IntroStart"
          * @const
          */
-        introStart = "IntroStart";
+        IntroStart = "IntroStart";
 
         /**
          * value: "IntroEnd"
          * @const
          */
-        introEnd = "IntroEnd";
+        IntroEnd = "IntroEnd";
 
         /**
          * value: "CreditsStart"
          * @const
          */
-        creditsStart = "CreditsStart";
+        CreditsStart = "CreditsStart";
 
 
     /**

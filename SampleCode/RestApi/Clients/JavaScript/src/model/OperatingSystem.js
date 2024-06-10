@@ -20,13 +20,13 @@ export default class OperatingSystem {
          * value: "Windows"
          * @const
          */
-        windows = "Windows";
+        Windows = "Windows";
 
         /**
          * value: "Linux"
          * @const
          */
-        linux = "Linux";
+        Linux = "Linux";
 
         /**
          * value: "OSX"
@@ -44,7 +44,7 @@ export default class OperatingSystem {
          * value: "Android"
          * @const
          */
-        android = "Android";
+        Android = "Android";
 
 
     /**

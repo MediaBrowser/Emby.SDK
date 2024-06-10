@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type PersistenceIntroDebugInfo struct {
 	Id int64 `json:"Id,omitempty"`

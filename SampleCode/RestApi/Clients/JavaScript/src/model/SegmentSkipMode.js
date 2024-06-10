@@ -20,19 +20,19 @@ export default class SegmentSkipMode {
          * value: "ShowButton"
          * @const
          */
-        showButton = "ShowButton";
+        ShowButton = "ShowButton";
 
         /**
          * value: "AutoSkip"
          * @const
          */
-        autoSkip = "AutoSkip";
+        AutoSkip = "AutoSkip";
 
         /**
          * value: "None"
          * @const
          */
-        none = "None";
+        None = "None";
 
 
     /**

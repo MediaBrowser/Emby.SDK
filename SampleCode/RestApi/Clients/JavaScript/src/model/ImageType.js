@@ -20,91 +20,91 @@ export default class ImageType {
          * value: "Primary"
          * @const
          */
-        primary = "Primary";
+        Primary = "Primary";
 
         /**
          * value: "Art"
          * @const
          */
-        art = "Art";
+        Art = "Art";
 
         /**
          * value: "Backdrop"
          * @const
          */
-        backdrop = "Backdrop";
+        Backdrop = "Backdrop";
 
         /**
          * value: "Banner"
          * @const
          */
-        banner = "Banner";
+        Banner = "Banner";
 
         /**
          * value: "Logo"
          * @const
          */
-        logo = "Logo";
+        Logo = "Logo";
 
         /**
          * value: "Thumb"
          * @const
          */
-        thumb = "Thumb";
+        Thumb = "Thumb";
 
         /**
          * value: "Disc"
          * @const
          */
-        disc = "Disc";
+        Disc = "Disc";
 
         /**
          * value: "Box"
          * @const
          */
-        box = "Box";
+        Box = "Box";
 
         /**
          * value: "Screenshot"
          * @const
          */
-        screenshot = "Screenshot";
+        Screenshot = "Screenshot";
 
         /**
          * value: "Menu"
          * @const
          */
-        menu = "Menu";
+        Menu = "Menu";
 
         /**
          * value: "Chapter"
          * @const
          */
-        chapter = "Chapter";
+        Chapter = "Chapter";
 
         /**
          * value: "BoxRear"
          * @const
          */
-        boxRear = "BoxRear";
+        BoxRear = "BoxRear";
 
         /**
          * value: "Thumbnail"
          * @const
          */
-        thumbnail = "Thumbnail";
+        Thumbnail = "Thumbnail";
 
         /**
          * value: "LogoLight"
          * @const
          */
-        logoLight = "LogoLight";
+        LogoLight = "LogoLight";
 
         /**
          * value: "LogoLightColor"
          * @const
          */
-        logoLightColor = "LogoLightColor";
+        LogoLightColor = "LogoLightColor";
 
 
     /**

@@ -20,13 +20,13 @@ export default class ImageSavingConvention {
          * value: "Legacy"
          * @const
          */
-        legacy = "Legacy";
+        Legacy = "Legacy";
 
         /**
          * value: "Compatible"
          * @const
          */
-        compatible = "Compatible";
+        Compatible = "Compatible";
 
 
     /**

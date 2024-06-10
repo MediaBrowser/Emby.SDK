@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'media.emby'
-version = '4.9.0.23'
+version = '4.9.0.24'
 
 buildscript {
     repositories {
@@ -83,7 +83,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'embyclient-rest-java-beta'
+            pom.artifactId = 'embyclient-java-beta'
         }
     }
 

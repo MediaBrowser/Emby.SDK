@@ -20,19 +20,19 @@ export default class PlaybackErrorCode {
          * value: "NotAllowed"
          * @const
          */
-        notAllowed = "NotAllowed";
+        NotAllowed = "NotAllowed";
 
         /**
          * value: "NoCompatibleStream"
          * @const
          */
-        noCompatibleStream = "NoCompatibleStream";
+        NoCompatibleStream = "NoCompatibleStream";
 
         /**
          * value: "RateLimitExceeded"
          * @const
          */
-        rateLimitExceeded = "RateLimitExceeded";
+        RateLimitExceeded = "RateLimitExceeded";
 
 
     /**

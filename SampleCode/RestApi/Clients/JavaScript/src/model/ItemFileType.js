@@ -20,19 +20,19 @@ export default class ItemFileType {
          * value: "Media"
          * @const
          */
-        media = "Media";
+        Media = "Media";
 
         /**
          * value: "Image"
          * @const
          */
-        image = "Image";
+        Image = "Image";
 
         /**
          * value: "Subtitles"
          * @const
          */
-        subtitles = "Subtitles";
+        Subtitles = "Subtitles";
 
 
     /**

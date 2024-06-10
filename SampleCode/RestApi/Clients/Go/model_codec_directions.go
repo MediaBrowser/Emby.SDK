@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 // CodecDirections : Enum for indicating the processing direction of a codec.  
 type CodecDirections string
 

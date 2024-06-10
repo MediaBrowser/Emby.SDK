@@ -51,8 +51,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns></returns>
-        void GetPlaylistsByIdAddtoplaylistinfo (string userId, string ids, string id);
+        /// <returns>PlaylistsAddToPlaylistInfo</returns>
+        PlaylistsAddToPlaylistInfo GetPlaylistsByIdAddtoplaylistinfo (string userId, string ids, string id);
 
         /// <summary>
         /// Gets add to playlist info
@@ -64,8 +64,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo (string userId, string ids, string id);
+        /// <returns>ApiResponse of PlaylistsAddToPlaylistInfo</returns>
+        ApiResponse<PlaylistsAddToPlaylistInfo> GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo (string userId, string ids, string id);
         /// <summary>
         /// Gets the original items of a playlist
         /// </summary>
@@ -236,8 +236,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetPlaylistsByIdAddtoplaylistinfoAsync (string userId, string ids, string id);
+        /// <returns>Task of PlaylistsAddToPlaylistInfo</returns>
+        System.Threading.Tasks.Task<PlaylistsAddToPlaylistInfo> GetPlaylistsByIdAddtoplaylistinfoAsync (string userId, string ids, string id);
 
         /// <summary>
         /// Gets add to playlist info
@@ -249,8 +249,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo (string userId, string ids, string id);
+        /// <returns>Task of ApiResponse (PlaylistsAddToPlaylistInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PlaylistsAddToPlaylistInfo>> GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo (string userId, string ids, string id);
         /// <summary>
         /// Gets the original items of a playlist
         /// </summary>
@@ -665,10 +665,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns></returns>
-        public void GetPlaylistsByIdAddtoplaylistinfo (string userId, string ids, string id)
+        /// <returns>PlaylistsAddToPlaylistInfo</returns>
+        public PlaylistsAddToPlaylistInfo GetPlaylistsByIdAddtoplaylistinfo (string userId, string ids, string id)
         {
-             GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo(userId, ids, id);
+             ApiResponse<PlaylistsAddToPlaylistInfo> localVarResponse = GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo(userId, ids, id);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -678,8 +679,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo (string userId, string ids, string id)
+        /// <returns>ApiResponse of PlaylistsAddToPlaylistInfo</returns>
+        public ApiResponse< PlaylistsAddToPlaylistInfo > GetPlaylistsByIdAddtoplaylistinfoWithHttpInfo (string userId, string ids, string id)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -738,9 +739,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<PlaylistsAddToPlaylistInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                (PlaylistsAddToPlaylistInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlaylistsAddToPlaylistInfo)));
         }
 
         /// <summary>
@@ -750,10 +751,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetPlaylistsByIdAddtoplaylistinfoAsync (string userId, string ids, string id)
+        /// <returns>Task of PlaylistsAddToPlaylistInfo</returns>
+        public async System.Threading.Tasks.Task<PlaylistsAddToPlaylistInfo> GetPlaylistsByIdAddtoplaylistinfoAsync (string userId, string ids, string id)
         {
-             await GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo(userId, ids, id);
+             ApiResponse<PlaylistsAddToPlaylistInfo> localVarResponse = await GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo(userId, ids, id);
+             return localVarResponse.Data;
 
         }
 
@@ -764,8 +766,8 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo (string userId, string ids, string id)
+        /// <returns>Task of ApiResponse (PlaylistsAddToPlaylistInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PlaylistsAddToPlaylistInfo>> GetPlaylistsByIdAddtoplaylistinfoAsyncWithHttpInfo (string userId, string ids, string id)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -824,9 +826,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<PlaylistsAddToPlaylistInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                (PlaylistsAddToPlaylistInfo) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PlaylistsAddToPlaylistInfo)));
         }
 
         /// <summary>

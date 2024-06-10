@@ -20,91 +20,91 @@ export default class ProgressEvent {
          * value: "TimeUpdate"
          * @const
          */
-        timeUpdate = "TimeUpdate";
+        TimeUpdate = "TimeUpdate";
 
         /**
          * value: "Pause"
          * @const
          */
-        pause = "Pause";
+        Pause = "Pause";
 
         /**
          * value: "Unpause"
          * @const
          */
-        unpause = "Unpause";
+        Unpause = "Unpause";
 
         /**
          * value: "VolumeChange"
          * @const
          */
-        volumeChange = "VolumeChange";
+        VolumeChange = "VolumeChange";
 
         /**
          * value: "RepeatModeChange"
          * @const
          */
-        repeatModeChange = "RepeatModeChange";
+        RepeatModeChange = "RepeatModeChange";
 
         /**
          * value: "AudioTrackChange"
          * @const
          */
-        audioTrackChange = "AudioTrackChange";
+        AudioTrackChange = "AudioTrackChange";
 
         /**
          * value: "SubtitleTrackChange"
          * @const
          */
-        subtitleTrackChange = "SubtitleTrackChange";
+        SubtitleTrackChange = "SubtitleTrackChange";
 
         /**
          * value: "PlaylistItemMove"
          * @const
          */
-        playlistItemMove = "PlaylistItemMove";
+        PlaylistItemMove = "PlaylistItemMove";
 
         /**
          * value: "PlaylistItemRemove"
          * @const
          */
-        playlistItemRemove = "PlaylistItemRemove";
+        PlaylistItemRemove = "PlaylistItemRemove";
 
         /**
          * value: "PlaylistItemAdd"
          * @const
          */
-        playlistItemAdd = "PlaylistItemAdd";
+        PlaylistItemAdd = "PlaylistItemAdd";
 
         /**
          * value: "QualityChange"
          * @const
          */
-        qualityChange = "QualityChange";
+        QualityChange = "QualityChange";
 
         /**
          * value: "StateChange"
          * @const
          */
-        stateChange = "StateChange";
+        StateChange = "StateChange";
 
         /**
          * value: "SubtitleOffsetChange"
          * @const
          */
-        subtitleOffsetChange = "SubtitleOffsetChange";
+        SubtitleOffsetChange = "SubtitleOffsetChange";
 
         /**
          * value: "PlaybackRateChange"
          * @const
          */
-        playbackRateChange = "PlaybackRateChange";
+        PlaybackRateChange = "PlaybackRateChange";
 
         /**
          * value: "ShuffleChange"
          * @const
          */
-        shuffleChange = "ShuffleChange";
+        ShuffleChange = "ShuffleChange";
 
 
     /**

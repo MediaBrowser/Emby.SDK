@@ -89,8 +89,8 @@ namespace Emby.ApiClient.Api
         /// <param name="userId">User Id (optional)</param>
         /// <param name="ids">Item id, comma delimited</param>
         /// <param name="id"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetPlaylistsByIdAddtoplaylistinfo (string userId, string ids, string id)
+        /// <returns>Task of ApiResponse (PlaylistsAddToPlaylistInfo)</returns>
+        public async Task<RestResponse<PlaylistsAddToPlaylistInfo>> GetPlaylistsByIdAddtoplaylistinfo (string userId, string ids, string id)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -122,7 +122,7 @@ namespace Emby.ApiClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<PlaylistsAddToPlaylistInfo>(request).ConfigureAwait(false);
             return localVarResponse;
         }
 

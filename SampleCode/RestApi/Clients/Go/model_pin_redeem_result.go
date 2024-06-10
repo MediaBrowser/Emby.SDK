@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type PinRedeemResult struct {
 	// A value indicating whether this `MediaBrowser.Model.Users.PinRedeemResult` is success.

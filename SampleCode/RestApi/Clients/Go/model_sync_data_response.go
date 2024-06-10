@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type SyncDataResponse struct {
 	ItemIdsToRemove []string `json:"ItemIdsToRemove,omitempty"`

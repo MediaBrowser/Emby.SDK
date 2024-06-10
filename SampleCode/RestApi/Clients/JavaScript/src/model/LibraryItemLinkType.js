@@ -20,67 +20,67 @@ export default class LibraryItemLinkType {
          * value: "Artists"
          * @const
          */
-        artists = "Artists";
+        Artists = "Artists";
 
         /**
          * value: "AlbumArtists"
          * @const
          */
-        albumArtists = "AlbumArtists";
+        AlbumArtists = "AlbumArtists";
 
         /**
          * value: "Genres"
          * @const
          */
-        genres = "Genres";
+        Genres = "Genres";
 
         /**
          * value: "Studios"
          * @const
          */
-        studios = "Studios";
+        Studios = "Studios";
 
         /**
          * value: "Tags"
          * @const
          */
-        tags = "Tags";
+        Tags = "Tags";
 
         /**
          * value: "Composers"
          * @const
          */
-        composers = "Composers";
+        Composers = "Composers";
 
         /**
          * value: "Collections"
          * @const
          */
-        collections = "Collections";
+        Collections = "Collections";
 
         /**
          * value: "Albums"
          * @const
          */
-        albums = "Albums";
+        Albums = "Albums";
 
         /**
          * value: "CollectionFolders"
          * @const
          */
-        collectionFolders = "CollectionFolders";
+        CollectionFolders = "CollectionFolders";
 
         /**
          * value: "LiveTVSeries"
          * @const
          */
-        liveTVSeries = "LiveTVSeries";
+        LiveTVSeries = "LiveTVSeries";
 
         /**
          * value: "GameSystems"
          * @const
          */
-        gameSystems = "GameSystems";
+        GameSystems = "GameSystems";
 
 
     /**

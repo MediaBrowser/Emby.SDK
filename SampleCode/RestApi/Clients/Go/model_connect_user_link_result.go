@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type ConnectUserLinkResult struct {
 	IsPending bool `json:"IsPending,omitempty"`

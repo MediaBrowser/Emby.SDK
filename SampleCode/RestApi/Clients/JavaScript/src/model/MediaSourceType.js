@@ -20,19 +20,19 @@ export default class MediaSourceType {
          * value: "Default"
          * @const
          */
-        _default = "Default";
+        _Default = "Default";
 
         /**
          * value: "Grouping"
          * @const
          */
-        grouping = "Grouping";
+        Grouping = "Grouping";
 
         /**
          * value: "Placeholder"
          * @const
          */
-        placeholder = "Placeholder";
+        Placeholder = "Placeholder";
 
 
     /**

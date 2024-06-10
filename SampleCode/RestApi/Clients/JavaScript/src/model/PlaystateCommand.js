@@ -20,61 +20,61 @@ export default class PlaystateCommand {
          * value: "Stop"
          * @const
          */
-        stop = "Stop";
+        Stop = "Stop";
 
         /**
          * value: "Pause"
          * @const
          */
-        pause = "Pause";
+        Pause = "Pause";
 
         /**
          * value: "Unpause"
          * @const
          */
-        unpause = "Unpause";
+        Unpause = "Unpause";
 
         /**
          * value: "NextTrack"
          * @const
          */
-        nextTrack = "NextTrack";
+        NextTrack = "NextTrack";
 
         /**
          * value: "PreviousTrack"
          * @const
          */
-        previousTrack = "PreviousTrack";
+        PreviousTrack = "PreviousTrack";
 
         /**
          * value: "Seek"
          * @const
          */
-        seek = "Seek";
+        Seek = "Seek";
 
         /**
          * value: "Rewind"
          * @const
          */
-        rewind = "Rewind";
+        Rewind = "Rewind";
 
         /**
          * value: "FastForward"
          * @const
          */
-        fastForward = "FastForward";
+        FastForward = "FastForward";
 
         /**
          * value: "PlayPause"
          * @const
          */
-        playPause = "PlayPause";
+        PlayPause = "PlayPause";
 
         /**
          * value: "SeekRelative"
          * @const
          */
-        seekRelative = "SeekRelative";
+        SeekRelative = "SeekRelative";
 
 
     /**

@@ -20,13 +20,13 @@ export default class ConditionsPropertyConditionType {
          * value: "Visible"
          * @const
          */
-        visible = "Visible";
+        Visible = "Visible";
 
         /**
          * value: "Enabled"
          * @const
          */
-        enabled = "Enabled";
+        Enabled = "Enabled";
 
 
     /**

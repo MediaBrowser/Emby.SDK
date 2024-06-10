@@ -20,37 +20,37 @@ export default class SyncJobOption {
          * value: "Name"
          * @const
          */
-        name = "Name";
+        Name = "Name";
 
         /**
          * value: "Quality"
          * @const
          */
-        quality = "Quality";
+        Quality = "Quality";
 
         /**
          * value: "UnwatchedOnly"
          * @const
          */
-        unwatchedOnly = "UnwatchedOnly";
+        UnwatchedOnly = "UnwatchedOnly";
 
         /**
          * value: "SyncNewContent"
          * @const
          */
-        syncNewContent = "SyncNewContent";
+        SyncNewContent = "SyncNewContent";
 
         /**
          * value: "ItemLimit"
          * @const
          */
-        itemLimit = "ItemLimit";
+        ItemLimit = "ItemLimit";
 
         /**
          * value: "Profile"
          * @const
          */
-        profile = "Profile";
+        Profile = "Profile";
 
 
     /**

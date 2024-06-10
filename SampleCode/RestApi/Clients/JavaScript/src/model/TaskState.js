@@ -20,19 +20,19 @@ export default class TaskState {
          * value: "Idle"
          * @const
          */
-        idle = "Idle";
+        Idle = "Idle";
 
         /**
          * value: "Cancelling"
          * @const
          */
-        cancelling = "Cancelling";
+        Cancelling = "Cancelling";
 
         /**
          * value: "Running"
          * @const
          */
-        running = "Running";
+        Running = "Running";
 
 
     /**

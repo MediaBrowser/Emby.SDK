@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 // Used to hold information about a user's list of configured virtual folders  
 type VirtualFolderInfo struct {

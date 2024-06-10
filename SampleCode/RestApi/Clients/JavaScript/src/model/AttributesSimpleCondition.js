@@ -20,25 +20,25 @@ export default class AttributesSimpleCondition {
          * value: "IsTrue"
          * @const
          */
-        isTrue = "IsTrue";
+        IsTrue = "IsTrue";
 
         /**
          * value: "IsFalse"
          * @const
          */
-        isFalse = "IsFalse";
+        IsFalse = "IsFalse";
 
         /**
          * value: "IsNull"
          * @const
          */
-        isNull = "IsNull";
+        IsNull = "IsNull";
 
         /**
          * value: "IsNotNullOrEmpty"
          * @const
          */
-        isNotNullOrEmpty = "IsNotNullOrEmpty";
+        IsNotNullOrEmpty = "IsNotNullOrEmpty";
 
 
     /**

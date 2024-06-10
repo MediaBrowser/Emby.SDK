@@ -20,151 +20,151 @@ export default class TranscodeReason {
          * value: "ContainerNotSupported"
          * @const
          */
-        containerNotSupported = "ContainerNotSupported";
+        ContainerNotSupported = "ContainerNotSupported";
 
         /**
          * value: "VideoCodecNotSupported"
          * @const
          */
-        videoCodecNotSupported = "VideoCodecNotSupported";
+        VideoCodecNotSupported = "VideoCodecNotSupported";
 
         /**
          * value: "AudioCodecNotSupported"
          * @const
          */
-        audioCodecNotSupported = "AudioCodecNotSupported";
+        AudioCodecNotSupported = "AudioCodecNotSupported";
 
         /**
          * value: "ContainerBitrateExceedsLimit"
          * @const
          */
-        containerBitrateExceedsLimit = "ContainerBitrateExceedsLimit";
+        ContainerBitrateExceedsLimit = "ContainerBitrateExceedsLimit";
 
         /**
          * value: "AudioBitrateNotSupported"
          * @const
          */
-        audioBitrateNotSupported = "AudioBitrateNotSupported";
+        AudioBitrateNotSupported = "AudioBitrateNotSupported";
 
         /**
          * value: "AudioChannelsNotSupported"
          * @const
          */
-        audioChannelsNotSupported = "AudioChannelsNotSupported";
+        AudioChannelsNotSupported = "AudioChannelsNotSupported";
 
         /**
          * value: "VideoResolutionNotSupported"
          * @const
          */
-        videoResolutionNotSupported = "VideoResolutionNotSupported";
+        VideoResolutionNotSupported = "VideoResolutionNotSupported";
 
         /**
          * value: "UnknownVideoStreamInfo"
          * @const
          */
-        unknownVideoStreamInfo = "UnknownVideoStreamInfo";
+        UnknownVideoStreamInfo = "UnknownVideoStreamInfo";
 
         /**
          * value: "UnknownAudioStreamInfo"
          * @const
          */
-        unknownAudioStreamInfo = "UnknownAudioStreamInfo";
+        UnknownAudioStreamInfo = "UnknownAudioStreamInfo";
 
         /**
          * value: "AudioProfileNotSupported"
          * @const
          */
-        audioProfileNotSupported = "AudioProfileNotSupported";
+        AudioProfileNotSupported = "AudioProfileNotSupported";
 
         /**
          * value: "AudioSampleRateNotSupported"
          * @const
          */
-        audioSampleRateNotSupported = "AudioSampleRateNotSupported";
+        AudioSampleRateNotSupported = "AudioSampleRateNotSupported";
 
         /**
          * value: "AnamorphicVideoNotSupported"
          * @const
          */
-        anamorphicVideoNotSupported = "AnamorphicVideoNotSupported";
+        AnamorphicVideoNotSupported = "AnamorphicVideoNotSupported";
 
         /**
          * value: "InterlacedVideoNotSupported"
          * @const
          */
-        interlacedVideoNotSupported = "InterlacedVideoNotSupported";
+        InterlacedVideoNotSupported = "InterlacedVideoNotSupported";
 
         /**
          * value: "SecondaryAudioNotSupported"
          * @const
          */
-        secondaryAudioNotSupported = "SecondaryAudioNotSupported";
+        SecondaryAudioNotSupported = "SecondaryAudioNotSupported";
 
         /**
          * value: "RefFramesNotSupported"
          * @const
          */
-        refFramesNotSupported = "RefFramesNotSupported";
+        RefFramesNotSupported = "RefFramesNotSupported";
 
         /**
          * value: "VideoBitDepthNotSupported"
          * @const
          */
-        videoBitDepthNotSupported = "VideoBitDepthNotSupported";
+        VideoBitDepthNotSupported = "VideoBitDepthNotSupported";
 
         /**
          * value: "VideoBitrateNotSupported"
          * @const
          */
-        videoBitrateNotSupported = "VideoBitrateNotSupported";
+        VideoBitrateNotSupported = "VideoBitrateNotSupported";
 
         /**
          * value: "VideoFramerateNotSupported"
          * @const
          */
-        videoFramerateNotSupported = "VideoFramerateNotSupported";
+        VideoFramerateNotSupported = "VideoFramerateNotSupported";
 
         /**
          * value: "VideoLevelNotSupported"
          * @const
          */
-        videoLevelNotSupported = "VideoLevelNotSupported";
+        VideoLevelNotSupported = "VideoLevelNotSupported";
 
         /**
          * value: "VideoProfileNotSupported"
          * @const
          */
-        videoProfileNotSupported = "VideoProfileNotSupported";
+        VideoProfileNotSupported = "VideoProfileNotSupported";
 
         /**
          * value: "AudioBitDepthNotSupported"
          * @const
          */
-        audioBitDepthNotSupported = "AudioBitDepthNotSupported";
+        AudioBitDepthNotSupported = "AudioBitDepthNotSupported";
 
         /**
          * value: "SubtitleCodecNotSupported"
          * @const
          */
-        subtitleCodecNotSupported = "SubtitleCodecNotSupported";
+        SubtitleCodecNotSupported = "SubtitleCodecNotSupported";
 
         /**
          * value: "DirectPlayError"
          * @const
          */
-        directPlayError = "DirectPlayError";
+        DirectPlayError = "DirectPlayError";
 
         /**
          * value: "VideoRangeNotSupported"
          * @const
          */
-        videoRangeNotSupported = "VideoRangeNotSupported";
+        VideoRangeNotSupported = "VideoRangeNotSupported";
 
         /**
          * value: "SubtitleContentOptionsEnabled"
          * @const
          */
-        subtitleContentOptionsEnabled = "SubtitleContentOptionsEnabled";
+        SubtitleContentOptionsEnabled = "SubtitleContentOptionsEnabled";
 
 
     /**

@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 // MediaStream information.      MediaStream itens are typically included in a `MediaBrowser.Model.Dto.MediaSourceInfo` object.      `MediaBrowser.Model.Dto.MediaSourceInfo.MediaStreams`  
 type MediaStream struct {

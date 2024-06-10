@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type ProcessRunMetricsProcessStatistics struct {
 	// The current cpu.

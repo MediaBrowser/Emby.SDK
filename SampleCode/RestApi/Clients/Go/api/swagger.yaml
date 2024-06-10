@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.23
+  version: 4.9.0.24
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -43347,13 +43347,14 @@ paths:
           type: string
       responses:
         "200":
-          description: Operation successful. Returning a GetAddToPlaylistInfo object.
+          description: Operation successful. Returning a AddToPlaylistInfo object.
           content:
             application/json:
               schema:
-                x-content-type: application/json
+                $ref: '#/components/schemas/Playlists.AddToPlaylistInfo'
             application/xml:
-              schema: {}
+              schema:
+                $ref: '#/components/schemas/Playlists.AddToPlaylistInfo'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -84771,6 +84772,18 @@ components:
         - UserIds
         - UserIds
       x-internal-ref-name: Emby.Notifications.UserNotificationInfo
+    Playlists.AddToPlaylistInfo:
+      type: object
+      properties:
+        ItemCount:
+          type: integer
+          format: int32
+        ContainsDuplicates:
+          type: boolean
+      example:
+        ContainsDuplicates: true
+        ItemCount: 0
+      x-internal-ref-name: MediaBrowser.Controller.Playlists.AddToPlaylistInfo
     Playlists.AddToPlaylistResult:
       type: object
       properties:

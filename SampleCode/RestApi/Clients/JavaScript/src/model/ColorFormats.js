@@ -20,7 +20,7 @@ export default class ColorFormats {
          * value: "Unknown"
          * @const
          */
-        unknown = "Unknown";
+        Unknown = "Unknown";
 
         /**
          * value: "yuv420p"
@@ -140,7 +140,7 @@ export default class ColorFormats {
          * value: "bgr4_byte"
          * @const
          */
-        bgr4Byte = "bgr4_byte";
+        bgr4_byte = "bgr4_byte";
 
         /**
          * value: "rgb8"
@@ -158,7 +158,7 @@ export default class ColorFormats {
          * value: "rgb4_byte"
          * @const
          */
-        rgb4Byte = "rgb4_byte";
+        rgb4_byte = "rgb4_byte";
 
         /**
          * value: "nv12"
@@ -254,19 +254,19 @@ export default class ColorFormats {
          * value: "vaapi_moco"
          * @const
          */
-        vaapiMoco = "vaapi_moco";
+        vaapi_moco = "vaapi_moco";
 
         /**
          * value: "vaapi_idct"
          * @const
          */
-        vaapiIdct = "vaapi_idct";
+        vaapi_idct = "vaapi_idct";
 
         /**
          * value: "vaapi_vld"
          * @const
          */
-        vaapiVld = "vaapi_vld";
+        vaapi_vld = "vaapi_vld";
 
         /**
          * value: "yuv420p16"
@@ -290,7 +290,7 @@ export default class ColorFormats {
          * value: "dxva2_vld"
          * @const
          */
-        dxva2Vld = "dxva2_vld";
+        dxva2_vld = "dxva2_vld";
 
         /**
          * value: "rgb444"
@@ -518,7 +518,7 @@ export default class ColorFormats {
          * value: "d3d11va_vld"
          * @const
          */
-        d3d11vaVld = "d3d11va_vld";
+        d3d11va_vld = "d3d11va_vld";
 
         /**
          * value: "cuda"
@@ -608,49 +608,49 @@ export default class ColorFormats {
          * value: "bayer_bggr8"
          * @const
          */
-        bayerBggr8 = "bayer_bggr8";
+        bayer_bggr8 = "bayer_bggr8";
 
         /**
          * value: "bayer_rggb8"
          * @const
          */
-        bayerRggb8 = "bayer_rggb8";
+        bayer_rggb8 = "bayer_rggb8";
 
         /**
          * value: "bayer_gbrg8"
          * @const
          */
-        bayerGbrg8 = "bayer_gbrg8";
+        bayer_gbrg8 = "bayer_gbrg8";
 
         /**
          * value: "bayer_grbg8"
          * @const
          */
-        bayerGrbg8 = "bayer_grbg8";
+        bayer_grbg8 = "bayer_grbg8";
 
         /**
          * value: "bayer_bggr16"
          * @const
          */
-        bayerBggr16 = "bayer_bggr16";
+        bayer_bggr16 = "bayer_bggr16";
 
         /**
          * value: "bayer_rggb16"
          * @const
          */
-        bayerRggb16 = "bayer_rggb16";
+        bayer_rggb16 = "bayer_rggb16";
 
         /**
          * value: "bayer_gbrg16"
          * @const
          */
-        bayerGbrg16 = "bayer_gbrg16";
+        bayer_gbrg16 = "bayer_gbrg16";
 
         /**
          * value: "bayer_grbg16"
          * @const
          */
-        bayerGrbg16 = "bayer_grbg16";
+        bayer_grbg16 = "bayer_grbg16";
 
         /**
          * value: "xvmc"
@@ -680,7 +680,7 @@ export default class ColorFormats {
          * value: "videotoolbox_vld"
          * @const
          */
-        videotoolboxVld = "videotoolbox_vld";
+        videotoolbox_vld = "videotoolbox_vld";
 
         /**
          * value: "p010"
@@ -758,7 +758,7 @@ export default class ColorFormats {
          * value: "drm_prime"
          * @const
          */
-        drmPrime = "drm_prime";
+        drm_prime = "drm_prime";
 
         /**
          * value: "opencl"

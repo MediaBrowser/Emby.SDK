@@ -20,31 +20,31 @@ export default class UserItemShareLevel {
          * value: "None"
          * @const
          */
-        none = "None";
+        None = "None";
 
         /**
          * value: "Read"
          * @const
          */
-        read = "Read";
+        Read = "Read";
 
         /**
          * value: "Write"
          * @const
          */
-        write = "Write";
+        Write = "Write";
 
         /**
          * value: "Manage"
          * @const
          */
-        manage = "Manage";
+        Manage = "Manage";
 
         /**
          * value: "ManageDelete"
          * @const
          */
-        manageDelete = "ManageDelete";
+        ManageDelete = "ManageDelete";
 
 
     /**

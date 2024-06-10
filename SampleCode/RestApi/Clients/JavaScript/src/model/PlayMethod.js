@@ -20,19 +20,19 @@ export default class PlayMethod {
          * value: "Transcode"
          * @const
          */
-        transcode = "Transcode";
+        Transcode = "Transcode";
 
         /**
          * value: "DirectStream"
          * @const
          */
-        directStream = "DirectStream";
+        DirectStream = "DirectStream";
 
         /**
          * value: "DirectPlay"
          * @const
          */
-        directPlay = "DirectPlay";
+        DirectPlay = "DirectPlay";
 
 
     /**

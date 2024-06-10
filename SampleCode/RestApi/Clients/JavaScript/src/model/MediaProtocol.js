@@ -20,49 +20,49 @@ export default class MediaProtocol {
          * value: "File"
          * @const
          */
-        file = "File";
+        File = "File";
 
         /**
          * value: "Http"
          * @const
          */
-        http = "Http";
+        Http = "Http";
 
         /**
          * value: "Rtmp"
          * @const
          */
-        rtmp = "Rtmp";
+        Rtmp = "Rtmp";
 
         /**
          * value: "Rtsp"
          * @const
          */
-        rtsp = "Rtsp";
+        Rtsp = "Rtsp";
 
         /**
          * value: "Udp"
          * @const
          */
-        udp = "Udp";
+        Udp = "Udp";
 
         /**
          * value: "Rtp"
          * @const
          */
-        rtp = "Rtp";
+        Rtp = "Rtp";
 
         /**
          * value: "Ftp"
          * @const
          */
-        ftp = "Ftp";
+        Ftp = "Ftp";
 
         /**
          * value: "Mms"
          * @const
          */
-        mms = "Mms";
+        Mms = "Mms";
 
 
     /**

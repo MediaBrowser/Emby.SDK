@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 // CodecKinds : Enum defining the kind of media a codec is processing.  
 type CodecKinds string
 

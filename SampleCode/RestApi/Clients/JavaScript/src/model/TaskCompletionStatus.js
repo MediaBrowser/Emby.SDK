@@ -20,25 +20,25 @@ export default class TaskCompletionStatus {
          * value: "Completed"
          * @const
          */
-        completed = "Completed";
+        Completed = "Completed";
 
         /**
          * value: "Failed"
          * @const
          */
-        failed = "Failed";
+        Failed = "Failed";
 
         /**
          * value: "Cancelled"
          * @const
          */
-        cancelled = "Cancelled";
+        Cancelled = "Cancelled";
 
         /**
          * value: "Aborted"
          * @const
          */
-        aborted = "Aborted";
+        Aborted = "Aborted";
 
 
     /**

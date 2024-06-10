@@ -20,25 +20,25 @@ export default class IOFileSystemEntryType {
          * value: "File"
          * @const
          */
-        file = "File";
+        File = "File";
 
         /**
          * value: "Directory"
          * @const
          */
-        directory = "Directory";
+        Directory = "Directory";
 
         /**
          * value: "NetworkComputer"
          * @const
          */
-        networkComputer = "NetworkComputer";
+        NetworkComputer = "NetworkComputer";
 
         /**
          * value: "NetworkShare"
          * @const
          */
-        networkShare = "NetworkShare";
+        NetworkShare = "NetworkShare";
 
 
     /**

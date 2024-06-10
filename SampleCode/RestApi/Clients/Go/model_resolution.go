@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 // Struct representing a video resolution specified in X and Y dimension.      `System.IComparable`      `System.IEquatable`1`  
 type Resolution struct {

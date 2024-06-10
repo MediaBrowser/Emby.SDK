@@ -20,19 +20,19 @@ export default class DlnaProfilesHeaderMatchType {
          * value: "Equals"
          * @const
          */
-        equals = "Equals";
+        Equals = "Equals";
 
         /**
          * value: "Regex"
          * @const
          */
-        regex = "Regex";
+        Regex = "Regex";
 
         /**
          * value: "Substring"
          * @const
          */
-        substring = "Substring";
+        Substring = "Substring";
 
 
     /**

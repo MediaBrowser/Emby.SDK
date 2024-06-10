@@ -20,49 +20,49 @@ export default class PersonType {
          * value: "Actor"
          * @const
          */
-        actor = "Actor";
+        Actor = "Actor";
 
         /**
          * value: "Director"
          * @const
          */
-        director = "Director";
+        Director = "Director";
 
         /**
          * value: "Writer"
          * @const
          */
-        writer = "Writer";
+        Writer = "Writer";
 
         /**
          * value: "Producer"
          * @const
          */
-        producer = "Producer";
+        Producer = "Producer";
 
         /**
          * value: "GuestStar"
          * @const
          */
-        guestStar = "GuestStar";
+        GuestStar = "GuestStar";
 
         /**
          * value: "Composer"
          * @const
          */
-        composer = "Composer";
+        Composer = "Composer";
 
         /**
          * value: "Conductor"
          * @const
          */
-        conductor = "Conductor";
+        Conductor = "Conductor";
 
         /**
          * value: "Lyricist"
          * @const
          */
-        lyricist = "Lyricist";
+        Lyricist = "Lyricist";
 
 
     /**

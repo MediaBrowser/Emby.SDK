@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type RemoteSearchQueryPersonLookupInfo struct {
 	SearchInfo *PersonLookupInfo `json:"SearchInfo,omitempty"`

@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.23"
+    "version": "4.9.0.24"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -37348,8 +37348,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Returning a GetAddToPlaylistInfo object.",
-            "schema": { }
+            "description": "Operation successful. Returning a AddToPlaylistInfo object.",
+            "schema": {
+              "$ref": "#/definitions/Playlists.AddToPlaylistInfo"
+            }
           },
           "400": {
             "$ref": "#/responses/400"
@@ -66550,6 +66552,19 @@
         }
       },
       "x-internal-ref-name": "Emby.Notifications.UserNotificationInfo"
+    },
+    "Playlists.AddToPlaylistInfo": {
+      "type": "object",
+      "properties": {
+        "ItemCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ContainsDuplicates": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Playlists.AddToPlaylistInfo"
     },
     "Playlists.AddToPlaylistResult": {
       "type": "object",

@@ -20,121 +20,121 @@ export default class CommonEditorTypes {
          * value: "Group"
          * @const
          */
-        group = "Group";
+        Group = "Group";
 
         /**
          * value: "Text"
          * @const
          */
-        text = "Text";
+        Text = "Text";
 
         /**
          * value: "Numeric"
          * @const
          */
-        numeric = "Numeric";
+        Numeric = "Numeric";
 
         /**
          * value: "Boolean"
          * @const
          */
-        _boolean = "Boolean";
+        _Boolean = "Boolean";
 
         /**
          * value: "SelectSingle"
          * @const
          */
-        selectSingle = "SelectSingle";
+        SelectSingle = "SelectSingle";
 
         /**
          * value: "SelectMultiple"
          * @const
          */
-        selectMultiple = "SelectMultiple";
+        SelectMultiple = "SelectMultiple";
 
         /**
          * value: "Date"
          * @const
          */
-        _date = "Date";
+        _Date = "Date";
 
         /**
          * value: "FilePath"
          * @const
          */
-        filePath = "FilePath";
+        FilePath = "FilePath";
 
         /**
          * value: "FolderPath"
          * @const
          */
-        folderPath = "FolderPath";
+        FolderPath = "FolderPath";
 
         /**
          * value: "StatusItem"
          * @const
          */
-        statusItem = "StatusItem";
+        StatusItem = "StatusItem";
 
         /**
          * value: "ProgressItem"
          * @const
          */
-        progressItem = "ProgressItem";
+        ProgressItem = "ProgressItem";
 
         /**
          * value: "ButtonItem"
          * @const
          */
-        buttonItem = "ButtonItem";
+        ButtonItem = "ButtonItem";
 
         /**
          * value: "ButtonGroup"
          * @const
          */
-        buttonGroup = "ButtonGroup";
+        ButtonGroup = "ButtonGroup";
 
         /**
          * value: "CaptionItem"
          * @const
          */
-        captionItem = "CaptionItem";
+        CaptionItem = "CaptionItem";
 
         /**
          * value: "LabelItem"
          * @const
          */
-        labelItem = "LabelItem";
+        LabelItem = "LabelItem";
 
         /**
          * value: "ItemList"
          * @const
          */
-        itemList = "ItemList";
+        ItemList = "ItemList";
 
         /**
          * value: "RadioGroup"
          * @const
          */
-        radioGroup = "RadioGroup";
+        RadioGroup = "RadioGroup";
 
         /**
          * value: "DxDataGrid"
          * @const
          */
-        dxDataGrid = "DxDataGrid";
+        DxDataGrid = "DxDataGrid";
 
         /**
          * value: "DxPivotGrid"
          * @const
          */
-        dxPivotGrid = "DxPivotGrid";
+        DxPivotGrid = "DxPivotGrid";
 
         /**
          * value: "SpacerItem"
          * @const
          */
-        spacerItem = "SpacerItem";
+        SpacerItem = "SpacerItem";
 
 
     /**

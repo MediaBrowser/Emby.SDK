@@ -20,7 +20,7 @@ export default class VideoMediaTypes {
          * value: "Unknown"
          * @const
          */
-        unknown = "Unknown";
+        Unknown = "Unknown";
 
         /**
          * value: "copy"
@@ -158,13 +158,13 @@ export default class VideoMediaTypes {
          * value: "a64_multi"
          * @const
          */
-        a64Multi = "a64_multi";
+        a64_multi = "a64_multi";
 
         /**
          * value: "a64_multi5"
          * @const
          */
-        a64Multi5 = "a64_multi5";
+        a64_multi5 = "a64_multi5";
 
         /**
          * value: "aasc"
@@ -182,7 +182,7 @@ export default class VideoMediaTypes {
          * value: "alias_pix"
          * @const
          */
-        aliasPix = "alias_pix";
+        alias_pix = "alias_pix";
 
         /**
          * value: "amv"
@@ -308,13 +308,13 @@ export default class VideoMediaTypes {
          * value: "bmv_video"
          * @const
          */
-        bmvVideo = "bmv_video";
+        bmv_video = "bmv_video";
 
         /**
          * value: "brender_pix"
          * @const
          */
-        brenderPix = "brender_pix";
+        brender_pix = "brender_pix";
 
         /**
          * value: "c93"
@@ -584,7 +584,7 @@ export default class VideoMediaTypes {
          * value: "hq_hqa"
          * @const
          */
-        hqHqa = "hq_hqa";
+        hq_hqa = "hq_hqa";
 
         /**
          * value: "hqx"
@@ -614,7 +614,7 @@ export default class VideoMediaTypes {
          * value: "iff_ilbm"
          * @const
          */
-        iffIlbm = "iff_ilbm";
+        iff_ilbm = "iff_ilbm";
 
         /**
          * value: "indeo2"
@@ -830,7 +830,7 @@ export default class VideoMediaTypes {
          * value: "paf_video"
          * @const
          */
-        pafVideo = "paf_video";
+        paf_video = "paf_video";
 
         /**
          * value: "pam"
@@ -1100,7 +1100,7 @@ export default class VideoMediaTypes {
          * value: "targa_y216"
          * @const
          */
-        targaY216 = "targa_y216";
+        targa_y216 = "targa_y216";
 
         /**
          * value: "tdsc"
@@ -1322,25 +1322,25 @@ export default class VideoMediaTypes {
          * value: "wrapped_avframe"
          * @const
          */
-        wrappedAvframe = "wrapped_avframe";
+        wrapped_avframe = "wrapped_avframe";
 
         /**
          * value: "ws_vqa"
          * @const
          */
-        wsVqa = "ws_vqa";
+        ws_vqa = "ws_vqa";
 
         /**
          * value: "xan_wc3"
          * @const
          */
-        xanWc3 = "xan_wc3";
+        xan_wc3 = "xan_wc3";
 
         /**
          * value: "xan_wc4"
          * @const
          */
-        xanWc4 = "xan_wc4";
+        xan_wc4 = "xan_wc4";
 
         /**
          * value: "xbin"

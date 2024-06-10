@@ -20,13 +20,13 @@ export default class MediaEncodingCodecParameterContext {
          * value: "Playback"
          * @const
          */
-        playback = "Playback";
+        Playback = "Playback";
 
         /**
          * value: "Conversion"
          * @const
          */
-        conversion = "Conversion";
+        Conversion = "Conversion";
 
 
     /**

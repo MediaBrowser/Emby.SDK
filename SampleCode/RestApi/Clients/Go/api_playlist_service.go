@@ -5,7 +5,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 import (
 	"context"
@@ -114,20 +114,20 @@ Requires authentication as user
  * @param id
  * @param optional nil or *PlaylistServiceApiGetPlaylistsByIdAddtoplaylistinfoOpts - Optional Parameters:
      * @param "UserId" (optional.String) -  User Id
-@return Object
+@return PlaylistsAddToPlaylistInfo
 */
 
 type PlaylistServiceApiGetPlaylistsByIdAddtoplaylistinfoOpts struct {
     UserId optional.String
 }
 
-func (a *PlaylistServiceApiService) GetPlaylistsByIdAddtoplaylistinfo(ctx context.Context, ids string, id string, localVarOptionals *PlaylistServiceApiGetPlaylistsByIdAddtoplaylistinfoOpts) (Object, *http.Response, error) {
+func (a *PlaylistServiceApiService) GetPlaylistsByIdAddtoplaylistinfo(ctx context.Context, ids string, id string, localVarOptionals *PlaylistServiceApiGetPlaylistsByIdAddtoplaylistinfoOpts) (PlaylistsAddToPlaylistInfo, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue Object
+		localVarReturnValue PlaylistsAddToPlaylistInfo
 	)
 
 	// create path and map variables
@@ -202,7 +202,7 @@ func (a *PlaylistServiceApiService) GetPlaylistsByIdAddtoplaylistinfo(ctx contex
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v Object
+			var v PlaylistsAddToPlaylistInfo
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

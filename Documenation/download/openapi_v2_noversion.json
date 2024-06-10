@@ -37346,8 +37346,10 @@
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Returning a GetAddToPlaylistInfo object.",
-            "schema": { }
+            "description": "Operation successful. Returning a AddToPlaylistInfo object.",
+            "schema": {
+              "$ref": "#/definitions/Playlists.AddToPlaylistInfo"
+            }
           },
           "400": {
             "$ref": "#/responses/400"
@@ -66548,6 +66550,19 @@
         }
       },
       "x-internal-ref-name": "Emby.Notifications.UserNotificationInfo"
+    },
+    "Playlists.AddToPlaylistInfo": {
+      "type": "object",
+      "properties": {
+        "ItemCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ContainsDuplicates": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Playlists.AddToPlaylistInfo"
     },
     "Playlists.AddToPlaylistResult": {
       "type": "object",

@@ -20,19 +20,19 @@ export default class RepeatMode {
          * value: "RepeatNone"
          * @const
          */
-        repeatNone = "RepeatNone";
+        RepeatNone = "RepeatNone";
 
         /**
          * value: "RepeatAll"
          * @const
          */
-        repeatAll = "RepeatAll";
+        RepeatAll = "RepeatAll";
 
         /**
          * value: "RepeatOne"
          * @const
          */
-        repeatOne = "RepeatOne";
+        RepeatOne = "RepeatOne";
 
 
     /**

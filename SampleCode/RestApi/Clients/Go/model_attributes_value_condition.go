@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 // AttributesValueCondition : Conditions for comparing with a target value.  
 type AttributesValueCondition string
 

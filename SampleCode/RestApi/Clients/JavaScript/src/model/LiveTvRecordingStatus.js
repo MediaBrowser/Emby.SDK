@@ -20,43 +20,43 @@ export default class LiveTvRecordingStatus {
          * value: "New"
          * @const
          */
-        _new = "New";
+        _New = "New";
 
         /**
          * value: "InProgress"
          * @const
          */
-        inProgress = "InProgress";
+        InProgress = "InProgress";
 
         /**
          * value: "Completed"
          * @const
          */
-        completed = "Completed";
+        Completed = "Completed";
 
         /**
          * value: "Cancelled"
          * @const
          */
-        cancelled = "Cancelled";
+        Cancelled = "Cancelled";
 
         /**
          * value: "ConflictedOk"
          * @const
          */
-        conflictedOk = "ConflictedOk";
+        ConflictedOk = "ConflictedOk";
 
         /**
          * value: "ConflictedNotOk"
          * @const
          */
-        conflictedNotOk = "ConflictedNotOk";
+        ConflictedNotOk = "ConflictedNotOk";
 
         /**
          * value: "Error"
          * @const
          */
-        error = "Error";
+        Error = "Error";
 
 
     /**

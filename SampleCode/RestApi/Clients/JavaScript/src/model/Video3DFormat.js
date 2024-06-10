@@ -20,25 +20,25 @@ export default class Video3DFormat {
          * value: "HalfSideBySide"
          * @const
          */
-        halfSideBySide = "HalfSideBySide";
+        HalfSideBySide = "HalfSideBySide";
 
         /**
          * value: "FullSideBySide"
          * @const
          */
-        fullSideBySide = "FullSideBySide";
+        FullSideBySide = "FullSideBySide";
 
         /**
          * value: "FullTopAndBottom"
          * @const
          */
-        fullTopAndBottom = "FullTopAndBottom";
+        FullTopAndBottom = "FullTopAndBottom";
 
         /**
          * value: "HalfTopAndBottom"
          * @const
          */
-        halfTopAndBottom = "HalfTopAndBottom";
+        HalfTopAndBottom = "HalfTopAndBottom";
 
         /**
          * value: "MVC"

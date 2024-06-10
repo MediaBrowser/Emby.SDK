@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type QueryResultUserLibraryTagItem struct {
 	Items []UserLibraryTagItem `json:"Items,omitempty"`

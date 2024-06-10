@@ -20,25 +20,25 @@ export default class ProxyHeaderMode {
          * value: "None"
          * @const
          */
-        none = "None";
+        None = "None";
 
         /**
          * value: "LanAddressesOnly"
          * @const
          */
-        lanAddressesOnly = "LanAddressesOnly";
+        LanAddressesOnly = "LanAddressesOnly";
 
         /**
          * value: "RemoteAddressesOnly"
          * @const
          */
-        remoteAddressesOnly = "RemoteAddressesOnly";
+        RemoteAddressesOnly = "RemoteAddressesOnly";
 
         /**
          * value: "AllAddresses"
          * @const
          */
-        allAddresses = "AllAddresses";
+        AllAddresses = "AllAddresses";
 
 
     /**

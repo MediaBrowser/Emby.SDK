@@ -20,151 +20,151 @@ export default class ProfileConditionValue {
          * value: "AudioChannels"
          * @const
          */
-        audioChannels = "AudioChannels";
+        AudioChannels = "AudioChannels";
 
         /**
          * value: "AudioBitrate"
          * @const
          */
-        audioBitrate = "AudioBitrate";
+        AudioBitrate = "AudioBitrate";
 
         /**
          * value: "AudioProfile"
          * @const
          */
-        audioProfile = "AudioProfile";
+        AudioProfile = "AudioProfile";
 
         /**
          * value: "Width"
          * @const
          */
-        width = "Width";
+        Width = "Width";
 
         /**
          * value: "Height"
          * @const
          */
-        height = "Height";
+        Height = "Height";
 
         /**
          * value: "Has64BitOffsets"
          * @const
          */
-        has64BitOffsets = "Has64BitOffsets";
+        Has64BitOffsets = "Has64BitOffsets";
 
         /**
          * value: "PacketLength"
          * @const
          */
-        packetLength = "PacketLength";
+        PacketLength = "PacketLength";
 
         /**
          * value: "VideoBitDepth"
          * @const
          */
-        videoBitDepth = "VideoBitDepth";
+        VideoBitDepth = "VideoBitDepth";
 
         /**
          * value: "VideoBitrate"
          * @const
          */
-        videoBitrate = "VideoBitrate";
+        VideoBitrate = "VideoBitrate";
 
         /**
          * value: "VideoFramerate"
          * @const
          */
-        videoFramerate = "VideoFramerate";
+        VideoFramerate = "VideoFramerate";
 
         /**
          * value: "VideoLevel"
          * @const
          */
-        videoLevel = "VideoLevel";
+        VideoLevel = "VideoLevel";
 
         /**
          * value: "VideoProfile"
          * @const
          */
-        videoProfile = "VideoProfile";
+        VideoProfile = "VideoProfile";
 
         /**
          * value: "VideoTimestamp"
          * @const
          */
-        videoTimestamp = "VideoTimestamp";
+        VideoTimestamp = "VideoTimestamp";
 
         /**
          * value: "IsAnamorphic"
          * @const
          */
-        isAnamorphic = "IsAnamorphic";
+        IsAnamorphic = "IsAnamorphic";
 
         /**
          * value: "RefFrames"
          * @const
          */
-        refFrames = "RefFrames";
+        RefFrames = "RefFrames";
 
         /**
          * value: "NumAudioStreams"
          * @const
          */
-        numAudioStreams = "NumAudioStreams";
+        NumAudioStreams = "NumAudioStreams";
 
         /**
          * value: "NumVideoStreams"
          * @const
          */
-        numVideoStreams = "NumVideoStreams";
+        NumVideoStreams = "NumVideoStreams";
 
         /**
          * value: "IsSecondaryAudio"
          * @const
          */
-        isSecondaryAudio = "IsSecondaryAudio";
+        IsSecondaryAudio = "IsSecondaryAudio";
 
         /**
          * value: "VideoCodecTag"
          * @const
          */
-        videoCodecTag = "VideoCodecTag";
+        VideoCodecTag = "VideoCodecTag";
 
         /**
          * value: "IsAvc"
          * @const
          */
-        isAvc = "IsAvc";
+        IsAvc = "IsAvc";
 
         /**
          * value: "IsInterlaced"
          * @const
          */
-        isInterlaced = "IsInterlaced";
+        IsInterlaced = "IsInterlaced";
 
         /**
          * value: "AudioSampleRate"
          * @const
          */
-        audioSampleRate = "AudioSampleRate";
+        AudioSampleRate = "AudioSampleRate";
 
         /**
          * value: "AudioBitDepth"
          * @const
          */
-        audioBitDepth = "AudioBitDepth";
+        AudioBitDepth = "AudioBitDepth";
 
         /**
          * value: "VideoRange"
          * @const
          */
-        videoRange = "VideoRange";
+        VideoRange = "VideoRange";
 
         /**
          * value: "VideoRotation"
          * @const
          */
-        videoRotation = "VideoRotation";
+        VideoRotation = "VideoRotation";
 
 
     /**

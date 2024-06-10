@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type TupleDoubleDouble struct {
 	Item1 float64 `json:"Item1,omitempty"`

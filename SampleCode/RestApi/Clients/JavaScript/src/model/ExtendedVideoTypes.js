@@ -20,31 +20,31 @@ export default class ExtendedVideoTypes {
          * value: "None"
          * @const
          */
-        none = "None";
+        None = "None";
 
         /**
          * value: "Hdr10"
          * @const
          */
-        hdr10 = "Hdr10";
+        Hdr10 = "Hdr10";
 
         /**
          * value: "Hdr10Plus"
          * @const
          */
-        hdr10Plus = "Hdr10Plus";
+        Hdr10Plus = "Hdr10Plus";
 
         /**
          * value: "HyperLogGamma"
          * @const
          */
-        hyperLogGamma = "HyperLogGamma";
+        HyperLogGamma = "HyperLogGamma";
 
         /**
          * value: "DolbyVision"
          * @const
          */
-        dolbyVision = "DolbyVision";
+        DolbyVision = "DolbyVision";
 
 
     /**

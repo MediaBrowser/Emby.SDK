@@ -20,43 +20,43 @@ export default class DayOfWeek {
          * value: "Sunday"
          * @const
          */
-        sunday = "Sunday";
+        Sunday = "Sunday";
 
         /**
          * value: "Monday"
          * @const
          */
-        monday = "Monday";
+        Monday = "Monday";
 
         /**
          * value: "Tuesday"
          * @const
          */
-        tuesday = "Tuesday";
+        Tuesday = "Tuesday";
 
         /**
          * value: "Wednesday"
          * @const
          */
-        wednesday = "Wednesday";
+        Wednesday = "Wednesday";
 
         /**
          * value: "Thursday"
          * @const
          */
-        thursday = "Thursday";
+        Thursday = "Thursday";
 
         /**
          * value: "Friday"
          * @const
          */
-        friday = "Friday";
+        Friday = "Friday";
 
         /**
          * value: "Saturday"
          * @const
          */
-        saturday = "Saturday";
+        Saturday = "Saturday";
 
 
     /**

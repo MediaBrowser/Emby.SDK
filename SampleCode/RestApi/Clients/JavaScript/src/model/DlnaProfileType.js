@@ -20,19 +20,19 @@ export default class DlnaProfileType {
          * value: "Audio"
          * @const
          */
-        audio = "Audio";
+        Audio = "Audio";
 
         /**
          * value: "Video"
          * @const
          */
-        video = "Video";
+        Video = "Video";
 
         /**
          * value: "Photo"
          * @const
          */
-        photo = "Photo";
+        Photo = "Photo";
 
 
     /**

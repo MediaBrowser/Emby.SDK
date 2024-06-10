@@ -20,13 +20,13 @@ export default class SubtitleLocationType {
          * value: "InternalStream"
          * @const
          */
-        internalStream = "InternalStream";
+        InternalStream = "InternalStream";
 
         /**
          * value: "VideoSideData"
          * @const
          */
-        videoSideData = "VideoSideData";
+        VideoSideData = "VideoSideData";
 
 
     /**

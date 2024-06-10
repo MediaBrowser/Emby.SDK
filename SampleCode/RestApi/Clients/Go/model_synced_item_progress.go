@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type SyncedItemProgress struct {
 	Progress float64 `json:"Progress,omitempty"`

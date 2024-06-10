@@ -20,43 +20,43 @@ export default class MediaStreamType {
          * value: "Unknown"
          * @const
          */
-        unknown = "Unknown";
+        Unknown = "Unknown";
 
         /**
          * value: "Audio"
          * @const
          */
-        audio = "Audio";
+        Audio = "Audio";
 
         /**
          * value: "Video"
          * @const
          */
-        video = "Video";
+        Video = "Video";
 
         /**
          * value: "Subtitle"
          * @const
          */
-        subtitle = "Subtitle";
+        Subtitle = "Subtitle";
 
         /**
          * value: "EmbeddedImage"
          * @const
          */
-        embeddedImage = "EmbeddedImage";
+        EmbeddedImage = "EmbeddedImage";
 
         /**
          * value: "Attachment"
          * @const
          */
-        attachment = "Attachment";
+        Attachment = "Attachment";
 
         /**
          * value: "Data"
          * @const
          */
-        data = "Data";
+        Data = "Data";
 
 
     /**

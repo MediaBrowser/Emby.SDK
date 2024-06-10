@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type LibraryAddVirtualFolder struct {
 	Name string `json:"Name,omitempty"`

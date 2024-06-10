@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type CodecProfile struct {
 	Type_ *CodecType `json:"Type,omitempty"`

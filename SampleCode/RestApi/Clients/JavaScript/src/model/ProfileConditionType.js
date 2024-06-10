@@ -20,31 +20,31 @@ export default class ProfileConditionType {
          * value: "Equals"
          * @const
          */
-        equals = "Equals";
+        Equals = "Equals";
 
         /**
          * value: "NotEquals"
          * @const
          */
-        notEquals = "NotEquals";
+        NotEquals = "NotEquals";
 
         /**
          * value: "LessThanEqual"
          * @const
          */
-        lessThanEqual = "LessThanEqual";
+        LessThanEqual = "LessThanEqual";
 
         /**
          * value: "GreaterThanEqual"
          * @const
          */
-        greaterThanEqual = "GreaterThanEqual";
+        GreaterThanEqual = "GreaterThanEqual";
 
         /**
          * value: "EqualsAny"
          * @const
          */
-        equalsAny = "EqualsAny";
+        EqualsAny = "EqualsAny";
 
 
     /**

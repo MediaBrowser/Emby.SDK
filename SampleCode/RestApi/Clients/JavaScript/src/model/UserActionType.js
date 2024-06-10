@@ -20,19 +20,19 @@ export default class UserActionType {
          * value: "PlayedItem"
          * @const
          */
-        playedItem = "PlayedItem";
+        PlayedItem = "PlayedItem";
 
         /**
          * value: "MarkPlayed"
          * @const
          */
-        markPlayed = "MarkPlayed";
+        MarkPlayed = "MarkPlayed";
 
         /**
          * value: "MarkFavorite"
          * @const
          */
-        markFavorite = "MarkFavorite";
+        MarkFavorite = "MarkFavorite";
 
 
     /**

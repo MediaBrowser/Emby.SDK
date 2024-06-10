@@ -20,109 +20,109 @@ export default class MetadataFields {
          * value: "Cast"
          * @const
          */
-        cast = "Cast";
+        Cast = "Cast";
 
         /**
          * value: "Genres"
          * @const
          */
-        genres = "Genres";
+        Genres = "Genres";
 
         /**
          * value: "ProductionLocations"
          * @const
          */
-        productionLocations = "ProductionLocations";
+        ProductionLocations = "ProductionLocations";
 
         /**
          * value: "Studios"
          * @const
          */
-        studios = "Studios";
+        Studios = "Studios";
 
         /**
          * value: "Tags"
          * @const
          */
-        tags = "Tags";
+        Tags = "Tags";
 
         /**
          * value: "Name"
          * @const
          */
-        name = "Name";
+        Name = "Name";
 
         /**
          * value: "Overview"
          * @const
          */
-        overview = "Overview";
+        Overview = "Overview";
 
         /**
          * value: "Runtime"
          * @const
          */
-        runtime = "Runtime";
+        Runtime = "Runtime";
 
         /**
          * value: "OfficialRating"
          * @const
          */
-        officialRating = "OfficialRating";
+        OfficialRating = "OfficialRating";
 
         /**
          * value: "Collections"
          * @const
          */
-        collections = "Collections";
+        Collections = "Collections";
 
         /**
          * value: "ChannelNumber"
          * @const
          */
-        channelNumber = "ChannelNumber";
+        ChannelNumber = "ChannelNumber";
 
         /**
          * value: "SortName"
          * @const
          */
-        sortName = "SortName";
+        SortName = "SortName";
 
         /**
          * value: "OriginalTitle"
          * @const
          */
-        originalTitle = "OriginalTitle";
+        OriginalTitle = "OriginalTitle";
 
         /**
          * value: "SortIndexNumber"
          * @const
          */
-        sortIndexNumber = "SortIndexNumber";
+        SortIndexNumber = "SortIndexNumber";
 
         /**
          * value: "SortParentIndexNumber"
          * @const
          */
-        sortParentIndexNumber = "SortParentIndexNumber";
+        SortParentIndexNumber = "SortParentIndexNumber";
 
         /**
          * value: "CommunityRating"
          * @const
          */
-        communityRating = "CommunityRating";
+        CommunityRating = "CommunityRating";
 
         /**
          * value: "CriticRating"
          * @const
          */
-        criticRating = "CriticRating";
+        CriticRating = "CriticRating";
 
         /**
          * value: "Tagline"
          * @const
          */
-        tagline = "Tagline";
+        Tagline = "Tagline";
 
 
     /**

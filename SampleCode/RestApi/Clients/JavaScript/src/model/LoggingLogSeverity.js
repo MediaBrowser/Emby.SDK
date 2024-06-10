@@ -20,31 +20,31 @@ export default class LoggingLogSeverity {
          * value: "Info"
          * @const
          */
-        info = "Info";
+        Info = "Info";
 
         /**
          * value: "Debug"
          * @const
          */
-        debug = "Debug";
+        Debug = "Debug";
 
         /**
          * value: "Warn"
          * @const
          */
-        warn = "Warn";
+        Warn = "Warn";
 
         /**
          * value: "Error"
          * @const
          */
-        error = "Error";
+        Error = "Error";
 
         /**
          * value: "Fatal"
          * @const
          */
-        fatal = "Fatal";
+        Fatal = "Fatal";
 
 
     /**

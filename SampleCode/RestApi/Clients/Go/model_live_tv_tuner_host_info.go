@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type LiveTvTunerHostInfo struct {
 	Id string `json:"Id,omitempty"`

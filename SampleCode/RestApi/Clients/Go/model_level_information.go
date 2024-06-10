@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 // Class for unified presentation of all information associated with a specific codec level.  
 type LevelInformation struct {

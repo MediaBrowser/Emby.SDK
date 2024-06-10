@@ -20,31 +20,31 @@ export default class LiveTvKeywordType {
          * value: "Name"
          * @const
          */
-        name = "Name";
+        Name = "Name";
 
         /**
          * value: "EpisodeTitle"
          * @const
          */
-        episodeTitle = "EpisodeTitle";
+        EpisodeTitle = "EpisodeTitle";
 
         /**
          * value: "Overview"
          * @const
          */
-        overview = "Overview";
+        Overview = "Overview";
 
         /**
          * value: "Actor"
          * @const
          */
-        actor = "Actor";
+        Actor = "Actor";
 
         /**
          * value: "Director"
          * @const
          */
-        director = "Director";
+        Director = "Director";
 
 
     /**

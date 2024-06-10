@@ -20,19 +20,19 @@ export default class SyncCategory {
          * value: "Latest"
          * @const
          */
-        latest = "Latest";
+        Latest = "Latest";
 
         /**
          * value: "NextUp"
          * @const
          */
-        nextUp = "NextUp";
+        NextUp = "NextUp";
 
         /**
          * value: "Resume"
          * @const
          */
-        resume = "Resume";
+        Resume = "Resume";
 
 
     /**

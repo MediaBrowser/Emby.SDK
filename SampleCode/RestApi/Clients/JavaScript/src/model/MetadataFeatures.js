@@ -20,19 +20,19 @@ export default class MetadataFeatures {
          * value: "Collections"
          * @const
          */
-        collections = "Collections";
+        Collections = "Collections";
 
         /**
          * value: "Adult"
          * @const
          */
-        adult = "Adult";
+        Adult = "Adult";
 
         /**
          * value: "RequiredSetup"
          * @const
          */
-        requiredSetup = "RequiredSetup";
+        RequiredSetup = "RequiredSetup";
 
 
     /**

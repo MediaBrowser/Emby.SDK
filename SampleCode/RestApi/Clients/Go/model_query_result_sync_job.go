@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type QueryResultSyncJob struct {
 	Items []SyncJob `json:"Items,omitempty"`

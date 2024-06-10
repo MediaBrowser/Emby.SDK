@@ -20,13 +20,13 @@ export default class CodecDirections {
          * value: "Encoder"
          * @const
          */
-        encoder = "Encoder";
+        Encoder = "Encoder";
 
         /**
          * value: "Decoder"
          * @const
          */
-        decoder = "Decoder";
+        Decoder = "Decoder";
 
 
     /**

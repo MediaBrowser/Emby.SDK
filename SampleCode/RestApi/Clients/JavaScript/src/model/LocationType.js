@@ -20,13 +20,13 @@ export default class LocationType {
          * value: "FileSystem"
          * @const
          */
-        fileSystem = "FileSystem";
+        FileSystem = "FileSystem";
 
         /**
          * value: "Virtual"
          * @const
          */
-        virtual = "Virtual";
+        Virtual = "Virtual";
 
 
     /**

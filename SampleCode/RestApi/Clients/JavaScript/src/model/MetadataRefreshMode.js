@@ -20,19 +20,19 @@ export default class MetadataRefreshMode {
          * value: "ValidationOnly"
          * @const
          */
-        validationOnly = "ValidationOnly";
+        ValidationOnly = "ValidationOnly";
 
         /**
          * value: "Default"
          * @const
          */
-        _default = "Default";
+        _Default = "Default";
 
         /**
          * value: "FullRefresh"
          * @const
          */
-        fullRefresh = "FullRefresh";
+        FullRefresh = "FullRefresh";
 
 
     /**

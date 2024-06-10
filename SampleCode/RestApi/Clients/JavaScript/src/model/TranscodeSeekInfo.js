@@ -20,13 +20,13 @@ export default class TranscodeSeekInfo {
          * value: "Auto"
          * @const
          */
-        auto = "Auto";
+        Auto = "Auto";
 
         /**
          * value: "Bytes"
          * @const
          */
-        bytes = "Bytes";
+        Bytes = "Bytes";
 
 
     /**

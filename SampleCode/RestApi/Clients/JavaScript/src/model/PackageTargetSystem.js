@@ -20,25 +20,25 @@ export default class PackageTargetSystem {
          * value: "Server"
          * @const
          */
-        server = "Server";
+        Server = "Server";
 
         /**
          * value: "MBTheater"
          * @const
          */
-        mBTheater = "MBTheater";
+        MBTheater = "MBTheater";
 
         /**
          * value: "MBClassic"
          * @const
          */
-        mBClassic = "MBClassic";
+        MBClassic = "MBClassic";
 
         /**
          * value: "Other"
          * @const
          */
-        other = "Other";
+        Other = "Other";
 
 
     /**

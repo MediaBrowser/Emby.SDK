@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type ApiOnPlaybackProgress struct {
 	PlaylistIndex int32 `json:"PlaylistIndex,omitempty"`

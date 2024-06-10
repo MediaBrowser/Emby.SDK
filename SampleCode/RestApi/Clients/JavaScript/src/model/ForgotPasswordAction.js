@@ -20,13 +20,13 @@ export default class ForgotPasswordAction {
          * value: "ContactAdmin"
          * @const
          */
-        contactAdmin = "ContactAdmin";
+        ContactAdmin = "ContactAdmin";
 
         /**
          * value: "PinCode"
          * @const
          */
-        pinCode = "PinCode";
+        PinCode = "PinCode";
 
 
     /**

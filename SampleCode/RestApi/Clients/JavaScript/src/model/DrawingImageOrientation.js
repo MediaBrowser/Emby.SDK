@@ -20,49 +20,49 @@ export default class DrawingImageOrientation {
          * value: "TopLeft"
          * @const
          */
-        topLeft = "TopLeft";
+        TopLeft = "TopLeft";
 
         /**
          * value: "TopRight"
          * @const
          */
-        topRight = "TopRight";
+        TopRight = "TopRight";
 
         /**
          * value: "BottomRight"
          * @const
          */
-        bottomRight = "BottomRight";
+        BottomRight = "BottomRight";
 
         /**
          * value: "BottomLeft"
          * @const
          */
-        bottomLeft = "BottomLeft";
+        BottomLeft = "BottomLeft";
 
         /**
          * value: "LeftTop"
          * @const
          */
-        leftTop = "LeftTop";
+        LeftTop = "LeftTop";
 
         /**
          * value: "RightTop"
          * @const
          */
-        rightTop = "RightTop";
+        RightTop = "RightTop";
 
         /**
          * value: "RightBottom"
          * @const
          */
-        rightBottom = "RightBottom";
+        RightBottom = "RightBottom";
 
         /**
          * value: "LeftBottom"
          * @const
          */
-        leftBottom = "LeftBottom";
+        LeftBottom = "LeftBottom";
 
 
     /**

@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 // This is a serializable stub class that is used by the api to provide information about installed plugins.  
 type PluginsPluginInfo struct {

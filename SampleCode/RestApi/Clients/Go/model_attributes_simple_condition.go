@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 // AttributesSimpleCondition : Conditions on the source value.  
 type AttributesSimpleCondition string
 

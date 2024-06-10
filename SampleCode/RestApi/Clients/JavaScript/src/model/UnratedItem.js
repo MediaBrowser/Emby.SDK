@@ -20,61 +20,61 @@ export default class UnratedItem {
          * value: "Movie"
          * @const
          */
-        movie = "Movie";
+        Movie = "Movie";
 
         /**
          * value: "Trailer"
          * @const
          */
-        trailer = "Trailer";
+        Trailer = "Trailer";
 
         /**
          * value: "Series"
          * @const
          */
-        series = "Series";
+        Series = "Series";
 
         /**
          * value: "Music"
          * @const
          */
-        music = "Music";
+        Music = "Music";
 
         /**
          * value: "Game"
          * @const
          */
-        game = "Game";
+        Game = "Game";
 
         /**
          * value: "Book"
          * @const
          */
-        book = "Book";
+        Book = "Book";
 
         /**
          * value: "LiveTvChannel"
          * @const
          */
-        liveTvChannel = "LiveTvChannel";
+        LiveTvChannel = "LiveTvChannel";
 
         /**
          * value: "LiveTvProgram"
          * @const
          */
-        liveTvProgram = "LiveTvProgram";
+        LiveTvProgram = "LiveTvProgram";
 
         /**
          * value: "ChannelContent"
          * @const
          */
-        channelContent = "ChannelContent";
+        ChannelContent = "ChannelContent";
 
         /**
          * value: "Other"
          * @const
          */
-        other = "Other";
+        Other = "Other";
 
 
     /**

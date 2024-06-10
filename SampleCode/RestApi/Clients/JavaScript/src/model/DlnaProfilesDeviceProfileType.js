@@ -20,13 +20,13 @@ export default class DlnaProfilesDeviceProfileType {
          * value: "System"
          * @const
          */
-        system = "System";
+        System = "System";
 
         /**
          * value: "User"
          * @const
          */
-        user = "User";
+        User = "User";
 
 
     /**

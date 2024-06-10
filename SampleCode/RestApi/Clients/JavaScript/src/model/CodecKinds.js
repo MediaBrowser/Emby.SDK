@@ -20,19 +20,19 @@ export default class CodecKinds {
          * value: "Audio"
          * @const
          */
-        audio = "Audio";
+        Audio = "Audio";
 
         /**
          * value: "Video"
          * @const
          */
-        video = "Video";
+        Video = "Video";
 
         /**
          * value: "SubTitles"
          * @const
          */
-        subTitles = "SubTitles";
+        SubTitles = "SubTitles";
 
 
     /**

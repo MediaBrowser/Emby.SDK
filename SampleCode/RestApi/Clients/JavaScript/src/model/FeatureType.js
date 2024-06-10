@@ -20,13 +20,13 @@ export default class FeatureType {
          * value: "System"
          * @const
          */
-        system = "System";
+        System = "System";
 
         /**
          * value: "User"
          * @const
          */
-        user = "User";
+        User = "User";
 
 
     /**

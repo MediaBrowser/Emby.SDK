@@ -20,19 +20,19 @@ export default class SystemEvent {
          * value: "WakeFromSleep"
          * @const
          */
-        wakeFromSleep = "WakeFromSleep";
+        WakeFromSleep = "WakeFromSleep";
 
         /**
          * value: "DisplayConfigurationChange"
          * @const
          */
-        displayConfigurationChange = "DisplayConfigurationChange";
+        DisplayConfigurationChange = "DisplayConfigurationChange";
 
         /**
          * value: "NetworkChange"
          * @const
          */
-        networkChange = "NetworkChange";
+        NetworkChange = "NetworkChange";
 
 
     /**

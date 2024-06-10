@@ -20,19 +20,19 @@ export default class SeriesDisplayOrder {
          * value: "Aired"
          * @const
          */
-        aired = "Aired";
+        Aired = "Aired";
 
         /**
          * value: "Dvd"
          * @const
          */
-        dvd = "Dvd";
+        Dvd = "Dvd";
 
         /**
          * value: "Absolute"
          * @const
          */
-        absolute = "Absolute";
+        Absolute = "Absolute";
 
 
     /**

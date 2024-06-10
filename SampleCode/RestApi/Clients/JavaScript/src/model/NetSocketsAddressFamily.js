@@ -20,37 +20,37 @@ export default class NetSocketsAddressFamily {
          * value: "Unspecified"
          * @const
          */
-        unspecified = "Unspecified";
+        Unspecified = "Unspecified";
 
         /**
          * value: "Unix"
          * @const
          */
-        unix = "Unix";
+        Unix = "Unix";
 
         /**
          * value: "InterNetwork"
          * @const
          */
-        interNetwork = "InterNetwork";
+        InterNetwork = "InterNetwork";
 
         /**
          * value: "ImpLink"
          * @const
          */
-        impLink = "ImpLink";
+        ImpLink = "ImpLink";
 
         /**
          * value: "Pup"
          * @const
          */
-        pup = "Pup";
+        Pup = "Pup";
 
         /**
          * value: "Chaos"
          * @const
          */
-        chaos = "Chaos";
+        Chaos = "Chaos";
 
         /**
          * value: "NS"
@@ -62,157 +62,157 @@ export default class NetSocketsAddressFamily {
          * value: "Ipx"
          * @const
          */
-        ipx = "Ipx";
+        Ipx = "Ipx";
 
         /**
          * value: "Iso"
          * @const
          */
-        iso = "Iso";
+        Iso = "Iso";
 
         /**
          * value: "Osi"
          * @const
          */
-        osi = "Osi";
+        Osi = "Osi";
 
         /**
          * value: "Ecma"
          * @const
          */
-        ecma = "Ecma";
+        Ecma = "Ecma";
 
         /**
          * value: "DataKit"
          * @const
          */
-        dataKit = "DataKit";
+        DataKit = "DataKit";
 
         /**
          * value: "Ccitt"
          * @const
          */
-        ccitt = "Ccitt";
+        Ccitt = "Ccitt";
 
         /**
          * value: "Sna"
          * @const
          */
-        sna = "Sna";
+        Sna = "Sna";
 
         /**
          * value: "DecNet"
          * @const
          */
-        decNet = "DecNet";
+        DecNet = "DecNet";
 
         /**
          * value: "DataLink"
          * @const
          */
-        dataLink = "DataLink";
+        DataLink = "DataLink";
 
         /**
          * value: "Lat"
          * @const
          */
-        lat = "Lat";
+        Lat = "Lat";
 
         /**
          * value: "HyperChannel"
          * @const
          */
-        hyperChannel = "HyperChannel";
+        HyperChannel = "HyperChannel";
 
         /**
          * value: "AppleTalk"
          * @const
          */
-        appleTalk = "AppleTalk";
+        AppleTalk = "AppleTalk";
 
         /**
          * value: "NetBios"
          * @const
          */
-        netBios = "NetBios";
+        NetBios = "NetBios";
 
         /**
          * value: "VoiceView"
          * @const
          */
-        voiceView = "VoiceView";
+        VoiceView = "VoiceView";
 
         /**
          * value: "FireFox"
          * @const
          */
-        fireFox = "FireFox";
+        FireFox = "FireFox";
 
         /**
          * value: "Banyan"
          * @const
          */
-        banyan = "Banyan";
+        Banyan = "Banyan";
 
         /**
          * value: "Atm"
          * @const
          */
-        atm = "Atm";
+        Atm = "Atm";
 
         /**
          * value: "InterNetworkV6"
          * @const
          */
-        interNetworkV6 = "InterNetworkV6";
+        InterNetworkV6 = "InterNetworkV6";
 
         /**
          * value: "Cluster"
          * @const
          */
-        cluster = "Cluster";
+        Cluster = "Cluster";
 
         /**
          * value: "Ieee12844"
          * @const
          */
-        ieee12844 = "Ieee12844";
+        Ieee12844 = "Ieee12844";
 
         /**
          * value: "Irda"
          * @const
          */
-        irda = "Irda";
+        Irda = "Irda";
 
         /**
          * value: "NetworkDesigners"
          * @const
          */
-        networkDesigners = "NetworkDesigners";
+        NetworkDesigners = "NetworkDesigners";
 
         /**
          * value: "Max"
          * @const
          */
-        max = "Max";
+        Max = "Max";
 
         /**
          * value: "Packet"
          * @const
          */
-        packet = "Packet";
+        Packet = "Packet";
 
         /**
          * value: "ControllerAreaNetwork"
          * @const
          */
-        controllerAreaNetwork = "ControllerAreaNetwork";
+        ControllerAreaNetwork = "ControllerAreaNetwork";
 
         /**
          * value: "Unknown"
          * @const
          */
-        unknown = "Unknown";
+        Unknown = "Unknown";
 
 
     /**

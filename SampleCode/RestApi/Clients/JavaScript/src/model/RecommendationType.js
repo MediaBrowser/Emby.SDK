@@ -20,37 +20,37 @@ export default class RecommendationType {
          * value: "SimilarToRecentlyPlayed"
          * @const
          */
-        similarToRecentlyPlayed = "SimilarToRecentlyPlayed";
+        SimilarToRecentlyPlayed = "SimilarToRecentlyPlayed";
 
         /**
          * value: "SimilarToLikedItem"
          * @const
          */
-        similarToLikedItem = "SimilarToLikedItem";
+        SimilarToLikedItem = "SimilarToLikedItem";
 
         /**
          * value: "HasDirectorFromRecentlyPlayed"
          * @const
          */
-        hasDirectorFromRecentlyPlayed = "HasDirectorFromRecentlyPlayed";
+        HasDirectorFromRecentlyPlayed = "HasDirectorFromRecentlyPlayed";
 
         /**
          * value: "HasActorFromRecentlyPlayed"
          * @const
          */
-        hasActorFromRecentlyPlayed = "HasActorFromRecentlyPlayed";
+        HasActorFromRecentlyPlayed = "HasActorFromRecentlyPlayed";
 
         /**
          * value: "HasLikedDirector"
          * @const
          */
-        hasLikedDirector = "HasLikedDirector";
+        HasLikedDirector = "HasLikedDirector";
 
         /**
          * value: "HasLikedActor"
          * @const
          */
-        hasLikedActor = "HasLikedActor";
+        HasLikedActor = "HasLikedActor";
 
 
     /**

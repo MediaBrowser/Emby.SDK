@@ -20,37 +20,37 @@ export default class AttributesValueCondition {
          * value: "IsEqual"
          * @const
          */
-        isEqual = "IsEqual";
+        IsEqual = "IsEqual";
 
         /**
          * value: "IsNotEqual"
          * @const
          */
-        isNotEqual = "IsNotEqual";
+        IsNotEqual = "IsNotEqual";
 
         /**
          * value: "IsGreater"
          * @const
          */
-        isGreater = "IsGreater";
+        IsGreater = "IsGreater";
 
         /**
          * value: "IsGreaterOrEqual"
          * @const
          */
-        isGreaterOrEqual = "IsGreaterOrEqual";
+        IsGreaterOrEqual = "IsGreaterOrEqual";
 
         /**
          * value: "IsLess"
          * @const
          */
-        isLess = "IsLess";
+        IsLess = "IsLess";
 
         /**
          * value: "IsLessOrEqual"
          * @const
          */
-        isLessOrEqual = "IsLessOrEqual";
+        IsLessOrEqual = "IsLessOrEqual";
 
 
     /**

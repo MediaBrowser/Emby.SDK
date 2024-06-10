@@ -20,19 +20,19 @@ export default class CodecType {
          * value: "Video"
          * @const
          */
-        video = "Video";
+        Video = "Video";
 
         /**
          * value: "VideoAudio"
          * @const
          */
-        videoAudio = "VideoAudio";
+        VideoAudio = "VideoAudio";
 
         /**
          * value: "Audio"
          * @const
          */
-        audio = "Audio";
+        Audio = "Audio";
 
 
     /**

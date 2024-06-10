@@ -20,115 +20,115 @@ export default class TranscodingVpStepTypes {
          * value: "Decoder"
          * @const
          */
-        decoder = "Decoder";
+        Decoder = "Decoder";
 
         /**
          * value: "Encoder"
          * @const
          */
-        encoder = "Encoder";
+        Encoder = "Encoder";
 
         /**
          * value: "Scaling"
          * @const
          */
-        scaling = "Scaling";
+        Scaling = "Scaling";
 
         /**
          * value: "Deinterlace"
          * @const
          */
-        deinterlace = "Deinterlace";
+        Deinterlace = "Deinterlace";
 
         /**
          * value: "SubtitleOverlay"
          * @const
          */
-        subtitleOverlay = "SubtitleOverlay";
+        SubtitleOverlay = "SubtitleOverlay";
 
         /**
          * value: "ToneMapping"
          * @const
          */
-        toneMapping = "ToneMapping";
+        ToneMapping = "ToneMapping";
 
         /**
          * value: "ColorConversion"
          * @const
          */
-        colorConversion = "ColorConversion";
+        ColorConversion = "ColorConversion";
 
         /**
          * value: "SplitCaptions"
          * @const
          */
-        splitCaptions = "SplitCaptions";
+        SplitCaptions = "SplitCaptions";
 
         /**
          * value: "TextSub2Video"
          * @const
          */
-        textSub2Video = "TextSub2Video";
+        TextSub2Video = "TextSub2Video";
 
         /**
          * value: "GraphicSub2Video"
          * @const
          */
-        graphicSub2Video = "GraphicSub2Video";
+        GraphicSub2Video = "GraphicSub2Video";
 
         /**
          * value: "GraphicSub2Text"
          * @const
          */
-        graphicSub2Text = "GraphicSub2Text";
+        GraphicSub2Text = "GraphicSub2Text";
 
         /**
          * value: "BurnInTextSubs"
          * @const
          */
-        burnInTextSubs = "BurnInTextSubs";
+        BurnInTextSubs = "BurnInTextSubs";
 
         /**
          * value: "BurnInGraphicSubs"
          * @const
          */
-        burnInGraphicSubs = "BurnInGraphicSubs";
+        BurnInGraphicSubs = "BurnInGraphicSubs";
 
         /**
          * value: "ScaleSubs"
          * @const
          */
-        scaleSubs = "ScaleSubs";
+        ScaleSubs = "ScaleSubs";
 
         /**
          * value: "TextMod"
          * @const
          */
-        textMod = "TextMod";
+        TextMod = "TextMod";
 
         /**
          * value: "Censor"
          * @const
          */
-        censor = "Censor";
+        Censor = "Censor";
 
         /**
          * value: "ShowSpeaker"
          * @const
          */
-        showSpeaker = "ShowSpeaker";
+        ShowSpeaker = "ShowSpeaker";
 
         /**
          * value: "StripStyles"
          * @const
          */
-        stripStyles = "StripStyles";
+        StripStyles = "StripStyles";
 
         /**
          * value: "ConnectTo"
          * @const
          */
-        connectTo = "ConnectTo";
+        ConnectTo = "ConnectTo";
 
 
     /**

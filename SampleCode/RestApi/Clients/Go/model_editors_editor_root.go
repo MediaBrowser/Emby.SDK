@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type EditorsEditorRoot struct {
 	PropertyConditions []ConditionsPropertyCondition `json:"PropertyConditions,omitempty"`

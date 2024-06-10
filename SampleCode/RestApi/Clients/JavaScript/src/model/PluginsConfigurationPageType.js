@@ -20,13 +20,13 @@ export default class PluginsConfigurationPageType {
          * value: "PluginConfiguration"
          * @const
          */
-        pluginConfiguration = "PluginConfiguration";
+        PluginConfiguration = "PluginConfiguration";
 
         /**
          * value: "None"
          * @const
          */
-        none = "None";
+        None = "None";
 
 
     /**

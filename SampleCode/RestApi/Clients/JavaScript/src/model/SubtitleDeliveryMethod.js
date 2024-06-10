@@ -20,31 +20,31 @@ export default class SubtitleDeliveryMethod {
          * value: "Encode"
          * @const
          */
-        encode = "Encode";
+        Encode = "Encode";
 
         /**
          * value: "Embed"
          * @const
          */
-        embed = "Embed";
+        Embed = "Embed";
 
         /**
          * value: "External"
          * @const
          */
-        external = "External";
+        External = "External";
 
         /**
          * value: "Hls"
          * @const
          */
-        hls = "Hls";
+        Hls = "Hls";
 
         /**
          * value: "VideoSideData"
          * @const
          */
-        videoSideData = "VideoSideData";
+        VideoSideData = "VideoSideData";
 
 
     /**

@@ -20,13 +20,13 @@ export default class SortOrder {
          * value: "Ascending"
          * @const
          */
-        ascending = "Ascending";
+        Ascending = "Ascending";
 
         /**
          * value: "Descending"
          * @const
          */
-        descending = "Descending";
+        Descending = "Descending";
 
 
     /**

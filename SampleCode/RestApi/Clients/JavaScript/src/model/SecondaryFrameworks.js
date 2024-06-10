@@ -20,79 +20,79 @@ export default class SecondaryFrameworks {
          * value: "Unknown"
          * @const
          */
-        unknown = "Unknown";
+        Unknown = "Unknown";
 
         /**
          * value: "None"
          * @const
          */
-        none = "None";
+        None = "None";
 
         /**
          * value: "AmdAmf"
          * @const
          */
-        amdAmf = "AmdAmf";
+        AmdAmf = "AmdAmf";
 
         /**
          * value: "MediaCodec"
          * @const
          */
-        mediaCodec = "MediaCodec";
+        MediaCodec = "MediaCodec";
 
         /**
          * value: "NvEncDec"
          * @const
          */
-        nvEncDec = "NvEncDec";
+        NvEncDec = "NvEncDec";
 
         /**
          * value: "OpenMax"
          * @const
          */
-        openMax = "OpenMax";
+        OpenMax = "OpenMax";
 
         /**
          * value: "QuickSync"
          * @const
          */
-        quickSync = "QuickSync";
+        QuickSync = "QuickSync";
 
         /**
          * value: "VaApi"
          * @const
          */
-        vaApi = "VaApi";
+        VaApi = "VaApi";
 
         /**
          * value: "V4L2"
          * @const
          */
-        v4L2 = "V4L2";
+        V4L2 = "V4L2";
 
         /**
          * value: "DxVa"
          * @const
          */
-        dxVa = "DxVa";
+        DxVa = "DxVa";
 
         /**
          * value: "D3d11va"
          * @const
          */
-        d3d11va = "D3d11va";
+        D3d11va = "D3d11va";
 
         /**
          * value: "VideoToolbox"
          * @const
          */
-        videoToolbox = "VideoToolbox";
+        VideoToolbox = "VideoToolbox";
 
         /**
          * value: "Mmal"
          * @const
          */
-        mmal = "Mmal";
+        Mmal = "Mmal";
 
 
     /**

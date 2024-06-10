@@ -20,19 +20,19 @@ export default class LiveTvTimerType {
          * value: "Program"
          * @const
          */
-        program = "Program";
+        Program = "Program";
 
         /**
          * value: "DateTime"
          * @const
          */
-        dateTime = "DateTime";
+        DateTime = "DateTime";
 
         /**
          * value: "Keyword"
          * @const
          */
-        keyword = "Keyword";
+        Keyword = "Keyword";
 
 
     /**

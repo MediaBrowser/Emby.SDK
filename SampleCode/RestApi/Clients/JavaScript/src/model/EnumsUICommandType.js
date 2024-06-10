@@ -20,73 +20,73 @@ export default class EnumsUICommandType {
          * value: "Custom"
          * @const
          */
-        custom = "Custom";
+        Custom = "Custom";
 
         /**
          * value: "WizardCancel"
          * @const
          */
-        wizardCancel = "WizardCancel";
+        WizardCancel = "WizardCancel";
 
         /**
          * value: "WizardBack"
          * @const
          */
-        wizardBack = "WizardBack";
+        WizardBack = "WizardBack";
 
         /**
          * value: "WizardNext"
          * @const
          */
-        wizardNext = "WizardNext";
+        WizardNext = "WizardNext";
 
         /**
          * value: "WizardFinish"
          * @const
          */
-        wizardFinish = "WizardFinish";
+        WizardFinish = "WizardFinish";
 
         /**
          * value: "DialogCancel"
          * @const
          */
-        dialogCancel = "DialogCancel";
+        DialogCancel = "DialogCancel";
 
         /**
          * value: "DialogOk"
          * @const
          */
-        dialogOk = "DialogOk";
+        DialogOk = "DialogOk";
 
         /**
          * value: "PageSave"
          * @const
          */
-        pageSave = "PageSave";
+        PageSave = "PageSave";
 
         /**
          * value: "PageBack"
          * @const
          */
-        pageBack = "PageBack";
+        PageBack = "PageBack";
 
         /**
          * value: "WizardButton1"
          * @const
          */
-        wizardButton1 = "WizardButton1";
+        WizardButton1 = "WizardButton1";
 
         /**
          * value: "WizardButton2"
          * @const
          */
-        wizardButton2 = "WizardButton2";
+        WizardButton2 = "WizardButton2";
 
         /**
          * value: "WizardButton3"
          * @const
          */
-        wizardButton3 = "WizardButton3";
+        WizardButton3 = "WizardButton3";
 
 
     /**

@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 // Struct representing a combination of video resolution and frame rate.      `System.IEquatable`1`  
 type ResolutionWithRate struct {

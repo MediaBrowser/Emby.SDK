@@ -20,13 +20,13 @@ export default class RatingType {
          * value: "Score"
          * @const
          */
-        score = "Score";
+        Score = "Score";
 
         /**
          * value: "Likes"
          * @const
          */
-        likes = "Likes";
+        Likes = "Likes";
 
 
     /**

@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 
 type ApiNameIdDescriptionPair struct {
 	ShortOverview string `json:"ShortOverview,omitempty"`

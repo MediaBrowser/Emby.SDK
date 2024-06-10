@@ -20,37 +20,37 @@ export default class SyncJobItemStatus {
          * value: "Queued"
          * @const
          */
-        queued = "Queued";
+        Queued = "Queued";
 
         /**
          * value: "Converting"
          * @const
          */
-        converting = "Converting";
+        Converting = "Converting";
 
         /**
          * value: "ReadyToTransfer"
          * @const
          */
-        readyToTransfer = "ReadyToTransfer";
+        ReadyToTransfer = "ReadyToTransfer";
 
         /**
          * value: "Transferring"
          * @const
          */
-        transferring = "Transferring";
+        Transferring = "Transferring";
 
         /**
          * value: "Synced"
          * @const
          */
-        synced = "Synced";
+        Synced = "Synced";
 
         /**
          * value: "Failed"
          * @const
          */
-        failed = "Failed";
+        Failed = "Failed";
 
 
     /**

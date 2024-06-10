@@ -20,25 +20,25 @@ export default class LiveTvKeepUntil {
          * value: "UntilDeleted"
          * @const
          */
-        untilDeleted = "UntilDeleted";
+        UntilDeleted = "UntilDeleted";
 
         /**
          * value: "UntilSpaceNeeded"
          * @const
          */
-        untilSpaceNeeded = "UntilSpaceNeeded";
+        UntilSpaceNeeded = "UntilSpaceNeeded";
 
         /**
          * value: "UntilWatched"
          * @const
          */
-        untilWatched = "UntilWatched";
+        UntilWatched = "UntilWatched";
 
         /**
          * value: "UntilDate"
          * @const
          */
-        untilDate = "UntilDate";
+        UntilDate = "UntilDate";
 
 
     /**

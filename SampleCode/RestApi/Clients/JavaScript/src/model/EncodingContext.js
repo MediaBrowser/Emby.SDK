@@ -20,13 +20,13 @@ export default class EncodingContext {
          * value: "Streaming"
          * @const
          */
-        streaming = "Streaming";
+        Streaming = "Streaming";
 
         /**
          * value: "Static"
          * @const
          */
-        _static = "Static";
+        _Static = "Static";
 
 
     /**

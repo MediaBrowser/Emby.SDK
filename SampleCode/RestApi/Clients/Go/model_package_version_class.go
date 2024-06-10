@@ -4,7 +4,7 @@
  * Explore the Emby Server API
  *
  */
-package embyclient-rest-go
+package embyclient
 // PackageVersionClass : Enum PackageVersionClass  
 type PackageVersionClass string
 
