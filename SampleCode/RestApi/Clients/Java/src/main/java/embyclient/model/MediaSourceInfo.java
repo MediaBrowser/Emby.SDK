@@ -12,6 +12,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import embyclient.model.ChapterInfo;
 import embyclient.model.MediaProtocol;
 import embyclient.model.MediaSourceType;
 import embyclient.model.MediaStream;
@@ -30,6 +31,9 @@ import org.threeten.bp.OffsetDateTime;
 
 
 public class MediaSourceInfo {
+  @SerializedName("Chapters")
+  private List<ChapterInfo> chapters = null;
+
   @SerializedName("Protocol")
   private MediaProtocol protocol = null;
 
@@ -167,6 +171,32 @@ public class MediaSourceInfo {
 
   @SerializedName("ServerId")
   private String serverId = null;
+
+  public MediaSourceInfo chapters(List<ChapterInfo> chapters) {
+    this.chapters = chapters;
+    return this;
+  }
+
+  public MediaSourceInfo addChaptersItem(ChapterInfo chaptersItem) {
+    if (this.chapters == null) {
+      this.chapters = new ArrayList<ChapterInfo>();
+    }
+    this.chapters.add(chaptersItem);
+    return this;
+  }
+
+   /**
+   * Get chapters
+   * @return chapters
+  **/
+  @Schema(description = "")
+  public List<ChapterInfo> getChapters() {
+    return chapters;
+  }
+
+  public void setChapters(List<ChapterInfo> chapters) {
+    this.chapters = chapters;
+  }
 
   public MediaSourceInfo protocol(MediaProtocol protocol) {
     this.protocol = protocol;
@@ -1030,7 +1060,8 @@ public class MediaSourceInfo {
       return false;
     }
     MediaSourceInfo mediaSourceInfo = (MediaSourceInfo) o;
-    return Objects.equals(this.protocol, mediaSourceInfo.protocol) &&
+    return Objects.equals(this.chapters, mediaSourceInfo.chapters) &&
+        Objects.equals(this.protocol, mediaSourceInfo.protocol) &&
         Objects.equals(this.id, mediaSourceInfo.id) &&
         Objects.equals(this.path, mediaSourceInfo.path) &&
         Objects.equals(this.encoderPath, mediaSourceInfo.encoderPath) &&
@@ -1080,7 +1111,7 @@ public class MediaSourceInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
+    return Objects.hash(chapters, protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
   }
 
 
@@ -1089,6 +1120,7 @@ public class MediaSourceInfo {
     StringBuilder sb = new StringBuilder();
     sb.append("class MediaSourceInfo {\n");
     
+    sb.append("    chapters: ").append(toIndentedString(chapters)).append("\n");
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");

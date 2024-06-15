@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.24"
+    "version": "4.9.0.25"
   },
   "servers": [
     {
@@ -78738,6 +78738,119 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "SubtitleService"
+        ],
+        "summary": "Gets subtitles in a specified format.",
+        "description": "Requires authentication as user",
+        "operationId": "headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MediaSourceId",
+            "in": "path",
+            "description": "MediaSourceId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Index",
+            "in": "path",
+            "description": "The subtitle stream index",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Format",
+            "in": "path",
+            "description": "Format",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartPositionTicks",
+            "in": "query",
+            "description": "StartPositionTicks",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "EndPositionTicks",
+            "in": "query",
+            "description": "EndPositionTicks",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "CopyTimestamps",
+            "in": "query",
+            "description": "CopyTimestamps",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Items/{Id}/Images/{Type}/{Index}/Delete": {
@@ -79312,6 +79425,119 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "SubtitleService"
+        ],
+        "summary": "Gets subtitles in a specified format.",
+        "description": "Requires authentication as user",
+        "operationId": "headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MediaSourceId",
+            "in": "path",
+            "description": "MediaSourceId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Index",
+            "in": "path",
+            "description": "The subtitle stream index",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Format",
+            "in": "path",
+            "description": "Format",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartPositionTicks",
+            "in": "query",
+            "description": "StartPositionTicks",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "EndPositionTicks",
+            "in": "query",
+            "description": "EndPositionTicks",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "CopyTimestamps",
+            "in": "query",
+            "description": "CopyTimestamps",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}": {
@@ -79428,6 +79654,119 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "SubtitleService"
+        ],
+        "summary": "Gets subtitles in a specified format.",
+        "description": "Requires authentication as user",
+        "operationId": "headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MediaSourceId",
+            "in": "path",
+            "description": "MediaSourceId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Index",
+            "in": "path",
+            "description": "The subtitle stream index",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Format",
+            "in": "path",
+            "description": "Format",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartPositionTicks",
+            "in": "path",
+            "description": "StartPositionTicks",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "EndPositionTicks",
+            "in": "query",
+            "description": "EndPositionTicks",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "CopyTimestamps",
+            "in": "query",
+            "description": "CopyTimestamps",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}": {
@@ -79439,6 +79778,119 @@
         "summary": "Gets subtitles in a specified format.",
         "description": "Requires authentication as user",
         "operationId": "getVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Item Id",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MediaSourceId",
+            "in": "path",
+            "description": "MediaSourceId",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Index",
+            "in": "path",
+            "description": "The subtitle stream index",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Format",
+            "in": "path",
+            "description": "Format",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartPositionTicks",
+            "in": "path",
+            "description": "StartPositionTicks",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "EndPositionTicks",
+            "in": "query",
+            "description": "EndPositionTicks",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "CopyTimestamps",
+            "in": "query",
+            "description": "CopyTimestamps",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "SubtitleService"
+        ],
+        "summary": "Gets subtitles in a specified format.",
+        "description": "Requires authentication as user",
+        "operationId": "headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat",
         "parameters": [
           {
             "name": "Id",
@@ -80326,6 +80778,12 @@
       "MediaSourceInfo": {
         "type": "object",
         "properties": {
+          "Chapters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChapterInfo"
+            }
+          },
           "Protocol": {
             "$ref": "#/components/schemas/MediaProtocol"
           },
@@ -80502,6 +80960,42 @@
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Dto.MediaSourceInfo"
+      },
+      "ChapterInfo": {
+        "type": "object",
+        "properties": {
+          "StartPositionTicks": {
+            "type": "integer",
+            "description": "The start position ticks.",
+            "format": "int64"
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "ImageTag": {
+            "type": "string"
+          },
+          "MarkerType": {
+            "$ref": "#/components/schemas/MarkerType"
+          },
+          "ChapterIndex": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "description": "Class ChapterInfo\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Entities.ChapterInfo"
+      },
+      "MarkerType": {
+        "enum": [
+          "Chapter",
+          "IntroStart",
+          "IntroEnd",
+          "CreditsStart"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "MediaBrowser.Model.Entities.MarkerType"
       },
       "MediaProtocol": {
         "enum": [
@@ -81008,42 +81502,6 @@
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Dto.NameIdPair"
-      },
-      "ChapterInfo": {
-        "type": "object",
-        "properties": {
-          "StartPositionTicks": {
-            "type": "integer",
-            "description": "The start position ticks.",
-            "format": "int64"
-          },
-          "Name": {
-            "type": "string",
-            "description": "The name."
-          },
-          "ImageTag": {
-            "type": "string"
-          },
-          "MarkerType": {
-            "$ref": "#/components/schemas/MarkerType"
-          },
-          "ChapterIndex": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "description": "Class ChapterInfo\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Entities.ChapterInfo"
-      },
-      "MarkerType": {
-        "enum": [
-          "Chapter",
-          "IntroStart",
-          "IntroEnd",
-          "CreditsStart"
-        ],
-        "type": "string",
-        "x-internal-ref-name": "MediaBrowser.Model.Entities.MarkerType"
       },
       "LocationType": {
         "enum": [

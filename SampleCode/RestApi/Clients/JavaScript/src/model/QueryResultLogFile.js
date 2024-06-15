@@ -15,7 +15,7 @@ import LogFile from './LogFile';
 /**
 * The QueryResultLogFile model module.
 * @module model/QueryResultLogFile
-* @version 4.9.0.24
+* @version 4.9.0.25
 */
 export default class QueryResultLogFile {
     /**

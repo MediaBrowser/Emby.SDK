@@ -10,6 +10,7 @@ import (
 )
 
 type MediaSourceInfo struct {
+	Chapters []ChapterInfo `json:"Chapters,omitempty"`
 	Protocol *MediaProtocol `json:"Protocol,omitempty"`
 	Id string `json:"Id,omitempty"`
 	Path string `json:"Path,omitempty"`

@@ -359,7 +359,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ListItem.html">ListItem</a>[]&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ListItem.html">ListItem</a>[]&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -606,7 +606,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1831,7 +1831,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;[]</td>
+        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2058,6 +2058,53 @@
   </table>
   
   
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetInternalId_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetInternalId*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetInternalId_System_String_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetInternalId(System.String,System.String)">GetInternalId(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long GetInternalId(string itemId, string mediaSourceId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">itemId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mediaSourceId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Library_ILibraryManager_GetInternalItemIds_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetInternalItemIds*"></a>
   <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetInternalItemIds_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetInternalItemIds(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetInternalItemIds(InternalItemsQuery)</h4>
   <div class="markdown level1 summary"></div>
@@ -2190,7 +2237,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.Video.html">Video</a>&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.Video.html">Video</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -2310,6 +2357,53 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
         <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_ILibraryManager_GetItemById_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemById*"></a>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_GetItemById_System_String_System_String_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.GetItemById(System.String,System.String)">GetItemById(String, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BaseItem GetItemById(string itemId, string mediaSourceId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">itemId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mediaSourceId</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -3057,7 +3151,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;[]</td>
+        <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -4894,7 +4988,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

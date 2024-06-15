@@ -1281,6 +1281,676 @@ public class SubtitleServiceApi {
         return call;
     }
     /**
+     * Build call for headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (required)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCall(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}"
+            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
+            .replaceAll("\\{" + "MediaSourceId" + "\\}", apiClient.escapeString(mediaSourceId.toString()))
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Format" + "\\}", apiClient.escapeString(format.toString()))
+            .replaceAll("\\{" + "StartPositionTicks" + "\\}", apiClient.escapeString(startPositionTicks.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (endPositionTicks != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EndPositionTicks", endPositionTicks));
+        if (copyTimestamps != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("CopyTimestamps", copyTimestamps));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatValidateBeforeCall(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        // verify the required parameter 'mediaSourceId' is set
+        if (mediaSourceId == null) {
+            throw new ApiException("Missing the required parameter 'mediaSourceId' when calling headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        // verify the required parameter 'index' is set
+        if (index == null) {
+            throw new ApiException("Missing the required parameter 'index' when calling headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        // verify the required parameter 'format' is set
+        if (format == null) {
+            throw new ApiException("Missing the required parameter 'format' when calling headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        // verify the required parameter 'startPositionTicks' is set
+        if (startPositionTicks == null) {
+            throw new ApiException("Missing the required parameter 'startPositionTicks' when calling headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (required)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps) throws ApiException {
+        headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatWithHttpInfo(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps);
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (required)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatWithHttpInfo(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps) throws ApiException {
+        com.squareup.okhttp.Call call = headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatValidateBeforeCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Gets subtitles in a specified format. (asynchronously)
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (required)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatAsync(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatValidateBeforeCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (optional)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatCall(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}"
+            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
+            .replaceAll("\\{" + "MediaSourceId" + "\\}", apiClient.escapeString(mediaSourceId.toString()))
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Format" + "\\}", apiClient.escapeString(format.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (startPositionTicks != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("StartPositionTicks", startPositionTicks));
+        if (endPositionTicks != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EndPositionTicks", endPositionTicks));
+        if (copyTimestamps != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("CopyTimestamps", copyTimestamps));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatValidateBeforeCall(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(Async)");
+        }
+        // verify the required parameter 'mediaSourceId' is set
+        if (mediaSourceId == null) {
+            throw new ApiException("Missing the required parameter 'mediaSourceId' when calling headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(Async)");
+        }
+        // verify the required parameter 'index' is set
+        if (index == null) {
+            throw new ApiException("Missing the required parameter 'index' when calling headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(Async)");
+        }
+        // verify the required parameter 'format' is set
+        if (format == null) {
+            throw new ApiException("Missing the required parameter 'format' when calling headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (optional)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps) throws ApiException {
+        headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps);
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (optional)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps) throws ApiException {
+        com.squareup.okhttp.Call call = headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatValidateBeforeCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Gets subtitles in a specified format. (asynchronously)
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (optional)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatAsync(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatValidateBeforeCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (required)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCall(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}"
+            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
+            .replaceAll("\\{" + "MediaSourceId" + "\\}", apiClient.escapeString(mediaSourceId.toString()))
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Format" + "\\}", apiClient.escapeString(format.toString()))
+            .replaceAll("\\{" + "StartPositionTicks" + "\\}", apiClient.escapeString(startPositionTicks.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (endPositionTicks != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EndPositionTicks", endPositionTicks));
+        if (copyTimestamps != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("CopyTimestamps", copyTimestamps));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatValidateBeforeCall(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        // verify the required parameter 'mediaSourceId' is set
+        if (mediaSourceId == null) {
+            throw new ApiException("Missing the required parameter 'mediaSourceId' when calling headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        // verify the required parameter 'index' is set
+        if (index == null) {
+            throw new ApiException("Missing the required parameter 'index' when calling headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        // verify the required parameter 'format' is set
+        if (format == null) {
+            throw new ApiException("Missing the required parameter 'format' when calling headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        // verify the required parameter 'startPositionTicks' is set
+        if (startPositionTicks == null) {
+            throw new ApiException("Missing the required parameter 'startPositionTicks' when calling headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (required)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps) throws ApiException {
+        headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatWithHttpInfo(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps);
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (required)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatWithHttpInfo(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps) throws ApiException {
+        com.squareup.okhttp.Call call = headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatValidateBeforeCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Gets subtitles in a specified format. (asynchronously)
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (required)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatAsync(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatValidateBeforeCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
+     * Build call for headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (optional)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatCall(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+        
+        // create path and map variables
+        String localVarPath = "/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}"
+            .replaceAll("\\{" + "Id" + "\\}", apiClient.escapeString(id.toString()))
+            .replaceAll("\\{" + "MediaSourceId" + "\\}", apiClient.escapeString(mediaSourceId.toString()))
+            .replaceAll("\\{" + "Index" + "\\}", apiClient.escapeString(index.toString()))
+            .replaceAll("\\{" + "Format" + "\\}", apiClient.escapeString(format.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (startPositionTicks != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("StartPositionTicks", startPositionTicks));
+        if (endPositionTicks != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EndPositionTicks", endPositionTicks));
+        if (copyTimestamps != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("CopyTimestamps", copyTimestamps));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "apikeyauth", "embyauth" };
+        return apiClient.buildCall(localVarPath, "HEAD", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+    
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatValidateBeforeCall(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(Async)");
+        }
+        // verify the required parameter 'mediaSourceId' is set
+        if (mediaSourceId == null) {
+            throw new ApiException("Missing the required parameter 'mediaSourceId' when calling headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(Async)");
+        }
+        // verify the required parameter 'index' is set
+        if (index == null) {
+            throw new ApiException("Missing the required parameter 'index' when calling headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(Async)");
+        }
+        // verify the required parameter 'format' is set
+        if (format == null) {
+            throw new ApiException("Missing the required parameter 'format' when calling headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(Async)");
+        }
+        
+        com.squareup.okhttp.Call call = headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, progressListener, progressRequestListener);
+        return call;
+
+        
+        
+        
+        
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (optional)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public void headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps) throws ApiException {
+        headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps);
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (optional)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<Void> headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps) throws ApiException {
+        com.squareup.okhttp.Call call = headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatValidateBeforeCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, null, null);
+        return apiClient.execute(call);
+    }
+
+    /**
+     * Gets subtitles in a specified format. (asynchronously)
+     * Requires authentication as user
+     * @param id Item Id (required)
+     * @param mediaSourceId MediaSourceId (required)
+     * @param index The subtitle stream index (required)
+     * @param format Format (required)
+     * @param startPositionTicks StartPositionTicks (optional)
+     * @param endPositionTicks EndPositionTicks (optional)
+     * @param copyTimestamps CopyTimestamps (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatAsync(String id, String mediaSourceId, Integer index, String format, Long startPositionTicks, Long endPositionTicks, Boolean copyTimestamps, final ApiCallback<Void> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatValidateBeforeCall(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, progressListener, progressRequestListener);
+        apiClient.executeAsync(call, callback);
+        return call;
+    }
+    /**
      * Build call for postItemsByIdRemotesearchSubtitlesBySubtitleid
      * @param id Item Id (required)
      * @param mediaSourceId MediaSourceId (required)

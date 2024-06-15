@@ -16,7 +16,7 @@ import SubtitlesSubtitleDownloadResult from '../model/SubtitlesSubtitleDownloadR
 /**
 * SubtitleService service.
 * @module api/SubtitleServiceApi
-* @version 4.9.0.24
+* @version 4.9.0.25
 */
 export default class SubtitleServiceApi {
 
@@ -415,6 +415,214 @@ export default class SubtitleServiceApi {
      */
     getVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat() {
       return this.getVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatWithHttpInfo() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id,
+        'MediaSourceId': MediaSourceId,
+        'Index': Index,
+        'Format': Format,
+        'StartPositionTicks': StartPositionTicks
+      };
+      let queryParams = {
+        'EndPositionTicks': opts['EndPositionTicks'],
+        'CopyTimestamps': opts['CopyTimestamps']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat() {
+      return this.headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id,
+        'MediaSourceId': MediaSourceId,
+        'Index': Index,
+        'Format': Format
+      };
+      let queryParams = {
+        'StartPositionTicks': opts['StartPositionTicks'],
+        'EndPositionTicks': opts['EndPositionTicks'],
+        'CopyTimestamps': opts['CopyTimestamps']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat() {
+      return this.headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatWithHttpInfo() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id,
+        'MediaSourceId': MediaSourceId,
+        'Index': Index,
+        'Format': Format,
+        'StartPositionTicks': StartPositionTicks
+      };
+      let queryParams = {
+        'EndPositionTicks': opts['EndPositionTicks'],
+        'CopyTimestamps': opts['CopyTimestamps']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat() {
+      return this.headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': Id,
+        'MediaSourceId': MediaSourceId,
+        'Index': Index,
+        'Format': Format
+      };
+      let queryParams = {
+        'StartPositionTicks': opts['StartPositionTicks'],
+        'EndPositionTicks': opts['EndPositionTicks'],
+        'CopyTimestamps': opts['CopyTimestamps']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat() {
+      return this.headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

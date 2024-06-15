@@ -494,6 +494,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Id">BaseItem.Id</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaSourceIdPrefix">BaseItem.MediaSourceIdPrefix</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultMediaSourceId">BaseItem.GetDefaultMediaSourceId()</a>
     </div>
     <div>
@@ -1799,12 +1802,12 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_LiveTv_LiveTvChannel_GetMediaSources_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvChannel.GetMediaSources*"></a>
-  <h4 id="MediaBrowser_Controller_LiveTv_LiveTvChannel_GetMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvChannel.GetMediaSources(MediaBrowser.Controller.Entities.User,System.Boolean,System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions)">GetMediaSources(User, Boolean, Boolean, LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_LiveTv_LiveTvChannel_GetMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvChannel.GetMediaSources(MediaBrowser.Controller.Entities.User,System.Boolean,System.Boolean,System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions)">GetMediaSources(User, Boolean, Boolean, Boolean, LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override List&lt;MediaSourceInfo&gt; GetMediaSources(User user, bool enableAlternateMediaSources, bool enablePathSubstitution, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public override List&lt;MediaSourceInfo&gt; GetMediaSources(User user, bool enableAlternateMediaSources, bool enablePathSubstitution, bool fillChapters, LibraryOptions libraryOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1832,6 +1835,11 @@ public override bool SupportsThemeMedia { get; }</code></pre>
         <td></td>
       </tr>
       <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">fillChapters</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
         <td><span class="parametername">libraryOptions</span></td>
         <td></td>
@@ -1854,7 +1862,7 @@ public override bool SupportsThemeMedia { get; }</code></pre>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaSources(User, Boolean, Boolean, LibraryOptions)</a></div>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_">BaseItem.GetMediaSources(User, Boolean, Boolean, Boolean, LibraryOptions)</a></div>
   
   
   <a id="MediaBrowser_Controller_LiveTv_LiveTvChannel_GetMediaStreams_" data-uid="MediaBrowser.Controller.LiveTv.LiveTvChannel.GetMediaStreams*"></a>

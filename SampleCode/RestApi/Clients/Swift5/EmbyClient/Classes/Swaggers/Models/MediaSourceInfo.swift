@@ -11,6 +11,7 @@ import Foundation
 
 public struct MediaSourceInfo: Codable {
 
+    public var chapters: [ChapterInfo]?
     public var _protocol: MediaProtocol?
     public var _id: String?
     public var path: String?
@@ -61,7 +62,8 @@ public struct MediaSourceInfo: Codable {
     /** Used only by our Windows app. Not used by Emby Server. */
     public var serverId: String?
 
-    public init(_protocol: MediaProtocol? = nil, _id: String? = nil, path: String? = nil, encoderPath: String? = nil, encoderProtocol: MediaProtocol? = nil, type: MediaSourceType? = nil, probePath: String? = nil, probeProtocol: MediaProtocol? = nil, container: String? = nil, size: Int64? = nil, name: String? = nil, sortName: String? = nil, isRemote: Bool? = nil, hasMixedProtocols: Bool? = nil, runTimeTicks: Int64? = nil, containerStartTimeTicks: Int64? = nil, supportsTranscoding: Bool? = nil, trancodeLiveStartIndex: Int? = nil, wallClockStart: Date? = nil, supportsDirectStream: Bool? = nil, supportsDirectPlay: Bool? = nil, isInfiniteStream: Bool? = nil, requiresOpening: Bool? = nil, openToken: String? = nil, requiresClosing: Bool? = nil, liveStreamId: String? = nil, bufferMs: Int? = nil, requiresLooping: Bool? = nil, supportsProbing: Bool? = nil, video3DFormat: Video3DFormat? = nil, mediaStreams: [MediaStream]? = nil, formats: [String]? = nil, bitrate: Int? = nil, timestamp: TransportStreamTimestamp? = nil, requiredHttpHeaders: [String:String]? = nil, directStreamUrl: String? = nil, addApiKeyToDirectStreamUrl: Bool? = nil, transcodingUrl: String? = nil, transcodingSubProtocol: String? = nil, transcodingContainer: String? = nil, analyzeDurationMs: Int? = nil, readAtNativeFramerate: Bool? = nil, defaultAudioStreamIndex: Int? = nil, defaultSubtitleStreamIndex: Int? = nil, itemId: String? = nil, serverId: String? = nil) {
+    public init(chapters: [ChapterInfo]? = nil, _protocol: MediaProtocol? = nil, _id: String? = nil, path: String? = nil, encoderPath: String? = nil, encoderProtocol: MediaProtocol? = nil, type: MediaSourceType? = nil, probePath: String? = nil, probeProtocol: MediaProtocol? = nil, container: String? = nil, size: Int64? = nil, name: String? = nil, sortName: String? = nil, isRemote: Bool? = nil, hasMixedProtocols: Bool? = nil, runTimeTicks: Int64? = nil, containerStartTimeTicks: Int64? = nil, supportsTranscoding: Bool? = nil, trancodeLiveStartIndex: Int? = nil, wallClockStart: Date? = nil, supportsDirectStream: Bool? = nil, supportsDirectPlay: Bool? = nil, isInfiniteStream: Bool? = nil, requiresOpening: Bool? = nil, openToken: String? = nil, requiresClosing: Bool? = nil, liveStreamId: String? = nil, bufferMs: Int? = nil, requiresLooping: Bool? = nil, supportsProbing: Bool? = nil, video3DFormat: Video3DFormat? = nil, mediaStreams: [MediaStream]? = nil, formats: [String]? = nil, bitrate: Int? = nil, timestamp: TransportStreamTimestamp? = nil, requiredHttpHeaders: [String:String]? = nil, directStreamUrl: String? = nil, addApiKeyToDirectStreamUrl: Bool? = nil, transcodingUrl: String? = nil, transcodingSubProtocol: String? = nil, transcodingContainer: String? = nil, analyzeDurationMs: Int? = nil, readAtNativeFramerate: Bool? = nil, defaultAudioStreamIndex: Int? = nil, defaultSubtitleStreamIndex: Int? = nil, itemId: String? = nil, serverId: String? = nil) {
+        self.chapters = chapters
         self._protocol = _protocol
         self._id = _id
         self.path = path
@@ -111,6 +113,7 @@ public struct MediaSourceInfo: Codable {
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case chapters = "Chapters"
         case _protocol = "Protocol"
         case _id = "Id"
         case path = "Path"

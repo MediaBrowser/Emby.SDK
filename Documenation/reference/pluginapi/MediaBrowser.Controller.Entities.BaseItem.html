@@ -240,6 +240,30 @@
   </table>
   
   
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_MediaSourceIdPrefix" data-uid="MediaBrowser.Controller.Entities.BaseItem.MediaSourceIdPrefix">MediaSourceIdPrefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MediaSourceIdPrefix</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensions" data-uid="MediaBrowser.Controller.Entities.BaseItem.SupportedImageExtensions">SupportedImageExtensions</h4>
   <div class="markdown level1 summary"><p>The supported image extensions</p>
 </div>
@@ -7847,7 +7871,7 @@ public int Width { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -7949,12 +7973,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetMediaSources*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetMediaSources(MediaBrowser.Controller.Entities.User,System.Boolean,System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions)">GetMediaSources(User, Boolean, Boolean, LibraryOptions)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_MediaBrowser_Controller_Entities_User_System_Boolean_System_Boolean_System_Boolean_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetMediaSources(MediaBrowser.Controller.Entities.User,System.Boolean,System.Boolean,System.Boolean,MediaBrowser.Model.Configuration.LibraryOptions)">GetMediaSources(User, Boolean, Boolean, Boolean, LibraryOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual List&lt;MediaSourceInfo&gt; GetMediaSources(User user, bool enableAlternateMediaSources, bool enablePathSubstitution, LibraryOptions libraryOptions)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual List&lt;MediaSourceInfo&gt; GetMediaSources(User user, bool enableAlternateMediaSources, bool enablePathSubstitution, bool fillChapters, LibraryOptions libraryOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -7979,6 +8003,11 @@ public int Width { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">enablePathSubstitution</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">fillChapters</span></td>
         <td></td>
       </tr>
       <tr>
@@ -10389,7 +10418,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -10439,7 +10468,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td><p>true if a provider reports we changed</p>
 </td>
       </tr>

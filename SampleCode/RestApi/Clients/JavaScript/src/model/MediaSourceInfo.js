@@ -10,6 +10,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ChapterInfo from './ChapterInfo';
 import MediaProtocol from './MediaProtocol';
 import MediaSourceType from './MediaSourceType';
 import MediaStream from './MediaStream';
@@ -19,7 +20,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.9.0.24
+* @version 4.9.0.25
 */
 export default class MediaSourceInfo {
     /**
@@ -46,6 +47,9 @@ export default class MediaSourceInfo {
             obj = obj || new MediaSourceInfo();
                         
             
+            if (data.hasOwnProperty('Chapters')) {
+                obj['Chapters'] = ApiClient.convertToType(data['Chapters'], [ChapterInfo]);
+            }
             if (data.hasOwnProperty('Protocol')) {
                 obj['Protocol'] = MediaProtocol.constructFromObject(data['Protocol']);
             }
@@ -188,6 +192,10 @@ export default class MediaSourceInfo {
         return obj;
     }
 
+    /**
+    * @member {Array.<module:model/ChapterInfo>} Chapters
+    */
+    'Chapters' = undefined;
     /**
     * @member {module:model/MediaProtocol} Protocol
     */

@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * VideoHlsService service.
 * @module api/VideoHlsServiceApi
-* @version 4.9.0.24
+* @version 4.9.0.25
 */
 export default class VideoHlsServiceApi {
 

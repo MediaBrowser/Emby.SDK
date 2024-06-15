@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.0.24
+ * OpenAPI spec version: 4.9.0.25
  * 
  *
  * NOTE: This file is auto generated.
@@ -4984,6 +4984,46 @@ describe("SubtitleServiceApi", () => {
     const EndPositionTicks: number = 789
     const CopyTimestamps: boolean = true
     return expect(instance.getVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(Id, MediaSourceId, Index, Format, StartPositionTicks, EndPositionTicks, CopyTimestamps, {})).resolves.toBe(null)
+  })
+  test("headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat", () => {
+    const Id: string = "Id_example"
+    const MediaSourceId: string = "MediaSourceId_example"
+    const Index: number = 56
+    const Format: string = "Format_example"
+    const StartPositionTicks: number = 789
+    const EndPositionTicks: number = 789
+    const CopyTimestamps: boolean = true
+    return expect(instance.headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Id, MediaSourceId, Index, Format, StartPositionTicks, EndPositionTicks, CopyTimestamps, {})).resolves.toBe(null)
+  })
+  test("headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat", () => {
+    const Id: string = "Id_example"
+    const MediaSourceId: string = "MediaSourceId_example"
+    const Index: number = 56
+    const Format: string = "Format_example"
+    const StartPositionTicks: number = 789
+    const EndPositionTicks: number = 789
+    const CopyTimestamps: boolean = true
+    return expect(instance.headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(Id, MediaSourceId, Index, Format, StartPositionTicks, EndPositionTicks, CopyTimestamps, {})).resolves.toBe(null)
+  })
+  test("headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat", () => {
+    const Id: string = "Id_example"
+    const MediaSourceId: string = "MediaSourceId_example"
+    const Index: number = 56
+    const Format: string = "Format_example"
+    const StartPositionTicks: number = 789
+    const EndPositionTicks: number = 789
+    const CopyTimestamps: boolean = true
+    return expect(instance.headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(Id, MediaSourceId, Index, Format, StartPositionTicks, EndPositionTicks, CopyTimestamps, {})).resolves.toBe(null)
+  })
+  test("headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat", () => {
+    const Id: string = "Id_example"
+    const MediaSourceId: string = "MediaSourceId_example"
+    const Index: number = 56
+    const Format: string = "Format_example"
+    const StartPositionTicks: number = 789
+    const EndPositionTicks: number = 789
+    const CopyTimestamps: boolean = true
+    return expect(instance.headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(Id, MediaSourceId, Index, Format, StartPositionTicks, EndPositionTicks, CopyTimestamps, {})).resolves.toBe(null)
   })
   test("postItemsByIdRemotesearchSubtitlesBySubtitleid", () => {
     const Id: string = "Id_example"

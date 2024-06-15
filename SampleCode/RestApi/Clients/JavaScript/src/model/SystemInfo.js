@@ -17,7 +17,7 @@ import WakeOnLanInfo from './WakeOnLanInfo';
 /**
 * The SystemInfo model module.
 * @module model/SystemInfo
-* @version 4.9.0.24
+* @version 4.9.0.25
 */
 export default class SystemInfo {
     /**

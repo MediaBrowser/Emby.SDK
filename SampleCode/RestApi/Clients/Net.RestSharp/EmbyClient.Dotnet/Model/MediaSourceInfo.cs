@@ -26,6 +26,7 @@ namespace EmbyClient.Dotnet.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSourceInfo" /> class.
         /// </summary>
+        /// <param name="chapters">chapters.</param>
         /// <param name="protocol">protocol.</param>
         /// <param name="id">id.</param>
         /// <param name="path">path.</param>
@@ -72,8 +73,9 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="defaultSubtitleStreamIndex">defaultSubtitleStreamIndex.</param>
         /// <param name="itemId">Used only by our Windows app. Not used by Emby Server. The id of the item that this mediasource belongs to, if there is one Also used by Emby for Kodi.</param>
         /// <param name="serverId">Used only by our Windows app. Not used by Emby Server..</param>
-        public MediaSourceInfo(MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string probePath = default(string), MediaProtocol probeProtocol = default(MediaProtocol), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
+        public MediaSourceInfo(List<ChapterInfo> chapters = default(List<ChapterInfo>), MediaProtocol protocol = default(MediaProtocol), string id = default(string), string path = default(string), string encoderPath = default(string), MediaProtocol encoderProtocol = default(MediaProtocol), MediaSourceType type = default(MediaSourceType), string probePath = default(string), MediaProtocol probeProtocol = default(MediaProtocol), string container = default(string), long? size = default(long?), string name = default(string), string sortName = default(string), bool? isRemote = default(bool?), bool? hasMixedProtocols = default(bool?), long? runTimeTicks = default(long?), long? containerStartTimeTicks = default(long?), bool? supportsTranscoding = default(bool?), int? trancodeLiveStartIndex = default(int?), DateTimeOffset? wallClockStart = default(DateTimeOffset?), bool? supportsDirectStream = default(bool?), bool? supportsDirectPlay = default(bool?), bool? isInfiniteStream = default(bool?), bool? requiresOpening = default(bool?), string openToken = default(string), bool? requiresClosing = default(bool?), string liveStreamId = default(string), int? bufferMs = default(int?), bool? requiresLooping = default(bool?), bool? supportsProbing = default(bool?), Video3DFormat video3DFormat = default(Video3DFormat), List<MediaStream> mediaStreams = default(List<MediaStream>), List<string> formats = default(List<string>), int? bitrate = default(int?), TransportStreamTimestamp timestamp = default(TransportStreamTimestamp), Dictionary<string, string> requiredHttpHeaders = default(Dictionary<string, string>), string directStreamUrl = default(string), bool? addApiKeyToDirectStreamUrl = default(bool?), string transcodingUrl = default(string), string transcodingSubProtocol = default(string), string transcodingContainer = default(string), int? analyzeDurationMs = default(int?), bool? readAtNativeFramerate = default(bool?), int? defaultAudioStreamIndex = default(int?), int? defaultSubtitleStreamIndex = default(int?), string itemId = default(string), string serverId = default(string))
         {
+            this.Chapters = chapters;
             this.Protocol = protocol;
             this.Id = id;
             this.Path = path;
@@ -122,6 +124,12 @@ namespace EmbyClient.Dotnet.Model
             this.ServerId = serverId;
         }
         
+        /// <summary>
+        /// Gets or Sets Chapters
+        /// </summary>
+        [DataMember(Name="Chapters", EmitDefaultValue=false)]
+        public List<ChapterInfo> Chapters { get; set; }
+
         /// <summary>
         /// Gets or Sets Protocol
         /// </summary>
@@ -409,6 +417,7 @@ namespace EmbyClient.Dotnet.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaSourceInfo {\n");
+            sb.Append("  Chapters: ").Append(Chapters).Append("\n");
             sb.Append("  Protocol: ").Append(Protocol).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
@@ -489,6 +498,12 @@ namespace EmbyClient.Dotnet.Model
                 return false;
 
             return 
+                (
+                    this.Chapters == input.Chapters ||
+                    this.Chapters != null &&
+                    input.Chapters != null &&
+                    this.Chapters.SequenceEqual(input.Chapters)
+                ) && 
                 (
                     this.Protocol == input.Protocol ||
                     (this.Protocol != null &&
@@ -733,6 +748,8 @@ namespace EmbyClient.Dotnet.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Chapters != null)
+                    hashCode = hashCode * 59 + this.Chapters.GetHashCode();
                 if (this.Protocol != null)
                     hashCode = hashCode * 59 + this.Protocol.GetHashCode();
                 if (this.Id != null)

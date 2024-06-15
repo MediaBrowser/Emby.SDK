@@ -22,6 +22,7 @@ class MediaSourceInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'chapters': 'list[ChapterInfo]',
         'protocol': 'MediaProtocol',
         'id': 'str',
         'path': 'str',
@@ -71,6 +72,7 @@ class MediaSourceInfo(object):
     }
 
     attribute_map = {
+        'chapters': 'Chapters',
         'protocol': 'Protocol',
         'id': 'Id',
         'path': 'Path',
@@ -119,8 +121,9 @@ class MediaSourceInfo(object):
         'server_id': 'ServerId'
     }
 
-    def __init__(self, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, probe_path=None, probe_protocol=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
+    def __init__(self, chapters=None, protocol=None, id=None, path=None, encoder_path=None, encoder_protocol=None, type=None, probe_path=None, probe_protocol=None, container=None, size=None, name=None, sort_name=None, is_remote=None, has_mixed_protocols=None, run_time_ticks=None, container_start_time_ticks=None, supports_transcoding=None, trancode_live_start_index=None, wall_clock_start=None, supports_direct_stream=None, supports_direct_play=None, is_infinite_stream=None, requires_opening=None, open_token=None, requires_closing=None, live_stream_id=None, buffer_ms=None, requires_looping=None, supports_probing=None, video3_d_format=None, media_streams=None, formats=None, bitrate=None, timestamp=None, required_http_headers=None, direct_stream_url=None, add_api_key_to_direct_stream_url=None, transcoding_url=None, transcoding_sub_protocol=None, transcoding_container=None, analyze_duration_ms=None, read_at_native_framerate=None, default_audio_stream_index=None, default_subtitle_stream_index=None, item_id=None, server_id=None):  # noqa: E501
         """MediaSourceInfo - a model defined in Swagger"""  # noqa: E501
+        self._chapters = None
         self._protocol = None
         self._id = None
         self._path = None
@@ -168,6 +171,8 @@ class MediaSourceInfo(object):
         self._item_id = None
         self._server_id = None
         self.discriminator = None
+        if chapters is not None:
+            self.chapters = chapters
         if protocol is not None:
             self.protocol = protocol
         if id is not None:
@@ -260,6 +265,27 @@ class MediaSourceInfo(object):
             self.item_id = item_id
         if server_id is not None:
             self.server_id = server_id
+
+    @property
+    def chapters(self):
+        """Gets the chapters of this MediaSourceInfo.  # noqa: E501
+
+
+        :return: The chapters of this MediaSourceInfo.  # noqa: E501
+        :rtype: list[ChapterInfo]
+        """
+        return self._chapters
+
+    @chapters.setter
+    def chapters(self, chapters):
+        """Sets the chapters of this MediaSourceInfo.
+
+
+        :param chapters: The chapters of this MediaSourceInfo.  # noqa: E501
+        :type: list[ChapterInfo]
+        """
+
+        self._chapters = chapters
 
     @property
     def protocol(self):

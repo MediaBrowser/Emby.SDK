@@ -27,6 +27,12 @@ namespace Emby.ApiClient.Model
         }
         
         /// <summary>
+        /// Gets or Sets Chapters
+        /// </summary>
+        /// <value>The Chapters.</value>
+        public List<ChapterInfo> Chapters { get; set; }
+
+        /// <summary>
         /// Gets or Sets Protocol
         /// </summary>
         /// <value>The Protocol.</value>
@@ -310,6 +316,7 @@ namespace Emby.ApiClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaSourceInfo {\n");
+            sb.Append("  Chapters: ").Append(Chapters).Append("\n");
             sb.Append("  Protocol: ").Append(Protocol).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
@@ -381,6 +388,12 @@ namespace Emby.ApiClient.Model
                 return false;
 
             return 
+                (
+                    this.Chapters == input.Chapters ||
+                    this.Chapters != null &&
+                    input.Chapters != null &&
+                    this.Chapters.SequenceEqual(input.Chapters)
+                ) && 
                 (
                     this.Protocol == input.Protocol ||
                     (this.Protocol != null &&
@@ -625,6 +638,8 @@ namespace Emby.ApiClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Chapters != null)
+                    hashCode = hashCode * 59 + this.Chapters.GetHashCode();
                 if (this.Protocol != null)
                     hashCode = hashCode * 59 + this.Protocol.GetHashCode();
                 if (this.Id != null)
