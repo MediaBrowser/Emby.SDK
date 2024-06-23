@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LiveTvTunerHostInfo model module.
 * @module model/LiveTvTunerHostInfo
-* @version 4.9.0.25
+* @version 4.9.0.26
 */
 export default class LiveTvTunerHostInfo {
     /**

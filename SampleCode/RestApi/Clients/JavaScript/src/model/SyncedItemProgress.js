@@ -15,7 +15,7 @@ import SyncJobItemStatus from './SyncJobItemStatus';
 /**
 * The SyncedItemProgress model module.
 * @module model/SyncedItemProgress
-* @version 4.9.0.25
+* @version 4.9.0.26
 */
 export default class SyncedItemProgress {
     /**
