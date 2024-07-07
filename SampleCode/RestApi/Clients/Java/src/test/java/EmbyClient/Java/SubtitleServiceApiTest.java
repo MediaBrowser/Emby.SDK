@@ -179,6 +179,90 @@ public class SubtitleServiceApiTest {
         // TODO: test validations
     }
     /**
+     * Gets subtitles in a specified format.
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatTest() throws Exception {
+        String id = null;
+        String mediaSourceId = null;
+        Integer index = null;
+        String format = null;
+        Long startPositionTicks = null;
+        Long endPositionTicks = null;
+        Boolean copyTimestamps = null;
+        api.headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets subtitles in a specified format.
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatTest() throws Exception {
+        String id = null;
+        String mediaSourceId = null;
+        Integer index = null;
+        String format = null;
+        Long startPositionTicks = null;
+        Long endPositionTicks = null;
+        Boolean copyTimestamps = null;
+        api.headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets subtitles in a specified format.
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatTest() throws Exception {
+        String id = null;
+        String mediaSourceId = null;
+        Integer index = null;
+        String format = null;
+        Long startPositionTicks = null;
+        Long endPositionTicks = null;
+        Boolean copyTimestamps = null;
+        api.headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps);
+
+        // TODO: test validations
+    }
+    /**
+     * Gets subtitles in a specified format.
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatTest() throws Exception {
+        String id = null;
+        String mediaSourceId = null;
+        Integer index = null;
+        String format = null;
+        Long startPositionTicks = null;
+        Long endPositionTicks = null;
+        Boolean copyTimestamps = null;
+        api.headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps);
+
+        // TODO: test validations
+    }
+    /**
      * 
      *
      * Requires authentication as user

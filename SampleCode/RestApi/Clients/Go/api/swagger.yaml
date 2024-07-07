@@ -62038,6 +62038,90 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - SubtitleService
+      summary: Gets subtitles in a specified format.
+      description: Requires authentication as user
+      operationId: headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat
+      parameters:
+      - name: Id
+        in: path
+        description: Item Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: MediaSourceId
+        in: path
+        description: MediaSourceId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: Index
+        in: path
+        description: The subtitle stream index
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      - name: Format
+        in: path
+        description: Format
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: StartPositionTicks
+        in: query
+        description: StartPositionTicks
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      - name: EndPositionTicks
+        in: query
+        description: EndPositionTicks
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int64
+          nullable: true
+      - name: CopyTimestamps
+        in: query
+        description: CopyTimestamps
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/Images/{Type}/{Index}/Delete:
     post:
       tags:
@@ -62441,6 +62525,90 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - SubtitleService
+      summary: Gets subtitles in a specified format.
+      description: Requires authentication as user
+      operationId: headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat
+      parameters:
+      - name: Id
+        in: path
+        description: Item Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: MediaSourceId
+        in: path
+        description: MediaSourceId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: Index
+        in: path
+        description: The subtitle stream index
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      - name: Format
+        in: path
+        description: Format
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: StartPositionTicks
+        in: query
+        description: StartPositionTicks
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      - name: EndPositionTicks
+        in: query
+        description: EndPositionTicks
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int64
+          nullable: true
+      - name: CopyTimestamps
+        in: query
+        description: CopyTimestamps
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}:
     summary: Gets subtitles in a specified format.
     get:
@@ -62527,6 +62695,90 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - SubtitleService
+      summary: Gets subtitles in a specified format.
+      description: Requires authentication as user
+      operationId: headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat
+      parameters:
+      - name: Id
+        in: path
+        description: Item Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: MediaSourceId
+        in: path
+        description: MediaSourceId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: Index
+        in: path
+        description: The subtitle stream index
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      - name: Format
+        in: path
+        description: Format
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: StartPositionTicks
+        in: path
+        description: StartPositionTicks
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      - name: EndPositionTicks
+        in: query
+        description: EndPositionTicks
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int64
+          nullable: true
+      - name: CopyTimestamps
+        in: query
+        description: CopyTimestamps
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}:
     summary: Gets subtitles in a specified format.
     get:
@@ -62535,6 +62787,90 @@ paths:
       summary: Gets subtitles in a specified format.
       description: Requires authentication as user
       operationId: getVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat
+      parameters:
+      - name: Id
+        in: path
+        description: Item Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: MediaSourceId
+        in: path
+        description: MediaSourceId
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: Index
+        in: path
+        description: The subtitle stream index
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int32
+      - name: Format
+        in: path
+        description: Format
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: StartPositionTicks
+        in: path
+        description: StartPositionTicks
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      - name: EndPositionTicks
+        in: query
+        description: EndPositionTicks
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: integer
+          format: int64
+          nullable: true
+      - name: CopyTimestamps
+        in: query
+        description: CopyTimestamps
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: Operation successful. Response content unknown.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - SubtitleService
+      summary: Gets subtitles in a specified format.
+      description: Requires authentication as user
+      operationId: headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat
       parameters:
       - name: Id
         in: path

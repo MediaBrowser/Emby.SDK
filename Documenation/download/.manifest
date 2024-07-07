@@ -9889,7 +9889,6 @@
   "MediaBrowser.Model.Configuration.EncodingOptions.ThrottlingMethod": "MediaBrowser.Model.Configuration.EncodingOptions.yml",
   "MediaBrowser.Model.Configuration.EncodingOptions.TranscodingTempPath": "MediaBrowser.Model.Configuration.EncodingOptions.yml",
   "MediaBrowser.Model.Configuration.ImageOption": "MediaBrowser.Model.Configuration.ImageOption.yml",
-  "MediaBrowser.Model.Configuration.ImageOption.#ctor": "MediaBrowser.Model.Configuration.ImageOption.yml",
   "MediaBrowser.Model.Configuration.ImageOption.Limit": "MediaBrowser.Model.Configuration.ImageOption.yml",
   "MediaBrowser.Model.Configuration.ImageOption.MinWidth": "MediaBrowser.Model.Configuration.ImageOption.yml",
   "MediaBrowser.Model.Configuration.ImageOption.Type": "MediaBrowser.Model.Configuration.ImageOption.yml",

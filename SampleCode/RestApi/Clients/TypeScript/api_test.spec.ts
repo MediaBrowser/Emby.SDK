@@ -4969,6 +4969,46 @@ describe("SubtitleServiceApi", () => {
     const copyTimestamps: boolean = true
     return expect(instance.getVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, {})).resolves.toBe(null)
   })
+  test("headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat", () => {
+    const id: string = "id_example"
+    const mediaSourceId: string = "mediaSourceId_example"
+    const index: number = 56
+    const format: string = "format_example"
+    const startPositionTicks: number = 789
+    const endPositionTicks: number = 789
+    const copyTimestamps: boolean = true
+    return expect(instance.headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, {})).resolves.toBe(null)
+  })
+  test("headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat", () => {
+    const id: string = "id_example"
+    const mediaSourceId: string = "mediaSourceId_example"
+    const index: number = 56
+    const format: string = "format_example"
+    const startPositionTicks: number = 789
+    const endPositionTicks: number = 789
+    const copyTimestamps: boolean = true
+    return expect(instance.headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, {})).resolves.toBe(null)
+  })
+  test("headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat", () => {
+    const id: string = "id_example"
+    const mediaSourceId: string = "mediaSourceId_example"
+    const index: number = 56
+    const format: string = "format_example"
+    const startPositionTicks: number = 789
+    const endPositionTicks: number = 789
+    const copyTimestamps: boolean = true
+    return expect(instance.headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, {})).resolves.toBe(null)
+  })
+  test("headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat", () => {
+    const id: string = "id_example"
+    const mediaSourceId: string = "mediaSourceId_example"
+    const index: number = 56
+    const format: string = "format_example"
+    const startPositionTicks: number = 789
+    const endPositionTicks: number = 789
+    const copyTimestamps: boolean = true
+    return expect(instance.headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(id, mediaSourceId, index, format, startPositionTicks, endPositionTicks, copyTimestamps, {})).resolves.toBe(null)
+  })
   test("postItemsByIdRemotesearchSubtitlesBySubtitleid", () => {
     const id: string = "id_example"
     const mediaSourceId: string = "mediaSourceId_example"

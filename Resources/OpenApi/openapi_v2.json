@@ -55971,6 +55971,94 @@
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
       },
+      "head": {
+        "tags": [
+          "SubtitleService"
+        ],
+        "summary": "Gets subtitles in a specified format.",
+        "description": "Requires authentication as user",
+        "operationId": "headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Item Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "MediaSourceId",
+            "description": "MediaSourceId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Index",
+            "description": "The subtitle stream index",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Format",
+            "description": "Format",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "StartPositionTicks",
+            "description": "StartPositionTicks",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "EndPositionTicks",
+            "description": "EndPositionTicks",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "CopyTimestamps",
+            "description": "CopyTimestamps",
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
       "x-summary": "Gets subtitles in a specified format."
     },
     "/Items/{Id}/Images/{Type}/{Index}/Delete": {
@@ -56452,6 +56540,94 @@
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
       },
+      "head": {
+        "tags": [
+          "SubtitleService"
+        ],
+        "summary": "Gets subtitles in a specified format.",
+        "description": "Requires authentication as user",
+        "operationId": "headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Item Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "MediaSourceId",
+            "description": "MediaSourceId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Index",
+            "description": "The subtitle stream index",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Format",
+            "description": "Format",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "StartPositionTicks",
+            "description": "StartPositionTicks",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "EndPositionTicks",
+            "description": "EndPositionTicks",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "CopyTimestamps",
+            "description": "CopyTimestamps",
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
       "x-summary": "Gets subtitles in a specified format."
     },
     "/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}": {
@@ -56544,6 +56720,95 @@
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
       },
+      "head": {
+        "tags": [
+          "SubtitleService"
+        ],
+        "summary": "Gets subtitles in a specified format.",
+        "description": "Requires authentication as user",
+        "operationId": "headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Item Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "MediaSourceId",
+            "description": "MediaSourceId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Index",
+            "description": "The subtitle stream index",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Format",
+            "description": "Format",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "StartPositionTicks",
+            "description": "StartPositionTicks",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "EndPositionTicks",
+            "description": "EndPositionTicks",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "CopyTimestamps",
+            "description": "CopyTimestamps",
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
       "x-summary": "Gets subtitles in a specified format."
     },
     "/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}": {
@@ -56554,6 +56819,95 @@
         "summary": "Gets subtitles in a specified format.",
         "description": "Requires authentication as user",
         "operationId": "getVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Item Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "MediaSourceId",
+            "description": "MediaSourceId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Index",
+            "description": "The subtitle stream index",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "Format",
+            "description": "Format",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "StartPositionTicks",
+            "description": "StartPositionTicks",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "EndPositionTicks",
+            "description": "EndPositionTicks",
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "query",
+            "name": "CopyTimestamps",
+            "description": "CopyTimestamps",
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "SubtitleService"
+        ],
+        "summary": "Gets subtitles in a specified format.",
+        "description": "Requires authentication as user",
+        "operationId": "headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat",
         "parameters": [
           {
             "in": "path",

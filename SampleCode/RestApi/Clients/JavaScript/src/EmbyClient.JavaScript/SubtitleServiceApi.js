@@ -370,6 +370,186 @@ export default class SubtitleServiceApi {
       );
     }
     /**
+     * Callback function to receive the result of the headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat operation.
+     * @callback module:EmbyClient.JavaScript/SubtitleServiceApi~headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript/SubtitleServiceApi~headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id,
+        'MediaSourceId': mediaSourceId,
+        'Index': index,
+        'Format': format,
+        'StartPositionTicks': startPositionTicks
+      };
+      let queryParams = {
+        'EndPositionTicks': opts['endPositionTicks'],
+        'CopyTimestamps': opts['copyTimestamps']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat operation.
+     * @callback module:EmbyClient.JavaScript/SubtitleServiceApi~headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript/SubtitleServiceApi~headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id,
+        'MediaSourceId': mediaSourceId,
+        'Index': index,
+        'Format': format
+      };
+      let queryParams = {
+        'StartPositionTicks': opts['startPositionTicks'],
+        'EndPositionTicks': opts['endPositionTicks'],
+        'CopyTimestamps': opts['copyTimestamps']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat operation.
+     * @callback module:EmbyClient.JavaScript/SubtitleServiceApi~headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript/SubtitleServiceApi~headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id,
+        'MediaSourceId': mediaSourceId,
+        'Index': index,
+        'Format': format,
+        'StartPositionTicks': startPositionTicks
+      };
+      let queryParams = {
+        'EndPositionTicks': opts['endPositionTicks'],
+        'CopyTimestamps': opts['copyTimestamps']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat operation.
+     * @callback module:EmbyClient.JavaScript/SubtitleServiceApi~headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets subtitles in a specified format.
+     * Requires authentication as user
+     * @param {Object} opts Optional parameters
+     * @param {module:EmbyClient.JavaScript/SubtitleServiceApi~headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat() {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+        'Id': id,
+        'MediaSourceId': mediaSourceId,
+        'Index': index,
+        'Format': format
+      };
+      let queryParams = {
+        'StartPositionTicks': opts['startPositionTicks'],
+        'EndPositionTicks': opts['endPositionTicks'],
+        'CopyTimestamps': opts['copyTimestamps']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
      * Callback function to receive the result of the postItemsByIdRemotesearchSubtitlesBySubtitleid operation.
      * @callback module:EmbyClient.JavaScript/SubtitleServiceApi~postItemsByIdRemotesearchSubtitlesBySubtitleidCallback
      * @param {String} error Error message, if any.

@@ -583,6 +583,346 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
+        /// Gets subtitles in a specified format.
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id">Item Id</param>
+        /// <param name="mediaSourceId">MediaSourceId</param>
+        /// <param name="index">The subtitle stream index</param>
+        /// <param name="format">Format</param>
+        /// <param name="startPositionTicks">StartPositionTicks</param>
+        /// <param name="endPositionTicks">EndPositionTicks (optional)</param>
+        /// <param name="copyTimestamps">CopyTimestamps (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat (string id, string mediaSourceId, int? index, string format, long? startPositionTicks, long? endPositionTicks, bool? copyTimestamps)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            // verify the required parameter 'mediaSourceId' is set
+            if (mediaSourceId == null)
+            {
+                throw new ApiException("Missing required parameter 'mediaSourceId' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            // verify the required parameter 'index' is set
+            if (index == null)
+            {
+                throw new ApiException("Missing required parameter 'index' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            // verify the required parameter 'format' is set
+            if (format == null)
+            {
+                throw new ApiException("Missing required parameter 'format' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            // verify the required parameter 'startPositionTicks' is set
+            if (startPositionTicks == null)
+            {
+                throw new ApiException("Missing required parameter 'startPositionTicks' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            var request = new RestRequest("/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}", Method.Head);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (mediaSourceId != null)
+            {
+                request.AddParameter("MediaSourceId", this.ApiClient.ParameterToString(mediaSourceId), ParameterType.UrlSegment);
+            }
+
+            if (index != null)
+            {
+                request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (format != null)
+            {
+                request.AddParameter("Format", this.ApiClient.ParameterToString(format), ParameterType.UrlSegment);
+            }
+
+            if (startPositionTicks != null)
+            {
+                request.AddParameter("StartPositionTicks", this.ApiClient.ParameterToString(startPositionTicks), ParameterType.UrlSegment);
+            }
+
+            if (endPositionTicks != null)
+            {
+                request.AddQueryParameter("EndPositionTicks", this.ApiClient.ParameterToString(endPositionTicks));
+            }
+
+            if (copyTimestamps != null)
+            {
+                request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets subtitles in a specified format.
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id">Item Id</param>
+        /// <param name="mediaSourceId">MediaSourceId</param>
+        /// <param name="index">The subtitle stream index</param>
+        /// <param name="format">Format</param>
+        /// <param name="startPositionTicks">StartPositionTicks (optional)</param>
+        /// <param name="endPositionTicks">EndPositionTicks (optional)</param>
+        /// <param name="copyTimestamps">CopyTimestamps (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat (string id, string mediaSourceId, int? index, string format, long? startPositionTicks, long? endPositionTicks, bool? copyTimestamps)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat");
+            }
+            
+            // verify the required parameter 'mediaSourceId' is set
+            if (mediaSourceId == null)
+            {
+                throw new ApiException("Missing required parameter 'mediaSourceId' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat");
+            }
+            
+            // verify the required parameter 'index' is set
+            if (index == null)
+            {
+                throw new ApiException("Missing required parameter 'index' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat");
+            }
+            
+            // verify the required parameter 'format' is set
+            if (format == null)
+            {
+                throw new ApiException("Missing required parameter 'format' when calling SubtitleServiceApi->HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat");
+            }
+            
+            var request = new RestRequest("/Items/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}", Method.Head);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (mediaSourceId != null)
+            {
+                request.AddParameter("MediaSourceId", this.ApiClient.ParameterToString(mediaSourceId), ParameterType.UrlSegment);
+            }
+
+            if (index != null)
+            {
+                request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (format != null)
+            {
+                request.AddParameter("Format", this.ApiClient.ParameterToString(format), ParameterType.UrlSegment);
+            }
+
+            if (startPositionTicks != null)
+            {
+                request.AddQueryParameter("StartPositionTicks", this.ApiClient.ParameterToString(startPositionTicks));
+            }
+
+            if (endPositionTicks != null)
+            {
+                request.AddQueryParameter("EndPositionTicks", this.ApiClient.ParameterToString(endPositionTicks));
+            }
+
+            if (copyTimestamps != null)
+            {
+                request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets subtitles in a specified format.
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id">Item Id</param>
+        /// <param name="mediaSourceId">MediaSourceId</param>
+        /// <param name="index">The subtitle stream index</param>
+        /// <param name="format">Format</param>
+        /// <param name="startPositionTicks">StartPositionTicks</param>
+        /// <param name="endPositionTicks">EndPositionTicks (optional)</param>
+        /// <param name="copyTimestamps">CopyTimestamps (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat (string id, string mediaSourceId, int? index, string format, long? startPositionTicks, long? endPositionTicks, bool? copyTimestamps)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            // verify the required parameter 'mediaSourceId' is set
+            if (mediaSourceId == null)
+            {
+                throw new ApiException("Missing required parameter 'mediaSourceId' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            // verify the required parameter 'index' is set
+            if (index == null)
+            {
+                throw new ApiException("Missing required parameter 'index' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            // verify the required parameter 'format' is set
+            if (format == null)
+            {
+                throw new ApiException("Missing required parameter 'format' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            // verify the required parameter 'startPositionTicks' is set
+            if (startPositionTicks == null)
+            {
+                throw new ApiException("Missing required parameter 'startPositionTicks' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat");
+            }
+            
+            var request = new RestRequest("/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}", Method.Head);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (mediaSourceId != null)
+            {
+                request.AddParameter("MediaSourceId", this.ApiClient.ParameterToString(mediaSourceId), ParameterType.UrlSegment);
+            }
+
+            if (index != null)
+            {
+                request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (format != null)
+            {
+                request.AddParameter("Format", this.ApiClient.ParameterToString(format), ParameterType.UrlSegment);
+            }
+
+            if (startPositionTicks != null)
+            {
+                request.AddParameter("StartPositionTicks", this.ApiClient.ParameterToString(startPositionTicks), ParameterType.UrlSegment);
+            }
+
+            if (endPositionTicks != null)
+            {
+                request.AddQueryParameter("EndPositionTicks", this.ApiClient.ParameterToString(endPositionTicks));
+            }
+
+            if (copyTimestamps != null)
+            {
+                request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Gets subtitles in a specified format.
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <param name="id">Item Id</param>
+        /// <param name="mediaSourceId">MediaSourceId</param>
+        /// <param name="index">The subtitle stream index</param>
+        /// <param name="format">Format</param>
+        /// <param name="startPositionTicks">StartPositionTicks (optional)</param>
+        /// <param name="endPositionTicks">EndPositionTicks (optional)</param>
+        /// <param name="copyTimestamps">CopyTimestamps (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat (string id, string mediaSourceId, int? index, string format, long? startPositionTicks, long? endPositionTicks, bool? copyTimestamps)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+            {
+                throw new ApiException("Missing required parameter 'id' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat");
+            }
+            
+            // verify the required parameter 'mediaSourceId' is set
+            if (mediaSourceId == null)
+            {
+                throw new ApiException("Missing required parameter 'mediaSourceId' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat");
+            }
+            
+            // verify the required parameter 'index' is set
+            if (index == null)
+            {
+                throw new ApiException("Missing required parameter 'index' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat");
+            }
+            
+            // verify the required parameter 'format' is set
+            if (format == null)
+            {
+                throw new ApiException("Missing required parameter 'format' when calling SubtitleServiceApi->HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat");
+            }
+            
+            var request = new RestRequest("/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}", Method.Head);
+
+            if (id != null)
+            {
+                request.AddParameter("Id", this.ApiClient.ParameterToString(id), ParameterType.UrlSegment);
+            }
+
+            if (mediaSourceId != null)
+            {
+                request.AddParameter("MediaSourceId", this.ApiClient.ParameterToString(mediaSourceId), ParameterType.UrlSegment);
+            }
+
+            if (index != null)
+            {
+                request.AddParameter("Index", this.ApiClient.ParameterToString(index), ParameterType.UrlSegment);
+            }
+
+            if (format != null)
+            {
+                request.AddParameter("Format", this.ApiClient.ParameterToString(format), ParameterType.UrlSegment);
+            }
+
+            if (startPositionTicks != null)
+            {
+                request.AddQueryParameter("StartPositionTicks", this.ApiClient.ParameterToString(startPositionTicks));
+            }
+
+            if (endPositionTicks != null)
+            {
+                request.AddQueryParameter("EndPositionTicks", this.ApiClient.ParameterToString(endPositionTicks));
+            }
+
+            if (copyTimestamps != null)
+            {
+                request.AddQueryParameter("CopyTimestamps", this.ApiClient.ParameterToString(copyTimestamps));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <remarks>
