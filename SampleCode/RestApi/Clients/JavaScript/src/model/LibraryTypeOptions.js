@@ -12,17 +12,17 @@
 import ApiClient from '../ApiClient';
 import ImageOption from './ImageOption';
 import ImageType from './ImageType';
-import LibraryLibraryOptionInfo from './LibraryLibraryOptionInfo';
+import LibraryOptionInfo from './LibraryOptionInfo';
 
 /**
-* The LibraryLibraryTypeOptions model module.
-* @module model/LibraryLibraryTypeOptions
-* @version 4.9.0.26
+* The LibraryTypeOptions model module.
+* @module model/LibraryTypeOptions
+* @version 4.9.0.27
 */
-export default class LibraryLibraryTypeOptions {
+export default class LibraryTypeOptions {
     /**
-    * Constructs a new <code>LibraryLibraryTypeOptions</code>.
-    * @alias module:model/LibraryLibraryTypeOptions
+    * Constructs a new <code>LibraryTypeOptions</code>.
+    * @alias module:model/LibraryTypeOptions
     * @class
     */
 
@@ -33,25 +33,25 @@ export default class LibraryLibraryTypeOptions {
     }
 
     /**
-    * Constructs a <code>LibraryLibraryTypeOptions</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>LibraryTypeOptions</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/LibraryLibraryTypeOptions} obj Optional instance to populate.
-    * @return {module:model/LibraryLibraryTypeOptions} The populated <code>LibraryLibraryTypeOptions</code> instance.
+    * @param {module:model/LibraryTypeOptions} obj Optional instance to populate.
+    * @return {module:model/LibraryTypeOptions} The populated <code>LibraryTypeOptions</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new LibraryLibraryTypeOptions();
+            obj = obj || new LibraryTypeOptions();
                         
             
             if (data.hasOwnProperty('Type')) {
                 obj['Type'] = ApiClient.convertToType(data['Type'], 'String');
             }
             if (data.hasOwnProperty('MetadataFetchers')) {
-                obj['MetadataFetchers'] = ApiClient.convertToType(data['MetadataFetchers'], [LibraryLibraryOptionInfo]);
+                obj['MetadataFetchers'] = ApiClient.convertToType(data['MetadataFetchers'], [LibraryOptionInfo]);
             }
             if (data.hasOwnProperty('ImageFetchers')) {
-                obj['ImageFetchers'] = ApiClient.convertToType(data['ImageFetchers'], [LibraryLibraryOptionInfo]);
+                obj['ImageFetchers'] = ApiClient.convertToType(data['ImageFetchers'], [LibraryOptionInfo]);
             }
             if (data.hasOwnProperty('SupportedImageTypes')) {
                 obj['SupportedImageTypes'] = ApiClient.convertToType(data['SupportedImageTypes'], [ImageType]);
@@ -68,11 +68,11 @@ export default class LibraryLibraryTypeOptions {
     */
     'Type' = undefined;
     /**
-    * @member {Array.<module:model/LibraryLibraryOptionInfo>} MetadataFetchers
+    * @member {Array.<module:model/LibraryOptionInfo>} MetadataFetchers
     */
     'MetadataFetchers' = undefined;
     /**
-    * @member {Array.<module:model/LibraryLibraryOptionInfo>} ImageFetchers
+    * @member {Array.<module:model/LibraryOptionInfo>} ImageFetchers
     */
     'ImageFetchers' = undefined;
     /**

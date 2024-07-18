@@ -9,8 +9,8 @@ import embyclient.model.AllThemeMediaResult;
 import embyclient.model.BaseItemDto;
 import embyclient.model.ItemCounts;
 import embyclient.model.LibraryDeleteInfo;
-import embyclient.model.LibraryLibraryOptionsResult;
 import embyclient.model.LibraryMediaFolder;
+import embyclient.model.LibraryOptionsResult;
 import embyclient.model.LibraryPostUpdatedMedia;
 import embyclient.model.PersistenceIntroDebugInfo;
 import embyclient.model.QueryResultBaseItemDto;
@@ -339,7 +339,7 @@ public class LibraryServiceApiTest {
      */
     @Test
     public void getLibrariesAvailableoptionsTest() throws Exception {
-        LibraryLibraryOptionsResult response = api.getLibrariesAvailableoptions();
+        LibraryOptionsResult response = api.getLibrariesAvailableoptions();
 
         // TODO: test validations
     }

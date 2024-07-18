@@ -1863,15 +1863,15 @@ func (a *LibraryServiceApiService) GetItemsIntros(ctx context.Context) ([]Persis
 LibraryServiceApiService
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return LibraryLibraryOptionsResult
+@return LibraryOptionsResult
 */
-func (a *LibraryServiceApiService) GetLibrariesAvailableoptions(ctx context.Context) (LibraryLibraryOptionsResult, *http.Response, error) {
+func (a *LibraryServiceApiService) GetLibrariesAvailableoptions(ctx context.Context) (LibraryOptionsResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue LibraryLibraryOptionsResult
+		localVarReturnValue LibraryOptionsResult
 	)
 
 	// create path and map variables
@@ -1941,7 +1941,7 @@ func (a *LibraryServiceApiService) GetLibrariesAvailableoptions(ctx context.Cont
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v LibraryLibraryOptionsResult
+			var v LibraryOptionsResult
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.26
+  version: 4.9.0.27
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -23510,10 +23510,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Library.LibraryOptionsResult'
+                $ref: '#/components/schemas/LibraryOptionsResult'
             application/xml:
               schema:
-                $ref: '#/components/schemas/Library.LibraryOptionsResult'
+                $ref: '#/components/schemas/LibraryOptionsResult'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -69548,29 +69548,29 @@ components:
         End: 1
         Id: 0
       x-internal-ref-name: MediaBrowser.Controller.Persistence.IntroDebugInfo
-    Library.LibraryOptionsResult:
+    LibraryOptionsResult:
       type: object
       properties:
         MetadataSavers:
           type: array
           items:
-            $ref: '#/components/schemas/Library.LibraryOptionInfo'
+            $ref: '#/components/schemas/LibraryOptionInfo'
         MetadataReaders:
           type: array
           items:
-            $ref: '#/components/schemas/Library.LibraryOptionInfo'
+            $ref: '#/components/schemas/LibraryOptionInfo'
         SubtitleFetchers:
           type: array
           items:
-            $ref: '#/components/schemas/Library.LibraryOptionInfo'
+            $ref: '#/components/schemas/LibraryOptionInfo'
         LyricsFetchers:
           type: array
           items:
-            $ref: '#/components/schemas/Library.LibraryOptionInfo'
+            $ref: '#/components/schemas/LibraryOptionInfo'
         TypeOptions:
           type: array
           items:
-            $ref: '#/components/schemas/Library.LibraryTypeOptions'
+            $ref: '#/components/schemas/LibraryTypeOptions'
       example:
         LyricsFetchers:
         - null
@@ -69629,8 +69629,8 @@ components:
           - Collections
           SetupUrl: SetupUrl
           Name: Name
-      x-internal-ref-name: Emby.Api.Library.LibraryOptionsResult
-    Library.LibraryOptionInfo:
+      x-internal-ref-name: MediaBrowser.Controller.Providers.LibraryOptionsResult
+    LibraryOptionInfo:
       type: object
       properties:
         Name:
@@ -69650,7 +69650,7 @@ components:
         - Collections
         SetupUrl: SetupUrl
         Name: Name
-      x-internal-ref-name: Emby.Api.Library.LibraryOptionInfo
+      x-internal-ref-name: MediaBrowser.Controller.Providers.LibraryOptionInfo
     MetadataFeatures:
       type: string
       enum:
@@ -69658,7 +69658,7 @@ components:
       - Adult
       - RequiredSetup
       x-internal-ref-name: MediaBrowser.Model.Configuration.MetadataFeatures
-    Library.LibraryTypeOptions:
+    LibraryTypeOptions:
       type: object
       properties:
         Type:
@@ -69666,11 +69666,11 @@ components:
         MetadataFetchers:
           type: array
           items:
-            $ref: '#/components/schemas/Library.LibraryOptionInfo'
+            $ref: '#/components/schemas/LibraryOptionInfo'
         ImageFetchers:
           type: array
           items:
-            $ref: '#/components/schemas/Library.LibraryOptionInfo'
+            $ref: '#/components/schemas/LibraryOptionInfo'
         SupportedImageTypes:
           type: array
           items:
@@ -69697,7 +69697,7 @@ components:
         MetadataFetchers:
         - null
         - null
-      x-internal-ref-name: Emby.Api.Library.LibraryTypeOptions
+      x-internal-ref-name: MediaBrowser.Controller.Providers.LibraryTypeOptions
     ImageOption:
       type: object
       properties:
@@ -69913,6 +69913,10 @@ components:
           type: boolean
         ImportCollections:
           type: boolean
+        DisableMultiVersionItems:
+          type: boolean
+        DisableMultiPartItems:
+          type: boolean
         MinCollectionItems:
           type: integer
           format: int32
@@ -69953,10 +69957,12 @@ components:
         - MetadataSavers
         SaveMetadataHidden: true
         SaveLocalMetadata: true
+        DisableMultiVersionItems: true
         PreferredImageLanguage: PreferredImageLanguage
         DownloadImagesInAdvance: true
         ThumbnailImagesIntervalSeconds: 2
         MaxResumePct: 9
+        DisableMultiPartItems: true
         MinResumeDurationSeconds: 3
         EnableAudioResume: true
         MusicFolderStructure: MusicFolderStructure
@@ -84854,10 +84860,12 @@ components:
             - MetadataSavers
             SaveMetadataHidden: true
             SaveLocalMetadata: true
+            DisableMultiVersionItems: true
             PreferredImageLanguage: PreferredImageLanguage
             DownloadImagesInAdvance: true
             ThumbnailImagesIntervalSeconds: 2
             MaxResumePct: 9
+            DisableMultiPartItems: true
             MinResumeDurationSeconds: 3
             EnableAudioResume: true
             MusicFolderStructure: MusicFolderStructure
@@ -84992,10 +85000,12 @@ components:
             - MetadataSavers
             SaveMetadataHidden: true
             SaveLocalMetadata: true
+            DisableMultiVersionItems: true
             PreferredImageLanguage: PreferredImageLanguage
             DownloadImagesInAdvance: true
             ThumbnailImagesIntervalSeconds: 2
             MaxResumePct: 9
+            DisableMultiPartItems: true
             MinResumeDurationSeconds: 3
             EnableAudioResume: true
             MusicFolderStructure: MusicFolderStructure
@@ -85168,10 +85178,12 @@ components:
           - MetadataSavers
           SaveMetadataHidden: true
           SaveLocalMetadata: true
+          DisableMultiVersionItems: true
           PreferredImageLanguage: PreferredImageLanguage
           DownloadImagesInAdvance: true
           ThumbnailImagesIntervalSeconds: 2
           MaxResumePct: 9
+          DisableMultiPartItems: true
           MinResumeDurationSeconds: 3
           EnableAudioResume: true
           MusicFolderStructure: MusicFolderStructure

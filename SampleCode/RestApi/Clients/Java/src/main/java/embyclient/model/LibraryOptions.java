@@ -174,6 +174,12 @@ public class LibraryOptions {
   @SerializedName("ImportCollections")
   private Boolean importCollections = null;
 
+  @SerializedName("DisableMultiVersionItems")
+  private Boolean disableMultiVersionItems = null;
+
+  @SerializedName("DisableMultiPartItems")
+  private Boolean disableMultiPartItems = null;
+
   @SerializedName("MinCollectionItems")
   private Integer minCollectionItems = null;
 
@@ -1191,6 +1197,42 @@ public class LibraryOptions {
     this.importCollections = importCollections;
   }
 
+  public LibraryOptions disableMultiVersionItems(Boolean disableMultiVersionItems) {
+    this.disableMultiVersionItems = disableMultiVersionItems;
+    return this;
+  }
+
+   /**
+   * Get disableMultiVersionItems
+   * @return disableMultiVersionItems
+  **/
+  @Schema(description = "")
+  public Boolean isDisableMultiVersionItems() {
+    return disableMultiVersionItems;
+  }
+
+  public void setDisableMultiVersionItems(Boolean disableMultiVersionItems) {
+    this.disableMultiVersionItems = disableMultiVersionItems;
+  }
+
+  public LibraryOptions disableMultiPartItems(Boolean disableMultiPartItems) {
+    this.disableMultiPartItems = disableMultiPartItems;
+    return this;
+  }
+
+   /**
+   * Get disableMultiPartItems
+   * @return disableMultiPartItems
+  **/
+  @Schema(description = "")
+  public Boolean isDisableMultiPartItems() {
+    return disableMultiPartItems;
+  }
+
+  public void setDisableMultiPartItems(Boolean disableMultiPartItems) {
+    this.disableMultiPartItems = disableMultiPartItems;
+  }
+
   public LibraryOptions minCollectionItems(Integer minCollectionItems) {
     this.minCollectionItems = minCollectionItems;
     return this;
@@ -1377,6 +1419,8 @@ public class LibraryOptions {
         Objects.equals(this.collapseSingleItemFolders, libraryOptions.collapseSingleItemFolders) &&
         Objects.equals(this.enableAdultMetadata, libraryOptions.enableAdultMetadata) &&
         Objects.equals(this.importCollections, libraryOptions.importCollections) &&
+        Objects.equals(this.disableMultiVersionItems, libraryOptions.disableMultiVersionItems) &&
+        Objects.equals(this.disableMultiPartItems, libraryOptions.disableMultiPartItems) &&
         Objects.equals(this.minCollectionItems, libraryOptions.minCollectionItems) &&
         Objects.equals(this.musicFolderStructure, libraryOptions.musicFolderStructure) &&
         Objects.equals(this.minResumePct, libraryOptions.minResumePct) &&
@@ -1388,7 +1432,7 @@ public class LibraryOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, cacheImages, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, autoGenerateChapters, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
+    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, cacheImages, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, autoGenerateChapters, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, disableMultiVersionItems, disableMultiPartItems, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
   }
 
 
@@ -1447,6 +1491,8 @@ public class LibraryOptions {
     sb.append("    collapseSingleItemFolders: ").append(toIndentedString(collapseSingleItemFolders)).append("\n");
     sb.append("    enableAdultMetadata: ").append(toIndentedString(enableAdultMetadata)).append("\n");
     sb.append("    importCollections: ").append(toIndentedString(importCollections)).append("\n");
+    sb.append("    disableMultiVersionItems: ").append(toIndentedString(disableMultiVersionItems)).append("\n");
+    sb.append("    disableMultiPartItems: ").append(toIndentedString(disableMultiPartItems)).append("\n");
     sb.append("    minCollectionItems: ").append(toIndentedString(minCollectionItems)).append("\n");
     sb.append("    musicFolderStructure: ").append(toIndentedString(musicFolderStructure)).append("\n");
     sb.append("    minResumePct: ").append(toIndentedString(minResumePct)).append("\n");

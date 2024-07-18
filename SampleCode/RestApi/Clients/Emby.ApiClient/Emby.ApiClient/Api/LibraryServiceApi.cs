@@ -818,13 +818,13 @@ namespace Emby.ApiClient.Api
         /// <remarks>
         /// Requires authentication as user
         /// </remarks>
-        /// <returns>Task of ApiResponse (LibraryLibraryOptionsResult)</returns>
-        public async Task<RestResponse<LibraryLibraryOptionsResult>> GetLibrariesAvailableoptions ()
+        /// <returns>Task of ApiResponse (LibraryOptionsResult)</returns>
+        public async Task<RestResponse<LibraryOptionsResult>> GetLibrariesAvailableoptions ()
         {
             var request = new RestRequest("/Libraries/AvailableOptions", Method.Get);
 
             // make the HTTP request
-            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<LibraryLibraryOptionsResult>(request).ConfigureAwait(false);
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<LibraryOptionsResult>(request).ConfigureAwait(false);
             return localVarResponse;
         }
 

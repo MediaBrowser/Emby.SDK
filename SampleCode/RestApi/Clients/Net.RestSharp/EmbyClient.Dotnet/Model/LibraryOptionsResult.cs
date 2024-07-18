@@ -18,20 +18,20 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// LibraryLibraryOptionsResult
+    /// LibraryOptionsResult
     /// </summary>
     [DataContract]
-        public partial class LibraryLibraryOptionsResult :  IEquatable<LibraryLibraryOptionsResult>
+        public partial class LibraryOptionsResult :  IEquatable<LibraryOptionsResult>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LibraryLibraryOptionsResult" /> class.
+        /// Initializes a new instance of the <see cref="LibraryOptionsResult" /> class.
         /// </summary>
         /// <param name="metadataSavers">metadataSavers.</param>
         /// <param name="metadataReaders">metadataReaders.</param>
         /// <param name="subtitleFetchers">subtitleFetchers.</param>
         /// <param name="lyricsFetchers">lyricsFetchers.</param>
         /// <param name="typeOptions">typeOptions.</param>
-        public LibraryLibraryOptionsResult(List<LibraryLibraryOptionInfo> metadataSavers = default(List<LibraryLibraryOptionInfo>), List<LibraryLibraryOptionInfo> metadataReaders = default(List<LibraryLibraryOptionInfo>), List<LibraryLibraryOptionInfo> subtitleFetchers = default(List<LibraryLibraryOptionInfo>), List<LibraryLibraryOptionInfo> lyricsFetchers = default(List<LibraryLibraryOptionInfo>), List<LibraryLibraryTypeOptions> typeOptions = default(List<LibraryLibraryTypeOptions>))
+        public LibraryOptionsResult(List<LibraryOptionInfo> metadataSavers = default(List<LibraryOptionInfo>), List<LibraryOptionInfo> metadataReaders = default(List<LibraryOptionInfo>), List<LibraryOptionInfo> subtitleFetchers = default(List<LibraryOptionInfo>), List<LibraryOptionInfo> lyricsFetchers = default(List<LibraryOptionInfo>), List<LibraryTypeOptions> typeOptions = default(List<LibraryTypeOptions>))
         {
             this.MetadataSavers = metadataSavers;
             this.MetadataReaders = metadataReaders;
@@ -44,31 +44,31 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets MetadataSavers
         /// </summary>
         [DataMember(Name="MetadataSavers", EmitDefaultValue=false)]
-        public List<LibraryLibraryOptionInfo> MetadataSavers { get; set; }
+        public List<LibraryOptionInfo> MetadataSavers { get; set; }
 
         /// <summary>
         /// Gets or Sets MetadataReaders
         /// </summary>
         [DataMember(Name="MetadataReaders", EmitDefaultValue=false)]
-        public List<LibraryLibraryOptionInfo> MetadataReaders { get; set; }
+        public List<LibraryOptionInfo> MetadataReaders { get; set; }
 
         /// <summary>
         /// Gets or Sets SubtitleFetchers
         /// </summary>
         [DataMember(Name="SubtitleFetchers", EmitDefaultValue=false)]
-        public List<LibraryLibraryOptionInfo> SubtitleFetchers { get; set; }
+        public List<LibraryOptionInfo> SubtitleFetchers { get; set; }
 
         /// <summary>
         /// Gets or Sets LyricsFetchers
         /// </summary>
         [DataMember(Name="LyricsFetchers", EmitDefaultValue=false)]
-        public List<LibraryLibraryOptionInfo> LyricsFetchers { get; set; }
+        public List<LibraryOptionInfo> LyricsFetchers { get; set; }
 
         /// <summary>
         /// Gets or Sets TypeOptions
         /// </summary>
         [DataMember(Name="TypeOptions", EmitDefaultValue=false)]
-        public List<LibraryLibraryTypeOptions> TypeOptions { get; set; }
+        public List<LibraryTypeOptions> TypeOptions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -77,7 +77,7 @@ namespace EmbyClient.Dotnet.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LibraryLibraryOptionsResult {\n");
+            sb.Append("class LibraryOptionsResult {\n");
             sb.Append("  MetadataSavers: ").Append(MetadataSavers).Append("\n");
             sb.Append("  MetadataReaders: ").Append(MetadataReaders).Append("\n");
             sb.Append("  SubtitleFetchers: ").Append(SubtitleFetchers).Append("\n");
@@ -103,15 +103,15 @@ namespace EmbyClient.Dotnet.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LibraryLibraryOptionsResult);
+            return this.Equals(input as LibraryOptionsResult);
         }
 
         /// <summary>
-        /// Returns true if LibraryLibraryOptionsResult instances are equal
+        /// Returns true if LibraryOptionsResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of LibraryLibraryOptionsResult to be compared</param>
+        /// <param name="input">Instance of LibraryOptionsResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LibraryLibraryOptionsResult input)
+        public bool Equals(LibraryOptionsResult input)
         {
             if (input == null)
                 return false;

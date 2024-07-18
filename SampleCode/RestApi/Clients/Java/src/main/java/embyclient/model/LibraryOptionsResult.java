@@ -12,41 +12,41 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import embyclient.model.LibraryLibraryOptionInfo;
-import embyclient.model.LibraryLibraryTypeOptions;
+import embyclient.model.LibraryOptionInfo;
+import embyclient.model.LibraryTypeOptions;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * LibraryLibraryOptionsResult
+ * LibraryOptionsResult
  */
 
 
-public class LibraryLibraryOptionsResult {
+public class LibraryOptionsResult {
   @SerializedName("MetadataSavers")
-  private List<LibraryLibraryOptionInfo> metadataSavers = null;
+  private List<LibraryOptionInfo> metadataSavers = null;
 
   @SerializedName("MetadataReaders")
-  private List<LibraryLibraryOptionInfo> metadataReaders = null;
+  private List<LibraryOptionInfo> metadataReaders = null;
 
   @SerializedName("SubtitleFetchers")
-  private List<LibraryLibraryOptionInfo> subtitleFetchers = null;
+  private List<LibraryOptionInfo> subtitleFetchers = null;
 
   @SerializedName("LyricsFetchers")
-  private List<LibraryLibraryOptionInfo> lyricsFetchers = null;
+  private List<LibraryOptionInfo> lyricsFetchers = null;
 
   @SerializedName("TypeOptions")
-  private List<LibraryLibraryTypeOptions> typeOptions = null;
+  private List<LibraryTypeOptions> typeOptions = null;
 
-  public LibraryLibraryOptionsResult metadataSavers(List<LibraryLibraryOptionInfo> metadataSavers) {
+  public LibraryOptionsResult metadataSavers(List<LibraryOptionInfo> metadataSavers) {
     this.metadataSavers = metadataSavers;
     return this;
   }
 
-  public LibraryLibraryOptionsResult addMetadataSaversItem(LibraryLibraryOptionInfo metadataSaversItem) {
+  public LibraryOptionsResult addMetadataSaversItem(LibraryOptionInfo metadataSaversItem) {
     if (this.metadataSavers == null) {
-      this.metadataSavers = new ArrayList<LibraryLibraryOptionInfo>();
+      this.metadataSavers = new ArrayList<LibraryOptionInfo>();
     }
     this.metadataSavers.add(metadataSaversItem);
     return this;
@@ -57,22 +57,22 @@ public class LibraryLibraryOptionsResult {
    * @return metadataSavers
   **/
   @Schema(description = "")
-  public List<LibraryLibraryOptionInfo> getMetadataSavers() {
+  public List<LibraryOptionInfo> getMetadataSavers() {
     return metadataSavers;
   }
 
-  public void setMetadataSavers(List<LibraryLibraryOptionInfo> metadataSavers) {
+  public void setMetadataSavers(List<LibraryOptionInfo> metadataSavers) {
     this.metadataSavers = metadataSavers;
   }
 
-  public LibraryLibraryOptionsResult metadataReaders(List<LibraryLibraryOptionInfo> metadataReaders) {
+  public LibraryOptionsResult metadataReaders(List<LibraryOptionInfo> metadataReaders) {
     this.metadataReaders = metadataReaders;
     return this;
   }
 
-  public LibraryLibraryOptionsResult addMetadataReadersItem(LibraryLibraryOptionInfo metadataReadersItem) {
+  public LibraryOptionsResult addMetadataReadersItem(LibraryOptionInfo metadataReadersItem) {
     if (this.metadataReaders == null) {
-      this.metadataReaders = new ArrayList<LibraryLibraryOptionInfo>();
+      this.metadataReaders = new ArrayList<LibraryOptionInfo>();
     }
     this.metadataReaders.add(metadataReadersItem);
     return this;
@@ -83,22 +83,22 @@ public class LibraryLibraryOptionsResult {
    * @return metadataReaders
   **/
   @Schema(description = "")
-  public List<LibraryLibraryOptionInfo> getMetadataReaders() {
+  public List<LibraryOptionInfo> getMetadataReaders() {
     return metadataReaders;
   }
 
-  public void setMetadataReaders(List<LibraryLibraryOptionInfo> metadataReaders) {
+  public void setMetadataReaders(List<LibraryOptionInfo> metadataReaders) {
     this.metadataReaders = metadataReaders;
   }
 
-  public LibraryLibraryOptionsResult subtitleFetchers(List<LibraryLibraryOptionInfo> subtitleFetchers) {
+  public LibraryOptionsResult subtitleFetchers(List<LibraryOptionInfo> subtitleFetchers) {
     this.subtitleFetchers = subtitleFetchers;
     return this;
   }
 
-  public LibraryLibraryOptionsResult addSubtitleFetchersItem(LibraryLibraryOptionInfo subtitleFetchersItem) {
+  public LibraryOptionsResult addSubtitleFetchersItem(LibraryOptionInfo subtitleFetchersItem) {
     if (this.subtitleFetchers == null) {
-      this.subtitleFetchers = new ArrayList<LibraryLibraryOptionInfo>();
+      this.subtitleFetchers = new ArrayList<LibraryOptionInfo>();
     }
     this.subtitleFetchers.add(subtitleFetchersItem);
     return this;
@@ -109,22 +109,22 @@ public class LibraryLibraryOptionsResult {
    * @return subtitleFetchers
   **/
   @Schema(description = "")
-  public List<LibraryLibraryOptionInfo> getSubtitleFetchers() {
+  public List<LibraryOptionInfo> getSubtitleFetchers() {
     return subtitleFetchers;
   }
 
-  public void setSubtitleFetchers(List<LibraryLibraryOptionInfo> subtitleFetchers) {
+  public void setSubtitleFetchers(List<LibraryOptionInfo> subtitleFetchers) {
     this.subtitleFetchers = subtitleFetchers;
   }
 
-  public LibraryLibraryOptionsResult lyricsFetchers(List<LibraryLibraryOptionInfo> lyricsFetchers) {
+  public LibraryOptionsResult lyricsFetchers(List<LibraryOptionInfo> lyricsFetchers) {
     this.lyricsFetchers = lyricsFetchers;
     return this;
   }
 
-  public LibraryLibraryOptionsResult addLyricsFetchersItem(LibraryLibraryOptionInfo lyricsFetchersItem) {
+  public LibraryOptionsResult addLyricsFetchersItem(LibraryOptionInfo lyricsFetchersItem) {
     if (this.lyricsFetchers == null) {
-      this.lyricsFetchers = new ArrayList<LibraryLibraryOptionInfo>();
+      this.lyricsFetchers = new ArrayList<LibraryOptionInfo>();
     }
     this.lyricsFetchers.add(lyricsFetchersItem);
     return this;
@@ -135,22 +135,22 @@ public class LibraryLibraryOptionsResult {
    * @return lyricsFetchers
   **/
   @Schema(description = "")
-  public List<LibraryLibraryOptionInfo> getLyricsFetchers() {
+  public List<LibraryOptionInfo> getLyricsFetchers() {
     return lyricsFetchers;
   }
 
-  public void setLyricsFetchers(List<LibraryLibraryOptionInfo> lyricsFetchers) {
+  public void setLyricsFetchers(List<LibraryOptionInfo> lyricsFetchers) {
     this.lyricsFetchers = lyricsFetchers;
   }
 
-  public LibraryLibraryOptionsResult typeOptions(List<LibraryLibraryTypeOptions> typeOptions) {
+  public LibraryOptionsResult typeOptions(List<LibraryTypeOptions> typeOptions) {
     this.typeOptions = typeOptions;
     return this;
   }
 
-  public LibraryLibraryOptionsResult addTypeOptionsItem(LibraryLibraryTypeOptions typeOptionsItem) {
+  public LibraryOptionsResult addTypeOptionsItem(LibraryTypeOptions typeOptionsItem) {
     if (this.typeOptions == null) {
-      this.typeOptions = new ArrayList<LibraryLibraryTypeOptions>();
+      this.typeOptions = new ArrayList<LibraryTypeOptions>();
     }
     this.typeOptions.add(typeOptionsItem);
     return this;
@@ -161,11 +161,11 @@ public class LibraryLibraryOptionsResult {
    * @return typeOptions
   **/
   @Schema(description = "")
-  public List<LibraryLibraryTypeOptions> getTypeOptions() {
+  public List<LibraryTypeOptions> getTypeOptions() {
     return typeOptions;
   }
 
-  public void setTypeOptions(List<LibraryLibraryTypeOptions> typeOptions) {
+  public void setTypeOptions(List<LibraryTypeOptions> typeOptions) {
     this.typeOptions = typeOptions;
   }
 
@@ -178,12 +178,12 @@ public class LibraryLibraryOptionsResult {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LibraryLibraryOptionsResult libraryLibraryOptionsResult = (LibraryLibraryOptionsResult) o;
-    return Objects.equals(this.metadataSavers, libraryLibraryOptionsResult.metadataSavers) &&
-        Objects.equals(this.metadataReaders, libraryLibraryOptionsResult.metadataReaders) &&
-        Objects.equals(this.subtitleFetchers, libraryLibraryOptionsResult.subtitleFetchers) &&
-        Objects.equals(this.lyricsFetchers, libraryLibraryOptionsResult.lyricsFetchers) &&
-        Objects.equals(this.typeOptions, libraryLibraryOptionsResult.typeOptions);
+    LibraryOptionsResult libraryOptionsResult = (LibraryOptionsResult) o;
+    return Objects.equals(this.metadataSavers, libraryOptionsResult.metadataSavers) &&
+        Objects.equals(this.metadataReaders, libraryOptionsResult.metadataReaders) &&
+        Objects.equals(this.subtitleFetchers, libraryOptionsResult.subtitleFetchers) &&
+        Objects.equals(this.lyricsFetchers, libraryOptionsResult.lyricsFetchers) &&
+        Objects.equals(this.typeOptions, libraryOptionsResult.typeOptions);
   }
 
   @Override
@@ -195,7 +195,7 @@ public class LibraryLibraryOptionsResult {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class LibraryLibraryOptionsResult {\n");
+    sb.append("class LibraryOptionsResult {\n");
     
     sb.append("    metadataSavers: ").append(toIndentedString(metadataSavers)).append("\n");
     sb.append("    metadataReaders: ").append(toIndentedString(metadataReaders)).append("\n");

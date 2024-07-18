@@ -10680,7 +10680,7 @@ open class LibraryServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLibrariesAvailableoptions(completion: @escaping ((_ data: LibraryLibraryOptionsResult?,_ error: Error?) -> Void)) {
+    open class func getLibrariesAvailableoptions(completion: @escaping ((_ data: LibraryOptionsResult?,_ error: Error?) -> Void)) {
         getLibrariesAvailableoptionsWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -10738,16 +10738,16 @@ open class LibraryServiceAPI {
   } ]
 }}]
 
-     - returns: RequestBuilder<LibraryLibraryOptionsResult> 
+     - returns: RequestBuilder<LibraryOptionsResult> 
      */
-    open class func getLibrariesAvailableoptionsWithRequestBuilder() -> RequestBuilder<LibraryLibraryOptionsResult> {
+    open class func getLibrariesAvailableoptionsWithRequestBuilder() -> RequestBuilder<LibraryOptionsResult> {
         let path = "/Libraries/AvailableOptions"
         let URLString = EmbyClientAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<LibraryLibraryOptionsResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<LibraryOptionsResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

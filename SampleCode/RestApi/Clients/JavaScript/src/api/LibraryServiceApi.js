@@ -14,8 +14,8 @@ import AllThemeMediaResult from '../model/AllThemeMediaResult';
 import BaseItemDto from '../model/BaseItemDto';
 import ItemCounts from '../model/ItemCounts';
 import LibraryDeleteInfo from '../model/LibraryDeleteInfo';
-import LibraryLibraryOptionsResult from '../model/LibraryLibraryOptionsResult';
 import LibraryMediaFolder from '../model/LibraryMediaFolder';
+import LibraryOptionsResult from '../model/LibraryOptionsResult';
 import LibraryPostUpdatedMedia from '../model/LibraryPostUpdatedMedia';
 import PersistenceIntroDebugInfo from '../model/PersistenceIntroDebugInfo';
 import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
@@ -24,7 +24,7 @@ import ThemeMediaResult from '../model/ThemeMediaResult';
 /**
 * LibraryService service.
 * @module api/LibraryServiceApi
-* @version 4.9.0.26
+* @version 4.9.0.27
 */
 export default class LibraryServiceApi {
 
@@ -815,7 +815,7 @@ export default class LibraryServiceApi {
 
     /**
      * Requires authentication as user
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LibraryLibraryOptionsResult} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LibraryOptionsResult} and HTTP response
      */
     getLibrariesAvailableoptionsWithHttpInfo() {
       let postBody = null;
@@ -832,7 +832,7 @@ export default class LibraryServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = LibraryLibraryOptionsResult;
+      let returnType = LibraryOptionsResult;
 
       return this.apiClient.callApi(
         '/Libraries/AvailableOptions', 'GET',
@@ -843,7 +843,7 @@ export default class LibraryServiceApi {
 
     /**
      * Requires authentication as user
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LibraryLibraryOptionsResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LibraryOptionsResult}
      */
     getLibrariesAvailableoptions() {
       return this.getLibrariesAvailableoptionsWithHttpInfo()

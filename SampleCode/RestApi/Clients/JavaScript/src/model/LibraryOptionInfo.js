@@ -13,14 +13,14 @@ import ApiClient from '../ApiClient';
 import MetadataFeatures from './MetadataFeatures';
 
 /**
-* The LibraryLibraryOptionInfo model module.
-* @module model/LibraryLibraryOptionInfo
-* @version 4.9.0.26
+* The LibraryOptionInfo model module.
+* @module model/LibraryOptionInfo
+* @version 4.9.0.27
 */
-export default class LibraryLibraryOptionInfo {
+export default class LibraryOptionInfo {
     /**
-    * Constructs a new <code>LibraryLibraryOptionInfo</code>.
-    * @alias module:model/LibraryLibraryOptionInfo
+    * Constructs a new <code>LibraryOptionInfo</code>.
+    * @alias module:model/LibraryOptionInfo
     * @class
     */
 
@@ -31,15 +31,15 @@ export default class LibraryLibraryOptionInfo {
     }
 
     /**
-    * Constructs a <code>LibraryLibraryOptionInfo</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>LibraryOptionInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/LibraryLibraryOptionInfo} obj Optional instance to populate.
-    * @return {module:model/LibraryLibraryOptionInfo} The populated <code>LibraryLibraryOptionInfo</code> instance.
+    * @param {module:model/LibraryOptionInfo} obj Optional instance to populate.
+    * @return {module:model/LibraryOptionInfo} The populated <code>LibraryOptionInfo</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new LibraryLibraryOptionInfo();
+            obj = obj || new LibraryOptionInfo();
                         
             
             if (data.hasOwnProperty('Name')) {

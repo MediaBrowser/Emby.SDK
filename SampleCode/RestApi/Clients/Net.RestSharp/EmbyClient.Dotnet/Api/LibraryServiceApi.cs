@@ -473,8 +473,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>LibraryLibraryOptionsResult</returns>
-        LibraryLibraryOptionsResult GetLibrariesAvailableoptions ();
+        /// <returns>LibraryOptionsResult</returns>
+        LibraryOptionsResult GetLibrariesAvailableoptions ();
 
         /// <summary>
         /// 
@@ -483,8 +483,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of LibraryLibraryOptionsResult</returns>
-        ApiResponse<LibraryLibraryOptionsResult> GetLibrariesAvailableoptionsWithHttpInfo ();
+        /// <returns>ApiResponse of LibraryOptionsResult</returns>
+        ApiResponse<LibraryOptionsResult> GetLibrariesAvailableoptionsWithHttpInfo ();
         /// <summary>
         /// Gets all user media folders.
         /// </summary>
@@ -1270,8 +1270,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of LibraryLibraryOptionsResult</returns>
-        System.Threading.Tasks.Task<LibraryLibraryOptionsResult> GetLibrariesAvailableoptionsAsync ();
+        /// <returns>Task of LibraryOptionsResult</returns>
+        System.Threading.Tasks.Task<LibraryOptionsResult> GetLibrariesAvailableoptionsAsync ();
 
         /// <summary>
         /// 
@@ -1280,8 +1280,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (LibraryLibraryOptionsResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LibraryLibraryOptionsResult>> GetLibrariesAvailableoptionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (LibraryOptionsResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LibraryOptionsResult>> GetLibrariesAvailableoptionsAsyncWithHttpInfo ();
         /// <summary>
         /// Gets all user media folders.
         /// </summary>
@@ -4505,10 +4505,10 @@ namespace EmbyClient.Dotnet.Api
         ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>LibraryLibraryOptionsResult</returns>
-        public LibraryLibraryOptionsResult GetLibrariesAvailableoptions ()
+        /// <returns>LibraryOptionsResult</returns>
+        public LibraryOptionsResult GetLibrariesAvailableoptions ()
         {
-             ApiResponse<LibraryLibraryOptionsResult> localVarResponse = GetLibrariesAvailableoptionsWithHttpInfo();
+             ApiResponse<LibraryOptionsResult> localVarResponse = GetLibrariesAvailableoptionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -4516,8 +4516,8 @@ namespace EmbyClient.Dotnet.Api
         ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of LibraryLibraryOptionsResult</returns>
-        public ApiResponse< LibraryLibraryOptionsResult > GetLibrariesAvailableoptionsWithHttpInfo ()
+        /// <returns>ApiResponse of LibraryOptionsResult</returns>
+        public ApiResponse< LibraryOptionsResult > GetLibrariesAvailableoptionsWithHttpInfo ()
         {
 
             var localVarPath = "/Libraries/AvailableOptions";
@@ -4567,19 +4567,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<LibraryLibraryOptionsResult>(localVarStatusCode,
+            return new ApiResponse<LibraryOptionsResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (LibraryLibraryOptionsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryLibraryOptionsResult)));
+                (LibraryOptionsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryOptionsResult)));
         }
 
         /// <summary>
         ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of LibraryLibraryOptionsResult</returns>
-        public async System.Threading.Tasks.Task<LibraryLibraryOptionsResult> GetLibrariesAvailableoptionsAsync ()
+        /// <returns>Task of LibraryOptionsResult</returns>
+        public async System.Threading.Tasks.Task<LibraryOptionsResult> GetLibrariesAvailableoptionsAsync ()
         {
-             ApiResponse<LibraryLibraryOptionsResult> localVarResponse = await GetLibrariesAvailableoptionsAsyncWithHttpInfo();
+             ApiResponse<LibraryOptionsResult> localVarResponse = await GetLibrariesAvailableoptionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -4588,8 +4588,8 @@ namespace EmbyClient.Dotnet.Api
         ///  Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (LibraryLibraryOptionsResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LibraryLibraryOptionsResult>> GetLibrariesAvailableoptionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (LibraryOptionsResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LibraryOptionsResult>> GetLibrariesAvailableoptionsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Libraries/AvailableOptions";
@@ -4639,9 +4639,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<LibraryLibraryOptionsResult>(localVarStatusCode,
+            return new ApiResponse<LibraryOptionsResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (LibraryLibraryOptionsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryLibraryOptionsResult)));
+                (LibraryOptionsResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LibraryOptionsResult)));
         }
 
         /// <summary>

@@ -18,11 +18,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * LibraryLibraryOptionInfo
+ * LibraryOptionInfo
  */
 
 
-public class LibraryLibraryOptionInfo {
+public class LibraryOptionInfo {
   @SerializedName("Name")
   private String name = null;
 
@@ -35,7 +35,7 @@ public class LibraryLibraryOptionInfo {
   @SerializedName("Features")
   private List<MetadataFeatures> features = null;
 
-  public LibraryLibraryOptionInfo name(String name) {
+  public LibraryOptionInfo name(String name) {
     this.name = name;
     return this;
   }
@@ -53,7 +53,7 @@ public class LibraryLibraryOptionInfo {
     this.name = name;
   }
 
-  public LibraryLibraryOptionInfo setupUrl(String setupUrl) {
+  public LibraryOptionInfo setupUrl(String setupUrl) {
     this.setupUrl = setupUrl;
     return this;
   }
@@ -71,7 +71,7 @@ public class LibraryLibraryOptionInfo {
     this.setupUrl = setupUrl;
   }
 
-  public LibraryLibraryOptionInfo defaultEnabled(Boolean defaultEnabled) {
+  public LibraryOptionInfo defaultEnabled(Boolean defaultEnabled) {
     this.defaultEnabled = defaultEnabled;
     return this;
   }
@@ -89,12 +89,12 @@ public class LibraryLibraryOptionInfo {
     this.defaultEnabled = defaultEnabled;
   }
 
-  public LibraryLibraryOptionInfo features(List<MetadataFeatures> features) {
+  public LibraryOptionInfo features(List<MetadataFeatures> features) {
     this.features = features;
     return this;
   }
 
-  public LibraryLibraryOptionInfo addFeaturesItem(MetadataFeatures featuresItem) {
+  public LibraryOptionInfo addFeaturesItem(MetadataFeatures featuresItem) {
     if (this.features == null) {
       this.features = new ArrayList<MetadataFeatures>();
     }
@@ -124,11 +124,11 @@ public class LibraryLibraryOptionInfo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LibraryLibraryOptionInfo libraryLibraryOptionInfo = (LibraryLibraryOptionInfo) o;
-    return Objects.equals(this.name, libraryLibraryOptionInfo.name) &&
-        Objects.equals(this.setupUrl, libraryLibraryOptionInfo.setupUrl) &&
-        Objects.equals(this.defaultEnabled, libraryLibraryOptionInfo.defaultEnabled) &&
-        Objects.equals(this.features, libraryLibraryOptionInfo.features);
+    LibraryOptionInfo libraryOptionInfo = (LibraryOptionInfo) o;
+    return Objects.equals(this.name, libraryOptionInfo.name) &&
+        Objects.equals(this.setupUrl, libraryOptionInfo.setupUrl) &&
+        Objects.equals(this.defaultEnabled, libraryOptionInfo.defaultEnabled) &&
+        Objects.equals(this.features, libraryOptionInfo.features);
   }
 
   @Override
@@ -140,7 +140,7 @@ public class LibraryLibraryOptionInfo {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class LibraryLibraryOptionInfo {\n");
+    sb.append("class LibraryOptionInfo {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    setupUrl: ").append(toIndentedString(setupUrl)).append("\n");

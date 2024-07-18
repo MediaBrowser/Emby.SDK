@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.26"
+    "version": "4.9.0.27"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -18292,7 +18292,7 @@
           "200": {
             "description": "Operation successful. Returning a LibraryOptionsResult object.",
             "schema": {
-              "$ref": "#/definitions/Library.LibraryOptionsResult"
+              "$ref": "#/definitions/LibraryOptionsResult"
             }
           },
           "400": {
@@ -60963,43 +60963,43 @@
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Persistence.IntroDebugInfo"
     },
-    "Library.LibraryOptionsResult": {
+    "LibraryOptionsResult": {
       "type": "object",
       "properties": {
         "MetadataSavers": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.LibraryOptionInfo"
+            "$ref": "#/definitions/LibraryOptionInfo"
           }
         },
         "MetadataReaders": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.LibraryOptionInfo"
+            "$ref": "#/definitions/LibraryOptionInfo"
           }
         },
         "SubtitleFetchers": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.LibraryOptionInfo"
+            "$ref": "#/definitions/LibraryOptionInfo"
           }
         },
         "LyricsFetchers": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.LibraryOptionInfo"
+            "$ref": "#/definitions/LibraryOptionInfo"
           }
         },
         "TypeOptions": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.LibraryTypeOptions"
+            "$ref": "#/definitions/LibraryTypeOptions"
           }
         }
       },
-      "x-internal-ref-name": "Emby.Api.Library.LibraryOptionsResult"
+      "x-internal-ref-name": "MediaBrowser.Controller.Providers.LibraryOptionsResult"
     },
-    "Library.LibraryOptionInfo": {
+    "LibraryOptionInfo": {
       "type": "object",
       "properties": {
         "Name": {
@@ -61018,7 +61018,7 @@
           }
         }
       },
-      "x-internal-ref-name": "Emby.Api.Library.LibraryOptionInfo"
+      "x-internal-ref-name": "MediaBrowser.Controller.Providers.LibraryOptionInfo"
     },
     "MetadataFeatures": {
       "enum": [
@@ -61029,7 +61029,7 @@
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Configuration.MetadataFeatures"
     },
-    "Library.LibraryTypeOptions": {
+    "LibraryTypeOptions": {
       "type": "object",
       "properties": {
         "Type": {
@@ -61038,13 +61038,13 @@
         "MetadataFetchers": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.LibraryOptionInfo"
+            "$ref": "#/definitions/LibraryOptionInfo"
           }
         },
         "ImageFetchers": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Library.LibraryOptionInfo"
+            "$ref": "#/definitions/LibraryOptionInfo"
           }
         },
         "SupportedImageTypes": {
@@ -61060,7 +61060,7 @@
           }
         }
       },
-      "x-internal-ref-name": "Emby.Api.Library.LibraryTypeOptions"
+      "x-internal-ref-name": "MediaBrowser.Controller.Providers.LibraryTypeOptions"
     },
     "ImageOption": {
       "type": "object",
@@ -61341,6 +61341,12 @@
           "type": "boolean"
         },
         "ImportCollections": {
+          "type": "boolean"
+        },
+        "DisableMultiVersionItems": {
+          "type": "boolean"
+        },
+        "DisableMultiPartItems": {
           "type": "boolean"
         },
         "MinCollectionItems": {

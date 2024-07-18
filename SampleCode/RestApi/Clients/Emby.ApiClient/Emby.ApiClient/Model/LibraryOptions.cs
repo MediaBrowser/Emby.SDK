@@ -327,6 +327,18 @@ namespace Emby.ApiClient.Model
         public bool? ImportCollections { get; set; }
 
         /// <summary>
+        /// Gets or Sets DisableMultiVersionItems
+        /// </summary>
+        /// <value>The DisableMultiVersionItems.</value>
+        public bool? DisableMultiVersionItems { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisableMultiPartItems
+        /// </summary>
+        /// <value>The DisableMultiPartItems.</value>
+        public bool? DisableMultiPartItems { get; set; }
+
+        /// <summary>
         /// Gets or Sets MinCollectionItems
         /// </summary>
         /// <value>The MinCollectionItems.</value>
@@ -426,6 +438,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  CollapseSingleItemFolders: ").Append(CollapseSingleItemFolders).Append("\n");
             sb.Append("  EnableAdultMetadata: ").Append(EnableAdultMetadata).Append("\n");
             sb.Append("  ImportCollections: ").Append(ImportCollections).Append("\n");
+            sb.Append("  DisableMultiVersionItems: ").Append(DisableMultiVersionItems).Append("\n");
+            sb.Append("  DisableMultiPartItems: ").Append(DisableMultiPartItems).Append("\n");
             sb.Append("  MinCollectionItems: ").Append(MinCollectionItems).Append("\n");
             sb.Append("  MusicFolderStructure: ").Append(MusicFolderStructure).Append("\n");
             sb.Append("  MinResumePct: ").Append(MinResumePct).Append("\n");
@@ -721,6 +735,16 @@ namespace Emby.ApiClient.Model
                     this.ImportCollections.Equals(input.ImportCollections))
                 ) && 
                 (
+                    this.DisableMultiVersionItems == input.DisableMultiVersionItems ||
+                    (this.DisableMultiVersionItems != null &&
+                    this.DisableMultiVersionItems.Equals(input.DisableMultiVersionItems))
+                ) && 
+                (
+                    this.DisableMultiPartItems == input.DisableMultiPartItems ||
+                    (this.DisableMultiPartItems != null &&
+                    this.DisableMultiPartItems.Equals(input.DisableMultiPartItems))
+                ) && 
+                (
                     this.MinCollectionItems == input.MinCollectionItems ||
                     (this.MinCollectionItems != null &&
                     this.MinCollectionItems.Equals(input.MinCollectionItems))
@@ -866,6 +890,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.EnableAdultMetadata.GetHashCode();
                 if (this.ImportCollections != null)
                     hashCode = hashCode * 59 + this.ImportCollections.GetHashCode();
+                if (this.DisableMultiVersionItems != null)
+                    hashCode = hashCode * 59 + this.DisableMultiVersionItems.GetHashCode();
+                if (this.DisableMultiPartItems != null)
+                    hashCode = hashCode * 59 + this.DisableMultiPartItems.GetHashCode();
                 if (this.MinCollectionItems != null)
                     hashCode = hashCode * 59 + this.MinCollectionItems.GetHashCode();
                 if (this.MusicFolderStructure != null)

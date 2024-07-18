@@ -18,20 +18,20 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// LibraryLibraryTypeOptions
+    /// LibraryTypeOptions
     /// </summary>
     [DataContract]
-        public partial class LibraryLibraryTypeOptions :  IEquatable<LibraryLibraryTypeOptions>
+        public partial class LibraryTypeOptions :  IEquatable<LibraryTypeOptions>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LibraryLibraryTypeOptions" /> class.
+        /// Initializes a new instance of the <see cref="LibraryTypeOptions" /> class.
         /// </summary>
         /// <param name="type">type.</param>
         /// <param name="metadataFetchers">metadataFetchers.</param>
         /// <param name="imageFetchers">imageFetchers.</param>
         /// <param name="supportedImageTypes">supportedImageTypes.</param>
         /// <param name="defaultImageOptions">defaultImageOptions.</param>
-        public LibraryLibraryTypeOptions(string type = default(string), List<LibraryLibraryOptionInfo> metadataFetchers = default(List<LibraryLibraryOptionInfo>), List<LibraryLibraryOptionInfo> imageFetchers = default(List<LibraryLibraryOptionInfo>), List<ImageType> supportedImageTypes = default(List<ImageType>), List<ImageOption> defaultImageOptions = default(List<ImageOption>))
+        public LibraryTypeOptions(string type = default(string), List<LibraryOptionInfo> metadataFetchers = default(List<LibraryOptionInfo>), List<LibraryOptionInfo> imageFetchers = default(List<LibraryOptionInfo>), List<ImageType> supportedImageTypes = default(List<ImageType>), List<ImageOption> defaultImageOptions = default(List<ImageOption>))
         {
             this.Type = type;
             this.MetadataFetchers = metadataFetchers;
@@ -50,13 +50,13 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets MetadataFetchers
         /// </summary>
         [DataMember(Name="MetadataFetchers", EmitDefaultValue=false)]
-        public List<LibraryLibraryOptionInfo> MetadataFetchers { get; set; }
+        public List<LibraryOptionInfo> MetadataFetchers { get; set; }
 
         /// <summary>
         /// Gets or Sets ImageFetchers
         /// </summary>
         [DataMember(Name="ImageFetchers", EmitDefaultValue=false)]
-        public List<LibraryLibraryOptionInfo> ImageFetchers { get; set; }
+        public List<LibraryOptionInfo> ImageFetchers { get; set; }
 
         /// <summary>
         /// Gets or Sets SupportedImageTypes
@@ -77,7 +77,7 @@ namespace EmbyClient.Dotnet.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class LibraryLibraryTypeOptions {\n");
+            sb.Append("class LibraryTypeOptions {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  MetadataFetchers: ").Append(MetadataFetchers).Append("\n");
             sb.Append("  ImageFetchers: ").Append(ImageFetchers).Append("\n");
@@ -103,15 +103,15 @@ namespace EmbyClient.Dotnet.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as LibraryLibraryTypeOptions);
+            return this.Equals(input as LibraryTypeOptions);
         }
 
         /// <summary>
-        /// Returns true if LibraryLibraryTypeOptions instances are equal
+        /// Returns true if LibraryTypeOptions instances are equal
         /// </summary>
-        /// <param name="input">Instance of LibraryLibraryTypeOptions to be compared</param>
+        /// <param name="input">Instance of LibraryTypeOptions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(LibraryLibraryTypeOptions input)
+        public bool Equals(LibraryTypeOptions input)
         {
             if (input == null)
                 return false;

@@ -15,7 +15,7 @@ import SeriesInfo from './SeriesInfo';
 /**
 * The RemoteSearchQuerySeriesInfo model module.
 * @module model/RemoteSearchQuerySeriesInfo
-* @version 4.9.0.26
+* @version 4.9.0.27
 */
 export default class RemoteSearchQuerySeriesInfo {
     /**

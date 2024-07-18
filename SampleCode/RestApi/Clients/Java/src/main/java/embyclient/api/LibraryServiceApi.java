@@ -23,8 +23,8 @@ import embyclient.model.AllThemeMediaResult;
 import embyclient.model.BaseItemDto;
 import embyclient.model.ItemCounts;
 import embyclient.model.LibraryDeleteInfo;
-import embyclient.model.LibraryLibraryOptionsResult;
 import embyclient.model.LibraryMediaFolder;
+import embyclient.model.LibraryOptionsResult;
 import embyclient.model.LibraryPostUpdatedMedia;
 import embyclient.model.PersistenceIntroDebugInfo;
 import embyclient.model.QueryResultBaseItemDto;
@@ -2481,23 +2481,23 @@ public class LibraryServiceApi {
     /**
      * 
      * Requires authentication as user
-     * @return LibraryLibraryOptionsResult
+     * @return LibraryOptionsResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public LibraryLibraryOptionsResult getLibrariesAvailableoptions() throws ApiException {
-        ApiResponse<LibraryLibraryOptionsResult> resp = getLibrariesAvailableoptionsWithHttpInfo();
+    public LibraryOptionsResult getLibrariesAvailableoptions() throws ApiException {
+        ApiResponse<LibraryOptionsResult> resp = getLibrariesAvailableoptionsWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * 
      * Requires authentication as user
-     * @return ApiResponse&lt;LibraryLibraryOptionsResult&gt;
+     * @return ApiResponse&lt;LibraryOptionsResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<LibraryLibraryOptionsResult> getLibrariesAvailableoptionsWithHttpInfo() throws ApiException {
+    public ApiResponse<LibraryOptionsResult> getLibrariesAvailableoptionsWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getLibrariesAvailableoptionsValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<LibraryLibraryOptionsResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<LibraryOptionsResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -2508,7 +2508,7 @@ public class LibraryServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getLibrariesAvailableoptionsAsync(final ApiCallback<LibraryLibraryOptionsResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getLibrariesAvailableoptionsAsync(final ApiCallback<LibraryOptionsResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -2530,7 +2530,7 @@ public class LibraryServiceApi {
         }
 
         com.squareup.okhttp.Call call = getLibrariesAvailableoptionsValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<LibraryLibraryOptionsResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<LibraryOptionsResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

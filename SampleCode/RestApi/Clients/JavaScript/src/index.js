@@ -119,17 +119,17 @@ import LibraryAddMediaPath from './model/LibraryAddMediaPath';
 import LibraryAddVirtualFolder from './model/LibraryAddVirtualFolder';
 import LibraryDeleteInfo from './model/LibraryDeleteInfo';
 import LibraryItemLinkType from './model/LibraryItemLinkType';
-import LibraryLibraryOptionInfo from './model/LibraryLibraryOptionInfo';
-import LibraryLibraryOptionsResult from './model/LibraryLibraryOptionsResult';
-import LibraryLibraryTypeOptions from './model/LibraryLibraryTypeOptions';
 import LibraryMediaFolder from './model/LibraryMediaFolder';
 import LibraryMediaUpdateInfo from './model/LibraryMediaUpdateInfo';
+import LibraryOptionInfo from './model/LibraryOptionInfo';
 import LibraryOptions from './model/LibraryOptions';
+import LibraryOptionsResult from './model/LibraryOptionsResult';
 import LibraryPostUpdatedMedia from './model/LibraryPostUpdatedMedia';
 import LibraryRemoveMediaPath from './model/LibraryRemoveMediaPath';
 import LibraryRemoveVirtualFolder from './model/LibraryRemoveVirtualFolder';
 import LibraryRenameVirtualFolder from './model/LibraryRenameVirtualFolder';
 import LibrarySubFolder from './model/LibrarySubFolder';
+import LibraryTypeOptions from './model/LibraryTypeOptions';
 import LibraryUpdateLibraryOptions from './model/LibraryUpdateLibraryOptions';
 import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
 import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
@@ -429,7 +429,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.9.0.26
+* @version 4.9.0.27
 */
 export {
     /**
@@ -1093,24 +1093,6 @@ export {
     LibraryItemLinkType,
 
     /**
-     * The LibraryLibraryOptionInfo model constructor.
-     * @property {module:model/LibraryLibraryOptionInfo}
-     */
-    LibraryLibraryOptionInfo,
-
-    /**
-     * The LibraryLibraryOptionsResult model constructor.
-     * @property {module:model/LibraryLibraryOptionsResult}
-     */
-    LibraryLibraryOptionsResult,
-
-    /**
-     * The LibraryLibraryTypeOptions model constructor.
-     * @property {module:model/LibraryLibraryTypeOptions}
-     */
-    LibraryLibraryTypeOptions,
-
-    /**
      * The LibraryMediaFolder model constructor.
      * @property {module:model/LibraryMediaFolder}
      */
@@ -1123,10 +1105,22 @@ export {
     LibraryMediaUpdateInfo,
 
     /**
+     * The LibraryOptionInfo model constructor.
+     * @property {module:model/LibraryOptionInfo}
+     */
+    LibraryOptionInfo,
+
+    /**
      * The LibraryOptions model constructor.
      * @property {module:model/LibraryOptions}
      */
     LibraryOptions,
+
+    /**
+     * The LibraryOptionsResult model constructor.
+     * @property {module:model/LibraryOptionsResult}
+     */
+    LibraryOptionsResult,
 
     /**
      * The LibraryPostUpdatedMedia model constructor.
@@ -1157,6 +1151,12 @@ export {
      * @property {module:model/LibrarySubFolder}
      */
     LibrarySubFolder,
+
+    /**
+     * The LibraryTypeOptions model constructor.
+     * @property {module:model/LibraryTypeOptions}
+     */
+    LibraryTypeOptions,
 
     /**
      * The LibraryUpdateLibraryOptions model constructor.

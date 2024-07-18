@@ -6,10 +6,10 @@
  */
 package embyclient
 
-type LibraryLibraryTypeOptions struct {
+type LibraryTypeOptions struct {
 	Type_ string `json:"Type,omitempty"`
-	MetadataFetchers []LibraryLibraryOptionInfo `json:"MetadataFetchers,omitempty"`
-	ImageFetchers []LibraryLibraryOptionInfo `json:"ImageFetchers,omitempty"`
+	MetadataFetchers []LibraryOptionInfo `json:"MetadataFetchers,omitempty"`
+	ImageFetchers []LibraryOptionInfo `json:"ImageFetchers,omitempty"`
 	SupportedImageTypes []ImageType `json:"SupportedImageTypes,omitempty"`
 	DefaultImageOptions []ImageOption `json:"DefaultImageOptions,omitempty"`
 }

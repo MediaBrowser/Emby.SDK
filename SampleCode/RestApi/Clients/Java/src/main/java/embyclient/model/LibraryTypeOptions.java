@@ -14,25 +14,25 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import embyclient.model.ImageOption;
 import embyclient.model.ImageType;
-import embyclient.model.LibraryLibraryOptionInfo;
+import embyclient.model.LibraryOptionInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * LibraryLibraryTypeOptions
+ * LibraryTypeOptions
  */
 
 
-public class LibraryLibraryTypeOptions {
+public class LibraryTypeOptions {
   @SerializedName("Type")
   private String type = null;
 
   @SerializedName("MetadataFetchers")
-  private List<LibraryLibraryOptionInfo> metadataFetchers = null;
+  private List<LibraryOptionInfo> metadataFetchers = null;
 
   @SerializedName("ImageFetchers")
-  private List<LibraryLibraryOptionInfo> imageFetchers = null;
+  private List<LibraryOptionInfo> imageFetchers = null;
 
   @SerializedName("SupportedImageTypes")
   private List<ImageType> supportedImageTypes = null;
@@ -40,7 +40,7 @@ public class LibraryLibraryTypeOptions {
   @SerializedName("DefaultImageOptions")
   private List<ImageOption> defaultImageOptions = null;
 
-  public LibraryLibraryTypeOptions type(String type) {
+  public LibraryTypeOptions type(String type) {
     this.type = type;
     return this;
   }
@@ -58,14 +58,14 @@ public class LibraryLibraryTypeOptions {
     this.type = type;
   }
 
-  public LibraryLibraryTypeOptions metadataFetchers(List<LibraryLibraryOptionInfo> metadataFetchers) {
+  public LibraryTypeOptions metadataFetchers(List<LibraryOptionInfo> metadataFetchers) {
     this.metadataFetchers = metadataFetchers;
     return this;
   }
 
-  public LibraryLibraryTypeOptions addMetadataFetchersItem(LibraryLibraryOptionInfo metadataFetchersItem) {
+  public LibraryTypeOptions addMetadataFetchersItem(LibraryOptionInfo metadataFetchersItem) {
     if (this.metadataFetchers == null) {
-      this.metadataFetchers = new ArrayList<LibraryLibraryOptionInfo>();
+      this.metadataFetchers = new ArrayList<LibraryOptionInfo>();
     }
     this.metadataFetchers.add(metadataFetchersItem);
     return this;
@@ -76,22 +76,22 @@ public class LibraryLibraryTypeOptions {
    * @return metadataFetchers
   **/
   @Schema(description = "")
-  public List<LibraryLibraryOptionInfo> getMetadataFetchers() {
+  public List<LibraryOptionInfo> getMetadataFetchers() {
     return metadataFetchers;
   }
 
-  public void setMetadataFetchers(List<LibraryLibraryOptionInfo> metadataFetchers) {
+  public void setMetadataFetchers(List<LibraryOptionInfo> metadataFetchers) {
     this.metadataFetchers = metadataFetchers;
   }
 
-  public LibraryLibraryTypeOptions imageFetchers(List<LibraryLibraryOptionInfo> imageFetchers) {
+  public LibraryTypeOptions imageFetchers(List<LibraryOptionInfo> imageFetchers) {
     this.imageFetchers = imageFetchers;
     return this;
   }
 
-  public LibraryLibraryTypeOptions addImageFetchersItem(LibraryLibraryOptionInfo imageFetchersItem) {
+  public LibraryTypeOptions addImageFetchersItem(LibraryOptionInfo imageFetchersItem) {
     if (this.imageFetchers == null) {
-      this.imageFetchers = new ArrayList<LibraryLibraryOptionInfo>();
+      this.imageFetchers = new ArrayList<LibraryOptionInfo>();
     }
     this.imageFetchers.add(imageFetchersItem);
     return this;
@@ -102,20 +102,20 @@ public class LibraryLibraryTypeOptions {
    * @return imageFetchers
   **/
   @Schema(description = "")
-  public List<LibraryLibraryOptionInfo> getImageFetchers() {
+  public List<LibraryOptionInfo> getImageFetchers() {
     return imageFetchers;
   }
 
-  public void setImageFetchers(List<LibraryLibraryOptionInfo> imageFetchers) {
+  public void setImageFetchers(List<LibraryOptionInfo> imageFetchers) {
     this.imageFetchers = imageFetchers;
   }
 
-  public LibraryLibraryTypeOptions supportedImageTypes(List<ImageType> supportedImageTypes) {
+  public LibraryTypeOptions supportedImageTypes(List<ImageType> supportedImageTypes) {
     this.supportedImageTypes = supportedImageTypes;
     return this;
   }
 
-  public LibraryLibraryTypeOptions addSupportedImageTypesItem(ImageType supportedImageTypesItem) {
+  public LibraryTypeOptions addSupportedImageTypesItem(ImageType supportedImageTypesItem) {
     if (this.supportedImageTypes == null) {
       this.supportedImageTypes = new ArrayList<ImageType>();
     }
@@ -136,12 +136,12 @@ public class LibraryLibraryTypeOptions {
     this.supportedImageTypes = supportedImageTypes;
   }
 
-  public LibraryLibraryTypeOptions defaultImageOptions(List<ImageOption> defaultImageOptions) {
+  public LibraryTypeOptions defaultImageOptions(List<ImageOption> defaultImageOptions) {
     this.defaultImageOptions = defaultImageOptions;
     return this;
   }
 
-  public LibraryLibraryTypeOptions addDefaultImageOptionsItem(ImageOption defaultImageOptionsItem) {
+  public LibraryTypeOptions addDefaultImageOptionsItem(ImageOption defaultImageOptionsItem) {
     if (this.defaultImageOptions == null) {
       this.defaultImageOptions = new ArrayList<ImageOption>();
     }
@@ -171,12 +171,12 @@ public class LibraryLibraryTypeOptions {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LibraryLibraryTypeOptions libraryLibraryTypeOptions = (LibraryLibraryTypeOptions) o;
-    return Objects.equals(this.type, libraryLibraryTypeOptions.type) &&
-        Objects.equals(this.metadataFetchers, libraryLibraryTypeOptions.metadataFetchers) &&
-        Objects.equals(this.imageFetchers, libraryLibraryTypeOptions.imageFetchers) &&
-        Objects.equals(this.supportedImageTypes, libraryLibraryTypeOptions.supportedImageTypes) &&
-        Objects.equals(this.defaultImageOptions, libraryLibraryTypeOptions.defaultImageOptions);
+    LibraryTypeOptions libraryTypeOptions = (LibraryTypeOptions) o;
+    return Objects.equals(this.type, libraryTypeOptions.type) &&
+        Objects.equals(this.metadataFetchers, libraryTypeOptions.metadataFetchers) &&
+        Objects.equals(this.imageFetchers, libraryTypeOptions.imageFetchers) &&
+        Objects.equals(this.supportedImageTypes, libraryTypeOptions.supportedImageTypes) &&
+        Objects.equals(this.defaultImageOptions, libraryTypeOptions.defaultImageOptions);
   }
 
   @Override
@@ -188,7 +188,7 @@ public class LibraryLibraryTypeOptions {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class LibraryLibraryTypeOptions {\n");
+    sb.append("class LibraryTypeOptions {\n");
     
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    metadataFetchers: ").append(toIndentedString(metadataFetchers)).append("\n");
