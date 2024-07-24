@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * ItemsService service.
 * @module api/ItemsServiceApi
-* @version 4.9.0.27
+* @version 4.9.0.28
 */
 export default class ItemsServiceApi {
 
