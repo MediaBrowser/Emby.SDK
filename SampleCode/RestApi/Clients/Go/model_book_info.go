@@ -13,6 +13,7 @@ type BookInfo struct {
 	SeriesName string `json:"SeriesName,omitempty"`
 	// The name.
 	Name string `json:"Name,omitempty"`
+	Path string `json:"Path,omitempty"`
 	// The metadata language.
 	MetadataLanguage string `json:"MetadataLanguage,omitempty"`
 	// The metadata country code.

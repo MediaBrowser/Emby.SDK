@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ProfileInformation model module.
 * @module model/ProfileInformation
-* @version 4.9.0.28
+* @version 4.9.0.29
 */
 export default class ProfileInformation {
     /**

@@ -28,6 +28,7 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="seriesName">seriesName.</param>
         /// <param name="name">The name..</param>
+        /// <param name="path">path.</param>
         /// <param name="metadataLanguage">The metadata language..</param>
         /// <param name="metadataCountryCode">The metadata country code..</param>
         /// <param name="metadataLanguages">metadataLanguages.</param>
@@ -38,10 +39,11 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="premiereDate">premiereDate.</param>
         /// <param name="isAutomated">isAutomated.</param>
         /// <param name="enableAdultMetadata">enableAdultMetadata.</param>
-        public BookInfo(string seriesName = default(string), string name = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), List<GlobalizationCultureDto> metadataLanguages = default(List<GlobalizationCultureDto>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
+        public BookInfo(string seriesName = default(string), string name = default(string), string path = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), List<GlobalizationCultureDto> metadataLanguages = default(List<GlobalizationCultureDto>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
         {
             this.SeriesName = seriesName;
             this.Name = name;
+            this.Path = path;
             this.MetadataLanguage = metadataLanguage;
             this.MetadataCountryCode = metadataCountryCode;
             this.MetadataLanguages = metadataLanguages;
@@ -66,6 +68,12 @@ namespace EmbyClient.Dotnet.Model
         /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Path
+        /// </summary>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// The metadata language.
@@ -140,6 +148,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class BookInfo {\n");
             sb.Append("  SeriesName: ").Append(SeriesName).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  MetadataLanguage: ").Append(MetadataLanguage).Append("\n");
             sb.Append("  MetadataCountryCode: ").Append(MetadataCountryCode).Append("\n");
             sb.Append("  MetadataLanguages: ").Append(MetadataLanguages).Append("\n");
@@ -193,6 +202,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
                 ) && 
                 (
                     this.MetadataLanguage == input.MetadataLanguage ||
@@ -260,6 +274,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.SeriesName.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.MetadataLanguage != null)
                     hashCode = hashCode * 59 + this.MetadataLanguage.GetHashCode();
                 if (this.MetadataCountryCode != null)

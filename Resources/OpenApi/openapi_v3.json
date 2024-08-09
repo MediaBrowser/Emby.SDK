@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.28"
+    "version": "4.9.0.29"
   },
   "servers": [
     {
@@ -88363,6 +88363,9 @@
             "type": "string",
             "description": "The name."
           },
+          "Path": {
+            "type": "string"
+          },
           "MetadataLanguage": {
             "type": "string",
             "description": "The metadata language."
@@ -88517,6 +88520,9 @@
             "type": "string",
             "description": "The name."
           },
+          "Path": {
+            "type": "string"
+          },
           "MetadataLanguage": {
             "type": "string",
             "description": "The metadata language."
@@ -88594,6 +88600,9 @@
           "Name": {
             "type": "string",
             "description": "The name."
+          },
+          "Path": {
+            "type": "string"
           },
           "MetadataLanguage": {
             "type": "string",
@@ -88680,6 +88689,9 @@
           "Name": {
             "type": "string",
             "description": "The name."
+          },
+          "Path": {
+            "type": "string"
           },
           "MetadataLanguage": {
             "type": "string",
@@ -88768,6 +88780,9 @@
             "type": "string",
             "description": "The name."
           },
+          "Path": {
+            "type": "string"
+          },
           "MetadataLanguage": {
             "type": "string",
             "description": "The metadata language."
@@ -88845,6 +88860,9 @@
           "Name": {
             "type": "string",
             "description": "The name."
+          },
+          "Path": {
+            "type": "string"
           },
           "MetadataLanguage": {
             "type": "string",
@@ -88930,6 +88948,9 @@
             "type": "string",
             "description": "The name."
           },
+          "Path": {
+            "type": "string"
+          },
           "MetadataLanguage": {
             "type": "string",
             "description": "The metadata language."
@@ -89007,6 +89028,9 @@
           "Name": {
             "type": "string",
             "description": "The name."
+          },
+          "Path": {
+            "type": "string"
           },
           "MetadataLanguage": {
             "type": "string",
@@ -89099,6 +89123,9 @@
             "type": "string",
             "description": "The name."
           },
+          "Path": {
+            "type": "string"
+          },
           "MetadataLanguage": {
             "type": "string",
             "description": "The metadata language."
@@ -89173,6 +89200,9 @@
           "Name": {
             "type": "string",
             "description": "The name."
+          },
+          "Path": {
+            "type": "string"
           },
           "MetadataLanguage": {
             "type": "string",
@@ -89251,6 +89281,9 @@
           "Name": {
             "type": "string",
             "description": "The name."
+          },
+          "Path": {
+            "type": "string"
           },
           "MetadataLanguage": {
             "type": "string",

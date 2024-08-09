@@ -16,7 +16,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The BookInfo model module.
 * @module model/BookInfo
-* @version 4.9.0.28
+* @version 4.9.0.29
 */
 export default class BookInfo {
     /**
@@ -48,6 +48,9 @@ export default class BookInfo {
             }
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
+            }
+            if (data.hasOwnProperty('Path')) {
+                obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
             }
             if (data.hasOwnProperty('MetadataLanguage')) {
                 obj['MetadataLanguage'] = ApiClient.convertToType(data['MetadataLanguage'], 'String');
@@ -92,6 +95,10 @@ export default class BookInfo {
     * @member {String} Name
     */
     'Name' = undefined;
+    /**
+    * @member {String} Path
+    */
+    'Path' = undefined;
     /**
     * The metadata language.
     * @member {String} MetadataLanguage

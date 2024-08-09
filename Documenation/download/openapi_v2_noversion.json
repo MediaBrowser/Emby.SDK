@@ -65415,6 +65415,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -65558,6 +65561,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -65630,6 +65636,9 @@
       "properties": {
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -65711,6 +65720,9 @@
         },
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -65796,6 +65808,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -65868,6 +65883,9 @@
       "properties": {
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -65950,6 +65968,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -66022,6 +66043,9 @@
       "properties": {
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -66111,6 +66135,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -66180,6 +66207,9 @@
         },
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -66254,6 +66284,9 @@
       "properties": {
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {

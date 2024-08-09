@@ -15,6 +15,7 @@ type AlbumInfo struct {
 	SongInfos []SongInfo `json:"SongInfos,omitempty"`
 	// The name.
 	Name string `json:"Name,omitempty"`
+	Path string `json:"Path,omitempty"`
 	// The metadata language.
 	MetadataLanguage string `json:"MetadataLanguage,omitempty"`
 	// The metadata country code.

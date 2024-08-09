@@ -27,6 +27,7 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="ArtistInfo" /> class.
         /// </summary>
         /// <param name="name">The name..</param>
+        /// <param name="path">path.</param>
         /// <param name="metadataLanguage">The metadata language..</param>
         /// <param name="metadataCountryCode">The metadata country code..</param>
         /// <param name="metadataLanguages">metadataLanguages.</param>
@@ -37,9 +38,10 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="premiereDate">premiereDate.</param>
         /// <param name="isAutomated">isAutomated.</param>
         /// <param name="enableAdultMetadata">enableAdultMetadata.</param>
-        public ArtistInfo(string name = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), List<GlobalizationCultureDto> metadataLanguages = default(List<GlobalizationCultureDto>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
+        public ArtistInfo(string name = default(string), string path = default(string), string metadataLanguage = default(string), string metadataCountryCode = default(string), List<GlobalizationCultureDto> metadataLanguages = default(List<GlobalizationCultureDto>), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? year = default(int?), int? indexNumber = default(int?), int? parentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), bool? isAutomated = default(bool?), bool? enableAdultMetadata = default(bool?))
         {
             this.Name = name;
+            this.Path = path;
             this.MetadataLanguage = metadataLanguage;
             this.MetadataCountryCode = metadataCountryCode;
             this.MetadataLanguages = metadataLanguages;
@@ -58,6 +60,12 @@ namespace EmbyClient.Dotnet.Model
         /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Path
+        /// </summary>
+        [DataMember(Name="Path", EmitDefaultValue=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// The metadata language.
@@ -131,6 +139,7 @@ namespace EmbyClient.Dotnet.Model
             var sb = new StringBuilder();
             sb.Append("class ArtistInfo {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  MetadataLanguage: ").Append(MetadataLanguage).Append("\n");
             sb.Append("  MetadataCountryCode: ").Append(MetadataCountryCode).Append("\n");
             sb.Append("  MetadataLanguages: ").Append(MetadataLanguages).Append("\n");
@@ -179,6 +188,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
                 ) && 
                 (
                     this.MetadataLanguage == input.MetadataLanguage ||
@@ -244,6 +258,8 @@ namespace EmbyClient.Dotnet.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.MetadataLanguage != null)
                     hashCode = hashCode * 59 + this.MetadataLanguage.GetHashCode();
                 if (this.MetadataCountryCode != null)

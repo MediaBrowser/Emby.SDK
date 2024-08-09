@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.28"
+    "version": "4.9.0.29"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -65417,6 +65417,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -65560,6 +65563,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -65632,6 +65638,9 @@
       "properties": {
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -65713,6 +65722,9 @@
         },
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -65798,6 +65810,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -65870,6 +65885,9 @@
       "properties": {
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -65952,6 +65970,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -66024,6 +66045,9 @@
       "properties": {
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -66113,6 +66137,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "Path": {
+          "type": "string"
+        },
         "MetadataLanguage": {
           "description": "The metadata language.",
           "type": "string"
@@ -66182,6 +66209,9 @@
         },
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {
@@ -66256,6 +66286,9 @@
       "properties": {
         "Name": {
           "description": "The name.",
+          "type": "string"
+        },
+        "Path": {
           "type": "string"
         },
         "MetadataLanguage": {

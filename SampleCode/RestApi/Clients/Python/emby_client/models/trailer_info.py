@@ -23,6 +23,7 @@ class TrailerInfo(object):
     """
     swagger_types = {
         'name': 'str',
+        'path': 'str',
         'metadata_language': 'str',
         'metadata_country_code': 'str',
         'metadata_languages': 'list[GlobalizationCultureDto]',
@@ -37,6 +38,7 @@ class TrailerInfo(object):
 
     attribute_map = {
         'name': 'Name',
+        'path': 'Path',
         'metadata_language': 'MetadataLanguage',
         'metadata_country_code': 'MetadataCountryCode',
         'metadata_languages': 'MetadataLanguages',
@@ -49,9 +51,10 @@ class TrailerInfo(object):
         'enable_adult_metadata': 'EnableAdultMetadata'
     }
 
-    def __init__(self, name=None, metadata_language=None, metadata_country_code=None, metadata_languages=None, provider_ids=None, year=None, index_number=None, parent_index_number=None, premiere_date=None, is_automated=None, enable_adult_metadata=None):  # noqa: E501
+    def __init__(self, name=None, path=None, metadata_language=None, metadata_country_code=None, metadata_languages=None, provider_ids=None, year=None, index_number=None, parent_index_number=None, premiere_date=None, is_automated=None, enable_adult_metadata=None):  # noqa: E501
         """TrailerInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
+        self._path = None
         self._metadata_language = None
         self._metadata_country_code = None
         self._metadata_languages = None
@@ -65,6 +68,8 @@ class TrailerInfo(object):
         self.discriminator = None
         if name is not None:
             self.name = name
+        if path is not None:
+            self.path = path
         if metadata_language is not None:
             self.metadata_language = metadata_language
         if metadata_country_code is not None:
@@ -108,6 +113,27 @@ class TrailerInfo(object):
         """
 
         self._name = name
+
+    @property
+    def path(self):
+        """Gets the path of this TrailerInfo.  # noqa: E501
+
+
+        :return: The path of this TrailerInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this TrailerInfo.
+
+
+        :param path: The path of this TrailerInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._path = path
 
     @property
     def metadata_language(self):

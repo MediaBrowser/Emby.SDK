@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The DefaultDirectoryBrowserInfo model module.
 * @module model/DefaultDirectoryBrowserInfo
-* @version 4.9.0.28
+* @version 4.9.0.29
 */
 export default class DefaultDirectoryBrowserInfo {
     /**

@@ -13,6 +13,7 @@ public struct PersonLookupInfo: Codable {
 
     /** The name. */
     public var name: String?
+    public var path: String?
     /** The metadata language. */
     public var metadataLanguage: String?
     /** The metadata country code. */
@@ -27,8 +28,9 @@ public struct PersonLookupInfo: Codable {
     public var isAutomated: Bool?
     public var enableAdultMetadata: Bool?
 
-    public init(name: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
+    public init(name: String? = nil, path: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
         self.name = name
+        self.path = path
         self.metadataLanguage = metadataLanguage
         self.metadataCountryCode = metadataCountryCode
         self.metadataLanguages = metadataLanguages
@@ -43,6 +45,7 @@ public struct PersonLookupInfo: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case name = "Name"
+        case path = "Path"
         case metadataLanguage = "MetadataLanguage"
         case metadataCountryCode = "MetadataCountryCode"
         case metadataLanguages = "MetadataLanguages"

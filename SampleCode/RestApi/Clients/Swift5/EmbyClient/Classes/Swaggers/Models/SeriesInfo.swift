@@ -15,6 +15,7 @@ public struct SeriesInfo: Codable {
     public var displayOrder: SeriesDisplayOrder?
     /** The name. */
     public var name: String?
+    public var path: String?
     /** The metadata language. */
     public var metadataLanguage: String?
     /** The metadata country code. */
@@ -29,10 +30,11 @@ public struct SeriesInfo: Codable {
     public var isAutomated: Bool?
     public var enableAdultMetadata: Bool?
 
-    public init(episodeAirDate: Date? = nil, displayOrder: SeriesDisplayOrder? = nil, name: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
+    public init(episodeAirDate: Date? = nil, displayOrder: SeriesDisplayOrder? = nil, name: String? = nil, path: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
         self.episodeAirDate = episodeAirDate
         self.displayOrder = displayOrder
         self.name = name
+        self.path = path
         self.metadataLanguage = metadataLanguage
         self.metadataCountryCode = metadataCountryCode
         self.metadataLanguages = metadataLanguages
@@ -49,6 +51,7 @@ public struct SeriesInfo: Codable {
         case episodeAirDate = "EpisodeAirDate"
         case displayOrder = "DisplayOrder"
         case name = "Name"
+        case path = "Path"
         case metadataLanguage = "MetadataLanguage"
         case metadataCountryCode = "MetadataCountryCode"
         case metadataLanguages = "MetadataLanguages"

@@ -33,6 +33,12 @@ namespace Emby.ApiClient.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets Path
+        /// </summary>
+        /// <value>The Path.</value>
+        public string Path { get; set; }
+
+        /// <summary>
         /// The metadata language.
         /// </summary>
         /// <value>The MetadataLanguage.</value>
@@ -101,6 +107,7 @@ namespace Emby.ApiClient.Model
             var sb = new StringBuilder();
             sb.Append("class GameInfo {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Path: ").Append(Path).Append("\n");
             sb.Append("  MetadataLanguage: ").Append(MetadataLanguage).Append("\n");
             sb.Append("  MetadataCountryCode: ").Append(MetadataCountryCode).Append("\n");
             sb.Append("  MetadataLanguages: ").Append(MetadataLanguages).Append("\n");
@@ -140,6 +147,11 @@ namespace Emby.ApiClient.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Path == input.Path ||
+                    (this.Path != null &&
+                    this.Path.Equals(input.Path))
                 ) && 
                 (
                     this.MetadataLanguage == input.MetadataLanguage ||
@@ -205,6 +217,8 @@ namespace Emby.ApiClient.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Path != null)
+                    hashCode = hashCode * 59 + this.Path.GetHashCode();
                 if (this.MetadataLanguage != null)
                     hashCode = hashCode * 59 + this.MetadataLanguage.GetHashCode();
                 if (this.MetadataCountryCode != null)

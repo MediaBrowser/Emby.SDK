@@ -28,6 +28,9 @@ public class TrailerInfo {
   @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("Path")
+  private String path = null;
+
   @SerializedName("MetadataLanguage")
   private String metadataLanguage = null;
 
@@ -74,6 +77,24 @@ public class TrailerInfo {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public TrailerInfo path(String path) {
+    this.path = path;
+    return this;
+  }
+
+   /**
+   * Get path
+   * @return path
+  **/
+  @Schema(description = "")
+  public String getPath() {
+    return path;
+  }
+
+  public void setPath(String path) {
+    this.path = path;
   }
 
   public TrailerInfo metadataLanguage(String metadataLanguage) {
@@ -275,6 +296,7 @@ public class TrailerInfo {
     }
     TrailerInfo trailerInfo = (TrailerInfo) o;
     return Objects.equals(this.name, trailerInfo.name) &&
+        Objects.equals(this.path, trailerInfo.path) &&
         Objects.equals(this.metadataLanguage, trailerInfo.metadataLanguage) &&
         Objects.equals(this.metadataCountryCode, trailerInfo.metadataCountryCode) &&
         Objects.equals(this.metadataLanguages, trailerInfo.metadataLanguages) &&
@@ -289,7 +311,7 @@ public class TrailerInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, metadataLanguage, metadataCountryCode, metadataLanguages, providerIds, year, indexNumber, parentIndexNumber, premiereDate, isAutomated, enableAdultMetadata);
+    return Objects.hash(name, path, metadataLanguage, metadataCountryCode, metadataLanguages, providerIds, year, indexNumber, parentIndexNumber, premiereDate, isAutomated, enableAdultMetadata);
   }
 
 
@@ -299,6 +321,7 @@ public class TrailerInfo {
     sb.append("class TrailerInfo {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    metadataLanguage: ").append(toIndentedString(metadataLanguage)).append("\n");
     sb.append("    metadataCountryCode: ").append(toIndentedString(metadataCountryCode)).append("\n");
     sb.append("    metadataLanguages: ").append(toIndentedString(metadataLanguages)).append("\n");

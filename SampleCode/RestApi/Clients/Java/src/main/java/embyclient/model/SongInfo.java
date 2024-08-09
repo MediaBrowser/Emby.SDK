@@ -40,6 +40,9 @@ public class SongInfo {
   @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("Path")
+  private String path = null;
+
   @SerializedName("MetadataLanguage")
   private String metadataLanguage = null;
 
@@ -182,6 +185,24 @@ public class SongInfo {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public SongInfo path(String path) {
+    this.path = path;
+    return this;
+  }
+
+   /**
+   * Get path
+   * @return path
+  **/
+  @Schema(description = "")
+  public String getPath() {
+    return path;
+  }
+
+  public void setPath(String path) {
+    this.path = path;
   }
 
   public SongInfo metadataLanguage(String metadataLanguage) {
@@ -387,6 +408,7 @@ public class SongInfo {
         Objects.equals(this.artists, songInfo.artists) &&
         Objects.equals(this.composers, songInfo.composers) &&
         Objects.equals(this.name, songInfo.name) &&
+        Objects.equals(this.path, songInfo.path) &&
         Objects.equals(this.metadataLanguage, songInfo.metadataLanguage) &&
         Objects.equals(this.metadataCountryCode, songInfo.metadataCountryCode) &&
         Objects.equals(this.metadataLanguages, songInfo.metadataLanguages) &&
@@ -401,7 +423,7 @@ public class SongInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(albumArtists, album, artists, composers, name, metadataLanguage, metadataCountryCode, metadataLanguages, providerIds, year, indexNumber, parentIndexNumber, premiereDate, isAutomated, enableAdultMetadata);
+    return Objects.hash(albumArtists, album, artists, composers, name, path, metadataLanguage, metadataCountryCode, metadataLanguages, providerIds, year, indexNumber, parentIndexNumber, premiereDate, isAutomated, enableAdultMetadata);
   }
 
 
@@ -415,6 +437,7 @@ public class SongInfo {
     sb.append("    artists: ").append(toIndentedString(artists)).append("\n");
     sb.append("    composers: ").append(toIndentedString(composers)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    metadataLanguage: ").append(toIndentedString(metadataLanguage)).append("\n");
     sb.append("    metadataCountryCode: ").append(toIndentedString(metadataCountryCode)).append("\n");
     sb.append("    metadataLanguages: ").append(toIndentedString(metadataLanguages)).append("\n");

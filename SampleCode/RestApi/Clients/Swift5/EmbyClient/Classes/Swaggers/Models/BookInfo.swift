@@ -14,6 +14,7 @@ public struct BookInfo: Codable {
     public var seriesName: String?
     /** The name. */
     public var name: String?
+    public var path: String?
     /** The metadata language. */
     public var metadataLanguage: String?
     /** The metadata country code. */
@@ -28,9 +29,10 @@ public struct BookInfo: Codable {
     public var isAutomated: Bool?
     public var enableAdultMetadata: Bool?
 
-    public init(seriesName: String? = nil, name: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
+    public init(seriesName: String? = nil, name: String? = nil, path: String? = nil, metadataLanguage: String? = nil, metadataCountryCode: String? = nil, metadataLanguages: [GlobalizationCultureDto]? = nil, providerIds: ProviderIdDictionary? = nil, year: Int? = nil, indexNumber: Int? = nil, parentIndexNumber: Int? = nil, premiereDate: Date? = nil, isAutomated: Bool? = nil, enableAdultMetadata: Bool? = nil) {
         self.seriesName = seriesName
         self.name = name
+        self.path = path
         self.metadataLanguage = metadataLanguage
         self.metadataCountryCode = metadataCountryCode
         self.metadataLanguages = metadataLanguages
@@ -46,6 +48,7 @@ public struct BookInfo: Codable {
     public enum CodingKeys: String, CodingKey { 
         case seriesName = "SeriesName"
         case name = "Name"
+        case path = "Path"
         case metadataLanguage = "MetadataLanguage"
         case metadataCountryCode = "MetadataCountryCode"
         case metadataLanguages = "MetadataLanguages"

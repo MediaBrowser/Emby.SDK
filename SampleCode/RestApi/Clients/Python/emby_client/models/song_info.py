@@ -27,6 +27,7 @@ class SongInfo(object):
         'artists': 'list[str]',
         'composers': 'list[str]',
         'name': 'str',
+        'path': 'str',
         'metadata_language': 'str',
         'metadata_country_code': 'str',
         'metadata_languages': 'list[GlobalizationCultureDto]',
@@ -45,6 +46,7 @@ class SongInfo(object):
         'artists': 'Artists',
         'composers': 'Composers',
         'name': 'Name',
+        'path': 'Path',
         'metadata_language': 'MetadataLanguage',
         'metadata_country_code': 'MetadataCountryCode',
         'metadata_languages': 'MetadataLanguages',
@@ -57,13 +59,14 @@ class SongInfo(object):
         'enable_adult_metadata': 'EnableAdultMetadata'
     }
 
-    def __init__(self, album_artists=None, album=None, artists=None, composers=None, name=None, metadata_language=None, metadata_country_code=None, metadata_languages=None, provider_ids=None, year=None, index_number=None, parent_index_number=None, premiere_date=None, is_automated=None, enable_adult_metadata=None):  # noqa: E501
+    def __init__(self, album_artists=None, album=None, artists=None, composers=None, name=None, path=None, metadata_language=None, metadata_country_code=None, metadata_languages=None, provider_ids=None, year=None, index_number=None, parent_index_number=None, premiere_date=None, is_automated=None, enable_adult_metadata=None):  # noqa: E501
         """SongInfo - a model defined in Swagger"""  # noqa: E501
         self._album_artists = None
         self._album = None
         self._artists = None
         self._composers = None
         self._name = None
+        self._path = None
         self._metadata_language = None
         self._metadata_country_code = None
         self._metadata_languages = None
@@ -85,6 +88,8 @@ class SongInfo(object):
             self.composers = composers
         if name is not None:
             self.name = name
+        if path is not None:
+            self.path = path
         if metadata_language is not None:
             self.metadata_language = metadata_language
         if metadata_country_code is not None:
@@ -212,6 +217,27 @@ class SongInfo(object):
         """
 
         self._name = name
+
+    @property
+    def path(self):
+        """Gets the path of this SongInfo.  # noqa: E501
+
+
+        :return: The path of this SongInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this SongInfo.
+
+
+        :param path: The path of this SongInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._path = path
 
     @property
     def metadata_language(self):
