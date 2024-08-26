@@ -27,6 +27,7 @@ namespace EmbyClient.Dotnet.Model
         /// Initializes a new instance of the <see cref="RemoteSearchResult" /> class.
         /// </summary>
         /// <param name="name">The name..</param>
+        /// <param name="originalTitle">originalTitle.</param>
         /// <param name="providerIds">providerIds.</param>
         /// <param name="productionYear">The year..</param>
         /// <param name="indexNumber">indexNumber.</param>
@@ -42,9 +43,10 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="disambiguationComment">disambiguationComment.</param>
         /// <param name="albumArtist">albumArtist.</param>
         /// <param name="artists">artists.</param>
-        public RemoteSearchResult(string name = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? productionYear = default(int?), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), string imageUrl = default(string), string searchProviderName = default(string), string gameSystem = default(string), string overview = default(string), string disambiguationComment = default(string), RemoteSearchResult albumArtist = default(RemoteSearchResult), List<RemoteSearchResult> artists = default(List<RemoteSearchResult>))
+        public RemoteSearchResult(string name = default(string), string originalTitle = default(string), ProviderIdDictionary providerIds = default(ProviderIdDictionary), int? productionYear = default(int?), int? indexNumber = default(int?), int? indexNumberEnd = default(int?), int? parentIndexNumber = default(int?), int? sortIndexNumber = default(int?), int? sortParentIndexNumber = default(int?), DateTimeOffset? premiereDate = default(DateTimeOffset?), string imageUrl = default(string), string searchProviderName = default(string), string gameSystem = default(string), string overview = default(string), string disambiguationComment = default(string), RemoteSearchResult albumArtist = default(RemoteSearchResult), List<RemoteSearchResult> artists = default(List<RemoteSearchResult>))
         {
             this.Name = name;
+            this.OriginalTitle = originalTitle;
             this.ProviderIds = providerIds;
             this.ProductionYear = productionYear;
             this.IndexNumber = indexNumber;
@@ -68,6 +70,12 @@ namespace EmbyClient.Dotnet.Model
         /// <value>The name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OriginalTitle
+        /// </summary>
+        [DataMember(Name="OriginalTitle", EmitDefaultValue=false)]
+        public string OriginalTitle { get; set; }
 
         /// <summary>
         /// Gets or Sets ProviderIds
@@ -169,6 +177,7 @@ namespace EmbyClient.Dotnet.Model
             var sb = new StringBuilder();
             sb.Append("class RemoteSearchResult {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  OriginalTitle: ").Append(OriginalTitle).Append("\n");
             sb.Append("  ProviderIds: ").Append(ProviderIds).Append("\n");
             sb.Append("  ProductionYear: ").Append(ProductionYear).Append("\n");
             sb.Append("  IndexNumber: ").Append(IndexNumber).Append("\n");
@@ -222,6 +231,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.OriginalTitle == input.OriginalTitle ||
+                    (this.OriginalTitle != null &&
+                    this.OriginalTitle.Equals(input.OriginalTitle))
                 ) && 
                 (
                     this.ProviderIds == input.ProviderIds ||
@@ -312,6 +326,8 @@ namespace EmbyClient.Dotnet.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.OriginalTitle != null)
+                    hashCode = hashCode * 59 + this.OriginalTitle.GetHashCode();
                 if (this.ProviderIds != null)
                     hashCode = hashCode * 59 + this.ProviderIds.GetHashCode();
                 if (this.ProductionYear != null)

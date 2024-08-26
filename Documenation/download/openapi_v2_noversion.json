@@ -65468,6 +65468,9 @@
           "description": "The name.",
           "type": "string"
         },
+        "OriginalTitle": {
+          "type": "string"
+        },
         "ProviderIds": {
           "$ref": "#/definitions/ProviderIdDictionary"
         },

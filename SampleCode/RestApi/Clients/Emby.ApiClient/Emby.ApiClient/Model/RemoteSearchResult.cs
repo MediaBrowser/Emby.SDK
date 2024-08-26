@@ -33,6 +33,12 @@ namespace Emby.ApiClient.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets OriginalTitle
+        /// </summary>
+        /// <value>The OriginalTitle.</value>
+        public string OriginalTitle { get; set; }
+
+        /// <summary>
         /// Gets or Sets ProviderIds
         /// </summary>
         /// <value>The ProviderIds.</value>
@@ -131,6 +137,7 @@ namespace Emby.ApiClient.Model
             var sb = new StringBuilder();
             sb.Append("class RemoteSearchResult {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  OriginalTitle: ").Append(OriginalTitle).Append("\n");
             sb.Append("  ProviderIds: ").Append(ProviderIds).Append("\n");
             sb.Append("  ProductionYear: ").Append(ProductionYear).Append("\n");
             sb.Append("  IndexNumber: ").Append(IndexNumber).Append("\n");
@@ -175,6 +182,11 @@ namespace Emby.ApiClient.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.OriginalTitle == input.OriginalTitle ||
+                    (this.OriginalTitle != null &&
+                    this.OriginalTitle.Equals(input.OriginalTitle))
                 ) && 
                 (
                     this.ProviderIds == input.ProviderIds ||
@@ -265,6 +277,8 @@ namespace Emby.ApiClient.Model
                 int hashCode = 41;
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.OriginalTitle != null)
+                    hashCode = hashCode * 59 + this.OriginalTitle.GetHashCode();
                 if (this.ProviderIds != null)
                     hashCode = hashCode * 59 + this.ProviderIds.GetHashCode();
                 if (this.ProductionYear != null)

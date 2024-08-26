@@ -13,6 +13,7 @@ public struct RemoteSearchResult: Codable {
 
     /** The name. */
     public var name: String?
+    public var originalTitle: String?
     public var providerIds: ProviderIdDictionary?
     /** The year. */
     public var productionYear: Int?
@@ -30,8 +31,9 @@ public struct RemoteSearchResult: Codable {
     public var albumArtist: RemoteSearchResult?
     public var artists: [RemoteSearchResult]?
 
-    public init(name: String? = nil, providerIds: ProviderIdDictionary? = nil, productionYear: Int? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, premiereDate: Date? = nil, imageUrl: String? = nil, searchProviderName: String? = nil, gameSystem: String? = nil, overview: String? = nil, disambiguationComment: String? = nil, albumArtist: RemoteSearchResult? = nil, artists: [RemoteSearchResult]? = nil) {
+    public init(name: String? = nil, originalTitle: String? = nil, providerIds: ProviderIdDictionary? = nil, productionYear: Int? = nil, indexNumber: Int? = nil, indexNumberEnd: Int? = nil, parentIndexNumber: Int? = nil, sortIndexNumber: Int? = nil, sortParentIndexNumber: Int? = nil, premiereDate: Date? = nil, imageUrl: String? = nil, searchProviderName: String? = nil, gameSystem: String? = nil, overview: String? = nil, disambiguationComment: String? = nil, albumArtist: RemoteSearchResult? = nil, artists: [RemoteSearchResult]? = nil) {
         self.name = name
+        self.originalTitle = originalTitle
         self.providerIds = providerIds
         self.productionYear = productionYear
         self.indexNumber = indexNumber
@@ -51,6 +53,7 @@ public struct RemoteSearchResult: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case name = "Name"
+        case originalTitle = "OriginalTitle"
         case providerIds = "ProviderIds"
         case productionYear = "ProductionYear"
         case indexNumber = "IndexNumber"
