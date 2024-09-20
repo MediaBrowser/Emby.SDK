@@ -15,7 +15,7 @@ import QueryResultUserLibraryOfficialRatingItem from '../model/QueryResultUserLi
 /**
 * OfficialRatingService service.
 * @module EmbyClient.JavaScript/OfficialRatingServiceApi
-* @version 4.8.8.0
+* @version 4.8.9.0
 */
 export default class OfficialRatingServiceApi {
 

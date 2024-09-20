@@ -28,6 +28,9 @@ public class RemoteSearchResult {
   @SerializedName("Name")
   private String name = null;
 
+  @SerializedName("OriginalTitle")
+  private String originalTitle = null;
+
   @SerializedName("ProviderIds")
   private ProviderIdDictionary providerIds = null;
 
@@ -89,6 +92,24 @@ public class RemoteSearchResult {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public RemoteSearchResult originalTitle(String originalTitle) {
+    this.originalTitle = originalTitle;
+    return this;
+  }
+
+   /**
+   * Get originalTitle
+   * @return originalTitle
+  **/
+  @Schema(description = "")
+  public String getOriginalTitle() {
+    return originalTitle;
+  }
+
+  public void setOriginalTitle(String originalTitle) {
+    this.originalTitle = originalTitle;
   }
 
   public RemoteSearchResult providerIds(ProviderIdDictionary providerIds) {
@@ -380,6 +401,7 @@ public class RemoteSearchResult {
     }
     RemoteSearchResult remoteSearchResult = (RemoteSearchResult) o;
     return Objects.equals(this.name, remoteSearchResult.name) &&
+        Objects.equals(this.originalTitle, remoteSearchResult.originalTitle) &&
         Objects.equals(this.providerIds, remoteSearchResult.providerIds) &&
         Objects.equals(this.productionYear, remoteSearchResult.productionYear) &&
         Objects.equals(this.indexNumber, remoteSearchResult.indexNumber) &&
@@ -399,7 +421,7 @@ public class RemoteSearchResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
+    return Objects.hash(name, originalTitle, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
   }
 
 
@@ -409,6 +431,7 @@ public class RemoteSearchResult {
     sb.append("class RemoteSearchResult {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    originalTitle: ").append(toIndentedString(originalTitle)).append("\n");
     sb.append("    providerIds: ").append(toIndentedString(providerIds)).append("\n");
     sb.append("    productionYear: ").append(toIndentedString(productionYear)).append("\n");
     sb.append("    indexNumber: ").append(toIndentedString(indexNumber)).append("\n");

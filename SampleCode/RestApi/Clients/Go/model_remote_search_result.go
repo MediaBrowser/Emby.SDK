@@ -12,6 +12,7 @@ import (
 type RemoteSearchResult struct {
 	// The name.
 	Name string `json:"Name,omitempty"`
+	OriginalTitle string `json:"OriginalTitle,omitempty"`
 	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
 	// The year.
 	ProductionYear int32 `json:"ProductionYear,omitempty"`

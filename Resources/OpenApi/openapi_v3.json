@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.8.0"
+    "version": "4.8.9.0"
   },
   "servers": [
     {
@@ -88140,6 +88140,9 @@
           "Name": {
             "type": "string",
             "description": "The name."
+          },
+          "OriginalTitle": {
+            "type": "string"
           },
           "ProviderIds": {
             "$ref": "#/components/schemas/ProviderIdDictionary"

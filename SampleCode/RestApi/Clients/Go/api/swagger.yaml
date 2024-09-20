@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.8.0
+  version: 4.8.9.0
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -80754,6 +80754,8 @@ components:
         Name:
           type: string
           description: The name.
+        OriginalTitle:
+          type: string
         ProviderIds:
           $ref: '#/components/schemas/ProviderIdDictionary'
         ProductionYear:
@@ -80813,6 +80815,7 @@ components:
         AlbumArtist: null
         Name: Name
         ProductionYear: 0
+        OriginalTitle: OriginalTitle
         IndexNumber: 6
         SortIndexNumber: 5
         SearchProviderName: SearchProviderName

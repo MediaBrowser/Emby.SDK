@@ -15,7 +15,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The RemoteSearchResult model module.
 * @module model/RemoteSearchResult
-* @version 4.8.8.0
+* @version 4.8.9.0
 */
 export default class RemoteSearchResult {
     /**
@@ -44,6 +44,9 @@ export default class RemoteSearchResult {
             
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
+            }
+            if (data.hasOwnProperty('OriginalTitle')) {
+                obj['OriginalTitle'] = ApiClient.convertToType(data['OriginalTitle'], 'String');
             }
             if (data.hasOwnProperty('ProviderIds')) {
                 obj['ProviderIds'] = ProviderIdDictionary.constructFromObject(data['ProviderIds']);
@@ -99,6 +102,10 @@ export default class RemoteSearchResult {
     * @member {String} Name
     */
     'Name' = undefined;
+    /**
+    * @member {String} OriginalTitle
+    */
+    'OriginalTitle' = undefined;
     /**
     * @member {module:model/ProviderIdDictionary} ProviderIds
     */

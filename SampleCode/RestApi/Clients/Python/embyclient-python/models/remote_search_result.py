@@ -23,6 +23,7 @@ class RemoteSearchResult(object):
     """
     swagger_types = {
         'name': 'str',
+        'original_title': 'str',
         'provider_ids': 'ProviderIdDictionary',
         'production_year': 'int',
         'index_number': 'int',
@@ -42,6 +43,7 @@ class RemoteSearchResult(object):
 
     attribute_map = {
         'name': 'Name',
+        'original_title': 'OriginalTitle',
         'provider_ids': 'ProviderIds',
         'production_year': 'ProductionYear',
         'index_number': 'IndexNumber',
@@ -59,9 +61,10 @@ class RemoteSearchResult(object):
         'artists': 'Artists'
     }
 
-    def __init__(self, name=None, provider_ids=None, production_year=None, index_number=None, index_number_end=None, parent_index_number=None, sort_index_number=None, sort_parent_index_number=None, premiere_date=None, image_url=None, search_provider_name=None, game_system=None, overview=None, disambiguation_comment=None, album_artist=None, artists=None):  # noqa: E501
+    def __init__(self, name=None, original_title=None, provider_ids=None, production_year=None, index_number=None, index_number_end=None, parent_index_number=None, sort_index_number=None, sort_parent_index_number=None, premiere_date=None, image_url=None, search_provider_name=None, game_system=None, overview=None, disambiguation_comment=None, album_artist=None, artists=None):  # noqa: E501
         """RemoteSearchResult - a model defined in Swagger"""  # noqa: E501
         self._name = None
+        self._original_title = None
         self._provider_ids = None
         self._production_year = None
         self._index_number = None
@@ -80,6 +83,8 @@ class RemoteSearchResult(object):
         self.discriminator = None
         if name is not None:
             self.name = name
+        if original_title is not None:
+            self.original_title = original_title
         if provider_ids is not None:
             self.provider_ids = provider_ids
         if production_year is not None:
@@ -133,6 +138,27 @@ class RemoteSearchResult(object):
         """
 
         self._name = name
+
+    @property
+    def original_title(self):
+        """Gets the original_title of this RemoteSearchResult.  # noqa: E501
+
+
+        :return: The original_title of this RemoteSearchResult.  # noqa: E501
+        :rtype: str
+        """
+        return self._original_title
+
+    @original_title.setter
+    def original_title(self, original_title):
+        """Sets the original_title of this RemoteSearchResult.
+
+
+        :param original_title: The original_title of this RemoteSearchResult.  # noqa: E501
+        :type: str
+        """
+
+        self._original_title = original_title
 
     @property
     def provider_ids(self):

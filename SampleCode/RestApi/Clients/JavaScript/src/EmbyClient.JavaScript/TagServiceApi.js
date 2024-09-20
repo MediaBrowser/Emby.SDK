@@ -18,7 +18,7 @@ import UserLibraryRemoveTags from '../model/UserLibraryRemoveTags';
 /**
 * TagService service.
 * @module EmbyClient.JavaScript/TagServiceApi
-* @version 4.8.8.0
+* @version 4.8.9.0
 */
 export default class TagServiceApi {
 
