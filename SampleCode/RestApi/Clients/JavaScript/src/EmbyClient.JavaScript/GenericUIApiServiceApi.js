@@ -16,7 +16,7 @@ import UIViewInfo from '../model/UIViewInfo';
 /**
 * GenericUIApiService service.
 * @module EmbyClient.JavaScript/GenericUIApiServiceApi
-* @version 4.8.9.0
+* @version 4.8.10.0
 */
 export default class GenericUIApiServiceApi {
 
