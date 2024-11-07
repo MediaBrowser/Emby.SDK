@@ -541,6 +541,44 @@ open class SystemServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
+    open class func headSystemPing(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        headSystemPingWithRequestBuilder().execute { (response, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+
+    /**
+     - HEAD /System/Ping
+
+     - API Key:
+       - type: apiKey api_key (QUERY)
+       - name: apikeyauth
+     - :
+       - type: http
+       - name: embyauth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func headSystemPingWithRequestBuilder() -> RequestBuilder<Void> {
+        let path = "/System/Ping"
+        let URLString = EmbyClientAPI.basePath + path
+        let parameters: [String:Any]? = nil
+        let url = URLComponents(string: URLString)
+
+
+        let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
+
+        return requestBuilder.init(method: "HEAD", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
+    }
+    /**
+
+     - parameter completion: completion handler to receive the data and the error objects
+     */
     open class func postSystemPing(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
         postSystemPingWithRequestBuilder().execute { (response, error) -> Void in
             if error == nil {

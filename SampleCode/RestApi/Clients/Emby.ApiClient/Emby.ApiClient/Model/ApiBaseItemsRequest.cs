@@ -39,6 +39,12 @@ namespace Emby.ApiClient.Model
         public bool? EnableTotalRecordCount { get; set; }
 
         /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        /// <value>The Name.</value>
+        public string Name { get; set; }
+
+        /// <summary>
         /// Gets or Sets RecordingKeyword
         /// </summary>
         /// <value>The RecordingKeyword.</value>
@@ -198,6 +204,7 @@ namespace Emby.ApiClient.Model
             sb.Append("class ApiBaseItemsRequest {\n");
             sb.Append("  Is4K: ").Append(Is4K).Append("\n");
             sb.Append("  EnableTotalRecordCount: ").Append(EnableTotalRecordCount).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RecordingKeyword: ").Append(RecordingKeyword).Append("\n");
             sb.Append("  RecordingKeywordType: ").Append(RecordingKeywordType).Append("\n");
             sb.Append("  RandomSeed: ").Append(RandomSeed).Append("\n");
@@ -257,6 +264,11 @@ namespace Emby.ApiClient.Model
                     this.EnableTotalRecordCount == input.EnableTotalRecordCount ||
                     (this.EnableTotalRecordCount != null &&
                     this.EnableTotalRecordCount.Equals(input.EnableTotalRecordCount))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
                     this.RecordingKeyword == input.RecordingKeyword ||
@@ -399,6 +411,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Is4K.GetHashCode();
                 if (this.EnableTotalRecordCount != null)
                     hashCode = hashCode * 59 + this.EnableTotalRecordCount.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.RecordingKeyword != null)
                     hashCode = hashCode * 59 + this.RecordingKeyword.GetHashCode();
                 if (this.RecordingKeywordType != null)

@@ -24,6 +24,7 @@ class ApiBaseItemsRequest(object):
     swagger_types = {
         'is4_k': 'bool',
         'enable_total_record_count': 'bool',
+        'name': 'str',
         'recording_keyword': 'str',
         'recording_keyword_type': 'LiveTvKeywordType',
         'random_seed': 'int',
@@ -54,6 +55,7 @@ class ApiBaseItemsRequest(object):
     attribute_map = {
         'is4_k': 'Is4K',
         'enable_total_record_count': 'EnableTotalRecordCount',
+        'name': 'Name',
         'recording_keyword': 'RecordingKeyword',
         'recording_keyword_type': 'RecordingKeywordType',
         'random_seed': 'RandomSeed',
@@ -81,10 +83,11 @@ class ApiBaseItemsRequest(object):
         'has_aired': 'HasAired'
     }
 
-    def __init__(self, is4_k=None, enable_total_record_count=None, recording_keyword=None, recording_keyword_type=None, random_seed=None, genre_ids=None, collection_ids=None, tag_ids=None, exclude_tag_ids=None, exclude_artist_ids=None, album_artist_ids=None, contributing_artist_ids=None, album_ids=None, outer_ids=None, list_item_ids=None, audio_languages=None, subtitle_languages=None, can_edit_items=None, group_items_into=None, min_width=None, min_height=None, max_width=None, max_height=None, group_programs_by_series=None, air_days=None, is_airing=None, has_aired=None):  # noqa: E501
+    def __init__(self, is4_k=None, enable_total_record_count=None, name=None, recording_keyword=None, recording_keyword_type=None, random_seed=None, genre_ids=None, collection_ids=None, tag_ids=None, exclude_tag_ids=None, exclude_artist_ids=None, album_artist_ids=None, contributing_artist_ids=None, album_ids=None, outer_ids=None, list_item_ids=None, audio_languages=None, subtitle_languages=None, can_edit_items=None, group_items_into=None, min_width=None, min_height=None, max_width=None, max_height=None, group_programs_by_series=None, air_days=None, is_airing=None, has_aired=None):  # noqa: E501
         """ApiBaseItemsRequest - a model defined in Swagger"""  # noqa: E501
         self._is4_k = None
         self._enable_total_record_count = None
+        self._name = None
         self._recording_keyword = None
         self._recording_keyword_type = None
         self._random_seed = None
@@ -115,6 +118,8 @@ class ApiBaseItemsRequest(object):
             self.is4_k = is4_k
         if enable_total_record_count is not None:
             self.enable_total_record_count = enable_total_record_count
+        if name is not None:
+            self.name = name
         if recording_keyword is not None:
             self.recording_keyword = recording_keyword
         if recording_keyword_type is not None:
@@ -207,6 +212,27 @@ class ApiBaseItemsRequest(object):
         """
 
         self._enable_total_record_count = enable_total_record_count
+
+    @property
+    def name(self):
+        """Gets the name of this ApiBaseItemsRequest.  # noqa: E501
+
+
+        :return: The name of this ApiBaseItemsRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this ApiBaseItemsRequest.
+
+
+        :param name: The name of this ApiBaseItemsRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     @property
     def recording_keyword(self):

@@ -15,7 +15,7 @@ import EditObjectContainer from '../model/EditObjectContainer';
 /**
 * ToneMapOptionsService service.
 * @module api/ToneMapOptionsServiceApi
-* @version 4.9.0.30
+* @version 4.9.0.31
 */
 export default class ToneMapOptionsServiceApi {
 

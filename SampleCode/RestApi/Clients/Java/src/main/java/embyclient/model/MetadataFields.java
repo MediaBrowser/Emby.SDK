@@ -37,7 +37,10 @@ public enum MetadataFields {
   SORTPARENTINDEXNUMBER("SortParentIndexNumber"),
   COMMUNITYRATING("CommunityRating"),
   CRITICRATING("CriticRating"),
-  TAGLINE("Tagline");
+  TAGLINE("Tagline"),
+  COMPOSERS("Composers"),
+  ARTISTS("Artists"),
+  ALBUMARTISTS("AlbumArtists");
 
   private String value;
 

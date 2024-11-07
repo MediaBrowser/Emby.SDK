@@ -17,7 +17,7 @@ import LiveTvKeywordType from './LiveTvKeywordType';
 /**
 * The ApiBaseItemsRequest model module.
 * @module model/ApiBaseItemsRequest
-* @version 4.9.0.30
+* @version 4.9.0.31
 */
 export default class ApiBaseItemsRequest {
     /**
@@ -49,6 +49,9 @@ export default class ApiBaseItemsRequest {
             }
             if (data.hasOwnProperty('EnableTotalRecordCount')) {
                 obj['EnableTotalRecordCount'] = ApiClient.convertToType(data['EnableTotalRecordCount'], 'Boolean');
+            }
+            if (data.hasOwnProperty('Name')) {
+                obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
             if (data.hasOwnProperty('RecordingKeyword')) {
                 obj['RecordingKeyword'] = ApiClient.convertToType(data['RecordingKeyword'], 'String');
@@ -137,6 +140,10 @@ export default class ApiBaseItemsRequest {
     * @member {Boolean} EnableTotalRecordCount
     */
     'EnableTotalRecordCount' = undefined;
+    /**
+    * @member {String} Name
+    */
+    'Name' = undefined;
     /**
     * @member {String} RecordingKeyword
     */

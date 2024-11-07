@@ -27228,6 +27228,42 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "SystemService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "headSystemPing",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/System/WakeOnLanInfo": {
@@ -58666,7 +58702,10 @@
         "SortParentIndexNumber",
         "CommunityRating",
         "CriticRating",
-        "Tagline"
+        "Tagline",
+        "Composers",
+        "Artists",
+        "AlbumArtists"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Entities.MetadataFields"
@@ -61797,6 +61836,9 @@
         },
         "EnableTotalRecordCount": {
           "type": "boolean"
+        },
+        "Name": {
+          "type": "string"
         },
         "RecordingKeyword": {
           "type": "string"

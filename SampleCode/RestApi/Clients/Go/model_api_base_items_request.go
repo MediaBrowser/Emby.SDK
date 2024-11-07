@@ -9,6 +9,7 @@ package embyclient
 type ApiBaseItemsRequest struct {
 	Is4K bool `json:"Is4K,omitempty"`
 	EnableTotalRecordCount bool `json:"EnableTotalRecordCount,omitempty"`
+	Name string `json:"Name,omitempty"`
 	RecordingKeyword string `json:"RecordingKeyword,omitempty"`
 	RecordingKeywordType *LiveTvKeywordType `json:"RecordingKeywordType,omitempty"`
 	RandomSeed int32 `json:"RandomSeed,omitempty"`

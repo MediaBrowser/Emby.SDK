@@ -31,6 +31,9 @@ public class ApiBaseItemsRequest {
   @SerializedName("EnableTotalRecordCount")
   private Boolean enableTotalRecordCount = null;
 
+  @SerializedName("Name")
+  private String name = null;
+
   @SerializedName("RecordingKeyword")
   private String recordingKeyword = null;
 
@@ -140,6 +143,24 @@ public class ApiBaseItemsRequest {
 
   public void setEnableTotalRecordCount(Boolean enableTotalRecordCount) {
     this.enableTotalRecordCount = enableTotalRecordCount;
+  }
+
+  public ApiBaseItemsRequest name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @Schema(description = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   public ApiBaseItemsRequest recordingKeyword(String recordingKeyword) {
@@ -612,6 +633,7 @@ public class ApiBaseItemsRequest {
     ApiBaseItemsRequest apiBaseItemsRequest = (ApiBaseItemsRequest) o;
     return Objects.equals(this.is4K, apiBaseItemsRequest.is4K) &&
         Objects.equals(this.enableTotalRecordCount, apiBaseItemsRequest.enableTotalRecordCount) &&
+        Objects.equals(this.name, apiBaseItemsRequest.name) &&
         Objects.equals(this.recordingKeyword, apiBaseItemsRequest.recordingKeyword) &&
         Objects.equals(this.recordingKeywordType, apiBaseItemsRequest.recordingKeywordType) &&
         Objects.equals(this.randomSeed, apiBaseItemsRequest.randomSeed) &&
@@ -641,7 +663,7 @@ public class ApiBaseItemsRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(is4K, enableTotalRecordCount, recordingKeyword, recordingKeywordType, randomSeed, genreIds, collectionIds, tagIds, excludeTagIds, excludeArtistIds, albumArtistIds, contributingArtistIds, albumIds, outerIds, listItemIds, audioLanguages, subtitleLanguages, canEditItems, groupItemsInto, minWidth, minHeight, maxWidth, maxHeight, groupProgramsBySeries, airDays, isAiring, hasAired);
+    return Objects.hash(is4K, enableTotalRecordCount, name, recordingKeyword, recordingKeywordType, randomSeed, genreIds, collectionIds, tagIds, excludeTagIds, excludeArtistIds, albumArtistIds, contributingArtistIds, albumIds, outerIds, listItemIds, audioLanguages, subtitleLanguages, canEditItems, groupItemsInto, minWidth, minHeight, maxWidth, maxHeight, groupProgramsBySeries, airDays, isAiring, hasAired);
   }
 
 
@@ -652,6 +674,7 @@ public class ApiBaseItemsRequest {
     
     sb.append("    is4K: ").append(toIndentedString(is4K)).append("\n");
     sb.append("    enableTotalRecordCount: ").append(toIndentedString(enableTotalRecordCount)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    recordingKeyword: ").append(toIndentedString(recordingKeyword)).append("\n");
     sb.append("    recordingKeywordType: ").append(toIndentedString(recordingKeywordType)).append("\n");
     sb.append("    randomSeed: ").append(toIndentedString(randomSeed)).append("\n");

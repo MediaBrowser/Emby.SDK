@@ -113,5 +113,20 @@ namespace EmbyClient.Dotnet.Model
         /// Enum Tagline for value: Tagline
         /// </summary>
         [EnumMember(Value = "Tagline")]
-        Tagline = 18    }
+        Tagline = 18,
+        /// <summary>
+        /// Enum Composers for value: Composers
+        /// </summary>
+        [EnumMember(Value = "Composers")]
+        Composers = 19,
+        /// <summary>
+        /// Enum Artists for value: Artists
+        /// </summary>
+        [EnumMember(Value = "Artists")]
+        Artists = 20,
+        /// <summary>
+        /// Enum AlbumArtists for value: AlbumArtists
+        /// </summary>
+        [EnumMember(Value = "AlbumArtists")]
+        AlbumArtists = 21    }
 }

@@ -28,4 +28,7 @@ public enum MetadataFields: String, Codable {
     case communityRating = "CommunityRating"
     case criticRating = "CriticRating"
     case tagline = "Tagline"
+    case composers = "Composers"
+    case artists = "Artists"
+    case albumArtists = "AlbumArtists"
 }

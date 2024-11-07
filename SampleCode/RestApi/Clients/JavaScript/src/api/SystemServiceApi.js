@@ -21,7 +21,7 @@ import WakeOnLanInfo from '../model/WakeOnLanInfo';
 /**
 * SystemService service.
 * @module api/SystemServiceApi
-* @version 4.9.0.30
+* @version 4.9.0.31
 */
 export default class SystemServiceApi {
 
@@ -461,6 +461,46 @@ export default class SystemServiceApi {
      */
     getSystemWakeonlaninfo() {
       return this.getSystemWakeonlaninfoWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    headSystemPingWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/System/Ping', 'HEAD',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * Requires authentication as user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    headSystemPing() {
+      return this.headSystemPingWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

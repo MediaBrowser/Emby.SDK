@@ -28,6 +28,7 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="is4K">is4K.</param>
         /// <param name="enableTotalRecordCount">enableTotalRecordCount.</param>
+        /// <param name="name">name.</param>
         /// <param name="recordingKeyword">recordingKeyword.</param>
         /// <param name="recordingKeywordType">recordingKeywordType.</param>
         /// <param name="randomSeed">randomSeed.</param>
@@ -53,10 +54,11 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="airDays">airDays.</param>
         /// <param name="isAiring">isAiring.</param>
         /// <param name="hasAired">hasAired.</param>
-        public ApiBaseItemsRequest(bool? is4K = default(bool?), bool? enableTotalRecordCount = default(bool?), string recordingKeyword = default(string), LiveTvKeywordType recordingKeywordType = default(LiveTvKeywordType), int? randomSeed = default(int?), string genreIds = default(string), string collectionIds = default(string), string tagIds = default(string), string excludeTagIds = default(string), string excludeArtistIds = default(string), string albumArtistIds = default(string), string contributingArtistIds = default(string), string albumIds = default(string), string outerIds = default(string), string listItemIds = default(string), string audioLanguages = default(string), string subtitleLanguages = default(string), bool? canEditItems = default(bool?), LibraryItemLinkType groupItemsInto = default(LibraryItemLinkType), int? minWidth = default(int?), int? minHeight = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? groupProgramsBySeries = default(bool?), List<DayOfWeek> airDays = default(List<DayOfWeek>), bool? isAiring = default(bool?), bool? hasAired = default(bool?))
+        public ApiBaseItemsRequest(bool? is4K = default(bool?), bool? enableTotalRecordCount = default(bool?), string name = default(string), string recordingKeyword = default(string), LiveTvKeywordType recordingKeywordType = default(LiveTvKeywordType), int? randomSeed = default(int?), string genreIds = default(string), string collectionIds = default(string), string tagIds = default(string), string excludeTagIds = default(string), string excludeArtistIds = default(string), string albumArtistIds = default(string), string contributingArtistIds = default(string), string albumIds = default(string), string outerIds = default(string), string listItemIds = default(string), string audioLanguages = default(string), string subtitleLanguages = default(string), bool? canEditItems = default(bool?), LibraryItemLinkType groupItemsInto = default(LibraryItemLinkType), int? minWidth = default(int?), int? minHeight = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? groupProgramsBySeries = default(bool?), List<DayOfWeek> airDays = default(List<DayOfWeek>), bool? isAiring = default(bool?), bool? hasAired = default(bool?))
         {
             this.Is4K = is4K;
             this.EnableTotalRecordCount = enableTotalRecordCount;
+            this.Name = name;
             this.RecordingKeyword = recordingKeyword;
             this.RecordingKeywordType = recordingKeywordType;
             this.RandomSeed = randomSeed;
@@ -95,6 +97,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="EnableTotalRecordCount", EmitDefaultValue=false)]
         public bool? EnableTotalRecordCount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="Name", EmitDefaultValue=false)]
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets RecordingKeyword
@@ -256,6 +264,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class ApiBaseItemsRequest {\n");
             sb.Append("  Is4K: ").Append(Is4K).Append("\n");
             sb.Append("  EnableTotalRecordCount: ").Append(EnableTotalRecordCount).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RecordingKeyword: ").Append(RecordingKeyword).Append("\n");
             sb.Append("  RecordingKeywordType: ").Append(RecordingKeywordType).Append("\n");
             sb.Append("  RandomSeed: ").Append(RandomSeed).Append("\n");
@@ -324,6 +333,11 @@ namespace EmbyClient.Dotnet.Model
                     this.EnableTotalRecordCount == input.EnableTotalRecordCount ||
                     (this.EnableTotalRecordCount != null &&
                     this.EnableTotalRecordCount.Equals(input.EnableTotalRecordCount))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
                     this.RecordingKeyword == input.RecordingKeyword ||
@@ -466,6 +480,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Is4K.GetHashCode();
                 if (this.EnableTotalRecordCount != null)
                     hashCode = hashCode * 59 + this.EnableTotalRecordCount.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.RecordingKeyword != null)
                     hashCode = hashCode * 59 + this.RecordingKeyword.GetHashCode();
                 if (this.RecordingKeywordType != null)

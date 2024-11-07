@@ -184,6 +184,20 @@ public class SystemServiceApiTest {
      *          if the Api call fails
      */
     @Test
+    public void headSystemPingTest() throws Exception {
+        api.headSystemPing();
+
+        // TODO: test validations
+    }
+    /**
+     * 
+     *
+     * Requires authentication as user
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
     public void postSystemPingTest() throws Exception {
         api.postSystemPing();
 

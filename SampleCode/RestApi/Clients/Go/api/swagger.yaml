@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.30
+  version: 4.9.0.31
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -33692,6 +33692,28 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - SystemService
+      description: Requires authentication as user
+      operationId: headSystemPing
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
   /System/WakeOnLanInfo:
     summary: Gets wake on lan information
     get:
@@ -66318,6 +66340,9 @@ components:
       - CommunityRating
       - CriticRating
       - Tagline
+      - Composers
+      - Artists
+      - AlbumArtists
       x-internal-ref-name: MediaBrowser.Model.Entities.MetadataFields
     Drawing.ImageOrientation:
       type: string
@@ -72323,6 +72348,8 @@ components:
           nullable: true
         EnableTotalRecordCount:
           type: boolean
+        Name:
+          type: string
         RecordingKeyword:
           type: string
         RecordingKeywordType:

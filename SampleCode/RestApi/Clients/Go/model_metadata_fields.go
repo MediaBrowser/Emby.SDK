@@ -28,4 +28,7 @@ const (
 	COMMUNITY_RATING_MetadataFields MetadataFields = "CommunityRating"
 	CRITIC_RATING_MetadataFields MetadataFields = "CriticRating"
 	TAGLINE_MetadataFields MetadataFields = "Tagline"
+	COMPOSERS_MetadataFields MetadataFields = "Composers"
+	ARTISTS_MetadataFields MetadataFields = "Artists"
+	ALBUM_ARTISTS_MetadataFields MetadataFields = "AlbumArtists"
 )

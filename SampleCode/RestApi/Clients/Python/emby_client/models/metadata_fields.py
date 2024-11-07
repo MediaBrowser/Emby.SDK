@@ -36,6 +36,9 @@ class MetadataFields(object):
     COMMUNITYRATING = "CommunityRating"
     CRITICRATING = "CriticRating"
     TAGLINE = "Tagline"
+    COMPOSERS = "Composers"
+    ARTISTS = "Artists"
+    ALBUMARTISTS = "AlbumArtists"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

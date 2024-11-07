@@ -124,6 +124,24 @@ export default class MetadataFields {
          */
         Tagline = "Tagline";
 
+        /**
+         * value: "Composers"
+         * @const
+         */
+        Composers = "Composers";
+
+        /**
+         * value: "Artists"
+         * @const
+         */
+        Artists = "Artists";
+
+        /**
+         * value: "AlbumArtists"
+         * @const
+         */
+        AlbumArtists = "AlbumArtists";
+
 
     /**
     * Returns a <code>MetadataFields</code> enum value from a Javascript object name.
