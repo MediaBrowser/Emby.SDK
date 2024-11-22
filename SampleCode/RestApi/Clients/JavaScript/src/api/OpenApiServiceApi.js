@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * OpenApiService service.
 * @module api/OpenApiServiceApi
-* @version 4.9.0.31
+* @version 4.9.0.32
 */
 export default class OpenApiServiceApi {
 

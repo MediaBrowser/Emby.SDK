@@ -169,6 +169,7 @@
     <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasMediaSources.html">IHasMediaSources</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasArtist.html">IHasArtist</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasAlbum.html">IHasAlbum</a></div>
+    <div><a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasMusicAlbum.html">IHasMusicAlbum</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasMusicGenres.html">IHasMusicGenres</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.MusicVideoInfo.html">MusicVideoInfo</a>&gt;</div>
   </div>
@@ -1277,7 +1278,7 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_MusicVideo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class MusicVideo : Video, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasMediaSources, IHasArtist, IHasAlbum, IHasMusicGenres, IHasLookupInfo&lt;MusicVideoInfo&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class MusicVideo : Video, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasMediaSources, IHasArtist, IHasAlbum, IHasMusicAlbum, IHasMusicGenres, IHasLookupInfo&lt;MusicVideoInfo&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -1577,6 +1578,9 @@ public override bool SupportsResetMetadata { get; }</code></pre>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasAlbum.html">IHasAlbum</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasMusicAlbum.html">IHasMusicAlbum</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Audio.IHasMusicGenres.html">IHasMusicGenres</a>

@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The RunUICommand model module.
 * @module model/RunUICommand
-* @version 4.9.0.31
+* @version 4.9.0.32
 */
 export default class RunUICommand {
     /**
