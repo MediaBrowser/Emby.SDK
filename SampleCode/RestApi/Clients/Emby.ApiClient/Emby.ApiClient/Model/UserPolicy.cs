@@ -249,12 +249,6 @@ namespace Emby.ApiClient.Model
         public bool? EnablePublicSharing { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockedMediaFolders
-        /// </summary>
-        /// <value>The BlockedMediaFolders.</value>
-        public List<string> BlockedMediaFolders { get; set; }
-
-        /// <summary>
         /// Gets or Sets RemoteClientBitrateLimit
         /// </summary>
         /// <value>The RemoteClientBitrateLimit.</value>
@@ -347,7 +341,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  EnableAllFolders: ").Append(EnableAllFolders).Append("\n");
             sb.Append("  InvalidLoginAttemptCount: ").Append(InvalidLoginAttemptCount).Append("\n");
             sb.Append("  EnablePublicSharing: ").Append(EnablePublicSharing).Append("\n");
-            sb.Append("  BlockedMediaFolders: ").Append(BlockedMediaFolders).Append("\n");
             sb.Append("  RemoteClientBitrateLimit: ").Append(RemoteClientBitrateLimit).Append("\n");
             sb.Append("  AuthenticationProviderId: ").Append(AuthenticationProviderId).Append("\n");
             sb.Append("  ExcludedSubFolders: ").Append(ExcludedSubFolders).Append("\n");
@@ -575,12 +568,6 @@ namespace Emby.ApiClient.Model
                     this.EnablePublicSharing.Equals(input.EnablePublicSharing))
                 ) && 
                 (
-                    this.BlockedMediaFolders == input.BlockedMediaFolders ||
-                    this.BlockedMediaFolders != null &&
-                    input.BlockedMediaFolders != null &&
-                    this.BlockedMediaFolders.SequenceEqual(input.BlockedMediaFolders)
-                ) && 
-                (
                     this.RemoteClientBitrateLimit == input.RemoteClientBitrateLimit ||
                     (this.RemoteClientBitrateLimit != null &&
                     this.RemoteClientBitrateLimit.Equals(input.RemoteClientBitrateLimit))
@@ -707,8 +694,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.InvalidLoginAttemptCount.GetHashCode();
                 if (this.EnablePublicSharing != null)
                     hashCode = hashCode * 59 + this.EnablePublicSharing.GetHashCode();
-                if (this.BlockedMediaFolders != null)
-                    hashCode = hashCode * 59 + this.BlockedMediaFolders.GetHashCode();
                 if (this.RemoteClientBitrateLimit != null)
                     hashCode = hashCode * 59 + this.RemoteClientBitrateLimit.GetHashCode();
                 if (this.AuthenticationProviderId != null)

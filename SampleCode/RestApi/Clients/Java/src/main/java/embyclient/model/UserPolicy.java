@@ -135,9 +135,6 @@ public class UserPolicy {
   @SerializedName("EnablePublicSharing")
   private Boolean enablePublicSharing = null;
 
-  @SerializedName("BlockedMediaFolders")
-  private List<String> blockedMediaFolders = null;
-
   @SerializedName("RemoteClientBitrateLimit")
   private Integer remoteClientBitrateLimit = null;
 
@@ -892,32 +889,6 @@ public class UserPolicy {
     this.enablePublicSharing = enablePublicSharing;
   }
 
-  public UserPolicy blockedMediaFolders(List<String> blockedMediaFolders) {
-    this.blockedMediaFolders = blockedMediaFolders;
-    return this;
-  }
-
-  public UserPolicy addBlockedMediaFoldersItem(String blockedMediaFoldersItem) {
-    if (this.blockedMediaFolders == null) {
-      this.blockedMediaFolders = new ArrayList<String>();
-    }
-    this.blockedMediaFolders.add(blockedMediaFoldersItem);
-    return this;
-  }
-
-   /**
-   * Get blockedMediaFolders
-   * @return blockedMediaFolders
-  **/
-  @Schema(description = "")
-  public List<String> getBlockedMediaFolders() {
-    return blockedMediaFolders;
-  }
-
-  public void setBlockedMediaFolders(List<String> blockedMediaFolders) {
-    this.blockedMediaFolders = blockedMediaFolders;
-  }
-
   public UserPolicy remoteClientBitrateLimit(Integer remoteClientBitrateLimit) {
     this.remoteClientBitrateLimit = remoteClientBitrateLimit;
     return this;
@@ -1125,7 +1096,6 @@ public class UserPolicy {
         Objects.equals(this.enableAllFolders, userPolicy.enableAllFolders) &&
         Objects.equals(this.invalidLoginAttemptCount, userPolicy.invalidLoginAttemptCount) &&
         Objects.equals(this.enablePublicSharing, userPolicy.enablePublicSharing) &&
-        Objects.equals(this.blockedMediaFolders, userPolicy.blockedMediaFolders) &&
         Objects.equals(this.remoteClientBitrateLimit, userPolicy.remoteClientBitrateLimit) &&
         Objects.equals(this.authenticationProviderId, userPolicy.authenticationProviderId) &&
         Objects.equals(this.excludedSubFolders, userPolicy.excludedSubFolders) &&
@@ -1138,7 +1108,7 @@ public class UserPolicy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, blockedMediaFolders, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices, allowCameraUpload, allowSharingPersonalItems);
+    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices, allowCameraUpload, allowSharingPersonalItems);
   }
 
 
@@ -1184,7 +1154,6 @@ public class UserPolicy {
     sb.append("    enableAllFolders: ").append(toIndentedString(enableAllFolders)).append("\n");
     sb.append("    invalidLoginAttemptCount: ").append(toIndentedString(invalidLoginAttemptCount)).append("\n");
     sb.append("    enablePublicSharing: ").append(toIndentedString(enablePublicSharing)).append("\n");
-    sb.append("    blockedMediaFolders: ").append(toIndentedString(blockedMediaFolders)).append("\n");
     sb.append("    remoteClientBitrateLimit: ").append(toIndentedString(remoteClientBitrateLimit)).append("\n");
     sb.append("    authenticationProviderId: ").append(toIndentedString(authenticationProviderId)).append("\n");
     sb.append("    excludedSubFolders: ").append(toIndentedString(excludedSubFolders)).append("\n");

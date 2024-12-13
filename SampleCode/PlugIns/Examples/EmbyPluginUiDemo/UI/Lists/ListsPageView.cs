@@ -6,6 +6,7 @@
 
     using MediaBrowser.Controller;
     using MediaBrowser.Controller.Library;
+    using MediaBrowser.Controller.Persistence;
     using MediaBrowser.Model.Activity;
     using MediaBrowser.Model.Plugins;
     using MediaBrowser.Model.Plugins.UI.Views;
@@ -21,7 +22,7 @@
         {
             this.applicationHost = applicationHost;
             this.ContentData = new ListsUI();
-            this.ListsUI.CreateListItems(applicationHost.Resolve<IActivityManager>(), applicationHost.Resolve<ILibraryManager>());
+            this.ListsUI.CreateListItems(applicationHost.Resolve<IActivityManager>(), applicationHost.Resolve<ILibraryManager>(), applicationHost.Resolve<IItemRepository>());
         }
 
         public ListsUI ListsUI => this.ContentData as ListsUI;
@@ -41,7 +42,7 @@
             switch (commandId)
             {
                 case PostBackCommand:
-                    this.ListsUI.CreateListItems(this.applicationHost.Resolve<IActivityManager>(), this.applicationHost.Resolve<ILibraryManager>());
+                    this.ListsUI.CreateListItems(this.applicationHost.Resolve<IActivityManager>(), this.applicationHost.Resolve<ILibraryManager>(), this.applicationHost.Resolve<IItemRepository>());
                     return Task.FromResult<IPluginUIView>(this);
             }
 

@@ -1,10 +1,8 @@
-﻿namespace EmbyPluginUiDemo.UI.CalcDialog
+﻿namespace EmbyPluginUiDemo.UI.PostbackCalculator
 {
     using System;
     using System.Threading.Tasks;
-
     using EmbyPluginUiDemo.UIBaseClasses.Views;
-
     using MediaBrowser.Model.Plugins;
     using MediaBrowser.Model.Plugins.UI.Views;
 

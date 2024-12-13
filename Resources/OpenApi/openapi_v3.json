@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.32"
+    "version": "4.9.0.33"
   },
   "servers": [
     {
@@ -87260,12 +87260,6 @@
           },
           "EnablePublicSharing": {
             "type": "boolean"
-          },
-          "BlockedMediaFolders": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "RemoteClientBitrateLimit": {
             "type": "integer",

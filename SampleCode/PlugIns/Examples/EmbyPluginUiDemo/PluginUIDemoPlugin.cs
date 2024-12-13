@@ -76,7 +76,8 @@ namespace EmbyPluginUiDemo
                 {
                     this.pages = new List<IPluginUIPageController>();
 
-                    this.pages.Add(new MainPageController(this.GetPluginInfo(), this.applicationHost, this.basicsStore));
+                    this.pages.Add(new MainPageController1(this.GetPluginInfo(), this.applicationHost, this.basicsStore));
+                    this.pages.Add(new MainPageController2(this.GetPluginInfo(), this.applicationHost, this.basicsStore));
                 }
 
                 return this.pages.AsReadOnly();

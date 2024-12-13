@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.0.32
+  version: 4.9.0.33
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -78504,9 +78504,6 @@ components:
           EnabledFolders:
           - EnabledFolders
           - EnabledFolders
-          BlockedMediaFolders:
-          - BlockedMediaFolders
-          - BlockedMediaFolders
           IsDisabled: true
           MaxParentalRating: 1
           EnablePublicSharing: true
@@ -78808,10 +78805,6 @@ components:
           format: int32
         EnablePublicSharing:
           type: boolean
-        BlockedMediaFolders:
-          type: array
-          items:
-            type: string
         RemoteClientBitrateLimit:
           type: integer
           format: int32
@@ -78848,9 +78841,6 @@ components:
         EnabledFolders:
         - EnabledFolders
         - EnabledFolders
-        BlockedMediaFolders:
-        - BlockedMediaFolders
-        - BlockedMediaFolders
         IsDisabled: true
         MaxParentalRating: 1
         EnablePublicSharing: true
@@ -78981,9 +78971,6 @@ components:
             EnabledFolders:
             - EnabledFolders
             - EnabledFolders
-            BlockedMediaFolders:
-            - BlockedMediaFolders
-            - BlockedMediaFolders
             IsDisabled: true
             MaxParentalRating: 1
             EnablePublicSharing: true
@@ -79096,9 +79083,6 @@ components:
             EnabledFolders:
             - EnabledFolders
             - EnabledFolders
-            BlockedMediaFolders:
-            - BlockedMediaFolders
-            - BlockedMediaFolders
             IsDisabled: true
             MaxParentalRating: 1
             EnablePublicSharing: true
@@ -79234,9 +79218,6 @@ components:
             EnabledFolders:
             - EnabledFolders
             - EnabledFolders
-            BlockedMediaFolders:
-            - BlockedMediaFolders
-            - BlockedMediaFolders
             IsDisabled: true
             MaxParentalRating: 1
             EnablePublicSharing: true

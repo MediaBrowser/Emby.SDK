@@ -5,12 +5,12 @@
 
     using EmbyPluginUiDemo.Storage;
     using EmbyPluginUiDemo.UI.Basics;
-    using EmbyPluginUiDemo.UI.CalcDialog;
     using EmbyPluginUiDemo.UI.ChildCollections;
     using EmbyPluginUiDemo.UI.Conditions;
     using EmbyPluginUiDemo.UI.Constraints;
     using EmbyPluginUiDemo.UI.Lists;
     using EmbyPluginUiDemo.UI.Nesting;
+    using EmbyPluginUiDemo.UI.PostbackCalculator;
     using EmbyPluginUiDemo.UI.Selection;
     using EmbyPluginUiDemo.UI.States;
     using EmbyPluginUiDemo.UI.Validation;
@@ -21,7 +21,7 @@
     using MediaBrowser.Model.Plugins.UI;
     using MediaBrowser.Model.Plugins.UI.Views;
 
-    internal class MainPageController : ControllerBase, IHasTabbedUIPages
+    internal class MainPageController1 : ControllerBase, IHasTabbedUIPages
     {
         private readonly PluginInfo pluginInfo;
         private readonly BasicsOptionsStore basicsOptionsStore;
@@ -31,29 +31,26 @@
         /// <param name="pluginInfo">The plugin information.</param>
         /// <param name="applicationHost"></param>
         /// <param name="basicsOptionsStore"></param>
-        public MainPageController(PluginInfo pluginInfo, IServerApplicationHost applicationHost, BasicsOptionsStore basicsOptionsStore)
+        public MainPageController1(PluginInfo pluginInfo, IServerApplicationHost applicationHost, BasicsOptionsStore basicsOptionsStore)
             : base(pluginInfo.Id)
         {
             this.pluginInfo = pluginInfo;
             this.basicsOptionsStore = basicsOptionsStore;
             this.PageInfo = new PluginPageInfo
                             {
-                                Name = "PluginUiDemo",
+                                Name = "PluginUiDemo1",
                                 EnableInMainMenu = true,
-                                DisplayName = "Plugin UI Demo",
+                                DisplayName = "Plugin UI Demo 1",
                                 MenuIcon = "list_alt",
                                 IsMainConfigPage = false,
                             };
 
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(SelectionPageView), "Selection", e => new SelectionPageView(pluginInfo)));
-            this.tabPages.Add(new TabPageController(pluginInfo, nameof(ListsPageView), "Lists", e => new ListsPageView(pluginInfo, applicationHost)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(StatesPageView), "States", e => new StatesPageView(pluginInfo)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(ConstraintsPageView), "Constraints", e => new ConstraintsPageView(pluginInfo)));
-            this.tabPages.Add(new TabPageController(pluginInfo, nameof(NestingPageView), "Nested Objects", e => new NestingPageView(pluginInfo)));
-            this.tabPages.Add(new TabPageController(pluginInfo, nameof(ChildCollectionsView), "Child Collections", e => new ChildCollectionsView(pluginInfo)));
+            this.tabPages.Add(new TabPageController(pluginInfo, nameof(ValidationPageView), "Validation", e => new ValidationPageView(pluginInfo)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(ConditionsPageView), "Conditions", e => new ConditionsPageView(pluginInfo)));
             this.tabPages.Add(new TabPageController(pluginInfo, nameof(CalcPageView), "Postback", e => new CalcPageView(pluginInfo)));
-            this.tabPages.Add(new TabPageController(pluginInfo, nameof(ValidationPageView), "Validation", e => new ValidationPageView(pluginInfo)));
         }
 
         public override PluginPageInfo PageInfo { get; }

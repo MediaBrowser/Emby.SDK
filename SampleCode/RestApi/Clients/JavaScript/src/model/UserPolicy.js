@@ -16,7 +16,7 @@ import UnratedItem from './UnratedItem';
 /**
 * The UserPolicy model module.
 * @module model/UserPolicy
-* @version 4.9.0.32
+* @version 4.9.0.33
 */
 export default class UserPolicy {
     /**
@@ -153,9 +153,6 @@ export default class UserPolicy {
             }
             if (data.hasOwnProperty('EnablePublicSharing')) {
                 obj['EnablePublicSharing'] = ApiClient.convertToType(data['EnablePublicSharing'], 'Boolean');
-            }
-            if (data.hasOwnProperty('BlockedMediaFolders')) {
-                obj['BlockedMediaFolders'] = ApiClient.convertToType(data['BlockedMediaFolders'], ['String']);
             }
             if (data.hasOwnProperty('RemoteClientBitrateLimit')) {
                 obj['RemoteClientBitrateLimit'] = ApiClient.convertToType(data['RemoteClientBitrateLimit'], 'Number');
@@ -338,10 +335,6 @@ export default class UserPolicy {
     * @member {Boolean} EnablePublicSharing
     */
     'EnablePublicSharing' = undefined;
-    /**
-    * @member {Array.<String>} BlockedMediaFolders
-    */
-    'BlockedMediaFolders' = undefined;
     /**
     * @member {Number} RemoteClientBitrateLimit
     */

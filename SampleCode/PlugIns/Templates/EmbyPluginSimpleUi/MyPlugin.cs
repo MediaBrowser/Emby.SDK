@@ -12,17 +12,19 @@
     /// <summary>
     /// The plugin.
     /// </summary>
-    public class Plugin : BasePluginSimpleUI<PluginOptions>, IHasThumbImage
+    public class MyPlugin : BasePluginSimpleUI<MyPluginOptions>, IHasThumbImage
     {
-        /// <summary>The Plugin ID.</summary>
+        public const string PluginName = "´XVXVXVXVXVXVX";
+
+        /// <summary>The MyPlugin ID.</summary>
         private readonly Guid id = new Guid("00000000-0000-0000-0000-000000000000"); // << Generate one: Tools >> Create GUID
 
         private readonly ILogger logger;
 
-        /// <summary>Initializes a new instance of the <see cref="Plugin" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="MyPlugin" /> class.</summary>
         /// <param name="applicationHost">The application host.</param>
         /// <param name="logManager">The log manager.</param>
-        public Plugin(IApplicationHost applicationHost, ILogManager logManager) : base(applicationHost)
+        public MyPlugin(IApplicationHost applicationHost, ILogManager logManager) : base(applicationHost)
         {
             this.logger = logManager.GetLogger(this.Name);
             this.logger.Info("My plugin ({0}) is getting loaded", this.Name);
@@ -38,7 +40,11 @@
 
         /// <summary>Gets the name of the plugin</summary>
         /// <value>The name.</value>
-        public override sealed string Name => "´XVXVXVXVXVXVX";
+        public sealed override string Name => PluginName;
+
+        /// <summary>Gets the plugin options.</summary>
+        /// <value>The plugin options.</value>
+        public MyPluginOptions Options => this.GetOptions();
 
         /// <summary>Gets the thumb image format.</summary>
         /// <value>The thumb image format.</value>
@@ -52,7 +58,7 @@
             return type.Assembly.GetManifestResourceStream(type.Namespace + ".ThumbImage.png");
         }
 
-        protected override void OnOptionsSaved(PluginOptions options)
+        protected override void OnOptionsSaved(MyPluginOptions options)
         {
             this.logger.Info("My plugin ({0}) options have been updated.", this.Name);
         }

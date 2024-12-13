@@ -6,13 +6,11 @@
     using Emby.Web.GenericEdit.Validation;
 
     using MediaBrowser.Model.Attributes;
-    using MediaBrowser.Model.GenericEdit;
     using MediaBrowser.Model.Logging;
-    using MediaBrowser.Model.MediaInfo;
 
-    public class PluginOptions : EditableOptionsBase
+    public class MyPluginOptions : EditableOptionsBase
     {
-        public override string EditorTitle => "Plugin Options";
+        public override string EditorTitle => "MyPlugin Options";
 
         public override string EditorDescription => "This is a description text, shown at the top of the options page.\n"
                                                     + "The options below are just a few examples for creating UI elementsd.";

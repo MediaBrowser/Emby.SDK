@@ -63,7 +63,6 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="enableAllFolders">enableAllFolders.</param>
         /// <param name="invalidLoginAttemptCount">invalidLoginAttemptCount.</param>
         /// <param name="enablePublicSharing">enablePublicSharing.</param>
-        /// <param name="blockedMediaFolders">blockedMediaFolders.</param>
         /// <param name="remoteClientBitrateLimit">remoteClientBitrateLimit.</param>
         /// <param name="authenticationProviderId">authenticationProviderId.</param>
         /// <param name="excludedSubFolders">excludedSubFolders.</param>
@@ -72,7 +71,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="enableAllDevices">enableAllDevices.</param>
         /// <param name="allowCameraUpload">allowCameraUpload.</param>
         /// <param name="allowSharingPersonalItems">allowSharingPersonalItems.</param>
-        public UserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), long? lockedOutDate = default(long?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<AccessSchedule> accessSchedules = default(List<AccessSchedule>), List<UnratedItem> blockUnratedItems = default(List<UnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), List<string> blockedMediaFolders = default(List<string>), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?), bool? allowCameraUpload = default(bool?), bool? allowSharingPersonalItems = default(bool?))
+        public UserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), long? lockedOutDate = default(long?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<AccessSchedule> accessSchedules = default(List<AccessSchedule>), List<UnratedItem> blockUnratedItems = default(List<UnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?), bool? allowCameraUpload = default(bool?), bool? allowSharingPersonalItems = default(bool?))
         {
             this.IsAdministrator = isAdministrator;
             this.IsHidden = isHidden;
@@ -111,7 +110,6 @@ namespace EmbyClient.Dotnet.Model
             this.EnableAllFolders = enableAllFolders;
             this.InvalidLoginAttemptCount = invalidLoginAttemptCount;
             this.EnablePublicSharing = enablePublicSharing;
-            this.BlockedMediaFolders = blockedMediaFolders;
             this.RemoteClientBitrateLimit = remoteClientBitrateLimit;
             this.AuthenticationProviderId = authenticationProviderId;
             this.ExcludedSubFolders = excludedSubFolders;
@@ -350,12 +348,6 @@ namespace EmbyClient.Dotnet.Model
         public bool? EnablePublicSharing { get; set; }
 
         /// <summary>
-        /// Gets or Sets BlockedMediaFolders
-        /// </summary>
-        [DataMember(Name="BlockedMediaFolders", EmitDefaultValue=false)]
-        public List<string> BlockedMediaFolders { get; set; }
-
-        /// <summary>
         /// Gets or Sets RemoteClientBitrateLimit
         /// </summary>
         [DataMember(Name="RemoteClientBitrateLimit", EmitDefaultValue=false)]
@@ -448,7 +440,6 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  EnableAllFolders: ").Append(EnableAllFolders).Append("\n");
             sb.Append("  InvalidLoginAttemptCount: ").Append(InvalidLoginAttemptCount).Append("\n");
             sb.Append("  EnablePublicSharing: ").Append(EnablePublicSharing).Append("\n");
-            sb.Append("  BlockedMediaFolders: ").Append(BlockedMediaFolders).Append("\n");
             sb.Append("  RemoteClientBitrateLimit: ").Append(RemoteClientBitrateLimit).Append("\n");
             sb.Append("  AuthenticationProviderId: ").Append(AuthenticationProviderId).Append("\n");
             sb.Append("  ExcludedSubFolders: ").Append(ExcludedSubFolders).Append("\n");
@@ -685,12 +676,6 @@ namespace EmbyClient.Dotnet.Model
                     this.EnablePublicSharing.Equals(input.EnablePublicSharing))
                 ) && 
                 (
-                    this.BlockedMediaFolders == input.BlockedMediaFolders ||
-                    this.BlockedMediaFolders != null &&
-                    input.BlockedMediaFolders != null &&
-                    this.BlockedMediaFolders.SequenceEqual(input.BlockedMediaFolders)
-                ) && 
-                (
                     this.RemoteClientBitrateLimit == input.RemoteClientBitrateLimit ||
                     (this.RemoteClientBitrateLimit != null &&
                     this.RemoteClientBitrateLimit.Equals(input.RemoteClientBitrateLimit))
@@ -817,8 +802,6 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.InvalidLoginAttemptCount.GetHashCode();
                 if (this.EnablePublicSharing != null)
                     hashCode = hashCode * 59 + this.EnablePublicSharing.GetHashCode();
-                if (this.BlockedMediaFolders != null)
-                    hashCode = hashCode * 59 + this.BlockedMediaFolders.GetHashCode();
                 if (this.RemoteClientBitrateLimit != null)
                     hashCode = hashCode * 59 + this.RemoteClientBitrateLimit.GetHashCode();
                 if (this.AuthenticationProviderId != null)

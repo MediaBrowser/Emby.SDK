@@ -13,6 +13,7 @@ namespace EmbyPluginUiDemo.UI.Lists
 
     using MediaBrowser.Controller.Entities;
     using MediaBrowser.Controller.Library;
+    using MediaBrowser.Controller.Persistence;
     using MediaBrowser.Model.Activity;
     using MediaBrowser.Model.Attributes;
     using MediaBrowser.Model.Entities;
@@ -90,7 +91,7 @@ namespace EmbyPluginUiDemo.UI.Lists
         [VisibleCondition(nameof(DemoChoice), ValueCondition.IsEqual, nameof(DemoChoices.NestedList))]
         public GenericItemList LibraryItemsList { get; set; }
 
-        public void CreateListItems(IActivityManager activityManager, ILibraryManager libraryManager)
+        public void CreateListItems(IActivityManager activityManager, ILibraryManager libraryManager, IItemRepository itemRepository)
         {
             this.ActivityList.Clear();
             this.LibraryItemsList.Clear();
@@ -109,7 +110,7 @@ namespace EmbyPluginUiDemo.UI.Lists
 
             if (this.DemoChoice == DemoChoices.NestedList)
             {
-                this.CreateNestedList(libraryManager);
+                this.CreateNestedList(libraryManager, itemRepository);
                 return;
             }
 
@@ -161,9 +162,9 @@ namespace EmbyPluginUiDemo.UI.Lists
             }
         }
 
-        private void CreateNestedList(ILibraryManager libraryManager)
+        private void CreateNestedList(ILibraryManager libraryManager, IItemRepository itemRepository)
         {
-            var people = libraryManager.GetPeople(new InternalItemsQuery { Limit = 2000, }).Items;
+            var people = itemRepository.GetPeople(new InternalItemsQuery { Limit = 2000, IncludeLiveTVView = false }).Items;
 
             for (int i = 0; i < 2; i++)
             {

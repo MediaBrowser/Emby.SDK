@@ -17,7 +17,7 @@ import LiveTvKeywordType from './LiveTvKeywordType';
 /**
 * The ApiBaseItemsRequest model module.
 * @module model/ApiBaseItemsRequest
-* @version 4.9.0.32
+* @version 4.9.0.33
 */
 export default class ApiBaseItemsRequest {
     /**

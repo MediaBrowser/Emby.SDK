@@ -153,7 +153,8 @@
   
   <h1 id="Emby_Web_GenericEdit_Elements_ProgressItem" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem" class="text-break">Class ProgressItem
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Class representing a progress bar in the plugin UI.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -172,7 +173,8 @@
   
   <a id="Emby_Web_GenericEdit_Elements_ProgressItem__ctor_" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.#ctor*"></a>
   <h4 id="Emby_Web_GenericEdit_Elements_ProgressItem__ctor" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.#ctor">ProgressItem()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Web.GenericEdit.Elements.ProgressItem.html">ProgressItem</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -182,7 +184,8 @@
   
   <a id="Emby_Web_GenericEdit_Elements_ProgressItem__ctor_" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.#ctor*"></a>
   <h4 id="Emby_Web_GenericEdit_Elements_ProgressItem__ctor_System_Int32_System_Int32_System_String_" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.#ctor(System.Int32,System.Int32,System.String)">ProgressItem(Int32, Int32, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Web.GenericEdit.Elements.ProgressItem.html">ProgressItem</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -201,17 +204,20 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">currentValue</span></td>
-        <td></td>
+        <td><p>The current value.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxValue</span></td>
-        <td></td>
+        <td><p>The maximum value.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">progressText</span></td>
-        <td></td>
+        <td><p>The progress text.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -221,7 +227,8 @@
   
   <a id="Emby_Web_GenericEdit_Elements_ProgressItem_CurrentValue_" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.CurrentValue*"></a>
   <h4 id="Emby_Web_GenericEdit_Elements_ProgressItem_CurrentValue" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.CurrentValue">CurrentValue</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the current value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -238,15 +245,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The current value.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_ProgressItem_CurrentValue_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This indicates the current state of progress.
+If set to <code>0</code>, the bar is shown empty across the full range.
+If set to <a class="xref" href="Emby.Web.GenericEdit.Elements.ProgressItem.html#Emby_Web_GenericEdit_Elements_ProgressItem_MaxValue">MaxValue</a>, the bar is shown filled across the full range.</p>
+</div>
   
   
   <a id="Emby_Web_GenericEdit_Elements_ProgressItem_MaxValue_" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.MaxValue*"></a>
   <h4 id="Emby_Web_GenericEdit_Elements_ProgressItem_MaxValue" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.MaxValue">MaxValue</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -263,15 +277,20 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The maximum value.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_ProgressItem_MaxValue_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This value represents the 100% position. When <a class="xref" href="Emby.Web.GenericEdit.Elements.ProgressItem.html#Emby_Web_GenericEdit_Elements_ProgressItem_CurrentValue">CurrentValue</a> reaches this value, the progress bar will be filled across the full range.</p>
+</div>
   
   
   <a id="Emby_Web_GenericEdit_Elements_ProgressItem_ProgressText_" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.ProgressText*"></a>
   <h4 id="Emby_Web_GenericEdit_Elements_ProgressItem_ProgressText" data-uid="Emby.Web.GenericEdit.Elements.ProgressItem.ProgressText">ProgressText</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the progress text.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -288,10 +307,14 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The progress text.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Emby_Web_GenericEdit_Elements_ProgressItem_ProgressText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If specified, a label will be shown with the given text.</p>
+</div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Emby.Media.Common.Extensions.Extensions.html#Emby_Media_Common_Extensions_Extensions_JsonClone__1___0_MediaBrowser_Model_Serialization_IJsonSerializer_">Extensions.JsonClone&lt;T&gt;(T, IJsonSerializer)</a>

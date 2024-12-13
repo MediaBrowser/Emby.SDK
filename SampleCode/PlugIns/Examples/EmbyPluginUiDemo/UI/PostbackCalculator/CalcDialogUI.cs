@@ -1,10 +1,8 @@
-﻿namespace EmbyPluginUiDemo.UI.CalcDialog
+﻿namespace EmbyPluginUiDemo.UI.PostbackCalculator
 {
     using System.ComponentModel;
-
     using Emby.Web.GenericEdit;
     using Emby.Web.GenericEdit.Elements;
-
     using MediaBrowser.Model.Attributes;
 
     public class CalcDialogUI : EditableOptionsBase

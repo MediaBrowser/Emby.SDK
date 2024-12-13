@@ -59,7 +59,6 @@ class UserPolicy(object):
         'enable_all_folders': 'bool',
         'invalid_login_attempt_count': 'int',
         'enable_public_sharing': 'bool',
-        'blocked_media_folders': 'list[str]',
         'remote_client_bitrate_limit': 'int',
         'authentication_provider_id': 'str',
         'excluded_sub_folders': 'list[str]',
@@ -108,7 +107,6 @@ class UserPolicy(object):
         'enable_all_folders': 'EnableAllFolders',
         'invalid_login_attempt_count': 'InvalidLoginAttemptCount',
         'enable_public_sharing': 'EnablePublicSharing',
-        'blocked_media_folders': 'BlockedMediaFolders',
         'remote_client_bitrate_limit': 'RemoteClientBitrateLimit',
         'authentication_provider_id': 'AuthenticationProviderId',
         'excluded_sub_folders': 'ExcludedSubFolders',
@@ -119,7 +117,7 @@ class UserPolicy(object):
         'allow_sharing_personal_items': 'AllowSharingPersonalItems'
     }
 
-    def __init__(self, is_administrator=None, is_hidden=None, is_hidden_remotely=None, is_hidden_from_unused_devices=None, is_disabled=None, locked_out_date=None, max_parental_rating=None, allow_tag_or_rating=None, blocked_tags=None, is_tag_blocking_mode_inclusive=None, include_tags=None, enable_user_preference_access=None, access_schedules=None, block_unrated_items=None, enable_remote_control_of_other_users=None, enable_shared_device_control=None, enable_remote_access=None, enable_live_tv_management=None, enable_live_tv_access=None, enable_media_playback=None, enable_audio_playback_transcoding=None, enable_video_playback_transcoding=None, enable_playback_remuxing=None, enable_content_deletion=None, restricted_features=None, enable_content_deletion_from_folders=None, enable_content_downloading=None, enable_subtitle_downloading=None, enable_subtitle_management=None, enable_sync_transcoding=None, enable_media_conversion=None, enabled_channels=None, enable_all_channels=None, enabled_folders=None, enable_all_folders=None, invalid_login_attempt_count=None, enable_public_sharing=None, blocked_media_folders=None, remote_client_bitrate_limit=None, authentication_provider_id=None, excluded_sub_folders=None, simultaneous_stream_limit=None, enabled_devices=None, enable_all_devices=None, allow_camera_upload=None, allow_sharing_personal_items=None):  # noqa: E501
+    def __init__(self, is_administrator=None, is_hidden=None, is_hidden_remotely=None, is_hidden_from_unused_devices=None, is_disabled=None, locked_out_date=None, max_parental_rating=None, allow_tag_or_rating=None, blocked_tags=None, is_tag_blocking_mode_inclusive=None, include_tags=None, enable_user_preference_access=None, access_schedules=None, block_unrated_items=None, enable_remote_control_of_other_users=None, enable_shared_device_control=None, enable_remote_access=None, enable_live_tv_management=None, enable_live_tv_access=None, enable_media_playback=None, enable_audio_playback_transcoding=None, enable_video_playback_transcoding=None, enable_playback_remuxing=None, enable_content_deletion=None, restricted_features=None, enable_content_deletion_from_folders=None, enable_content_downloading=None, enable_subtitle_downloading=None, enable_subtitle_management=None, enable_sync_transcoding=None, enable_media_conversion=None, enabled_channels=None, enable_all_channels=None, enabled_folders=None, enable_all_folders=None, invalid_login_attempt_count=None, enable_public_sharing=None, remote_client_bitrate_limit=None, authentication_provider_id=None, excluded_sub_folders=None, simultaneous_stream_limit=None, enabled_devices=None, enable_all_devices=None, allow_camera_upload=None, allow_sharing_personal_items=None):  # noqa: E501
         """UserPolicy - a model defined in Swagger"""  # noqa: E501
         self._is_administrator = None
         self._is_hidden = None
@@ -158,7 +156,6 @@ class UserPolicy(object):
         self._enable_all_folders = None
         self._invalid_login_attempt_count = None
         self._enable_public_sharing = None
-        self._blocked_media_folders = None
         self._remote_client_bitrate_limit = None
         self._authentication_provider_id = None
         self._excluded_sub_folders = None
@@ -242,8 +239,6 @@ class UserPolicy(object):
             self.invalid_login_attempt_count = invalid_login_attempt_count
         if enable_public_sharing is not None:
             self.enable_public_sharing = enable_public_sharing
-        if blocked_media_folders is not None:
-            self.blocked_media_folders = blocked_media_folders
         if remote_client_bitrate_limit is not None:
             self.remote_client_bitrate_limit = remote_client_bitrate_limit
         if authentication_provider_id is not None:
@@ -1047,27 +1042,6 @@ class UserPolicy(object):
         """
 
         self._enable_public_sharing = enable_public_sharing
-
-    @property
-    def blocked_media_folders(self):
-        """Gets the blocked_media_folders of this UserPolicy.  # noqa: E501
-
-
-        :return: The blocked_media_folders of this UserPolicy.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._blocked_media_folders
-
-    @blocked_media_folders.setter
-    def blocked_media_folders(self, blocked_media_folders):
-        """Sets the blocked_media_folders of this UserPolicy.
-
-
-        :param blocked_media_folders: The blocked_media_folders of this UserPolicy.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._blocked_media_folders = blocked_media_folders
 
     @property
     def remote_client_bitrate_limit(self):

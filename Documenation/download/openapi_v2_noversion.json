@@ -64322,12 +64322,6 @@
         "EnablePublicSharing": {
           "type": "boolean"
         },
-        "BlockedMediaFolders": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "RemoteClientBitrateLimit": {
           "format": "int32",
           "type": "integer"
