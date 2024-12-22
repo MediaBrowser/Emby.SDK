@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.33"
+    "version": "4.9.0.34"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -65538,6 +65538,14 @@
           "type": "integer"
         },
         "PremiereDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "StartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "EndDate": {
           "format": "date-time",
           "type": "string"
         },
