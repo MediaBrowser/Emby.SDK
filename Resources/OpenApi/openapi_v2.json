@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.34"
+    "version": "4.9.0.35"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -34940,6 +34940,10 @@
         ],
         "summary": "Gets the channel management list",
         "description": "Requires authentication as administrator",
+        "externalDocs": {
+          "description": "API Documentation: Item Information",
+          "url": "https://betadev.emby.media/doc/restapi/Item-Information.html"
+        },
         "operationId": "getLivetvManageChannels",
         "produces": [
           "application/json",
@@ -34975,9 +34979,9 @@
         ],
         "responses": {
           "200": {
-            "description": "Operation successful. Returning a QueryResult<ChannelManagementInfo> object.",
+            "description": "Operation successful. Returning a QueryResult<BaseItemDto> object.",
             "schema": {
-              "$ref": "#/definitions/QueryResult_ChannelManagementInfo"
+              "$ref": "#/definitions/QueryResult_BaseItemDto"
             }
           },
           "400": {
@@ -57313,6 +57317,9 @@
           "description": "The Prefix.",
           "type": "string"
         },
+        "TunerName": {
+          "type": "string"
+        },
         "PlaylistItemId": {
           "description": "The playlist item identifier.",
           "type": "string"
@@ -62645,9 +62652,6 @@
           "description": "A value indicating whether this instance can seek.",
           "type": "boolean"
         },
-        "Item": {
-          "$ref": "#/definitions/BaseItemDto"
-        },
         "NowPlayingQueue": {
           "type": "array",
           "items": {
@@ -62695,11 +62699,6 @@
           "description": "A value indicating whether this instance is muted.",
           "type": "boolean"
         },
-        "PositionTicks": {
-          "format": "int64",
-          "description": "The position ticks.",
-          "type": "integer"
-        },
         "RunTimeTicks": {
           "format": "int64",
           "type": "integer"
@@ -62730,10 +62729,6 @@
           "description": "The live stream identifier.",
           "type": "string"
         },
-        "PlaySessionId": {
-          "description": "The play session identifier.",
-          "type": "string"
-        },
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
@@ -62753,6 +62748,18 @@
           "items": {
             "type": "string"
           }
+        },
+        "PlaySessionId": {
+          "description": "The play session identifier.",
+          "type": "string"
+        },
+        "Item": {
+          "$ref": "#/definitions/BaseItemDto"
+        },
+        "PositionTicks": {
+          "format": "int64",
+          "description": "The position ticks.",
+          "type": "integer"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Session.PlaybackStartInfo"
@@ -63495,6 +63502,14 @@
           "type": "boolean"
         },
         "DatabaseAnalysisLimit": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Max_LibraryDbConnections": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Max_OtherDbConnections": {
           "format": "int32",
           "type": "integer"
         },
@@ -66876,33 +66891,6 @@
       },
       "x-internal-ref-name": "Emby.Api.Library.AddMediaPath"
     },
-    "QueryResult_ChannelManagementInfo": {
-      "type": "object",
-      "properties": {
-        "Items": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ChannelManagementInfo"
-          }
-        },
-        "TotalRecordCount": {
-          "format": "int32",
-          "type": "integer"
-        }
-      }
-    },
-    "ChannelManagementInfo": {
-      "type": "object",
-      "properties": {
-        "Id": {
-          "type": "string"
-        },
-        "Name": {
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "Emby.LiveTV.ChannelManagementInfo"
-    },
     "Api.TagItem": {
       "type": "object",
       "properties": {
@@ -67128,9 +67116,6 @@
           "description": "A value indicating whether this instance can seek.",
           "type": "boolean"
         },
-        "Item": {
-          "$ref": "#/definitions/BaseItemDto"
-        },
         "NowPlayingQueue": {
           "type": "array",
           "items": {
@@ -67178,11 +67163,6 @@
           "description": "A value indicating whether this instance is muted.",
           "type": "boolean"
         },
-        "PositionTicks": {
-          "format": "int64",
-          "description": "The position ticks.",
-          "type": "integer"
-        },
         "RunTimeTicks": {
           "format": "int64",
           "type": "integer"
@@ -67213,10 +67193,6 @@
           "description": "The live stream identifier.",
           "type": "string"
         },
-        "PlaySessionId": {
-          "description": "The play session identifier.",
-          "type": "string"
-        },
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
@@ -67236,6 +67212,18 @@
           "items": {
             "type": "string"
           }
+        },
+        "PlaySessionId": {
+          "description": "The play session identifier.",
+          "type": "string"
+        },
+        "Item": {
+          "$ref": "#/definitions/BaseItemDto"
+        },
+        "PositionTicks": {
+          "format": "int64",
+          "description": "The position ticks.",
+          "type": "integer"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Session.PlaybackProgressInfo"
@@ -67261,9 +67249,6 @@
           "format": "int32",
           "type": "integer"
         },
-        "Item": {
-          "$ref": "#/definitions/BaseItemDto"
-        },
         "ItemId": {
           "description": "The item identifier.",
           "type": "string"
@@ -67276,17 +67261,8 @@
           "description": "The media version identifier.",
           "type": "string"
         },
-        "PositionTicks": {
-          "format": "int64",
-          "description": "The position ticks.",
-          "type": "integer"
-        },
         "LiveStreamId": {
           "description": "The live stream identifier.",
-          "type": "string"
-        },
-        "PlaySessionId": {
-          "description": "The play session identifier.",
           "type": "string"
         },
         "Failed": {
@@ -67298,6 +67274,18 @@
         },
         "NextMediaType": {
           "type": "string"
+        },
+        "PlaySessionId": {
+          "description": "The play session identifier.",
+          "type": "string"
+        },
+        "Item": {
+          "$ref": "#/definitions/BaseItemDto"
+        },
+        "PositionTicks": {
+          "format": "int64",
+          "description": "The position ticks.",
+          "type": "integer"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Session.PlaybackStopInfo"
@@ -67774,6 +67762,33 @@
         }
       },
       "x-internal-ref-name": "Emby.LiveTV.Api.SetChannelDisabled"
+    },
+    "QueryResult_ChannelManagementInfo": {
+      "type": "object",
+      "properties": {
+        "Items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChannelManagementInfo"
+          }
+        },
+        "TotalRecordCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ChannelManagementInfo": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "Emby.LiveTV.ChannelManagementInfo"
     },
     "Api.SetChannelSortIndex": {
       "type": "object",
