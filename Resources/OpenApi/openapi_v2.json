@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.37"
+    "version": "4.9.0.38"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -26112,6 +26112,10 @@
         "summary": "Sends a notification to all admin users",
         "description": "Requires authentication as user",
         "operationId": "postNotificationsAdmin",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
         "parameters": [
           {
             "in": "query",
@@ -26144,6 +26148,15 @@
             "name": "Level",
             "description": "The notification level",
             "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "AddAdminNotification",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Api.AddAdminNotification"
+            }
           }
         ],
         "responses": {
@@ -70787,6 +70800,15 @@
         }
       },
       "x-internal-ref-name": "Emby.Notifications.NotificationTypeInfo"
+    },
+    "Api.AddAdminNotification": {
+      "type": "object",
+      "properties": {
+        "DisplayDateTime": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.Notifications.Api.AddAdminNotification"
     },
     "PlaybackStartInfo": {
       "description": "Class PlaybackStartInfo.\r\n",
