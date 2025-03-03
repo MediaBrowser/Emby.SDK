@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.38"
+    "version": "4.9.0.41"
   },
   "servers": [
     {
@@ -106,9 +106,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -1152,9 +1173,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -2198,9 +2240,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -3248,9 +3311,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -4387,9 +4471,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -5547,9 +5652,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -6655,9 +6781,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -7705,9 +7852,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -8755,9 +8923,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -9851,9 +10040,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -10901,9 +11111,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -11947,9 +12178,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -13174,9 +13426,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -14533,9 +14806,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -15583,9 +15877,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -16629,9 +16944,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -17751,9 +18087,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -18801,9 +19158,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -19847,9 +20225,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -20893,9 +21292,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -22478,9 +22898,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -23524,9 +23965,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -24580,9 +25042,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -28466,9 +28949,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -30353,9 +30857,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -32452,9 +32977,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -33554,9 +34100,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -34610,9 +35177,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -35651,9 +36239,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -36742,9 +37351,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -38630,9 +39260,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -40510,9 +41161,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -41544,9 +42216,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -45254,9 +45947,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -46314,9 +47028,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -47374,9 +48109,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -52564,9 +53320,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -54856,9 +55633,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -55980,9 +56778,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -58949,9 +59768,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -61524,9 +62364,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -62584,9 +63445,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -64264,9 +65146,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -66213,27 +67116,6 @@
         "operationId": "getShowsByIdSeasons",
         "parameters": [
           {
-            "name": "UserId",
-            "in": "query",
-            "description": "User Id",
-            "required": true,
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string",
-              "format": "guid"
-            }
-          },
-          {
-            "name": "Fields",
-            "in": "query",
-            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines, TrailerUrls",
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "Id",
             "in": "path",
             "description": "The series id",
@@ -66241,6 +67123,81 @@
             "style": "simple",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "ArtistType",
+            "in": "query",
+            "description": "Artist or AlbumArtist",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxOfficialRating",
+            "in": "query",
+            "description": "Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HasThemeSong",
+            "in": "query",
+            "description": "Optional filter by items with theme songs.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasThemeVideo",
+            "in": "query",
+            "description": "Optional filter by items with theme videos.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasSubtitles",
+            "in": "query",
+            "description": "Optional filter by items with subtitles.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasSpecialFeature",
+            "in": "query",
+            "description": "Optional filter by items with special features.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTrailer",
+            "in": "query",
+            "description": "Optional filter by items with trailers.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
             }
           },
           {
@@ -66265,9 +67222,603 @@
             }
           },
           {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinIndexNumber",
+            "in": "query",
+            "description": "Optional filter by minimum index number.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinStartDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxStartDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinEndDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxEndDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinPlayers",
+            "in": "query",
+            "description": "Optional filter by minimum number of game players.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MaxPlayers",
+            "in": "query",
+            "description": "Optional filter by maximum number of game players.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ParentIndexNumber",
+            "in": "query",
+            "description": "Optional filter by parent index number.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasParentalRating",
+            "in": "query",
+            "description": "Optional filter by items that have or do not have a parental rating",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsHD",
+            "in": "query",
+            "description": "Optional filter by items that are HD or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsUnaired",
+            "in": "query",
+            "description": "Optional filter by items that are unaired episodes or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinCommunityRating",
+            "in": "query",
+            "description": "Optional filter by minimum community rating.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinCriticRating",
+            "in": "query",
+            "description": "Optional filter by minimum critic rating.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "number",
+              "format": "double",
+              "nullable": true
+            }
+          },
+          {
+            "name": "AiredDuringSeason",
+            "in": "query",
+            "description": "Gets all episodes that aired during a season, including specials.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "MinPremiereDate",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinDateLastSaved",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MinDateLastSavedForUser",
+            "in": "query",
+            "description": "Optional. The minimum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MaxPremiereDate",
+            "in": "query",
+            "description": "Optional. The maximum premiere date. Format = ISO",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HasOverview",
+            "in": "query",
+            "description": "Optional filter by items that have an overview or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasImdbId",
+            "in": "query",
+            "description": "Optional filter by items that have an imdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTmdbId",
+            "in": "query",
+            "description": "Optional filter by items that have a tmdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasTvdbId",
+            "in": "query",
+            "description": "Optional filter by items that have a tvdb id or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ExcludeItemIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered by exxcluding item ids. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartIndex",
+            "in": "query",
+            "description": "Optional. The record index to start at. All items with a lower index will be dropped from the results.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Limit",
+            "in": "query",
+            "description": "Optional. The maximum number of records to return",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Recursive",
+            "in": "query",
+            "description": "When searching within folders, this determines whether or not the search will be recursive. true/false",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "SearchTerm",
+            "in": "query",
+            "description": "Enter a search term to perform a search request",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortOrder",
+            "in": "query",
+            "description": "Sort Order - Ascending,Descending",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ParentId",
+            "in": "query",
+            "description": "Specify this to localize the search to a specific item or folder. Omit to use the root",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Fields",
+            "in": "query",
+            "description": "Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExcludeItemTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IncludeItemTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on item type. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AnyProviderIdEquals",
+            "in": "query",
+            "description": "Optional. If specified, result will be filtered to contain only items which match at least one of the specified IDs. Each provider ID must be in the form 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value pairs.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filters",
+            "in": "query",
+            "description": "Optional. Specify additional filters to apply. This allows multiple, comma delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsFavorite",
+            "in": "query",
+            "description": "Optional filter by items that are marked as favorite, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsMovie",
+            "in": "query",
+            "description": "Optional filter for movies.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSeries",
+            "in": "query",
+            "description": "Optional filter for series.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsFolder",
+            "in": "query",
+            "description": "Optional filter for folders.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNews",
+            "in": "query",
+            "description": "Optional filter for news.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsKids",
+            "in": "query",
+            "description": "Optional filter for kids.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsSports",
+            "in": "query",
+            "description": "Optional filter for sports.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNew",
+            "in": "query",
+            "description": "Optional filter for IsNew.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsPremiere",
+            "in": "query",
+            "description": "Optional filter for IsPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsNewOrPremiere",
+            "in": "query",
+            "description": "Optional filter for IsNewOrPremiere.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "IsRepeat",
+            "in": "query",
+            "description": "Optional filter for IsRepeat.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "ProjectToMedia",
+            "in": "query",
+            "description": "ProjectToMedia",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "MediaTypes",
+            "in": "query",
+            "description": "Optional filter by MediaType. Allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ImageTypes",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on those containing image types. This allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SortBy",
+            "in": "query",
+            "description": "Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsPlayed",
+            "in": "query",
+            "description": "Optional filter by items that are played, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Genres",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OfficialRatings",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tags",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExcludeTags",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Years",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "EnableImages",
             "in": "query",
             "description": "Optional, include image information in output",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "EnableUserData",
+            "in": "query",
+            "description": "Optional, include user data",
             "style": "form",
             "explode": false,
             "schema": {
@@ -66298,14 +67849,293 @@
             }
           },
           {
-            "name": "EnableUserData",
+            "name": "Person",
             "in": "query",
-            "description": "Optional, include user data",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PersonIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered to include only those containing the specified person.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PersonTypes",
+            "in": "query",
+            "description": "Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Studios",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StudioIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Artists",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistIds",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on artist. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Albums",
+            "in": "query",
+            "description": "Optional. If specified, results will be filtered based on album. This allows multiple, pipe delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ids",
+            "in": "query",
+            "description": "Optional. If specific items are needed, specify a list of item id's to retrieve. This allows multiple, comma delimited.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "VideoTypes",
+            "in": "query",
+            "description": "Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Containers",
+            "in": "query",
+            "description": "Optional filter by Container. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioCodecs",
+            "in": "query",
+            "description": "Optional filter by AudioCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AudioLayouts",
+            "in": "query",
+            "description": "Optional filter by AudioLayout. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "VideoCodecs",
+            "in": "query",
+            "description": "Optional filter by VideoCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ExtendedVideoTypes",
+            "in": "query",
+            "description": "Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SubtitleCodecs",
+            "in": "query",
+            "description": "Optional filter by SubtitleCodec. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Path",
+            "in": "query",
+            "description": "Optional filter by Path.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "description": "User Id",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            }
+          },
+          {
+            "name": "MinOfficialRating",
+            "in": "query",
+            "description": "Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsLocked",
+            "in": "query",
+            "description": "Optional filter by items that are locked.",
             "style": "form",
             "explode": false,
             "schema": {
               "type": "boolean",
               "nullable": true
+            }
+          },
+          {
+            "name": "IsPlaceHolder",
+            "in": "query",
+            "description": "Optional filter by items that are placeholders",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "HasOfficialRating",
+            "in": "query",
+            "description": "Optional filter by items that have official ratings",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "GroupItemsIntoCollections",
+            "in": "query",
+            "description": "Whether or not to hide items behind their boxsets.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Is3D",
+            "in": "query",
+            "description": "Optional filter by items that are 3D, or not.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
+            "name": "SeriesStatus",
+            "in": "query",
+            "description": "Optional filter by Series Status. Allows multiple, comma delimeted.",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ArtistStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AlbumArtistStartsWithOrGreater",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally or greater than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameStartsWith",
+            "in": "query",
+            "description": "Optional filter by items whose name is sorted equally than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NameLessThan",
+            "in": "query",
+            "description": "Optional filter by items whose name is equally or lesser than a given input string.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -66395,16 +68225,6 @@
             }
           },
           {
-            "name": "StartItemId",
-            "in": "query",
-            "description": "Optional. Skip through the list until a given item is found.",
-            "style": "form",
-            "explode": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "ArtistType",
             "in": "query",
             "description": "Artist or AlbumArtist",
@@ -66480,9 +68300,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -67528,9 +69369,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -68588,9 +70450,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -70632,9 +72515,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -72205,9 +74109,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -82935,9 +84860,30 @@
             }
           },
           {
+            "name": "IsSpecialSeason",
+            "in": "query",
+            "description": "Optional. Filter by special season.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            }
+          },
+          {
             "name": "AdjacentTo",
             "in": "query",
             "description": "Optional. Return items that are siblings of a supplied item.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "StartItemId",
+            "in": "query",
+            "description": "Optional. Skip through the list until a given item is found.",
             "style": "form",
             "explode": false,
             "schema": {
@@ -98241,6 +100187,10 @@
               "$ref": "#/components/schemas/NameValuePair"
             }
           },
+          "TvgShiftTicks": {
+            "type": "integer",
+            "format": "int64"
+          },
           "MoviePrefix": {
             "type": "string"
           },
@@ -98377,6 +100327,10 @@
       "Api.BaseItemsRequest": {
         "type": "object",
         "properties": {
+          "IsSpecialEpisode": {
+            "type": "boolean",
+            "nullable": true
+          },
           "Is4K": {
             "type": "boolean",
             "nullable": true
@@ -98440,6 +100394,10 @@
           "GroupItemsInto": {
             "$ref": "#/components/schemas/Library.ItemLinkType"
           },
+          "IsStandaloneSpecial": {
+            "type": "boolean",
+            "nullable": true
+          },
           "MinWidth": {
             "type": "integer",
             "format": "int32",
@@ -98476,6 +100434,9 @@
           "HasAired": {
             "type": "boolean",
             "nullable": true
+          },
+          "CollectionTypes": {
+            "type": "string"
           }
         },
         "x-internal-ref-name": "MediaBrowser.Controller.Api.BaseItemsRequest"
@@ -99929,6 +101890,9 @@
             "type": "boolean"
           },
           "LogAllQueryTimes": {
+            "type": "boolean"
+          },
+          "DisableOutgoingIPv6": {
             "type": "boolean"
           },
           "EnableCaseSensitiveItemIds": {
