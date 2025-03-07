@@ -43,11 +43,12 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="kidsCategories">kidsCategories.</param>
         /// <param name="movieCategories">movieCategories.</param>
         /// <param name="channelMappings">channelMappings.</param>
+        /// <param name="tvgShiftTicks">tvgShiftTicks.</param>
         /// <param name="moviePrefix">moviePrefix.</param>
         /// <param name="preferredLanguage">preferredLanguage.</param>
         /// <param name="userAgent">userAgent.</param>
         /// <param name="dataVersion">dataVersion.</param>
-        public LiveTvListingsProviderInfo(string name = default(string), string setupUrl = default(string), string id = default(string), string type = default(string), string username = default(string), string password = default(string), string listingsId = default(string), string zipCode = default(string), string country = default(string), string path = default(string), List<string> enabledTuners = default(List<string>), bool? enableAllTuners = default(bool?), List<string> newsCategories = default(List<string>), List<string> sportsCategories = default(List<string>), List<string> kidsCategories = default(List<string>), List<string> movieCategories = default(List<string>), List<NameValuePair> channelMappings = default(List<NameValuePair>), string moviePrefix = default(string), string preferredLanguage = default(string), string userAgent = default(string), string dataVersion = default(string))
+        public LiveTvListingsProviderInfo(string name = default(string), string setupUrl = default(string), string id = default(string), string type = default(string), string username = default(string), string password = default(string), string listingsId = default(string), string zipCode = default(string), string country = default(string), string path = default(string), List<string> enabledTuners = default(List<string>), bool? enableAllTuners = default(bool?), List<string> newsCategories = default(List<string>), List<string> sportsCategories = default(List<string>), List<string> kidsCategories = default(List<string>), List<string> movieCategories = default(List<string>), List<NameValuePair> channelMappings = default(List<NameValuePair>), long? tvgShiftTicks = default(long?), string moviePrefix = default(string), string preferredLanguage = default(string), string userAgent = default(string), string dataVersion = default(string))
         {
             this.Name = name;
             this.SetupUrl = setupUrl;
@@ -66,6 +67,7 @@ namespace EmbyClient.Dotnet.Model
             this.KidsCategories = kidsCategories;
             this.MovieCategories = movieCategories;
             this.ChannelMappings = channelMappings;
+            this.TvgShiftTicks = tvgShiftTicks;
             this.MoviePrefix = moviePrefix;
             this.PreferredLanguage = preferredLanguage;
             this.UserAgent = userAgent;
@@ -175,6 +177,12 @@ namespace EmbyClient.Dotnet.Model
         public List<NameValuePair> ChannelMappings { get; set; }
 
         /// <summary>
+        /// Gets or Sets TvgShiftTicks
+        /// </summary>
+        [DataMember(Name="TvgShiftTicks", EmitDefaultValue=false)]
+        public long? TvgShiftTicks { get; set; }
+
+        /// <summary>
         /// Gets or Sets MoviePrefix
         /// </summary>
         [DataMember(Name="MoviePrefix", EmitDefaultValue=false)]
@@ -223,6 +231,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  KidsCategories: ").Append(KidsCategories).Append("\n");
             sb.Append("  MovieCategories: ").Append(MovieCategories).Append("\n");
             sb.Append("  ChannelMappings: ").Append(ChannelMappings).Append("\n");
+            sb.Append("  TvgShiftTicks: ").Append(TvgShiftTicks).Append("\n");
             sb.Append("  MoviePrefix: ").Append(MoviePrefix).Append("\n");
             sb.Append("  PreferredLanguage: ").Append(PreferredLanguage).Append("\n");
             sb.Append("  UserAgent: ").Append(UserAgent).Append("\n");
@@ -353,6 +362,11 @@ namespace EmbyClient.Dotnet.Model
                     this.ChannelMappings.SequenceEqual(input.ChannelMappings)
                 ) && 
                 (
+                    this.TvgShiftTicks == input.TvgShiftTicks ||
+                    (this.TvgShiftTicks != null &&
+                    this.TvgShiftTicks.Equals(input.TvgShiftTicks))
+                ) && 
+                (
                     this.MoviePrefix == input.MoviePrefix ||
                     (this.MoviePrefix != null &&
                     this.MoviePrefix.Equals(input.MoviePrefix))
@@ -417,6 +431,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.MovieCategories.GetHashCode();
                 if (this.ChannelMappings != null)
                     hashCode = hashCode * 59 + this.ChannelMappings.GetHashCode();
+                if (this.TvgShiftTicks != null)
+                    hashCode = hashCode * 59 + this.TvgShiftTicks.GetHashCode();
                 if (this.MoviePrefix != null)
                     hashCode = hashCode * 59 + this.MoviePrefix.GetHashCode();
                 if (this.PreferredLanguage != null)

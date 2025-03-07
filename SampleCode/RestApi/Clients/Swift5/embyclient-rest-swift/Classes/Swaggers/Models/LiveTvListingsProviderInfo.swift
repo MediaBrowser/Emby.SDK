@@ -28,12 +28,13 @@ public struct LiveTvListingsProviderInfo: Codable {
     public var kidsCategories: [String]?
     public var movieCategories: [String]?
     public var channelMappings: [NameValuePair]?
+    public var tvgShiftTicks: Int64?
     public var moviePrefix: String?
     public var preferredLanguage: String?
     public var userAgent: String?
     public var dataVersion: String?
 
-    public init(name: String? = nil, setupUrl: String? = nil, _id: String? = nil, type: String? = nil, username: String? = nil, password: String? = nil, listingsId: String? = nil, zipCode: String? = nil, country: String? = nil, path: String? = nil, enabledTuners: [String]? = nil, enableAllTuners: Bool? = nil, newsCategories: [String]? = nil, sportsCategories: [String]? = nil, kidsCategories: [String]? = nil, movieCategories: [String]? = nil, channelMappings: [NameValuePair]? = nil, moviePrefix: String? = nil, preferredLanguage: String? = nil, userAgent: String? = nil, dataVersion: String? = nil) {
+    public init(name: String? = nil, setupUrl: String? = nil, _id: String? = nil, type: String? = nil, username: String? = nil, password: String? = nil, listingsId: String? = nil, zipCode: String? = nil, country: String? = nil, path: String? = nil, enabledTuners: [String]? = nil, enableAllTuners: Bool? = nil, newsCategories: [String]? = nil, sportsCategories: [String]? = nil, kidsCategories: [String]? = nil, movieCategories: [String]? = nil, channelMappings: [NameValuePair]? = nil, tvgShiftTicks: Int64? = nil, moviePrefix: String? = nil, preferredLanguage: String? = nil, userAgent: String? = nil, dataVersion: String? = nil) {
         self.name = name
         self.setupUrl = setupUrl
         self._id = _id
@@ -51,6 +52,7 @@ public struct LiveTvListingsProviderInfo: Codable {
         self.kidsCategories = kidsCategories
         self.movieCategories = movieCategories
         self.channelMappings = channelMappings
+        self.tvgShiftTicks = tvgShiftTicks
         self.moviePrefix = moviePrefix
         self.preferredLanguage = preferredLanguage
         self.userAgent = userAgent
@@ -75,6 +77,7 @@ public struct LiveTvListingsProviderInfo: Codable {
         case kidsCategories = "KidsCategories"
         case movieCategories = "MovieCategories"
         case channelMappings = "ChannelMappings"
+        case tvgShiftTicks = "TvgShiftTicks"
         case moviePrefix = "MoviePrefix"
         case preferredLanguage = "PreferredLanguage"
         case userAgent = "UserAgent"

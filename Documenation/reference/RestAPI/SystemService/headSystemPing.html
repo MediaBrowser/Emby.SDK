@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>getLivetvListingproviders </title>
+    <title>headSystemPing </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="getLivetvListingproviders ">
+    <meta name="title" content="headSystemPing ">
     <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../../../favicon.ico">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    <meta property="docfx:uid" content="emby.restapi/getLivetvListingproviders">
+    <meta property="docfx:uid" content="emby.restapi/headSystemPing">
     
     <meta property="docfx:rel" content="../../../">
     
@@ -145,13 +145,11 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="emby.restapi/getLivetvListingproviders">
+            <article class="content wrap" id="_content" data-uid="emby.restapi/headSystemPing">
 <div class="refdoc">
 
-<h1 id="emby_restapi_getLivetvListingproviders" data-uid="emby.restapi/getLivetvListingproviders" class="text-capitalize text-break">getLivetvListingproviders</h1>
-<div class="markdown level0 summary"><p>Gets current listing providers</p>
-</div>
-<div class="markdown level0 description"><p>Requires authentication as administrator</p>
+<h1 id="emby_restapi_headSystemPing" data-uid="emby.restapi/headSystemPing" class="text-capitalize text-break">headSystemPing</h1>
+<div class="markdown level0 description"><p>Requires authentication as user</p>
 </div>
 
 
@@ -160,36 +158,11 @@
   
   
   
-   <h3 id="emby_restapi_getLivetvListingproviders_operation" data-uid="emby.restapi/getLivetvListingproviders/operation" style="display:none;" class="text-capitalize">getLivetvListingproviders</h3>
+   <h3 id="emby_restapi_headSystemPing_operation" data-uid="emby.restapi/headSystemPing/operation" style="display:none;" class="text-capitalize">headSystemPing</h3>
   <h5>Request</h5>
   <div class="codewrapper">
-    <pre><code class="lang-restApi hljs"><span class="opspan opspan-get">get</span> /LiveTv/ListingProviders</code></pre>
+    <pre><code class="lang-restApi hljs"><span class="opspan opspan-head">head</span> /System/Ping</code></pre>
   </div>
-  <h5>Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>In</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">*ChannelId</span></td>
-        <td>query</td>
-        <td>
-              
-  
-        </td>
-        <td></td>
-        <td><p>Channel id</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <div class="responses">
     <h5>Responses</h5>
     <table class="table table-bordered table-striped table-condensed">
@@ -205,11 +178,10 @@
       <tr>
         <td><span class="status">200</span></td>
         <td>
+              
   
-              <a href="#MediaBrowser_Model_LiveTv_ListingsProviderInfo" class="typelink">ListingsProviderInfo</a>
-              []
         </td>
-        <td><p>Operation successful. Returning a ListingsProviderInfo[] object.</p>
+        <td><p>Operation successful. Empty response.</p>
 </td>
         <td class="sample-response">
         </td>
@@ -272,260 +244,6 @@
       </tbody>
     </table>
   </div>
-<h2 id="definitions">Definitions</h2>
-  
-  <h3 id="MediaBrowser_Model_LiveTv_ListingsProviderInfo" class="text-capitalize">ListingsProviderInfo</h3>
-  <div>
-      <p>see also <a href="../../pluginapi/MediaBrowser.Model.LiveTv.ListingsProviderInfo.html">MediaBrowser.Model.LiveTv.ListingsProviderInfo</a></p>
-
-  </div>
-  <table class="table table-bordered table-striped table-condensed">
-      <thead>
-          <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Notes</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td><span class="parametername">Name</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">SetupUrl</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Id</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Type</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Username</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Password</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">ListingsId</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">ZipCode</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Country</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Path</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">EnabledTuners</span></td>
-              <td>
-                    array
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">EnableAllTuners</span></td>
-              <td>
-                    boolean
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">NewsCategories</span></td>
-              <td>
-                    array
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">SportsCategories</span></td>
-              <td>
-                    array
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">KidsCategories</span></td>
-              <td>
-                    array
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">MovieCategories</span></td>
-              <td>
-                    array
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">ChannelMappings</span></td>
-              <td>
-  
-                      <a href="#MediaBrowser_Model_Dto_NameValuePair" class="typelink">NameValuePair[]</a>
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">TvgShiftTicks</span></td>
-              <td>
-                    integer
-                      (int64)
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">MoviePrefix</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">PreferredLanguage</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">UserAgent</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-          <tr>
-              <td><span class="parametername">DataVersion</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td></td>
-          </tr>
-      </tbody>
-  </table>
-  
-  <h3 id="MediaBrowser_Model_Dto_NameValuePair" class="text-capitalize">NameValuePair</h3>
-  <div>
-      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.NameValuePair.html">MediaBrowser.Model.Dto.NameValuePair</a></p>
-
-  </div>
-  <table class="table table-bordered table-striped table-condensed">
-      <thead>
-          <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Notes</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td><span class="parametername">Name</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td><p>The name.</p>
-</td>
-          </tr>
-          <tr>
-              <td><span class="parametername">Value</span></td>
-              <td>
-                    string
-  
-                  
-              </td>
-              <td><p>The value.</p>
-</td>
-          </tr>
-      </tbody>
-  </table>
 </div>
 </article>
           </div>

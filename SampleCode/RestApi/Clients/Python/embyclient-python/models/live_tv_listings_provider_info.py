@@ -39,6 +39,7 @@ class LiveTvListingsProviderInfo(object):
         'kids_categories': 'list[str]',
         'movie_categories': 'list[str]',
         'channel_mappings': 'list[NameValuePair]',
+        'tvg_shift_ticks': 'int',
         'movie_prefix': 'str',
         'preferred_language': 'str',
         'user_agent': 'str',
@@ -63,13 +64,14 @@ class LiveTvListingsProviderInfo(object):
         'kids_categories': 'KidsCategories',
         'movie_categories': 'MovieCategories',
         'channel_mappings': 'ChannelMappings',
+        'tvg_shift_ticks': 'TvgShiftTicks',
         'movie_prefix': 'MoviePrefix',
         'preferred_language': 'PreferredLanguage',
         'user_agent': 'UserAgent',
         'data_version': 'DataVersion'
     }
 
-    def __init__(self, name=None, setup_url=None, id=None, type=None, username=None, password=None, listings_id=None, zip_code=None, country=None, path=None, enabled_tuners=None, enable_all_tuners=None, news_categories=None, sports_categories=None, kids_categories=None, movie_categories=None, channel_mappings=None, movie_prefix=None, preferred_language=None, user_agent=None, data_version=None):  # noqa: E501
+    def __init__(self, name=None, setup_url=None, id=None, type=None, username=None, password=None, listings_id=None, zip_code=None, country=None, path=None, enabled_tuners=None, enable_all_tuners=None, news_categories=None, sports_categories=None, kids_categories=None, movie_categories=None, channel_mappings=None, tvg_shift_ticks=None, movie_prefix=None, preferred_language=None, user_agent=None, data_version=None):  # noqa: E501
         """LiveTvListingsProviderInfo - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._setup_url = None
@@ -88,6 +90,7 @@ class LiveTvListingsProviderInfo(object):
         self._kids_categories = None
         self._movie_categories = None
         self._channel_mappings = None
+        self._tvg_shift_ticks = None
         self._movie_prefix = None
         self._preferred_language = None
         self._user_agent = None
@@ -127,6 +130,8 @@ class LiveTvListingsProviderInfo(object):
             self.movie_categories = movie_categories
         if channel_mappings is not None:
             self.channel_mappings = channel_mappings
+        if tvg_shift_ticks is not None:
+            self.tvg_shift_ticks = tvg_shift_ticks
         if movie_prefix is not None:
             self.movie_prefix = movie_prefix
         if preferred_language is not None:
@@ -492,6 +497,27 @@ class LiveTvListingsProviderInfo(object):
         """
 
         self._channel_mappings = channel_mappings
+
+    @property
+    def tvg_shift_ticks(self):
+        """Gets the tvg_shift_ticks of this LiveTvListingsProviderInfo.  # noqa: E501
+
+
+        :return: The tvg_shift_ticks of this LiveTvListingsProviderInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._tvg_shift_ticks
+
+    @tvg_shift_ticks.setter
+    def tvg_shift_ticks(self, tvg_shift_ticks):
+        """Sets the tvg_shift_ticks of this LiveTvListingsProviderInfo.
+
+
+        :param tvg_shift_ticks: The tvg_shift_ticks of this LiveTvListingsProviderInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._tvg_shift_ticks = tvg_shift_ticks
 
     @property
     def movie_prefix(self):

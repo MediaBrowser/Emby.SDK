@@ -74,6 +74,9 @@ public class LiveTvListingsProviderInfo {
   @SerializedName("ChannelMappings")
   private List<NameValuePair> channelMappings = null;
 
+  @SerializedName("TvgShiftTicks")
+  private Long tvgShiftTicks = null;
+
   @SerializedName("MoviePrefix")
   private String moviePrefix = null;
 
@@ -440,6 +443,24 @@ public class LiveTvListingsProviderInfo {
     this.channelMappings = channelMappings;
   }
 
+  public LiveTvListingsProviderInfo tvgShiftTicks(Long tvgShiftTicks) {
+    this.tvgShiftTicks = tvgShiftTicks;
+    return this;
+  }
+
+   /**
+   * Get tvgShiftTicks
+   * @return tvgShiftTicks
+  **/
+  @Schema(description = "")
+  public Long getTvgShiftTicks() {
+    return tvgShiftTicks;
+  }
+
+  public void setTvgShiftTicks(Long tvgShiftTicks) {
+    this.tvgShiftTicks = tvgShiftTicks;
+  }
+
   public LiveTvListingsProviderInfo moviePrefix(String moviePrefix) {
     this.moviePrefix = moviePrefix;
     return this;
@@ -539,6 +560,7 @@ public class LiveTvListingsProviderInfo {
         Objects.equals(this.kidsCategories, liveTvListingsProviderInfo.kidsCategories) &&
         Objects.equals(this.movieCategories, liveTvListingsProviderInfo.movieCategories) &&
         Objects.equals(this.channelMappings, liveTvListingsProviderInfo.channelMappings) &&
+        Objects.equals(this.tvgShiftTicks, liveTvListingsProviderInfo.tvgShiftTicks) &&
         Objects.equals(this.moviePrefix, liveTvListingsProviderInfo.moviePrefix) &&
         Objects.equals(this.preferredLanguage, liveTvListingsProviderInfo.preferredLanguage) &&
         Objects.equals(this.userAgent, liveTvListingsProviderInfo.userAgent) &&
@@ -547,7 +569,7 @@ public class LiveTvListingsProviderInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, setupUrl, id, type, username, password, listingsId, zipCode, country, path, enabledTuners, enableAllTuners, newsCategories, sportsCategories, kidsCategories, movieCategories, channelMappings, moviePrefix, preferredLanguage, userAgent, dataVersion);
+    return Objects.hash(name, setupUrl, id, type, username, password, listingsId, zipCode, country, path, enabledTuners, enableAllTuners, newsCategories, sportsCategories, kidsCategories, movieCategories, channelMappings, tvgShiftTicks, moviePrefix, preferredLanguage, userAgent, dataVersion);
   }
 
 
@@ -573,6 +595,7 @@ public class LiveTvListingsProviderInfo {
     sb.append("    kidsCategories: ").append(toIndentedString(kidsCategories)).append("\n");
     sb.append("    movieCategories: ").append(toIndentedString(movieCategories)).append("\n");
     sb.append("    channelMappings: ").append(toIndentedString(channelMappings)).append("\n");
+    sb.append("    tvgShiftTicks: ").append(toIndentedString(tvgShiftTicks)).append("\n");
     sb.append("    moviePrefix: ").append(toIndentedString(moviePrefix)).append("\n");
     sb.append("    preferredLanguage: ").append(toIndentedString(preferredLanguage)).append("\n");
     sb.append("    userAgent: ").append(toIndentedString(userAgent)).append("\n");

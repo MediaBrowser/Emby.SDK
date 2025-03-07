@@ -87,6 +87,18 @@ namespace Emby.ApiClient.Model
         public DateTimeOffset? PremiereDate { get; set; }
 
         /// <summary>
+        /// Gets or Sets StartDate
+        /// </summary>
+        /// <value>The StartDate.</value>
+        public DateTimeOffset? StartDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EndDate
+        /// </summary>
+        /// <value>The EndDate.</value>
+        public DateTimeOffset? EndDate { get; set; }
+
+        /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
         /// <value>The ImageUrl.</value>
@@ -146,6 +158,8 @@ namespace Emby.ApiClient.Model
             sb.Append("  SortIndexNumber: ").Append(SortIndexNumber).Append("\n");
             sb.Append("  SortParentIndexNumber: ").Append(SortParentIndexNumber).Append("\n");
             sb.Append("  PremiereDate: ").Append(PremiereDate).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("  SearchProviderName: ").Append(SearchProviderName).Append("\n");
             sb.Append("  GameSystem: ").Append(GameSystem).Append("\n");
@@ -229,6 +243,16 @@ namespace Emby.ApiClient.Model
                     this.PremiereDate.Equals(input.PremiereDate))
                 ) && 
                 (
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
+                ) && 
+                (
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
+                ) && 
+                (
                     this.ImageUrl == input.ImageUrl ||
                     (this.ImageUrl != null &&
                     this.ImageUrl.Equals(input.ImageUrl))
@@ -295,6 +319,10 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.SortParentIndexNumber.GetHashCode();
                 if (this.PremiereDate != null)
                     hashCode = hashCode * 59 + this.PremiereDate.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 if (this.ImageUrl != null)
                     hashCode = hashCode * 59 + this.ImageUrl.GetHashCode();
                 if (this.SearchProviderName != null)

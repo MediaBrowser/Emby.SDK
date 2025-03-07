@@ -32,6 +32,8 @@ class RemoteSearchResult(object):
         'sort_index_number': 'int',
         'sort_parent_index_number': 'int',
         'premiere_date': 'datetime',
+        'start_date': 'datetime',
+        'end_date': 'datetime',
         'image_url': 'str',
         'search_provider_name': 'str',
         'game_system': 'str',
@@ -52,6 +54,8 @@ class RemoteSearchResult(object):
         'sort_index_number': 'SortIndexNumber',
         'sort_parent_index_number': 'SortParentIndexNumber',
         'premiere_date': 'PremiereDate',
+        'start_date': 'StartDate',
+        'end_date': 'EndDate',
         'image_url': 'ImageUrl',
         'search_provider_name': 'SearchProviderName',
         'game_system': 'GameSystem',
@@ -61,7 +65,7 @@ class RemoteSearchResult(object):
         'artists': 'Artists'
     }
 
-    def __init__(self, name=None, original_title=None, provider_ids=None, production_year=None, index_number=None, index_number_end=None, parent_index_number=None, sort_index_number=None, sort_parent_index_number=None, premiere_date=None, image_url=None, search_provider_name=None, game_system=None, overview=None, disambiguation_comment=None, album_artist=None, artists=None):  # noqa: E501
+    def __init__(self, name=None, original_title=None, provider_ids=None, production_year=None, index_number=None, index_number_end=None, parent_index_number=None, sort_index_number=None, sort_parent_index_number=None, premiere_date=None, start_date=None, end_date=None, image_url=None, search_provider_name=None, game_system=None, overview=None, disambiguation_comment=None, album_artist=None, artists=None):  # noqa: E501
         """RemoteSearchResult - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._original_title = None
@@ -73,6 +77,8 @@ class RemoteSearchResult(object):
         self._sort_index_number = None
         self._sort_parent_index_number = None
         self._premiere_date = None
+        self._start_date = None
+        self._end_date = None
         self._image_url = None
         self._search_provider_name = None
         self._game_system = None
@@ -101,6 +107,10 @@ class RemoteSearchResult(object):
             self.sort_parent_index_number = sort_parent_index_number
         if premiere_date is not None:
             self.premiere_date = premiere_date
+        if start_date is not None:
+            self.start_date = start_date
+        if end_date is not None:
+            self.end_date = end_date
         if image_url is not None:
             self.image_url = image_url
         if search_provider_name is not None:
@@ -329,6 +339,48 @@ class RemoteSearchResult(object):
         """
 
         self._premiere_date = premiere_date
+
+    @property
+    def start_date(self):
+        """Gets the start_date of this RemoteSearchResult.  # noqa: E501
+
+
+        :return: The start_date of this RemoteSearchResult.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._start_date
+
+    @start_date.setter
+    def start_date(self, start_date):
+        """Sets the start_date of this RemoteSearchResult.
+
+
+        :param start_date: The start_date of this RemoteSearchResult.  # noqa: E501
+        :type: datetime
+        """
+
+        self._start_date = start_date
+
+    @property
+    def end_date(self):
+        """Gets the end_date of this RemoteSearchResult.  # noqa: E501
+
+
+        :return: The end_date of this RemoteSearchResult.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._end_date
+
+    @end_date.setter
+    def end_date(self, end_date):
+        """Sets the end_date of this RemoteSearchResult.
+
+
+        :param end_date: The end_date of this RemoteSearchResult.  # noqa: E501
+        :type: datetime
+        """
+
+        self._end_date = end_date
 
     @property
     def image_url(self):

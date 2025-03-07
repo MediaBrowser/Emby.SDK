@@ -16,7 +16,7 @@ import ImageType from '../model/ImageType';
 /**
 * ImageService service.
 * @module EmbyClient.JavaScript/ImageServiceApi
-* @version 4.8.10.0
+* @version 4.8.11.0
 */
 export default class ImageServiceApi {
 

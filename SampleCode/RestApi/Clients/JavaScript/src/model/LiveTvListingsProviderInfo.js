@@ -15,7 +15,7 @@ import NameValuePair from './NameValuePair';
 /**
 * The LiveTvListingsProviderInfo model module.
 * @module model/LiveTvListingsProviderInfo
-* @version 4.8.10.0
+* @version 4.8.11.0
 */
 export default class LiveTvListingsProviderInfo {
     /**
@@ -92,6 +92,9 @@ export default class LiveTvListingsProviderInfo {
             }
             if (data.hasOwnProperty('ChannelMappings')) {
                 obj['ChannelMappings'] = ApiClient.convertToType(data['ChannelMappings'], [NameValuePair]);
+            }
+            if (data.hasOwnProperty('TvgShiftTicks')) {
+                obj['TvgShiftTicks'] = ApiClient.convertToType(data['TvgShiftTicks'], 'Number');
             }
             if (data.hasOwnProperty('MoviePrefix')) {
                 obj['MoviePrefix'] = ApiClient.convertToType(data['MoviePrefix'], 'String');
@@ -177,6 +180,10 @@ export default class LiveTvListingsProviderInfo {
     * @member {Array.<module:model/NameValuePair>} ChannelMappings
     */
     'ChannelMappings' = undefined;
+    /**
+    * @member {Number} TvgShiftTicks
+    */
+    'TvgShiftTicks' = undefined;
     /**
     * @member {String} MoviePrefix
     */

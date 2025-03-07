@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.8.10.0
+  version: 4.8.11.0
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -33668,6 +33668,28 @@ paths:
       - SystemService
       description: Requires authentication as user
       operationId: postSystemPing
+      responses:
+        "200":
+          description: Operation successful. Empty response.
+        "400":
+          description: Bad Request. Server cannot process request.
+        "401":
+          description: Unauthorized. Client needs to authenticate.
+        "403":
+          description: Forbidden. No permission for the reqested operation.
+        "404":
+          description: Resource not found or unavailable.
+        "500":
+          description: Server error.
+      security:
+      - apikeyauth: []
+      - embyauth: []
+      x-RequiredAuthentication: Requires authentication as user
+    head:
+      tags:
+      - SystemService
+      description: Requires authentication as user
+      operationId: headSystemPing
       responses:
         "200":
           description: Operation successful. Empty response.
@@ -70216,6 +70238,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/NameValuePair'
+        TvgShiftTicks:
+          type: integer
+          format: int64
         MoviePrefix:
           type: string
         PreferredLanguage:
@@ -70229,6 +70254,7 @@ components:
         NewsCategories:
         - NewsCategories
         - NewsCategories
+        TvgShiftTicks: 0
         ZipCode: ZipCode
         ChannelMappings:
         - Value: Value
@@ -80787,6 +80813,14 @@ components:
           type: string
           format: date-time
           nullable: true
+        StartDate:
+          type: string
+          format: date-time
+          nullable: true
+        EndDate:
+          type: string
+          format: date-time
+          nullable: true
         ImageUrl:
           type: string
         SearchProviderName:
@@ -80812,8 +80846,10 @@ components:
         Overview: Overview
         ParentIndexNumber: 5
         DisambiguationComment: DisambiguationComment
+        EndDate: 2000-01-23T04:56:07.000+00:00
         AlbumArtist: null
         Name: Name
+        StartDate: 2000-01-23T04:56:07.000+00:00
         ProductionYear: 0
         OriginalTitle: OriginalTitle
         IndexNumber: 6

@@ -249,6 +249,22 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <returns>Task of ApiResponse</returns>
+        public async Task<RestResponse<Object>> HeadSystemPing ()
+        {
+            var request = new RestRequest("/System/Ping", Method.Head);
+
+            // make the HTTP request
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// Requires authentication as user
+        /// </remarks>
+        /// <returns>Task of ApiResponse</returns>
         public async Task<RestResponse<Object>> PostSystemPing ()
         {
             var request = new RestRequest("/System/Ping", Method.Post);

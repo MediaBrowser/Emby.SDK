@@ -129,6 +129,12 @@ namespace Emby.ApiClient.Model
         public List<NameValuePair> ChannelMappings { get; set; }
 
         /// <summary>
+        /// Gets or Sets TvgShiftTicks
+        /// </summary>
+        /// <value>The TvgShiftTicks.</value>
+        public long? TvgShiftTicks { get; set; }
+
+        /// <summary>
         /// Gets or Sets MoviePrefix
         /// </summary>
         /// <value>The MoviePrefix.</value>
@@ -177,6 +183,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  KidsCategories: ").Append(KidsCategories).Append("\n");
             sb.Append("  MovieCategories: ").Append(MovieCategories).Append("\n");
             sb.Append("  ChannelMappings: ").Append(ChannelMappings).Append("\n");
+            sb.Append("  TvgShiftTicks: ").Append(TvgShiftTicks).Append("\n");
             sb.Append("  MoviePrefix: ").Append(MoviePrefix).Append("\n");
             sb.Append("  PreferredLanguage: ").Append(PreferredLanguage).Append("\n");
             sb.Append("  UserAgent: ").Append(UserAgent).Append("\n");
@@ -298,6 +305,11 @@ namespace Emby.ApiClient.Model
                     this.ChannelMappings.SequenceEqual(input.ChannelMappings)
                 ) && 
                 (
+                    this.TvgShiftTicks == input.TvgShiftTicks ||
+                    (this.TvgShiftTicks != null &&
+                    this.TvgShiftTicks.Equals(input.TvgShiftTicks))
+                ) && 
+                (
                     this.MoviePrefix == input.MoviePrefix ||
                     (this.MoviePrefix != null &&
                     this.MoviePrefix.Equals(input.MoviePrefix))
@@ -362,6 +374,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.MovieCategories.GetHashCode();
                 if (this.ChannelMappings != null)
                     hashCode = hashCode * 59 + this.ChannelMappings.GetHashCode();
+                if (this.TvgShiftTicks != null)
+                    hashCode = hashCode * 59 + this.TvgShiftTicks.GetHashCode();
                 if (this.MoviePrefix != null)
                     hashCode = hashCode * 59 + this.MoviePrefix.GetHashCode();
                 if (this.PreferredLanguage != null)

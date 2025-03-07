@@ -6244,6 +6244,7 @@ open class LiveTvServiceAPI {
      - examples: [{contentType=application/json, example=[ {
   "Path" : "Path",
   "NewsCategories" : [ "NewsCategories", "NewsCategories" ],
+  "TvgShiftTicks" : 0,
   "ZipCode" : "ZipCode",
   "ChannelMappings" : [ {
     "Value" : "Value",
@@ -6272,6 +6273,7 @@ open class LiveTvServiceAPI {
 }, {
   "Path" : "Path",
   "NewsCategories" : [ "NewsCategories", "NewsCategories" ],
+  "TvgShiftTicks" : 0,
   "ZipCode" : "ZipCode",
   "ChannelMappings" : [ {
     "Value" : "Value",
@@ -6384,6 +6386,7 @@ open class LiveTvServiceAPI {
      - examples: [{contentType=application/json, example={
   "Path" : "Path",
   "NewsCategories" : [ "NewsCategories", "NewsCategories" ],
+  "TvgShiftTicks" : 0,
   "ZipCode" : "ZipCode",
   "ChannelMappings" : [ {
     "Value" : "Value",
@@ -15318,6 +15321,7 @@ open class LiveTvServiceAPI {
      - examples: [{contentType=application/json, example={
   "Path" : "Path",
   "NewsCategories" : [ "NewsCategories", "NewsCategories" ],
+  "TvgShiftTicks" : 0,
   "ZipCode" : "ZipCode",
   "ChannelMappings" : [ {
     "Value" : "Value",

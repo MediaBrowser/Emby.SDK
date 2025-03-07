@@ -27221,6 +27221,42 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "SystemService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "headSystemPing",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/responses/400"
+          },
+          "401": {
+            "$ref": "#/responses/401"
+          },
+          "403": {
+            "$ref": "#/responses/403"
+          },
+          "404": {
+            "$ref": "#/responses/404"
+          },
+          "500": {
+            "$ref": "#/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/System/WakeOnLanInfo": {
@@ -61417,6 +61453,10 @@
             "$ref": "#/definitions/NameValuePair"
           }
         },
+        "TvgShiftTicks": {
+          "format": "int64",
+          "type": "integer"
+        },
         "MoviePrefix": {
           "type": "string"
         },
@@ -65256,6 +65296,14 @@
           "type": "integer"
         },
         "PremiereDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "StartDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "EndDate": {
           "format": "date-time",
           "type": "string"
         },

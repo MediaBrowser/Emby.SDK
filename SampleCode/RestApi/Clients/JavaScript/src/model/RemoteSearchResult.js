@@ -15,7 +15,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The RemoteSearchResult model module.
 * @module model/RemoteSearchResult
-* @version 4.8.10.0
+* @version 4.8.11.0
 */
 export default class RemoteSearchResult {
     /**
@@ -71,6 +71,12 @@ export default class RemoteSearchResult {
             }
             if (data.hasOwnProperty('PremiereDate')) {
                 obj['PremiereDate'] = ApiClient.convertToType(data['PremiereDate'], 'Date');
+            }
+            if (data.hasOwnProperty('StartDate')) {
+                obj['StartDate'] = ApiClient.convertToType(data['StartDate'], 'Date');
+            }
+            if (data.hasOwnProperty('EndDate')) {
+                obj['EndDate'] = ApiClient.convertToType(data['EndDate'], 'Date');
             }
             if (data.hasOwnProperty('ImageUrl')) {
                 obj['ImageUrl'] = ApiClient.convertToType(data['ImageUrl'], 'String');
@@ -139,6 +145,14 @@ export default class RemoteSearchResult {
     * @member {Date} PremiereDate
     */
     'PremiereDate' = undefined;
+    /**
+    * @member {Date} StartDate
+    */
+    'StartDate' = undefined;
+    /**
+    * @member {Date} EndDate
+    */
+    'EndDate' = undefined;
     /**
     * @member {String} ImageUrl
     */

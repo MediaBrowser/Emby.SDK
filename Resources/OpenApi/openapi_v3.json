@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.8.10.0"
+    "version": "4.8.11.0"
   },
   "servers": [
     {
@@ -40689,6 +40689,42 @@
         ],
         "description": "Requires authentication as user",
         "operationId": "getSystemPing",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "head": {
+        "tags": [
+          "SystemService"
+        ],
+        "description": "Requires authentication as user",
+        "operationId": "headSystemPing",
         "responses": {
           "200": {
             "description": "Operation successful. Empty response."
@@ -84288,6 +84324,10 @@
               "$ref": "#/components/schemas/NameValuePair"
             }
           },
+          "TvgShiftTicks": {
+            "type": "integer",
+            "format": "int64"
+          },
           "MoviePrefix": {
             "type": "string"
           },
@@ -88179,6 +88219,16 @@
             "nullable": true
           },
           "PremiereDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "StartDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "EndDate": {
             "type": "string",
             "format": "date-time",
             "nullable": true

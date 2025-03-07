@@ -21,7 +21,7 @@ import WakeOnLanInfo from '../model/WakeOnLanInfo';
 /**
 * SystemService service.
 * @module EmbyClient.JavaScript/SystemServiceApi
-* @version 4.8.10.0
+* @version 4.8.11.0
 */
 export default class SystemServiceApi {
 
@@ -408,6 +408,41 @@ export default class SystemServiceApi {
 
       return this.apiClient.callApi(
         '/System/WakeOnLanInfo', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+    /**
+     * Callback function to receive the result of the headSystemPing operation.
+     * @callback module:EmbyClient.JavaScript/SystemServiceApi~headSystemPingCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Requires authentication as user
+     * @param {module:EmbyClient.JavaScript/SystemServiceApi~headSystemPingCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    headSystemPing() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['apikeyauth', 'embyauth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+
+      return this.apiClient.callApi(
+        '/System/Ping', 'HEAD',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

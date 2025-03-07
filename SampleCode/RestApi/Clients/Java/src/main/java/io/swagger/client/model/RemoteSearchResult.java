@@ -55,6 +55,12 @@ public class RemoteSearchResult {
   @SerializedName("PremiereDate")
   private OffsetDateTime premiereDate = null;
 
+  @SerializedName("StartDate")
+  private OffsetDateTime startDate = null;
+
+  @SerializedName("EndDate")
+  private OffsetDateTime endDate = null;
+
   @SerializedName("ImageUrl")
   private String imageUrl = null;
 
@@ -256,6 +262,42 @@ public class RemoteSearchResult {
     this.premiereDate = premiereDate;
   }
 
+  public RemoteSearchResult startDate(OffsetDateTime startDate) {
+    this.startDate = startDate;
+    return this;
+  }
+
+   /**
+   * Get startDate
+   * @return startDate
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getStartDate() {
+    return startDate;
+  }
+
+  public void setStartDate(OffsetDateTime startDate) {
+    this.startDate = startDate;
+  }
+
+  public RemoteSearchResult endDate(OffsetDateTime endDate) {
+    this.endDate = endDate;
+    return this;
+  }
+
+   /**
+   * Get endDate
+   * @return endDate
+  **/
+  @Schema(description = "")
+  public OffsetDateTime getEndDate() {
+    return endDate;
+  }
+
+  public void setEndDate(OffsetDateTime endDate) {
+    this.endDate = endDate;
+  }
+
   public RemoteSearchResult imageUrl(String imageUrl) {
     this.imageUrl = imageUrl;
     return this;
@@ -410,6 +452,8 @@ public class RemoteSearchResult {
         Objects.equals(this.sortIndexNumber, remoteSearchResult.sortIndexNumber) &&
         Objects.equals(this.sortParentIndexNumber, remoteSearchResult.sortParentIndexNumber) &&
         Objects.equals(this.premiereDate, remoteSearchResult.premiereDate) &&
+        Objects.equals(this.startDate, remoteSearchResult.startDate) &&
+        Objects.equals(this.endDate, remoteSearchResult.endDate) &&
         Objects.equals(this.imageUrl, remoteSearchResult.imageUrl) &&
         Objects.equals(this.searchProviderName, remoteSearchResult.searchProviderName) &&
         Objects.equals(this.gameSystem, remoteSearchResult.gameSystem) &&
@@ -421,7 +465,7 @@ public class RemoteSearchResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, originalTitle, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
+    return Objects.hash(name, originalTitle, providerIds, productionYear, indexNumber, indexNumberEnd, parentIndexNumber, sortIndexNumber, sortParentIndexNumber, premiereDate, startDate, endDate, imageUrl, searchProviderName, gameSystem, overview, disambiguationComment, albumArtist, artists);
   }
 
 
@@ -440,6 +484,8 @@ public class RemoteSearchResult {
     sb.append("    sortIndexNumber: ").append(toIndentedString(sortIndexNumber)).append("\n");
     sb.append("    sortParentIndexNumber: ").append(toIndentedString(sortParentIndexNumber)).append("\n");
     sb.append("    premiereDate: ").append(toIndentedString(premiereDate)).append("\n");
+    sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
+    sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
     sb.append("    searchProviderName: ").append(toIndentedString(searchProviderName)).append("\n");
     sb.append("    gameSystem: ").append(toIndentedString(gameSystem)).append("\n");

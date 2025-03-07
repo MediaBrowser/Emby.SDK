@@ -15,7 +15,7 @@ import CommonEditorTypes from './CommonEditorTypes';
 /**
 * The EditorsEditorBase model module.
 * @module model/EditorsEditorBase
-* @version 4.8.10.0
+* @version 4.8.11.0
 */
 export default class EditorsEditorBase {
     /**

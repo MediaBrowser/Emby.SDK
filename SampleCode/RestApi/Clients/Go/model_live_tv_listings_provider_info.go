@@ -24,6 +24,7 @@ type LiveTvListingsProviderInfo struct {
 	KidsCategories []string `json:"KidsCategories,omitempty"`
 	MovieCategories []string `json:"MovieCategories,omitempty"`
 	ChannelMappings []NameValuePair `json:"ChannelMappings,omitempty"`
+	TvgShiftTicks int64 `json:"TvgShiftTicks,omitempty"`
 	MoviePrefix string `json:"MoviePrefix,omitempty"`
 	PreferredLanguage string `json:"PreferredLanguage,omitempty"`
 	UserAgent string `json:"UserAgent,omitempty"`

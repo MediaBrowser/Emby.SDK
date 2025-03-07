@@ -16,7 +16,7 @@ import SyncJobItem from './SyncJobItem';
 /**
 * The SyncJobCreationResult model module.
 * @module model/SyncJobCreationResult
-* @version 4.8.10.0
+* @version 4.8.11.0
 */
 export default class SyncJobCreationResult {
     /**
