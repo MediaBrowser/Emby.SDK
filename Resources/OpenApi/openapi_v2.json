@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.41"
+    "version": "4.9.0.42"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -68712,6 +68712,13 @@
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
+        "SleepTimerMode": {
+          "$ref": "#/definitions/SleepTimerMode"
+        },
+        "SleepTimerEndTime": {
+          "format": "date-time",
+          "type": "string"
+        },
         "SubtitleOffset": {
           "format": "int32",
           "type": "integer"
@@ -68743,6 +68750,15 @@
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.RepeatMode"
+    },
+    "SleepTimerMode": {
+      "enum": [
+        "None",
+        "AfterItem",
+        "AtTime"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Session.SleepTimerMode"
     },
     "SessionUserInfo": {
       "description": "Class SessionUserInfo.\r\n",
@@ -70682,10 +70698,13 @@
         "ImportCollections": {
           "type": "boolean"
         },
-        "DisableMultiVersionItems": {
+        "EnableMultiVersionByFiles": {
           "type": "boolean"
         },
-        "DisableMultiPartItems": {
+        "EnableMultiVersionByMetadata": {
+          "type": "boolean"
+        },
+        "EnableMultiPartItems": {
           "type": "boolean"
         },
         "MinCollectionItems": {
@@ -71146,6 +71165,9 @@
         "EnableTotalRecordCount": {
           "type": "boolean"
         },
+        "IsDuplicate": {
+          "type": "boolean"
+        },
         "Name": {
           "type": "string"
         },
@@ -71175,6 +71197,9 @@
           "type": "string"
         },
         "AlbumArtistIds": {
+          "type": "string"
+        },
+        "ComposerArtistIds": {
           "type": "string"
         },
         "ContributingArtistIds": {
@@ -72047,6 +72072,13 @@
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
+        "SleepTimerMode": {
+          "$ref": "#/definitions/SleepTimerMode"
+        },
+        "SleepTimerEndTime": {
+          "format": "date-time",
+          "type": "string"
+        },
         "Shuffle": {
           "type": "boolean"
         },
@@ -72108,7 +72140,8 @@
         "StateChange",
         "SubtitleOffsetChange",
         "PlaybackRateChange",
-        "ShuffleChange"
+        "ShuffleChange",
+        "SleepTimerChange"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"
@@ -73815,7 +73848,8 @@
     "Library.UserCopyOptions": {
       "enum": [
         "UserPolicy",
-        "UserConfiguration"
+        "UserConfiguration",
+        "UserData"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Controller.Library.UserCopyOptions"
@@ -75753,6 +75787,12 @@
           "items": {
             "$ref": "#/definitions/ExternalIdInfo"
           }
+        },
+        "PersonExternalIdInfos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ExternalIdInfo"
+          }
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.MetadataEditorInfo"
@@ -76518,6 +76558,13 @@
         "RepeatMode": {
           "$ref": "#/definitions/RepeatMode"
         },
+        "SleepTimerMode": {
+          "$ref": "#/definitions/SleepTimerMode"
+        },
+        "SleepTimerEndTime": {
+          "format": "date-time",
+          "type": "string"
+        },
         "Shuffle": {
           "type": "boolean"
         },
@@ -77141,6 +77188,13 @@
         },
         "Shuffle": {
           "type": "boolean"
+        },
+        "SleepTimerMode": {
+          "$ref": "#/definitions/SleepTimerMode"
+        },
+        "SleepTimerEndTime": {
+          "format": "date-time",
+          "type": "string"
         },
         "EventName": {
           "$ref": "#/definitions/ProgressEvent"

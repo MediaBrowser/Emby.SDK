@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.41"
+    "version": "4.9.0.42"
   },
   "servers": [
     {
@@ -97872,6 +97872,14 @@
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
+          "SleepTimerMode": {
+            "$ref": "#/components/schemas/SleepTimerMode"
+          },
+          "SleepTimerEndTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
           "SubtitleOffset": {
             "type": "integer",
             "format": "int32"
@@ -97903,6 +97911,15 @@
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Session.RepeatMode"
+      },
+      "SleepTimerMode": {
+        "enum": [
+          "None",
+          "AfterItem",
+          "AtTime"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "MediaBrowser.Model.Session.SleepTimerMode"
       },
       "SessionUserInfo": {
         "type": "object",
@@ -99864,10 +99881,13 @@
           "ImportCollections": {
             "type": "boolean"
           },
-          "DisableMultiVersionItems": {
+          "EnableMultiVersionByFiles": {
             "type": "boolean"
           },
-          "DisableMultiPartItems": {
+          "EnableMultiVersionByMetadata": {
+            "type": "boolean"
+          },
+          "EnableMultiPartItems": {
             "type": "boolean"
           },
           "MinCollectionItems": {
@@ -100338,6 +100358,10 @@
           "EnableTotalRecordCount": {
             "type": "boolean"
           },
+          "IsDuplicate": {
+            "type": "boolean",
+            "nullable": true
+          },
           "Name": {
             "type": "string"
           },
@@ -100367,6 +100391,9 @@
             "type": "string"
           },
           "AlbumArtistIds": {
+            "type": "string"
+          },
+          "ComposerArtistIds": {
             "type": "string"
           },
           "ContributingArtistIds": {
@@ -101253,6 +101280,14 @@
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
+          "SleepTimerMode": {
+            "$ref": "#/components/schemas/SleepTimerMode"
+          },
+          "SleepTimerEndTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
           "Shuffle": {
             "type": "boolean"
           },
@@ -101316,7 +101351,8 @@
           "StateChange",
           "SubtitleOffsetChange",
           "PlaybackRateChange",
-          "ShuffleChange"
+          "ShuffleChange",
+          "SleepTimerChange"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Session.ProgressEvent"
@@ -103040,7 +103076,8 @@
       "Library.UserCopyOptions": {
         "enum": [
           "UserPolicy",
-          "UserConfiguration"
+          "UserConfiguration",
+          "UserData"
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Controller.Library.UserCopyOptions"
@@ -105041,6 +105078,12 @@
             "items": {
               "$ref": "#/components/schemas/ExternalIdInfo"
             }
+          },
+          "PersonExternalIdInfos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExternalIdInfo"
+            }
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Dto.MetadataEditorInfo"
@@ -105828,6 +105871,14 @@
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
+          "SleepTimerMode": {
+            "$ref": "#/components/schemas/SleepTimerMode"
+          },
+          "SleepTimerEndTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
           "Shuffle": {
             "type": "boolean"
           },
@@ -106465,6 +106516,14 @@
           },
           "Shuffle": {
             "type": "boolean"
+          },
+          "SleepTimerMode": {
+            "$ref": "#/components/schemas/SleepTimerMode"
+          },
+          "SleepTimerEndTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           },
           "EventName": {
             "$ref": "#/components/schemas/ProgressEvent"
