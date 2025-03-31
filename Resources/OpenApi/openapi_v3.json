@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.42"
+    "version": "4.9.0.43"
   },
   "servers": [
     {
@@ -101203,17 +101203,9 @@
           "PlaylistItemId": {
             "type": "string"
           },
-          "ItemId": {
-            "type": "string",
-            "description": "The item identifier."
-          },
           "SessionId": {
             "type": "string",
             "description": "The session id."
-          },
-          "MediaSourceId": {
-            "type": "string",
-            "description": "The media version identifier."
           },
           "AudioStreamIndex": {
             "type": "integer",
@@ -101273,10 +101265,6 @@
           "PlayMethod": {
             "$ref": "#/components/schemas/PlayMethod"
           },
-          "LiveStreamId": {
-            "type": "string",
-            "description": "The live stream identifier."
-          },
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
@@ -101308,6 +101296,18 @@
           "PlaySessionId": {
             "type": "string",
             "description": "The play session identifier."
+          },
+          "ItemId": {
+            "type": "string",
+            "description": "The item identifier."
+          },
+          "LiveStreamId": {
+            "type": "string",
+            "description": "The live stream identifier."
+          },
+          "MediaSourceId": {
+            "type": "string",
+            "description": "The media version identifier."
           },
           "Item": {
             "$ref": "#/components/schemas/BaseItemDto"
@@ -105794,17 +105794,9 @@
           "PlaylistItemId": {
             "type": "string"
           },
-          "ItemId": {
-            "type": "string",
-            "description": "The item identifier."
-          },
           "SessionId": {
             "type": "string",
             "description": "The session id."
-          },
-          "MediaSourceId": {
-            "type": "string",
-            "description": "The media version identifier."
           },
           "AudioStreamIndex": {
             "type": "integer",
@@ -105864,10 +105856,6 @@
           "PlayMethod": {
             "$ref": "#/components/schemas/PlayMethod"
           },
-          "LiveStreamId": {
-            "type": "string",
-            "description": "The live stream identifier."
-          },
           "RepeatMode": {
             "$ref": "#/components/schemas/RepeatMode"
           },
@@ -105899,6 +105887,18 @@
           "PlaySessionId": {
             "type": "string",
             "description": "The play session identifier."
+          },
+          "ItemId": {
+            "type": "string",
+            "description": "The item identifier."
+          },
+          "LiveStreamId": {
+            "type": "string",
+            "description": "The live stream identifier."
+          },
+          "MediaSourceId": {
+            "type": "string",
+            "description": "The media version identifier."
           },
           "Item": {
             "$ref": "#/components/schemas/BaseItemDto"
