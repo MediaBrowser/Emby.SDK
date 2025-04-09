@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.43"
+    "version": "4.9.0.44"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -42978,13 +42978,6 @@
         ],
         "parameters": [
           {
-            "in": "path",
-            "name": "Name",
-            "description": "The genre name",
-            "required": true,
-            "type": "string"
-          },
-          {
             "in": "query",
             "name": "ArtistType",
             "description": "Artist or AlbumArtist",
@@ -43345,6 +43338,12 @@
             "in": "query",
             "name": "SortBy",
             "description": "Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime",
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "Name",
+            "required": true,
             "type": "string"
           },
           {
@@ -68706,6 +68705,9 @@
           "description": "The now playing media version identifier.",
           "type": "string"
         },
+        "MediaSource": {
+          "$ref": "#/definitions/MediaSourceInfo"
+        },
         "PlayMethod": {
           "$ref": "#/definitions/PlayMethod"
         },
@@ -76618,27 +76620,15 @@
           "format": "int32",
           "type": "integer"
         },
-        "ItemId": {
-          "description": "The item identifier.",
-          "type": "string"
-        },
         "SessionId": {
           "description": "The session id.",
           "type": "string"
         },
-        "MediaSourceId": {
-          "description": "The media version identifier.",
-          "type": "string"
-        },
-        "LiveStreamId": {
-          "description": "The live stream identifier.",
-          "type": "string"
+        "IsAutomated": {
+          "type": "boolean"
         },
         "Failed": {
           "description": "A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed.",
-          "type": "boolean"
-        },
-        "IsAutomated": {
           "type": "boolean"
         },
         "NextMediaType": {
@@ -76646,6 +76636,18 @@
         },
         "PlaySessionId": {
           "description": "The play session identifier.",
+          "type": "string"
+        },
+        "ItemId": {
+          "description": "The item identifier.",
+          "type": "string"
+        },
+        "LiveStreamId": {
+          "description": "The live stream identifier.",
+          "type": "string"
+        },
+        "MediaSourceId": {
+          "description": "The media version identifier.",
           "type": "string"
         },
         "Item": {

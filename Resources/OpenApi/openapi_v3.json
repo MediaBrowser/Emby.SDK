@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.43"
+    "version": "4.9.0.44"
   },
   "servers": [
     {
@@ -63360,16 +63360,6 @@
         "operationId": "getMusicgenresByNameInstantmix",
         "parameters": [
           {
-            "name": "Name",
-            "in": "path",
-            "description": "The genre name",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "ArtistType",
             "in": "query",
             "description": "Artist or AlbumArtist",
@@ -63988,6 +63978,15 @@
             "in": "query",
             "description": "Optional. Specify one or more sort orders, comma delimeted. Options: Album, AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated, DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue, Runtime",
             "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Name",
+            "in": "path",
+            "required": true,
+            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -97866,6 +97865,9 @@
             "type": "string",
             "description": "The now playing media version identifier."
           },
+          "MediaSource": {
+            "$ref": "#/components/schemas/MediaSourceInfo"
+          },
           "PlayMethod": {
             "$ref": "#/components/schemas/PlayMethod"
           },
@@ -105933,28 +105935,16 @@
             "type": "integer",
             "format": "int32"
           },
-          "ItemId": {
-            "type": "string",
-            "description": "The item identifier."
-          },
           "SessionId": {
             "type": "string",
             "description": "The session id."
           },
-          "MediaSourceId": {
-            "type": "string",
-            "description": "The media version identifier."
-          },
-          "LiveStreamId": {
-            "type": "string",
-            "description": "The live stream identifier."
+          "IsAutomated": {
+            "type": "boolean"
           },
           "Failed": {
             "type": "boolean",
             "description": "A value indicating whether this `MediaBrowser.Model.Session.PlaybackStopInfo` is failed."
-          },
-          "IsAutomated": {
-            "type": "boolean"
           },
           "NextMediaType": {
             "type": "string"
@@ -105962,6 +105952,18 @@
           "PlaySessionId": {
             "type": "string",
             "description": "The play session identifier."
+          },
+          "ItemId": {
+            "type": "string",
+            "description": "The item identifier."
+          },
+          "LiveStreamId": {
+            "type": "string",
+            "description": "The live stream identifier."
+          },
+          "MediaSourceId": {
+            "type": "string",
+            "description": "The media version identifier."
           },
           "Item": {
             "$ref": "#/components/schemas/BaseItemDto"
