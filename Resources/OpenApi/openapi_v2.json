@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.48"
+    "version": "4.9.0.49"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -70306,6 +70306,10 @@
           "description": "The child count.",
           "type": "integer"
         },
+        "SeasonCount": {
+          "format": "int32",
+          "type": "integer"
+        },
         "SeriesName": {
           "description": "The name of the series.",
           "type": "string"
@@ -72357,7 +72361,9 @@
         "SubtitleCodecNotSupported",
         "DirectPlayError",
         "VideoRangeNotSupported",
-        "SubtitleContentOptionsEnabled"
+        "SubtitleContentOptionsEnabled",
+        "ExternalAudioNotSupported",
+        "AudioDelayNotSupported"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.TranscodeReason"
@@ -72829,6 +72835,12 @@
           "format": "int32",
           "type": "integer"
         },
+        "DeclaredFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "DirectPlayProfiles": {
           "description": "The direct play profiles.",
           "type": "array",
@@ -73143,7 +73155,8 @@
         "AudioSampleRate",
         "AudioBitDepth",
         "VideoRange",
-        "VideoRotation"
+        "VideoRotation",
+        "IsExternalAudio"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Dlna.ProfileConditionValue"
@@ -74304,6 +74317,12 @@
         "MaxStaticMusicBitrate": {
           "format": "int32",
           "type": "integer"
+        },
+        "DeclaredFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "DirectPlayProfiles": {
           "description": "The direct play profiles.",
