@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.0.50"
+    "version": "4.9.0.51"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -18675,7 +18675,7 @@
           "ItemUpdateService"
         ],
         "summary": "Updates an item",
-        "description": "Requires authentication as administrator",
+        "description": "Requires authentication as user",
         "operationId": "postItemsByItemid",
         "consumes": [
           "application/json",
@@ -18727,7 +18727,7 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Updates an item"
     },
@@ -37157,7 +37157,7 @@
           "ItemUpdateService"
         ],
         "summary": "Gets metadata editor info for an item",
-        "description": "Requires authentication as administrator",
+        "description": "Requires authentication as user",
         "operationId": "getItemsByItemidMetadataeditor",
         "produces": [
           "application/json",
@@ -37203,7 +37203,7 @@
             "embyauth": [ ]
           }
         ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
+        "x-RequiredAuthentication": "Requires authentication as user"
       },
       "x-summary": "Gets metadata editor info for an item"
     },
@@ -73782,6 +73782,9 @@
           "items": {
             "$ref": "#/definitions/LibraryTypeOptions"
           }
+        },
+        "DefaultLibraryOptions": {
+          "$ref": "#/definitions/LibraryOptions"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Providers.LibraryOptionsResult"
@@ -73867,72 +73870,6 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Configuration.ImageOption"
-    },
-    "Library.MediaFolder": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "Id": {
-          "type": "string"
-        },
-        "Guid": {
-          "type": "string"
-        },
-        "SubFolders": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Library.SubFolder"
-          }
-        },
-        "IsUserAccessConfigurable": {
-          "type": "boolean"
-        }
-      },
-      "x-internal-ref-name": "Emby.Api.Library.MediaFolder"
-    },
-    "Library.SubFolder": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "Id": {
-          "type": "string"
-        },
-        "Path": {
-          "type": "string"
-        },
-        "IsUserAccessConfigurable": {
-          "type": "boolean"
-        }
-      },
-      "x-internal-ref-name": "Emby.Api.Library.SubFolder"
-    },
-    "Library.AddVirtualFolder": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "CollectionType": {
-          "type": "string"
-        },
-        "RefreshLibrary": {
-          "type": "boolean"
-        },
-        "Paths": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "LibraryOptions": {
-          "$ref": "#/definitions/LibraryOptions"
-        }
-      },
-      "x-internal-ref-name": "Emby.Api.Library.AddVirtualFolder"
     },
     "LibraryOptions": {
       "type": "object",
@@ -74232,6 +74169,72 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Configuration.TypeOptions"
+    },
+    "Library.MediaFolder": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "string"
+        },
+        "Guid": {
+          "type": "string"
+        },
+        "SubFolders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Library.SubFolder"
+          }
+        },
+        "IsUserAccessConfigurable": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.Library.MediaFolder"
+    },
+    "Library.SubFolder": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "string"
+        },
+        "Path": {
+          "type": "string"
+        },
+        "IsUserAccessConfigurable": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.Library.SubFolder"
+    },
+    "Library.AddVirtualFolder": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "CollectionType": {
+          "type": "string"
+        },
+        "RefreshLibrary": {
+          "type": "boolean"
+        },
+        "Paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "LibraryOptions": {
+          "$ref": "#/definitions/LibraryOptions"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.Library.AddVirtualFolder"
     },
     "LiveStreamRequest": {
       "type": "object",
@@ -74710,6 +74713,12 @@
         },
         "CollectionTypes": {
           "type": "string"
+        },
+        "ExcludeSources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Api.BaseItemsRequest"
