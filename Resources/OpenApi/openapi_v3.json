@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.0"
+    "version": "4.9.1.1"
   },
   "servers": [
     {
@@ -55278,6 +55278,22 @@
             }
           }
         ],
+        "requestBody": {
+          "description": "BaseRefreshRequest: ",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseRefreshRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseRefreshRequest"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "Operation successful. Empty response."
@@ -101350,6 +101366,11 @@
             "format": "date-time",
             "nullable": true
           },
+          "DateModified": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
           "ExtraType": {
             "type": "string"
           },
@@ -110766,6 +110787,15 @@
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Controller.Providers.MetadataRefreshMode"
+      },
+      "BaseRefreshRequest": {
+        "type": "object",
+        "properties": {
+          "ReplaceThumbnailImages": {
+            "type": "boolean"
+          }
+        },
+        "x-internal-ref-name": "Emby.Api.BaseRefreshRequest"
       },
       "MetadataEditorInfo": {
         "type": "object",

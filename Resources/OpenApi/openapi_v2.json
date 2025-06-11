@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.0"
+    "version": "4.9.1.1"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -37082,6 +37082,10 @@
         "summary": "Refreshes metadata for an item",
         "description": "Requires authentication as user",
         "operationId": "postItemsByIdRefresh",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
         "parameters": [
           {
             "in": "query",
@@ -37117,6 +37121,15 @@
             "name": "ReplaceAllImages",
             "description": "Determines if images should be replaced. Only applicable if mode is FullRefresh",
             "type": "boolean"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "BaseRefreshRequest: ",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BaseRefreshRequest"
+            }
           }
         ],
         "responses": {
@@ -70038,6 +70051,10 @@
           "description": "The date created.",
           "type": "string"
         },
+        "DateModified": {
+          "format": "date-time",
+          "type": "string"
+        },
         "ExtraType": {
           "type": "string"
         },
@@ -79217,6 +79234,15 @@
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Controller.Providers.MetadataRefreshMode"
+    },
+    "BaseRefreshRequest": {
+      "type": "object",
+      "properties": {
+        "ReplaceThumbnailImages": {
+          "type": "boolean"
+        }
+      },
+      "x-internal-ref-name": "Emby.Api.BaseRefreshRequest"
     },
     "MetadataEditorInfo": {
       "type": "object",
