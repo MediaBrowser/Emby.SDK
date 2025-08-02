@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.1"
+    "version": "4.9.1.13"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -104,25 +104,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -188,25 +192,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -758,25 +766,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -842,25 +854,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -1412,25 +1428,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -1496,25 +1516,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -2070,25 +2094,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -2154,25 +2182,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -2797,25 +2829,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -2881,25 +2917,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -3552,25 +3592,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -3636,25 +3680,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -4260,25 +4308,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -4344,25 +4396,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -4918,25 +4974,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -5002,25 +5062,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -5576,25 +5640,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -5660,25 +5728,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -6276,25 +6348,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -6360,25 +6436,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -6934,25 +7014,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -7018,25 +7102,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -7588,25 +7676,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -7672,25 +7764,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -8388,25 +8484,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -8472,25 +8572,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -9293,25 +9397,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -9377,25 +9485,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -9951,25 +10063,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -10035,25 +10151,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -10605,25 +10725,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -10689,25 +10813,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -11325,25 +11453,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -11409,25 +11541,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -11983,25 +12119,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -12067,25 +12207,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -12637,25 +12781,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -12721,25 +12869,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -13291,25 +13443,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -13375,25 +13531,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -14338,25 +14498,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -14422,25 +14586,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -14992,25 +15160,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -15076,25 +15248,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -15653,25 +15829,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -15737,25 +15917,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -18815,25 +18999,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -18899,25 +19087,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -20099,7 +20291,7 @@
         "tags": [
           "MediaInfoService"
         ],
-        "summary": "Closes a media source",
+        "summary": "Gets media info for a live stream",
         "description": "Requires authentication as user",
         "operationId": "postLivestreamsMediainfo",
         "parameters": [
@@ -20141,7 +20333,7 @@
         ],
         "x-RequiredAuthentication": "Requires authentication as user"
       },
-      "x-summary": "Closes a media source"
+      "x-summary": "Gets media info for a live stream"
     },
     "/LiveTv/ChannelTags": {
       "get": {
@@ -20231,25 +20423,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -20315,25 +20511,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -21815,25 +22015,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -21899,25 +22103,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -22502,25 +22710,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -22586,25 +22798,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -23158,25 +23374,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -23242,25 +23462,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -23812,25 +24036,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -23896,25 +24124,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -24491,25 +24723,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -24575,25 +24811,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -25856,25 +26096,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -25940,25 +26184,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -27224,25 +27472,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -27308,25 +27560,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -27871,25 +28127,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -27955,25 +28215,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -30818,25 +31082,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -30902,25 +31170,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -31483,25 +31755,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -31567,25 +31843,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -32148,25 +32428,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -32232,25 +32516,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -35711,25 +35999,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -35795,25 +36087,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -37468,25 +37764,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -37552,25 +37852,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -38189,25 +38493,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -38273,25 +38581,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -39146,25 +39458,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -39230,25 +39546,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -39813,25 +40133,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -39897,25 +40221,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -40480,25 +40808,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -40564,25 +40896,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -42180,25 +42516,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -42264,25 +42604,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -42841,25 +43185,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -42925,25 +43273,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -43882,25 +44234,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -43966,25 +44322,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -45187,25 +45547,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -45271,25 +45635,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -45845,25 +46213,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -45929,25 +46301,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -47028,25 +47404,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -47112,25 +47492,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -48573,25 +48957,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -48657,25 +49045,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -49243,25 +49635,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -49327,25 +49723,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -49905,25 +50305,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -49989,25 +50393,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -50570,25 +50978,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -50654,25 +51066,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -51982,7 +52398,8 @@
             "in": "query",
             "name": "MinDate",
             "description": "Optional. The minimum date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           }
         ],
         "responses": {
@@ -52115,25 +52532,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -52199,25 +52620,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -52773,25 +53198,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -52857,25 +53286,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -53797,25 +54230,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -53881,25 +54318,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -61772,25 +62213,29 @@
             "in": "query",
             "name": "MinStartDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxStartDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinEndDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxEndDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -61856,25 +62301,29 @@
             "in": "query",
             "name": "MinPremiereDate",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSaved",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MinDateLastSavedForUser",
             "description": "Optional. The minimum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
             "name": "MaxPremiereDate",
             "description": "Optional. The maximum premiere date. Format = ISO",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
           },
           {
             "in": "query",
@@ -70055,6 +70504,20 @@
           "format": "date-time",
           "type": "string"
         },
+        "VideoCodec": {
+          "type": "string"
+        },
+        "AudioCodec": {
+          "type": "string"
+        },
+        "AverageFrameRate": {
+          "format": "float",
+          "type": "number"
+        },
+        "RealFrameRate": {
+          "format": "float",
+          "type": "number"
+        },
         "ExtraType": {
           "type": "string"
         },
@@ -72046,6 +72509,9 @@
           "description": "The user id.",
           "type": "string"
         },
+        "PartyId": {
+          "type": "string"
+        },
         "UserName": {
           "description": "The username.",
           "type": "string"
@@ -72703,6 +73169,10 @@
           "type": "string"
         },
         "MimeType": {
+          "type": "string"
+        },
+        "DateCreated": {
+          "format": "date-time",
           "type": "string"
         }
       },
@@ -74623,6 +75093,14 @@
         },
         "Is4K": {
           "type": "boolean"
+        },
+        "MinDateCreated": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "MaxDateCreated": {
+          "format": "date-time",
+          "type": "string"
         },
         "EnableTotalRecordCount": {
           "type": "boolean"
