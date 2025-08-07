@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.16"
+    "version": "4.9.1.17"
   },
   "servers": [
     {
@@ -110543,6 +110543,12 @@
             }
           },
           "LatestItemsExcludes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "SearchExcludes": {
             "type": "array",
             "items": {
               "type": "string"
