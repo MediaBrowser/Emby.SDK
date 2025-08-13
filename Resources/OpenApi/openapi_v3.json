@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.17"
+    "version": "4.9.1.18"
   },
   "servers": [
     {
@@ -109940,6 +109940,12 @@
           "ProxyHeaderMode": {
             "$ref": "#/components/schemas/ProxyHeaderMode"
           },
+          "IsInMaintenanceMode": {
+            "type": "boolean"
+          },
+          "MaintenanceModeMessage": {
+            "type": "string"
+          },
           "EnableDebugLevelLogging": {
             "type": "boolean",
             "description": "A value indicating whether \\[enable debug level logging\\]."
@@ -114085,6 +114091,9 @@
           "Name": {
             "type": "string"
           },
+          "Subtitle": {
+            "type": "string"
+          },
           "Id": {
             "type": "string"
           },
@@ -114112,6 +114121,20 @@
           },
           "ParentItem": {
             "$ref": "#/components/schemas/BaseItemDto"
+          },
+          "TextInfo": {
+            "$ref": "#/components/schemas/TextSectionInfo"
+          },
+          "PremiumFeature": {
+            "type": "string"
+          },
+          "PremiumMessage": {
+            "type": "string"
+          },
+          "RefreshInterval": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "x-internal-ref-name": "MediaBrowser.Model.Entities.ContentSection"
@@ -114123,6 +114146,33 @@
         ],
         "type": "string",
         "x-internal-ref-name": "MediaBrowser.Model.Entities.ScrollDirection"
+      },
+      "TextSectionInfo": {
+        "type": "object",
+        "properties": {
+          "Text": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Id": {
+            "type": "string"
+          },
+          "Level": {
+            "$ref": "#/components/schemas/Notifications.NotificationLevel"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Model.Entities.TextSectionInfo"
+      },
+      "Notifications.NotificationLevel": {
+        "enum": [
+          "Normal",
+          "Warning",
+          "Error"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "MediaBrowser.Model.Notifications.NotificationLevel"
       },
       "UserLibrary.AddTags": {
         "type": "object",
