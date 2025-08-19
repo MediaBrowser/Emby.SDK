@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.19"
+    "version": "4.9.1.20"
   },
   "servers": [
     {
@@ -110177,6 +110177,9 @@
             "items": {
               "$ref": "#/components/schemas/WakeOnLanInfo"
             }
+          },
+          "IsInMaintenanceMode": {
+            "type": "boolean"
           },
           "LocalAddress": {
             "type": "string",
