@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.25"
+    "version": "4.9.1.26"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -73711,7 +73711,8 @@
         "Censor",
         "ShowSpeaker",
         "StripStyles",
-        "ConnectTo"
+        "ConnectTo",
+        "Rotate"
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.Transcoding.VpStepTypes"

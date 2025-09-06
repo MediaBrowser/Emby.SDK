@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.25"
+    "version": "4.9.1.26"
   },
   "servers": [
     {
@@ -106034,7 +106034,8 @@
           "Censor",
           "ShowSpeaker",
           "StripStyles",
-          "ConnectTo"
+          "ConnectTo",
+          "Rotate"
         ],
         "type": "string",
         "description": "Video Processing Step Type enum.\r\n",
