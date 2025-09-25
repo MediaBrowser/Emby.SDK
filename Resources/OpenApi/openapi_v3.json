@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.35"
+    "version": "4.9.1.36"
   },
   "servers": [
     {
@@ -13497,6 +13497,95 @@
                   "items": {
                     "$ref": "#/components/schemas/PackageInfo"
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Parties": {
+      "summary": "Gets a list of active parties",
+      "get": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Gets a list of active parties",
+        "description": "Requires authentication as user",
+        "operationId": "getParties",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Response content unknown."
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      },
+      "post": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Creates a party",
+        "description": "Requires authentication as user",
+        "operationId": "postParties",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a PartyInfoResult object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartyInfoResult"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartyInfoResult"
                 }
               }
             }
@@ -41022,6 +41111,98 @@
                 }
               }
             }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Parties/Info": {
+      "summary": "Gets info about the session's current party",
+      "get": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Gets info about the session's current party",
+        "description": "Requires authentication as user",
+        "operationId": "getPartiesInfo",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a PartyInfoResult object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartyInfoResult"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartyInfoResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
+      }
+    },
+    "/Parties/Leave": {
+      "summary": "Leaves a party",
+      "post": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Leaves a party",
+        "description": "Requires authentication as user",
+        "operationId": "postPartiesLeave",
+        "responses": {
+          "200": {
+            "description": "Operation successful. Empty response."
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -70083,6 +70264,70 @@
           }
         ],
         "x-RequiredAuthentication": "Requires authentication as administrator"
+      }
+    },
+    "/Parties/{Id}/Join": {
+      "summary": "Joins a party",
+      "post": {
+        "tags": [
+          "PartyService"
+        ],
+        "summary": "Joins a party",
+        "description": "Requires authentication as user",
+        "operationId": "postPartiesByIdJoin",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "description": "Name",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operation successful. Returning a PartyInfoResult object.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartyInfoResult"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartyInfoResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          }
+        },
+        "security": [
+          {
+            "apikeyauth": [ ]
+          },
+          {
+            "embyauth": [ ]
+          }
+        ],
+        "x-RequiredAuthentication": "Requires authentication as user"
       }
     },
     "/Playlists/{Id}/AddToPlaylistInfo": {
@@ -105287,6 +105532,27 @@
         "description": "Enum PackageVersionClass\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Updates.PackageVersionClass"
       },
+      "PartyInfoResult": {
+        "type": "object",
+        "properties": {
+          "PartyInfo": {
+            "$ref": "#/components/schemas/PartyInfo"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Model.Session.PartyInfoResult"
+      },
+      "PartyInfo": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Model.Session.PartyInfo"
+      },
       "Playlists.PlaylistCreationResult": {
         "type": "object",
         "properties": {
@@ -108184,6 +108450,9 @@
             "nullable": true
           },
           "EnableTotalRecordCount": {
+            "type": "boolean"
+          },
+          "MatchAnyWord": {
             "type": "boolean"
           },
           "IsDuplicate": {
@@ -114608,6 +114877,13 @@
       "externalDocs": {
         "description": "API Reference: PackageService",
         "url": "https://betadev.emby.media/reference/RestAPI/PackageService.html"
+      }
+    },
+    {
+      "name": "PartyService",
+      "externalDocs": {
+        "description": "API Reference: PartyService",
+        "url": "https://betadev.emby.media/reference/RestAPI/PartyService.html"
       }
     },
     {
