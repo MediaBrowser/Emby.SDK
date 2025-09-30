@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>Emby.ApiClient</AssemblyName>
+        <PackageId>Emby.ApiClient</PackageId>
+        <OutputType>Library</OutputType>
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+        <RootNamespace>Emby.ApiClient</RootNamespace>
+        <Version>4.9.1.36</Version>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <NoWarn>1701;1702;0472</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="RestSharp" Version="112.1.0" />
+        <PackageReference Include="ServiceStack.Text.Core" Version="6.11.0" />
+        <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,14 @@
+/*
+ * Emby Server REST API (BETA)
+ *
+ * Explore the Emby Server API
+ *
+ */
+package embyclient
+
+type PlaystateRequest struct {
+	Command *PlaystateCommand `json:"Command,omitempty"`
+	SeekPositionTicks int64 `json:"SeekPositionTicks,omitempty"`
+	// The controlling user identifier.
+	ControllingUserId string `json:"ControllingUserId,omitempty"`
+}

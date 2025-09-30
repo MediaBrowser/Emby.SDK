@@ -1,0 +1,46 @@
+/**
+ * Emby Server REST API (BETA)
+ * Explore the Emby Server API
+ *
+ * 
+ *
+ * NOTE: This class is auto generated.
+ * Do not edit the class manually.
+ *
+ */
+
+import ApiClient from '../ApiClient';
+/**
+* Enum class NotificationsNotificationLevel.
+* @enum {}
+* @readonly
+*/
+export default class NotificationsNotificationLevel {
+        /**
+         * value: "Normal"
+         * @const
+         */
+        Normal = "Normal";
+
+        /**
+         * value: "Warning"
+         * @const
+         */
+        Warning = "Warning";
+
+        /**
+         * value: "Error"
+         * @const
+         */
+        Error = "Error";
+
+
+    /**
+    * Returns a <code>NotificationsNotificationLevel</code> enum value from a Javascript object name.
+    * @param {Object} data The plain JavaScript object containing the name of the enum value.
+    * @return {module:model/NotificationsNotificationLevel} The enum <code>NotificationsNotificationLevel</code> value.
+    */
+    static constructFromObject(object) {
+        return object;
+    }
+}
