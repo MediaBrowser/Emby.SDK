@@ -18,7 +18,7 @@ import ProxyHeaderMode from './ProxyHeaderMode';
 /**
 * The ServerConfiguration model module.
 * @module model/ServerConfiguration
-* @version 4.9.1.36
+* @version 4.9.2.1
 */
 export default class ServerConfiguration {
     /**

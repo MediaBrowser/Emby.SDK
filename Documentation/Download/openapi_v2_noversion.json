@@ -78583,6 +78583,9 @@
         "EnableVideoPlaybackTranscoding": {
           "type": "boolean"
         },
+        "EnableTranscodingQuality": {
+          "type": "boolean"
+        },
         "EnablePlaybackRemuxing": {
           "type": "boolean"
         },

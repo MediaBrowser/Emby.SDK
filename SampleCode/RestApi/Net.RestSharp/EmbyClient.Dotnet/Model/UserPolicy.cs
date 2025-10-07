@@ -48,6 +48,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="enableMediaPlayback">enableMediaPlayback.</param>
         /// <param name="enableAudioPlaybackTranscoding">enableAudioPlaybackTranscoding.</param>
         /// <param name="enableVideoPlaybackTranscoding">enableVideoPlaybackTranscoding.</param>
+        /// <param name="enableTranscodingQuality">enableTranscodingQuality.</param>
         /// <param name="enablePlaybackRemuxing">enablePlaybackRemuxing.</param>
         /// <param name="enableContentDeletion">enableContentDeletion.</param>
         /// <param name="restrictedFeatures">restrictedFeatures.</param>
@@ -71,7 +72,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="enableAllDevices">enableAllDevices.</param>
         /// <param name="allowCameraUpload">allowCameraUpload.</param>
         /// <param name="allowSharingPersonalItems">allowSharingPersonalItems.</param>
-        public UserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), long? lockedOutDate = default(long?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<AccessSchedule> accessSchedules = default(List<AccessSchedule>), List<UnratedItem> blockUnratedItems = default(List<UnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?), bool? allowCameraUpload = default(bool?), bool? allowSharingPersonalItems = default(bool?))
+        public UserPolicy(bool? isAdministrator = default(bool?), bool? isHidden = default(bool?), bool? isHiddenRemotely = default(bool?), bool? isHiddenFromUnusedDevices = default(bool?), bool? isDisabled = default(bool?), long? lockedOutDate = default(long?), int? maxParentalRating = default(int?), bool? allowTagOrRating = default(bool?), List<string> blockedTags = default(List<string>), bool? isTagBlockingModeInclusive = default(bool?), List<string> includeTags = default(List<string>), bool? enableUserPreferenceAccess = default(bool?), List<AccessSchedule> accessSchedules = default(List<AccessSchedule>), List<UnratedItem> blockUnratedItems = default(List<UnratedItem>), bool? enableRemoteControlOfOtherUsers = default(bool?), bool? enableSharedDeviceControl = default(bool?), bool? enableRemoteAccess = default(bool?), bool? enableLiveTvManagement = default(bool?), bool? enableLiveTvAccess = default(bool?), bool? enableMediaPlayback = default(bool?), bool? enableAudioPlaybackTranscoding = default(bool?), bool? enableVideoPlaybackTranscoding = default(bool?), bool? enableTranscodingQuality = default(bool?), bool? enablePlaybackRemuxing = default(bool?), bool? enableContentDeletion = default(bool?), List<string> restrictedFeatures = default(List<string>), List<string> enableContentDeletionFromFolders = default(List<string>), bool? enableContentDownloading = default(bool?), bool? enableSubtitleDownloading = default(bool?), bool? enableSubtitleManagement = default(bool?), bool? enableSyncTranscoding = default(bool?), bool? enableMediaConversion = default(bool?), List<string> enabledChannels = default(List<string>), bool? enableAllChannels = default(bool?), List<string> enabledFolders = default(List<string>), bool? enableAllFolders = default(bool?), int? invalidLoginAttemptCount = default(int?), bool? enablePublicSharing = default(bool?), int? remoteClientBitrateLimit = default(int?), string authenticationProviderId = default(string), List<string> excludedSubFolders = default(List<string>), int? simultaneousStreamLimit = default(int?), List<string> enabledDevices = default(List<string>), bool? enableAllDevices = default(bool?), bool? allowCameraUpload = default(bool?), bool? allowSharingPersonalItems = default(bool?))
         {
             this.IsAdministrator = isAdministrator;
             this.IsHidden = isHidden;
@@ -95,6 +96,7 @@ namespace EmbyClient.Dotnet.Model
             this.EnableMediaPlayback = enableMediaPlayback;
             this.EnableAudioPlaybackTranscoding = enableAudioPlaybackTranscoding;
             this.EnableVideoPlaybackTranscoding = enableVideoPlaybackTranscoding;
+            this.EnableTranscodingQuality = enableTranscodingQuality;
             this.EnablePlaybackRemuxing = enablePlaybackRemuxing;
             this.EnableContentDeletion = enableContentDeletion;
             this.RestrictedFeatures = restrictedFeatures;
@@ -255,6 +257,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="EnableVideoPlaybackTranscoding", EmitDefaultValue=false)]
         public bool? EnableVideoPlaybackTranscoding { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EnableTranscodingQuality
+        /// </summary>
+        [DataMember(Name="EnableTranscodingQuality", EmitDefaultValue=false)]
+        public bool? EnableTranscodingQuality { get; set; }
 
         /// <summary>
         /// Gets or Sets EnablePlaybackRemuxing
@@ -425,6 +433,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  EnableMediaPlayback: ").Append(EnableMediaPlayback).Append("\n");
             sb.Append("  EnableAudioPlaybackTranscoding: ").Append(EnableAudioPlaybackTranscoding).Append("\n");
             sb.Append("  EnableVideoPlaybackTranscoding: ").Append(EnableVideoPlaybackTranscoding).Append("\n");
+            sb.Append("  EnableTranscodingQuality: ").Append(EnableTranscodingQuality).Append("\n");
             sb.Append("  EnablePlaybackRemuxing: ").Append(EnablePlaybackRemuxing).Append("\n");
             sb.Append("  EnableContentDeletion: ").Append(EnableContentDeletion).Append("\n");
             sb.Append("  RestrictedFeatures: ").Append(RestrictedFeatures).Append("\n");
@@ -595,6 +604,11 @@ namespace EmbyClient.Dotnet.Model
                     this.EnableVideoPlaybackTranscoding == input.EnableVideoPlaybackTranscoding ||
                     (this.EnableVideoPlaybackTranscoding != null &&
                     this.EnableVideoPlaybackTranscoding.Equals(input.EnableVideoPlaybackTranscoding))
+                ) && 
+                (
+                    this.EnableTranscodingQuality == input.EnableTranscodingQuality ||
+                    (this.EnableTranscodingQuality != null &&
+                    this.EnableTranscodingQuality.Equals(input.EnableTranscodingQuality))
                 ) && 
                 (
                     this.EnablePlaybackRemuxing == input.EnablePlaybackRemuxing ||
@@ -772,6 +786,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.EnableAudioPlaybackTranscoding.GetHashCode();
                 if (this.EnableVideoPlaybackTranscoding != null)
                     hashCode = hashCode * 59 + this.EnableVideoPlaybackTranscoding.GetHashCode();
+                if (this.EnableTranscodingQuality != null)
+                    hashCode = hashCode * 59 + this.EnableTranscodingQuality.GetHashCode();
                 if (this.EnablePlaybackRemuxing != null)
                     hashCode = hashCode * 59 + this.EnablePlaybackRemuxing.GetHashCode();
                 if (this.EnableContentDeletion != null)

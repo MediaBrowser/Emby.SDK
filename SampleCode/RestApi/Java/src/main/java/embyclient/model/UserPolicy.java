@@ -90,6 +90,9 @@ public class UserPolicy {
   @SerializedName("EnableVideoPlaybackTranscoding")
   private Boolean enableVideoPlaybackTranscoding = null;
 
+  @SerializedName("EnableTranscodingQuality")
+  private Boolean enableTranscodingQuality = null;
+
   @SerializedName("EnablePlaybackRemuxing")
   private Boolean enablePlaybackRemuxing = null;
 
@@ -587,6 +590,24 @@ public class UserPolicy {
     this.enableVideoPlaybackTranscoding = enableVideoPlaybackTranscoding;
   }
 
+  public UserPolicy enableTranscodingQuality(Boolean enableTranscodingQuality) {
+    this.enableTranscodingQuality = enableTranscodingQuality;
+    return this;
+  }
+
+   /**
+   * Get enableTranscodingQuality
+   * @return enableTranscodingQuality
+  **/
+  @Schema(description = "")
+  public Boolean isEnableTranscodingQuality() {
+    return enableTranscodingQuality;
+  }
+
+  public void setEnableTranscodingQuality(Boolean enableTranscodingQuality) {
+    this.enableTranscodingQuality = enableTranscodingQuality;
+  }
+
   public UserPolicy enablePlaybackRemuxing(Boolean enablePlaybackRemuxing) {
     this.enablePlaybackRemuxing = enablePlaybackRemuxing;
     return this;
@@ -1081,6 +1102,7 @@ public class UserPolicy {
         Objects.equals(this.enableMediaPlayback, userPolicy.enableMediaPlayback) &&
         Objects.equals(this.enableAudioPlaybackTranscoding, userPolicy.enableAudioPlaybackTranscoding) &&
         Objects.equals(this.enableVideoPlaybackTranscoding, userPolicy.enableVideoPlaybackTranscoding) &&
+        Objects.equals(this.enableTranscodingQuality, userPolicy.enableTranscodingQuality) &&
         Objects.equals(this.enablePlaybackRemuxing, userPolicy.enablePlaybackRemuxing) &&
         Objects.equals(this.enableContentDeletion, userPolicy.enableContentDeletion) &&
         Objects.equals(this.restrictedFeatures, userPolicy.restrictedFeatures) &&
@@ -1108,7 +1130,7 @@ public class UserPolicy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices, allowCameraUpload, allowSharingPersonalItems);
+    return Objects.hash(isAdministrator, isHidden, isHiddenRemotely, isHiddenFromUnusedDevices, isDisabled, lockedOutDate, maxParentalRating, allowTagOrRating, blockedTags, isTagBlockingModeInclusive, includeTags, enableUserPreferenceAccess, accessSchedules, blockUnratedItems, enableRemoteControlOfOtherUsers, enableSharedDeviceControl, enableRemoteAccess, enableLiveTvManagement, enableLiveTvAccess, enableMediaPlayback, enableAudioPlaybackTranscoding, enableVideoPlaybackTranscoding, enableTranscodingQuality, enablePlaybackRemuxing, enableContentDeletion, restrictedFeatures, enableContentDeletionFromFolders, enableContentDownloading, enableSubtitleDownloading, enableSubtitleManagement, enableSyncTranscoding, enableMediaConversion, enabledChannels, enableAllChannels, enabledFolders, enableAllFolders, invalidLoginAttemptCount, enablePublicSharing, remoteClientBitrateLimit, authenticationProviderId, excludedSubFolders, simultaneousStreamLimit, enabledDevices, enableAllDevices, allowCameraUpload, allowSharingPersonalItems);
   }
 
 
@@ -1139,6 +1161,7 @@ public class UserPolicy {
     sb.append("    enableMediaPlayback: ").append(toIndentedString(enableMediaPlayback)).append("\n");
     sb.append("    enableAudioPlaybackTranscoding: ").append(toIndentedString(enableAudioPlaybackTranscoding)).append("\n");
     sb.append("    enableVideoPlaybackTranscoding: ").append(toIndentedString(enableVideoPlaybackTranscoding)).append("\n");
+    sb.append("    enableTranscodingQuality: ").append(toIndentedString(enableTranscodingQuality)).append("\n");
     sb.append("    enablePlaybackRemuxing: ").append(toIndentedString(enablePlaybackRemuxing)).append("\n");
     sb.append("    enableContentDeletion: ").append(toIndentedString(enableContentDeletion)).append("\n");
     sb.append("    restrictedFeatures: ").append(toIndentedString(restrictedFeatures)).append("\n");

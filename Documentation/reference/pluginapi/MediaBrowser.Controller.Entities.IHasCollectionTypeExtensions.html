@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ListHelper
+    <title>Class IHasCollectionTypeExtensions
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ListHelper
+    <meta name="title" content="Class IHasCollectionTypeExtensions
    ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    <meta property="docfx:uid" content="MediaBrowser.Model.Extensions.ListHelper">
+    <meta property="docfx:uid" content="MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions">
     
     <meta property="docfx:rel" content="../../">
     
@@ -147,36 +147,36 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MediaBrowser.Model.Extensions.ListHelper">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions">
 <div class="refdoc">
   
   
-  <h1 id="MediaBrowser_Model_Extensions_ListHelper" data-uid="MediaBrowser.Model.Extensions.ListHelper" class="text-break">Class ListHelper
+  <h1 id="MediaBrowser_Controller_Entities_IHasCollectionTypeExtensions" data-uid="MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions" class="text-break">Class IHasCollectionTypeExtensions
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ListHelper</span></div>
+    <div class="level1"><span class="xref">IHasCollectionTypeExtensions</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Model.Extensions.html">MediaBrowser.Model.Extensions</a></h6>
-  <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
-  <h5 id="MediaBrowser_Model_Extensions_ListHelper_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.html">MediaBrowser.Controller.Entities</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_Entities_IHasCollectionTypeExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ListHelper</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IHasCollectionTypeExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="MediaBrowser_Model_Extensions_ListHelper_ContainsIgnoreCase_" data-uid="MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase*"></a>
-  <h4 id="MediaBrowser_Model_Extensions_ListHelper_ContainsIgnoreCase_System_ReadOnlyMemory_System_Char____System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.ReadOnlyMemory{System.Char}[],System.ReadOnlySpan{System.Char})">ContainsIgnoreCase(ReadOnlyMemory&lt;Char&gt;[], ReadOnlySpan&lt;Char&gt;)</h4>
+  <a id="MediaBrowser_Controller_Entities_IHasCollectionTypeExtensions_GetCollectionType_" data-uid="MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.GetCollectionType*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_IHasCollectionTypeExtensions_GetCollectionType_MediaBrowser_Controller_Entities_IHasCollectionType_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.GetCollectionType(MediaBrowser.Controller.Entities.IHasCollectionType,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)">GetCollectionType(IHasCollectionType, IDataContext, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ContainsIgnoreCase(ReadOnlyMemory&lt;char&gt;[] list, ReadOnlySpan&lt;char&gt; value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetCollectionType(this IHasCollectionType folder, IDataContext dataContext, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,13 +189,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.ReadOnlyMemory</span>&lt;<span class="xref">System.Char</span>&gt;[]</td>
-        <td><span class="parametername">list</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.IHasCollectionType.html">IHasCollectionType</a></td>
+        <td><span class="parametername">folder</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.ReadOnlySpan</span>&lt;<span class="xref">System.Char</span>&gt;</td>
-        <td><span class="parametername">value</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Data.IDataContext.html">IDataContext</a></td>
+        <td><span class="parametername">dataContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -210,54 +215,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="MediaBrowser_Model_Extensions_ListHelper_ContainsIgnoreCase_" data-uid="MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase*"></a>
-  <h4 id="MediaBrowser_Model_Extensions_ListHelper_ContainsIgnoreCase_System_String___System_ReadOnlySpan_System_Char__" data-uid="MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.String[],System.ReadOnlySpan{System.Char})">ContainsIgnoreCase(String[], ReadOnlySpan&lt;Char&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ContainsIgnoreCase(string[] list, ReadOnlySpan&lt;char&gt; value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span>[]</td>
-        <td><span class="parametername">list</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.ReadOnlySpan</span>&lt;<span class="xref">System.Char</span>&gt;</td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>

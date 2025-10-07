@@ -44,6 +44,7 @@ class UserPolicy(object):
         'enable_media_playback': 'bool',
         'enable_audio_playback_transcoding': 'bool',
         'enable_video_playback_transcoding': 'bool',
+        'enable_transcoding_quality': 'bool',
         'enable_playback_remuxing': 'bool',
         'enable_content_deletion': 'bool',
         'restricted_features': 'list[str]',
@@ -92,6 +93,7 @@ class UserPolicy(object):
         'enable_media_playback': 'EnableMediaPlayback',
         'enable_audio_playback_transcoding': 'EnableAudioPlaybackTranscoding',
         'enable_video_playback_transcoding': 'EnableVideoPlaybackTranscoding',
+        'enable_transcoding_quality': 'EnableTranscodingQuality',
         'enable_playback_remuxing': 'EnablePlaybackRemuxing',
         'enable_content_deletion': 'EnableContentDeletion',
         'restricted_features': 'RestrictedFeatures',
@@ -117,7 +119,7 @@ class UserPolicy(object):
         'allow_sharing_personal_items': 'AllowSharingPersonalItems'
     }
 
-    def __init__(self, is_administrator=None, is_hidden=None, is_hidden_remotely=None, is_hidden_from_unused_devices=None, is_disabled=None, locked_out_date=None, max_parental_rating=None, allow_tag_or_rating=None, blocked_tags=None, is_tag_blocking_mode_inclusive=None, include_tags=None, enable_user_preference_access=None, access_schedules=None, block_unrated_items=None, enable_remote_control_of_other_users=None, enable_shared_device_control=None, enable_remote_access=None, enable_live_tv_management=None, enable_live_tv_access=None, enable_media_playback=None, enable_audio_playback_transcoding=None, enable_video_playback_transcoding=None, enable_playback_remuxing=None, enable_content_deletion=None, restricted_features=None, enable_content_deletion_from_folders=None, enable_content_downloading=None, enable_subtitle_downloading=None, enable_subtitle_management=None, enable_sync_transcoding=None, enable_media_conversion=None, enabled_channels=None, enable_all_channels=None, enabled_folders=None, enable_all_folders=None, invalid_login_attempt_count=None, enable_public_sharing=None, remote_client_bitrate_limit=None, authentication_provider_id=None, excluded_sub_folders=None, simultaneous_stream_limit=None, enabled_devices=None, enable_all_devices=None, allow_camera_upload=None, allow_sharing_personal_items=None):  # noqa: E501
+    def __init__(self, is_administrator=None, is_hidden=None, is_hidden_remotely=None, is_hidden_from_unused_devices=None, is_disabled=None, locked_out_date=None, max_parental_rating=None, allow_tag_or_rating=None, blocked_tags=None, is_tag_blocking_mode_inclusive=None, include_tags=None, enable_user_preference_access=None, access_schedules=None, block_unrated_items=None, enable_remote_control_of_other_users=None, enable_shared_device_control=None, enable_remote_access=None, enable_live_tv_management=None, enable_live_tv_access=None, enable_media_playback=None, enable_audio_playback_transcoding=None, enable_video_playback_transcoding=None, enable_transcoding_quality=None, enable_playback_remuxing=None, enable_content_deletion=None, restricted_features=None, enable_content_deletion_from_folders=None, enable_content_downloading=None, enable_subtitle_downloading=None, enable_subtitle_management=None, enable_sync_transcoding=None, enable_media_conversion=None, enabled_channels=None, enable_all_channels=None, enabled_folders=None, enable_all_folders=None, invalid_login_attempt_count=None, enable_public_sharing=None, remote_client_bitrate_limit=None, authentication_provider_id=None, excluded_sub_folders=None, simultaneous_stream_limit=None, enabled_devices=None, enable_all_devices=None, allow_camera_upload=None, allow_sharing_personal_items=None):  # noqa: E501
         """UserPolicy - a model defined in Swagger"""  # noqa: E501
         self._is_administrator = None
         self._is_hidden = None
@@ -141,6 +143,7 @@ class UserPolicy(object):
         self._enable_media_playback = None
         self._enable_audio_playback_transcoding = None
         self._enable_video_playback_transcoding = None
+        self._enable_transcoding_quality = None
         self._enable_playback_remuxing = None
         self._enable_content_deletion = None
         self._restricted_features = None
@@ -209,6 +212,8 @@ class UserPolicy(object):
             self.enable_audio_playback_transcoding = enable_audio_playback_transcoding
         if enable_video_playback_transcoding is not None:
             self.enable_video_playback_transcoding = enable_video_playback_transcoding
+        if enable_transcoding_quality is not None:
+            self.enable_transcoding_quality = enable_transcoding_quality
         if enable_playback_remuxing is not None:
             self.enable_playback_remuxing = enable_playback_remuxing
         if enable_content_deletion is not None:
@@ -725,6 +730,27 @@ class UserPolicy(object):
         """
 
         self._enable_video_playback_transcoding = enable_video_playback_transcoding
+
+    @property
+    def enable_transcoding_quality(self):
+        """Gets the enable_transcoding_quality of this UserPolicy.  # noqa: E501
+
+
+        :return: The enable_transcoding_quality of this UserPolicy.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_transcoding_quality
+
+    @enable_transcoding_quality.setter
+    def enable_transcoding_quality(self, enable_transcoding_quality):
+        """Sets the enable_transcoding_quality of this UserPolicy.
+
+
+        :param enable_transcoding_quality: The enable_transcoding_quality of this UserPolicy.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_transcoding_quality = enable_transcoding_quality
 
     @property
     def enable_playback_remuxing(self):

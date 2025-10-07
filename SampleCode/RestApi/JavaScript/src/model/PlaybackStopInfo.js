@@ -16,7 +16,7 @@ import QueueItem from './QueueItem';
 /**
 * The PlaybackStopInfo model module.
 * @module model/PlaybackStopInfo
-* @version 4.9.1.36
+* @version 4.9.2.1
 */
 export default class PlaybackStopInfo {
     /**

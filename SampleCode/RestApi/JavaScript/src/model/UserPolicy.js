@@ -16,7 +16,7 @@ import UnratedItem from './UnratedItem';
 /**
 * The UserPolicy model module.
 * @module model/UserPolicy
-* @version 4.9.1.36
+* @version 4.9.2.1
 */
 export default class UserPolicy {
     /**
@@ -108,6 +108,9 @@ export default class UserPolicy {
             }
             if (data.hasOwnProperty('EnableVideoPlaybackTranscoding')) {
                 obj['EnableVideoPlaybackTranscoding'] = ApiClient.convertToType(data['EnableVideoPlaybackTranscoding'], 'Boolean');
+            }
+            if (data.hasOwnProperty('EnableTranscodingQuality')) {
+                obj['EnableTranscodingQuality'] = ApiClient.convertToType(data['EnableTranscodingQuality'], 'Boolean');
             }
             if (data.hasOwnProperty('EnablePlaybackRemuxing')) {
                 obj['EnablePlaybackRemuxing'] = ApiClient.convertToType(data['EnablePlaybackRemuxing'], 'Boolean');
@@ -274,6 +277,10 @@ export default class UserPolicy {
     * @member {Boolean} EnableVideoPlaybackTranscoding
     */
     'EnableVideoPlaybackTranscoding' = undefined;
+    /**
+    * @member {Boolean} EnableTranscodingQuality
+    */
+    'EnableTranscodingQuality' = undefined;
     /**
     * @member {Boolean} EnablePlaybackRemuxing
     */

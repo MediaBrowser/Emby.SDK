@@ -16,7 +16,7 @@ import ItemFileInfo from './ItemFileInfo';
 /**
 * The SyncedItem model module.
 * @module model/SyncedItem
-* @version 4.9.1.36
+* @version 4.9.2.1
 */
 export default class SyncedItem {
     /**

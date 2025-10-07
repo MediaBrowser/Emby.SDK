@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.1.36
+  version: 4.9.2.1
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -99825,6 +99825,7 @@ components:
           EnabledFolders:
           - EnabledFolders
           - EnabledFolders
+          EnableTranscodingQuality: true
           IsDisabled: true
           MaxParentalRating: 1
           EnablePublicSharing: true
@@ -100086,6 +100087,8 @@ components:
           type: boolean
         EnableVideoPlaybackTranscoding:
           type: boolean
+        EnableTranscodingQuality:
+          type: boolean
         EnablePlaybackRemuxing:
           type: boolean
         EnableContentDeletion:
@@ -100162,6 +100165,7 @@ components:
         EnabledFolders:
         - EnabledFolders
         - EnabledFolders
+        EnableTranscodingQuality: true
         IsDisabled: true
         MaxParentalRating: 1
         EnablePublicSharing: true
@@ -100292,6 +100296,7 @@ components:
             EnabledFolders:
             - EnabledFolders
             - EnabledFolders
+            EnableTranscodingQuality: true
             IsDisabled: true
             MaxParentalRating: 1
             EnablePublicSharing: true
@@ -100404,6 +100409,7 @@ components:
             EnabledFolders:
             - EnabledFolders
             - EnabledFolders
+            EnableTranscodingQuality: true
             IsDisabled: true
             MaxParentalRating: 1
             EnablePublicSharing: true
@@ -100539,6 +100545,7 @@ components:
             EnabledFolders:
             - EnabledFolders
             - EnabledFolders
+            EnableTranscodingQuality: true
             IsDisabled: true
             MaxParentalRating: 1
             EnablePublicSharing: true

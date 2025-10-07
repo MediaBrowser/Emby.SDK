@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.1.36"
+    "version": "4.9.2.1"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -78583,6 +78583,9 @@
           "type": "boolean"
         },
         "EnableVideoPlaybackTranscoding": {
+          "type": "boolean"
+        },
+        "EnableTranscodingQuality": {
           "type": "boolean"
         },
         "EnablePlaybackRemuxing": {

@@ -70049,6 +70049,25 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.IHasCollectionType.CollectionType
   nameWithType: IHasCollectionType.CollectionType
+- uid: MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions
+  name: IHasCollectionTypeExtensions
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.html
+  commentId: T:MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions
+  fullName: MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions
+  nameWithType: IHasCollectionTypeExtensions
+- uid: MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.GetCollectionType(MediaBrowser.Controller.Entities.IHasCollectionType,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  name: GetCollectionType(IHasCollectionType, IDataContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.html#MediaBrowser_Controller_Entities_IHasCollectionTypeExtensions_GetCollectionType_MediaBrowser_Controller_Entities_IHasCollectionType_MediaBrowser_Model_Data_IDataContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.GetCollectionType(MediaBrowser.Controller.Entities.IHasCollectionType,MediaBrowser.Model.Data.IDataContext,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.GetCollectionType(MediaBrowser.Controller.Entities.IHasCollectionType, MediaBrowser.Model.Data.IDataContext, System.Threading.CancellationToken)
+  nameWithType: IHasCollectionTypeExtensions.GetCollectionType(IHasCollectionType, IDataContext, CancellationToken)
+- uid: MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.GetCollectionType*
+  name: GetCollectionType
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.html#MediaBrowser_Controller_Entities_IHasCollectionTypeExtensions_GetCollectionType_
+  commentId: Overload:MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.GetCollectionType
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.IHasCollectionTypeExtensions.GetCollectionType
+  nameWithType: IHasCollectionTypeExtensions.GetCollectionType
 - uid: MediaBrowser.Controller.Entities.IHasFolderGrouping
   name: IHasFolderGrouping
   href: reference/pluginapi/MediaBrowser.Controller.Entities.IHasFolderGrouping.html
@@ -101484,15 +101503,12 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.ISessionController.SupportsMediaControl
   nameWithType: ISessionController.SupportsMediaControl
-- uid: MediaBrowser.Controller.Session.ISessionController.SupportsMessage(System.ReadOnlySpan{System.Char})
-  name: SupportsMessage(ReadOnlySpan<Char>)
-  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionController.html#MediaBrowser_Controller_Session_ISessionController_SupportsMessage_System_ReadOnlySpan_System_Char__
-  commentId: M:MediaBrowser.Controller.Session.ISessionController.SupportsMessage(System.ReadOnlySpan{System.Char})
-  name.vb: SupportsMessage(ReadOnlySpan(Of Char))
-  fullName: MediaBrowser.Controller.Session.ISessionController.SupportsMessage(System.ReadOnlySpan<System.Char>)
-  fullName.vb: MediaBrowser.Controller.Session.ISessionController.SupportsMessage(System.ReadOnlySpan(Of System.Char))
-  nameWithType: ISessionController.SupportsMessage(ReadOnlySpan<Char>)
-  nameWithType.vb: ISessionController.SupportsMessage(ReadOnlySpan(Of Char))
+- uid: MediaBrowser.Controller.Session.ISessionController.SupportsMessage(System.String)
+  name: SupportsMessage(String)
+  href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionController.html#MediaBrowser_Controller_Session_ISessionController_SupportsMessage_System_String_
+  commentId: M:MediaBrowser.Controller.Session.ISessionController.SupportsMessage(System.String)
+  fullName: MediaBrowser.Controller.Session.ISessionController.SupportsMessage(System.String)
+  nameWithType: ISessionController.SupportsMessage(String)
 - uid: MediaBrowser.Controller.Session.ISessionController.SupportsMessage*
   name: SupportsMessage
   href: reference/pluginapi/MediaBrowser.Controller.Session.ISessionController.html#MediaBrowser_Controller_Session_ISessionController_SupportsMessage_
@@ -122031,37 +122047,6 @@ references:
   commentId: N:MediaBrowser.Model.Extensions
   fullName: MediaBrowser.Model.Extensions
   nameWithType: MediaBrowser.Model.Extensions
-- uid: MediaBrowser.Model.Extensions.ListHelper
-  name: ListHelper
-  href: reference/pluginapi/MediaBrowser.Model.Extensions.ListHelper.html
-  commentId: T:MediaBrowser.Model.Extensions.ListHelper
-  fullName: MediaBrowser.Model.Extensions.ListHelper
-  nameWithType: ListHelper
-- uid: MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.ReadOnlyMemory{System.Char}[],System.ReadOnlySpan{System.Char})
-  name: ContainsIgnoreCase(ReadOnlyMemory<Char>[], ReadOnlySpan<Char>)
-  href: reference/pluginapi/MediaBrowser.Model.Extensions.ListHelper.html#MediaBrowser_Model_Extensions_ListHelper_ContainsIgnoreCase_System_ReadOnlyMemory_System_Char____System_ReadOnlySpan_System_Char__
-  commentId: M:MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.ReadOnlyMemory{System.Char}[],System.ReadOnlySpan{System.Char})
-  name.vb: ContainsIgnoreCase(ReadOnlyMemory(Of Char)(), ReadOnlySpan(Of Char))
-  fullName: MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.ReadOnlyMemory<System.Char>[], System.ReadOnlySpan<System.Char>)
-  fullName.vb: MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.ReadOnlyMemory(Of System.Char)(), System.ReadOnlySpan(Of System.Char))
-  nameWithType: ListHelper.ContainsIgnoreCase(ReadOnlyMemory<Char>[], ReadOnlySpan<Char>)
-  nameWithType.vb: ListHelper.ContainsIgnoreCase(ReadOnlyMemory(Of Char)(), ReadOnlySpan(Of Char))
-- uid: MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.String[],System.ReadOnlySpan{System.Char})
-  name: ContainsIgnoreCase(String[], ReadOnlySpan<Char>)
-  href: reference/pluginapi/MediaBrowser.Model.Extensions.ListHelper.html#MediaBrowser_Model_Extensions_ListHelper_ContainsIgnoreCase_System_String___System_ReadOnlySpan_System_Char__
-  commentId: M:MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.String[],System.ReadOnlySpan{System.Char})
-  name.vb: ContainsIgnoreCase(String(), ReadOnlySpan(Of Char))
-  fullName: MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.String[], System.ReadOnlySpan<System.Char>)
-  fullName.vb: MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase(System.String(), System.ReadOnlySpan(Of System.Char))
-  nameWithType: ListHelper.ContainsIgnoreCase(String[], ReadOnlySpan<Char>)
-  nameWithType.vb: ListHelper.ContainsIgnoreCase(String(), ReadOnlySpan(Of Char))
-- uid: MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase*
-  name: ContainsIgnoreCase
-  href: reference/pluginapi/MediaBrowser.Model.Extensions.ListHelper.html#MediaBrowser_Model_Extensions_ListHelper_ContainsIgnoreCase_
-  commentId: Overload:MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Extensions.ListHelper.ContainsIgnoreCase
-  nameWithType: ListHelper.ContainsIgnoreCase
 - uid: MediaBrowser.Model.Extensions.StringCompatibility
   name: StringCompatibility
   href: reference/pluginapi/MediaBrowser.Model.Extensions.StringCompatibility.html
@@ -144068,6 +144053,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Users.UserPolicy.EnableSyncTranscoding
   nameWithType: UserPolicy.EnableSyncTranscoding
+- uid: MediaBrowser.Model.Users.UserPolicy.EnableTranscodingQuality
+  name: EnableTranscodingQuality
+  href: reference/pluginapi/MediaBrowser.Model.Users.UserPolicy.html#MediaBrowser_Model_Users_UserPolicy_EnableTranscodingQuality
+  commentId: P:MediaBrowser.Model.Users.UserPolicy.EnableTranscodingQuality
+  fullName: MediaBrowser.Model.Users.UserPolicy.EnableTranscodingQuality
+  nameWithType: UserPolicy.EnableTranscodingQuality
+- uid: MediaBrowser.Model.Users.UserPolicy.EnableTranscodingQuality*
+  name: EnableTranscodingQuality
+  href: reference/pluginapi/MediaBrowser.Model.Users.UserPolicy.html#MediaBrowser_Model_Users_UserPolicy_EnableTranscodingQuality_
+  commentId: Overload:MediaBrowser.Model.Users.UserPolicy.EnableTranscodingQuality
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Users.UserPolicy.EnableTranscodingQuality
+  nameWithType: UserPolicy.EnableTranscodingQuality
 - uid: MediaBrowser.Model.Users.UserPolicy.EnableUserPreferenceAccess
   name: EnableUserPreferenceAccess
   href: reference/pluginapi/MediaBrowser.Model.Users.UserPolicy.html#MediaBrowser_Model_Users_UserPolicy_EnableUserPreferenceAccess
