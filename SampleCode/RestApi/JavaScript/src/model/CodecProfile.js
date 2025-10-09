@@ -16,7 +16,7 @@ import ProfileCondition from './ProfileCondition';
 /**
 * The CodecProfile model module.
 * @module model/CodecProfile
-* @version 4.9.2.1
+* @version 4.9.2.2
 */
 export default class CodecProfile {
     /**

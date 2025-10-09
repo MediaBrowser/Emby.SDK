@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.2.1
+  version: 4.9.2.2
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -72538,31 +72538,6 @@ paths:
       - apikeyauth: []
       - embyauth: []
       x-RequiredAuthentication: Requires authentication as user
-  /LiveTv/ListingProviders/SchedulesDirect/Countries:
-    summary: Gets available lineups
-    get:
-      tags:
-      - LiveTvService
-      summary: Gets available lineups
-      description: Requires authentication as administrator
-      operationId: getLivetvListingprovidersSchedulesdirectCountries
-      responses:
-        "200":
-          description: Operation successful. Response content unknown.
-        "400":
-          description: Bad Request. Server cannot process request.
-        "401":
-          description: Unauthorized. Client needs to authenticate.
-        "403":
-          description: Forbidden. No permission for the reqested operation.
-        "404":
-          description: Resource not found or unavailable.
-        "500":
-          description: Server error.
-      security:
-      - apikeyauth: []
-      - embyauth: []
-      x-RequiredAuthentication: Requires authentication as administrator
   /LiveTv/TunerHosts/Default/{Type}:
     summary: Gets tuner hosts
     get:
@@ -83917,6 +83892,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -84085,6 +84061,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -84485,6 +84462,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -84653,6 +84631,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -85623,6 +85602,7 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
+          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -85791,6 +85771,7 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
+          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -86087,6 +86068,8 @@ components:
           type: string
         Path:
           type: string
+        ConvertUrlCredentialsToBasicAuth:
+          type: boolean
         EncoderPath:
           type: string
         EncoderProtocol:
@@ -86327,6 +86310,7 @@ components:
         Video3DFormat: null
         BufferMs: 4
         ContainerStartTimeTicks: 3
+        ConvertUrlCredentialsToBasicAuth: true
         SortName: SortName
         Timestamp: None
         ItemId: ItemId
@@ -87860,6 +87844,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -88028,6 +88013,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -88497,6 +88483,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -88739,6 +88726,7 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
+          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -91576,6 +91564,7 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
+          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -91985,6 +91974,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -92153,6 +92143,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -92557,6 +92548,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -92725,6 +92717,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -93139,6 +93132,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -93307,6 +93301,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -93872,6 +93867,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -94040,6 +94036,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -94468,6 +94465,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -94636,6 +94634,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -95148,6 +95147,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -95316,6 +95316,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -96295,6 +96296,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -96463,6 +96465,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -96863,6 +96866,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -97031,6 +97035,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -97834,6 +97839,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -98028,6 +98034,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -98267,6 +98274,7 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
+          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -98543,6 +98551,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -98737,6 +98746,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -100818,6 +100828,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -100986,6 +100997,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -101455,6 +101467,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -103667,6 +103680,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -103835,6 +103849,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -104235,6 +104250,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -104403,6 +104419,7 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
+              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -104825,6 +104842,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -104993,6 +105011,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -105393,6 +105412,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -105561,6 +105581,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -106124,6 +106145,7 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
+          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -106292,6 +106314,7 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
+          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -107446,6 +107469,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -107614,6 +107638,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -108287,6 +108312,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -108455,6 +108481,7 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
+            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId

@@ -43,6 +43,9 @@ public class MediaSourceInfo {
   @SerializedName("Path")
   private String path = null;
 
+  @SerializedName("ConvertUrlCredentialsToBasicAuth")
+  private Boolean convertUrlCredentialsToBasicAuth = null;
+
   @SerializedName("EncoderPath")
   private String encoderPath = null;
 
@@ -250,6 +253,24 @@ public class MediaSourceInfo {
 
   public void setPath(String path) {
     this.path = path;
+  }
+
+  public MediaSourceInfo convertUrlCredentialsToBasicAuth(Boolean convertUrlCredentialsToBasicAuth) {
+    this.convertUrlCredentialsToBasicAuth = convertUrlCredentialsToBasicAuth;
+    return this;
+  }
+
+   /**
+   * Get convertUrlCredentialsToBasicAuth
+   * @return convertUrlCredentialsToBasicAuth
+  **/
+  @Schema(description = "")
+  public Boolean isConvertUrlCredentialsToBasicAuth() {
+    return convertUrlCredentialsToBasicAuth;
+  }
+
+  public void setConvertUrlCredentialsToBasicAuth(Boolean convertUrlCredentialsToBasicAuth) {
+    this.convertUrlCredentialsToBasicAuth = convertUrlCredentialsToBasicAuth;
   }
 
   public MediaSourceInfo encoderPath(String encoderPath) {
@@ -1064,6 +1085,7 @@ public class MediaSourceInfo {
         Objects.equals(this.protocol, mediaSourceInfo.protocol) &&
         Objects.equals(this.id, mediaSourceInfo.id) &&
         Objects.equals(this.path, mediaSourceInfo.path) &&
+        Objects.equals(this.convertUrlCredentialsToBasicAuth, mediaSourceInfo.convertUrlCredentialsToBasicAuth) &&
         Objects.equals(this.encoderPath, mediaSourceInfo.encoderPath) &&
         Objects.equals(this.encoderProtocol, mediaSourceInfo.encoderProtocol) &&
         Objects.equals(this.type, mediaSourceInfo.type) &&
@@ -1111,7 +1133,7 @@ public class MediaSourceInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(chapters, protocol, id, path, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
+    return Objects.hash(chapters, protocol, id, path, convertUrlCredentialsToBasicAuth, encoderPath, encoderProtocol, type, probePath, probeProtocol, container, size, name, sortName, isRemote, hasMixedProtocols, runTimeTicks, containerStartTimeTicks, supportsTranscoding, trancodeLiveStartIndex, wallClockStart, supportsDirectStream, supportsDirectPlay, isInfiniteStream, requiresOpening, openToken, requiresClosing, liveStreamId, bufferMs, requiresLooping, supportsProbing, video3DFormat, mediaStreams, formats, bitrate, timestamp, requiredHttpHeaders, directStreamUrl, addApiKeyToDirectStreamUrl, transcodingUrl, transcodingSubProtocol, transcodingContainer, analyzeDurationMs, readAtNativeFramerate, defaultAudioStreamIndex, defaultSubtitleStreamIndex, itemId, serverId);
   }
 
 
@@ -1124,6 +1146,7 @@ public class MediaSourceInfo {
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    convertUrlCredentialsToBasicAuth: ").append(toIndentedString(convertUrlCredentialsToBasicAuth)).append("\n");
     sb.append("    encoderPath: ").append(toIndentedString(encoderPath)).append("\n");
     sb.append("    encoderProtocol: ").append(toIndentedString(encoderProtocol)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

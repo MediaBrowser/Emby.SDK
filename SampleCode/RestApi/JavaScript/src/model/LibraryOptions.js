@@ -16,7 +16,7 @@ import TypeOptions from './TypeOptions';
 /**
 * The LibraryOptions model module.
 * @module model/LibraryOptions
-* @version 4.9.2.1
+* @version 4.9.2.2
 */
 export default class LibraryOptions {
     /**

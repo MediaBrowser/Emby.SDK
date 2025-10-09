@@ -59986,46 +59986,6 @@
       },
       "x-summary": "Gets a live tv channel"
     },
-    "/LiveTv/ListingProviders/SchedulesDirect/Countries": {
-      "get": {
-        "tags": [
-          "LiveTvService"
-        ],
-        "summary": "Gets available lineups",
-        "description": "Requires authentication as administrator",
-        "operationId": "getLivetvListingprovidersSchedulesdirectCountries",
-        "responses": {
-          "200": {
-            "description": "Operation successful. Response content unknown."
-          },
-          "400": {
-            "$ref": "#/responses/400"
-          },
-          "401": {
-            "$ref": "#/responses/401"
-          },
-          "403": {
-            "$ref": "#/responses/403"
-          },
-          "404": {
-            "$ref": "#/responses/404"
-          },
-          "500": {
-            "$ref": "#/responses/500"
-          }
-        },
-        "security": [
-          {
-            "apikeyauth": [ ]
-          },
-          {
-            "embyauth": [ ]
-          }
-        ],
-        "x-RequiredAuthentication": "Requires authentication as administrator"
-      },
-      "x-summary": "Gets available lineups"
-    },
     "/LiveTv/TunerHosts/Default/{Type}": {
       "get": {
         "tags": [
@@ -72153,6 +72113,9 @@
         },
         "Path": {
           "type": "string"
+        },
+        "ConvertUrlCredentialsToBasicAuth": {
+          "type": "boolean"
         },
         "EncoderPath": {
           "type": "string"

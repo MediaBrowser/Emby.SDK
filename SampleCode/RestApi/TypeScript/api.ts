@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.2.1
+ * OpenAPI spec version: 4.9.2.2
  * 
  *
  * NOTE: This file is auto generated.
@@ -7170,6 +7170,12 @@ export interface MediaSourceInfo {
      * @memberof MediaSourceInfo
      */
     Path?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaSourceInfo
+     */
+    ConvertUrlCredentialsToBasicAuth?: boolean;
     /**
      * 
      * @type {string}
@@ -66741,39 +66747,6 @@ export const LiveTvServiceApiFetchParamCreator = function (configuration?: Confi
         },
         /**
          * Requires authentication as administrator
-         * @summary Gets available lineups
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getLivetvListingprovidersSchedulesdirectCountries(options: any = {}): FetchArgs {
-            const localVarPath = `/LiveTv/ListingProviders/SchedulesDirect/Countries`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication apikeyauth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-					? configuration.apiKey("api_key")
-					: configuration.apiKey;
-                localVarQueryParameter["api_key"] = localVarApiKeyValue;
-            }
-
-            // authentication embyauth required
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Requires authentication as administrator
          * @summary Gets the channel management list
          * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
          * @param {number} [Limit] Optional. The maximum number of records to return
@@ -71675,24 +71648,6 @@ export const LiveTvServiceApiFp = function(configuration?: Configuration) {
         },
         /**
          * Requires authentication as administrator
-         * @summary Gets available lineups
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getLivetvListingprovidersSchedulesdirectCountries(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
-            const localVarFetchArgs = LiveTvServiceApiFetchParamCreator(configuration).getLivetvListingprovidersSchedulesdirectCountries(options);
-            return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    } else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         * Requires authentication as administrator
          * @summary Gets the channel management list
          * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
          * @param {number} [Limit] Optional. The maximum number of records to return
@@ -73555,15 +73510,6 @@ export const LiveTvServiceApiFactory = function (configuration?: Configuration, 
         },
         /**
          * Requires authentication as administrator
-         * @summary Gets available lineups
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getLivetvListingprovidersSchedulesdirectCountries(options?: any) {
-            return LiveTvServiceApiFp(configuration).getLivetvListingprovidersSchedulesdirectCountries(options)(fetch, basePath);
-        },
-        /**
-         * Requires authentication as administrator
          * @summary Gets the channel management list
          * @param {number} [StartIndex] Optional. The record index to start at. All items with a lower index will be dropped from the results.
          * @param {number} [Limit] Optional. The maximum number of records to return
@@ -75116,17 +75062,6 @@ export class LiveTvServiceApi extends BaseAPI {
      */
     public getLivetvListingprovidersLineups(Id?: string, Type?: string, Location?: string, Country?: string, options?: any) {
         return LiveTvServiceApiFp(this.configuration).getLivetvListingprovidersLineups(Id, Type, Location, Country, options)(this.fetch, this.basePath);
-    }
-
-    /**
-     * Requires authentication as administrator
-     * @summary Gets available lineups
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof LiveTvServiceApi
-     */
-    public getLivetvListingprovidersSchedulesdirectCountries(options?: any) {
-        return LiveTvServiceApiFp(this.configuration).getLivetvListingprovidersSchedulesdirectCountries(options)(this.fetch, this.basePath);
     }
 
     /**

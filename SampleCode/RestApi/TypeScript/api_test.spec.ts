@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.2.1
+ * OpenAPI spec version: 4.9.2.2
  * 
  *
  * NOTE: This file is auto generated.
@@ -5236,9 +5236,6 @@ describe("LiveTvServiceApi", () => {
     const Location: string = "Location_example"
     const Country: string = "Country_example"
     return expect(instance.getLivetvListingprovidersLineups(Id, Type, Location, Country, {})).resolves.toBe(null)
-  })
-  test("getLivetvListingprovidersSchedulesdirectCountries", () => {
-    return expect(instance.getLivetvListingprovidersSchedulesdirectCountries({})).resolves.toBe(null)
   })
   test("getLivetvManageChannels", () => {
     const StartIndex: number = 56

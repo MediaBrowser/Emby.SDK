@@ -38,7 +38,7 @@ import SortOrder from '../model/SortOrder';
 /**
 * LiveTvService service.
 * @module api/LiveTvServiceApi
-* @version 4.9.2.1
+* @version 4.9.2.2
 */
 export default class LiveTvServiceApi {
 
@@ -1410,48 +1410,6 @@ export default class LiveTvServiceApi {
      */
     getLivetvListingprovidersLineups() {
       return this.getLivetvListingprovidersLineupsWithHttpInfo()
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Gets available lineups
-     * Requires authentication as administrator
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    getLivetvListingprovidersSchedulesdirectCountriesWithHttpInfo() {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['apikeyauth', 'embyauth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-
-      return this.apiClient.callApi(
-        '/LiveTv/ListingProviders/SchedulesDirect/Countries', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-    /**
-     * Gets available lineups
-     * Requires authentication as administrator
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    getLivetvListingprovidersSchedulesdirectCountries() {
-      return this.getLivetvListingprovidersSchedulesdirectCountriesWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

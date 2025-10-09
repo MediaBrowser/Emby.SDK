@@ -2985,22 +2985,6 @@ namespace Emby.ApiClient.Api
         }
 
         /// <summary>
-        /// Gets available lineups
-        /// </summary>
-        /// <remarks>
-        /// Requires authentication as administrator
-        /// </remarks>
-        /// <returns>Task of ApiResponse</returns>
-        public async Task<RestResponse<Object>> GetLivetvListingprovidersSchedulesdirectCountries ()
-        {
-            var request = new RestRequest("/LiveTv/ListingProviders/SchedulesDirect/Countries", Method.Get);
-
-            // make the HTTP request
-            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<Object>(request).ConfigureAwait(false);
-            return localVarResponse;
-        }
-
-        /// <summary>
         /// Gets the channel management list
         /// </summary>
         /// <remarks>

@@ -780,20 +780,6 @@ public class LiveTvServiceApiTest {
         // TODO: test validations
     }
     /**
-     * Gets available lineups
-     *
-     * Requires authentication as administrator
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void getLivetvListingprovidersSchedulesdirectCountriesTest() throws Exception {
-        api.getLivetvListingprovidersSchedulesdirectCountries();
-
-        // TODO: test validations
-    }
-    /**
      * Gets the channel management list
      *
      * Requires authentication as administrator

@@ -737,6 +737,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -904,6 +905,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1284,6 +1286,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -1451,6 +1454,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -2085,6 +2089,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -2252,6 +2257,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -2782,6 +2788,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -2949,6 +2956,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -3329,6 +3337,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -3496,6 +3505,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -4569,6 +4579,7 @@ open class LiveTvServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
+        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -4736,6 +4747,7 @@ open class LiveTvServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
+        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -5119,6 +5131,7 @@ open class LiveTvServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
+        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -5286,6 +5299,7 @@ open class LiveTvServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
+        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -5917,6 +5931,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -6084,6 +6099,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -6677,46 +6693,6 @@ open class LiveTvServiceAPI {
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
     /**
-     Gets available lineups
-
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getLivetvListingprovidersSchedulesdirectCountries(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        getLivetvListingprovidersSchedulesdirectCountriesWithRequestBuilder().execute { (response, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-
-    /**
-     Gets available lineups
-     - GET /LiveTv/ListingProviders/SchedulesDirect/Countries
-
-     - API Key:
-       - type: apiKey api_key (QUERY)
-       - name: apikeyauth
-     - :
-       - type: http
-       - name: embyauth
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func getLivetvListingprovidersSchedulesdirectCountriesWithRequestBuilder() -> RequestBuilder<Void> {
-        let path = "/LiveTv/ListingProviders/SchedulesDirect/Countries"
-        let URLString = EmbyClientAPI.basePath + path
-        let parameters: [String:Any]? = nil
-        let url = URLComponents(string: URLString)
-
-
-        let requestBuilder: RequestBuilder<Void>.Type = EmbyClientAPI.requestBuilderFactory.getNonDecodableBuilder()
-
-        return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
-    }
-    /**
      Gets the channel management list
 
      - parameter startIndex: (query) Optional. The record index to start at. All items with a lower index will be dropped from the results. (optional)
@@ -6897,6 +6873,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -7064,6 +7041,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -7444,6 +7422,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -7611,6 +7590,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -8486,6 +8466,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -8653,6 +8634,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -9033,6 +9015,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -9200,6 +9183,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -10175,6 +10159,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -10342,6 +10327,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -10870,6 +10856,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -11037,6 +11024,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -11417,6 +11405,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -11584,6 +11573,7 @@ open class LiveTvServiceAPI {
     "Size" : 7,
     "BufferMs" : 4,
     "ContainerStartTimeTicks" : 3,
+    "ConvertUrlCredentialsToBasicAuth" : true,
     "SortName" : "SortName",
     "Timestamp" : "None",
     "ItemId" : "ItemId",
@@ -12207,6 +12197,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -12374,6 +12365,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -12754,6 +12746,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -12921,6 +12914,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -13345,6 +13339,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -13512,6 +13507,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -13892,6 +13888,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -14059,6 +14056,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -14640,6 +14638,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -14807,6 +14806,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -15259,6 +15259,7 @@ open class LiveTvServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
+        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -15426,6 +15427,7 @@ open class LiveTvServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
+        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -15833,6 +15835,7 @@ open class LiveTvServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
+        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -16000,6 +16003,7 @@ open class LiveTvServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
+        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -16452,6 +16456,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",
@@ -16619,6 +16624,7 @@ open class LiveTvServiceAPI {
       "Size" : 7,
       "BufferMs" : 4,
       "ContainerStartTimeTicks" : 3,
+      "ConvertUrlCredentialsToBasicAuth" : true,
       "SortName" : "SortName",
       "Timestamp" : "None",
       "ItemId" : "ItemId",

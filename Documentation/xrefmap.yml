@@ -23084,15 +23084,6 @@ references:
 - uid: emby.restapi/getLivetvListingprovidersLineups/operationlistitem
   name: getLivetvListingprovidersLineups
   href: reference/RestAPI/LiveTvService.html#emby_restapi_getLivetvListingprovidersLineups_operationlistitem
-- uid: emby.restapi/getLivetvListingprovidersSchedulesdirectCountries
-  name: getLivetvListingprovidersSchedulesdirectCountries
-  href: reference/RestAPI/LiveTvService/getLivetvListingprovidersSchedulesdirectCountries.html
-- uid: emby.restapi/getLivetvListingprovidersSchedulesdirectCountries/operation
-  name: getLivetvListingprovidersSchedulesdirectCountries
-  href: reference/RestAPI/LiveTvService/getLivetvListingprovidersSchedulesdirectCountries.html#emby_restapi_getLivetvListingprovidersSchedulesdirectCountries_operation
-- uid: emby.restapi/getLivetvListingprovidersSchedulesdirectCountries/operationlistitem
-  name: getLivetvListingprovidersSchedulesdirectCountries
-  href: reference/RestAPI/LiveTvService.html#emby_restapi_getLivetvListingprovidersSchedulesdirectCountries_operationlistitem
 - uid: emby.restapi/getLivetvLiverecordingsByIdHlsBySegment
   name: getLivetvLiverecordingsByIdHlsBySegment
   href: reference/RestAPI/LiveStreamService/getLivetvLiverecordingsByIdHlsBySegment.html
@@ -51025,6 +51016,25 @@ references:
   commentId: T:MediaBrowser.Common.Net.HttpRequestOptions
   fullName: MediaBrowser.Common.Net.HttpRequestOptions
   nameWithType: HttpRequestOptions
+- uid: MediaBrowser.Common.Net.HttpRequestOptions.#ctor
+  name: HttpRequestOptions()
+  href: reference/pluginapi/MediaBrowser.Common.Net.HttpRequestOptions.html#MediaBrowser_Common_Net_HttpRequestOptions__ctor
+  commentId: M:MediaBrowser.Common.Net.HttpRequestOptions.#ctor
+  fullName: MediaBrowser.Common.Net.HttpRequestOptions.HttpRequestOptions()
+  nameWithType: HttpRequestOptions.HttpRequestOptions()
+- uid: MediaBrowser.Common.Net.HttpRequestOptions.#ctor(MediaBrowser.Model.Dto.MediaSourceInfo)
+  name: HttpRequestOptions(MediaSourceInfo)
+  href: reference/pluginapi/MediaBrowser.Common.Net.HttpRequestOptions.html#MediaBrowser_Common_Net_HttpRequestOptions__ctor_MediaBrowser_Model_Dto_MediaSourceInfo_
+  commentId: M:MediaBrowser.Common.Net.HttpRequestOptions.#ctor(MediaBrowser.Model.Dto.MediaSourceInfo)
+  fullName: MediaBrowser.Common.Net.HttpRequestOptions.HttpRequestOptions(MediaBrowser.Model.Dto.MediaSourceInfo)
+  nameWithType: HttpRequestOptions.HttpRequestOptions(MediaSourceInfo)
+- uid: MediaBrowser.Common.Net.HttpRequestOptions.#ctor*
+  name: HttpRequestOptions
+  href: reference/pluginapi/MediaBrowser.Common.Net.HttpRequestOptions.html#MediaBrowser_Common_Net_HttpRequestOptions__ctor_
+  commentId: Overload:MediaBrowser.Common.Net.HttpRequestOptions.#ctor
+  isSpec: "True"
+  fullName: MediaBrowser.Common.Net.HttpRequestOptions.HttpRequestOptions
+  nameWithType: HttpRequestOptions.HttpRequestOptions
 - uid: MediaBrowser.Common.Net.HttpRequestOptions.AcceptHeader
   name: AcceptHeader
   href: reference/pluginapi/MediaBrowser.Common.Net.HttpRequestOptions.html#MediaBrowser_Common_Net_HttpRequestOptions_AcceptHeader
@@ -57491,6 +57501,19 @@ references:
   commentId: T:MediaBrowser.Controller.Channels.ChannelItemInfo
   fullName: MediaBrowser.Controller.Channels.ChannelItemInfo
   nameWithType: ChannelItemInfo
+- uid: MediaBrowser.Controller.Channels.ChannelItemInfo.Album
+  name: Album
+  href: reference/pluginapi/MediaBrowser.Controller.Channels.ChannelItemInfo.html#MediaBrowser_Controller_Channels_ChannelItemInfo_Album
+  commentId: P:MediaBrowser.Controller.Channels.ChannelItemInfo.Album
+  fullName: MediaBrowser.Controller.Channels.ChannelItemInfo.Album
+  nameWithType: ChannelItemInfo.Album
+- uid: MediaBrowser.Controller.Channels.ChannelItemInfo.Album*
+  name: Album
+  href: reference/pluginapi/MediaBrowser.Controller.Channels.ChannelItemInfo.html#MediaBrowser_Controller_Channels_ChannelItemInfo_Album_
+  commentId: Overload:MediaBrowser.Controller.Channels.ChannelItemInfo.Album
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Channels.ChannelItemInfo.Album
+  nameWithType: ChannelItemInfo.Album
 - uid: MediaBrowser.Controller.Channels.ChannelItemInfo.AlbumArtists
   name: AlbumArtists
   href: reference/pluginapi/MediaBrowser.Controller.Channels.ChannelItemInfo.html#MediaBrowser_Controller_Channels_ChannelItemInfo_AlbumArtists
@@ -117091,6 +117114,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.MediaSourceInfo.Controller
   nameWithType: MediaSourceInfo.Controller
+- uid: MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
+  name: ConvertUrlCredentialsToBasicAuth
+  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_ConvertUrlCredentialsToBasicAuth
+  commentId: P:MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
+  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
+  nameWithType: MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
+- uid: MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth*
+  name: ConvertUrlCredentialsToBasicAuth
+  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_ConvertUrlCredentialsToBasicAuth_
+  commentId: Overload:MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
+  nameWithType: MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
 - uid: MediaBrowser.Model.Dto.MediaSourceInfo.DefaultAudioStream
   name: DefaultAudioStream
   href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_DefaultAudioStream

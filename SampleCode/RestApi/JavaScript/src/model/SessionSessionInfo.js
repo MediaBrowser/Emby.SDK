@@ -18,7 +18,7 @@ import TranscodingInfo from './TranscodingInfo';
 /**
 * The SessionSessionInfo model module.
 * @module model/SessionSessionInfo
-* @version 4.9.2.1
+* @version 4.9.2.2
 */
 export default class SessionSessionInfo {
     /**
