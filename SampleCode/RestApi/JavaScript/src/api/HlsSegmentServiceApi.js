@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * HlsSegmentService service.
 * @module api/HlsSegmentServiceApi
-* @version 4.9.2.2
+* @version 4.9.2.3
 */
 export default class HlsSegmentServiceApi {
 

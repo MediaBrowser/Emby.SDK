@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The ApiSetChannelSortIndex model module.
 * @module model/ApiSetChannelSortIndex
-* @version 4.9.2.2
+* @version 4.9.2.3
 */
 export default class ApiSetChannelSortIndex {
     /**

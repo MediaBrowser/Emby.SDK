@@ -16,7 +16,7 @@ import MediaEncodingCodecParameterContext from '../model/MediaEncodingCodecParam
 /**
 * CodecParameterService service.
 * @module api/CodecParameterServiceApi
-* @version 4.9.2.2
+* @version 4.9.2.3
 */
 export default class CodecParameterServiceApi {
 

@@ -15,7 +15,7 @@ import PartyInfoResult from '../model/PartyInfoResult';
 /**
 * PartyService service.
 * @module api/PartyServiceApi
-* @version 4.9.2.2
+* @version 4.9.2.3
 */
 export default class PartyServiceApi {
 

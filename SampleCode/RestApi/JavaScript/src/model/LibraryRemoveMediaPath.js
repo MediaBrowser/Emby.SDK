@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LibraryRemoveMediaPath model module.
 * @module model/LibraryRemoveMediaPath
-* @version 4.9.2.2
+* @version 4.9.2.3
 */
 export default class LibraryRemoveMediaPath {
     /**

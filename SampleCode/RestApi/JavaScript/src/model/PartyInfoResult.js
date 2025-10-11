@@ -15,7 +15,7 @@ import PartyInfo from './PartyInfo';
 /**
 * The PartyInfoResult model module.
 * @module model/PartyInfoResult
-* @version 4.9.2.2
+* @version 4.9.2.3
 */
 export default class PartyInfoResult {
     /**
