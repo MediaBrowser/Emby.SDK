@@ -39,6 +39,5 @@ type UserDto struct {
 	Policy *UserPolicy `json:"Policy,omitempty"`
 	// The primary image aspect ratio.
 	PrimaryImageAspectRatio float64 `json:"PrimaryImageAspectRatio,omitempty"`
-	HasConfiguredEasyPassword bool `json:"HasConfiguredEasyPassword,omitempty"`
 	UserItemShareLevel *UserItemShareLevel `json:"UserItemShareLevel,omitempty"`
 }

@@ -20,7 +20,7 @@ import Video3DFormat from './Video3DFormat';
 /**
 * The MediaSourceInfo model module.
 * @module model/MediaSourceInfo
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export default class MediaSourceInfo {
     /**
@@ -58,9 +58,6 @@ export default class MediaSourceInfo {
             }
             if (data.hasOwnProperty('Path')) {
                 obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
-            }
-            if (data.hasOwnProperty('ConvertUrlCredentialsToBasicAuth')) {
-                obj['ConvertUrlCredentialsToBasicAuth'] = ApiClient.convertToType(data['ConvertUrlCredentialsToBasicAuth'], 'Boolean');
             }
             if (data.hasOwnProperty('EncoderPath')) {
                 obj['EncoderPath'] = ApiClient.convertToType(data['EncoderPath'], 'String');
@@ -211,10 +208,6 @@ export default class MediaSourceInfo {
     * @member {String} Path
     */
     'Path' = undefined;
-    /**
-    * @member {Boolean} ConvertUrlCredentialsToBasicAuth
-    */
-    'ConvertUrlCredentialsToBasicAuth' = undefined;
     /**
     * @member {String} EncoderPath
     */

@@ -15,7 +15,7 @@ import DeviceProfile from './DeviceProfile';
 /**
 * The LiveStreamRequest model module.
 * @module model/LiveStreamRequest
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export default class LiveStreamRequest {
     /**

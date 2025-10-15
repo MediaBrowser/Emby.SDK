@@ -6,6 +6,6 @@
  */
 package embyclient
 
-type PartyInfoResult struct {
-	PartyInfo *PartyInfo `json:"PartyInfo,omitempty"`
+type SessionPartyInfoResult struct {
+	PartyInfo *SessionPartyInfo `json:"PartyInfo,omitempty"`
 }

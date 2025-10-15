@@ -129,12 +129,6 @@ namespace Emby.ApiClient.Model
         public double? PrimaryImageAspectRatio { get; set; }
 
         /// <summary>
-        /// Gets or Sets HasConfiguredEasyPassword
-        /// </summary>
-        /// <value>The HasConfiguredEasyPassword.</value>
-        public bool? HasConfiguredEasyPassword { get; set; }
-
-        /// <summary>
         /// Gets or Sets UserItemShareLevel
         /// </summary>
         /// <value>The UserItemShareLevel.</value>
@@ -165,7 +159,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  Configuration: ").Append(Configuration).Append("\n");
             sb.Append("  Policy: ").Append(Policy).Append("\n");
             sb.Append("  PrimaryImageAspectRatio: ").Append(PrimaryImageAspectRatio).Append("\n");
-            sb.Append("  HasConfiguredEasyPassword: ").Append(HasConfiguredEasyPassword).Append("\n");
             sb.Append("  UserItemShareLevel: ").Append(UserItemShareLevel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -278,11 +271,6 @@ namespace Emby.ApiClient.Model
                     this.PrimaryImageAspectRatio.Equals(input.PrimaryImageAspectRatio))
                 ) && 
                 (
-                    this.HasConfiguredEasyPassword == input.HasConfiguredEasyPassword ||
-                    (this.HasConfiguredEasyPassword != null &&
-                    this.HasConfiguredEasyPassword.Equals(input.HasConfiguredEasyPassword))
-                ) && 
-                (
                     this.UserItemShareLevel == input.UserItemShareLevel ||
                     (this.UserItemShareLevel != null &&
                     this.UserItemShareLevel.Equals(input.UserItemShareLevel))
@@ -332,8 +320,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Policy.GetHashCode();
                 if (this.PrimaryImageAspectRatio != null)
                     hashCode = hashCode * 59 + this.PrimaryImageAspectRatio.GetHashCode();
-                if (this.HasConfiguredEasyPassword != null)
-                    hashCode = hashCode * 59 + this.HasConfiguredEasyPassword.GetHashCode();
                 if (this.UserItemShareLevel != null)
                     hashCode = hashCode * 59 + this.UserItemShareLevel.GetHashCode();
                 return hashCode;

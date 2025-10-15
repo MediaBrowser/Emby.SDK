@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The LibraryRenameVirtualFolder model module.
 * @module model/LibraryRenameVirtualFolder
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export default class LibraryRenameVirtualFolder {
     /**

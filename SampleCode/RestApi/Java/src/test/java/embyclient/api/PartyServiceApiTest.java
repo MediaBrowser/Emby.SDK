@@ -5,7 +5,7 @@
 
 package embyclient.api;
 
-import embyclient.model.PartyInfoResult;
+import embyclient.model.SessionPartyInfoResult;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -48,7 +48,7 @@ public class PartyServiceApiTest {
      */
     @Test
     public void getPartiesInfoTest() throws Exception {
-        PartyInfoResult response = api.getPartiesInfo();
+        SessionPartyInfoResult response = api.getPartiesInfo();
 
         // TODO: test validations
     }
@@ -62,7 +62,7 @@ public class PartyServiceApiTest {
      */
     @Test
     public void postPartiesTest() throws Exception {
-        PartyInfoResult response = api.postParties();
+        SessionPartyInfoResult response = api.postParties();
 
         // TODO: test validations
     }
@@ -77,7 +77,7 @@ public class PartyServiceApiTest {
     @Test
     public void postPartiesByIdJoinTest() throws Exception {
         String id = null;
-        PartyInfoResult response = api.postPartiesByIdJoin(id);
+        SessionPartyInfoResult response = api.postPartiesByIdJoin(id);
 
         // TODO: test validations
     }

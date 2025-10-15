@@ -12,21 +12,27 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import embyclient.model.EntitiesUser;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 /**
- * PartyInfo
+ * SessionPartyInfo
  */
 
 
-public class PartyInfo {
+public class SessionPartyInfo {
   @SerializedName("Id")
   private String id = null;
 
   @SerializedName("Name")
   private String name = null;
 
-  public PartyInfo id(String id) {
+  @SerializedName("Users")
+  private List<EntitiesUser> users = null;
+
+  public SessionPartyInfo id(String id) {
     this.id = id;
     return this;
   }
@@ -44,7 +50,7 @@ public class PartyInfo {
     this.id = id;
   }
 
-  public PartyInfo name(String name) {
+  public SessionPartyInfo name(String name) {
     this.name = name;
     return this;
   }
@@ -62,6 +68,32 @@ public class PartyInfo {
     this.name = name;
   }
 
+  public SessionPartyInfo users(List<EntitiesUser> users) {
+    this.users = users;
+    return this;
+  }
+
+  public SessionPartyInfo addUsersItem(EntitiesUser usersItem) {
+    if (this.users == null) {
+      this.users = new ArrayList<>();
+    }
+    this.users.add(usersItem);
+    return this;
+  }
+
+   /**
+   * Get users
+   * @return users
+  **/
+  @Schema(description = "")
+  public List<EntitiesUser> getUsers() {
+    return users;
+  }
+
+  public void setUsers(List<EntitiesUser> users) {
+    this.users = users;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -71,24 +103,26 @@ public class PartyInfo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PartyInfo partyInfo = (PartyInfo) o;
-    return Objects.equals(this.id, partyInfo.id) &&
-        Objects.equals(this.name, partyInfo.name);
+    SessionPartyInfo sessionPartyInfo = (SessionPartyInfo) o;
+    return Objects.equals(this.id, sessionPartyInfo.id) &&
+        Objects.equals(this.name, sessionPartyInfo.name) &&
+        Objects.equals(this.users, sessionPartyInfo.users);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name);
+    return Objects.hash(id, name, users);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PartyInfo {\n");
+    sb.append("class SessionPartyInfo {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }

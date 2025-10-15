@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.2.3
+  version: 4.9.2.4
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -11930,10 +11930,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PartyInfoResult'
+                $ref: '#/components/schemas/Session.PartyInfoResult'
             application/xml:
               schema:
-                $ref: '#/components/schemas/PartyInfoResult'
+                $ref: '#/components/schemas/Session.PartyInfoResult'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -34399,10 +34399,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PartyInfoResult'
+                $ref: '#/components/schemas/Session.PartyInfoResult'
             application/xml:
               schema:
-                $ref: '#/components/schemas/PartyInfoResult'
+                $ref: '#/components/schemas/Session.PartyInfoResult'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -57797,10 +57797,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PartyInfoResult'
+                $ref: '#/components/schemas/Session.PartyInfoResult'
             application/xml:
               schema:
-                $ref: '#/components/schemas/PartyInfoResult'
+                $ref: '#/components/schemas/Session.PartyInfoResult'
         "400":
           description: Bad Request. Server cannot process request.
         "401":
@@ -83892,7 +83892,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -84061,7 +84060,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -84462,7 +84460,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -84631,7 +84628,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -85602,7 +85598,6 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
-          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -85771,7 +85766,6 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
-          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -86068,8 +86062,6 @@ components:
           type: string
         Path:
           type: string
-        ConvertUrlCredentialsToBasicAuth:
-          type: boolean
         EncoderPath:
           type: string
         EncoderProtocol:
@@ -86310,7 +86302,6 @@ components:
         Video3DFormat: null
         BufferMs: 4
         ContainerStartTimeTicks: 3
-        ConvertUrlCredentialsToBasicAuth: true
         SortName: SortName
         Timestamp: None
         ItemId: ItemId
@@ -87360,27 +87351,364 @@ components:
       - Beta
       - Dev
       x-internal-ref-name: MediaBrowser.Model.Updates.PackageVersionClass
-    PartyInfoResult:
+    Session.PartyInfoResult:
       type: object
       properties:
         PartyInfo:
-          $ref: '#/components/schemas/PartyInfo'
+          $ref: '#/components/schemas/Session.PartyInfo'
       example:
         PartyInfo:
           Id: Id
+          Users:
+          - PlayedPercentage: 1.4658129805029452
+            RecursiveChildCountEqualsChildCount: true
+            OriginalParsedName: OriginalParsedName
+            ConnectAccessKey: ConnectAccessKey
+            LastLoginDate: 2000-01-23T04:56:07.000+00:00
+            IsNameParsedFromFolder: true
+            DateCreated: 2000-01-23T04:56:07.000+00:00
+            ImportedCollections:
+            - Id: 5
+              ProviderIds:
+                key: ProviderIds
+              Name: Name
+            - Id: 5
+              ProviderIds:
+                key: ProviderIds
+              Name: Name
+            ConnectUserId: ConnectUserId
+            ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
+            Name: Name
+            ImageInfos:
+            - Path: Path
+              Type: Primary
+              Height: 6
+              Orientation: TopLeft
+              Width: 0
+              DateModified: 2000-01-23T04:56:07.000+00:00
+            - Path: Path
+              Type: Primary
+              Height: 6
+              Orientation: TopLeft
+              Width: 0
+              DateModified: 2000-01-23T04:56:07.000+00:00
+            UsesIdForConfigurationPath: true
+            Salt: Salt
+            ConnectUserName: ConnectUserName
+            LastActivityDate: 2000-01-23T04:56:07.000+00:00
+            ConnectLinkType: LinkedUser
+            EasyPassword: EasyPassword
+            Password: Password
+          - PlayedPercentage: 1.4658129805029452
+            RecursiveChildCountEqualsChildCount: true
+            OriginalParsedName: OriginalParsedName
+            ConnectAccessKey: ConnectAccessKey
+            LastLoginDate: 2000-01-23T04:56:07.000+00:00
+            IsNameParsedFromFolder: true
+            DateCreated: 2000-01-23T04:56:07.000+00:00
+            ImportedCollections:
+            - Id: 5
+              ProviderIds:
+                key: ProviderIds
+              Name: Name
+            - Id: 5
+              ProviderIds:
+                key: ProviderIds
+              Name: Name
+            ConnectUserId: ConnectUserId
+            ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
+            Name: Name
+            ImageInfos:
+            - Path: Path
+              Type: Primary
+              Height: 6
+              Orientation: TopLeft
+              Width: 0
+              DateModified: 2000-01-23T04:56:07.000+00:00
+            - Path: Path
+              Type: Primary
+              Height: 6
+              Orientation: TopLeft
+              Width: 0
+              DateModified: 2000-01-23T04:56:07.000+00:00
+            UsesIdForConfigurationPath: true
+            Salt: Salt
+            ConnectUserName: ConnectUserName
+            LastActivityDate: 2000-01-23T04:56:07.000+00:00
+            ConnectLinkType: LinkedUser
+            EasyPassword: EasyPassword
+            Password: Password
           Name: Name
-      x-internal-ref-name: MediaBrowser.Model.Session.PartyInfoResult
-    PartyInfo:
+      x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfoResult
+    Session.PartyInfo:
       type: object
       properties:
         Id:
           type: string
         Name:
           type: string
+        Users:
+          type: array
+          items:
+            $ref: '#/components/schemas/Entities.User'
       example:
         Id: Id
+        Users:
+        - PlayedPercentage: 1.4658129805029452
+          RecursiveChildCountEqualsChildCount: true
+          OriginalParsedName: OriginalParsedName
+          ConnectAccessKey: ConnectAccessKey
+          LastLoginDate: 2000-01-23T04:56:07.000+00:00
+          IsNameParsedFromFolder: true
+          DateCreated: 2000-01-23T04:56:07.000+00:00
+          ImportedCollections:
+          - Id: 5
+            ProviderIds:
+              key: ProviderIds
+            Name: Name
+          - Id: 5
+            ProviderIds:
+              key: ProviderIds
+            Name: Name
+          ConnectUserId: ConnectUserId
+          ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
+          Name: Name
+          ImageInfos:
+          - Path: Path
+            Type: Primary
+            Height: 6
+            Orientation: TopLeft
+            Width: 0
+            DateModified: 2000-01-23T04:56:07.000+00:00
+          - Path: Path
+            Type: Primary
+            Height: 6
+            Orientation: TopLeft
+            Width: 0
+            DateModified: 2000-01-23T04:56:07.000+00:00
+          UsesIdForConfigurationPath: true
+          Salt: Salt
+          ConnectUserName: ConnectUserName
+          LastActivityDate: 2000-01-23T04:56:07.000+00:00
+          ConnectLinkType: LinkedUser
+          EasyPassword: EasyPassword
+          Password: Password
+        - PlayedPercentage: 1.4658129805029452
+          RecursiveChildCountEqualsChildCount: true
+          OriginalParsedName: OriginalParsedName
+          ConnectAccessKey: ConnectAccessKey
+          LastLoginDate: 2000-01-23T04:56:07.000+00:00
+          IsNameParsedFromFolder: true
+          DateCreated: 2000-01-23T04:56:07.000+00:00
+          ImportedCollections:
+          - Id: 5
+            ProviderIds:
+              key: ProviderIds
+            Name: Name
+          - Id: 5
+            ProviderIds:
+              key: ProviderIds
+            Name: Name
+          ConnectUserId: ConnectUserId
+          ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
+          Name: Name
+          ImageInfos:
+          - Path: Path
+            Type: Primary
+            Height: 6
+            Orientation: TopLeft
+            Width: 0
+            DateModified: 2000-01-23T04:56:07.000+00:00
+          - Path: Path
+            Type: Primary
+            Height: 6
+            Orientation: TopLeft
+            Width: 0
+            DateModified: 2000-01-23T04:56:07.000+00:00
+          UsesIdForConfigurationPath: true
+          Salt: Salt
+          ConnectUserName: ConnectUserName
+          LastActivityDate: 2000-01-23T04:56:07.000+00:00
+          ConnectLinkType: LinkedUser
+          EasyPassword: EasyPassword
+          Password: Password
         Name: Name
-      x-internal-ref-name: MediaBrowser.Model.Session.PartyInfo
+      x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfo
+    Entities.User:
+      type: object
+      properties:
+        UsesIdForConfigurationPath:
+          type: boolean
+          description: From now on all user paths will be Id\-based. This is for backwards
+            compatibility.
+        Password:
+          type: string
+          description: The password.
+        EasyPassword:
+          type: string
+        Salt:
+          type: string
+        ConnectUserName:
+          type: string
+        ConnectUserId:
+          type: string
+        ConnectLinkType:
+          $ref: '#/components/schemas/Connect.UserLinkType'
+        ConnectAccessKey:
+          type: string
+        ImageInfos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Entities.ItemImageInfo'
+        Name:
+          type: string
+          description: The name.
+        LastLoginDate:
+          type: string
+          description: The last login date.
+          format: date-time
+          nullable: true
+        LastActivityDate:
+          type: string
+          description: The last activity date.
+          format: date-time
+          nullable: true
+        PlayedPercentage:
+          type: number
+          format: double
+          nullable: true
+        RecursiveChildCountEqualsChildCount:
+          type: boolean
+        OriginalParsedName:
+          type: string
+          description: Internal use only
+        IsNameParsedFromFolder:
+          type: boolean
+          description: Internal use only
+        DateCreated:
+          type: string
+          description: The date created.
+          format: date-time
+        ImportedCollections:
+          type: array
+          items:
+            $ref: '#/components/schemas/LinkedItemInfo'
+        ResolvedPresentationUniqueKey:
+          type: string
+      description: "Class User\r\n"
+      example:
+        PlayedPercentage: 1.4658129805029452
+        RecursiveChildCountEqualsChildCount: true
+        OriginalParsedName: OriginalParsedName
+        ConnectAccessKey: ConnectAccessKey
+        LastLoginDate: 2000-01-23T04:56:07.000+00:00
+        IsNameParsedFromFolder: true
+        DateCreated: 2000-01-23T04:56:07.000+00:00
+        ImportedCollections:
+        - Id: 5
+          ProviderIds:
+            key: ProviderIds
+          Name: Name
+        - Id: 5
+          ProviderIds:
+            key: ProviderIds
+          Name: Name
+        ConnectUserId: ConnectUserId
+        ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
+        Name: Name
+        ImageInfos:
+        - Path: Path
+          Type: Primary
+          Height: 6
+          Orientation: TopLeft
+          Width: 0
+          DateModified: 2000-01-23T04:56:07.000+00:00
+        - Path: Path
+          Type: Primary
+          Height: 6
+          Orientation: TopLeft
+          Width: 0
+          DateModified: 2000-01-23T04:56:07.000+00:00
+        UsesIdForConfigurationPath: true
+        Salt: Salt
+        ConnectUserName: ConnectUserName
+        LastActivityDate: 2000-01-23T04:56:07.000+00:00
+        ConnectLinkType: LinkedUser
+        EasyPassword: EasyPassword
+        Password: Password
+      x-internal-ref-name: MediaBrowser.Controller.Entities.User
+    Connect.UserLinkType:
+      type: string
+      enum:
+      - LinkedUser
+      - Guest
+      x-internal-ref-name: MediaBrowser.Model.Connect.UserLinkType
+    Entities.ItemImageInfo:
+      type: object
+      properties:
+        Path:
+          type: string
+          description: The path.
+        Type:
+          $ref: '#/components/schemas/ImageType'
+        Orientation:
+          $ref: '#/components/schemas/Drawing.ImageOrientation'
+        DateModified:
+          type: string
+          description: The date modified.
+          format: date-time
+        Width:
+          type: integer
+          format: int32
+        Height:
+          type: integer
+          format: int32
+      example:
+        Path: Path
+        Type: Primary
+        Height: 6
+        Orientation: TopLeft
+        Width: 0
+        DateModified: 2000-01-23T04:56:07.000+00:00
+      x-internal-ref-name: MediaBrowser.Controller.Entities.ItemImageInfo
+    ImageType:
+      type: string
+      description: "Enum ImageType\r\n"
+      enum:
+      - Primary
+      - Art
+      - Backdrop
+      - Banner
+      - Logo
+      - Thumb
+      - Disc
+      - Box
+      - Screenshot
+      - Menu
+      - Chapter
+      - BoxRear
+      - Thumbnail
+      - LogoLight
+      - LogoLightColor
+      x-internal-ref-name: MediaBrowser.Model.Entities.ImageType
+    LinkedItemInfo:
+      type: object
+      properties:
+        ProviderIds:
+          $ref: '#/components/schemas/ProviderIdDictionary'
+        Name:
+          type: string
+          description: The name.
+        Id:
+          type: integer
+          description: The identifier.
+          format: int64
+      example:
+        Id: 5
+        ProviderIds:
+          key: ProviderIds
+        Name: Name
+      x-internal-ref-name: MediaBrowser.Model.Dto.LinkedItemInfo
     Playlists.PlaylistCreationResult:
       type: object
       properties:
@@ -87844,7 +88172,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -88013,7 +88340,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -88483,7 +88809,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -88726,7 +89051,6 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
-          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -89181,26 +89505,6 @@ components:
       - ConnectTo
       - Rotate
       x-internal-ref-name: MediaBrowser.Model.Session.Transcoding.VpStepTypes
-    ImageType:
-      type: string
-      description: "Enum ImageType\r\n"
-      enum:
-      - Primary
-      - Art
-      - Backdrop
-      - Banner
-      - Logo
-      - Thumb
-      - Disc
-      - Box
-      - Screenshot
-      - Menu
-      - Chapter
-      - BoxRear
-      - Thumbnail
-      - LogoLight
-      - LogoLightColor
-      x-internal-ref-name: MediaBrowser.Model.Entities.ImageType
     NameValuePair:
       type: object
       properties:
@@ -91564,7 +91868,6 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
-          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -91974,7 +92277,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -92143,7 +92445,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -92548,7 +92849,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -92717,7 +93017,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -93132,7 +93431,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -93301,7 +93599,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -93867,7 +94164,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -94036,7 +94332,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -94465,7 +94760,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -94634,7 +94928,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -95147,7 +95440,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -95316,7 +95608,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -96296,7 +96587,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -96465,7 +96755,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -96866,7 +97155,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -97035,7 +97323,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -97839,7 +98126,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -98034,7 +98320,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -98274,7 +98559,6 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
-          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -98551,7 +98835,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -98746,7 +99029,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -99789,9 +100071,11 @@ components:
         HasPassword:
           type: boolean
           description: A value indicating whether this instance has password.
+          nullable: true
         HasConfiguredPassword:
           type: boolean
           description: A value indicating whether this instance has configured password.
+          nullable: true
         EnableAutoLogin:
           type: boolean
           nullable: true
@@ -99814,9 +100098,6 @@ components:
           description: The primary image aspect ratio.
           format: double
           nullable: true
-        HasConfiguredEasyPassword:
-          type: boolean
-          deprecated: true
         UserItemShareLevel:
           $ref: '#/components/schemas/UserItemShareLevel'
       description: "Class UserDto\r\n"
@@ -99892,7 +100173,6 @@ components:
           IsHiddenFromUnusedDevices: true
           EnableSyncTranscoding: true
           RemoteClientBitrateLimit: 7
-        HasConfiguredEasyPassword: true
         EnableAutoLogin: true
         UserItemShareLevel: None
         Configuration:
@@ -99935,12 +100215,6 @@ components:
         Id: Id
         HasPassword: true
       x-internal-ref-name: MediaBrowser.Model.Dto.UserDto
-    Connect.UserLinkType:
-      type: string
-      enum:
-      - LinkedUser
-      - Guest
-      x-internal-ref-name: MediaBrowser.Model.Connect.UserLinkType
     UserConfiguration:
       type: object
       properties:
@@ -100363,7 +100637,6 @@ components:
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
             RemoteClientBitrateLimit: 7
-          HasConfiguredEasyPassword: true
           EnableAutoLogin: true
           UserItemShareLevel: None
           Configuration:
@@ -100476,7 +100749,6 @@ components:
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
             RemoteClientBitrateLimit: 7
-          HasConfiguredEasyPassword: true
           EnableAutoLogin: true
           UserItemShareLevel: None
           Configuration:
@@ -100612,7 +100884,6 @@ components:
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
             RemoteClientBitrateLimit: 7
-          HasConfiguredEasyPassword: true
           EnableAutoLogin: true
           UserItemShareLevel: None
           Configuration:
@@ -100828,7 +101099,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -100997,7 +101267,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -101467,7 +101736,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -103680,7 +103948,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -103849,7 +104116,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -104250,7 +104516,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -104419,7 +104684,6 @@ components:
               Video3DFormat: null
               BufferMs: 4
               ContainerStartTimeTicks: 3
-              ConvertUrlCredentialsToBasicAuth: true
               SortName: SortName
               Timestamp: None
               ItemId: ItemId
@@ -104842,7 +105106,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -105011,7 +105274,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -105412,7 +105674,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -105581,7 +105842,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -106145,7 +106405,6 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
-          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -106314,7 +106573,6 @@ components:
           Video3DFormat: null
           BufferMs: 4
           ContainerStartTimeTicks: 3
-          ConvertUrlCredentialsToBasicAuth: true
           SortName: SortName
           Timestamp: None
           ItemId: ItemId
@@ -107469,7 +107727,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -107638,7 +107895,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -108312,7 +108568,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId
@@ -108481,7 +108736,6 @@ components:
             Video3DFormat: null
             BufferMs: 4
             ContainerStartTimeTicks: 3
-            ConvertUrlCredentialsToBasicAuth: true
             SortName: SortName
             Timestamp: None
             ItemId: ItemId

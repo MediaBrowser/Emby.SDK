@@ -14,7 +14,6 @@ type MediaSourceInfo struct {
 	Protocol *MediaProtocol `json:"Protocol,omitempty"`
 	Id string `json:"Id,omitempty"`
 	Path string `json:"Path,omitempty"`
-	ConvertUrlCredentialsToBasicAuth bool `json:"ConvertUrlCredentialsToBasicAuth,omitempty"`
 	EncoderPath string `json:"EncoderPath,omitempty"`
 	EncoderProtocol *MediaProtocol `json:"EncoderProtocol,omitempty"`
 	Type_ *MediaSourceType `json:"Type,omitempty"`

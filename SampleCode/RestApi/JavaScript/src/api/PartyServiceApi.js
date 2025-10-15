@@ -10,12 +10,12 @@
  */
 
 import ApiClient from "../ApiClient";
-import PartyInfoResult from '../model/PartyInfoResult';
+import SessionPartyInfoResult from '../model/SessionPartyInfoResult';
 
 /**
 * PartyService service.
 * @module api/PartyServiceApi
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export default class PartyServiceApi {
 
@@ -77,7 +77,7 @@ export default class PartyServiceApi {
     /**
      * Gets info about the session&#x27;s current party
      * Requires authentication as user
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PartyInfoResult} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SessionPartyInfoResult} and HTTP response
      */
     getPartiesInfoWithHttpInfo() {
       let postBody = null;
@@ -94,7 +94,7 @@ export default class PartyServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = PartyInfoResult;
+      let returnType = SessionPartyInfoResult;
 
       return this.apiClient.callApi(
         '/Parties/Info', 'GET',
@@ -106,7 +106,7 @@ export default class PartyServiceApi {
     /**
      * Gets info about the session&#x27;s current party
      * Requires authentication as user
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PartyInfoResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SessionPartyInfoResult}
      */
     getPartiesInfo() {
       return this.getPartiesInfoWithHttpInfo()
@@ -119,7 +119,7 @@ export default class PartyServiceApi {
     /**
      * Creates a party
      * Requires authentication as user
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PartyInfoResult} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SessionPartyInfoResult} and HTTP response
      */
     postPartiesWithHttpInfo() {
       let postBody = null;
@@ -136,7 +136,7 @@ export default class PartyServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = PartyInfoResult;
+      let returnType = SessionPartyInfoResult;
 
       return this.apiClient.callApi(
         '/Parties', 'POST',
@@ -148,7 +148,7 @@ export default class PartyServiceApi {
     /**
      * Creates a party
      * Requires authentication as user
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PartyInfoResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SessionPartyInfoResult}
      */
     postParties() {
       return this.postPartiesWithHttpInfo()
@@ -161,7 +161,7 @@ export default class PartyServiceApi {
     /**
      * Joins a party
      * Requires authentication as user
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PartyInfoResult} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SessionPartyInfoResult} and HTTP response
      */
     postPartiesByIdJoinWithHttpInfo() {
       let postBody = null;
@@ -179,7 +179,7 @@ export default class PartyServiceApi {
       let authNames = ['apikeyauth', 'embyauth'];
       let contentTypes = [];
       let accepts = ['application/json', 'application/xml'];
-      let returnType = PartyInfoResult;
+      let returnType = SessionPartyInfoResult;
 
       return this.apiClient.callApi(
         '/Parties/{Id}/Join', 'POST',
@@ -191,7 +191,7 @@ export default class PartyServiceApi {
     /**
      * Joins a party
      * Requires authentication as user
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PartyInfoResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SessionPartyInfoResult}
      */
     postPartiesByIdJoin() {
       return this.postPartiesByIdJoinWithHttpInfo()

@@ -62,13 +62,13 @@ namespace Emby.ApiClient.Api
         /// <remarks>
         /// Requires authentication as user
         /// </remarks>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        public async Task<RestResponse<PartyInfoResult>> GetPartiesInfo ()
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        public async Task<RestResponse<SessionPartyInfoResult>> GetPartiesInfo ()
         {
             var request = new RestRequest("/Parties/Info", Method.Get);
 
             // make the HTTP request
-            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<PartyInfoResult>(request).ConfigureAwait(false);
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<SessionPartyInfoResult>(request).ConfigureAwait(false);
             return localVarResponse;
         }
 
@@ -78,13 +78,13 @@ namespace Emby.ApiClient.Api
         /// <remarks>
         /// Requires authentication as user
         /// </remarks>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        public async Task<RestResponse<PartyInfoResult>> PostParties ()
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        public async Task<RestResponse<SessionPartyInfoResult>> PostParties ()
         {
             var request = new RestRequest("/Parties", Method.Post);
 
             // make the HTTP request
-            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<PartyInfoResult>(request).ConfigureAwait(false);
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<SessionPartyInfoResult>(request).ConfigureAwait(false);
             return localVarResponse;
         }
 
@@ -95,8 +95,8 @@ namespace Emby.ApiClient.Api
         /// Requires authentication as user
         /// </remarks>
         /// <param name="id">Name</param>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        public async Task<RestResponse<PartyInfoResult>> PostPartiesByIdJoin (string id)
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        public async Task<RestResponse<SessionPartyInfoResult>> PostPartiesByIdJoin (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -112,7 +112,7 @@ namespace Emby.ApiClient.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<PartyInfoResult>(request).ConfigureAwait(false);
+            var localVarResponse = await this.ApiClient.RestClient.ExecuteAsync<SessionPartyInfoResult>(request).ConfigureAwait(false);
             return localVarResponse;
         }
 

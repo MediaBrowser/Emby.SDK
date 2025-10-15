@@ -10,16 +10,17 @@
  */
 
 import ApiClient from '../ApiClient';
+import EntitiesUser from './EntitiesUser';
 
 /**
-* The PartyInfo model module.
-* @module model/PartyInfo
-* @version 4.9.2.3
+* The SessionPartyInfo model module.
+* @module model/SessionPartyInfo
+* @version 4.9.2.4
 */
-export default class PartyInfo {
+export default class SessionPartyInfo {
     /**
-    * Constructs a new <code>PartyInfo</code>.
-    * @alias module:model/PartyInfo
+    * Constructs a new <code>SessionPartyInfo</code>.
+    * @alias module:model/SessionPartyInfo
     * @class
     */
 
@@ -30,15 +31,15 @@ export default class PartyInfo {
     }
 
     /**
-    * Constructs a <code>PartyInfo</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>SessionPartyInfo</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/PartyInfo} obj Optional instance to populate.
-    * @return {module:model/PartyInfo} The populated <code>PartyInfo</code> instance.
+    * @param {module:model/SessionPartyInfo} obj Optional instance to populate.
+    * @return {module:model/SessionPartyInfo} The populated <code>SessionPartyInfo</code> instance.
     */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new PartyInfo();
+            obj = obj || new SessionPartyInfo();
                         
             
             if (data.hasOwnProperty('Id')) {
@@ -46,6 +47,9 @@ export default class PartyInfo {
             }
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
+            }
+            if (data.hasOwnProperty('Users')) {
+                obj['Users'] = ApiClient.convertToType(data['Users'], [EntitiesUser]);
             }
         }
         return obj;
@@ -59,6 +63,10 @@ export default class PartyInfo {
     * @member {String} Name
     */
     'Name' = undefined;
+    /**
+    * @member {Array.<module:model/EntitiesUser>} Users
+    */
+    'Users' = undefined;
 
 
 

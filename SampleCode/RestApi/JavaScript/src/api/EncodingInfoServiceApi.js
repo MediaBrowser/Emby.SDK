@@ -17,7 +17,7 @@ import VideoCodecBase from '../model/VideoCodecBase';
 /**
 * EncodingInfoService service.
 * @module api/EncodingInfoServiceApi
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export default class EncodingInfoServiceApi {
 

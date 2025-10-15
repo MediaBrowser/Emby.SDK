@@ -85,6 +85,8 @@ import EditorsEditorBase from './model/EditorsEditorBase';
 import EditorsEditorButtonItem from './model/EditorsEditorButtonItem';
 import EditorsEditorRoot from './model/EditorsEditorRoot';
 import EncodingContext from './model/EncodingContext';
+import EntitiesItemImageInfo from './model/EntitiesItemImageInfo';
+import EntitiesUser from './model/EntitiesUser';
 import EnumsUICommandType from './model/EnumsUICommandType';
 import EnumsUIViewType from './model/EnumsUIViewType';
 import ExtendedVideoSubTypes from './model/ExtendedVideoSubTypes';
@@ -136,6 +138,7 @@ import LibraryTypeOptions from './model/LibraryTypeOptions';
 import LibraryUpdateLibraryOptions from './model/LibraryUpdateLibraryOptions';
 import LibraryUpdateMediaPath from './model/LibraryUpdateMediaPath';
 import LibraryUserCopyOptions from './model/LibraryUserCopyOptions';
+import LinkedItemInfo from './model/LinkedItemInfo';
 import LiveStreamRequest from './model/LiveStreamRequest';
 import LiveStreamResponse from './model/LiveStreamResponse';
 import LiveTvChannelType from './model/LiveTvChannelType';
@@ -188,8 +191,6 @@ import PackageTargetSystem from './model/PackageTargetSystem';
 import PackageVersionClass from './model/PackageVersionClass';
 import PackageVersionInfo from './model/PackageVersionInfo';
 import ParentalRating from './model/ParentalRating';
-import PartyInfo from './model/PartyInfo';
-import PartyInfoResult from './model/PartyInfoResult';
 import PathSubstitution from './model/PathSubstitution';
 import PersistenceIntroDebugInfo from './model/PersistenceIntroDebugInfo';
 import PersonLookupInfo from './model/PersonLookupInfo';
@@ -269,6 +270,8 @@ import SegmentSkipMode from './model/SegmentSkipMode';
 import SeriesDisplayOrder from './model/SeriesDisplayOrder';
 import SeriesInfo from './model/SeriesInfo';
 import ServerConfiguration from './model/ServerConfiguration';
+import SessionPartyInfo from './model/SessionPartyInfo';
+import SessionPartyInfoResult from './model/SessionPartyInfoResult';
 import SessionSessionInfo from './model/SessionSessionInfo';
 import SessionUserInfo from './model/SessionUserInfo';
 import SleepTimerMode from './model/SleepTimerMode';
@@ -440,7 +443,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export {
     /**
@@ -900,6 +903,18 @@ export {
     EncodingContext,
 
     /**
+     * The EntitiesItemImageInfo model constructor.
+     * @property {module:model/EntitiesItemImageInfo}
+     */
+    EntitiesItemImageInfo,
+
+    /**
+     * The EntitiesUser model constructor.
+     * @property {module:model/EntitiesUser}
+     */
+    EntitiesUser,
+
+    /**
      * The EnumsUICommandType model constructor.
      * @property {module:model/EnumsUICommandType}
      */
@@ -1204,6 +1219,12 @@ export {
      * @property {module:model/LibraryUserCopyOptions}
      */
     LibraryUserCopyOptions,
+
+    /**
+     * The LinkedItemInfo model constructor.
+     * @property {module:model/LinkedItemInfo}
+     */
+    LinkedItemInfo,
 
     /**
      * The LiveStreamRequest model constructor.
@@ -1516,18 +1537,6 @@ export {
      * @property {module:model/ParentalRating}
      */
     ParentalRating,
-
-    /**
-     * The PartyInfo model constructor.
-     * @property {module:model/PartyInfo}
-     */
-    PartyInfo,
-
-    /**
-     * The PartyInfoResult model constructor.
-     * @property {module:model/PartyInfoResult}
-     */
-    PartyInfoResult,
 
     /**
      * The PathSubstitution model constructor.
@@ -2002,6 +2011,18 @@ export {
      * @property {module:model/ServerConfiguration}
      */
     ServerConfiguration,
+
+    /**
+     * The SessionPartyInfo model constructor.
+     * @property {module:model/SessionPartyInfo}
+     */
+    SessionPartyInfo,
+
+    /**
+     * The SessionPartyInfoResult model constructor.
+     * @property {module:model/SessionPartyInfoResult}
+     */
+    SessionPartyInfoResult,
 
     /**
      * The SessionSessionInfo model constructor.

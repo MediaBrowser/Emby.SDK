@@ -82456,6 +82456,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IUserManager.GetHomeSections
   nameWithType: IUserManager.GetHomeSections
+- uid: MediaBrowser.Controller.Library.IUserManager.GetImageCacheTag(MediaBrowser.Controller.Entities.User)
+  name: GetImageCacheTag(User)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_GetImageCacheTag_MediaBrowser_Controller_Entities_User_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.GetImageCacheTag(MediaBrowser.Controller.Entities.User)
+  fullName: MediaBrowser.Controller.Library.IUserManager.GetImageCacheTag(MediaBrowser.Controller.Entities.User)
+  nameWithType: IUserManager.GetImageCacheTag(User)
+- uid: MediaBrowser.Controller.Library.IUserManager.GetImageCacheTag*
+  name: GetImageCacheTag
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_GetImageCacheTag_
+  commentId: Overload:MediaBrowser.Controller.Library.IUserManager.GetImageCacheTag
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.IUserManager.GetImageCacheTag
+  nameWithType: IUserManager.GetImageCacheTag
 - uid: MediaBrowser.Controller.Library.IUserManager.GetInternalId(System.Guid)
   name: GetInternalId(Guid)
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_GetInternalId_System_Guid_
@@ -82484,6 +82497,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Library.IUserManager.GetInternalId
   nameWithType: IUserManager.GetInternalId
+- uid: MediaBrowser.Controller.Library.IUserManager.GetNonLoginOrManagementUserDto(MediaBrowser.Controller.Entities.User)
+  name: GetNonLoginOrManagementUserDto(User)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_GetNonLoginOrManagementUserDto_MediaBrowser_Controller_Entities_User_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.GetNonLoginOrManagementUserDto(MediaBrowser.Controller.Entities.User)
+  fullName: MediaBrowser.Controller.Library.IUserManager.GetNonLoginOrManagementUserDto(MediaBrowser.Controller.Entities.User)
+  nameWithType: IUserManager.GetNonLoginOrManagementUserDto(User)
+- uid: MediaBrowser.Controller.Library.IUserManager.GetNonLoginOrManagementUserDto*
+  name: GetNonLoginOrManagementUserDto
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_GetNonLoginOrManagementUserDto_
+  commentId: Overload:MediaBrowser.Controller.Library.IUserManager.GetNonLoginOrManagementUserDto
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Library.IUserManager.GetNonLoginOrManagementUserDto
+  nameWithType: IUserManager.GetNonLoginOrManagementUserDto
 - uid: MediaBrowser.Controller.Library.IUserManager.GetTypedUserSetting(System.Int64,System.String)
   name: GetTypedUserSetting(Int64, String)
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_GetTypedUserSetting_System_Int64_System_String_
@@ -100324,15 +100350,15 @@ references:
   fullName.vb: MediaBrowser.Controller.Resolvers.BaseItemResolver(Of T).ResolveItem
   nameWithType: BaseItemResolver<T>.ResolveItem
   nameWithType.vb: BaseItemResolver(Of T).ResolveItem
-- uid: MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Providers.IDirectoryService)
-  name: ResolveMultiple(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, IDirectoryService)
-  href: reference/pluginapi/MediaBrowser.Controller.Resolvers.BaseItemResolver-1.html#MediaBrowser_Controller_Resolvers_BaseItemResolver_1_ResolveMultiple_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Providers_IDirectoryService_
-  commentId: M:MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Providers.IDirectoryService)
-  name.vb: ResolveMultiple(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, IDirectoryService)
-  fullName: MediaBrowser.Controller.Resolvers.BaseItemResolver<T>.ResolveMultiple(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Providers.IDirectoryService)
-  fullName.vb: MediaBrowser.Controller.Resolvers.BaseItemResolver(Of T).ResolveMultiple(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Providers.IDirectoryService)
-  nameWithType: BaseItemResolver<T>.ResolveMultiple(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, IDirectoryService)
-  nameWithType.vb: BaseItemResolver(Of T).ResolveMultiple(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, IDirectoryService)
+- uid: MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Providers.IDirectoryService)
+  name: ResolveMultiple(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, BaseItem[], IDirectoryService)
+  href: reference/pluginapi/MediaBrowser.Controller.Resolvers.BaseItemResolver-1.html#MediaBrowser_Controller_Resolvers_BaseItemResolver_1_ResolveMultiple_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Controller_Providers_IDirectoryService_
+  commentId: M:MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Providers.IDirectoryService)
+  name.vb: ResolveMultiple(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, BaseItem(), IDirectoryService)
+  fullName: MediaBrowser.Controller.Resolvers.BaseItemResolver<T>.ResolveMultiple(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Entities.BaseItem[], MediaBrowser.Controller.Providers.IDirectoryService)
+  fullName.vb: MediaBrowser.Controller.Resolvers.BaseItemResolver(Of T).ResolveMultiple(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Entities.BaseItem(), MediaBrowser.Controller.Providers.IDirectoryService)
+  nameWithType: BaseItemResolver<T>.ResolveMultiple(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, BaseItem[], IDirectoryService)
+  nameWithType.vb: BaseItemResolver(Of T).ResolveMultiple(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, BaseItem(), IDirectoryService)
 - uid: MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultiple*
   name: ResolveMultiple
   href: reference/pluginapi/MediaBrowser.Controller.Resolvers.BaseItemResolver-1.html#MediaBrowser_Controller_Resolvers_BaseItemResolver_1_ResolveMultiple_
@@ -100342,15 +100368,15 @@ references:
   fullName.vb: MediaBrowser.Controller.Resolvers.BaseItemResolver(Of T).ResolveMultiple
   nameWithType: BaseItemResolver<T>.ResolveMultiple
   nameWithType.vb: BaseItemResolver(Of T).ResolveMultiple
-- uid: MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultipleInternal(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Providers.IDirectoryService)
-  name: ResolveMultipleInternal(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, IDirectoryService)
-  href: reference/pluginapi/MediaBrowser.Controller.Resolvers.BaseItemResolver-1.html#MediaBrowser_Controller_Resolvers_BaseItemResolver_1_ResolveMultipleInternal_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Providers_IDirectoryService_
-  commentId: M:MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultipleInternal(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Providers.IDirectoryService)
-  name.vb: ResolveMultipleInternal(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, IDirectoryService)
-  fullName: MediaBrowser.Controller.Resolvers.BaseItemResolver<T>.ResolveMultipleInternal(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Providers.IDirectoryService)
-  fullName.vb: MediaBrowser.Controller.Resolvers.BaseItemResolver(Of T).ResolveMultipleInternal(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Providers.IDirectoryService)
-  nameWithType: BaseItemResolver<T>.ResolveMultipleInternal(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, IDirectoryService)
-  nameWithType.vb: BaseItemResolver(Of T).ResolveMultipleInternal(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, IDirectoryService)
+- uid: MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultipleInternal(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Providers.IDirectoryService)
+  name: ResolveMultipleInternal(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, BaseItem[], IDirectoryService)
+  href: reference/pluginapi/MediaBrowser.Controller.Resolvers.BaseItemResolver-1.html#MediaBrowser_Controller_Resolvers_BaseItemResolver_1_ResolveMultipleInternal_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Controller_Providers_IDirectoryService_
+  commentId: M:MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultipleInternal(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Providers.IDirectoryService)
+  name.vb: ResolveMultipleInternal(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, BaseItem(), IDirectoryService)
+  fullName: MediaBrowser.Controller.Resolvers.BaseItemResolver<T>.ResolveMultipleInternal(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Entities.BaseItem[], MediaBrowser.Controller.Providers.IDirectoryService)
+  fullName.vb: MediaBrowser.Controller.Resolvers.BaseItemResolver(Of T).ResolveMultipleInternal(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Entities.BaseItem(), MediaBrowser.Controller.Providers.IDirectoryService)
+  nameWithType: BaseItemResolver<T>.ResolveMultipleInternal(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, BaseItem[], IDirectoryService)
+  nameWithType.vb: BaseItemResolver(Of T).ResolveMultipleInternal(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, BaseItem(), IDirectoryService)
 - uid: MediaBrowser.Controller.Resolvers.BaseItemResolver`1.ResolveMultipleInternal*
   name: ResolveMultipleInternal
   href: reference/pluginapi/MediaBrowser.Controller.Resolvers.BaseItemResolver-1.html#MediaBrowser_Controller_Resolvers_BaseItemResolver_1_ResolveMultipleInternal_
@@ -100415,15 +100441,15 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Resolvers.IItemResolver.Priority
   nameWithType: IItemResolver.Priority
-- uid: MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Providers.IDirectoryService)
-  name: ResolveMultiple(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, IDirectoryService)
-  href: reference/pluginapi/MediaBrowser.Controller.Resolvers.IItemResolver.html#MediaBrowser_Controller_Resolvers_IItemResolver_ResolveMultiple_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Providers_IDirectoryService_
-  commentId: M:MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Providers.IDirectoryService)
-  name.vb: ResolveMultiple(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, IDirectoryService)
-  fullName: MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Providers.IDirectoryService)
-  fullName.vb: MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Providers.IDirectoryService)
-  nameWithType: IItemResolver.ResolveMultiple(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, IDirectoryService)
-  nameWithType.vb: IItemResolver.ResolveMultiple(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, IDirectoryService)
+- uid: MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Providers.IDirectoryService)
+  name: ResolveMultiple(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, BaseItem[], IDirectoryService)
+  href: reference/pluginapi/MediaBrowser.Controller.Resolvers.IItemResolver.html#MediaBrowser_Controller_Resolvers_IItemResolver_ResolveMultiple_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Controller_Providers_IDirectoryService_
+  commentId: M:MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Providers.IDirectoryService)
+  name.vb: ResolveMultiple(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, BaseItem(), IDirectoryService)
+  fullName: MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, System.Collections.Generic.List<MediaBrowser.Model.IO.FileSystemMetadata>, MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Entities.BaseItem[], MediaBrowser.Controller.Providers.IDirectoryService)
+  fullName.vb: MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder, System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), System.Collections.Generic.List(Of MediaBrowser.Model.IO.FileSystemMetadata), MediaBrowser.Model.Configuration.LibraryOptions, MediaBrowser.Controller.Entities.BaseItem(), MediaBrowser.Controller.Providers.IDirectoryService)
+  nameWithType: IItemResolver.ResolveMultiple(Folder, List<FileSystemMetadata>, List<FileSystemMetadata>, LibraryOptions, BaseItem[], IDirectoryService)
+  nameWithType.vb: IItemResolver.ResolveMultiple(Folder, List(Of FileSystemMetadata), List(Of FileSystemMetadata), LibraryOptions, BaseItem(), IDirectoryService)
 - uid: MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple*
   name: ResolveMultiple
   href: reference/pluginapi/MediaBrowser.Controller.Resolvers.IItemResolver.html#MediaBrowser_Controller_Resolvers_IItemResolver_ResolveMultiple_
@@ -102269,6 +102295,134 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyEventArgs.SessionInfo
   nameWithType: PartyEventArgs.SessionInfo
+- uid: MediaBrowser.Controller.Session.PartyInfo
+  name: PartyInfo
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html
+  commentId: T:MediaBrowser.Controller.Session.PartyInfo
+  fullName: MediaBrowser.Controller.Session.PartyInfo
+  nameWithType: PartyInfo
+- uid: MediaBrowser.Controller.Session.PartyInfo.Id
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Id
+  commentId: P:MediaBrowser.Controller.Session.PartyInfo.Id
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Id
+  nameWithType: PartyInfo.Id
+- uid: MediaBrowser.Controller.Session.PartyInfo.Id*
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Id_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfo.Id
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Id
+  nameWithType: PartyInfo.Id
+- uid: MediaBrowser.Controller.Session.PartyInfo.Name
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Name
+  commentId: P:MediaBrowser.Controller.Session.PartyInfo.Name
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Name
+  nameWithType: PartyInfo.Name
+- uid: MediaBrowser.Controller.Session.PartyInfo.Name*
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Name_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfo.Name
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Name
+  nameWithType: PartyInfo.Name
+- uid: MediaBrowser.Controller.Session.PartyInfo.Users
+  name: Users
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Users
+  commentId: P:MediaBrowser.Controller.Session.PartyInfo.Users
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Users
+  nameWithType: PartyInfo.Users
+- uid: MediaBrowser.Controller.Session.PartyInfo.Users*
+  name: Users
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Users_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfo.Users
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Users
+  nameWithType: PartyInfo.Users
+- uid: MediaBrowser.Controller.Session.PartyInfoDto
+  name: PartyInfoDto
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html
+  commentId: T:MediaBrowser.Controller.Session.PartyInfoDto
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto
+  nameWithType: PartyInfoDto
+- uid: MediaBrowser.Controller.Session.PartyInfoDto.Id
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Id
+  commentId: P:MediaBrowser.Controller.Session.PartyInfoDto.Id
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Id
+  nameWithType: PartyInfoDto.Id
+- uid: MediaBrowser.Controller.Session.PartyInfoDto.Id*
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Id_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfoDto.Id
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Id
+  nameWithType: PartyInfoDto.Id
+- uid: MediaBrowser.Controller.Session.PartyInfoDto.Name
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Name
+  commentId: P:MediaBrowser.Controller.Session.PartyInfoDto.Name
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Name
+  nameWithType: PartyInfoDto.Name
+- uid: MediaBrowser.Controller.Session.PartyInfoDto.Name*
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Name_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfoDto.Name
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Name
+  nameWithType: PartyInfoDto.Name
+- uid: MediaBrowser.Controller.Session.PartyInfoDto.Users
+  name: Users
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Users
+  commentId: P:MediaBrowser.Controller.Session.PartyInfoDto.Users
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Users
+  nameWithType: PartyInfoDto.Users
+- uid: MediaBrowser.Controller.Session.PartyInfoDto.Users*
+  name: Users
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Users_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfoDto.Users
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Users
+  nameWithType: PartyInfoDto.Users
+- uid: MediaBrowser.Controller.Session.PartyInfoResult
+  name: PartyInfoResult
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoResult.html
+  commentId: T:MediaBrowser.Controller.Session.PartyInfoResult
+  fullName: MediaBrowser.Controller.Session.PartyInfoResult
+  nameWithType: PartyInfoResult
+- uid: MediaBrowser.Controller.Session.PartyInfoResult.PartyInfo
+  name: PartyInfo
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoResult.html#MediaBrowser_Controller_Session_PartyInfoResult_PartyInfo
+  commentId: P:MediaBrowser.Controller.Session.PartyInfoResult.PartyInfo
+  fullName: MediaBrowser.Controller.Session.PartyInfoResult.PartyInfo
+  nameWithType: PartyInfoResult.PartyInfo
+- uid: MediaBrowser.Controller.Session.PartyInfoResult.PartyInfo*
+  name: PartyInfo
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoResult.html#MediaBrowser_Controller_Session_PartyInfoResult_PartyInfo_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfoResult.PartyInfo
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfoResult.PartyInfo
+  nameWithType: PartyInfoResult.PartyInfo
+- uid: MediaBrowser.Controller.Session.PartySessionInfo
+  name: PartySessionInfo
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html
+  commentId: T:MediaBrowser.Controller.Session.PartySessionInfo
+  fullName: MediaBrowser.Controller.Session.PartySessionInfo
+  nameWithType: PartySessionInfo
+- uid: MediaBrowser.Controller.Session.PartySessionInfo.Id
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html#MediaBrowser_Controller_Session_PartySessionInfo_Id
+  commentId: P:MediaBrowser.Controller.Session.PartySessionInfo.Id
+  fullName: MediaBrowser.Controller.Session.PartySessionInfo.Id
+  nameWithType: PartySessionInfo.Id
+- uid: MediaBrowser.Controller.Session.PartySessionInfo.Id*
+  name: Id
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartySessionInfo.html#MediaBrowser_Controller_Session_PartySessionInfo_Id_
+  commentId: Overload:MediaBrowser.Controller.Session.PartySessionInfo.Id
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartySessionInfo.Id
+  nameWithType: PartySessionInfo.Id
 - uid: MediaBrowser.Controller.Session.PlaySessionInfo
   name: PlaySessionInfo
   href: reference/pluginapi/MediaBrowser.Controller.Session.PlaySessionInfo.html
@@ -117114,19 +117268,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.MediaSourceInfo.Controller
   nameWithType: MediaSourceInfo.Controller
-- uid: MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
-  name: ConvertUrlCredentialsToBasicAuth
-  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_ConvertUrlCredentialsToBasicAuth
-  commentId: P:MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
-  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
-  nameWithType: MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
-- uid: MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth*
-  name: ConvertUrlCredentialsToBasicAuth
-  href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_ConvertUrlCredentialsToBasicAuth_
-  commentId: Overload:MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Dto.MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
-  nameWithType: MediaSourceInfo.ConvertUrlCredentialsToBasicAuth
 - uid: MediaBrowser.Model.Dto.MediaSourceInfo.DefaultAudioStream
   name: DefaultAudioStream
   href: reference/pluginapi/MediaBrowser.Model.Dto.MediaSourceInfo.html#MediaBrowser_Model_Dto_MediaSourceInfo_DefaultAudioStream
@@ -118272,19 +118413,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.UserDto.EnableAutoLogin
   nameWithType: UserDto.EnableAutoLogin
-- uid: MediaBrowser.Model.Dto.UserDto.HasConfiguredEasyPassword
-  name: HasConfiguredEasyPassword
-  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDto.html#MediaBrowser_Model_Dto_UserDto_HasConfiguredEasyPassword
-  commentId: P:MediaBrowser.Model.Dto.UserDto.HasConfiguredEasyPassword
-  fullName: MediaBrowser.Model.Dto.UserDto.HasConfiguredEasyPassword
-  nameWithType: UserDto.HasConfiguredEasyPassword
-- uid: MediaBrowser.Model.Dto.UserDto.HasConfiguredEasyPassword*
-  name: HasConfiguredEasyPassword
-  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDto.html#MediaBrowser_Model_Dto_UserDto_HasConfiguredEasyPassword_
-  commentId: Overload:MediaBrowser.Model.Dto.UserDto.HasConfiguredEasyPassword
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Dto.UserDto.HasConfiguredEasyPassword
-  nameWithType: UserDto.HasConfiguredEasyPassword
 - uid: MediaBrowser.Model.Dto.UserDto.HasConfiguredPassword
   name: HasConfiguredPassword
   href: reference/pluginapi/MediaBrowser.Model.Dto.UserDto.html#MediaBrowser_Model_Dto_UserDto_HasConfiguredPassword
@@ -118467,6 +118595,61 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Dto.UserDto.UserItemShareLevel
   nameWithType: UserDto.UserItemShareLevel
+- uid: MediaBrowser.Model.Dto.UserDtoFields
+  name: UserDtoFields
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoFields.html
+  commentId: T:MediaBrowser.Model.Dto.UserDtoFields
+  fullName: MediaBrowser.Model.Dto.UserDtoFields
+  nameWithType: UserDtoFields
+- uid: MediaBrowser.Model.Dto.UserDtoFields.Configuration
+  name: Configuration
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoFields.html#MediaBrowser_Model_Dto_UserDtoFields_Configuration
+  commentId: F:MediaBrowser.Model.Dto.UserDtoFields.Configuration
+  fullName: MediaBrowser.Model.Dto.UserDtoFields.Configuration
+  nameWithType: UserDtoFields.Configuration
+- uid: MediaBrowser.Model.Dto.UserDtoFields.DateCreated
+  name: DateCreated
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoFields.html#MediaBrowser_Model_Dto_UserDtoFields_DateCreated
+  commentId: F:MediaBrowser.Model.Dto.UserDtoFields.DateCreated
+  fullName: MediaBrowser.Model.Dto.UserDtoFields.DateCreated
+  nameWithType: UserDtoFields.DateCreated
+- uid: MediaBrowser.Model.Dto.UserDtoFields.EmbyConnectInfo
+  name: EmbyConnectInfo
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoFields.html#MediaBrowser_Model_Dto_UserDtoFields_EmbyConnectInfo
+  commentId: F:MediaBrowser.Model.Dto.UserDtoFields.EmbyConnectInfo
+  fullName: MediaBrowser.Model.Dto.UserDtoFields.EmbyConnectInfo
+  nameWithType: UserDtoFields.EmbyConnectInfo
+- uid: MediaBrowser.Model.Dto.UserDtoFields.Policy
+  name: Policy
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoFields.html#MediaBrowser_Model_Dto_UserDtoFields_Policy
+  commentId: F:MediaBrowser.Model.Dto.UserDtoFields.Policy
+  fullName: MediaBrowser.Model.Dto.UserDtoFields.Policy
+  nameWithType: UserDtoFields.Policy
+- uid: MediaBrowser.Model.Dto.UserDtoFields.PreLoginInfo
+  name: PreLoginInfo
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoFields.html#MediaBrowser_Model_Dto_UserDtoFields_PreLoginInfo
+  commentId: F:MediaBrowser.Model.Dto.UserDtoFields.PreLoginInfo
+  fullName: MediaBrowser.Model.Dto.UserDtoFields.PreLoginInfo
+  nameWithType: UserDtoFields.PreLoginInfo
+- uid: MediaBrowser.Model.Dto.UserDtoOptions
+  name: UserDtoOptions
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoOptions.html
+  commentId: T:MediaBrowser.Model.Dto.UserDtoOptions
+  fullName: MediaBrowser.Model.Dto.UserDtoOptions
+  nameWithType: UserDtoOptions
+- uid: MediaBrowser.Model.Dto.UserDtoOptions.Fields
+  name: Fields
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoOptions.html#MediaBrowser_Model_Dto_UserDtoOptions_Fields
+  commentId: P:MediaBrowser.Model.Dto.UserDtoOptions.Fields
+  fullName: MediaBrowser.Model.Dto.UserDtoOptions.Fields
+  nameWithType: UserDtoOptions.Fields
+- uid: MediaBrowser.Model.Dto.UserDtoOptions.Fields*
+  name: Fields
+  href: reference/pluginapi/MediaBrowser.Model.Dto.UserDtoOptions.html#MediaBrowser_Model_Dto_UserDtoOptions_Fields_
+  commentId: Overload:MediaBrowser.Model.Dto.UserDtoOptions.Fields
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dto.UserDtoOptions.Fields
+  nameWithType: UserDtoOptions.Fields
 - uid: MediaBrowser.Model.Dto.UserItemDataDto
   name: UserItemDataDto
   href: reference/pluginapi/MediaBrowser.Model.Dto.UserItemDataDto.html
@@ -137282,76 +137465,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Session.MessageCommand.TimeoutMs
   nameWithType: MessageCommand.TimeoutMs
-- uid: MediaBrowser.Model.Session.PartyInfo
-  name: PartyInfo
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartyInfo.html
-  commentId: T:MediaBrowser.Model.Session.PartyInfo
-  fullName: MediaBrowser.Model.Session.PartyInfo
-  nameWithType: PartyInfo
-- uid: MediaBrowser.Model.Session.PartyInfo.Id
-  name: Id
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartyInfo.html#MediaBrowser_Model_Session_PartyInfo_Id
-  commentId: P:MediaBrowser.Model.Session.PartyInfo.Id
-  fullName: MediaBrowser.Model.Session.PartyInfo.Id
-  nameWithType: PartyInfo.Id
-- uid: MediaBrowser.Model.Session.PartyInfo.Id*
-  name: Id
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartyInfo.html#MediaBrowser_Model_Session_PartyInfo_Id_
-  commentId: Overload:MediaBrowser.Model.Session.PartyInfo.Id
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Session.PartyInfo.Id
-  nameWithType: PartyInfo.Id
-- uid: MediaBrowser.Model.Session.PartyInfo.Name
-  name: Name
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartyInfo.html#MediaBrowser_Model_Session_PartyInfo_Name
-  commentId: P:MediaBrowser.Model.Session.PartyInfo.Name
-  fullName: MediaBrowser.Model.Session.PartyInfo.Name
-  nameWithType: PartyInfo.Name
-- uid: MediaBrowser.Model.Session.PartyInfo.Name*
-  name: Name
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartyInfo.html#MediaBrowser_Model_Session_PartyInfo_Name_
-  commentId: Overload:MediaBrowser.Model.Session.PartyInfo.Name
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Session.PartyInfo.Name
-  nameWithType: PartyInfo.Name
-- uid: MediaBrowser.Model.Session.PartyInfoResult
-  name: PartyInfoResult
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartyInfoResult.html
-  commentId: T:MediaBrowser.Model.Session.PartyInfoResult
-  fullName: MediaBrowser.Model.Session.PartyInfoResult
-  nameWithType: PartyInfoResult
-- uid: MediaBrowser.Model.Session.PartyInfoResult.PartyInfo
-  name: PartyInfo
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartyInfoResult.html#MediaBrowser_Model_Session_PartyInfoResult_PartyInfo
-  commentId: P:MediaBrowser.Model.Session.PartyInfoResult.PartyInfo
-  fullName: MediaBrowser.Model.Session.PartyInfoResult.PartyInfo
-  nameWithType: PartyInfoResult.PartyInfo
-- uid: MediaBrowser.Model.Session.PartyInfoResult.PartyInfo*
-  name: PartyInfo
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartyInfoResult.html#MediaBrowser_Model_Session_PartyInfoResult_PartyInfo_
-  commentId: Overload:MediaBrowser.Model.Session.PartyInfoResult.PartyInfo
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Session.PartyInfoResult.PartyInfo
-  nameWithType: PartyInfoResult.PartyInfo
-- uid: MediaBrowser.Model.Session.PartySessionInfo
-  name: PartySessionInfo
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartySessionInfo.html
-  commentId: T:MediaBrowser.Model.Session.PartySessionInfo
-  fullName: MediaBrowser.Model.Session.PartySessionInfo
-  nameWithType: PartySessionInfo
-- uid: MediaBrowser.Model.Session.PartySessionInfo.Id
-  name: Id
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartySessionInfo.html#MediaBrowser_Model_Session_PartySessionInfo_Id
-  commentId: P:MediaBrowser.Model.Session.PartySessionInfo.Id
-  fullName: MediaBrowser.Model.Session.PartySessionInfo.Id
-  nameWithType: PartySessionInfo.Id
-- uid: MediaBrowser.Model.Session.PartySessionInfo.Id*
-  name: Id
-  href: reference/pluginapi/MediaBrowser.Model.Session.PartySessionInfo.html#MediaBrowser_Model_Session_PartySessionInfo_Id_
-  commentId: Overload:MediaBrowser.Model.Session.PartySessionInfo.Id
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Session.PartySessionInfo.Id
-  nameWithType: PartySessionInfo.Id
 - uid: MediaBrowser.Model.Session.PlaybackProgressInfo
   name: PlaybackProgressInfo
   href: reference/pluginapi/MediaBrowser.Model.Session.PlaybackProgressInfo.html

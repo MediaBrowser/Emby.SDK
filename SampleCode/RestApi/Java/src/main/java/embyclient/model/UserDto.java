@@ -76,9 +76,6 @@ public class UserDto {
   @SerializedName("PrimaryImageAspectRatio")
   private Double primaryImageAspectRatio = null;
 
-  @SerializedName("HasConfiguredEasyPassword")
-  private Boolean hasConfiguredEasyPassword = null;
-
   @SerializedName("UserItemShareLevel")
   private UserItemShareLevel userItemShareLevel = null;
 
@@ -388,24 +385,6 @@ public class UserDto {
     this.primaryImageAspectRatio = primaryImageAspectRatio;
   }
 
-  public UserDto hasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
-    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
-    return this;
-  }
-
-   /**
-   * Get hasConfiguredEasyPassword
-   * @return hasConfiguredEasyPassword
-  **/
-  @Schema(description = "")
-  public Boolean isHasConfiguredEasyPassword() {
-    return hasConfiguredEasyPassword;
-  }
-
-  public void setHasConfiguredEasyPassword(Boolean hasConfiguredEasyPassword) {
-    this.hasConfiguredEasyPassword = hasConfiguredEasyPassword;
-  }
-
   public UserDto userItemShareLevel(UserItemShareLevel userItemShareLevel) {
     this.userItemShareLevel = userItemShareLevel;
     return this;
@@ -451,13 +430,12 @@ public class UserDto {
         Objects.equals(this._configuration, userDto._configuration) &&
         Objects.equals(this.policy, userDto.policy) &&
         Objects.equals(this.primaryImageAspectRatio, userDto.primaryImageAspectRatio) &&
-        Objects.equals(this.hasConfiguredEasyPassword, userDto.hasConfiguredEasyPassword) &&
         Objects.equals(this.userItemShareLevel, userDto.userItemShareLevel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, serverId, serverName, prefix, connectUserName, dateCreated, connectLinkType, id, primaryImageTag, hasPassword, hasConfiguredPassword, enableAutoLogin, lastLoginDate, lastActivityDate, _configuration, policy, primaryImageAspectRatio, hasConfiguredEasyPassword, userItemShareLevel);
+    return Objects.hash(name, serverId, serverName, prefix, connectUserName, dateCreated, connectLinkType, id, primaryImageTag, hasPassword, hasConfiguredPassword, enableAutoLogin, lastLoginDate, lastActivityDate, _configuration, policy, primaryImageAspectRatio, userItemShareLevel);
   }
 
 
@@ -483,7 +461,6 @@ public class UserDto {
     sb.append("    _configuration: ").append(toIndentedString(_configuration)).append("\n");
     sb.append("    policy: ").append(toIndentedString(policy)).append("\n");
     sb.append("    primaryImageAspectRatio: ").append(toIndentedString(primaryImageAspectRatio)).append("\n");
-    sb.append("    hasConfiguredEasyPassword: ").append(toIndentedString(hasConfiguredEasyPassword)).append("\n");
     sb.append("    userItemShareLevel: ").append(toIndentedString(userItemShareLevel)).append("\n");
     sb.append("}");
     return sb.toString();

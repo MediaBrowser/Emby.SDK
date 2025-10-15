@@ -181,7 +181,7 @@
         <td><span class="status">200</span></td>
         <td>
   
-              <a href="#MediaBrowser_Model_Session_PartyInfoResult" class="typelink">PartyInfoResult</a>
+              <a href="#MediaBrowser_Controller_Session_PartyInfoResult" class="typelink">PartyInfoResult</a>
               
         </td>
         <td><p>Operation successful. Returning a PartyInfoResult object.</p>
@@ -249,9 +249,9 @@
   </div>
 <h2 id="definitions">Definitions</h2>
   
-  <h3 id="MediaBrowser_Model_Session_PartyInfoResult" class="text-capitalize">PartyInfoResult</h3>
+  <h3 id="MediaBrowser_Controller_Session_PartyInfoResult" class="text-capitalize">PartyInfoResult</h3>
   <div>
-      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Session.PartyInfoResult.html">MediaBrowser.Model.Session.PartyInfoResult</a></p>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Controller.Session.PartyInfoResult.html">MediaBrowser.Controller.Session.PartyInfoResult</a></p>
 
   </div>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,7 +267,7 @@
               <td><span class="parametername">PartyInfo</span></td>
               <td>
   
-                      <a href="#MediaBrowser_Model_Session_PartyInfo" class="typelink">PartyInfo[]</a>
+                      <a href="#MediaBrowser_Controller_Session_PartyInfo" class="typelink">PartyInfo[]</a>
                   
               </td>
               <td></td>
@@ -275,9 +275,9 @@
       </tbody>
   </table>
   
-  <h3 id="MediaBrowser_Model_Session_PartyInfo" class="text-capitalize">PartyInfo</h3>
+  <h3 id="MediaBrowser_Controller_Session_PartyInfo" class="text-capitalize">PartyInfo</h3>
   <div>
-      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Session.PartyInfo.html">MediaBrowser.Model.Session.PartyInfo</a></p>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Controller.Session.PartyInfo.html">MediaBrowser.Controller.Session.PartyInfo</a></p>
 
   </div>
   <table class="table table-bordered table-striped table-condensed">
@@ -307,8 +307,399 @@
               </td>
               <td></td>
           </tr>
+          <tr>
+              <td><span class="parametername">Users</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Controller_Entities_User" class="typelink">User[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
       </tbody>
   </table>
+  
+  <h3 id="MediaBrowser_Controller_Entities_User" class="text-capitalize">User</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Controller.Entities.User.html">MediaBrowser.Controller.Entities.User</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">UsesIdForConfigurationPath</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>From now on all user paths will be Id-based. This is for backwards compatibility.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Password</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The password.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">EasyPassword</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Salt</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConnectUserName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConnectUserId</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConnectLinkType</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Connect_UserLinkType" class="typelink">UserLinkType</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ConnectAccessKey</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImageInfos</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Controller_Entities_ItemImageInfo" class="typelink">ItemImageInfo[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LastLoginDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td><p>The last login date.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">LastActivityDate</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td><p>The last activity date.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">PlayedPercentage</span></td>
+              <td>
+                    number
+                      (double)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">RecursiveChildCountEqualsChildCount</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">OriginalParsedName</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>Internal use only</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">IsNameParsedFromFolder</span></td>
+              <td>
+                    boolean
+  
+                  
+              </td>
+              <td><p>Internal use only</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DateCreated</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td><p>The date created.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ImportedCollections</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Dto_LinkedItemInfo" class="typelink">LinkedItemInfo[]</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">ResolvedPresentationUniqueKey</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Connect_UserLinkType" class="text-capitalize">UserLinkType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Connect.UserLinkType.html">MediaBrowser.Model.Connect.UserLinkType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>LinkedUser</li>
+  <li>Guest</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Controller_Entities_ItemImageInfo" class="text-capitalize">ItemImageInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Controller.Entities.ItemImageInfo.html">MediaBrowser.Controller.Entities.ItemImageInfo</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">Path</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The path.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Type</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ImageType" class="typelink">ImageType</a>
+                  
+              </td>
+              <td><p>Enum ImageType</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Orientation</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Drawing_ImageOrientation" class="typelink">ImageOrientation</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">DateModified</span></td>
+              <td>
+                    string
+                      (date-time)
+  
+                  
+              </td>
+              <td><p>The date modified.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Width</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Height</span></td>
+              <td>
+                    integer
+                      (int32)
+  
+                  
+              </td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_ImageType" class="text-capitalize">ImageType</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ImageType.html">MediaBrowser.Model.Entities.ImageType</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>Primary</li>
+  <li>Art</li>
+  <li>Backdrop</li>
+  <li>Banner</li>
+  <li>Logo</li>
+  <li>Thumb</li>
+  <li>Disc</li>
+  <li>Box</li>
+  <li>Screenshot</li>
+  <li>Menu</li>
+  <li>Chapter</li>
+  <li>BoxRear</li>
+  <li>Thumbnail</li>
+  <li>LogoLight</li>
+  <li>LogoLightColor</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Drawing_ImageOrientation" class="text-capitalize">ImageOrientation</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Drawing.ImageOrientation.html">MediaBrowser.Model.Drawing.ImageOrientation</a></p>
+
+  </div>
+  <h5>Enum Values</h5>
+  <ul>
+  <li>TopLeft</li>
+  <li>TopRight</li>
+  <li>BottomRight</li>
+  <li>BottomLeft</li>
+  <li>LeftTop</li>
+  <li>RightTop</li>
+  <li>RightBottom</li>
+  <li>LeftBottom</li>
+  </ul>
+  
+  <h3 id="MediaBrowser_Model_Dto_LinkedItemInfo" class="text-capitalize">LinkedItemInfo</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Dto.LinkedItemInfo.html">MediaBrowser.Model.Dto.LinkedItemInfo</a></p>
+
+  </div>
+  <table class="table table-bordered table-striped table-condensed">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Notes</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><span class="parametername">ProviderIds</span></td>
+              <td>
+  
+                      <a href="#MediaBrowser_Model_Entities_ProviderIdDictionary" class="typelink">ProviderIdDictionary</a>
+                  
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Name</span></td>
+              <td>
+                    string
+  
+                  
+              </td>
+              <td><p>The name.</p>
+</td>
+          </tr>
+          <tr>
+              <td><span class="parametername">Id</span></td>
+              <td>
+                    integer
+                      (int64)
+  
+                  
+              </td>
+              <td><p>The identifier.</p>
+</td>
+          </tr>
+      </tbody>
+  </table>
+  
+  <h3 id="MediaBrowser_Model_Entities_ProviderIdDictionary" class="text-capitalize">ProviderIdDictionary</h3>
+  <div>
+      <p>see also <a href="../../pluginapi/MediaBrowser.Model.Entities.ProviderIdDictionary.html">MediaBrowser.Model.Entities.ProviderIdDictionary</a></p>
+
+  </div>
 </div>
 </article>
           </div>

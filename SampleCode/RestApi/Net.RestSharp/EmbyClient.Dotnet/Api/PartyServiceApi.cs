@@ -44,8 +44,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PartyInfoResult</returns>
-        PartyInfoResult GetPartiesInfo ();
+        /// <returns>SessionPartyInfoResult</returns>
+        SessionPartyInfoResult GetPartiesInfo ();
 
         /// <summary>
         /// Gets info about the session&#x27;s current party
@@ -54,8 +54,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PartyInfoResult</returns>
-        ApiResponse<PartyInfoResult> GetPartiesInfoWithHttpInfo ();
+        /// <returns>ApiResponse of SessionPartyInfoResult</returns>
+        ApiResponse<SessionPartyInfoResult> GetPartiesInfoWithHttpInfo ();
         /// <summary>
         /// Creates a party
         /// </summary>
@@ -63,8 +63,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PartyInfoResult</returns>
-        PartyInfoResult PostParties ();
+        /// <returns>SessionPartyInfoResult</returns>
+        SessionPartyInfoResult PostParties ();
 
         /// <summary>
         /// Creates a party
@@ -73,8 +73,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PartyInfoResult</returns>
-        ApiResponse<PartyInfoResult> PostPartiesWithHttpInfo ();
+        /// <returns>ApiResponse of SessionPartyInfoResult</returns>
+        ApiResponse<SessionPartyInfoResult> PostPartiesWithHttpInfo ();
         /// <summary>
         /// Joins a party
         /// </summary>
@@ -83,8 +83,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Name</param>
-        /// <returns>PartyInfoResult</returns>
-        PartyInfoResult PostPartiesByIdJoin (string id);
+        /// <returns>SessionPartyInfoResult</returns>
+        SessionPartyInfoResult PostPartiesByIdJoin (string id);
 
         /// <summary>
         /// Joins a party
@@ -94,8 +94,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Name</param>
-        /// <returns>ApiResponse of PartyInfoResult</returns>
-        ApiResponse<PartyInfoResult> PostPartiesByIdJoinWithHttpInfo (string id);
+        /// <returns>ApiResponse of SessionPartyInfoResult</returns>
+        ApiResponse<SessionPartyInfoResult> PostPartiesByIdJoinWithHttpInfo (string id);
         /// <summary>
         /// Leaves a party
         /// </summary>
@@ -143,8 +143,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of PartyInfoResult</returns>
-        System.Threading.Tasks.Task<PartyInfoResult> GetPartiesInfoAsync ();
+        /// <returns>Task of SessionPartyInfoResult</returns>
+        System.Threading.Tasks.Task<SessionPartyInfoResult> GetPartiesInfoAsync ();
 
         /// <summary>
         /// Gets info about the session&#x27;s current party
@@ -153,8 +153,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PartyInfoResult>> GetPartiesInfoAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SessionPartyInfoResult>> GetPartiesInfoAsyncWithHttpInfo ();
         /// <summary>
         /// Creates a party
         /// </summary>
@@ -162,8 +162,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of PartyInfoResult</returns>
-        System.Threading.Tasks.Task<PartyInfoResult> PostPartiesAsync ();
+        /// <returns>Task of SessionPartyInfoResult</returns>
+        System.Threading.Tasks.Task<SessionPartyInfoResult> PostPartiesAsync ();
 
         /// <summary>
         /// Creates a party
@@ -172,8 +172,8 @@ namespace EmbyClient.Dotnet.Api
         /// Requires authentication as user
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PartyInfoResult>> PostPartiesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SessionPartyInfoResult>> PostPartiesAsyncWithHttpInfo ();
         /// <summary>
         /// Joins a party
         /// </summary>
@@ -182,8 +182,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Name</param>
-        /// <returns>Task of PartyInfoResult</returns>
-        System.Threading.Tasks.Task<PartyInfoResult> PostPartiesByIdJoinAsync (string id);
+        /// <returns>Task of SessionPartyInfoResult</returns>
+        System.Threading.Tasks.Task<SessionPartyInfoResult> PostPartiesByIdJoinAsync (string id);
 
         /// <summary>
         /// Joins a party
@@ -193,8 +193,8 @@ namespace EmbyClient.Dotnet.Api
         /// </remarks>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Name</param>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PartyInfoResult>> PostPartiesByIdJoinAsyncWithHttpInfo (string id);
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SessionPartyInfoResult>> PostPartiesByIdJoinAsyncWithHttpInfo (string id);
         /// <summary>
         /// Leaves a party
         /// </summary>
@@ -466,10 +466,10 @@ namespace EmbyClient.Dotnet.Api
         /// Gets info about the session&#x27;s current party Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PartyInfoResult</returns>
-        public PartyInfoResult GetPartiesInfo ()
+        /// <returns>SessionPartyInfoResult</returns>
+        public SessionPartyInfoResult GetPartiesInfo ()
         {
-             ApiResponse<PartyInfoResult> localVarResponse = GetPartiesInfoWithHttpInfo();
+             ApiResponse<SessionPartyInfoResult> localVarResponse = GetPartiesInfoWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -477,8 +477,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets info about the session&#x27;s current party Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PartyInfoResult</returns>
-        public ApiResponse< PartyInfoResult > GetPartiesInfoWithHttpInfo ()
+        /// <returns>ApiResponse of SessionPartyInfoResult</returns>
+        public ApiResponse< SessionPartyInfoResult > GetPartiesInfoWithHttpInfo ()
         {
 
             var localVarPath = "/Parties/Info";
@@ -528,19 +528,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<PartyInfoResult>(localVarStatusCode,
+            return new ApiResponse<SessionPartyInfoResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (PartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartyInfoResult)));
+                (SessionPartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionPartyInfoResult)));
         }
 
         /// <summary>
         /// Gets info about the session&#x27;s current party Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of PartyInfoResult</returns>
-        public async System.Threading.Tasks.Task<PartyInfoResult> GetPartiesInfoAsync ()
+        /// <returns>Task of SessionPartyInfoResult</returns>
+        public async System.Threading.Tasks.Task<SessionPartyInfoResult> GetPartiesInfoAsync ()
         {
-             ApiResponse<PartyInfoResult> localVarResponse = await GetPartiesInfoAsyncWithHttpInfo();
+             ApiResponse<SessionPartyInfoResult> localVarResponse = await GetPartiesInfoAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -549,8 +549,8 @@ namespace EmbyClient.Dotnet.Api
         /// Gets info about the session&#x27;s current party Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PartyInfoResult>> GetPartiesInfoAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SessionPartyInfoResult>> GetPartiesInfoAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Parties/Info";
@@ -600,19 +600,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<PartyInfoResult>(localVarStatusCode,
+            return new ApiResponse<SessionPartyInfoResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (PartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartyInfoResult)));
+                (SessionPartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionPartyInfoResult)));
         }
 
         /// <summary>
         /// Creates a party Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PartyInfoResult</returns>
-        public PartyInfoResult PostParties ()
+        /// <returns>SessionPartyInfoResult</returns>
+        public SessionPartyInfoResult PostParties ()
         {
-             ApiResponse<PartyInfoResult> localVarResponse = PostPartiesWithHttpInfo();
+             ApiResponse<SessionPartyInfoResult> localVarResponse = PostPartiesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -620,8 +620,8 @@ namespace EmbyClient.Dotnet.Api
         /// Creates a party Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PartyInfoResult</returns>
-        public ApiResponse< PartyInfoResult > PostPartiesWithHttpInfo ()
+        /// <returns>ApiResponse of SessionPartyInfoResult</returns>
+        public ApiResponse< SessionPartyInfoResult > PostPartiesWithHttpInfo ()
         {
 
             var localVarPath = "/Parties";
@@ -671,19 +671,19 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<PartyInfoResult>(localVarStatusCode,
+            return new ApiResponse<SessionPartyInfoResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (PartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartyInfoResult)));
+                (SessionPartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionPartyInfoResult)));
         }
 
         /// <summary>
         /// Creates a party Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of PartyInfoResult</returns>
-        public async System.Threading.Tasks.Task<PartyInfoResult> PostPartiesAsync ()
+        /// <returns>Task of SessionPartyInfoResult</returns>
+        public async System.Threading.Tasks.Task<SessionPartyInfoResult> PostPartiesAsync ()
         {
-             ApiResponse<PartyInfoResult> localVarResponse = await PostPartiesAsyncWithHttpInfo();
+             ApiResponse<SessionPartyInfoResult> localVarResponse = await PostPartiesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -692,8 +692,8 @@ namespace EmbyClient.Dotnet.Api
         /// Creates a party Requires authentication as user
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PartyInfoResult>> PostPartiesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SessionPartyInfoResult>> PostPartiesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/Parties";
@@ -743,9 +743,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<PartyInfoResult>(localVarStatusCode,
+            return new ApiResponse<SessionPartyInfoResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (PartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartyInfoResult)));
+                (SessionPartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionPartyInfoResult)));
         }
 
         /// <summary>
@@ -753,10 +753,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Name</param>
-        /// <returns>PartyInfoResult</returns>
-        public PartyInfoResult PostPartiesByIdJoin (string id)
+        /// <returns>SessionPartyInfoResult</returns>
+        public SessionPartyInfoResult PostPartiesByIdJoin (string id)
         {
-             ApiResponse<PartyInfoResult> localVarResponse = PostPartiesByIdJoinWithHttpInfo(id);
+             ApiResponse<SessionPartyInfoResult> localVarResponse = PostPartiesByIdJoinWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -765,8 +765,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Name</param>
-        /// <returns>ApiResponse of PartyInfoResult</returns>
-        public ApiResponse< PartyInfoResult > PostPartiesByIdJoinWithHttpInfo (string id)
+        /// <returns>ApiResponse of SessionPartyInfoResult</returns>
+        public ApiResponse< SessionPartyInfoResult > PostPartiesByIdJoinWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -820,9 +820,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<PartyInfoResult>(localVarStatusCode,
+            return new ApiResponse<SessionPartyInfoResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (PartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartyInfoResult)));
+                (SessionPartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionPartyInfoResult)));
         }
 
         /// <summary>
@@ -830,10 +830,10 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Name</param>
-        /// <returns>Task of PartyInfoResult</returns>
-        public async System.Threading.Tasks.Task<PartyInfoResult> PostPartiesByIdJoinAsync (string id)
+        /// <returns>Task of SessionPartyInfoResult</returns>
+        public async System.Threading.Tasks.Task<SessionPartyInfoResult> PostPartiesByIdJoinAsync (string id)
         {
-             ApiResponse<PartyInfoResult> localVarResponse = await PostPartiesByIdJoinAsyncWithHttpInfo(id);
+             ApiResponse<SessionPartyInfoResult> localVarResponse = await PostPartiesByIdJoinAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -843,8 +843,8 @@ namespace EmbyClient.Dotnet.Api
         /// </summary>
         /// <exception cref="EmbyClient.Dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Name</param>
-        /// <returns>Task of ApiResponse (PartyInfoResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PartyInfoResult>> PostPartiesByIdJoinAsyncWithHttpInfo (string id)
+        /// <returns>Task of ApiResponse (SessionPartyInfoResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SessionPartyInfoResult>> PostPartiesByIdJoinAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -898,9 +898,9 @@ namespace EmbyClient.Dotnet.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<PartyInfoResult>(localVarStatusCode,
+            return new ApiResponse<SessionPartyInfoResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (PartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PartyInfoResult)));
+                (SessionPartyInfoResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SessionPartyInfoResult)));
         }
 
         /// <summary>

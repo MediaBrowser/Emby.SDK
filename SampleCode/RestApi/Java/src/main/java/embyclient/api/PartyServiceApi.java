@@ -19,7 +19,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import embyclient.model.PartyInfoResult;
+import embyclient.model.SessionPartyInfoResult;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -221,23 +221,23 @@ public class PartyServiceApi {
     /**
      * Gets info about the session&#x27;s current party
      * Requires authentication as user
-     * @return PartyInfoResult
+     * @return SessionPartyInfoResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PartyInfoResult getPartiesInfo() throws ApiException {
-        ApiResponse<PartyInfoResult> resp = getPartiesInfoWithHttpInfo();
+    public SessionPartyInfoResult getPartiesInfo() throws ApiException {
+        ApiResponse<SessionPartyInfoResult> resp = getPartiesInfoWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Gets info about the session&#x27;s current party
      * Requires authentication as user
-     * @return ApiResponse&lt;PartyInfoResult&gt;
+     * @return ApiResponse&lt;SessionPartyInfoResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PartyInfoResult> getPartiesInfoWithHttpInfo() throws ApiException {
+    public ApiResponse<SessionPartyInfoResult> getPartiesInfoWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = getPartiesInfoValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<PartyInfoResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<SessionPartyInfoResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -248,7 +248,7 @@ public class PartyServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getPartiesInfoAsync(final ApiCallback<PartyInfoResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getPartiesInfoAsync(final ApiCallback<SessionPartyInfoResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -270,7 +270,7 @@ public class PartyServiceApi {
         }
 
         com.squareup.okhttp.Call call = getPartiesInfoValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<PartyInfoResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<SessionPartyInfoResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -337,23 +337,23 @@ public class PartyServiceApi {
     /**
      * Creates a party
      * Requires authentication as user
-     * @return PartyInfoResult
+     * @return SessionPartyInfoResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PartyInfoResult postParties() throws ApiException {
-        ApiResponse<PartyInfoResult> resp = postPartiesWithHttpInfo();
+    public SessionPartyInfoResult postParties() throws ApiException {
+        ApiResponse<SessionPartyInfoResult> resp = postPartiesWithHttpInfo();
         return resp.getData();
     }
 
     /**
      * Creates a party
      * Requires authentication as user
-     * @return ApiResponse&lt;PartyInfoResult&gt;
+     * @return ApiResponse&lt;SessionPartyInfoResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PartyInfoResult> postPartiesWithHttpInfo() throws ApiException {
+    public ApiResponse<SessionPartyInfoResult> postPartiesWithHttpInfo() throws ApiException {
         com.squareup.okhttp.Call call = postPartiesValidateBeforeCall(null, null);
-        Type localVarReturnType = new TypeToken<PartyInfoResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<SessionPartyInfoResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -364,7 +364,7 @@ public class PartyServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postPartiesAsync(final ApiCallback<PartyInfoResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call postPartiesAsync(final ApiCallback<SessionPartyInfoResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -386,7 +386,7 @@ public class PartyServiceApi {
         }
 
         com.squareup.okhttp.Call call = postPartiesValidateBeforeCall(progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<PartyInfoResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<SessionPartyInfoResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
@@ -460,11 +460,11 @@ public class PartyServiceApi {
      * Joins a party
      * Requires authentication as user
      * @param id Name (required)
-     * @return PartyInfoResult
+     * @return SessionPartyInfoResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public PartyInfoResult postPartiesByIdJoin(String id) throws ApiException {
-        ApiResponse<PartyInfoResult> resp = postPartiesByIdJoinWithHttpInfo(id);
+    public SessionPartyInfoResult postPartiesByIdJoin(String id) throws ApiException {
+        ApiResponse<SessionPartyInfoResult> resp = postPartiesByIdJoinWithHttpInfo(id);
         return resp.getData();
     }
 
@@ -472,12 +472,12 @@ public class PartyServiceApi {
      * Joins a party
      * Requires authentication as user
      * @param id Name (required)
-     * @return ApiResponse&lt;PartyInfoResult&gt;
+     * @return ApiResponse&lt;SessionPartyInfoResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<PartyInfoResult> postPartiesByIdJoinWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<SessionPartyInfoResult> postPartiesByIdJoinWithHttpInfo(String id) throws ApiException {
         com.squareup.okhttp.Call call = postPartiesByIdJoinValidateBeforeCall(id, null, null);
-        Type localVarReturnType = new TypeToken<PartyInfoResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<SessionPartyInfoResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -489,7 +489,7 @@ public class PartyServiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postPartiesByIdJoinAsync(String id, final ApiCallback<PartyInfoResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call postPartiesByIdJoinAsync(String id, final ApiCallback<SessionPartyInfoResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -511,7 +511,7 @@ public class PartyServiceApi {
         }
 
         com.squareup.okhttp.Call call = postPartiesByIdJoinValidateBeforeCall(id, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<PartyInfoResult>(){}.getType();
+        Type localVarReturnType = new TypeToken<SessionPartyInfoResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

@@ -105,15 +105,15 @@ func (a *PartyServiceApiService) GetParties(ctx context.Context) (*http.Response
 PartyServiceApiService Gets info about the session&#x27;s current party
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return PartyInfoResult
+@return SessionPartyInfoResult
 */
-func (a *PartyServiceApiService) GetPartiesInfo(ctx context.Context) (PartyInfoResult, *http.Response, error) {
+func (a *PartyServiceApiService) GetPartiesInfo(ctx context.Context) (SessionPartyInfoResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue PartyInfoResult
+		localVarReturnValue SessionPartyInfoResult
 	)
 
 	// create path and map variables
@@ -183,7 +183,7 @@ func (a *PartyServiceApiService) GetPartiesInfo(ctx context.Context) (PartyInfoR
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v PartyInfoResult
+			var v SessionPartyInfoResult
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -201,15 +201,15 @@ func (a *PartyServiceApiService) GetPartiesInfo(ctx context.Context) (PartyInfoR
 PartyServiceApiService Creates a party
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-@return PartyInfoResult
+@return SessionPartyInfoResult
 */
-func (a *PartyServiceApiService) PostParties(ctx context.Context) (PartyInfoResult, *http.Response, error) {
+func (a *PartyServiceApiService) PostParties(ctx context.Context) (SessionPartyInfoResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue PartyInfoResult
+		localVarReturnValue SessionPartyInfoResult
 	)
 
 	// create path and map variables
@@ -279,7 +279,7 @@ func (a *PartyServiceApiService) PostParties(ctx context.Context) (PartyInfoResu
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v PartyInfoResult
+			var v SessionPartyInfoResult
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -298,15 +298,15 @@ PartyServiceApiService Joins a party
 Requires authentication as user
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Name
-@return PartyInfoResult
+@return SessionPartyInfoResult
 */
-func (a *PartyServiceApiService) PostPartiesByIdJoin(ctx context.Context, id string) (PartyInfoResult, *http.Response, error) {
+func (a *PartyServiceApiService) PostPartiesByIdJoin(ctx context.Context, id string) (SessionPartyInfoResult, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue PartyInfoResult
+		localVarReturnValue SessionPartyInfoResult
 	)
 
 	// create path and map variables
@@ -377,7 +377,7 @@ func (a *PartyServiceApiService) PostPartiesByIdJoin(ctx context.Context, id str
 			error: localVarHttpResponse.Status,
 		}
 		if localVarHttpResponse.StatusCode == 200 {
-			var v PartyInfoResult
+			var v SessionPartyInfoResult
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

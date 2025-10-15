@@ -15,7 +15,7 @@ import MovieInfo from './MovieInfo';
 /**
 * The RemoteSearchQueryMovieInfo model module.
 * @module model/RemoteSearchQueryMovieInfo
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export default class RemoteSearchQueryMovieInfo {
     /**

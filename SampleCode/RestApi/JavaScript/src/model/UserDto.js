@@ -18,7 +18,7 @@ import UserPolicy from './UserPolicy';
 /**
 * The UserDto model module.
 * @module model/UserDto
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export default class UserDto {
     /**
@@ -96,9 +96,6 @@ export default class UserDto {
             }
             if (data.hasOwnProperty('PrimaryImageAspectRatio')) {
                 obj['PrimaryImageAspectRatio'] = ApiClient.convertToType(data['PrimaryImageAspectRatio'], 'Number');
-            }
-            if (data.hasOwnProperty('HasConfiguredEasyPassword')) {
-                obj['HasConfiguredEasyPassword'] = ApiClient.convertToType(data['HasConfiguredEasyPassword'], 'Boolean');
             }
             if (data.hasOwnProperty('UserItemShareLevel')) {
                 obj['UserItemShareLevel'] = UserItemShareLevel.constructFromObject(data['UserItemShareLevel']);
@@ -186,10 +183,6 @@ export default class UserDto {
     * @member {Number} PrimaryImageAspectRatio
     */
     'PrimaryImageAspectRatio' = undefined;
-    /**
-    * @member {Boolean} HasConfiguredEasyPassword
-    */
-    'HasConfiguredEasyPassword' = undefined;
     /**
     * @member {module:model/UserItemShareLevel} UserItemShareLevel
     */

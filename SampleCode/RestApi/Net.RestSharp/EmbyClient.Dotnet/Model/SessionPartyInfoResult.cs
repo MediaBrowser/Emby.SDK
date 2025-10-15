@@ -18,16 +18,16 @@ using SwaggerDateConverter = EmbyClient.Dotnet.Client.SwaggerDateConverter;
 namespace EmbyClient.Dotnet.Model
 {
     /// <summary>
-    /// PartyInfoResult
+    /// SessionPartyInfoResult
     /// </summary>
     [DataContract]
-        public partial class PartyInfoResult :  IEquatable<PartyInfoResult>
+        public partial class SessionPartyInfoResult :  IEquatable<SessionPartyInfoResult>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PartyInfoResult" /> class.
+        /// Initializes a new instance of the <see cref="SessionPartyInfoResult" /> class.
         /// </summary>
         /// <param name="partyInfo">partyInfo.</param>
-        public PartyInfoResult(PartyInfo partyInfo = default(PartyInfo))
+        public SessionPartyInfoResult(SessionPartyInfo partyInfo = default(SessionPartyInfo))
         {
             this.PartyInfo = partyInfo;
         }
@@ -36,7 +36,7 @@ namespace EmbyClient.Dotnet.Model
         /// Gets or Sets PartyInfo
         /// </summary>
         [DataMember(Name="PartyInfo", EmitDefaultValue=false)]
-        public PartyInfo PartyInfo { get; set; }
+        public SessionPartyInfo PartyInfo { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -45,7 +45,7 @@ namespace EmbyClient.Dotnet.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PartyInfoResult {\n");
+            sb.Append("class SessionPartyInfoResult {\n");
             sb.Append("  PartyInfo: ").Append(PartyInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -67,15 +67,15 @@ namespace EmbyClient.Dotnet.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PartyInfoResult);
+            return this.Equals(input as SessionPartyInfoResult);
         }
 
         /// <summary>
-        /// Returns true if PartyInfoResult instances are equal
+        /// Returns true if SessionPartyInfoResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of PartyInfoResult to be compared</param>
+        /// <param name="input">Instance of SessionPartyInfoResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PartyInfoResult input)
+        public bool Equals(SessionPartyInfoResult input)
         {
             if (input == null)
                 return false;

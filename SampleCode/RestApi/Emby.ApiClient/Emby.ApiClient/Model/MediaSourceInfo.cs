@@ -51,12 +51,6 @@ namespace Emby.ApiClient.Model
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or Sets ConvertUrlCredentialsToBasicAuth
-        /// </summary>
-        /// <value>The ConvertUrlCredentialsToBasicAuth.</value>
-        public bool? ConvertUrlCredentialsToBasicAuth { get; set; }
-
-        /// <summary>
         /// Gets or Sets EncoderPath
         /// </summary>
         /// <value>The EncoderPath.</value>
@@ -326,7 +320,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  Protocol: ").Append(Protocol).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
-            sb.Append("  ConvertUrlCredentialsToBasicAuth: ").Append(ConvertUrlCredentialsToBasicAuth).Append("\n");
             sb.Append("  EncoderPath: ").Append(EncoderPath).Append("\n");
             sb.Append("  EncoderProtocol: ").Append(EncoderProtocol).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -415,11 +408,6 @@ namespace Emby.ApiClient.Model
                     this.Path == input.Path ||
                     (this.Path != null &&
                     this.Path.Equals(input.Path))
-                ) && 
-                (
-                    this.ConvertUrlCredentialsToBasicAuth == input.ConvertUrlCredentialsToBasicAuth ||
-                    (this.ConvertUrlCredentialsToBasicAuth != null &&
-                    this.ConvertUrlCredentialsToBasicAuth.Equals(input.ConvertUrlCredentialsToBasicAuth))
                 ) && 
                 (
                     this.EncoderPath == input.EncoderPath ||
@@ -658,8 +646,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Path != null)
                     hashCode = hashCode * 59 + this.Path.GetHashCode();
-                if (this.ConvertUrlCredentialsToBasicAuth != null)
-                    hashCode = hashCode * 59 + this.ConvertUrlCredentialsToBasicAuth.GetHashCode();
                 if (this.EncoderPath != null)
                     hashCode = hashCode * 59 + this.EncoderPath.GetHashCode();
                 if (this.EncoderProtocol != null)

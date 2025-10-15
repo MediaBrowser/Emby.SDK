@@ -40,10 +40,9 @@ public struct UserDto: Codable {
     public var policy: UserPolicy?
     /** The primary image aspect ratio. */
     public var primaryImageAspectRatio: Double?
-    public var hasConfiguredEasyPassword: Bool?
     public var userItemShareLevel: UserItemShareLevel?
 
-    public init(name: String? = nil, serverId: String? = nil, serverName: String? = nil, _prefix: String? = nil, connectUserName: String? = nil, dateCreated: Date? = nil, connectLinkType: ConnectUserLinkType? = nil, _id: String? = nil, primaryImageTag: String? = nil, hasPassword: Bool? = nil, hasConfiguredPassword: Bool? = nil, enableAutoLogin: Bool? = nil, lastLoginDate: Date? = nil, lastActivityDate: Date? = nil, configuration: UserConfiguration? = nil, policy: UserPolicy? = nil, primaryImageAspectRatio: Double? = nil, hasConfiguredEasyPassword: Bool? = nil, userItemShareLevel: UserItemShareLevel? = nil) {
+    public init(name: String? = nil, serverId: String? = nil, serverName: String? = nil, _prefix: String? = nil, connectUserName: String? = nil, dateCreated: Date? = nil, connectLinkType: ConnectUserLinkType? = nil, _id: String? = nil, primaryImageTag: String? = nil, hasPassword: Bool? = nil, hasConfiguredPassword: Bool? = nil, enableAutoLogin: Bool? = nil, lastLoginDate: Date? = nil, lastActivityDate: Date? = nil, configuration: UserConfiguration? = nil, policy: UserPolicy? = nil, primaryImageAspectRatio: Double? = nil, userItemShareLevel: UserItemShareLevel? = nil) {
         self.name = name
         self.serverId = serverId
         self.serverName = serverName
@@ -61,7 +60,6 @@ public struct UserDto: Codable {
         self.configuration = configuration
         self.policy = policy
         self.primaryImageAspectRatio = primaryImageAspectRatio
-        self.hasConfiguredEasyPassword = hasConfiguredEasyPassword
         self.userItemShareLevel = userItemShareLevel
     }
 
@@ -83,7 +81,6 @@ public struct UserDto: Codable {
         case configuration = "Configuration"
         case policy = "Policy"
         case primaryImageAspectRatio = "PrimaryImageAspectRatio"
-        case hasConfiguredEasyPassword = "HasConfiguredEasyPassword"
         case userItemShareLevel = "UserItemShareLevel"
     }
 

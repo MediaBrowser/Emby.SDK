@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.2.3"
+    "version": "4.9.2.4"
   },
   "servers": [
     {
@@ -13580,12 +13580,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PartyInfoResult"
+                  "$ref": "#/components/schemas/Session.PartyInfoResult"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PartyInfoResult"
+                  "$ref": "#/components/schemas/Session.PartyInfoResult"
                 }
               }
             }
@@ -41154,12 +41154,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PartyInfoResult"
+                  "$ref": "#/components/schemas/Session.PartyInfoResult"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PartyInfoResult"
+                  "$ref": "#/components/schemas/Session.PartyInfoResult"
                 }
               }
             }
@@ -70293,12 +70293,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PartyInfoResult"
+                  "$ref": "#/components/schemas/Session.PartyInfoResult"
                 }
               },
               "application/xml": {
                 "schema": {
-                  "$ref": "#/components/schemas/PartyInfoResult"
+                  "$ref": "#/components/schemas/Session.PartyInfoResult"
                 }
               }
             }
@@ -104395,9 +104395,6 @@
           "Path": {
             "type": "string"
           },
-          "ConvertUrlCredentialsToBasicAuth": {
-            "type": "boolean"
-          },
           "EncoderPath": {
             "type": "string"
           },
@@ -105495,16 +105492,16 @@
         "description": "Enum PackageVersionClass\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Updates.PackageVersionClass"
       },
-      "PartyInfoResult": {
+      "Session.PartyInfoResult": {
         "type": "object",
         "properties": {
           "PartyInfo": {
-            "$ref": "#/components/schemas/PartyInfo"
+            "$ref": "#/components/schemas/Session.PartyInfo"
           }
         },
-        "x-internal-ref-name": "MediaBrowser.Model.Session.PartyInfoResult"
+        "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfoResult"
       },
-      "PartyInfo": {
+      "Session.PartyInfo": {
         "type": "object",
         "properties": {
           "Id": {
@@ -105512,9 +105509,177 @@
           },
           "Name": {
             "type": "string"
+          },
+          "Users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Entities.User"
+            }
           }
         },
-        "x-internal-ref-name": "MediaBrowser.Model.Session.PartyInfo"
+        "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
+      },
+      "Entities.User": {
+        "type": "object",
+        "properties": {
+          "UsesIdForConfigurationPath": {
+            "type": "boolean",
+            "description": "From now on all user paths will be Id\\-based. This is for backwards compatibility."
+          },
+          "Password": {
+            "type": "string",
+            "description": "The password."
+          },
+          "EasyPassword": {
+            "type": "string"
+          },
+          "Salt": {
+            "type": "string"
+          },
+          "ConnectUserName": {
+            "type": "string"
+          },
+          "ConnectUserId": {
+            "type": "string"
+          },
+          "ConnectLinkType": {
+            "$ref": "#/components/schemas/Connect.UserLinkType"
+          },
+          "ConnectAccessKey": {
+            "type": "string"
+          },
+          "ImageInfos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Entities.ItemImageInfo"
+            }
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "LastLoginDate": {
+            "type": "string",
+            "description": "The last login date.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "LastActivityDate": {
+            "type": "string",
+            "description": "The last activity date.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "PlayedPercentage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "RecursiveChildCountEqualsChildCount": {
+            "type": "boolean"
+          },
+          "OriginalParsedName": {
+            "type": "string",
+            "description": "Internal use only"
+          },
+          "IsNameParsedFromFolder": {
+            "type": "boolean",
+            "description": "Internal use only"
+          },
+          "DateCreated": {
+            "type": "string",
+            "description": "The date created.",
+            "format": "date-time"
+          },
+          "ImportedCollections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LinkedItemInfo"
+            }
+          },
+          "ResolvedPresentationUniqueKey": {
+            "type": "string"
+          }
+        },
+        "description": "Class User\r\n",
+        "x-internal-ref-name": "MediaBrowser.Controller.Entities.User"
+      },
+      "Connect.UserLinkType": {
+        "enum": [
+          "LinkedUser",
+          "Guest"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
+      },
+      "Entities.ItemImageInfo": {
+        "type": "object",
+        "properties": {
+          "Path": {
+            "type": "string",
+            "description": "The path."
+          },
+          "Type": {
+            "$ref": "#/components/schemas/ImageType"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Drawing.ImageOrientation"
+          },
+          "DateModified": {
+            "type": "string",
+            "description": "The date modified.",
+            "format": "date-time"
+          },
+          "Width": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Height": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Controller.Entities.ItemImageInfo"
+      },
+      "ImageType": {
+        "enum": [
+          "Primary",
+          "Art",
+          "Backdrop",
+          "Banner",
+          "Logo",
+          "Thumb",
+          "Disc",
+          "Box",
+          "Screenshot",
+          "Menu",
+          "Chapter",
+          "BoxRear",
+          "Thumbnail",
+          "LogoLight",
+          "LogoLightColor"
+        ],
+        "type": "string",
+        "description": "Enum ImageType\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
+      },
+      "LinkedItemInfo": {
+        "type": "object",
+        "properties": {
+          "ProviderIds": {
+            "$ref": "#/components/schemas/ProviderIdDictionary"
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "Id": {
+            "type": "integer",
+            "description": "The identifier.",
+            "format": "int64"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
       },
       "Playlists.PlaylistCreationResult": {
         "type": "object",
@@ -106269,28 +106434,6 @@
         "type": "string",
         "description": "Video Processing Step Type enum.\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Session.Transcoding.VpStepTypes"
-      },
-      "ImageType": {
-        "enum": [
-          "Primary",
-          "Art",
-          "Backdrop",
-          "Banner",
-          "Logo",
-          "Thumb",
-          "Disc",
-          "Box",
-          "Screenshot",
-          "Menu",
-          "Chapter",
-          "BoxRear",
-          "Thumbnail",
-          "LogoLight",
-          "LogoLightColor"
-        ],
-        "type": "string",
-        "description": "Enum ImageType\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
       },
       "NameValuePair": {
         "type": "object",
@@ -110707,11 +110850,13 @@
           },
           "HasPassword": {
             "type": "boolean",
-            "description": "A value indicating whether this instance has password."
+            "description": "A value indicating whether this instance has password.",
+            "nullable": true
           },
           "HasConfiguredPassword": {
             "type": "boolean",
-            "description": "A value indicating whether this instance has configured password."
+            "description": "A value indicating whether this instance has configured password.",
+            "nullable": true
           },
           "EnableAutoLogin": {
             "type": "boolean",
@@ -110741,24 +110886,12 @@
             "format": "double",
             "nullable": true
           },
-          "HasConfiguredEasyPassword": {
-            "type": "boolean",
-            "deprecated": true
-          },
           "UserItemShareLevel": {
             "$ref": "#/components/schemas/UserItemShareLevel"
           }
         },
         "description": "Class UserDto\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Dto.UserDto"
-      },
-      "Connect.UserLinkType": {
-        "enum": [
-          "LinkedUser",
-          "Guest"
-        ],
-        "type": "string",
-        "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
       },
       "UserConfiguration": {
         "type": "object",

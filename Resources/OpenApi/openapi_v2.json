@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.2.3"
+    "version": "4.9.2.4"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -8449,7 +8449,7 @@
           "200": {
             "description": "Operation successful. Returning a PartyInfoResult object.",
             "schema": {
-              "$ref": "#/definitions/PartyInfoResult"
+              "$ref": "#/definitions/Session.PartyInfoResult"
             }
           },
           "400": {
@@ -27032,7 +27032,7 @@
           "200": {
             "description": "Operation successful. Returning a PartyInfoResult object.",
             "schema": {
-              "$ref": "#/definitions/PartyInfoResult"
+              "$ref": "#/definitions/Session.PartyInfoResult"
             }
           },
           "400": {
@@ -47210,7 +47210,7 @@
           "200": {
             "description": "Operation successful. Returning a PartyInfoResult object.",
             "schema": {
-              "$ref": "#/definitions/PartyInfoResult"
+              "$ref": "#/definitions/Session.PartyInfoResult"
             }
           },
           "400": {
@@ -72116,9 +72116,6 @@
         "Path": {
           "type": "string"
         },
-        "ConvertUrlCredentialsToBasicAuth": {
-          "type": "boolean"
-        },
         "EncoderPath": {
           "type": "string"
         },
@@ -73178,16 +73175,16 @@
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Updates.PackageVersionClass"
     },
-    "PartyInfoResult": {
+    "Session.PartyInfoResult": {
       "type": "object",
       "properties": {
         "PartyInfo": {
-          "$ref": "#/definitions/PartyInfo"
+          "$ref": "#/definitions/Session.PartyInfo"
         }
       },
-      "x-internal-ref-name": "MediaBrowser.Model.Session.PartyInfoResult"
+      "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfoResult"
     },
-    "PartyInfo": {
+    "Session.PartyInfo": {
       "type": "object",
       "properties": {
         "Id": {
@@ -73195,9 +73192,174 @@
         },
         "Name": {
           "type": "string"
+        },
+        "Users": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Entities.User"
+          }
         }
       },
-      "x-internal-ref-name": "MediaBrowser.Model.Session.PartyInfo"
+      "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
+    },
+    "Entities.User": {
+      "description": "Class User\r\n",
+      "type": "object",
+      "properties": {
+        "UsesIdForConfigurationPath": {
+          "description": "From now on all user paths will be Id\\-based. This is for backwards compatibility.",
+          "type": "boolean"
+        },
+        "Password": {
+          "description": "The password.",
+          "type": "string"
+        },
+        "EasyPassword": {
+          "type": "string"
+        },
+        "Salt": {
+          "type": "string"
+        },
+        "ConnectUserName": {
+          "type": "string"
+        },
+        "ConnectUserId": {
+          "type": "string"
+        },
+        "ConnectLinkType": {
+          "$ref": "#/definitions/Connect.UserLinkType"
+        },
+        "ConnectAccessKey": {
+          "type": "string"
+        },
+        "ImageInfos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Entities.ItemImageInfo"
+          }
+        },
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "LastLoginDate": {
+          "format": "date-time",
+          "description": "The last login date.",
+          "type": "string"
+        },
+        "LastActivityDate": {
+          "format": "date-time",
+          "description": "The last activity date.",
+          "type": "string"
+        },
+        "PlayedPercentage": {
+          "format": "double",
+          "type": "number"
+        },
+        "RecursiveChildCountEqualsChildCount": {
+          "type": "boolean"
+        },
+        "OriginalParsedName": {
+          "description": "Internal use only",
+          "type": "string"
+        },
+        "IsNameParsedFromFolder": {
+          "description": "Internal use only",
+          "type": "boolean"
+        },
+        "DateCreated": {
+          "format": "date-time",
+          "description": "The date created.",
+          "type": "string"
+        },
+        "ImportedCollections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LinkedItemInfo"
+          }
+        },
+        "ResolvedPresentationUniqueKey": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Entities.User"
+    },
+    "Connect.UserLinkType": {
+      "enum": [
+        "LinkedUser",
+        "Guest"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
+    },
+    "Entities.ItemImageInfo": {
+      "type": "object",
+      "properties": {
+        "Path": {
+          "description": "The path.",
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/definitions/ImageType"
+        },
+        "Orientation": {
+          "$ref": "#/definitions/Drawing.ImageOrientation"
+        },
+        "DateModified": {
+          "format": "date-time",
+          "description": "The date modified.",
+          "type": "string"
+        },
+        "Width": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Height": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Entities.ItemImageInfo"
+    },
+    "ImageType": {
+      "description": "Enum ImageType\r\n",
+      "enum": [
+        "Primary",
+        "Art",
+        "Backdrop",
+        "Banner",
+        "Logo",
+        "Thumb",
+        "Disc",
+        "Box",
+        "Screenshot",
+        "Menu",
+        "Chapter",
+        "BoxRear",
+        "Thumbnail",
+        "LogoLight",
+        "LogoLightColor"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
+    },
+    "LinkedItemInfo": {
+      "type": "object",
+      "properties": {
+        "ProviderIds": {
+          "$ref": "#/definitions/ProviderIdDictionary"
+        },
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "Id": {
+          "format": "int64",
+          "description": "The identifier.",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
     },
     "Playlists.PlaylistCreationResult": {
       "type": "object",
@@ -73927,28 +74089,6 @@
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.Transcoding.VpStepTypes"
-    },
-    "ImageType": {
-      "description": "Enum ImageType\r\n",
-      "enum": [
-        "Primary",
-        "Art",
-        "Backdrop",
-        "Banner",
-        "Logo",
-        "Thumb",
-        "Disc",
-        "Box",
-        "Screenshot",
-        "Menu",
-        "Chapter",
-        "BoxRear",
-        "Thumbnail",
-        "LogoLight",
-        "LogoLightColor"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
     },
     "NameValuePair": {
       "type": "object",
@@ -78349,22 +78489,11 @@
           "description": "The primary image aspect ratio.",
           "type": "number"
         },
-        "HasConfiguredEasyPassword": {
-          "type": "boolean"
-        },
         "UserItemShareLevel": {
           "$ref": "#/definitions/UserItemShareLevel"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Model.Dto.UserDto"
-    },
-    "Connect.UserLinkType": {
-      "enum": [
-        "LinkedUser",
-        "Guest"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
     },
     "UserConfiguration": {
       "description": "Class UserConfiguration\r\n",

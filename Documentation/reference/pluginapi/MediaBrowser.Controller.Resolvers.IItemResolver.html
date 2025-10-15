@@ -196,12 +196,12 @@
   
   
   <a id="MediaBrowser_Controller_Resolvers_IItemResolver_ResolveMultiple_" data-uid="MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple*"></a>
-  <h4 id="MediaBrowser_Controller_Resolvers_IItemResolver_ResolveMultiple_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Providers.IDirectoryService)">ResolveMultiple(Folder, List&lt;FileSystemMetadata&gt;, List&lt;FileSystemMetadata&gt;, LibraryOptions, IDirectoryService)</h4>
+  <h4 id="MediaBrowser_Controller_Resolvers_IItemResolver_ResolveMultiple_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Model_Configuration_LibraryOptions_MediaBrowser_Controller_Entities_BaseItem___MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Resolvers.IItemResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Model.Configuration.LibraryOptions,MediaBrowser.Controller.Entities.BaseItem[],MediaBrowser.Controller.Providers.IDirectoryService)">ResolveMultiple(Folder, List&lt;FileSystemMetadata&gt;, List&lt;FileSystemMetadata&gt;, LibraryOptions, BaseItem[], IDirectoryService)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">MultiItemResolverResult ResolveMultiple(Folder parent, List&lt;FileSystemMetadata&gt; files, List&lt;FileSystemMetadata&gt; originalFiles, LibraryOptions libraryOptions, IDirectoryService directoryService)</code></pre>
+    <pre><code class="lang-csharp hljs">MultiItemResolverResult ResolveMultiple(Folder parent, List&lt;FileSystemMetadata&gt; files, List&lt;FileSystemMetadata&gt; originalFiles, LibraryOptions libraryOptions, BaseItem[] collectionFolders, IDirectoryService directoryService)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,6 +231,11 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
         <td><span class="parametername">libraryOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>[]</td>
+        <td><span class="parametername">collectionFolders</span></td>
         <td></td>
       </tr>
       <tr>

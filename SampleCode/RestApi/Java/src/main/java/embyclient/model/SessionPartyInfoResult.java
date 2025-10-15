@@ -12,19 +12,19 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import embyclient.model.PartyInfo;
+import embyclient.model.SessionPartyInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * PartyInfoResult
+ * SessionPartyInfoResult
  */
 
 
-public class PartyInfoResult {
+public class SessionPartyInfoResult {
   @SerializedName("PartyInfo")
-  private PartyInfo partyInfo = null;
+  private SessionPartyInfo partyInfo = null;
 
-  public PartyInfoResult partyInfo(PartyInfo partyInfo) {
+  public SessionPartyInfoResult partyInfo(SessionPartyInfo partyInfo) {
     this.partyInfo = partyInfo;
     return this;
   }
@@ -34,11 +34,11 @@ public class PartyInfoResult {
    * @return partyInfo
   **/
   @Schema(description = "")
-  public PartyInfo getPartyInfo() {
+  public SessionPartyInfo getPartyInfo() {
     return partyInfo;
   }
 
-  public void setPartyInfo(PartyInfo partyInfo) {
+  public void setPartyInfo(SessionPartyInfo partyInfo) {
     this.partyInfo = partyInfo;
   }
 
@@ -51,8 +51,8 @@ public class PartyInfoResult {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PartyInfoResult partyInfoResult = (PartyInfoResult) o;
-    return Objects.equals(this.partyInfo, partyInfoResult.partyInfo);
+    SessionPartyInfoResult sessionPartyInfoResult = (SessionPartyInfoResult) o;
+    return Objects.equals(this.partyInfo, sessionPartyInfoResult.partyInfo);
   }
 
   @Override
@@ -64,7 +64,7 @@ public class PartyInfoResult {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PartyInfoResult {\n");
+    sb.append("class SessionPartyInfoResult {\n");
     
     sb.append("    partyInfo: ").append(toIndentedString(partyInfo)).append("\n");
     sb.append("}");

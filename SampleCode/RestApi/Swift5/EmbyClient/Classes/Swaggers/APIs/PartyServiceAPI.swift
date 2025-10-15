@@ -55,7 +55,7 @@ open class PartyServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getPartiesInfo(completion: @escaping ((_ data: PartyInfoResult?,_ error: Error?) -> Void)) {
+    open class func getPartiesInfo(completion: @escaping ((_ data: SessionPartyInfoResult?,_ error: Error?) -> Void)) {
         getPartiesInfoWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -75,20 +75,113 @@ open class PartyServiceAPI {
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
     "Id" : "Id",
+    "Users" : [ {
+      "PlayedPercentage" : 1.4658129805029452,
+      "RecursiveChildCountEqualsChildCount" : true,
+      "OriginalParsedName" : "OriginalParsedName",
+      "ConnectAccessKey" : "ConnectAccessKey",
+      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+      "IsNameParsedFromFolder" : true,
+      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "ImportedCollections" : [ {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      }, {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      } ],
+      "ConnectUserId" : "ConnectUserId",
+      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
+      "Name" : "Name",
+      "ImageInfos" : [ {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "UsesIdForConfigurationPath" : true,
+      "Salt" : "Salt",
+      "ConnectUserName" : "ConnectUserName",
+      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+      "ConnectLinkType" : "LinkedUser",
+      "EasyPassword" : "EasyPassword",
+      "Password" : "Password"
+    }, {
+      "PlayedPercentage" : 1.4658129805029452,
+      "RecursiveChildCountEqualsChildCount" : true,
+      "OriginalParsedName" : "OriginalParsedName",
+      "ConnectAccessKey" : "ConnectAccessKey",
+      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+      "IsNameParsedFromFolder" : true,
+      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "ImportedCollections" : [ {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      }, {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      } ],
+      "ConnectUserId" : "ConnectUserId",
+      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
+      "Name" : "Name",
+      "ImageInfos" : [ {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "UsesIdForConfigurationPath" : true,
+      "Salt" : "Salt",
+      "ConnectUserName" : "ConnectUserName",
+      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+      "ConnectLinkType" : "LinkedUser",
+      "EasyPassword" : "EasyPassword",
+      "Password" : "Password"
+    } ],
     "Name" : "Name"
   }
 }}]
 
-     - returns: RequestBuilder<PartyInfoResult> 
+     - returns: RequestBuilder<SessionPartyInfoResult> 
      */
-    open class func getPartiesInfoWithRequestBuilder() -> RequestBuilder<PartyInfoResult> {
+    open class func getPartiesInfoWithRequestBuilder() -> RequestBuilder<SessionPartyInfoResult> {
         let path = "/Parties/Info"
         let URLString = EmbyClientAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<PartyInfoResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SessionPartyInfoResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -97,7 +190,7 @@ open class PartyServiceAPI {
 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postParties(completion: @escaping ((_ data: PartyInfoResult?,_ error: Error?) -> Void)) {
+    open class func postParties(completion: @escaping ((_ data: SessionPartyInfoResult?,_ error: Error?) -> Void)) {
         postPartiesWithRequestBuilder().execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -117,20 +210,113 @@ open class PartyServiceAPI {
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
     "Id" : "Id",
+    "Users" : [ {
+      "PlayedPercentage" : 1.4658129805029452,
+      "RecursiveChildCountEqualsChildCount" : true,
+      "OriginalParsedName" : "OriginalParsedName",
+      "ConnectAccessKey" : "ConnectAccessKey",
+      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+      "IsNameParsedFromFolder" : true,
+      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "ImportedCollections" : [ {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      }, {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      } ],
+      "ConnectUserId" : "ConnectUserId",
+      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
+      "Name" : "Name",
+      "ImageInfos" : [ {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "UsesIdForConfigurationPath" : true,
+      "Salt" : "Salt",
+      "ConnectUserName" : "ConnectUserName",
+      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+      "ConnectLinkType" : "LinkedUser",
+      "EasyPassword" : "EasyPassword",
+      "Password" : "Password"
+    }, {
+      "PlayedPercentage" : 1.4658129805029452,
+      "RecursiveChildCountEqualsChildCount" : true,
+      "OriginalParsedName" : "OriginalParsedName",
+      "ConnectAccessKey" : "ConnectAccessKey",
+      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+      "IsNameParsedFromFolder" : true,
+      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "ImportedCollections" : [ {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      }, {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      } ],
+      "ConnectUserId" : "ConnectUserId",
+      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
+      "Name" : "Name",
+      "ImageInfos" : [ {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "UsesIdForConfigurationPath" : true,
+      "Salt" : "Salt",
+      "ConnectUserName" : "ConnectUserName",
+      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+      "ConnectLinkType" : "LinkedUser",
+      "EasyPassword" : "EasyPassword",
+      "Password" : "Password"
+    } ],
     "Name" : "Name"
   }
 }}]
 
-     - returns: RequestBuilder<PartyInfoResult> 
+     - returns: RequestBuilder<SessionPartyInfoResult> 
      */
-    open class func postPartiesWithRequestBuilder() -> RequestBuilder<PartyInfoResult> {
+    open class func postPartiesWithRequestBuilder() -> RequestBuilder<SessionPartyInfoResult> {
         let path = "/Parties"
         let URLString = EmbyClientAPI.basePath + path
         let parameters: [String:Any]? = nil
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<PartyInfoResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SessionPartyInfoResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
@@ -140,7 +326,7 @@ open class PartyServiceAPI {
      - parameter _id: (path) Name 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postPartiesByIdJoin(_id: String, completion: @escaping ((_ data: PartyInfoResult?,_ error: Error?) -> Void)) {
+    open class func postPartiesByIdJoin(_id: String, completion: @escaping ((_ data: SessionPartyInfoResult?,_ error: Error?) -> Void)) {
         postPartiesByIdJoinWithRequestBuilder(_id: _id).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
@@ -160,14 +346,107 @@ open class PartyServiceAPI {
      - examples: [{contentType=application/json, example={
   "PartyInfo" : {
     "Id" : "Id",
+    "Users" : [ {
+      "PlayedPercentage" : 1.4658129805029452,
+      "RecursiveChildCountEqualsChildCount" : true,
+      "OriginalParsedName" : "OriginalParsedName",
+      "ConnectAccessKey" : "ConnectAccessKey",
+      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+      "IsNameParsedFromFolder" : true,
+      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "ImportedCollections" : [ {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      }, {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      } ],
+      "ConnectUserId" : "ConnectUserId",
+      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
+      "Name" : "Name",
+      "ImageInfos" : [ {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "UsesIdForConfigurationPath" : true,
+      "Salt" : "Salt",
+      "ConnectUserName" : "ConnectUserName",
+      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+      "ConnectLinkType" : "LinkedUser",
+      "EasyPassword" : "EasyPassword",
+      "Password" : "Password"
+    }, {
+      "PlayedPercentage" : 1.4658129805029452,
+      "RecursiveChildCountEqualsChildCount" : true,
+      "OriginalParsedName" : "OriginalParsedName",
+      "ConnectAccessKey" : "ConnectAccessKey",
+      "LastLoginDate" : "2000-01-23T04:56:07.000+00:00",
+      "IsNameParsedFromFolder" : true,
+      "DateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "ImportedCollections" : [ {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      }, {
+        "Id" : 5,
+        "ProviderIds" : {
+          "key" : "ProviderIds"
+        },
+        "Name" : "Name"
+      } ],
+      "ConnectUserId" : "ConnectUserId",
+      "ResolvedPresentationUniqueKey" : "ResolvedPresentationUniqueKey",
+      "Name" : "Name",
+      "ImageInfos" : [ {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      }, {
+        "Path" : "Path",
+        "Type" : "Primary",
+        "Height" : 6,
+        "Orientation" : "TopLeft",
+        "Width" : 0,
+        "DateModified" : "2000-01-23T04:56:07.000+00:00"
+      } ],
+      "UsesIdForConfigurationPath" : true,
+      "Salt" : "Salt",
+      "ConnectUserName" : "ConnectUserName",
+      "LastActivityDate" : "2000-01-23T04:56:07.000+00:00",
+      "ConnectLinkType" : "LinkedUser",
+      "EasyPassword" : "EasyPassword",
+      "Password" : "Password"
+    } ],
     "Name" : "Name"
   }
 }}]
      - parameter _id: (path) Name 
 
-     - returns: RequestBuilder<PartyInfoResult> 
+     - returns: RequestBuilder<SessionPartyInfoResult> 
      */
-    open class func postPartiesByIdJoinWithRequestBuilder(_id: String) -> RequestBuilder<PartyInfoResult> {
+    open class func postPartiesByIdJoinWithRequestBuilder(_id: String) -> RequestBuilder<SessionPartyInfoResult> {
         var path = "/Parties/{Id}/Join"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -177,7 +456,7 @@ open class PartyServiceAPI {
         let url = URLComponents(string: URLString)
 
 
-        let requestBuilder: RequestBuilder<PartyInfoResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<SessionPartyInfoResult>.Type = EmbyClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }

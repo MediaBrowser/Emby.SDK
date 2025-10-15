@@ -28,7 +28,7 @@ import UserPolicy from '../model/UserPolicy';
 /**
 * UserService service.
 * @module api/UserServiceApi
-* @version 4.9.2.3
+* @version 4.9.2.4
 */
 export default class UserServiceApi {
 

@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.2.3
+ * OpenAPI spec version: 4.9.2.4
  * 
  *
  * NOTE: This file is auto generated.
@@ -4087,6 +4087,170 @@ export enum EncodingContext {
 /**
  * 
  * @export
+ * @interface EntitiesItemImageInfo
+ */
+export interface EntitiesItemImageInfo {
+    /**
+     * The path.
+     * @type {string}
+     * @memberof EntitiesItemImageInfo
+     */
+    Path?: string;
+    /**
+     * 
+     * @type {ImageType}
+     * @memberof EntitiesItemImageInfo
+     */
+    Type?: ImageType;
+    /**
+     * 
+     * @type {DrawingImageOrientation}
+     * @memberof EntitiesItemImageInfo
+     */
+    Orientation?: DrawingImageOrientation;
+    /**
+     * The date modified.
+     * @type {Date}
+     * @memberof EntitiesItemImageInfo
+     */
+    DateModified?: Date;
+    /**
+     * 
+     * @type {number}
+     * @memberof EntitiesItemImageInfo
+     */
+    Width?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof EntitiesItemImageInfo
+     */
+    Height?: number;
+}
+/**
+ * Class User  
+ * @export
+ * @interface EntitiesUser
+ */
+export interface EntitiesUser {
+    /**
+     * From now on all user paths will be Id\\-based. This is for backwards compatibility.
+     * @type {boolean}
+     * @memberof EntitiesUser
+     */
+    UsesIdForConfigurationPath?: boolean;
+    /**
+     * The password.
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    Password?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    EasyPassword?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    Salt?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    ConnectUserName?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    ConnectUserId?: string;
+    /**
+     * 
+     * @type {ConnectUserLinkType}
+     * @memberof EntitiesUser
+     */
+    ConnectLinkType?: ConnectUserLinkType;
+    /**
+     * 
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    ConnectAccessKey?: string;
+    /**
+     * 
+     * @type {Array<EntitiesItemImageInfo>}
+     * @memberof EntitiesUser
+     */
+    ImageInfos?: Array<EntitiesItemImageInfo>;
+    /**
+     * The name.
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    Name?: string;
+    /**
+     * The last login date.
+     * @type {Date}
+     * @memberof EntitiesUser
+     */
+    LastLoginDate?: Date;
+    /**
+     * The last activity date.
+     * @type {Date}
+     * @memberof EntitiesUser
+     */
+    LastActivityDate?: Date;
+    /**
+     * 
+     * @type {number}
+     * @memberof EntitiesUser
+     */
+    PlayedPercentage?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof EntitiesUser
+     */
+    RecursiveChildCountEqualsChildCount?: boolean;
+    /**
+     * Internal use only
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    OriginalParsedName?: string;
+    /**
+     * Internal use only
+     * @type {boolean}
+     * @memberof EntitiesUser
+     */
+    IsNameParsedFromFolder?: boolean;
+    /**
+     * The date created.
+     * @type {Date}
+     * @memberof EntitiesUser
+     */
+    DateCreated?: Date;
+    /**
+     * 
+     * @type {Array<LinkedItemInfo>}
+     * @memberof EntitiesUser
+     */
+    ImportedCollections?: Array<LinkedItemInfo>;
+    /**
+     * 
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    ResolvedPresentationUniqueKey?: string;
+}
+/**
+ * 
+ * @export
  * @enum {string}
  */
 export enum EnumsUICommandType {
@@ -5856,6 +6020,31 @@ export enum LibraryUserCopyOptions {
 /**
  * 
  * @export
+ * @interface LinkedItemInfo
+ */
+export interface LinkedItemInfo {
+    /**
+     * 
+     * @type {ProviderIdDictionary}
+     * @memberof LinkedItemInfo
+     */
+    ProviderIds?: ProviderIdDictionary;
+    /**
+     * The name.
+     * @type {string}
+     * @memberof LinkedItemInfo
+     */
+    Name?: string;
+    /**
+     * The identifier.
+     * @type {number}
+     * @memberof LinkedItemInfo
+     */
+    Id?: number;
+}
+/**
+ * 
+ * @export
  * @interface LiveStreamRequest
  */
 export interface LiveStreamRequest {
@@ -7170,12 +7359,6 @@ export interface MediaSourceInfo {
      * @memberof MediaSourceInfo
      */
     Path?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof MediaSourceInfo
-     */
-    ConvertUrlCredentialsToBasicAuth?: boolean;
     /**
      * 
      * @type {string}
@@ -8515,38 +8698,6 @@ export interface ParentalRating {
      * @memberof ParentalRating
      */
     Value?: number;
-}
-/**
- * 
- * @export
- * @interface PartyInfo
- */
-export interface PartyInfo {
-    /**
-     * 
-     * @type {string}
-     * @memberof PartyInfo
-     */
-    Id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PartyInfo
-     */
-    Name?: string;
-}
-/**
- * 
- * @export
- * @interface PartyInfoResult
- */
-export interface PartyInfoResult {
-    /**
-     * 
-     * @type {PartyInfo}
-     * @memberof PartyInfoResult
-     */
-    PartyInfo?: PartyInfo;
 }
 /**
  * 
@@ -11726,6 +11877,44 @@ export interface ServerConfiguration {
     CachePath?: string;
 }
 /**
+ * 
+ * @export
+ * @interface SessionPartyInfo
+ */
+export interface SessionPartyInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof SessionPartyInfo
+     */
+    Id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SessionPartyInfo
+     */
+    Name?: string;
+    /**
+     * 
+     * @type {Array<EntitiesUser>}
+     * @memberof SessionPartyInfo
+     */
+    Users?: Array<EntitiesUser>;
+}
+/**
+ * 
+ * @export
+ * @interface SessionPartyInfoResult
+ */
+export interface SessionPartyInfoResult {
+    /**
+     * 
+     * @type {SessionPartyInfo}
+     * @memberof SessionPartyInfoResult
+     */
+    PartyInfo?: SessionPartyInfo;
+}
+/**
  * Class SessionInfo  
  * @export
  * @interface SessionSessionInfo
@@ -14413,12 +14602,6 @@ export interface UserDto {
      * @memberof UserDto
      */
     PrimaryImageAspectRatio?: number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof UserDto
-     */
-    HasConfiguredEasyPassword?: boolean;
     /**
      * 
      * @type {UserItemShareLevel}
@@ -80248,7 +80431,7 @@ export const PartyServiceApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPartiesInfo(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PartyInfoResult> {
+        getPartiesInfo(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SessionPartyInfoResult> {
             const localVarFetchArgs = PartyServiceApiFetchParamCreator(configuration).getPartiesInfo(options);
             return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -80266,7 +80449,7 @@ export const PartyServiceApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postParties(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PartyInfoResult> {
+        postParties(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SessionPartyInfoResult> {
             const localVarFetchArgs = PartyServiceApiFetchParamCreator(configuration).postParties(options);
             return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -80285,7 +80468,7 @@ export const PartyServiceApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postPartiesByIdJoin(Id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PartyInfoResult> {
+        postPartiesByIdJoin(Id: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SessionPartyInfoResult> {
             const localVarFetchArgs = PartyServiceApiFetchParamCreator(configuration).postPartiesByIdJoin(Id, options);
             return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {

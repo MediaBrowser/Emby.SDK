@@ -185,7 +185,6 @@ open class UserServiceAPI {
     "EnableSyncTranscoding" : true,
     "RemoteClientBitrateLimit" : 7
   },
-  "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
   "UserItemShareLevel" : "None",
   "Configuration" : {
@@ -378,7 +377,6 @@ open class UserServiceAPI {
       "EnableSyncTranscoding" : true,
       "RemoteClientBitrateLimit" : 7
     },
-    "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
     "UserItemShareLevel" : "None",
     "Configuration" : {
@@ -472,7 +470,6 @@ open class UserServiceAPI {
       "EnableSyncTranscoding" : true,
       "RemoteClientBitrateLimit" : 7
     },
-    "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
     "UserItemShareLevel" : "None",
     "Configuration" : {
@@ -681,7 +678,6 @@ open class UserServiceAPI {
     "EnableSyncTranscoding" : true,
     "RemoteClientBitrateLimit" : 7
   },
-  "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
   "UserItemShareLevel" : "None",
   "Configuration" : {
@@ -775,7 +771,6 @@ open class UserServiceAPI {
     "EnableSyncTranscoding" : true,
     "RemoteClientBitrateLimit" : 7
   },
-  "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
   "UserItemShareLevel" : "None",
   "Configuration" : {
@@ -918,7 +913,6 @@ open class UserServiceAPI {
       "EnableSyncTranscoding" : true,
       "RemoteClientBitrateLimit" : 7
     },
-    "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
     "UserItemShareLevel" : "None",
     "Configuration" : {
@@ -1012,7 +1006,6 @@ open class UserServiceAPI {
       "EnableSyncTranscoding" : true,
       "RemoteClientBitrateLimit" : 7
     },
-    "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
     "UserItemShareLevel" : "None",
     "Configuration" : {
@@ -1161,7 +1154,6 @@ open class UserServiceAPI {
       "EnableSyncTranscoding" : true,
       "RemoteClientBitrateLimit" : 7
     },
-    "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
     "UserItemShareLevel" : "None",
     "Configuration" : {
@@ -1371,7 +1363,6 @@ open class UserServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
-        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -1539,7 +1530,6 @@ open class UserServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
-        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -1991,7 +1981,6 @@ open class UserServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
-        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -2203,7 +2192,6 @@ open class UserServiceAPI {
       "EnableSyncTranscoding" : true,
       "RemoteClientBitrateLimit" : 7
     },
-    "HasConfiguredEasyPassword" : true,
     "EnableAutoLogin" : true,
     "UserItemShareLevel" : "None",
     "Configuration" : {
@@ -2413,7 +2401,6 @@ open class UserServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
-        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -2581,7 +2568,6 @@ open class UserServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
-        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -3033,7 +3019,6 @@ open class UserServiceAPI {
         "Size" : 7,
         "BufferMs" : 4,
         "ContainerStartTimeTicks" : 3,
-        "ConvertUrlCredentialsToBasicAuth" : true,
         "SortName" : "SortName",
         "Timestamp" : "None",
         "ItemId" : "ItemId",
@@ -3616,7 +3601,6 @@ open class UserServiceAPI {
     "EnableSyncTranscoding" : true,
     "RemoteClientBitrateLimit" : 7
   },
-  "HasConfiguredEasyPassword" : true,
   "EnableAutoLogin" : true,
   "UserItemShareLevel" : "None",
   "Configuration" : {
