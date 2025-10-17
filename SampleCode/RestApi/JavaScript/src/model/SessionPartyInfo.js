@@ -11,11 +11,12 @@
 
 import ApiClient from '../ApiClient';
 import EntitiesUser from './EntitiesUser';
+import SessionSessionInfo from './SessionSessionInfo';
 
 /**
 * The SessionPartyInfo model module.
 * @module model/SessionPartyInfo
-* @version 4.9.2.4
+* @version 4.9.2.5
 */
 export default class SessionPartyInfo {
     /**
@@ -48,6 +49,9 @@ export default class SessionPartyInfo {
             if (data.hasOwnProperty('Name')) {
                 obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
+            if (data.hasOwnProperty('Sessions')) {
+                obj['Sessions'] = ApiClient.convertToType(data['Sessions'], [SessionSessionInfo]);
+            }
             if (data.hasOwnProperty('Users')) {
                 obj['Users'] = ApiClient.convertToType(data['Users'], [EntitiesUser]);
             }
@@ -63,6 +67,10 @@ export default class SessionPartyInfo {
     * @member {String} Name
     */
     'Name' = undefined;
+    /**
+    * @member {Array.<module:model/SessionSessionInfo>} Sessions
+    */
+    'Sessions' = undefined;
     /**
     * @member {Array.<module:model/EntitiesUser>} Users
     */

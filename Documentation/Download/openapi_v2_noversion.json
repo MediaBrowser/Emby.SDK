@@ -73191,6 +73191,12 @@
         "Name": {
           "type": "string"
         },
+        "Sessions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Session.SessionInfo"
+          }
+        },
         "Users": {
           "type": "array",
           "items": {
@@ -73199,364 +73205,6 @@
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
-    },
-    "Entities.User": {
-      "description": "Class User\r\n",
-      "type": "object",
-      "properties": {
-        "UsesIdForConfigurationPath": {
-          "description": "From now on all user paths will be Id\\-based. This is for backwards compatibility.",
-          "type": "boolean"
-        },
-        "Password": {
-          "description": "The password.",
-          "type": "string"
-        },
-        "EasyPassword": {
-          "type": "string"
-        },
-        "Salt": {
-          "type": "string"
-        },
-        "ConnectUserName": {
-          "type": "string"
-        },
-        "ConnectUserId": {
-          "type": "string"
-        },
-        "ConnectLinkType": {
-          "$ref": "#/definitions/Connect.UserLinkType"
-        },
-        "ConnectAccessKey": {
-          "type": "string"
-        },
-        "ImageInfos": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Entities.ItemImageInfo"
-          }
-        },
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "LastLoginDate": {
-          "format": "date-time",
-          "description": "The last login date.",
-          "type": "string"
-        },
-        "LastActivityDate": {
-          "format": "date-time",
-          "description": "The last activity date.",
-          "type": "string"
-        },
-        "PlayedPercentage": {
-          "format": "double",
-          "type": "number"
-        },
-        "RecursiveChildCountEqualsChildCount": {
-          "type": "boolean"
-        },
-        "OriginalParsedName": {
-          "description": "Internal use only",
-          "type": "string"
-        },
-        "IsNameParsedFromFolder": {
-          "description": "Internal use only",
-          "type": "boolean"
-        },
-        "DateCreated": {
-          "format": "date-time",
-          "description": "The date created.",
-          "type": "string"
-        },
-        "ImportedCollections": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/LinkedItemInfo"
-          }
-        },
-        "ResolvedPresentationUniqueKey": {
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Controller.Entities.User"
-    },
-    "Connect.UserLinkType": {
-      "enum": [
-        "LinkedUser",
-        "Guest"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
-    },
-    "Entities.ItemImageInfo": {
-      "type": "object",
-      "properties": {
-        "Path": {
-          "description": "The path.",
-          "type": "string"
-        },
-        "Type": {
-          "$ref": "#/definitions/ImageType"
-        },
-        "Orientation": {
-          "$ref": "#/definitions/Drawing.ImageOrientation"
-        },
-        "DateModified": {
-          "format": "date-time",
-          "description": "The date modified.",
-          "type": "string"
-        },
-        "Width": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "Height": {
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Controller.Entities.ItemImageInfo"
-    },
-    "ImageType": {
-      "description": "Enum ImageType\r\n",
-      "enum": [
-        "Primary",
-        "Art",
-        "Backdrop",
-        "Banner",
-        "Logo",
-        "Thumb",
-        "Disc",
-        "Box",
-        "Screenshot",
-        "Menu",
-        "Chapter",
-        "BoxRear",
-        "Thumbnail",
-        "LogoLight",
-        "LogoLightColor"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
-    },
-    "LinkedItemInfo": {
-      "type": "object",
-      "properties": {
-        "ProviderIds": {
-          "$ref": "#/definitions/ProviderIdDictionary"
-        },
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "Id": {
-          "format": "int64",
-          "description": "The identifier.",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
-    },
-    "Playlists.PlaylistCreationResult": {
-      "type": "object",
-      "properties": {
-        "Id": {
-          "type": "string"
-        },
-        "Name": {
-          "type": "string"
-        },
-        "ItemAddedCount": {
-          "format": "int32",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Controller.Playlists.PlaylistCreationResult"
-    },
-    "Plugins.PluginInfo": {
-      "description": "This is a serializable stub class that is used by the api to provide information about installed plugins.\r\n",
-      "type": "object",
-      "properties": {
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "Version": {
-          "description": "The version.",
-          "type": "string"
-        },
-        "ConfigurationFileName": {
-          "description": "The name of the configuration file.",
-          "type": "string"
-        },
-        "Description": {
-          "description": "The description.",
-          "type": "string"
-        },
-        "Id": {
-          "description": "The unique id.",
-          "type": "string"
-        },
-        "ImageTag": {
-          "description": "The image URL.",
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Plugins.PluginInfo"
-    },
-    "TaskInfo": {
-      "description": "Class TaskInfo\r\n",
-      "type": "object",
-      "properties": {
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "State": {
-          "$ref": "#/definitions/TaskState"
-        },
-        "CurrentProgressPercentage": {
-          "format": "double",
-          "description": "The progress.",
-          "type": "number"
-        },
-        "Id": {
-          "description": "The id.",
-          "type": "string"
-        },
-        "LastExecutionResult": {
-          "$ref": "#/definitions/TaskResult"
-        },
-        "Triggers": {
-          "description": "The triggers.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/TaskTriggerInfo"
-          }
-        },
-        "Description": {
-          "description": "The description.",
-          "type": "string"
-        },
-        "Category": {
-          "description": "The category.",
-          "type": "string"
-        },
-        "IsHidden": {
-          "description": "A value indicating whether this instance is hidden.",
-          "type": "boolean"
-        },
-        "Key": {
-          "description": "The key.",
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskInfo"
-    },
-    "TaskState": {
-      "description": "Enum TaskState\r\n",
-      "enum": [
-        "Idle",
-        "Cancelling",
-        "Running"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskState"
-    },
-    "TaskResult": {
-      "description": "Class TaskExecutionInfo\r\n",
-      "type": "object",
-      "properties": {
-        "StartTimeUtc": {
-          "format": "date-time",
-          "description": "The start time UTC.",
-          "type": "string"
-        },
-        "EndTimeUtc": {
-          "format": "date-time",
-          "description": "The end time UTC.",
-          "type": "string"
-        },
-        "Status": {
-          "$ref": "#/definitions/TaskCompletionStatus"
-        },
-        "Name": {
-          "description": "The name.",
-          "type": "string"
-        },
-        "Key": {
-          "description": "The key.",
-          "type": "string"
-        },
-        "Id": {
-          "description": "The id.",
-          "type": "string"
-        },
-        "ErrorMessage": {
-          "description": "The error message.",
-          "type": "string"
-        },
-        "LongErrorMessage": {
-          "description": "The long error message.",
-          "type": "string"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskResult"
-    },
-    "TaskCompletionStatus": {
-      "description": "Enum TaskCompletionStatus\r\n",
-      "enum": [
-        "Completed",
-        "Failed",
-        "Cancelled",
-        "Aborted"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskCompletionStatus"
-    },
-    "TaskTriggerInfo": {
-      "description": "Class TaskTriggerInfo\r\n",
-      "type": "object",
-      "properties": {
-        "Type": {
-          "description": "The type.",
-          "type": "string"
-        },
-        "TimeOfDayTicks": {
-          "format": "int64",
-          "description": "The time of day.",
-          "type": "integer"
-        },
-        "IntervalTicks": {
-          "format": "int64",
-          "description": "The interval.",
-          "type": "integer"
-        },
-        "SystemEvent": {
-          "$ref": "#/definitions/SystemEvent"
-        },
-        "DayOfWeek": {
-          "$ref": "#/definitions/DayOfWeek"
-        },
-        "MaxRuntimeTicks": {
-          "format": "int64",
-          "description": "The maximum runtime ticks.",
-          "type": "integer"
-        }
-      },
-      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskTriggerInfo"
-    },
-    "SystemEvent": {
-      "description": "Enum SystemEvent\r\n",
-      "enum": [
-        "WakeFromSleep",
-        "DisplayConfigurationChange",
-        "NetworkChange"
-      ],
-      "type": "string",
-      "x-internal-ref-name": "MediaBrowser.Model.Tasks.SystemEvent"
     },
     "Session.SessionInfo": {
       "description": "Class SessionInfo\r\n",
@@ -74087,6 +73735,364 @@
       ],
       "type": "string",
       "x-internal-ref-name": "MediaBrowser.Model.Session.Transcoding.VpStepTypes"
+    },
+    "Entities.User": {
+      "description": "Class User\r\n",
+      "type": "object",
+      "properties": {
+        "UsesIdForConfigurationPath": {
+          "description": "From now on all user paths will be Id\\-based. This is for backwards compatibility.",
+          "type": "boolean"
+        },
+        "Password": {
+          "description": "The password.",
+          "type": "string"
+        },
+        "EasyPassword": {
+          "type": "string"
+        },
+        "Salt": {
+          "type": "string"
+        },
+        "ConnectUserName": {
+          "type": "string"
+        },
+        "ConnectUserId": {
+          "type": "string"
+        },
+        "ConnectLinkType": {
+          "$ref": "#/definitions/Connect.UserLinkType"
+        },
+        "ConnectAccessKey": {
+          "type": "string"
+        },
+        "ImageInfos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Entities.ItemImageInfo"
+          }
+        },
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "LastLoginDate": {
+          "format": "date-time",
+          "description": "The last login date.",
+          "type": "string"
+        },
+        "LastActivityDate": {
+          "format": "date-time",
+          "description": "The last activity date.",
+          "type": "string"
+        },
+        "PlayedPercentage": {
+          "format": "double",
+          "type": "number"
+        },
+        "RecursiveChildCountEqualsChildCount": {
+          "type": "boolean"
+        },
+        "OriginalParsedName": {
+          "description": "Internal use only",
+          "type": "string"
+        },
+        "IsNameParsedFromFolder": {
+          "description": "Internal use only",
+          "type": "boolean"
+        },
+        "DateCreated": {
+          "format": "date-time",
+          "description": "The date created.",
+          "type": "string"
+        },
+        "ImportedCollections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LinkedItemInfo"
+          }
+        },
+        "ResolvedPresentationUniqueKey": {
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Entities.User"
+    },
+    "Connect.UserLinkType": {
+      "enum": [
+        "LinkedUser",
+        "Guest"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
+    },
+    "Entities.ItemImageInfo": {
+      "type": "object",
+      "properties": {
+        "Path": {
+          "description": "The path.",
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/definitions/ImageType"
+        },
+        "Orientation": {
+          "$ref": "#/definitions/Drawing.ImageOrientation"
+        },
+        "DateModified": {
+          "format": "date-time",
+          "description": "The date modified.",
+          "type": "string"
+        },
+        "Width": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Height": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Entities.ItemImageInfo"
+    },
+    "ImageType": {
+      "description": "Enum ImageType\r\n",
+      "enum": [
+        "Primary",
+        "Art",
+        "Backdrop",
+        "Banner",
+        "Logo",
+        "Thumb",
+        "Disc",
+        "Box",
+        "Screenshot",
+        "Menu",
+        "Chapter",
+        "BoxRear",
+        "Thumbnail",
+        "LogoLight",
+        "LogoLightColor"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
+    },
+    "LinkedItemInfo": {
+      "type": "object",
+      "properties": {
+        "ProviderIds": {
+          "$ref": "#/definitions/ProviderIdDictionary"
+        },
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "Id": {
+          "format": "int64",
+          "description": "The identifier.",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
+    },
+    "Playlists.PlaylistCreationResult": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "ItemAddedCount": {
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Controller.Playlists.PlaylistCreationResult"
+    },
+    "Plugins.PluginInfo": {
+      "description": "This is a serializable stub class that is used by the api to provide information about installed plugins.\r\n",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "Version": {
+          "description": "The version.",
+          "type": "string"
+        },
+        "ConfigurationFileName": {
+          "description": "The name of the configuration file.",
+          "type": "string"
+        },
+        "Description": {
+          "description": "The description.",
+          "type": "string"
+        },
+        "Id": {
+          "description": "The unique id.",
+          "type": "string"
+        },
+        "ImageTag": {
+          "description": "The image URL.",
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Plugins.PluginInfo"
+    },
+    "TaskInfo": {
+      "description": "Class TaskInfo\r\n",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "State": {
+          "$ref": "#/definitions/TaskState"
+        },
+        "CurrentProgressPercentage": {
+          "format": "double",
+          "description": "The progress.",
+          "type": "number"
+        },
+        "Id": {
+          "description": "The id.",
+          "type": "string"
+        },
+        "LastExecutionResult": {
+          "$ref": "#/definitions/TaskResult"
+        },
+        "Triggers": {
+          "description": "The triggers.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TaskTriggerInfo"
+          }
+        },
+        "Description": {
+          "description": "The description.",
+          "type": "string"
+        },
+        "Category": {
+          "description": "The category.",
+          "type": "string"
+        },
+        "IsHidden": {
+          "description": "A value indicating whether this instance is hidden.",
+          "type": "boolean"
+        },
+        "Key": {
+          "description": "The key.",
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskInfo"
+    },
+    "TaskState": {
+      "description": "Enum TaskState\r\n",
+      "enum": [
+        "Idle",
+        "Cancelling",
+        "Running"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskState"
+    },
+    "TaskResult": {
+      "description": "Class TaskExecutionInfo\r\n",
+      "type": "object",
+      "properties": {
+        "StartTimeUtc": {
+          "format": "date-time",
+          "description": "The start time UTC.",
+          "type": "string"
+        },
+        "EndTimeUtc": {
+          "format": "date-time",
+          "description": "The end time UTC.",
+          "type": "string"
+        },
+        "Status": {
+          "$ref": "#/definitions/TaskCompletionStatus"
+        },
+        "Name": {
+          "description": "The name.",
+          "type": "string"
+        },
+        "Key": {
+          "description": "The key.",
+          "type": "string"
+        },
+        "Id": {
+          "description": "The id.",
+          "type": "string"
+        },
+        "ErrorMessage": {
+          "description": "The error message.",
+          "type": "string"
+        },
+        "LongErrorMessage": {
+          "description": "The long error message.",
+          "type": "string"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskResult"
+    },
+    "TaskCompletionStatus": {
+      "description": "Enum TaskCompletionStatus\r\n",
+      "enum": [
+        "Completed",
+        "Failed",
+        "Cancelled",
+        "Aborted"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskCompletionStatus"
+    },
+    "TaskTriggerInfo": {
+      "description": "Class TaskTriggerInfo\r\n",
+      "type": "object",
+      "properties": {
+        "Type": {
+          "description": "The type.",
+          "type": "string"
+        },
+        "TimeOfDayTicks": {
+          "format": "int64",
+          "description": "The time of day.",
+          "type": "integer"
+        },
+        "IntervalTicks": {
+          "format": "int64",
+          "description": "The interval.",
+          "type": "integer"
+        },
+        "SystemEvent": {
+          "$ref": "#/definitions/SystemEvent"
+        },
+        "DayOfWeek": {
+          "$ref": "#/definitions/DayOfWeek"
+        },
+        "MaxRuntimeTicks": {
+          "format": "int64",
+          "description": "The maximum runtime ticks.",
+          "type": "integer"
+        }
+      },
+      "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskTriggerInfo"
+    },
+    "SystemEvent": {
+      "description": "Enum SystemEvent\r\n",
+      "enum": [
+        "WakeFromSleep",
+        "DisplayConfigurationChange",
+        "NetworkChange"
+      ],
+      "type": "string",
+      "x-internal-ref-name": "MediaBrowser.Model.Tasks.SystemEvent"
     },
     "NameValuePair": {
       "type": "object",
@@ -76705,10 +76711,6 @@
           "description": "The program identifier.",
           "type": "string"
         },
-        "Name": {
-          "description": "Name of the recording.",
-          "type": "string"
-        },
         "ServiceName": {
           "type": "string"
         },
@@ -76796,6 +76798,10 @@
         },
         "TimerType": {
           "$ref": "#/definitions/LiveTv.TimerType"
+        },
+        "Name": {
+          "description": "Name of the recording.",
+          "type": "string"
         }
       },
       "x-internal-ref-name": "MediaBrowser.Controller.LiveTv.SeriesTimerInfo"

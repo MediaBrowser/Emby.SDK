@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.2.4
+ * OpenAPI spec version: 4.9.2.5
  * 
  *
  * NOTE: This file is auto generated.
@@ -6437,12 +6437,6 @@ export interface LiveTvSeriesTimerInfo {
      */
     ProgramId?: string;
     /**
-     * Name of the recording.
-     * @type {string}
-     * @memberof LiveTvSeriesTimerInfo
-     */
-    Name?: string;
-    /**
      * 
      * @type {string}
      * @memberof LiveTvSeriesTimerInfo
@@ -6568,6 +6562,12 @@ export interface LiveTvSeriesTimerInfo {
      * @memberof LiveTvSeriesTimerInfo
      */
     TimerType?: LiveTvTimerType;
+    /**
+     * Name of the recording.
+     * @type {string}
+     * @memberof LiveTvSeriesTimerInfo
+     */
+    Name?: string;
 }
 /**
  * Class SeriesTimerInfoDto.  
@@ -11894,6 +11894,12 @@ export interface SessionPartyInfo {
      * @memberof SessionPartyInfo
      */
     Name?: string;
+    /**
+     * 
+     * @type {Array<SessionSessionInfo>}
+     * @memberof SessionPartyInfo
+     */
+    Sessions?: Array<SessionSessionInfo>;
     /**
      * 
      * @type {Array<EntitiesUser>}

@@ -57,12 +57,6 @@ namespace Emby.ApiClient.Model
         public string ProgramId { get; set; }
 
         /// <summary>
-        /// Name of the recording.
-        /// </summary>
-        /// <value>The Name.</value>
-        public string Name { get; set; }
-
-        /// <summary>
         /// Gets or Sets ServiceName
         /// </summary>
         /// <value>The ServiceName.</value>
@@ -189,6 +183,12 @@ namespace Emby.ApiClient.Model
         public LiveTvTimerType TimerType { get; set; }
 
         /// <summary>
+        /// Name of the recording.
+        /// </summary>
+        /// <value>The Name.</value>
+        public string Name { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -201,7 +201,6 @@ namespace Emby.ApiClient.Model
             sb.Append("  ChannelIds: ").Append(ChannelIds).Append("\n");
             sb.Append("  ParentFolderId: ").Append(ParentFolderId).Append("\n");
             sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
             sb.Append("  Overview: ").Append(Overview).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
@@ -223,6 +222,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  MaxRecordingSeconds: ").Append(MaxRecordingSeconds).Append("\n");
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
             sb.Append("  TimerType: ").Append(TimerType).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -273,11 +273,6 @@ namespace Emby.ApiClient.Model
                     this.ProgramId == input.ProgramId ||
                     (this.ProgramId != null &&
                     this.ProgramId.Equals(input.ProgramId))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
                 ) && 
                 (
                     this.ServiceName == input.ServiceName ||
@@ -385,6 +380,11 @@ namespace Emby.ApiClient.Model
                     this.TimerType == input.TimerType ||
                     (this.TimerType != null &&
                     this.TimerType.Equals(input.TimerType))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 );
         }
 
@@ -407,8 +407,6 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.ParentFolderId.GetHashCode();
                 if (this.ProgramId != null)
                     hashCode = hashCode * 59 + this.ProgramId.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.ServiceName != null)
                     hashCode = hashCode * 59 + this.ServiceName.GetHashCode();
                 if (this.Overview != null)
@@ -451,6 +449,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Keywords.GetHashCode();
                 if (this.TimerType != null)
                     hashCode = hashCode * 59 + this.TimerType.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;
             }
         }

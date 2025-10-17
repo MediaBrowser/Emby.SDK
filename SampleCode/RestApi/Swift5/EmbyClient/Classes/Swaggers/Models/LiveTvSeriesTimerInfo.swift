@@ -19,8 +19,6 @@ public struct LiveTvSeriesTimerInfo: Codable {
     public var parentFolderId: Int64?
     /** The program identifier. */
     public var programId: String?
-    /** Name of the recording. */
-    public var name: String?
     public var serviceName: String?
     /** Description of the recording. */
     public var overview: String?
@@ -54,14 +52,15 @@ public struct LiveTvSeriesTimerInfo: Codable {
     public var maxRecordingSeconds: Int?
     public var keywords: [LiveTvKeywordInfo]?
     public var timerType: LiveTvTimerType?
+    /** Name of the recording. */
+    public var name: String?
 
-    public init(_id: String? = nil, channelId: String? = nil, channelIds: [String]? = nil, parentFolderId: Int64? = nil, programId: String? = nil, name: String? = nil, serviceName: String? = nil, overview: String? = nil, startDate: Date? = nil, endDate: Date? = nil, recordAnyTime: Bool? = nil, keepUpTo: Int? = nil, keepUntil: LiveTvKeepUntil? = nil, skipEpisodesInLibrary: Bool? = nil, matchExistingItemsWithAnyLibrary: Bool? = nil, recordNewOnly: Bool? = nil, days: [DayOfWeek]? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, isPostPaddingRequired: Bool? = nil, seriesId: String? = nil, providerIds: ProviderIdDictionary? = nil, maxRecordingSeconds: Int? = nil, keywords: [LiveTvKeywordInfo]? = nil, timerType: LiveTvTimerType? = nil) {
+    public init(_id: String? = nil, channelId: String? = nil, channelIds: [String]? = nil, parentFolderId: Int64? = nil, programId: String? = nil, serviceName: String? = nil, overview: String? = nil, startDate: Date? = nil, endDate: Date? = nil, recordAnyTime: Bool? = nil, keepUpTo: Int? = nil, keepUntil: LiveTvKeepUntil? = nil, skipEpisodesInLibrary: Bool? = nil, matchExistingItemsWithAnyLibrary: Bool? = nil, recordNewOnly: Bool? = nil, days: [DayOfWeek]? = nil, priority: Int? = nil, prePaddingSeconds: Int? = nil, postPaddingSeconds: Int? = nil, isPrePaddingRequired: Bool? = nil, isPostPaddingRequired: Bool? = nil, seriesId: String? = nil, providerIds: ProviderIdDictionary? = nil, maxRecordingSeconds: Int? = nil, keywords: [LiveTvKeywordInfo]? = nil, timerType: LiveTvTimerType? = nil, name: String? = nil) {
         self._id = _id
         self.channelId = channelId
         self.channelIds = channelIds
         self.parentFolderId = parentFolderId
         self.programId = programId
-        self.name = name
         self.serviceName = serviceName
         self.overview = overview
         self.startDate = startDate
@@ -83,6 +82,7 @@ public struct LiveTvSeriesTimerInfo: Codable {
         self.maxRecordingSeconds = maxRecordingSeconds
         self.keywords = keywords
         self.timerType = timerType
+        self.name = name
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -91,7 +91,6 @@ public struct LiveTvSeriesTimerInfo: Codable {
         case channelIds = "ChannelIds"
         case parentFolderId = "ParentFolderId"
         case programId = "ProgramId"
-        case name = "Name"
         case serviceName = "ServiceName"
         case overview = "Overview"
         case startDate = "StartDate"
@@ -113,6 +112,7 @@ public struct LiveTvSeriesTimerInfo: Codable {
         case maxRecordingSeconds = "MaxRecordingSeconds"
         case keywords = "Keywords"
         case timerType = "TimerType"
+        case name = "Name"
     }
 
 }

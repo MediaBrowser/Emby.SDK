@@ -13,6 +13,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import embyclient.model.EntitiesUser;
+import embyclient.model.SessionSessionInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,6 +29,9 @@ public class SessionPartyInfo {
 
   @SerializedName("Name")
   private String name = null;
+
+  @SerializedName("Sessions")
+  private List<SessionSessionInfo> sessions = null;
 
   @SerializedName("Users")
   private List<EntitiesUser> users = null;
@@ -68,6 +72,32 @@ public class SessionPartyInfo {
     this.name = name;
   }
 
+  public SessionPartyInfo sessions(List<SessionSessionInfo> sessions) {
+    this.sessions = sessions;
+    return this;
+  }
+
+  public SessionPartyInfo addSessionsItem(SessionSessionInfo sessionsItem) {
+    if (this.sessions == null) {
+      this.sessions = new ArrayList<>();
+    }
+    this.sessions.add(sessionsItem);
+    return this;
+  }
+
+   /**
+   * Get sessions
+   * @return sessions
+  **/
+  @Schema(description = "")
+  public List<SessionSessionInfo> getSessions() {
+    return sessions;
+  }
+
+  public void setSessions(List<SessionSessionInfo> sessions) {
+    this.sessions = sessions;
+  }
+
   public SessionPartyInfo users(List<EntitiesUser> users) {
     this.users = users;
     return this;
@@ -106,12 +136,13 @@ public class SessionPartyInfo {
     SessionPartyInfo sessionPartyInfo = (SessionPartyInfo) o;
     return Objects.equals(this.id, sessionPartyInfo.id) &&
         Objects.equals(this.name, sessionPartyInfo.name) &&
+        Objects.equals(this.sessions, sessionPartyInfo.sessions) &&
         Objects.equals(this.users, sessionPartyInfo.users);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, users);
+    return Objects.hash(id, name, sessions, users);
   }
 
 
@@ -122,6 +153,7 @@ public class SessionPartyInfo {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    sessions: ").append(toIndentedString(sessions)).append("\n");
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();

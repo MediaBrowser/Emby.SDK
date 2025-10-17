@@ -19,7 +19,7 @@ import ProviderIdDictionary from './ProviderIdDictionary';
 /**
 * The LiveTvSeriesTimerInfo model module.
 * @module model/LiveTvSeriesTimerInfo
-* @version 4.9.2.4
+* @version 4.9.2.5
 */
 export default class LiveTvSeriesTimerInfo {
     /**
@@ -60,9 +60,6 @@ export default class LiveTvSeriesTimerInfo {
             }
             if (data.hasOwnProperty('ProgramId')) {
                 obj['ProgramId'] = ApiClient.convertToType(data['ProgramId'], 'String');
-            }
-            if (data.hasOwnProperty('Name')) {
-                obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
             }
             if (data.hasOwnProperty('ServiceName')) {
                 obj['ServiceName'] = ApiClient.convertToType(data['ServiceName'], 'String');
@@ -127,6 +124,9 @@ export default class LiveTvSeriesTimerInfo {
             if (data.hasOwnProperty('TimerType')) {
                 obj['TimerType'] = LiveTvTimerType.constructFromObject(data['TimerType']);
             }
+            if (data.hasOwnProperty('Name')) {
+                obj['Name'] = ApiClient.convertToType(data['Name'], 'String');
+            }
         }
         return obj;
     }
@@ -154,11 +154,6 @@ export default class LiveTvSeriesTimerInfo {
     * @member {String} ProgramId
     */
     'ProgramId' = undefined;
-    /**
-    * Name of the recording.
-    * @member {String} Name
-    */
-    'Name' = undefined;
     /**
     * @member {String} ServiceName
     */
@@ -255,6 +250,11 @@ export default class LiveTvSeriesTimerInfo {
     * @member {module:model/LiveTvTimerType} TimerType
     */
     'TimerType' = undefined;
+    /**
+    * Name of the recording.
+    * @member {String} Name
+    */
+    'Name' = undefined;
 
 
 

@@ -39,6 +39,12 @@ namespace Emby.ApiClient.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets Sessions
+        /// </summary>
+        /// <value>The Sessions.</value>
+        public List<SessionSessionInfo> Sessions { get; set; }
+
+        /// <summary>
         /// Gets or Sets Users
         /// </summary>
         /// <value>The Users.</value>
@@ -54,6 +60,7 @@ namespace Emby.ApiClient.Model
             sb.Append("class SessionPartyInfo {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -91,6 +98,12 @@ namespace Emby.ApiClient.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.Sessions == input.Sessions ||
+                    this.Sessions != null &&
+                    input.Sessions != null &&
+                    this.Sessions.SequenceEqual(input.Sessions)
+                ) && 
+                (
                     this.Users == input.Users ||
                     this.Users != null &&
                     input.Users != null &&
@@ -111,6 +124,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Sessions != null)
+                    hashCode = hashCode * 59 + this.Sessions.GetHashCode();
                 if (this.Users != null)
                     hashCode = hashCode * 59 + this.Users.GetHashCode();
                 return hashCode;

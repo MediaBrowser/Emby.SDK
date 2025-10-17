@@ -24,25 +24,30 @@ class SessionPartyInfo(object):
     swagger_types = {
         'id': 'str',
         'name': 'str',
+        'sessions': 'list[SessionSessionInfo]',
         'users': 'list[EntitiesUser]'
     }
 
     attribute_map = {
         'id': 'Id',
         'name': 'Name',
+        'sessions': 'Sessions',
         'users': 'Users'
     }
 
-    def __init__(self, id=None, name=None, users=None):  # noqa: E501
+    def __init__(self, id=None, name=None, sessions=None, users=None):  # noqa: E501
         """SessionPartyInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
+        self._sessions = None
         self._users = None
         self.discriminator = None
         if id is not None:
             self.id = id
         if name is not None:
             self.name = name
+        if sessions is not None:
+            self.sessions = sessions
         if users is not None:
             self.users = users
 
@@ -87,6 +92,27 @@ class SessionPartyInfo(object):
         """
 
         self._name = name
+
+    @property
+    def sessions(self):
+        """Gets the sessions of this SessionPartyInfo.  # noqa: E501
+
+
+        :return: The sessions of this SessionPartyInfo.  # noqa: E501
+        :rtype: list[SessionSessionInfo]
+        """
+        return self._sessions
+
+    @sessions.setter
+    def sessions(self, sessions):
+        """Sets the sessions of this SessionPartyInfo.
+
+
+        :param sessions: The sessions of this SessionPartyInfo.  # noqa: E501
+        :type: list[SessionSessionInfo]
+        """
+
+        self._sessions = sessions
 
     @property
     def users(self):

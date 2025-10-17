@@ -83945,6 +83945,25 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.ActiveRecordingInfo.Timer
   nameWithType: ActiveRecordingInfo.Timer
+- uid: MediaBrowser.Controller.LiveTv.BaseTimerInfo
+  name: BaseTimerInfo
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.BaseTimerInfo.html
+  commentId: T:MediaBrowser.Controller.LiveTv.BaseTimerInfo
+  fullName: MediaBrowser.Controller.LiveTv.BaseTimerInfo
+  nameWithType: BaseTimerInfo
+- uid: MediaBrowser.Controller.LiveTv.BaseTimerInfo.Name
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.BaseTimerInfo.html#MediaBrowser_Controller_LiveTv_BaseTimerInfo_Name
+  commentId: P:MediaBrowser.Controller.LiveTv.BaseTimerInfo.Name
+  fullName: MediaBrowser.Controller.LiveTv.BaseTimerInfo.Name
+  nameWithType: BaseTimerInfo.Name
+- uid: MediaBrowser.Controller.LiveTv.BaseTimerInfo.Name*
+  name: Name
+  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.BaseTimerInfo.html#MediaBrowser_Controller_LiveTv_BaseTimerInfo_Name_
+  commentId: Overload:MediaBrowser.Controller.LiveTv.BaseTimerInfo.Name
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.LiveTv.BaseTimerInfo.Name
+  nameWithType: BaseTimerInfo.Name
 - uid: MediaBrowser.Controller.LiveTv.BaseTunerHost
   name: BaseTunerHost
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.BaseTunerHost.html
@@ -88531,19 +88550,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.MaxRecordingSeconds
   nameWithType: SeriesTimerInfo.MaxRecordingSeconds
-- uid: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.Name
-  name: Name
-  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.SeriesTimerInfo.html#MediaBrowser_Controller_LiveTv_SeriesTimerInfo_Name
-  commentId: P:MediaBrowser.Controller.LiveTv.SeriesTimerInfo.Name
-  fullName: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.Name
-  nameWithType: SeriesTimerInfo.Name
-- uid: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.Name*
-  name: Name
-  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.SeriesTimerInfo.html#MediaBrowser_Controller_LiveTv_SeriesTimerInfo_Name_
-  commentId: Overload:MediaBrowser.Controller.LiveTv.SeriesTimerInfo.Name
-  isSpec: "True"
-  fullName: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.Name
-  nameWithType: SeriesTimerInfo.Name
 - uid: MediaBrowser.Controller.LiveTv.SeriesTimerInfo.Overview
   name: Overview
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.SeriesTimerInfo.html#MediaBrowser_Controller_LiveTv_SeriesTimerInfo_Overview
@@ -89050,19 +89056,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.LiveTv.TimerInfo.KeepUntil
   nameWithType: TimerInfo.KeepUntil
-- uid: MediaBrowser.Controller.LiveTv.TimerInfo.Name
-  name: Name
-  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TimerInfo.html#MediaBrowser_Controller_LiveTv_TimerInfo_Name
-  commentId: P:MediaBrowser.Controller.LiveTv.TimerInfo.Name
-  fullName: MediaBrowser.Controller.LiveTv.TimerInfo.Name
-  nameWithType: TimerInfo.Name
-- uid: MediaBrowser.Controller.LiveTv.TimerInfo.Name*
-  name: Name
-  href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TimerInfo.html#MediaBrowser_Controller_LiveTv_TimerInfo_Name_
-  commentId: Overload:MediaBrowser.Controller.LiveTv.TimerInfo.Name
-  isSpec: "True"
-  fullName: MediaBrowser.Controller.LiveTv.TimerInfo.Name
-  nameWithType: TimerInfo.Name
 - uid: MediaBrowser.Controller.LiveTv.TimerInfo.OfficialRating
   name: OfficialRating
   href: reference/pluginapi/MediaBrowser.Controller.LiveTv.TimerInfo.html#MediaBrowser_Controller_LiveTv_TimerInfo_OfficialRating
@@ -102327,6 +102320,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyInfo.Name
   nameWithType: PartyInfo.Name
+- uid: MediaBrowser.Controller.Session.PartyInfo.Sessions
+  name: Sessions
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Sessions
+  commentId: P:MediaBrowser.Controller.Session.PartyInfo.Sessions
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Sessions
+  nameWithType: PartyInfo.Sessions
+- uid: MediaBrowser.Controller.Session.PartyInfo.Sessions*
+  name: Sessions
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Sessions_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfo.Sessions
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfo.Sessions
+  nameWithType: PartyInfo.Sessions
 - uid: MediaBrowser.Controller.Session.PartyInfo.Users
   name: Users
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfo.html#MediaBrowser_Controller_Session_PartyInfo_Users
@@ -102372,6 +102378,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Session.PartyInfoDto.Name
   nameWithType: PartyInfoDto.Name
+- uid: MediaBrowser.Controller.Session.PartyInfoDto.Sessions
+  name: Sessions
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Sessions
+  commentId: P:MediaBrowser.Controller.Session.PartyInfoDto.Sessions
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Sessions
+  nameWithType: PartyInfoDto.Sessions
+- uid: MediaBrowser.Controller.Session.PartyInfoDto.Sessions*
+  name: Sessions
+  href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Sessions_
+  commentId: Overload:MediaBrowser.Controller.Session.PartyInfoDto.Sessions
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Session.PartyInfoDto.Sessions
+  nameWithType: PartyInfoDto.Sessions
 - uid: MediaBrowser.Controller.Session.PartyInfoDto.Users
   name: Users
   href: reference/pluginapi/MediaBrowser.Controller.Session.PartyInfoDto.html#MediaBrowser_Controller_Session_PartyInfoDto_Users

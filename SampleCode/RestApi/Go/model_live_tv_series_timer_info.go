@@ -18,8 +18,6 @@ type LiveTvSeriesTimerInfo struct {
 	ParentFolderId int64 `json:"ParentFolderId,omitempty"`
 	// The program identifier.
 	ProgramId string `json:"ProgramId,omitempty"`
-	// Name of the recording.
-	Name string `json:"Name,omitempty"`
 	ServiceName string `json:"ServiceName,omitempty"`
 	// Description of the recording.
 	Overview string `json:"Overview,omitempty"`
@@ -53,4 +51,6 @@ type LiveTvSeriesTimerInfo struct {
 	MaxRecordingSeconds int32 `json:"MaxRecordingSeconds,omitempty"`
 	Keywords []LiveTvKeywordInfo `json:"Keywords,omitempty"`
 	TimerType *LiveTvTimerType `json:"TimerType,omitempty"`
+	// Name of the recording.
+	Name string `json:"Name,omitempty"`
 }

@@ -43,9 +43,6 @@ public class LiveTvSeriesTimerInfo {
   @SerializedName("ProgramId")
   private String programId = null;
 
-  @SerializedName("Name")
-  private String name = null;
-
   @SerializedName("ServiceName")
   private String serviceName = null;
 
@@ -108,6 +105,9 @@ public class LiveTvSeriesTimerInfo {
 
   @SerializedName("TimerType")
   private LiveTvTimerType timerType = null;
+
+  @SerializedName("Name")
+  private String name = null;
 
   public LiveTvSeriesTimerInfo id(String id) {
     this.id = id;
@@ -205,24 +205,6 @@ public class LiveTvSeriesTimerInfo {
 
   public void setProgramId(String programId) {
     this.programId = programId;
-  }
-
-  public LiveTvSeriesTimerInfo name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Name of the recording.
-   * @return name
-  **/
-  @Schema(description = "Name of the recording.")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
   }
 
   public LiveTvSeriesTimerInfo serviceName(String serviceName) {
@@ -619,6 +601,24 @@ public class LiveTvSeriesTimerInfo {
     this.timerType = timerType;
   }
 
+  public LiveTvSeriesTimerInfo name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Name of the recording.
+   * @return name
+  **/
+  @Schema(description = "Name of the recording.")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -634,7 +634,6 @@ public class LiveTvSeriesTimerInfo {
         Objects.equals(this.channelIds, liveTvSeriesTimerInfo.channelIds) &&
         Objects.equals(this.parentFolderId, liveTvSeriesTimerInfo.parentFolderId) &&
         Objects.equals(this.programId, liveTvSeriesTimerInfo.programId) &&
-        Objects.equals(this.name, liveTvSeriesTimerInfo.name) &&
         Objects.equals(this.serviceName, liveTvSeriesTimerInfo.serviceName) &&
         Objects.equals(this.overview, liveTvSeriesTimerInfo.overview) &&
         Objects.equals(this.startDate, liveTvSeriesTimerInfo.startDate) &&
@@ -655,12 +654,13 @@ public class LiveTvSeriesTimerInfo {
         Objects.equals(this.providerIds, liveTvSeriesTimerInfo.providerIds) &&
         Objects.equals(this.maxRecordingSeconds, liveTvSeriesTimerInfo.maxRecordingSeconds) &&
         Objects.equals(this.keywords, liveTvSeriesTimerInfo.keywords) &&
-        Objects.equals(this.timerType, liveTvSeriesTimerInfo.timerType);
+        Objects.equals(this.timerType, liveTvSeriesTimerInfo.timerType) &&
+        Objects.equals(this.name, liveTvSeriesTimerInfo.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, channelId, channelIds, parentFolderId, programId, name, serviceName, overview, startDate, endDate, recordAnyTime, keepUpTo, keepUntil, skipEpisodesInLibrary, matchExistingItemsWithAnyLibrary, recordNewOnly, days, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, isPostPaddingRequired, seriesId, providerIds, maxRecordingSeconds, keywords, timerType);
+    return Objects.hash(id, channelId, channelIds, parentFolderId, programId, serviceName, overview, startDate, endDate, recordAnyTime, keepUpTo, keepUntil, skipEpisodesInLibrary, matchExistingItemsWithAnyLibrary, recordNewOnly, days, priority, prePaddingSeconds, postPaddingSeconds, isPrePaddingRequired, isPostPaddingRequired, seriesId, providerIds, maxRecordingSeconds, keywords, timerType, name);
   }
 
 
@@ -674,7 +674,6 @@ public class LiveTvSeriesTimerInfo {
     sb.append("    channelIds: ").append(toIndentedString(channelIds)).append("\n");
     sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
     sb.append("    programId: ").append(toIndentedString(programId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    serviceName: ").append(toIndentedString(serviceName)).append("\n");
     sb.append("    overview: ").append(toIndentedString(overview)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
@@ -696,6 +695,7 @@ public class LiveTvSeriesTimerInfo {
     sb.append("    maxRecordingSeconds: ").append(toIndentedString(maxRecordingSeconds)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
     sb.append("    timerType: ").append(toIndentedString(timerType)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

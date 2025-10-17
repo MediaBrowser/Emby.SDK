@@ -16,7 +16,7 @@ import SystemEvent from './SystemEvent';
 /**
 * The TaskTriggerInfo model module.
 * @module model/TaskTriggerInfo
-* @version 4.9.2.4
+* @version 4.9.2.5
 */
 export default class TaskTriggerInfo {
     /**

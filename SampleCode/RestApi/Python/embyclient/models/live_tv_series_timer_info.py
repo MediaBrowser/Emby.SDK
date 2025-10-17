@@ -27,7 +27,6 @@ class LiveTvSeriesTimerInfo(object):
         'channel_ids': 'list[str]',
         'parent_folder_id': 'int',
         'program_id': 'str',
-        'name': 'str',
         'service_name': 'str',
         'overview': 'str',
         'start_date': 'datetime',
@@ -48,7 +47,8 @@ class LiveTvSeriesTimerInfo(object):
         'provider_ids': 'ProviderIdDictionary',
         'max_recording_seconds': 'int',
         'keywords': 'list[LiveTvKeywordInfo]',
-        'timer_type': 'LiveTvTimerType'
+        'timer_type': 'LiveTvTimerType',
+        'name': 'str'
     }
 
     attribute_map = {
@@ -57,7 +57,6 @@ class LiveTvSeriesTimerInfo(object):
         'channel_ids': 'ChannelIds',
         'parent_folder_id': 'ParentFolderId',
         'program_id': 'ProgramId',
-        'name': 'Name',
         'service_name': 'ServiceName',
         'overview': 'Overview',
         'start_date': 'StartDate',
@@ -78,17 +77,17 @@ class LiveTvSeriesTimerInfo(object):
         'provider_ids': 'ProviderIds',
         'max_recording_seconds': 'MaxRecordingSeconds',
         'keywords': 'Keywords',
-        'timer_type': 'TimerType'
+        'timer_type': 'TimerType',
+        'name': 'Name'
     }
 
-    def __init__(self, id=None, channel_id=None, channel_ids=None, parent_folder_id=None, program_id=None, name=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, match_existing_items_with_any_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None):  # noqa: E501
+    def __init__(self, id=None, channel_id=None, channel_ids=None, parent_folder_id=None, program_id=None, service_name=None, overview=None, start_date=None, end_date=None, record_any_time=None, keep_up_to=None, keep_until=None, skip_episodes_in_library=None, match_existing_items_with_any_library=None, record_new_only=None, days=None, priority=None, pre_padding_seconds=None, post_padding_seconds=None, is_pre_padding_required=None, is_post_padding_required=None, series_id=None, provider_ids=None, max_recording_seconds=None, keywords=None, timer_type=None, name=None):  # noqa: E501
         """LiveTvSeriesTimerInfo - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._channel_id = None
         self._channel_ids = None
         self._parent_folder_id = None
         self._program_id = None
-        self._name = None
         self._service_name = None
         self._overview = None
         self._start_date = None
@@ -110,6 +109,7 @@ class LiveTvSeriesTimerInfo(object):
         self._max_recording_seconds = None
         self._keywords = None
         self._timer_type = None
+        self._name = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -121,8 +121,6 @@ class LiveTvSeriesTimerInfo(object):
             self.parent_folder_id = parent_folder_id
         if program_id is not None:
             self.program_id = program_id
-        if name is not None:
-            self.name = name
         if service_name is not None:
             self.service_name = service_name
         if overview is not None:
@@ -165,6 +163,8 @@ class LiveTvSeriesTimerInfo(object):
             self.keywords = keywords
         if timer_type is not None:
             self.timer_type = timer_type
+        if name is not None:
+            self.name = name
 
     @property
     def id(self):
@@ -276,29 +276,6 @@ class LiveTvSeriesTimerInfo(object):
         """
 
         self._program_id = program_id
-
-    @property
-    def name(self):
-        """Gets the name of this LiveTvSeriesTimerInfo.  # noqa: E501
-
-        Name of the recording.  # noqa: E501
-
-        :return: The name of this LiveTvSeriesTimerInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this LiveTvSeriesTimerInfo.
-
-        Name of the recording.  # noqa: E501
-
-        :param name: The name of this LiveTvSeriesTimerInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
 
     @property
     def service_name(self):
@@ -764,6 +741,29 @@ class LiveTvSeriesTimerInfo(object):
         """
 
         self._timer_type = timer_type
+
+    @property
+    def name(self):
+        """Gets the name of this LiveTvSeriesTimerInfo.  # noqa: E501
+
+        Name of the recording.  # noqa: E501
+
+        :return: The name of this LiveTvSeriesTimerInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this LiveTvSeriesTimerInfo.
+
+        Name of the recording.  # noqa: E501
+
+        :param name: The name of this LiveTvSeriesTimerInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

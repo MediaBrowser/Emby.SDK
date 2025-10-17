@@ -13,17 +13,20 @@ public struct SessionPartyInfo: Codable {
 
     public var _id: String?
     public var name: String?
+    public var sessions: [SessionSessionInfo]?
     public var users: [EntitiesUser]?
 
-    public init(_id: String? = nil, name: String? = nil, users: [EntitiesUser]? = nil) {
+    public init(_id: String? = nil, name: String? = nil, sessions: [SessionSessionInfo]? = nil, users: [EntitiesUser]? = nil) {
         self._id = _id
         self.name = name
+        self.sessions = sessions
         self.users = users
     }
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "Id"
         case name = "Name"
+        case sessions = "Sessions"
         case users = "Users"
     }
 

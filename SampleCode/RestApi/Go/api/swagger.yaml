@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.2.4
+  version: 4.9.2.5
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -87358,9 +87358,1740 @@ components:
           $ref: '#/components/schemas/Session.PartyInfo'
       example:
         PartyInfo:
+          Sessions:
+          - PlaylistLength: 3
+            ApplicationVersion: ApplicationVersion
+            SupportedCommands:
+            - SupportedCommands
+            - SupportedCommands
+            DeviceId: DeviceId
+            PlaylistItemId: PlaylistItemId
+            PlaylistIndex: 9
+            ServerId: ServerId
+            RemoteEndPoint: RemoteEndPoint
+            InternalDeviceId: 2
+            SupportsRemoteControl: true
+            Protocol: Protocol
+            Client: Client
+            UserName: UserName
+            UserPrimaryImageTag: UserPrimaryImageTag
+            DeviceType: DeviceType
+            PlayableMediaTypes:
+            - PlayableMediaTypes
+            - PlayableMediaTypes
+            NowPlayingItem:
+              SeasonName: SeasonName
+              PremiereDate: 2000-01-23T04:56:07.000+00:00
+              Size: 6
+              CriticRating: 2.8841622
+              GameSystemId: 6
+              Studios:
+              - Id: 6
+                Name: Name
+              - Id: 6
+                Name: Name
+              CameraMake: CameraMake
+              Aperture: 9.132027271330688
+              ChannelPrimaryImageTag: ChannelPrimaryImageTag
+              ExtraType: ExtraType
+              ParentBackdropItemId: ParentBackdropItemId
+              Etag: Etag
+              TunerName: TunerName
+              ParentLogoImageTag: ParentLogoImageTag
+              ExposureTime: 4.678947989005849
+              MediaType: MediaType
+              ManagementId: ManagementId
+              Tags:
+              - Tags
+              - Tags
+              Status: Status
+              IndexNumberEnd: 0
+              ArtistItems:
+              - Id: Id
+                Name: Name
+              - Id: Id
+                Name: Name
+              MediaSources:
+              - EncoderPath: EncoderPath
+                RequiredHttpHeaders:
+                  key: RequiredHttpHeaders
+                RunTimeTicks: 9
+                HasMixedProtocols: true
+                MediaStreams:
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                Size: 7
+                Video3DFormat: null
+                BufferMs: 4
+                ContainerStartTimeTicks: 3
+                SortName: SortName
+                Timestamp: None
+                ItemId: ItemId
+                Name: Name
+                RequiresOpening: true
+                DirectStreamUrl: DirectStreamUrl
+                SupportsDirectStream: true
+                RequiresClosing: true
+                Container: Container
+                ServerId: ServerId
+                LiveStreamId: LiveStreamId
+                RequiresLooping: true
+                Protocol: File
+                AddApiKeyToDirectStreamUrl: true
+                DefaultSubtitleStreamIndex: 1
+                TrancodeLiveStartIndex: 2
+                IsInfiniteStream: true
+                Path: Path
+                IsRemote: true
+                EncoderProtocol: null
+                SupportsDirectPlay: true
+                TranscodingSubProtocol: TranscodingSubProtocol
+                Formats:
+                - Formats
+                - Formats
+                AnalyzeDurationMs: 3
+                WallClockStart: 2000-01-23T04:56:07.000+00:00
+                Bitrate: 6
+                OpenToken: OpenToken
+                ProbeProtocol: null
+                SupportsProbing: true
+                Type: Default
+                ReadAtNativeFramerate: true
+                TranscodingContainer: TranscodingContainer
+                ProbePath: ProbePath
+                TranscodingUrl: TranscodingUrl
+                Chapters:
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                Id: Id
+                SupportsTranscoding: true
+                DefaultAudioStreamIndex: 6
+              - EncoderPath: EncoderPath
+                RequiredHttpHeaders:
+                  key: RequiredHttpHeaders
+                RunTimeTicks: 9
+                HasMixedProtocols: true
+                MediaStreams:
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                Size: 7
+                Video3DFormat: null
+                BufferMs: 4
+                ContainerStartTimeTicks: 3
+                SortName: SortName
+                Timestamp: None
+                ItemId: ItemId
+                Name: Name
+                RequiresOpening: true
+                DirectStreamUrl: DirectStreamUrl
+                SupportsDirectStream: true
+                RequiresClosing: true
+                Container: Container
+                ServerId: ServerId
+                LiveStreamId: LiveStreamId
+                RequiresLooping: true
+                Protocol: File
+                AddApiKeyToDirectStreamUrl: true
+                DefaultSubtitleStreamIndex: 1
+                TrancodeLiveStartIndex: 2
+                IsInfiniteStream: true
+                Path: Path
+                IsRemote: true
+                EncoderProtocol: null
+                SupportsDirectPlay: true
+                TranscodingSubProtocol: TranscodingSubProtocol
+                Formats:
+                - Formats
+                - Formats
+                AnalyzeDurationMs: 3
+                WallClockStart: 2000-01-23T04:56:07.000+00:00
+                Bitrate: 6
+                OpenToken: OpenToken
+                ProbeProtocol: null
+                SupportsProbing: true
+                Type: Default
+                ReadAtNativeFramerate: true
+                TranscodingContainer: TranscodingContainer
+                ProbePath: ProbePath
+                TranscodingUrl: TranscodingUrl
+                Chapters:
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                Id: Id
+                SupportsTranscoding: true
+                DefaultAudioStreamIndex: 6
+              GenreItems:
+              - null
+              - null
+              OfficialRating: OfficialRating
+              Longitude: 0.5199002018724985
+              Composers:
+              - null
+              - null
+              AverageFrameRate: 0.8008282
+              LockData: true
+              FocalLength: 7.260521264802104
+              IsNews: true
+              ShutterSpeed: 0.8774076871421566
+              Id: Id
+              SortIndexNumber: 1
+              IsFolder: true
+              CanMakePublic: true
+              SeriesTimerId: SeriesTimerId
+              SeriesId: SeriesId
+              ListingsPath: ListingsPath
+              MediaStreams:
+              - null
+              - null
+              FileName: FileName
+              PrimaryImageTag: PrimaryImageTag
+              Prefix: Prefix
+              CanDownload: true
+              IsMovie: true
+              SeriesCount: 8
+              PrimaryImageItemId: PrimaryImageItemId
+              ListingsChannelId: ListingsChannelId
+              SeriesStudio: SeriesStudio
+              IsLive: true
+              Width: 4
+              ExternalUrls:
+              - Url: Url
+                Name: Name
+              - Url: Url
+                Name: Name
+              RecursiveItemCount: 7
+              Path: Path
+              ParentId: ParentId
+              TimerType: Program
+              GameSystem: GameSystem
+              MusicVideoCount: 0
+              IsSeries: true
+              ProductionLocations:
+              - ProductionLocations
+              - ProductionLocations
+              Subviews:
+              - Subviews
+              - Subviews
+              Bitrate: 3
+              SeasonCount: 3
+              EndDate: 2000-01-23T04:56:07.000+00:00
+              RealFrameRate: 6.0274563
+              SeriesPrimaryImageTag: SeriesPrimaryImageTag
+              ParentThumbItemId: ParentThumbItemId
+              PreferredMetadataLanguage: PreferredMetadataLanguage
+              CanLeaveContent: true
+              Type: Type
+              BackdropImageTags:
+              - BackdropImageTags
+              - BackdropImageTags
+              ParentBackdropImageTags:
+              - ParentBackdropImageTags
+              - ParentBackdropImageTags
+              ChildCount: 5
+              TagItems:
+              - null
+              - null
+              Artists:
+              - Artists
+              - Artists
+              ListingsChannelName: ListingsChannelName
+              RunTimeTicks: 5
+              AlbumPrimaryImageTag: AlbumPrimaryImageTag
+              Video3DFormat: HalfSideBySide
+              CanDelete: true
+              PlaylistItemId: PlaylistItemId
+              SortParentIndexNumber: 5
+              DisplayPreferencesId: DisplayPreferencesId
+              Album: Album
+              Latitude: 9.702963800023566
+              Guid: Guid
+              SortName: SortName
+              Name: Name
+              StartDate: 2000-01-23T04:56:07.000+00:00
+              Container: Container
+              ProductionYear: 3
+              SeriesName: SeriesName
+              AsSeries: true
+              AlbumId: AlbumId
+              SupportsSync: true
+              LocalTrailerCount: 0
+              IndexNumber: 7
+              CompletionPercentage: 4.86315908102884
+              Genres:
+              - Genres
+              - Genres
+              SeasonId: SeasonId
+              LockedFields:
+              - Cast
+              - Cast
+              Disabled: true
+              ProviderIds:
+                key: ProviderIds
+              AudioCodec: AudioCodec
+              RemoteTrailers:
+              - Url: Url
+                Name: Name
+              - Url: Url
+                Name: Name
+              PresentationUniqueKey: PresentationUniqueKey
+              CustomRating: CustomRating
+              ListingsChannelNumber: ListingsChannelNumber
+              SyncStatus: Queued
+              CanManageAccess: true
+              AirDays:
+              - Sunday
+              - Sunday
+              VideoCodec: VideoCodec
+              ParentLogoItemId: ParentLogoItemId
+              PartCount: 6
+              ListingsProviderId: ListingsProviderId
+              CanEditItems: true
+              ChannelName: ChannelName
+              EpisodeTitle: EpisodeTitle
+              IsoSpeedRating: 5
+              CommunityRating: 6.878052
+              Software: Software
+              Chapters:
+              - null
+              - null
+              SongCount: 3
+              Taglines:
+              - Taglines
+              - Taglines
+              PreferredMetadataCountryCode: PreferredMetadataCountryCode
+              CameraModel: CameraModel
+              ChannelNumber: ChannelNumber
+              UserData:
+                UnplayedItemCount: 7
+                Played: true
+                ServerId: ServerId
+                PlayedPercentage: 8.969578798196912
+                Rating: 4.652396432933246
+                PlayCount: 3
+                PlaybackPositionTicks: 3
+                LastPlayedDate: 2000-01-23T04:56:07.000+00:00
+                IsFavorite: true
+                ItemId: ItemId
+                Key: Key
+              TimerId: TimerId
+              DateCreated: 2000-01-23T04:56:07.000+00:00
+              ParentThumbImageTag: ParentThumbImageTag
+              IsSports: true
+              ChannelId: ChannelId
+              ParentIndexNumber: 7
+              IsNew: true
+              AffiliateCallSign: AffiliateCallSign
+              ListingsId: ListingsId
+              AlbumArtists:
+              - null
+              - null
+              ServerId: ServerId
+              Number: Number
+              AlbumCount: 4
+              IsRepeat: true
+              CollectionType: CollectionType
+              PrimaryImageAspectRatio: 0.2025324113236393
+              Height: 1
+              IsKids: true
+              DisplayOrder: DisplayOrder
+              MovieCount: 6
+              People:
+              - Role: Role
+                Type: Actor
+                PrimaryImageTag: PrimaryImageTag
+                Id: Id
+                Name: Name
+              - Role: Role
+                Type: Actor
+                PrimaryImageTag: PrimaryImageTag
+                Id: Id
+                Name: Name
+              Overview: Overview
+              SpecialFeatureCount: 4
+              ImageOrientation: TopLeft
+              AlbumArtist: AlbumArtist
+              ImageTags:
+                key: ImageTags
+              OriginalTitle: OriginalTitle
+              ForcedSortName: ForcedSortName
+              CurrentProgram: null
+              SupportsResume: true
+              LocationType: FileSystem
+              IsPremiere: true
+              DateModified: 2000-01-23T04:56:07.000+00:00
+              Altitude: 7.933506881737151
+            TranscodingInfo:
+              IsAudioDirect: true
+              ProcessStatistics:
+                Metrics:
+                - Time: Time
+                  WorkingSet: 6.778324963048013
+                  VirtualMemory: 2.8841621266687802
+                  CpuPercent: 1.284659006116532
+                - Time: Time
+                  WorkingSet: 6.778324963048013
+                  VirtualMemory: 2.8841621266687802
+                  CpuPercent: 1.284659006116532
+                AverageCpu: 6.438423552598547
+                CurrentCpu: 9.018348186070783
+                CurrentWorkingSet: 6.965117697638846
+                CurrentVirtualMemory: 3.5571952270680973
+              TranscodeReasons:
+              - ContainerNotSupported
+              - ContainerNotSupported
+              VideoEncoderHwAccel: VideoEncoderHwAccel
+              Framerate: 1.0246457
+              Container: Container
+              TranscodingStartPositionTicks: 7.457744773683766
+              IsVideoDirect: true
+              AverageCpuUsage: 9.369310271410669
+              VideoDecoderIsHardware: true
+              VideoDecoderMediaType: VideoDecoderMediaType
+              SubProtocol: SubProtocol
+              CompletionPercentage: 1.4894159098541704
+              Height: 4
+              VideoPipelineInfo:
+              - StepType: Decoder
+                FfmpegDescription: FfmpegDescription
+                Param: Param
+                ParamShort: ParamShort
+                StepTypeName: StepTypeName
+                IsHardwareContext: true
+                FfmpegOptions: FfmpegOptions
+                FfmpegName: FfmpegName
+                Short: Short
+                HardwareContextName: HardwareContextName
+                Name: Name
+              - StepType: Decoder
+                FfmpegDescription: FfmpegDescription
+                Param: Param
+                ParamShort: ParamShort
+                StepTypeName: StepTypeName
+                IsHardwareContext: true
+                FfmpegOptions: FfmpegOptions
+                FfmpegName: FfmpegName
+                Short: Short
+                HardwareContextName: HardwareContextName
+                Name: Name
+              VideoDecoder: VideoDecoder
+              Width: 1
+              AudioCodec: AudioCodec
+              VideoEncoderIsHardware: true
+              SubtitlePipelineInfos:
+              - - null
+                - null
+              - - null
+                - null
+              CpuHistory:
+              - Item1: 6.683562403749608
+                Item2: 8.762042012749001
+              - Item1: 6.683562403749608
+                Item2: 8.762042012749001
+              CurrentThrottle: 6
+              VideoCodec: VideoCodec
+              Bitrate: 4
+              VideoDecoderHwAccel: VideoDecoderHwAccel
+              TranscodingPositionTicks: 6.84685269835264
+              CurrentCpuUsage: 9.965781217890562
+              AudioBitrate: 7
+              AudioChannels: 5
+              VideoEncoderMediaType: VideoEncoderMediaType
+              VideoEncoder: VideoEncoder
+              VideoBitrate: 1
+            PartyId: PartyId
+            AppIconUrl: AppIconUrl
+            UserId: UserId
+            LastActivityDate: 2000-01-23T04:56:07.000+00:00
+            Id: Id
+            AdditionalUsers:
+            - UserName: UserName
+              UserId: UserId
+              UserInternalId: 7
+            - UserName: UserName
+              UserId: UserId
+              UserInternalId: 7
+            PlayState:
+              Shuffle: true
+              PositionTicks: 0
+              MediaSourceId: MediaSourceId
+              IsPaused: true
+              SubtitleStreamIndex: 5
+              SleepTimerMode: None
+              PlaybackRate: 2.3021358869347655
+              RepeatMode: RepeatNone
+              CanSeek: true
+              MediaSource:
+                EncoderPath: EncoderPath
+                RequiredHttpHeaders:
+                  key: RequiredHttpHeaders
+                RunTimeTicks: 9
+                HasMixedProtocols: true
+                MediaStreams:
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                Size: 7
+                Video3DFormat: null
+                BufferMs: 4
+                ContainerStartTimeTicks: 3
+                SortName: SortName
+                Timestamp: None
+                ItemId: ItemId
+                Name: Name
+                RequiresOpening: true
+                DirectStreamUrl: DirectStreamUrl
+                SupportsDirectStream: true
+                RequiresClosing: true
+                Container: Container
+                ServerId: ServerId
+                LiveStreamId: LiveStreamId
+                RequiresLooping: true
+                Protocol: File
+                AddApiKeyToDirectStreamUrl: true
+                DefaultSubtitleStreamIndex: 1
+                TrancodeLiveStartIndex: 2
+                IsInfiniteStream: true
+                Path: Path
+                IsRemote: true
+                EncoderProtocol: null
+                SupportsDirectPlay: true
+                TranscodingSubProtocol: TranscodingSubProtocol
+                Formats:
+                - Formats
+                - Formats
+                AnalyzeDurationMs: 3
+                WallClockStart: 2000-01-23T04:56:07.000+00:00
+                Bitrate: 6
+                OpenToken: OpenToken
+                ProbeProtocol: null
+                SupportsProbing: true
+                Type: Default
+                ReadAtNativeFramerate: true
+                TranscodingContainer: TranscodingContainer
+                ProbePath: ProbePath
+                TranscodingUrl: TranscodingUrl
+                Chapters:
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                Id: Id
+                SupportsTranscoding: true
+                DefaultAudioStreamIndex: 6
+              PlayMethod: Transcode
+              SleepTimerEndTime: 2000-01-23T04:56:07.000+00:00
+              SubtitleOffset: 5
+              AudioStreamIndex: 1
+              IsMuted: true
+              VolumeLevel: 6
+            DeviceName: DeviceName
+          - PlaylistLength: 3
+            ApplicationVersion: ApplicationVersion
+            SupportedCommands:
+            - SupportedCommands
+            - SupportedCommands
+            DeviceId: DeviceId
+            PlaylistItemId: PlaylistItemId
+            PlaylistIndex: 9
+            ServerId: ServerId
+            RemoteEndPoint: RemoteEndPoint
+            InternalDeviceId: 2
+            SupportsRemoteControl: true
+            Protocol: Protocol
+            Client: Client
+            UserName: UserName
+            UserPrimaryImageTag: UserPrimaryImageTag
+            DeviceType: DeviceType
+            PlayableMediaTypes:
+            - PlayableMediaTypes
+            - PlayableMediaTypes
+            NowPlayingItem:
+              SeasonName: SeasonName
+              PremiereDate: 2000-01-23T04:56:07.000+00:00
+              Size: 6
+              CriticRating: 2.8841622
+              GameSystemId: 6
+              Studios:
+              - Id: 6
+                Name: Name
+              - Id: 6
+                Name: Name
+              CameraMake: CameraMake
+              Aperture: 9.132027271330688
+              ChannelPrimaryImageTag: ChannelPrimaryImageTag
+              ExtraType: ExtraType
+              ParentBackdropItemId: ParentBackdropItemId
+              Etag: Etag
+              TunerName: TunerName
+              ParentLogoImageTag: ParentLogoImageTag
+              ExposureTime: 4.678947989005849
+              MediaType: MediaType
+              ManagementId: ManagementId
+              Tags:
+              - Tags
+              - Tags
+              Status: Status
+              IndexNumberEnd: 0
+              ArtistItems:
+              - Id: Id
+                Name: Name
+              - Id: Id
+                Name: Name
+              MediaSources:
+              - EncoderPath: EncoderPath
+                RequiredHttpHeaders:
+                  key: RequiredHttpHeaders
+                RunTimeTicks: 9
+                HasMixedProtocols: true
+                MediaStreams:
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                Size: 7
+                Video3DFormat: null
+                BufferMs: 4
+                ContainerStartTimeTicks: 3
+                SortName: SortName
+                Timestamp: None
+                ItemId: ItemId
+                Name: Name
+                RequiresOpening: true
+                DirectStreamUrl: DirectStreamUrl
+                SupportsDirectStream: true
+                RequiresClosing: true
+                Container: Container
+                ServerId: ServerId
+                LiveStreamId: LiveStreamId
+                RequiresLooping: true
+                Protocol: File
+                AddApiKeyToDirectStreamUrl: true
+                DefaultSubtitleStreamIndex: 1
+                TrancodeLiveStartIndex: 2
+                IsInfiniteStream: true
+                Path: Path
+                IsRemote: true
+                EncoderProtocol: null
+                SupportsDirectPlay: true
+                TranscodingSubProtocol: TranscodingSubProtocol
+                Formats:
+                - Formats
+                - Formats
+                AnalyzeDurationMs: 3
+                WallClockStart: 2000-01-23T04:56:07.000+00:00
+                Bitrate: 6
+                OpenToken: OpenToken
+                ProbeProtocol: null
+                SupportsProbing: true
+                Type: Default
+                ReadAtNativeFramerate: true
+                TranscodingContainer: TranscodingContainer
+                ProbePath: ProbePath
+                TranscodingUrl: TranscodingUrl
+                Chapters:
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                Id: Id
+                SupportsTranscoding: true
+                DefaultAudioStreamIndex: 6
+              - EncoderPath: EncoderPath
+                RequiredHttpHeaders:
+                  key: RequiredHttpHeaders
+                RunTimeTicks: 9
+                HasMixedProtocols: true
+                MediaStreams:
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                Size: 7
+                Video3DFormat: null
+                BufferMs: 4
+                ContainerStartTimeTicks: 3
+                SortName: SortName
+                Timestamp: None
+                ItemId: ItemId
+                Name: Name
+                RequiresOpening: true
+                DirectStreamUrl: DirectStreamUrl
+                SupportsDirectStream: true
+                RequiresClosing: true
+                Container: Container
+                ServerId: ServerId
+                LiveStreamId: LiveStreamId
+                RequiresLooping: true
+                Protocol: File
+                AddApiKeyToDirectStreamUrl: true
+                DefaultSubtitleStreamIndex: 1
+                TrancodeLiveStartIndex: 2
+                IsInfiniteStream: true
+                Path: Path
+                IsRemote: true
+                EncoderProtocol: null
+                SupportsDirectPlay: true
+                TranscodingSubProtocol: TranscodingSubProtocol
+                Formats:
+                - Formats
+                - Formats
+                AnalyzeDurationMs: 3
+                WallClockStart: 2000-01-23T04:56:07.000+00:00
+                Bitrate: 6
+                OpenToken: OpenToken
+                ProbeProtocol: null
+                SupportsProbing: true
+                Type: Default
+                ReadAtNativeFramerate: true
+                TranscodingContainer: TranscodingContainer
+                ProbePath: ProbePath
+                TranscodingUrl: TranscodingUrl
+                Chapters:
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                Id: Id
+                SupportsTranscoding: true
+                DefaultAudioStreamIndex: 6
+              GenreItems:
+              - null
+              - null
+              OfficialRating: OfficialRating
+              Longitude: 0.5199002018724985
+              Composers:
+              - null
+              - null
+              AverageFrameRate: 0.8008282
+              LockData: true
+              FocalLength: 7.260521264802104
+              IsNews: true
+              ShutterSpeed: 0.8774076871421566
+              Id: Id
+              SortIndexNumber: 1
+              IsFolder: true
+              CanMakePublic: true
+              SeriesTimerId: SeriesTimerId
+              SeriesId: SeriesId
+              ListingsPath: ListingsPath
+              MediaStreams:
+              - null
+              - null
+              FileName: FileName
+              PrimaryImageTag: PrimaryImageTag
+              Prefix: Prefix
+              CanDownload: true
+              IsMovie: true
+              SeriesCount: 8
+              PrimaryImageItemId: PrimaryImageItemId
+              ListingsChannelId: ListingsChannelId
+              SeriesStudio: SeriesStudio
+              IsLive: true
+              Width: 4
+              ExternalUrls:
+              - Url: Url
+                Name: Name
+              - Url: Url
+                Name: Name
+              RecursiveItemCount: 7
+              Path: Path
+              ParentId: ParentId
+              TimerType: Program
+              GameSystem: GameSystem
+              MusicVideoCount: 0
+              IsSeries: true
+              ProductionLocations:
+              - ProductionLocations
+              - ProductionLocations
+              Subviews:
+              - Subviews
+              - Subviews
+              Bitrate: 3
+              SeasonCount: 3
+              EndDate: 2000-01-23T04:56:07.000+00:00
+              RealFrameRate: 6.0274563
+              SeriesPrimaryImageTag: SeriesPrimaryImageTag
+              ParentThumbItemId: ParentThumbItemId
+              PreferredMetadataLanguage: PreferredMetadataLanguage
+              CanLeaveContent: true
+              Type: Type
+              BackdropImageTags:
+              - BackdropImageTags
+              - BackdropImageTags
+              ParentBackdropImageTags:
+              - ParentBackdropImageTags
+              - ParentBackdropImageTags
+              ChildCount: 5
+              TagItems:
+              - null
+              - null
+              Artists:
+              - Artists
+              - Artists
+              ListingsChannelName: ListingsChannelName
+              RunTimeTicks: 5
+              AlbumPrimaryImageTag: AlbumPrimaryImageTag
+              Video3DFormat: HalfSideBySide
+              CanDelete: true
+              PlaylistItemId: PlaylistItemId
+              SortParentIndexNumber: 5
+              DisplayPreferencesId: DisplayPreferencesId
+              Album: Album
+              Latitude: 9.702963800023566
+              Guid: Guid
+              SortName: SortName
+              Name: Name
+              StartDate: 2000-01-23T04:56:07.000+00:00
+              Container: Container
+              ProductionYear: 3
+              SeriesName: SeriesName
+              AsSeries: true
+              AlbumId: AlbumId
+              SupportsSync: true
+              LocalTrailerCount: 0
+              IndexNumber: 7
+              CompletionPercentage: 4.86315908102884
+              Genres:
+              - Genres
+              - Genres
+              SeasonId: SeasonId
+              LockedFields:
+              - Cast
+              - Cast
+              Disabled: true
+              ProviderIds:
+                key: ProviderIds
+              AudioCodec: AudioCodec
+              RemoteTrailers:
+              - Url: Url
+                Name: Name
+              - Url: Url
+                Name: Name
+              PresentationUniqueKey: PresentationUniqueKey
+              CustomRating: CustomRating
+              ListingsChannelNumber: ListingsChannelNumber
+              SyncStatus: Queued
+              CanManageAccess: true
+              AirDays:
+              - Sunday
+              - Sunday
+              VideoCodec: VideoCodec
+              ParentLogoItemId: ParentLogoItemId
+              PartCount: 6
+              ListingsProviderId: ListingsProviderId
+              CanEditItems: true
+              ChannelName: ChannelName
+              EpisodeTitle: EpisodeTitle
+              IsoSpeedRating: 5
+              CommunityRating: 6.878052
+              Software: Software
+              Chapters:
+              - null
+              - null
+              SongCount: 3
+              Taglines:
+              - Taglines
+              - Taglines
+              PreferredMetadataCountryCode: PreferredMetadataCountryCode
+              CameraModel: CameraModel
+              ChannelNumber: ChannelNumber
+              UserData:
+                UnplayedItemCount: 7
+                Played: true
+                ServerId: ServerId
+                PlayedPercentage: 8.969578798196912
+                Rating: 4.652396432933246
+                PlayCount: 3
+                PlaybackPositionTicks: 3
+                LastPlayedDate: 2000-01-23T04:56:07.000+00:00
+                IsFavorite: true
+                ItemId: ItemId
+                Key: Key
+              TimerId: TimerId
+              DateCreated: 2000-01-23T04:56:07.000+00:00
+              ParentThumbImageTag: ParentThumbImageTag
+              IsSports: true
+              ChannelId: ChannelId
+              ParentIndexNumber: 7
+              IsNew: true
+              AffiliateCallSign: AffiliateCallSign
+              ListingsId: ListingsId
+              AlbumArtists:
+              - null
+              - null
+              ServerId: ServerId
+              Number: Number
+              AlbumCount: 4
+              IsRepeat: true
+              CollectionType: CollectionType
+              PrimaryImageAspectRatio: 0.2025324113236393
+              Height: 1
+              IsKids: true
+              DisplayOrder: DisplayOrder
+              MovieCount: 6
+              People:
+              - Role: Role
+                Type: Actor
+                PrimaryImageTag: PrimaryImageTag
+                Id: Id
+                Name: Name
+              - Role: Role
+                Type: Actor
+                PrimaryImageTag: PrimaryImageTag
+                Id: Id
+                Name: Name
+              Overview: Overview
+              SpecialFeatureCount: 4
+              ImageOrientation: TopLeft
+              AlbumArtist: AlbumArtist
+              ImageTags:
+                key: ImageTags
+              OriginalTitle: OriginalTitle
+              ForcedSortName: ForcedSortName
+              CurrentProgram: null
+              SupportsResume: true
+              LocationType: FileSystem
+              IsPremiere: true
+              DateModified: 2000-01-23T04:56:07.000+00:00
+              Altitude: 7.933506881737151
+            TranscodingInfo:
+              IsAudioDirect: true
+              ProcessStatistics:
+                Metrics:
+                - Time: Time
+                  WorkingSet: 6.778324963048013
+                  VirtualMemory: 2.8841621266687802
+                  CpuPercent: 1.284659006116532
+                - Time: Time
+                  WorkingSet: 6.778324963048013
+                  VirtualMemory: 2.8841621266687802
+                  CpuPercent: 1.284659006116532
+                AverageCpu: 6.438423552598547
+                CurrentCpu: 9.018348186070783
+                CurrentWorkingSet: 6.965117697638846
+                CurrentVirtualMemory: 3.5571952270680973
+              TranscodeReasons:
+              - ContainerNotSupported
+              - ContainerNotSupported
+              VideoEncoderHwAccel: VideoEncoderHwAccel
+              Framerate: 1.0246457
+              Container: Container
+              TranscodingStartPositionTicks: 7.457744773683766
+              IsVideoDirect: true
+              AverageCpuUsage: 9.369310271410669
+              VideoDecoderIsHardware: true
+              VideoDecoderMediaType: VideoDecoderMediaType
+              SubProtocol: SubProtocol
+              CompletionPercentage: 1.4894159098541704
+              Height: 4
+              VideoPipelineInfo:
+              - StepType: Decoder
+                FfmpegDescription: FfmpegDescription
+                Param: Param
+                ParamShort: ParamShort
+                StepTypeName: StepTypeName
+                IsHardwareContext: true
+                FfmpegOptions: FfmpegOptions
+                FfmpegName: FfmpegName
+                Short: Short
+                HardwareContextName: HardwareContextName
+                Name: Name
+              - StepType: Decoder
+                FfmpegDescription: FfmpegDescription
+                Param: Param
+                ParamShort: ParamShort
+                StepTypeName: StepTypeName
+                IsHardwareContext: true
+                FfmpegOptions: FfmpegOptions
+                FfmpegName: FfmpegName
+                Short: Short
+                HardwareContextName: HardwareContextName
+                Name: Name
+              VideoDecoder: VideoDecoder
+              Width: 1
+              AudioCodec: AudioCodec
+              VideoEncoderIsHardware: true
+              SubtitlePipelineInfos:
+              - - null
+                - null
+              - - null
+                - null
+              CpuHistory:
+              - Item1: 6.683562403749608
+                Item2: 8.762042012749001
+              - Item1: 6.683562403749608
+                Item2: 8.762042012749001
+              CurrentThrottle: 6
+              VideoCodec: VideoCodec
+              Bitrate: 4
+              VideoDecoderHwAccel: VideoDecoderHwAccel
+              TranscodingPositionTicks: 6.84685269835264
+              CurrentCpuUsage: 9.965781217890562
+              AudioBitrate: 7
+              AudioChannels: 5
+              VideoEncoderMediaType: VideoEncoderMediaType
+              VideoEncoder: VideoEncoder
+              VideoBitrate: 1
+            PartyId: PartyId
+            AppIconUrl: AppIconUrl
+            UserId: UserId
+            LastActivityDate: 2000-01-23T04:56:07.000+00:00
+            Id: Id
+            AdditionalUsers:
+            - UserName: UserName
+              UserId: UserId
+              UserInternalId: 7
+            - UserName: UserName
+              UserId: UserId
+              UserInternalId: 7
+            PlayState:
+              Shuffle: true
+              PositionTicks: 0
+              MediaSourceId: MediaSourceId
+              IsPaused: true
+              SubtitleStreamIndex: 5
+              SleepTimerMode: None
+              PlaybackRate: 2.3021358869347655
+              RepeatMode: RepeatNone
+              CanSeek: true
+              MediaSource:
+                EncoderPath: EncoderPath
+                RequiredHttpHeaders:
+                  key: RequiredHttpHeaders
+                RunTimeTicks: 9
+                HasMixedProtocols: true
+                MediaStreams:
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                - VideoRange: VideoRange
+                  ColorSpace: ColorSpace
+                  Index: 6
+                  BitDepth: 1
+                  ItemId: ItemId
+                  SupportsExternalStream: true
+                  Codec: Codec
+                  SampleRate: 1
+                  IsAnamorphic: true
+                  PixelFormat: PixelFormat
+                  AttachmentSize: 9
+                  SubtitleLocationType: InternalStream
+                  RefFrames: 1
+                  IsAVC: true
+                  ColorTransfer: ColorTransfer
+                  ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                  IsExternalUrl: true
+                  DisplayTitle: DisplayTitle
+                  IsForced: true
+                  ChannelLayout: ChannelLayout
+                  DisplayLanguage: DisplayLanguage
+                  AverageFrameRate: 9.965781
+                  StreamStartTimeTicks: 7
+                  IsExternal: true
+                  Level: 8.762042012749001
+                  ExtendedVideoSubType: None
+                  Channels: 7
+                  Profile: Profile
+                  MimeType: MimeType
+                  DeliveryUrl: DeliveryUrl
+                  ColorPrimaries: ColorPrimaries
+                  ServerId: ServerId
+                  Language: Language
+                  IsTextSubtitleStream: true
+                  NalLengthSize: NalLengthSize
+                  Height: 4
+                  Protocol: null
+                  Width: 5
+                  TimeBase: TimeBase
+                  CodecTag: CodecTag
+                  IsDefault: true
+                  Path: Path
+                  Comment: Comment
+                  DeliveryMethod: Encode
+                  Title: Title
+                  ExtendedVideoType: None
+                  Rotation: 6
+                  RealFrameRate: 9.36931
+                  IsHearingImpaired: true
+                  AspectRatio: AspectRatio
+                  Type: Unknown
+                  IsInterlaced: true
+                  Extradata: Extradata
+                  BitRate: 1
+                Size: 7
+                Video3DFormat: null
+                BufferMs: 4
+                ContainerStartTimeTicks: 3
+                SortName: SortName
+                Timestamp: None
+                ItemId: ItemId
+                Name: Name
+                RequiresOpening: true
+                DirectStreamUrl: DirectStreamUrl
+                SupportsDirectStream: true
+                RequiresClosing: true
+                Container: Container
+                ServerId: ServerId
+                LiveStreamId: LiveStreamId
+                RequiresLooping: true
+                Protocol: File
+                AddApiKeyToDirectStreamUrl: true
+                DefaultSubtitleStreamIndex: 1
+                TrancodeLiveStartIndex: 2
+                IsInfiniteStream: true
+                Path: Path
+                IsRemote: true
+                EncoderProtocol: null
+                SupportsDirectPlay: true
+                TranscodingSubProtocol: TranscodingSubProtocol
+                Formats:
+                - Formats
+                - Formats
+                AnalyzeDurationMs: 3
+                WallClockStart: 2000-01-23T04:56:07.000+00:00
+                Bitrate: 6
+                OpenToken: OpenToken
+                ProbeProtocol: null
+                SupportsProbing: true
+                Type: Default
+                ReadAtNativeFramerate: true
+                TranscodingContainer: TranscodingContainer
+                ProbePath: ProbePath
+                TranscodingUrl: TranscodingUrl
+                Chapters:
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                - StartPositionTicks: 5
+                  ImageTag: ImageTag
+                  MarkerType: Chapter
+                  ChapterIndex: 2
+                  Name: Name
+                Id: Id
+                SupportsTranscoding: true
+                DefaultAudioStreamIndex: 6
+              PlayMethod: Transcode
+              SleepTimerEndTime: 2000-01-23T04:56:07.000+00:00
+              SubtitleOffset: 5
+              AudioStreamIndex: 1
+              IsMuted: true
+              VolumeLevel: 6
+            DeviceName: DeviceName
           Id: Id
           Users:
-          - PlayedPercentage: 1.4658129805029452
+          - PlayedPercentage: 3.353193347011243
             RecursiveChildCountEqualsChildCount: true
             OriginalParsedName: OriginalParsedName
             ConnectAccessKey: ConnectAccessKey
@@ -87368,11 +89099,11 @@ components:
             IsNameParsedFromFolder: true
             DateCreated: 2000-01-23T04:56:07.000+00:00
             ImportedCollections:
-            - Id: 5
+            - Id: 3
               ProviderIds:
                 key: ProviderIds
               Name: Name
-            - Id: 5
+            - Id: 3
               ProviderIds:
                 key: ProviderIds
               Name: Name
@@ -87384,13 +89115,13 @@ components:
               Type: Primary
               Height: 6
               Orientation: TopLeft
-              Width: 0
+              Width: 5
               DateModified: 2000-01-23T04:56:07.000+00:00
             - Path: Path
               Type: Primary
               Height: 6
               Orientation: TopLeft
-              Width: 0
+              Width: 5
               DateModified: 2000-01-23T04:56:07.000+00:00
             UsesIdForConfigurationPath: true
             Salt: Salt
@@ -87399,7 +89130,7 @@ components:
             ConnectLinkType: LinkedUser
             EasyPassword: EasyPassword
             Password: Password
-          - PlayedPercentage: 1.4658129805029452
+          - PlayedPercentage: 3.353193347011243
             RecursiveChildCountEqualsChildCount: true
             OriginalParsedName: OriginalParsedName
             ConnectAccessKey: ConnectAccessKey
@@ -87407,11 +89138,11 @@ components:
             IsNameParsedFromFolder: true
             DateCreated: 2000-01-23T04:56:07.000+00:00
             ImportedCollections:
-            - Id: 5
+            - Id: 3
               ProviderIds:
                 key: ProviderIds
               Name: Name
-            - Id: 5
+            - Id: 3
               ProviderIds:
                 key: ProviderIds
               Name: Name
@@ -87423,13 +89154,13 @@ components:
               Type: Primary
               Height: 6
               Orientation: TopLeft
-              Width: 0
+              Width: 5
               DateModified: 2000-01-23T04:56:07.000+00:00
             - Path: Path
               Type: Primary
               Height: 6
               Orientation: TopLeft
-              Width: 0
+              Width: 5
               DateModified: 2000-01-23T04:56:07.000+00:00
             UsesIdForConfigurationPath: true
             Salt: Salt
@@ -87447,14 +89178,1749 @@ components:
           type: string
         Name:
           type: string
+        Sessions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Session.SessionInfo'
         Users:
           type: array
           items:
             $ref: '#/components/schemas/Entities.User'
       example:
+        Sessions:
+        - PlaylistLength: 3
+          ApplicationVersion: ApplicationVersion
+          SupportedCommands:
+          - SupportedCommands
+          - SupportedCommands
+          DeviceId: DeviceId
+          PlaylistItemId: PlaylistItemId
+          PlaylistIndex: 9
+          ServerId: ServerId
+          RemoteEndPoint: RemoteEndPoint
+          InternalDeviceId: 2
+          SupportsRemoteControl: true
+          Protocol: Protocol
+          Client: Client
+          UserName: UserName
+          UserPrimaryImageTag: UserPrimaryImageTag
+          DeviceType: DeviceType
+          PlayableMediaTypes:
+          - PlayableMediaTypes
+          - PlayableMediaTypes
+          NowPlayingItem:
+            SeasonName: SeasonName
+            PremiereDate: 2000-01-23T04:56:07.000+00:00
+            Size: 6
+            CriticRating: 2.8841622
+            GameSystemId: 6
+            Studios:
+            - Id: 6
+              Name: Name
+            - Id: 6
+              Name: Name
+            CameraMake: CameraMake
+            Aperture: 9.132027271330688
+            ChannelPrimaryImageTag: ChannelPrimaryImageTag
+            ExtraType: ExtraType
+            ParentBackdropItemId: ParentBackdropItemId
+            Etag: Etag
+            TunerName: TunerName
+            ParentLogoImageTag: ParentLogoImageTag
+            ExposureTime: 4.678947989005849
+            MediaType: MediaType
+            ManagementId: ManagementId
+            Tags:
+            - Tags
+            - Tags
+            Status: Status
+            IndexNumberEnd: 0
+            ArtistItems:
+            - Id: Id
+              Name: Name
+            - Id: Id
+              Name: Name
+            MediaSources:
+            - EncoderPath: EncoderPath
+              RequiredHttpHeaders:
+                key: RequiredHttpHeaders
+              RunTimeTicks: 9
+              HasMixedProtocols: true
+              MediaStreams:
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              Size: 7
+              Video3DFormat: null
+              BufferMs: 4
+              ContainerStartTimeTicks: 3
+              SortName: SortName
+              Timestamp: None
+              ItemId: ItemId
+              Name: Name
+              RequiresOpening: true
+              DirectStreamUrl: DirectStreamUrl
+              SupportsDirectStream: true
+              RequiresClosing: true
+              Container: Container
+              ServerId: ServerId
+              LiveStreamId: LiveStreamId
+              RequiresLooping: true
+              Protocol: File
+              AddApiKeyToDirectStreamUrl: true
+              DefaultSubtitleStreamIndex: 1
+              TrancodeLiveStartIndex: 2
+              IsInfiniteStream: true
+              Path: Path
+              IsRemote: true
+              EncoderProtocol: null
+              SupportsDirectPlay: true
+              TranscodingSubProtocol: TranscodingSubProtocol
+              Formats:
+              - Formats
+              - Formats
+              AnalyzeDurationMs: 3
+              WallClockStart: 2000-01-23T04:56:07.000+00:00
+              Bitrate: 6
+              OpenToken: OpenToken
+              ProbeProtocol: null
+              SupportsProbing: true
+              Type: Default
+              ReadAtNativeFramerate: true
+              TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
+              TranscodingUrl: TranscodingUrl
+              Chapters:
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              Id: Id
+              SupportsTranscoding: true
+              DefaultAudioStreamIndex: 6
+            - EncoderPath: EncoderPath
+              RequiredHttpHeaders:
+                key: RequiredHttpHeaders
+              RunTimeTicks: 9
+              HasMixedProtocols: true
+              MediaStreams:
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              Size: 7
+              Video3DFormat: null
+              BufferMs: 4
+              ContainerStartTimeTicks: 3
+              SortName: SortName
+              Timestamp: None
+              ItemId: ItemId
+              Name: Name
+              RequiresOpening: true
+              DirectStreamUrl: DirectStreamUrl
+              SupportsDirectStream: true
+              RequiresClosing: true
+              Container: Container
+              ServerId: ServerId
+              LiveStreamId: LiveStreamId
+              RequiresLooping: true
+              Protocol: File
+              AddApiKeyToDirectStreamUrl: true
+              DefaultSubtitleStreamIndex: 1
+              TrancodeLiveStartIndex: 2
+              IsInfiniteStream: true
+              Path: Path
+              IsRemote: true
+              EncoderProtocol: null
+              SupportsDirectPlay: true
+              TranscodingSubProtocol: TranscodingSubProtocol
+              Formats:
+              - Formats
+              - Formats
+              AnalyzeDurationMs: 3
+              WallClockStart: 2000-01-23T04:56:07.000+00:00
+              Bitrate: 6
+              OpenToken: OpenToken
+              ProbeProtocol: null
+              SupportsProbing: true
+              Type: Default
+              ReadAtNativeFramerate: true
+              TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
+              TranscodingUrl: TranscodingUrl
+              Chapters:
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              Id: Id
+              SupportsTranscoding: true
+              DefaultAudioStreamIndex: 6
+            GenreItems:
+            - null
+            - null
+            OfficialRating: OfficialRating
+            Longitude: 0.5199002018724985
+            Composers:
+            - null
+            - null
+            AverageFrameRate: 0.8008282
+            LockData: true
+            FocalLength: 7.260521264802104
+            IsNews: true
+            ShutterSpeed: 0.8774076871421566
+            Id: Id
+            SortIndexNumber: 1
+            IsFolder: true
+            CanMakePublic: true
+            SeriesTimerId: SeriesTimerId
+            SeriesId: SeriesId
+            ListingsPath: ListingsPath
+            MediaStreams:
+            - null
+            - null
+            FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
+            Prefix: Prefix
+            CanDownload: true
+            IsMovie: true
+            SeriesCount: 8
+            PrimaryImageItemId: PrimaryImageItemId
+            ListingsChannelId: ListingsChannelId
+            SeriesStudio: SeriesStudio
+            IsLive: true
+            Width: 4
+            ExternalUrls:
+            - Url: Url
+              Name: Name
+            - Url: Url
+              Name: Name
+            RecursiveItemCount: 7
+            Path: Path
+            ParentId: ParentId
+            TimerType: Program
+            GameSystem: GameSystem
+            MusicVideoCount: 0
+            IsSeries: true
+            ProductionLocations:
+            - ProductionLocations
+            - ProductionLocations
+            Subviews:
+            - Subviews
+            - Subviews
+            Bitrate: 3
+            SeasonCount: 3
+            EndDate: 2000-01-23T04:56:07.000+00:00
+            RealFrameRate: 6.0274563
+            SeriesPrimaryImageTag: SeriesPrimaryImageTag
+            ParentThumbItemId: ParentThumbItemId
+            PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
+            Type: Type
+            BackdropImageTags:
+            - BackdropImageTags
+            - BackdropImageTags
+            ParentBackdropImageTags:
+            - ParentBackdropImageTags
+            - ParentBackdropImageTags
+            ChildCount: 5
+            TagItems:
+            - null
+            - null
+            Artists:
+            - Artists
+            - Artists
+            ListingsChannelName: ListingsChannelName
+            RunTimeTicks: 5
+            AlbumPrimaryImageTag: AlbumPrimaryImageTag
+            Video3DFormat: HalfSideBySide
+            CanDelete: true
+            PlaylistItemId: PlaylistItemId
+            SortParentIndexNumber: 5
+            DisplayPreferencesId: DisplayPreferencesId
+            Album: Album
+            Latitude: 9.702963800023566
+            Guid: Guid
+            SortName: SortName
+            Name: Name
+            StartDate: 2000-01-23T04:56:07.000+00:00
+            Container: Container
+            ProductionYear: 3
+            SeriesName: SeriesName
+            AsSeries: true
+            AlbumId: AlbumId
+            SupportsSync: true
+            LocalTrailerCount: 0
+            IndexNumber: 7
+            CompletionPercentage: 4.86315908102884
+            Genres:
+            - Genres
+            - Genres
+            SeasonId: SeasonId
+            LockedFields:
+            - Cast
+            - Cast
+            Disabled: true
+            ProviderIds:
+              key: ProviderIds
+            AudioCodec: AudioCodec
+            RemoteTrailers:
+            - Url: Url
+              Name: Name
+            - Url: Url
+              Name: Name
+            PresentationUniqueKey: PresentationUniqueKey
+            CustomRating: CustomRating
+            ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
+            CanManageAccess: true
+            AirDays:
+            - Sunday
+            - Sunday
+            VideoCodec: VideoCodec
+            ParentLogoItemId: ParentLogoItemId
+            PartCount: 6
+            ListingsProviderId: ListingsProviderId
+            CanEditItems: true
+            ChannelName: ChannelName
+            EpisodeTitle: EpisodeTitle
+            IsoSpeedRating: 5
+            CommunityRating: 6.878052
+            Software: Software
+            Chapters:
+            - null
+            - null
+            SongCount: 3
+            Taglines:
+            - Taglines
+            - Taglines
+            PreferredMetadataCountryCode: PreferredMetadataCountryCode
+            CameraModel: CameraModel
+            ChannelNumber: ChannelNumber
+            UserData:
+              UnplayedItemCount: 7
+              Played: true
+              ServerId: ServerId
+              PlayedPercentage: 8.969578798196912
+              Rating: 4.652396432933246
+              PlayCount: 3
+              PlaybackPositionTicks: 3
+              LastPlayedDate: 2000-01-23T04:56:07.000+00:00
+              IsFavorite: true
+              ItemId: ItemId
+              Key: Key
+            TimerId: TimerId
+            DateCreated: 2000-01-23T04:56:07.000+00:00
+            ParentThumbImageTag: ParentThumbImageTag
+            IsSports: true
+            ChannelId: ChannelId
+            ParentIndexNumber: 7
+            IsNew: true
+            AffiliateCallSign: AffiliateCallSign
+            ListingsId: ListingsId
+            AlbumArtists:
+            - null
+            - null
+            ServerId: ServerId
+            Number: Number
+            AlbumCount: 4
+            IsRepeat: true
+            CollectionType: CollectionType
+            PrimaryImageAspectRatio: 0.2025324113236393
+            Height: 1
+            IsKids: true
+            DisplayOrder: DisplayOrder
+            MovieCount: 6
+            People:
+            - Role: Role
+              Type: Actor
+              PrimaryImageTag: PrimaryImageTag
+              Id: Id
+              Name: Name
+            - Role: Role
+              Type: Actor
+              PrimaryImageTag: PrimaryImageTag
+              Id: Id
+              Name: Name
+            Overview: Overview
+            SpecialFeatureCount: 4
+            ImageOrientation: TopLeft
+            AlbumArtist: AlbumArtist
+            ImageTags:
+              key: ImageTags
+            OriginalTitle: OriginalTitle
+            ForcedSortName: ForcedSortName
+            CurrentProgram: null
+            SupportsResume: true
+            LocationType: FileSystem
+            IsPremiere: true
+            DateModified: 2000-01-23T04:56:07.000+00:00
+            Altitude: 7.933506881737151
+          TranscodingInfo:
+            IsAudioDirect: true
+            ProcessStatistics:
+              Metrics:
+              - Time: Time
+                WorkingSet: 6.778324963048013
+                VirtualMemory: 2.8841621266687802
+                CpuPercent: 1.284659006116532
+              - Time: Time
+                WorkingSet: 6.778324963048013
+                VirtualMemory: 2.8841621266687802
+                CpuPercent: 1.284659006116532
+              AverageCpu: 6.438423552598547
+              CurrentCpu: 9.018348186070783
+              CurrentWorkingSet: 6.965117697638846
+              CurrentVirtualMemory: 3.5571952270680973
+            TranscodeReasons:
+            - ContainerNotSupported
+            - ContainerNotSupported
+            VideoEncoderHwAccel: VideoEncoderHwAccel
+            Framerate: 1.0246457
+            Container: Container
+            TranscodingStartPositionTicks: 7.457744773683766
+            IsVideoDirect: true
+            AverageCpuUsage: 9.369310271410669
+            VideoDecoderIsHardware: true
+            VideoDecoderMediaType: VideoDecoderMediaType
+            SubProtocol: SubProtocol
+            CompletionPercentage: 1.4894159098541704
+            Height: 4
+            VideoPipelineInfo:
+            - StepType: Decoder
+              FfmpegDescription: FfmpegDescription
+              Param: Param
+              ParamShort: ParamShort
+              StepTypeName: StepTypeName
+              IsHardwareContext: true
+              FfmpegOptions: FfmpegOptions
+              FfmpegName: FfmpegName
+              Short: Short
+              HardwareContextName: HardwareContextName
+              Name: Name
+            - StepType: Decoder
+              FfmpegDescription: FfmpegDescription
+              Param: Param
+              ParamShort: ParamShort
+              StepTypeName: StepTypeName
+              IsHardwareContext: true
+              FfmpegOptions: FfmpegOptions
+              FfmpegName: FfmpegName
+              Short: Short
+              HardwareContextName: HardwareContextName
+              Name: Name
+            VideoDecoder: VideoDecoder
+            Width: 1
+            AudioCodec: AudioCodec
+            VideoEncoderIsHardware: true
+            SubtitlePipelineInfos:
+            - - null
+              - null
+            - - null
+              - null
+            CpuHistory:
+            - Item1: 6.683562403749608
+              Item2: 8.762042012749001
+            - Item1: 6.683562403749608
+              Item2: 8.762042012749001
+            CurrentThrottle: 6
+            VideoCodec: VideoCodec
+            Bitrate: 4
+            VideoDecoderHwAccel: VideoDecoderHwAccel
+            TranscodingPositionTicks: 6.84685269835264
+            CurrentCpuUsage: 9.965781217890562
+            AudioBitrate: 7
+            AudioChannels: 5
+            VideoEncoderMediaType: VideoEncoderMediaType
+            VideoEncoder: VideoEncoder
+            VideoBitrate: 1
+          PartyId: PartyId
+          AppIconUrl: AppIconUrl
+          UserId: UserId
+          LastActivityDate: 2000-01-23T04:56:07.000+00:00
+          Id: Id
+          AdditionalUsers:
+          - UserName: UserName
+            UserId: UserId
+            UserInternalId: 7
+          - UserName: UserName
+            UserId: UserId
+            UserInternalId: 7
+          PlayState:
+            Shuffle: true
+            PositionTicks: 0
+            MediaSourceId: MediaSourceId
+            IsPaused: true
+            SubtitleStreamIndex: 5
+            SleepTimerMode: None
+            PlaybackRate: 2.3021358869347655
+            RepeatMode: RepeatNone
+            CanSeek: true
+            MediaSource:
+              EncoderPath: EncoderPath
+              RequiredHttpHeaders:
+                key: RequiredHttpHeaders
+              RunTimeTicks: 9
+              HasMixedProtocols: true
+              MediaStreams:
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              Size: 7
+              Video3DFormat: null
+              BufferMs: 4
+              ContainerStartTimeTicks: 3
+              SortName: SortName
+              Timestamp: None
+              ItemId: ItemId
+              Name: Name
+              RequiresOpening: true
+              DirectStreamUrl: DirectStreamUrl
+              SupportsDirectStream: true
+              RequiresClosing: true
+              Container: Container
+              ServerId: ServerId
+              LiveStreamId: LiveStreamId
+              RequiresLooping: true
+              Protocol: File
+              AddApiKeyToDirectStreamUrl: true
+              DefaultSubtitleStreamIndex: 1
+              TrancodeLiveStartIndex: 2
+              IsInfiniteStream: true
+              Path: Path
+              IsRemote: true
+              EncoderProtocol: null
+              SupportsDirectPlay: true
+              TranscodingSubProtocol: TranscodingSubProtocol
+              Formats:
+              - Formats
+              - Formats
+              AnalyzeDurationMs: 3
+              WallClockStart: 2000-01-23T04:56:07.000+00:00
+              Bitrate: 6
+              OpenToken: OpenToken
+              ProbeProtocol: null
+              SupportsProbing: true
+              Type: Default
+              ReadAtNativeFramerate: true
+              TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
+              TranscodingUrl: TranscodingUrl
+              Chapters:
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              Id: Id
+              SupportsTranscoding: true
+              DefaultAudioStreamIndex: 6
+            PlayMethod: Transcode
+            SleepTimerEndTime: 2000-01-23T04:56:07.000+00:00
+            SubtitleOffset: 5
+            AudioStreamIndex: 1
+            IsMuted: true
+            VolumeLevel: 6
+          DeviceName: DeviceName
+        - PlaylistLength: 3
+          ApplicationVersion: ApplicationVersion
+          SupportedCommands:
+          - SupportedCommands
+          - SupportedCommands
+          DeviceId: DeviceId
+          PlaylistItemId: PlaylistItemId
+          PlaylistIndex: 9
+          ServerId: ServerId
+          RemoteEndPoint: RemoteEndPoint
+          InternalDeviceId: 2
+          SupportsRemoteControl: true
+          Protocol: Protocol
+          Client: Client
+          UserName: UserName
+          UserPrimaryImageTag: UserPrimaryImageTag
+          DeviceType: DeviceType
+          PlayableMediaTypes:
+          - PlayableMediaTypes
+          - PlayableMediaTypes
+          NowPlayingItem:
+            SeasonName: SeasonName
+            PremiereDate: 2000-01-23T04:56:07.000+00:00
+            Size: 6
+            CriticRating: 2.8841622
+            GameSystemId: 6
+            Studios:
+            - Id: 6
+              Name: Name
+            - Id: 6
+              Name: Name
+            CameraMake: CameraMake
+            Aperture: 9.132027271330688
+            ChannelPrimaryImageTag: ChannelPrimaryImageTag
+            ExtraType: ExtraType
+            ParentBackdropItemId: ParentBackdropItemId
+            Etag: Etag
+            TunerName: TunerName
+            ParentLogoImageTag: ParentLogoImageTag
+            ExposureTime: 4.678947989005849
+            MediaType: MediaType
+            ManagementId: ManagementId
+            Tags:
+            - Tags
+            - Tags
+            Status: Status
+            IndexNumberEnd: 0
+            ArtistItems:
+            - Id: Id
+              Name: Name
+            - Id: Id
+              Name: Name
+            MediaSources:
+            - EncoderPath: EncoderPath
+              RequiredHttpHeaders:
+                key: RequiredHttpHeaders
+              RunTimeTicks: 9
+              HasMixedProtocols: true
+              MediaStreams:
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              Size: 7
+              Video3DFormat: null
+              BufferMs: 4
+              ContainerStartTimeTicks: 3
+              SortName: SortName
+              Timestamp: None
+              ItemId: ItemId
+              Name: Name
+              RequiresOpening: true
+              DirectStreamUrl: DirectStreamUrl
+              SupportsDirectStream: true
+              RequiresClosing: true
+              Container: Container
+              ServerId: ServerId
+              LiveStreamId: LiveStreamId
+              RequiresLooping: true
+              Protocol: File
+              AddApiKeyToDirectStreamUrl: true
+              DefaultSubtitleStreamIndex: 1
+              TrancodeLiveStartIndex: 2
+              IsInfiniteStream: true
+              Path: Path
+              IsRemote: true
+              EncoderProtocol: null
+              SupportsDirectPlay: true
+              TranscodingSubProtocol: TranscodingSubProtocol
+              Formats:
+              - Formats
+              - Formats
+              AnalyzeDurationMs: 3
+              WallClockStart: 2000-01-23T04:56:07.000+00:00
+              Bitrate: 6
+              OpenToken: OpenToken
+              ProbeProtocol: null
+              SupportsProbing: true
+              Type: Default
+              ReadAtNativeFramerate: true
+              TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
+              TranscodingUrl: TranscodingUrl
+              Chapters:
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              Id: Id
+              SupportsTranscoding: true
+              DefaultAudioStreamIndex: 6
+            - EncoderPath: EncoderPath
+              RequiredHttpHeaders:
+                key: RequiredHttpHeaders
+              RunTimeTicks: 9
+              HasMixedProtocols: true
+              MediaStreams:
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              Size: 7
+              Video3DFormat: null
+              BufferMs: 4
+              ContainerStartTimeTicks: 3
+              SortName: SortName
+              Timestamp: None
+              ItemId: ItemId
+              Name: Name
+              RequiresOpening: true
+              DirectStreamUrl: DirectStreamUrl
+              SupportsDirectStream: true
+              RequiresClosing: true
+              Container: Container
+              ServerId: ServerId
+              LiveStreamId: LiveStreamId
+              RequiresLooping: true
+              Protocol: File
+              AddApiKeyToDirectStreamUrl: true
+              DefaultSubtitleStreamIndex: 1
+              TrancodeLiveStartIndex: 2
+              IsInfiniteStream: true
+              Path: Path
+              IsRemote: true
+              EncoderProtocol: null
+              SupportsDirectPlay: true
+              TranscodingSubProtocol: TranscodingSubProtocol
+              Formats:
+              - Formats
+              - Formats
+              AnalyzeDurationMs: 3
+              WallClockStart: 2000-01-23T04:56:07.000+00:00
+              Bitrate: 6
+              OpenToken: OpenToken
+              ProbeProtocol: null
+              SupportsProbing: true
+              Type: Default
+              ReadAtNativeFramerate: true
+              TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
+              TranscodingUrl: TranscodingUrl
+              Chapters:
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              Id: Id
+              SupportsTranscoding: true
+              DefaultAudioStreamIndex: 6
+            GenreItems:
+            - null
+            - null
+            OfficialRating: OfficialRating
+            Longitude: 0.5199002018724985
+            Composers:
+            - null
+            - null
+            AverageFrameRate: 0.8008282
+            LockData: true
+            FocalLength: 7.260521264802104
+            IsNews: true
+            ShutterSpeed: 0.8774076871421566
+            Id: Id
+            SortIndexNumber: 1
+            IsFolder: true
+            CanMakePublic: true
+            SeriesTimerId: SeriesTimerId
+            SeriesId: SeriesId
+            ListingsPath: ListingsPath
+            MediaStreams:
+            - null
+            - null
+            FileName: FileName
+            PrimaryImageTag: PrimaryImageTag
+            Prefix: Prefix
+            CanDownload: true
+            IsMovie: true
+            SeriesCount: 8
+            PrimaryImageItemId: PrimaryImageItemId
+            ListingsChannelId: ListingsChannelId
+            SeriesStudio: SeriesStudio
+            IsLive: true
+            Width: 4
+            ExternalUrls:
+            - Url: Url
+              Name: Name
+            - Url: Url
+              Name: Name
+            RecursiveItemCount: 7
+            Path: Path
+            ParentId: ParentId
+            TimerType: Program
+            GameSystem: GameSystem
+            MusicVideoCount: 0
+            IsSeries: true
+            ProductionLocations:
+            - ProductionLocations
+            - ProductionLocations
+            Subviews:
+            - Subviews
+            - Subviews
+            Bitrate: 3
+            SeasonCount: 3
+            EndDate: 2000-01-23T04:56:07.000+00:00
+            RealFrameRate: 6.0274563
+            SeriesPrimaryImageTag: SeriesPrimaryImageTag
+            ParentThumbItemId: ParentThumbItemId
+            PreferredMetadataLanguage: PreferredMetadataLanguage
+            CanLeaveContent: true
+            Type: Type
+            BackdropImageTags:
+            - BackdropImageTags
+            - BackdropImageTags
+            ParentBackdropImageTags:
+            - ParentBackdropImageTags
+            - ParentBackdropImageTags
+            ChildCount: 5
+            TagItems:
+            - null
+            - null
+            Artists:
+            - Artists
+            - Artists
+            ListingsChannelName: ListingsChannelName
+            RunTimeTicks: 5
+            AlbumPrimaryImageTag: AlbumPrimaryImageTag
+            Video3DFormat: HalfSideBySide
+            CanDelete: true
+            PlaylistItemId: PlaylistItemId
+            SortParentIndexNumber: 5
+            DisplayPreferencesId: DisplayPreferencesId
+            Album: Album
+            Latitude: 9.702963800023566
+            Guid: Guid
+            SortName: SortName
+            Name: Name
+            StartDate: 2000-01-23T04:56:07.000+00:00
+            Container: Container
+            ProductionYear: 3
+            SeriesName: SeriesName
+            AsSeries: true
+            AlbumId: AlbumId
+            SupportsSync: true
+            LocalTrailerCount: 0
+            IndexNumber: 7
+            CompletionPercentage: 4.86315908102884
+            Genres:
+            - Genres
+            - Genres
+            SeasonId: SeasonId
+            LockedFields:
+            - Cast
+            - Cast
+            Disabled: true
+            ProviderIds:
+              key: ProviderIds
+            AudioCodec: AudioCodec
+            RemoteTrailers:
+            - Url: Url
+              Name: Name
+            - Url: Url
+              Name: Name
+            PresentationUniqueKey: PresentationUniqueKey
+            CustomRating: CustomRating
+            ListingsChannelNumber: ListingsChannelNumber
+            SyncStatus: Queued
+            CanManageAccess: true
+            AirDays:
+            - Sunday
+            - Sunday
+            VideoCodec: VideoCodec
+            ParentLogoItemId: ParentLogoItemId
+            PartCount: 6
+            ListingsProviderId: ListingsProviderId
+            CanEditItems: true
+            ChannelName: ChannelName
+            EpisodeTitle: EpisodeTitle
+            IsoSpeedRating: 5
+            CommunityRating: 6.878052
+            Software: Software
+            Chapters:
+            - null
+            - null
+            SongCount: 3
+            Taglines:
+            - Taglines
+            - Taglines
+            PreferredMetadataCountryCode: PreferredMetadataCountryCode
+            CameraModel: CameraModel
+            ChannelNumber: ChannelNumber
+            UserData:
+              UnplayedItemCount: 7
+              Played: true
+              ServerId: ServerId
+              PlayedPercentage: 8.969578798196912
+              Rating: 4.652396432933246
+              PlayCount: 3
+              PlaybackPositionTicks: 3
+              LastPlayedDate: 2000-01-23T04:56:07.000+00:00
+              IsFavorite: true
+              ItemId: ItemId
+              Key: Key
+            TimerId: TimerId
+            DateCreated: 2000-01-23T04:56:07.000+00:00
+            ParentThumbImageTag: ParentThumbImageTag
+            IsSports: true
+            ChannelId: ChannelId
+            ParentIndexNumber: 7
+            IsNew: true
+            AffiliateCallSign: AffiliateCallSign
+            ListingsId: ListingsId
+            AlbumArtists:
+            - null
+            - null
+            ServerId: ServerId
+            Number: Number
+            AlbumCount: 4
+            IsRepeat: true
+            CollectionType: CollectionType
+            PrimaryImageAspectRatio: 0.2025324113236393
+            Height: 1
+            IsKids: true
+            DisplayOrder: DisplayOrder
+            MovieCount: 6
+            People:
+            - Role: Role
+              Type: Actor
+              PrimaryImageTag: PrimaryImageTag
+              Id: Id
+              Name: Name
+            - Role: Role
+              Type: Actor
+              PrimaryImageTag: PrimaryImageTag
+              Id: Id
+              Name: Name
+            Overview: Overview
+            SpecialFeatureCount: 4
+            ImageOrientation: TopLeft
+            AlbumArtist: AlbumArtist
+            ImageTags:
+              key: ImageTags
+            OriginalTitle: OriginalTitle
+            ForcedSortName: ForcedSortName
+            CurrentProgram: null
+            SupportsResume: true
+            LocationType: FileSystem
+            IsPremiere: true
+            DateModified: 2000-01-23T04:56:07.000+00:00
+            Altitude: 7.933506881737151
+          TranscodingInfo:
+            IsAudioDirect: true
+            ProcessStatistics:
+              Metrics:
+              - Time: Time
+                WorkingSet: 6.778324963048013
+                VirtualMemory: 2.8841621266687802
+                CpuPercent: 1.284659006116532
+              - Time: Time
+                WorkingSet: 6.778324963048013
+                VirtualMemory: 2.8841621266687802
+                CpuPercent: 1.284659006116532
+              AverageCpu: 6.438423552598547
+              CurrentCpu: 9.018348186070783
+              CurrentWorkingSet: 6.965117697638846
+              CurrentVirtualMemory: 3.5571952270680973
+            TranscodeReasons:
+            - ContainerNotSupported
+            - ContainerNotSupported
+            VideoEncoderHwAccel: VideoEncoderHwAccel
+            Framerate: 1.0246457
+            Container: Container
+            TranscodingStartPositionTicks: 7.457744773683766
+            IsVideoDirect: true
+            AverageCpuUsage: 9.369310271410669
+            VideoDecoderIsHardware: true
+            VideoDecoderMediaType: VideoDecoderMediaType
+            SubProtocol: SubProtocol
+            CompletionPercentage: 1.4894159098541704
+            Height: 4
+            VideoPipelineInfo:
+            - StepType: Decoder
+              FfmpegDescription: FfmpegDescription
+              Param: Param
+              ParamShort: ParamShort
+              StepTypeName: StepTypeName
+              IsHardwareContext: true
+              FfmpegOptions: FfmpegOptions
+              FfmpegName: FfmpegName
+              Short: Short
+              HardwareContextName: HardwareContextName
+              Name: Name
+            - StepType: Decoder
+              FfmpegDescription: FfmpegDescription
+              Param: Param
+              ParamShort: ParamShort
+              StepTypeName: StepTypeName
+              IsHardwareContext: true
+              FfmpegOptions: FfmpegOptions
+              FfmpegName: FfmpegName
+              Short: Short
+              HardwareContextName: HardwareContextName
+              Name: Name
+            VideoDecoder: VideoDecoder
+            Width: 1
+            AudioCodec: AudioCodec
+            VideoEncoderIsHardware: true
+            SubtitlePipelineInfos:
+            - - null
+              - null
+            - - null
+              - null
+            CpuHistory:
+            - Item1: 6.683562403749608
+              Item2: 8.762042012749001
+            - Item1: 6.683562403749608
+              Item2: 8.762042012749001
+            CurrentThrottle: 6
+            VideoCodec: VideoCodec
+            Bitrate: 4
+            VideoDecoderHwAccel: VideoDecoderHwAccel
+            TranscodingPositionTicks: 6.84685269835264
+            CurrentCpuUsage: 9.965781217890562
+            AudioBitrate: 7
+            AudioChannels: 5
+            VideoEncoderMediaType: VideoEncoderMediaType
+            VideoEncoder: VideoEncoder
+            VideoBitrate: 1
+          PartyId: PartyId
+          AppIconUrl: AppIconUrl
+          UserId: UserId
+          LastActivityDate: 2000-01-23T04:56:07.000+00:00
+          Id: Id
+          AdditionalUsers:
+          - UserName: UserName
+            UserId: UserId
+            UserInternalId: 7
+          - UserName: UserName
+            UserId: UserId
+            UserInternalId: 7
+          PlayState:
+            Shuffle: true
+            PositionTicks: 0
+            MediaSourceId: MediaSourceId
+            IsPaused: true
+            SubtitleStreamIndex: 5
+            SleepTimerMode: None
+            PlaybackRate: 2.3021358869347655
+            RepeatMode: RepeatNone
+            CanSeek: true
+            MediaSource:
+              EncoderPath: EncoderPath
+              RequiredHttpHeaders:
+                key: RequiredHttpHeaders
+              RunTimeTicks: 9
+              HasMixedProtocols: true
+              MediaStreams:
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              - VideoRange: VideoRange
+                ColorSpace: ColorSpace
+                Index: 6
+                BitDepth: 1
+                ItemId: ItemId
+                SupportsExternalStream: true
+                Codec: Codec
+                SampleRate: 1
+                IsAnamorphic: true
+                PixelFormat: PixelFormat
+                AttachmentSize: 9
+                SubtitleLocationType: InternalStream
+                RefFrames: 1
+                IsAVC: true
+                ColorTransfer: ColorTransfer
+                ExtendedVideoSubTypeDescription: ExtendedVideoSubTypeDescription
+                IsExternalUrl: true
+                DisplayTitle: DisplayTitle
+                IsForced: true
+                ChannelLayout: ChannelLayout
+                DisplayLanguage: DisplayLanguage
+                AverageFrameRate: 9.965781
+                StreamStartTimeTicks: 7
+                IsExternal: true
+                Level: 8.762042012749001
+                ExtendedVideoSubType: None
+                Channels: 7
+                Profile: Profile
+                MimeType: MimeType
+                DeliveryUrl: DeliveryUrl
+                ColorPrimaries: ColorPrimaries
+                ServerId: ServerId
+                Language: Language
+                IsTextSubtitleStream: true
+                NalLengthSize: NalLengthSize
+                Height: 4
+                Protocol: null
+                Width: 5
+                TimeBase: TimeBase
+                CodecTag: CodecTag
+                IsDefault: true
+                Path: Path
+                Comment: Comment
+                DeliveryMethod: Encode
+                Title: Title
+                ExtendedVideoType: None
+                Rotation: 6
+                RealFrameRate: 9.36931
+                IsHearingImpaired: true
+                AspectRatio: AspectRatio
+                Type: Unknown
+                IsInterlaced: true
+                Extradata: Extradata
+                BitRate: 1
+              Size: 7
+              Video3DFormat: null
+              BufferMs: 4
+              ContainerStartTimeTicks: 3
+              SortName: SortName
+              Timestamp: None
+              ItemId: ItemId
+              Name: Name
+              RequiresOpening: true
+              DirectStreamUrl: DirectStreamUrl
+              SupportsDirectStream: true
+              RequiresClosing: true
+              Container: Container
+              ServerId: ServerId
+              LiveStreamId: LiveStreamId
+              RequiresLooping: true
+              Protocol: File
+              AddApiKeyToDirectStreamUrl: true
+              DefaultSubtitleStreamIndex: 1
+              TrancodeLiveStartIndex: 2
+              IsInfiniteStream: true
+              Path: Path
+              IsRemote: true
+              EncoderProtocol: null
+              SupportsDirectPlay: true
+              TranscodingSubProtocol: TranscodingSubProtocol
+              Formats:
+              - Formats
+              - Formats
+              AnalyzeDurationMs: 3
+              WallClockStart: 2000-01-23T04:56:07.000+00:00
+              Bitrate: 6
+              OpenToken: OpenToken
+              ProbeProtocol: null
+              SupportsProbing: true
+              Type: Default
+              ReadAtNativeFramerate: true
+              TranscodingContainer: TranscodingContainer
+              ProbePath: ProbePath
+              TranscodingUrl: TranscodingUrl
+              Chapters:
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              - StartPositionTicks: 5
+                ImageTag: ImageTag
+                MarkerType: Chapter
+                ChapterIndex: 2
+                Name: Name
+              Id: Id
+              SupportsTranscoding: true
+              DefaultAudioStreamIndex: 6
+            PlayMethod: Transcode
+            SleepTimerEndTime: 2000-01-23T04:56:07.000+00:00
+            SubtitleOffset: 5
+            AudioStreamIndex: 1
+            IsMuted: true
+            VolumeLevel: 6
+          DeviceName: DeviceName
         Id: Id
         Users:
-        - PlayedPercentage: 1.4658129805029452
+        - PlayedPercentage: 3.353193347011243
           RecursiveChildCountEqualsChildCount: true
           OriginalParsedName: OriginalParsedName
           ConnectAccessKey: ConnectAccessKey
@@ -87462,11 +90928,11 @@ components:
           IsNameParsedFromFolder: true
           DateCreated: 2000-01-23T04:56:07.000+00:00
           ImportedCollections:
-          - Id: 5
+          - Id: 3
             ProviderIds:
               key: ProviderIds
             Name: Name
-          - Id: 5
+          - Id: 3
             ProviderIds:
               key: ProviderIds
             Name: Name
@@ -87478,13 +90944,13 @@ components:
             Type: Primary
             Height: 6
             Orientation: TopLeft
-            Width: 0
+            Width: 5
             DateModified: 2000-01-23T04:56:07.000+00:00
           - Path: Path
             Type: Primary
             Height: 6
             Orientation: TopLeft
-            Width: 0
+            Width: 5
             DateModified: 2000-01-23T04:56:07.000+00:00
           UsesIdForConfigurationPath: true
           Salt: Salt
@@ -87493,7 +90959,7 @@ components:
           ConnectLinkType: LinkedUser
           EasyPassword: EasyPassword
           Password: Password
-        - PlayedPercentage: 1.4658129805029452
+        - PlayedPercentage: 3.353193347011243
           RecursiveChildCountEqualsChildCount: true
           OriginalParsedName: OriginalParsedName
           ConnectAccessKey: ConnectAccessKey
@@ -87501,11 +90967,11 @@ components:
           IsNameParsedFromFolder: true
           DateCreated: 2000-01-23T04:56:07.000+00:00
           ImportedCollections:
-          - Id: 5
+          - Id: 3
             ProviderIds:
               key: ProviderIds
             Name: Name
-          - Id: 5
+          - Id: 3
             ProviderIds:
               key: ProviderIds
             Name: Name
@@ -87517,13 +90983,13 @@ components:
             Type: Primary
             Height: 6
             Orientation: TopLeft
-            Width: 0
+            Width: 5
             DateModified: 2000-01-23T04:56:07.000+00:00
           - Path: Path
             Type: Primary
             Height: 6
             Orientation: TopLeft
-            Width: 0
+            Width: 5
             DateModified: 2000-01-23T04:56:07.000+00:00
           UsesIdForConfigurationPath: true
           Salt: Salt
@@ -87534,393 +91000,6 @@ components:
           Password: Password
         Name: Name
       x-internal-ref-name: MediaBrowser.Controller.Session.PartyInfo
-    Entities.User:
-      type: object
-      properties:
-        UsesIdForConfigurationPath:
-          type: boolean
-          description: From now on all user paths will be Id\-based. This is for backwards
-            compatibility.
-        Password:
-          type: string
-          description: The password.
-        EasyPassword:
-          type: string
-        Salt:
-          type: string
-        ConnectUserName:
-          type: string
-        ConnectUserId:
-          type: string
-        ConnectLinkType:
-          $ref: '#/components/schemas/Connect.UserLinkType'
-        ConnectAccessKey:
-          type: string
-        ImageInfos:
-          type: array
-          items:
-            $ref: '#/components/schemas/Entities.ItemImageInfo'
-        Name:
-          type: string
-          description: The name.
-        LastLoginDate:
-          type: string
-          description: The last login date.
-          format: date-time
-          nullable: true
-        LastActivityDate:
-          type: string
-          description: The last activity date.
-          format: date-time
-          nullable: true
-        PlayedPercentage:
-          type: number
-          format: double
-          nullable: true
-        RecursiveChildCountEqualsChildCount:
-          type: boolean
-        OriginalParsedName:
-          type: string
-          description: Internal use only
-        IsNameParsedFromFolder:
-          type: boolean
-          description: Internal use only
-        DateCreated:
-          type: string
-          description: The date created.
-          format: date-time
-        ImportedCollections:
-          type: array
-          items:
-            $ref: '#/components/schemas/LinkedItemInfo'
-        ResolvedPresentationUniqueKey:
-          type: string
-      description: "Class User\r\n"
-      example:
-        PlayedPercentage: 1.4658129805029452
-        RecursiveChildCountEqualsChildCount: true
-        OriginalParsedName: OriginalParsedName
-        ConnectAccessKey: ConnectAccessKey
-        LastLoginDate: 2000-01-23T04:56:07.000+00:00
-        IsNameParsedFromFolder: true
-        DateCreated: 2000-01-23T04:56:07.000+00:00
-        ImportedCollections:
-        - Id: 5
-          ProviderIds:
-            key: ProviderIds
-          Name: Name
-        - Id: 5
-          ProviderIds:
-            key: ProviderIds
-          Name: Name
-        ConnectUserId: ConnectUserId
-        ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
-        Name: Name
-        ImageInfos:
-        - Path: Path
-          Type: Primary
-          Height: 6
-          Orientation: TopLeft
-          Width: 0
-          DateModified: 2000-01-23T04:56:07.000+00:00
-        - Path: Path
-          Type: Primary
-          Height: 6
-          Orientation: TopLeft
-          Width: 0
-          DateModified: 2000-01-23T04:56:07.000+00:00
-        UsesIdForConfigurationPath: true
-        Salt: Salt
-        ConnectUserName: ConnectUserName
-        LastActivityDate: 2000-01-23T04:56:07.000+00:00
-        ConnectLinkType: LinkedUser
-        EasyPassword: EasyPassword
-        Password: Password
-      x-internal-ref-name: MediaBrowser.Controller.Entities.User
-    Connect.UserLinkType:
-      type: string
-      enum:
-      - LinkedUser
-      - Guest
-      x-internal-ref-name: MediaBrowser.Model.Connect.UserLinkType
-    Entities.ItemImageInfo:
-      type: object
-      properties:
-        Path:
-          type: string
-          description: The path.
-        Type:
-          $ref: '#/components/schemas/ImageType'
-        Orientation:
-          $ref: '#/components/schemas/Drawing.ImageOrientation'
-        DateModified:
-          type: string
-          description: The date modified.
-          format: date-time
-        Width:
-          type: integer
-          format: int32
-        Height:
-          type: integer
-          format: int32
-      example:
-        Path: Path
-        Type: Primary
-        Height: 6
-        Orientation: TopLeft
-        Width: 0
-        DateModified: 2000-01-23T04:56:07.000+00:00
-      x-internal-ref-name: MediaBrowser.Controller.Entities.ItemImageInfo
-    ImageType:
-      type: string
-      description: "Enum ImageType\r\n"
-      enum:
-      - Primary
-      - Art
-      - Backdrop
-      - Banner
-      - Logo
-      - Thumb
-      - Disc
-      - Box
-      - Screenshot
-      - Menu
-      - Chapter
-      - BoxRear
-      - Thumbnail
-      - LogoLight
-      - LogoLightColor
-      x-internal-ref-name: MediaBrowser.Model.Entities.ImageType
-    LinkedItemInfo:
-      type: object
-      properties:
-        ProviderIds:
-          $ref: '#/components/schemas/ProviderIdDictionary'
-        Name:
-          type: string
-          description: The name.
-        Id:
-          type: integer
-          description: The identifier.
-          format: int64
-      example:
-        Id: 5
-        ProviderIds:
-          key: ProviderIds
-        Name: Name
-      x-internal-ref-name: MediaBrowser.Model.Dto.LinkedItemInfo
-    Playlists.PlaylistCreationResult:
-      type: object
-      properties:
-        Id:
-          type: string
-        Name:
-          type: string
-        ItemAddedCount:
-          type: integer
-          format: int32
-      example:
-        ItemAddedCount: 0
-        Id: Id
-        Name: Name
-      x-internal-ref-name: MediaBrowser.Controller.Playlists.PlaylistCreationResult
-    Plugins.PluginInfo:
-      type: object
-      properties:
-        Name:
-          type: string
-          description: The name.
-        Version:
-          type: string
-          description: The version.
-        ConfigurationFileName:
-          type: string
-          description: The name of the configuration file.
-        Description:
-          type: string
-          description: The description.
-        Id:
-          type: string
-          description: The unique id.
-        ImageTag:
-          type: string
-          description: The image URL.
-      description: "This is a serializable stub class that is used by the api to provide\
-        \ information about installed plugins.\r\n"
-      example:
-        ImageTag: ImageTag
-        Description: Description
-        Version: Version
-        Id: Id
-        ConfigurationFileName: ConfigurationFileName
-        Name: Name
-      x-internal-ref-name: MediaBrowser.Model.Plugins.PluginInfo
-    TaskInfo:
-      type: object
-      properties:
-        Name:
-          type: string
-          description: The name.
-        State:
-          $ref: '#/components/schemas/TaskState'
-        CurrentProgressPercentage:
-          type: number
-          description: The progress.
-          format: double
-          nullable: true
-        Id:
-          type: string
-          description: The id.
-        LastExecutionResult:
-          $ref: '#/components/schemas/TaskResult'
-        Triggers:
-          type: array
-          description: The triggers.
-          items:
-            $ref: '#/components/schemas/TaskTriggerInfo'
-        Description:
-          type: string
-          description: The description.
-        Category:
-          type: string
-          description: The category.
-        IsHidden:
-          type: boolean
-          description: A value indicating whether this instance is hidden.
-        Key:
-          type: string
-          description: The key.
-      description: "Class TaskInfo\r\n"
-      example:
-        IsHidden: true
-        Description: Description
-        Category: Category
-        State: Idle
-        CurrentProgressPercentage: 0.8008281904610115
-        Triggers:
-        - SystemEvent: WakeFromSleep
-          DayOfWeek: Sunday
-          Type: Type
-          IntervalTicks: 1
-          TimeOfDayTicks: 6
-          MaxRuntimeTicks: 5
-        - SystemEvent: WakeFromSleep
-          DayOfWeek: Sunday
-          Type: Type
-          IntervalTicks: 1
-          TimeOfDayTicks: 6
-          MaxRuntimeTicks: 5
-        Id: Id
-        LastExecutionResult:
-          Status: Completed
-          StartTimeUtc: 2000-01-23T04:56:07.000+00:00
-          LongErrorMessage: LongErrorMessage
-          Id: Id
-          EndTimeUtc: 2000-01-23T04:56:07.000+00:00
-          ErrorMessage: ErrorMessage
-          Key: Key
-          Name: Name
-        Key: Key
-        Name: Name
-      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskInfo
-    TaskState:
-      type: string
-      description: "Enum TaskState\r\n"
-      enum:
-      - Idle
-      - Cancelling
-      - Running
-      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskState
-    TaskResult:
-      type: object
-      properties:
-        StartTimeUtc:
-          type: string
-          description: The start time UTC.
-          format: date-time
-        EndTimeUtc:
-          type: string
-          description: The end time UTC.
-          format: date-time
-        Status:
-          $ref: '#/components/schemas/TaskCompletionStatus'
-        Name:
-          type: string
-          description: The name.
-        Key:
-          type: string
-          description: The key.
-        Id:
-          type: string
-          description: The id.
-        ErrorMessage:
-          type: string
-          description: The error message.
-        LongErrorMessage:
-          type: string
-          description: The long error message.
-      description: "Class TaskExecutionInfo\r\n"
-      example:
-        Status: Completed
-        StartTimeUtc: 2000-01-23T04:56:07.000+00:00
-        LongErrorMessage: LongErrorMessage
-        Id: Id
-        EndTimeUtc: 2000-01-23T04:56:07.000+00:00
-        ErrorMessage: ErrorMessage
-        Key: Key
-        Name: Name
-      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskResult
-    TaskCompletionStatus:
-      type: string
-      description: "Enum TaskCompletionStatus\r\n"
-      enum:
-      - Completed
-      - Failed
-      - Cancelled
-      - Aborted
-      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskCompletionStatus
-    TaskTriggerInfo:
-      type: object
-      properties:
-        Type:
-          type: string
-          description: The type.
-        TimeOfDayTicks:
-          type: integer
-          description: The time of day.
-          format: int64
-          nullable: true
-        IntervalTicks:
-          type: integer
-          description: The interval.
-          format: int64
-          nullable: true
-        SystemEvent:
-          $ref: '#/components/schemas/SystemEvent'
-        DayOfWeek:
-          $ref: '#/components/schemas/DayOfWeek'
-        MaxRuntimeTicks:
-          type: integer
-          description: The maximum runtime ticks.
-          format: int64
-          nullable: true
-      description: "Class TaskTriggerInfo\r\n"
-      example:
-        SystemEvent: WakeFromSleep
-        DayOfWeek: Sunday
-        Type: Type
-        IntervalTicks: 1
-        TimeOfDayTicks: 6
-        MaxRuntimeTicks: 5
-      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskTriggerInfo
-    SystemEvent:
-      type: string
-      description: "Enum SystemEvent\r\n"
-      enum:
-      - WakeFromSleep
-      - DisplayConfigurationChange
-      - NetworkChange
-      x-internal-ref-name: MediaBrowser.Model.Tasks.SystemEvent
     Session.SessionInfo:
       type: object
       properties:
@@ -89505,6 +92584,393 @@ components:
       - ConnectTo
       - Rotate
       x-internal-ref-name: MediaBrowser.Model.Session.Transcoding.VpStepTypes
+    Entities.User:
+      type: object
+      properties:
+        UsesIdForConfigurationPath:
+          type: boolean
+          description: From now on all user paths will be Id\-based. This is for backwards
+            compatibility.
+        Password:
+          type: string
+          description: The password.
+        EasyPassword:
+          type: string
+        Salt:
+          type: string
+        ConnectUserName:
+          type: string
+        ConnectUserId:
+          type: string
+        ConnectLinkType:
+          $ref: '#/components/schemas/Connect.UserLinkType'
+        ConnectAccessKey:
+          type: string
+        ImageInfos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Entities.ItemImageInfo'
+        Name:
+          type: string
+          description: The name.
+        LastLoginDate:
+          type: string
+          description: The last login date.
+          format: date-time
+          nullable: true
+        LastActivityDate:
+          type: string
+          description: The last activity date.
+          format: date-time
+          nullable: true
+        PlayedPercentage:
+          type: number
+          format: double
+          nullable: true
+        RecursiveChildCountEqualsChildCount:
+          type: boolean
+        OriginalParsedName:
+          type: string
+          description: Internal use only
+        IsNameParsedFromFolder:
+          type: boolean
+          description: Internal use only
+        DateCreated:
+          type: string
+          description: The date created.
+          format: date-time
+        ImportedCollections:
+          type: array
+          items:
+            $ref: '#/components/schemas/LinkedItemInfo'
+        ResolvedPresentationUniqueKey:
+          type: string
+      description: "Class User\r\n"
+      example:
+        PlayedPercentage: 3.353193347011243
+        RecursiveChildCountEqualsChildCount: true
+        OriginalParsedName: OriginalParsedName
+        ConnectAccessKey: ConnectAccessKey
+        LastLoginDate: 2000-01-23T04:56:07.000+00:00
+        IsNameParsedFromFolder: true
+        DateCreated: 2000-01-23T04:56:07.000+00:00
+        ImportedCollections:
+        - Id: 3
+          ProviderIds:
+            key: ProviderIds
+          Name: Name
+        - Id: 3
+          ProviderIds:
+            key: ProviderIds
+          Name: Name
+        ConnectUserId: ConnectUserId
+        ResolvedPresentationUniqueKey: ResolvedPresentationUniqueKey
+        Name: Name
+        ImageInfos:
+        - Path: Path
+          Type: Primary
+          Height: 6
+          Orientation: TopLeft
+          Width: 5
+          DateModified: 2000-01-23T04:56:07.000+00:00
+        - Path: Path
+          Type: Primary
+          Height: 6
+          Orientation: TopLeft
+          Width: 5
+          DateModified: 2000-01-23T04:56:07.000+00:00
+        UsesIdForConfigurationPath: true
+        Salt: Salt
+        ConnectUserName: ConnectUserName
+        LastActivityDate: 2000-01-23T04:56:07.000+00:00
+        ConnectLinkType: LinkedUser
+        EasyPassword: EasyPassword
+        Password: Password
+      x-internal-ref-name: MediaBrowser.Controller.Entities.User
+    Connect.UserLinkType:
+      type: string
+      enum:
+      - LinkedUser
+      - Guest
+      x-internal-ref-name: MediaBrowser.Model.Connect.UserLinkType
+    Entities.ItemImageInfo:
+      type: object
+      properties:
+        Path:
+          type: string
+          description: The path.
+        Type:
+          $ref: '#/components/schemas/ImageType'
+        Orientation:
+          $ref: '#/components/schemas/Drawing.ImageOrientation'
+        DateModified:
+          type: string
+          description: The date modified.
+          format: date-time
+        Width:
+          type: integer
+          format: int32
+        Height:
+          type: integer
+          format: int32
+      example:
+        Path: Path
+        Type: Primary
+        Height: 6
+        Orientation: TopLeft
+        Width: 5
+        DateModified: 2000-01-23T04:56:07.000+00:00
+      x-internal-ref-name: MediaBrowser.Controller.Entities.ItemImageInfo
+    ImageType:
+      type: string
+      description: "Enum ImageType\r\n"
+      enum:
+      - Primary
+      - Art
+      - Backdrop
+      - Banner
+      - Logo
+      - Thumb
+      - Disc
+      - Box
+      - Screenshot
+      - Menu
+      - Chapter
+      - BoxRear
+      - Thumbnail
+      - LogoLight
+      - LogoLightColor
+      x-internal-ref-name: MediaBrowser.Model.Entities.ImageType
+    LinkedItemInfo:
+      type: object
+      properties:
+        ProviderIds:
+          $ref: '#/components/schemas/ProviderIdDictionary'
+        Name:
+          type: string
+          description: The name.
+        Id:
+          type: integer
+          description: The identifier.
+          format: int64
+      example:
+        Id: 3
+        ProviderIds:
+          key: ProviderIds
+        Name: Name
+      x-internal-ref-name: MediaBrowser.Model.Dto.LinkedItemInfo
+    Playlists.PlaylistCreationResult:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        ItemAddedCount:
+          type: integer
+          format: int32
+      example:
+        ItemAddedCount: 0
+        Id: Id
+        Name: Name
+      x-internal-ref-name: MediaBrowser.Controller.Playlists.PlaylistCreationResult
+    Plugins.PluginInfo:
+      type: object
+      properties:
+        Name:
+          type: string
+          description: The name.
+        Version:
+          type: string
+          description: The version.
+        ConfigurationFileName:
+          type: string
+          description: The name of the configuration file.
+        Description:
+          type: string
+          description: The description.
+        Id:
+          type: string
+          description: The unique id.
+        ImageTag:
+          type: string
+          description: The image URL.
+      description: "This is a serializable stub class that is used by the api to provide\
+        \ information about installed plugins.\r\n"
+      example:
+        ImageTag: ImageTag
+        Description: Description
+        Version: Version
+        Id: Id
+        ConfigurationFileName: ConfigurationFileName
+        Name: Name
+      x-internal-ref-name: MediaBrowser.Model.Plugins.PluginInfo
+    TaskInfo:
+      type: object
+      properties:
+        Name:
+          type: string
+          description: The name.
+        State:
+          $ref: '#/components/schemas/TaskState'
+        CurrentProgressPercentage:
+          type: number
+          description: The progress.
+          format: double
+          nullable: true
+        Id:
+          type: string
+          description: The id.
+        LastExecutionResult:
+          $ref: '#/components/schemas/TaskResult'
+        Triggers:
+          type: array
+          description: The triggers.
+          items:
+            $ref: '#/components/schemas/TaskTriggerInfo'
+        Description:
+          type: string
+          description: The description.
+        Category:
+          type: string
+          description: The category.
+        IsHidden:
+          type: boolean
+          description: A value indicating whether this instance is hidden.
+        Key:
+          type: string
+          description: The key.
+      description: "Class TaskInfo\r\n"
+      example:
+        IsHidden: true
+        Description: Description
+        Category: Category
+        State: Idle
+        CurrentProgressPercentage: 0.8008281904610115
+        Triggers:
+        - SystemEvent: WakeFromSleep
+          DayOfWeek: Sunday
+          Type: Type
+          IntervalTicks: 1
+          TimeOfDayTicks: 6
+          MaxRuntimeTicks: 5
+        - SystemEvent: WakeFromSleep
+          DayOfWeek: Sunday
+          Type: Type
+          IntervalTicks: 1
+          TimeOfDayTicks: 6
+          MaxRuntimeTicks: 5
+        Id: Id
+        LastExecutionResult:
+          Status: Completed
+          StartTimeUtc: 2000-01-23T04:56:07.000+00:00
+          LongErrorMessage: LongErrorMessage
+          Id: Id
+          EndTimeUtc: 2000-01-23T04:56:07.000+00:00
+          ErrorMessage: ErrorMessage
+          Key: Key
+          Name: Name
+        Key: Key
+        Name: Name
+      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskInfo
+    TaskState:
+      type: string
+      description: "Enum TaskState\r\n"
+      enum:
+      - Idle
+      - Cancelling
+      - Running
+      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskState
+    TaskResult:
+      type: object
+      properties:
+        StartTimeUtc:
+          type: string
+          description: The start time UTC.
+          format: date-time
+        EndTimeUtc:
+          type: string
+          description: The end time UTC.
+          format: date-time
+        Status:
+          $ref: '#/components/schemas/TaskCompletionStatus'
+        Name:
+          type: string
+          description: The name.
+        Key:
+          type: string
+          description: The key.
+        Id:
+          type: string
+          description: The id.
+        ErrorMessage:
+          type: string
+          description: The error message.
+        LongErrorMessage:
+          type: string
+          description: The long error message.
+      description: "Class TaskExecutionInfo\r\n"
+      example:
+        Status: Completed
+        StartTimeUtc: 2000-01-23T04:56:07.000+00:00
+        LongErrorMessage: LongErrorMessage
+        Id: Id
+        EndTimeUtc: 2000-01-23T04:56:07.000+00:00
+        ErrorMessage: ErrorMessage
+        Key: Key
+        Name: Name
+      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskResult
+    TaskCompletionStatus:
+      type: string
+      description: "Enum TaskCompletionStatus\r\n"
+      enum:
+      - Completed
+      - Failed
+      - Cancelled
+      - Aborted
+      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskCompletionStatus
+    TaskTriggerInfo:
+      type: object
+      properties:
+        Type:
+          type: string
+          description: The type.
+        TimeOfDayTicks:
+          type: integer
+          description: The time of day.
+          format: int64
+          nullable: true
+        IntervalTicks:
+          type: integer
+          description: The interval.
+          format: int64
+          nullable: true
+        SystemEvent:
+          $ref: '#/components/schemas/SystemEvent'
+        DayOfWeek:
+          $ref: '#/components/schemas/DayOfWeek'
+        MaxRuntimeTicks:
+          type: integer
+          description: The maximum runtime ticks.
+          format: int64
+          nullable: true
+      description: "Class TaskTriggerInfo\r\n"
+      example:
+        SystemEvent: WakeFromSleep
+        DayOfWeek: Sunday
+        Type: Type
+        IntervalTicks: 1
+        TimeOfDayTicks: 6
+        MaxRuntimeTicks: 5
+      x-internal-ref-name: MediaBrowser.Model.Tasks.TaskTriggerInfo
+    SystemEvent:
+      type: string
+      description: "Enum SystemEvent\r\n"
+      enum:
+      - WakeFromSleep
+      - DisplayConfigurationChange
+      - NetworkChange
+      x-internal-ref-name: MediaBrowser.Model.Tasks.SystemEvent
     NameValuePair:
       type: object
       properties:
@@ -96200,9 +99666,6 @@ components:
         ProgramId:
           type: string
           description: The program identifier.
-        Name:
-          type: string
-          description: Name of the recording.
         ServiceName:
           type: string
         Overview:
@@ -96268,6 +99731,9 @@ components:
             $ref: '#/components/schemas/LiveTv.KeywordInfo'
         TimerType:
           $ref: '#/components/schemas/LiveTv.TimerType'
+        Name:
+          type: string
+          description: Name of the recording.
       x-internal-ref-name: MediaBrowser.Controller.LiveTv.SeriesTimerInfo
     LiveTv.GuideInfo:
       type: object

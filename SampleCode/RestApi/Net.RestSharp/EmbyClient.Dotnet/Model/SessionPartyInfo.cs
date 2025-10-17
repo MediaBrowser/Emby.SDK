@@ -28,11 +28,13 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
+        /// <param name="sessions">sessions.</param>
         /// <param name="users">users.</param>
-        public SessionPartyInfo(string id = default(string), string name = default(string), List<EntitiesUser> users = default(List<EntitiesUser>))
+        public SessionPartyInfo(string id = default(string), string name = default(string), List<SessionSessionInfo> sessions = default(List<SessionSessionInfo>), List<EntitiesUser> users = default(List<EntitiesUser>))
         {
             this.Id = id;
             this.Name = name;
+            this.Sessions = sessions;
             this.Users = users;
         }
         
@@ -47,6 +49,12 @@ namespace EmbyClient.Dotnet.Model
         /// </summary>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Sessions
+        /// </summary>
+        [DataMember(Name="Sessions", EmitDefaultValue=false)]
+        public List<SessionSessionInfo> Sessions { get; set; }
 
         /// <summary>
         /// Gets or Sets Users
@@ -64,6 +72,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("class SessionPartyInfo {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -110,6 +119,12 @@ namespace EmbyClient.Dotnet.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.Sessions == input.Sessions ||
+                    this.Sessions != null &&
+                    input.Sessions != null &&
+                    this.Sessions.SequenceEqual(input.Sessions)
+                ) && 
+                (
                     this.Users == input.Users ||
                     this.Users != null &&
                     input.Users != null &&
@@ -130,6 +145,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Sessions != null)
+                    hashCode = hashCode * 59 + this.Sessions.GetHashCode();
                 if (this.Users != null)
                     hashCode = hashCode * 59 + this.Users.GetHashCode();
                 return hashCode;

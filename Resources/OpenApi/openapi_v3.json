@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.2.4"
+    "version": "4.9.2.5"
   },
   "servers": [
     {
@@ -105510,6 +105510,12 @@
           "Name": {
             "type": "string"
           },
+          "Sessions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Session.SessionInfo"
+            }
+          },
           "Users": {
             "type": "array",
             "items": {
@@ -105518,371 +105524,6 @@
           }
         },
         "x-internal-ref-name": "MediaBrowser.Controller.Session.PartyInfo"
-      },
-      "Entities.User": {
-        "type": "object",
-        "properties": {
-          "UsesIdForConfigurationPath": {
-            "type": "boolean",
-            "description": "From now on all user paths will be Id\\-based. This is for backwards compatibility."
-          },
-          "Password": {
-            "type": "string",
-            "description": "The password."
-          },
-          "EasyPassword": {
-            "type": "string"
-          },
-          "Salt": {
-            "type": "string"
-          },
-          "ConnectUserName": {
-            "type": "string"
-          },
-          "ConnectUserId": {
-            "type": "string"
-          },
-          "ConnectLinkType": {
-            "$ref": "#/components/schemas/Connect.UserLinkType"
-          },
-          "ConnectAccessKey": {
-            "type": "string"
-          },
-          "ImageInfos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Entities.ItemImageInfo"
-            }
-          },
-          "Name": {
-            "type": "string",
-            "description": "The name."
-          },
-          "LastLoginDate": {
-            "type": "string",
-            "description": "The last login date.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "LastActivityDate": {
-            "type": "string",
-            "description": "The last activity date.",
-            "format": "date-time",
-            "nullable": true
-          },
-          "PlayedPercentage": {
-            "type": "number",
-            "format": "double",
-            "nullable": true
-          },
-          "RecursiveChildCountEqualsChildCount": {
-            "type": "boolean"
-          },
-          "OriginalParsedName": {
-            "type": "string",
-            "description": "Internal use only"
-          },
-          "IsNameParsedFromFolder": {
-            "type": "boolean",
-            "description": "Internal use only"
-          },
-          "DateCreated": {
-            "type": "string",
-            "description": "The date created.",
-            "format": "date-time"
-          },
-          "ImportedCollections": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LinkedItemInfo"
-            }
-          },
-          "ResolvedPresentationUniqueKey": {
-            "type": "string"
-          }
-        },
-        "description": "Class User\r\n",
-        "x-internal-ref-name": "MediaBrowser.Controller.Entities.User"
-      },
-      "Connect.UserLinkType": {
-        "enum": [
-          "LinkedUser",
-          "Guest"
-        ],
-        "type": "string",
-        "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
-      },
-      "Entities.ItemImageInfo": {
-        "type": "object",
-        "properties": {
-          "Path": {
-            "type": "string",
-            "description": "The path."
-          },
-          "Type": {
-            "$ref": "#/components/schemas/ImageType"
-          },
-          "Orientation": {
-            "$ref": "#/components/schemas/Drawing.ImageOrientation"
-          },
-          "DateModified": {
-            "type": "string",
-            "description": "The date modified.",
-            "format": "date-time"
-          },
-          "Width": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "Height": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "x-internal-ref-name": "MediaBrowser.Controller.Entities.ItemImageInfo"
-      },
-      "ImageType": {
-        "enum": [
-          "Primary",
-          "Art",
-          "Backdrop",
-          "Banner",
-          "Logo",
-          "Thumb",
-          "Disc",
-          "Box",
-          "Screenshot",
-          "Menu",
-          "Chapter",
-          "BoxRear",
-          "Thumbnail",
-          "LogoLight",
-          "LogoLightColor"
-        ],
-        "type": "string",
-        "description": "Enum ImageType\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
-      },
-      "LinkedItemInfo": {
-        "type": "object",
-        "properties": {
-          "ProviderIds": {
-            "$ref": "#/components/schemas/ProviderIdDictionary"
-          },
-          "Name": {
-            "type": "string",
-            "description": "The name."
-          },
-          "Id": {
-            "type": "integer",
-            "description": "The identifier.",
-            "format": "int64"
-          }
-        },
-        "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
-      },
-      "Playlists.PlaylistCreationResult": {
-        "type": "object",
-        "properties": {
-          "Id": {
-            "type": "string"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "ItemAddedCount": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "x-internal-ref-name": "MediaBrowser.Controller.Playlists.PlaylistCreationResult"
-      },
-      "Plugins.PluginInfo": {
-        "type": "object",
-        "properties": {
-          "Name": {
-            "type": "string",
-            "description": "The name."
-          },
-          "Version": {
-            "type": "string",
-            "description": "The version."
-          },
-          "ConfigurationFileName": {
-            "type": "string",
-            "description": "The name of the configuration file."
-          },
-          "Description": {
-            "type": "string",
-            "description": "The description."
-          },
-          "Id": {
-            "type": "string",
-            "description": "The unique id."
-          },
-          "ImageTag": {
-            "type": "string",
-            "description": "The image URL."
-          }
-        },
-        "description": "This is a serializable stub class that is used by the api to provide information about installed plugins.\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Plugins.PluginInfo"
-      },
-      "TaskInfo": {
-        "type": "object",
-        "properties": {
-          "Name": {
-            "type": "string",
-            "description": "The name."
-          },
-          "State": {
-            "$ref": "#/components/schemas/TaskState"
-          },
-          "CurrentProgressPercentage": {
-            "type": "number",
-            "description": "The progress.",
-            "format": "double",
-            "nullable": true
-          },
-          "Id": {
-            "type": "string",
-            "description": "The id."
-          },
-          "LastExecutionResult": {
-            "$ref": "#/components/schemas/TaskResult"
-          },
-          "Triggers": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TaskTriggerInfo"
-            },
-            "description": "The triggers."
-          },
-          "Description": {
-            "type": "string",
-            "description": "The description."
-          },
-          "Category": {
-            "type": "string",
-            "description": "The category."
-          },
-          "IsHidden": {
-            "type": "boolean",
-            "description": "A value indicating whether this instance is hidden."
-          },
-          "Key": {
-            "type": "string",
-            "description": "The key."
-          }
-        },
-        "description": "Class TaskInfo\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskInfo"
-      },
-      "TaskState": {
-        "enum": [
-          "Idle",
-          "Cancelling",
-          "Running"
-        ],
-        "type": "string",
-        "description": "Enum TaskState\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskState"
-      },
-      "TaskResult": {
-        "type": "object",
-        "properties": {
-          "StartTimeUtc": {
-            "type": "string",
-            "description": "The start time UTC.",
-            "format": "date-time"
-          },
-          "EndTimeUtc": {
-            "type": "string",
-            "description": "The end time UTC.",
-            "format": "date-time"
-          },
-          "Status": {
-            "$ref": "#/components/schemas/TaskCompletionStatus"
-          },
-          "Name": {
-            "type": "string",
-            "description": "The name."
-          },
-          "Key": {
-            "type": "string",
-            "description": "The key."
-          },
-          "Id": {
-            "type": "string",
-            "description": "The id."
-          },
-          "ErrorMessage": {
-            "type": "string",
-            "description": "The error message."
-          },
-          "LongErrorMessage": {
-            "type": "string",
-            "description": "The long error message."
-          }
-        },
-        "description": "Class TaskExecutionInfo\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskResult"
-      },
-      "TaskCompletionStatus": {
-        "enum": [
-          "Completed",
-          "Failed",
-          "Cancelled",
-          "Aborted"
-        ],
-        "type": "string",
-        "description": "Enum TaskCompletionStatus\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskCompletionStatus"
-      },
-      "TaskTriggerInfo": {
-        "type": "object",
-        "properties": {
-          "Type": {
-            "type": "string",
-            "description": "The type."
-          },
-          "TimeOfDayTicks": {
-            "type": "integer",
-            "description": "The time of day.",
-            "format": "int64",
-            "nullable": true
-          },
-          "IntervalTicks": {
-            "type": "integer",
-            "description": "The interval.",
-            "format": "int64",
-            "nullable": true
-          },
-          "SystemEvent": {
-            "$ref": "#/components/schemas/SystemEvent"
-          },
-          "DayOfWeek": {
-            "$ref": "#/components/schemas/DayOfWeek"
-          },
-          "MaxRuntimeTicks": {
-            "type": "integer",
-            "description": "The maximum runtime ticks.",
-            "format": "int64",
-            "nullable": true
-          }
-        },
-        "description": "Class TaskTriggerInfo\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskTriggerInfo"
-      },
-      "SystemEvent": {
-        "enum": [
-          "WakeFromSleep",
-          "DisplayConfigurationChange",
-          "NetworkChange"
-        ],
-        "type": "string",
-        "description": "Enum SystemEvent\r\n",
-        "x-internal-ref-name": "MediaBrowser.Model.Tasks.SystemEvent"
       },
       "Session.SessionInfo": {
         "type": "object",
@@ -106434,6 +106075,371 @@
         "type": "string",
         "description": "Video Processing Step Type enum.\r\n",
         "x-internal-ref-name": "MediaBrowser.Model.Session.Transcoding.VpStepTypes"
+      },
+      "Entities.User": {
+        "type": "object",
+        "properties": {
+          "UsesIdForConfigurationPath": {
+            "type": "boolean",
+            "description": "From now on all user paths will be Id\\-based. This is for backwards compatibility."
+          },
+          "Password": {
+            "type": "string",
+            "description": "The password."
+          },
+          "EasyPassword": {
+            "type": "string"
+          },
+          "Salt": {
+            "type": "string"
+          },
+          "ConnectUserName": {
+            "type": "string"
+          },
+          "ConnectUserId": {
+            "type": "string"
+          },
+          "ConnectLinkType": {
+            "$ref": "#/components/schemas/Connect.UserLinkType"
+          },
+          "ConnectAccessKey": {
+            "type": "string"
+          },
+          "ImageInfos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Entities.ItemImageInfo"
+            }
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "LastLoginDate": {
+            "type": "string",
+            "description": "The last login date.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "LastActivityDate": {
+            "type": "string",
+            "description": "The last activity date.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "PlayedPercentage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "RecursiveChildCountEqualsChildCount": {
+            "type": "boolean"
+          },
+          "OriginalParsedName": {
+            "type": "string",
+            "description": "Internal use only"
+          },
+          "IsNameParsedFromFolder": {
+            "type": "boolean",
+            "description": "Internal use only"
+          },
+          "DateCreated": {
+            "type": "string",
+            "description": "The date created.",
+            "format": "date-time"
+          },
+          "ImportedCollections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LinkedItemInfo"
+            }
+          },
+          "ResolvedPresentationUniqueKey": {
+            "type": "string"
+          }
+        },
+        "description": "Class User\r\n",
+        "x-internal-ref-name": "MediaBrowser.Controller.Entities.User"
+      },
+      "Connect.UserLinkType": {
+        "enum": [
+          "LinkedUser",
+          "Guest"
+        ],
+        "type": "string",
+        "x-internal-ref-name": "MediaBrowser.Model.Connect.UserLinkType"
+      },
+      "Entities.ItemImageInfo": {
+        "type": "object",
+        "properties": {
+          "Path": {
+            "type": "string",
+            "description": "The path."
+          },
+          "Type": {
+            "$ref": "#/components/schemas/ImageType"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Drawing.ImageOrientation"
+          },
+          "DateModified": {
+            "type": "string",
+            "description": "The date modified.",
+            "format": "date-time"
+          },
+          "Width": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Height": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Controller.Entities.ItemImageInfo"
+      },
+      "ImageType": {
+        "enum": [
+          "Primary",
+          "Art",
+          "Backdrop",
+          "Banner",
+          "Logo",
+          "Thumb",
+          "Disc",
+          "Box",
+          "Screenshot",
+          "Menu",
+          "Chapter",
+          "BoxRear",
+          "Thumbnail",
+          "LogoLight",
+          "LogoLightColor"
+        ],
+        "type": "string",
+        "description": "Enum ImageType\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Entities.ImageType"
+      },
+      "LinkedItemInfo": {
+        "type": "object",
+        "properties": {
+          "ProviderIds": {
+            "$ref": "#/components/schemas/ProviderIdDictionary"
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "Id": {
+            "type": "integer",
+            "description": "The identifier.",
+            "format": "int64"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Model.Dto.LinkedItemInfo"
+      },
+      "Playlists.PlaylistCreationResult": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "ItemAddedCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "x-internal-ref-name": "MediaBrowser.Controller.Playlists.PlaylistCreationResult"
+      },
+      "Plugins.PluginInfo": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "Version": {
+            "type": "string",
+            "description": "The version."
+          },
+          "ConfigurationFileName": {
+            "type": "string",
+            "description": "The name of the configuration file."
+          },
+          "Description": {
+            "type": "string",
+            "description": "The description."
+          },
+          "Id": {
+            "type": "string",
+            "description": "The unique id."
+          },
+          "ImageTag": {
+            "type": "string",
+            "description": "The image URL."
+          }
+        },
+        "description": "This is a serializable stub class that is used by the api to provide information about installed plugins.\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Plugins.PluginInfo"
+      },
+      "TaskInfo": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "State": {
+            "$ref": "#/components/schemas/TaskState"
+          },
+          "CurrentProgressPercentage": {
+            "type": "number",
+            "description": "The progress.",
+            "format": "double",
+            "nullable": true
+          },
+          "Id": {
+            "type": "string",
+            "description": "The id."
+          },
+          "LastExecutionResult": {
+            "$ref": "#/components/schemas/TaskResult"
+          },
+          "Triggers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TaskTriggerInfo"
+            },
+            "description": "The triggers."
+          },
+          "Description": {
+            "type": "string",
+            "description": "The description."
+          },
+          "Category": {
+            "type": "string",
+            "description": "The category."
+          },
+          "IsHidden": {
+            "type": "boolean",
+            "description": "A value indicating whether this instance is hidden."
+          },
+          "Key": {
+            "type": "string",
+            "description": "The key."
+          }
+        },
+        "description": "Class TaskInfo\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskInfo"
+      },
+      "TaskState": {
+        "enum": [
+          "Idle",
+          "Cancelling",
+          "Running"
+        ],
+        "type": "string",
+        "description": "Enum TaskState\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskState"
+      },
+      "TaskResult": {
+        "type": "object",
+        "properties": {
+          "StartTimeUtc": {
+            "type": "string",
+            "description": "The start time UTC.",
+            "format": "date-time"
+          },
+          "EndTimeUtc": {
+            "type": "string",
+            "description": "The end time UTC.",
+            "format": "date-time"
+          },
+          "Status": {
+            "$ref": "#/components/schemas/TaskCompletionStatus"
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name."
+          },
+          "Key": {
+            "type": "string",
+            "description": "The key."
+          },
+          "Id": {
+            "type": "string",
+            "description": "The id."
+          },
+          "ErrorMessage": {
+            "type": "string",
+            "description": "The error message."
+          },
+          "LongErrorMessage": {
+            "type": "string",
+            "description": "The long error message."
+          }
+        },
+        "description": "Class TaskExecutionInfo\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskResult"
+      },
+      "TaskCompletionStatus": {
+        "enum": [
+          "Completed",
+          "Failed",
+          "Cancelled",
+          "Aborted"
+        ],
+        "type": "string",
+        "description": "Enum TaskCompletionStatus\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskCompletionStatus"
+      },
+      "TaskTriggerInfo": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "type": "string",
+            "description": "The type."
+          },
+          "TimeOfDayTicks": {
+            "type": "integer",
+            "description": "The time of day.",
+            "format": "int64",
+            "nullable": true
+          },
+          "IntervalTicks": {
+            "type": "integer",
+            "description": "The interval.",
+            "format": "int64",
+            "nullable": true
+          },
+          "SystemEvent": {
+            "$ref": "#/components/schemas/SystemEvent"
+          },
+          "DayOfWeek": {
+            "$ref": "#/components/schemas/DayOfWeek"
+          },
+          "MaxRuntimeTicks": {
+            "type": "integer",
+            "description": "The maximum runtime ticks.",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "description": "Class TaskTriggerInfo\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Tasks.TaskTriggerInfo"
+      },
+      "SystemEvent": {
+        "enum": [
+          "WakeFromSleep",
+          "DisplayConfigurationChange",
+          "NetworkChange"
+        ],
+        "type": "string",
+        "description": "Enum SystemEvent\r\n",
+        "x-internal-ref-name": "MediaBrowser.Model.Tasks.SystemEvent"
       },
       "NameValuePair": {
         "type": "object",
@@ -109081,10 +109087,6 @@
             "type": "string",
             "description": "The program identifier."
           },
-          "Name": {
-            "type": "string",
-            "description": "Name of the recording."
-          },
           "ServiceName": {
             "type": "string"
           },
@@ -109172,6 +109174,10 @@
           },
           "TimerType": {
             "$ref": "#/components/schemas/LiveTv.TimerType"
+          },
+          "Name": {
+            "type": "string",
+            "description": "Name of the recording."
           }
         },
         "x-internal-ref-name": "MediaBrowser.Controller.LiveTv.SeriesTimerInfo"
