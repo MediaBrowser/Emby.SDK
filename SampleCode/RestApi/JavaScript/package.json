@@ -1,6 +1,6 @@
 {
   "name": "embyclient-js",
-  "version": "4.9.2.5",
+  "version": "4.9.2.6",
   "description": "The official JavaScript client library for Emby Server REST API access",
   "license": "Unlicense",
   "main": "src/index.js",

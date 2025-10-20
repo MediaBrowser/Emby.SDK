@@ -15,7 +15,7 @@ import MetadataFeatures from './MetadataFeatures';
 /**
 * The LibraryOptionInfo model module.
 * @module model/LibraryOptionInfo
-* @version 4.9.2.5
+* @version 4.9.2.6
 */
 export default class LibraryOptionInfo {
     /**

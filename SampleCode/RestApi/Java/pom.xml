@@ -5,7 +5,7 @@
   <artifactId>embyclient</artifactId>
   <packaging>jar</packaging>
   <name>embyclient</name>
-  <version>4.9.2.5</version>
+  <version>4.9.2.6</version>
   <url>https://dev.emby.media</url>
   <description>Swagger Java</description>
 

@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * LiveStreamService service.
 * @module api/LiveStreamServiceApi
-* @version 4.9.2.5
+* @version 4.9.2.6
 */
 export default class LiveStreamServiceApi {
 
