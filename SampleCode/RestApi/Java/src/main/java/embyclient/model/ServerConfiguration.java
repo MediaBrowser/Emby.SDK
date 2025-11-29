@@ -176,8 +176,8 @@ public class ServerConfiguration {
   @SerializedName("DatabaseAnalysisLimit")
   private Integer databaseAnalysisLimit = null;
 
-  @SerializedName("MaxLibraryDbConnections")
-  private Integer maxLibraryDbConnections = null;
+  @SerializedName("MaxLibraryDatabaseConnections")
+  private Integer maxLibraryDatabaseConnections = null;
 
   @SerializedName("MaxAuthDbConnections")
   private Integer maxAuthDbConnections = null;
@@ -1181,22 +1181,22 @@ public class ServerConfiguration {
     this.databaseAnalysisLimit = databaseAnalysisLimit;
   }
 
-  public ServerConfiguration maxLibraryDbConnections(Integer maxLibraryDbConnections) {
-    this.maxLibraryDbConnections = maxLibraryDbConnections;
+  public ServerConfiguration maxLibraryDatabaseConnections(Integer maxLibraryDatabaseConnections) {
+    this.maxLibraryDatabaseConnections = maxLibraryDatabaseConnections;
     return this;
   }
 
    /**
-   * Get maxLibraryDbConnections
-   * @return maxLibraryDbConnections
+   * Get maxLibraryDatabaseConnections
+   * @return maxLibraryDatabaseConnections
   **/
   @Schema(description = "")
-  public Integer getMaxLibraryDbConnections() {
-    return maxLibraryDbConnections;
+  public Integer getMaxLibraryDatabaseConnections() {
+    return maxLibraryDatabaseConnections;
   }
 
-  public void setMaxLibraryDbConnections(Integer maxLibraryDbConnections) {
-    this.maxLibraryDbConnections = maxLibraryDbConnections;
+  public void setMaxLibraryDatabaseConnections(Integer maxLibraryDatabaseConnections) {
+    this.maxLibraryDatabaseConnections = maxLibraryDatabaseConnections;
   }
 
   public ServerConfiguration maxAuthDbConnections(Integer maxAuthDbConnections) {
@@ -1583,7 +1583,7 @@ public class ServerConfiguration {
         Objects.equals(this.enablePeopleLetterSubFolders, serverConfiguration.enablePeopleLetterSubFolders) &&
         Objects.equals(this.optimizeDatabaseOnShutdown, serverConfiguration.optimizeDatabaseOnShutdown) &&
         Objects.equals(this.databaseAnalysisLimit, serverConfiguration.databaseAnalysisLimit) &&
-        Objects.equals(this.maxLibraryDbConnections, serverConfiguration.maxLibraryDbConnections) &&
+        Objects.equals(this.maxLibraryDatabaseConnections, serverConfiguration.maxLibraryDatabaseConnections) &&
         Objects.equals(this.maxAuthDbConnections, serverConfiguration.maxAuthDbConnections) &&
         Objects.equals(this.maxOtherDbConnections, serverConfiguration.maxOtherDbConnections) &&
         Objects.equals(this.disableAsyncIO, serverConfiguration.disableAsyncIO) &&
@@ -1606,7 +1606,7 @@ public class ServerConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, disableOutgoingIPv6, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, maxLibraryDbConnections, maxAuthDbConnections, maxOtherDbConnections, disableAsyncIO, migratedToUserItemShares8, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, isInMaintenanceMode, maintenanceModeMessage, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
+    return Objects.hash(enableUPnP, publicPort, publicHttpsPort, httpServerPortNumber, httpsPortNumber, enableHttps, certificatePath, certificatePassword, isPortAuthorized, autoRunWebApp, enableRemoteAccess, logAllQueryTimes, disableOutgoingIPv6, enableCaseSensitiveItemIds, metadataPath, metadataNetworkPath, preferredMetadataLanguage, metadataCountryCode, sortRemoveWords, libraryMonitorDelaySeconds, enableDashboardResponseCaching, dashboardSourcePath, imageSavingConvention, enableAutomaticRestart, serverName, preferredDetectedRemoteAddressFamily, wanDdns, uiCulture, remoteClientBitrateLimit, localNetworkSubnets, localNetworkAddresses, enableExternalContentInSuggestions, requireHttps, isBehindProxy, remoteIPFilter, isRemoteIPFilterBlacklist, imageExtractionTimeoutMs, pathSubstitutions, uninstalledPlugins, collapseVideoFolders, enableOriginalTrackTitles, vacuumDatabaseOnStartup, simultaneousStreamLimit, databaseCacheSizeMB, enableSqLiteMmio, playlistsUpgradedToM3U, imageExtractorUpgraded1, enablePeopleLetterSubFolders, optimizeDatabaseOnShutdown, databaseAnalysisLimit, maxLibraryDatabaseConnections, maxAuthDbConnections, maxOtherDbConnections, disableAsyncIO, migratedToUserItemShares8, migratedLibraryOptionsToDb, allowLegacyLocalNetworkPassword, enableSavedMetadataForPeople, tvChannelsRefreshed, proxyHeaderMode, isInMaintenanceMode, maintenanceModeMessage, enableDebugLevelLogging, revertDebugLogging, enableAutoUpdate, logFileRetentionDays, runAtStartup, isStartupWizardCompleted, cachePath);
   }
 
 
@@ -1665,7 +1665,7 @@ public class ServerConfiguration {
     sb.append("    enablePeopleLetterSubFolders: ").append(toIndentedString(enablePeopleLetterSubFolders)).append("\n");
     sb.append("    optimizeDatabaseOnShutdown: ").append(toIndentedString(optimizeDatabaseOnShutdown)).append("\n");
     sb.append("    databaseAnalysisLimit: ").append(toIndentedString(databaseAnalysisLimit)).append("\n");
-    sb.append("    maxLibraryDbConnections: ").append(toIndentedString(maxLibraryDbConnections)).append("\n");
+    sb.append("    maxLibraryDatabaseConnections: ").append(toIndentedString(maxLibraryDatabaseConnections)).append("\n");
     sb.append("    maxAuthDbConnections: ").append(toIndentedString(maxAuthDbConnections)).append("\n");
     sb.append("    maxOtherDbConnections: ").append(toIndentedString(maxOtherDbConnections)).append("\n");
     sb.append("    disableAsyncIO: ").append(toIndentedString(disableAsyncIO)).append("\n");

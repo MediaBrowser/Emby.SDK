@@ -74,7 +74,7 @@ type ServerConfiguration struct {
 	EnablePeopleLetterSubFolders bool `json:"EnablePeopleLetterSubFolders,omitempty"`
 	OptimizeDatabaseOnShutdown bool `json:"OptimizeDatabaseOnShutdown,omitempty"`
 	DatabaseAnalysisLimit int32 `json:"DatabaseAnalysisLimit,omitempty"`
-	MaxLibraryDbConnections int32 `json:"MaxLibraryDbConnections,omitempty"`
+	MaxLibraryDatabaseConnections int32 `json:"MaxLibraryDatabaseConnections,omitempty"`
 	MaxAuthDbConnections int32 `json:"MaxAuthDbConnections,omitempty"`
 	MaxOtherDbConnections int32 `json:"MaxOtherDbConnections,omitempty"`
 	DisableAsyncIO bool `json:"DisableAsyncIO,omitempty"`

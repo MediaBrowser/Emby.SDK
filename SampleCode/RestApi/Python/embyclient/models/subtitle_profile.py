@@ -27,6 +27,7 @@ class SubtitleProfile(object):
         'didl_mode': 'str',
         'language': 'str',
         'container': 'str',
+        'allow_chunked_response': 'bool',
         'protocol': 'str'
     }
 
@@ -36,16 +37,18 @@ class SubtitleProfile(object):
         'didl_mode': 'DidlMode',
         'language': 'Language',
         'container': 'Container',
+        'allow_chunked_response': 'AllowChunkedResponse',
         'protocol': 'Protocol'
     }
 
-    def __init__(self, format=None, method=None, didl_mode=None, language=None, container=None, protocol=None):  # noqa: E501
+    def __init__(self, format=None, method=None, didl_mode=None, language=None, container=None, allow_chunked_response=None, protocol=None):  # noqa: E501
         """SubtitleProfile - a model defined in Swagger"""  # noqa: E501
         self._format = None
         self._method = None
         self._didl_mode = None
         self._language = None
         self._container = None
+        self._allow_chunked_response = None
         self._protocol = None
         self.discriminator = None
         if format is not None:
@@ -58,6 +61,8 @@ class SubtitleProfile(object):
             self.language = language
         if container is not None:
             self.container = container
+        if allow_chunked_response is not None:
+            self.allow_chunked_response = allow_chunked_response
         if protocol is not None:
             self.protocol = protocol
 
@@ -165,6 +170,27 @@ class SubtitleProfile(object):
         """
 
         self._container = container
+
+    @property
+    def allow_chunked_response(self):
+        """Gets the allow_chunked_response of this SubtitleProfile.  # noqa: E501
+
+
+        :return: The allow_chunked_response of this SubtitleProfile.  # noqa: E501
+        :rtype: bool
+        """
+        return self._allow_chunked_response
+
+    @allow_chunked_response.setter
+    def allow_chunked_response(self, allow_chunked_response):
+        """Sets the allow_chunked_response of this SubtitleProfile.
+
+
+        :param allow_chunked_response: The allow_chunked_response of this SubtitleProfile.  # noqa: E501
+        :type: bool
+        """
+
+        self._allow_chunked_response = allow_chunked_response
 
     @property
     def protocol(self):

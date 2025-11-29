@@ -2,7 +2,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.2.6
+ * OpenAPI spec version: 4.9.2.7
  * 
  *
  * NOTE: This file is auto generated.
@@ -6616,7 +6616,8 @@ describe("RemoteImageServiceApi", () => {
     const Limit: number = 56
     const ProviderName: string = "ProviderName_example"
     const IncludeAllLanguages: boolean = true
-    return expect(instance.getItemsByIdRemoteimages(Id, Type, StartIndex, Limit, ProviderName, IncludeAllLanguages, {})).resolves.toBe(null)
+    const EnableSeriesImages: boolean = true
+    return expect(instance.getItemsByIdRemoteimages(Id, Type, StartIndex, Limit, ProviderName, IncludeAllLanguages, EnableSeriesImages, {})).resolves.toBe(null)
   })
   test("getItemsByIdRemoteimagesProviders", () => {
     const Id: string = "Id_example"

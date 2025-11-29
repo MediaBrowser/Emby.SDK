@@ -35,12 +35,13 @@ public struct EntitiesUser: Codable {
     public var originalParsedName: String?
     /** Internal use only */
     public var isNameParsedFromFolder: Bool?
+    public var idString: String?
     /** The date created. */
     public var dateCreated: Date?
     public var importedCollections: [LinkedItemInfo]?
     public var resolvedPresentationUniqueKey: String?
 
-    public init(usesIdForConfigurationPath: Bool? = nil, password: String? = nil, easyPassword: String? = nil, salt: String? = nil, connectUserName: String? = nil, connectUserId: String? = nil, connectLinkType: ConnectUserLinkType? = nil, connectAccessKey: String? = nil, imageInfos: [EntitiesItemImageInfo]? = nil, name: String? = nil, lastLoginDate: Date? = nil, lastActivityDate: Date? = nil, playedPercentage: Double? = nil, recursiveChildCountEqualsChildCount: Bool? = nil, originalParsedName: String? = nil, isNameParsedFromFolder: Bool? = nil, dateCreated: Date? = nil, importedCollections: [LinkedItemInfo]? = nil, resolvedPresentationUniqueKey: String? = nil) {
+    public init(usesIdForConfigurationPath: Bool? = nil, password: String? = nil, easyPassword: String? = nil, salt: String? = nil, connectUserName: String? = nil, connectUserId: String? = nil, connectLinkType: ConnectUserLinkType? = nil, connectAccessKey: String? = nil, imageInfos: [EntitiesItemImageInfo]? = nil, name: String? = nil, lastLoginDate: Date? = nil, lastActivityDate: Date? = nil, playedPercentage: Double? = nil, recursiveChildCountEqualsChildCount: Bool? = nil, originalParsedName: String? = nil, isNameParsedFromFolder: Bool? = nil, idString: String? = nil, dateCreated: Date? = nil, importedCollections: [LinkedItemInfo]? = nil, resolvedPresentationUniqueKey: String? = nil) {
         self.usesIdForConfigurationPath = usesIdForConfigurationPath
         self.password = password
         self.easyPassword = easyPassword
@@ -57,6 +58,7 @@ public struct EntitiesUser: Codable {
         self.recursiveChildCountEqualsChildCount = recursiveChildCountEqualsChildCount
         self.originalParsedName = originalParsedName
         self.isNameParsedFromFolder = isNameParsedFromFolder
+        self.idString = idString
         self.dateCreated = dateCreated
         self.importedCollections = importedCollections
         self.resolvedPresentationUniqueKey = resolvedPresentationUniqueKey
@@ -79,6 +81,7 @@ public struct EntitiesUser: Codable {
         case recursiveChildCountEqualsChildCount = "RecursiveChildCountEqualsChildCount"
         case originalParsedName = "OriginalParsedName"
         case isNameParsedFromFolder = "IsNameParsedFromFolder"
+        case idString = "IdString"
         case dateCreated = "DateCreated"
         case importedCollections = "ImportedCollections"
         case resolvedPresentationUniqueKey = "ResolvedPresentationUniqueKey"

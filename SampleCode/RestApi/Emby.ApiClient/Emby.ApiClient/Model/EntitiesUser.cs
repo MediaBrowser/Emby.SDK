@@ -123,6 +123,12 @@ namespace Emby.ApiClient.Model
         public bool? IsNameParsedFromFolder { get; set; }
 
         /// <summary>
+        /// Gets or Sets IdString
+        /// </summary>
+        /// <value>The IdString.</value>
+        public string IdString { get; set; }
+
+        /// <summary>
         /// The date created.
         /// </summary>
         /// <value>The DateCreated.</value>
@@ -164,6 +170,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  RecursiveChildCountEqualsChildCount: ").Append(RecursiveChildCountEqualsChildCount).Append("\n");
             sb.Append("  OriginalParsedName: ").Append(OriginalParsedName).Append("\n");
             sb.Append("  IsNameParsedFromFolder: ").Append(IsNameParsedFromFolder).Append("\n");
+            sb.Append("  IdString: ").Append(IdString).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ImportedCollections: ").Append(ImportedCollections).Append("\n");
             sb.Append("  ResolvedPresentationUniqueKey: ").Append(ResolvedPresentationUniqueKey).Append("\n");
@@ -274,6 +281,11 @@ namespace Emby.ApiClient.Model
                     this.IsNameParsedFromFolder.Equals(input.IsNameParsedFromFolder))
                 ) && 
                 (
+                    this.IdString == input.IdString ||
+                    (this.IdString != null &&
+                    this.IdString.Equals(input.IdString))
+                ) && 
+                (
                     this.DateCreated == input.DateCreated ||
                     (this.DateCreated != null &&
                     this.DateCreated.Equals(input.DateCreated))
@@ -332,6 +344,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.OriginalParsedName.GetHashCode();
                 if (this.IsNameParsedFromFolder != null)
                     hashCode = hashCode * 59 + this.IsNameParsedFromFolder.GetHashCode();
+                if (this.IdString != null)
+                    hashCode = hashCode * 59 + this.IdString.GetHashCode();
                 if (this.DateCreated != null)
                     hashCode = hashCode * 59 + this.DateCreated.GetHashCode();
                 if (this.ImportedCollections != null)

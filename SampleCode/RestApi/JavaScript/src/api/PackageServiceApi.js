@@ -17,7 +17,7 @@ import PackageVersionInfo from '../model/PackageVersionInfo';
 /**
 * PackageService service.
 * @module api/PackageServiceApi
-* @version 4.9.2.6
+* @version 4.9.2.7
 */
 export default class PackageServiceApi {
 

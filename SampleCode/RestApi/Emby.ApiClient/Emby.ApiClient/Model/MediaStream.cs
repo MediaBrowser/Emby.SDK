@@ -261,6 +261,12 @@ namespace Emby.ApiClient.Model
         public bool? IsExternalUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsChunkedResponse
+        /// </summary>
+        /// <value>The IsChunkedResponse.</value>
+        public bool? IsChunkedResponse { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsTextSubtitleStream
         /// </summary>
         /// <value>The IsTextSubtitleStream.</value>
@@ -397,6 +403,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  DeliveryMethod: ").Append(DeliveryMethod).Append("\n");
             sb.Append("  DeliveryUrl: ").Append(DeliveryUrl).Append("\n");
             sb.Append("  IsExternalUrl: ").Append(IsExternalUrl).Append("\n");
+            sb.Append("  IsChunkedResponse: ").Append(IsChunkedResponse).Append("\n");
             sb.Append("  IsTextSubtitleStream: ").Append(IsTextSubtitleStream).Append("\n");
             sb.Append("  SupportsExternalStream: ").Append(SupportsExternalStream).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
@@ -633,6 +640,11 @@ namespace Emby.ApiClient.Model
                     this.IsExternalUrl.Equals(input.IsExternalUrl))
                 ) && 
                 (
+                    this.IsChunkedResponse == input.IsChunkedResponse ||
+                    (this.IsChunkedResponse != null &&
+                    this.IsChunkedResponse.Equals(input.IsChunkedResponse))
+                ) && 
+                (
                     this.IsTextSubtitleStream == input.IsTextSubtitleStream ||
                     (this.IsTextSubtitleStream != null &&
                     this.IsTextSubtitleStream.Equals(input.IsTextSubtitleStream))
@@ -796,6 +808,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.DeliveryUrl.GetHashCode();
                 if (this.IsExternalUrl != null)
                     hashCode = hashCode * 59 + this.IsExternalUrl.GetHashCode();
+                if (this.IsChunkedResponse != null)
+                    hashCode = hashCode * 59 + this.IsChunkedResponse.GetHashCode();
                 if (this.IsTextSubtitleStream != null)
                     hashCode = hashCode * 59 + this.IsTextSubtitleStream.GetHashCode();
                 if (this.SupportsExternalStream != null)

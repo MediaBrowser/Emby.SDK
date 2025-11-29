@@ -72,7 +72,7 @@ class ServerConfiguration(object):
         'enable_people_letter_sub_folders': 'bool',
         'optimize_database_on_shutdown': 'bool',
         'database_analysis_limit': 'int',
-        'max_library_db_connections': 'int',
+        'max_library_database_connections': 'int',
         'max_auth_db_connections': 'int',
         'max_other_db_connections': 'int',
         'disable_async_io': 'bool',
@@ -144,7 +144,7 @@ class ServerConfiguration(object):
         'enable_people_letter_sub_folders': 'EnablePeopleLetterSubFolders',
         'optimize_database_on_shutdown': 'OptimizeDatabaseOnShutdown',
         'database_analysis_limit': 'DatabaseAnalysisLimit',
-        'max_library_db_connections': 'MaxLibraryDbConnections',
+        'max_library_database_connections': 'MaxLibraryDatabaseConnections',
         'max_auth_db_connections': 'MaxAuthDbConnections',
         'max_other_db_connections': 'MaxOtherDbConnections',
         'disable_async_io': 'DisableAsyncIO',
@@ -165,7 +165,7 @@ class ServerConfiguration(object):
         'cache_path': 'CachePath'
     }
 
-    def __init__(self, enable_upn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, disable_outgoing_ipv6=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay_seconds=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded1=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, max_library_db_connections=None, max_auth_db_connections=None, max_other_db_connections=None, disable_async_io=None, migrated_to_user_item_shares8=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, tv_channels_refreshed=None, proxy_header_mode=None, is_in_maintenance_mode=None, maintenance_mode_message=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
+    def __init__(self, enable_upn_p=None, public_port=None, public_https_port=None, http_server_port_number=None, https_port_number=None, enable_https=None, certificate_path=None, certificate_password=None, is_port_authorized=None, auto_run_web_app=None, enable_remote_access=None, log_all_query_times=None, disable_outgoing_ipv6=None, enable_case_sensitive_item_ids=None, metadata_path=None, metadata_network_path=None, preferred_metadata_language=None, metadata_country_code=None, sort_remove_words=None, library_monitor_delay_seconds=None, enable_dashboard_response_caching=None, dashboard_source_path=None, image_saving_convention=None, enable_automatic_restart=None, server_name=None, preferred_detected_remote_address_family=None, wan_ddns=None, ui_culture=None, remote_client_bitrate_limit=None, local_network_subnets=None, local_network_addresses=None, enable_external_content_in_suggestions=None, require_https=None, is_behind_proxy=None, remote_ip_filter=None, is_remote_ip_filter_blacklist=None, image_extraction_timeout_ms=None, path_substitutions=None, uninstalled_plugins=None, collapse_video_folders=None, enable_original_track_titles=None, vacuum_database_on_startup=None, simultaneous_stream_limit=None, database_cache_size_mb=None, enable_sq_lite_mmio=None, playlists_upgraded_to_m3_u=None, image_extractor_upgraded1=None, enable_people_letter_sub_folders=None, optimize_database_on_shutdown=None, database_analysis_limit=None, max_library_database_connections=None, max_auth_db_connections=None, max_other_db_connections=None, disable_async_io=None, migrated_to_user_item_shares8=None, migrated_library_options_to_db=None, allow_legacy_local_network_password=None, enable_saved_metadata_for_people=None, tv_channels_refreshed=None, proxy_header_mode=None, is_in_maintenance_mode=None, maintenance_mode_message=None, enable_debug_level_logging=None, revert_debug_logging=None, enable_auto_update=None, log_file_retention_days=None, run_at_startup=None, is_startup_wizard_completed=None, cache_path=None):  # noqa: E501
         """ServerConfiguration - a model defined in Swagger"""  # noqa: E501
         self._enable_upn_p = None
         self._public_port = None
@@ -217,7 +217,7 @@ class ServerConfiguration(object):
         self._enable_people_letter_sub_folders = None
         self._optimize_database_on_shutdown = None
         self._database_analysis_limit = None
-        self._max_library_db_connections = None
+        self._max_library_database_connections = None
         self._max_auth_db_connections = None
         self._max_other_db_connections = None
         self._disable_async_io = None
@@ -337,8 +337,8 @@ class ServerConfiguration(object):
             self.optimize_database_on_shutdown = optimize_database_on_shutdown
         if database_analysis_limit is not None:
             self.database_analysis_limit = database_analysis_limit
-        if max_library_db_connections is not None:
-            self.max_library_db_connections = max_library_db_connections
+        if max_library_database_connections is not None:
+            self.max_library_database_connections = max_library_database_connections
         if max_auth_db_connections is not None:
             self.max_auth_db_connections = max_auth_db_connections
         if max_other_db_connections is not None:
@@ -1459,25 +1459,25 @@ class ServerConfiguration(object):
         self._database_analysis_limit = database_analysis_limit
 
     @property
-    def max_library_db_connections(self):
-        """Gets the max_library_db_connections of this ServerConfiguration.  # noqa: E501
+    def max_library_database_connections(self):
+        """Gets the max_library_database_connections of this ServerConfiguration.  # noqa: E501
 
 
-        :return: The max_library_db_connections of this ServerConfiguration.  # noqa: E501
+        :return: The max_library_database_connections of this ServerConfiguration.  # noqa: E501
         :rtype: int
         """
-        return self._max_library_db_connections
+        return self._max_library_database_connections
 
-    @max_library_db_connections.setter
-    def max_library_db_connections(self, max_library_db_connections):
-        """Sets the max_library_db_connections of this ServerConfiguration.
+    @max_library_database_connections.setter
+    def max_library_database_connections(self, max_library_database_connections):
+        """Sets the max_library_database_connections of this ServerConfiguration.
 
 
-        :param max_library_db_connections: The max_library_db_connections of this ServerConfiguration.  # noqa: E501
+        :param max_library_database_connections: The max_library_database_connections of this ServerConfiguration.  # noqa: E501
         :type: int
         """
 
-        self._max_library_db_connections = max_library_db_connections
+        self._max_library_database_connections = max_library_database_connections
 
     @property
     def max_auth_db_connections(self):

@@ -58,7 +58,8 @@ public class RemoteImageServiceApiTest {
         Integer limit = null;
         String providerName = null;
         Boolean includeAllLanguages = null;
-        RemoteImageResult response = api.getItemsByIdRemoteimages(id, type, startIndex, limit, providerName, includeAllLanguages);
+        Boolean enableSeriesImages = null;
+        RemoteImageResult response = api.getItemsByIdRemoteimages(id, type, startIndex, limit, providerName, includeAllLanguages, enableSeriesImages);
 
         // TODO: test validations
     }

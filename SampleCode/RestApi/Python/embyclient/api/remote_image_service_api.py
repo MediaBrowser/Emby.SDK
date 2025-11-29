@@ -130,6 +130,7 @@ class RemoteImageServiceApi(object):
         :param int limit: Optional. The maximum number of records to return
         :param str provider_name: Optional. The image provider to use
         :param bool include_all_languages: Optional.
+        :param bool enable_series_images: Optional.
         :return: RemoteImageResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -157,12 +158,13 @@ class RemoteImageServiceApi(object):
         :param int limit: Optional. The maximum number of records to return
         :param str provider_name: Optional. The image provider to use
         :param bool include_all_languages: Optional.
+        :param bool enable_series_images: Optional.
         :return: RemoteImageResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'start_index', 'limit', 'provider_name', 'include_all_languages']  # noqa: E501
+        all_params = ['id', 'type', 'start_index', 'limit', 'provider_name', 'include_all_languages', 'enable_series_images']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -199,6 +201,8 @@ class RemoteImageServiceApi(object):
             query_params.append(('ProviderName', params['provider_name']))  # noqa: E501
         if 'include_all_languages' in params:
             query_params.append(('IncludeAllLanguages', params['include_all_languages']))  # noqa: E501
+        if 'enable_series_images' in params:
+            query_params.append(('EnableSeriesImages', params['enable_series_images']))  # noqa: E501
 
         header_params = {}
 

@@ -17,7 +17,7 @@ import LinkedItemInfo from './LinkedItemInfo';
 /**
 * The EntitiesUser model module.
 * @module model/EntitiesUser
-* @version 4.9.2.6
+* @version 4.9.2.7
 */
 export default class EntitiesUser {
     /**
@@ -92,6 +92,9 @@ export default class EntitiesUser {
             }
             if (data.hasOwnProperty('IsNameParsedFromFolder')) {
                 obj['IsNameParsedFromFolder'] = ApiClient.convertToType(data['IsNameParsedFromFolder'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IdString')) {
+                obj['IdString'] = ApiClient.convertToType(data['IdString'], 'String');
             }
             if (data.hasOwnProperty('DateCreated')) {
                 obj['DateCreated'] = ApiClient.convertToType(data['DateCreated'], 'Date');
@@ -177,6 +180,10 @@ export default class EntitiesUser {
     * @member {Boolean} IsNameParsedFromFolder
     */
     'IsNameParsedFromFolder' = undefined;
+    /**
+    * @member {String} IdString
+    */
+    'IdString' = undefined;
     /**
     * The date created.
     * @member {Date} DateCreated

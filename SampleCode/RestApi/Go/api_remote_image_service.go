@@ -115,6 +115,7 @@ Requires authentication as user
      * @param "Limit" (optional.Int32) -  Optional. The maximum number of records to return
      * @param "ProviderName" (optional.String) -  Optional. The image provider to use
      * @param "IncludeAllLanguages" (optional.Bool) -  Optional.
+     * @param "EnableSeriesImages" (optional.Bool) -  Optional.
 @return RemoteImageResult
 */
 
@@ -124,6 +125,7 @@ type RemoteImageServiceApiGetItemsByIdRemoteimagesOpts struct {
     Limit optional.Int32
     ProviderName optional.String
     IncludeAllLanguages optional.Bool
+    EnableSeriesImages optional.Bool
 }
 
 func (a *RemoteImageServiceApiService) GetItemsByIdRemoteimages(ctx context.Context, id string, localVarOptionals *RemoteImageServiceApiGetItemsByIdRemoteimagesOpts) (RemoteImageResult, *http.Response, error) {
@@ -157,6 +159,9 @@ func (a *RemoteImageServiceApiService) GetItemsByIdRemoteimages(ctx context.Cont
 	}
 	if localVarOptionals != nil && localVarOptionals.IncludeAllLanguages.IsSet() {
 		localVarQueryParams.Add("IncludeAllLanguages", parameterToString(localVarOptionals.IncludeAllLanguages.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.EnableSeriesImages.IsSet() {
+		localVarQueryParams.Add("EnableSeriesImages", parameterToString(localVarOptionals.EnableSeriesImages.Value(), ""))
 	}
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{}

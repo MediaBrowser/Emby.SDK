@@ -177,6 +177,7 @@ open class DlnaServiceAPI {
   "RequiresPlainFolders" : true,
   "EnableSingleSubtitleLimit" : true,
   "SubtitleProfiles" : [ {
+    "AllowChunkedResponse" : true,
     "Container" : "Container",
     "Format" : "Format",
     "Language" : "Language",
@@ -184,6 +185,7 @@ open class DlnaServiceAPI {
     "Method" : "Encode",
     "Protocol" : "Protocol"
   }, {
+    "AllowChunkedResponse" : true,
     "Container" : "Container",
     "Format" : "Format",
     "Language" : "Language",
@@ -357,6 +359,7 @@ open class DlnaServiceAPI {
   "RequiresPlainFolders" : true,
   "EnableSingleSubtitleLimit" : true,
   "SubtitleProfiles" : [ {
+    "AllowChunkedResponse" : true,
     "Container" : "Container",
     "Format" : "Format",
     "Language" : "Language",
@@ -364,6 +367,7 @@ open class DlnaServiceAPI {
     "Method" : "Encode",
     "Protocol" : "Protocol"
   }, {
+    "AllowChunkedResponse" : true,
     "Container" : "Container",
     "Format" : "Format",
     "Language" : "Language",
@@ -575,6 +579,7 @@ open class DlnaServiceAPI {
   "RequiresPlainFolders" : true,
   "EnableSingleSubtitleLimit" : true,
   "SubtitleProfiles" : [ {
+    "AllowChunkedResponse" : true,
     "Container" : "Container",
     "Format" : "Format",
     "Language" : "Language",
@@ -582,6 +587,7 @@ open class DlnaServiceAPI {
     "Method" : "Encode",
     "Protocol" : "Protocol"
   }, {
+    "AllowChunkedResponse" : true,
     "Container" : "Container",
     "Format" : "Format",
     "Language" : "Language",
@@ -796,6 +802,7 @@ open class DlnaServiceAPI {
   "RequiresPlainFolders" : true,
   "EnableSingleSubtitleLimit" : true,
   "SubtitleProfiles" : [ {
+    "AllowChunkedResponse" : true,
     "Container" : "Container",
     "Format" : "Format",
     "Language" : "Language",
@@ -803,6 +810,7 @@ open class DlnaServiceAPI {
     "Method" : "Encode",
     "Protocol" : "Protocol"
   }, {
+    "AllowChunkedResponse" : true,
     "Container" : "Container",
     "Format" : "Format",
     "Language" : "Language",

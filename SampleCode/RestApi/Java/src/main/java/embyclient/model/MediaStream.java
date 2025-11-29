@@ -143,6 +143,9 @@ public class MediaStream {
   @SerializedName("IsExternalUrl")
   private Boolean isExternalUrl = null;
 
+  @SerializedName("IsChunkedResponse")
+  private Boolean isChunkedResponse = null;
+
   @SerializedName("IsTextSubtitleStream")
   private Boolean isTextSubtitleStream = null;
 
@@ -890,6 +893,24 @@ public class MediaStream {
     this.isExternalUrl = isExternalUrl;
   }
 
+  public MediaStream isChunkedResponse(Boolean isChunkedResponse) {
+    this.isChunkedResponse = isChunkedResponse;
+    return this;
+  }
+
+   /**
+   * Get isChunkedResponse
+   * @return isChunkedResponse
+  **/
+  @Schema(description = "")
+  public Boolean isIsChunkedResponse() {
+    return isChunkedResponse;
+  }
+
+  public void setIsChunkedResponse(Boolean isChunkedResponse) {
+    this.isChunkedResponse = isChunkedResponse;
+  }
+
   public MediaStream isTextSubtitleStream(Boolean isTextSubtitleStream) {
     this.isTextSubtitleStream = isTextSubtitleStream;
     return this;
@@ -1209,6 +1230,7 @@ public class MediaStream {
         Objects.equals(this.deliveryMethod, mediaStream.deliveryMethod) &&
         Objects.equals(this.deliveryUrl, mediaStream.deliveryUrl) &&
         Objects.equals(this.isExternalUrl, mediaStream.isExternalUrl) &&
+        Objects.equals(this.isChunkedResponse, mediaStream.isChunkedResponse) &&
         Objects.equals(this.isTextSubtitleStream, mediaStream.isTextSubtitleStream) &&
         Objects.equals(this.supportsExternalStream, mediaStream.supportsExternalStream) &&
         Objects.equals(this.path, mediaStream.path) &&
@@ -1228,7 +1250,7 @@ public class MediaStream {
 
   @Override
   public int hashCode() {
-    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, isHearingImpaired, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
+    return Objects.hash(codec, codecTag, language, colorTransfer, colorPrimaries, colorSpace, comment, streamStartTimeTicks, timeBase, title, extradata, videoRange, displayTitle, displayLanguage, nalLengthSize, isInterlaced, isAVC, channelLayout, bitRate, bitDepth, refFrames, rotation, channels, sampleRate, isDefault, isForced, isHearingImpaired, height, width, averageFrameRate, realFrameRate, profile, type, aspectRatio, index, isExternal, deliveryMethod, deliveryUrl, isExternalUrl, isChunkedResponse, isTextSubtitleStream, supportsExternalStream, path, protocol, pixelFormat, level, isAnamorphic, extendedVideoType, extendedVideoSubType, extendedVideoSubTypeDescription, itemId, serverId, attachmentSize, mimeType, subtitleLocationType);
   }
 
 
@@ -1276,6 +1298,7 @@ public class MediaStream {
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
     sb.append("    deliveryUrl: ").append(toIndentedString(deliveryUrl)).append("\n");
     sb.append("    isExternalUrl: ").append(toIndentedString(isExternalUrl)).append("\n");
+    sb.append("    isChunkedResponse: ").append(toIndentedString(isChunkedResponse)).append("\n");
     sb.append("    isTextSubtitleStream: ").append(toIndentedString(isTextSubtitleStream)).append("\n");
     sb.append("    supportsExternalStream: ").append(toIndentedString(supportsExternalStream)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");

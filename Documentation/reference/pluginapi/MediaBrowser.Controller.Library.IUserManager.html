@@ -2161,8 +2161,7 @@ User[] Users { get; }</code></pre>
   
   <a id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String)">RedeemPasswordResetPin(String)</h4>
-  <div class="markdown level1 summary"><p>Redeems the password reset pin.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2181,8 +2180,7 @@ User[] Users { get; }</code></pre>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">pin</span></td>
-        <td><p>The pin.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -2197,8 +2195,56 @@ User[] Users { get; }</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Model.Users.PinRedeemResult.html">PinRedeemResult</a>&gt;</td>
-        <td><p><code>true</code> if XXXX, <code>false</code> otherwise.</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin*"></a>
+  <h4 id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String,System.Threading.CancellationToken)">RedeemPasswordResetPin(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Redeems the password reset pin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;PinRedeemResult&gt; RedeemPasswordResetPin(string pin, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">pin</span></td>
+        <td><p>The pin.</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="MediaBrowser.Model.Users.PinRedeemResult.html">PinRedeemResult</a>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>

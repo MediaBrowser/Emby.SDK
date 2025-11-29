@@ -166,6 +166,68 @@
   
   
   <a id="MediaBrowser_Model_IO_IStreamHelper_CopyToAsync_" data-uid="MediaBrowser.Model.IO.IStreamHelper.CopyToAsync*"></a>
+  <h4 id="MediaBrowser_Model_IO_IStreamHelper_CopyToAsync_System_IO_Stream_System_IO_Pipelines_PipeWriter_System_Int32_System_Action_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IStreamHelper.CopyToAsync(System.IO.Stream,System.IO.Pipelines.PipeWriter,System.Int32,System.Action{System.Int32},System.Threading.CancellationToken)">CopyToAsync(Stream, PipeWriter, Int32, Action&lt;Int32&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task CopyToAsync(Stream source, PipeWriter writer, int bufferSize, Action&lt;int&gt; onRead, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Pipelines.PipeWriter</span></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">bufferSize</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">onRead</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Model_IO_IStreamHelper_CopyToAsync_" data-uid="MediaBrowser.Model.IO.IStreamHelper.CopyToAsync*"></a>
   <h4 id="MediaBrowser_Model_IO_IStreamHelper_CopyToAsync_System_IO_Stream_System_IO_Pipelines_PipeWriter_System_Int32_System_Int32_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IStreamHelper.CopyToAsync(System.IO.Stream,System.IO.Pipelines.PipeWriter,System.Int32,System.Int32,System.Threading.CancellationToken)">CopyToAsync(Stream, PipeWriter, Int32, Int32, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>

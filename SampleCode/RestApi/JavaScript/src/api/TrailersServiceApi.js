@@ -15,7 +15,7 @@ import QueryResultBaseItemDto from '../model/QueryResultBaseItemDto';
 /**
 * TrailersService service.
 * @module api/TrailersServiceApi
-* @version 4.9.2.6
+* @version 4.9.2.7
 */
 export default class TrailersServiceApi {
 

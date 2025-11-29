@@ -57,6 +57,12 @@ namespace Emby.ApiClient.Model
         public string Container { get; set; }
 
         /// <summary>
+        /// Gets or Sets AllowChunkedResponse
+        /// </summary>
+        /// <value>The AllowChunkedResponse.</value>
+        public bool? AllowChunkedResponse { get; set; }
+
+        /// <summary>
         /// Gets or Sets Protocol
         /// </summary>
         /// <value>The Protocol.</value>
@@ -75,6 +81,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  DidlMode: ").Append(DidlMode).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
+            sb.Append("  AllowChunkedResponse: ").Append(AllowChunkedResponse).Append("\n");
             sb.Append("  Protocol: ").Append(Protocol).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -127,6 +134,11 @@ namespace Emby.ApiClient.Model
                     this.Container.Equals(input.Container))
                 ) && 
                 (
+                    this.AllowChunkedResponse == input.AllowChunkedResponse ||
+                    (this.AllowChunkedResponse != null &&
+                    this.AllowChunkedResponse.Equals(input.AllowChunkedResponse))
+                ) && 
+                (
                     this.Protocol == input.Protocol ||
                     (this.Protocol != null &&
                     this.Protocol.Equals(input.Protocol))
@@ -152,6 +164,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.Language.GetHashCode();
                 if (this.Container != null)
                     hashCode = hashCode * 59 + this.Container.GetHashCode();
+                if (this.AllowChunkedResponse != null)
+                    hashCode = hashCode * 59 + this.AllowChunkedResponse.GetHashCode();
                 if (this.Protocol != null)
                     hashCode = hashCode * 59 + this.Protocol.GetHashCode();
                 return hashCode;

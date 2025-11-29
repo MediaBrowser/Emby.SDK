@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.2.6
+ * OpenAPI spec version: 4.9.2.7
  * 
  *
  * NOTE: This file is auto generated.
@@ -4230,6 +4230,12 @@ export interface EntitiesUser {
      */
     IsNameParsedFromFolder?: boolean;
     /**
+     * 
+     * @type {string}
+     * @memberof EntitiesUser
+     */
+    IdString?: string;
+    /**
      * The date created.
      * @type {Date}
      * @memberof EntitiesUser
@@ -7868,6 +7874,12 @@ export interface MediaStream {
      * @memberof MediaStream
      */
     IsExternalUrl?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof MediaStream
+     */
+    IsChunkedResponse?: boolean;
     /**
      * 
      * @type {boolean}
@@ -11766,7 +11778,7 @@ export interface ServerConfiguration {
      * @type {number}
      * @memberof ServerConfiguration
      */
-    MaxLibraryDbConnections?: number;
+    MaxLibraryDatabaseConnections?: number;
     /**
      * 
      * @type {number}
@@ -12300,6 +12312,12 @@ export interface SubtitleProfile {
      * @memberof SubtitleProfile
      */
     Container?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SubtitleProfile
+     */
+    AllowChunkedResponse?: boolean;
     /**
      * 
      * @type {string}
@@ -84314,10 +84332,11 @@ export const RemoteImageServiceApiFetchParamCreator = function (configuration?: 
          * @param {number} [Limit] Optional. The maximum number of records to return
          * @param {string} [ProviderName] Optional. The image provider to use
          * @param {boolean} [IncludeAllLanguages] Optional.
+         * @param {boolean} [EnableSeriesImages] Optional.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsByIdRemoteimages(Id: string, Type?: ImageType, StartIndex?: number, Limit?: number, ProviderName?: string, IncludeAllLanguages?: boolean, options: any = {}): FetchArgs {
+        getItemsByIdRemoteimages(Id: string, Type?: ImageType, StartIndex?: number, Limit?: number, ProviderName?: string, IncludeAllLanguages?: boolean, EnableSeriesImages?: boolean, options: any = {}): FetchArgs {
             // verify required parameter 'Id' is not null or undefined
             if (Id === null || Id === undefined) {
                 throw new RequiredError('Id','Required parameter Id was null or undefined when calling getItemsByIdRemoteimages.');
@@ -84357,6 +84376,10 @@ export const RemoteImageServiceApiFetchParamCreator = function (configuration?: 
 
             if (IncludeAllLanguages !== undefined) {
                 localVarQueryParameter['IncludeAllLanguages'] = IncludeAllLanguages;
+            }
+
+            if (EnableSeriesImages !== undefined) {
+                localVarQueryParameter['EnableSeriesImages'] = EnableSeriesImages;
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -84512,11 +84535,12 @@ export const RemoteImageServiceApiFp = function(configuration?: Configuration) {
          * @param {number} [Limit] Optional. The maximum number of records to return
          * @param {string} [ProviderName] Optional. The image provider to use
          * @param {boolean} [IncludeAllLanguages] Optional.
+         * @param {boolean} [EnableSeriesImages] Optional.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsByIdRemoteimages(Id: string, Type?: ImageType, StartIndex?: number, Limit?: number, ProviderName?: string, IncludeAllLanguages?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<RemoteImageResult> {
-            const localVarFetchArgs = RemoteImageServiceApiFetchParamCreator(configuration).getItemsByIdRemoteimages(Id, Type, StartIndex, Limit, ProviderName, IncludeAllLanguages, options);
+        getItemsByIdRemoteimages(Id: string, Type?: ImageType, StartIndex?: number, Limit?: number, ProviderName?: string, IncludeAllLanguages?: boolean, EnableSeriesImages?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<RemoteImageResult> {
+            const localVarFetchArgs = RemoteImageServiceApiFetchParamCreator(configuration).getItemsByIdRemoteimages(Id, Type, StartIndex, Limit, ProviderName, IncludeAllLanguages, EnableSeriesImages, options);
             return (fetch: FetchAPI = isomorphicFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -84597,11 +84621,12 @@ export const RemoteImageServiceApiFactory = function (configuration?: Configurat
          * @param {number} [Limit] Optional. The maximum number of records to return
          * @param {string} [ProviderName] Optional. The image provider to use
          * @param {boolean} [IncludeAllLanguages] Optional.
+         * @param {boolean} [EnableSeriesImages] Optional.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getItemsByIdRemoteimages(Id: string, Type?: ImageType, StartIndex?: number, Limit?: number, ProviderName?: string, IncludeAllLanguages?: boolean, options?: any) {
-            return RemoteImageServiceApiFp(configuration).getItemsByIdRemoteimages(Id, Type, StartIndex, Limit, ProviderName, IncludeAllLanguages, options)(fetch, basePath);
+        getItemsByIdRemoteimages(Id: string, Type?: ImageType, StartIndex?: number, Limit?: number, ProviderName?: string, IncludeAllLanguages?: boolean, EnableSeriesImages?: boolean, options?: any) {
+            return RemoteImageServiceApiFp(configuration).getItemsByIdRemoteimages(Id, Type, StartIndex, Limit, ProviderName, IncludeAllLanguages, EnableSeriesImages, options)(fetch, basePath);
         },
         /**
          * Requires authentication as user
@@ -84658,12 +84683,13 @@ export class RemoteImageServiceApi extends BaseAPI {
      * @param {number} [Limit] Optional. The maximum number of records to return
      * @param {string} [ProviderName] Optional. The image provider to use
      * @param {boolean} [IncludeAllLanguages] Optional.
+     * @param {boolean} [EnableSeriesImages] Optional.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RemoteImageServiceApi
      */
-    public getItemsByIdRemoteimages(Id: string, Type?: ImageType, StartIndex?: number, Limit?: number, ProviderName?: string, IncludeAllLanguages?: boolean, options?: any) {
-        return RemoteImageServiceApiFp(this.configuration).getItemsByIdRemoteimages(Id, Type, StartIndex, Limit, ProviderName, IncludeAllLanguages, options)(this.fetch, this.basePath);
+    public getItemsByIdRemoteimages(Id: string, Type?: ImageType, StartIndex?: number, Limit?: number, ProviderName?: string, IncludeAllLanguages?: boolean, EnableSeriesImages?: boolean, options?: any) {
+        return RemoteImageServiceApiFp(this.configuration).getItemsByIdRemoteimages(Id, Type, StartIndex, Limit, ProviderName, IncludeAllLanguages, EnableSeriesImages, options)(this.fetch, this.basePath);
     }
 
     /**

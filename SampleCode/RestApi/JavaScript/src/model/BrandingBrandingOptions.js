@@ -14,7 +14,7 @@ import ApiClient from '../ApiClient';
 /**
 * The BrandingBrandingOptions model module.
 * @module model/BrandingBrandingOptions
-* @version 4.9.2.6
+* @version 4.9.2.7
 */
 export default class BrandingBrandingOptions {
     /**

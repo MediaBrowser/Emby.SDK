@@ -180,9 +180,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsPhysicalRoot">Folder.IsPhysicalRoot</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsTopParent">Folder.IsTopParent</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsFolder">Folder.IsFolder</a>
     </div>
     <div>
@@ -630,6 +627,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Id">BaseItem.Id</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IdString">BaseItem.IdString</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaSourceIdPrefix">BaseItem.MediaSourceIdPrefix</a>
     </div>
     <div>
@@ -816,7 +816,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_">BaseItem.GetInternalMetadataPath(String)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_Guid_System_String_">BaseItem.GetInternalMetadataPath(Guid, String)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_System_String_">BaseItem.GetInternalMetadataPath(String, String)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreateSortName">BaseItem.CreateSortName()</a>
@@ -1387,6 +1387,34 @@ public override bool IsResolvedToFolder { get; }</code></pre>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsResolvedToFolder">Folder.IsResolvedToFolder</a></div>
   
   
+  <a id="MediaBrowser_Controller_Playlists_Playlist_IsTopParent_" data-uid="MediaBrowser.Controller.Playlists.Playlist.IsTopParent*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_Playlist_IsTopParent" data-uid="MediaBrowser.Controller.Playlists.Playlist.IsTopParent">IsTopParent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool IsTopParent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsTopParent">Folder.IsTopParent</a></div>
+  
+  
   <a id="MediaBrowser_Controller_Playlists_Playlist_MediaType_" data-uid="MediaBrowser.Controller.Playlists.Playlist.MediaType*"></a>
   <h4 id="MediaBrowser_Controller_Playlists_Playlist_MediaType" data-uid="MediaBrowser.Controller.Playlists.Playlist.MediaType">MediaType</h4>
   <div class="markdown level1 summary"></div>
@@ -1438,6 +1466,34 @@ public override string MediaType { get; }</code></pre>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="MediaBrowser_Controller_Playlists_Playlist_PrimaryImageRequiresOrientation_" data-uid="MediaBrowser.Controller.Playlists.Playlist.PrimaryImageRequiresOrientation*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_Playlist_PrimaryImageRequiresOrientation" data-uid="MediaBrowser.Controller.Playlists.Playlist.PrimaryImageRequiresOrientation">PrimaryImageRequiresOrientation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public override bool PrimaryImageRequiresOrientation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_PrimaryImageRequiresOrientation">Folder.PrimaryImageRequiresOrientation</a></div>
   
   
   <a id="MediaBrowser_Controller_Playlists_Playlist_RecursiveChildCountEqualsChildCount_" data-uid="MediaBrowser.Controller.Playlists.Playlist.RecursiveChildCountEqualsChildCount*"></a>

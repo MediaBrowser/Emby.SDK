@@ -1530,6 +1530,31 @@ public Guid Id { get; set; }</code></pre>
   </table>
   
   
+  <a id="MediaBrowser_Controller_Entities_BaseItem_IdString_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IdString*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IdString" data-uid="MediaBrowser.Controller.Entities.BaseItem.IdString">IdString</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string IdString { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="MediaBrowser_Controller_Entities_BaseItem_ImageDisplayParentId_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ImageDisplayParentId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_ImageDisplayParentId" data-uid="MediaBrowser.Controller.Entities.BaseItem.ImageDisplayParentId">ImageDisplayParentId</h4>
   <div class="markdown level1 summary"></div>
@@ -3292,6 +3317,32 @@ public string PrimaryImagePath { get; }</code></pre>
         <td><span class="xref">System.String</span></td>
         <td><p>The primary image path.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="MediaBrowser_Controller_Entities_BaseItem_PrimaryImageRequiresOrientation_" data-uid="MediaBrowser.Controller.Entities.BaseItem.PrimaryImageRequiresOrientation*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_PrimaryImageRequiresOrientation" data-uid="MediaBrowser.Controller.Entities.BaseItem.PrimaryImageRequiresOrientation">PrimaryImageRequiresOrientation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public virtual bool PrimaryImageRequiresOrientation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -8117,12 +8168,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_Guid_System_String_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.Guid,System.String)">GetInternalMetadataPath(Guid, String)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String)">GetInternalMetadataPath(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected static string GetInternalMetadataPath(Guid itemId, string basePath)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual string GetInternalMetadataPath(string basePath)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -8134,11 +8185,6 @@ public int Width { get; set; }</code></pre>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><span class="xref">System.Guid</span></td>
-        <td><span class="parametername">itemId</span></td>
-        <td></td>
-      </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">basePath</span></td>
@@ -8164,12 +8210,12 @@ public int Width { get; set; }</code></pre>
   
   
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String)">GetInternalMetadataPath(String)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_System_String_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String,System.String)">GetInternalMetadataPath(String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual string GetInternalMetadataPath(string basePath)</code></pre>
+    <pre><code class="lang-csharp hljs">protected static string GetInternalMetadataPath(string idString, string basePath)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -8181,6 +8227,11 @@ public int Width { get; set; }</code></pre>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">idString</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">basePath</span></td>

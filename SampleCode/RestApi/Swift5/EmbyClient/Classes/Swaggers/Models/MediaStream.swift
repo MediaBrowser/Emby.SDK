@@ -84,6 +84,7 @@ public struct MediaStream: Codable {
     public var deliveryUrl: String?
     /** A value indicating whether this instance is external URL.    Custom property set by the application. */
     public var isExternalUrl: Bool?
+    public var isChunkedResponse: Bool?
     public var isTextSubtitleStream: Bool?
     /** A value indicating whether \\[supports external stream\\]. */
     public var supportsExternalStream: Bool?
@@ -110,7 +111,7 @@ public struct MediaStream: Codable {
     public var mimeType: String?
     public var subtitleLocationType: SubtitleLocationType?
 
-    public init(codec: String? = nil, codecTag: String? = nil, language: String? = nil, colorTransfer: String? = nil, colorPrimaries: String? = nil, colorSpace: String? = nil, comment: String? = nil, streamStartTimeTicks: Int64? = nil, timeBase: String? = nil, title: String? = nil, extradata: String? = nil, videoRange: String? = nil, displayTitle: String? = nil, displayLanguage: String? = nil, nalLengthSize: String? = nil, isInterlaced: Bool? = nil, isAVC: Bool? = nil, channelLayout: String? = nil, bitRate: Int? = nil, bitDepth: Int? = nil, refFrames: Int? = nil, rotation: Int? = nil, channels: Int? = nil, sampleRate: Int? = nil, isDefault: Bool? = nil, isForced: Bool? = nil, isHearingImpaired: Bool? = nil, height: Int? = nil, width: Int? = nil, averageFrameRate: Float? = nil, realFrameRate: Float? = nil, profile: String? = nil, type: MediaStreamType? = nil, aspectRatio: String? = nil, index: Int? = nil, isExternal: Bool? = nil, deliveryMethod: SubtitleDeliveryMethod? = nil, deliveryUrl: String? = nil, isExternalUrl: Bool? = nil, isTextSubtitleStream: Bool? = nil, supportsExternalStream: Bool? = nil, path: String? = nil, _protocol: MediaProtocol? = nil, pixelFormat: String? = nil, level: Double? = nil, isAnamorphic: Bool? = nil, extendedVideoType: ExtendedVideoTypes? = nil, extendedVideoSubType: ExtendedVideoSubTypes? = nil, extendedVideoSubTypeDescription: String? = nil, itemId: String? = nil, serverId: String? = nil, attachmentSize: Int? = nil, mimeType: String? = nil, subtitleLocationType: SubtitleLocationType? = nil) {
+    public init(codec: String? = nil, codecTag: String? = nil, language: String? = nil, colorTransfer: String? = nil, colorPrimaries: String? = nil, colorSpace: String? = nil, comment: String? = nil, streamStartTimeTicks: Int64? = nil, timeBase: String? = nil, title: String? = nil, extradata: String? = nil, videoRange: String? = nil, displayTitle: String? = nil, displayLanguage: String? = nil, nalLengthSize: String? = nil, isInterlaced: Bool? = nil, isAVC: Bool? = nil, channelLayout: String? = nil, bitRate: Int? = nil, bitDepth: Int? = nil, refFrames: Int? = nil, rotation: Int? = nil, channels: Int? = nil, sampleRate: Int? = nil, isDefault: Bool? = nil, isForced: Bool? = nil, isHearingImpaired: Bool? = nil, height: Int? = nil, width: Int? = nil, averageFrameRate: Float? = nil, realFrameRate: Float? = nil, profile: String? = nil, type: MediaStreamType? = nil, aspectRatio: String? = nil, index: Int? = nil, isExternal: Bool? = nil, deliveryMethod: SubtitleDeliveryMethod? = nil, deliveryUrl: String? = nil, isExternalUrl: Bool? = nil, isChunkedResponse: Bool? = nil, isTextSubtitleStream: Bool? = nil, supportsExternalStream: Bool? = nil, path: String? = nil, _protocol: MediaProtocol? = nil, pixelFormat: String? = nil, level: Double? = nil, isAnamorphic: Bool? = nil, extendedVideoType: ExtendedVideoTypes? = nil, extendedVideoSubType: ExtendedVideoSubTypes? = nil, extendedVideoSubTypeDescription: String? = nil, itemId: String? = nil, serverId: String? = nil, attachmentSize: Int? = nil, mimeType: String? = nil, subtitleLocationType: SubtitleLocationType? = nil) {
         self.codec = codec
         self.codecTag = codecTag
         self.language = language
@@ -150,6 +151,7 @@ public struct MediaStream: Codable {
         self.deliveryMethod = deliveryMethod
         self.deliveryUrl = deliveryUrl
         self.isExternalUrl = isExternalUrl
+        self.isChunkedResponse = isChunkedResponse
         self.isTextSubtitleStream = isTextSubtitleStream
         self.supportsExternalStream = supportsExternalStream
         self.path = path
@@ -207,6 +209,7 @@ public struct MediaStream: Codable {
         case deliveryMethod = "DeliveryMethod"
         case deliveryUrl = "DeliveryUrl"
         case isExternalUrl = "IsExternalUrl"
+        case isChunkedResponse = "IsChunkedResponse"
         case isTextSubtitleStream = "IsTextSubtitleStream"
         case supportsExternalStream = "SupportsExternalStream"
         case path = "Path"

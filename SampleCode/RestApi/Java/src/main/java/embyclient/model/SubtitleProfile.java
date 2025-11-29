@@ -36,6 +36,9 @@ public class SubtitleProfile {
   @SerializedName("Container")
   private String container = null;
 
+  @SerializedName("AllowChunkedResponse")
+  private Boolean allowChunkedResponse = null;
+
   @SerializedName("Protocol")
   private String protocol = null;
 
@@ -129,6 +132,24 @@ public class SubtitleProfile {
     this.container = container;
   }
 
+  public SubtitleProfile allowChunkedResponse(Boolean allowChunkedResponse) {
+    this.allowChunkedResponse = allowChunkedResponse;
+    return this;
+  }
+
+   /**
+   * Get allowChunkedResponse
+   * @return allowChunkedResponse
+  **/
+  @Schema(description = "")
+  public Boolean isAllowChunkedResponse() {
+    return allowChunkedResponse;
+  }
+
+  public void setAllowChunkedResponse(Boolean allowChunkedResponse) {
+    this.allowChunkedResponse = allowChunkedResponse;
+  }
+
   public SubtitleProfile protocol(String protocol) {
     this.protocol = protocol;
     return this;
@@ -162,12 +183,13 @@ public class SubtitleProfile {
         Objects.equals(this.didlMode, subtitleProfile.didlMode) &&
         Objects.equals(this.language, subtitleProfile.language) &&
         Objects.equals(this.container, subtitleProfile.container) &&
+        Objects.equals(this.allowChunkedResponse, subtitleProfile.allowChunkedResponse) &&
         Objects.equals(this.protocol, subtitleProfile.protocol);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(format, method, didlMode, language, container, protocol);
+    return Objects.hash(format, method, didlMode, language, container, allowChunkedResponse, protocol);
   }
 
 
@@ -181,6 +203,7 @@ public class SubtitleProfile {
     sb.append("    didlMode: ").append(toIndentedString(didlMode)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    container: ").append(toIndentedString(container)).append("\n");
+    sb.append("    allowChunkedResponse: ").append(toIndentedString(allowChunkedResponse)).append("\n");
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
     sb.append("}");
     return sb.toString();

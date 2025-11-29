@@ -16,7 +16,7 @@ import RecommendationType from './RecommendationType';
 /**
 * The RecommendationDto model module.
 * @module model/RecommendationDto
-* @version 4.9.2.6
+* @version 4.9.2.7
 */
 export default class RecommendationDto {
     /**

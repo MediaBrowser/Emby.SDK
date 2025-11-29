@@ -179,12 +179,13 @@ public class RemoteImageServiceApi {
      * @param limit Optional. The maximum number of records to return (optional)
      * @param providerName Optional. The image provider to use (optional)
      * @param includeAllLanguages Optional. (optional)
+     * @param enableSeriesImages Optional. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdRemoteimagesCall(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdRemoteimagesCall(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages, Boolean enableSeriesImages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -203,6 +204,8 @@ public class RemoteImageServiceApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("ProviderName", providerName));
         if (includeAllLanguages != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("IncludeAllLanguages", includeAllLanguages));
+        if (enableSeriesImages != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("EnableSeriesImages", enableSeriesImages));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -237,13 +240,13 @@ public class RemoteImageServiceApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getItemsByIdRemoteimagesValidateBeforeCall(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getItemsByIdRemoteimagesValidateBeforeCall(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages, Boolean enableSeriesImages, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling getItemsByIdRemoteimages(Async)");
         }
         
-        com.squareup.okhttp.Call call = getItemsByIdRemoteimagesCall(id, type, startIndex, limit, providerName, includeAllLanguages, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdRemoteimagesCall(id, type, startIndex, limit, providerName, includeAllLanguages, enableSeriesImages, progressListener, progressRequestListener);
         return call;
 
         
@@ -261,11 +264,12 @@ public class RemoteImageServiceApi {
      * @param limit Optional. The maximum number of records to return (optional)
      * @param providerName Optional. The image provider to use (optional)
      * @param includeAllLanguages Optional. (optional)
+     * @param enableSeriesImages Optional. (optional)
      * @return RemoteImageResult
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public RemoteImageResult getItemsByIdRemoteimages(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages) throws ApiException {
-        ApiResponse<RemoteImageResult> resp = getItemsByIdRemoteimagesWithHttpInfo(id, type, startIndex, limit, providerName, includeAllLanguages);
+    public RemoteImageResult getItemsByIdRemoteimages(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages, Boolean enableSeriesImages) throws ApiException {
+        ApiResponse<RemoteImageResult> resp = getItemsByIdRemoteimagesWithHttpInfo(id, type, startIndex, limit, providerName, includeAllLanguages, enableSeriesImages);
         return resp.getData();
     }
 
@@ -278,11 +282,12 @@ public class RemoteImageServiceApi {
      * @param limit Optional. The maximum number of records to return (optional)
      * @param providerName Optional. The image provider to use (optional)
      * @param includeAllLanguages Optional. (optional)
+     * @param enableSeriesImages Optional. (optional)
      * @return ApiResponse&lt;RemoteImageResult&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<RemoteImageResult> getItemsByIdRemoteimagesWithHttpInfo(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages) throws ApiException {
-        com.squareup.okhttp.Call call = getItemsByIdRemoteimagesValidateBeforeCall(id, type, startIndex, limit, providerName, includeAllLanguages, null, null);
+    public ApiResponse<RemoteImageResult> getItemsByIdRemoteimagesWithHttpInfo(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages, Boolean enableSeriesImages) throws ApiException {
+        com.squareup.okhttp.Call call = getItemsByIdRemoteimagesValidateBeforeCall(id, type, startIndex, limit, providerName, includeAllLanguages, enableSeriesImages, null, null);
         Type localVarReturnType = new TypeToken<RemoteImageResult>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -296,11 +301,12 @@ public class RemoteImageServiceApi {
      * @param limit Optional. The maximum number of records to return (optional)
      * @param providerName Optional. The image provider to use (optional)
      * @param includeAllLanguages Optional. (optional)
+     * @param enableSeriesImages Optional. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getItemsByIdRemoteimagesAsync(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages, final ApiCallback<RemoteImageResult> callback) throws ApiException {
+    public com.squareup.okhttp.Call getItemsByIdRemoteimagesAsync(String id, ImageType type, Integer startIndex, Integer limit, String providerName, Boolean includeAllLanguages, Boolean enableSeriesImages, final ApiCallback<RemoteImageResult> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -321,7 +327,7 @@ public class RemoteImageServiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getItemsByIdRemoteimagesValidateBeforeCall(id, type, startIndex, limit, providerName, includeAllLanguages, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getItemsByIdRemoteimagesValidateBeforeCall(id, type, startIndex, limit, providerName, includeAllLanguages, enableSeriesImages, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<RemoteImageResult>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

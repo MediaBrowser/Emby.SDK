@@ -52,8 +52,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>RemoteImageResult</returns>
-        RemoteImageResult GetItemsByIdRemoteimages (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages);
+        RemoteImageResult GetItemsByIdRemoteimages (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages);
 
         /// <summary>
         /// Gets available remote images for an item
@@ -68,8 +69,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>ApiResponse of RemoteImageResult</returns>
-        ApiResponse<RemoteImageResult> GetItemsByIdRemoteimagesWithHttpInfo (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages);
+        ApiResponse<RemoteImageResult> GetItemsByIdRemoteimagesWithHttpInfo (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages);
         /// <summary>
         /// Gets available remote image providers for an item
         /// </summary>
@@ -156,8 +158,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>Task of RemoteImageResult</returns>
-        System.Threading.Tasks.Task<RemoteImageResult> GetItemsByIdRemoteimagesAsync (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages);
+        System.Threading.Tasks.Task<RemoteImageResult> GetItemsByIdRemoteimagesAsync (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages);
 
         /// <summary>
         /// Gets available remote images for an item
@@ -172,8 +175,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>Task of ApiResponse (RemoteImageResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RemoteImageResult>> GetItemsByIdRemoteimagesAsyncWithHttpInfo (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages);
+        System.Threading.Tasks.Task<ApiResponse<RemoteImageResult>> GetItemsByIdRemoteimagesAsyncWithHttpInfo (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages);
         /// <summary>
         /// Gets available remote image providers for an item
         /// </summary>
@@ -494,10 +498,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>RemoteImageResult</returns>
-        public RemoteImageResult GetItemsByIdRemoteimages (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages)
+        public RemoteImageResult GetItemsByIdRemoteimages (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages)
         {
-             ApiResponse<RemoteImageResult> localVarResponse = GetItemsByIdRemoteimagesWithHttpInfo(id, type, startIndex, limit, providerName, includeAllLanguages);
+             ApiResponse<RemoteImageResult> localVarResponse = GetItemsByIdRemoteimagesWithHttpInfo(id, type, startIndex, limit, providerName, includeAllLanguages, enableSeriesImages);
              return localVarResponse.Data;
         }
 
@@ -511,8 +516,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>ApiResponse of RemoteImageResult</returns>
-        public ApiResponse< RemoteImageResult > GetItemsByIdRemoteimagesWithHttpInfo (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages)
+        public ApiResponse< RemoteImageResult > GetItemsByIdRemoteimagesWithHttpInfo (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -546,6 +552,7 @@ namespace EmbyClient.Dotnet.Api
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (providerName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ProviderName", providerName)); // query parameter
             if (includeAllLanguages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IncludeAllLanguages", includeAllLanguages)); // query parameter
+            if (enableSeriesImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableSeriesImages", enableSeriesImages)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {
@@ -586,10 +593,11 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>Task of RemoteImageResult</returns>
-        public async System.Threading.Tasks.Task<RemoteImageResult> GetItemsByIdRemoteimagesAsync (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages)
+        public async System.Threading.Tasks.Task<RemoteImageResult> GetItemsByIdRemoteimagesAsync (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages)
         {
-             ApiResponse<RemoteImageResult> localVarResponse = await GetItemsByIdRemoteimagesAsyncWithHttpInfo(id, type, startIndex, limit, providerName, includeAllLanguages);
+             ApiResponse<RemoteImageResult> localVarResponse = await GetItemsByIdRemoteimagesAsyncWithHttpInfo(id, type, startIndex, limit, providerName, includeAllLanguages, enableSeriesImages);
              return localVarResponse.Data;
 
         }
@@ -604,8 +612,9 @@ namespace EmbyClient.Dotnet.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>Task of ApiResponse (RemoteImageResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RemoteImageResult>> GetItemsByIdRemoteimagesAsyncWithHttpInfo (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages)
+        public async System.Threading.Tasks.Task<ApiResponse<RemoteImageResult>> GetItemsByIdRemoteimagesAsyncWithHttpInfo (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -639,6 +648,7 @@ namespace EmbyClient.Dotnet.Api
             if (limit != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Limit", limit)); // query parameter
             if (providerName != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ProviderName", providerName)); // query parameter
             if (includeAllLanguages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "IncludeAllLanguages", includeAllLanguages)); // query parameter
+            if (enableSeriesImages != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EnableSeriesImages", enableSeriesImages)); // query parameter
             // authentication (apikeyauth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("api_key")))
             {

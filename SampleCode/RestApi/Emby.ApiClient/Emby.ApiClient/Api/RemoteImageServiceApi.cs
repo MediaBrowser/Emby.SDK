@@ -80,8 +80,9 @@ namespace Emby.ApiClient.Api
         /// <param name="limit">Optional. The maximum number of records to return (optional)</param>
         /// <param name="providerName">Optional. The image provider to use (optional)</param>
         /// <param name="includeAllLanguages">Optional. (optional)</param>
+        /// <param name="enableSeriesImages">Optional. (optional)</param>
         /// <returns>Task of ApiResponse (RemoteImageResult)</returns>
-        public async Task<RestResponse<RemoteImageResult>> GetItemsByIdRemoteimages (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages)
+        public async Task<RestResponse<RemoteImageResult>> GetItemsByIdRemoteimages (string id, ImageType type, int? startIndex, int? limit, string providerName, bool? includeAllLanguages, bool? enableSeriesImages)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -119,6 +120,11 @@ namespace Emby.ApiClient.Api
             if (includeAllLanguages != null)
             {
                 request.AddQueryParameter("IncludeAllLanguages", this.ApiClient.ParameterToString(includeAllLanguages));
+            }
+
+            if (enableSeriesImages != null)
+            {
+                request.AddQueryParameter("EnableSeriesImages", this.ApiClient.ParameterToString(enableSeriesImages));
             }
 
             // make the HTTP request

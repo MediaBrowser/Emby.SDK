@@ -42,10 +42,11 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="recursiveChildCountEqualsChildCount">recursiveChildCountEqualsChildCount.</param>
         /// <param name="originalParsedName">Internal use only.</param>
         /// <param name="isNameParsedFromFolder">Internal use only.</param>
+        /// <param name="idString">idString.</param>
         /// <param name="dateCreated">The date created..</param>
         /// <param name="importedCollections">importedCollections.</param>
         /// <param name="resolvedPresentationUniqueKey">resolvedPresentationUniqueKey.</param>
-        public EntitiesUser(bool? usesIdForConfigurationPath = default(bool?), string password = default(string), string easyPassword = default(string), string salt = default(string), string connectUserName = default(string), string connectUserId = default(string), ConnectUserLinkType connectLinkType = default(ConnectUserLinkType), string connectAccessKey = default(string), List<EntitiesItemImageInfo> imageInfos = default(List<EntitiesItemImageInfo>), string name = default(string), DateTimeOffset? lastLoginDate = default(DateTimeOffset?), DateTimeOffset? lastActivityDate = default(DateTimeOffset?), double? playedPercentage = default(double?), bool? recursiveChildCountEqualsChildCount = default(bool?), string originalParsedName = default(string), bool? isNameParsedFromFolder = default(bool?), DateTimeOffset? dateCreated = default(DateTimeOffset?), List<LinkedItemInfo> importedCollections = default(List<LinkedItemInfo>), string resolvedPresentationUniqueKey = default(string))
+        public EntitiesUser(bool? usesIdForConfigurationPath = default(bool?), string password = default(string), string easyPassword = default(string), string salt = default(string), string connectUserName = default(string), string connectUserId = default(string), ConnectUserLinkType connectLinkType = default(ConnectUserLinkType), string connectAccessKey = default(string), List<EntitiesItemImageInfo> imageInfos = default(List<EntitiesItemImageInfo>), string name = default(string), DateTimeOffset? lastLoginDate = default(DateTimeOffset?), DateTimeOffset? lastActivityDate = default(DateTimeOffset?), double? playedPercentage = default(double?), bool? recursiveChildCountEqualsChildCount = default(bool?), string originalParsedName = default(string), bool? isNameParsedFromFolder = default(bool?), string idString = default(string), DateTimeOffset? dateCreated = default(DateTimeOffset?), List<LinkedItemInfo> importedCollections = default(List<LinkedItemInfo>), string resolvedPresentationUniqueKey = default(string))
         {
             this.UsesIdForConfigurationPath = usesIdForConfigurationPath;
             this.Password = password;
@@ -63,6 +64,7 @@ namespace EmbyClient.Dotnet.Model
             this.RecursiveChildCountEqualsChildCount = recursiveChildCountEqualsChildCount;
             this.OriginalParsedName = originalParsedName;
             this.IsNameParsedFromFolder = isNameParsedFromFolder;
+            this.IdString = idString;
             this.DateCreated = dateCreated;
             this.ImportedCollections = importedCollections;
             this.ResolvedPresentationUniqueKey = resolvedPresentationUniqueKey;
@@ -172,6 +174,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsNameParsedFromFolder { get; set; }
 
         /// <summary>
+        /// Gets or Sets IdString
+        /// </summary>
+        [DataMember(Name="IdString", EmitDefaultValue=false)]
+        public string IdString { get; set; }
+
+        /// <summary>
         /// The date created.
         /// </summary>
         /// <value>The date created.</value>
@@ -214,6 +222,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  RecursiveChildCountEqualsChildCount: ").Append(RecursiveChildCountEqualsChildCount).Append("\n");
             sb.Append("  OriginalParsedName: ").Append(OriginalParsedName).Append("\n");
             sb.Append("  IsNameParsedFromFolder: ").Append(IsNameParsedFromFolder).Append("\n");
+            sb.Append("  IdString: ").Append(IdString).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ImportedCollections: ").Append(ImportedCollections).Append("\n");
             sb.Append("  ResolvedPresentationUniqueKey: ").Append(ResolvedPresentationUniqueKey).Append("\n");
@@ -333,6 +342,11 @@ namespace EmbyClient.Dotnet.Model
                     this.IsNameParsedFromFolder.Equals(input.IsNameParsedFromFolder))
                 ) && 
                 (
+                    this.IdString == input.IdString ||
+                    (this.IdString != null &&
+                    this.IdString.Equals(input.IdString))
+                ) && 
+                (
                     this.DateCreated == input.DateCreated ||
                     (this.DateCreated != null &&
                     this.DateCreated.Equals(input.DateCreated))
@@ -391,6 +405,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.OriginalParsedName.GetHashCode();
                 if (this.IsNameParsedFromFolder != null)
                     hashCode = hashCode * 59 + this.IsNameParsedFromFolder.GetHashCode();
+                if (this.IdString != null)
+                    hashCode = hashCode * 59 + this.IdString.GetHashCode();
                 if (this.DateCreated != null)
                     hashCode = hashCode * 59 + this.DateCreated.GetHashCode();
                 if (this.ImportedCollections != null)

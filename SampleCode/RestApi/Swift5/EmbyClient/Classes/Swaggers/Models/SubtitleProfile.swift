@@ -16,14 +16,16 @@ public struct SubtitleProfile: Codable {
     public var didlMode: String?
     public var language: String?
     public var container: String?
+    public var allowChunkedResponse: Bool?
     public var _protocol: String?
 
-    public init(format: String? = nil, method: SubtitleDeliveryMethod? = nil, didlMode: String? = nil, language: String? = nil, container: String? = nil, _protocol: String? = nil) {
+    public init(format: String? = nil, method: SubtitleDeliveryMethod? = nil, didlMode: String? = nil, language: String? = nil, container: String? = nil, allowChunkedResponse: Bool? = nil, _protocol: String? = nil) {
         self.format = format
         self.method = method
         self.didlMode = didlMode
         self.language = language
         self.container = container
+        self.allowChunkedResponse = allowChunkedResponse
         self._protocol = _protocol
     }
 
@@ -33,6 +35,7 @@ public struct SubtitleProfile: Codable {
         case didlMode = "DidlMode"
         case language = "Language"
         case container = "Container"
+        case allowChunkedResponse = "AllowChunkedResponse"
         case _protocol = "Protocol"
     }
 

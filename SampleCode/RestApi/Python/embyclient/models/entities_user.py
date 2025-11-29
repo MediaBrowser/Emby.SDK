@@ -38,6 +38,7 @@ class EntitiesUser(object):
         'recursive_child_count_equals_child_count': 'bool',
         'original_parsed_name': 'str',
         'is_name_parsed_from_folder': 'bool',
+        'id_string': 'str',
         'date_created': 'datetime',
         'imported_collections': 'list[LinkedItemInfo]',
         'resolved_presentation_unique_key': 'str'
@@ -60,12 +61,13 @@ class EntitiesUser(object):
         'recursive_child_count_equals_child_count': 'RecursiveChildCountEqualsChildCount',
         'original_parsed_name': 'OriginalParsedName',
         'is_name_parsed_from_folder': 'IsNameParsedFromFolder',
+        'id_string': 'IdString',
         'date_created': 'DateCreated',
         'imported_collections': 'ImportedCollections',
         'resolved_presentation_unique_key': 'ResolvedPresentationUniqueKey'
     }
 
-    def __init__(self, uses_id_for_configuration_path=None, password=None, easy_password=None, salt=None, connect_user_name=None, connect_user_id=None, connect_link_type=None, connect_access_key=None, image_infos=None, name=None, last_login_date=None, last_activity_date=None, played_percentage=None, recursive_child_count_equals_child_count=None, original_parsed_name=None, is_name_parsed_from_folder=None, date_created=None, imported_collections=None, resolved_presentation_unique_key=None):  # noqa: E501
+    def __init__(self, uses_id_for_configuration_path=None, password=None, easy_password=None, salt=None, connect_user_name=None, connect_user_id=None, connect_link_type=None, connect_access_key=None, image_infos=None, name=None, last_login_date=None, last_activity_date=None, played_percentage=None, recursive_child_count_equals_child_count=None, original_parsed_name=None, is_name_parsed_from_folder=None, id_string=None, date_created=None, imported_collections=None, resolved_presentation_unique_key=None):  # noqa: E501
         """EntitiesUser - a model defined in Swagger"""  # noqa: E501
         self._uses_id_for_configuration_path = None
         self._password = None
@@ -83,6 +85,7 @@ class EntitiesUser(object):
         self._recursive_child_count_equals_child_count = None
         self._original_parsed_name = None
         self._is_name_parsed_from_folder = None
+        self._id_string = None
         self._date_created = None
         self._imported_collections = None
         self._resolved_presentation_unique_key = None
@@ -119,6 +122,8 @@ class EntitiesUser(object):
             self.original_parsed_name = original_parsed_name
         if is_name_parsed_from_folder is not None:
             self.is_name_parsed_from_folder = is_name_parsed_from_folder
+        if id_string is not None:
+            self.id_string = id_string
         if date_created is not None:
             self.date_created = date_created
         if imported_collections is not None:
@@ -475,6 +480,27 @@ class EntitiesUser(object):
         """
 
         self._is_name_parsed_from_folder = is_name_parsed_from_folder
+
+    @property
+    def id_string(self):
+        """Gets the id_string of this EntitiesUser.  # noqa: E501
+
+
+        :return: The id_string of this EntitiesUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_string
+
+    @id_string.setter
+    def id_string(self, id_string):
+        """Sets the id_string of this EntitiesUser.
+
+
+        :param id_string: The id_string of this EntitiesUser.  # noqa: E501
+        :type: str
+        """
+
+        self._id_string = id_string
 
     @property
     def date_created(self):

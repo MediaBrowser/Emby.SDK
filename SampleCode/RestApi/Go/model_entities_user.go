@@ -34,6 +34,7 @@ type EntitiesUser struct {
 	OriginalParsedName string `json:"OriginalParsedName,omitempty"`
 	// Internal use only
 	IsNameParsedFromFolder bool `json:"IsNameParsedFromFolder,omitempty"`
+	IdString string `json:"IdString,omitempty"`
 	// The date created.
 	DateCreated time.Time `json:"DateCreated,omitempty"`
 	ImportedCollections []LinkedItemInfo `json:"ImportedCollections,omitempty"`

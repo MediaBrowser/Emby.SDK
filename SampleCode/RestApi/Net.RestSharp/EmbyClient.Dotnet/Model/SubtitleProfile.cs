@@ -31,14 +31,16 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="didlMode">didlMode.</param>
         /// <param name="language">language.</param>
         /// <param name="container">container.</param>
+        /// <param name="allowChunkedResponse">allowChunkedResponse.</param>
         /// <param name="protocol">protocol.</param>
-        public SubtitleProfile(string format = default(string), SubtitleDeliveryMethod method = default(SubtitleDeliveryMethod), string didlMode = default(string), string language = default(string), string container = default(string), string protocol = default(string))
+        public SubtitleProfile(string format = default(string), SubtitleDeliveryMethod method = default(SubtitleDeliveryMethod), string didlMode = default(string), string language = default(string), string container = default(string), bool? allowChunkedResponse = default(bool?), string protocol = default(string))
         {
             this.Format = format;
             this.Method = method;
             this.DidlMode = didlMode;
             this.Language = language;
             this.Container = container;
+            this.AllowChunkedResponse = allowChunkedResponse;
             this.Protocol = protocol;
         }
         
@@ -73,6 +75,12 @@ namespace EmbyClient.Dotnet.Model
         public string Container { get; set; }
 
         /// <summary>
+        /// Gets or Sets AllowChunkedResponse
+        /// </summary>
+        [DataMember(Name="AllowChunkedResponse", EmitDefaultValue=false)]
+        public bool? AllowChunkedResponse { get; set; }
+
+        /// <summary>
         /// Gets or Sets Protocol
         /// </summary>
         [DataMember(Name="Protocol", EmitDefaultValue=false)]
@@ -91,6 +99,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  DidlMode: ").Append(DidlMode).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
+            sb.Append("  AllowChunkedResponse: ").Append(AllowChunkedResponse).Append("\n");
             sb.Append("  Protocol: ").Append(Protocol).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -152,6 +161,11 @@ namespace EmbyClient.Dotnet.Model
                     this.Container.Equals(input.Container))
                 ) && 
                 (
+                    this.AllowChunkedResponse == input.AllowChunkedResponse ||
+                    (this.AllowChunkedResponse != null &&
+                    this.AllowChunkedResponse.Equals(input.AllowChunkedResponse))
+                ) && 
+                (
                     this.Protocol == input.Protocol ||
                     (this.Protocol != null &&
                     this.Protocol.Equals(input.Protocol))
@@ -177,6 +191,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.Language.GetHashCode();
                 if (this.Container != null)
                     hashCode = hashCode * 59 + this.Container.GetHashCode();
+                if (this.AllowChunkedResponse != null)
+                    hashCode = hashCode * 59 + this.AllowChunkedResponse.GetHashCode();
                 if (this.Protocol != null)
                     hashCode = hashCode * 59 + this.Protocol.GetHashCode();
                 return hashCode;

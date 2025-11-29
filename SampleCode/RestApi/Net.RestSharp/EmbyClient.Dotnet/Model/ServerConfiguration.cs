@@ -76,7 +76,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="enablePeopleLetterSubFolders">enablePeopleLetterSubFolders.</param>
         /// <param name="optimizeDatabaseOnShutdown">optimizeDatabaseOnShutdown.</param>
         /// <param name="databaseAnalysisLimit">databaseAnalysisLimit.</param>
-        /// <param name="maxLibraryDbConnections">maxLibraryDbConnections.</param>
+        /// <param name="maxLibraryDatabaseConnections">maxLibraryDatabaseConnections.</param>
         /// <param name="maxAuthDbConnections">maxAuthDbConnections.</param>
         /// <param name="maxOtherDbConnections">maxOtherDbConnections.</param>
         /// <param name="disableAsyncIO">disableAsyncIO.</param>
@@ -95,7 +95,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="runAtStartup">A value indicating whether \\[run at startup\\]..</param>
         /// <param name="isStartupWizardCompleted">A value indicating whether this instance is first run..</param>
         /// <param name="cachePath">The cache path..</param>
-        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? disableOutgoingIPv6 = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelaySeconds = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded1 = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), int? maxLibraryDbConnections = default(int?), int? maxAuthDbConnections = default(int?), int? maxOtherDbConnections = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares8 = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), bool? tvChannelsRefreshed = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? isInMaintenanceMode = default(bool?), string maintenanceModeMessage = default(string), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
+        public ServerConfiguration(bool? enableUPnP = default(bool?), int? publicPort = default(int?), int? publicHttpsPort = default(int?), int? httpServerPortNumber = default(int?), int? httpsPortNumber = default(int?), bool? enableHttps = default(bool?), string certificatePath = default(string), string certificatePassword = default(string), bool? isPortAuthorized = default(bool?), bool? autoRunWebApp = default(bool?), bool? enableRemoteAccess = default(bool?), bool? logAllQueryTimes = default(bool?), bool? disableOutgoingIPv6 = default(bool?), bool? enableCaseSensitiveItemIds = default(bool?), string metadataPath = default(string), string metadataNetworkPath = default(string), string preferredMetadataLanguage = default(string), string metadataCountryCode = default(string), List<string> sortRemoveWords = default(List<string>), int? libraryMonitorDelaySeconds = default(int?), bool? enableDashboardResponseCaching = default(bool?), string dashboardSourcePath = default(string), ImageSavingConvention imageSavingConvention = default(ImageSavingConvention), bool? enableAutomaticRestart = default(bool?), string serverName = default(string), NetSocketsAddressFamily preferredDetectedRemoteAddressFamily = default(NetSocketsAddressFamily), string wanDdns = default(string), string uICulture = default(string), int? remoteClientBitrateLimit = default(int?), List<string> localNetworkSubnets = default(List<string>), List<string> localNetworkAddresses = default(List<string>), bool? enableExternalContentInSuggestions = default(bool?), bool? requireHttps = default(bool?), bool? isBehindProxy = default(bool?), List<string> remoteIPFilter = default(List<string>), bool? isRemoteIPFilterBlacklist = default(bool?), int? imageExtractionTimeoutMs = default(int?), List<PathSubstitution> pathSubstitutions = default(List<PathSubstitution>), List<string> uninstalledPlugins = default(List<string>), bool? collapseVideoFolders = default(bool?), bool? enableOriginalTrackTitles = default(bool?), bool? vacuumDatabaseOnStartup = default(bool?), int? simultaneousStreamLimit = default(int?), int? databaseCacheSizeMB = default(int?), bool? enableSqLiteMmio = default(bool?), bool? playlistsUpgradedToM3U = default(bool?), bool? imageExtractorUpgraded1 = default(bool?), bool? enablePeopleLetterSubFolders = default(bool?), bool? optimizeDatabaseOnShutdown = default(bool?), int? databaseAnalysisLimit = default(int?), int? maxLibraryDatabaseConnections = default(int?), int? maxAuthDbConnections = default(int?), int? maxOtherDbConnections = default(int?), bool? disableAsyncIO = default(bool?), bool? migratedToUserItemShares8 = default(bool?), bool? migratedLibraryOptionsToDb = default(bool?), bool? allowLegacyLocalNetworkPassword = default(bool?), bool? enableSavedMetadataForPeople = default(bool?), bool? tvChannelsRefreshed = default(bool?), ProxyHeaderMode proxyHeaderMode = default(ProxyHeaderMode), bool? isInMaintenanceMode = default(bool?), string maintenanceModeMessage = default(string), bool? enableDebugLevelLogging = default(bool?), string revertDebugLogging = default(string), bool? enableAutoUpdate = default(bool?), int? logFileRetentionDays = default(int?), bool? runAtStartup = default(bool?), bool? isStartupWizardCompleted = default(bool?), string cachePath = default(string))
         {
             this.EnableUPnP = enableUPnP;
             this.PublicPort = publicPort;
@@ -147,7 +147,7 @@ namespace EmbyClient.Dotnet.Model
             this.EnablePeopleLetterSubFolders = enablePeopleLetterSubFolders;
             this.OptimizeDatabaseOnShutdown = optimizeDatabaseOnShutdown;
             this.DatabaseAnalysisLimit = databaseAnalysisLimit;
-            this.MaxLibraryDbConnections = maxLibraryDbConnections;
+            this.MaxLibraryDatabaseConnections = maxLibraryDatabaseConnections;
             this.MaxAuthDbConnections = maxAuthDbConnections;
             this.MaxOtherDbConnections = maxOtherDbConnections;
             this.DisableAsyncIO = disableAsyncIO;
@@ -485,10 +485,10 @@ namespace EmbyClient.Dotnet.Model
         public int? DatabaseAnalysisLimit { get; set; }
 
         /// <summary>
-        /// Gets or Sets MaxLibraryDbConnections
+        /// Gets or Sets MaxLibraryDatabaseConnections
         /// </summary>
-        [DataMember(Name="MaxLibraryDbConnections", EmitDefaultValue=false)]
-        public int? MaxLibraryDbConnections { get; set; }
+        [DataMember(Name="MaxLibraryDatabaseConnections", EmitDefaultValue=false)]
+        public int? MaxLibraryDatabaseConnections { get; set; }
 
         /// <summary>
         /// Gets or Sets MaxAuthDbConnections
@@ -662,7 +662,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  EnablePeopleLetterSubFolders: ").Append(EnablePeopleLetterSubFolders).Append("\n");
             sb.Append("  OptimizeDatabaseOnShutdown: ").Append(OptimizeDatabaseOnShutdown).Append("\n");
             sb.Append("  DatabaseAnalysisLimit: ").Append(DatabaseAnalysisLimit).Append("\n");
-            sb.Append("  MaxLibraryDbConnections: ").Append(MaxLibraryDbConnections).Append("\n");
+            sb.Append("  MaxLibraryDatabaseConnections: ").Append(MaxLibraryDatabaseConnections).Append("\n");
             sb.Append("  MaxAuthDbConnections: ").Append(MaxAuthDbConnections).Append("\n");
             sb.Append("  MaxOtherDbConnections: ").Append(MaxOtherDbConnections).Append("\n");
             sb.Append("  DisableAsyncIO: ").Append(DisableAsyncIO).Append("\n");
@@ -972,9 +972,9 @@ namespace EmbyClient.Dotnet.Model
                     this.DatabaseAnalysisLimit.Equals(input.DatabaseAnalysisLimit))
                 ) && 
                 (
-                    this.MaxLibraryDbConnections == input.MaxLibraryDbConnections ||
-                    (this.MaxLibraryDbConnections != null &&
-                    this.MaxLibraryDbConnections.Equals(input.MaxLibraryDbConnections))
+                    this.MaxLibraryDatabaseConnections == input.MaxLibraryDatabaseConnections ||
+                    (this.MaxLibraryDatabaseConnections != null &&
+                    this.MaxLibraryDatabaseConnections.Equals(input.MaxLibraryDatabaseConnections))
                 ) && 
                 (
                     this.MaxAuthDbConnections == input.MaxAuthDbConnections ||
@@ -1177,8 +1177,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.OptimizeDatabaseOnShutdown.GetHashCode();
                 if (this.DatabaseAnalysisLimit != null)
                     hashCode = hashCode * 59 + this.DatabaseAnalysisLimit.GetHashCode();
-                if (this.MaxLibraryDbConnections != null)
-                    hashCode = hashCode * 59 + this.MaxLibraryDbConnections.GetHashCode();
+                if (this.MaxLibraryDatabaseConnections != null)
+                    hashCode = hashCode * 59 + this.MaxLibraryDatabaseConnections.GetHashCode();
                 if (this.MaxAuthDbConnections != null)
                     hashCode = hashCode * 59 + this.MaxAuthDbConnections.GetHashCode();
                 if (this.MaxOtherDbConnections != null)

@@ -64,10 +64,11 @@ open class RemoteImageServiceAPI {
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter providerName: (query) Optional. The image provider to use (optional)
      - parameter includeAllLanguages: (query) Optional. (optional)
+     - parameter enableSeriesImages: (query) Optional. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getItemsByIdRemoteimages(_id: String, type: ImageType? = nil, startIndex: Int? = nil, limit: Int? = nil, providerName: String? = nil, includeAllLanguages: Bool? = nil, completion: @escaping ((_ data: RemoteImageResult?,_ error: Error?) -> Void)) {
-        getItemsByIdRemoteimagesWithRequestBuilder(_id: _id, type: type, startIndex: startIndex, limit: limit, providerName: providerName, includeAllLanguages: includeAllLanguages).execute { (response, error) -> Void in
+    open class func getItemsByIdRemoteimages(_id: String, type: ImageType? = nil, startIndex: Int? = nil, limit: Int? = nil, providerName: String? = nil, includeAllLanguages: Bool? = nil, enableSeriesImages: Bool? = nil, completion: @escaping ((_ data: RemoteImageResult?,_ error: Error?) -> Void)) {
+        getItemsByIdRemoteimagesWithRequestBuilder(_id: _id, type: type, startIndex: startIndex, limit: limit, providerName: providerName, includeAllLanguages: includeAllLanguages, enableSeriesImages: enableSeriesImages).execute { (response, error) -> Void in
             completion(response?.body, error)
         }
     }
@@ -118,10 +119,11 @@ open class RemoteImageServiceAPI {
      - parameter limit: (query) Optional. The maximum number of records to return (optional)
      - parameter providerName: (query) Optional. The image provider to use (optional)
      - parameter includeAllLanguages: (query) Optional. (optional)
+     - parameter enableSeriesImages: (query) Optional. (optional)
 
      - returns: RequestBuilder<RemoteImageResult> 
      */
-    open class func getItemsByIdRemoteimagesWithRequestBuilder(_id: String, type: ImageType? = nil, startIndex: Int? = nil, limit: Int? = nil, providerName: String? = nil, includeAllLanguages: Bool? = nil) -> RequestBuilder<RemoteImageResult> {
+    open class func getItemsByIdRemoteimagesWithRequestBuilder(_id: String, type: ImageType? = nil, startIndex: Int? = nil, limit: Int? = nil, providerName: String? = nil, includeAllLanguages: Bool? = nil, enableSeriesImages: Bool? = nil) -> RequestBuilder<RemoteImageResult> {
         var path = "/Items/{Id}/RemoteImages"
         let _idPreEscape = "\(_id)"
         let _idPostEscape = _idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -134,7 +136,8 @@ open class RemoteImageServiceAPI {
                         "StartIndex": startIndex?.encodeToJSON(), 
                         "Limit": limit?.encodeToJSON(), 
                         "ProviderName": providerName, 
-                        "IncludeAllLanguages": includeAllLanguages
+                        "IncludeAllLanguages": includeAllLanguages, 
+                        "EnableSeriesImages": enableSeriesImages
         ])
 
 

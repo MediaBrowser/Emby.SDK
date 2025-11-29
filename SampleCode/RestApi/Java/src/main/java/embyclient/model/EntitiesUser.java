@@ -74,6 +74,9 @@ public class EntitiesUser {
   @SerializedName("IsNameParsedFromFolder")
   private Boolean isNameParsedFromFolder = null;
 
+  @SerializedName("IdString")
+  private String idString = null;
+
   @SerializedName("DateCreated")
   private OffsetDateTime dateCreated = null;
 
@@ -379,6 +382,24 @@ public class EntitiesUser {
     this.isNameParsedFromFolder = isNameParsedFromFolder;
   }
 
+  public EntitiesUser idString(String idString) {
+    this.idString = idString;
+    return this;
+  }
+
+   /**
+   * Get idString
+   * @return idString
+  **/
+  @Schema(description = "")
+  public String getIdString() {
+    return idString;
+  }
+
+  public void setIdString(String idString) {
+    this.idString = idString;
+  }
+
   public EntitiesUser dateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
     return this;
@@ -467,6 +488,7 @@ public class EntitiesUser {
         Objects.equals(this.recursiveChildCountEqualsChildCount, entitiesUser.recursiveChildCountEqualsChildCount) &&
         Objects.equals(this.originalParsedName, entitiesUser.originalParsedName) &&
         Objects.equals(this.isNameParsedFromFolder, entitiesUser.isNameParsedFromFolder) &&
+        Objects.equals(this.idString, entitiesUser.idString) &&
         Objects.equals(this.dateCreated, entitiesUser.dateCreated) &&
         Objects.equals(this.importedCollections, entitiesUser.importedCollections) &&
         Objects.equals(this.resolvedPresentationUniqueKey, entitiesUser.resolvedPresentationUniqueKey);
@@ -474,7 +496,7 @@ public class EntitiesUser {
 
   @Override
   public int hashCode() {
-    return Objects.hash(usesIdForConfigurationPath, password, easyPassword, salt, connectUserName, connectUserId, connectLinkType, connectAccessKey, imageInfos, name, lastLoginDate, lastActivityDate, playedPercentage, recursiveChildCountEqualsChildCount, originalParsedName, isNameParsedFromFolder, dateCreated, importedCollections, resolvedPresentationUniqueKey);
+    return Objects.hash(usesIdForConfigurationPath, password, easyPassword, salt, connectUserName, connectUserId, connectLinkType, connectAccessKey, imageInfos, name, lastLoginDate, lastActivityDate, playedPercentage, recursiveChildCountEqualsChildCount, originalParsedName, isNameParsedFromFolder, idString, dateCreated, importedCollections, resolvedPresentationUniqueKey);
   }
 
 
@@ -499,6 +521,7 @@ public class EntitiesUser {
     sb.append("    recursiveChildCountEqualsChildCount: ").append(toIndentedString(recursiveChildCountEqualsChildCount)).append("\n");
     sb.append("    originalParsedName: ").append(toIndentedString(originalParsedName)).append("\n");
     sb.append("    isNameParsedFromFolder: ").append(toIndentedString(isNameParsedFromFolder)).append("\n");
+    sb.append("    idString: ").append(toIndentedString(idString)).append("\n");
     sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("    importedCollections: ").append(toIndentedString(importedCollections)).append("\n");
     sb.append("    resolvedPresentationUniqueKey: ").append(toIndentedString(resolvedPresentationUniqueKey)).append("\n");

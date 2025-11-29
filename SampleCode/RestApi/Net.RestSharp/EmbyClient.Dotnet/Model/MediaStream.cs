@@ -65,6 +65,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="deliveryMethod">deliveryMethod.</param>
         /// <param name="deliveryUrl">The delivery URL.    Custom property set by the application..</param>
         /// <param name="isExternalUrl">A value indicating whether this instance is external URL.    Custom property set by the application..</param>
+        /// <param name="isChunkedResponse">isChunkedResponse.</param>
         /// <param name="isTextSubtitleStream">isTextSubtitleStream.</param>
         /// <param name="supportsExternalStream">A value indicating whether \\[supports external stream\\]..</param>
         /// <param name="path">The filename..</param>
@@ -80,7 +81,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="attachmentSize">The size of the attachment..</param>
         /// <param name="mimeType">The type of the MIME..</param>
         /// <param name="subtitleLocationType">subtitleLocationType.</param>
-        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?), int? height = default(int?), int? width = default(int?), float? averageFrameRate = default(float?), float? realFrameRate = default(float?), string profile = default(string), MediaStreamType type = default(MediaStreamType), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), SubtitleDeliveryMethod deliveryMethod = default(SubtitleDeliveryMethod), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), MediaProtocol protocol = default(MediaProtocol), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), ExtendedVideoTypes extendedVideoType = default(ExtendedVideoTypes), ExtendedVideoSubTypes extendedVideoSubType = default(ExtendedVideoSubTypes), string extendedVideoSubTypeDescription = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), SubtitleLocationType subtitleLocationType = default(SubtitleLocationType))
+        public MediaStream(string codec = default(string), string codecTag = default(string), string language = default(string), string colorTransfer = default(string), string colorPrimaries = default(string), string colorSpace = default(string), string comment = default(string), long? streamStartTimeTicks = default(long?), string timeBase = default(string), string title = default(string), string extradata = default(string), string videoRange = default(string), string displayTitle = default(string), string displayLanguage = default(string), string nalLengthSize = default(string), bool? isInterlaced = default(bool?), bool? isAVC = default(bool?), string channelLayout = default(string), int? bitRate = default(int?), int? bitDepth = default(int?), int? refFrames = default(int?), int? rotation = default(int?), int? channels = default(int?), int? sampleRate = default(int?), bool? isDefault = default(bool?), bool? isForced = default(bool?), bool? isHearingImpaired = default(bool?), int? height = default(int?), int? width = default(int?), float? averageFrameRate = default(float?), float? realFrameRate = default(float?), string profile = default(string), MediaStreamType type = default(MediaStreamType), string aspectRatio = default(string), int? index = default(int?), bool? isExternal = default(bool?), SubtitleDeliveryMethod deliveryMethod = default(SubtitleDeliveryMethod), string deliveryUrl = default(string), bool? isExternalUrl = default(bool?), bool? isChunkedResponse = default(bool?), bool? isTextSubtitleStream = default(bool?), bool? supportsExternalStream = default(bool?), string path = default(string), MediaProtocol protocol = default(MediaProtocol), string pixelFormat = default(string), double? level = default(double?), bool? isAnamorphic = default(bool?), ExtendedVideoTypes extendedVideoType = default(ExtendedVideoTypes), ExtendedVideoSubTypes extendedVideoSubType = default(ExtendedVideoSubTypes), string extendedVideoSubTypeDescription = default(string), string itemId = default(string), string serverId = default(string), int? attachmentSize = default(int?), string mimeType = default(string), SubtitleLocationType subtitleLocationType = default(SubtitleLocationType))
         {
             this.Codec = codec;
             this.CodecTag = codecTag;
@@ -121,6 +122,7 @@ namespace EmbyClient.Dotnet.Model
             this.DeliveryMethod = deliveryMethod;
             this.DeliveryUrl = deliveryUrl;
             this.IsExternalUrl = isExternalUrl;
+            this.IsChunkedResponse = isChunkedResponse;
             this.IsTextSubtitleStream = isTextSubtitleStream;
             this.SupportsExternalStream = supportsExternalStream;
             this.Path = path;
@@ -406,6 +408,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? IsExternalUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsChunkedResponse
+        /// </summary>
+        [DataMember(Name="IsChunkedResponse", EmitDefaultValue=false)]
+        public bool? IsChunkedResponse { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsTextSubtitleStream
         /// </summary>
         [DataMember(Name="IsTextSubtitleStream", EmitDefaultValue=false)]
@@ -552,6 +560,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  DeliveryMethod: ").Append(DeliveryMethod).Append("\n");
             sb.Append("  DeliveryUrl: ").Append(DeliveryUrl).Append("\n");
             sb.Append("  IsExternalUrl: ").Append(IsExternalUrl).Append("\n");
+            sb.Append("  IsChunkedResponse: ").Append(IsChunkedResponse).Append("\n");
             sb.Append("  IsTextSubtitleStream: ").Append(IsTextSubtitleStream).Append("\n");
             sb.Append("  SupportsExternalStream: ").Append(SupportsExternalStream).Append("\n");
             sb.Append("  Path: ").Append(Path).Append("\n");
@@ -797,6 +806,11 @@ namespace EmbyClient.Dotnet.Model
                     this.IsExternalUrl.Equals(input.IsExternalUrl))
                 ) && 
                 (
+                    this.IsChunkedResponse == input.IsChunkedResponse ||
+                    (this.IsChunkedResponse != null &&
+                    this.IsChunkedResponse.Equals(input.IsChunkedResponse))
+                ) && 
+                (
                     this.IsTextSubtitleStream == input.IsTextSubtitleStream ||
                     (this.IsTextSubtitleStream != null &&
                     this.IsTextSubtitleStream.Equals(input.IsTextSubtitleStream))
@@ -960,6 +974,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.DeliveryUrl.GetHashCode();
                 if (this.IsExternalUrl != null)
                     hashCode = hashCode * 59 + this.IsExternalUrl.GetHashCode();
+                if (this.IsChunkedResponse != null)
+                    hashCode = hashCode * 59 + this.IsChunkedResponse.GetHashCode();
                 if (this.IsTextSubtitleStream != null)
                     hashCode = hashCode * 59 + this.IsTextSubtitleStream.GetHashCode();
                 if (this.SupportsExternalStream != null)

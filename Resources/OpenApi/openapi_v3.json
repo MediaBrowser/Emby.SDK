@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.2.6"
+    "version": "4.9.2.7"
   },
   "servers": [
     {
@@ -62364,6 +62364,16 @@
             "schema": {
               "type": "boolean"
             }
+          },
+          {
+            "name": "EnableSeriesImages",
+            "in": "query",
+            "description": "Optional.",
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
@@ -104801,6 +104811,10 @@
             "description": "A value indicating whether this instance is external URL.\r\n\r\nCustom property set by the application.",
             "nullable": true
           },
+          "IsChunkedResponse": {
+            "type": "boolean",
+            "nullable": true
+          },
           "IsTextSubtitleStream": {
             "type": "boolean"
           },
@@ -106143,6 +106157,9 @@
             "type": "boolean",
             "description": "Internal use only"
           },
+          "IdString": {
+            "type": "string"
+          },
           "DateCreated": {
             "type": "string",
             "description": "The date created.",
@@ -107168,6 +107185,9 @@
           },
           "Container": {
             "type": "string"
+          },
+          "AllowChunkedResponse": {
+            "type": "boolean"
           },
           "Protocol": {
             "type": "string"
@@ -110295,7 +110315,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "MaxLibraryDbConnections": {
+          "MaxLibraryDatabaseConnections": {
             "type": "integer",
             "format": "int32"
           },

@@ -80,6 +80,7 @@ type MediaStream struct {
 	DeliveryUrl string `json:"DeliveryUrl,omitempty"`
 	// A value indicating whether this instance is external URL.    Custom property set by the application.
 	IsExternalUrl bool `json:"IsExternalUrl,omitempty"`
+	IsChunkedResponse bool `json:"IsChunkedResponse,omitempty"`
 	IsTextSubtitleStream bool `json:"IsTextSubtitleStream,omitempty"`
 	// A value indicating whether \\[supports external stream\\].
 	SupportsExternalStream bool `json:"SupportsExternalStream,omitempty"`

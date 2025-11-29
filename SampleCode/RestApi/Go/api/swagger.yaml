@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.2.6
+  version: 4.9.2.7
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -51472,6 +51472,14 @@ paths:
         explode: false
         schema:
           type: boolean
+      - name: EnableSeriesImages
+        in: query
+        description: Optional.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: boolean
       responses:
         "200":
           description: Operation successful. Returning a RemoteImageResult object.
@@ -83787,6 +83795,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -83841,6 +83850,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -83955,6 +83965,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -84009,6 +84020,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -84355,6 +84367,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -84409,6 +84422,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -84523,6 +84537,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -84577,6 +84592,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -85493,6 +85509,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -85547,6 +85564,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -85661,6 +85679,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -85715,6 +85734,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -86197,6 +86217,7 @@ components:
           ItemId: ItemId
           SupportsExternalStream: true
           Codec: Codec
+          IsChunkedResponse: true
           SampleRate: 1
           IsAnamorphic: true
           PixelFormat: PixelFormat
@@ -86251,6 +86272,7 @@ components:
           ItemId: ItemId
           SupportsExternalStream: true
           Codec: Codec
+          IsChunkedResponse: true
           SampleRate: 1
           IsAnamorphic: true
           PixelFormat: PixelFormat
@@ -86607,6 +86629,9 @@ components:
           description: "A value indicating whether this instance is external URL.\r\
             \n\r\nCustom property set by the application."
           nullable: true
+        IsChunkedResponse:
+          type: boolean
+          nullable: true
         IsTextSubtitleStream:
           type: boolean
         SupportsExternalStream:
@@ -86670,6 +86695,7 @@ components:
         ItemId: ItemId
         SupportsExternalStream: true
         Codec: Codec
+        IsChunkedResponse: true
         SampleRate: 1
         IsAnamorphic: true
         PixelFormat: PixelFormat
@@ -87425,6 +87451,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -87479,6 +87506,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -87593,6 +87621,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -87647,6 +87676,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -88062,6 +88092,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -88116,6 +88147,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -88290,6 +88322,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -88344,6 +88377,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -88458,6 +88492,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -88512,6 +88547,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -88927,6 +88963,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -88981,6 +89018,7 @@ components:
                   ItemId: ItemId
                   SupportsExternalStream: true
                   Codec: Codec
+                  IsChunkedResponse: true
                   SampleRate: 1
                   IsAnamorphic: true
                   PixelFormat: PixelFormat
@@ -89126,6 +89164,7 @@ components:
             UsesIdForConfigurationPath: true
             Salt: Salt
             ConnectUserName: ConnectUserName
+            IdString: IdString
             LastActivityDate: 2000-01-23T04:56:07.000+00:00
             ConnectLinkType: LinkedUser
             EasyPassword: EasyPassword
@@ -89165,6 +89204,7 @@ components:
             UsesIdForConfigurationPath: true
             Salt: Salt
             ConnectUserName: ConnectUserName
+            IdString: IdString
             LastActivityDate: 2000-01-23T04:56:07.000+00:00
             ConnectLinkType: LinkedUser
             EasyPassword: EasyPassword
@@ -89254,6 +89294,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -89308,6 +89349,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -89422,6 +89464,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -89476,6 +89519,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -89891,6 +89935,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -89945,6 +89990,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -90119,6 +90165,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -90173,6 +90220,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -90287,6 +90335,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -90341,6 +90390,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -90756,6 +90806,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -90810,6 +90861,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -90955,6 +91007,7 @@ components:
           UsesIdForConfigurationPath: true
           Salt: Salt
           ConnectUserName: ConnectUserName
+          IdString: IdString
           LastActivityDate: 2000-01-23T04:56:07.000+00:00
           ConnectLinkType: LinkedUser
           EasyPassword: EasyPassword
@@ -90994,6 +91047,7 @@ components:
           UsesIdForConfigurationPath: true
           Salt: Salt
           ConnectUserName: ConnectUserName
+          IdString: IdString
           LastActivityDate: 2000-01-23T04:56:07.000+00:00
           ConnectLinkType: LinkedUser
           EasyPassword: EasyPassword
@@ -91146,6 +91200,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -91200,6 +91255,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -91314,6 +91370,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -91368,6 +91425,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -91783,6 +91841,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -91837,6 +91896,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -92025,6 +92085,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -92079,6 +92140,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -92635,6 +92697,8 @@ components:
         IsNameParsedFromFolder:
           type: boolean
           description: Internal use only
+        IdString:
+          type: string
         DateCreated:
           type: string
           description: The date created.
@@ -92682,6 +92746,7 @@ components:
         UsesIdForConfigurationPath: true
         Salt: Salt
         ConnectUserName: ConnectUserName
+        IdString: IdString
         LastActivityDate: 2000-01-23T04:56:07.000+00:00
         ConnectLinkType: LinkedUser
         EasyPassword: EasyPassword
@@ -93390,13 +93455,15 @@ components:
         RequiresPlainFolders: true
         EnableSingleSubtitleLimit: true
         SubtitleProfiles:
-        - Container: Container
+        - AllowChunkedResponse: true
+          Container: Container
           Format: Format
           Language: Language
           DidlMode: DidlMode
           Method: Encode
           Protocol: Protocol
-        - Container: Container
+        - AllowChunkedResponse: true
+          Container: Container
           Format: Format
           Language: Language
           DidlMode: DidlMode
@@ -93816,9 +93883,12 @@ components:
           type: string
         Container:
           type: string
+        AllowChunkedResponse:
+          type: boolean
         Protocol:
           type: string
       example:
+        AllowChunkedResponse: true
         Container: Container
         Format: Format
         Language: Language
@@ -95229,6 +95299,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -95283,6 +95354,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -95638,6 +95710,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -95692,6 +95765,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -95806,6 +95880,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -95860,6 +95935,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -96210,6 +96286,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -96264,6 +96341,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -96378,6 +96456,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -96432,6 +96511,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -96792,6 +96872,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -96846,6 +96927,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -96960,6 +97042,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -97014,6 +97097,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -97525,6 +97609,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -97579,6 +97664,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -97693,6 +97779,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -97747,6 +97834,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -98121,6 +98209,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -98175,6 +98264,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -98289,6 +98379,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -98343,6 +98434,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -98801,6 +98893,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -98855,6 +98948,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -98969,6 +99063,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -99023,6 +99118,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -99948,6 +100044,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -100002,6 +100099,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -100116,6 +100214,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -100170,6 +100269,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -100516,6 +100616,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -100570,6 +100671,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -100684,6 +100786,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -100738,6 +100841,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -101487,6 +101591,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -101541,6 +101646,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -101681,6 +101787,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -101735,6 +101842,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -101920,6 +102028,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -101974,6 +102083,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -102196,6 +102306,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -102250,6 +102361,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -102390,6 +102502,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -102444,6 +102557,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -102899,7 +103013,7 @@ components:
         DatabaseAnalysisLimit:
           type: integer
           format: int32
-        MaxLibraryDbConnections:
+        MaxLibraryDatabaseConnections:
           type: integer
           format: int32
         MaxAuthDbConnections:
@@ -103014,7 +103128,6 @@ components:
         MaxOtherDbConnections: 1
         CertificatePath: CertificatePath
         CollapseVideoFolders: true
-        MaxLibraryDbConnections: 4
         AutoRunWebApp: true
         MetadataPath: MetadataPath
         IsRemoteIPFilterBlacklist: true
@@ -103025,6 +103138,7 @@ components:
         EnableHttps: true
         VacuumDatabaseOnStartup: true
         ServerName: ServerName
+        MaxLibraryDatabaseConnections: 4
         SortRemoveWords:
         - SortRemoveWords
         - SortRemoveWords
@@ -104460,6 +104574,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -104514,6 +104629,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -104628,6 +104744,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -104682,6 +104799,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -105097,6 +105215,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -105151,6 +105270,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -107309,6 +107429,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -107363,6 +107484,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -107477,6 +107599,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -107531,6 +107654,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -107877,6 +108001,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -107931,6 +108056,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -108045,6 +108171,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -108099,6 +108226,7 @@ components:
                 ItemId: ItemId
                 SupportsExternalStream: true
                 Codec: Codec
+                IsChunkedResponse: true
                 SampleRate: 1
                 IsAnamorphic: true
                 PixelFormat: PixelFormat
@@ -108467,6 +108595,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -108521,6 +108650,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -108635,6 +108765,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -108689,6 +108820,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -109035,6 +109167,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -109089,6 +109222,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -109203,6 +109337,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -109257,6 +109392,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -109766,6 +109902,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -109820,6 +109957,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -109934,6 +110072,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -109988,6 +110127,7 @@ components:
             ItemId: ItemId
             SupportsExternalStream: true
             Codec: Codec
+            IsChunkedResponse: true
             SampleRate: 1
             IsAnamorphic: true
             PixelFormat: PixelFormat
@@ -111088,6 +111228,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -111142,6 +111283,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -111256,6 +111398,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -111310,6 +111453,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -111929,6 +112073,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -111983,6 +112128,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -112097,6 +112243,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat
@@ -112151,6 +112298,7 @@ components:
               ItemId: ItemId
               SupportsExternalStream: true
               Codec: Codec
+              IsChunkedResponse: true
               SampleRate: 1
               IsAnamorphic: true
               PixelFormat: PixelFormat

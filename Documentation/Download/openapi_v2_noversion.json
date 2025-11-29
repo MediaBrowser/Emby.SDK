@@ -41664,6 +41664,12 @@
             "name": "IncludeAllLanguages",
             "description": "Optional.",
             "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "EnableSeriesImages",
+            "description": "Optional.",
+            "type": "boolean"
           }
         ],
         "responses": {
@@ -72493,6 +72499,9 @@
           "description": "A value indicating whether this instance is external URL.\r\n\r\nCustom property set by the application.",
           "type": "boolean"
         },
+        "IsChunkedResponse": {
+          "type": "boolean"
+        },
         "IsTextSubtitleStream": {
           "type": "boolean"
         },
@@ -73801,6 +73810,9 @@
           "description": "Internal use only",
           "type": "boolean"
         },
+        "IdString": {
+          "type": "string"
+        },
         "DateCreated": {
           "format": "date-time",
           "description": "The date created.",
@@ -74815,6 +74827,9 @@
         },
         "Container": {
           "type": "string"
+        },
+        "AllowChunkedResponse": {
+          "type": "boolean"
         },
         "Protocol": {
           "type": "string"
@@ -77904,7 +77919,7 @@
           "format": "int32",
           "type": "integer"
         },
-        "MaxLibraryDbConnections": {
+        "MaxLibraryDatabaseConnections": {
           "format": "int32",
           "type": "integer"
         },

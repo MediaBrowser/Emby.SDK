@@ -166,18 +166,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class TranscodingInfo</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="MediaBrowser_Model_Session_TranscodingInfo__ctor_" data-uid="MediaBrowser.Model.Session.TranscodingInfo.#ctor*"></a>
-  <h4 id="MediaBrowser_Model_Session_TranscodingInfo__ctor" data-uid="MediaBrowser.Model.Session.TranscodingInfo.#ctor">TranscodingInfo()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TranscodingInfo()</code></pre>
-  </div>
   <h3 id="properties">Properties
   </h3>
   
@@ -365,6 +353,7 @@ public double? AverageCpuUsage { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated, please use ProcessStatistics instead&quot;)]
+[IgnoreDataMember]
 public Tuple&lt;double, double&gt;[] CpuHistory { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -541,7 +530,8 @@ public double? CurrentCpuUsage { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProcessStatistics ProcessStatistics { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[IgnoreDataMember]
+public ProcessStatistics ProcessStatistics { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

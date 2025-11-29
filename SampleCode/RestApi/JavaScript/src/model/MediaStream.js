@@ -20,7 +20,7 @@ import SubtitleLocationType from './SubtitleLocationType';
 /**
 * The MediaStream model module.
 * @module model/MediaStream
-* @version 4.9.2.6
+* @version 4.9.2.7
 */
 export default class MediaStream {
     /**
@@ -164,6 +164,9 @@ export default class MediaStream {
             }
             if (data.hasOwnProperty('IsExternalUrl')) {
                 obj['IsExternalUrl'] = ApiClient.convertToType(data['IsExternalUrl'], 'Boolean');
+            }
+            if (data.hasOwnProperty('IsChunkedResponse')) {
+                obj['IsChunkedResponse'] = ApiClient.convertToType(data['IsChunkedResponse'], 'Boolean');
             }
             if (data.hasOwnProperty('IsTextSubtitleStream')) {
                 obj['IsTextSubtitleStream'] = ApiClient.convertToType(data['IsTextSubtitleStream'], 'Boolean');
@@ -403,6 +406,10 @@ export default class MediaStream {
     * @member {Boolean} IsExternalUrl
     */
     'IsExternalUrl' = undefined;
+    /**
+    * @member {Boolean} IsChunkedResponse
+    */
+    'IsChunkedResponse' = undefined;
     /**
     * @member {Boolean} IsTextSubtitleStream
     */

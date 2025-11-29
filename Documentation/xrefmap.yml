@@ -17640,6 +17640,12 @@ references:
   commentId: T:Emby.Model.Sanitation.SanitationExtensions
   fullName: Emby.Model.Sanitation.SanitationExtensions
   nameWithType: SanitationExtensions
+- uid: Emby.Model.Sanitation.SanitationExtensions.Indicators
+  name: Indicators
+  href: reference/pluginapi/Emby.Model.Sanitation.SanitationExtensions.html#Emby_Model_Sanitation_SanitationExtensions_Indicators
+  commentId: F:Emby.Model.Sanitation.SanitationExtensions.Indicators
+  fullName: Emby.Model.Sanitation.SanitationExtensions.Indicators
+  nameWithType: SanitationExtensions.Indicators
 - uid: Emby.Model.Sanitation.SanitationExtensions.MarkPrivate(System.Net.IPAddress)
   name: MarkPrivate(IPAddress)
   href: reference/pluginapi/Emby.Model.Sanitation.SanitationExtensions.html#Emby_Model_Sanitation_SanitationExtensions_MarkPrivate_System_Net_IPAddress_
@@ -57437,6 +57443,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Channels.Channel.IsTopParent
   nameWithType: Channel.IsTopParent
+- uid: MediaBrowser.Controller.Channels.Channel.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Channels.Channel.html#MediaBrowser_Controller_Channels_Channel_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Channels.Channel.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Channels.Channel.PrimaryImageRequiresOrientation
+  nameWithType: Channel.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Channels.Channel.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Channels.Channel.html#MediaBrowser_Controller_Channels_Channel_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Channels.Channel.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Channels.Channel.PrimaryImageRequiresOrientation
+  nameWithType: Channel.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Channels.Channel.SupportsInheritedParentImages
   name: SupportsInheritedParentImages
   href: reference/pluginapi/MediaBrowser.Controller.Channels.Channel.html#MediaBrowser_Controller_Channels_Channel_SupportsInheritedParentImages
@@ -59655,6 +59674,12 @@ references:
   commentId: M:MediaBrowser.Controller.Drawing.IImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.ItemImageInfo)
   fullName: MediaBrowser.Controller.Drawing.IImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.ItemImageInfo)
   nameWithType: IImageProcessor.GetImageCacheTag(ItemImageInfo)
+- uid: MediaBrowser.Controller.Drawing.IImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.PersonInfo,MediaBrowser.Controller.Entities.ItemImageInfo)
+  name: GetImageCacheTag(PersonInfo, ItemImageInfo)
+  href: reference/pluginapi/MediaBrowser.Controller.Drawing.IImageProcessor.html#MediaBrowser_Controller_Drawing_IImageProcessor_GetImageCacheTag_MediaBrowser_Controller_Entities_PersonInfo_MediaBrowser_Controller_Entities_ItemImageInfo_
+  commentId: M:MediaBrowser.Controller.Drawing.IImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.PersonInfo,MediaBrowser.Controller.Entities.ItemImageInfo)
+  fullName: MediaBrowser.Controller.Drawing.IImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.PersonInfo, MediaBrowser.Controller.Entities.ItemImageInfo)
+  nameWithType: IImageProcessor.GetImageCacheTag(PersonInfo, ItemImageInfo)
 - uid: MediaBrowser.Controller.Drawing.IImageProcessor.GetImageCacheTag(System.Int64,MediaBrowser.Model.Entities.ChapterInfo)
   name: GetImageCacheTag(Int64, ChapterInfo)
   href: reference/pluginapi/MediaBrowser.Controller.Drawing.IImageProcessor.html#MediaBrowser_Controller_Drawing_IImageProcessor_GetImageCacheTag_System_Int64_MediaBrowser_Model_Entities_ChapterInfo_
@@ -60929,6 +60954,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.AggregateFolder.IsVisible
   nameWithType: AggregateFolder.IsVisible
+- uid: MediaBrowser.Controller.Entities.AggregateFolder.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.AggregateFolder.html#MediaBrowser_Controller_Entities_AggregateFolder_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.AggregateFolder.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.AggregateFolder.PrimaryImageRequiresOrientation
+  nameWithType: AggregateFolder.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.AggregateFolder.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.AggregateFolder.html#MediaBrowser_Controller_Entities_AggregateFolder_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.AggregateFolder.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.AggregateFolder.PrimaryImageRequiresOrientation
+  nameWithType: AggregateFolder.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.AggregateFolder.SetAutoSorting(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Collections.Generic.List{System.ValueTuple{System.String,MediaBrowser.Model.Entities.SortOrder}})
   name: SetAutoSorting(InternalItemsQuery, List<(String, SortOrder)>)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.AggregateFolder.html#MediaBrowser_Controller_Entities_AggregateFolder_SetAutoSorting_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Collections_Generic_List_System_ValueTuple_System_String_MediaBrowser_Model_Entities_SortOrder___
@@ -62113,6 +62151,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsFolder
   nameWithType: MusicAlbum.IsFolder
+- uid: MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsTopParent
+  name: IsTopParent
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicAlbum.html#MediaBrowser_Controller_Entities_Audio_MusicAlbum_IsTopParent
+  commentId: P:MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsTopParent
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsTopParent
+  nameWithType: MusicAlbum.IsTopParent
+- uid: MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsTopParent*
+  name: IsTopParent
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicAlbum.html#MediaBrowser_Controller_Entities_Audio_MusicAlbum_IsTopParent_
+  commentId: Overload:MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsTopParent
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicAlbum.IsTopParent
+  nameWithType: MusicAlbum.IsTopParent
 - uid: MediaBrowser.Controller.Entities.Audio.MusicAlbum.MarkDirectlyAsPlayed
   name: MarkDirectlyAsPlayed
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicAlbum.html#MediaBrowser_Controller_Entities_Audio_MusicAlbum_MarkDirectlyAsPlayed
@@ -62126,6 +62177,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Audio.MusicAlbum.MarkDirectlyAsPlayed
   nameWithType: MusicAlbum.MarkDirectlyAsPlayed
+- uid: MediaBrowser.Controller.Entities.Audio.MusicAlbum.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicAlbum.html#MediaBrowser_Controller_Entities_Audio_MusicAlbum_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.Audio.MusicAlbum.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicAlbum.PrimaryImageRequiresOrientation
+  nameWithType: MusicAlbum.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.Audio.MusicAlbum.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicAlbum.html#MediaBrowser_Controller_Entities_Audio_MusicAlbum_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.Audio.MusicAlbum.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicAlbum.PrimaryImageRequiresOrientation
+  nameWithType: MusicAlbum.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.Audio.MusicAlbum.RecursiveChildCountEqualsChildCount
   name: RecursiveChildCountEqualsChildCount
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicAlbum.html#MediaBrowser_Controller_Entities_Audio_MusicAlbum_RecursiveChildCountEqualsChildCount
@@ -62514,6 +62578,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Audio.MusicArtist.IsFolder
   nameWithType: MusicArtist.IsFolder
+- uid: MediaBrowser.Controller.Entities.Audio.MusicArtist.IsTopParent
+  name: IsTopParent
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicArtist.html#MediaBrowser_Controller_Entities_Audio_MusicArtist_IsTopParent
+  commentId: P:MediaBrowser.Controller.Entities.Audio.MusicArtist.IsTopParent
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicArtist.IsTopParent
+  nameWithType: MusicArtist.IsTopParent
+- uid: MediaBrowser.Controller.Entities.Audio.MusicArtist.IsTopParent*
+  name: IsTopParent
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicArtist.html#MediaBrowser_Controller_Entities_Audio_MusicArtist_IsTopParent_
+  commentId: Overload:MediaBrowser.Controller.Entities.Audio.MusicArtist.IsTopParent
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicArtist.IsTopParent
+  nameWithType: MusicArtist.IsTopParent
+- uid: MediaBrowser.Controller.Entities.Audio.MusicArtist.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicArtist.html#MediaBrowser_Controller_Entities_Audio_MusicArtist_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.Audio.MusicArtist.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicArtist.PrimaryImageRequiresOrientation
+  nameWithType: MusicArtist.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.Audio.MusicArtist.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicArtist.html#MediaBrowser_Controller_Entities_Audio_MusicArtist_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.Audio.MusicArtist.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Audio.MusicArtist.PrimaryImageRequiresOrientation
+  nameWithType: MusicArtist.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.Audio.MusicArtist.SetAutoSorting(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Collections.Generic.List{System.ValueTuple{System.String,MediaBrowser.Model.Entities.SortOrder}})
   name: SetAutoSorting(InternalItemsQuery, List<(String, SortOrder)>)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Audio.MusicArtist.html#MediaBrowser_Controller_Entities_Audio_MusicArtist_SetAutoSorting_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Collections_Generic_List_System_ValueTuple_System_String_MediaBrowser_Model_Entities_SortOrder___
@@ -64445,18 +64535,18 @@ references:
   commentId: M:MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath
   fullName: MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath()
   nameWithType: BaseItem.GetInternalMetadataPath()
-- uid: MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.Guid,System.String)
-  name: GetInternalMetadataPath(Guid, String)
-  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_Guid_System_String_
-  commentId: M:MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.Guid,System.String)
-  fullName: MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.Guid, System.String)
-  nameWithType: BaseItem.GetInternalMetadataPath(Guid, String)
 - uid: MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String)
   name: GetInternalMetadataPath(String)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_
   commentId: M:MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String)
   fullName: MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String)
   nameWithType: BaseItem.GetInternalMetadataPath(String)
+- uid: MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String,System.String)
+  name: GetInternalMetadataPath(String, String)
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_System_String_
+  commentId: M:MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String,System.String)
+  fullName: MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath(System.String, System.String)
+  nameWithType: BaseItem.GetInternalMetadataPath(String, String)
 - uid: MediaBrowser.Controller.Entities.BaseItem.GetInternalMetadataPath*
   name: GetInternalMetadataPath
   href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_
@@ -65060,6 +65150,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.BaseItem.Id
   nameWithType: BaseItem.Id
+- uid: MediaBrowser.Controller.Entities.BaseItem.IdString
+  name: IdString
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IdString
+  commentId: P:MediaBrowser.Controller.Entities.BaseItem.IdString
+  fullName: MediaBrowser.Controller.Entities.BaseItem.IdString
+  nameWithType: BaseItem.IdString
+- uid: MediaBrowser.Controller.Entities.BaseItem.IdString*
+  name: IdString
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IdString_
+  commentId: Overload:MediaBrowser.Controller.Entities.BaseItem.IdString
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.BaseItem.IdString
+  nameWithType: BaseItem.IdString
 - uid: MediaBrowser.Controller.Entities.BaseItem.ImageDisplayParentId
   name: ImageDisplayParentId
   href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ImageDisplayParentId
@@ -66232,6 +66335,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.BaseItem.PrimaryImagePath
   nameWithType: BaseItem.PrimaryImagePath
+- uid: MediaBrowser.Controller.Entities.BaseItem.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.BaseItem.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.BaseItem.PrimaryImageRequiresOrientation
+  nameWithType: BaseItem.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.BaseItem.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.BaseItem.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.BaseItem.PrimaryImageRequiresOrientation
+  nameWithType: BaseItem.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.BaseItem.ProductionLocations
   name: ProductionLocations
   href: reference/pluginapi/MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProductionLocations
@@ -67860,6 +67976,32 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.BoxSet.IsDisplayedAsFolder
   nameWithType: BoxSet.IsDisplayedAsFolder
+- uid: MediaBrowser.Controller.Entities.BoxSet.IsTopParent
+  name: IsTopParent
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BoxSet.html#MediaBrowser_Controller_Entities_BoxSet_IsTopParent
+  commentId: P:MediaBrowser.Controller.Entities.BoxSet.IsTopParent
+  fullName: MediaBrowser.Controller.Entities.BoxSet.IsTopParent
+  nameWithType: BoxSet.IsTopParent
+- uid: MediaBrowser.Controller.Entities.BoxSet.IsTopParent*
+  name: IsTopParent
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BoxSet.html#MediaBrowser_Controller_Entities_BoxSet_IsTopParent_
+  commentId: Overload:MediaBrowser.Controller.Entities.BoxSet.IsTopParent
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.BoxSet.IsTopParent
+  nameWithType: BoxSet.IsTopParent
+- uid: MediaBrowser.Controller.Entities.BoxSet.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BoxSet.html#MediaBrowser_Controller_Entities_BoxSet_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.BoxSet.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.BoxSet.PrimaryImageRequiresOrientation
+  nameWithType: BoxSet.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.BoxSet.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.BoxSet.html#MediaBrowser_Controller_Entities_BoxSet_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.BoxSet.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.BoxSet.PrimaryImageRequiresOrientation
+  nameWithType: BoxSet.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.BoxSet.SupportsAncestors
   name: SupportsAncestors
   href: reference/pluginapi/MediaBrowser.Controller.Entities.BoxSet.html#MediaBrowser_Controller_Entities_BoxSet_SupportsAncestors
@@ -68361,6 +68503,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.CollectionFolder.PhysicalFolderIds
   nameWithType: CollectionFolder.PhysicalFolderIds
+- uid: MediaBrowser.Controller.Entities.CollectionFolder.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.CollectionFolder.html#MediaBrowser_Controller_Entities_CollectionFolder_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.CollectionFolder.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.CollectionFolder.PrimaryImageRequiresOrientation
+  nameWithType: CollectionFolder.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.CollectionFolder.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.CollectionFolder.html#MediaBrowser_Controller_Entities_CollectionFolder_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.CollectionFolder.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.CollectionFolder.PrimaryImageRequiresOrientation
+  nameWithType: CollectionFolder.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.CollectionFolder.ResetTaggedItems
   name: ResetTaggedItems()
   href: reference/pluginapi/MediaBrowser.Controller.Entities.CollectionFolder.html#MediaBrowser_Controller_Entities_CollectionFolder_ResetTaggedItems
@@ -69051,6 +69206,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Folder.MarkUnplayed
   nameWithType: Folder.MarkUnplayed
+- uid: MediaBrowser.Controller.Entities.Folder.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.Folder.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.Folder.PrimaryImageRequiresOrientation
+  nameWithType: Folder.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.Folder.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.Folder.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Folder.PrimaryImageRequiresOrientation
+  nameWithType: Folder.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.Folder.SetAutoSorting(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Collections.Generic.List{System.ValueTuple{System.String,MediaBrowser.Model.Entities.SortOrder}})
   name: SetAutoSorting(InternalItemsQuery, List<(String, SortOrder)>)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SetAutoSorting_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Collections_Generic_List_System_ValueTuple_System_String_MediaBrowser_Model_Entities_SortOrder___
@@ -69665,6 +69833,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.GameSystem.IsFolder
   nameWithType: GameSystem.IsFolder
+- uid: MediaBrowser.Controller.Entities.GameSystem.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.GameSystem.html#MediaBrowser_Controller_Entities_GameSystem_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.GameSystem.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.GameSystem.PrimaryImageRequiresOrientation
+  nameWithType: GameSystem.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.GameSystem.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.GameSystem.html#MediaBrowser_Controller_Entities_GameSystem_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.GameSystem.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.GameSystem.PrimaryImageRequiresOrientation
+  nameWithType: GameSystem.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.GameSystem.RecursiveChildCountEqualsChildCount
   name: RecursiveChildCountEqualsChildCount
   href: reference/pluginapi/MediaBrowser.Controller.Entities.GameSystem.html#MediaBrowser_Controller_Entities_GameSystem_RecursiveChildCountEqualsChildCount
@@ -73545,6 +73726,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.TopParentIds
   nameWithType: InternalItemsQuery.TopParentIds
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.UseExistsForSubQueries
+  name: UseExistsForSubQueries
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_UseExistsForSubQueries
+  commentId: P:MediaBrowser.Controller.Entities.InternalItemsQuery.UseExistsForSubQueries
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.UseExistsForSubQueries
+  nameWithType: InternalItemsQuery.UseExistsForSubQueries
+- uid: MediaBrowser.Controller.Entities.InternalItemsQuery.UseExistsForSubQueries*
+  name: UseExistsForSubQueries
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_UseExistsForSubQueries_
+  commentId: Overload:MediaBrowser.Controller.Entities.InternalItemsQuery.UseExistsForSubQueries
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.InternalItemsQuery.UseExistsForSubQueries
+  nameWithType: InternalItemsQuery.UseExistsForSubQueries
 - uid: MediaBrowser.Controller.Entities.InternalItemsQuery.User
   name: User
   href: reference/pluginapi/MediaBrowser.Controller.Entities.InternalItemsQuery.html#MediaBrowser_Controller_Entities_InternalItemsQuery_User
@@ -74839,6 +75033,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.Photo.Orientation
   nameWithType: Photo.Orientation
+- uid: MediaBrowser.Controller.Entities.Photo.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Photo.html#MediaBrowser_Controller_Entities_Photo_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.Photo.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.Photo.PrimaryImageRequiresOrientation
+  nameWithType: Photo.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.Photo.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.Photo.html#MediaBrowser_Controller_Entities_Photo_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.Photo.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.Photo.PrimaryImageRequiresOrientation
+  nameWithType: Photo.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.Photo.ShutterSpeed
   name: ShutterSpeed
   href: reference/pluginapi/MediaBrowser.Controller.Entities.Photo.html#MediaBrowser_Controller_Entities_Photo_ShutterSpeed
@@ -74923,6 +75130,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.PhotoAlbum.GetDefaultPrimaryImageAspectRatio
   nameWithType: PhotoAlbum.GetDefaultPrimaryImageAspectRatio
+- uid: MediaBrowser.Controller.Entities.PhotoAlbum.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.PhotoAlbum.html#MediaBrowser_Controller_Entities_PhotoAlbum_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.PhotoAlbum.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.PhotoAlbum.PrimaryImageRequiresOrientation
+  nameWithType: PhotoAlbum.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.PhotoAlbum.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.PhotoAlbum.html#MediaBrowser_Controller_Entities_PhotoAlbum_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.PhotoAlbum.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.PhotoAlbum.PrimaryImageRequiresOrientation
+  nameWithType: PhotoAlbum.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.PhotoAlbum.SupportsGenres
   name: SupportsGenres
   href: reference/pluginapi/MediaBrowser.Controller.Entities.PhotoAlbum.html#MediaBrowser_Controller_Entities_PhotoAlbum_SupportsGenres
@@ -76456,6 +76676,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.TV.Season.LocationType
   nameWithType: Season.LocationType
+- uid: MediaBrowser.Controller.Entities.TV.Season.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Season.html#MediaBrowser_Controller_Entities_TV_Season_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.TV.Season.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.TV.Season.PrimaryImageRequiresOrientation
+  nameWithType: Season.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.TV.Season.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Season.html#MediaBrowser_Controller_Entities_TV_Season_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.TV.Season.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.TV.Season.PrimaryImageRequiresOrientation
+  nameWithType: Season.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.TV.Season.RecursiveChildCountEqualsChildCount
   name: RecursiveChildCountEqualsChildCount
   href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Season.html#MediaBrowser_Controller_Entities_TV_Season_RecursiveChildCountEqualsChildCount
@@ -76809,6 +77042,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.TV.Series.ParseNameBeforeMetadataRefresh
   nameWithType: Series.ParseNameBeforeMetadataRefresh
+- uid: MediaBrowser.Controller.Entities.TV.Series.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Series.html#MediaBrowser_Controller_Entities_TV_Series_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.TV.Series.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.TV.Series.PrimaryImageRequiresOrientation
+  nameWithType: Series.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.TV.Series.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Series.html#MediaBrowser_Controller_Entities_TV_Series_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.TV.Series.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.TV.Series.PrimaryImageRequiresOrientation
+  nameWithType: Series.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.TV.Series.SetAutoSorting(MediaBrowser.Controller.Entities.InternalItemsQuery,System.Collections.Generic.List{System.ValueTuple{System.String,MediaBrowser.Model.Entities.SortOrder}})
   name: SetAutoSorting(InternalItemsQuery, List<(String, SortOrder)>)
   href: reference/pluginapi/MediaBrowser.Controller.Entities.TV.Series.html#MediaBrowser_Controller_Entities_TV_Series_SetAutoSorting_MediaBrowser_Controller_Entities_InternalItemsQuery_System_Collections_Generic_List_System_ValueTuple_System_String_MediaBrowser_Model_Entities_SortOrder___
@@ -77628,6 +77874,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.UserRootFolder.IsVisible
   nameWithType: UserRootFolder.IsVisible
+- uid: MediaBrowser.Controller.Entities.UserRootFolder.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.UserRootFolder.html#MediaBrowser_Controller_Entities_UserRootFolder_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.UserRootFolder.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.UserRootFolder.PrimaryImageRequiresOrientation
+  nameWithType: UserRootFolder.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.UserRootFolder.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.UserRootFolder.html#MediaBrowser_Controller_Entities_UserRootFolder_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.UserRootFolder.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.UserRootFolder.PrimaryImageRequiresOrientation
+  nameWithType: UserRootFolder.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.UserRootFolder.SupportsAncestors
   name: SupportsAncestors
   href: reference/pluginapi/MediaBrowser.Controller.Entities.UserRootFolder.html#MediaBrowser_Controller_Entities_UserRootFolder_SupportsAncestors
@@ -77855,6 +78114,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Entities.UserView.IsTopParent
   nameWithType: UserView.IsTopParent
+- uid: MediaBrowser.Controller.Entities.UserView.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.UserView.html#MediaBrowser_Controller_Entities_UserView_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Entities.UserView.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Entities.UserView.PrimaryImageRequiresOrientation
+  nameWithType: UserView.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Entities.UserView.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Entities.UserView.html#MediaBrowser_Controller_Entities_UserView_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Entities.UserView.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Entities.UserView.PrimaryImageRequiresOrientation
+  nameWithType: UserView.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Entities.UserView.SupportsCollections
   name: SupportsCollections
   href: reference/pluginapi/MediaBrowser.Controller.Entities.UserView.html#MediaBrowser_Controller_Entities_UserView_SupportsCollections
@@ -78765,6 +79037,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.IServerApplicationHost.GetLocalApiUrl
   nameWithType: IServerApplicationHost.GetLocalApiUrl
+- uid: MediaBrowser.Controller.IServerApplicationHost.GetLocalHostApiUrl
+  name: GetLocalHostApiUrl()
+  href: reference/pluginapi/MediaBrowser.Controller.IServerApplicationHost.html#MediaBrowser_Controller_IServerApplicationHost_GetLocalHostApiUrl
+  commentId: M:MediaBrowser.Controller.IServerApplicationHost.GetLocalHostApiUrl
+  fullName: MediaBrowser.Controller.IServerApplicationHost.GetLocalHostApiUrl()
+  nameWithType: IServerApplicationHost.GetLocalHostApiUrl()
+- uid: MediaBrowser.Controller.IServerApplicationHost.GetLocalHostApiUrl*
+  name: GetLocalHostApiUrl
+  href: reference/pluginapi/MediaBrowser.Controller.IServerApplicationHost.html#MediaBrowser_Controller_IServerApplicationHost_GetLocalHostApiUrl_
+  commentId: Overload:MediaBrowser.Controller.IServerApplicationHost.GetLocalHostApiUrl
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.IServerApplicationHost.GetLocalHostApiUrl
+  nameWithType: IServerApplicationHost.GetLocalHostApiUrl
 - uid: MediaBrowser.Controller.IServerApplicationHost.GetLocalIpAddresses(System.Net.Sockets.AddressFamily,System.Threading.CancellationToken)
   name: GetLocalIpAddresses(AddressFamily, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.IServerApplicationHost.html#MediaBrowser_Controller_IServerApplicationHost_GetLocalIpAddresses_System_Net_Sockets_AddressFamily_System_Threading_CancellationToken_
@@ -82802,6 +83087,12 @@ references:
   commentId: M:MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String)
   fullName: MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String)
   nameWithType: IUserManager.RedeemPasswordResetPin(String)
+- uid: MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String,System.Threading.CancellationToken)
+  name: RedeemPasswordResetPin(String, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_System_String_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String,System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String, System.Threading.CancellationToken)
+  nameWithType: IUserManager.RedeemPasswordResetPin(String, CancellationToken)
 - uid: MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin*
   name: RedeemPasswordResetPin
   href: reference/pluginapi/MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_
@@ -91107,6 +91398,64 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.MediaEncoding.IStreamInfoManager.SetDynamicValues
   nameWithType: IStreamInfoManager.SetDynamicValues
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob
+  name: ISubtitleConversionJob
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html
+  commentId: T:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob
+  nameWithType: ISubtitleConversionJob
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsChunked
+  name: IsChunked
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html#MediaBrowser_Controller_MediaEncoding_ISubtitleConversionJob_IsChunked
+  commentId: P:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsChunked
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsChunked
+  nameWithType: ISubtitleConversionJob.IsChunked
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsChunked*
+  name: IsChunked
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html#MediaBrowser_Controller_MediaEncoding_ISubtitleConversionJob_IsChunked_
+  commentId: Overload:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsChunked
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsChunked
+  nameWithType: ISubtitleConversionJob.IsChunked
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsCompleted
+  name: IsCompleted
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html#MediaBrowser_Controller_MediaEncoding_ISubtitleConversionJob_IsCompleted
+  commentId: P:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsCompleted
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsCompleted
+  nameWithType: ISubtitleConversionJob.IsCompleted
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsCompleted*
+  name: IsCompleted
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html#MediaBrowser_Controller_MediaEncoding_ISubtitleConversionJob_IsCompleted_
+  commentId: Overload:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsCompleted
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.IsCompleted
+  nameWithType: ISubtitleConversionJob.IsCompleted
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.OutputPath
+  name: OutputPath
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html#MediaBrowser_Controller_MediaEncoding_ISubtitleConversionJob_OutputPath
+  commentId: P:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.OutputPath
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.OutputPath
+  nameWithType: ISubtitleConversionJob.OutputPath
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.OutputPath*
+  name: OutputPath
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html#MediaBrowser_Controller_MediaEncoding_ISubtitleConversionJob_OutputPath_
+  commentId: Overload:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.OutputPath
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.OutputPath
+  nameWithType: ISubtitleConversionJob.OutputPath
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.WaitForCompletion(System.Threading.CancellationToken)
+  name: WaitForCompletion(CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html#MediaBrowser_Controller_MediaEncoding_ISubtitleConversionJob_WaitForCompletion_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.WaitForCompletion(System.Threading.CancellationToken)
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.WaitForCompletion(System.Threading.CancellationToken)
+  nameWithType: ISubtitleConversionJob.WaitForCompletion(CancellationToken)
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.WaitForCompletion*
+  name: WaitForCompletion
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.html#MediaBrowser_Controller_MediaEncoding_ISubtitleConversionJob_WaitForCompletion_
+  commentId: Overload:MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.WaitForCompletion
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleConversionJob.WaitForCompletion
+  nameWithType: ISubtitleConversionJob.WaitForCompletion
 - uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder
   name: ISubtitleEncoder
   href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html
@@ -91129,6 +91478,22 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleFileCharacterSet
   nameWithType: ISubtitleEncoder.GetSubtitleFileCharacterSet
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
+  name: GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary<String, String>, MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitleJob_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Boolean_System_Collections_Generic_IDictionary_System_String_System_String__MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
+  name.vb: GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary(Of String, String), MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String, MediaBrowser.Model.MediaInfo.MediaProtocol, System.Boolean, System.Collections.Generic.IDictionary<System.String, System.String>, MediaBrowser.Model.Entities.MediaStream, System.String, System.Int64, System.Int64, System.Boolean, System.Boolean, MediaBrowser.Model.Dlna.EncodingContext, System.Threading.CancellationToken)
+  fullName.vb: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob(System.String, MediaBrowser.Model.MediaInfo.MediaProtocol, System.Boolean, System.Collections.Generic.IDictionary(Of System.String, System.String), MediaBrowser.Model.Entities.MediaStream, System.String, System.Int64, System.Int64, System.Boolean, System.Boolean, MediaBrowser.Model.Dlna.EncodingContext, System.Threading.CancellationToken)
+  nameWithType: ISubtitleEncoder.GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary<String, String>, MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
+  nameWithType.vb: ISubtitleEncoder.GetSubtitleJob(String, MediaProtocol, Boolean, IDictionary(Of String, String), MediaStream, String, Int64, Int64, Boolean, Boolean, EncodingContext, CancellationToken)
+- uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob*
+  name: GetSubtitleJob
+  href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitleJob_
+  commentId: Overload:MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitleJob
+  nameWithType: ISubtitleEncoder.GetSubtitleJob
 - uid: MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.GetSubtitles(System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},MediaBrowser.Model.Entities.MediaStream,System.String,System.Int64,System.Int64,System.Boolean,MediaBrowser.Model.Dlna.EncodingContext,System.Threading.CancellationToken)
   name: GetSubtitles(String, MediaProtocol, Boolean, IDictionary<String, String>, MediaStream, String, Int64, Int64, Boolean, EncodingContext, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html#MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Boolean_System_Collections_Generic_IDictionary_System_String_System_String__MediaBrowser_Model_Entities_MediaStream_System_String_System_Int64_System_Int64_System_Boolean_MediaBrowser_Model_Dlna_EncodingContext_System_Threading_CancellationToken_
@@ -92143,6 +92508,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Net.AuthorizationInfo.Token
   nameWithType: AuthorizationInfo.Token
+- uid: MediaBrowser.Controller.Net.AuthorizationInfo.TokenRoles
+  name: TokenRoles
+  href: reference/pluginapi/MediaBrowser.Controller.Net.AuthorizationInfo.html#MediaBrowser_Controller_Net_AuthorizationInfo_TokenRoles
+  commentId: P:MediaBrowser.Controller.Net.AuthorizationInfo.TokenRoles
+  fullName: MediaBrowser.Controller.Net.AuthorizationInfo.TokenRoles
+  nameWithType: AuthorizationInfo.TokenRoles
+- uid: MediaBrowser.Controller.Net.AuthorizationInfo.TokenRoles*
+  name: TokenRoles
+  href: reference/pluginapi/MediaBrowser.Controller.Net.AuthorizationInfo.html#MediaBrowser_Controller_Net_AuthorizationInfo_TokenRoles_
+  commentId: Overload:MediaBrowser.Controller.Net.AuthorizationInfo.TokenRoles
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.AuthorizationInfo.TokenRoles
+  nameWithType: AuthorizationInfo.TokenRoles
 - uid: MediaBrowser.Controller.Net.AuthorizationInfo.User
   name: User
   href: reference/pluginapi/MediaBrowser.Controller.Net.AuthorizationInfo.html#MediaBrowser_Controller_Net_AuthorizationInfo_User
@@ -92537,6 +92915,32 @@ references:
   commentId: T:MediaBrowser.Controller.Net.IHttpResultFactory
   fullName: MediaBrowser.Controller.Net.IHttpResultFactory
   nameWithType: IHttpResultFactory
+- uid: MediaBrowser.Controller.Net.IHttpResultFactory.GetLiveStreamWriter(MediaBrowser.Controller.Net.LiveStreamWriterOptions)
+  name: GetLiveStreamWriter(LiveStreamWriterOptions)
+  href: reference/pluginapi/MediaBrowser.Controller.Net.IHttpResultFactory.html#MediaBrowser_Controller_Net_IHttpResultFactory_GetLiveStreamWriter_MediaBrowser_Controller_Net_LiveStreamWriterOptions_
+  commentId: M:MediaBrowser.Controller.Net.IHttpResultFactory.GetLiveStreamWriter(MediaBrowser.Controller.Net.LiveStreamWriterOptions)
+  fullName: MediaBrowser.Controller.Net.IHttpResultFactory.GetLiveStreamWriter(MediaBrowser.Controller.Net.LiveStreamWriterOptions)
+  nameWithType: IHttpResultFactory.GetLiveStreamWriter(LiveStreamWriterOptions)
+- uid: MediaBrowser.Controller.Net.IHttpResultFactory.GetLiveStreamWriter*
+  name: GetLiveStreamWriter
+  href: reference/pluginapi/MediaBrowser.Controller.Net.IHttpResultFactory.html#MediaBrowser_Controller_Net_IHttpResultFactory_GetLiveStreamWriter_
+  commentId: Overload:MediaBrowser.Controller.Net.IHttpResultFactory.GetLiveStreamWriter
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.IHttpResultFactory.GetLiveStreamWriter
+  nameWithType: IHttpResultFactory.GetLiveStreamWriter
+- uid: MediaBrowser.Controller.Net.IHttpResultFactory.GetProgressiveStreamWriterResult(MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions)
+  name: GetProgressiveStreamWriterResult(ProgressiveStreamWriterOptions)
+  href: reference/pluginapi/MediaBrowser.Controller.Net.IHttpResultFactory.html#MediaBrowser_Controller_Net_IHttpResultFactory_GetProgressiveStreamWriterResult_MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_
+  commentId: M:MediaBrowser.Controller.Net.IHttpResultFactory.GetProgressiveStreamWriterResult(MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions)
+  fullName: MediaBrowser.Controller.Net.IHttpResultFactory.GetProgressiveStreamWriterResult(MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions)
+  nameWithType: IHttpResultFactory.GetProgressiveStreamWriterResult(ProgressiveStreamWriterOptions)
+- uid: MediaBrowser.Controller.Net.IHttpResultFactory.GetProgressiveStreamWriterResult*
+  name: GetProgressiveStreamWriterResult
+  href: reference/pluginapi/MediaBrowser.Controller.Net.IHttpResultFactory.html#MediaBrowser_Controller_Net_IHttpResultFactory_GetProgressiveStreamWriterResult_
+  commentId: Overload:MediaBrowser.Controller.Net.IHttpResultFactory.GetProgressiveStreamWriterResult
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.IHttpResultFactory.GetProgressiveStreamWriterResult
+  nameWithType: IHttpResultFactory.GetProgressiveStreamWriterResult
 - uid: MediaBrowser.Controller.Net.IHttpResultFactory.GetRedirectResult(System.String)
   name: GetRedirectResult(String)
   href: reference/pluginapi/MediaBrowser.Controller.Net.IHttpResultFactory.html#MediaBrowser_Controller_Net_IHttpResultFactory_GetRedirectResult_System_String_
@@ -92910,6 +93314,174 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Net.IWebSocketListener.ProcessMessage
   nameWithType: IWebSocketListener.ProcessMessage
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions
+  name: LiveStreamWriterOptions
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html
+  commentId: T:MediaBrowser.Controller.Net.LiveStreamWriterOptions
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions
+  nameWithType: LiveStreamWriterOptions
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions.LiveStream
+  name: LiveStream
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html#MediaBrowser_Controller_Net_LiveStreamWriterOptions_LiveStream
+  commentId: P:MediaBrowser.Controller.Net.LiveStreamWriterOptions.LiveStream
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions.LiveStream
+  nameWithType: LiveStreamWriterOptions.LiveStream
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions.LiveStream*
+  name: LiveStream
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html#MediaBrowser_Controller_Net_LiveStreamWriterOptions_LiveStream_
+  commentId: Overload:MediaBrowser.Controller.Net.LiveStreamWriterOptions.LiveStream
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions.LiveStream
+  nameWithType: LiveStreamWriterOptions.LiveStream
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnComplete
+  name: OnComplete
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html#MediaBrowser_Controller_Net_LiveStreamWriterOptions_OnComplete
+  commentId: P:MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnComplete
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnComplete
+  nameWithType: LiveStreamWriterOptions.OnComplete
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnComplete*
+  name: OnComplete
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html#MediaBrowser_Controller_Net_LiveStreamWriterOptions_OnComplete_
+  commentId: Overload:MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnComplete
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnComplete
+  nameWithType: LiveStreamWriterOptions.OnComplete
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnError
+  name: OnError
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html#MediaBrowser_Controller_Net_LiveStreamWriterOptions_OnError
+  commentId: P:MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnError
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnError
+  nameWithType: LiveStreamWriterOptions.OnError
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnError*
+  name: OnError
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html#MediaBrowser_Controller_Net_LiveStreamWriterOptions_OnError_
+  commentId: Overload:MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnError
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions.OnError
+  nameWithType: LiveStreamWriterOptions.OnError
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions.ResponseHeaders
+  name: ResponseHeaders
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html#MediaBrowser_Controller_Net_LiveStreamWriterOptions_ResponseHeaders
+  commentId: P:MediaBrowser.Controller.Net.LiveStreamWriterOptions.ResponseHeaders
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions.ResponseHeaders
+  nameWithType: LiveStreamWriterOptions.ResponseHeaders
+- uid: MediaBrowser.Controller.Net.LiveStreamWriterOptions.ResponseHeaders*
+  name: ResponseHeaders
+  href: reference/pluginapi/MediaBrowser.Controller.Net.LiveStreamWriterOptions.html#MediaBrowser_Controller_Net_LiveStreamWriterOptions_ResponseHeaders_
+  commentId: Overload:MediaBrowser.Controller.Net.LiveStreamWriterOptions.ResponseHeaders
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.LiveStreamWriterOptions.ResponseHeaders
+  nameWithType: LiveStreamWriterOptions.ResponseHeaders
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions
+  name: ProgressiveStreamWriterOptions
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html
+  commentId: T:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions
+  nameWithType: ProgressiveStreamWriterOptions
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.FileShareMode
+  name: FileShareMode
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_FileShareMode
+  commentId: P:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.FileShareMode
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.FileShareMode
+  nameWithType: ProgressiveStreamWriterOptions.FileShareMode
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.FileShareMode*
+  name: FileShareMode
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_FileShareMode_
+  commentId: Overload:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.FileShareMode
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.FileShareMode
+  nameWithType: ProgressiveStreamWriterOptions.FileShareMode
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.IsCompleted
+  name: IsCompleted
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_IsCompleted
+  commentId: P:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.IsCompleted
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.IsCompleted
+  nameWithType: ProgressiveStreamWriterOptions.IsCompleted
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.IsCompleted*
+  name: IsCompleted
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_IsCompleted_
+  commentId: Overload:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.IsCompleted
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.IsCompleted
+  nameWithType: ProgressiveStreamWriterOptions.IsCompleted
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.MediaSource
+  name: MediaSource
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_MediaSource
+  commentId: P:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.MediaSource
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.MediaSource
+  nameWithType: ProgressiveStreamWriterOptions.MediaSource
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.MediaSource*
+  name: MediaSource
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_MediaSource_
+  commentId: Overload:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.MediaSource
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.MediaSource
+  nameWithType: ProgressiveStreamWriterOptions.MediaSource
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnComplete
+  name: OnComplete
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_OnComplete
+  commentId: P:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnComplete
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnComplete
+  nameWithType: ProgressiveStreamWriterOptions.OnComplete
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnComplete*
+  name: OnComplete
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_OnComplete_
+  commentId: Overload:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnComplete
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnComplete
+  nameWithType: ProgressiveStreamWriterOptions.OnComplete
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnError
+  name: OnError
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_OnError
+  commentId: P:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnError
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnError
+  nameWithType: ProgressiveStreamWriterOptions.OnError
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnError*
+  name: OnError
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_OnError_
+  commentId: Overload:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnError
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnError
+  nameWithType: ProgressiveStreamWriterOptions.OnError
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnRead
+  name: OnRead
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_OnRead
+  commentId: P:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnRead
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnRead
+  nameWithType: ProgressiveStreamWriterOptions.OnRead
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnRead*
+  name: OnRead
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_OnRead_
+  commentId: Overload:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnRead
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.OnRead
+  nameWithType: ProgressiveStreamWriterOptions.OnRead
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.Path
+  name: Path
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_Path
+  commentId: P:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.Path
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.Path
+  nameWithType: ProgressiveStreamWriterOptions.Path
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.Path*
+  name: Path
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_Path_
+  commentId: Overload:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.Path
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.Path
+  nameWithType: ProgressiveStreamWriterOptions.Path
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.ResponseHeaders
+  name: ResponseHeaders
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_ResponseHeaders
+  commentId: P:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.ResponseHeaders
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.ResponseHeaders
+  nameWithType: ProgressiveStreamWriterOptions.ResponseHeaders
+- uid: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.ResponseHeaders*
+  name: ResponseHeaders
+  href: reference/pluginapi/MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.html#MediaBrowser_Controller_Net_ProgressiveStreamWriterOptions_ResponseHeaders_
+  commentId: Overload:MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.ResponseHeaders
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Net.ProgressiveStreamWriterOptions.ResponseHeaders
+  nameWithType: ProgressiveStreamWriterOptions.ResponseHeaders
 - uid: MediaBrowser.Controller.Net.SecurityException
   name: SecurityException
   href: reference/pluginapi/MediaBrowser.Controller.Net.SecurityException.html
@@ -95570,6 +96142,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Playlists.Playlist.IsSaveLocalImagesEnabled
   nameWithType: Playlist.IsSaveLocalImagesEnabled
+- uid: MediaBrowser.Controller.Playlists.Playlist.IsTopParent
+  name: IsTopParent
+  href: reference/pluginapi/MediaBrowser.Controller.Playlists.Playlist.html#MediaBrowser_Controller_Playlists_Playlist_IsTopParent
+  commentId: P:MediaBrowser.Controller.Playlists.Playlist.IsTopParent
+  fullName: MediaBrowser.Controller.Playlists.Playlist.IsTopParent
+  nameWithType: Playlist.IsTopParent
+- uid: MediaBrowser.Controller.Playlists.Playlist.IsTopParent*
+  name: IsTopParent
+  href: reference/pluginapi/MediaBrowser.Controller.Playlists.Playlist.html#MediaBrowser_Controller_Playlists_Playlist_IsTopParent_
+  commentId: Overload:MediaBrowser.Controller.Playlists.Playlist.IsTopParent
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Playlists.Playlist.IsTopParent
+  nameWithType: Playlist.IsTopParent
 - uid: MediaBrowser.Controller.Playlists.Playlist.MediaType
   name: MediaType
   href: reference/pluginapi/MediaBrowser.Controller.Playlists.Playlist.html#MediaBrowser_Controller_Playlists_Playlist_MediaType
@@ -95596,6 +96181,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Playlists.Playlist.PlaylistMediaType
   nameWithType: Playlist.PlaylistMediaType
+- uid: MediaBrowser.Controller.Playlists.Playlist.PrimaryImageRequiresOrientation
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Playlists.Playlist.html#MediaBrowser_Controller_Playlists_Playlist_PrimaryImageRequiresOrientation
+  commentId: P:MediaBrowser.Controller.Playlists.Playlist.PrimaryImageRequiresOrientation
+  fullName: MediaBrowser.Controller.Playlists.Playlist.PrimaryImageRequiresOrientation
+  nameWithType: Playlist.PrimaryImageRequiresOrientation
+- uid: MediaBrowser.Controller.Playlists.Playlist.PrimaryImageRequiresOrientation*
+  name: PrimaryImageRequiresOrientation
+  href: reference/pluginapi/MediaBrowser.Controller.Playlists.Playlist.html#MediaBrowser_Controller_Playlists_Playlist_PrimaryImageRequiresOrientation_
+  commentId: Overload:MediaBrowser.Controller.Playlists.Playlist.PrimaryImageRequiresOrientation
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Playlists.Playlist.PrimaryImageRequiresOrientation
+  nameWithType: Playlist.PrimaryImageRequiresOrientation
 - uid: MediaBrowser.Controller.Playlists.Playlist.RecursiveChildCountEqualsChildCount
   name: RecursiveChildCountEqualsChildCount
   href: reference/pluginapi/MediaBrowser.Controller.Playlists.Playlist.html#MediaBrowser_Controller_Playlists_Playlist_RecursiveChildCountEqualsChildCount
@@ -96426,6 +97024,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Controller.Providers.BaseMetadataResult.Chapters
   nameWithType: BaseMetadataResult.Chapters
+- uid: MediaBrowser.Controller.Providers.BaseMetadataResult.ClearCachedMediaSource
+  name: ClearCachedMediaSource()
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.BaseMetadataResult.html#MediaBrowser_Controller_Providers_BaseMetadataResult_ClearCachedMediaSource
+  commentId: M:MediaBrowser.Controller.Providers.BaseMetadataResult.ClearCachedMediaSource
+  fullName: MediaBrowser.Controller.Providers.BaseMetadataResult.ClearCachedMediaSource()
+  nameWithType: BaseMetadataResult.ClearCachedMediaSource()
+- uid: MediaBrowser.Controller.Providers.BaseMetadataResult.ClearCachedMediaSource*
+  name: ClearCachedMediaSource
+  href: reference/pluginapi/MediaBrowser.Controller.Providers.BaseMetadataResult.html#MediaBrowser_Controller_Providers_BaseMetadataResult_ClearCachedMediaSource_
+  commentId: Overload:MediaBrowser.Controller.Providers.BaseMetadataResult.ClearCachedMediaSource
+  isSpec: "True"
+  fullName: MediaBrowser.Controller.Providers.BaseMetadataResult.ClearCachedMediaSource
+  nameWithType: BaseMetadataResult.ClearCachedMediaSource
 - uid: MediaBrowser.Controller.Providers.BaseMetadataResult.DetectedExternalAudioTracks
   name: DetectedExternalAudioTracks
   href: reference/pluginapi/MediaBrowser.Controller.Providers.BaseMetadataResult.html#MediaBrowser_Controller_Providers_BaseMetadataResult_DetectedExternalAudioTracks
@@ -108167,19 +108778,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Configuration.ServerConfiguration.MaxAuthDbConnections
   nameWithType: ServerConfiguration.MaxAuthDbConnections
-- uid: MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDbConnections
-  name: MaxLibraryDbConnections
-  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_MaxLibraryDbConnections
-  commentId: P:MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDbConnections
-  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDbConnections
-  nameWithType: ServerConfiguration.MaxLibraryDbConnections
-- uid: MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDbConnections*
-  name: MaxLibraryDbConnections
-  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_MaxLibraryDbConnections_
-  commentId: Overload:MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDbConnections
+- uid: MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDatabaseConnections
+  name: MaxLibraryDatabaseConnections
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_MaxLibraryDatabaseConnections
+  commentId: P:MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDatabaseConnections
+  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDatabaseConnections
+  nameWithType: ServerConfiguration.MaxLibraryDatabaseConnections
+- uid: MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDatabaseConnections*
+  name: MaxLibraryDatabaseConnections
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_MaxLibraryDatabaseConnections_
+  commentId: Overload:MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDatabaseConnections
   isSpec: "True"
-  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDbConnections
-  nameWithType: ServerConfiguration.MaxLibraryDbConnections
+  fullName: MediaBrowser.Model.Configuration.ServerConfiguration.MaxLibraryDatabaseConnections
+  nameWithType: ServerConfiguration.MaxLibraryDatabaseConnections
 - uid: MediaBrowser.Model.Configuration.ServerConfiguration.MaxOtherDbConnections
   name: MaxOtherDbConnections
   href: reference/pluginapi/MediaBrowser.Model.Configuration.ServerConfiguration.html#MediaBrowser_Model_Configuration_ServerConfiguration_MaxOtherDbConnections
@@ -112080,6 +112691,19 @@ references:
   commentId: T:MediaBrowser.Model.Dlna.RequestedStreamInfo
   fullName: MediaBrowser.Model.Dlna.RequestedStreamInfo
   nameWithType: RequestedStreamInfo
+- uid: MediaBrowser.Model.Dlna.RequestedStreamInfo.AllowChunkedResponse
+  name: AllowChunkedResponse
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.RequestedStreamInfo.html#MediaBrowser_Model_Dlna_RequestedStreamInfo_AllowChunkedResponse
+  commentId: P:MediaBrowser.Model.Dlna.RequestedStreamInfo.AllowChunkedResponse
+  fullName: MediaBrowser.Model.Dlna.RequestedStreamInfo.AllowChunkedResponse
+  nameWithType: RequestedStreamInfo.AllowChunkedResponse
+- uid: MediaBrowser.Model.Dlna.RequestedStreamInfo.AllowChunkedResponse*
+  name: AllowChunkedResponse
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.RequestedStreamInfo.html#MediaBrowser_Model_Dlna_RequestedStreamInfo_AllowChunkedResponse_
+  commentId: Overload:MediaBrowser.Model.Dlna.RequestedStreamInfo.AllowChunkedResponse
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dlna.RequestedStreamInfo.AllowChunkedResponse
+  nameWithType: RequestedStreamInfo.AllowChunkedResponse
 - uid: MediaBrowser.Model.Dlna.RequestedStreamInfo.AudioChannels
   name: AudioChannels
   href: reference/pluginapi/MediaBrowser.Model.Dlna.RequestedStreamInfo.html#MediaBrowser_Model_Dlna_RequestedStreamInfo_AudioChannels
@@ -113442,6 +114066,19 @@ references:
   commentId: T:MediaBrowser.Model.Dlna.SubtitleProfile
   fullName: MediaBrowser.Model.Dlna.SubtitleProfile
   nameWithType: SubtitleProfile
+- uid: MediaBrowser.Model.Dlna.SubtitleProfile.AllowChunkedResponse
+  name: AllowChunkedResponse
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleProfile.html#MediaBrowser_Model_Dlna_SubtitleProfile_AllowChunkedResponse
+  commentId: P:MediaBrowser.Model.Dlna.SubtitleProfile.AllowChunkedResponse
+  fullName: MediaBrowser.Model.Dlna.SubtitleProfile.AllowChunkedResponse
+  nameWithType: SubtitleProfile.AllowChunkedResponse
+- uid: MediaBrowser.Model.Dlna.SubtitleProfile.AllowChunkedResponse*
+  name: AllowChunkedResponse
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleProfile.html#MediaBrowser_Model_Dlna_SubtitleProfile_AllowChunkedResponse_
+  commentId: Overload:MediaBrowser.Model.Dlna.SubtitleProfile.AllowChunkedResponse
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dlna.SubtitleProfile.AllowChunkedResponse
+  nameWithType: SubtitleProfile.AllowChunkedResponse
 - uid: MediaBrowser.Model.Dlna.SubtitleProfile.Container
   name: Container
   href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleProfile.html#MediaBrowser_Model_Dlna_SubtitleProfile_Container
@@ -113555,6 +114192,19 @@ references:
   commentId: T:MediaBrowser.Model.Dlna.SubtitleStreamInfo
   fullName: MediaBrowser.Model.Dlna.SubtitleStreamInfo
   nameWithType: SubtitleStreamInfo
+- uid: MediaBrowser.Model.Dlna.SubtitleStreamInfo.AllowChunkedResponse
+  name: AllowChunkedResponse
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleStreamInfo.html#MediaBrowser_Model_Dlna_SubtitleStreamInfo_AllowChunkedResponse
+  commentId: P:MediaBrowser.Model.Dlna.SubtitleStreamInfo.AllowChunkedResponse
+  fullName: MediaBrowser.Model.Dlna.SubtitleStreamInfo.AllowChunkedResponse
+  nameWithType: SubtitleStreamInfo.AllowChunkedResponse
+- uid: MediaBrowser.Model.Dlna.SubtitleStreamInfo.AllowChunkedResponse*
+  name: AllowChunkedResponse
+  href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleStreamInfo.html#MediaBrowser_Model_Dlna_SubtitleStreamInfo_AllowChunkedResponse_
+  commentId: Overload:MediaBrowser.Model.Dlna.SubtitleStreamInfo.AllowChunkedResponse
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Dlna.SubtitleStreamInfo.AllowChunkedResponse
+  nameWithType: SubtitleStreamInfo.AllowChunkedResponse
 - uid: MediaBrowser.Model.Dlna.SubtitleStreamInfo.DeliveryMethod
   name: DeliveryMethod
   href: reference/pluginapi/MediaBrowser.Model.Dlna.SubtitleStreamInfo.html#MediaBrowser_Model_Dlna_SubtitleStreamInfo_DeliveryMethod
@@ -120694,6 +121344,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Entities.MediaStream.IsAVC
   nameWithType: MediaStream.IsAVC
+- uid: MediaBrowser.Model.Entities.MediaStream.IsChunkedResponse
+  name: IsChunkedResponse
+  href: reference/pluginapi/MediaBrowser.Model.Entities.MediaStream.html#MediaBrowser_Model_Entities_MediaStream_IsChunkedResponse
+  commentId: P:MediaBrowser.Model.Entities.MediaStream.IsChunkedResponse
+  fullName: MediaBrowser.Model.Entities.MediaStream.IsChunkedResponse
+  nameWithType: MediaStream.IsChunkedResponse
+- uid: MediaBrowser.Model.Entities.MediaStream.IsChunkedResponse*
+  name: IsChunkedResponse
+  href: reference/pluginapi/MediaBrowser.Model.Entities.MediaStream.html#MediaBrowser_Model_Entities_MediaStream_IsChunkedResponse_
+  commentId: Overload:MediaBrowser.Model.Entities.MediaStream.IsChunkedResponse
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Entities.MediaStream.IsChunkedResponse
+  nameWithType: MediaStream.IsChunkedResponse
 - uid: MediaBrowser.Model.Entities.MediaStream.IsClosedCaptions
   name: IsClosedCaptions
   href: reference/pluginapi/MediaBrowser.Model.Entities.MediaStream.html#MediaBrowser_Model_Entities_MediaStream_IsClosedCaptions
@@ -125000,6 +125663,15 @@ references:
   commentId: T:MediaBrowser.Model.IO.IStreamHelper
   fullName: MediaBrowser.Model.IO.IStreamHelper
   nameWithType: IStreamHelper
+- uid: MediaBrowser.Model.IO.IStreamHelper.CopyToAsync(System.IO.Stream,System.IO.Pipelines.PipeWriter,System.Int32,System.Action{System.Int32},System.Threading.CancellationToken)
+  name: CopyToAsync(Stream, PipeWriter, Int32, Action<Int32>, CancellationToken)
+  href: reference/pluginapi/MediaBrowser.Model.IO.IStreamHelper.html#MediaBrowser_Model_IO_IStreamHelper_CopyToAsync_System_IO_Stream_System_IO_Pipelines_PipeWriter_System_Int32_System_Action_System_Int32__System_Threading_CancellationToken_
+  commentId: M:MediaBrowser.Model.IO.IStreamHelper.CopyToAsync(System.IO.Stream,System.IO.Pipelines.PipeWriter,System.Int32,System.Action{System.Int32},System.Threading.CancellationToken)
+  name.vb: CopyToAsync(Stream, PipeWriter, Int32, Action(Of Int32), CancellationToken)
+  fullName: MediaBrowser.Model.IO.IStreamHelper.CopyToAsync(System.IO.Stream, System.IO.Pipelines.PipeWriter, System.Int32, System.Action<System.Int32>, System.Threading.CancellationToken)
+  fullName.vb: MediaBrowser.Model.IO.IStreamHelper.CopyToAsync(System.IO.Stream, System.IO.Pipelines.PipeWriter, System.Int32, System.Action(Of System.Int32), System.Threading.CancellationToken)
+  nameWithType: IStreamHelper.CopyToAsync(Stream, PipeWriter, Int32, Action<Int32>, CancellationToken)
+  nameWithType.vb: IStreamHelper.CopyToAsync(Stream, PipeWriter, Int32, Action(Of Int32), CancellationToken)
 - uid: MediaBrowser.Model.IO.IStreamHelper.CopyToAsync(System.IO.Stream,System.IO.Pipelines.PipeWriter,System.Int32,System.Int32,System.Threading.CancellationToken)
   name: CopyToAsync(Stream, PipeWriter, Int32, Int32, CancellationToken)
   href: reference/pluginapi/MediaBrowser.Model.IO.IStreamHelper.html#MediaBrowser_Model_IO_IStreamHelper_CopyToAsync_System_IO_Stream_System_IO_Pipelines_PipeWriter_System_Int32_System_Int32_System_Threading_CancellationToken_
@@ -126335,19 +127007,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.MovieRecordingFolderId
   nameWithType: LiveTvOptions.MovieRecordingFolderId
-- uid: MediaBrowser.Model.LiveTv.LiveTvOptions.MovieRecordingPath
-  name: MovieRecordingPath
-  href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_MovieRecordingPath
-  commentId: P:MediaBrowser.Model.LiveTv.LiveTvOptions.MovieRecordingPath
-  fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.MovieRecordingPath
-  nameWithType: LiveTvOptions.MovieRecordingPath
-- uid: MediaBrowser.Model.LiveTv.LiveTvOptions.MovieRecordingPath*
-  name: MovieRecordingPath
-  href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_MovieRecordingPath_
-  commentId: Overload:MediaBrowser.Model.LiveTv.LiveTvOptions.MovieRecordingPath
-  isSpec: "True"
-  fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.MovieRecordingPath
-  nameWithType: LiveTvOptions.MovieRecordingPath
 - uid: MediaBrowser.Model.LiveTv.LiveTvOptions.PostPaddingSeconds
   name: PostPaddingSeconds
   href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_PostPaddingSeconds
@@ -126387,19 +127046,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.RecordingFolderId
   nameWithType: LiveTvOptions.RecordingFolderId
-- uid: MediaBrowser.Model.LiveTv.LiveTvOptions.RecordingPath
-  name: RecordingPath
-  href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_RecordingPath
-  commentId: P:MediaBrowser.Model.LiveTv.LiveTvOptions.RecordingPath
-  fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.RecordingPath
-  nameWithType: LiveTvOptions.RecordingPath
-- uid: MediaBrowser.Model.LiveTv.LiveTvOptions.RecordingPath*
-  name: RecordingPath
-  href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_RecordingPath_
-  commentId: Overload:MediaBrowser.Model.LiveTv.LiveTvOptions.RecordingPath
-  isSpec: "True"
-  fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.RecordingPath
-  nameWithType: LiveTvOptions.RecordingPath
 - uid: MediaBrowser.Model.LiveTv.LiveTvOptions.RecordingPostProcessor
   name: RecordingPostProcessor
   href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_RecordingPostProcessor
@@ -126439,19 +127085,6 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.SeriesRecordingFolderId
   nameWithType: LiveTvOptions.SeriesRecordingFolderId
-- uid: MediaBrowser.Model.LiveTv.LiveTvOptions.SeriesRecordingPath
-  name: SeriesRecordingPath
-  href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_SeriesRecordingPath
-  commentId: P:MediaBrowser.Model.LiveTv.LiveTvOptions.SeriesRecordingPath
-  fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.SeriesRecordingPath
-  nameWithType: LiveTvOptions.SeriesRecordingPath
-- uid: MediaBrowser.Model.LiveTv.LiveTvOptions.SeriesRecordingPath*
-  name: SeriesRecordingPath
-  href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_SeriesRecordingPath_
-  commentId: Overload:MediaBrowser.Model.LiveTv.LiveTvOptions.SeriesRecordingPath
-  isSpec: "True"
-  fullName: MediaBrowser.Model.LiveTv.LiveTvOptions.SeriesRecordingPath
-  nameWithType: LiveTvOptions.SeriesRecordingPath
 - uid: MediaBrowser.Model.LiveTv.LiveTvOptions.TunerHosts
   name: TunerHosts
   href: reference/pluginapi/MediaBrowser.Model.LiveTv.LiveTvOptions.html#MediaBrowser_Model_LiveTv_LiveTvOptions_TunerHosts
@@ -132270,6 +132903,19 @@ references:
   commentId: T:MediaBrowser.Model.Providers.RemoteImageQuery
   fullName: MediaBrowser.Model.Providers.RemoteImageQuery
   nameWithType: RemoteImageQuery
+- uid: MediaBrowser.Model.Providers.RemoteImageQuery.EnableSeriesImages
+  name: EnableSeriesImages
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteImageQuery.html#MediaBrowser_Model_Providers_RemoteImageQuery_EnableSeriesImages
+  commentId: P:MediaBrowser.Model.Providers.RemoteImageQuery.EnableSeriesImages
+  fullName: MediaBrowser.Model.Providers.RemoteImageQuery.EnableSeriesImages
+  nameWithType: RemoteImageQuery.EnableSeriesImages
+- uid: MediaBrowser.Model.Providers.RemoteImageQuery.EnableSeriesImages*
+  name: EnableSeriesImages
+  href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteImageQuery.html#MediaBrowser_Model_Providers_RemoteImageQuery_EnableSeriesImages_
+  commentId: Overload:MediaBrowser.Model.Providers.RemoteImageQuery.EnableSeriesImages
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Providers.RemoteImageQuery.EnableSeriesImages
+  nameWithType: RemoteImageQuery.EnableSeriesImages
 - uid: MediaBrowser.Model.Providers.RemoteImageQuery.ImageType
   name: ImageType
   href: reference/pluginapi/MediaBrowser.Model.Providers.RemoteImageQuery.html#MediaBrowser_Model_Providers_RemoteImageQuery_ImageType
@@ -136471,22 +137117,6 @@ references:
   commentId: T:MediaBrowser.Model.Services.MyHttpUtility
   fullName: MediaBrowser.Model.Services.MyHttpUtility
   nameWithType: MyHttpUtility
-- uid: MediaBrowser.Model.Services.MyHttpUtility.MarkParamsPrivateInUrl(System.String,System.String[])
-  name: MarkParamsPrivateInUrl(String, String[])
-  href: reference/pluginapi/MediaBrowser.Model.Services.MyHttpUtility.html#MediaBrowser_Model_Services_MyHttpUtility_MarkParamsPrivateInUrl_System_String_System_String___
-  commentId: M:MediaBrowser.Model.Services.MyHttpUtility.MarkParamsPrivateInUrl(System.String,System.String[])
-  name.vb: MarkParamsPrivateInUrl(String, String())
-  fullName: MediaBrowser.Model.Services.MyHttpUtility.MarkParamsPrivateInUrl(System.String, System.String[])
-  fullName.vb: MediaBrowser.Model.Services.MyHttpUtility.MarkParamsPrivateInUrl(System.String, System.String())
-  nameWithType: MyHttpUtility.MarkParamsPrivateInUrl(String, String[])
-  nameWithType.vb: MyHttpUtility.MarkParamsPrivateInUrl(String, String())
-- uid: MediaBrowser.Model.Services.MyHttpUtility.MarkParamsPrivateInUrl*
-  name: MarkParamsPrivateInUrl
-  href: reference/pluginapi/MediaBrowser.Model.Services.MyHttpUtility.html#MediaBrowser_Model_Services_MyHttpUtility_MarkParamsPrivateInUrl_
-  commentId: Overload:MediaBrowser.Model.Services.MyHttpUtility.MarkParamsPrivateInUrl
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Services.MyHttpUtility.MarkParamsPrivateInUrl
-  nameWithType: MyHttpUtility.MarkParamsPrivateInUrl
 - uid: MediaBrowser.Model.Services.MyHttpUtility.ParseQueryString(System.String)
   name: ParseQueryString(String)
   href: reference/pluginapi/MediaBrowser.Model.Services.MyHttpUtility.html#MediaBrowser_Model_Services_MyHttpUtility_ParseQueryString_System_String_
@@ -139114,19 +139744,6 @@ references:
   commentId: T:MediaBrowser.Model.Session.TranscodingInfo
   fullName: MediaBrowser.Model.Session.TranscodingInfo
   nameWithType: TranscodingInfo
-- uid: MediaBrowser.Model.Session.TranscodingInfo.#ctor
-  name: TranscodingInfo()
-  href: reference/pluginapi/MediaBrowser.Model.Session.TranscodingInfo.html#MediaBrowser_Model_Session_TranscodingInfo__ctor
-  commentId: M:MediaBrowser.Model.Session.TranscodingInfo.#ctor
-  fullName: MediaBrowser.Model.Session.TranscodingInfo.TranscodingInfo()
-  nameWithType: TranscodingInfo.TranscodingInfo()
-- uid: MediaBrowser.Model.Session.TranscodingInfo.#ctor*
-  name: TranscodingInfo
-  href: reference/pluginapi/MediaBrowser.Model.Session.TranscodingInfo.html#MediaBrowser_Model_Session_TranscodingInfo__ctor_
-  commentId: Overload:MediaBrowser.Model.Session.TranscodingInfo.#ctor
-  isSpec: "True"
-  fullName: MediaBrowser.Model.Session.TranscodingInfo.TranscodingInfo
-  nameWithType: TranscodingInfo.TranscodingInfo
 - uid: MediaBrowser.Model.Session.TranscodingInfo.AudioBitrate
   name: AudioBitrate
   href: reference/pluginapi/MediaBrowser.Model.Session.TranscodingInfo.html#MediaBrowser_Model_Session_TranscodingInfo_AudioBitrate
