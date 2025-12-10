@@ -16,7 +16,7 @@ import ImageType from './ImageType';
 /**
 * The EntitiesItemImageInfo model module.
 * @module model/EntitiesItemImageInfo
-* @version 4.9.2.7
+* @version 4.9.2.8
 */
 export default class EntitiesItemImageInfo {
     /**

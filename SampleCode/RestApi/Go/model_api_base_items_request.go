@@ -43,6 +43,7 @@ type ApiBaseItemsRequest struct {
 	MaxWidth int32 `json:"MaxWidth,omitempty"`
 	MaxHeight int32 `json:"MaxHeight,omitempty"`
 	GroupProgramsBySeries bool `json:"GroupProgramsBySeries,omitempty"`
+	GroupByPresentationUniqueKey bool `json:"GroupByPresentationUniqueKey,omitempty"`
 	AirDays []DayOfWeek `json:"AirDays,omitempty"`
 	IsAiring bool `json:"IsAiring,omitempty"`
 	HasAired bool `json:"HasAired,omitempty"`

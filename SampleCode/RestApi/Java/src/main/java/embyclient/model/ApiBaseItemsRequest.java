@@ -126,6 +126,9 @@ public class ApiBaseItemsRequest {
   @SerializedName("GroupProgramsBySeries")
   private Boolean groupProgramsBySeries = null;
 
+  @SerializedName("GroupByPresentationUniqueKey")
+  private Boolean groupByPresentationUniqueKey = null;
+
   @SerializedName("AirDays")
   private List<DayOfWeek> airDays = null;
 
@@ -743,6 +746,24 @@ public class ApiBaseItemsRequest {
     this.groupProgramsBySeries = groupProgramsBySeries;
   }
 
+  public ApiBaseItemsRequest groupByPresentationUniqueKey(Boolean groupByPresentationUniqueKey) {
+    this.groupByPresentationUniqueKey = groupByPresentationUniqueKey;
+    return this;
+  }
+
+   /**
+   * Get groupByPresentationUniqueKey
+   * @return groupByPresentationUniqueKey
+  **/
+  @Schema(description = "")
+  public Boolean isGroupByPresentationUniqueKey() {
+    return groupByPresentationUniqueKey;
+  }
+
+  public void setGroupByPresentationUniqueKey(Boolean groupByPresentationUniqueKey) {
+    this.groupByPresentationUniqueKey = groupByPresentationUniqueKey;
+  }
+
   public ApiBaseItemsRequest airDays(List<DayOfWeek> airDays) {
     this.airDays = airDays;
     return this;
@@ -892,6 +913,7 @@ public class ApiBaseItemsRequest {
         Objects.equals(this.maxWidth, apiBaseItemsRequest.maxWidth) &&
         Objects.equals(this.maxHeight, apiBaseItemsRequest.maxHeight) &&
         Objects.equals(this.groupProgramsBySeries, apiBaseItemsRequest.groupProgramsBySeries) &&
+        Objects.equals(this.groupByPresentationUniqueKey, apiBaseItemsRequest.groupByPresentationUniqueKey) &&
         Objects.equals(this.airDays, apiBaseItemsRequest.airDays) &&
         Objects.equals(this.isAiring, apiBaseItemsRequest.isAiring) &&
         Objects.equals(this.hasAired, apiBaseItemsRequest.hasAired) &&
@@ -901,7 +923,7 @@ public class ApiBaseItemsRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(isSpecialEpisode, is4K, minDateCreated, maxDateCreated, enableTotalRecordCount, matchAnyWord, isDuplicate, name, recordingKeyword, recordingKeywordType, randomSeed, genreIds, collectionIds, tagIds, excludeTagIds, itemPersonTypes, excludeArtistIds, albumArtistIds, composerArtistIds, contributingArtistIds, albumIds, outerIds, listItemIds, audioLanguages, subtitleLanguages, canEditItems, groupItemsInto, isStandaloneSpecial, minWidth, minHeight, maxWidth, maxHeight, groupProgramsBySeries, airDays, isAiring, hasAired, collectionTypes, excludeSources);
+    return Objects.hash(isSpecialEpisode, is4K, minDateCreated, maxDateCreated, enableTotalRecordCount, matchAnyWord, isDuplicate, name, recordingKeyword, recordingKeywordType, randomSeed, genreIds, collectionIds, tagIds, excludeTagIds, itemPersonTypes, excludeArtistIds, albumArtistIds, composerArtistIds, contributingArtistIds, albumIds, outerIds, listItemIds, audioLanguages, subtitleLanguages, canEditItems, groupItemsInto, isStandaloneSpecial, minWidth, minHeight, maxWidth, maxHeight, groupProgramsBySeries, groupByPresentationUniqueKey, airDays, isAiring, hasAired, collectionTypes, excludeSources);
   }
 
 
@@ -943,6 +965,7 @@ public class ApiBaseItemsRequest {
     sb.append("    maxWidth: ").append(toIndentedString(maxWidth)).append("\n");
     sb.append("    maxHeight: ").append(toIndentedString(maxHeight)).append("\n");
     sb.append("    groupProgramsBySeries: ").append(toIndentedString(groupProgramsBySeries)).append("\n");
+    sb.append("    groupByPresentationUniqueKey: ").append(toIndentedString(groupByPresentationUniqueKey)).append("\n");
     sb.append("    airDays: ").append(toIndentedString(airDays)).append("\n");
     sb.append("    isAiring: ").append(toIndentedString(isAiring)).append("\n");
     sb.append("    hasAired: ").append(toIndentedString(hasAired)).append("\n");

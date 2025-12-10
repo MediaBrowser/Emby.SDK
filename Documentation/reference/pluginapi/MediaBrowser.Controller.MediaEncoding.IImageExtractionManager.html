@@ -167,12 +167,12 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractAudioImage(String, IDictionary&lt;String, String&gt;, Nullable&lt;MediaContainers&gt;, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage(MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractAudioImage(MediaSourceInfo, String, Nullable&lt;MediaContainers&gt;, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractAudioImage(string path, IDictionary&lt;string, string&gt; requestHeaders, MediaContainers? container, int? streamIndex, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractAudioImage(MediaSourceInfo mediaSource, string inputPath, MediaContainers? container, int? streamIndex, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +185,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">path</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">inputPath</span></td>
         <td></td>
       </tr>
       <tr>
@@ -229,12 +229,12 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractAudioImage(String, IDictionary&lt;String, String&gt;, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractAudioImage_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractAudioImage(MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractAudioImage(MediaSourceInfo, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractAudioImage(string path, IDictionary&lt;string, string&gt; requestHeaders, int? streamIndex, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractAudioImage(MediaSourceInfo mediaSource, string inputPath, int? streamIndex, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,13 +247,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">path</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">inputPath</span></td>
         <td></td>
       </tr>
       <tr>
@@ -286,12 +286,12 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_MediaInfo_MediaProtocol_MediaBrowser_Model_Entities_MediaStream_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_Nullable_System_TimeSpan__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.MediaInfo.MediaProtocol,MediaBrowser.Model.Entities.MediaStream,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">ExtractVideoImage(String, IDictionary&lt;String, String&gt;, Nullable&lt;MediaContainers&gt;, MediaProtocol, MediaStream, Nullable&lt;Video3DFormat&gt;, Nullable&lt;TimeSpan&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_MediaInfo_MediaProtocol_MediaBrowser_Model_Entities_MediaStream_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_Nullable_System_TimeSpan__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage(MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.MediaInfo.MediaProtocol,MediaBrowser.Model.Entities.MediaStream,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.Nullable{System.TimeSpan},System.Threading.CancellationToken)">ExtractVideoImage(MediaSourceInfo, String, Nullable&lt;MediaContainers&gt;, MediaProtocol, MediaStream, Nullable&lt;Video3DFormat&gt;, Nullable&lt;TimeSpan&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractVideoImage(string inputPath, IDictionary&lt;string, string&gt; requestHeaders, MediaContainers? container, MediaProtocol protocol, MediaStream videoStream, Video3DFormat? threedFormat, TimeSpan? offset, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractVideoImage(MediaSourceInfo mediaSource, string inputPath, MediaContainers? container, MediaProtocol protocol, MediaStream videoStream, Video3DFormat? threedFormat, TimeSpan? offset, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -304,13 +304,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">inputPath</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">inputPath</span></td>
         <td></td>
       </tr>
       <tr>
@@ -363,12 +363,12 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_MediaInfo_MediaProtocol_MediaBrowser_Model_Entities_MediaStream_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.MediaInfo.MediaProtocol,MediaBrowser.Model.Entities.MediaStream,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImage(String, IDictionary&lt;String, String&gt;, Nullable&lt;MediaContainers&gt;, MediaProtocol, MediaStream, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImage_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_MediaInfo_MediaProtocol_MediaBrowser_Model_Entities_MediaStream_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImage(MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.MediaInfo.MediaProtocol,MediaBrowser.Model.Entities.MediaStream,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImage(MediaSourceInfo, String, Nullable&lt;MediaContainers&gt;, MediaProtocol, MediaStream, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractVideoImage(string inputPath, IDictionary&lt;string, string&gt; requestHeaders, MediaContainers? container, MediaProtocol protocol, MediaStream imageStream, int? streamIndex, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; ExtractVideoImage(MediaSourceInfo mediaSource, string inputPath, MediaContainers? container, MediaProtocol protocol, MediaStream imageStream, int? streamIndex, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -381,13 +381,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">inputPath</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">inputPath</span></td>
         <td></td>
       </tr>
       <tr>
@@ -435,13 +435,13 @@
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan___System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan[],System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesFromList(String, IDictionary&lt;String, String&gt;, Nullable&lt;MediaContainers&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan[], String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan___System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList(MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan[],System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesFromList(MediaSourceInfo, String, Nullable&lt;MediaContainers&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan[], String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use ExtractVideoImagesFromList2() instead.&quot;)]
-Task ExtractVideoImagesFromList(string inputPath, IDictionary&lt;string, string&gt; requestHeaders, MediaContainers? container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan[] extractionTimes, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
+Task ExtractVideoImagesFromList(MediaSourceInfo mediaSource, string inputPath, MediaContainers? container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan[] extractionTimes, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -454,13 +454,13 @@ Task ExtractVideoImagesFromList(string inputPath, IDictionary&lt;string, string&
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">inputPath</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">inputPath</span></td>
         <td></td>
       </tr>
       <tr>
@@ -528,12 +528,12 @@ Task ExtractVideoImagesFromList(string inputPath, IDictionary&lt;string, string&
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList2_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList2*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList2_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan___System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList2(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan[],System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesFromList2(String, IDictionary&lt;String, String&gt;, Nullable&lt;MediaContainers&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan[], String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesFromList2_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan___System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesFromList2(MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan[],System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesFromList2(MediaSourceInfo, String, Nullable&lt;MediaContainers&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan[], String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;List&lt;TimeSpan&gt;&gt; ExtractVideoImagesFromList2(string inputPath, IDictionary&lt;string, string&gt; requestHeaders, MediaContainers? container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan[] extractionTimes, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;List&lt;TimeSpan&gt;&gt; ExtractVideoImagesFromList2(MediaSourceInfo mediaSource, string inputPath, MediaContainers? container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan[] extractionTimes, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -546,13 +546,13 @@ Task ExtractVideoImagesFromList(string inputPath, IDictionary&lt;string, string&
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">inputPath</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">inputPath</span></td>
         <td></td>
       </tr>
       <tr>
@@ -620,12 +620,12 @@ Task ExtractVideoImagesFromList(string inputPath, IDictionary&lt;string, string&
   
   
   <a id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesOnInterval_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesOnInterval*"></a>
-  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesOnInterval_System_String_System_Collections_Generic_IDictionary_System_String_System_String__System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesOnInterval(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesOnInterval(String, IDictionary&lt;String, String&gt;, Nullable&lt;MediaContainers&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan, String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_MediaEncoding_IImageExtractionManager_ExtractVideoImagesOnInterval_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Nullable_MediaBrowser_Model_MediaInfo_MediaContainers__MediaBrowser_Model_Entities_MediaStream_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Nullable_MediaBrowser_Model_Entities_Video3DFormat__System_TimeSpan_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.MediaEncoding.IImageExtractionManager.ExtractVideoImagesOnInterval(MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.Nullable{MediaBrowser.Model.MediaInfo.MediaContainers},MediaBrowser.Model.Entities.MediaStream,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Nullable{MediaBrowser.Model.Entities.Video3DFormat},System.TimeSpan,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ExtractVideoImagesOnInterval(MediaSourceInfo, String, Nullable&lt;MediaContainers&gt;, MediaStream, MediaProtocol, Nullable&lt;Video3DFormat&gt;, TimeSpan, String, String, Nullable&lt;Int32&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ExtractVideoImagesOnInterval(string inputPath, IDictionary&lt;string, string&gt; requestHeaders, MediaContainers? container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan interval, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ExtractVideoImagesOnInterval(MediaSourceInfo mediaSource, string inputPath, MediaContainers? container, MediaStream videoStream, MediaProtocol protocol, Video3DFormat? threedFormat, TimeSpan interval, string targetDirectory, string filenamePrefix, int? maxWidth, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -638,13 +638,13 @@ Task ExtractVideoImagesFromList(string inputPath, IDictionary&lt;string, string&
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">inputPath</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td><span class="parametername">requestHeaders</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">inputPath</span></td>
         <td></td>
       </tr>
       <tr>

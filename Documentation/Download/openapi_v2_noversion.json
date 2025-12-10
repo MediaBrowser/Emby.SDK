@@ -76305,6 +76305,9 @@
         "GroupProgramsBySeries": {
           "type": "boolean"
         },
+        "GroupByPresentationUniqueKey": {
+          "type": "boolean"
+        },
         "AirDays": {
           "type": "array",
           "items": {

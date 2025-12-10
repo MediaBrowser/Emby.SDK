@@ -55,6 +55,7 @@ class ApiBaseItemsRequest(object):
         'max_width': 'int',
         'max_height': 'int',
         'group_programs_by_series': 'bool',
+        'group_by_presentation_unique_key': 'bool',
         'air_days': 'list[DayOfWeek]',
         'is_airing': 'bool',
         'has_aired': 'bool',
@@ -96,6 +97,7 @@ class ApiBaseItemsRequest(object):
         'max_width': 'MaxWidth',
         'max_height': 'MaxHeight',
         'group_programs_by_series': 'GroupProgramsBySeries',
+        'group_by_presentation_unique_key': 'GroupByPresentationUniqueKey',
         'air_days': 'AirDays',
         'is_airing': 'IsAiring',
         'has_aired': 'HasAired',
@@ -103,7 +105,7 @@ class ApiBaseItemsRequest(object):
         'exclude_sources': 'ExcludeSources'
     }
 
-    def __init__(self, is_special_episode=None, is4_k=None, min_date_created=None, max_date_created=None, enable_total_record_count=None, match_any_word=None, is_duplicate=None, name=None, recording_keyword=None, recording_keyword_type=None, random_seed=None, genre_ids=None, collection_ids=None, tag_ids=None, exclude_tag_ids=None, item_person_types=None, exclude_artist_ids=None, album_artist_ids=None, composer_artist_ids=None, contributing_artist_ids=None, album_ids=None, outer_ids=None, list_item_ids=None, audio_languages=None, subtitle_languages=None, can_edit_items=None, group_items_into=None, is_standalone_special=None, min_width=None, min_height=None, max_width=None, max_height=None, group_programs_by_series=None, air_days=None, is_airing=None, has_aired=None, collection_types=None, exclude_sources=None):  # noqa: E501
+    def __init__(self, is_special_episode=None, is4_k=None, min_date_created=None, max_date_created=None, enable_total_record_count=None, match_any_word=None, is_duplicate=None, name=None, recording_keyword=None, recording_keyword_type=None, random_seed=None, genre_ids=None, collection_ids=None, tag_ids=None, exclude_tag_ids=None, item_person_types=None, exclude_artist_ids=None, album_artist_ids=None, composer_artist_ids=None, contributing_artist_ids=None, album_ids=None, outer_ids=None, list_item_ids=None, audio_languages=None, subtitle_languages=None, can_edit_items=None, group_items_into=None, is_standalone_special=None, min_width=None, min_height=None, max_width=None, max_height=None, group_programs_by_series=None, group_by_presentation_unique_key=None, air_days=None, is_airing=None, has_aired=None, collection_types=None, exclude_sources=None):  # noqa: E501
         """ApiBaseItemsRequest - a model defined in Swagger"""  # noqa: E501
         self._is_special_episode = None
         self._is4_k = None
@@ -138,6 +140,7 @@ class ApiBaseItemsRequest(object):
         self._max_width = None
         self._max_height = None
         self._group_programs_by_series = None
+        self._group_by_presentation_unique_key = None
         self._air_days = None
         self._is_airing = None
         self._has_aired = None
@@ -210,6 +213,8 @@ class ApiBaseItemsRequest(object):
             self.max_height = max_height
         if group_programs_by_series is not None:
             self.group_programs_by_series = group_programs_by_series
+        if group_by_presentation_unique_key is not None:
+            self.group_by_presentation_unique_key = group_by_presentation_unique_key
         if air_days is not None:
             self.air_days = air_days
         if is_airing is not None:
@@ -913,6 +918,27 @@ class ApiBaseItemsRequest(object):
         """
 
         self._group_programs_by_series = group_programs_by_series
+
+    @property
+    def group_by_presentation_unique_key(self):
+        """Gets the group_by_presentation_unique_key of this ApiBaseItemsRequest.  # noqa: E501
+
+
+        :return: The group_by_presentation_unique_key of this ApiBaseItemsRequest.  # noqa: E501
+        :rtype: bool
+        """
+        return self._group_by_presentation_unique_key
+
+    @group_by_presentation_unique_key.setter
+    def group_by_presentation_unique_key(self, group_by_presentation_unique_key):
+        """Sets the group_by_presentation_unique_key of this ApiBaseItemsRequest.
+
+
+        :param group_by_presentation_unique_key: The group_by_presentation_unique_key of this ApiBaseItemsRequest.  # noqa: E501
+        :type: bool
+        """
+
+        self._group_by_presentation_unique_key = group_by_presentation_unique_key
 
     @property
     def air_days(self):

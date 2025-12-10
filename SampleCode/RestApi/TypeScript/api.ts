@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.2.7
+ * OpenAPI spec version: 4.9.2.8
  * 
  *
  * NOTE: This file is auto generated.
@@ -551,6 +551,12 @@ export interface ApiBaseItemsRequest {
      * @memberof ApiBaseItemsRequest
      */
     GroupProgramsBySeries?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ApiBaseItemsRequest
+     */
+    GroupByPresentationUniqueKey?: boolean;
     /**
      * 
      * @type {Array<DayOfWeek>}

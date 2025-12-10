@@ -18,7 +18,7 @@ import PersonType from './PersonType';
 /**
 * The ApiBaseItemsRequest model module.
 * @module model/ApiBaseItemsRequest
-* @version 4.9.2.7
+* @version 4.9.2.8
 */
 export default class ApiBaseItemsRequest {
     /**
@@ -143,6 +143,9 @@ export default class ApiBaseItemsRequest {
             }
             if (data.hasOwnProperty('GroupProgramsBySeries')) {
                 obj['GroupProgramsBySeries'] = ApiClient.convertToType(data['GroupProgramsBySeries'], 'Boolean');
+            }
+            if (data.hasOwnProperty('GroupByPresentationUniqueKey')) {
+                obj['GroupByPresentationUniqueKey'] = ApiClient.convertToType(data['GroupByPresentationUniqueKey'], 'Boolean');
             }
             if (data.hasOwnProperty('AirDays')) {
                 obj['AirDays'] = ApiClient.convertToType(data['AirDays'], [DayOfWeek]);
@@ -295,6 +298,10 @@ export default class ApiBaseItemsRequest {
     * @member {Boolean} GroupProgramsBySeries
     */
     'GroupProgramsBySeries' = undefined;
+    /**
+    * @member {Boolean} GroupByPresentationUniqueKey
+    */
+    'GroupByPresentationUniqueKey' = undefined;
     /**
     * @member {Array.<module:model/DayOfWeek>} AirDays
     */

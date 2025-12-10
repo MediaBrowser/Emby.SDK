@@ -443,7 +443,7 @@ import WebAppServiceApi from './api/WebAppServiceApi';
 * </pre>
 * </p>
 * @module index
-* @version 4.9.2.7
+* @version 4.9.2.8
 */
 export {
     /**

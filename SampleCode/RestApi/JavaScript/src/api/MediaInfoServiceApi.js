@@ -18,7 +18,7 @@ import PlaybackInfoResponse from '../model/PlaybackInfoResponse';
 /**
 * MediaInfoService service.
 * @module api/MediaInfoServiceApi
-* @version 4.9.2.7
+* @version 4.9.2.8
 */
 export default class MediaInfoServiceApi {
 

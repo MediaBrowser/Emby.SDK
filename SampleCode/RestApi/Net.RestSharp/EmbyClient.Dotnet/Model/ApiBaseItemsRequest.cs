@@ -59,12 +59,13 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="maxWidth">maxWidth.</param>
         /// <param name="maxHeight">maxHeight.</param>
         /// <param name="groupProgramsBySeries">groupProgramsBySeries.</param>
+        /// <param name="groupByPresentationUniqueKey">groupByPresentationUniqueKey.</param>
         /// <param name="airDays">airDays.</param>
         /// <param name="isAiring">isAiring.</param>
         /// <param name="hasAired">hasAired.</param>
         /// <param name="collectionTypes">collectionTypes.</param>
         /// <param name="excludeSources">excludeSources.</param>
-        public ApiBaseItemsRequest(bool? isSpecialEpisode = default(bool?), bool? is4K = default(bool?), DateTimeOffset? minDateCreated = default(DateTimeOffset?), DateTimeOffset? maxDateCreated = default(DateTimeOffset?), bool? enableTotalRecordCount = default(bool?), bool? matchAnyWord = default(bool?), bool? isDuplicate = default(bool?), string name = default(string), string recordingKeyword = default(string), LiveTvKeywordType recordingKeywordType = default(LiveTvKeywordType), int? randomSeed = default(int?), string genreIds = default(string), string collectionIds = default(string), string tagIds = default(string), string excludeTagIds = default(string), List<PersonType> itemPersonTypes = default(List<PersonType>), string excludeArtistIds = default(string), string albumArtistIds = default(string), string composerArtistIds = default(string), string contributingArtistIds = default(string), string albumIds = default(string), string outerIds = default(string), string listItemIds = default(string), string audioLanguages = default(string), string subtitleLanguages = default(string), bool? canEditItems = default(bool?), LibraryItemLinkType groupItemsInto = default(LibraryItemLinkType), bool? isStandaloneSpecial = default(bool?), int? minWidth = default(int?), int? minHeight = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? groupProgramsBySeries = default(bool?), List<DayOfWeek> airDays = default(List<DayOfWeek>), bool? isAiring = default(bool?), bool? hasAired = default(bool?), string collectionTypes = default(string), List<string> excludeSources = default(List<string>))
+        public ApiBaseItemsRequest(bool? isSpecialEpisode = default(bool?), bool? is4K = default(bool?), DateTimeOffset? minDateCreated = default(DateTimeOffset?), DateTimeOffset? maxDateCreated = default(DateTimeOffset?), bool? enableTotalRecordCount = default(bool?), bool? matchAnyWord = default(bool?), bool? isDuplicate = default(bool?), string name = default(string), string recordingKeyword = default(string), LiveTvKeywordType recordingKeywordType = default(LiveTvKeywordType), int? randomSeed = default(int?), string genreIds = default(string), string collectionIds = default(string), string tagIds = default(string), string excludeTagIds = default(string), List<PersonType> itemPersonTypes = default(List<PersonType>), string excludeArtistIds = default(string), string albumArtistIds = default(string), string composerArtistIds = default(string), string contributingArtistIds = default(string), string albumIds = default(string), string outerIds = default(string), string listItemIds = default(string), string audioLanguages = default(string), string subtitleLanguages = default(string), bool? canEditItems = default(bool?), LibraryItemLinkType groupItemsInto = default(LibraryItemLinkType), bool? isStandaloneSpecial = default(bool?), int? minWidth = default(int?), int? minHeight = default(int?), int? maxWidth = default(int?), int? maxHeight = default(int?), bool? groupProgramsBySeries = default(bool?), bool? groupByPresentationUniqueKey = default(bool?), List<DayOfWeek> airDays = default(List<DayOfWeek>), bool? isAiring = default(bool?), bool? hasAired = default(bool?), string collectionTypes = default(string), List<string> excludeSources = default(List<string>))
         {
             this.IsSpecialEpisode = isSpecialEpisode;
             this.Is4K = is4K;
@@ -99,6 +100,7 @@ namespace EmbyClient.Dotnet.Model
             this.MaxWidth = maxWidth;
             this.MaxHeight = maxHeight;
             this.GroupProgramsBySeries = groupProgramsBySeries;
+            this.GroupByPresentationUniqueKey = groupByPresentationUniqueKey;
             this.AirDays = airDays;
             this.IsAiring = isAiring;
             this.HasAired = hasAired;
@@ -305,6 +307,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? GroupProgramsBySeries { get; set; }
 
         /// <summary>
+        /// Gets or Sets GroupByPresentationUniqueKey
+        /// </summary>
+        [DataMember(Name="GroupByPresentationUniqueKey", EmitDefaultValue=false)]
+        public bool? GroupByPresentationUniqueKey { get; set; }
+
+        /// <summary>
         /// Gets or Sets AirDays
         /// </summary>
         [DataMember(Name="AirDays", EmitDefaultValue=false)]
@@ -375,6 +383,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  MaxWidth: ").Append(MaxWidth).Append("\n");
             sb.Append("  MaxHeight: ").Append(MaxHeight).Append("\n");
             sb.Append("  GroupProgramsBySeries: ").Append(GroupProgramsBySeries).Append("\n");
+            sb.Append("  GroupByPresentationUniqueKey: ").Append(GroupByPresentationUniqueKey).Append("\n");
             sb.Append("  AirDays: ").Append(AirDays).Append("\n");
             sb.Append("  IsAiring: ").Append(IsAiring).Append("\n");
             sb.Append("  HasAired: ").Append(HasAired).Append("\n");
@@ -581,6 +590,11 @@ namespace EmbyClient.Dotnet.Model
                     this.GroupProgramsBySeries.Equals(input.GroupProgramsBySeries))
                 ) && 
                 (
+                    this.GroupByPresentationUniqueKey == input.GroupByPresentationUniqueKey ||
+                    (this.GroupByPresentationUniqueKey != null &&
+                    this.GroupByPresentationUniqueKey.Equals(input.GroupByPresentationUniqueKey))
+                ) && 
+                (
                     this.AirDays == input.AirDays ||
                     this.AirDays != null &&
                     input.AirDays != null &&
@@ -684,6 +698,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.MaxHeight.GetHashCode();
                 if (this.GroupProgramsBySeries != null)
                     hashCode = hashCode * 59 + this.GroupProgramsBySeries.GetHashCode();
+                if (this.GroupByPresentationUniqueKey != null)
+                    hashCode = hashCode * 59 + this.GroupByPresentationUniqueKey.GetHashCode();
                 if (this.AirDays != null)
                     hashCode = hashCode * 59 + this.AirDays.GetHashCode();
                 if (this.IsAiring != null)

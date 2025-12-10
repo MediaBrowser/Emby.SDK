@@ -15,7 +15,7 @@ import ForgotPasswordAction from './ForgotPasswordAction';
 /**
 * The ForgotPasswordResult model module.
 * @module model/ForgotPasswordResult
-* @version 4.9.2.7
+* @version 4.9.2.8
 */
 export default class ForgotPasswordResult {
     /**

@@ -44,13 +44,14 @@ public struct ApiBaseItemsRequest: Codable {
     public var maxWidth: Int?
     public var maxHeight: Int?
     public var groupProgramsBySeries: Bool?
+    public var groupByPresentationUniqueKey: Bool?
     public var airDays: [DayOfWeek]?
     public var isAiring: Bool?
     public var hasAired: Bool?
     public var collectionTypes: String?
     public var excludeSources: [String]?
 
-    public init(isSpecialEpisode: Bool? = nil, is4K: Bool? = nil, minDateCreated: Date? = nil, maxDateCreated: Date? = nil, enableTotalRecordCount: Bool? = nil, matchAnyWord: Bool? = nil, isDuplicate: Bool? = nil, name: String? = nil, recordingKeyword: String? = nil, recordingKeywordType: LiveTvKeywordType? = nil, randomSeed: Int? = nil, genreIds: String? = nil, collectionIds: String? = nil, tagIds: String? = nil, excludeTagIds: String? = nil, itemPersonTypes: [PersonType]? = nil, excludeArtistIds: String? = nil, albumArtistIds: String? = nil, composerArtistIds: String? = nil, contributingArtistIds: String? = nil, albumIds: String? = nil, outerIds: String? = nil, listItemIds: String? = nil, audioLanguages: String? = nil, subtitleLanguages: String? = nil, canEditItems: Bool? = nil, groupItemsInto: LibraryItemLinkType? = nil, isStandaloneSpecial: Bool? = nil, minWidth: Int? = nil, minHeight: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, groupProgramsBySeries: Bool? = nil, airDays: [DayOfWeek]? = nil, isAiring: Bool? = nil, hasAired: Bool? = nil, collectionTypes: String? = nil, excludeSources: [String]? = nil) {
+    public init(isSpecialEpisode: Bool? = nil, is4K: Bool? = nil, minDateCreated: Date? = nil, maxDateCreated: Date? = nil, enableTotalRecordCount: Bool? = nil, matchAnyWord: Bool? = nil, isDuplicate: Bool? = nil, name: String? = nil, recordingKeyword: String? = nil, recordingKeywordType: LiveTvKeywordType? = nil, randomSeed: Int? = nil, genreIds: String? = nil, collectionIds: String? = nil, tagIds: String? = nil, excludeTagIds: String? = nil, itemPersonTypes: [PersonType]? = nil, excludeArtistIds: String? = nil, albumArtistIds: String? = nil, composerArtistIds: String? = nil, contributingArtistIds: String? = nil, albumIds: String? = nil, outerIds: String? = nil, listItemIds: String? = nil, audioLanguages: String? = nil, subtitleLanguages: String? = nil, canEditItems: Bool? = nil, groupItemsInto: LibraryItemLinkType? = nil, isStandaloneSpecial: Bool? = nil, minWidth: Int? = nil, minHeight: Int? = nil, maxWidth: Int? = nil, maxHeight: Int? = nil, groupProgramsBySeries: Bool? = nil, groupByPresentationUniqueKey: Bool? = nil, airDays: [DayOfWeek]? = nil, isAiring: Bool? = nil, hasAired: Bool? = nil, collectionTypes: String? = nil, excludeSources: [String]? = nil) {
         self.isSpecialEpisode = isSpecialEpisode
         self.is4K = is4K
         self.minDateCreated = minDateCreated
@@ -84,6 +85,7 @@ public struct ApiBaseItemsRequest: Codable {
         self.maxWidth = maxWidth
         self.maxHeight = maxHeight
         self.groupProgramsBySeries = groupProgramsBySeries
+        self.groupByPresentationUniqueKey = groupByPresentationUniqueKey
         self.airDays = airDays
         self.isAiring = isAiring
         self.hasAired = hasAired
@@ -125,6 +127,7 @@ public struct ApiBaseItemsRequest: Codable {
         case maxWidth = "MaxWidth"
         case maxHeight = "MaxHeight"
         case groupProgramsBySeries = "GroupProgramsBySeries"
+        case groupByPresentationUniqueKey = "GroupByPresentationUniqueKey"
         case airDays = "AirDays"
         case isAiring = "IsAiring"
         case hasAired = "HasAired"

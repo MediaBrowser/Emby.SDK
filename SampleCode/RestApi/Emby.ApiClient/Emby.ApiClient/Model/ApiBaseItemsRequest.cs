@@ -225,6 +225,12 @@ namespace Emby.ApiClient.Model
         public bool? GroupProgramsBySeries { get; set; }
 
         /// <summary>
+        /// Gets or Sets GroupByPresentationUniqueKey
+        /// </summary>
+        /// <value>The GroupByPresentationUniqueKey.</value>
+        public bool? GroupByPresentationUniqueKey { get; set; }
+
+        /// <summary>
         /// Gets or Sets AirDays
         /// </summary>
         /// <value>The AirDays.</value>
@@ -295,6 +301,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  MaxWidth: ").Append(MaxWidth).Append("\n");
             sb.Append("  MaxHeight: ").Append(MaxHeight).Append("\n");
             sb.Append("  GroupProgramsBySeries: ").Append(GroupProgramsBySeries).Append("\n");
+            sb.Append("  GroupByPresentationUniqueKey: ").Append(GroupByPresentationUniqueKey).Append("\n");
             sb.Append("  AirDays: ").Append(AirDays).Append("\n");
             sb.Append("  IsAiring: ").Append(IsAiring).Append("\n");
             sb.Append("  HasAired: ").Append(HasAired).Append("\n");
@@ -492,6 +499,11 @@ namespace Emby.ApiClient.Model
                     this.GroupProgramsBySeries.Equals(input.GroupProgramsBySeries))
                 ) && 
                 (
+                    this.GroupByPresentationUniqueKey == input.GroupByPresentationUniqueKey ||
+                    (this.GroupByPresentationUniqueKey != null &&
+                    this.GroupByPresentationUniqueKey.Equals(input.GroupByPresentationUniqueKey))
+                ) && 
+                (
                     this.AirDays == input.AirDays ||
                     this.AirDays != null &&
                     input.AirDays != null &&
@@ -595,6 +607,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.MaxHeight.GetHashCode();
                 if (this.GroupProgramsBySeries != null)
                     hashCode = hashCode * 59 + this.GroupProgramsBySeries.GetHashCode();
+                if (this.GroupByPresentationUniqueKey != null)
+                    hashCode = hashCode * 59 + this.GroupByPresentationUniqueKey.GetHashCode();
                 if (this.AirDays != null)
                     hashCode = hashCode * 59 + this.AirDays.GetHashCode();
                 if (this.IsAiring != null)
