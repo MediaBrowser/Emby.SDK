@@ -180,6 +180,9 @@ public class LibraryOptions {
   @SerializedName("CollapseSingleItemFolders")
   private Boolean collapseSingleItemFolders = null;
 
+  @SerializedName("ForceCollapseSingleItemFolders")
+  private Boolean forceCollapseSingleItemFolders = null;
+
   @SerializedName("EnableAdultMetadata")
   private Boolean enableAdultMetadata = null;
 
@@ -1248,6 +1251,24 @@ public class LibraryOptions {
     this.collapseSingleItemFolders = collapseSingleItemFolders;
   }
 
+  public LibraryOptions forceCollapseSingleItemFolders(Boolean forceCollapseSingleItemFolders) {
+    this.forceCollapseSingleItemFolders = forceCollapseSingleItemFolders;
+    return this;
+  }
+
+   /**
+   * Get forceCollapseSingleItemFolders
+   * @return forceCollapseSingleItemFolders
+  **/
+  @Schema(description = "")
+  public Boolean isForceCollapseSingleItemFolders() {
+    return forceCollapseSingleItemFolders;
+  }
+
+  public void setForceCollapseSingleItemFolders(Boolean forceCollapseSingleItemFolders) {
+    this.forceCollapseSingleItemFolders = forceCollapseSingleItemFolders;
+  }
+
   public LibraryOptions enableAdultMetadata(Boolean enableAdultMetadata) {
     this.enableAdultMetadata = enableAdultMetadata;
     return this;
@@ -1526,6 +1547,7 @@ public class LibraryOptions {
         Objects.equals(this.hearingImpairedSubtitlesOnly, libraryOptions.hearingImpairedSubtitlesOnly) &&
         Objects.equals(this.typeOptions, libraryOptions.typeOptions) &&
         Objects.equals(this.collapseSingleItemFolders, libraryOptions.collapseSingleItemFolders) &&
+        Objects.equals(this.forceCollapseSingleItemFolders, libraryOptions.forceCollapseSingleItemFolders) &&
         Objects.equals(this.enableAdultMetadata, libraryOptions.enableAdultMetadata) &&
         Objects.equals(this.importCollections, libraryOptions.importCollections) &&
         Objects.equals(this.enableMultiVersionByFiles, libraryOptions.enableMultiVersionByFiles) &&
@@ -1542,7 +1564,7 @@ public class LibraryOptions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, cacheImages, excludeFromSearch, enablePlexIgnore, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, autoGenerateChapters, mergeTopLevelFolders, autoGenerateChapterIntervalMinutes, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, enableAdultMetadata, importCollections, enableMultiVersionByFiles, enableMultiVersionByMetadata, enableMultiPartItems, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
+    return Objects.hash(enableArchiveMediaFiles, enablePhotos, enableRealtimeMonitor, enableMarkerDetection, enableMarkerDetectionDuringLibraryScan, introDetectionFingerprintLength, enableChapterImageExtraction, extractChapterImagesDuringLibraryScan, downloadImagesInAdvance, cacheImages, excludeFromSearch, enablePlexIgnore, pathInfos, ignoreHiddenFiles, ignoreFileExtensions, saveLocalMetadata, saveMetadataHidden, saveLocalThumbnailSets, importPlaylists, enableAutomaticSeriesGrouping, shareEmbeddedMusicAlbumImages, enableEmbeddedTitles, enableAudioResume, autoGenerateChapters, mergeTopLevelFolders, autoGenerateChapterIntervalMinutes, automaticRefreshIntervalDays, placeholderMetadataRefreshIntervalDays, preferredMetadataLanguage, preferredImageLanguage, contentType, metadataCountryCode, metadataSavers, disabledLocalMetadataReaders, localMetadataReaderOrder, disabledLyricsFetchers, saveLyricsWithMedia, lyricsDownloadMaxAgeDays, lyricsFetcherOrder, lyricsDownloadLanguages, disabledSubtitleFetchers, subtitleFetcherOrder, skipSubtitlesIfEmbeddedSubtitlesPresent, skipSubtitlesIfAudioTrackMatches, subtitleDownloadLanguages, subtitleDownloadMaxAgeDays, requirePerfectSubtitleMatch, saveSubtitlesWithMedia, forcedSubtitlesOnly, hearingImpairedSubtitlesOnly, typeOptions, collapseSingleItemFolders, forceCollapseSingleItemFolders, enableAdultMetadata, importCollections, enableMultiVersionByFiles, enableMultiVersionByMetadata, enableMultiPartItems, minCollectionItems, musicFolderStructure, minResumePct, maxResumePct, minResumeDurationSeconds, thumbnailImagesIntervalSeconds, sampleIgnoreSize);
   }
 
 
@@ -1603,6 +1625,7 @@ public class LibraryOptions {
     sb.append("    hearingImpairedSubtitlesOnly: ").append(toIndentedString(hearingImpairedSubtitlesOnly)).append("\n");
     sb.append("    typeOptions: ").append(toIndentedString(typeOptions)).append("\n");
     sb.append("    collapseSingleItemFolders: ").append(toIndentedString(collapseSingleItemFolders)).append("\n");
+    sb.append("    forceCollapseSingleItemFolders: ").append(toIndentedString(forceCollapseSingleItemFolders)).append("\n");
     sb.append("    enableAdultMetadata: ").append(toIndentedString(enableAdultMetadata)).append("\n");
     sb.append("    importCollections: ").append(toIndentedString(importCollections)).append("\n");
     sb.append("    enableMultiVersionByFiles: ").append(toIndentedString(enableMultiVersionByFiles)).append("\n");

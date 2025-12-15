@@ -61,6 +61,7 @@ type LibraryOptions struct {
 	HearingImpairedSubtitlesOnly bool `json:"HearingImpairedSubtitlesOnly,omitempty"`
 	TypeOptions []TypeOptions `json:"TypeOptions,omitempty"`
 	CollapseSingleItemFolders bool `json:"CollapseSingleItemFolders,omitempty"`
+	ForceCollapseSingleItemFolders bool `json:"ForceCollapseSingleItemFolders,omitempty"`
 	EnableAdultMetadata bool `json:"EnableAdultMetadata,omitempty"`
 	ImportCollections bool `json:"ImportCollections,omitempty"`
 	EnableMultiVersionByFiles bool `json:"EnableMultiVersionByFiles,omitempty"`

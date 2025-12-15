@@ -15,7 +15,7 @@ import ProcessRunMetricsProcessMetricPoint from './ProcessRunMetricsProcessMetri
 /**
 * The ProcessRunMetricsProcessStatistics model module.
 * @module model/ProcessRunMetricsProcessStatistics
-* @version 4.9.2.8
+* @version 4.9.4.1
 */
 export default class ProcessRunMetricsProcessStatistics {
     /**

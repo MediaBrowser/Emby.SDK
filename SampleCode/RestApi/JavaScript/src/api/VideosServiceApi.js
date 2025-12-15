@@ -14,7 +14,7 @@ import ApiClient from "../ApiClient";
 /**
 * VideosService service.
 * @module api/VideosServiceApi
-* @version 4.9.2.8
+* @version 4.9.4.1
 */
 export default class VideosServiceApi {
 

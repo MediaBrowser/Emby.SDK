@@ -75660,6 +75660,9 @@
         "CollapseSingleItemFolders": {
           "type": "boolean"
         },
+        "ForceCollapseSingleItemFolders": {
+          "type": "boolean"
+        },
         "EnableAdultMetadata": {
           "type": "boolean"
         },
@@ -78701,6 +78704,10 @@
         },
         "EnableTranscodingQuality": {
           "type": "boolean"
+        },
+        "AutoRemoteQuality": {
+          "format": "int32",
+          "type": "integer"
         },
         "EnablePlaybackRemuxing": {
           "type": "boolean"

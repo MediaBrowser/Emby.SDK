@@ -12878,6 +12878,7 @@ open class LibraryServiceAPI {
     "RequirePerfectSubtitleMatch" : true,
     "DisabledSubtitleFetchers" : [ "DisabledSubtitleFetchers", "DisabledSubtitleFetchers" ],
     "EnableMultiPartItems" : true,
+    "ForceCollapseSingleItemFolders" : true,
     "LocalMetadataReaderOrder" : [ "LocalMetadataReaderOrder", "LocalMetadataReaderOrder" ],
     "LyricsFetcherOrder" : [ "LyricsFetcherOrder", "LyricsFetcherOrder" ],
     "HearingImpairedSubtitlesOnly" : true,

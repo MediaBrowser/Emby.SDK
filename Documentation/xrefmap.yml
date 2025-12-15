@@ -107429,6 +107429,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Configuration.LibraryOptions.ExtractChapterImagesDuringLibraryScan
   nameWithType: LibraryOptions.ExtractChapterImagesDuringLibraryScan
+- uid: MediaBrowser.Model.Configuration.LibraryOptions.ForceCollapseSingleItemFolders
+  name: ForceCollapseSingleItemFolders
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.LibraryOptions.html#MediaBrowser_Model_Configuration_LibraryOptions_ForceCollapseSingleItemFolders
+  commentId: P:MediaBrowser.Model.Configuration.LibraryOptions.ForceCollapseSingleItemFolders
+  fullName: MediaBrowser.Model.Configuration.LibraryOptions.ForceCollapseSingleItemFolders
+  nameWithType: LibraryOptions.ForceCollapseSingleItemFolders
+- uid: MediaBrowser.Model.Configuration.LibraryOptions.ForceCollapseSingleItemFolders*
+  name: ForceCollapseSingleItemFolders
+  href: reference/pluginapi/MediaBrowser.Model.Configuration.LibraryOptions.html#MediaBrowser_Model_Configuration_LibraryOptions_ForceCollapseSingleItemFolders_
+  commentId: Overload:MediaBrowser.Model.Configuration.LibraryOptions.ForceCollapseSingleItemFolders
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Configuration.LibraryOptions.ForceCollapseSingleItemFolders
+  nameWithType: LibraryOptions.ForceCollapseSingleItemFolders
 - uid: MediaBrowser.Model.Configuration.LibraryOptions.ForcedSubtitlesOnly
   name: ForcedSubtitlesOnly
   href: reference/pluginapi/MediaBrowser.Model.Configuration.LibraryOptions.html#MediaBrowser_Model_Configuration_LibraryOptions_ForcedSubtitlesOnly
@@ -144532,6 +144545,19 @@ references:
   isSpec: "True"
   fullName: MediaBrowser.Model.Users.UserPolicy.AuthenticationProviderId
   nameWithType: UserPolicy.AuthenticationProviderId
+- uid: MediaBrowser.Model.Users.UserPolicy.AutoRemoteQuality
+  name: AutoRemoteQuality
+  href: reference/pluginapi/MediaBrowser.Model.Users.UserPolicy.html#MediaBrowser_Model_Users_UserPolicy_AutoRemoteQuality
+  commentId: P:MediaBrowser.Model.Users.UserPolicy.AutoRemoteQuality
+  fullName: MediaBrowser.Model.Users.UserPolicy.AutoRemoteQuality
+  nameWithType: UserPolicy.AutoRemoteQuality
+- uid: MediaBrowser.Model.Users.UserPolicy.AutoRemoteQuality*
+  name: AutoRemoteQuality
+  href: reference/pluginapi/MediaBrowser.Model.Users.UserPolicy.html#MediaBrowser_Model_Users_UserPolicy_AutoRemoteQuality_
+  commentId: Overload:MediaBrowser.Model.Users.UserPolicy.AutoRemoteQuality
+  isSpec: "True"
+  fullName: MediaBrowser.Model.Users.UserPolicy.AutoRemoteQuality
+  nameWithType: UserPolicy.AutoRemoteQuality
 - uid: MediaBrowser.Model.Users.UserPolicy.BlockedTags
   name: BlockedTags
   href: reference/pluginapi/MediaBrowser.Model.Users.UserPolicy.html#MediaBrowser_Model_Users_UserPolicy_BlockedTags

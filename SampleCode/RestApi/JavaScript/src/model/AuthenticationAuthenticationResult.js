@@ -16,7 +16,7 @@ import UserDto from './UserDto';
 /**
 * The AuthenticationAuthenticationResult model module.
 * @module model/AuthenticationAuthenticationResult
-* @version 4.9.2.8
+* @version 4.9.4.1
 */
 export default class AuthenticationAuthenticationResult {
     /**

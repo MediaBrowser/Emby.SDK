@@ -15,7 +15,7 @@ import RokuMetadataApiThumbnailSetInfo from '../model/RokuMetadataApiThumbnailSe
 /**
 * BifService service.
 * @module api/BifServiceApi
-* @version 4.9.2.8
+* @version 4.9.4.1
 */
 export default class BifServiceApi {
 

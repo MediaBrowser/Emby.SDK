@@ -8,7 +8,7 @@
       "name": "Emby Developer Forum",
       "url": "https://emby.media/community/index.php?/forum/47-developer-api"
     },
-    "version": "4.9.2.8"
+    "version": "4.9.4.1"
   },
   "host": "emby.media",
   "basePath": "/emby",
@@ -75662,6 +75662,9 @@
         "CollapseSingleItemFolders": {
           "type": "boolean"
         },
+        "ForceCollapseSingleItemFolders": {
+          "type": "boolean"
+        },
         "EnableAdultMetadata": {
           "type": "boolean"
         },
@@ -78703,6 +78706,10 @@
         },
         "EnableTranscodingQuality": {
           "type": "boolean"
+        },
+        "AutoRemoteQuality": {
+          "format": "int32",
+          "type": "integer"
         },
         "EnablePlaybackRemuxing": {
           "type": "boolean"

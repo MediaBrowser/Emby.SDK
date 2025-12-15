@@ -339,6 +339,12 @@ namespace Emby.ApiClient.Model
         public bool? CollapseSingleItemFolders { get; set; }
 
         /// <summary>
+        /// Gets or Sets ForceCollapseSingleItemFolders
+        /// </summary>
+        /// <value>The ForceCollapseSingleItemFolders.</value>
+        public bool? ForceCollapseSingleItemFolders { get; set; }
+
+        /// <summary>
         /// Gets or Sets EnableAdultMetadata
         /// </summary>
         /// <value>The EnableAdultMetadata.</value>
@@ -470,6 +476,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  HearingImpairedSubtitlesOnly: ").Append(HearingImpairedSubtitlesOnly).Append("\n");
             sb.Append("  TypeOptions: ").Append(TypeOptions).Append("\n");
             sb.Append("  CollapseSingleItemFolders: ").Append(CollapseSingleItemFolders).Append("\n");
+            sb.Append("  ForceCollapseSingleItemFolders: ").Append(ForceCollapseSingleItemFolders).Append("\n");
             sb.Append("  EnableAdultMetadata: ").Append(EnableAdultMetadata).Append("\n");
             sb.Append("  ImportCollections: ").Append(ImportCollections).Append("\n");
             sb.Append("  EnableMultiVersionByFiles: ").Append(EnableMultiVersionByFiles).Append("\n");
@@ -780,6 +787,11 @@ namespace Emby.ApiClient.Model
                     this.CollapseSingleItemFolders.Equals(input.CollapseSingleItemFolders))
                 ) && 
                 (
+                    this.ForceCollapseSingleItemFolders == input.ForceCollapseSingleItemFolders ||
+                    (this.ForceCollapseSingleItemFolders != null &&
+                    this.ForceCollapseSingleItemFolders.Equals(input.ForceCollapseSingleItemFolders))
+                ) && 
+                (
                     this.EnableAdultMetadata == input.EnableAdultMetadata ||
                     (this.EnableAdultMetadata != null &&
                     this.EnableAdultMetadata.Equals(input.EnableAdultMetadata))
@@ -954,6 +966,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.TypeOptions.GetHashCode();
                 if (this.CollapseSingleItemFolders != null)
                     hashCode = hashCode * 59 + this.CollapseSingleItemFolders.GetHashCode();
+                if (this.ForceCollapseSingleItemFolders != null)
+                    hashCode = hashCode * 59 + this.ForceCollapseSingleItemFolders.GetHashCode();
                 if (this.EnableAdultMetadata != null)
                     hashCode = hashCode * 59 + this.EnableAdultMetadata.GetHashCode();
                 if (this.ImportCollections != null)

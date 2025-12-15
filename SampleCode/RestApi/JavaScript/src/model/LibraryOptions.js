@@ -16,7 +16,7 @@ import TypeOptions from './TypeOptions';
 /**
 * The LibraryOptions model module.
 * @module model/LibraryOptions
-* @version 4.9.2.8
+* @version 4.9.4.1
 */
 export default class LibraryOptions {
     /**
@@ -198,6 +198,9 @@ export default class LibraryOptions {
             }
             if (data.hasOwnProperty('CollapseSingleItemFolders')) {
                 obj['CollapseSingleItemFolders'] = ApiClient.convertToType(data['CollapseSingleItemFolders'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ForceCollapseSingleItemFolders')) {
+                obj['ForceCollapseSingleItemFolders'] = ApiClient.convertToType(data['ForceCollapseSingleItemFolders'], 'Boolean');
             }
             if (data.hasOwnProperty('EnableAdultMetadata')) {
                 obj['EnableAdultMetadata'] = ApiClient.convertToType(data['EnableAdultMetadata'], 'Boolean');
@@ -449,6 +452,10 @@ export default class LibraryOptions {
     * @member {Boolean} CollapseSingleItemFolders
     */
     'CollapseSingleItemFolders' = undefined;
+    /**
+    * @member {Boolean} ForceCollapseSingleItemFolders
+    */
+    'ForceCollapseSingleItemFolders' = undefined;
     /**
     * @member {Boolean} EnableAdultMetadata
     */

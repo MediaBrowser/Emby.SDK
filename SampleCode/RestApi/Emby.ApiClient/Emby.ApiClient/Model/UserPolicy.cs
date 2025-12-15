@@ -165,6 +165,12 @@ namespace Emby.ApiClient.Model
         public bool? EnableTranscodingQuality { get; set; }
 
         /// <summary>
+        /// Gets or Sets AutoRemoteQuality
+        /// </summary>
+        /// <value>The AutoRemoteQuality.</value>
+        public int? AutoRemoteQuality { get; set; }
+
+        /// <summary>
         /// Gets or Sets EnablePlaybackRemuxing
         /// </summary>
         /// <value>The EnablePlaybackRemuxing.</value>
@@ -333,6 +339,7 @@ namespace Emby.ApiClient.Model
             sb.Append("  EnableAudioPlaybackTranscoding: ").Append(EnableAudioPlaybackTranscoding).Append("\n");
             sb.Append("  EnableVideoPlaybackTranscoding: ").Append(EnableVideoPlaybackTranscoding).Append("\n");
             sb.Append("  EnableTranscodingQuality: ").Append(EnableTranscodingQuality).Append("\n");
+            sb.Append("  AutoRemoteQuality: ").Append(AutoRemoteQuality).Append("\n");
             sb.Append("  EnablePlaybackRemuxing: ").Append(EnablePlaybackRemuxing).Append("\n");
             sb.Append("  EnableContentDeletion: ").Append(EnableContentDeletion).Append("\n");
             sb.Append("  RestrictedFeatures: ").Append(RestrictedFeatures).Append("\n");
@@ -499,6 +506,11 @@ namespace Emby.ApiClient.Model
                     this.EnableTranscodingQuality == input.EnableTranscodingQuality ||
                     (this.EnableTranscodingQuality != null &&
                     this.EnableTranscodingQuality.Equals(input.EnableTranscodingQuality))
+                ) && 
+                (
+                    this.AutoRemoteQuality == input.AutoRemoteQuality ||
+                    (this.AutoRemoteQuality != null &&
+                    this.AutoRemoteQuality.Equals(input.AutoRemoteQuality))
                 ) && 
                 (
                     this.EnablePlaybackRemuxing == input.EnablePlaybackRemuxing ||
@@ -678,6 +690,8 @@ namespace Emby.ApiClient.Model
                     hashCode = hashCode * 59 + this.EnableVideoPlaybackTranscoding.GetHashCode();
                 if (this.EnableTranscodingQuality != null)
                     hashCode = hashCode * 59 + this.EnableTranscodingQuality.GetHashCode();
+                if (this.AutoRemoteQuality != null)
+                    hashCode = hashCode * 59 + this.AutoRemoteQuality.GetHashCode();
                 if (this.EnablePlaybackRemuxing != null)
                     hashCode = hashCode * 59 + this.EnablePlaybackRemuxing.GetHashCode();
                 if (this.EnableContentDeletion != null)

@@ -4,7 +4,7 @@
  * Emby Server REST API (BETA)
  * Explore the Emby Server API
  *
- * OpenAPI spec version: 4.9.2.8
+ * OpenAPI spec version: 4.9.4.1
  * 
  *
  * NOTE: This file is auto generated.
@@ -5721,6 +5721,12 @@ export interface LibraryOptions {
      * @memberof LibraryOptions
      */
     CollapseSingleItemFolders?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof LibraryOptions
+     */
+    ForceCollapseSingleItemFolders?: boolean;
     /**
      * 
      * @type {boolean}
@@ -15067,6 +15073,12 @@ export interface UserPolicy {
      * @memberof UserPolicy
      */
     EnableTranscodingQuality?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof UserPolicy
+     */
+    AutoRemoteQuality?: number;
     /**
      * 
      * @type {boolean}

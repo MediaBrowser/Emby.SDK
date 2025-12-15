@@ -15,7 +15,7 @@ import OperatingSystem from './OperatingSystem';
 /**
 * The ConfigurationToneMappingToneMapOptionsVisibility model module.
 * @module model/ConfigurationToneMappingToneMapOptionsVisibility
-* @version 4.9.2.8
+* @version 4.9.4.1
 */
 export default class ConfigurationToneMappingToneMapOptionsVisibility {
     /**

@@ -6,7 +6,7 @@ info:
   contact:
     name: Emby Developer Forum
     url: https://emby.media/community/index.php?/forum/47-developer-api
-  version: 4.9.2.8
+  version: 4.9.4.1
 externalDocs:
   description: embyDEV - REST API Documentation
   url: https://dev.emby.media/doc/restapi/index.html
@@ -94569,6 +94569,7 @@ components:
           - DisabledSubtitleFetchers
           - DisabledSubtitleFetchers
           EnableMultiPartItems: true
+          ForceCollapseSingleItemFolders: true
           LocalMetadataReaderOrder:
           - LocalMetadataReaderOrder
           - LocalMetadataReaderOrder
@@ -94893,6 +94894,8 @@ components:
             $ref: '#/components/schemas/TypeOptions'
         CollapseSingleItemFolders:
           type: boolean
+        ForceCollapseSingleItemFolders:
+          type: boolean
         EnableAdultMetadata:
           type: boolean
         ImportCollections:
@@ -95011,6 +95014,7 @@ components:
         - DisabledSubtitleFetchers
         - DisabledSubtitleFetchers
         EnableMultiPartItems: true
+        ForceCollapseSingleItemFolders: true
         LocalMetadataReaderOrder:
         - LocalMetadataReaderOrder
         - LocalMetadataReaderOrder
@@ -103686,6 +103690,7 @@ components:
       description: "Class UserDto\r\n"
       example:
         Policy:
+          AutoRemoteQuality: 2
           AllowTagOrRating: true
           EnableContentDeletion: true
           AllowSharingPersonalItems: true
@@ -103712,7 +103717,7 @@ components:
             EndHour: 5.637376656633329
           EnableContentDownloading: true
           EnableSubtitleManagement: true
-          SimultaneousStreamLimit: 9
+          SimultaneousStreamLimit: 3
           IncludeTags:
           - IncludeTags
           - IncludeTags
@@ -103723,7 +103728,7 @@ components:
           - EnabledChannels
           EnableAllDevices: true
           EnableMediaConversion: true
-          InvalidLoginAttemptCount: 2
+          InvalidLoginAttemptCount: 7
           IsTagBlockingModeInclusive: true
           RestrictedFeatures:
           - RestrictedFeatures
@@ -103755,7 +103760,7 @@ components:
           EnableAudioPlaybackTranscoding: true
           IsHiddenFromUnusedDevices: true
           EnableSyncTranscoding: true
-          RemoteClientBitrateLimit: 7
+          RemoteClientBitrateLimit: 9
         EnableAutoLogin: true
         UserItemShareLevel: None
         Configuration:
@@ -103793,7 +103798,7 @@ components:
         HasConfiguredPassword: true
         ServerName: ServerName
         LastActivityDate: 2000-01-23T04:56:07.000+00:00
-        PrimaryImageAspectRatio: 3.616076749251911
+        PrimaryImageAspectRatio: 2.027123023002322
         ConnectLinkType: LinkedUser
         Id: Id
         HasPassword: true
@@ -103956,6 +103961,9 @@ components:
           type: boolean
         EnableTranscodingQuality:
           type: boolean
+        AutoRemoteQuality:
+          type: integer
+          format: int32
         EnablePlaybackRemuxing:
           type: boolean
         EnableContentDeletion:
@@ -104019,6 +104027,7 @@ components:
         AllowSharingPersonalItems:
           type: boolean
       example:
+        AutoRemoteQuality: 2
         AllowTagOrRating: true
         EnableContentDeletion: true
         AllowSharingPersonalItems: true
@@ -104045,7 +104054,7 @@ components:
           EndHour: 5.637376656633329
         EnableContentDownloading: true
         EnableSubtitleManagement: true
-        SimultaneousStreamLimit: 9
+        SimultaneousStreamLimit: 3
         IncludeTags:
         - IncludeTags
         - IncludeTags
@@ -104056,7 +104065,7 @@ components:
         - EnabledChannels
         EnableAllDevices: true
         EnableMediaConversion: true
-        InvalidLoginAttemptCount: 2
+        InvalidLoginAttemptCount: 7
         IsTagBlockingModeInclusive: true
         RestrictedFeatures:
         - RestrictedFeatures
@@ -104088,7 +104097,7 @@ components:
         EnableAudioPlaybackTranscoding: true
         IsHiddenFromUnusedDevices: true
         EnableSyncTranscoding: true
-        RemoteClientBitrateLimit: 7
+        RemoteClientBitrateLimit: 9
       x-internal-ref-name: MediaBrowser.Model.Users.UserPolicy
     AccessSchedule:
       type: object
@@ -104150,6 +104159,7 @@ components:
         TotalRecordCount: 0
         Items:
         - Policy:
+            AutoRemoteQuality: 2
             AllowTagOrRating: true
             EnableContentDeletion: true
             AllowSharingPersonalItems: true
@@ -104176,7 +104186,7 @@ components:
               EndHour: 5.637376656633329
             EnableContentDownloading: true
             EnableSubtitleManagement: true
-            SimultaneousStreamLimit: 9
+            SimultaneousStreamLimit: 3
             IncludeTags:
             - IncludeTags
             - IncludeTags
@@ -104187,7 +104197,7 @@ components:
             - EnabledChannels
             EnableAllDevices: true
             EnableMediaConversion: true
-            InvalidLoginAttemptCount: 2
+            InvalidLoginAttemptCount: 7
             IsTagBlockingModeInclusive: true
             RestrictedFeatures:
             - RestrictedFeatures
@@ -104219,7 +104229,7 @@ components:
             EnableAudioPlaybackTranscoding: true
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
-            RemoteClientBitrateLimit: 7
+            RemoteClientBitrateLimit: 9
           EnableAutoLogin: true
           UserItemShareLevel: None
           Configuration:
@@ -104257,11 +104267,12 @@ components:
           HasConfiguredPassword: true
           ServerName: ServerName
           LastActivityDate: 2000-01-23T04:56:07.000+00:00
-          PrimaryImageAspectRatio: 3.616076749251911
+          PrimaryImageAspectRatio: 2.027123023002322
           ConnectLinkType: LinkedUser
           Id: Id
           HasPassword: true
         - Policy:
+            AutoRemoteQuality: 2
             AllowTagOrRating: true
             EnableContentDeletion: true
             AllowSharingPersonalItems: true
@@ -104288,7 +104299,7 @@ components:
               EndHour: 5.637376656633329
             EnableContentDownloading: true
             EnableSubtitleManagement: true
-            SimultaneousStreamLimit: 9
+            SimultaneousStreamLimit: 3
             IncludeTags:
             - IncludeTags
             - IncludeTags
@@ -104299,7 +104310,7 @@ components:
             - EnabledChannels
             EnableAllDevices: true
             EnableMediaConversion: true
-            InvalidLoginAttemptCount: 2
+            InvalidLoginAttemptCount: 7
             IsTagBlockingModeInclusive: true
             RestrictedFeatures:
             - RestrictedFeatures
@@ -104331,7 +104342,7 @@ components:
             EnableAudioPlaybackTranscoding: true
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
-            RemoteClientBitrateLimit: 7
+            RemoteClientBitrateLimit: 9
           EnableAutoLogin: true
           UserItemShareLevel: None
           Configuration:
@@ -104369,7 +104380,7 @@ components:
           HasConfiguredPassword: true
           ServerName: ServerName
           LastActivityDate: 2000-01-23T04:56:07.000+00:00
-          PrimaryImageAspectRatio: 3.616076749251911
+          PrimaryImageAspectRatio: 2.027123023002322
           ConnectLinkType: LinkedUser
           Id: Id
           HasPassword: true
@@ -104397,6 +104408,7 @@ components:
       example:
         User:
           Policy:
+            AutoRemoteQuality: 2
             AllowTagOrRating: true
             EnableContentDeletion: true
             AllowSharingPersonalItems: true
@@ -104423,7 +104435,7 @@ components:
               EndHour: 5.637376656633329
             EnableContentDownloading: true
             EnableSubtitleManagement: true
-            SimultaneousStreamLimit: 9
+            SimultaneousStreamLimit: 3
             IncludeTags:
             - IncludeTags
             - IncludeTags
@@ -104434,7 +104446,7 @@ components:
             - EnabledChannels
             EnableAllDevices: true
             EnableMediaConversion: true
-            InvalidLoginAttemptCount: 2
+            InvalidLoginAttemptCount: 7
             IsTagBlockingModeInclusive: true
             RestrictedFeatures:
             - RestrictedFeatures
@@ -104466,7 +104478,7 @@ components:
             EnableAudioPlaybackTranscoding: true
             IsHiddenFromUnusedDevices: true
             EnableSyncTranscoding: true
-            RemoteClientBitrateLimit: 7
+            RemoteClientBitrateLimit: 9
           EnableAutoLogin: true
           UserItemShareLevel: None
           Configuration:
@@ -104504,7 +104516,7 @@ components:
           HasConfiguredPassword: true
           ServerName: ServerName
           LastActivityDate: 2000-01-23T04:56:07.000+00:00
-          PrimaryImageAspectRatio: 3.616076749251911
+          PrimaryImageAspectRatio: 2.027123023002322
           ConnectLinkType: LinkedUser
           Id: Id
           HasPassword: true
@@ -110410,6 +110422,7 @@ components:
             - DisabledSubtitleFetchers
             - DisabledSubtitleFetchers
             EnableMultiPartItems: true
+            ForceCollapseSingleItemFolders: true
             LocalMetadataReaderOrder:
             - LocalMetadataReaderOrder
             - LocalMetadataReaderOrder
@@ -110547,6 +110560,7 @@ components:
             - DisabledSubtitleFetchers
             - DisabledSubtitleFetchers
             EnableMultiPartItems: true
+            ForceCollapseSingleItemFolders: true
             LocalMetadataReaderOrder:
             - LocalMetadataReaderOrder
             - LocalMetadataReaderOrder
@@ -110722,6 +110736,7 @@ components:
           - DisabledSubtitleFetchers
           - DisabledSubtitleFetchers
           EnableMultiPartItems: true
+          ForceCollapseSingleItemFolders: true
           LocalMetadataReaderOrder:
           - LocalMetadataReaderOrder
           - LocalMetadataReaderOrder

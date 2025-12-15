@@ -15,7 +15,7 @@ import AlbumInfo from './AlbumInfo';
 /**
 * The RemoteSearchQueryAlbumInfo model module.
 * @module model/RemoteSearchQueryAlbumInfo
-* @version 4.9.2.8
+* @version 4.9.4.1
 */
 export default class RemoteSearchQueryAlbumInfo {
     /**

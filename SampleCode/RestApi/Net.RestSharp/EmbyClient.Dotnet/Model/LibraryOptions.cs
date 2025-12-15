@@ -78,6 +78,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="hearingImpairedSubtitlesOnly">hearingImpairedSubtitlesOnly.</param>
         /// <param name="typeOptions">typeOptions.</param>
         /// <param name="collapseSingleItemFolders">collapseSingleItemFolders.</param>
+        /// <param name="forceCollapseSingleItemFolders">forceCollapseSingleItemFolders.</param>
         /// <param name="enableAdultMetadata">enableAdultMetadata.</param>
         /// <param name="importCollections">importCollections.</param>
         /// <param name="enableMultiVersionByFiles">enableMultiVersionByFiles.</param>
@@ -90,7 +91,7 @@ namespace EmbyClient.Dotnet.Model
         /// <param name="minResumeDurationSeconds">The minimum duration that an item must have in order to be eligible for playstate updates...</param>
         /// <param name="thumbnailImagesIntervalSeconds">thumbnailImagesIntervalSeconds.</param>
         /// <param name="sampleIgnoreSize">sampleIgnoreSize.</param>
-        public LibraryOptions(bool? enableArchiveMediaFiles = default(bool?), bool? enablePhotos = default(bool?), bool? enableRealtimeMonitor = default(bool?), bool? enableMarkerDetection = default(bool?), bool? enableMarkerDetectionDuringLibraryScan = default(bool?), int? introDetectionFingerprintLength = default(int?), bool? enableChapterImageExtraction = default(bool?), bool? extractChapterImagesDuringLibraryScan = default(bool?), bool? downloadImagesInAdvance = default(bool?), bool? cacheImages = default(bool?), bool? excludeFromSearch = default(bool?), bool? enablePlexIgnore = default(bool?), List<MediaPathInfo> pathInfos = default(List<MediaPathInfo>), bool? ignoreHiddenFiles = default(bool?), List<string> ignoreFileExtensions = default(List<string>), bool? saveLocalMetadata = default(bool?), bool? saveMetadataHidden = default(bool?), bool? saveLocalThumbnailSets = default(bool?), bool? importPlaylists = default(bool?), bool? enableAutomaticSeriesGrouping = default(bool?), bool? shareEmbeddedMusicAlbumImages = default(bool?), bool? enableEmbeddedTitles = default(bool?), bool? enableAudioResume = default(bool?), bool? autoGenerateChapters = default(bool?), bool? mergeTopLevelFolders = default(bool?), int? autoGenerateChapterIntervalMinutes = default(int?), int? automaticRefreshIntervalDays = default(int?), int? placeholderMetadataRefreshIntervalDays = default(int?), string preferredMetadataLanguage = default(string), string preferredImageLanguage = default(string), string contentType = default(string), string metadataCountryCode = default(string), List<string> metadataSavers = default(List<string>), List<string> disabledLocalMetadataReaders = default(List<string>), List<string> localMetadataReaderOrder = default(List<string>), List<string> disabledLyricsFetchers = default(List<string>), bool? saveLyricsWithMedia = default(bool?), int? lyricsDownloadMaxAgeDays = default(int?), List<string> lyricsFetcherOrder = default(List<string>), List<string> lyricsDownloadLanguages = default(List<string>), List<string> disabledSubtitleFetchers = default(List<string>), List<string> subtitleFetcherOrder = default(List<string>), bool? skipSubtitlesIfEmbeddedSubtitlesPresent = default(bool?), bool? skipSubtitlesIfAudioTrackMatches = default(bool?), List<string> subtitleDownloadLanguages = default(List<string>), int? subtitleDownloadMaxAgeDays = default(int?), bool? requirePerfectSubtitleMatch = default(bool?), bool? saveSubtitlesWithMedia = default(bool?), bool? forcedSubtitlesOnly = default(bool?), bool? hearingImpairedSubtitlesOnly = default(bool?), List<TypeOptions> typeOptions = default(List<TypeOptions>), bool? collapseSingleItemFolders = default(bool?), bool? enableAdultMetadata = default(bool?), bool? importCollections = default(bool?), bool? enableMultiVersionByFiles = default(bool?), bool? enableMultiVersionByMetadata = default(bool?), bool? enableMultiPartItems = default(bool?), int? minCollectionItems = default(int?), string musicFolderStructure = default(string), int? minResumePct = default(int?), int? maxResumePct = default(int?), int? minResumeDurationSeconds = default(int?), int? thumbnailImagesIntervalSeconds = default(int?), int? sampleIgnoreSize = default(int?))
+        public LibraryOptions(bool? enableArchiveMediaFiles = default(bool?), bool? enablePhotos = default(bool?), bool? enableRealtimeMonitor = default(bool?), bool? enableMarkerDetection = default(bool?), bool? enableMarkerDetectionDuringLibraryScan = default(bool?), int? introDetectionFingerprintLength = default(int?), bool? enableChapterImageExtraction = default(bool?), bool? extractChapterImagesDuringLibraryScan = default(bool?), bool? downloadImagesInAdvance = default(bool?), bool? cacheImages = default(bool?), bool? excludeFromSearch = default(bool?), bool? enablePlexIgnore = default(bool?), List<MediaPathInfo> pathInfos = default(List<MediaPathInfo>), bool? ignoreHiddenFiles = default(bool?), List<string> ignoreFileExtensions = default(List<string>), bool? saveLocalMetadata = default(bool?), bool? saveMetadataHidden = default(bool?), bool? saveLocalThumbnailSets = default(bool?), bool? importPlaylists = default(bool?), bool? enableAutomaticSeriesGrouping = default(bool?), bool? shareEmbeddedMusicAlbumImages = default(bool?), bool? enableEmbeddedTitles = default(bool?), bool? enableAudioResume = default(bool?), bool? autoGenerateChapters = default(bool?), bool? mergeTopLevelFolders = default(bool?), int? autoGenerateChapterIntervalMinutes = default(int?), int? automaticRefreshIntervalDays = default(int?), int? placeholderMetadataRefreshIntervalDays = default(int?), string preferredMetadataLanguage = default(string), string preferredImageLanguage = default(string), string contentType = default(string), string metadataCountryCode = default(string), List<string> metadataSavers = default(List<string>), List<string> disabledLocalMetadataReaders = default(List<string>), List<string> localMetadataReaderOrder = default(List<string>), List<string> disabledLyricsFetchers = default(List<string>), bool? saveLyricsWithMedia = default(bool?), int? lyricsDownloadMaxAgeDays = default(int?), List<string> lyricsFetcherOrder = default(List<string>), List<string> lyricsDownloadLanguages = default(List<string>), List<string> disabledSubtitleFetchers = default(List<string>), List<string> subtitleFetcherOrder = default(List<string>), bool? skipSubtitlesIfEmbeddedSubtitlesPresent = default(bool?), bool? skipSubtitlesIfAudioTrackMatches = default(bool?), List<string> subtitleDownloadLanguages = default(List<string>), int? subtitleDownloadMaxAgeDays = default(int?), bool? requirePerfectSubtitleMatch = default(bool?), bool? saveSubtitlesWithMedia = default(bool?), bool? forcedSubtitlesOnly = default(bool?), bool? hearingImpairedSubtitlesOnly = default(bool?), List<TypeOptions> typeOptions = default(List<TypeOptions>), bool? collapseSingleItemFolders = default(bool?), bool? forceCollapseSingleItemFolders = default(bool?), bool? enableAdultMetadata = default(bool?), bool? importCollections = default(bool?), bool? enableMultiVersionByFiles = default(bool?), bool? enableMultiVersionByMetadata = default(bool?), bool? enableMultiPartItems = default(bool?), int? minCollectionItems = default(int?), string musicFolderStructure = default(string), int? minResumePct = default(int?), int? maxResumePct = default(int?), int? minResumeDurationSeconds = default(int?), int? thumbnailImagesIntervalSeconds = default(int?), int? sampleIgnoreSize = default(int?))
         {
             this.EnableArchiveMediaFiles = enableArchiveMediaFiles;
             this.EnablePhotos = enablePhotos;
@@ -144,6 +145,7 @@ namespace EmbyClient.Dotnet.Model
             this.HearingImpairedSubtitlesOnly = hearingImpairedSubtitlesOnly;
             this.TypeOptions = typeOptions;
             this.CollapseSingleItemFolders = collapseSingleItemFolders;
+            this.ForceCollapseSingleItemFolders = forceCollapseSingleItemFolders;
             this.EnableAdultMetadata = enableAdultMetadata;
             this.ImportCollections = importCollections;
             this.EnableMultiVersionByFiles = enableMultiVersionByFiles;
@@ -473,6 +475,12 @@ namespace EmbyClient.Dotnet.Model
         public bool? CollapseSingleItemFolders { get; set; }
 
         /// <summary>
+        /// Gets or Sets ForceCollapseSingleItemFolders
+        /// </summary>
+        [DataMember(Name="ForceCollapseSingleItemFolders", EmitDefaultValue=false)]
+        public bool? ForceCollapseSingleItemFolders { get; set; }
+
+        /// <summary>
         /// Gets or Sets EnableAdultMetadata
         /// </summary>
         [DataMember(Name="EnableAdultMetadata", EmitDefaultValue=false)]
@@ -607,6 +615,7 @@ namespace EmbyClient.Dotnet.Model
             sb.Append("  HearingImpairedSubtitlesOnly: ").Append(HearingImpairedSubtitlesOnly).Append("\n");
             sb.Append("  TypeOptions: ").Append(TypeOptions).Append("\n");
             sb.Append("  CollapseSingleItemFolders: ").Append(CollapseSingleItemFolders).Append("\n");
+            sb.Append("  ForceCollapseSingleItemFolders: ").Append(ForceCollapseSingleItemFolders).Append("\n");
             sb.Append("  EnableAdultMetadata: ").Append(EnableAdultMetadata).Append("\n");
             sb.Append("  ImportCollections: ").Append(ImportCollections).Append("\n");
             sb.Append("  EnableMultiVersionByFiles: ").Append(EnableMultiVersionByFiles).Append("\n");
@@ -926,6 +935,11 @@ namespace EmbyClient.Dotnet.Model
                     this.CollapseSingleItemFolders.Equals(input.CollapseSingleItemFolders))
                 ) && 
                 (
+                    this.ForceCollapseSingleItemFolders == input.ForceCollapseSingleItemFolders ||
+                    (this.ForceCollapseSingleItemFolders != null &&
+                    this.ForceCollapseSingleItemFolders.Equals(input.ForceCollapseSingleItemFolders))
+                ) && 
+                (
                     this.EnableAdultMetadata == input.EnableAdultMetadata ||
                     (this.EnableAdultMetadata != null &&
                     this.EnableAdultMetadata.Equals(input.EnableAdultMetadata))
@@ -1100,6 +1114,8 @@ namespace EmbyClient.Dotnet.Model
                     hashCode = hashCode * 59 + this.TypeOptions.GetHashCode();
                 if (this.CollapseSingleItemFolders != null)
                     hashCode = hashCode * 59 + this.CollapseSingleItemFolders.GetHashCode();
+                if (this.ForceCollapseSingleItemFolders != null)
+                    hashCode = hashCode * 59 + this.ForceCollapseSingleItemFolders.GetHashCode();
                 if (this.EnableAdultMetadata != null)
                     hashCode = hashCode * 59 + this.EnableAdultMetadata.GetHashCode();
                 if (this.ImportCollections != null)
